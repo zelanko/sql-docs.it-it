@@ -1,5 +1,5 @@
 ---
-title: Definizione di una dimensione | Documenti Microsoft
+title: Definizione di una dimensione | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467925"
 ---
-# <a name="lesson-2-1---defining-a-dimension"></a>Lezione 2-1-definizione di una dimensione
+# <a name="lesson-2-1---defining-a-dimension"></a>Lezione 2-1: definizione di una dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Nell'attività seguente si utilizzerà la Creazione guidata dimensione per compilare una dimensione Date.  
@@ -52,7 +52,7 @@ Nell'attività seguente si utilizzerà la Creazione guidata dimensione per compi
   
     -   **Calendar Semester**  
   
-8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Fare poi clic su **Data** > **Calendario** > **Data**. Scegliere **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
+8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Fare poi clic su **Data** > **Calendario** > **Data**. Fare clic su **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
   
     -   **English Month Name** in **Mese**  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Scrittura di codice Transact-SQL| Microsoft Docs'
+title: 'Lezione 2: Scrivere codice Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470028"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lezione 2: Scrittura di codice Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente di sviluppo integrato per la scrittura di query [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML e di comandi SQLCMD. Nell'esercitazione viene illustrato l'utilizzo dell'editor di query del motore di database per scrivere uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!NOTE]  
->  In questa lezione vengono illustrate le funzionalità dello strumento. Per un'esercitazione sulla scrittura di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
+>  In questa lezione vengono illustrate le funzionalità dello strumento. Per un'esercitazione sulla scrittura [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, vedere [esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
   
  Questa lezione include gli argomenti seguenti:  
   

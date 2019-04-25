@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472230"
 ---
 # <a name="the-fields-collection"></a>Raccolta Fields
 Il **campi** insieme è uno degli insiemi intrinseci di ADO. Una raccolta è un set ordinato di elementi che può essere indicato come un'unità. Per altre informazioni sulle raccolte di ADO, vedere [il modello a oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

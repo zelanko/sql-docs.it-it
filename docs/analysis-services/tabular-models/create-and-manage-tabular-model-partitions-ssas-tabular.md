@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire partizioni di modelli tabulari | Documenti Microsoft
+title: Creare e gestire partizioni di modelli tabulari | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472293"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Creare e gestire partizioni di modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34039888"
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, tali partizioni possono essere gestite tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. Nelle attività presentate in questo argomento viene descritto come creare e gestire partizioni per un modello distribuito.  
   
   > [!NOTE]  
->  Partizioni nei modelli tabulari creati a livello di compatibilità 1400 vengono definite utilizzando un'istruzione di query M. Per ulteriori informazioni, vedere [M riferimento](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Partizioni nei modelli tabulari creati al livello di compatibilità 1400 vengono definite utilizzando un'istruzione di query M. Per altre informazioni, vedere [riferimento M](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
 ## <a name="tasks"></a>Attività  
@@ -34,7 +34,7 @@ ms.locfileid: "34039888"
   
 2.  In **Nome partizione**digitare un nome per la partizione. Per impostazione predefinita, il nome della partizione predefinita sarà numerato in modo incrementale per ogni nuova partizione.  
   
-3.  In **istruzione di Query**digitare o incollare un'istruzione di query SQL o M che definisce le colonne e tutte le clausole che si desidera includere nella partizione nella finestra query.  
+3.  Nelle **istruzione Query**digitare o incollare un'istruzione di query SQL o M che definisce le colonne e tutte le clausole che si desidera includere nella partizione nella finestra di query.  
   
 4.  Per convalidare l'istruzione, fare clic su **Controlla sintassi**.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "34039888"
   
 2.  In **Nome partizione**digitare un nuovo nome per la partizione.  
   
-3.  In **istruzione di Query**, modificare l'istruzione di query.  
+3.  Nelle **istruzione Query**, modificare l'istruzione della query.  
   
 ###  <a name="bkmk_merge"></a> Per unire due o più partizioni  
   
--   Nel **partizioni** della finestra di dialogo di **partizioni** elenco, utilizzare Ctrl + fare clic per selezionare le partizioni da unire e quindi fare clic su di **unione** pulsante.  
+-   Nel **partizioni** nella finestra di dialogo il **partizioni** elenco, usare Ctrl + fare clic per selezionare le partizioni da unire e quindi fare clic sui **Merge** pulsante.  
   
 > [!IMPORTANT]  
->  L'unione delle partizioni non consente di aggiornare i metadati della partizione. È necessario modificare l'istruzione SQL o M per la partizione risultante assicurare che le operazioni di elaborazione elaborano tutti i dati nella partizione unita.  
+>  L'unione delle partizioni non consente di aggiornare i metadati della partizione. È necessario modificare l'istruzione SQL o M per la partizione risultante per assicurarsi che tutti i dati nella partizione unita di elaborare le operazioni di elaborazione.  
   
 ###  <a name="bkmk_delete"></a> Per eliminare una partizione  
   

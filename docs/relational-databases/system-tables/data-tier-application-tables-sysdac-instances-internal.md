@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471116"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Tabelle applicazioni livello dati - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Consente di visualizzare una riga per ogni istanza di applicazione livello dati distribuita in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Questa tabella viene archiviata nello schema dbo nel database msdb.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati.|  
 |nome_istanza|**sysname**|Nome dell'istanza di applicazione livello dati specificato alla distribuzione dell'istanza.|  

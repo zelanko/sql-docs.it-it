@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468270"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
   È possibile registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'utilità esistente di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per monitorarne le prestazioni e la configurazione come istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  
@@ -145,9 +145,9 @@ ms.locfileid: "52762483"
   
  Impostazioni istanza gestita  
   
--   Nome dell'istanza SQL Server: Nomecomputer\nomeistanza.  
+-   Nome dell'istanza SQL Server: ComputerName\InstanceName  
   
--   Account Set di raccolta utilità: Nomedominio\nomeutente  
+-   Account Set di raccolta utilità: DomainName\UserName  
   
  Scegliere **Avanti**per continuare.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "52762483"
 >   
 >  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, Errore: 10061) 15404)  
+>  Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, errore: 15404)  
 >   
 >  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -178,7 +178,7 @@ ms.locfileid: "52762483"
   
  Dopo avere completato la Registrazione guidata istanza, fare clic sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** in SSMS. Le istanze registrate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono visualizzate nella visualizzazione elenco nel riquadro **Contenuto Esplora utilità** .  
   
- Il processo di raccolta dati inizia immediatamente, ma possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità. La raccolta dati continua una volta ogni 15 minuti. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità **, scegliere quindi** Aggiorna[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o fare clic con il pulsante destro del mouse sul nome dell'istanza di**  nella visualizzazione elenco, quindi scegliere **Aggiorna**.  
+ Il processo di raccolta dati inizia immediatamente, ma possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità. La raccolta dati continua una volta ogni 15 minuti. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità**, scegliere quindi **Aggiorna[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o fare clic con il pulsante destro del mouse sul nome dell'istanza di** nella visualizzazione elenco, quindi scegliere **Aggiorna**.  
   
  Per rimuovere le istanze gestite da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** per popolare la visualizzazione elenco di istanze gestite, fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella visualizzazione elenco in **Contenuto Esplora utilità** , quindi scegliere **Rendi istanza non gestita**.  
   

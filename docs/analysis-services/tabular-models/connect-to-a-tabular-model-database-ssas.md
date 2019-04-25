@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469491"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>Connettersi a un database modello tabulare  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -91,11 +91,11 @@ ms.locfileid: "53072418"
   
  Quando si importano dati, si verifica questo errore di Microsoft Excel quando si prova a usare la procedura guidata per connettersi a un database modello tabulare in un server Analysis Services remoto e non si dispone delle autorizzazioni sufficienti. Per risolvere l'errore, è necessario disporre di diritti di accesso utente sul database. Fare riferimento alle istruzioni fornite precedentemente in questo argomento per concedere accesso utente ai dati.  
   
- **Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: \<nome modello > Sandbox**  
+ **Si è verificato un errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: \<nome modello > Sandbox**  
   
  In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché non si dispone di autorizzazioni sufficienti sul server Analysis Services remoto. Per risolvere l'errore, è necessario disporre di diritti di accesso utente sul database. Fare riferimento alle istruzioni fornite precedentemente in questo argomento per concedere accesso utente ai dati.  
   
- **Errore durante l'operazione. Ricaricare la cartella di lavoro e quindi provare a eseguire nuovamente l'operazione.**  
+ **Si è verificato un errore durante il tentativo di eseguire questa operazione. Ricaricare la cartella di lavoro e quindi provare a eseguire nuovamente l'operazione.**  
   
  In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché Excel Services non è considerato attendibile dall'istanza di Analysis Services nella quale vengono distribuiti i dati del modello. Per risolvere l'errore, concedere autorizzazioni amministrative di Excel Services sull'istanza di Analysis Services. Per concedere autorizzazioni di amministratore, fare riferimento alle istruzioni fornite precedentemente in questo argomento. Se l'errore persiste, riciclare il pool di applicazioni di Excel Services.  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762338"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
   L'unico modo per creare uno snapshot del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non supporta la creazione di snapshot del database.  
@@ -28,7 +28,7 @@ ms.locfileid: "52768333"
   
      [Sicurezza](#Security)  
   
-     [Procedura consigliata: Denominazione degli snapshot del Database](#Naming)  
+     [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
   
 -   **Per creare un snapshot del database utilizzando:**  [Transact-SQL](#TsqlProcedure)  
   
@@ -51,13 +51,13 @@ ms.locfileid: "52768333"
 ###  <a name="Recommendations"></a> Indicazioni  
  In questa sezione vengono illustrate le procedure consigliate seguenti:  
   
--   [Procedura consigliata: Denominazione degli snapshot del Database](#Naming)  
+-   [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
   
--   [Procedura consigliata: Limitazione del numero di snapshot del Database](#Limiting_Number)  
+-   [Procedura consigliata: Limitazione del numero di snapshot del database](#Limiting_Number)  
   
--   [Procedura consigliata: Connessioni client a uno Snapshot del Database](#Client_Connections)  
+-   [Procedura consigliata: Connessioni client a uno snapshot del database](#Client_Connections)  
   
-####  <a name="Naming"></a> Procedura consigliata: Denominazione degli snapshot del database  
+####  <a name="Naming"></a> Procedura consigliata: Denominazione degli snapshot del Database  
  Prima di creare gli snapshot è importante considerare il nome da utilizzare. Ogni snapshot del database richiede un nome di database univoco. Per semplificare l'amministrazione, il nome di uno snapshot può contenere informazioni utili a identificare il database, ad esempio:  
   
 -   Nome del database di origine.  
@@ -82,18 +82,18 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Procedura consigliata: Limitazione del numero di snapshot del database  
+####  <a name="Limiting_Number"></a> Procedura consigliata: Limitazione del numero di snapshot del Database  
  Creando una serie di snapshot a intervalli di tempo si acquisiscono snapshot sequenziali del database di origine. Ogni snapshot viene mantenuto finché non viene esplicitamente eliminato. Poiché ogni snapshot continua a crescere man mano che le pagine originali vengono aggiornate, per conservare spazio su disco è consigliabile eliminare un vecchio snapshot prima di crearne uno nuovo.  
   
 > [!NOTE]  
 >  Se si desidera ripristinare uno snapshot del database è necessario eliminare tutti gli altri snapshot dal database.  
   
-####  <a name="Client_Connections"></a> Procedura consigliata: Connessioni client a uno snapshot del database  
+####  <a name="Client_Connections"></a> Procedura consigliata: Connessioni client a uno Snapshot del Database  
  Per utilizzare uno snapshot del database, i client devono sapere dove reperirlo. Gli utenti possono leggere da uno snapshot del database durante la creazione o l'eliminazione di un altro snapshot. Quando si sostituisce uno snapshot esistente con un nuovo snapshot, tuttavia, è necessario reindirizzare i client al nuovo snapshot. Gli utenti possono connettersi manualmente a uno snapshot del database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per supportare un ambiente di produzione, è tuttavia consigliabile creare una soluzione a livello di programmazione che indirizzi in modo trasparente i client che scrivono report all'ultimo snapshot del database.  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Se un utente può creare un database, può creare anche uno snapshot del database; tuttavia, per creare uno snapshot di un database mirror, è necessario essere membro del ruolo del server predefinito **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Come creare uno snapshot del database utilizzando Transact-SQL  
@@ -136,7 +136,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
   
--   b. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
+-   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Creazione di uno snapshot del database AdventureWorks  
  In questo esempio viene creato uno snapshot del database `AdventureWorks` . Il nome dello snapshot, `AdventureWorks_dbss_1800`, e il nome del file sparse corrispondente, `AdventureWorks_data_1800.ss`, indicano l'ora di creazione, ovvero le 18.00 (1800).  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467643"
 ---
-# <a name="lesson-13-deploy"></a>Lezione 13: Distribuire
+# <a name="lesson-13-deploy"></a>Lezione 13: Distribuzione
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In questa lezione verranno configurate le proprietà di distribuzione; specificare un locale o istanza del server di Azure e un nome per il modello. Il modello verrà quindi distribuita per quell'istanza. Dopo aver distribuito il modello, gli utenti possono connettersi a esso tramite un'applicazione client di creazione di report. Per altre informazioni sulla distribuzione, vedere [distribuzione di soluzioni di modelli tabulari](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) e [Distribuisci in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  
@@ -24,7 +24,7 @@ In questa lezione verranno configurate le proprietà di distribuzione; specifica
 Tempo stimato per il completamento della lezione: **5 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 12: analizzare in Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 12: Analizza in Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Distribuire il modello  
   
@@ -59,10 +59,10 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 3. Dopo aver completato la distribuzione, fare clic su **Chiudi**.  
   
-## <a name="conclusion"></a>Conclusioni  
-Congratulazioni! Si è finito di creazione e distribuzione del primo modello tabulare di Analysis Services. Tramite questa esercitazione sono state completate le attività più comuni di creazione di un modello tabulare. Ora che il modello Adventure Works Internet Sales è stato distribuito, è possibile utilizzare SQL Server Management Studio per gestire il modello, nonché creare script di processo e un piano di backup. Gli utenti possono anche connettersi al modello usando un'applicazione client di creazione di report, ad esempio Microsoft Excel o Power BI.  
+## <a name="conclusion"></a>Conclusione  
+La procedura è stata completata. Si è finito di creazione e distribuzione del primo modello tabulare di Analysis Services. Tramite questa esercitazione sono state completate le attività più comuni di creazione di un modello tabulare. Ora che il modello Adventure Works Internet Sales è stato distribuito, è possibile utilizzare SQL Server Management Studio per gestire il modello, nonché creare script di processo e un piano di backup. Gli utenti possono anche connettersi al modello usando un'applicazione client di creazione di report, ad esempio Microsoft Excel o Power BI.  
 
-![come-tabulare-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Vedere anche  

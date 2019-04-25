@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92e34de1b9fd675570527f9a28f8476a51597f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472558"
 ---
 # <a name="data-shaping-example"></a>Esempio di data shaping
 I seguenti dati di data shaping comando illustra come compilare un modello gerarchico **Recordset** dalle **clienti** e **ordini** tabelle nel database Northwind.  
@@ -35,10 +35,10 @@ RELATE customerID TO customerID)
   
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
-|ALFKI|Maria inferiore|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
+|ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- In un comando SHAPE, Accodamento consente di creare un elemento figlio **Recordset** correlato al padre **Recordset** (come restituito dal comando specifico del provider immediatamente dopo la parola chiave forma cui avevo precedente) dalla clausola RELATE. Il padre e figlio hanno in genere almeno una colonna in comune: il valore della colonna in una riga dell'elemento padre è identico al valore della colonna in tutte le righe dell'elemento figlio.  
+ In un comando SHAPE, Accodamento consente di creare un elemento figlio **Recordset** correlato al padre **Recordset** (come restituito dal comando specifico del provider immediatamente dopo la parola chiave forma cui avevo precedente) dalla clausola RELATE. L'elemento padre e figlio è in genere hanno almeno una colonna in comune: Il valore della colonna in una riga dell'elemento padre è identico al valore della colonna in tutte le righe dell'elemento figlio.  
   
  È possibile usare i comandi di forma secondo: vale a dire, per generare un elemento padre **Recordset** da un elemento figlio **Recordset**. I record nell'elemento figlio **Recordset** sono raggruppati, in genere con la clausola BY e una riga viene aggiunta all'elemento padre **Recordset** per ogni gruppo di nell'elemento figlio risulta. Se la clausola BY viene omessa, l'elemento figlio **Recordset** verranno form un singolo gruppo e l'elemento padre **Recordset** conterranno esattamente una riga. Ciò è utile per il calcolo di aggregazioni "totale complessivo" sull'intero figlio **Recordset**.  
   

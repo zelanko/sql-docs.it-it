@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763272"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errori del processo di gestione temporanea (Master Data Services)
   Al termine del processo di staging, per tutti i record elaborati è presente un valore nella colonna ErrorCode delle tabelle di staging. Questi valori sono elencati nella seguente tabella.  
@@ -33,7 +33,7 @@ ms.locfileid: "52822355"
 |210041|"ROOT" non è un codice membro valido.|Il valore **MemberCode** contiene la parola "ROOT".|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210042|"MDMUNUSED" non è un codice membro valido.|Il valore **MemberCode** contiene la parola "MDMUNUSED".|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210052|MemberCode non può essere disattivato perché è utilizzato come valore di attributo basato su dominio.|Quando **ImportType** = **3** o **4**, la gestione temporanea ha esito negativo se il membro viene usato come valore di attributo per altri membri. Usare **ImportType5** o **6** per impostare il valore su NULL o modificare i valori prima di eseguire il processo di gestione temporanea.|Foglia<br /><br /> Consolidata|  
-|300002|Il codice membro non è valido.|Relazioni: Codice del membro padre o figlio non esiste.<br /><br /> Foglia o consolidato: **ImportType** = **3** oppure **4** e il codice membro non esiste.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
+|300002|Il codice membro non è valido.|Relazioni: il codice membro padre o figlio non esiste.<br /><br /> Foglia o Consolidata: **ImportType** = **3** o **4** e il codice membro non esiste.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |300004|Il codice membro esiste già.|**ImportType** = **1** ed è stato usato un codice membro che già esiste nell'entità.|Foglia<br /><br /> Consolidata|  
 |210011|Se **RelationshipType** è **1**, **ParentCode** non può essere un membro foglia.|Assicurarsi che il valore **ParentCode** sia un codice membro consolidato.|Relazione|  
 |210015|Lo stesso codice membro è presente più volte nella tabella di staging per una gerarchia e un batch.|Per una gerarchia esplicita, si è specificata la posizione dello stesso membro più volte nello stesso batch.|Relazione|  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468760"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Esplorazione di un modello Decision Trees
   Quando si apre un modello di classificazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore di struttura ad albero delle decisioni interattivo, simile al [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore alberi delle decisioni in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
@@ -92,7 +92,7 @@ ms.locfileid: "52525563"
   
          Case totali: 1150  
   
-         Probabilità acquirente di biciclette: % 18  
+         Probabilità acquirente di biciclette: 18%  
   
     -   Età > = 32 e \< 53 e Yearly Income > = 26000 e gli elementi figlio non = stato civile e 0 = 'Single'  
   

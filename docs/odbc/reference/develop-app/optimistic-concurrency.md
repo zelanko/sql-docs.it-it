@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446213"
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 *La concorrenza ottimistica* il relativo nome deriva dal presupposto ottimistico che raramente si verificheranno conflitti tra le transazioni, viene definito un conflitto si sono verificati quando un'altra transazione aggiorna o elimina una riga di dati tra il momento in cui viene letto la transazione corrente e l'ora aggiornata o eliminata. È l'opposto del *concorrenza pessimistica,* o si blocca, in cui lo sviluppatore dell'applicazione ritiene che tali conflitti siano comuni.  

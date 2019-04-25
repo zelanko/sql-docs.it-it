@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9f49b71a6e6774c83f1573ff7b0d5d20e169a83d
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466850"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Supporto delle funzionalità di Master Data Services e Data Quality Services
 
@@ -25,11 +25,11 @@ ms.locfileid: "55044567"
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-and-data-quality-services"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e Data Quality Services
 
-|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Sì||||||Sì|  
-|Applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Sì||||||Sì|  
-|Data Quality Services|Sì||||||Sì|  
+|Database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Yes||||||Yes|  
+|Applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Yes||||||Yes|  
+|Data Quality Services|Yes||||||Yes|  
 
 
 

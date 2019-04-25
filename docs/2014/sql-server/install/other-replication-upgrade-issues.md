@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473182"
 ---
 # <a name="other-replication-upgrade-issues"></a>Altri problemi di aggiornamento della replica
   In questo argomento vengono analizzati alcuni problemi relativi all'aggiornamento che non sono segnalati da Preparazione aggiornamento.  
@@ -50,7 +50,7 @@ ms.locfileid: "48200731"
   
 -   Tutti i controlli ActiveX sono contrassegnati come non sicuri per la generazione di script e l'inizializzazione.  
   
--   Il controllo ActiveX snapshot è stato eliminato. È possibile creare e gestire snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure a livello di programmazione mediante stored procedure di replica. Per ulteriori informazioni, vedere gli argomenti "Procedura: Creazione e applicazione dello snapshot iniziale ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" e "Procedura: Creazione dello snapshot iniziale (programmazione Transact-SQL della replica)" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Il controllo ActiveX snapshot è stato eliminato. È possibile creare e gestire snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure a livello di programmazione mediante stored procedure di replica. Per altre informazioni, vedere gli argomenti "procedura: Creare e applicare lo Snapshot iniziale ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "e" procedura: Creare lo Snapshot iniziale (programmazione Transact-SQL della replica) "in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
   
 -   I controlli ActiveX distribuzione e ActiveX merge sono stati deprecati. Una funzionalità analoga viene fornita per applicazioni del codice gestito da oggetti RMO (Replication Management Objects). Per ulteriori informazioni, vedere l'argomento relativo alla sincronizzazione delle sottoscrizioni (programmazione RMO) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

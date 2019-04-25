@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Modifica di misure, attributi e gerarchie | Documenti Microsoft'
+title: 'Lezione 3: Modifica le misure, attributi e gerarchie | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a75fc19b3e6fca6520a1257cc979bf8f194cfa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469468"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lezione 3: Modifica di misure, attributi e gerarchie
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lezione 3: Modifica le misure, attributi e gerarchie
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Dopo aver definito il cubo iniziale, è possibile rendere il cubo maggiormente utile e semplice. A tale scopo, aggiungere le gerarchie che supportano la navigazione e l'aggregazione a vari livelli, applicare formati a una misura specifica e definire calcoli e relazioni.  
@@ -38,12 +38,12 @@ In questa attività verranno illustrate le procedure per definire una gerarchia 
 [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
 In questa attività verranno illustrate le procedure per definire una gerarchia utente, modificare i nomi dei membri degli attributi e utilizzare chiavi composte per specificare membri degli attributi univoci.  
   
-[Esplorazione del cubo distribuito](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
+[Esplorazione di un cubo distribuito](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
 In questa attività verranno illustrate le procedure per esplorare i dati dei cubi tramite l'apposita finestra in Progettazione cubi.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale & #40; Esercitazione di AdventureWorks & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

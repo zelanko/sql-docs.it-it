@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473897"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Eseguire l'aggiornamento dal database (MySQLToSQL)
 Il **aggiornare dal Database** nella finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di MySQL. Le righe nella finestra di dialogo sono contraddistinte dal colore basato sullo stato dei metadati:  
@@ -38,7 +38,7 @@ Per l'accesso di **aggiornare dal Database** della finestra di dialogo scelta di
 |-|-|  
 |**Nome**|**Definizione**|  
 |**Comprimi (-)**|Comprimi tutti i gruppi di oggetti per nascondere i singoli oggetti.|  
-|**Espansione (+)**|Espandere tutti i gruppi di oggetti per mostrare i singoli oggetti.|  
+|**Expand (+)**|Espandere tutti i gruppi di oggetti per mostrare i singoli oggetti.|  
 |**Mostra/Nascondi oggetti uguali**|Gli oggetti nell'elenco viene nascosto se i metadati degli oggetti sono lo stesso nel database MySQL in SSMA.|  
 |**Aggiornare dal Database (freccia)**|Utilizzare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornato in SSMA.|  
 |**Eseguire l'operazione non aggiornato dal Database (pulsante) X**|Utilizzare il pulsante X per specificare che i metadati per gli oggetti selezionati non devono essere aggiornati in SSMA.|  

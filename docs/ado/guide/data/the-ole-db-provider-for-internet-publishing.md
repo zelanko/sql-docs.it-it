@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472210"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Provider OLE DB per Internet Publishing
 L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti sono utilizzabile con il Provider Microsoft OLE DB per Internet Publishing (Provider di pubblicazione Internet) per accedere e modificare risorse, ad esempio file o cartelle Web gestito da Microsoft FrontPage. Con ADO, è possibile specificare l'origine di un **Record**, **Stream**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sia un URL. È possibile caricare, scaricare, spostare, copiare ed eliminare le risorse o modificare direttamente le proprietà delle risorse.  
@@ -33,19 +33,19 @@ L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [S
   
  Esistono tre modi per la connessione di ADO per Internet Publishing Provider:  
   
--   Specificare "URL =" nella stringa di connessione. Esempio:  
+-   Specificare "URL =" nella stringa di connessione. Ad esempio:   
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Esempio:  
+-   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Ad esempio:   
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà delle [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Esempio:  
+-   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà delle [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Ad esempio:   
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
@@ -55,4 +55,4 @@ L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [S
 > [!NOTE]
 >  Se Msdaipp. DSO in modo esplicito viene specificato come valore del provider, con la *Provider* parola chiave di stringa di connessione o il **Provider** proprietà, non è possibile usare "URL =" nella stringa di connessione. In caso contrario si verificherà un errore. In alternativa, è sufficiente specificare l'URL come illustrato in precedenza.  
   
- Per informazioni più specifiche sul Provider di pubblicazione di Internet, vedere [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentazione del provider fornito con l'applicazione di origine con cui il Provider OLE DB per È stata installata la pubblicazione su Internet: Windows 2000, Office 2000 o Internet Explorer 5.0.
+ Per informazioni più specifiche sul Provider di pubblicazione di Internet, vedere [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentazione del provider fornito con l'applicazione di origine con cui il Provider OLE DB per La pubblicazione su Internet è stato installato: Windows 2000, Office 2000 o Internet Explorer 5.0.

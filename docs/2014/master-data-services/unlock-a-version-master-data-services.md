@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cfe3d83f83f24e6867e3555855e79049c4bf0ec2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765224"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Sbloccare una versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sbloccare una versione di un modello per abilitare modifiche ai membri del modello e ai relativi attributi.  

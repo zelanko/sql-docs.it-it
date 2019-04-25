@@ -1,5 +1,5 @@
 ---
-title: Eseguire query sui parametri utilizzati per creare un modello di Data Mining | Documenti Microsoft
+title: Eseguire query sui parametri usati per creare un modello di Data Mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df2eb8317f90a96b35fc886e2158000e0f57d09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469498"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Eseguire query sui parametri utilizzati per creare un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività Query di data Mining](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Attività e procedure relative alle query di data mining](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

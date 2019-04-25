@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468327"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Backup di un database con tabelle con ottimizzazione per la memoria
   Il backup delle tabelle con ottimizzazione per la memoria viene eseguito durante i normali backup di database. Per le tabelle basate su disco, il CHECKSUM di coppie di file di dati e file differenziali viene convalidato durante il backup del database per rilevare eventuali danneggiamenti di archiviazione.  
@@ -48,7 +48,7 @@ ms.locfileid: "52408628"
   
  Il primo scenario di carico di lavoro è relativo (principalmente) all'operazione di inserimento. In questo scenario, la maggior parte dei file di dati si trova nello stato Attivo, è completamente caricata e con pochissime righe eliminate. Le dimensioni del backup del database si avvicineranno a quelle dei dati in memoria.  
   
- Il secondo scenario di carico di lavoro è per le operazioni di inserimento, eliminazione e aggiornamento frequenti: Nel peggiore dei casi, tutte le coppie di file del checkpoint sono caricate al 50% dopo aver tenuto conto delle righe eliminate. Pertanto, le dimensioni del backup del database saranno di almeno 2 volte quelle dei dati in memoria. Inoltre, saranno poche le coppie di file di checkpoint negli stati MERGE SOURCE e Required for backup/high availability che verranno aggiunte alle dimensioni del backup del database.  
+ Il secondo scenario di carico di lavoro è per operazioni update, delete e insert frequenti: Nel peggiore dei casi, tutte le coppie di file del checkpoint sono caricate al 50% dopo aver tenuto conto delle righe eliminate. Pertanto, le dimensioni del backup del database saranno di almeno 2 volte quelle dei dati in memoria. Inoltre, saranno poche le coppie di file di checkpoint negli stati MERGE SOURCE e Required for backup/high availability che verranno aggiunte alle dimensioni del backup del database.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backup differenziali di database con tabelle con ottimizzazione per la memoria  
  Lo spazio di archiviazione per le tabelle ottimizzate per la memoria è costituito da file di dati e differenziali come descritto in [Durabilità per tabelle ottimizzate per la memoria](memory-optimized-tables.md). Il backup differenziale di un database con tabelle ottimizzate per la memoria contiene i dati seguenti:  

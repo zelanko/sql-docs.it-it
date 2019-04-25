@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobschedules (Transact-SQL) | Microsoft Docs
+title: dbo.sysjobschedules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470809"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Include informazioni di pianificazione per i processi da eseguire tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa tabella è archiviata nel **msdb** database.  
   
-> **Nota:** il **sysjobschedules** tabella viene aggiornata ogni 20 minuti, che può influenzare i valori restituiti dai **sp_help_jobschedule** stored procedure.  
+> **NOTA:** Il **sysjobschedules** tabella viene aggiornata ogni 20 minuti, che può influenzare i valori restituiti dai **sp_help_jobschedule** stored procedure.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID della pianificazione.|  
 |**job_id**|**uniqueidentifier**|ID del processo.|  

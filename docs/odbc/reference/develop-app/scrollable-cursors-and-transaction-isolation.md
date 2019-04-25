@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468594"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursori scorrevoli e isolamento delle transazioni
 Nella tabella seguente elenca i fattori che controllano la visibilità delle modifiche.  
@@ -38,29 +38,29 @@ Nella tabella seguente elenca i fattori che controllano la visibilità delle mod
   
  La tabella seguente riepiloga la capacità di ogni tipo di cursore di rilevare le modifiche apportate da solo da altre operazioni nella propria transazione e da altre transazioni. La visibilità delle modifiche quest'ultime varia a seconda del tipo di cursore e il livello di isolamento della transazione contenente il cursore.  
   
-|Cursore type\action|self|Il proprietario<br /><br /> TXN|Assumere<br /><br /> TXN<br /><br /> (RU[a])|Assumere<br /><br /> TXN<br /><br /> (RC[a])|Assumere<br /><br /> TXN<br /><br /> (RR[a])|Assumere<br /><br /> TXN<br /><br /> (S[a])|  
+|Cursore type\action|self|Il proprietario<br /><br /> Txn|Assumere<br /><br /> Txn<br /><br /> (RU[a])|Assumere<br /><br /> Txn<br /><br /> (RC[a])|Assumere<br /><br /> Txn<br /><br /> (RR[a])|Assumere<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|Statico|||||||  
-|Insert|Forse [b]|no|no|no|no|no|  
-|Update|Forse [b]|no|no|no|no|no|  
-|DELETE|Forse [b]|no|no|no|no|no|  
+|Static|||||||  
+|Insert|Forse [b]|no|No|No|no|No|  
+|Update|Forse [b]|No|no|No|No|No|  
+|DELETE|Forse [b]|No|No|No|no|No|  
 |Gestito da keyset|||||||  
-|Insert|Forse [b]|no|no|no|no|no|  
-|Update|Sì|Sì|Sì|Sì|no|no|  
-|DELETE|Forse [b]|Sì|Sì|Sì|no|no|  
+|Insert|Forse [b]|No|No|no|No|No|  
+|Update|Yes|Yes|Yes|Yes|No|no|  
+|DELETE|Forse [b]|Yes|Yes|Yes|No|no|  
 |Dynamic|||||||  
-|Insert|Sì|Sì|Sì|Sì|Sì|no|  
-|Update|Sì|Sì|Sì|Sì|no|no|  
-|DELETE|Sì|Sì|Sì|Sì|no|no|  
+|Insert|Yes|Yes|Yes|Yes|Yes|No|  
+|Update|Yes|Yes|Yes|Yes|No|no|  
+|DELETE|Yes|Yes|Yes|Yes|no|No|  
   
  [a] le lettere tra parentesi indicano il livello di isolamento della transazione contenente il cursore. il livello di isolamento della transazione (in cui è stata effettuata la modifica) non è rilevante.  
   
- RU: Read uncommitted  
+ RU: Read Uncommitted  
   
- RC: Read commit  
+ RC: Read Committed  
   
- RR: Lettura ripetibile  
+ RR: Repeatable Read  
   
- S: serializzabile  
+ S:  Serializable  
   
  [b] dipende dal modo in cui il cursore viene implementato. Indica se il cursore è possibile rilevare tali modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY **SQLGetInfo**.

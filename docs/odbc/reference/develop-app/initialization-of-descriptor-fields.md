@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d988099cad357254f04a79a8a6cccbbe4eb2768c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446812"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Inizializzazione dei campi di descrizione
 Quando si alloca un descrittore riga dell'applicazione, i relativi campi ricevano valori iniziali come indicato nella [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Il valore iniziale del campo SQL_DESC_TYPE è SQL_DEFAULT. Ciò consente un trattamento dei dati del database per la presentazione all'applicazione standard. L'applicazione può specificare diverse modalità di gestione dei dati impostando i campi del record del descrittore.  

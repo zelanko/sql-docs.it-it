@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470889"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni avviso. Un avviso è un messaggio inviato in risposta a un evento con cui è possibile inoltrare messaggi all'esterno dell'ambiente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite posta elettronica o cercapersone. Un avviso può generare inoltre un'attività.  Questa tabella è archiviata nel **msdb** database.
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'avviso.|  
 |**name**|**sysname**|Nome dell'avviso.|  
-|**event_source**|**Nvarchar(100)**|Origine dell'evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**event_source**|**nvarchar(100)**|Origine dell'evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Riservato per utilizzi futuri.|  
 |**event_id**|**int**|Riservato per utilizzi futuri.|  
 |**message_id**|**int**|Definito dall'utente ID messaggio o un riferimento a **sysmessages** messaggio che attiva l'avviso.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47855040"
 |**notification_message**|**nvarchar(512)**|Informazioni aggiuntive inviate con l'avviso.|  
 |**include_event_description**|**tinyint**|Maschera di bit che indica se la descrizione dell'evento viene inviata tramite posta elettronica, cercapersone o Net send. Vedere grafico riportato di seguito per i valori.|  
 |**database_name**|**nvarchar(512)**|Database in cui è necessario che si verifichi l'avviso affinché venga attivato.|  
-|**event_description_keyword**|**Nvarchar(100)**|Modello a cui deve corrispondere l'errore affinché venga attivato l'avviso.|  
+|**event_description_keyword**|**nvarchar(100)**|Modello a cui deve corrispondere l'errore affinché venga attivato l'avviso.|  
 |**occurrence_count**|**int**|Numero di occorrenze dell'avviso.|  
 |**count_reset_date**|**int**|Numero di giorni (date) verrà reimpostato su **0**.|  
 |**count_reset_time**|**int**|Ora del numero di giorni reimposteranno **0**.|  

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512635"
 ---
 # <a name="creating-extended-stored-procedures"></a>Creazione di stored procedure estese
     
@@ -29,7 +29,7 @@ ms.locfileid: "52749073"
   
  Una stored procedure estesa è una funzione con un prototipo:  
   
- SRVRETCODE *xp_extendedProcName* **(** SRVPROC  **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
   
  L'utilizzo del prefisso xp_ è facoltativo. Per i nomi delle stored procedure estese viene fatta distinzione tra maiuscole e minuscole quando vi si fa riferimento in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], indipendentemente dalla tabella codici o dall'ordinamento installato nel server. Quando si compila una DLL:  
   

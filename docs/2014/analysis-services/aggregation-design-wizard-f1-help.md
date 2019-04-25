@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9323f9b4fa6655fe72ae70457329c4ffc0d5dec2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473569"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Guida sensibile al contesto della Progettazione guidata aggregazioni
   Le aggregazioni garantiscono miglioramenti delle prestazioni poiché consentono a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di recuperare totali precalcolati direttamente dall'archiviazione del cubo senza dover ricalcolare i dati da un'origine dati sottostante per ogni query.  
@@ -35,7 +35,7 @@ ms.locfileid: "48150641"
   
  Dopo avere utilizzato la Progettazione guidata aggregazioni è possibile utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per progettare aggregazioni basate sui modelli di utilizzo degli utenti aziendali e delle applicazioni client che eseguono query sul cubo.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Selezione partizioni da modificare &#40;progettazione guidata aggregazioni&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. Messages (Transact-SQL) | Microsoft Docs
+title: sys.messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501802"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Viste del catalogo dei messaggi (di errore) - Sys. Messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni **message_id** oppure **language_id** dei messaggi di errore nel sistema, per i messaggi sia definito dal sistema e definite dall'utente. Per altre informazioni, vedere [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|ID del messaggio. Questo valore è univoco nel server. I messaggi con ID minore di 50000 sono messaggi di sistema.|  
 |**language_id**|**smallint**|ID di lingua per cui il testo nel **testo** viene usato, come definito nella **syslanguages**. Questo valore è univoco per un determinato **message_id**.|  

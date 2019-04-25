@@ -1,5 +1,5 @@
 ---
-title: Definizione ed esplorazione dei KPI | Documenti Microsoft
+title: Definizione ed esplorazione dei KPI | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469674"
 ---
-# <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lezione 7-1-definizione ed esplorazione dei KPI
+# <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lezione 7-1: definizione ed esplorazione dei KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome per l'indicatore KPI e il gruppo di misure a cui è associato. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
@@ -66,7 +66,7 @@ Nelle attività di questa lezione si definiranno gli indicatori KPI nel progetto
   
     Verrà visualizzato un modello KPI vuoto nel riquadro di visualizzazione, come illustrato nella figura seguente.  
   
-    ![Indicatore KPI vuoto nel riquadro visualizzazione](../analysis-services/media/l7-kpi-2.gif "modello KPI vuoto nel riquadro di visualizzazione")  
+    ![Modello KPI vuoto nel riquadro visualizzazione](../analysis-services/media/l7-kpi-2.gif "modello KPI vuoto nel riquadro di visualizzazione")  
   
 3.  Nella casella **Nome** digitare **Reseller Revenue**, quindi selezionare **Reseller Sales** nell'elenco **Gruppo di misure associato** .  
   
@@ -269,5 +269,5 @@ Nelle attività di questa lezione si definiranno gli indicatori KPI nel progetto
     Verrà visualizzato il margine di profitto lordo per le biciclette vendute dai rivenditori in Nord America nel terzo trimestre dell'anno di calendario 2007.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 8: Definizione di azioni](../analysis-services/lesson-8-defining-actions.md)  
+[Lezione 8: Definizione delle azioni](../analysis-services/lesson-8-defining-actions.md)  
   

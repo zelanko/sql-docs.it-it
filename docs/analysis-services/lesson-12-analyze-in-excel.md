@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 12: Analizzare in Excel | Microsoft Docs'
+title: 'Lezione 12: Analizza in Excel | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468434"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>Lezione 12: Analizzare in Excel
+# <a name="lesson-12-analyze-in-excel"></a>Lezione 12: Analizza in Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In questa lezione si utilizzerà l'analizza nella funzionalità di Excel in SSDT per aprire Microsoft Excel, creare automaticamente una connessione all'origine dati all'area di lavoro modello e aggiungere automaticamente una tabella pivot al foglio di lavoro. La funzionalità Analizza in Excel offre un metodo rapido e semplice per testare l'efficacia della progettazione del modello prima di distribuirlo. Non si eseguirà alcuna analisi dei dati in questa lezione. Lo scopo di questa lezione è acquisire familiarità con gli strumenti che è possibile utilizzare per testare la progettazione del modello. A differenza dell'utilizzo di analisi nella funzionalità di Excel, che è destinato agli autori di modelli, gli utenti finali utilizzeranno applicazioni di creazione report come Excel o Power BI per connettersi e sfogliare i dati del modello di distribuzione client.  
@@ -26,7 +26,7 @@ Per completare questa lezione, è necessario che Excel sia installato nello stes
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 11: creare ruoli](../analysis-services/lesson-11-create-roles.md).  
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 11: Creare ruoli](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Sfogliare il modello utilizzando la prospettiva predefinita e la prospettiva Internet Sales  
 In queste prime attività, si sfoglierà il modello usando la prospettiva predefinita, che include tutti gli oggetti modello, e anche tramite la prospettiva Internet Sales è in precedenza. La prospettiva Internet Sales esclude l'oggetto Customer table.  
@@ -49,11 +49,11 @@ In queste prime attività, si sfoglierà il modello usando la prospettiva predef
   
 2.  Nella finestra di dialogo **Analizza in Excel** lasciare selezionata l'opzione **Utente di Windows corrente** , quindi nell'elenco a discesa **Prospettiva** selezionare **Internet Sales**e fare clic su **OK**. 
     
-    ![come-tabulare-lesson12-prospettiva](../analysis-services/media/as-tabular-lesson12-perspective.png)
+    ![as-tabular-lesson12-perspective](../analysis-services/media/as-tabular-lesson12-perspective.png)
     
 3.  In Excel, in **PivotTable Fields**, notare che la tabella DimCustomer è esclusa dall'elenco dei campi.  
     
-    ![come in formato tabulare-lesson12-campi](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  Chiudere Excel senza salvare la cartella di lavoro.  
   
@@ -71,7 +71,7 @@ I ruoli sono una parte integrante di qualsiasi modello tabulare. Senza almeno un
 3.  Chiudere Excel senza salvare la cartella di lavoro.  
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 13: distribuire](../analysis-services/lesson-13-deploy.md).
+Passare alla lezione successiva: [Lezione 13: Distribuire](../analysis-services/lesson-13-deploy.md).
 
   
   

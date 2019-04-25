@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506776"
 ---
 # <a name="report-server-properties-service-tab"></a>Proprietà - Server di report (scheda Servizio)
   Si tratta del servizio del server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
@@ -45,11 +45,11 @@ ms.locfileid: "52803423"
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
   
--   Manuale: Il servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
+-   Manuale: Questo servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
   
--   Automatico: viene eseguito un tentativo automatico di avvio del servizio all'avvio del computer.  
+-   Automatico: Il servizio tenta di avviare all'avvio del computer.  
   
--   Disabilitato: il servizio non può essere avviato.  
+-   Disabilitato: Il servizio non può essere avviato.  
   
  **Stato**  
  Indica se il servizio è in esecuzione, arrestato o disabilitato.  

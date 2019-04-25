@@ -1,5 +1,5 @@
 ---
-title: Le tabelle nidificate (Analysis Services - Data Mining) | Documenti Microsoft
+title: Tabelle nidificate (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 35444ae17ac4a11bd0321e70631f45d84273e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472415"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelle nidificate (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i dati devono essere inseriti in un algoritmo di data mining come serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornisce un metodo univoco per la gestione di questi casi, tramite *tabelle nidificate*. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In *è disponibile un metodo univoco per la gestione di questi casi,* tramite tabelle annidate. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
   
  ![Due tabelle combinate tramite una tabella nidificata](../../analysis-services/data-mining/media/nested-tables.gif "due tabelle combinate tramite una tabella nidificata")  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34018118"
  Ad esempio, se la tabella annidata contiene le colonne **Product**, **ProductQuantity**e **ProductPrice**, è possibile scegliere **Product** come chiave della tabella annidata, ma aggiungere **ProductQuantity** alla struttura di data mining da usare come input.  
   
 ## <a name="filtering-nested-table-data"></a>Filtro di dati della tabella nidificata  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile creare filtri sui dati da utilizzare per il training o il test del modello di data mining. Per testare il modello su un subset di case o per influire sulla composizione del modello, è possibile utilizzare un filtro. I filtri possono anche essere applicati alle tabelle nidificate. Sono tuttavia presenti limitazioni per la sintassi che è possibile utilizzare con le tabelle nidificate.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile creare filtri sui dati da utilizzare per il training o il test del modello di data mining. Un filtro è utilizzabile per influire sulla composizione del modello o per testare il modello su un subset di case. I filtri possono anche essere applicati alle tabelle nidificate. Sono tuttavia presenti limitazioni per la sintassi che è possibile utilizzare con le tabelle nidificate.  
   
  Spesso, quando si applica un filtro a una tabella nidificata, si verifica l'esistenza o la non esistenza di un attributo. Ad esempio, è possibile applicare un filtro che limita i case utilizzati nel modello solo a quelli con un valore specificato nella tabella nidificata. Oppure è possibile limitare i case utilizzati nel modello ai clienti che non hanno acquistato un determinato elemento.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34018118"
  Per altre informazioni su come creare e usare i filtri dei modelli, vedere [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445997"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Scorrimento e recupero di righe (ODBC)
 Quando si usa un cursore scorrevole, le applicazioni chiamano **SQLFetchScroll** per posizionare il cursore e recuperare le righe. **SQLFetchScroll** supporta lo scorrimento relativo (successivo e precedente relativo *n* righe), lo scorrimento assoluto (, cognome e di riga *n*) e il posizionamento dal segnalibro. Il *FetchOrientation* e *FetchOffset* argomenti nel **SQLFetchScroll** specificare quale set di righe da recuperare, come illustrato nelle figure seguenti.  
@@ -41,4 +41,4 @@ Quando si usa un cursore scorrevole, le applicazioni chiamano **SQLFetchScroll**
  Dopo aver recuperato il set di righe, l'applicazione può chiamare **SQLSetPos** per posizionarsi su una particolare riga nelle righe del set di righe o l'aggiornamento del set di righe. Per altre informazioni sull'uso **SQLSetPos**, vedere [aggiornamento dei dati con SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Lo scorrimento è supportato in ODBC 2. *x* i driver **SQLExtendedFetch**. Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.
+>  Lo scorrimento è supportato in ODBC 2. *x* i driver **SQLExtendedFetch**. Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.
