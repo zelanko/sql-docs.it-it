@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: eec122493d7af91bc5aa5483fbdb1de842705c90
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038452"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960107"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
   L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto alle proprietà di campo `Value` e `IsMissing`, disponibili nell'origine dei dati e supportate dall'estensione per l'elaborazione dati. Le proprietà estese non vengono visualizzate nel riquadro Dati report all'interno della raccolta di campi per un set di dati del report. È possibile includere valori di proprietà di campo estese nel report scrivendo espressioni che essi sono specificati per nome usando l'elemento predefinito `Fields` raccolta.  
@@ -47,7 +47,7 @@ ms.locfileid: "56038452"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Specifica il valore dei dati del campo.|  
 |`IsMissing`|`Boolean`|Indica se il campo è stato trovato nel set di dati risultante.|  
-|`UniqueName`|`String`|Restituisce il nome completo di un livello. Ad esempio, il `UniqueName` valore per un dipendente potrebbe essere *[Employee]. [ Reparto dipendente]. [Reparto]. & [vendite]. & [responsabile vendite Nord America]. America.&[272]*.|  
+|`UniqueName`|`String`|Restituisce il nome completo di un livello. Ad esempio, il `UniqueName` valore per un dipendente potrebbe essere *[Employee]. [ Reparto dipendente]. [Reparto]. & [vendite]. & [responsabile vendite Nord America]. America].&[272]*.|  
 |`BackgroundColor`|`String`|Restituisce il colore di sfondo definito nel database per il campo.|  
 |`Color`|`String`|Restituisce il colore di primo piano definito nel database per l'elemento.|  
 |`FontFamily`|`String`|Restituisce il nome del tipo di carattere definito nel database per l'elemento.|  
