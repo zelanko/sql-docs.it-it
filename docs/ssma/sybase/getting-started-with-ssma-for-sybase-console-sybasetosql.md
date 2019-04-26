@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631955"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introduzione a SSMA per Sybase Console (SybaseToSQL)
 In questa sezione viene descritta la procedura per l'avvio e Introduzione a SSMA per Sybase applicazione di console. Anche elencati nel presente documento vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
@@ -57,11 +57,11 @@ Dopo l'esecuzione di comandi di script SSMA e le opzioni, il programma di consol
   
 Colore dall'interpretazione dell'output della console viene visualizzato nella tabella seguente:  
   
-|Colore|Description|  
+|Colore|Descrizione|  
 |---------|---------------|  
 |Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Data e un timestamp, messaggio all'utente|  
-|bianco|Comandi di file di script, il tipo di messaggio|  
+|Bianco|Comandi di file di script, il tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultati di un'operazione|  

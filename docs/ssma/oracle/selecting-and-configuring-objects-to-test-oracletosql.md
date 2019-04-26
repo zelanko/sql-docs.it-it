@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626206"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Selezione e configurazione degli oggetti da testare (OracleToSQL)
 In questo passaggio si selezionano oggetti da testare e configurare le impostazioni per il confronto dei parametri di output procedure e funzioni, nonché i valori restituiti di funzioni.  

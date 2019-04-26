@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625961"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta inoltre che restituiscono informazioni sullo schema da un server collegato durante l'elaborazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] query distribuite.  
@@ -49,10 +49,10 @@ ms.locfileid: "48203461"
 |DBSCHEMA_TABLES|Sono supportate tutte le restrizioni.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |DBSCHEMA_TABLES_INFO|Sono supportate tutte le restrizioni.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Supporto di query distribuite nei set di righe dello schema](schema-rowsets-distributed-query-support.md)  
   
- [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS Rowset &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   

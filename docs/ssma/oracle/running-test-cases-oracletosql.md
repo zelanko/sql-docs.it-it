@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625794"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di test case (OracleToSQL)
 Quando si SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e viene creato un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test ha esito positivo. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -43,27 +43,27 @@ Si supponga che la tabella verificata è denominata USER_TABLE. Per una tabella,
   
 ||||  
 |-|-|-|  
-|nome|Tipo|Description|  
+|Nome|Tipo|Descrizione|  
 |USER_TABLE$Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
-|USER_TABLE$ AUD|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
-|USER_TABLE$ AUDID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
+|USER_TABLE$AUD|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
+|USER_TABLE$AUDID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  
-|USER_TABLE$ NEW|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
-|USER_TABLE$ NEW_ID|vista|Identificazione di righe inserite e modificate.|  
-|USER_TABLE$ PRECEDENTE|vista|Rappresentazione semplificata di righe eliminate e sovrascritte.|  
+|USER_TABLE$NEW|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
+|USER_TABLE$NEW_ID|vista|Identificazione di righe inserite e modificate.|  
+|USER_TABLE$OLD|vista|Rappresentazione semplificata di righe eliminate e sovrascritte.|  
   
 L'oggetto seguente viene creato nello schema di tabella verificata nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
-|nome|Tipo|Description|  
+|Nome|Tipo|Descrizione|  
 |USER_TABLE$Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
   
 E gli oggetti seguenti vengono creati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nel database ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|nome|Tipo|Description|  
+|Nome|Tipo|Descrizione|  
 |USER_TABLE$Aud|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
 |USER_TABLE$AudID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  
@@ -78,7 +78,7 @@ In questa fase, Tester di SSMA richiama ogni oggetto selezionato per la sperimen
 Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari creati nel **inizializzazione** passaggio.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Visualizzazione dei report di Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Viewing Test Case Reports &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Selezione e configurazione degli oggetti da testare &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  

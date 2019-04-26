@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523744"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   In questo argomento viene illustrato come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +46,7 @@ ms.locfileid: "53377553"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
@@ -67,7 +67,7 @@ ms.locfileid: "53377553"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  

@@ -1,5 +1,5 @@
 ---
-title: La definizione di membri calcolati | Documenti Microsoft
+title: La definizione di membri calcolati | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523670"
 ---
-# <a name="lesson-6-1---defining-calculated-members"></a>Lezione 6-1-definizione di membri calcolati
+# <a name="lesson-6-1---defining-calculated-members"></a>Lezione 6-1: definizione di membri calcolati
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 I membri calcolati sono membri di una dimensione o di un gruppo di misure definiti in base a una combinazione di dati del cubo, di operatori aritmetici, di numeri e di funzioni. È possibile ad esempio creare un membro calcolato che calcoli la somma di due misure fisiche del cubo. Le definizioni dei membri calcolati vengono archiviate nei cubi, ma i loro valori vengono calcolati in fase di query.  
@@ -41,7 +41,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
     Nella figura seguente viene illustrato il modulo visualizzato nel riquadro **Calculation Expressions** (Espressioni di calcolo) quando si fa clic su **Nuovo membro calcolato**.  
   
-    ![Modulo riquadro espressioni di calcolo](../analysis-services/media/l6-calculatedmembers-02.gif "form del riquadro espressioni di calcolo")  
+    ![Form del riquadro espressioni calcoli](../analysis-services/media/l6-calculatedmembers-02.gif "form del riquadro espressioni di calcolo")  
   
 3.  Nella casella **Nome** cambiare il nome della misura calcolata in **[Total Sales Amount]**.  
   
@@ -70,7 +70,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
     Nella figura seguente viene illustrato il riquadro **Calculation Expressions** (Espressioni di calcolo) popolato con le impostazione specificate nei passaggi precedenti.  
   
-    ![Riquadro espressioni di calcolo Populated](../analysis-services/media/l6-calculatedmembers-03.gif "riquadro espressioni di calcolo compilato")  
+    ![Riquadro espressioni calcoli Populated](../analysis-services/media/l6-calculatedmembers-03.gif "riquadro espressioni di calcolo compilato")  
   
 10. Sulla barra degli strumenti della scheda **Calcoli** fare clic su **Visualizzazione Script**e controllare lo script di calcolo nel riquadro **Calculation Expressions** (Espressioni di calcolo).  
   
@@ -251,7 +251,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
 2.  Dopo aver completato la distribuzione, passare alla scheda **Esplorazione** e fare clic sul pulsante **Riconnetti**.  
   
-3.  Fare clic sull'icona Excel e selezionare **Abilita**.  
+3.  Fare clic sull'icona di Excel, quindi su **Abilita**.  
   
 4.  Nel riquadro **Elenco campi tabella pivot** espandere la cartella **Valori** per visualizzare i nuovi membri calcolati nella dimensione Measures.  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628896"
 ---
 # <a name="manual-commit-mode"></a>Modalità di commit manuale
 *In modalità di commit manuale* applicazioni devono completare in modo esplicito le transazioni chiamando **SQLEndTran** per eseguirne il commit o il rollback. Si tratta della modalità di transazione normale per la maggior parte dei database relazionali.  

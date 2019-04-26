@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631259"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Esempio di proprietà RecordCount (VC + +) e filtro
 Questo esempio Usa la [filtro](../../../ado/reference/ado-api/filter-property.md) per aprire una nuova [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato su una determinata condizione applicata a un oggetto esistente **Recordset**. Usa il [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà per visualizzare il numero di record in due **recordset**. La funzione FilterField è necessaria per eseguire questa procedura.  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630801"
 ---
 # <a name="specify-synchronization-schedules"></a>Impostazione di pianificazioni della sincronizzazione
   In questo argomento viene descritto come specificare le pianificazioni di sincronizzazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Quando si crea una sottoscrizione, è possibile definire una pianificazione della sincronizzazione per controllare l'esecuzione dell'agente di replica per la sottoscrizione. Se non si specificano parametri di pianificazione, per la sottoscrizione verrà utilizzata la pianificazione predefinita.  
@@ -326,7 +326,7 @@ ms.locfileid: "52788678"
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [Sottoscrivere le pubblicazioni](subscribe-to-publications.md)   
  [Sincronizzare una sottoscrizione push](synchronize-a-push-subscription.md)   
  [Sincronizzare una sottoscrizione pull](synchronize-a-pull-subscription.md)   
  [Sincronizzare i dati](synchronize-data.md)  

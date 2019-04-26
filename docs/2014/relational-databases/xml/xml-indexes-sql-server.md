@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631364"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
   È possibile creare indici XML sulle colonne con tipo di dati `xml`. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
@@ -53,7 +53,7 @@ ms.locfileid: "58533973"
   
 -   Indice XML secondario  
   
- Il primo indice nella colonna di tipo `xml` deve essere l'indice XML primario, Usa l'indice XML primario, sono supportati i tipi di indici secondari seguenti: PERCORSO valore e proprietà. In base al tipo di query, questi indici secondari possono facilitare il miglioramento delle prestazioni delle query.  
+ Il primo indice nella colonna di tipo `xml` deve essere l'indice XML primario, il cui utilizzo consente di supportare i tipi di indici secondari seguenti: PATH, VALUE e PROPERTY. In base al tipo di query, questi indici secondari possono facilitare il miglioramento delle prestazioni delle query.  
   
 > [!NOTE]  
 >  Non è possibile creare o modificare un indice XML a meno che le opzioni del database siano correttamente impostate per l'utilizzo del tipo di dati `xml`. Per altre informazioni, vedere [Utilizzo della ricerca full-text con colonne XML](use-full-text-search-with-xml-columns.md).  
@@ -93,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chiave primaria della tabella di base. La chiave primaria della tabella di base viene duplicata nell'indice XML primario per eseguire un join all'indietro con la tabella di base e il numero massimo di colonne nella chiave primaria della tabella di base è limitato a 15.  
   
- Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Esempio:  
+ Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Ad esempio:   
   
 -   `//ContactRecord/PhoneNumber` in cui sono noti solo gli ultimi due passaggi  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626048"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
   Gestione basata su criteri consente di monitorare le procedure consigliate per la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di file dei criteri che è possibile importare come criteri per procedure consigliate e quindi valutare i criteri rispetto a un set di destinazioni che include istanze, oggetti istanza, database o oggetti di database. È possibile valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md).  

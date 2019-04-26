@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631844"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)
   In una sottoscrizione guidata dai dati i dati di sottoscrizione dinamici vengono ottenuti tramite una query o un comando che consente di recuperare i dati da un'origine dei dati esterna. I dati di sottoscrizione possono essere recuperati da qualsiasi origine dei dati supportata che soddisfi i requisiti per l'elaborazione della sottoscrizione guidata dai dati. La sintassi della query o del comando deve essere valida per un'estensione per l'elaborazione dati installata con il server di report.  

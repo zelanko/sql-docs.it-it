@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629391"
 ---
 # <a name="subscribers"></a>Sottoscrittori
   Consente di specificare i Sottoscrittori [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che riceveranno una sottoscrizione della pubblicazione selezionata.  
@@ -50,7 +50,7 @@ ms.locfileid: "52806203"
   
 -   Nel server di pubblicazione della pubblicazione selezionata è in esecuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
- Facendo clic **Aggiungi Sottoscrittore** viene visualizzato un menu con due opzioni: **Aggiungi Sottoscrittore SQL Server** e **Aggiungi Sottoscrittore Non SQL Server**. Scegliere **Aggiungi Sottoscrittore non SQL Server** per aggiungere un Sottoscrittore Oracle o IBM DB2.  
+ Facendo clic su **Aggiungi sottoscrittore** viene visualizzato un menu con due opzioni: **Aggiungi Sottoscrittore SQL Server** e **Aggiungi Sottoscrittore non SQL Server**. Scegliere **Aggiungi Sottoscrittore non SQL Server** per aggiungere un Sottoscrittore Oracle o IBM DB2.  
   
  **Aggiungi Sottoscrittore SQL Server**  
  Consente di aggiungere un server all'elenco dei server attivabili come Sottoscrittori. Questo pulsante viene visualizzato se viene soddisfatta una o più delle condizioni seguenti:  
@@ -68,7 +68,7 @@ ms.locfileid: "52806203"
     -   La pubblicazione consente le sottoscrizioni anonime.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  

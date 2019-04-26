@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625828"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso di repository test (SybaseToSQL)
 Gli archivi di Repository Test SSMA SSMA Tester test case e risultati dei test per un uso successivo. I dati del Repository vengono salvati nelle tabelle di SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nello schema **ssma_sybase_utilities** del **ssmatesterdb_syb** database.  
@@ -64,7 +64,7 @@ Le informazioni seguenti sui risultati dei test viene visualizzate nella griglia
   
 -   Nome: Nome del test case.  
   
--   Inizio: Test case data di esecuzione.  
+-   Avviato: Test case data di esecuzione.  
   
 -   Risultato: Un breve riepilogo dell'esecuzione del test (descrizione comando della cella, questo visualizza un riepilogo completo dell'esecuzione del test).  
   

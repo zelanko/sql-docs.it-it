@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628687"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Impostazioni del progetto (sincronizzazione) (OracleToSQL)
 La pagina di sincronizzazione del **impostazioni del progetto** finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA carica e gli aggiornamenti di database oggetti, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: InStr (MDX) | Documenti Microsoft
+title: Instr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629089"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -37,13 +37,13 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  Espressione stringa di cui eseguire la ricerca.  
   
- *Confrontare*  
- (Facoltativo) Valore intero. Questo argomento viene sempre ignorato. È definito per la compatibilità con altri **Instr** funzioni in altri linguaggi.  
+ *Compare*  
+ (Facoltativo) Valore intero. Questo argomento viene sempre ignorato. È definito per la compatibilità con le altre **Instr** funzioni in altri linguaggi.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore intero con la posizione iniziale di *String2* in *String1*.  
+ Valore intero con posizione iniziale della *String2* nelle *String1*.  
   
- Inoltre, **InStr** funzione restituisce i valori elencati nella tabella seguente, a seconda della condizione:  
+ È inoltre **InStr** funzione restituisce i valori elencati nella tabella seguente a seconda della condizione:  
   
 |Condizione|Valore restituito|  
 |---------------|------------------|  
@@ -54,13 +54,13 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 non trovato|zero (0)|  
 |start è maggiore di Len(String2)|zero (0)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 > [!WARNING]  
 >  **InStr** sempre esegue un confronto tra maiuscole e minuscole.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo del **Instr** (funzione) e vengono mostrati diversi scenari di risultato.  
+ Nell'esempio seguente viene illustrato l'utilizzo dei **Instr** (funzione) e vengono mostrati diversi scenari di risultato.  
   
 ```  
 with   

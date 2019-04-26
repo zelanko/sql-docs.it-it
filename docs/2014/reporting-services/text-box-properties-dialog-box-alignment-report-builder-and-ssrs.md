@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631284"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà casella di testo, Allineamento (Generatore report e SSRS)
   Selezionare **Allineamento** nella finestra di dialogo **Proprietà casella di testo** per posizionare i valori all'interno di una cella o di un'area dati selezionata.  

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524061"
 ---
 # <a name="create-clr-functions"></a>Creare funzioni CLR
   È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR). Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  

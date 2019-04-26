@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524473"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
   Il tipo di dati spaziali geografici, `geography`, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` tipo di dati memorizza archiviare dati ellissoidali (terra rotonda assembly), ad esempio coordinate di latitudine e longitudine GPS.  
@@ -105,7 +105,7 @@ ms.locfileid: "53369493"
 ###  <a name="gml"></a> Costruzione di un'istanza geografica dall'input di testo GML  
  Il `geography` tipo di dati fornisce un metodo che genera una `geography` da GML, una rappresentazione XML dell'istanza una `geography` istanza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
   
- Per altre informazioni su Geography Markup Language, vedere la specifica OGC: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Per altre informazioni su GML (Geography Markup Language), vedere la specifica OGC: [Specifiche OGC, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **Per costruire qualsiasi tipo di istanza geografica dall'input GML**  
  [GeomFromGML &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

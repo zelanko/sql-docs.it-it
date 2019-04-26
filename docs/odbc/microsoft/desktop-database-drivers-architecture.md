@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629052"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architettura dei driver di database desktop
 Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni successive, o Windows NT 4.0 e Windows 2000. Sono supportate solo le applicazioni a 32 bit in Windows 95 o versione successiva. le applicazioni a 16 bit e a 32 bit sono supportate in Windows NT 4.0 e Windows 2000.  

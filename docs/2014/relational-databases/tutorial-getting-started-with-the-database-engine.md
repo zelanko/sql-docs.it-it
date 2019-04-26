@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524333"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al Motore di database
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Guida introduttiva con il motore di Database
   Benvenuto a questa esercitazione introduttiva su [!INCLUDE[ssDE](../includes/ssde-md.md)] . Questa esercitazione è destinata agli utenti che non hanno familiarità con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e hanno installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. In questa breve esercitazione verranno fornite informazioni per iniziare a utilizzare [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
@@ -31,10 +31,10 @@ ms.locfileid: "53355189"
   
  L'esercitazione è suddivisa in due lezioni:  
   
- [Lezione 1: La connessione al motore di Database](lesson-1-connecting-to-the-database-engine.md)  
+ [Lezione 1: Connessione al motore di database](lesson-1-connecting-to-the-database-engine.md)  
  In questa lezione verranno descritte le procedure per connettersi a [!INCLUDE[ssDE](../includes/ssde-md.md)] e consentire ad altre persone di connettersi.  
   
- [Lezione 2: La connessione da un altro Computer](lesson-2-connecting-from-another-computer.md)  
+ [Lezione 2: Connessione da un altro computer](lesson-2-connecting-from-another-computer.md)  
  In questa lezione verranno descritte le procedure per connettersi a [!INCLUDE[ssDE](../includes/ssde-md.md)] da un secondo computer, incluse le impostazioni per l'abilitazione di protocolli, la configurazione di porte e la configurazione del firewall.  
   
 ## <a name="requirements"></a>Requisiti  

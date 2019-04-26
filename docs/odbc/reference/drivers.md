@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e3996aafa0e4f5b389e4f46d5df3b22632daad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628766"
 ---
 # <a name="drivers"></a>Driver
 *I driver* sono librerie che implementano le funzioni dell'API ODBC. Ognuno è specifico per un determinato DBMS; ad esempio, un driver per Oracle non è possibile accedere direttamente ai dati in un DBMS Informix. I driver di espongono le funzionalità del DBMS sottostante; non sono necessarie per implementare funzionalità non supportate dal sistema DBMS. Ad esempio, se il sistema DBMS sottostante non supporta gli outer join, quindi non deve essere il driver. L'unico importante eccezione è che i driver per DBMS che non dispongono di motori di database autonomo, ad esempio Xbase, devono implementare un motore di database che supporti almeno una quantità minima di SQL.  

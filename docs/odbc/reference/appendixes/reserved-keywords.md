@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628890"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
 Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non limitano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare queste parole chiave. Il simbolo #**definire** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
@@ -45,7 +45,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
-|FUNZIONE BIT_LENGTH|NATIONAL|  
+|BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
@@ -55,7 +55,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CATALOG|NULL|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
-|CHARACTER|FUNZIONE OCTET_LENGTH|  
+|CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
 |CHECK|ON|  
 |CLOSE|ONLY|  
@@ -68,7 +68,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|CONVENZIONE PASCAL|  
+|CONTINUE|PASCAL|  
 |CONVERT|POSIZIONE|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -89,7 +89,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Elimina|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  

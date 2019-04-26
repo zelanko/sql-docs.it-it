@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625901"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nodo Gestione criteri (Esplora oggetti)
   Questa sezione contiene gli argomenti della Guida sensibile al contesto seguenti relativi al nodo **Gestione criteri** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

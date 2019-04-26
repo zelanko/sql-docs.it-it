@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42790102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523362"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>Lezione 7: Creare indicatori di prestazioni chiave
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -24,7 +24,7 @@ In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli in
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 6: creare misure](../analysis-services/lesson-6-create-measures.md).   
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 6: Creare misure](../analysis-services/lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Creare indicatori di prestazioni chiave  
   
@@ -50,7 +50,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 8.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde).
   
-    ![come-tabulare-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
+    ![as-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > Si noti l'espandibile **descrizioni** etichetta sotto gli stili di icona disponibili. Questa scheda consente di immettere descrizioni per i vari elementi KPI per renderle più facilmente identificabili nelle applicazioni client.  
@@ -78,6 +78,6 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
 6.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde), quindi fare clic su **OK**.  
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 8: creare prospettive](../analysis-services/lesson-8-create-perspectives.md).
+Passare alla lezione successiva: [Lezione 8: Creare prospettive](../analysis-services/lesson-8-create-perspectives.md).
   
   

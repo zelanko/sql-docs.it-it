@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62513279"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server
 
@@ -327,7 +327,7 @@ GO
 |**Read committed**|No|Yes|Yes|  
 |**Repeatable read**|No|No|Yes|  
 |**Snapshot**|No|No|No|  
-|**Serializable**|No|No|No|  
+|**Serializable**|No|No|no|  
   
  Per altre informazioni sui tipi specifici di blocco o di controllo delle versioni delle righe controllati da ogni livello di isolamento delle transazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -476,12 +476,12 @@ GO
 ||Modalità concessa esistente||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Modalità richiesta**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Blocco preventivo condiviso (IS)**|Yes|Yes|Yes|Yes|Yes|no|  
-|**Condiviso (S)**|Yes|Yes|Yes|no|No|No|  
-|**Aggiornamento (U)**|Yes|Yes|no|No|No|No|  
-|**Blocco preventivo esclusivo (IX)**|Yes|No|No|Yes|No|no|  
-|**Blocco condiviso preventivo esclusivo (SIX)**|Yes|No|no|no|no|No|  
-|**Esclusivo (X)**|No|No|no|No|No|No|  
+|**Blocco preventivo condiviso (IS)**|Yes|Yes|Yes|Yes|Yes|No|  
+|**Condiviso (S)**|Yes|Yes|Yes|No|No|No|  
+|**Aggiornamento (U)**|Yes|Yes|No|No|No|no|  
+|**Blocco preventivo esclusivo (IX)**|Yes|No|no|Yes|no|No|  
+|**Blocco condiviso preventivo esclusivo (SIX)**|Yes|No|No|no|No|No|  
+|**Esclusivo (X)**|No|No|No|No|No|No|  
   
 > [!NOTE]  
 >  I blocchi preventivi esclusivi (IX) sono compatibili con la modalità di blocco IX perché tale modalità prevede l'intenzione di aggiornamento solo di alcune righe e non di tutte. Altre transazioni possono pertanto accedere alle risorse per la lettura o l'aggiornamento di alcune righe, a condizione che non utilizzino le righe già in fase di aggiornamento. Se viene eseguito il tentativo di aggiornare la stessa riga da parte di due transazioni, a entrambe viene concesso il blocco IX a livello di tabella e pagina. Un blocco X a livello di riga viene tuttavia concesso a una delle transazioni. L'altra transazione dovrà rimanere in attesa fino alla rimozione di tale blocco.  
@@ -524,12 +524,12 @@ GO
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modalità richiesta**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
 |**Condiviso (S)**|Yes|Yes|No|Yes|Yes|Yes|No|  
-|**Aggiornamento (U)**|Yes|No|No|Yes|No|Yes|no|  
-|**Esclusivo (X)**|no|no|no|no|no|Yes|No|  
+|**Aggiornamento (U)**|Yes|No|no|Yes|No|Yes|No|  
+|**Esclusivo (X)**|No|No|No|no|No|Yes|No|  
 |**RangeS-S**|Yes|Yes|No|Yes|Yes|No|No|  
-|**RangeS-U**|Yes|No|no|Yes|No|No|No|  
-|**RangeI-N**|Yes|Yes|Yes|no|No|Yes|No|  
-|**RangeX-X**|No|No|No|No|No|No|No|  
+|**RangeS-U**|Yes|No|No|Yes|No|No|No|  
+|**RangeI-N**|Yes|Yes|Yes|No|No|Yes|No|  
+|**RangeX-X**|No|no|No|No|no|No|No|  
   
 #### <a name="conversion-locks"></a>Blocchi di conversione  
 

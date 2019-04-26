@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632479"
 ---
 # <a name="update-delete-and-insert-statements"></a>Istruzioni UPDATE, DELETE e INSERT
 Applicazioni basate su SQL apportano modifiche alle tabelle mediante l'esecuzione di **UPDATE**, **eliminare**, e **Inserisci** istruzioni. Queste istruzioni fanno parte del livello di conformità grammatica SQL minima e devono essere supportate da tutti i driver e origini dati.  

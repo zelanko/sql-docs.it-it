@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7ae1c272603e410a45e9e6c4d51dab23d34c46a0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631375"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL di ricerca full-text, funzioni, stored procedure e viste
   Sono elencati le istruzioni Transact-SQL e gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la ricerca full-text, tra cui la funzione di ricerca della proprietà.  

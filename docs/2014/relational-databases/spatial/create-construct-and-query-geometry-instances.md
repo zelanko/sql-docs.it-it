@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8daff4753eb5921ee80eef8f44de96487ea86a15
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524483"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Creazione, costruzione e query di istanze geometry
   Il tipo di dati spaziali planare, `geometry`, rappresenta i dati in un sistema di coordinate euclideo (piano). Questo tipo è implementato come tipo di dati CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

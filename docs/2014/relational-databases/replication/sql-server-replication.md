@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626152"
 ---
 # <a name="sql-server-replication"></a>Replica di SQL Server
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Grazie alla replica è possibile distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626058"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Test di oggetti di database migrati (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Oracle Tester (SSMA Tester) verifica automaticamente la conversione di oggetti di database e la migrazione dei dati apportate da SSMA. Al termine di tutti i passaggi di migrazione di SSMA, utilizzare il Tester di SSMA per verificare che gli oggetti convertiti funzionano allo stesso modo e che tutti i dati è stato trasferito correttamente.  

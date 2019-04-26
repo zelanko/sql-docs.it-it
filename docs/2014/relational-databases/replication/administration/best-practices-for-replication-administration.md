@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629632"
 ---
 # <a name="best-practices-for-replication-administration"></a>Procedure consigliate per l'amministrazione della replica
-  Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre a seguire le procedure consigliate descritte in questo argomento, è consigliabile leggere l'argomento in domande frequenti per familiarizzare con problemi e domande frequenti: [Domande frequenti per gli amministratori di replica](frequently-asked-questions-for-replication-administrators.md).  
+  Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre ad attenersi a tali procedure, provare a familiarizzare con domande e problemi comuni leggendo: [Domande frequenti per gli amministratori di replica](frequently-asked-questions-for-replication-administrators.md).  
   
  È preferibile suddividere le procedure consigliate in due aree:  
   

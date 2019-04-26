@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626068"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi dimensione al cubo (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Aggiungi dimensione al cubo** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere a un cubo un riferimento a una dimensione del database. Per visualizzare la finestra di dialogo **Aggiungi dimensione al cubo** è possibile eseguire una delle operazioni seguenti:  

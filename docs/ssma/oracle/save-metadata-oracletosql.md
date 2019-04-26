@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625765"
 ---
 # <a name="save-metadata--oracletosql"></a>Salvare i metadati (OracleToSQL)
 Il **salvare i metadati** nella finestra di dialogo viene richiesto di caricare i metadati nel progetto SSMA prima di salvarlo. In questo modo si dispone di un file di progetto completo che è possibile usare in modalità offline e inviare ad altri utenti, ad esempio il personale di supporto tecnico.  
@@ -23,7 +23,7 @@ Il **salvare i metadati** nella finestra di dialogo viene richiesto di caricare 
 Per l'accesso di **salvare i metadati** nella finestra di dialogo Salva il progetto. Se tutti i metadati mancanti, SSMA verrà visualizzato il **salvare i metadati** nella finestra di dialogo.  
   
 ## <a name="options"></a>Opzioni  
-**Nome**  
+**Name**  
 Il nome di ogni database nel progetto.  
   
 **Stato**  

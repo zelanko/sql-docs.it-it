@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626102"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro dell'editor dei form delle azioni della scheda **Azioni** in Progettazione cubi per creare e modificare azioni standard.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome dell'azione.  
   
  **Destinazione azione**  
@@ -33,11 +33,11 @@ ms.locfileid: "48225551"
  **Tipo di destinazione**  
  Consente di selezionare il tipo di oggetto a cui associare l'azione. Il server restituisce al client solo le azioni del tipo specificato relative all'oggetto. L'azione è disponibile per il client se il valore di **Condizione** viene soddisfatto e se sono selezionati gli oggetti specificati nella tabella seguente.  
   
-|valore|Oggetto selezionato|  
+|Value|Oggetto selezionato|  
 |-----------|---------------------|  
 |Membri dell'attributo|Un membro è selezionato da un livello basato sull'attributo in **Oggetto di destinazione**.|  
 |Celle|In **Oggetto di destinazione** è selezionato il set denominato. Selezionare **Tutte le celle** per selezionare tutte le celle del cubo.|  
-|Cube|In **Oggetto di destinazione** è selezionato il cubo. Selezionare CURRENTCUBE per utilizzare il cubo corrente.<br /><br /> Nota: l'uso di CURRENTCUBE garantisce maggiore portabilità nel caso in cui il cubo venga rinominato o l'azione venga copiata in altri cubi. È consigliabile utilizzare CURRENTCUBE per rappresentare il cubo corrente.|  
+|Cube|In **Oggetto di destinazione** è selezionato il cubo. Selezionare CURRENTCUBE per utilizzare il cubo corrente.<br /><br /> Nota: Uso di CURRENTCUBE garantisce maggiore portabilità nel caso in cui il cubo venga rinominato o l'azione copiata in altri cubi. È consigliabile utilizzare CURRENTCUBE per rappresentare il cubo corrente.|  
 |Membri della dimensione|In **Oggetto di destinazione** è selezionato un membro della dimensione.|  
 |Gerarchia|In **Oggetto di destinazione** è selezionata la gerarchia.|  
 |Membri della gerarchia|In **Oggetto di destinazione** è selezionato un membro della gerarchia.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48225551"
  **Tipo**  
  Consente di selezionare il tipo di azione da intraprendere quando l'azione viene eseguita. Sono disponibili i tipi di azione seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Set di dati|Restituisce un'istruzione MDX che rappresenta un set di dati multidimensionale e deve essere eseguita e visualizzata dall'applicazione client.|  
 |Proprietario|Restituisce una stringa sul proprietario che può essere interpretata dalle applicazioni client associate all'impostazione **Applicazione** relativa a questa azione.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48225551"
   
  Nella tabella seguente vengono descritte le impostazioni disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un'attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interattiva|L'azione viene eseguita in seguito alla chiamata dell'utente.|  

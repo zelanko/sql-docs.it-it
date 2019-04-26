@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628464"
 ---
 # <a name="embedded-sql"></a>SQL incorporato
 La prima tecnica per l'invio di istruzioni SQL per il sistema DBMS è incorporata SQL. Poiché SQL non usa le variabili e le istruzioni di controllo di flusso, viene spesso utilizzato come un sottolinguaggio per i database che può essere aggiunti a un programma scritto in un linguaggio di programmazione convenzionale, ad esempio C o COBOL. Si tratta di un'idea di embedded SQL centrale: posizionamento delle istruzioni SQL in un programma scritto in un host di linguaggio di programmazione. In breve, le tecniche seguenti vengono usate per incorporare le istruzioni SQL in un linguaggio host:  
