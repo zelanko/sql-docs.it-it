@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630893"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Impostazioni del progetto (caricamento oggetti di sistema) (OracleToSQL)
 La pagina di caricamento di oggetti di sistema dei **impostazioni del progetto** finestra di dialogo consente di specificare quali oggetti di sistema Oracle SSMA converte e carica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,9 +33,9 @@ Conversione di oggetti di sistema utilizza le risorse di sistema e richiede temp
   
 -   SYS.DBMS_PIPE  
   
--   SYS. DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
--   SYS. STANDARD  
+-   SYS.STANDARD  
   
 -   SYS.UTL_FILE  
   
