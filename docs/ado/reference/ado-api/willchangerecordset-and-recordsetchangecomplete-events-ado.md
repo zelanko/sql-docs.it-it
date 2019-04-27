@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ed1c7a9f1ed86359eef75fdaf13c9e40d838f3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642435"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventi WillChangeRecordset e RecordsetChangeComplete (ADO)
 Il **WillChangeRecordset** eventi viene chiamato prima che un'operazione in sospeso viene modificato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il **RecordsetChangeComplete** eventi viene chiamato dopo la **Recordset** è stato modificato.  

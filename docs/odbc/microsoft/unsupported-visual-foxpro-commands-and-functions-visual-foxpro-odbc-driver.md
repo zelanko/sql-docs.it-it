@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633371"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Comandi e funzioni Visual FoxPro non supportati (driver ODBC Visual FoxPro)
 Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono supportate dal Driver ODBC Visual FoxPro ma supportate da Microsoft® Visual FoxPro.  
@@ -33,7 +33,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
   
 ||||  
 |-|-|-|  
-|#DEFINE #UNDEF|... #IF #ENDIF direttiva del preprocessore|#IFDEF &AMP;#124; #IFNDEF|  
+|#DEFINE #UNDEF|... #IF #ENDIF direttiva del preprocessore|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE (direttiva del preprocessore)|:: Operatore di risoluzione dell'ambito|! Comando (vedere eseguire &#124; . Comando)|  
 |? &#124; ?? Comando|??? Comando|\ &#124; \\\ Comando|  
 |@ ... FINESTRA comando|@ ... Comando di classe|@ ... Comando CLEAR|  
@@ -69,7 +69,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
 |Variabile di memoria di sistema _CUROBJ|Comando di chiamata|Comando CANCEL|  
 |CAPSLOCK () (funzione)|Comando CD|Comando di modifica|  
 |Comando CHDIR|Funzione CHRSAW)|Comando Chiudi promemoria|  
-|Funzione CNTBAR)|Funzione CNTPAD)|Funzione di COL)|  
+|Funzione CNTBAR)|CNTPAD( ) Function|Funzione di COL)|  
 |Comando di compilazione|COMPILARE comandi DATABASE|FORM comando di compilazione|  
 |Funzione COMPOBJ)|Oggetto contenitore|Oggetto di controllo|  
 |COPIARE i FILE (comando)|Comando COPY di credito|CLASSE comando CREATE|  
@@ -84,7 +84,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
   
 ||||  
 |-|-|-|  
-|Variabile di memoria di sistema _DBLCLICK|Variabile di memoria di sistema _DIARYDATE|Funzione DBSETPROP)|  
+|Variabile di memoria di sistema _DBLCLICK|_DIARYDATE System Memory Variable|Funzione DBSETPROP)|  
 |Funzioni DDE|DISATTIVARE il comando MENU|DISATTIVARE comando POPUP|  
 |DISATTIVARE la finestra di comando|DICHIARARE - comando DLL|DICHIARARE comando|  
 |DEFINIRE della barra di comando|DEFINIRE finestra comando|DEFINIRE comandi di classe|  
@@ -237,7 +237,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
 |Il comando di connessione di RIDENOMINAZIONE|RINOMINARE tabella comandi|RIPRISTINO dal comando|  
 |Comando REPORT|Rieseguire una query () (funzione)|FINESTRA di comando di ripristino|  
 |MACRO comando RESTORE|SCHERMATA comando RESTORE|Funzione RGBSCHEME)|  
-|Comando Riprendi|Funzione RGB)|ESEGUIRE &AMP;#124; . Comando|  
+|Comando Riprendi|Funzione RGB)|RUN &#124; ! Comando|  
 |Comando RMDIR|Funzione di riga)||  
 |Comando RUNSCRIPT|Funzione RDLEVEL)||  
   
@@ -287,7 +287,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
   
 ||||  
 |-|-|-|  
-|Variabile di memoria di sistema _TABS|TESTO... Comando ENDTEXT|Funzione TXTWIDTH)|  
+|_TABS System Memory Variable|TESTO... Comando ENDTEXT|Funzione TXTWIDTH)|  
 |TRANSFORM () (funzione)|Variabile di memoria di sistema _TRANSPORT||  
 |Comando TYPE|Variabile di memoria di sistema _THROTTLE||  
   

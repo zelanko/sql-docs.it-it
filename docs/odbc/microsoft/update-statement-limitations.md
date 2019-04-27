@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633133"
 ---
 # <a name="update-statement-limitations"></a>Limitazioni dell'istruzione UPDATE
 Per il driver Paradox aggiornare una tabella, la tabella deve avere un indice univoco (chiave primaria Paradox). Quando si usa il driver Paradox senza implementare il motore di Database Borland, non è possibile aggiornare una tabella Paradox.  

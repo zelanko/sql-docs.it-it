@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768053"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converti tipi senza eseguire i controlli di conversione (Importazione/Esportazione guidata SQL Server)
   Usare la **Converti tipi senza i controlli di conversione** pagina per controllare i mapping eseguiti quando la procedura guidata non è possibile individuare uno o più del [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] file di mapping e conversione di tipi di dati. Nella pagina sono incluse informazioni che semplificano l'individuazione del file o dei file mancanti.  

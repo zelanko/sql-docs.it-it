@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637609"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
   In questo argomento viene descritto come generare istanze XML.  
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   Viene assegnato il valore predefinito all'attributo `xml:space` attivo per un elemento o i relativi predecessori.  
   
- Ad esempio:  
+ Ad esempio:   
   
 ```  
 declare @x xml  
@@ -85,7 +85,7 @@ select @x
 <root><child/></root>  
 ```  
   
- È tuttavia possibile modificare tale impostazione. Per mantenere gli spazi vuoti in un'istanza XML DT, è possibile utilizzare l'operatore CONVERT e il parametro facoltativo *style* corrispondente impostato sul valore 1. Esempio:  
+ È tuttavia possibile modificare tale impostazione. Per mantenere gli spazi vuoti in un'istanza XML DT, è possibile utilizzare l'operatore CONVERT e il parametro facoltativo *style* corrispondente impostato sul valore 1. Ad esempio:   
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se il parametro *style* non viene utilizzato o è impostato sul valore 0, gli spazi vuoti non significativi non vengono mantenuti per la conversione dell'istanza XML DT. Per altre informazioni sull'uso dell'operatore CONVERT e del parametro *style* durante la conversione di dati di tipo stringa in istanze XML DT, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: Eseguire il cast di un valore stringa a xml tipizzato e assegnarla a una colonna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: Eseguire il cast di un valore stringa al tipo XML tipizzato e assegnarlo a una colonna  
  Nell'esempio seguente esegue il cast di una variabile stringa che contiene un frammento XML per il `xml` tipo di dati e quindi lo archivia nella `xml` colonna di tipo:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: Convertire una stringa in xml tipizzato e assegnarla a una variabile  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: Convertire una stringa nel tipo XML tipizzato e assegnarla a una variabile  
  Nell'esempio seguente, una stringa viene convertita in `xml` digitare e assegnato a una variabile del `xml` tipo di dati:  
   
 ```  
@@ -133,7 +133,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Utilizzo dell'istruzione SELECT con la clausola FOR XML  
- È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Ad esempio:  
+ È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Ad esempio:   
   
 ```  
 DECLARE @xmlDoc xml  
@@ -183,7 +183,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
   
 ## <a name="using-constant-assignments"></a>Utilizzo di assegnazioni di costanti  
- Costante stringa utilizzabile in un'istanza di cui il `xml` è previsto il tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Esempio:  
+ Costante stringa utilizzabile in un'istanza di cui il `xml` è previsto il tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio:   
   
 ```  
 DECLARE @xmlDoc xml  

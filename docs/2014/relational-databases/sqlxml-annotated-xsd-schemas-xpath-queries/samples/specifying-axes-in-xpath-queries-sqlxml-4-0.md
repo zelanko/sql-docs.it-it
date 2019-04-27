@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ed6bf859b4e16ecd26b333fb042f4ea1d98ffac9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637721"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Definizione di assi in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato il modo in cui specificare assi in query XPath.  
@@ -83,7 +83,7 @@ ms.locfileid: "52753443"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>b. Recuperare nipoti del nodo di contesto  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperare nipoti del nodo di contesto  
  La query XPath seguente seleziona tutti i  **\<ordine >** figli del  **\<cliente >** gli elementi figlio del nodo di contesto:  
   
 ```  

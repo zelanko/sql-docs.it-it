@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfab3258ab8908c795e1c7d7e7719f1d0d4138bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766993"
 ---
 # <a name="progress-tab"></a>Scheda Stato
   Utilizzare la scheda **Stato** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per visualizzare lo stato dell'esecuzione di un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** vengono visualizzate informazioni quali l'ora di inizio, l'ora di fine e il tempo trascorso relative alla convalida e all'esecuzione del pacchetto e dei rispettivi file eseguibili, nonché informazioni o avvisi relativi al pacchetto, notifiche sullo stato, l'esito (positivo o negativo) del pacchetto e tutti i messaggi di errore generati durante l'esecuzione del pacchetto.  

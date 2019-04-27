@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766150"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Tramite le informazioni di questi file, è possibile risolvere i problemi di esecuzione dei pacchetti.  
@@ -48,9 +48,9 @@ ms.locfileid: "58379219"
   
 |Tipo di informazione|Descrizione|Esempio|  
 |-------------------------|-----------------|-------------|  
-|Ambiente|Versione del sistema operativo, dati di utilizzo della memoria, ID del processo e nome immagine del processo. Le informazioni sull'ambiente sono riportate all'inizio del file tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memoria: % 58 in uso. Fisica: Paging 845M / 2044M: 2404M / 4095M (Disp/totali)|  
-|Percorso e versione delle librerie a collegamento dinamico (DLL)|Percorso e numero di versione di ogni DLL caricata nel sistema durante l'elaborazione di un pacchetto.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Modulo caricato: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Modulo caricato: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Nome evento: OnError (EventName)<br /><br /> [E:3]         Nome origine:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID=%2)<br /><br /> [E:3]         ID esecuzione:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descrizione: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
+|Ambiente|Versione del sistema operativo, dati di utilizzo della memoria, ID del processo e nome immagine del processo. Le informazioni sull'ambiente sono riportate all'inizio del file tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
+|Percorso e versione delle librerie a collegamento dinamico (DLL)|Percorso e numero di versione di ogni DLL caricata nel sistema durante l'elaborazione di un pacchetto.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
+|Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Finestra di dialogo Esecuzione pacchetto](../execute-package-dialog-box.md)  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638326"
 ---
 # <a name="stored-procedures"></a>Stored procedure
   Una stored procedure ([Stored procedure &#40;motore di Database&#41;](../../stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -32,7 +32,7 @@ ms.locfileid: "51018326"
   
      DLL C o C++ scritte nell'API ODS (Open Data Services) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per le stored procedure estese. L'API ODS amplia le funzionalità delle stored procedure per includere il codice C o C++.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Esecuzione di stored procedure &#40;OLE DB&#41;](stored-procedures-running.md)  
   

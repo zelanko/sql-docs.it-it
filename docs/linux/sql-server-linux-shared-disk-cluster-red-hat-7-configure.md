@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634014"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -139,7 +139,7 @@ Il Server NFS eseguire le operazioni seguenti:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Esempio: 
+1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Ad esempio:  
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

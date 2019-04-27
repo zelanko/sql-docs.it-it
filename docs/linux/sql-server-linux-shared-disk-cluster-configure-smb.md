@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634161"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurare cluster di failover - SMB - SQL Server in Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "52532002"
 
 Questo articolo illustra come configurare l'archiviazione SMB per un'istanza cluster di failover (FCI) in Linux. 
  
-Nel mondo non Windows, SMB è spesso definita per la condivisione come Common Internet File System (CIFS) e implementata tramite Samba. L'accesso a una condivisione SMB del mondo di Windows, viene eseguita in questo modo: \\NOMESERVER\NOMECONDIVISIONE. Per le installazioni di SQL Server basata su Linux, è necessario montare la condivisione SMB come cartella.
+Nel mondo non Windows, SMB è spesso definita per la condivisione come Common Internet File System (CIFS) e implementata tramite Samba. L'accesso a una condivisione SMB del mondo di Windows, viene eseguita in questo modo: \\SERVERNAME\SHARENAME. Per le installazioni di SQL Server basata su Linux, è necessario montare la condivisione SMB come cartella.
 
 ## <a name="important-source-and-server-information"></a>Importanti informazioni di origine e di server
 

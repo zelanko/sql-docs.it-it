@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bb1214991c26880a75409783cf40157fce2449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635234"
 ---
 # <a name="advanced-settings-ssas"></a>Impostazioni avanzate (SSAS)
   Questa finestra di dialogo disponibile tramite **Importazione guidata tabella** consente di specificare la codifica e le impostazioni locali per il file flat al quale si sta effettuando la connessione. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -28,7 +28,7 @@ ms.locfileid: "48054881"
 |||  
 |-|-|  
 |Nome|Definizione|  
-|**Codifica**|Consente di specificare il tipo di codifica da utilizzare, ovvero ANSI o Unicode.<br /><br /> Il valore **Unicode** corrisponde alla codifica UTF-16.|  
+|**Codifica**|Specificare il tipo di codifica da usare: ANSI o Unicode.<br /><br /> Il valore **Unicode** corrisponde alla codifica UTF-16.|  
 |**Impostazioni locali**|Consente di specificare le impostazioni locali specifiche di una lingua per l'ordinamento e i formati di data e ora.|  
   
   

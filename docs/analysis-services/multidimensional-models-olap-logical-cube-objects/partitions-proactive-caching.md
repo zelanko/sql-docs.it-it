@@ -1,5 +1,5 @@
 ---
-title: Memorizzazione nella cache attiva (partizioni) | Documenti Microsoft
+title: Memorizzazione nella cache attiva (partizioni) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4959473b120a3a8a0c289ff3cd8f91e89df44b86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640385"
 ---
-# <a name="partitions---proactive-caching"></a>Le partizioni, la memorizzazione nella cache
+# <a name="partitions---proactive-caching"></a>Partizioni: caching attivo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   La memorizzazione nella cache attiva fornisce funzionalità automatiche di creazione e gestione della cache MOLAP per gli oggetti OLAP. I cubi incorporano immediatamente le modifiche apportate ai dati nel database, in base alle notifiche ricevute dal database. L'obiettivo della memorizzazione nella cache attiva consiste nel fornire le prestazioni della modalità MOLAP standard, garantendo l'immediatezza e la semplicità di gestione offerte da ROLAP.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34020758"
  Per ottimizzare le prestazioni riducendo al tempo stesso la latenza, è inoltre possibile utilizzare la memorizzazione nella cache senza eliminare gli oggetti MOLAP correnti. Le query in questo caso continuano a essere eseguite sugli oggetti MOLAP mentre i dati vengono letti ed elaborati in una nuova cache. Questa modalità di archiviazione consente di ottenere prestazioni migliori, ma è possibile che i dati restituiti dalle query non siano aggiornati durante la fase di compilazione della nuova cache.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Archiviazione della dimensione](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Archiviazione della partizione set & #40; Analysis Services - multidimensionale & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [Archiviazione di dimensioni](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [Impostare l'archiviazione delle partizioni &#40;Analysis Services - Multidimensionale&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

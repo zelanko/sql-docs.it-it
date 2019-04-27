@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1273e282dab772b2bd59177de6bd24ad1d3e6d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766034"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Editor attività Monitoraggio eventi WMI (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Monitoraggio eventi WMI** per specificare un nome e una descrizione per l'attività Monitoraggio eventi WMI.  

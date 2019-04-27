@@ -12,11 +12,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627984"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "51677800"
 
 SNAC o SQL Server Native Client, è un termine che è stato usato in modo intercambiabile per fare riferimento al driver ODBC e OLE DB per SQL Server.
 
-**Nota:** non è consigliabile usare il driver per i nuovi sviluppi. Viene chiamato il nuovo provider OLE DB di [Driver Microsoft OLE DB per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti in futuro.
+**NOTA:**  Non è consigliabile usare il driver per i nuovi sviluppi. Viene chiamato il nuovo provider OLE DB di [Driver Microsoft OLE DB per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti in futuro.
 
 
 **Per altre informazioni e per scaricare i driver ODBC SNAC, visitare [ciclo di vita SNAC spiegato](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**

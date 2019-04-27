@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767143"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor origine OData (pagina Connessione)
   Usare la pagina **Connessione** della finestra di dialogo **Editor origine OData** per selezionare la gestione connessione OData per l'origine OData. In questa pagina è inoltre possibile specificare una raccolta o un percorso della risorsa, nonché tutte le opzioni query per scegliere i dati che devono essere recuperati dall'origine OData. Per altre informazioni sull'origine OData, vedere [Origine OData](data-flow/odata-source.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "58390468"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Usa percorso risorsa o raccolta = Percorso risorsa  
  **Resource path**  
- Digitare un percorso della risorsa. Ad esempio: Employees  
+ Digitare un percorso della risorsa. Ad esempio:  Employees  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine OData &#40;pagina Colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627915"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47785339"
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_tasks**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Indirizzo di memoria dell'oggetto.|  
-|**task_state**|**nvarchar(60)**|Stato dell'attività. I possibili valori sono i seguenti:<br /><br /> PENDING: in attesa di un thread di lavoro.<br /><br /> RUNNABLE: eseguibile, ma in attesa di ricevere un quantum.<br /><br /> RUNNING: esecuzione in corso nell'utilità di pianificazione.<br /><br /> SUSPENDED: è disponibile un thread di lavoro, ma è in attesa di un evento.<br /><br /> DONE: completato.<br /><br /> SPINLOOP: bloccato in uno spinlock.|  
+|**task_state**|**nvarchar(60)**|Stato dell'attività. I possibili valori sono i seguenti:<br /><br /> IN SOSPESO: in attesa di un thread di lavoro.<br /><br /> ESEGUIBILE: Eseguibile, ma in attesa di ricevere un quantum.<br /><br /> CORSA: in esecuzione nell'utilità di pianificazione.<br /><br /> SOSPESO: Ha un ruolo di lavoro, ma è in attesa di un evento.<br /><br /> OPERAZIONE ESEGUITA: Completata.<br /><br /> SPINLOOP: Bloccato in uno spinlock.|  
 |**context_switches_count**|**int**|Numero di cambi di contesto dell'utilità di pianificazione completati dall'attività.|  
 |**pending_io_count**|**int**|Numero di I/O fisici eseguiti dall'attività.|  
 |**pending_io_byte_count**|**bigint**|Numero totale di byte degli I/O eseguiti dall'attività.|  

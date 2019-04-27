@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12fcc899eb4cb60b6616949c51c44419cc5a20ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635443"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>Vista avanzata (scheda Aggregazioni, Progettazione cubi)
   Utilizzare **Vista avanzata** nella progettazione delle aggregazioni per creare e modificare manualmente le progettazioni delle aggregazioni e le aggregazioni singole. Questa vista deve essere utilizzata esclusivamente dagli utenti avanzati.  
@@ -27,7 +27,7 @@ ms.locfileid: "48104701"
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Nuovo elemento Aggregation**|Fare clic per creare una nuova aggregazione.|  
 |**Elimina**|Fare clic per eliminare l'aggregazione o la progettazione delle aggregazioni selezionata.|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c99c251fe90eb90d546b59ae9e53f908a2965e4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636435"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (driver di database desktop)
 Un'istruzione preparata con un numero errato di colonne restituito un errore in fase di esecuzione, non al momento di preparazione dell'istruzione.

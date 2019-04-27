@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642503"
 ---
 # <a name="value-property-example-vb"></a>Esempio della proprietà Value (VB)
 Questo esempio viene illustrato il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà con [campo](../../../ado/reference/ado-api/field-object.md) e [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetti mediante la visualizzazione di valori di campi e proprietà per il ***dipendenti*** tabella.  

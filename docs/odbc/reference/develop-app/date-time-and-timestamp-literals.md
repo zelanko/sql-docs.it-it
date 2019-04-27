@@ -14,24 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641030"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Valori letterali data, ora e timestamp
 La sequenza di escape per i valori letterali data, ora e timestamp  
   
- **{**_-tipo_ **'** _valore_ **'}**  
+ **{**  _-type_ **'** _value_ **'}**  
   
  in cui *-tipo di valore letterale* è uno dei valori elencati nella tabella seguente.  
   
-|*tipo di valore letterale*|Significato|Formato di *valore*|  
+|*literal-type*|Significato|Formato di *valore*|  
 |---------------------|-------------|-----------------------|  
 |**d**|date|*aaaa*-*mm*-*gg*|  
 |**t**|Ora *|*hh*:*mm*:*ss*[1]|  
-|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...*] [1]|  
+|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
   
  [1] il numero di cifre a destra del separatore decimale in un intervallo di tempo o timestamp letterale contenente un componente relativo ai secondi dipende la precisione in secondi, quanto contenuto nel campo del descrittore SQL_DESC_PRECISION. (Per altre informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

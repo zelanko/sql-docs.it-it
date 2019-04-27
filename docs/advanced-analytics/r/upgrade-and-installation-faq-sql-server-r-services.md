@@ -9,11 +9,11 @@ ms.author: davidph
 author: dphansen
 manager: cgronlun
 ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642312"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Domande frequenti su installazione e aggiornamento per R Server o SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ Gli aggiornamenti da versioni non definitive di SQL Server 2016 non sono più su
 
 Le versioni seguenti sono state installate con versioni non definitive di SQL Server 2016.
 
-| Versione | Compilazione         |
+| Version | Compilazione         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

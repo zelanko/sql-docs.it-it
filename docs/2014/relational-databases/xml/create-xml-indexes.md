@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637761"
 ---
 # <a name="create-xml-indexes"></a>Creazione di indici XML
   Questo argomento descrive come creare, modificare e utilizzare indici XML primari e secondari.  

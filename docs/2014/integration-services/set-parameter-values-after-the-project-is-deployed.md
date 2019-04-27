@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766514"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Impostazione dei valori di parametri dopo la distribuzione del progetto
   La Distribuzione guidata consente di impostare i valori dei parametri predefiniti quando si distribuisce il progetto nel catalogo. Quando il progetto si trova nel catalogo, è possibile utilizzare Transact-SQL o Esplora oggetti di SQL Server Management Studio (SSMS) per impostare i valori predefiniti del server.  
@@ -29,7 +29,7 @@ ms.locfileid: "58379929"
   
 3.  Aprire la pagina dei parametri facendo clic su **Parametri** in **Selezione pagina**.  
   
-4.  Selezionare il parametro desiderato nell'elenco **Parametri** . Nota: Il **contenitore** colonna consente di distinguere i parametri del progetto da parametri di pacchetto.  
+4.  Selezionare il parametro desiderato nell'elenco **Parametri** . Nota: la colonna **Contenitore** consente di distinguere tra i parametri del progetto e i parametri del pacchetto.  
   
 5.  Nella colonna **Valore** specificare il valore del parametro predefinito del server desiderato.  
   

@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767513"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lezione 2: Creazione del pacchetto di distribuzione
-  Nella [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), viene creato il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto denominato Deployment Tutorial, aggiunto al progetto i pacchetti e i file di supporto e implementate le configurazioni nei pacchetti.  
+  Nella [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), è stato creato il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominato Deployment Tutorial, sono stati aggiunti i pacchetti e i file di supporto al progetto e sono state implementate le configurazioni nei pacchetti.  
   
  In questa lezione si procederà alla creazione del pacchetto di distribuzione, ovvero una cartella contenente gli elementi necessari per installare i pacchetti in un altro computer. Nel pacchetto di distribuzione verranno inclusi un manifesto di distribuzione, copie dei pacchetti e copie dei file di supporto del progetto Deployment Tutorial. Nel manifesto di distribuzione vengono elencati i pacchetti, i file esterni e le configurazioni incluse nel pacchetto di distribuzione.  
   

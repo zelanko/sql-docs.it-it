@@ -17,30 +17,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636106"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Scrittura di driver ODBC 3.x
 La tabella seguente illustra il supporto di funzione in un'applicazione ODBC 3. *x* driver e un'applicazione ODBC e il mapping eseguito da Gestione Driver quando le funzioni vengono chiamate su un'applicazione ODBC 3. *x* driver.  
   
-|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Il mapping o supportate<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
+|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3.*x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3.*x*<br /><br /> applicazione?|Il mapping o supportate<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|No|[1]|Yes|  
-|**SQLAllocEnv**|No|[1]|Yes|  
-|**Funzione SQLAllocHandle**|Yes|Yes|No|  
-|**SQLAllocStmt**|No|[1]|Yes|  
+|**SQLAllocConnect**|No|No[1]|Yes|  
+|**SQLAllocEnv**|no|No[1]|Yes|  
+|**SQLAllocHandle**|Yes|Yes|no|  
+|**SQLAllocStmt**|No|No[1]|Yes|  
 |**SQLBindCol**|Yes|Yes|No|  
-|**SQLBindParam**|No|Sì [2]|Yes|  
+|**SQLBindParam**|no|Sì [2]|Yes|  
 |**SQLBindParameter**|Yes|Yes|No|  
 |**SQLBrowseConnect**|Yes|Yes|No|  
 |**SQLBulkOperations**|Yes|Yes|No|  
-|**SQLCancel**|Yes|Yes|No|  
+|**SQLCancel**|Yes|Yes|no|  
 |**SQLCloseCursor**|Yes|Yes|No|  
-|**SQLColAttribute**|Yes|Yes|No|  
-|**SQLColAttributes**|[3]|No|Yes|  
+|**SQLColAttribute**|Yes|Yes|no|  
+|**SQLColAttributes**|No[3]|No|Yes|  
 |**SQLColumnPrivileges**|Yes|Yes|No|  
 |**SQLColumns**|Yes|Yes|No|  
 |**SQLConnect**|Yes|Yes|No|  
@@ -51,60 +51,60 @@ La tabella seguente illustra il supporto di funzione in un'applicazione ODBC 3. 
 |**SQLDisconnect**|Yes|Yes|No|  
 |**SQLDriverConnect**|Yes|Yes|No|  
 |**SQLDrivers**|No|Yes|Yes|  
-|**SQLEndTran**|Yes|Yes|No|  
-|**SQLError**|No|[1]|Yes|  
+|**SQLEndTran**|Yes|Yes|no|  
+|**SQLError**|no|No[1]|Yes|  
 |**SQLExecDirect**|Yes|Yes|No|  
 |**SQLExecute**|Yes|Yes|No|  
-|**SQLExtendedFetch**|Yes|No|No|  
+|**SQLExtendedFetch**|Yes|no|No|  
 |**SQLFetch**|Yes|Yes|No|  
 |**SQLFetchScroll**|Yes|Yes|No|  
 |**SQLForeignKeys**|Yes|Yes|No|  
 |**SQLFreeConnect**|No|Sì [1]|Yes|  
 |**SQLFreeEnv**|No|Sì [1]|Yes|  
 |**SQLFreeHandle**|Yes|Yes|No|  
-|**SQLFreeStmt**|Yes|Yes|No|  
-|**SQLGetConnectAttr**|Yes|Yes|No|  
-|**SQLGetConnectOption**|[5]|[1]|Yes|  
+|**SQLFreeStmt**|Yes|Yes|no|  
+|**SQLGetConnectAttr**|Yes|Yes|no|  
+|**SQLGetConnectOption**|No[5]|No[1]|Yes|  
 |**SQLGetCursorName**|Yes|Yes|No|  
 |**SQLGetData**|Yes|Yes|No|  
 |**SQLGetDescField**|Yes|Yes|No|  
 |**SQLGetDescRec**|Yes|Yes|No|  
-|**SQLGetDiagField**|Yes|Yes|No|  
-|**SQLGetDiagRec**|Yes|Yes|No|  
-|**SQLGetEnvAttr**|Yes|Yes|No|  
-|**SQLGetFunctions**|[6]|Yes|Yes|  
+|**SQLGetDiagField**|Yes|Yes|no|  
+|**SQLGetDiagRec**|Yes|Yes|no|  
+|**SQLGetEnvAttr**|Yes|Yes|no|  
+|**SQLGetFunctions**|No[6]|Yes|Yes|  
 |**SQLGetInfo**|Yes|Yes|No|  
 |**SQLGetStmtAttr**|Yes|Yes|No|  
-|**SQLGetStmtOption**|[5]|[1]|Yes|  
-|**SQLGetTypeInfo**|Yes|Yes|No|  
+|**SQLGetStmtOption**|No[5]|No[1]|Yes|  
+|**SQLGetTypeInfo**|Yes|Yes|no|  
 |**SQLMoreResults**|Yes|Yes|No|  
 |**SQLNativeSql**|Yes|Yes|No|  
 |**SQLNumParams**|Yes|Yes|No|  
-|**SQLNumResultCols**|Yes|Yes|No|  
+|**SQLNumResultCols**|Yes|Yes|no|  
 |**SQLParamData**|Yes|Yes|No|  
 |**SQLParamOptions**|No|No|Yes|  
 |**SQLPrepare**|Yes|Yes|No|  
-|**SQLPrimaryKeys**|Yes|Yes|No|  
+|**SQLPrimaryKeys**|Yes|Yes|no|  
 |**SQLProcedureColumns**|Yes|Yes|No|  
 |**SQLProcedures**|Yes|Yes|No|  
 |**SQLPutData**|Yes|Yes|No|  
 |**SQLRowCount**|Yes|Yes|No|  
 |**SQLSetConnectAttr**|Yes|Yes|No|  
-|**SQLSetConnectOption**|[5]|[1]|Yes|  
+|**SQLSetConnectOption**|No[5]|No[1]|Yes|  
 |**SQLSetCursorName**|Yes|Yes|No|  
 |**SQLSetDescField**|Yes|Yes|No|  
 |**SQLSetDescRec**|Yes|Yes|No|  
-|**SQLSetEnvAttr**|Yes|Yes|No|  
+|**SQLSetEnvAttr**|Yes|Yes|no|  
 |**SQLSetPos**|Yes|Yes|No|  
 |**SQLSetParam**|No|No|Yes|  
 |**SQLSetScrollOption**|Yes|Yes|No|  
 |**SQLSetStmtAttr**|Yes|Yes|No|  
-|**SQLSetStmtOption**|[5]|[1]|Yes|  
+|**SQLSetStmtOption**|No[5]|No[1]|Yes|  
 |**SQLSpecialColumns**|Yes|Yes|No|  
 |**SQLStatistics**|Yes|Yes|No|  
 |**SQLTablePrivileges**|Yes|Yes|No|  
 |**SQLTables**|Yes|Yes|No|  
-|**SQLTransact**|No|[1]|Yes|  
+|**SQLTransact**|No|No[1]|Yes|  
   
  [1] questa funzione è deprecata in ODBC 3. *x*. ODBC 3. *x* applicazioni non deve usare questa funzione. Tuttavia, un'applicazione compatibile con ISO CLI o Open Group può chiamare questa funzione.  
   

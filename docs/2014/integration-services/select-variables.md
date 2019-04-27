@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766534"
 ---
 # <a name="select-variables"></a>Seleziona variabili
   Usare la finestra di dialogo **Seleziona variabili** per specificare le variabili da applicare in un'operazione di invio di messaggi nell'attività Message Queue. Nell'elenco **Variabili disponibili** sono incluse le variabili di sistema e definite dall'utente che si trovano nell'ambito dell'attività Message Queue o nel rispettivo contenitore padre. L'attività usa le variabili incluse dell'elenco **Variabili selezionate** .  

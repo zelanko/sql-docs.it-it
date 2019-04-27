@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637731"
 ---
 # <a name="example-querying-xmltype-columns"></a>Esempio: esecuzione di query sulle colonne di tipo XML
   Nella query seguente sono incluse colonne di tipo `xml` e vengono recuperati l'ID del modello del prodotto, il nome e le fasi di produzione nel primo centro di lavorazione dalla colonna `Instructions` di tipo `xml`.  

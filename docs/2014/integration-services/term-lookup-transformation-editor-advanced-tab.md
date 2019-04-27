@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766275"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor trasformazione Ricerca termini (scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare se la ricerca deve distinguere tra lettere maiuscole e minuscole.  

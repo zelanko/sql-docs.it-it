@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768437"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
   Come descritto in [codifica e debug del componente Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, il progetto del componente Script contiene tre elementi:  

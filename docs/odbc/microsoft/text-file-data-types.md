@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633006"
 ---
 # <a name="text-file-data-types"></a>Tipi di dati file di testo
 Nella tabella seguente viene illustrato come tipi di dati di testo vengono eseguito il mapping ai tipi di dati SQL ODBC. Si noti che non tutti i tipi di dati SQL ODBC sono supportati dal driver ODBC testo.  
@@ -40,7 +40,7 @@ Nella tabella seguente viene illustrato come tipi di dati di testo vengono esegu
   
  La tabella seguente illustra le limitazioni sui tipi di dati di testo.  
   
-|Tipo di dati|Description|  
+|Tipo di dati|Descrizione|  
 |---------------|-----------------|  
 |CHAR|Creazione di una colonna CHAR pari a zero o di lunghezza non specificata restituisce effettivamente una colonna bit 255.<br /><br /> Nel file delimitati, una colonna CHAR può o non abbia i delimitatori di virgoletta doppia all'inizio e alla fine; nei file di lunghezza fissa, racchiusi tra virgolette doppie non vengono utilizzati come delimitatori.|  
 |DATETIME|MM-DD-YY (ad esempio, 17-01-92)<br /><br /> MMM-DD-YY (ad esempio Gen-17-92)<br /><br /> GG-MMM-AA (ad esempio, 17-Gen-92)<br /><br /> AAAA-MM-GG (ad esempio, 1992-01-17)<br /><br /> AAAA-MMM-GG (ad esempio, 1992-gen-17)<br /><br /> I separatori di data misti non sono consentiti all'interno di una tabella.<br /><br /> ISAM il testo formatta un campo Data/ora nel formato Stati Uniti o in Europa, a seconda dell'impostazione internazionale nel Pannello di controllo di Windows.|  

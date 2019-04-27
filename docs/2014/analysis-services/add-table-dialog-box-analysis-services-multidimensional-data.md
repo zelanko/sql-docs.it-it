@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111453302bd72396e9bc44d357851cccf2f30e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635371"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi tabella (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Aggiungi tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere una tabella durante la creazione di una query nella finestra di dialogo **Crea query denominata**, **Crea query di polling** o **Crea query di elaborazione**. È possibile visualizzare la finestra di dialogo **Aggiungi tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] facendo clic su **Aggiungi tabella** dal riquadro **Barra degli strumenti** della finestra di dialogo **Crea query denominata**, **Crea query di polling** o **Crea query di elaborazione**.  
@@ -34,7 +34,7 @@ ms.locfileid: "48209707"
 |**Funzioni**|Usare la scheda **Funzioni** per visualizzare e selezionare una funzione o una stored procedure da aggiungere.|  
 |**Sinonimi**|Usare la scheda **Sinonimi** per visualizzare e selezionare un sinonimo da aggiungere.|  
 |**Aggiorna**|Fare clic su questo pulsante per ricaricare tutte le tabelle nella finestra di dialogo.|  
-|**Aggiungi**|Fare clic su questo pulsante per aggiungere l'elemento correntemente selezionato. **Nota:** questa opzione è abilitata solo se si seleziona un elemento.|  
+|**Aggiungi**|Fare clic su questo pulsante per aggiungere l'elemento correntemente selezionato. **Nota:**  Questa opzione è abilitata solo se si seleziona un elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

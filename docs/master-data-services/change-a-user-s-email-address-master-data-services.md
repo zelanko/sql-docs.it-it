@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 724c4d7ce6e9c2c72a918248db379b45912cf30e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637111"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Modificare l'indirizzo di posta elettronica di un utente (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52790213"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare l'indirizzo di posta elettronica al quale vengono inviate le notifiche e il formato predefinito di posta elettronica della notifica.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso all'area funzionale **Utenti e gruppi** .  
@@ -45,7 +45,7 @@ ms.locfileid: "52790213"
   
 6.  Fare clic su **Salva**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767609"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Passaggio 9: Test del pacchetto dell'esercitazione della lezione 1
   In questa lezione sono state eseguite le operazioni seguenti:  
   
 -   Creazione di un nuovo progetto [!INCLUDE[ssIS](../includes/ssis-md.md)] .  

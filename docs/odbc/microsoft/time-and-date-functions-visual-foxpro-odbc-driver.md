@@ -19,39 +19,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632771"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni data e ora (driver ODBC Visual FoxPro)
 La tabella seguente elenca le funzioni di data e ora ODBC supportate per il Driver ODBC Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente di Visual FoxPro.  
   
 |Grammatica ODBC|Grammatica di Visual FoxPro|  
 |------------------|---------------------------|  
-|CURDATE *)*|DATA *)*|  
-|FUNZIONE CURTIME *)*|TEMPO *)*|  
-|Funzione DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|GIORNO *)*|  
-|ORA *(time_exp)*||  
-|MINUTO *(time_exp)*||  
-|MESE *(time_exp)*||  
+|CURDATE *( )*|DATE *( )*|  
+|CURTIME *( )*|TIME *( )*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|DAYOFMONTH(*date_exp)*|DAY *( )*|  
+|HOUR *(time_exp)*||  
+|MINUTE *(time_exp)*||  
+|MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|ORA *)*|DATA/ORA *)*|  
-|SECONDO *(time_exp)*|SEC *(time_exp)*|  
-|SETTIMANA *(date_exp)*||  
-|ANNO *(date_exp)*||  
+|NOW *( )*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
+|WEEK *(date_exp)*||  
+|YEAR *(date_exp)*||  
   
  Non sono supportate le funzioni di data e ora seguenti:  
   
  DAYOFYEAR *(date_exp)*  
   
- TRIMESTRE *(date_exp)*  
+ QUARTER *(date_exp)*  
   
- Timestampadd non *(intervallo, integer_exp, timestamp_exp)*  
+ TIMESTAMPADD *(interval, integer_exp, timestamp_exp)*  
   
- Timestampdiff non *(intervallo, timestamp_exp1, timestamp_exp2)*  
+ TIMESTAMPDIFF *(interval, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>Sequenze di escape ODBC  
  Il driver supporta anche la sequenza di escape ODBC per i dati di data e timestamp. La sintassi della clausola di escape è come segue:  

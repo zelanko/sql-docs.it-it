@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634753"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare cluster di failover - NFS - SQL Server in Linux
 
@@ -36,7 +36,7 @@ Quando si configurano le cartelle per essere condivise nel server di NFS, assicu
 
 Assicurarsi che vengano applicati i propri standard di sicurezza per l'accesso. Quando si configura la cartella, assicurarsi che solo i server che fanno parte dell'istanza FCI verrà visualizzata la cartella NFS. Un esempio di un /etc/exports modificato in una soluzione basato su Linux con NFS è illustrato di seguito in cui la cartella è limitata a FCIN1 e FCIN2.
 
-![05 nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Istruzioni
 

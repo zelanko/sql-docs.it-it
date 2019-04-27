@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635597"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Finestra di dialogo Opzioni avanzate vista origine dati (Creazione guidata vista origine dati) (Analysis Services)
   La finestra di dialogo **Opzioni avanzate vista origine dati** mette a disposizioni opzioni aggiuntive per controllare il modo in cui la vista dell'origine dati attinge schemi e relazioni dall'origine dati per compilare la vista.  

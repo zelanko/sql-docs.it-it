@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a438823d1aa71eecb25c4935026c1b43e45842d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637387"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (driver Access)
 > [!NOTE]  
@@ -29,5 +29,5 @@ ms.locfileid: "47812699"
   
 |colonna|Commenti|  
 |------------|--------------|  
-|COLUMN_TYPE|SQL_PARAM_INPUT o SQL_RESULT_COL|  
+|COLUMN_TYPE|SQL_PARAM_INPUT or SQL_RESULT_COL|  
 |NUMERO ORDINALE|Si tratta di una colonna specifici del driver che viene restituita alla fine del set di risultati. Il tipo SQL della colonna è un numero intero.|
