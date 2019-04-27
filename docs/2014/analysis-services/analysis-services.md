@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638812"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è un motore dati analitici online usato nelle soluzioni di Business Intelligence (BI) e di supporto decisionale che fornisce i dati analitici usati nei report aziendali e nelle applicazioni client quali i report di Reporting Services, Excel e altri strumenti di BI di terze parti. Un flusso di lavoro tipico per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] include la creazione di un oggetto OLAP o un modello di dati tabulare, la distribuzione del modello come database in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], l'elaborazione del database per caricarvi dati e l'assegnazione di autorizzazioni per permettere l'accesso ai dati. Quando è pronto, il modello di dati multifunzione sarà accessibile a qualsiasi applicazione client che supporta [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] come origine dati.  
@@ -68,6 +68,6 @@ ms.locfileid: "53360513"
  [Installazione di SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Guida per sviluppatori &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [Centro risorse di SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
- [Sito Web SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

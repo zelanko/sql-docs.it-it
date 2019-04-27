@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769948"
 ---
 # <a name="date-and-time-formats"></a>Formati di data e ora
   L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dati. L'analisi veloce supporta i formati seguenti per i tipi di dati data e ora.  

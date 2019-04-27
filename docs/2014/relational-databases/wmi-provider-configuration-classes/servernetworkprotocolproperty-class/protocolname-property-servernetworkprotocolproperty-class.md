@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9069e005f1405304c2f8bb5828458ebe50b50e10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642688"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>Proprietà ProtocolName (classe ServerNetworkProtocolProperty)
   Ottiene il nome del protocollo a cui appartiene la proprietà a cui si fa riferimento.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637994"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
   Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come con altri tipi predefiniti, è possibile usare la `xml` tipo di dati come tipo di colonna quando si crea una tabella come un tipo di variabile, tipo di parametro, un tipo restituito dalla funzione, o in [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -66,7 +66,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta inoltre i vincoli NULL e NOT NULL sulle colonne di tipo `xml`. Esempio:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta inoltre i vincoli NULL e NOT NULL sulle colonne di tipo `xml`. Ad esempio:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

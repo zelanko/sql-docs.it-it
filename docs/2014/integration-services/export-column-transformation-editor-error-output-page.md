@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 292d872d294f81c6dac19e64af9d6a08710230b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769567"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Editor trasformazione Esportazione colonna (pagina Output degli errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le opzioni di gestione degli errori.  

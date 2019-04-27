@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769599"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor destinazione Excel (pagina Output degli errori)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor destinazione Excel** per specificare le opzioni per la gestione degli errori.  

@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637619"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
   È possibile creare variabili, parametri e colonne di tipo `xml`. Se si desidera, è inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo `xml`. In questo caso, il `xml` istanza del tipo di dati viene chiamato *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
@@ -67,14 +67,14 @@ ms.locfileid: "58538439"
   
  Negli esempi seguenti, per specificare il nome della raccolta XML Schema viene utilizzata una convenzione di denominazione in due parti. La prima parte è il nome dello schema e la seconda parte è il nome della raccolta XML Schema.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: Associazione di una raccolta di schemi a una variabile di tipo xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: Associazione di una raccolta di schemi a una variabile di tipo XML  
  L'esempio seguente crea un`xml` variabile di tipo e associa una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Esempio: Specifica di uno Schema per una colonna di tipo xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Esempio: Specifica di uno schema per una colonna di tipo XML  
  Nell'esempio seguente viene creata una tabella con una colonna di tipo `xml` e viene specificato uno schema per la colonna:  
   
 ```  
@@ -83,7 +83,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Esempio: Il passaggio di un parametro di tipo xml a una Stored Procedure  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Esempio: Passaggio di un parametro di tipo XML a una stored procedure  
  Nell'esempio seguente viene passato un parametro di tipo `xml` a una stored procedure e viene specificato uno schema per la variabile:  
   
 ```  

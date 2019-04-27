@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768413"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
   Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.  

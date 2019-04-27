@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766673"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include i tre ruoli predefiniti a livello di database, `db_ssisadmin`, **db_ssisltduser**, e **db_ssisoperator**, per controllare l'accesso ai pacchetti. I ruoli possono essere implementati solo nei pacchetti vengono salvati i `msdb` del database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I ruoli vengono assegnati a un pacchetto in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le assegnazioni di ruolo vengono salvate le `msdb` database.  

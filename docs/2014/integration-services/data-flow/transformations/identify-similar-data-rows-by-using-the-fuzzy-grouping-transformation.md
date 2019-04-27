@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770714"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy
   È possibile aggiungere e configurare una trasformazione Raggruppamento fuzzy solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  

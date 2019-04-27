@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769267"
 ---
 # <a name="-equal-ssis-expression"></a>== (uguale) (espressione SSIS)
   Viene eseguito un confronto per determinare se due espressioni sono uguali. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](integration-services-data-types-in-expressions.md).  
@@ -52,7 +52,7 @@ expression1 == expression2
     > [!NOTE]  
     >  Per i confronti di stringa viene applicata la distinzione tra maiuscole e minuscole, tra caratteri accentati e non accentati, la distinzione Kana e di larghezza.  
   
--   **Data, ora o data/ora** entrambe *expression1* e *expression2* deve restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, or DT_FILETIME.  
+-   **Date, Time o Date/Time** Sia *expression1* che *expression2* devono restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, or DT_FILETIME.  
   
     > [!NOTE]  
     >  Il sistema non supporta i confronti tra un'espressione che restituisce un tipo di dati di ora e un'espressione che restituisce una data o un tipo di dati di data/ora. Viene generato un errore.  
@@ -81,7 +81,7 @@ expression1 == expression2
   
 -   **Binary** Sia *expression1* che *expression2* devono restituire il tipo di dati DT_BYTES.  
   
--   **BLOB** entrambe *expression1* e *expression2* devono restituire il tipo di dati stesso BLOB Binary Large Object Block (): DT_TEXT, DT_NTEXT o DT_IMAGE.  
+-   **BLOB** Sia *expression1* che *expression2* devono restituire lo stesso tipo di dati BLOB (Binary Large Object Block): DT_TEXT, DT_NTEXT o DT_IMAGE.  
   
  Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   

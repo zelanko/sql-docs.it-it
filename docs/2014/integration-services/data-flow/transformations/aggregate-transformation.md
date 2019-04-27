@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770637"
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
   La trasformazione Aggregazione applica funzioni di aggregazione, ad esempio Media, ai valori delle colonne e copia i risultati nell'output della trasformazione. Oltre alle funzioni di aggregazione, per questa trasformazione è disponibile la clausola GROUP BY, che consente di specificare i gruppi su cui eseguire l'aggregazione.  
@@ -35,7 +35,7 @@ ms.locfileid: "58384872"
 |Group by|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per altre informazioni, vedere [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
 |Sum|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
 |Media|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per altre informazioni, vedere [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
-|Conteggio|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
+|Count|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count Distinct|Consente di restituire il numero di valori non Null univoci di un gruppo.|  
 |Minimo|Restituisce il valore minimo in un gruppo. Per altre informazioni, vedere [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). Diversamente dalla funzione Transact-SQL MIN, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
 |Massimo|Restituisce il valore massimo in un gruppo. Per altre informazioni, vedere [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). Diversamente dalla funzione Transact-SQL MAX, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
@@ -100,7 +100,7 @@ ms.locfileid: "58384872"
   
  La trasformazione Aggregazione è asincrona, pertanto non legge e pubblica i dati riga per riga, ma legge l'intero set di righe, ne esegue i raggruppamenti e le aggregazioni e quindi pubblica i risultati.  
   
- Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. Ad esempio, un input della trasformazione aggregazione potrebbe avere tre colonne: **CountryRegion**, **Città**, e **popolamento**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
+ Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City** e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
   
  È inoltre possibile aggiungere più output alla trasformazione Aggregazione e indirizzare ogni aggregazione a un output diverso. Se ad esempio la trasformazione Aggregazione applica le funzioni Somma e Media, ogni aggregazione potrà essere indirizzata a un output diverso.  
   

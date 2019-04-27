@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634576"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "49072215"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   

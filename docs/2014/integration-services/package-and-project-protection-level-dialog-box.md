@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767043"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
   Utilizzare la finestra di dialogo **Livello di protezione pacchetto** per aggiornare il livello di protezione di un pacchetto. Il livello di protezione determina il metodo di protezione, la password o chiave utente e l'ambito di protezione del pacchetto. La protezione può includere tutti i dati o solo i dati sensibili.  

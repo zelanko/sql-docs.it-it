@@ -22,11 +22,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636280"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Statistiche sul profilo dell'applicazione  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descrizione|  
 |-------------------|-----------------|  
 |TimerResolution|Risoluzione minima del tempo di clock del server in millisecondi. Viene generalmente riportato come 0 (zero) e deve essere considerato solo se il numero riportato è maggiore. Se la risoluzione minima del tempo di clock del server è maggiore dell'intervallo probabile per alcune delle statistiche basate sul timer, tali statistiche possono essere state alterate.|  
 |SQLidu|Numero di istruzioni INSERT, DELETE o UPDATE dopo SQL_PERF_START.|  
@@ -117,7 +117,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Statistiche temporali  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descrizione|  
 |-------------------|-----------------|  
 |msExecutionTime|Tempo cumulativo impiegato dal driver per l'elaborazione dopo SQL_PERF_START, incluso il tempo di attesa per le risposte dal server.|  
 |msNetworkServerTime|Tempo cumulativo di attesa del driver per le risposte dal server.|  

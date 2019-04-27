@@ -12,11 +12,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524289"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta dati e indici spaziali. Un *indice spaziale* è un tipo di indice esteso che consente di indicizzare una colonna spaziale. Una colonna spaziale è una colonna della tabella che contiene dati spaziali, ad esempio `geometry` o `geography`.  
@@ -106,7 +106,7 @@ ms.locfileid: "54100886"
 #### <a name="deepest-cell-rule"></a>Regola della cella più in basso  
  La regola della cella più in basso sfrutta il fatto che ogni cella di livello inferiore appartiene alla cella a essa superiore: una cella di livello 4 appartiene a una cella di livello 3, una cella di livello 3 appartiene a una cella di livello 2 e una cella di livello 2 appartiene a una cella di livello 1. Un oggetto che appartiene alla cella 1.1.1.1, ad esempio, appartiene anche alle celle 1.1.1, 1.1 e 1. Il riconoscimento di tali relazioni gerarchiche tra celle è incorporata in Query Processor. Pertanto, solo le celle di livello più basso devono essere registrate nell'indice, rendendo minime le informazioni da archiviare.  
   
- Nell'illustrazione seguente, un poligono a forma di diamante relativamente piccolo è suddiviso a mosaico. L'indice utilizza il limite di celle per oggetto predefinito di 16 che non è raggiunto per questo piccolo oggetto. La suddivisione a mosaico, pertanto, continua fino al livello 4. Il poligono si trova nelle celle comprese tra il livello 1 e il livello 3 seguenti: 4, 4.4 e 4.4.10 e 4.4.14. Usando la regola della cella più in basso, tuttavia, nella suddivisione a mosaico vengono contate solo le 12 celle di livello 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
+ Nell'illustrazione seguente, un poligono a forma di diamante relativamente piccolo è suddiviso a mosaico. L'indice utilizza il limite di celle per oggetto predefinito di 16 che non è raggiunto per questo piccolo oggetto. La suddivisione a mosaico, pertanto, continua fino al livello 4. Il poligono si trova nel livello 1 seguente attraverso le celle di livello 3: 4, 4.4 e 4.4.10 e 4.4.14. Tuttavia, nella suddivisione a mosaico utilizzando la regola della cella più in basso, conta solo le 12 celle di livello 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
   
  ![Ottimizzazione della cella più in basso](../../database-engine/media/spndx-opt-deepest-cell.gif "Ottimizzazione della cella più in basso")  
   
@@ -204,7 +204,7 @@ ms.locfileid: "54100886"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Metodi di geografia supportati da indici spaziali  
- In determinate condizioni, gli indici spaziali supportano i seguenti metodi geography orientati ai set: Stintersects () e stdistance (). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
+ In determinate condizioni, gli indici spaziali supportano i seguenti metodi geography orientati ai set: STIntersects(),STEquals(), and STDistance(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
  *geography1*.*nome_metodo*(*geography2*)*operatore_confronto**numero_valido*  
   

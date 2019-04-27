@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639871"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>I componenti Data Warehouse - sistema di piattaforma Analitica in parallelo
 Questo articolo illustra il software di appliance e i componenti software non appliance del sistema di piattaforma Analitica.  
@@ -95,7 +95,7 @@ Data Movement Service (DMS) in esecuzione in ogni nodo di calcolo per eseguire l
 ### <a name="compute-node-databases"></a>I database di nodo di calcolo 
 Ogni nodo di calcolo viene eseguito un'istanza di SQL Server per elaborare query e gestire i dati utente.  
   
-## <a name="appliance-fabric"></a>Infrastruttura di Appliance  
+## <a name="appliance-fabric"></a>Appliance Fabric  
 L'infrastruttura di appliance fornisce il sistema operativo, servizi e infrastruttura di rete per l'appliance.  
   
 ### <a name="domain-controller"></a>Controller di dominio  
@@ -132,7 +132,7 @@ La tecnologia PolyBase si integra i dati pwd di SQL Server con dati Hadoop ester
   
 -   Distribuzione di Hadoop di Hortonworks  
   
--   Cloudera distribuzione di Hadoop  
+-   Cloudera Distribution of Hadoop  
   
 -   Dati archiviati in archivio Blob di Azure in HDInsight  
   

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52746924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642585"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lezione 2: Configurazione delle autorizzazioni per oggetti di Database
   La concessione di un accesso utente a un database consiste in tre passaggi. Viene innanzitutto creato un account di accesso, il quale consente all'utente di connettersi a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. L'account di accesso viene quindi configurato come utente nel database specificato. Viene infine concessa l'autorizzazione utente per gli oggetti di database. In questa lezione vengono illustrati tali passaggi e viene descritto come creare due oggetti, ovvero una vista e una stored procedure.  

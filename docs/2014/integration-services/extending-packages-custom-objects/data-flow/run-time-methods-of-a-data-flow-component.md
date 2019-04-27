@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768637"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Metodi di runtime di un componente del flusso di dati
   In fase di esecuzione l'attività Flusso di dati esamina la sequenza di componenti, prepara un piano di esecuzione e gestisce un pool di thread di lavoro che eseguono il piano di lavoro. L'attività carica righe di dati dalle origini, li elabora tramite trasformazioni, quindi li salva nelle destinazioni.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 167e8deb4009e7bf9398f89665cad9b3d368b1eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766643"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Seleziona posizione di destinazione (Aggiornamento guidato pacchetti SSIS)
   Usare la pagina **Seleziona posizione di destinazione** per specificare la destinazione in cui salvare i pacchetti aggiornati.  

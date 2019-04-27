@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766240"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi quando si eseguono i pacchetti dopo averli completati e distribuiti.  
@@ -85,7 +85,7 @@ ms.locfileid: "58374922"
   
     3.  **Valutare l'opportunità di acquisire i dati sul conteggio delle righe**. Prendere in considerazione la creazione di una tabella separata per le informazioni sul conteggio delle righe, in cui ogni istanza di esecuzione di un pacchetto è identificata tramite il relativo ExecutionID. Utilizzare la trasformazione Conteggio righe per salvare il conteggio delle righe in una serie di variabili in punti critici del flusso di dati. Al termine del flusso di dati, utilizzare un'attività Esegui SQL per inserire le serie di valori in una riga della tabella, per operazioni successive di analisi e creazione di report.  
   
-     Per altre informazioni su questo approccio, vedere la sezione "Registrazione e controllo ETL," nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i file di dump del debug  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Per altre informazioni, vedere [Generazione di file di dump per l'esecuzione del pacchetto](generating-dump-files-for-package-execution.md).  

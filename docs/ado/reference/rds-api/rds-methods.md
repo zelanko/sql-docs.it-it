@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4913009226232f1359fbba25d50bcaf0d095da17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642486"
 ---
 # <a name="rds-methods"></a>Metodi di Servizi Desktop remoto
 > [!IMPORTANT]
@@ -27,18 +27,18 @@ ms.locfileid: "51604312"
   
 |||  
 |-|-|  
-|[Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)|Annulla l'esecuzione di un'in sospeso, chiamata asincrona al metodo.|  
-|[Metodo CancelUpdate (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Annulla tutte le modifiche apportate alla riga corrente o nuova di un' **Recordset** oggetto.|  
-|[ConvertToString (Servizi Desktop remoto)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte un **Recordset** a una stringa MIME che rappresenta i dati del recordset.|  
-|[CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)|Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso.|  
-|[CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crea un oggetto vuoto, disconnesso **Recordset**.|  
+|[Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Annulla l'esecuzione di un'in sospeso, chiamata asincrona al metodo.|  
+|[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Annulla tutte le modifiche apportate alla riga corrente o nuova di un' **Recordset** oggetto.|  
+|[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte un **Recordset** a una stringa MIME che rappresenta i dati del recordset.|  
+|[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso.|  
+|[CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crea un oggetto vuoto, disconnesso **Recordset**.|  
 |[Metodo Execute (Servizi Desktop remoto)](../../../ado/reference/rds-api/execute-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati (per l'uso con ADO 2.5 e versioni successiva).|  
 |[Metodo Execute21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/execute21-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati (per l'uso con ADO 2.1).|  
 |[InvokeService (Servizi Desktop remoto)](../../../ado/reference/rds-api/invokeservice-rds.md)|Restituisce un puntatore all'interfaccia richiesta in una versione più con supporta dell'oggetto.|  
-|[Metodi MoveFirst, MoveLast, MoveNext, MovePrevious (Servizi Desktop remoto)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Sposta il primo, ultimo, successivo o precedente record in un oggetto specificato **Recordset** oggetto.|  
-|[Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)|Viene utilizzata una stringa di query SQL valida per restituire un **Recordset**.|  
-|[Refresh (Servizi Desktop remoto)](../../../ado/reference/rds-api/refresh-method-rds.md)|Riesegue l'origine dati specificata una query di **Connect** proprietà e gli aggiornamenti, i risultati della query.|  
-|[Reset (Servizi Desktop remoto)](../../../ado/reference/rds-api/reset-method-rds.md)|Esegue l'ordinamento o filtro sul lato client **Recordset**, basata sulla proprietà filtro e ordinamento specificate.|  
+|[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Sposta il primo, ultimo, successivo o precedente record in un oggetto specificato **Recordset** oggetto.|  
+|[Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Viene utilizzata una stringa di query SQL valida per restituire un **Recordset**.|  
+|[Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Riesegue l'origine dati specificata una query di **Connect** proprietà e gli aggiornamenti, i risultati della query.|  
+|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Esegue l'ordinamento o filtro sul lato client **Recordset**, basata sulla proprietà filtro e ordinamento specificate.|  
 |[SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Invia le modifiche in locale memorizzata nella cache e aggiornabile in sospeso **Recordset** per l'origine dati specificata nel **Connect** proprietà.|  
 |[Metodo Synchronize (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronizzare i set di record specificato con il database specificato dalla stringa di connessione (per l'uso con ADO 2.5 e versioni successiva).|  
 |[Metodo Synchronize21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizzare i set di record specificato con il database specificato dalla stringa di connessione (per l'uso con ADO 2.1).|

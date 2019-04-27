@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767073"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Ruoli pacchetto
   Usare la finestra di dialogo **Ruoli pacchetto**, disponibile in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], per specificare i ruoli a livello di database che dispongono dell'accesso in lettura al pacchetto e quelli che dispongono dell'accesso in scrittura. I ruoli a livello di database si applicano solo ai pacchetti archiviati nel database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**.  

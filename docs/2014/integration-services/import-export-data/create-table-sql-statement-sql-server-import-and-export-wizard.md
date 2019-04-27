@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768003"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Istruzione SQL CREATE TABLE (Importazione/Esportazione guidata SQL Server)
   Usare la **istruzione SQL Create Table** finestra di dialogo per visualizzare l'istruzione generata automaticamente, oppure a modificarla in base alle proprie esigenze. Se si modifica l'istruzione, potrebbe essere necessario apportare le modifiche adeguate al mapping delle colonne, nonché, in seguito, gestire manualmente l'istruzione SQL modificata.  

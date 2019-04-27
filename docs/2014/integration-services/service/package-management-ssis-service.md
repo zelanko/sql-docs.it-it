@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766628"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
   La gestione dei pacchetti implica attività come le seguenti:  
@@ -56,7 +56,7 @@ ms.locfileid: "58375349"
   
  La cartella **Pacchetti in esecuzione** non contiene alcuna sottocartella e non è estensibile.  
   
- Per impostazione predefinita, il **pacchetti archiviati** cartella contiene due cartelle: **File System** e **MSDB**. La cartella **File System** include i pacchetti che vengono salvati nel file system. La posizione di tali file è specificata nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La cartella predefinita è Packages, inclusa in %Programmi%\Microsoft SQL Server\100\DTS. La cartella **MSDB** include i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati salvati nel database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server. La tabella sysssispackages contiene i pacchetti salvati in msdb.  
+ Per impostazione predefinita, la cartella **Pacchetti archiviati** contiene due sottocartelle, ovvero **File System** e **MSDB**. La cartella **File System** include i pacchetti che vengono salvati nel file system. La posizione di tali file è specificata nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La cartella predefinita è Packages, inclusa in %Programmi%\Microsoft SQL Server\100\DTS. La cartella **MSDB** include i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati salvati nel database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server. La tabella sysssispackages contiene i pacchetti salvati in msdb.  
   
  Per visualizzare un elenco dei pacchetti presenti nell'archivio pacchetti, è necessario aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   

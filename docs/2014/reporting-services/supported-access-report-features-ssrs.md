@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631327"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Caratteristiche supportate dei report di Access (SSRS)
   Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
@@ -263,7 +263,7 @@ ms.locfileid: "59933103"
   
 |||||  
 |-|-|-|-|  
-|Avg|Conteggio|Max|Min|  
+|Avg|Count|Max|Min|  
 |StDev|StDevP|Sum|Var|  
 |VarP||||  
   

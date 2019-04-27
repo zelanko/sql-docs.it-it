@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767583"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Passaggio 1: Compilazione dell'utilità di distribuzione
   In questa attività verrà configurata e compilata un'utilità di distribuzione per il progetto Deployment Tutorial.  
@@ -48,7 +48,7 @@ ms.locfileid: "58381199"
   
 4.  Nella finestra Output verificare le informazioni seguenti:  
   
-     Compilazione avviata: Progetto SQL Integration Services: Incrementale...  
+     Compilazione avviata: Progetto di SQL Integration Services: Incrementale ...  
   
      Creazione dell'utilità di distribuzione in corso...  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58381199"
   
      Compilazione completata -- 0 errori, 0 avvisi  
   
-     ========== Compilazione: 0 ha avuto esito positivo, 0 non riuscite, 1 aggiornate, 0 ignorate ===  
+     ========== Compilazione: 0 completate, 0 non riuscite, 1 aggiornate, 0 ignorate ==========  
   
 5.  Scegliere **Esci** dal menu **File**. Se richiesto per salvare le modifiche agli elementi di Deployment Tutorial, fare clic su **Sì**.  
   

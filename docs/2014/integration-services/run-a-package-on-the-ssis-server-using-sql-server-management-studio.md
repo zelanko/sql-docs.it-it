@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37470afae8029f80511b2f9d9b709a7094d5e931
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766923"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Eseguire un pacchetto sul server SSIS mediante SQL Server Management Studio
   Dopo aver distribuito il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], è possibile eseguire il pacchetto nel server.  

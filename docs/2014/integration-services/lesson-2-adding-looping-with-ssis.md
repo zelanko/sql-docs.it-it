@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767553"
 ---
 # <a name="lesson-2-adding-looping"></a>Lezione 2: Aggiungere cicli
   Nella [Lezione 1: Creazione del progetto e il pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md), è stato creato un pacchetto che estrae i dati da un'unica origine file flat, trasformati i dati usando le trasformazioni ricerca e infine caricati i dati nella **FactCurrency** tabella dei fatti i **AdventureWorksDW2012** database di esempio.  

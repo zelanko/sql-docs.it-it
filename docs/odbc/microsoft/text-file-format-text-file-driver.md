@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633016"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato file di testo (driver file di testo)
 Il driver ODBC testo supporta entrambi i file di testo a larghezza fissa che quelli delimitati. Un file di testo è costituito da una riga di intestazione facoltativi e zero o più righe di testo.  
@@ -41,11 +41,11 @@ Il driver ODBC testo supporta entrambi i file di testo a larghezza fissa che que
 |Formato|Rappresentazione|  
 |------------|--------------------|  
 |Non-corsivo|Caratteri che devono essere immesso come visualizzato|  
-|*Corsivo*|Argomenti definiti in un' posizione nella grammatica|  
+|*italics*|Argomenti definiti in un' posizione nella grammatica|  
 |parentesi quadre ([])|Elementi facoltativi|  
 |le parentesi graffe ({})|Un elenco di scelte si escludono a vicenda|  
 |le barre verticali (&#124;)|Opzioni si escludono a vicenda separate|  
-|puntini di sospensione (...)|Elementi che possono essere ripetuti una o più volte|  
+|ellipses (...)|Elementi che possono essere ripetuti una o più volte|  
   
  Il formato di un file di testo è:  
   

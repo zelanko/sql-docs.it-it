@@ -20,18 +20,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635220"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
   Gli argomenti di questa sezione descrivono descritte le modifiche del comportamento tra le versioni di  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |------------|-----------------|  
 |[Analysis Services deprecate in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)|Descrive le funzionalità mantenute nella versione corrente per garantire la compatibilità con le versioni precedenti, che saranno però rimosse nelle versioni future di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Caratteristiche non più disponibili di Analysis Services in SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)|Descrive le funzionalità disponibili nelle versioni precedenti di  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che sono state però rimosse nelle versioni successive.|  

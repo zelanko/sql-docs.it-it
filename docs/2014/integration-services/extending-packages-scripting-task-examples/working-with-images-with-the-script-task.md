@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768447"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilizzo di immagini con l'attività Script
   Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Lo spazio dei nomi `System.Drawing` in Microsoft .NET Framework fornisce le classi per la modifica delle immagini.  

@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768853"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
@@ -125,7 +125,7 @@ ms.locfileid: "58376041"
   
  Se il nome del pacchetto è EmailRowCountPP, eseguito il 3/4/2005, con durata di esecuzione di 9 secondi, l'espressione viene valutata nella stringa seguente.  
   
- PExpression-->Package: (EmailRowCountPP) Avviato: 3 o 4/2005 secondi di durata: 9 di 11 06 18 AM.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Espressione di proprietà per il testo di un messaggio di posta elettronica  
  L'espressione di proprietà seguente consente di impostare la proprietà MessageSource dell'attività Invia messaggi. Nell'espressione vengono utilizzati valori letterali stringa, variabili definite dall'utente e l'operatore di concatenazione (+). Le variabili definite dall'utente sono denominate `nasdaqrawrows`, `nyserawrows`e `amexrawrows`. La stringa "\n" indica un ritorno a capo.  
@@ -136,11 +136,11 @@ ms.locfileid: "58376041"
   
  Rows Processed:  
   
- NASDAQ: 7058 7058  
+ NASDAQ: 7058  
   
- NYSE: 3528 3528  
+ NYSE: 3528  
   
- AMEX: 1102 1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Espressione di proprietà per la proprietà Executable dell'attività Esegui processo  
  L'espressione di proprietà seguente consente di impostare la proprietà Executable dell'attività Esegui processo. Nell'espressione viene utilizzata una combinazione di valori letterali stringa, operatori e funzioni, e precisamente le funzioni DATEPART e GETDATE e l'operatore condizionale.  
