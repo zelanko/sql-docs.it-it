@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743287"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lezione 9: ripristinare un database da Archiviazione di Windows Azure
   In questa lezione verrà illustrato come ripristinare un file di backup del database da Archiviazione di Windows Azure in un database, localmente o in una macchina virtuale di Windows Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6, 7 e 8.  
@@ -43,7 +43,7 @@ ms.locfileid: "58534443"
   
 3.  Copiare e incollare il seguente script completo nella finestra Query. Modificare lo script in base alle esigenze.  
   
-     **Nota:** eseguire l'istruzione `RESTORE` per ripristinare il backup del database (con estensione bak) del Servizio di archiviazione di Microsoft Azure in un'istanza del database in un altro computer.  
+     **Nota:** Eseguire il `RESTORE` istruzione per ripristinare il backup del database (con estensione bak) in archiviazione di Azure a un'istanza di database in un altro computer.  
   
     ```sql  
   

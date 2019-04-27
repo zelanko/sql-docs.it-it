@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6874f54f70e038cd7cafbb0c82a463513d9ed10d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657607"
 ---
 # <a name="query-builder-report-wizard"></a>Generatore di query (Creazione guidata report)
   Utilizzare un generatore di query per specificare una query che recuperi un set di risultati da utilizzare in un report. È possibile scegliere tra due generatori di query:  

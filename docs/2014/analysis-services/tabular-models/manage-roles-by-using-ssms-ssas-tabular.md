@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d437313d93871de4a8f7cdb21b3c0e18df8c1f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756976"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gestire ruoli tramite (SSAS tabulare)
   È possibile creare, modificare e gestire ruoli per un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48218931"
   
 4.  In **Impostare le autorizzazioni del ruolo per il database**selezionare una delle opzioni delle autorizzazioni seguenti:  
   
-    |Autorizzazione|Description|  
+    |Autorizzazione|Descrizione|  
     |----------------|-----------------|  
     |**Controllo completo (amministratore)**|I membri possono apportare modifiche allo schema del modello e visualizzare tutti i dati.|  
     |**Elaborazione database**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né visualizzare dati.|  
@@ -83,6 +83,6 @@ ms.locfileid: "48218931"
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da eliminare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
+ [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  
   
   

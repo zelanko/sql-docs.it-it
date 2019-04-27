@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778952"
 ---
 # <a name="full-text-search-f1-help"></a>Guida sensibile al contesto di Ricerca full-text
-  In questa sezione vengono forniti argomenti sui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] finestre di dialogo di ricerca Full-Text in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per accedere a un argomento relativo all'interfaccia utente, premere F1 oppure fare clic su **?** mentre la finestra di dialogo è aperta.  
+  In questa sezione sono disponibili argomenti sulle finestre di dialogo relative alla ricerca full-text di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] presenti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per accedere a un argomento relativo all'interfaccia utente, premere F1 oppure fare clic su **?** mentre la finestra di dialogo è aperta.  
   
 |||  
 |-|-|  

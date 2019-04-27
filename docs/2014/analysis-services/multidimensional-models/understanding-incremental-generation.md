@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740921"
 ---
 # <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
   Dopo la generazione iniziale dello schema, è possibile modificare le definizioni dei cubi e delle dimensioni mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e quindi eseguire di nuovo la Generazione guidata schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747713"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Finestra di dialogo Seleziona colonna chiave tabella nidificata (visualizzazione Struttura di data mining)
   Utilizzare la finestra di dialogo **Seleziona colonna chiave tabella nidificata** per indicare una colonna che fungerà da chiave per la nuova tabella nidificata. Alla chiusura della finestra di dialogo, una nuova tabella verrà aggiunta alla struttura di data mining contenente la colonna chiave specificata. È possibile aggiungere altre colonne alla tabella annidata facendo clic con il pulsante destro del mouse sulla struttura e selezionando **Aggiungi colonna**. Nella finestra di dialogo sono disponibili opzioni diverse a seconda che si utilizzi una modello di data mining OLAP o relazionale.  

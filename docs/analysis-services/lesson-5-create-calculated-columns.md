@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752515"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lezione 5: Creare colonne calcolate
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Verranno create cinque nuove colonne calcolate in tre tabelle diverse. I passagg
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 4: creare relazioni](../analysis-services/lesson-4-create-relationships.md). 
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 4: Creare relazioni](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Creare colonne calcolate  
   
@@ -52,7 +52,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 5.  Rinominare la colonna **MonthCalendar**. 
 
-    ![come-tabulare-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![as-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
 La colonna calcolata MonthCalendar fornisce un nome ordinabile per il mese.  
   
@@ -122,12 +122,12 @@ La colonna calcolata ProductCategoryName viene usata per creare una gerarchia ne
   
 5.  Trascinare la colonna tra le **SalesAmount** colonna e il **TaxAmt** colonna. 
  
-      ![come-tabulare-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     La colonna calcolata Margin viene usata per analizzare i margini di profitto per ogni vendita.  
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 6: creare misure](../analysis-services/lesson-6-create-measures.md).
+Passare alla lezione successiva: [Lezione 6: Creare misure](../analysis-services/lesson-6-create-measures.md).
   
   
   

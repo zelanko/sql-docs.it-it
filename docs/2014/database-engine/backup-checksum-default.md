@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788800"
 ---
 # <a name="backup-checksum-default"></a>checksum di backup predefinito
   Usare l'impostazione del checksum di backup predefinito per abilitare o disabilitare il checksum di backup durante il backup e ripristino.  
@@ -25,7 +25,7 @@ ms.locfileid: "48126735"
 |-|-|  
 |**Valore**|**Significato**|  
 |0|Disabilitato. Si tratta dell'impostazione predefinita.|  
-|1|Abilitata|  
+|1|Enabled|  
   
  L'impostazione diventa immediatamente effettiva.  
   

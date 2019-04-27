@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650662"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Traduzione dati attributo (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Traduzione dati attributo** per impostare la colonna contenente i dati della didascalia della traduzione, nonché le regole di confronto e il tipo di ordinamento da usare per i dati tradotti. Per visualizzare la finestra di dialogo **Traduzione dati attributo** , è possibile:  
@@ -64,7 +64,7 @@ ms.locfileid: "48117368"
  Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni accentate e non accentate delle lettere.  
   
  **Distinzione Kana**  
- Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana.  
+ Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua associata o l'alfabeto, nonché per distinguere tra i due tipi di caratteri kana giapponesi: Hiragana e Katakana.  
   
  Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali i caratteri Hiragana e Katakana.  
   

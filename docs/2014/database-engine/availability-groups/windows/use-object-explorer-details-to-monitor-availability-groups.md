@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788324"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Utilizzare Dettagli Esplora oggetti per monitorare Gruppi di disponibilità (SQL Server Management Studio)
   In questo argomento viene illustrato come utilizzare il riquadro **Dettagli Esplora oggetti** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per monitorare e gestire i database di disponibilità AlwaysOn, le repliche di disponibilità e i gruppi di disponibilità esistenti.  
@@ -31,11 +31,11 @@ ms.locfileid: "48075131"
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
--   **Per monitorare un gruppo di disponibilità tramite:**  [SQL Server Management Studio](#SSMSProcedure)  
+-   **Per monitorare un gruppo di disponibilità utilizzando:**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **Dettagli Esplora oggetti:**  
   
-     [Dettagli gruppo di disponibilità](#AvGroupsDetails)  
+     [Dettagli del gruppo di disponibilità](#AvGroupsDetails)  
   
      [Dettagli replica di disponibilità](#AvReplicaDetails)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48075131"
 ##  <a name="AvGroupsDetails"></a> Dettagli gruppo di disponibilità  
  Nella schermata dei dettagli **Gruppi di disponibilità** vengono visualizzate le colonne seguenti:  
   
- **Nome**  
+ **Name**  
  Elenca le cartelle **Repliche di disponibilità**, **Database di disponibilità**e **Listener gruppo disponibilità** del gruppo di disponibilità selezionato.  
   
 ##  <a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
@@ -87,7 +87,7 @@ ms.locfileid: "48075131"
   
  I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Non consentire connessioni**|Le connessioni dirette ai database di disponibilità non sono consentite quando questa replica di disponibilità agisce come una replica secondaria. I database secondari non sono disponibili per l'accesso in lettura.|  
 |**Consenti solo connessioni con finalità di lettura**|Sono consentite solo connessioni dirette in sola lettura quando questa replica agisce come una replica secondaria. Tutti i database nella replica sono disponibili per l'accesso in lettura.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48075131"
  **Stato connessione**  
  Indica se una replica secondaria è attualmente connessa alla replica primaria. I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Disconnesso**|Per una replica di disponibilità remota, indica che è disconnessa dalla replica di disponibilità locale. La risposta della replica locale allo stato Disconnesso dipende dal relativo ruolo:<br /><br /> Sulla replica primaria, se una replica secondaria è disconnessa, i database secondari sono contrassegnati come **Non sincronizzato** sulla replica primaria e la replica primaria attende che la replica secondaria venga riconnessa.<br /><br /> Sulla replica secondaria, dopo avere rilevato che è disconnessa, tenta di riconnettersi alla replica primaria.|  
 |**Connesso**|Una replica di disponibilità remota attualmente connessa alla replica locale.|  
@@ -105,10 +105,10 @@ ms.locfileid: "48075131"
  **Stato di sincronizzazione**  
  Indica se una replica secondaria è attualmente sincronizzata con la replica primaria. I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Non sincronizzato**|Il database non è sincronizzato o non è stato ancora aggiunto al gruppo di disponibilità.|  
-|**Sincronizzato**|Il database è sincronizzato con il database primario sulla replica primaria corrente o sull'ultima replica primaria.<br /><br /> Nota: nella modalità prestazioni, il database non si trova mai nello stato sincronizzato.|  
+|**Sincronizzato**|Il database è sincronizzato con il database primario sulla replica primaria corrente o sull'ultima replica primaria.<br /><br /> Nota: In modalità a prestazioni, il database si trova mai nello stato Synchronized.|  
 |**NULL**|Stato sconosciuto. Si ottiene questo valore quando l'istanza del server locale non è in grado di comunicare con il cluster di failover WSFC, ovvero il nodo locale non fa parte del quorum WSFC.|  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ ms.locfileid: "48075131"
 ##  <a name="AvDbDetails"></a> Dettagli database di disponibilità  
  Nella schermata dei dettagli **Database di disponibilità** vengono visualizzare le seguenti proprietà dei database di disponibilità di un determinato gruppo di disponibilità:  
   
- **Nome**  
+ **Name**  
  Nome del database di disponibilità.  
   
  **Stato di sincronizzazione**  
@@ -125,14 +125,14 @@ ms.locfileid: "48075131"
   
  Gli stati di sincronizzazione possibili sono:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|Sincronizzazione in corso|Il database secondario ha ricevuto i record del log delle transazioni per il database primario che non sono ancora scritti su disco (finali).<br /><br /> Nota: nella modalità con commit asincrono, lo stato di sincronizzazione è sempre **Sincronizzazione**.|  
+|Sincronizzazione in corso|Il database secondario ha ricevuto i record del log delle transazioni per il database primario che non sono ancora scritti su disco (finali).<br /><br /> Nota: Nella modalità con commit asincrono, lo stato di sincronizzazione è sempre **Synchronizing**.|  
   
  **Sospeso**  
  Indica se il database di disponibilità è attualmente online. I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Sospeso**|Questo stato indica che il database è stato sospeso in locale e che deve essere ripreso manualmente.<br /><br /> Sulla replica primaria, il valore non è attendibile per un database secondario. Per determinare in modo affidabile se un database secondario è sospeso, eseguire una query sulla replica secondaria che ospita il database.|  
 |**Non unito in join**|Indica che il database secondario non è stato aggiunto al gruppo di disponibilità o stato rimosso dal gruppo.|  

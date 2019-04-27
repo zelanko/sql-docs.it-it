@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58acd7eab11302e1963f5b456cefd81a57e2f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664283"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Esplorazione di modelli in Excel (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Esplora modello sulla barra multifunzione Data Mining](media/dmc-browse.gif "pulsante Esplora modello sulla barra multifunzione Data Mining")  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757246"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
   In questo argomento vengono fornite agli autori di modelli tabulari informazioni sulla modalità di utilizzo delle credenziali di accesso da parte di Analysis Services in caso di connessione a un'origine dati per importare ed elaborare (aggiornare) i dati.  
@@ -66,7 +66,7 @@ ms.locfileid: "52391864"
 ##  <a name="bkmk_imp_info_options"></a> Opzioni  
  Quando si configura la rappresentazione o si modificano proprietà per una connessione all'origine dati esistente in Analysis Services, è possibile specificare una delle opzioni seguenti:  
   
-|Opzione|Valore di ImpersonationMode<sup>1</sup>|Descrizione|  
+|Opzione|ImpersonationMode<sup>1</sup>|Descrizione|  
 |------------|-----------------------------------|-----------------|  
 |**Nome utente di Windows specifico e la password** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account servizio**|ImpersonateServiceAccount|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775284"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installare SQL Server 2014 tramite un file di configurazione
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consente di generare un file di configurazione in base all'impostazione predefinita del sistema e ai dati di input inseriti in fase di esecuzione. È possibile utilizzare il file di configurazione per distribuire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in tutta l'organizzazione con la stessa configurazione, nonché standardizzare le installazioni manuali nell'organizzazione creando un file batch che consente di avviare Setup.exe.  

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789869"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento si illustrano le considerazioni sulla distribuzione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e indicazioni su computer host, cluster WSCF (Windows Server Failover Clustering), istanze del server e gruppi di disponibilità. Per ognuno di questi componenti sono indicate le eventuali considerazioni sulla sicurezza e le autorizzazioni richieste.  
@@ -44,7 +44,7 @@ ms.locfileid: "59242229"
 ##  <a name="SystemReqsForAOAG"></a> Indicazioni e requisiti di sistema di Windows  
   
   
-###  <a name="SystemRequirements"></a> Elenco di controllo: Requisiti (sistema Windows)  
+###  <a name="SystemRequirements"></a> Elenco di controllo: requisiti (sistema Windows)  
  Per supportare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , assicurarsi che ogni computer che fa parte di uno o più gruppi di disponibilità soddisfi i requisiti essenziali seguenti:  
   
 ||Requisito|Collegamento|  
@@ -76,7 +76,7 @@ ms.locfileid: "59242229"
   
 -   **Sistemi simili:**  Per un determinato gruppo di disponibilità, tutte le repliche di disponibilità devono essere in sistemi simili, in grado di gestire carichi di lavoro identici.  
   
--   **Schede di rete dedicate:**  Per prestazioni ottimali, utilizzare una scheda di rete dedicata (scheda di interfaccia di rete) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Schede di rete dedicate:**  Per ottenere prestazioni ottimali, usare una scheda di rete dedicata (scheda di interfaccia di rete) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Spazio su disco sufficiente:**  Ogni computer in cui un'istanza del server ospita una replica di disponibilità deve disporre di spazio su disco sufficiente per tutti i database nel gruppo di disponibilità. Tenere presente che, con l'aumentare delle dimensioni dei database primari, i database secondari corrispondenti aumentano di conseguenza.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "59242229"
   
  
   
-###  <a name="PrerequisitesSI"></a> Elenco di controllo: Prerequisiti (istanza del Server)  
+###  <a name="PrerequisitesSI"></a> Elenco di controllo: prerequisiti (istanza del server)  
   
 ||Prerequisiti|Collegamenti|  
 |-|------------------|-----------|  
@@ -216,7 +216,7 @@ ms.locfileid: "59242229"
   
 -   **Modifica del nome di rete di un'istanza del cluster di failover:**  se è necessario modificare il nome di rete di un'istanza del cluster di failover che ospita una replica di disponibilità, è necessario rimuovere la replica dal relativo gruppo di disponibilità e riaggiungerla successivamente a questo gruppo. Non è possibile rimuovere la replica primaria, pertanto se si rinomina un'istanza del cluster di failover in cui è ospitata la replica primaria, è consigliabile eseguire il failover in una replica secondaria e successivamente rimuovere e poi riaggiungere la prima replica primaria. Si noti che la ridenominazione di un'istanza del cluster di failover può comportare la modifica dell'URL del relativo endpoint del mirroring del database. Quando si aggiunge la replica assicurarsi di specificare l'URL dell'endpoint corrente.  
   
-###  <a name="PrerequisitesFCI"></a> Elenco di controllo: Prerequisiti (FCI)  
+###  <a name="PrerequisitesFCI"></a> Elenco di controllo: prerequisiti (istanze del cluster di failover)  
   
 ||Prerequisiti|Collegamento|  
 |-|------------------|----------|  
@@ -251,7 +251,7 @@ ms.locfileid: "59242229"
   
 -   **Repliche di disponibilità:**  Ogni gruppo di disponibilità supporta una replica primaria e fino a otto repliche secondarie. È possibile eseguire tutte le repliche in modalità con commit asincrono oppure fino a un massimo di tre in modalità con commit sincrono (una replica primaria con due repliche secondarie sincrone).  
   
--   **Numero massimo di gruppi di disponibilità e database di disponibilità per computer:** Il numero effettivo di database e i gruppi di disponibilità che è possibile inserire in un computer (macchina virtuale o fisico) dipende da hardware e del carico di lavoro, ma non esiste alcun limite imposto. Microsoft ha eseguito test estensivi con 10 gruppi di disponibilità e 100 database per computer fisico. I segnali di sistemi di overload possono includere, a titolo esemplificativo, l'esaurimento del thread di lavoro, tempi di risposta lenti per visualizzazioni di sistema AlwaysOn e DMV e/o dump del sistema dispatcher bloccati. Assicurarsi di testare completamente l'ambiente con un carico di lavoro simile a quello di produzione per assicurare che possa gestire capacità di carico di lavoro di picco all'interno del contratto sul livello di servizio dell'applicazione. Per i contratti sul livello di servizio occorre considerare il carico in condizioni di errore e i tempi di risposta previsti.  
+-   **Numero massimo di gruppi di disponibilità e database di disponibilità per computer:** il numero effettivo di database e gruppi di disponibilità che è possibile creare in un computer (macchina virtuale o computer fisico) dipende dall'hardware e dal carico di lavoro, tuttavia non esiste un limite imposto. Microsoft ha eseguito test estensivi con 10 gruppi di disponibilità e 100 database per computer fisico. I segnali di sistemi di overload possono includere, a titolo esemplificativo, l'esaurimento del thread di lavoro, tempi di risposta lenti per visualizzazioni di sistema AlwaysOn e DMV e/o dump del sistema dispatcher bloccati. Assicurarsi di testare completamente l'ambiente con un carico di lavoro simile a quello di produzione per assicurare che possa gestire capacità di carico di lavoro di picco all'interno del contratto sul livello di servizio dell'applicazione. Per i contratti sul livello di servizio occorre considerare il carico in condizioni di errore e i tempi di risposta previsti.  
   
 -   **Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità:**  
   
@@ -306,7 +306,7 @@ ms.locfileid: "59242229"
   
  
   
-###  <a name="RequirementsDb"></a> Elenco di controllo: Requisiti (database di disponibilità)  
+###  <a name="RequirementsDb"></a> Elenco di controllo: requisiti (database di disponibilità)  
  Per essere idoneo a essere aggiunto a un gruppo di disponibilità, un database deve soddisfare i requisiti seguenti:  
   
 ||Requisiti|Collegamento|  
@@ -317,7 +317,7 @@ ms.locfileid: "59242229"
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Deve trattarsi di un database multiutente.|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**user_access** = 0)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Non deve essere utilizzato AUTO_CLOSE.|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**is_auto_close_on** = 0)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Utilizzare il modello di recupero con registrazione completa (noto anche come modalità di recupero con registrazione completa).|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**recovery_model** = 1)|  
-|![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Deve disporre di almeno un backup completo del database.<br /><br /> Nota: Dopo aver impostato un database in modalità di recupero con registrazione completa, è necessario un backup completo per avviare la catena di log di recupero con registrazione completa.|[Creazione di un backup completo del database &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Deve disporre di almeno un backup completo del database.<br /><br /> Nota: Dopo aver impostato un database sulla modalità di recupero con registrazione completa, è necessario un backup completo per iniziare la catena di log del recupero con registrazione completa.|[Creazione di un backup completo del database &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Non deve appartenere ad alcun gruppo di disponibilità esistente.|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**group_database_id** = NULL)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Non deve essere configurato per il mirroring del database.|[sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) Se il database non fa parte del mirroring, tutte le colonne con prefisso "mirroring_" sono NULL.|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Prima di aggiungere un database in cui è utilizzato FILESTREAM a un gruppo di disponibilità, verificare che FILESTREAM sia abilitato in ogni istanza del server in cui è o sarà ospitata una replica di disponibilità per il gruppo di disponibilità.|[Abilitare e configurare FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  

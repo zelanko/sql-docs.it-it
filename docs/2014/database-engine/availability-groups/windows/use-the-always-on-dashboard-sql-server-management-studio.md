@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788728"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utilizzare il Dashboard AlwaysOn (SQL Server Management Studio)
   Gli amministratori del database utilizzano il dashboard AlwaysOn per ottenere una vista immediata dell'integrità di un gruppo di disponibilità AlwaysOn e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alcuni degli utilizzi tipici del dashboard AlwaysOn sono i seguenti:  
@@ -58,7 +58,7 @@ ms.locfileid: "49120368"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
 ##  <a name="SSMSProcedure"></a> Per avviare il AlwaysOn Dashboard  
@@ -120,7 +120,7 @@ ms.locfileid: "49120368"
 ##  <a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
  Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne seguenti:  
   
- **Nome**  
+ **Name**  
  Nome dell'istanza del server che ospita la replica di disponibilità. Questa colonna viene visualizzata per impostazione predefinita.  
   
  **Ruolo**  
@@ -218,7 +218,7 @@ ms.locfileid: "49120368"
   
  Nel riquadro in cui sono visualizzate le informazioni raggruppate sono presenti le colonne seguenti:  
   
- **Nome**  
+ **Name**  
  Nome del database di disponibilità. Questo valore è visualizzato per impostazione predefinita.  
   
  **Replica**  

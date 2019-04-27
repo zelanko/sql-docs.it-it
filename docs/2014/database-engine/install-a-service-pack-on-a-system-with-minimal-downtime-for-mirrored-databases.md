@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779595"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installare un Service Pack in un sistema con tempi di inattività minimi per database con mirroring
   In questo argomento viene descritta la procedura per ridurre al minimo il tempo di inattività per i database con mirroring quando vengono installati Service Pack e hotfix. Questo processo comprende l'aggiornamento sequenziale delle istanze di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che partecipano al mirroring del database. Questa modalità di aggiornamento, che è noto come un *aggiornamento in sequenza*, riduce i tempi di inattività a un singolo failover. Si noti che per le sessioni in modalità a prestazioni elevate in cui il server mirror è geograficamente distante dal server principale, un aggiornamento in sequenza potrebbe non essere appropriato.  
@@ -34,7 +34,7 @@ ms.locfileid: "52520377"
 -   Se la sessione include un server di controllo del mirroring, si consiglia di rimuoverlo. In caso contrario, quando l'istanza del server mirror viene aggiornata, la disponibilità del database dipende dal server di controllo del mirroring che rimane connesso all'istanza del server principale. Dopo avere rimosso un server di controllo del mirroring, è possibile aggiornarlo in qualsiasi momento durante il processo di aggiornamento in sequenza senza rischiare alcun tempo di inattività del database.  
   
     > [!NOTE]  
-    >  Per altre informazioni, vedere [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Se una sessione è in esecuzione in modalità a prestazioni elevate, impostare la modalità operativa su modalità a protezione elevata.  
   

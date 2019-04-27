@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775441"
 ---
 # <a name="install-sql-server-powershell"></a>Installare SQL Server PowerShell
   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato se viene rilevato che sono state selezionate funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che includono componenti di PowerShell, ma che Windows PowerShell 2.0 non è installato. È necessario installare PowerShell tramite Windows Management Framework, quindi rieseguire l'installazione.  

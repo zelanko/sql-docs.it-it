@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730402"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Generale (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Generale** della finestra di dialogo **Ripristina database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per specificare il file di backup e le impostazioni generali da utilizzare per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.locfileid: "48099311"
   
  Selezionando questa opzione viene reso disponibile un elenco a discesa che consente di scegliere la quantità di informazioni di sicurezza. Sono disponibili le opzioni seguenti:  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Copia tutto**|Ripristina i ruoli del database inclusi nel file di backup, nonché agli account utente associati ai ruoli.|  
 |**Ignora appartenenze**|Ripristina i ruoli del database inclusi nel file di backup, ma non ripristina gli account utente associati ai ruoli.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48099311"
  Se il file di backup è crittografato, digitare la password utilizzata per crittografare il file di backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ripristinare Database, finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Finestra di dialogo Ripristina Database &#40;Analysis Services - Dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Partizioni &#40;dialogo Ripristina Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

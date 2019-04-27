@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729524"
 ---
 # <a name="granting-process-database-permissions"></a>Concessione di autorizzazioni per l'elaborazione di database
   Dopo l'installazione di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutti i membri del ruolo di amministratore del server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nell'istanza dispongono di autorizzazioni valide per l'intero server per eseguire qualsiasi attività all'interno dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per impostazione predefinita, nessun altro utente dispone dell'autorizzazione per amministrare o visualizzare gli oggetti nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48171761"
   
 3.  Nella finestra Proprietà modificare il **Name** proprietà del nuovo ruolo a `Process Database Objects Role`.  
   
-     ![Progettazione ruoli](../../2014/tutorials/media/l10-security-1.png "progettazione ruoli")  
+     ![Role Designer](../../2014/tutorials/media/l10-security-1.png "Role Designer")  
   
 4.  Passare alla scheda **Appartenenze** di Progettazione ruoli e fare clic su **Aggiungi**.  
   

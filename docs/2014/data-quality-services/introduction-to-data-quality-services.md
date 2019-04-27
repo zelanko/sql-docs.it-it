@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0cdd72c352246c89983b560e40428c1f9f7fb7b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792488"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
   La soluzione per la qualità dei dati fornita da [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente a un amministratore dei dati o un professionista IT di mantenere la qualità dei dati gestiti e assicurarne l'appropriatezza per l'utilizzo aziendale. DQS è una soluzione basata sulle informazioni che offre modalità assistite da computer e interattive per gestire l'integrità e la qualità delle origini dati. DQS consente di individuare, compilare e gestire informazioni sui dati. È quindi possibile utilizzare tali informazioni per eseguire la pulizia, la corrispondenza e il profiling dei dati. È inoltre possibile utilizzare i servizi basati su cloud di provider di dati di riferimento in un progetto Data Quality DQS.  
@@ -44,7 +44,7 @@ ms.locfileid: "56027952"
   
 -   **Monitoraggio:** la registrazione e la determinazione dello stato delle attività relative alla qualità dei dati. Il monitoraggio consente di verificare che la soluzione per la qualità dei dati funzioni come previsto. Per altre informazioni, vedere [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
--   **Knowledge Base:** Data Quality Services è una soluzione basata sulle informazioni che analizza i dati in base alla conoscenza creata con DQS. Consente di creare processi per la qualità dei dati in grado di migliorare costantemente le informazioni sui dati e, di conseguenza, la qualità dei dati stessi.  
+-   **Knowledge Base:** SQL Data Quality Services è una soluzione basata sulle informazioni in cui i dati vengono analizzati in base alla conoscenza creata con DQS. Consente di creare processi per la qualità dei dati in grado di migliorare costantemente le informazioni sui dati e, di conseguenza, la qualità dei dati stessi.  
   
  Il processo DQS viene illustrato nella figura seguente:  
   

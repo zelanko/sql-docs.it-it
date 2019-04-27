@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778922"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria
   Le tabelle ottimizzate per la memoria non dispongono di archiviazione di oggetti all'esterno di righe o grandi dimensioni (LOB) (questa limitazione è stato rimosso in SQL Server 2016 e versioni successive, vedere [tipi di dati supportati per OLTP In memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), e il limite è impostato su 8060 byte. L'archiviazione dei valori elevati di stringa di caratteri o binaria può essere eseguita in due modi:  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780958"
 ---
 # <a name="send-dataset-sample"></a>Esempio Send DataSet
   Nell'esempio Send `DataSet` viene illustrato come restituire un oggetto `DataSet` basato su ADO.NET all'interno di una stored procedure sul lato server basata su Common Language Runtime (CLR) come set di risultati al client. Questa operazione è utile, ad esempio, quando tramite una stored procedure di questo tipo vengono inseriti dati in un oggetto `DataSet` utilizzando i risultati di una query e vengono modificati i dati contenuti in tale oggetto `DataSet`. In alternativa, è utile se tramite la stored procedure viene creato e popolato un oggetto `DataSet` da zero. L'esempio è composto da due classi, `DataSetUtilities` e `TestSendDataSet`. Il metodo `SendDataSet` sulla classe `DataSetUtilities` implementa un modo generico per trasmettere il contenuto di un'istanza di un oggetto `DataSet` al client. Il metodo `DoTest` definito sulla classe `TestSendDataSet` consente di verificare che il metodo `SendDataSet` funzioni, creando un oggetto `DataSet` e inserendovi dati dalla stored procedure Transact-SQL `uspGetTwoBOMTestData`. La stored procedure `uspGetTwoBOMTestData` consente di eseguire la stored procedure `uspGetBillOfMaterials` Transact-SQL due volte per eseguire in modo ricorsivo la query per la distinta base di due prodotti specificati come parametri della stored procedure `usp_GetTwoBOMTestData`. Generalmente, dopo essere stati inseriti nel set di dati, i dati vengono modificati prima di richiamare `SendDataSet` per recapitare i dati del set di dati come set di risultati al client. Per motivi di semplicità, nell'esempio vengono restituiti i dati senza apportare modifiche.  

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756437"
 ---
 # <a name="create-term-based-relations"></a>Creare relazioni basate su termini
   In questo argomento viene descritto come creare relazioni basate su termini per un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relazione basata su termini (TRB) consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. È possibile, ad esempio, configurare una relazione basata su termini che modifica il termine "Inc." in "Incorporated". Il termine "Inc." verrà modificato ogni volta che viene trovato nel dominio. Le istanze di "Contoso, Inc." verranno modificate in "Contoso, Incorporated" e i due valori saranno considerati sinonimi esatti.  
@@ -57,7 +57,7 @@ ms.locfileid: "56016772"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare relazioni basate su termini, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Create"></a> Creare relazioni basate su termini  
@@ -90,7 +90,7 @@ ms.locfileid: "56016772"
   
     6.  Trovare un valore nella tabella Relazioni immettendo una o più cifre nella casella di testo **Trova** . Le corrispondenze per la stringa verranno evidenziate. Utilizzare le frecce in su o in giù per spostarsi tra le diverse istanze della stringa nella tabella.  
   
-    7.  **Correttore ortografico**: Se si specifica un valore nel **valore** oppure **Correggi in** colonna ha una sottolineatura rossa ondulata, il correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con il carattere di sottolineatura e selezionare uno dei valori proposti dal correttore ortografico. In alternativa, è possibile fare clic su **Aggiungi** nel menu di scelta rapida per mantenere il valore originale. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Correttore ortografico**: se un valore nella colonna **Valore** o **Correggi in** ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con il carattere di sottolineatura e selezionare uno dei valori proposti dal correttore ortografico. In alternativa, è possibile fare clic su **Aggiungi** nel menu di scelta rapida per mantenere il valore originale. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Per utilizzare il correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Relazioni basate su termini** per abilitarlo in tale pagina.  
@@ -99,7 +99,7 @@ ms.locfileid: "56016772"
   
 7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la creazione di relazioni basate su termini  
+##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di relazioni basate su termini  
  Dopo avere creato le relazioni basate su termini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

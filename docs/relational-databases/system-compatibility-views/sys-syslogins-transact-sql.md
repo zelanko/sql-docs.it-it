@@ -1,5 +1,5 @@
 ---
-title: Sys. syslogins (Transact-SQL) | Microsoft Docs
+title: sys.syslogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 54372511cab4cbcc3ecd7d2afe875325e105163d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671930"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "53204233"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**sid**|**varbinary(85)**|Identificatore di sicurezza.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|Data in cui l'account di accesso è stato aggiunto.|  
-|**updateDate**|**datetime**|Data di aggiornamento dell'account di accesso.|  
+|**updatedate**|**datetime**|Data di aggiornamento dell'account di accesso.|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -53,9 +53,9 @@ ms.locfileid: "53204233"
 |**name**|**sysname**|Nome dell'account di accesso dell'utente.|  
 |**dbname**|**sysname**|Nome del database predefinito dell'utente quando viene stabilita una connessione.|  
 |**password**|**nvarchar(128)**|Restituisce NULL.|  
-|**Lingua**|**sysname**|Lingua predefinita dell'utente.|  
+|**language**|**sysname**|Lingua predefinita dell'utente.|  
 |**denylogin**|**int**|1 = L'account di accesso è un utente o un gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cui è stato negato l'accesso.|  
-|**HasAccess**|**int**|1 = L'account di accesso dispone dell'accesso al server.|  
+|**hasaccess**|**int**|1 = L'account di accesso dispone dell'accesso al server.|  
 |**isntname**|**int**|1 = L'account di accesso è un utente o un gruppo di Windows.<br /><br /> 0 = L'account di accesso è un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**isntgroup**|**int**|1 = L'account di accesso è un gruppo di Windows.|  
 |**isntuser**|**int**|1 = L'account di accesso è un utente di Windows.|  
@@ -67,7 +67,7 @@ ms.locfileid: "53204233"
 |**diskadmin**|**int**|1 = account di accesso è un membro del **diskadmin** ruolo predefinito del server.|  
 |**dbcreator**|**int**|1 = account di accesso è un membro del **dbcreator** ruolo predefinito del server.|  
 |**bulkadmin**|**int**|1 = account di accesso è un membro del **bulkadmin** ruolo predefinito del server.|  
-|**LoginName**|**nvarchar(128)**|Nome dell'account di accesso dell'utente. Disponibile per compatibilità con le versioni precedenti.|  
+|**loginname**|**nvarchar(128)**|Nome dell'account di accesso dell'utente. Disponibile per compatibilità con le versioni precedenti.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

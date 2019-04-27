@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672142"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
   In questo argomento viene descritto come amministrare ed eseguire il monitoraggio dell'acquisizione dati delle modifiche.  
@@ -75,7 +75,7 @@ ms.locfileid: "52788903"
  Quando viene eseguita una pulizia, il limite minimo per tutte le istanze di acquisizione viene inizialmente aggiornato in una singola transazione. Viene quindi effettuato il tentativo di rimozione delle voci obsolete dalle tabelle delle modifiche e dalla tabella cdc.lsn_time_mapping. Il valore soglia configurabile limita il numero di voci eliminate in ogni singola istruzione. La mancata esecuzione dell'eliminazione in una singola tabella non impedirà il tentativo di eliminazione nelle altre.  
   
 ### <a name="cleanup-job-customization"></a>Personalizzazione del processo di pulizia  
- Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Poiché le procedure di pulizia sottostanti sono basate sui `lsn` anziché sul tempo, un numero qualsiasi di strategie può essere utilizzato per determinare il più piccolo `lsn` mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Inoltre, anche se la strategia predefinita applica lo stesso `lsn` per pulire le tabelle delle modifiche di tutti i database, la procedura di pulizia sottostante, può anche essere chiamato per eseguire la pulizia a livello di istanza di acquisizione.  
+ Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Poiché le procedure di pulizia sottostanti sono basate su `lsn` anziché sul tempo, è possibile usare qualsiasi strategia per determinare il valore `lsn` minimo da mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Benché la strategia predefinita applichi lo stesso valore `lsn` per pulire tutte le tabelle delle modifiche dei database è inoltre possibile chiamare la procedura di pulizia sottostante anche per eseguire la pulizia a livello di istanza di acquisizione.  
   
 ##  <a name="Monitor"></a> Monitoraggio del processo Change Data Capture  
  Il monitoraggio del processo Change Data Capture consente di determinare se le modifiche vengono scritte correttamente e con una latenza ragionevole nelle tabelle delle modifiche. L'esecuzione il monitoraggio può consentire anche di identificare gli errori che si potrebbero verificare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse due DMV per monitorare Change Data Capture: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

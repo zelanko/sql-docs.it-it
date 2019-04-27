@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781536"
 ---
 # <a name="handling-large-objects-using-clr"></a>Gestione di oggetti di grandi dimensioni tramite CLR
   Nell'esempio `HandlingLOBUsingCLR` relativo a SQL Server viene illustrato il trasferimento di oggetti di grandi dimensioni (LOB) tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un file system accessibile dal server tramite stored procedure Common Language Runtime (CLR). In questo esempio viene illustrata la procedura di accesso ai file nel codice sul lato server e quindi la procedura di richiamo di query dinamiche e di stored procedure dalle stored procedure basate su CLR. Viene inoltre descritta la procedura di registrazione e annullamento della registrazione di metodi e assembly CLR tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  

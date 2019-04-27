@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754488"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
   Nel contesto di una sessione di mirroring del database, in genere i ruoli principale e mirror sono intercambiabili tramite un processo denominato *cambio di ruolo*. Nel cambio di ruolo, il server mirror funge da *partner di failover* per il server principale, assumendo il ruolo principale e recuperando la propria copia del database e portandola online come nuovo database principale. Il server principale precedente, quando disponibile, assume il ruolo di mirror, e il suo database diventa il nuovo database mirror. Potenzialmente, i ruoli possono essere scambiati nei due sensi in seguito a più errori o per scopi amministrativi.  
@@ -67,9 +67,9 @@ ms.locfileid: "48181213"
   
 ||Prestazioni elevate|Modalità a sicurezza elevata senza un server di controllo del mirroring|Modalità a sicurezza elevata con un server di controllo del mirroring|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Failover automatico|no|no|Sì|  
-|Failover manuale|no|Sì|Sì|  
-|Servizio forzato|Sì|Sì|no|  
+|Failover automatico|No|No|Yes|  
+|Failover manuale|No|Yes|Yes|  
+|Servizio forzato|Yes|Yes|No|  
   
  Dopo un cambio di ruolo è necessario che alcuni metadati siano disponibili su entrambi i partner per garantire che tutti gli utenti del database possano accedere al nuovo database principale. È inoltre necessario che i processi di backup vengano creati sul nuovo server principale per garantire che i backup del database continuino regolarmente in base alla pianificazione. Per altre informazioni, vedere [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "48181213"
   
  La sessione ha inizialmente un quorum completo, ovvero tutti e tre i server sono connessi. **Partner_A** è il server principale e **Partner_B** il server mirror. **Partner_A** , o il database principale del **Partner_A**, diventa non disponibile. Sia il server di controllo del mirroring che **Partner_B** rilevano che il server principale non è più disponibile e la sessione mantiene il quorum. **Partner_B** diviene il server principale e rende disponibile la propria copia del database come nuovo database principale. Quando si riconnette alla sessione, **Partner_A** individua che **Partner_B** detiene ora il ruolo di server principale. **Partner_A** assume quindi il ruolo di server mirror.  
   
- Dopo il failover, i client devono riconnettersi al database principale corrente. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Dopo il failover, i client devono riconnettersi al database principale corrente. Per altre informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
 >  Le transazioni che sono state preparate utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator, ma di cui non è stato ancora eseguito il commit nel momento in cui si verifica un failover, vengono considerate interrotte dopo il failover del database.  

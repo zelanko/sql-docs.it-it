@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732177"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Descrizione dettagliata del diagramma della rete di dipendenze (componenti aggiuntivi Data mining)
   In vari tipi differenti di modelli di data mining viene utilizzato un grafico della rete come modalità di esplorazione delle relazioni nei dati. È possibile importare questi modelli in Visio utilizzando la **rete di dipendenze** il data shaping e quindi continuare a personalizzare e migliorare il layout. Il **forme di Data Mining per Visio** includono i seguenti controlli personalizzati per l'uso di diagrammi di rete di dipendenze:  

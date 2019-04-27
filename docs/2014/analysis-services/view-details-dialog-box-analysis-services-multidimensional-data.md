@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756116"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Visualizza dettagli (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Visualizza dettagli** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per visualizzare dettagli aggiuntivi su un messaggio o un'operazione in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per visualizzare la finestra di dialogo **Visualizza dettagli** , è possibile:  

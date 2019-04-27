@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774352"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Procedure per la gestione dei servizi (Gestione configurazione SQL Server)
   Il [!INCLUDE[ssDE](../includes/ssde-md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent vengono eseguiti nei sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows come servizi. Per altre informazioni sui servizi, vedere [Gestire i servizi del motore di database](configure-windows/manage-the-database-engine-services.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Connettersi a un altro computer &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
   

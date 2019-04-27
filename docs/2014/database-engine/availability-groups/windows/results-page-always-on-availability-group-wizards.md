@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789012"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Pagina Risultati (procedure guidate gruppi di disponibilità AlwaysOn)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Risultati** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare questa pagina per visualizzare i risultati della procedura guidata.  
@@ -28,13 +28,13 @@ ms.locfileid: "48104951"
 ##  <a name="PageOptions"></a> Opzioni della pagina Risultati  
  La griglia **Riepilogo** include le colonne seguenti:  
   
- **Nome**  
+ **Name**  
  Visualizza una frase che descrive un'operazione specifica.  
   
  **Result**  
  Per ogni passaggio completato, viene visualizzato uno dei seguenti testi di collegamenti ipertestuali.  
   
-|Risultato|Description|  
+|Risultato|Descrizione|  
 |------------|-----------------|  
 |**Errore**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
 |**Esito positivo**|Indica che il passaggio di convalida è riuscito.|  

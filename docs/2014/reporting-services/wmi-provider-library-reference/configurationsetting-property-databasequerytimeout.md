@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 25023ed146d00b8635b9ce822cbb2cdf23be65ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646357"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseQueryTimeout (MSReportServer_ConfigurationSetting WMI)
   Specifica il numero di secondi di attesa prima che il server di report presuma che il comando non sia riuscito e che sia necessaria una quantità di tempo troppo elevata per l'esecuzione. Il server di report calcola il tempo di esecuzione della query rispetto al catalogo SQL e non rispetto a un'origine dati per il report. Proprietà di lettura/scrittura.  

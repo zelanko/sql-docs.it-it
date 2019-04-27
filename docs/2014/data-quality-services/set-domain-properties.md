@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9766aa397b5fb89a3b664cc75e473abbb1d062ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792243"
 ---
 # <a name="set-domain-properties"></a>Impostare le proprietà di un dominio
   In questo argomento viene descritto come impostare le proprietà di un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -29,7 +29,7 @@ ms.locfileid: "56015477"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per impostare le proprietà in un dominio.  
   
 ##  <a name="Set"></a> Impostare le proprietà di un dominio  
@@ -40,7 +40,7 @@ ms.locfileid: "56015477"
   
 3.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'impostazione delle proprietà del dominio  
+##  <a name="FollowUp"></a> Completamento: Dopo aver impostato le proprietà di dominio  
  Dopo avere impostato le proprietà di un dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Properties"></a> Proprietà dominio  
@@ -49,7 +49,7 @@ ms.locfileid: "56015477"
  Dopo la creazione di un dominio è possibile modificarne il nome o la descrizione. Il nome del dominio deve essere univoco per la Knowledge Base. La descrizione può contenere fino a 256 caratteri.  
   
 ###  <a name="Type"></a> Tipo di dati  
- Quando si crea il dominio, selezionare uno dei seguenti tipi di dati per i valori nel dominio: **Stringa** (impostazione predefinita), **data**, **Integer**, oppure **Decimal**. Dopo avere creato il dominio, è possibile visualizzare il tipo di dati ma non modificarli. Tramite il tipo di dati selezionato per un dominio viene definito il tipo di dati di origine di cui è possibile eseguire il mapping al dominio. Per altre informazioni sui tipi di dati supportati per ognuno dei quattro tipi di dati del dominio in DQS, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Quando si crea il dominio, selezionare uno dei seguenti tipi di dati per i valori nel dominio: **Stringa** (valore predefinito), **Data**, **Intero** o **Decimale**. Dopo avere creato il dominio, è possibile visualizzare il tipo di dati ma non modificarli. Tramite il tipo di dati selezionato per un dominio viene definito il tipo di dati di origine di cui è possibile eseguire il mapping al dominio. Per altre informazioni sui tipi di dati supportati per ognuno dei quattro tipi di dati del dominio in DQS, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Utilizza valori iniziali  
  Selezionare questa casella di controllo per specificare che venga restituito il valore iniziale in un gruppo di sinonimi anziché un valore di cui è sinonimo. Deselezionare **Utilizza valori iniziali** per specificare che ogni valore di sinonimo verrà restituito nella forma corretta e non verrà sostituito dal valore iniziale per il gruppo.  

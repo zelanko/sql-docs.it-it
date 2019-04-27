@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650672"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Scheda Profili attributo (Visualizzatore modello di data mining)
   Usare la scheda **Profili attributo** per vedere il modo in cui la distribuzione dei valori di input in uno stato del modello Naive Bayes contribuisce a ogni stato dell'attributo risultante. La distribuzione dei valori viene mostrata come un istogramma colorato e tutte le distribuzioni vengono presentate in un formato tabulare per rendere più semplice il confronto dei valori.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md)e [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -41,13 +41,13 @@ ms.locfileid: "48194541"
  **Barre istogramma**  
  Consente di selezionare il numero di barre da includere nell'istogramma. Se esistono più barre di quante ne sono state scelte per la visualizzazione, le barre di importanza più alta vengono mantenute, mentre le barre rimanenti vengono raggruppate in **Altro**.  
   
- **Prevedibili**  
+ **Predictable**  
  Consente di selezionare una colonna stimabile nel modello di data mining.  
   
  **Profili attributo**  
  La tabella contiene le colonne seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Attributi**|Elenca le colonne del modello di data mining contenute nel modello di data mining.|  
 |**Stati**|Colonna facoltativa che descrive lo stato rappresentato dal colore nella riga degli attributi. Aggiungere o rimuovere la colonna usando la casella di controllo **Mostra legenda** .|  
@@ -55,8 +55,8 @@ ms.locfileid: "48194541"
 |**Colonna per gli Stati dell'attributo stimabile**|Consente di visualizzare una colonna per ogni stato della colonna stimabile, con ogni riga corrispondente a un attributo di input nel modello.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

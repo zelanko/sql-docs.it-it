@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787977"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
   In questo argomento viene illustrato come eseguire un failover manuale pianificato o un failover manuale forzato (failover forzato) su un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Se si esegue il failover su a una replica secondaria con stato SYNCHRONIZED, tramite la procedura guidata viene eseguito un failover manuale pianificato (senza perdita di dati). Se si esegue il failover su una replica secondaria con stato UNSYNCHRONIZED o NOT SYNCHRONIZING, la procedura guidata esegue un failover manuale forzato, noto anche come *failover forzato* (con possibile perdita di dati). In entrambe le forme di failover manuale la replica secondaria a cui si è connessi assume il ruolo primario. Con un failover manuale pianificato attualmente comporta il passaggio della replica primaria precedente al ruolo secondario. Dopo un failover forzato, quando la replica primaria precedente torna online assume il ruolo secondario.  
@@ -67,7 +67,7 @@ ms.locfileid: "57579651"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  

@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775653"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Aggiornare PowerPivot per SharePoint
   In questo argomento vengono riepilogati i passaggi necessari per aggiornare una distribuzione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. I passaggi specifici dipendono dalla versione di SharePoint è attualmente in esecuzione l'ambiente e includono PowerPivot per SharePoint Add-in (**sppowerpivot. msi**).  
@@ -187,7 +187,7 @@ ms.locfileid: "58434502"
   
     10. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo, le richieste di connessione per i dati PowerPivot avranno esito negativo con errori di tipo "Impossibile aggiornare i dati" o "un errore durante il tentativo di eseguire l'azione richiesta. Riprovare". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
   
-8.  **Ripetere il processo** per ogni servizio di SQL Server Analysis Services (PowerPivot) nella farm: 1) Eseguire l'installazione di SQL Server. 2) Eseguire lo strumento di configurazione PowerPivot   
+8.  **Ripetere il processo** per ogni servizio di SQL Server Analysis Services (PowerPivot) nella farm: Installazione di SQL Server 1) eseguire 2) eseguire lo strumento di configurazione PowerPivot.  
   
 9. Verificare che l'aggiornamento sia stato completato correttamente eseguendo i passaggi di post-aggiornamento e controllando la versione dei server PowerPivot nella farm. Per altre informazioni, vedere [Attività di verifica post-aggiornamento](#verify) in questo argomento e la sezione seguente.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434502"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Esaminare le distribuzioni esistenti per le informazioni seguenti: **Tipo** è Retraction o Deployment, **File** è powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+    2.  Esaminare le distribuzioni esistenti cercando le informazioni seguenti: **Tipo** è Retraction o Deployment, **File** è powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
     3.  Per le distribuzioni o i ritiri correlati alle soluzioni PowerPivot, copiare il valore GUID per **JobId** e quindi incollarlo nel comando seguente (utilizzare i comandi Contrassegna, copia e Incolla nel menu Modifica della Shell per copiare il GUID):  
   

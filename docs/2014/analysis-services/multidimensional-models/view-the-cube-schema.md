@@ -1,24 +1,23 @@
 ---
 title: Visualizzare lo Schema del cubo | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740691"
 ---
 # <a name="view-the-cube-schema"></a>Visualizzare lo schema del cubo
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Lo schema del cubo viene visualizzato nel riquadro **Vista origine dati** della scheda **Struttura cubo** in **Progettazione cubi** . Lo schema è il set di tabelle da cui derivano le misure e le dimensioni per un cubo. Ogni schema del cubo è costituito da una o più tabelle dei fatti e da una o più tabelle delle dimensioni su cui sono basate le misure e le dimensioni nel cubo.  
   
  Nel riquadro **Vista origine dati** della scheda **Struttura cubo** viene visualizzato un diagramma vista origine dati su cui è basato il cubo. Questo diagramma è un subset del diagramma principale della vista origine dati. È possibile nascondere e mostrare tabelle nel riquadro **Vista origine dati** , nonché visualizzare tutti i diagrammi esistenti. Tuttavia, non è possibile apportare modifiche, ad esempio aggiungere nuove relazioni o query denominate, allo schema sottostante. Per apportare modifiche allo schema, utilizzare Progettazione vista origine dati.  

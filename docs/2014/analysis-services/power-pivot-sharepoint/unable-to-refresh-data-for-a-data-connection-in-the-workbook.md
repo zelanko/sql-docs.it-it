@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749118"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossibile aggiornare i dati per una connessione dati della cartella di lavoro. Riprovare o contattare l'amministratore di sistema. Impossibile aggiornare le connessioni seguenti: Dati PowerPivot
   Per cartelle di lavoro di Excel contenenti dati PowerPivot, in Excel Services viene restituito questo errore se viene inviata una richiesta di connessione a un server PowerPivot che non verrà completata.  
@@ -41,7 +41,7 @@ ms.locfileid: "53371003"
   
  La cartella di lavoro che si sta tentando di aprire potrebbe essere stata creata con la versione SQL Server 2008 R2 di PowerPivot per Excel. Molto probabilmente, il provider di dati di Analysis Services specificato nella stringa di connessione dati non è presente sul computer che sta gestendo la richiesta.  
   
- In questo caso, il messaggio si trova nel log ULS: "Aggiornamento non riuscito per 'Dati PowerPivot' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
+ In questo caso, si troveranno questo messaggio nel log ULS: "Aggiornamento non riuscito per 'Dati PowerPivot' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
   
  Per determinare la versione della cartella di lavoro, aprirla in Excel e controllare il provider di dati specificato nella stringa di connessione. In una cartella di lavoro SQL Server 2008 R2 viene utilizzato MSOLAP.4 come provider di dati.  
   

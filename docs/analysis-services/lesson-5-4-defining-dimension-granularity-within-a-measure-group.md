@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752479"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lezione 5-4: definizione della granularità della dimensione all'interno di un gruppo di misure
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

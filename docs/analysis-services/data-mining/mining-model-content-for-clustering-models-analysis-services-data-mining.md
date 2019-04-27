@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello di data mining per i modelli di Clustering (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli di data mining per i modelli di Clustering (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3344fbcd8a1a31f0bb98a8a1702f1535eb831b3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736231"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di clustering (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34019168"
   
  Il nodo padre contiene statistiche utili che descrivono la distribuzione effettiva di tutti i case di training. Queste statistiche si trovano nella colonna della tabella nidificata, NODE_DISTRIBUTION. Ad esempio, nella tabella seguente sono illustrate diverse righe della tabella NODE_DISTRIBUTION che descrivono la distribuzione di dati demografici dei clienti per il modello di clustering `TM_Clustering`creato nell' [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Supporto|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (Mancante)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (Continuo)|  
@@ -45,7 +45,7 @@ ms.locfileid: "34019168"
 > [!NOTE]  
 >  La varianza rappresenta la varianza totale per il cluster. Se il valore relativo alla varianza è piccolo, significa che la maggior parte dei valori della colonna sono relativamente vicini alla media. Per ottenere la deviazione standard, calcolare la radice quadrata della varianza.  
   
- Si noti che per ogni attributo è presente un tipo di valore **Missing** che indica il numero di case in cui i dati per tale attributo sono mancanti. I dati mancanti possono essere significativi e influiscono sui calcoli in vari modi, a seconda del tipo di dati. Per altre informazioni, vedere [Valori mancanti &#40; Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Si noti che per ogni attributo è presente un tipo di valore **Missing** che indica il numero di case in cui i dati per tale attributo sono mancanti. I dati mancanti possono essere significativi e influiscono sui calcoli in vari modi, a seconda del tipo di dati. Per altre informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Contenuto di un modello di clustering  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining pertinenti per i modelli di clustering.  
@@ -70,7 +70,7 @@ ms.locfileid: "34019168"
  NODE_TYPE  
  Un modello di clustering restituisce i tipi di nodo seguenti:  
   
-|ID e nome del nodo|Description|  
+|ID e nome del nodo|Descrizione|  
 |----------------------|-----------------|  
 |1 (Model)|Nodo radice per il modello.|  
 |5 (Cluster)|Contiene un conteggio dei case nel cluster, le caratteristiche dei case nel cluster e statistiche che descrivono i valori nel cluster.|  
@@ -143,20 +143,20 @@ ms.locfileid: "34019168"
  MSOLAP_NODE_SHORT_CAPTION  
  Etichetta utilizzata a scopo di visualizzazione. Questa didascalia non può essere modificata.  
   
- **Nodo padre** Tipo di modello: modello di cluster  
+ **Nodo padre** il tipo di modello: Modello di cluster  
   
  **Nodi del cluster** Nome del cluster. Esempio: Cluster 1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per la creazione di un modello di clustering. Se non si conosce il metodo impiegato per creare il modello in uso, è possibile recuperare a livello di programmazione i metadati del modello, utilizzando un client ADOMD o AMO oppure eseguendo una query sul set di righe dello schema di data mining. Per altre informazioni, vedere [Eseguire query sui parametri usati per creare un modello di data mining](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La struttura e il contenuto del modello rimangono invariati, indipendentemente dal metodo di clustering o dai parametri utilizzati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

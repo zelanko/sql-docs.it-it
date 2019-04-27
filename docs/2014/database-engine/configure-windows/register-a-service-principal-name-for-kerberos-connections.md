@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781996"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
   Per utilizzare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che si verifichino entrambe le seguenti condizioni:  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Scenario|Metodo di autenticazione|  
 |--------------|---------------------------|  
-|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Con il termine corretto si intende che l'account per il quale è stato eseguito il mapping dal nome SPN registrato è quello utilizzato per eseguire il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
-|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Con il termine corretto si intende che l'account per il quale è stato eseguito il mapping dal nome SPN registrato è quello utilizzato per eseguire il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
 |Viene eseguito il mapping del nome SPN a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto.|Errore di autenticazione|  
 |La ricerca del nome SPN ha esito negativo o non viene eseguito il mapping a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto, oppure non è un account di dominio, un account virtuale, un account dei servizi gestiti o un account predefinito corretto.|Le connessioni locali e remote utilizzano l'autenticazione NTLM.|  
   

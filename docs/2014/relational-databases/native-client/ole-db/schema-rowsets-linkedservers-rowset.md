@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667336"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Set di righe LINKEDSERVERS (OLE DB)
   Il set di righe **LINKEDSERVERS** enumera le origini dati dell'organizzazione che possono partecipare nelle query distribuite di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Il set di righe **LINKEDSERVERS** contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Description|  
+|Nome colonna|Indicatore del tipo|Descrizione|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nome di un server collegato.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Produttore o altro nome che identifica il tipo di archivio dati rappresentato dal nome del server collegato.|  

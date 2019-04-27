@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663912"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Remote Message Ack** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia o riceve l'acknowledgement di un messaggio.  
@@ -29,7 +29,7 @@ ms.locfileid: "52812263"
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|10|Yes|  
-|**BigintData1**|**bigint**|Numero di sequenza del messaggio che contiene l'acknowledgement.|52|No|  
+|**BigintData1**|**bigint**|Numero di sequenza del messaggio che contiene l'acknowledgement.|52|no|  
 |**BigintData2**|**bigint**|Numero di sequenza del messaggio che contiene l'acknowledgement.|53|No|  
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Yes|  
 |**DatabaseID**|**int**|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
@@ -37,7 +37,7 @@ ms.locfileid: "52812263"
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento che offre maggiori informazioni su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Messaggi con Acknowledgement inviato**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Acknowledgement inviato**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement al di fuori di un normale messaggio in sequenza.<br /><br /> **Messaggio con riconoscimento ricevuto**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Riconoscimento ricevuto**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement al di fuori di un messaggio in sequenza.|21|Yes|  
 |**GUID**|**uniqueidentifier**|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
-|**HonorBrokerPriority**|**Int**|Il valore corrente dell'opzione di database HONOR_BROKER_PRIORITY: 0 = DISATTIVATO, 1 = ON.|32|Yes|  
+|**HonorBrokerPriority**|**Int**|Il valore corrente dell'opzione di database HONOR_BROKER_PRIORITY: 0 = OFF, 1 = ON.|32|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IntegerData**|**int**|Numero del frammento del messaggio che contiene l'acknowledgement.|25|No|  
 |**IntegerData2**|**int**|Numero del frammento del messaggio per il quale è stato inviato o ricevuto l'acknowledgement.|55|No|  

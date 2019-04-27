@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744241"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rete neurale (Visualizzatore modello di data mining)
   Utilizzare il visualizzatore **Microsoft Neural Network** per esplorare i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Neural Network](data-mining/microsoft-neural-network-algorithm.md), [Algoritmo Microsoft Logistic Regression](data-mining/microsoft-logistic-regression-algorithm.md),[Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Neural Network](data-mining/microsoft-neural-network-algorithm.md), [algoritmo Microsoft Logistic Regression](data-mining/microsoft-logistic-regression-algorithm.md),[visualizzare un modello usando il visualizzatore Microsoft Neural Network](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -38,7 +38,7 @@ ms.locfileid: "48169711"
  **Input**  
  Utilizzare quest'area per scegliere attributi di input e valori in modo da poter approfondire in un secondo momento il modo in cui questi influiscono sul risultato.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Attribute**|Consente di scegliere un attributo di input dall'elenco. Se si lascia l'impostazione predefinita,  **\<tutto >**, il grafico mostra un elenco di tutti gli attributi di input classificati in base alla relativa influenza sull'attributo stimabile.|  
 |**Valore**|Consente di scegliere un valore per l'attributo di input.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48169711"
  **Output**  
  Utilizzare questi controlli per scegliere un attributo e un valore stimabili da analizzare e confrontare nel grafico a barre. Se non si modificano le selezioni, il grafico a barre consente di confrontare i due primi stati del risultato.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Attributo di output**|Consente di scegliere un attributo stimabile. Se la colonna non è stata definita come stimabile durante la creazione del modello, non è possibile aggiungerla in questo momento.|  
 |**Valore 1**|Consente di scegliere uno stato dell'attributo stimabile da confrontare con lo stato contenuto in **Valore 2**.<br /><br /> È possibile confrontare uno qualsiasi dei due valori discreti o discretizzati; tuttavia, non è possibile confrontare un valore rispetto al relativo complemento, operazione che invece può essere effettuata in altri visualizzatori.|  
@@ -55,7 +55,7 @@ ms.locfileid: "48169711"
  **Variabili**  
  In questa parte della scheda **Rete neurale** è contenuto un grafico a barre interattivo che rappresenta le risposte alle selezioni eseguite per gli attributi di input e del risultato. Poiché una rete neurale consente di calcolare la probabilità di influenza di un particolare valore su un determinato risultato, è possibile scegliere qualsiasi combinazione di input e nel grafico a barre verrà visualizzato il modo in cui tale combinazione influisce sulla coppia di risultati in fase di confronto.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Attribute**|Consente di visualizzare il nome dell'attributo di input selezionato in **Attributo**.|  
 |**Valore**|Consente di visualizzare il valore per l'attributo di input selezionato.|  
@@ -63,8 +63,8 @@ ms.locfileid: "48169711"
 |**Predilige \<valore 2 >**|Visualizza una barra che indica il livello di influenza di questa particolare combinazione attributo-valore sul risultato di destinazione scelto in **Valore 2**.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

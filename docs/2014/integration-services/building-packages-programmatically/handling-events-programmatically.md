@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771807"
 ---
 # <a name="handling-events-programmatically"></a>Gestione degli eventi a livello di programmazione
   Il runtime di [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornisce una raccolta di eventi che si verificano prima, durante e dopo la convalida e l'esecuzione di un pacchetto. Tali eventi possono essere acquisiti in due modi. Il primo metodo prevede di implementare l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> in una classe e specificare la classe come parametro per i metodi `Execute` e `Validate` del pacchetto. Il secondo metodo consiste nella creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> che possono contenere altri oggetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ad esempio attività e cicli, eseguiti quando si verifica un evento in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. In questa sezione vengono descritti questi due metodi e vengono forniti esempi di codice per dimostrarne l'utilizzo.  

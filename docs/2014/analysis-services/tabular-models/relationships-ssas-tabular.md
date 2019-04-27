@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756762"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
   Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
@@ -47,17 +47,17 @@ ms.locfileid: "48191741"
 ##  <a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
+|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|0,10|254|03/01/2010|Budget Movie-Maker|27|  
   
  Questo approccio può funzionare, tuttavia comporta l'archiviazione di molti dati ridondanti, ad esempio l'indirizzo di posta elettronica del cliente per ogni ordine. L'archiviazione è economica ma è necessario assicurarsi di aggiornare ogni riga relativa al cliente nel caso in cui l'indirizzo di posta elettronica cambi. Una soluzione a questo problema è suddividere i dati in più tabelle e definire relazioni tra tali tabelle. Si tratta dell'approccio usato nei *database relazionali* come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, un database importato in un modello potrebbe rappresentare i dati dell'ordine tramite tre tabelle correlate:  
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|nome|EMail|  
+|[CustomerID]|Nome|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -74,7 +74,7 @@ ms.locfileid: "48191741"
 |[CustomerID]|OrderID|OrderDate|Prodotto|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|07/01/2010|Compact Digital|11|  
-|1|255|2010-01-03|SLR Camera|15|  
+|1|255|03/01/2010|SLR Camera|15|  
 |2|254|03/01/2010|Budget Movie-Maker|27|  
   
  Se si importano tali tabelle dallo stesso database, l'Importazione guidata tabella consente di rilevare le relazioni tra le tabelle in base alle colonne tra [parentesi] e di riprodurre tali relazioni in Progettazione modelli. Per altre informazioni, vedere [Inferenza e rilevamento automatici delle relazioni](#detection) in questo argomento. Se si importano tabelle da più origini, è possibile creare manualmente relazioni come descritto in [Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "48191741"
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra le tabelle \<tabella 1 > e \<la tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Non è possibile creare una relazione tra le tabelle \<tabella 1 > e \<la tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   
@@ -185,13 +185,13 @@ ms.locfileid: "48191741"
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Creare una relazione tra due tabelle &#40;tabulare di SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Viene descritto come creare manualmente una relazione tra due tabelle.|  
-|[Eliminare le relazioni &#40;tabulare di SSAS&#41;](relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  
+|[Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Viene descritto come creare manualmente una relazione tra due tabelle.|  
+|[Eliminare relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle e colonne &#40;tabulare di SSAS&#41;](tables-and-columns-ssas-tabular.md)   
- [Importare i dati &#40;tabulare di SSAS&#41;](../import-data-ssas-tabular.md)  
+ [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
+ [Importare dati &#40;SSAS tabulare&#41;](../import-data-ssas-tabular.md)  
   
   

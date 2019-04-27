@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741383"
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
   Se si abilita un gruppo di misure per la scrittura, gli utenti finali possono modificare i dati del cubo durante la relativa esplorazione; tuttavia, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nei dati del cubo o nei dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  

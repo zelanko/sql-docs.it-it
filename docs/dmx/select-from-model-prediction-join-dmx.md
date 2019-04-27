@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658953"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>Esempio 2: Utilizzo di OPENQUERY  
+## <a name="example-2-using-openquery"></a>Esempio 2: Tramite la funzione OPENQUERY  
  Nell'esempio seguente viene illustrato come creare una query di stima batch utilizzando un elenco di clienti potenziali archiviato in un set di dati esterno. Poiché la tabella fa parte di una vista origine dati che è stata definita in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la query può usare [OPENQUERY](../dmx/source-data-query-openquery.md) per recuperare i dati. Poiché i nomi delle colonne nella tabella sono diversi da quelli nel modello di data mining, il **via** clausola deve essere utilizzata per le colonne nella tabella vengono mappati alle colonne nel modello.  
   
  La query restituisce il nome e il cognome di ogni persona presente nella tabella, oltre a una colonna booleana che indica la probabilità che la persona acquisti una bicicletta, dove 0 indica "è improbabile che acquisti una bicicletta" e 1 indica "è probabile che acquisti una bicicletta". L'ultima colonna contiene la probabilità per il risultato stimato.  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  Poiché la colonna che contiene l'attributo stimabile, `[v Assoc Seq Line Items]`, è una colonna della tabella, la query restituisce una singola colonna contenente una tabella nidificata. Per impostazione predefinita, la colonna della tabella nidificata viene denominata `Expression`. Se il provider non supporta set di righe gerarchici, è possibile usare la **FLATTENED** (parola chiave) come illustrato in questo esempio per rendere più semplice visualizzare i risultati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741917"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
   L'elaborazione è un'operazione durante la quale tramite Analysis Services viene effettuata una query su un'origine dati relazionale e gli oggetti di Analysis Services vengono popolati utilizzando i dati ottenuti.  

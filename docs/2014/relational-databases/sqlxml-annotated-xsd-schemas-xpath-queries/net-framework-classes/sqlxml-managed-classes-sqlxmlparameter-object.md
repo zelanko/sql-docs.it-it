@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cb1e99b2959b41528152efc92daccfb793b2e280
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740561"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>Oggetto SqlXmlParameter (classi gestite SQLXML)
   L'oggetto SqlXmlParameter supporta queste proprietà:  
   
- nome  
+ Nome  
  Nome del parametro. Ai comandi possono essere passati parametri. La chiamata al metodo CreateParameter dell'oggetto SqlXmlCommand crea l'oggetto parametro.  
   
  Value  

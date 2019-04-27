@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853468"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *elenco di definizioni di colonna*  
  Elenco delimitato da virgole contenente le definizioni delle colonne.  
   
- *algoritmo*  
+ *algorithm*  
  Nome di un algoritmo di data mining, secondo quanto definito dal provider corrente.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *Stringa XML*  
- (Riservato agli utenti esperti). Modello con codifica XML (PMML). La stringa deve essere racchiusa tra virgolette singole (').  
+ (Solo per uso avanzato.) Un modello con codifica XML (PMML). La stringa deve essere racchiusa tra virgolette singole (').  
   
  Il **sessione** clausola consente di creare un modello di data mining che viene rimosso automaticamente dal server quando si chiude la connessione o la sessione scade. **SESSIONE** modelli di data mining sono utili perché non richiedono l'utente sia un amministratore del database, e utilizzano solo spazio su disco per, purché la connessione è aperta.  
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà dei membri (MDX) definito dall'utente | Documenti Microsoft
+title: Proprietà dei membri (MDX) definito dall'utente | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740228"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>Proprietà di membro MDX - proprietà dei membri definite dall'utente
+# <a name="mdx-member-properties---user-defined-member-properties"></a>Proprietà dei membri MDX - proprietà membro definite dall'utente
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Le proprietà dei membri definite dall'utente possono essere aggiunte a uno specifico livello denominato di una dimensione come relazioni tra attributi. Le proprietà dei membri definite dall'utente non possono essere aggiunte al livello **(All)** (Tutti) di una gerarchia né alla gerarchia stessa.  
   
@@ -65,7 +65,7 @@ FROM [Adventure Works]
  Per altre informazioni sulla compilazione di membri calcolati, vedere [Compilazione di membri calcolati in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzando le proprietà del membro & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Proprietà & #40; MDX & #41;](../../../mdx/properties-mdx.md)  
+ [Utilizzo delle proprietà dei membri &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

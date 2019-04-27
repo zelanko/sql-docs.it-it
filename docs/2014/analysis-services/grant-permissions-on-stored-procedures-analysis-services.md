@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730784"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Concedere le autorizzazioni per le stored procedure (Analysis Services)
-  Stored procedure, o assembly, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono routine esterne, scritte un [!INCLUDE[msCoName](../includes/msconame-md.md)] linguaggio di programmazione .NET, che estendono le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli assembly permettono allo sviluppatore di sfruttare tutte le potenzialità di integrazione tra più linguaggi, gestione delle eccezioni e supporto per il controllo delle versioni, per la distribuzione e per il debug.  
+  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le stored procedure, o assembly, sono routine esterne, scritte in un linguaggio di programmazione [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, che estendono le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli assembly permettono allo sviluppatore di sfruttare tutte le potenzialità di integrazione tra più linguaggi, gestione delle eccezioni e supporto per il controllo delle versioni, per la distribuzione e per il debug.  
   
  Per registrare un assembly, è necessario essere un amministratore del server. Visualizzare [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   

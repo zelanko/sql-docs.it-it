@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757214"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrare i dati di una tabella (SSAS tabulare)
   È possibile applicare filtri quando si importano dati per controllare le righe caricate in una tabella. Dopo aver importato i dati, non è possibile eliminare righe singole. Tuttavia, è possibile applicare filtri personalizzati per controllare la modalità in cui visualizzare tali righe. Le righe che non soddisfano i criteri di filtro sono nascoste. È possibile filtrare i dati in base a una o più colonne. I filtri sono additivi, pertanto ciascun filtro aggiuntivo è basato sul filtro corrente e consente di ridurre ulteriormente il subset di dati.  
@@ -53,8 +53,8 @@ ms.locfileid: "48079701"
 2.  Fare clic sul menu **Colonna** , quindi scegliere **Cancella tutti i filtri**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtrare e ordinare i dati &#40;tabulare di SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
- [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
+ [Filtrare e ordinare dati &#40;SSAS tabulare&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
+ [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  
   
   

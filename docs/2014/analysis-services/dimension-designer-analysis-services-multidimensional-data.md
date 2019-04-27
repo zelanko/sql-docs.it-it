@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731785"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Progettazione dimensioni (Analysis Services - Dati multidimensionali)
   Utilizzare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per esplorare i dati che la dimensione contiene e per modificare le varie proprietà di una dimensione esistente: inclusi gli attributi, le gerarchie, i livelli, le relazioni dell'attributo e le traduzioni.  

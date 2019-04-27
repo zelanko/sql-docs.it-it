@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746085"
 ---
 # <a name="tsql-event-category"></a>Categoria di eventi TSQL
   La categoria di eventi **TSQL** include eventi TSQL generali.  

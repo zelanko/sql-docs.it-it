@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e023624402d965aed6629d42ef97204413432e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771557"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor trasformazione cache (pagina Gestione connessioni)
   Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione cache** per selezionare una gestione connessione esistente o crearne una nuova.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771057"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selezionare tabelle e colonne Oracle
   Utilizzare la pagina Seleziona tabelle e colonne Oracle per selezionare le tabelle dal database di origine Oracle in cui vengono acquisite le modifiche. Nella pagina sono presenti gli elementi seguenti:  
@@ -26,15 +26,15 @@ ms.locfileid: "58384759"
  **Elenco tabelle**  
  Nell'elenco tabelle sono presenti tre colonne:  
   
--   **Nome tabella Oracle**: Il nome della tabella, inclusi lo schema della tabella.  
+-   **Nome tabella Oracle**: nome della tabella, incluso lo schema.  
   
--   **Istanza di acquisizione**: Il nome dell'istanza di acquisizione utilizzato per oggetti di nome specifico dell'istanza change data capture. L'istanza di acquisizione non può essere NULL.  
+-   **Istanza di acquisizione**: nome dell'istanza di acquisizione usata per denominare gli oggetti Change Data Capture specifici dell'istanza. L'istanza di acquisizione non può essere NULL.  
   
      Se non è specificato, il nome deriva dal nome dello schema di origine più il nome della tabella di origine nel formato `<schema-name>_<table-name>`. Il nome dell'istanza di acquisizione non può superare i 100 caratteri e deve essere univoco nel database.  
   
      È possibile fare clic in qualsiasi cella di questa colonna per modificare manualmente **capture_instance**.  
   
--   **Ruolo di sicurezza**: Nome del ruolo utilizzato per controllare l'accesso ai dati delle modifiche del database.  
+-   **Ruolo di sicurezza**: nome del ruolo del database usato per controllare l'accesso ai dati delle modifiche.  
   
      È possibile fare clic in qualsiasi cella di questa colonna per modificare manualmente **security_role**.  
   

@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773789"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilizzo di indici columnstore non cluster
-  Vengono descritte le attività principali per l'utilizzo di un indice columnstore non cluster in una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Vengono descritte le attività principali per l'utilizzo di un indice columnstore non cluster in una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Per una panoramica degli indici columnstore, vedere [descrizione degli indici Columnstore](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Per una panoramica di indici columnstore, vedere [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
  Per informazioni sugli indici columnstore cluster, vedere [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48182499"
 ##  <a name="change"></a> Modificare i dati in un indice Columnstore non cluster  
  Dopo aver creato un indice columnstore non cluster in una tabella, non è possibile modificare i dati direttamente nella tabella. Se si esegue una query con INSERT, UPDATE, DELETE o MERGE viene restituito un messaggio di errore. Per aggiungere o modificare i dati nella tabella, è possibile effettuare una delle operazioni seguenti:  
   
--   Disabilitare l'indice columnstore. È possibile aggiornare i dati nella tabella. Se si disabilita l'indice columnstore, è possibile ricompilare l'indice columnstore al termine dell'aggiornamento dei dati. Esempio:  
+-   Disabilitare l'indice columnstore. È possibile aggiornare i dati nella tabella. Se si disabilita l'indice columnstore, è possibile ricompilare l'indice columnstore al termine dell'aggiornamento dei dati. Ad esempio:   
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -46,7 +46,7 @@ ms.locfileid: "48182499"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Eliminare l'indice columnstore, aggiornare la tabella e quindi ricreare l'indice columnstore con CREATE COLUMNSTORE INDEX. Esempio:  
+-   Eliminare l'indice columnstore, aggiornare la tabella e quindi ricreare l'indice columnstore con CREATE COLUMNSTORE INDEX. Ad esempio:   
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

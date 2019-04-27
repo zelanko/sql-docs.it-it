@@ -1,5 +1,5 @@
 ---
-title: Sys. server_triggers (Transact-SQL) | Microsoft Docs
+title: sys.server_triggers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660752"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Include il set di tutti i trigger DDL a livello di server con object_type TR o TA. In caso di trigger CLR, l'assembly deve essere caricato nel **master** database. Tutti i nomi dei trigger DDL a livello di server esistono in un singolo ambito globale.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del trigger.|  
 |**object_id**|**int**|ID dell'oggetto.|  
 |**parent_class**|**tinyint**|Classe padre. È sempre:<br /><br /> 100 = Server|  
 |**parent_class_desc**|**nvarchar(60)**|Descrizione della classe padre. È sempre:<br /><br /> SERVER.|  
-|**parent_ID**|**int**|Sempre 0 per i trigger nel SERVER.|  
+|**parent_id**|**int**|Sempre 0 per i trigger nel SERVER.|  
 |**type**|**char(2)**|Tipo di oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
 |**type_desc**|**nvarchar(60)**|Descrizione della classe del tipo di oggetto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Data di creazione del trigger.|  

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788685"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
   In questo argomento viene descritto come usare la Creazione guidata Gruppo di disponibilità (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
@@ -36,7 +36,7 @@ ms.locfileid: "53363883"
   
      [Sicurezza](#Security)  
   
--   **Per creare e configurare una disponibilità di gruppo, utilizzando:**  [Creazione guidata nuovo gruppo di disponibilità (SQL Server Management Studio)](#RunAGwiz)  
+-   **Per creare e configurare un gruppo di disponibilità usando:**  [Creazione guidata nuovo gruppo di disponibilità (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  In alternativa all'utilizzo della Creazione guidata Gruppo di disponibilità, è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) o i cmdlet di PowerShell per [Creare un gruppo di disponibilità &#40; PowerShell SQL Server&#41;](../../../powershell/sql-server-powershell.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "53363883"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
  È inoltre necessaria l'autorizzazione CONTROL ON ENDPOINT se si desidera gestire l'endpoint del mirroring del database tramite la Creazione guidata Gruppo di disponibilità.  
@@ -111,12 +111,12 @@ ms.locfileid: "53363883"
   
      Se si modifica un database per renderlo idoneo, fare clic su **Aggiorna** per aggiornare la griglia dei database.  
   
-7.  Nella pagina **Specifica repliche** specificare e configurare una o più repliche per il nuovo gruppo di disponibilità. In questa pagina sono incluse quattro schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere la [pagina specifica repliche &#40;Creazione guidata nuovo gruppo di disponibilità: Procedura guidata Aggiungi Replica&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) argomento.  
+7.  Nella pagina **Specifica repliche** specificare e configurare una o più repliche per il nuovo gruppo di disponibilità. In questa pagina sono incluse quattro schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere l'argomento [Pagina Specifica repliche&#40;Creazione guidata gruppo di disponibilità: procedura guidata Aggiungi replica&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Scheda|Breve descrizione|  
     |---------|-----------------------|  
     |**Repliche**|Usare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.|  
-    |**Endpoint**|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente. **Nota:**  Se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#PrerequisitesRestrictions)più indietro in questo argomento.|  
+    |**Endpoint**|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente. **Nota:**  Se qualsiasi istanza del server è in esecuzione con un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#PrerequisitesRestrictions)più indietro in questo argomento.|  
     |**Preferenze di backup**|Usare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso e le priorità di backup per le singole repliche di disponibilità.|  
     |**Listener**|Usare questa scheda per creare un listener del gruppo di disponibilità. Per impostazione predefinita, la procedura guidata non crea un listener.|  
   
@@ -196,7 +196,7 @@ ms.locfileid: "53363883"
   
 -   **Blog:**  
   
-     [Su AlwaysON - HADRON serie: Utilizzo del Pool di lavoro per HADRON database abilitati](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Su AlwaysON - HADRON serie: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn Team blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "53363883"
   
 -   **Video:**  
   
-     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Introduzione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Serie Always On in Microsoft SQL Server nome in codice "Denali", parte 1: Introduzione alla soluzione a disponibilità elevata di nuova generazione)  
   
      [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

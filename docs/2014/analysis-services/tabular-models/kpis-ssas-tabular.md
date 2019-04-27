@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756950"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicatori KPI (SSAS tabulare)
   In un modello tabulare un indicatore di prestazioni chiave (*KPI*) viene usato per misurare le prestazioni di un valore, definito da una misura di *base*, rispetto a un valore di *destinazione*, definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  

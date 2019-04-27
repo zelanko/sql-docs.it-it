@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756570"
 ---
 # <a name="restore-from-powerpivot"></a>Ripristina da PowerPivot
   È possibile utilizzare la funzionalità Ripristina da PowerPivot in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services (in esecuzione in modalità tabulare) o eseguire il ripristino in un database esistente da una cartella di lavoro di PowerPivot (con estensione xlsx).  
@@ -49,7 +49,7 @@ ms.locfileid: "48146651"
 5.  Nella casella **Opzioni**lasciare **Includi informazioni di sicurezza** selezionato. Quando si esegue il ripristino da una cartella di lavoro di PowerPivot, questa impostazione non è applicabile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Database modello tabulare &#40;tabulare di SSAS&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Database modello tabulare &#40;SSAS tabulare&#41;](tabular-model-databases-ssas-tabular.md)   
  [Importare da PowerPivot &#40;tabulare di SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

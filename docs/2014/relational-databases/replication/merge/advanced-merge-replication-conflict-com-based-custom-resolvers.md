@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066309"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   I sistemi di risoluzione personalizzati offrono una flessibilità maggiore rispetto al meccanismo di risoluzione predefinito e possono implementare la logica di business richiesta dalle applicazioni che utilizzano i dati replicati. Un sistema di risoluzione personalizzato basato su COM è una libreria di collegamento dinamico (DLL, dynamic-link library) che implementa l'interfaccia COM **ICustomResolver** con i relativi metodi e proprietà e altre interfacce e definizioni di tipi di supporto progettate appositamente per la risoluzione dei conflitti.  

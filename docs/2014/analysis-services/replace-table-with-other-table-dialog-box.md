@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748303"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Finestra di dialogo Sostituisci tabella con un'altra tabella
   Utilizzare la finestra di dialogo **Sostituisci tabella con un'altra tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per sostituire una tabella esistente in una vista origine dati con una tabella dell'origine dati sottostante che non è ancora stata inclusa nella vista origine dati. Per visualizzare la finestra di dialogo **Sostituisci tabella con un'altra tabella** è possibile fare clic con il pulsante destro del mouse sul nome di una tabella nel riquadro **Diagramma** o **Tabelle** di **Progettazione vista origine dati** e scegliere **Con altra tabella** da **Sostituisci tabella**.  
@@ -40,6 +40,6 @@ ms.locfileid: "48173761"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Progettazione vista origine dati &#40;Analysis Services - dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773430"
 ---
 # <a name="view-a-list-of-modified-files"></a>Visualizzazione di un elenco di file modificati
   È possibile usare la **archiviazioni in sospeso** finestra per visualizzare sempre un elenco dei file estratti nella soluzione corrente e per archiviare i file con un singolo pulsante fare clic su.  
@@ -63,7 +63,7 @@ ms.locfileid: "48225049"
      **Annulla estrazione**  
      Inverte l'estrazione di tutti gli elementi selezionati nel **archiviazioni in sospeso** finestra.  
   
-     **Nome**  
+     **Name**  
      Consente di visualizzare un elenco degli elementi disponibili per l'archiviazione. Accanto a ciascun elemento viene visualizzata la casella di controllo selezionata. Se non si desidera archiviare un determinato elemento, deselezionare la relativa casella di controllo.  
   
 ## <a name="see-also"></a>Vedere anche  

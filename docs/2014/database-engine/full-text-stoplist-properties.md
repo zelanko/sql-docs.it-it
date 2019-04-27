@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779408"
 ---
 # <a name="full-text-stoplist-properties"></a>Proprietà elenco di parole non significative full-text
   Utilizzare questa finestra di dialogo per aggiungere o eliminare singole parole non significative, eliminare tutte le parole non significative per una lingua specifica oppure cancellare l'elenco di parole non significative corrente. Una parola non significativa è una parola di uso comune inclusa in un elenco di parole non significative. Le parole contenute in un elenco di questo tipo vengono omesse dall'indicizzazione full-text nelle tabelle che utilizzano l'elenco stesso. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "48072521"
  **Cancella elenco di parole non significative**  
  Consente di cancellare l'elenco di parole non significative eliminando tutte le parole non significative per tutte le lingue.  
   
- **parola non significativa**  
+ **Stopword**  
  Se è stato selezionato **Aggiungi parola non significativa** oppure **Elimina parola non significativa**, immettere la parola non significativa nel **parola non significativa** campo. Una nuova parola non significativa deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
   
  **Lingua full-text**  

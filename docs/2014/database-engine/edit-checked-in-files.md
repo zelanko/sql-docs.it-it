@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779605"
 ---
 # <a name="edit-checked-in-files"></a>Modificare i file archiviati
-  Prima di poter modificare i file inclusi nel controllo del codice sorgente in genere è necessario estrarli. È tuttavia possibile configurare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per poter modificare i file che non sono stati estratti. In questo caso le modifiche verranno conservate in memoria fino al salvataggio dei file. In seguito verrà chiesto di estrarre il file dal controllo del codice di origine.  
+  Prima di poter modificare i file inclusi nel controllo del codice sorgente in genere è necessario estrarli. Tuttavia, è possibile configurare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in modo che sia possibile modificare i file non estratto. In tal caso, le modifiche vengono mantenute in memoria fino a quando non si salvano i file. In seguito verrà chiesto di estrarre il file dal controllo del codice di origine.  
   
  Se si lavora in un team, non è consigliabile consentire modifiche dei file archiviati a meno che il provider del controllo del codice sorgente non supporti estrazioni sia della versione locale sia della versione del server. La maggior parte dei provider non supporta estrazioni della versione locale. In questo caso e se un file archiviato viene modificato, sarà necessario unire manualmente la versione in memoria e la versione del server prima di poter archiviare il file. In questo scenario, le unioni automatiche e assistite dal provider non sono supportate.  
   

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789853"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità) Always On
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
@@ -271,7 +271,7 @@ GO
   
     |Replica secondaria leggibile?|L'isolamento dello snapshot o l'isolamento dello snapshot Read Committed è abilitato?|Database primario|Database secondario|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |No|No|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
+    |No|no|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
     |No|Yes|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
     |Yes|No|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
     |Yes|Yes|Versioni di riga e overhead di 14 byte|Versioni di riga e overhead di 14 byte|  

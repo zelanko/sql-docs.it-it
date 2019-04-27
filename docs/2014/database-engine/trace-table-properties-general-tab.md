@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70f96b0146dbb38827b028e55a241296a5443c1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774093"
 ---
 # <a name="trace-table-properties-general-tab"></a>Proprietà tabella di traccia (scheda Generale)
   Usare la **generali** scheda della finestra di **proprietà tabella di traccia** finestra di dialogo per visualizzare le proprietà di una tabella di traccia.  

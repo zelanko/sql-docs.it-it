@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786821"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
   Introdotta in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'estensione del pool di buffer offre l'integrazione diretta di una estensione di RAM non volatile (ossia, un'unità SSD) al pool di buffer del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per migliorare la velocità effettiva di I/O in maniera significativa. L'estensione del pool di buffer non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "52640652"
   
  Le pagine di indice e di dati vengono lette dal disco nel pool di buffer e le pagine modificate, dette anche pagine dirty, vengono riscritte sul disco. L'utilizzo della memoria nei checkpoint di database e del server determinano la rimozione dalla cache del buffer delle pagine dirty ad accesso frequente (attive) e la scrittura su dischi di tipo meccanico, quindi la rilettura delle stesse nella cache. Queste operazioni di I/O sono in genere piccole letture e scritture casuali nell'ordine di 4 - 16 KB di dati. Piccoli modelli di I/O casuali generano frequenti ricerche, per contendersi il braccio meccanico del disco, aumentare la latenza dell'attività di I/O e ridurre la velocità effettiva di I/O aggregata del sistema.  
   
- L'approccio tipico per risolvere questi colli bottiglia nelle operazioni di I/O consiste nell'aggiungere una maggiore quantità di DRAM o, in alternativa, più spindle SAS a prestazioni elevate. Anche se queste opzioni sono utili, presentano svantaggi significativi: la memoria DRAM è più costosa delle unità di archiviazione dati e l'aggiunta di spindle aumenta le spese di investimento per l'acquisto di hardware, nonché i costi operativi dovuti al maggior consumo di energia e alla più elevata probabilità di guasti dei componenti.  
+ L'approccio tipico per risolvere questi colli bottiglia nelle operazioni di I/O consiste nell'aggiungere una maggiore quantità di DRAM o, in alternativa, più spindle SAS a prestazioni elevate. Anche se queste opzioni sono utili, presentano svantaggi significativi: DRAM è più costosa rispetto all'unità di archiviazione dati e aggiunta di spindle aumenta le spese di capitale di hardware e i costi operativi dovuti al maggior consumo di energia e aumentare le probabilità di guasti dei componenti.  
   
  La funzionalità di estensione del pool di buffer estende la cache di pool di buffer con RAM non volatile (di solito unità SSD). Grazie a questa estensione, il pool di buffer può supportare un working set del database più esteso, forzando il paging delle attività di I/O tra la RAM e le unità SSD. In questo modo viene effettuato in modo efficiente l'offload delle piccole operazioni di I/O casuali dai dischi meccanici alle unità SSD. Grazie alla latenza più bassa e al miglioramento delle prestazioni di I/O casuali delle unità SSD, l'estensione del pool di buffer consente di migliorare notevolmente la velocità effettiva di I/O.  
   

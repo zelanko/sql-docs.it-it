@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660194"
 ---
 # <a name="browsing-a-neural-network-model"></a>Esplorazione di un modello di rete neurale
   Quando si apre un modello di regressione logistica o di rete neurale utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore del modello di rete neurale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sugli schemi del modello e sui dati sottostanti.  
@@ -34,7 +34,7 @@ ms.locfileid: "48218581"
   
 -   [Input](#BKMK_Inputs)  
   
--   [Output](#BKMK_Outputs)  
+-   [Outputs](#BKMK_Outputs)  
   
  Per provare questo visualizzatore, è possibile creare un modello tramite [Procedura guidata Classificazione &#40;componenti aggiuntivi Data Mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) e usare l'opzione **Avanzate** per modificare l'algoritmo in Microsoft Logistic Regression nella finestra di dialogo **Parametri algoritmo**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48218581"
   
     -   L'**accuratezza** indica quanto è utile questa determinata coppia attributo-valore per la promozione di un risultato o di un altro.  
   
-     Nota: nella descrizione comando sono contenute le stesse informazioni indipendentemente dal fatto che si posizioni il mouse su una colonna o sull'altra.  
+     Nota: La descrizione comando contiene le stesse informazioni indipendentemente dal fatto che si posizioni il puntatore del mouse su una colonna o l'altro.  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218581"
  [Torna all'inizio](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Ulteriori informazioni sui modelli di rete neurale  
- Le informazioni nel visualizzatore vengono recuperate dal server utilizzando una stored procedure specifica di questo tipo di modello: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
+ Le informazioni nel visualizzatore vengono recuperate dal server utilizzando una stored procedure specifica per questo tipo di modello: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  Se si desidera creare un modello con più attributi stimabili tramite i componenti aggiuntivi, usare le opzioni di modellazione **Avanzate**.  
   

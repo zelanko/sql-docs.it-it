@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645106"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,26 @@ xp_loginconfig ['config_name']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **«** *config_name* **»**  
+ **'** *config_name* **'**  
  Valore di configurazione da visualizzare. Se *config_name* viene omesso, vengono segnalati tutti i valori di configurazione. *config_name* viene **sysname**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**modalità di accesso**|Modalità di sicurezza dell'account di accesso. I valori possibili sono **Mixed** e **l'autenticazione di Windows**.<br /><br /> Sostituito da:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**account di accesso predefinito**|Nome dell'ID di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito per gli utenti autorizzati su connessioni trusted (ovvero gli utenti che non dispongono di un nome di account di accesso corrispondente). Account di accesso predefinito è **guest**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
 |**Dominio predefinito**|Nome del dominio di Windows predefinito per gli utenti di rete su connessioni trusted. Il dominio predefinito è il dominio del computer in cui sono in esecuzione Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
 |**livello di controllo**|Livello di controllo. I valori possibili sono **none**, **successo**, **errore**, e **tutti**. I controlli vengono scritti nel log degli errori e nel Visualizzatore eventi di Windows.|  
 |**Nome set di host**|Indica se il nome dell'host proveniente dal record dell'account di accesso del client viene sostituito con il nome utente di rete di Windows. I valori possibili sono **true** oppure **false**. Se è impostato, il nome utente di rete viene visualizzato nell'output dal **sp_who**.|  
-|**eseguire il mapping di _**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido _ (sottolineatura). I valori possibili sono **separatore dominio** (impostazione predefinita), **spazio**, **null**, qualsiasi carattere singolo. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
-|**eseguire il mapping di $**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido $ (segno di dollaro). I valori possibili sono **separatore dominio**, **spazio**, **null**, qualsiasi carattere singolo. Il valore predefinito è **spazio**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
-|**eseguire il mapping di &**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido # (simbolo di cancelletto). I valori possibili sono **separatore dominio**, **spazio**, **null**, qualsiasi carattere singolo. Il valore predefinito è il segno meno. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
+|**map _**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido _ (sottolineatura). I valori possibili sono **separatore dominio** (impostazione predefinita), **spazio**, **null**, qualsiasi carattere singolo. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
+|**map $**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido $ (segno di dollaro). I valori possibili sono **separatore dominio**, **spazio**, **null**, qualsiasi carattere singolo. Il valore predefinito è **spazio**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
+|**map #**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido # (simbolo di cancelletto). I valori possibili sono **separatore dominio**, **spazio**, **null**, qualsiasi carattere singolo. Il valore predefinito è il segno meno. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Valore di configurazione|  
 |**valore di configurazione**|**sysname**|Impostazione del valore di configurazione|  

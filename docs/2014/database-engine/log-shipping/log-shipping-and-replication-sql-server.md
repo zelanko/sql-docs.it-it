@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774303"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Log shipping e replica (SQL Server)
   Il log shipping coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia è nota come database primario. Gli aggiornamenti al database primario apportati dai client vengono propagati attraverso il log shipping all'altra copia del database, nota come database secondario. Il processo di log shipping prevede l'applicazione nel database secondario del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database primario.  

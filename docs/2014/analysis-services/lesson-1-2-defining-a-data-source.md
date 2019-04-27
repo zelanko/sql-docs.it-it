@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729672"
 ---
 # <a name="defining-a-data-source"></a>Definizione di un'origine dei dati
-  Dopo aver creato un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la prima operazione consiste nel definire una o più origini dati da usare. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS - multidimensionale&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+  Dopo aver creato un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la prima operazione consiste nel definire una o più origini dati da usare. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS multidimensionale&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Nell'attività seguente il database di esempio AdventureWorksDWSQLServer2012 verrà definito come origine dati del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Ai fini di questa esercitazione questo database si trova nel computer locale. Tuttavia, i database di origine sono spesso ospitati in uno o più computer remoti.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "48195891"
  [Definizione di una vista origine dati](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un'origine dati &#40;multidimensionale di SSAS&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Creare un'origine dati &#40;SSAS multidimensionale&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

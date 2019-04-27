@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774585"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
   In questo argomento viene descritto come configurare il log shipping in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48049241"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare il log shipping utilizzando:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48049241"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -78,7 +78,7 @@ ms.locfileid: "48049241"
   
 8.  Si noti la pianificazione di backup presente nella casella **Pianificazione** in **Processo di backup**. Se si desidera personalizzare la pianificazione dell'installazione, fare clic su **Pianificazione** e quindi modificare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in base alle specifiche esigenze.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup del log scegliendo una delle opzioni seguenti: **Utilizza l'impostazione predefinita del server**, **Comprimi backup**o **Non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione di log shipping, è possibile controllare il comportamento della compressione dei backup del log scegliendo una delle opzioni seguenti: **Usare l'impostazione del server predefinito**, **Comprimi backup**, o **non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Fare clic su **OK**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48049241"
   
 28. Nella finestra di dialogo **Proprietà database** fare clic su **OK** per iniziare il processo di configurazione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   

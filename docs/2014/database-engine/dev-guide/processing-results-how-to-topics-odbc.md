@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780796"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>Procedure relative all'elaborazione dei risultati (ODBC)
   L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la determinazione delle caratteristiche del set di risultati, quindi recuperare i dati nelle variabili di programma utilizzando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oppure [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  

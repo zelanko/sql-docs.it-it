@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Driver dBASE) | Microsoft Docs
+title: SQLConfigDataSource (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665353"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (driver dBASE)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47631649"
   
  Il **SQLConfigDataSource** funzione che consente di aggiungere, modificare o eliminare un'origine dati utilizza in modo dinamico le parole chiave seguenti.  
   
-|Parola chiave|Description|  
+|Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|La sequenza nella quale vengono ordinati i campi.<br /><br /> La sequenza può essere: ASCII (predefinito) o internazionale.<br /><br /> Consente di impostare la stessa opzione come **sequenza di collazione** nella finestra di dialogo programma di installazione.|  
 |DEFAULTDIR|La specifica del percorso della directory.|  

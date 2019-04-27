@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792502"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Eseguire DQSInstaller.exe per completare l'installazione del server DQS
   Per completare l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , è necessario eseguire il file DQSInstaller.exe dopo l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo argomento descrive come eseguire DQSInstaller.exe dalla schermata **Start** , dal menu **Start** , da Esplora risorse o dal prompt dei comandi. Per eseguire il file DQSInstaller.exe è possibile scegliere una qualsiasi delle modalità.  
@@ -32,11 +32,11 @@ ms.locfileid: "56026322"
   
 1.  Nel computer in cui si è scelto di installare [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]eseguire il file DQSInstaller.exe tramite una delle modalità seguenti, in base al contesto appropriato:  
   
-    -   **Schermata iniziale**: Nel **avviare** schermata, fare clic su **il programma di installazione di Data Quality Server.**  
+    -   **Schermata Start**: nella schermata **Start** fare clic su **Programma di installazione di Data Quality Server**.  
   
     -   **Menu Start**: Nella barra delle applicazioni, fare clic su **avviare**, scegliere **tutti i programmi**, fare clic su **Microsoft SQL Server 2014**. Sotto **Microsoft SQL Server 2014**, fare clic su **Data Quality Services**, quindi fare clic su **il programma di installazione di Data Quality Server.**  
   
-    -   **Esplora Windows**: Individuare il file DQSInstaller.exe. Se è stata installata l'istanza predefinita di SQL Server, il file DQSinstaller.exe sarà disponibile in C:\Programmi\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Fare doppio clic sul file DQSInstaller.exe.  
+    -   **Esplora risorse**: Individuare il file DQSInstaller.exe. Se è stata installata l'istanza predefinita di SQL Server, il file DQSinstaller.exe sarà disponibile in C:\Programmi\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Fare doppio clic sul file DQSInstaller.exe.  
   
 2.  Verrà visualizzata una finestra del prompt dei comandi in cui viene indicato lo stato dell'installazione. Si noterà quanto segue:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "56026322"
 3.  Viene richiesto di digitare una password per la chiave master del database. Questa chiave è necessaria per crittografare le chiavi del provider di servizio dati di riferimento che saranno archiviate nel database DQS_MAIN quando i provider di dati di riferimento vengono configurati in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) in un secondo momento.  
   
     > [!IMPORTANT]  
-    >  La password deve contenere almeno 8 caratteri e deve contenere caratteri di tre delle quattro categorie seguenti: Lettera maiuscola (A, B, C,... Z), una lettera minuscola (a, b, c,... z), un numero (0, 1, 2,... 9) e un carattere speciale o non alfanumerico (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Ad esempio: P@ssword. Tramite il programma di installazione verrà richiesto di immettere un'altra password se quella corrente non soddisfa il requisito.  
+    >  La password deve essere composta da almeno 8 caratteri e deve contenere caratteri di tre delle quattro categorie seguenti: una lettera maiuscola (A, B, C,... Z), una lettera minuscola (a, b, c,... z), un numero (0, 1, 2,... 9) e un carattere speciale o non alfanumerico (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Ad esempio: P@ssword. Tramite il programma di installazione verrà richiesto di immettere un'altra password se quella corrente non soddisfa il requisito.  
   
 4.  Immettere una password, confermarla, quindi premere INVIO per continuare l'installazione.  
   

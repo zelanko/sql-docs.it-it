@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771747"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Selezione delle colonne di input a livello di programmazione
   Dopo avere connesso i componenti a livello di programmazione, selezionare le colonne dei componenti upstream che verranno trasformate o passate ai componenti downstream. Se non si selezionano colonne di input per il componente, quest'ultimo non riceve righe dall'attività Flusso di dati.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660802"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication **=** ] **'**_pubblicazione_**'**  
+ [ @publication**=** ] **'**_publication_**'**  
  Nome della pubblicazione. *pubblicazione*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
   
- [ @found **=** ] **'***trovato***'** OUTPUT  
+ [ @found**=** ] **'***found***'** OUTPUT  
  Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
- [ @publication_id **=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id**=**] **'***publication_id***'** OUTPUT  
  Numero di identificazione della pubblicazione. *publication_id* viene **uniqueidentifier** e un parametro di OUTPUT con valore predefinito è NULL.  
   
- [ @reserved **=**] **'***riservato***'**  
+ [ @reserved**=**] **'***reserved***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *riservato* viene **nvarchar(20)**, con un valore predefinito è NULL.  
   
- [ @publisher **=** ] **'***editore***'**  
+ [ @publisher**=** ] **'***publisher***'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [@publisher_db**=** ] **'***publisher_db***'**  
  Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -77,7 +77,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**int**|Viene determinato se i record dei conflitti vengono archiviati nel server di pubblicazione specificato:<br /><br /> **0** = i record dei conflitti vengono archiviati sia il server di pubblicazione e nel Sottoscrittore che ha causato il conflitto.<br /><br /> **1** = tutti i record dei conflitti vengono archiviati nel server di pubblicazione.|  
 |priority|**float(8)**|Priorità della sottoscrizione di loopback.|  
 |snapshot_ready|**tinyint**|Viene indicato se lo snapshot della pubblicazione specificata è pronto:<br /><br /> **0** = lo snapshot è pronto per l'uso.<br /><br /> **1** = lo snapshot non è pronto per l'uso.|  
-|publication_type|**int**|Tipo di pubblicazione:<br /><br /> **0** = snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = unione nell'indice.|  
+|publication_type|**int**|Tipo di pubblicazione:<br /><br /> **0** = Snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = unione nell'indice.|  
 |pubid|**uniqueidentifier**|Identificatore univoco della pubblicazione.|  
 |snapshot_jobid|**binary(16)**|ID di processo dell'agente snapshot. Per ottenere la voce per il processo di snapshot nel [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) tabella di sistema, è necessario convertire questo valore esadecimale a **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Viene determinato se la pubblicazione è abilitata per Internet. Se **1**, i file di sincronizzazione per la pubblicazione vengono inseriti nella `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. La directory FTP (File Transfer Protocol) deve essere creata dall'utente. Se **0**, la pubblicazione non è abilitata per l'accesso a Internet.|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Viene specificata la posizione in cui i file di snapshot possono essere prelevati dall'agente di merge quando lo snapshot viene recapitato tramite FTP.|  
 |ftp_login|**sysname**|Nome utente utilizzato per la connessione al servizio FTP.|  
 |conflict_retention|**int**|Viene specificato il periodo di memorizzazione dei conflitti espresso in giorni. Al trascorrere del numero di giorni specificati, la riga in conflitto viene eliminata dalla tabella dei conflitti.|  
-|keep_partition_changes|**int**|Specifica se viene eseguita l'ottimizzazione della sincronizzazione per la pubblicazione specificata. **keep_partition_changes** ha un valore predefinito è **0**. Un valore pari **0** significa che la sincronizzazione non è ottimizzata e le partizioni inviate a tutti i sottoscrittori vengono verificate quando si modificano i dati in una partizione.<br /><br /> **1** significa che la sincronizzazione è ottimizzata e vengono coinvolti solo i sottoscrittori con righe nella partizione modificata.<br /><br /> Nota: Per impostazione predefinita, nelle pubblicazioni di tipo merge vengono utilizzate partizioni precalcolate tramite cui viene garantito un livello di ottimizzazione maggiore rispetto a questa opzione. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [Ottimizza prestazioni filtro con parametri con partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Specifica se viene eseguita l'ottimizzazione della sincronizzazione per la pubblicazione specificata. **keep_partition_changes** ha un valore predefinito è **0**. Un valore pari **0** significa che la sincronizzazione non è ottimizzata e le partizioni inviate a tutti i sottoscrittori vengono verificate quando si modificano i dati in una partizione.<br /><br /> **1** significa che la sincronizzazione è ottimizzata e vengono coinvolti solo i sottoscrittori con righe nella partizione modificata.<br /><br /> Nota: Per impostazione predefinita, le pubblicazioni di tipo merge utilizzano partizioni pre-calcolate, che fornisce un livello di ottimizzazione maggiore rispetto a questa opzione. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [Ottimizza prestazioni filtro con parametri con partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Specifica se la funzionalità che consente di copiare i database di sottoscrizione che sottoscrivono la pubblicazione è abilitata. Un valore pari **0** significa copia non è consentita.|  
 |allow_synctoalternate|**int**|Viene specificato se è consentito l'utilizzo di un partner di sincronizzazione alternativo per la sincronizzazione con il server di pubblicazione. Un valore pari **0** indica un partner di sincronizzazione non è consentito.|  
 |validate_subscriber_info|**nvarchar(500)**|Viene visualizzato un elenco delle funzioni utilizzate per il recupero delle informazioni sul Sottoscrittore e la convalida dei criteri per i filtri di riga con parametri nel Sottoscrittore. Inoltre, viene facilitata la verifica del partizionamento consistente delle informazioni a ogni operazione di unione.|  
-|backward_comp_level|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Specifica se le informazioni sulla pubblicazione sono pubblicate in Active Directory. Un valore pari **0** significa che le informazioni di pubblicazione non sono disponibili da Active Directory.<br /><br /> Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni sulla pubblicazione in Active Directory.|  
 |max_concurrent_merge|**int**|Numero massimo di processi di merge simultanei. Se **0**, non sono previsti limiti al numero di processi di merge simultanei in esecuzione in un determinato momento.|  
 |max_concurrent_dynamic_snapshots|**int**|Numero massimo di sessioni simultanee di snapshot dei dati filtrati eseguibili nella pubblicazione di tipo merge. Se **0**, non sono previsti limiti al numero massimo di sessioni di snapshot dei dati filtrati eseguibili contemporaneamente nella pubblicazione in un determinato momento.|  

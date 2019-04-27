@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778912"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementazione dell'operatore OR in stored procedure compilate in modalità nativa
   Gli operatori OR non sono supportati nei predicati di query in stored procedure compilate in modo nativo. Dal momento che anche gli operatori NOT non sono supportati nei predicati di query in stored procedure compilate in modo nativo, gli effetti degli operatori OR non possono essere simulati da soli tramite l'utilizzo degli operatori logici equivalenti. Tuttavia, gli effetti di un operatore OR possono essere simulati con variabili di tabella ottimizzata per la memoria.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659180"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* non può essere 0. La funzione restituisce un errore se non viene indicata almeno una stima.  
   
- *avvio di n, n-fine*  
+ *n-start, n-end*  
  Specifica un intervallo di passaggi della serie temporale.  
   
  *n-start* deve essere un numero intero e non può essere 0.  
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Nel terzo esempio è illustrato come utilizzare il parametro EXTEND_MODEL_CASES per aggiornare un modello di data mining con nuovi dati.  
   
- Per altre informazioni sull'uso di modelli time series, vedere l'esercitazione di data mining [lezione 2: compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [tempo serie di stima DMX Esercitazione](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Per altre informazioni sull'uso di modelli time series, vedere l'esercitazione sul data mining, [lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [ora esercitazione su DMX per stima serie](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  È possibile che vengano restituiti risultati diversi dal modello utilizzato. I risultati degli esempi seguenti sono forniti solo per illustrare il formato del risultato.  
@@ -116,7 +116,7 @@ OR [Model Region] = 'M200 Pacific'
   
  In questo esempio è stata utilizzata la parola chiave FLATTENED per rendere più semplice la lettura dei risultati.  Se non si utilizza la parola chiave FLATTENED e viene restituito invece un set di righe gerarchico, questa query restituisce due colonne. La prima colonna contiene il valore per [ModelRegion] e la seconda colonna contiene una tabella nidificata con due colonne: $TIME, che mostra gli intervalli di tempo stimati e Quantity, che contiene i valori stimati.  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Esempio 2: Aggiunta di dati nuovi e utilizzo di REPLACE_MODEL_CASES  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Esempio 2: Aggiunta di nuovi dati e utilizzo di REPLACE_MODEL_CASES  
  Si supponga di trovare dati non corretti per una particolare area e di voler utilizzare gli schemi nel modello per modificare le stime in modo che riflettano i nuovi dati. In alternativa, si potrebbe scoprire che un'altra area dispone di tendenze più affidabili e desiderare di applicare il modello più affidabile ai dati da un'area diversa.  
   
  In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced stime basate su serie temporali &#40;esercitazione intermedia sul Data Mining dei dati&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
@@ -162,7 +162,7 @@ ON
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
 |M200 Pacific|9/25/2008 12:00:00 AM|84|  
   
-### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Esempio 3: Aggiunta di dati nuovi e utilizzo di EXTEND_MODEL_CASES  
+### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Esempio 3: Aggiunta di nuovi dati e utilizzo di EXTEND_MODEL_CASES  
  Esempio 3 viene illustrato l'utilizzo dei *EXTEND_MODEL_CASES* opzione per fornire nuovi dati, che viene aggiunto alla fine di una serie di dati esistente. Anziché sostituire i punti dati esistenti, i nuovi dati vengono aggiunti nel modello.  
   
  Nell'esempio seguente, i nuovi dati vengono forniti nell'istruzione SELECT che segue NATURAL PREDICTION JOIN. È possibile fornire più righe di nuovo input con questa sintassi, ma ogni nuova riga di input deve disporre di un timestamp univoco:  
@@ -194,11 +194,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Restituisce stime nuove per i tre intervalli di tempo rimanenti in base al modello appena espanso.  
   
- Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: estendere il modello Time Series](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: Estendere la serie temporale modellare](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Inoltre, notare che non sono stati forniti i nuovi dati per l'area Pacifico. Pertanto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce nuove stime per tutti e cinque gli intervalli di tempo,  
   
- : Quantity M200 Europe. EXTEND_MODEL_CASES:  
+ Quantità: M200 Europe. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantità: M200 Pacific. EXTEND_MODEL_CASES:  
+ Quantità:  M200 Pacific. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  

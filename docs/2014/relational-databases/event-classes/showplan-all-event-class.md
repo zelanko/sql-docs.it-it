@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 487aaee17be13727f2c23de42b95afcc27b0b939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662195"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All - classe di evento
   La classe di evento Showplan All viene generata quando in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL. Le informazioni incluse sono tuttavia un subset delle informazioni disponibili nelle classi di evento Showplan XML Statistics o Showplan XML.  
@@ -45,7 +45,7 @@ ms.locfileid: "52801113"
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
 |LineNumber|`int`|Visualizza il numero della riga contenente l'errore.|5|Yes|  
 |LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Yes|  
-|LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|No|  
+|LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|no|  
 |NestLevel|`int`|Valore intero che rappresenta i dati restituiti da @@NESTLEVEL.|29|Yes|  
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Yes|  
 |ObjectID|`int`|ID dell'oggetto assegnato dal sistema.|22|Yes|  

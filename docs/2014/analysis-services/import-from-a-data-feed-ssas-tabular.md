@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730764"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importare da un feed di dati (SSAS tabulare)
   I feed di dati rappresentano uno o più flussi di dati XML generati da un'origine dati online e trasmessi a un documento o a un'applicazione di destinazione. È possibile importare dati da un feed di dati nel modello tramite l'Importazione guidata tabella.  
@@ -191,10 +191,10 @@ ms.locfileid: "48099841"
 12. Nella pagina **Selezione tabelle e viste** fare clic su **Fine**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dati supportate &#40;tabulare di SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Tipi di dati supportati &#40;tabulare di SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [Rappresentazione &#40;tabulare di SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Elaborare i dati &#40;tabulare di SSAS&#41;](process-data-ssas-tabular.md)   
- [Importare i dati &#40;tabulare di SSAS&#41;](import-data-ssas-tabular.md)  
+ [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Tipi di dati supportati &#40;SSAS tabulare&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Rappresentazione &#40;SSAS tabulare&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [Elaborare dati &#40;SSAS tabulare&#41;](process-data-ssas-tabular.md)   
+ [Importare dati &#40;SSAS tabulare&#41;](import-data-ssas-tabular.md)  
   
   

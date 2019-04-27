@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781755"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Procedure per l'esecuzione di stored procedure (ODBC)
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esecuzione di stored procedure come stored procedure remote. L'esecuzione di una stored procedure come stored procedure remota consente al driver e al server di ottimizzare le prestazioni di esecuzione della procedura.  

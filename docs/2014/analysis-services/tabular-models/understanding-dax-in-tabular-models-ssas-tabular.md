@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756779"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Informazioni su DAX nei modelli tabulari (SSAS tabulare)
   Data Analysis Expressions (DAX) è il linguaggio delle formule usato per creare calcoli personalizzati in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per cartelle di lavoro di Microsoft Excel e progetti di modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  

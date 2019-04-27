@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38514159ca668a82f98582a9c5fde1d2aa98ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650182"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Nodo Proxy (Guida sensibile al contesto di SQL Server Agent)
   In questa sezione vengono forniti gli argomenti della Guida sensibile al contesto relativi al nodo **Proxy** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

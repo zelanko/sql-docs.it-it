@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779103"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Vi sono diverse fonti di informazione per l'utilizzo dei cmdlet e del provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell. Tra queste è inclusa la Guida disponibile nell'ambiente di Windows PowerShell.  
@@ -93,7 +93,7 @@ Get-Help -Category provider
   
 1.  Eseguire Get-Help specificando il nome SQLServer  
   
-### <a name="example-get-sql-server-provider-help"></a>Esempio: ottenere la Guida del provider SQL Server  
+### <a name="example-get-sql-server-provider-help"></a>Esempio: Ottenere la Guida di Provider SQL Server  
  In questo esempio vengono restituite informazioni di base sul provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 ```  

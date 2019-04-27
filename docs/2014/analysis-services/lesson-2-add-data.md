@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729317"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
   In questa lezione verrà utilizzata l'Importazione guidata tabella in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per connettersi al database SQL AdventureWorksDW, selezionare i dati, visualizzare un'anteprima, filtrare i dati e quindi importarli nell'area di lavoro del modello.  
   
- Mediante l'Importazione guidata tabella è possibile importare dati da un'ampia gamma di origini relazionali: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e altre ancora. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono inoltre essere selezionati utilizzando una stored procedure.  
+ Tramite l'importazione guidata tabella, è possibile importare dati da un'ampia gamma di origini relazionali: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e altro ancora. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono inoltre essere selezionati utilizzando una stored procedure.  
   
  Per altre informazioni sull'importazione di dati e sui diversi tipi di origine dati da cui è possibile importare, vedere [Origini dati &#40;SSAS tabulare&#41;](data-sources-ssas-tabular.md).  
   

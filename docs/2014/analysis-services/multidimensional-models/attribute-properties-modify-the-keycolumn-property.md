@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727285"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificare la proprietà KeyColumn di un attributo
   È possibile modificare la proprietà **KeyColumns** di un attributo. Ad esempio, è possibile specificare una chiave composta anziché una chiave semplice come chiave dell'attributo.  

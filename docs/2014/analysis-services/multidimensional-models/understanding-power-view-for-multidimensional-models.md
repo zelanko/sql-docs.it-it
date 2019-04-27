@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741100"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
   Questo articolo descrive la funzionalità Power View per modelli multidimensionali di Microsoft SQL Server 2014 e fornisce importanti informazioni destinate agli amministratori e ai professionisti di business intelligence che intendono implementare Power View per modelli multidimensionali nelle relative organizzazioni.  
@@ -98,7 +98,7 @@ ms.locfileid: "53362983"
  I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati dell'attributo dimensione sono archiviati in modo diverso, l'esecuzione di query su misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensioni, attributi e gerarchie  
- Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi dimensione con la proprietà AttributeHierarchyEnabled impostata su false (ad esempio, l'attributo Birth Date nella dimensione Customer) o con la proprietà AttributeHierarchyVisible impostata su false non verranno visualizzati nell'elenco campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  
+ Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi della dimensione che hanno proprietà AttributeHierarchyEnabled è impostata su false. Per esempio: L'attributo Birth Date nella dimensione Customer o la proprietà AttributeHierarchyVisible impostata su false non verrà visualizzato nell'elenco di campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  
   
  **Dimensione, attributi e gerarchie in SQL Server Data Tools (SSDT) e nell'elenco campi di Power View**  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53362983"
  I modelli multidimensionali supportano la sicurezza a livello di dimensione e di cella attraverso i ruoli. Un utente che si connette a un cubo tramite Power View viene autenticato e valutato per accertare che disponga delle autorizzazioni appropriate. Quando si applica la sicurezza a livello di dimensione, i membri di quest'ultima non verranno visti dall'utente in Power View, tuttavia se per un utente è stata definita un'autorizzazione di sicurezza a livello di cella con restrizioni per alcune celle, quell'utente non potrà connettersi al cubo con Power View. In alcuni casi, gli utenti possono vedere dati aggregati se porzioni di questi dati sono calcolate in base a dati sicuri.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Gerarchie/attributi non aggregabili  
- In un modello multidimensionale per gli attributi di una dimensione la proprietà IsAggregatable può essere impostata su false. Ciò significa che l'autore del modello ha specificato che le applicazioni client non devono aggregare i dati tra gerarchie (attributo o multilivello) quando si eseguono query sui dati. In Power View questo attributo dimensione viene esposto come colonna per cui non sono disponibili subtotali. L'immagine seguente illustra un esempio di gerarchia non aggregabile, ovvero Accounts. Il livello superiore della gerarchia padre-figlio Accounts è non aggregabile, mentre altri livelli lo sono. In una visualizzazione matrice della gerarchia Accounts (primi due livelli), sono visibili i subtotali per Account Level 02, ma non per il livello superiore, Account Level 01.  
+ In un modello multidimensionale per gli attributi di una dimensione la proprietà IsAggregatable può essere impostata su false. Ciò significa che l'autore del modello ha specificato che le applicazioni client non devono aggregare i dati tra gerarchie (attributo o multilivello) quando si eseguono query sui dati. In Power View questo attributo dimensione viene esposto come colonna per cui non sono disponibili subtotali. Nell'immagine seguente, è possibile vedere un esempio di una gerarchia non aggregabile: Account. Il livello superiore della gerarchia padre-figlio Accounts è non aggregabile, mentre altri livelli lo sono. In una visualizzazione matrice della gerarchia Accounts (primi due livelli), sono visibili i subtotali per Account Level 02, ma non per il livello superiore, Account Level 01.  
   
  **Gerarchia non aggregabile in Power View**  
   
@@ -218,7 +218,7 @@ ms.locfileid: "53362983"
   
  La richiesta DISCOVER_CSDL_METADATA presenta le restrizioni seguenti:  
   
-|nome|Obbligatorio|Descrizione|  
+|Nome|Obbligatorio|Descrizione|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Yes|Nome del catalogo\database.|  
 |PERSPECTIVE_NAME|Sì, se il cubo contiene più di una prospettiva. Facoltativo se è presente un solo cubo o una prospettiva predefinita.|Nome del cubo o della prospettiva nel database multidimensionale.|  

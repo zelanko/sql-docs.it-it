@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792391"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gestione di utenti DQS in SSMS
   In questo argomento viene descritto come creare utenti aggiuntivi nell'istanza di SQL Server utilizzando SQL Server Management Studio e come assegnare loro ruoli [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nel database DQS_MAIN.  
@@ -24,7 +24,7 @@ ms.locfileid: "56027982"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'account utente di Windows deve essere un membro del ruolo predefinito del server appropriato, ad esempio securityadmin, serveradmin o sysadmin, per creare account di accesso SQL e assegnare a questi i ruoli DQS appropriati.  
   
 ##  <a name="GrantRoles"></a> Creare un account di accesso SQL e concessione del ruolo DQS  
@@ -42,7 +42,7 @@ ms.locfileid: "56027982"
   
 5.  Al termine della convalida dell'utente, nel riquadro sinistro fare clic su **Mapping utenti** .  
   
-6.  Nel riquadro di destra, selezionare la casella di controllo sotto le **mappa** colonna per il **DQS_MAIN** del database e quindi selezionare il **dqs_administrator**, **dqs_kb_editor** , o **dqs_kb_operator** casella di controllo di **Database l'appartenenza al ruolo per: Database DQS_MAIN** riquadro, a seconda del livello di accesso necessario per l'utente.  
+6.  Nel riquadro destro selezionare la casella di controllo nella colonna **Mappa** per il database **DQS_MAIN** e quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN**, a seconda del livello di accesso necessario per l'utente.  
   
 7.  Nella finestra di dialogo **Account di accesso - Nuovo** fare clic su **OK** per applicare le modifiche.  
   

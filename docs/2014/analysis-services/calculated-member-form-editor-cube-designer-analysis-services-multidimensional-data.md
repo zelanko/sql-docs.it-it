@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a16319b01c6555aa3bf299da201d9662cd59f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667861"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form membro calcolato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Editor form membro calcolato** nella scheda **Calcoli** di Progettazione cubi consente di creare o modificare un membro calcolato.  
@@ -26,7 +26,7 @@ ms.locfileid: "48049111"
  **Nota** Questo riquadro viene visualizzato solo nella visualizzazione Form.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome del membro calcolato.  
   
  **Proprietà padre**  

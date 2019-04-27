@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788129"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server)
   La procedura guidata Aggiungi replica Azure consente di creare una nuova macchina virtuale di Windows Azure in un ambiente IT ibrido e di configurarla come replica secondaria per un gruppo di disponibilità AlwaysOn nuovo o esistente.  
@@ -26,9 +26,9 @@ ms.locfileid: "48095641"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per aggiungere una replica mediante:**  [Procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Per aggiungere una replica mediante:**  [Aggiungi Replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Se mai stata aggiunta una replica di disponibilità per un gruppo di disponibilità, vedere la "Istanze del Server" e "repliche e gruppi di disponibilità" sezioni in [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -49,13 +49,13 @@ ms.locfileid: "48095641"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Vedere [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica Azure (SQL Server Management Studio)  
  La procedura guidata Aggiungi replica Azure può essere avviata dalla [Pagina Specifica repliche](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Questa pagina può essere visualizzata in due modi:  
   
--   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Creazione guidata gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48095641"
   
 4.  Specificare le impostazioni per la macchina virtuale Windows Azure che ospiterà la nuova replica secondaria:  
   
-     Immagine  
+     Image  
      Nome dell'immagine di SQL Server da utilizzare per la macchina virtuale Windows Azure  
   
      Dimensioni VM  

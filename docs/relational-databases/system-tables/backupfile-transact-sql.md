@@ -20,30 +20,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645505"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni file di dati o di log di un database. Le colonne descrivono la configurazione dei file al momento dell'esecuzione del backup. Se il file è incluso nel backup è determinato dal **is_present** colonna. Questa tabella è archiviata nel **msdb** database.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Numero di identificazione univoco del file che include il set di backup. I riferimenti **backupset (backup_set_id)**.|  
+|**backup_set_id**|**int**|Numero di identificazione univoco del file che include il set di backup. References **backupset(backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Numero di gruppo del primo supporto che include il file di backup. Può essere NULL.|  
 |**first_media_number**|**smallint**|Numero del primo supporto che include il file di backup. Può essere NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nome del filegroup che include un file di database di backup. Può essere NULL.|  
 |**page_size**|**int**|Dimensioni della pagina in byte.|  
-|**file_number**|**Numeric(10,0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde al **Sys. database_files**. **file_id**).|  
-|**backed_up_page_count**|**Numeric(10,0)**|Numero di pagine di cui è stato eseguito il backup. Può essere NULL.|  
+|**file_number**|**numeric(10,0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde al **Sys. database_files**. **file_id**).|  
+|**backed_up_page_count**|**numeric(10,0)**|Numero di pagine di cui è stato eseguito il backup. Può essere NULL.|  
 |**file_type**|**char(1)**|File di cui è stato eseguito il backup. I valori possibili sono:<br /><br /> D = file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = catalogo full-text.<br /><br /> Può essere NULL.|  
-|**source_file_block_size**|**Numeric(10,0)**|Dispositivo in cui si trova il file di dati o di log originale quando viene eseguito il backup. Può essere NULL.|  
+|**source_file_block_size**|**numeric(10,0)**|Dispositivo in cui si trova il file di dati o di log originale quando viene eseguito il backup. Può essere NULL.|  
 |**file_size**|**numeric(20,0)**|Lunghezza in byte del file di cui è stato eseguito il backup. Può essere NULL.|  
-|**nome_logico**|**nvarchar(128)**|Nome logico del file di cui è stato eseguito il backup. Può essere NULL.|  
+|**logical_name**|**nvarchar(128)**|Nome logico del file di cui è stato eseguito il backup. Può essere NULL.|  
 |**physical_drive**|**nvarchar(260)**|Nome di dispositivo fisico o partizione. Può essere NULL.|  
 |**physical_name**|**nvarchar(260)**|Parte rimanente del nome fisico del file (sistema operativo). Può essere NULL.|  
 |**state**|**tinyint**|Stato del file. I valori possibili sono:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = ELIMINATO<br /><br /> Nota: Il valore 5 viene ignorato in modo che questi valori corrispondono ai valori per gli stati del database.|  

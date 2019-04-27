@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779136"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep consente di preparare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer e di completare la configurazione in un secondo momento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep comporta un processo costituito da due passaggi per ottenere un'istanza autonoma configurata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi necessari sono i seguenti:  

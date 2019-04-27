@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779192"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Proprietà catalogo full-text (pagina Tabelle e viste)
   Utilizzare questa finestra di dialogo per visualizzare o modificare le tabelle e le viste assegnate al catalogo full-text.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Tutti gli oggetti tabella/vista idonei nel database**  
- Elenca le tabelle e le viste che hanno un indice univoco definito, ma che non fanno già parte del catalogo full-text. Per selezionare una tabella o una vista e assegnarla al catalogo, selezionare gli elementi desiderati nella casella di riepilogo e fare clic sul pulsante "->".  
+ Elenca le tabelle e le viste che hanno un indice univoco definito, ma che non fanno già parte del catalogo full-text. Per selezionare una tabella o vista e assegnarla al catalogo, selezionare gli elementi nella casella di riepilogo e fare clic sul pulsante "->".  
   
  **Oggetti tabella/vista assegnati al catalogo**  
  Elenca le tabelle e le viste attualmente assegnate al catalogo full-text.  
@@ -53,7 +53,7 @@ ms.locfileid: "48202091"
 |||  
 |-|-|  
 |**Automatico**|L'indice full-text viene aggiornato automaticamente in caso di modifica, aggiunta o eliminazione dei dati nella tabella sottostante.|  
-|**Manuale**|Quando i dati viene modificati, aggiunto o eliminati nei dati con indicizzazione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene traccia delle modifiche. Quando il rilevamento delle modifiche è impostato su **Manuale** , le modifiche all'indice non vengono aggiornate automaticamente. Un amministratore può invece applicare le modifiche apportate manualmente usando un [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) istruzione.|  
+|**Manuale**|Le modifiche, le aggiunte o le eliminazioni dei dati indicizzati vengono rilevate da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando il rilevamento delle modifiche è impostato su **Manuale** , le modifiche all'indice non vengono aggiornate automaticamente. Un amministratore può invece applicare le modifiche apportate manualmente usando un [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) istruzione.|  
 |**Non rilevare modifiche**|Quando è impostata questa opzione, le modifiche apportate ai dati indicizzati nel catalogo non vengono registrate. Un amministratore deve compilare l'indice utilizzando ALTER FULLTEXT INDEX con FULL POPULATION o INCREMENTAL POPULATION.|  
   
 ## <a name="see-also"></a>Vedere anche  

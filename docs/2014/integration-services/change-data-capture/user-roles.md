@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771087"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Ruoli utente per il servizio CDC (Change Data Capture) per Oracle di Attunity
   In questa sezione sono descritti i ruoli utente per il servizio Change Data Capture per Oracle di Attunity. I ruoli descritti sono ruoli del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ruoli di Windows o ruoli del database Oracle.  
@@ -23,7 +23,7 @@ ms.locfileid: "58394318"
 ## <a name="windows-user-roles"></a>Ruoli utente di Windows  
  Di seguito vengono descritti i ruoli utente di Windows utilizzati dal servizio Oracle CDC.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Amministratore del computer: servizio Oracle CDC  
+### <a name="computer-administrator-oracle-cdc-service"></a>Amministratore del computer: Servizio Oracle CDC  
  L'amministratore del computer è un utente di Windows responsabile della creazione e della gestione del servizio CDC nel computer. Deve appartenere al gruppo di amministratori del computer locale.  
   
  Tra le attività eseguite dall'amministratore del computer del servizio Oracle CDC sono incluse le seguenti:  
@@ -52,7 +52,7 @@ ms.locfileid: "58394318"
   
 -   Funzione di amministratore del computer autorizzato come amministratore nel computer in cui è installato il servizio CDC per Oracle. Questa persona installa il servizio CDC per Oracle e utilizza la console di configurazione del servizio CDC per configurare un servizio CDC per Oracle in un computer locale.  
   
-### <a name="service-account-oracle-cdc-service"></a>Account servizio: servizio Oracle CDC  
+### <a name="service-account-oracle-cdc-service"></a>Account del servizio: Servizio Oracle CDC  
  Si tratta dell'account del servizio di Windows del servizio CDC, un account di Windows utilizzato per l'esecuzione del servizio Oracle CDC (account del servizio).  
   
  L'unico privilegio obbligatorio necessario per l'account del servizio è la possibilità di utilizzare il client Oracle e il provider ODBC del client nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo account non necessita dell'accesso ai file a meno che non sia richiesto da provider specifici, ad esempio se la stringa di connessione del client Oracle fa riferimento alle istanze del database Oracle in un file **tnsnames.ora** , nel qual caso il file deve essere accessibile in lettura all'account del servizio.  

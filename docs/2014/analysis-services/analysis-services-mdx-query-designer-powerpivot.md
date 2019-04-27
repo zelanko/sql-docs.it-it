@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 419db8a664d235090a68d495373eee1e0addbfff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643995"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Progettazione query MDX di Analysis Services (PowerPivot)
   Progettazione query MDX (Multidimensional Expression) di Analysis Services offre un'interfaccia utente grafica per semplificare la creazione di query MDX per un'origine dati [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro dei metadati da cui è possibile trascinare membri dei cubi selezionati per compilare una query MDX per il recupero dei dati che si desidera utilizzare.  

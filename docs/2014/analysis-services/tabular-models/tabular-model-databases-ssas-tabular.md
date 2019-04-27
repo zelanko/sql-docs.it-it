@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756591"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Database modello tabulare (SSAS tabulare)
   Un database modello tabulare è un database di Analysis Services creato in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite il modello di progetto di modello tabulare di Analysis Services, in cui tabelle e relazioni sono le strutture primarie per la rappresentazione di dati.  
@@ -25,20 +25,20 @@ ms.locfileid: "48190701"
  I database modello tabulare sono più facili da compilare rispetto ai database multidimensionali, specialmente se si dispone di un background nell'ambito dei database relazionali. Diversamente le attività amministrative sono simili, se non identiche, all'amministrazione di un database multidimensionale. Si applicano gli stessi strumenti e approcci.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Accesso ai dati di modello tabulare](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Elaborare database, tabelle o partizioni](process-database-table-or-partition-analysis-services.md)  
   
- [Ruoli nei modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Ruoli nei modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Partizioni di modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Partizioni di modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configurare l'accesso in memoria o DirectQuery per un database di modello tabulare](enable-directquery-mode-in-ssms.md)  
   
- [Connettersi a un Database modello tabulare &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Connettersi a un database modello tabulare &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Ripristina da PowerPivot](restore-from-power-pivot.md)  
   

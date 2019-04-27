@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654977"
 ---
 # <a name="ddl-triggers"></a>Trigger DDL
   I trigger DDL vengono eseguiti in risposta a vari eventi DDL (Data Definition Language), Questi eventi corrispondono principalmente a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che iniziano con le parole chiave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL.  

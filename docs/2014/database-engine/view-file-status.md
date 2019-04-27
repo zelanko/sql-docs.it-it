@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773367"
 ---
 # <a name="view-file-status"></a>Visualizzazione dello stato dei file
   Il controllo del codice sorgente gestisce informazioni dettagliate sullo stato su ogni elemento incluso nel controllo del codice sorgente. È possibile utilizzare queste informazioni per identificare lo stato corrente del file e creare un report sullo stato dell'elemento.  

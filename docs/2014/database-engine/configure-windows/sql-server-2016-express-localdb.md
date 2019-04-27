@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756999"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` è una modalità di esecuzione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destinata agli sviluppatori. `LocalDB` installazione copiato un set minimo di file necessari per avviare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una volta `LocalDB` è installato, gli sviluppatori avviano una connessione usando una stringa di connessione speciale. Durante la connessione, l'infrastruttura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessaria viene creata automaticamente e avviata, consentendo all'applicazione di usare il database senza attività di configurazione complesse o lunghe. Con Developer Tools gli sviluppatori dispongono di un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che consente di scrivere e verificare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] senza dover gestire un'istanza del server completa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` viene gestito usando il `SqlLocalDB.exe` utilità. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` deve essere usato al posto di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] funzionalità dell'istanza utente è stato deprecato.  
@@ -87,8 +87,8 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|nome|"LocalDBApp1"|  
-|Versione|\<Versione corrente>|  
+|Nome|"LocalDBApp1"|  
+|Version|\<Versione corrente>|  
 |Nome condiviso|""|  
 |Proprietario|"\<utente di Windows>"|  
 |Creazione automatica|No|  

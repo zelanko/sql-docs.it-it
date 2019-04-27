@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774780"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Apertura di soluzioni e progetti dal controllo del codice sorgente
   È possibile usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire una soluzione o progetto direttamente dal controllo del codice sorgente. Quando viene aperta una soluzione dal controllo del codice sorgente, nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene recuperata automaticamente la sua versione più recente e copiata nel percorso specificato.  
@@ -27,7 +27,7 @@ ms.locfileid: "48061261"
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Aprire Soluzioni dal controllo del codice sorgente](../../2014/database-engine/open-solutions-from-source-control.md)|Spiega come utilizzare l'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per aprire soluzioni direttamente dal controllo del codice sorgente.|  
 |[Apertura di progetti dal controllo del codice sorgente](../../2014/database-engine/open-projects-from-source-control.md)|Spiega come aprire un progetto dal controllo del codice sorgente per estrarre e modificare i file del progetto.|  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656440"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
   La formattazione degli elementi del report consente di migliorare l'aspetto e la leggibilità del report. È possibile formattare le caselle di testo e i singoli elementi contenuti nelle caselle, le immagini, le espressioni e i dati in modalità progettazione report.  

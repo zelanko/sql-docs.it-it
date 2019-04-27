@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec993b67736c8f1d77341ff25b620796dd9a209b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730669"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Genera query denominata (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Genera query denominata** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query denominata in base a una serie di grafico, un valore di serie di grafico o un filtro di grafico selezionato dal grafico visualizzato nella scheda **Grafico pivot** nella finestra di dialogo **Esplora dati** . Per visualizzare la finestra di dialogo **Genera query denominata** , è possibile fare clic su **Genera query denominata** nella finestra di dialogo **Esplora dati** .  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome della query denominata.  
   
  **Descrizione**  

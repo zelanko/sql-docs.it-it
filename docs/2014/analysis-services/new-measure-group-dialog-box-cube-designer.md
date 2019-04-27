@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743703"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Finestra di dialogo Nuovo gruppo di misure (Progettazione cubi)
   Utilizzare la finestra di dialogo **Nuovo gruppo di misure** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere un nuovo gruppo di misure a un cubo in Progettazione cubi. Per visualizzare la finestra di dialogo **Nuovo gruppo di misure** è possibile:  

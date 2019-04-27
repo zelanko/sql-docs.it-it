@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da44ae47d7e6eaea78a1d14736367ed5cc41d311
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757256"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Abilitare la modalità DirectQuery (SSAS tabulare)
   Per creare un modello in modalità DirectQuery, è innanzitutto necessario modificare l'ambiente di progettazione in modo che supporti l'utente della modalità DirectQuery. Quando si esegue questa operazione, vengono anche eseguite le operazioni seguenti:  
@@ -33,7 +33,7 @@ ms.locfileid: "48172581"
   
 ### <a name="to-enable-use-of-directquery-in-a-model"></a>Per abilitare l'utilizzo di DirectQuery in un modello  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire il file della soluzione.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il file della soluzione.  
   
 2.  In Esplora oggetti fare doppio clic sul file Model.bim.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "48172581"
 4.  Se sono presenti errori, in Visual Studio, aprire il **elenco errori** e risolvere eventuali problemi che impedirebbero di impostare la modalità DirectQuery per il modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La modalità DirectQuery &#40;tabulare di SSAS&#41;](directquery-mode-ssas-tabular.md)  
+ [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)  
   
   

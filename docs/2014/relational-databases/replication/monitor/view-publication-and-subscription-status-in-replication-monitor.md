@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666946"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Visualizzazione dello stato delle pubblicazioni e delle sottoscrizioni in Monitoraggio replica
   In Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni:  
@@ -53,7 +53,7 @@ ms.locfileid: "54123931"
   
  **Per visualizzare lo stato delle pubblicazioni e delle sottoscrizioni**  
   
--   Monitoraggio replica: [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).
+-   Monitoraggio replica: [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## <a name="publication-status-values"></a>Valori di stato delle pubblicazioni  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773397"
 ---
 # <a name="undo-checkouts"></a>Annullare estrazioni
   È possibile usare la **Annulla estrazione** comando per annullare un'estrazione esistente. che risulta particolarmente utile quando è necessario eseguire il rollback delle modifiche dopo avere modificato e salvato un file.  
@@ -42,7 +42,7 @@ ms.locfileid: "48078321"
      **Visualizzazione semplice**  
      Consente di visualizzare gli elementi come elenchi semplici sotto la relativa connessione del controllo del codice sorgente.  
   
-     **Nome**  
+     **Name**  
      Consente di visualizzare i nomi degli elementi per i quali annullare l'estrazione. Accanto agli elementi viene visualizzata la casella di controllo selezionata. Se non si desidera annullare l'estrazione di un elemento, deselezionare la casella di controllo corrispondente.  
   
      **Opzioni**  

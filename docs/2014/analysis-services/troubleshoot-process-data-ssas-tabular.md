@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756272"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Risolvere i problemi relativi all'elaborazione dei dati (SSAS tabulare)
   In questo argomento vengono fornite informazioni sull'elaborazione (aggiornamento) dei dati del modello quando si crea un modello tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Non sono disponibili informazioni sull'elaborazione di dati in modelli distribuiti in un'istanza del server Analysis Services. Per altre informazioni sull'elaborazione dei dati in un modello distribuito, vedere [Creare script per le attività amministrative in Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -106,7 +106,7 @@ ms.locfileid: "48174701"
 -   Non è possibile selezionare più colonne in tabelle diverse e modificarne le proprietà. È possibile utilizzare una sola tabella o vista alla volta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborare manualmente i dati &#40;tabulare di SSAS&#41;](manually-process-data-ssas-tabular.md)   
- [Modificare una connessione all'origine dati esistente &#40;tabulare di SSAS&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Elaborare manualmente i dati &#40;SSAS tabulare&#41;](manually-process-data-ssas-tabular.md)   
+ [Modificare una connessione all'origine dati esistente &#40;SSAS tabulare&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

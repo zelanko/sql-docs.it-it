@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666687"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Creazione di un nuovo diagramma di database (Visual Database Tools)
   È possibile utilizzare Esplora oggetti per creare nuovi diagrammi di database. I diagrammi di database mostrano graficamente la struttura del database. Mediante i diagrammi di database è possibile creare e modificare tabelle, colonne, relazioni e chiavi. È inoltre possibile modificare indici e vincoli.  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774293"
 ---
 # <a name="manage-checkins"></a>Gestione delle archiviazioni
   Per mettere a disposizione di altri utenti le modifiche apportate a un file incluso nel controllo del codice sorgente, è necessario archiviare il file. Quando un file viene archiviato, la versione creata viene copiata nel provider del controllo del codice sorgente, viene impostata come versione più recente del file e viene in genere messa a disposizione degli utenti dotati delle autorizzazioni necessarie.  
@@ -28,7 +28,7 @@ ms.locfileid: "48069871"
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Archiviazione di file](../../2014/database-engine/check-in-files.md)|Offre istruzioni sulla procedura di archiviazione di un file modificato.|  
 |[Visualizzazione di un elenco di file modificati](../../2014/database-engine/view-a-list-of-modified-files.md)|Spiega come visualizzare un elenco di file modificati che è possibile archiviare contemporaneamente al termine delle operazioni.|  

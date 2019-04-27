@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2301f57d97c42ef2887824d2acd092e2a78aee7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757073"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Gerarchie (SSAS tabulare)
   Nei modelli tabulari le gerarchie sono metadati che consentono di definire le relazioni tra due o più colonne di una tabella. Le gerarchie possono essere visualizzate separatamente dalle altre colonne in un elenco di campi client per la creazione di report, semplificando l'esplorazione e l'inserimento di tali gerarchie in un report.  
@@ -34,11 +34,11 @@ ms.locfileid: "48133441"
   
  In una tabella Date è ad esempio possibile creare una gerarchia Calendar. Anno di calendario verrà utilizzato come livello padre superiore, con Mese, Settimana e Anno inclusi come livelli figlio (Anno di calendario->Mese->Settimana->Giorno). In questa gerarchia viene illustrata una relazione logica da Calendar Year a Day. Un utente client può quindi selezionare l'anno di calendario in un elenco dei campi per includere tutti i livelli in una tabella pivot oppure espandere la gerarchia e selezionare solo livelli particolari da includere nella tabella pivot.  
   
- Poiché ogni livello di una gerarchia è una rappresentazione di una colonna di una tabella, il livello può essere rinominato. Sebbene non sia esclusiva delle gerarchie (qualsiasi colonna può essere rinominata in un modello tabulare), la ridenominazione dei livelli della gerarchia può rendere più semplificare l'individuazione e l'inclusione di livelli in un report. La ridenominazione di un livello non consente di ridenominare la colonna a cui fa riferimento, bensì rende semplicemente più identificabile il livello. Nell'esempio della gerarchia Calendar Year nella tabella Date in Vista dati, le colonne CalendarYear, CalendarMonth, CalendarWeek e CalendarDay sono state rinominate Calendar Year, Calendar Month, Calendar Week e Calendar Day per renderle più facilmente identificabili. La ridenominazione dei livelli consente inoltre di fornire coerenza nei report, poiché gli utenti dovranno probabilmente modificare di meno i nomi delle colonne per renderle più leggibili nelle tabelle pivot, nei grafici e così via.  
+ Poiché ogni livello di una gerarchia è una rappresentazione di una colonna di una tabella, il livello può essere rinominato. Sebbene non sia esclusiva delle gerarchie (qualsiasi colonna può essere rinominata in un modello tabulare), la ridenominazione dei livelli della gerarchia può rendere più semplificare l'individuazione e l'inclusione di livelli in un report. La ridenominazione di un livello non consente di ridenominare la colonna a cui fa riferimento, bensì rende semplicemente più identificabile il livello. In questo esempio gerarchia Calendar Year, nella tabella Date in vista dati, le colonne: CalendarYear, CalendarMonth, CalendarWeek e CalendarDay sono state rinominate Calendar Year, Month, settimana e giorno per renderle più facilmente identificabili. La ridenominazione dei livelli consente inoltre di fornire coerenza nei report, poiché gli utenti dovranno probabilmente modificare di meno i nomi delle colonne per renderle più leggibili nelle tabelle pivot, nei grafici e così via.  
   
  Le gerarchie possono essere incluse nelle prospettive. Le prospettive consentono di definire subset visualizzabili di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello. Una prospettiva può ad esempio fornire agli utenti un elenco visualizzabile (gerarchia) dei soli elementi di dati necessari a soddisfare specifici requisiti di creazione di report. Per altre informazioni, vedere [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
   
- Le gerarchie non sono pensate per essere utilizzate come meccanismo di sicurezza, ma piuttosto come strumento per migliorare l'esperienza utente. Tutte le impostazioni di sicurezza di una determinata gerarchia vengono ereditate dal modello sottostante. Le gerarchie non possono consentire l'accesso agli oggetti del modello se l'utente non dispone già del relativo diritto di accesso. È quindi necessario risolvere la sicurezza del database modello prima di poter fornire l'accesso agli oggetti del modello tramite una gerarchia. I ruoli di sicurezza possono essere utilizzati per proteggere i metadati e i dati del modello. Per altre informazioni, vedere [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Le gerarchie non sono pensate per essere utilizzate come meccanismo di sicurezza, ma piuttosto come strumento per migliorare l'esperienza utente. Tutte le impostazioni di sicurezza di una determinata gerarchia vengono ereditate dal modello sottostante. Le gerarchie non possono consentire l'accesso agli oggetti del modello se l'utente non dispone già del relativo diritto di accesso. È quindi necessario risolvere la sicurezza del database modello prima di poter fornire l'accesso agli oggetti del modello tramite una gerarchia. I ruoli di sicurezza possono essere utilizzati per proteggere i metadati e i dati del modello. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_define"></a> Definizione di gerarchie  
  Per creare e gestire gerarchie è possibile utilizzare Progettazione modelli in Vista diagramma. La creazione e la gestione di gerarchie non sono supportate in Progettazione modelli in Vista dati. Per visualizzare Progettazione modelli in Vista diagramma fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi fare clic su **Vista diagramma**.  
@@ -49,17 +49,17 @@ ms.locfileid: "48133441"
   
  Per impostazione predefinita, le nuove gerarchie vengono denominate hierarchy1, hierarchy2 e così via. È necessario modificare i nomi delle gerarchie per riflettere la natura della relazione padre-figlio, rendendole più identificabili agli utenti.  
   
- Dopo aver creato le gerarchie, è possibile utilizzare la funzionalità Analizza in Excel per eseguire un test sulla loro efficacia. Per altre informazioni, vedere [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
+ Dopo aver creato le gerarchie, è possibile utilizzare la funzionalità Analizza in Excel per eseguire un test sulla loro efficacia. Per altre informazioni, vedere la sezione [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
-|[Creare e gestire le gerarchie di &#40;tabulare di SSAS&#41;](hierarchies-ssas-tabular.md)|Viene descritto come creare e gestire gerarchie utilizzando Progettazione modelli in Vista diagramma.|  
+|[Creare e gestire gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)|Viene descritto come creare e gestire gerarchie utilizzando Progettazione modelli in Vista diagramma.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
- [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
+ [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
+ [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  
   
   

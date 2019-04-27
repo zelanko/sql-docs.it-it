@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740781"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>Visualizzare attributi in un albero, un elenco o una griglia in Progettazione dimensioni
   In questa procedura viene descritto come modificare la modalità di visualizzazione degli attributi in Progettazione dimensioni.  

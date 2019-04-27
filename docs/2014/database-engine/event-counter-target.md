@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f701ff8a1648a3f90f7e04c71f159081ac7a3da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780905"
 ---
 # <a name="event-counter-target"></a>Destinazione del contatore degli eventi
   La destinazione del contatore degli eventi conta tutti gli eventi generati durante una sessione di eventi estesi. Utilizzando la destinazione del contatore degli eventi, è possibile ottenere informazioni sulle funzionalità del carico di lavoro senza aggiungere l'overhead di un'intera raccolta di eventi. Questa destinazione non include parametri personalizzabili.  

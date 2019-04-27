@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779225"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria
   Gli indici vengono utilizzati per accedere in modo efficiente ai dati nelle tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La definizione degli indici corretti può migliorare notevolmente le prestazioni delle query. Si consideri, ad esempio, la query riportata di seguito:  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Se non è presente alcun indice sulla colonna c1, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dovrà essere analizzata l'intera tabella t, quindi dovranno essere filtrate le righe che soddisfano la condizione c1=1. Se tuttavia t include un indice sulla colonna c1, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può essere eseguita direttamente la ricerca del valore 1 e possono essere recuperate le righe.  
   
- Quando si effettua la ricerca di record con un valore specifico, o un intervallo di valori, per una o più colonne della tabella, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è possibile utilizzare un indice per tali colonne in modo da individuare rapidamente i record corrispondenti. Gli indici costituiscono un vantaggio sia per le tabelle basate su disco che per quelle ottimizzate per la memoria. Esistono tuttavia alcune differenze tra le strutture di indice, che è opportuno considerare quando si utilizzano tabelle ottimizzate per la memoria. Gli indici nelle tabelle ottimizzate per la memoria sono definiti indici ottimizzati per la memoria. Di seguito sono riportate alcune delle differenze principali:  
+ Quando si effettua la ricerca di record con un valore specifico, o un intervallo di valori, per una o più colonne della tabella, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è possibile utilizzare un indice per tali colonne in modo da individuare rapidamente i record corrispondenti. Gli indici costituiscono un vantaggio sia per le tabelle basate su disco che per quelle ottimizzate per la memoria. Esistono tuttavia alcune differenze tra le strutture di indice, che è opportuno considerare quando si utilizzano tabelle ottimizzate per la memoria. (Gli indici nelle tabelle ottimizzate per la memoria sono definiti per gli indici con ottimizzazione per la memoria.) Alcune delle differenze principali sono:  
   
 -   Gli indici con ottimizzazione per la memoria devono essere creati con [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Gli indici basati su disco possono essere creati con `CREATE TABLE` e `CREATE INDEX`.  
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754589"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Sospendere o riprendere una sessione di mirroring del database (SQL Server)
   In questo argomento viene descritto come sospendere o riprendere il mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48094001"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eseguire ReplaceThisText utilizzando:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48094001"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo la sospensione o ripresa del mirroring del database](#FollowUp)  
+-   **Completamento:**  [Dopo la sospensione o ripresa del mirroring del Database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  È possibile sospendere una sessione di mirroring del database in qualsiasi momento. Questa operazione potrebbe migliorare le prestazioni in caso di colli di bottiglia. Inoltre, la sessione può essere ripresa in qualsiasi momento.  
@@ -48,7 +48,7 @@ ms.locfileid: "48094001"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -70,7 +70,7 @@ ms.locfileid: "48094001"
   
 5.  Per riprendere la sessione fare clic su **Riprendi**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>Per sospendere il mirroring del database  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48094001"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la sospensione o ripresa del mirroring del database  
+##  <a name="FollowUp"></a> Completamento: Dopo la sospensione o ripresa del mirroring del Database  
   
 -   **Dopo la sospensione del mirroring del database**  
   

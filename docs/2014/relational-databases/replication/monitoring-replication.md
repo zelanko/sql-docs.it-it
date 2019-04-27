@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666869"
 ---
 # <a name="monitoring-replication"></a>Monitoraggio (replica)
   Il monitoraggio di una topologia di replica rappresenta un aspetto essenziale della distribuzione di una replica. Dato che l'attività di replica viene distribuita, è fondamentale monitorarne l'attività e lo stato su tutti i computer interessati. Per monitorare la replica è possibile utilizzare gli strumenti seguenti:  
@@ -34,7 +34,7 @@ ms.locfileid: "54134301"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] consente di accedere a Monitoraggio replica. Inoltre, consente di visualizzare lo stato corrente e l'ultimo messaggio registrato dagli agenti seguenti e consente di avviare e arrestare ciascun agente: Agente di lettura log, agente Snapshot, agente di Merge e agente di distribuzione. Per altre informazioni, vedere [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] consente di accedere a Monitoraggio replica. Consente anche di visualizzare lo stato attuale e l'ultimo messaggio registrato dagli agenti seguenti e di avviare e arrestare ogni agente: agente di lettura log, agente di snapshot, agente di merge e agente di distribuzione. Per altre informazioni, vedere [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] e oggetti RMO (Replication Management Objects)  
   

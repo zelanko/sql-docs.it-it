@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4a69cb8f0817c086537381a87b96dfb237b8d59c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643192"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyValType (classe ServerNetworkProtocolProperty)
   Ottiene il tipo di dati del valore archiviato nella proprietà a cui si fa riferimento.  

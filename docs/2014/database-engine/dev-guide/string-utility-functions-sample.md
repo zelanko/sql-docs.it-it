@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780586"
 ---
 # <a name="string-utility-functions-sample"></a>Esempio String Utility Functions
   L'esempio String Utilities include una funzione di flusso con valori di tabella, scritta in Visual C# e Visual Basic, che consente di dividere una stringa delimitata da virgole in una tabella con una colonna, nonché una funzione di aggregazione che consente di convertire una colonna stringa in una stringa delimitata da virgole.  Vengono inoltre implementate una funzione scalare e una funzione con valori di tabella che garantiscono funzionalità di ricerca e sostituzione di espressioni regolari.  

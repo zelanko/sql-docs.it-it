@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab277c5ad8d85fdc7c24046bfa191078525fe705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667118"
 ---
 # <a name="monitor-replication-agents"></a>Monitoraggio degli agenti di replica
   In Monitoraggio replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene offerta una visualizzazione di sistema dell'attività di replica e viene inoltre semplificata l'individuazione di informazioni su un agente specifico. Nell'elenco seguente vengono inclusi tutti gli agenti, le relative schede di Monitoraggio replica e un collegamento all'argomento in cui si spiega come accedere a queste schede:  
@@ -37,7 +37,7 @@ ms.locfileid: "54132311"
   
     -   Agente di lettura coda  
   
-     Accedere alle informazioni e attività associate a questi agenti utilizzare le schede seguenti: **Gli agenti** (disponibile per ogni server di pubblicazione e pubblicazione) e **avvisi** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+     Accedere a informazioni e attività associate a questi agenti tramite le schede seguenti: **Agenti** (disponibile per ogni server di pubblicazione e pubblicazione) e **Avvisi** (disponibile per ogni pubblicazione). Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Gli agenti seguenti sono associati alle sottoscrizioni in Monitoraggio replica:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54132311"
   
     -   Agente di merge  
   
-     Accedere alle informazioni e attività associate a questi agenti utilizzare le schede seguenti: **Elenco verifica sottoscrizioni** (disponibile per ogni server di pubblicazione) o il **tutte le sottoscrizioni** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+     Accedere a informazioni e attività associate a questi agenti tramite le schede seguenti: **Elenco verifica sottoscrizioni** (disponibile per ogni server di pubblicazione) o **Tutte le sottoscrizioni** (disponibile per ogni pubblicazione). Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Utilizzo di SQL Server Management Studio per il monitoraggio degli agenti di replica  
  In[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sono disponibili le finestre di dialogo seguenti per il monitoraggio degli agenti di replica:  
@@ -56,7 +56,7 @@ ms.locfileid: "54132311"
   
 -   **Visualizza stato sincronizzazione** (per tutte le sottoscrizioni: questa finestra di dialogo consente l'accesso all'agente di distribuzione e all'agente di merge)  
   
- Monitoraggio replica offre informazioni aggiuntive su ogni agente e consente di monitorare l'agente di lettura coda, se utilizzato. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+ Monitoraggio replica offre informazioni aggiuntive su ogni agente e consente di monitorare l'agente di lettura coda, se utilizzato. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 #### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>Per monitorare l'agente snapshot e l'agente di lettura log  
   

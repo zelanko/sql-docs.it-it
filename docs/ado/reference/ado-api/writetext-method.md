@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642957"
 ---
 # <a name="writetext-method"></a>Metodo WriteText
 Scrive una stringa di testo specificato in un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  

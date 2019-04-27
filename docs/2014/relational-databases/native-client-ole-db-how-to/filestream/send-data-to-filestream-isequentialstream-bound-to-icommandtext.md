@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643362"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream associato al parametro ICommandText (OLE DB)
   In questo esempio viene utilizzata un'interfaccia ISequentialStream associata a un parametro ICommandText per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  

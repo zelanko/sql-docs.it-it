@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
-ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773679"
 ---
 # <a name="ring-buffer-target"></a>Destinazione del buffer circolare
   La destinazione del buffer circolare mantiene brevemente in memoria i dati relativi agli eventi. Questa destinazione può gestire gli eventi in due modalità diverse.  

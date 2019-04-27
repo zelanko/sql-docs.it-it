@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746943"
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, con il conseguente miglioramento delle prestazioni complessive del server dovuto all'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
@@ -88,7 +88,7 @@ ms.locfileid: "55087900"
   
  Le proprietà sono elencate in ordine alfabetico.  
   
-|nome|Tipo|Descrizione|Impostazione predefinita|Informazioni aggiuntive|  
+|Nome|Tipo|Descrizione|Impostazione predefinita|Informazioni aggiuntive|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|Valore a virgola mobile a precisione doppia con cui si determina l'algoritmo usato per impostare una destinazione nel numero di thread che possono essere inseriti in una coda contemporaneamente.|2.0|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> La proprietà Concurrency viene usata per inizializzare i pool di thread che vengono implementati usando le porte di completamento I/O di Windows. Per altre informazioni, vedere [Porte di completamento I/O](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) .<br /><br /> Questa proprietà si applica solo ai modelli multidimensionali.|  
 |`IOProcess` \ `GroupAffinity`|string|Matrice di valori esadecimali corrispondenti ai gruppi di processori nel sistema, usata per impostare l'affinità dei thread nel pool di thread IOProcess sui processori logici in ogni gruppo di processori.|none|È possibile usare questa proprietà per creare affinità personalizzate. La proprietà è vuota per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare GroupAffinity per creare affinità fra thread e processori in un gruppo di processori](#bkmk_groupaffinity) .<br /><br /> Questa proprietà si applica solo ai modelli multidimensionali.|  
@@ -125,7 +125,7 @@ ms.locfileid: "55087900"
   
  Se il test delle prestazioni indica la necessità di eseguire l'ottimizzazione della CPU, può essere consigliabile adottare un approccio di livello superiore, ad esempio usando Gestione risorse di Windows Server per impostare l'affinità tra i processori logici e un processo server. Questo tipo di approccio può risultare più semplice da implementare e gestire rispetto alla definizione di affinità personalizzate per i singoli pool di thread.  
   
- Se tale approccio risulta insufficiente, è possibile ottenere una maggiore precisione tramite la definizione di affinità personalizzate per i pool di thread. È più probabile che la personalizzazione delle impostazioni di affinità sia consigliata su sistemi multicore di grandi dimensioni (sia NUMA che non NUMA) in cui si verifichi una riduzione del livello delle prestazioni a causa della distribuzione dei pool di thread su un insieme troppo ampio di processori. Sebbene sia possibile impostare `GroupAffinity` in sistemi con meno di 64 processori logici, il vantaggio è irrilevante e può influire negativamente sulle prestazioni.  
+ Se tale approccio risulta insufficiente, è possibile ottenere una maggiore precisione tramite la definizione di affinità personalizzate per i pool di thread. È più probabile che la personalizzazione delle impostazioni di affinità sia consigliata su sistemi multicore di grandi dimensioni (sia NUMA che non NUMA) in cui si verifichi una riduzione del livello delle prestazioni a causa della distribuzione dei pool di thread su un insieme troppo ampio di processori. Sebbene sia possibile impostare `GroupAffinity` su sistemi con meno di 64 processori logici, il vantaggio è irrilevante e può persino influire negativamente sulle prestazioni.  
   
 > [!NOTE]  
 >  La proprietà `GroupAffinity` è vincolata da edizioni che limitano il numero di core usati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. All'avvio, le informazioni sull'edizione e le proprietà `GroupAffinity` vengono usate in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per calcolare le maschere di affinità per ognuno dei cinque pool di thread gestiti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nell'edizione standard è possibile usare al massimo 16 core. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition in un sistema multicore di grandi dimensioni con più di 16 core, ne verranno usati solo 16 in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si aggiorna un'istanza Enterprise di una versione precedente, sarà possibile usare al massimo 20 core. Per altre informazioni sulle versioni e sulle licenze, vedere [Panoramica sulle licenze di SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=246061).  
@@ -251,17 +251,17 @@ ms.locfileid: "55087900"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- Tenere presente che l'algoritmo per impostare **MinThread** e **MaxThread** incorpora la configurazione di sistema, in particolare il numero di processori. Il seguente post di blog offre informazioni sulle modalità di calcolo dei valori: [Impostazioni di analisi configurazione Services 2012 (Blog di Wordpress)](https://go.microsoft.com/fwlink/?LinkId=330387). Si noti che queste impostazioni e questi comportamenti sono soggetti a modifica nelle versioni future.  
+ Tenere presente che l'algoritmo per impostare **MinThread** e **MaxThread** incorpora la configurazione di sistema, in particolare il numero di processori. Post di blog seguente offre approfondimenti sul modo in cui i valori vengono calcolati: [Impostazioni di analisi configurazione Services 2012 (Blog di Wordpress)](https://go.microsoft.com/fwlink/?LinkId=330387). Si noti che queste impostazioni e questi comportamenti sono soggetti a modifica nelle versioni future.  
   
  Nell'elenco seguente vengono illustrati esempi di altre impostazioni di maschere di affinità, per diverse combinazioni di processori:  
   
--   L'affinità per i processori 3-2-1-0 in un sistema con 8 core produce la maschera di bit: 00001111 e il valore esadecimale: 0xF  
+-   Affinità per processori a 3-2-1-0 in un sistema con 8 core produce la maschera di bit: 00001111 e un valore esadecimale: 0xF  
   
--   L'affinità per i processori 7-6-5-4 in un sistema con 8 core produce la maschera di bit: 11110000 e il valore esadecimale: 0xF0  
+-   Affinità per processori a 6-5-7-4 su un sistema con 8 core produce la maschera di bit: 11110000 e un valore esadecimale: 0xF0  
   
--   L'affinità per i processori 5-4-3-2 in un sistema con 8 core produce la maschera di bit: 00111100 e il valore esadecimale: 0x3C  
+-   Affinità per processori 5-4-3-2 in un sistema con 8 core produce la maschera di bit: 00111100 e un valore esadecimale: 0x3C  
   
--   L'affinità per i processori 7-6-1-0 in un sistema con 8 core produce la maschera di bit: 11000011 e il valore esadecimale: 0xC3  
+-   Affinità per processori 7-6-1-0 in un sistema con 8 core produce la maschera di bit: 11000011 e un valore esadecimale: 0xC3  
   
  Tenere presente che nei sistemi con più gruppi di processori viene generata una maschera di affinità separata per ogni gruppo, in un elenco delimitato da virgole.  
   

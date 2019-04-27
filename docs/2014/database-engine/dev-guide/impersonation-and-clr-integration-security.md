@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781129"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Rappresentazione e sicurezza per l'integrazione con CLR
   Quando il codice gestito accede alle risorse esterne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non rappresenta automaticamente il contesto di esecuzione corrente nel quale viene eseguita la routine. Il contesto di esecuzione corrente può essere rappresentato in modo esplicito dal codice degli assembly `EXTERNAL_ACCESS` e `UNSAFE`.  

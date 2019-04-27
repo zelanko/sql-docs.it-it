@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792041"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Aggiungere una replica secondaria a un gruppo di disponibilità (SQL Server)
   In questo argomento viene illustrato come aggiungere una replica secondaria a un gruppo di disponibilità AlwaysOn esistente utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "52525855"
   
 ##  <a name="Security"></a> Sicurezza  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -121,7 +121,7 @@ ms.locfileid: "52525855"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver aggiunto una Replica secondaria  
+##  <a name="FollowUp"></a> Completamento: Dopo l'aggiunta di una replica secondaria  
  Per aggiungere una replica per un gruppo di disponibilità esistente, è necessario effettuare i passaggi seguenti:  
   
 1.  Connettersi all'istanza del server che ospiterà la nuova replica secondaria.  

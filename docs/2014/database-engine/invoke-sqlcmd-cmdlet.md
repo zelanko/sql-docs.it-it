@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774595"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che esegue script contenenti istruzioni provenienti dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **sqlcmd**.  
@@ -96,7 +96,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  Il cmdlet**Invoke-Sqlcmd** non inizializza l'ambiente o le variabili di scripting di **sqlcmd** , ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
   
- Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Esempio:  
+ Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Ad esempio:   
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -104,7 +104,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  In un ambiente PowerShell non sono necessari tutti i parametri **sqlcmd** . Windows PowerShell, ad esempio, formatta tutto l'output dei cmdlet, pertanto i parametri **sqlcmd** che specificano le opzioni di formattazione non vengono implementati in **Invoke-Sqlcmd**. Nella tabella seguente viene specificata la relazione tra i parametri di **Invoke-Sqlcmd** e le opzioni **sqlcmd** :  
   
-|Description|Opzione sqlcmd|Parametro Invoke-Sqlcmd|  
+|Descrizione|Opzione sqlcmd|Parametro Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Nome server e istanza.|-S|-ServerInstance|  
 |Database iniziale da utilizzare.|-d|-Database|  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Disabilita i comandi interattivi, gli script di avvio e le variabili di ambiente.|-X|-DisableCommands|  
 |Disabilita la sostituzione delle variabili.|-X|-DisableVariables|  
 |Livello minimo di gravità da segnalare.|-v|-SeverityLevel|  
-|Livello minimo di errore da segnalare.|-m|-ErrorLevel|  
+|Livello minimo di errore da segnalare.|-M|-ErrorLevel|  
 |Intervallo di timeout di accesso.|-l|-ConnectionTimeout|  
 |Nome host.|-H|-HostName|  
 |Consente di modificare la password e di uscire.|-Z|-NewPassword|  
@@ -132,8 +132,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Esegue la query specificata e rimane in esecuzione.|-Q|Nessun parametro|  
 |Tabella codici da utilizzare per i dati di output.|-f|Nessun parametro|  
 |Modifica una password e rimane in esecuzione|-Z|Nessun parametro|  
-|Dimensioni pacchetto|-a|Nessun parametro|  
-|Separatore delle colonne|-s|Nessun parametro|  
+|Dimensioni pacchetto|-A|Nessun parametro|  
+|Separatore delle colonne|-S|Nessun parametro|  
 |Controlla le intestazioni di output|-H|Nessun parametro|  
 |Specifica i caratteri di controllo|-k|Nessun parametro|  
 |Larghezza visualizzazione lunghezza fissa|-Y|Nessun parametro|  
@@ -142,7 +142,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Abilita gli identificatori delimitati|-i|Nessun parametro|  
 |Rimuove gli spazi finali|-w|Nessun parametro|  
 |Elenca le istanze|-l|Nessun parametro|  
-|Imposta il formato dell'output come Unicode|-U|Nessun parametro|  
+|Imposta il formato dell'output come Unicode|-u|Nessun parametro|  
 |Stampa statistiche|-p|Nessun parametro|  
 |Fine comando|-c|Nessun parametro|  
 |Stabilisce la connessione utilizzando l'autenticazione di Windows|-E|Nessun parametro|  

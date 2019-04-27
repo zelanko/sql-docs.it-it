@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730220"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Le proprietà `Language` e `Collation` vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  

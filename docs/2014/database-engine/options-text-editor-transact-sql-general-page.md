@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774165"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opzioni (Editor di testo - pagina Transact-SQL-generale)
   Utilizzare la finestra di dialogo delle opzioni **Generale** per cambiare il comportamento di modifica generale dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzato per modificare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] . Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la sottocartella **Transact-SQL** e quindi fare clic su **Generale**.  

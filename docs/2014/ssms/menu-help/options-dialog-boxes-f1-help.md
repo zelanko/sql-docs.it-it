@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662082"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Guida sensibile al contesto delle finestre di dialogo Opzioni
   In questa sezione è inclusa la Guida sensibile al contesto per le finestre di dialogo che vengono visualizzate quando si sceglie **Opzioni** dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774723"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server obsolete in SQL Server 2014
   In questo argomento vengono descritte le funzionalità non più disponibili dopo l'aggiornamento a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

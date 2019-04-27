@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779874"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funzionalità del Motore di database non più utilizzate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssDE](../includes/ssde-md.md)] che non sono più disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -56,13 +56,13 @@ ms.locfileid: "54132618"
 |Category|Funzionalità non più disponibile|Sostituzione|  
 |--------------|--------------------------|-----------------|  
 |Backup e ripristino|**BACKUP {DATABASE &#124; LOG} WITH PASSWORD** e **BACKUP {DATABASE &#124; LOG} WITH MEDIAPASSWORD** non sono più disponibili. **RESTORE {DATABASE &#124; LOG} con [MEDIA] PASSWORD**continua a essere deprecata.|None|  
-|Backup e ripristino|**RESTORE {DATABASE &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG}...... CON RESTRICTED_USER**|  
+|Backup e ripristino|**RESTORE { DATABASE &#124; LOG } ... WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ... WITH RESTRICTED_USER**|  
 |Livello di compatibilità|livello di compatibilità 80|I database devono essere impostati almeno sul livello di compatibilità 90.|  
 |Opzioni di configurazione|`sp_configure 'user instance timeout'` e `'user instances enabled'`|Utilizzare la funzionalità di database locale. Per altre informazioni, vedere [utilità SqlLocalDB](../tools/sqllocaldb-utility.md)|  
 |Protocolli di connessione|Il supporto per il protocollo VIA è obsoleto.|In alternativa, utilizzare TCP.|  
 |Oggetti di database|Clausola `WITH APPEND` sui trigger|Ricreare l'intero trigger.|  
 |Opzioni di database|`sp_dboption`|`ALTER DATABASE`|  
-|Posta elettronica|SQL Mail|Usare la posta elettronica database. Per altre informazioni, vedere [posta elettronica Database](../relational-databases/database-mail/database-mail.md) e [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Mail|SQL Mail|Usare la posta elettronica database. Per altre informazioni, vedere [posta elettronica Database](../relational-databases/database-mail/database-mail.md) e [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Gestione della memoria|Estensioni AWE (Address Windowing Extensions) a 32 bit e supporto per l'aggiunta della memoria a caldo a 32 bit.|Utilizzare un sistema operativo a 64 bit.|  
 |Metadati|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programmabilità|SQL Server DMO (SQL-Distributed Management Objects)|Oggetti SMO (SQL Server Management Objects)|  

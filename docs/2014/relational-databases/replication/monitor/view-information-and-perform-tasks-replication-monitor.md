@@ -1,5 +1,5 @@
 ---
-title: Visualizzare informazioni ed eseguire attività con Monitoraggio replica | Microsoft Docs
+title: Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667134"
 ---
-# <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualizzare le informazioni ed eseguire attività di utilizzo di monitoraggio replica
-Monitoraggio replica è disponibile un numero di schede e le opzioni per visualizzare informazioni ed eseguire diverse attività. Questo articolo descrive le diverse operazioni che possono essere visualizzate ed eseguite quando si usa Monitoraggio replica.
+# <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica
+Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed eseguire diverse attività. Questo articolo descrive le informazioni che possono essere visualizzate e le operazioni che possono essere eseguite usando Monitoraggio replica.
 
 ## <a name="for-a-publication"></a>Per una pubblicazione
 
-### <a name="view-information"></a>Informazioni visualizzazione
+### <a name="view-information"></a>Visualizzare informazioni
 
   In Monitoraggio replica sono disponibili le schede seguenti che includono le informazioni sulla pubblicazione selezionata:  
   
@@ -53,9 +53,9 @@ Monitoraggio replica è disponibile un numero di schede e le opzioni per visuali
 2.  Per visualizzare e modificare le proprietà della pubblicazione, fare clic con il pulsante destro del mouse sulla pubblicazione e quindi scegliere **Proprietà**.    
 3.  Per visualizzare le informazioni sulle sottoscrizioni, fare clic sulla scheda **Tutte le sottoscrizioni** .  
   
-     Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+     Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  Per visualizzare informazioni sugli agenti, fare clic sulla scheda **Agenti** . In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).    
+4.  Per visualizzare informazioni sugli agenti, fare clic sulla scheda **Agenti** . In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).    
 5.  Per visualizzare informazioni su avvisi e valore soglia dell'agente, fare clic sulla scheda **Avvisi** . Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
 6.  Per visualizzare le informazioni sui token di traccia, fare clic sulla scheda **Token di traccia** . Per ulteriori informazioni sulle modalità di utilizzo dei token di traccia, vedere [Misurazione della latenza e convalida delle connessioni per la replica transazionale](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
@@ -100,14 +100,14 @@ Monitoraggio replica è disponibile un numero di schede e le opzioni per visuali
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.   
 2.  Per visualizzare le informazioni sulle sottoscrizioni, fare clic sulla scheda **Tutte le sottoscrizioni** . Per visualizzare solo le sottoscrizioni in uno stato specifico, ad esempio in sincronizzazione, selezionare un'opzione nell'elenco a discesa **Mostra** .   
-3.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+3.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
-### <a name="subscription-watch-list-tab"></a>Scheda elenco verifica sottoscrizioni  
+### <a name="subscription-watch-list-tab"></a>Scheda Elenco verifica sottoscrizioni  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro e quindi fare clic su un server di pubblicazione.   
 2.  Per visualizzare informazioni sulle sottoscrizioni, fare clic sulla scheda **Elenco verifica sottoscrizioni** .  
 3.  Selezionare il tipo di sottoscrizione da visualizzare nell'elenco a discesa **Mostra sottoscrizioni \<TipoSottoscrizione>**. Per visualizzare solo le sottoscrizioni in uno stato specifico, ad esempio in sincronizzazione, selezionare un'opzione nell'elenco a discesa **Mostra** .    
-4.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+4.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Per gli agenti di pubblicazione
 

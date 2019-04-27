@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c787a9383bcec3c7d7614cc5823e6c9b4320cd2f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792462"
 ---
 # <a name="manage-a-knowledge-base"></a>Gestire una Knowledge Base
   In questo argomento viene descritto come eseguire le funzioni di gestione su una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). È possibile eliminare una Knowledge Base, sbloccarla, annullare le modifiche apportatevi, rinominarla e visualizzarne le proprietà.  
@@ -27,7 +27,7 @@ ms.locfileid: "56034288"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per aprire una Knowledge Base è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Manage"></a> Gestire una Knowledge Base  
@@ -40,25 +40,25 @@ ms.locfileid: "56034288"
   
 4.  Nel menu di scelta rapida è possibile scegliere tra le opzioni seguenti:  
   
-    1.  **Apri**: Fare clic per aprire la knowledge base nell'attività selezionata nel **Seleziona attività** riquadro.  
+    1.  **Apri**: fare clic per aprire la Knowledge Base nell'attività selezionata nel riquadro **Seleziona attività**.  
   
-    2.  **Sbloccare**: è possibile sbloccare la Knowledge Base se si è l'utente che ha usato la Knowledge Base in uno dei passaggi di gestione del dominio, individuazione delle informazioni e corrispondenza dei criteri e la si è chiusa. Se si sblocca la Knowledge Base, un altro utente potrà aprirla e utilizzarla. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività. Per altre informazioni, vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    2.  **Sblocca**: È possibile sbloccare la knowledge base se si è l'utente che ha utilizzato la knowledge base in una delle operazioni di gestione del dominio, individuazione delle informazioni e l'attività dei criteri di corrispondenza e l'ha chiusa. Se si sblocca la Knowledge Base, un altro utente potrà aprirla e utilizzarla. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività. Per altre informazioni, vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Annulla modifiche apportate**: fare clic quando la Knowledge Base si trova in uno stato di lavorazione, indicato con una voce nel campo Stato della tabella. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività e se la Knowledge Base è bloccata. Per altre informazioni, vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    3.  **Discard work** (Elimina modifiche): Fare clic quando la knowledge base si trova in uno stato di elaborazione, indicato con una voce nel campo stato nella tabella. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività e se la Knowledge Base è bloccata. Per altre informazioni, vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Rinominare**: fare clic per rendere modificabile il campo della tabella per la Knowledge Base selezionata. Modificare il nome, quindi fare clic sulla Knowledge Base e nel campo per accettare la modifica del nome.  
+    4.  **Rinomina**: Fare clic per potere modificare il campo della Knowledge Base della tabella per la Knowledge base selezionata. Modificare il nome, quindi fare clic sulla Knowledge Base e nel campo per accettare la modifica del nome.  
   
-    5.  **Elimina**: fare clic per rimuovere la Knowledge Base dal database DQS_MAIN di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+    5.  **Elimina**: Fare clic per rimuovere la knowledge base dal database DQS_MAIN su [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-    6.  **Proprietà**: fare clic per visualizzare le proprietà del database in sola lettura.  
+    6.  **Proprietà**: Fare clic per visualizzare le proprietà del database in sola lettura.  
   
         1.  **Knowledge Base origine**: Knowledge Base su cui si basa questo database Operazione facoltativa.  
   
-        2.  **stato**: Indica se la knowledge base **In lavorazione** e, se si trova in un'attività di gestione di informazioni specifiche, come indicato dopo l'ultima chiusura. Lo stato può essere **In lavorazione**in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni, ma non in un'attività specifica, o **In lavorazione** con un'attività di gestione delle informazioni in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni e in un'attività specifica.  
+        2.  **Stato**: indica se la Knowledge Base è **In lavorazione** e se si trova in un'attività di gestione delle informazioni specifica, come determinato al momento dell'ultima chiusura. Lo stato può essere **In lavorazione**in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni, ma non in un'attività specifica, o **In lavorazione** con un'attività di gestione delle informazioni in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni e in un'attività specifica.  
   
-        3.  **È bloccato**: **True** se la knowledge base è bloccata, **False** in caso contrario  
+        3.  **Bloccato**: **True** se la Knowledge Base è stata bloccata, in caso contrario **False**  
   
-        4.  **Contiene contenuto non pubblicato**: True se la Knowledge Base contiene contenuto non salvato tramite pubblicazione, altrimenti False  
+        4.  **Contiene contenuto non pubblicato**: True se la knowledge base contiene contenuto non salvato tramite pubblicazione, False se non  
   
         5.  **Bloccato da**: nome dell'utente che ha chiuso la Knowledge Base, bloccandola.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "56034288"
   
         8.  **Data creazione**: data della creazione.  
   
-##  <a name="FollowUp"></a> Completamento: Fasi successive alla gestione di una Knowledge Base  
+##  <a name="FollowUp"></a> Completamento: Dopo la gestione di una Knowledge Base  
  Dopo avere gestito una Knowledge Base, il passaggio successivo dipende dall'azione intrapresa sulla Knowledge Base:  
   
 -   Se la Knowledge Base è stata aperta, l'utente continuerà nell'attività selezionata.  

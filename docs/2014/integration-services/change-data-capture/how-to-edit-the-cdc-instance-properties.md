@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771229"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Procedura di modifica delle proprietà dell'istanza di CDC
   In questa procedura viene illustrato come utilizzare CDC Designer Console per modificare le proprietà di configurazione per un'istanza di CDC.  
@@ -34,7 +34,7 @@ ms.locfileid: "58390849"
   
 5.  Nell'editor delle proprietà modificare le proprietà nelle schede seguenti:  
   
-    -   **Oracle**: Usare la **Oracle** scheda nell'editor delle proprietà per modificare la descrizione fornita nella pagina Create CDC database della New Instance wizard e apportare modifiche per le informazioni di connessione Oracle Log Mining del database.  
+    -   **Oracle**: Usare la scheda **Oracle** nell'editor delle proprietà per modificare la descrizione fornita nella pagina Create CDC database (Crea database CDC) della New Instance Wizard (Creazione guidata nuova istanza) e le informazioni di connessione al database di log mining Oracle.  
   
          Per informazioni sul contenuto di questa scheda che è possibile modificare, vedere [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "58390849"
   
          Per informazioni sul contenuto di questa scheda che è possibile modificare, vedere [Edit Tables](edit-tables.md).  
   
-    -   **Gli script**: Usare la **script** pressione di tab per eseguire o rieseguire uno script nel database di origine Oracle impostazione della registrazione supplementare.  
+    -   **Script**: usare la scheda **Script** per eseguire o rieseguire uno script nel database di origine Oracle per la configurazione della registrazione supplementare.  
   
          Per informazioni sulle operazioni possibili in questa scheda, vedere [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md).  
   

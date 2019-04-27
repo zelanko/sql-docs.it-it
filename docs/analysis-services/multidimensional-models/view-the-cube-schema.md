@@ -1,5 +1,5 @@
 ---
-title: Visualizzare lo Schema del cubo | Documenti Microsoft
+title: Visualizzare lo Schema del cubo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51f22eecc2cc892d65691b13edb9382f3134ddac
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743067"
 ---
 # <a name="view-the-cube-schema"></a>Visualizzare lo schema del cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ea5615fcc88e81be11fb833761bb67537b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731463"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>Abilitazione writeback della dimensione (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Attivazione writeback della dimensione** per attivare o disabilitare la funzionalità di writeback per la dimensione selezionata.  
@@ -28,7 +28,7 @@ ms.locfileid: "48079291"
  Selezionare questa opzione se si desidera che la dimensione sia abilitata per la scrittura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni abilitate per scrittura](multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   

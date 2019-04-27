@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2dc3f38aec3ba41330e29aa8ac5fdea771d90da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747113"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>Selezione partizioni da modificare (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Selezione partizioni da modificare** per selezionare le partizioni per le quali si desidera progettare le aggregazioni.  

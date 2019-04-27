@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771654"
 ---
 # <a name="project-properties-dialog-box"></a>Finestra di dialogo Proprietà progetto
   Un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è un'unità di distribuzione. In ogni progetto possono essere inclusi pacchetti, parametri e riferimenti all'ambiente. Un progetto è un oggetto a protezione diretta in cui è possibile definire autorizzazioni per le entità di database. Quando un progetto viene ridistribuito, la versione precedente può essere archiviata nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

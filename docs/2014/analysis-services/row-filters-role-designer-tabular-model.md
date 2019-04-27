@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748183"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtri di riga (Progettazione ruoli)(Modello tabulare)
   Usare la pagina **Filtri di riga** di Progettazione ruoli per definire filtri a livello di riga per il ruolo associato. I filtri di riga possono essere definiti solo per ruoli con le autorizzazioni di lettura e di lettura ed elaborazione.  
@@ -38,6 +38,6 @@ ms.locfileid: "48061221"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli nei modelli tabulari &#40;tabulare di SSAS&#41;](tabular-models/roles-ssas-tabular.md)   
- [Gestire ruoli tramite SSMS &#40;modello tabulare di SSAS&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Gestire ruoli tramite SSMS &#40;SSAS tabulare&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

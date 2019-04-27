@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773669"
 ---
 # <a name="search-property-list-editor"></a>Editor dell'elenco delle proprietà di ricerca
   Utilizzare questa finestra di dialogo per aggiungere o eliminare proprietà di ricerca in un elenco di proprietà di ricerca.  
@@ -29,7 +29,7 @@ ms.locfileid: "48148941"
  **Nome della proprietà**  
  Specificare il nome da utilizzare per identificare la proprietà nelle query full-text. Un nome di proprietà può contenere spazi interni. La lunghezza massima consentita per **Nome proprietà** è 256 caratteri. Questo nome può essere un nome descrittivo, ad esempio "Autore" o "Indirizzo abitazione" oppure il nome canonico Windows della proprietà, ad esempio `System.Author` o `System.Contact.HomeAddress`. **Nome proprietà** deve identificare in modo univoco la proprietà all'interno del set di proprietà.  
   
- Gli sviluppatori di usano il nome della proprietà per identificare la proprietà nel [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicato. Quando si aggiunge una proprietà è pertanto importante specificare un valore che la rappresenti in modo significativo.  
+ Gli sviluppatori utilizzano il nome della proprietà per identificare la proprietà nel predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Quando si aggiunge una proprietà è pertanto importante specificare un valore che la rappresenti in modo significativo.  
   
  **GUID del Set di proprietà**  
  Consente di specificare l'identificatore del set di proprietà a cui appartiene la proprietà. Si tratta di un identificatore univoco globale (GUID, Globally Unique Identifier). Un set di proprietà è un gruppo di proprietà correlate logicamente. Per informazioni sull'acquisizione di questo valore, vedere la sezione "Osservazioni" più avanti in questo argomento.  

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789111"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Pagina Stato installazione (procedure guidate gruppi di disponibilità AlwaysOn)
   Utilizzare questa finestra di dialogo per visualizzare lo stato di avanzamento di una procedura guidata [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eseguita in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. L'indicatore di stato segnala lo stato di avanzamento relativo dei passaggi eseguiti dalla procedura guidata.  
@@ -33,13 +33,13 @@ ms.locfileid: "48130841"
  **Altri dettagli**  
  Fare clic sulla freccia GIÙ per visualizzare una griglia dello stato di avanzamento in cui sono elencati i passaggi completati, seguiti dall'attuale operazione in corso. La griglia include le colonne seguenti:  
   
- **Nome**  
+ **Name**  
  Visualizza una frase che descrive un passaggio specifico.  
   
  **Stato**  
  Indica il risultato dei passaggi completati e la percentuale di completamento del passaggio corrente, come segue:  
   
-|Risultato|Description|  
+|Risultato|Descrizione|  
 |------------|-----------------|  
 |**Errore**|Indica che si è verificato un errore nell'operazione relativa a questo passaggio. Fare clic sul collegamento per visualizzare una finestra di dialogo del messaggio in cui viene descritto l'errore.|  
 |**In corso (** *percentuale di completamento* **)**|Indica che l'operazione è in corso e stima la percentuale di completamento di questo passaggio.|  

@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786746"
 ---
 # <a name="check-out-files"></a>Estrazione di file
   Se l'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non è stato configurato per consentire la modifica dei file archiviati, è necessario eseguire l'estrazione di un file prima di poterlo modificare. Quando si estrae un file, una copia della sua versione viene salvata sul disco locale e l'attributo di sola lettura del file viene rimosso.  
   
  È possibile estrarre i file in modalità esclusiva o condivisa. Quando si estrae un file in modalità esclusiva, il file non può essere estratto da altri utenti finché non viene archiviato. Se un file viene estratto in modalità condivisa, può essere estratto e modificato da altri utenti. Al momento dell'archiviazione potrebbe essere quindi necessario unire le versioni create dai diversi utenti.  
   
- Usare la **Estrai** comando per estrarre i progetti di controllo del codice sorgente e file. Quando si utilizza questo comando, vengono estratti anche tutti i file inclusi nella soluzione o nel progetto. L'estrazione di un singolo file di codice sorgente tuttavia non comporta l'estrazione anche del progetto o della soluzione ai quali il file appartiene.  
+ Usare la **Estrai** comando per estrarre i progetti di controllo del codice sorgente e file. Se si usa questo comando per estrarre una soluzione o progetto, tutti i file nella soluzione o progetto vengono anche estratti. Tuttavia, estrazione di un file di codice sorgente singoli non comporta l'estrazione del progetto o della soluzione a cui appartiene.  
   
 > [!NOTE]  
 >  Se il [!INCLUDE[msCoName](../includes/msconame-md.md)] database di Visual SourceSafe per il progetto è configurato per consentire più estrazioni e si desidera estrarre un file in modo esclusivo, è necessario cancellare il **Consenti più estrazioni** opzione il  **Controllare le opzioni avanzate** finestra di dialogo prima di estrarre il file. Per rendere effettiva questa impostazione è necessario riavviare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -55,9 +55,9 @@ ms.locfileid: "48051221"
      Consente di visualizzare gli elementi che si stanno estraendo in elenchi semplici con la rispettiva connessione del controllo del codice sorgente.  
   
      **Modifica**  
-     Consente di modificare un elemento senza estrarlo. Il **Edit** pulsante viene visualizzato solo se hai [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configurato per supportare la modifica dei file archiviati.  
+     Modificare un elemento senza estrarlo. Il **Edit** pulsante viene visualizzato solo se hai [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configurato per supportare la modifica dei file archiviati.  
   
-     **Nome**  
+     **Name**  
      Visualizza i nomi degli elementi che è possibile estrarre. Accanto a ogni elemento selezionato è disponibile una casella di controllo. Deselezionare tale casella se non si desidera estrarre l'elemento corrispondente.  
   
      **Opzioni**  

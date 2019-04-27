@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59caffb94baf8ae4a991bf793a3b77386bd1075f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730167"
 ---
 # <a name="importing-ssas"></a>Importazione (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di visualizzare lo stato dell'operazione di importazione. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48224818"
  **Dettagli**  
  Consente di visualizzare le seguenti informazioni per ogni operazione di importazione dei dati.  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Elemento di lavoro**|Visualizza il nome della tabella o della vista importata.|  
 |**Stato**|Indica se la tabella o la vista è stata importata correttamente e il numero di righe importate.|  

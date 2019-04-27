@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 265b3353d3b91f053a431da9929d010bc823fb2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755997"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Visualizzazione di modelli (componenti aggiuntivi Data mining per Office)
   I componenti aggiuntivi Data mining per Excel consentono di esplorare i modelli analitici creati nei modi seguenti:  

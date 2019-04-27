@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671039"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Proprietà calcolo (Analysis Services - Dati multidimensionali)
   La finestra di dialogo **Proprietà calcolo** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] consente di visualizzare o modificare le proprietà della cartella di visualizzazione e del gruppo di misure associato definite nella scheda **Calcoli** di Progettazione cubi per il cubo selezionato. È possibile visualizzare la finestra di dialogo **Proprietà calcolo** facendo clic su **Proprietà calcolo** nel riquadro **Barra degli strumenti** nella scheda **Calcoli** di Progettazione cubi.  

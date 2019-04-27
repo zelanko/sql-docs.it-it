@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774186"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Apertura di Progettazione tabelle (Visual Database Tools)
   Progettazione tabelle è uno strumento grafico che consente di progettare e rappresentare graficamente le tabelle di un database a cui si è connessi. È possibile utilizzare Progettazione tabelle per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  

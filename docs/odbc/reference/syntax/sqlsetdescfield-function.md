@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742257"
 ---
 # <a name="sqlsetdescfield-function"></a>Funzione SQLSetDescField
 
@@ -109,7 +109,7 @@ SQLRETURN SQLSetDescField(
   
  Altre funzioni possono essere chiamati per impostare più campi di descrizione con una singola chiamata della funzione. Il **SQLSetDescRec** funzione imposta un'ampia gamma di campi che interessano il buffer e il tipo di dati associati a una colonna o parametro (il SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL _ Campi DESC_SCALE, SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_INDICATOR_PTR). **SQLBindCol** oppure **SQLBindParameter** può essere utilizzata per rendere una specifica completa per l'associazione di una colonna o parametro. Queste funzioni impostano un gruppo specifico di campi di descrizione con chiamata una funzione.  
   
- **SQLSetDescField** può essere chiamato per modificare i buffer dell'associazione tramite l'aggiunta di un offset per i puntatori di associazione (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR). Questa operazione modificherà i buffer dell'associazione senza chiamare **SQLBindCol** oppure **SQLBindParameter**, che consente a un'applicazione modificare SQL_DESC_DATA_PTR senza modificare altri campi, ad esempio SQL_DESC_DATA_ TIPO.  
+ **SQLSetDescField** può essere chiamato per modificare i buffer dell'associazione tramite l'aggiunta di un offset per i puntatori di associazione (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR). Questa operazione modificherà i buffer dell'associazione senza chiamare **SQLBindCol** oppure **SQLBindParameter**, che consente a un'applicazione modificare SQL_DESC_DATA_PTR senza modificare altri campi, ad esempio SQL_DESC_DATA_ digitare.  
   
  Se un'applicazione chiama **SQLSetDescField** per impostare un campo diverso da SQL_DESC_COUNT o i campi posticipati SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR o SQL_DESC_INDICATOR_PTR, diventa non associato al record.  
   

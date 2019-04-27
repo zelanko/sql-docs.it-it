@@ -53,11 +53,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cea1d745b677bfa67f6847f2b42ed3701914f1e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654599"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formattazione di un grafico (Generatore report e SSRS)
   Dopo aver definito i dati per il grafico e una volta ottenuta la visualizzazione desiderata, è possibile aggiungere una formattazione per migliorare l'aspetto complessivo ed evidenziare i principali punti dati. Le opzioni di formattazione più comuni possono essere modificate dalla finestra di dialogo Proprietà accessibile facendo clic con il pulsante destro del mouse su un elemento del grafico per visualizzare il relativo menu di scelta rapida. A ogni elemento del grafico è associata una finestra di dialogo specifica. Per altre informazioni sugli elementi dei grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756538"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Riferimento tecnico (componenti aggiuntivi Data mining per Excel)
   Nei componenti aggiuntivi Data mining per Office sono incluse funzionalità utili per i programmatori e data miner avanzati.  
@@ -39,7 +39,7 @@ ms.locfileid: "48157561"
   
 -   [Utilità di configurazione server &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Algoritmi di Data Mining &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
  [Utilità di configurazione server &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  

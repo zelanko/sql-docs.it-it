@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657962"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
   L'estensione per il rendering di Word consente di eseguire il rendering di report nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il formato è Office Open XML.  

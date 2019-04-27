@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775222"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Aggiornamenti di versione ed edizione supportati
-  È possibile eseguire l'aggiornamento da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento sono elencati i percorsi di aggiornamento supportati da queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli aggiornamenti di edizione supportati per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  È possibile eseguire l'aggiornamento da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento sono elencati i percorsi di aggiornamento supportati da queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli aggiornamenti di edizione supportati per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51018586"
 -   Le versioni a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere aggiornate solo a un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a 64 bit.  
   
 > [!NOTE]  
->  Quando si esegue l'aggiornamento a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze, nonché per il numero massimo di core supportati. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando esegue l'aggiornamento a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, scegliere tra Enterprise Edition: Gestione delle licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze, nonché per il numero massimo di core supportati. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  La versione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supporta l'aggiornamento dalle versioni seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "51018586"
   
 -   Aggiornare un pacchetto di [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Eseguire i pacchetti con l'aggiornamento automatico sul posto.  
   
--   Aggiornare [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo l'installazione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+-   Aggiornare [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo l'installazione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
   
 -   Eseguire il backup di un cubo di [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] e il ripristino in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018586"
   
 -   Connettersi a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Quando un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] viene aggiornato a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il livello di compatibilità del database viene modificato da 90 a 100. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] i valori validi per il livello di compatibilità del database sono 100, 110 e 120. In [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) viene illustrato in che modo la modifica del livello di compatibilità possa influire sulle applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Quando un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] viene aggiornato a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il livello di compatibilità del database viene modificato da 90 a 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], i valori validi per il livello di compatibilità del database sono 100, 110 e 120.) In [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) viene illustrato in che modo la modifica del livello di compatibilità possa influire sulle applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tutti gli scenari non specificati nell'elenco sopra indicato non sono supportati, inclusi, a titolo esemplificativo, i seguenti:  
   
@@ -156,7 +156,7 @@ ms.locfileid: "51018586"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Evaluation <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> L'aggiornamento da Evaluation Enterprise (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster.|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Per gli sviluppatori <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
   

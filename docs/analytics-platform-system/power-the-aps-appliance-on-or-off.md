@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678629"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power l'appliance attiva o disattiva per il sistema di piattaforma Analitica
 In questo argomento viene descritto come all'alimentazione accensione o spegnimento Systemappliance la piattaforma Analitica che esegue Parallel Data Warehouse. Dopo un'interruzione dell'alimentazione irreversibili, usare questo argomento quando si sposta un'appliance di sistema di piattaforma Analitica o alla potenza su un dispositivo.  

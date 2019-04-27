@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756902"
 ---
 # <a name="roles-ssas-tabular"></a>Ruoli (SSAS tabulare)
   I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. In ogni ruolo sono contenuti membri, in base al nome utente o gruppo di Windows, e autorizzazioni, ad esempio per la lettura, l'elaborazione e l'amministratore. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri.  
@@ -56,7 +56,7 @@ ms.locfileid: "52419852"
 > [!NOTE]  
 >  Per i ruoli definiti per un modello configurato per la modalità DirectQuery non possono essere utilizzati filtri di riga; tuttavia, verranno applicate le autorizzazioni definite per ogni ruolo.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Autorizzazioni  
  Ogni ruolo dispone di una singola autorizzazione definita per il database, eccetto l'autorizzazione combinata di lettura ed elaborazione. Per impostazione predefinita, un nuovo ruolo disporrà dell'autorizzazione Nessuno. Ovvero, una volta che i membri sono stati aggiunti al ruolo con l'autorizzazione Nessuno, non possono modificare il database, eseguire operazioni di elaborazione, eseguire query sui dati né esaminare il database, a meno che non venga concessa un'autorizzazione diversa.  
   
  Un gruppo o utente di Windows può essere membro di un qualsiasi numero di ruoli, ognuno dei quali con un'autorizzazione diversa. Se un utente è membro di più ruoli, le autorizzazioni definite per ogni ruolo sono cumulative. Ad esempio, se un utente è membro di un ruolo con l'autorizzazione di lettura, e anche membro di un ruolo con l'autorizzazione Nessuno, tale utente disporrà delle autorizzazioni di lettura.  
@@ -97,7 +97,7 @@ ms.locfileid: "52419852"
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[Funzione USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Viene restituito il valore dominio\nomeutente dell'utente attualmente connesso.|  
+|[USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Viene restituito il valore dominio\nomeutente dell'utente attualmente connesso.|  
 |[Funzione CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Viene restituita la proprietà CustomData in una stringa di connessione.|  
   
  È possibile utilizzare la funzione LOOKUPVALUE per restituire valori per una colonna in cui il nome utente di Windows corrisponde al nome utente restituito dalla funzione USERNAME o una stringa restituita dalla funzione CustomData. Le query possono quindi essere limitate nel caso in cui i valori restituiti da LOOKUPVALUE corrispondono ai valori nella stessa tabella o in una tabella correlata.  
@@ -141,7 +141,7 @@ ms.locfileid: "52419852"
 ## <a name="see-also"></a>Vedere anche  
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)   
- [Funzione USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
+ [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [Funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [Funzione CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

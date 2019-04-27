@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 925ab0eb6248ec59284c175e472a237071a0c0bd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51017866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774815"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Aggiornare gli strumenti di gestione di SQL Server
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. In questo argomento vengono fornite informazioni sul supporto e il comportamento dell'aggiornamento degli strumenti e i componenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Posta elettronica database, Piani di manutenzione, XPStar e XPWeb.  

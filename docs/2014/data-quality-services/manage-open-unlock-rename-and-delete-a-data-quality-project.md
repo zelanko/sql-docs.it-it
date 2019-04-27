@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c77d1924bde3611bff4cf0328a659b2fea2cae45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792354"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>Gestione di un progetto Data Quality (apertura, sblocco, ridenominazione ed eliminazione)
   In questo argomento viene descritto come gestire un progetto Data Quality utilizzando [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ed effettuare operazioni sul progetto quali apertura, ridenominazione ed eliminazione.  
@@ -44,7 +44,7 @@ ms.locfileid: "56020323"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per gestire un progetto Data Quality è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
 ##  <a name="Open"></a> Apertura di un progetto Data Quality  
@@ -59,9 +59,9 @@ ms.locfileid: "56020323"
   
 4.  Il progetto Data Quality viene aperto nello stesso stato in cui era stata chiusa l'ultima volta l'attività. Un progetto Data Quality può presentare gli stati seguenti:  
   
-    -   Per il **pulizia** attività, un progetto data quality può presentare gli stati seguenti: **Pulizia - mappa**, **pulizia - Pulisci**, **pulizia - Gestisci e Visualizza risultati**, e **pulizia - esportazione**.  
+    -   Per l'attività **Pulizia**, un progetto Data Quality può presentare gli stati seguenti: **Pulizia - Mappa**, **Pulizia - Pulisci**, **Pulizia - Gestisci e visualizza risultati** e **Pulizia - Esportazione**.  
   
-    -   Per il **corrispondenti** attività, un progetto data quality può presentare gli stati seguenti: **Corrispondenza - mappa**, **corrispondenza - corrispondenza**, **corrispondenza - sopravvivenza**, e **corrispondenza - esportazione**.  
+    -   Per l'attività **Corrispondenza**, un progetto Data Quality può presentare gli stati seguenti: **Corrispondenza - Mappa**, **Corrispondenza - Corrispondenza**, **Corrispondenza - Sopravvivenza** e **Corrispondenza - Esportazione**.  
   
 ##  <a name="Unlock"></a> Sblocco di un progetto Data Quality  
  Quando viene creato, un progetto Data Quality è impostato in uno stato bloccato per impedire l'utilizzo o la modifica da parte di altri utenti. Se si desidera che altri utenti possano lavorare sul progetto Data Quality, una volta completate le proprie attività è necessario sbloccare il progetto. Per i progetti bloccati, viene visualizzato un simbolo a forma di lucchetto.  

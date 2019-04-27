@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780412"
 ---
 # <a name="event-pairing-target"></a>Destinazione di abbinamento degli eventi
   La destinazione di abbinamento degli eventi stabilisce la corrispondenza di due eventi utilizzando una o più colonne di dati presenti in ciascun evento. Molti eventi entrano nelle coppie, ad esempio, le acquisizioni e i rilasci del blocco. Dopo che una sequenza dell'evento viene abbinata, entrambi gli eventi sono ignorati. Il fatto di ignorare i set corrispondenti consente un facile rilevamento di acquisizioni del blocco che non sono state rilasciate.  
@@ -31,7 +31,7 @@ ms.locfileid: "48127941"
   
  Nella tabella seguente vengono descritte le opzioni disponibili per configurare l'abbinamento degli eventi.  
   
-|Opzione|Valori consentiti|Description|  
+|Opzione|Valori consentiti|Descrizione|  
 |------------|--------------------|-----------------|  
 |begin_event|Qualsiasi nome di evento presente nella sessione corrente.|Nome di evento che specifica l'evento di inizio in una sequenza abbinata.|  
 |end_event|Qualsiasi nome di evento presente nella sessione corrente.|Nome di evento che specifica l'evento di fine in una sequenza abbinata.|  

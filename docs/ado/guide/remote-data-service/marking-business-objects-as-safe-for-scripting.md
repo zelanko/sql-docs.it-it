@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675917"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Contrassegnare gli oggetti business come sicuri per lo scripting
 > [!IMPORTANT]

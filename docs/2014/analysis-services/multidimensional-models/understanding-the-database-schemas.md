@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740753"
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
   La Generazione guidata schema consente di generare uno schema relazionale denormalizzato per il database dell'area di interesse in base alle dimensioni e ai gruppi di misure in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La procedura guidata genera una tabella relazionale per ogni dimensione, denominata tabella della dimensione, in cui vengono archiviati i dati della dimensione e una tabella relazionale per ogni gruppo di misure, denominata tabella dei fatti, in cui vengono archiviati i fatti. Durante la generazione di queste tabelle relazionali, la procedura guidata ignora dimensioni collegate, gruppi di misure collegati e dimensioni temporali del server.  
@@ -45,7 +45,7 @@ ms.locfileid: "48133431"
  Per ogni dimensione la Generazione guidata schema genera una tabella della dimensione da includere nel database dell'area di interesse. La struttura della tabella della dimensione dipende dalle scelte effettuate durante la progettazione della dimensione su cui si basa.  
   
  Colonne  
- La procedura guidata genera una colonna per le associazioni di ogni attributo nella dimensione su cui si basa la tabella della dimensione, ad esempio le associazioni per il `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`e `UnaryOperatorColumn`le proprietà di ogni attributo.  
+ La procedura guidata genera una colonna per le associazioni di ogni attributo nella dimensione su cui si basa la tabella della dimensione, ad esempio le associazioni per le proprietà `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn` e `UnaryOperatorColumn` di ogni attributo.  
   
  Relazioni  
  La procedura guidata genera una relazione tra la colonna di ogni attributo padre e la chiave primaria della tabella della dimensione.  
@@ -65,7 +65,7 @@ ms.locfileid: "48133431"
  Per ogni gruppo di misure in un cubo la Generazione guidata schema genera una tabella dei fatti da includere nel database dell'area di interesse. La struttura della tabella dei fatti dipende dalle scelte effettuate durante la progettazione del gruppo di misure su cui si basa e dalle relazioni stabilite tra il gruppo di misure e qualsiasi dimensione inclusa.  
   
  Colonne  
- La procedura guidata genera una colonna per ogni misura, escluse le misure che utilizzano il `Count` funzione di aggregazione. Queste misure non richiedono una colonna corrispondente nella tabella dei fatti.  
+ La procedura guidata genera una colonna per ogni misura, escluse le misure che utilizzano la funzione di aggregazione `Count`. Queste misure non richiedono una colonna corrispondente nella tabella dei fatti.  
   
  Se applicabile, la procedura guidata genera inoltre una colonna per ogni colonna dell'attributo di granularità di ogni relazione di tipo Regolare tra la dimensione e il gruppo di misure e una o più colonne per le associazioni di ogni attributo di una dimensione collegata da una relazione di tipo Fatti con il gruppo di misure sui cui si basa la tabella.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48133431"
  La procedura guidata genera una tabella separata per l'archiviazione dei valori tradotti per ogni proprietà nel gruppo di misure che richiede una colonna per la traduzione. La procedura guidata crea inoltre una colonna separata per ogni lingua in cui i valori devono essere tradotti.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversione del tipo di dati e lunghezze predefinite  
- Generazione guidata schema Ignora sempre i tipi di dati eccetto le colonne che usano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo di dati. Il `wchar` le dimensioni dei dati viene convertita direttamente il `nvarchar` tipo di dati. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
+ Generazione guidata schema Ignora sempre i tipi di dati eccetto le colonne che usano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
   
  Se per un elemento di dati, ad esempio l'associazione di un attributo, non è stata specificata la lunghezza, per la colonna verrà utilizzata la lunghezza predefinita specificata nella tabella seguente.  
   

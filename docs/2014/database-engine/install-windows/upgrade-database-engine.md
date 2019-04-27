@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774975"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
   In questo argomento vengono fornite le informazioni necessarie per la preparazione e la comprensione del processo di aggiornamento, ovvero:  
@@ -43,7 +43,7 @@ ms.locfileid: "51018566"
 >  Prima di eseguire l'aggiornamento da un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra, verificare che le funzionalità attualmente in uso siano supportate nell'edizione a cui si desidera eseguire l'aggiornamento.  
   
 > [!NOTE]  
->  Quando si esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, scegliere tra Enterprise Edition: Gestione delle licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
  L'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente è supportato solo dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile eseguire la migrazione dei database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migrazione può essere eseguita da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra nello stesso computer o da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer diverso. Le opzioni di migrazione includono l'utilizzo della Copia guidata database, delle funzionalità di backup e ripristino, dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], nonché dei metodi per importare ed esportare globalmente.  
@@ -124,7 +124,7 @@ ms.locfileid: "51018566"
   
 -   Ripopolare cataloghi full-text per garantire la coerenza semantica nei risultati delle query.  
   
-     In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono installati nuovi word breaker da utilizzare per la ricerca full-text e semantica. I word breaker vengono utilizzati sia in fase di indicizzazione che di esecuzione delle query. Se non si ricompilano i cataloghi full-text, i risultati di ricerca potrebbero risultare incoerenti. Se si esegue una query full-text che esegue la ricerca di una frase divisa in modo diverso dal word breaker in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto a quello corrente, è possibile che si verifichi il mancato recupero di una riga o documento contenente la frase. Questo problema si verifica perché le frasi indicizzate sono state divise in base a una logica diversa da quella utilizzata dalla query. Per risolvere il problema, ripopolare (ricompilare) i cataloghi full-text con i nuovi word breaker in modo che il comportamento in fase di indicizzazione e di esecuzione delle query sia lo stesso.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuovi word breaker da usare per la ricerca full-text e semantica. I word breaker vengono utilizzati sia in fase di indicizzazione che di esecuzione delle query. Se non si ricompilano i cataloghi full-text, i risultati di ricerca potrebbero risultare incoerenti. Se si esegue una query full-text che esegue la ricerca di una frase divisa in modo diverso dal word breaker in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto a quello corrente, è possibile che si verifichi il mancato recupero di una riga o documento contenente la frase. Questo problema si verifica perché le frasi indicizzate sono state divise in base a una logica diversa da quella utilizzata dalla query. Per risolvere il problema, ripopolare (ricompilare) i cataloghi full-text con i nuovi word breaker in modo che il comportamento in fase di indicizzazione e di esecuzione delle query sia lo stesso.  
   
      Per altre informazioni, vedere [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773546"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Backup gestito di SQL Server in Windows Azure - Impostazioni di archiviazione e di memorizzazione
   In questo argomento vengono descritti i passaggi di base per configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database e per configurare le impostazioni predefinite per l'istanza. Vengono inoltre descritti i passaggi necessari per sospendere e riprendere i servizi [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per l'istanza.  
@@ -44,7 +44,7 @@ ms.locfileid: "52534478"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire la stored procedure che consentono [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], è necessario essere un un `System Administrator` o un membro il **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** eautorizzazioni`EXECUTE` le autorizzazioni per il **sp_delete_backuphistory**, e `smart_admin.sp_backup_master_switch` stored procedure.  Per le stored procedure e le funzioni utilizzate per esaminare le impostazioni esistenti sono in genere richieste rispettivamente le autorizzazioni `Execute` per la stored procedure e `Select` per la funzione.  
   
 
@@ -55,7 +55,7 @@ ms.locfileid: "52534478"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>Abilitazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di database  
  Se un database presenta requisiti specifici per il backup e il periodo di memorizzazione (SLA di recuperabilità) diversi da altri database nell'istanza, configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di database per il database in questione. Le impostazioni a livello di database hanno la priorità sulle impostazioni di configurazione a livello di istanza. Tuttavia entrambe queste opzioni possono essere utilizzate insieme nella stessa istanza. Di seguito è riportato un elenco dei vantaggi e delle considerazioni in caso di abilitazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di database.  
   
--   Più dettagliato: impostazioni di configurazione diverse per ogni database. Può supportare periodi di memorizzazione diversi per i singoli database.  
+-   Più granulare: Impostazioni di configurazione separato per ogni database. Può supportare periodi di memorizzazione diversi per i singoli database.  
   
 -   Vengono ignorate le impostazioni a livello di istanza per il database.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52534478"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>Abilitazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di istanza con le impostazioni predefinite  
  Utilizzare questa impostazione se la maggior parte dei database nell'istanza presenta gli stessi requisiti per il backup e i criteri di conservazione o se si desidera l'esecuzione automatica del backup delle nuove istanze di database durante la creazione. Alcuni database che fanno eccezione ai criteri possono comunque essere configurati singolarmente. Di seguito è riportato un elenco dei vantaggi e delle considerazioni in caso di abilitazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di istanza.  
   
--   Automazione a livello di istanza: impostazioni comuni applicate automaticamente ai nuovi database aggiunti in seguito.  
+-   Automazione a livello di istanza: Impostazioni comuni applicate automaticamente ai nuovi database aggiunti in seguito.  
   
 -   Il backup dei nuovi database verrà eseguito automaticamente subito dopo la creazione di questi ultimi nelle istanze.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52534478"
     ```  
   
 ##  <a name="InstanceConfigure"></a> Abilitare e configurare predefinito [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] impostazioni per l'istanza  
- È possibile abilitare e configurare le impostazioni predefinite del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di istanza in due modi:  Tramite il sistema stored procedure `smart_backup.set_instance_backup` oppure **SQL Server Management Studio**. I due metodi sono illustrati di seguito:  
+ È possibile abilitare e configurare default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] impostazioni a livello di istanza in due modi:  Tramite il sistema stored procedure `smart_backup.set_instance_backup` oppure **SQL Server Management Studio**. I due metodi sono illustrati di seguito:  
   
  **smart_backup.set_instance_backup:**. Specificando il valore **1** per *@enable_backup* parametro, è possibile abilitare il backup e impostare le configurazioni predefinite. Una volta applicate a livello di istanza, queste impostazioni predefinite sono valide per qualsiasi nuovo database aggiunto a questa istanza.  Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene abilitato per la prima volta, è necessario specificare le informazioni seguenti oltre ad abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nell'istanza:  
   

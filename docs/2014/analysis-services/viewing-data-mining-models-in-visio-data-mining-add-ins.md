@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756015"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visualizzazione di modelli di data mining in Visio (componenti aggiuntivi Data mining)
   Le forme di Visio per il data mining consentono di connettersi a un server e creare un diagramma che rappresenta un modello di data mining esistente. I diagrammi possono quindi essere personalizzati utilizzando i controlli di Visio, ma è anche possibile eseguire il drill-down nei dati, esporre alcune delle statistiche sottostanti e utilizzare il modello sottostante.  
@@ -40,7 +40,7 @@ ms.locfileid: "48050641"
 |Forma di Visio|Modelli supportati|  
 |-----------------|----------------------|  
 |Albero delle decisioni|Utilizzare questa forma per modelli basati sugli algoritmi di regressione lineare o dell'albero delle decisioni.|  
-|Rete di dipendenze|Utilizzare questa forma per modelli basati su uno dei seguenti algoritmi: Naïve Bayes, Decision Trees o Association Rules.|  
+|Rete di dipendenze|Utilizzare questa forma per modelli basati su uno qualsiasi degli algoritmi seguenti: Naive Bayes, Decision Trees o Association Rules.|  
 |Cluster|Utilizzare questa forma per modelli basati su algoritmi di clustering.|  
   
  Le opzioni disponibili nella procedura guidata variano a seconda del tipo di dati del modello di data mining. Ad esempio, le colonne contenenti numeri continui vengono visualizzate in modo diverso rispetto alle variabili di categoria.  

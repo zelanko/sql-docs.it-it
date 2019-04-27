@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657420"
 ---
 # <a name="troubleshoot-report-builder"></a>Risoluzione dei problemi relativi a Generatore report
   Generatore report è uno strumento per la creazione di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è possibile utilizzare per compilare report da molti tipi di origini dati diversi e per pubblicarli in un server di report o in un sito di SharePoint. I report creati dall'utente sono visualizzabili in Generatore Report in un Web browser o come parte di un [!INCLUDE[msCoName](../includes/msconame-md.md)] applicazione Windows o un sito di SharePoint.  

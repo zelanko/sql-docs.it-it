@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756140"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo
   L'Ottimizzazione guidata basata sulle statistiche di utilizzo è simile alla Progettazione guidata aggregazioni per quanto concerne l'output e consente di progettare aggregazioni per una partizione. Le aggregazioni progettate tramite l'Ottimizzazione guidata basata sulle statistiche di utilizzo, tuttavia, sono basate su un modello di utilizzo specifico delle query registrate nel log di query di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le aggregazioni garantiscono miglioramenti delle prestazioni poiché consentono a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di recuperare totali precalcolati direttamente dall'archiviazione del cubo senza dover ricalcolare i dati da un'origine dati sottostante per ogni query.  

@@ -1,5 +1,5 @@
 ---
-title: 'Repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità) Always On | Microsoft Docs'
+title: 'Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità) Always On | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a94db154042f2cc6314459b6af4b52a43c2c9966
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790680"
 ---
-# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità Always On)
+# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità) Always On
   Nelle funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è incluso il supporto per l'esecuzione di operazioni di backup nelle repliche secondarie. Le operazioni di backup possono richiedere considerevoli risorse a livello di I/O e di CPU (con compressione dei backup). La ripartizione dei backup su una replica secondaria sincronizzata o in sincronizzazione consente di utilizzare le risorse sull'istanza del server che ospita la replica primaria per i carichi di lavoro di livello 1.  
   
 > [!NOTE]  
@@ -43,14 +43,14 @@ ms.locfileid: "48186971"
   
      È garantita una catena di log coerente tra i backup di log eseguiti nelle repliche (primarie e secondarie), indipendentemente dalla relativa modalità di disponibilità (commit sincrono o asincrono).  
   
--   Per eseguire il backup di un database secondario, una replica secondaria deve essere in grado di comunicare con la replica primaria e deve essere `SYNCHRONIZED` o `SYNCHRONIZING`.  
+-   Per eseguire il backup di un database secondario, è necessario che una replica secondaria sia in grado di comunicare con la replica primaria e sia nello stato `SYNCHRONIZED` o `SYNCHRONIZING`.  
   
 ##  <a name="WhereBuJobsRun"></a> Configurazione del percorso di esecuzione dei processi di backup  
  L'esecuzione di backup su una replica secondaria per ripartire il carico di lavoro di backup dal server di produzione primario comporta notevoli vantaggi, tuttavia rende più complessa la selezione dei percorsi di esecuzione dei processi di backup. Per risolvere questo problema, configurare dove eseguire i processi di backup come segue:  
   
 1.  Configurare il gruppo di disponibilità per specificare le repliche di disponibilità per cui si desidera venga eseguito il backup. Per altre informazioni, vedere i parametri *AUTOMATED_BACKUP_PREFERENCE* e *BACKUP_PRIORITY* in [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql) o [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
   
-2.  Creare processi di backup controllati da script per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità che è un candidato per l'esecuzione del backup. Per altre informazioni, vedere la sezione "Completamento: Dopo avere configurato il backup su repliche secondarie" di [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md).  
+2.  Creare processi di backup controllati da script per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità che è un candidato per l'esecuzione del backup. Per altre informazioni, vedere la sezione "Completamento: Dopo aver configurato il backup su repliche secondarie" di [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per configurare il backup delle repliche secondarie**  

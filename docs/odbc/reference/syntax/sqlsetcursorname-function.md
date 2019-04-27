@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742247"
 ---
 # <a name="sqlsetcursorname-function"></a>Funzione SQLSetCursorName
 **Conformità**  
@@ -51,7 +51,7 @@ SQLRETURN SQLSetCursorName(
  *Nomecursore*  
  [Input] Nome del cursore. Elaborare con efficienza, il nome del cursore non deve includere spazi iniziali o finali nel nome del cursore e se il nome del cursore include identificatori delimitati, il delimitatore deve essere inserito come primo carattere nel nome del cursore.  
   
- *Lunghezzanome non*  
+ *NameLength*  
  [Input] Lunghezza in caratteri della **Nomecursore*.  
   
 ## <a name="returns"></a>Valori di codice restituiti  

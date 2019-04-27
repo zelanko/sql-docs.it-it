@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774373"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opzioni (risultati SQL Server-risultati della Query alla pagina di testo)
   Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di una query in formato testo. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni relative alle query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **Testo** in **Risultati**.  

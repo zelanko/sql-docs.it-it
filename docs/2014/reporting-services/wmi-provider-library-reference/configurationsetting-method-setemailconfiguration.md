@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ab5c414ec780c44cb8482ef85ae2032eaa54637
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646839"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetEmailConfiguration (MSReportServer_ConfigurationSetting WMI)
   Configura l'estensione per il recapito tramite posta elettronica utilizzata dal server di report per l'invio di messaggi di posta elettronica.  

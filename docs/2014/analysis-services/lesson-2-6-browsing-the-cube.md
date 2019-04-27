@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729327"
 ---
 # <a name="browsing-the-cube"></a>Esplorazione del cubo
   Dopo aver distribuito un cubo, è possibile visualizzarne i dati nella scheda **Esplorazione** di Progettazione cubi, mentre i dati della dimensione possono essere visualizzati nella scheda **Esplorazione** di Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
@@ -40,7 +40,7 @@ ms.locfileid: "48077511"
      Nel riquadro sinistro della finestra di progettazione vengono visualizzati gli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. A destra della scheda **Esplorazione** sono disponibili due riquadri: quello superiore è il riquadro **Filtro** , mentre quello inferiore è il riquadro **Dati** . In una lezione successiva si utilizzerà il visualizzatore cubi per eseguire analisi.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lezione 3: Modifica le misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  

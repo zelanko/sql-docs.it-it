@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23b19a53b512996f72990714ba3a478965179a1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773386"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>Regole di convalida per le procedure guidate dell'applicazione livello dati
   Questo argomento sarà aggiornato con l'azione correttiva per le regole di convalida nelle procedure guidate dell'applicazione livello dati.  

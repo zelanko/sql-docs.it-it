@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667816"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
   In questo argomento viene descritto come misurare le connessione di convalida e latenza per la replica transazionale in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite Monitoraggio replica, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). La replica transazionale offre la funzionalità token di traccia, che rappresenta una modalità pratica di misurazione della latenza nelle topologie di replica transazionale e di convalida delle connessioni tra server di pubblicazione, database di distribuzione e Sottoscrittori. Un token, ovvero una piccola quantità di dati, viene scritto nel log delle transazioni del database di pubblicazione, contrassegnato come se fosse una comune transazione replicata e inviato tramite il sistema in modo da consentire:  
@@ -88,7 +88,7 @@ ms.locfileid: "52813903"
   
 3.  Fare clic su **Inserisci utilità di traccia**.  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Server di pubblicazione al server di distribuzione**, **server di distribuzione-Sottoscrittore**, **latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Per visualizzare informazioni su un token di traccia inserito in precedenza  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52813903"
   
 3.  Selezionare un'ora dall'elenco a discesa **Ora di inserimento** .  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Server di pubblicazione al server di distribuzione**, **server di distribuzione-Sottoscrittore**, **latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
   
     > [!NOTE]  
     >  Le informazioni sul token di traccia vengono mantenute per lo stesso periodo di tempo degli altri dati cronologici, ovvero in base all'impostazione del periodo di memorizzazione della cronologia del database di distribuzione. Per informazioni sulla modifica delle proprietà del database di distribuzione, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../view-and-modify-distributor-and-publisher-properties.md).  

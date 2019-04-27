@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731734"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentazione di modelli di data mining (componenti aggiuntivi Data mining per Excel)
   ![Pulsante modello di documento, barra multifunzione Data Mining](media/dmc-docmodel.gif "pulsante modello di documento, barra multifunzione Data Mining")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118069"
   
 3.  Nel **Seleziona modello** finestra di dialogo, selezionare il modello su cui basare i report e quindi fare clic su **successivo**. È necessario eseguire la **modello di documento** guidata separatamente per ogni modello che si desidera documentare.  
   
-4.  Nel **selezione dettagli della documentazione** finestra di dialogo scegliere una delle due opzioni: **informazioni Complete** oppure **informazioni di riepilogo**.  
+4.  Nel **selezione dettagli della documentazione** finestra di dialogo scegliere una delle due opzioni: **Informazioni complete** oppure **informazioni di riepilogo**.  
   
 5.  Scegliere **Fine**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48118069"
 ||||  
 |-|-|-|  
 |**Metadati**|Metadati modello|Valori e parametri dell'algoritmo|  
-||Metadati colonna|Nome colonna<br /><br /> Utilizzo<br /><br /> Tipo di dati<br /><br /> Tipo di contenuto<br /><br /> Valori (elenco di valori discreti o intervallo di valori)|  
+||Metadati colonna|Nome colonna<br /><br /> Uso<br /><br /> Tipo di dati<br /><br /> Tipo di contenuto<br /><br /> Valori (elenco di valori discreti o intervallo di valori)|  
 |**Statistiche del modello**|Colonne continue|Valore medio<br /><br /> Valore minimo<br /><br /> Valore massimo<br /><br /> Radice errore quadratico medio<br /><br /> Errore assoluto medio<br /><br /> Punteggio in forma logaritmica<br /><br /> Formula di regressione (solo per i modelli per la regressione lineare)|  
 ||Colonne discrete|Numero di test superati<br /><br /> Numero di test non superati<br /><br /> Punteggio in forma logaritmica<br /><br /> Accuratezza|  
   

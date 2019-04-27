@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e422bbc6d14c70da299c55ec5af2aa6d824f099
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749386"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>Riferimenti a errori ed eventi (PowerPivot per SharePoint)
   In questa sezione sono fornite informazioni su errori ed eventi di PowerPivot per SharePoint. Gli errori riportati in questa sezione sono identificati dal testo del messaggio di errore visualizzato in una finestra di errore o log.  

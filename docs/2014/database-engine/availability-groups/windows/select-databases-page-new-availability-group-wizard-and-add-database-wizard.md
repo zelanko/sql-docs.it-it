@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788491"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Pagina Selezione database (nuovo gruppo di disponibilità-procedura guidata per aggiungere guidata Database)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Specifica database** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48149581"
 ##  <a name="PageOptions"></a> Opzioni di selezione dei database  
  Nella griglia **Database utente in questa istanza di SQL Server** è elencato ogni database utente locale. Le colonne sono le seguenti:  
   
- **Nome**  
+ **Name**  
  Visualizza il nome di un database utente locale.  
   
  **Dimensione**  

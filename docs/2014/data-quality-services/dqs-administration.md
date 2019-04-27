@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756031"
 ---
 # <a name="dqs-administration"></a>amministrazione dqs
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di amministrare e gestire varie attività DQS eseguite sul [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurare proprietà a livello di server correlate alle attività DQS, configurare le impostazioni del servizio dati di riferimento e le impostazioni di log DQS. Queste attività vengono eseguite tramite la funzionalità **Amministrazione** del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In base all'accesso di sicurezza (ruolo) di cui si dispone in DQS, l'accesso a determinate funzioni in quest'area può essere concesso o negato.  
@@ -49,11 +49,11 @@ ms.locfileid: "56032782"
 ### <a name="configuration"></a>Configurazione  
  La schermata **Configurazione** del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] consente all'amministratore DQS di effettuare le attività seguenti:  
   
--   **I dati di riferimento**: Configurare i provider di servizi dati di riferimento: Windows Azure Marketplace o provider di servizi dati di riferimento diretto. Dopo avere configurato i provider del servizio dati di riferimento, è possibile eseguire il mapping di un dominio singolo/composito ai dati di riferimento durante l'attività di gestione del dominio in una Knowledge Base, quindi utilizzare la stessa Knowledge Base per l'attività di pulizia in un progetto Data Quality. È inoltre possibile specificare le impostazioni proxy per la connessione a Internet per utilizzare Windows Azure Marketplace.  
+-   **Dati di riferimento**: configurare i provider del servizio dati di riferimento: Microsoft Azure Marketplace o provider del servizio dati di riferimento diretto. Dopo avere configurato i provider del servizio dati di riferimento, è possibile eseguire il mapping di un dominio singolo/composito ai dati di riferimento durante l'attività di gestione del dominio in una Knowledge Base, quindi utilizzare la stessa Knowledge Base per l'attività di pulizia in un progetto Data Quality. È inoltre possibile specificare le impostazioni proxy per la connessione a Internet per utilizzare Windows Azure Marketplace.  
   
--   **Impostazioni generali**: Specificare i valori di soglia per la pulizia e corrispondenza dei dati e determinare se abilitare notifiche per la profilatura [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Questi valori soglia vengono utilizzati da DQS durante le attività di pulizia assistita da computer e di corrispondenza in un progetto Data Quality.  
+-   **Impostazioni generali**: specificare i valori soglia per la pulizia e la corrispondenza dei dati e determinare se abilitare notifiche per la profilatura in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Questi valori soglia vengono utilizzati da DQS durante le attività di pulizia assistita da computer e di corrispondenza in un progetto Data Quality.  
   
--   **Impostazioni di log**: I file di log in DQS registrano le attività eseguite in DQS e sono utili per tenere traccia dei problemi operativi durante la manutenzione e risoluzione dei problemi. È possibile filtrare i messaggi che si desidera registrare per varie funzionalità DQS (gestione del dominio, individuazione delle informazioni, pulizia, corrispondenza e servizi dati di riferimento) e moduli DQS in base al livello di gravità degli eventi.  
+-   **Impostazioni log**: i file di log in DQS registrano le attività eseguite in DQS e sono utili per tenere traccia di problemi operativi durante la manutenzione e la risoluzione dei problemi. È possibile filtrare i messaggi che si desidera registrare per varie funzionalità DQS (gestione del dominio, individuazione delle informazioni, pulizia, corrispondenza e servizi dati di riferimento) e moduli DQS in base al livello di gravità degli eventi.  
   
 > [!NOTE]  
 >  La schermata **Configurazione** è disponibile solo per gli utenti che dispongono del ruolo dqs_administrator sul database DQS_MAIN.  
@@ -61,9 +61,9 @@ ms.locfileid: "56032782"
 ##  <a name="AdminOutsideClient"></a> Attività di amministrazione esterne al client Data Quality  
  Vi sono attività che vengono eseguite esternamente al client Data Quality:  
   
--   **Eseguire il backup e ripristino di database DQS**: Il backup e ripristino dei database DQS è analoga alla funzione il backup e ripristino di qualsiasi database di SQL Server con alcune considerazioni specifiche di DQS.  
+-   **Backup e ripristino di database DQS**: La funzione di backup e ripristino di database DQS è analoga alla funzione di backup e ripristino di qualsiasi database SQL Server, con alcune considerazioni specifiche di DQS.  
   
--   **Scollegare e collegare i database DQS**: I passaggi per scollegare e collegare i database DQS è analoga alla funzione lo scollegamento e collegamento di qualsiasi database di SQL Server con alcune considerazioni specifiche di DQS.  
+-   **Scollegare e collegare i database DQS**: i passaggi per scollegare e collegare i database DQS sono analoghi a quelli per scollegare e collegare qualsiasi database di SQL Server, con alcune considerazioni specifiche di DQS.  
   
  Per altre informazioni, vedere [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un modello utilizzando il visualizzatore Microsoft Decision Trees | Documenti Microsoft
+title: Visualizzare un modello usando il visualizzatore Microsoft Decision Trees | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d56116652e389e60edfb269ce2e23c14bb824f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671176"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Trees disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare alberi delle decisioni compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo dell'albero delle decisioni ibrido che supporta classificazione e regressione. È anche possibile pertanto usare il visualizzatore per visualizzare modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees viene usato per la modellazione predittiva di attributi discreti e continui. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
->  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
+>  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_TabsPanes"></a> Schede del visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees include le schede e i riquadri seguenti:  
@@ -92,9 +92,9 @@ ms.locfileid: "34016318"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Progettazione modelli di Data Mining visualizzatori modello di data mining & #40; & #41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
- [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
+ [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

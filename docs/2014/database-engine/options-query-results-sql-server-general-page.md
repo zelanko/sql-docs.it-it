@@ -18,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775021"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opzioni (Query risultati SQL Server pagina generale)
-  Utilizzare questa pagina per specificare le impostazioni predefinite del riquadro Risultati query. Per visualizzare le impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Risultati query**, selezionare **SQL Server** e quindi fare clic su **Generale**. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**.  
+  Utilizzare questa pagina per specificare le impostazioni predefinite del riquadro Risultati query. Per visualizzare le impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Risultati query**, selezionare **SQL Server** e quindi fare clic su **Generale**. Le modifiche apportate a queste opzioni si applicano soltanto alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Destinazione predefinita per i risultati**  

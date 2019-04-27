@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658893"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modello &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *n*  
  Facoltativo. Valore intero che specifica il numero di righe da restituire.  
   
- *elenco di espressioni*  
+ *expression list*  
  Elenco delimitato da virgole contenente espressioni o identificatori di colonne correlate (derivati dal modello).  
   
  *model*  
@@ -48,7 +48,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Note  
  Il **SELECT DISTINCT FROM** istruzione funziona solo con una singola colonna o un set di colonne correlate. Non è possibile utilizzare questa clausola con un set di colonne non correlate.  
   
- Il **SELECT DISTINCT FROM** istruzione consente di fare riferimento direttamente a una colonna all'interno di una tabella nidificata. Esempio:  
+ Il **SELECT DISTINCT FROM** istruzione consente di fare riferimento direttamente a una colonna all'interno di una tabella nidificata. Ad esempio:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -129,13 +129,13 @@ FROM [TM Decision Tree]
   
  Ad esempio, se si esplora il modello mediante il visualizzatore Microsoft Decision Trees e si seleziona un nodo contenente i clienti raggruppati in base al reddito, nella descrizione comandi vengono visualizzate le seguenti proprietà del nodo:  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Età > = 69 e Yearly Income < 39221.41  
   
 > [!NOTE]  
 >  Il valore minimo del bucket minimo e il valore massimo del bucket massimo rappresentano i valori minimo e massimo osservati. Tutti i valori che non rientrano in questo intervallo osservato vengono considerati appartenenti ai bucket minimo e massimo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
