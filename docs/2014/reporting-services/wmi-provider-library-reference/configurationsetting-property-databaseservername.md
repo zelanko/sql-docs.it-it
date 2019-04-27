@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbeef4b02c787baa9d29b16fe862af146033584d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646307"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseServerName (MSReportServer_ConfigurationSetting WMI)
   Specifica il nome del server in cui è installato il database del server di report. Proprietà di lettura/scrittura.  

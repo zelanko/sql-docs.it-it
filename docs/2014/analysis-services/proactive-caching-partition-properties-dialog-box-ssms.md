@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748843"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Memorizzazione nella cache attiva (finestra di dialogo Proprietà partizione) (SSMS)
   La pagina **Memorizzazione attiva nella cache** della finestra di dialogo **Proprietà partizione** in SQL Server Management Studio consente di impostare le proprietà di archiviazione e memorizzazione attiva nella cache di una partizione in un gruppo di misure per un cubo in un database di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "48118791"
  **Impostazione standard**  
  Consente di specificare una delle impostazioni predefinite elencate nella tabella seguente.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**ROLAP in tempo reale**|Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:<br /><br /> Modalità di archiviazione ROLAP.<br /><br /> Attiva la memorizzazione nella cache attiva.<br /><br /> Elimina la cache obsoleta, con un periodo di latenza di 0 secondi.<br /><br /> Porta l'oggetto online immediatamente.|  
 |**HOLAP in tempo reale**|Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:<br /><br /> Modalità di archiviazione HOLAP.<br /><br /> Attiva la memorizzazione nella cache attiva.<br /><br /> Elimina la cache obsoleta, con un periodo di latenza di 0 secondi.<br /><br /> Aggiorna la cache in presenza di modifiche ai dati, con un intervallo di inattività di 0 secondi e nessun intervallo di inattività sostitutivo.<br /><br /> Porta l'oggetto online immediatamente.|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667419"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Aggiunta e rimozione di server di pubblicazione da Monitoraggio replica
   Se il server dal quale viene avviato Monitoraggio replica è un server di pubblicazione, quest'ultimo verrà automaticamente aggiunto al monitoraggio. È possibile aggiungere ulteriori server di pubblicazione tramite la finestra di dialogo **Aggiungi server di pubblicazione** . Dopo l'aggiunta di un server di pubblicazione, questo viene visualizzato in un gruppo di server nel riquadro sinistro di Monitoraggio replica. Il gruppo **Server di pubblicazione personali** è incluso per impostazione predefinita. Tuttavia è possibile creare nuovi gruppi per gestire una o più topologie di replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](start-the-replication-monitor.md).  

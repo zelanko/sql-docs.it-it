@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5be09f364a0cfcf881cdbedd1db8f1f099819d0d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646377"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetVirtualDirectory (MSReportServer_ConfigurationSetting WMI)
   Imposta il nome della directory virtuale di una determinata applicazione.  

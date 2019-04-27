@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745482"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Specifica del livello di nidificazione nelle relazioni ricorsive mediante sql:max-depth
   Quando nei database relazionali una tabella viene coinvolta in una relazione con sé stessa, si parla di relazione ricorsiva. In una relazione supervisore-supervisionato (supervisor-supervisee), ad esempio, una tabella in cui sono archiviati i record dei dipendenti è coinvolta in una relazione con sé stessa. In questo caso, la stessa tabella dei dipendenti ricopre il ruolo di supervisore da un lato della relazione e di supervisionato dall'altro lato.  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Dal momento che la relazione è ricorsiva, è necessario trovare un modo per specificare il livello di nidificazione della ricorsione nello schema. In caso contrario, il risultato sarà una ricorsione infinita (il dipendente che è sotto la supervisione del dipendente che, a sua volta è sotto la supervisione del dipendente e così via). L'annotazione `sql:max-depth` consente di specificare il livello di nidificazione da raggiungere nella ricorsione. In questo particolare esempio, per specificare un valore per `sql:max-depth`, è necessario conoscere il livello di nidificazione della gerarchia di gestione nella società.  
   
 > [!NOTE]  
->  Lo schema specifica l'annotazione `sql:limit-field` ma non specifica l'annotazione `sql:limit-value`. Questa situazione limita il nodo principale nella gerarchia risultante ai soli dipendenti che non sono sottoposti ad alcuna supervisione (ReportsTo è NULL). È possibile risolvere il problema specificando `sql:limit-field` senza specificare `sql:limit-value` (la cui impostazione predefinita è NULL). Se si desidera che l'XML risultante includa ogni possibile albero gerarchico (l'albero gerarchico per ogni dipendente della tabella), rimuovere l'annotazione `sql:limit-field` dallo schema.  
+>  Lo schema specifica l'annotazione `sql:limit-field` ma non specifica l'annotazione `sql:limit-value`. Questa situazione limita il nodo principale nella gerarchia risultante ai soli dipendenti che non sono sottoposti ad alcuna supervisione (ReportsTo è NULL). Che specifica `sql:limit-field` e se non si specifica `sql:limit-value` (che per impostazione predefinita su NULL) dell'annotazione esegue questa operazione. Se si desidera che l'XML risultante includa ogni possibile albero gerarchico (l'albero gerarchico per ogni dipendente della tabella), rimuovere l'annotazione `sql:limit-field` dallo schema.  
   
 > [!NOTE]  
 >  Nella procedura riportata di seguito viene utilizzato il database tempdb.  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Utilizzare l'annotazione `sql:max-depth` nello schema per specificare il livello di nidificazione della ricorsione in una relazione ricorsiva descritta nello schema. Il valore della `sql:max-depth` annotazione è un numero intero positivo (da 1 a 50) che indica il numero di ricorsioni:  Un valore pari a 1 arresta la ricorsione in corrispondenza dell'elemento per cui il `sql:max-depth` annotazione è specificata; un valore pari a 2 Arresta la ricorsione al livello successivo dall'elemento in corrispondenza del quale `sql:max-depth` è specificato; e così via.  
   
 > [!NOTE]  
->  Nell'implementazione sottostante una query XPath specificata rispetto a un schema di mapping viene convertita in una query SELECT... FOR XML EXPLICIT. Questa query richiede che venga specificato un livello di nidificazione limitato della ricorsione. Più alto è il valore specificato per `sql:max-depth`, più grande sarà la query FOR XML EXPLICIT che verrà generata, con un probabile rallentamento del tempo di recupero.  
+>  Nell'implementazione sottostante una query XPath specificata rispetto a uno schema di mapping viene convertita in un'istruzione SELECT... PER la query XML EXPLICIT. Questa query richiede che venga specificato un livello di nidificazione limitato della ricorsione. Più alto è il valore specificato per `sql:max-depth`, più grande sarà la query FOR XML EXPLICIT che verrà generata, con un probabile rallentamento del tempo di recupero.  
   
 > [!NOTE]  
 >  Gli updategram e il caricamento bulk XML ignorano l'annotazione max-depth, pertanto gli inserimenti o gli aggiornamenti ricorsivi si verificheranno indipendentemente dal valore specificato per max-depth.  

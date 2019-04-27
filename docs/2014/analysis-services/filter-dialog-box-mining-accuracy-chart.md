@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731322"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Finestra di dialogo Filtro (Grafico accuratezza modello di data mining)
   La finestra di dialogo **Filtro** consente di compilare condizioni che è possibile applicare a un set di dati. Il set di dati può essere rappresentato da un set di dati esterno utilizzato per eseguire il test oppure da dati del case utilizzati per eseguire il training di un modello di data mining. Questa finestra di dialogo consente di compilare criteri che è possibile salvare come parte di criteri di filtro più complessi nella finestra di dialogo **Filtro dei set di dati** o in **Filtro modello** .  
@@ -33,13 +33,13 @@ ms.locfileid: "48060170"
   
  Se si applica il filtro al nuovo set di dati, il modello di data mining esistente viene utilizzato per valutare solo i case del set di dati che soddisfano le condizioni. Tuttavia, se si applica il filtro al modello di data mining, l'accuratezza del modello viene valutata solo per i case all'interno del modello di data mining che soddisfano i criteri.  
   
- **Per altre informazioni:** [Test e convalida &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Per ulteriori informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opzioni  
  **Condizioni**  
  Griglia contenente le colonne in cui si specificano le condizioni nelle colonne dalla tabella selezionata nella finestra di dialogo **Filtro dei set di dati** .  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**And/Or**|Fare clic per specificare se applicare l'operatore AND o l'operatore OR alla condizione nella riga. Questi valori sono disponibili solo dopo aver selezionato una colonna dall'elenco **Colonna struttura di data mining** .|  
 |**Colonna della struttura di data mining**|Fare clic per selezionare una colonna dall'elenco delle colonne contenute nella tabella selezionata dall'origine dati nella finestra di dialogo **Filtro dei set di dati** .|  

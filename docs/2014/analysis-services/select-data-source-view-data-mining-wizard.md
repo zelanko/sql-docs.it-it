@@ -14,19 +14,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f1272a654749f1fa6c3b4f8cafdada26ad56a56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747703"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Selezione vista origine dati (Creazione guidata modello di data mining)
   Usare la pagina **Selezione vista origine dati** per identificare la vista origine dati relativa alla struttura di data mining.  
   
 > [!NOTE]  
->  Questa pagina verrà visualizzata solo se si seleziona **Da database relazionale o data warehouse esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
+>  Questa pagina verrà visualizzata solo dopo aver selezionato **Da database relazionale o data warehouse esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
   
- **Per altre informazioni:** [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md), [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Nei modelli multidimensionali viste origine dati](multidimensional-models/data-source-views-in-multidimensional-models.md), [Creazione guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Viste origine dati disponibili**  

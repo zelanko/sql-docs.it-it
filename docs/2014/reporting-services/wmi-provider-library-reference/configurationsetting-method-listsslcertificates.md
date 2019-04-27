@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adda71c5ee0a88eabd619280457421bbf5ec0a75
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646694"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>Metodo ListSSLCertificates (MSReportServer_ConfigurationSetting WMI)
   Restituisce un elenco dei certificati presenti nel computer del server di report.  

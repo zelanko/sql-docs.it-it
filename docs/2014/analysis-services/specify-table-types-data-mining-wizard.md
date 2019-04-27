@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746343"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Impostazione tipi di tabelle (Creazione guidata modello di data mining)
   Usare la pagina **Impostazione tipi di tabelle** per identificare le tabelle da utilizzare per definire la struttura di data mining. Le tabelle non selezionate non verranno utilizzate per definire la struttura di data mining.  
@@ -26,7 +26,7 @@ ms.locfileid: "48202641"
 > [!NOTE]  
 >  È possibile aggiungere tabelle successivamente mediante la scheda **Struttura di data mining** in **Progettazione modelli di data mining**.  
   
- **Per altre informazioni:** [Tabelle annidate &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Tabelle nidificate &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Creazione guidata di Data Mining di dati &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Tabelle**  

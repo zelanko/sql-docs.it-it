@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753303"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
-  Usare la **distribuzione con scalabilità orizzontale** nella pagina [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o per aggiungere un server di report a una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
+  La pagina **Distribuzione con scalabilità orizzontale** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o di creare un join di un server di report per una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -35,11 +35,11 @@ ms.locfileid: "48099941"
   
  Per configurare una distribuzione con scalabilità orizzontale, iniziare con una o più istanze del server di report tutte connesse allo stesso database del server di report. In seguito all'installazione di tutte le istanze, connettersi al primo server di report e quindi utilizzare la pagina Distribuzione con scalabilità orizzontale aggiungere ogni istanza aggiuntiva. Solo un server di report già inizializzato per l'utilizzo di un database può inizializzare nodi aggiuntivi.  
   
- Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selezionare **distribuzione con scalabilità orizzontale** nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome del Server SQL**  
- Specificare il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] istanza che ospita il database del server di report.  
+ **SQL Server Name**  
+ Consente di specificare il nome dell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report.  
   
  **Database Name**  
  Consente di specificare il nome del database a cui è attualmente connessa l'istanza del server di report.  
@@ -51,7 +51,7 @@ ms.locfileid: "48099941"
  Indica il nome del server di report. Nella maggior parte dei casi, si tratta del nome del computer in cui è installato il server di report.  
   
  **Istanza**  
- Indica il nome dell'istanza del server di report. Le istanze del server di report sono basate su istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Indica il nome dell'istanza del server di report. Le istanze del server di report sono basate su istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Stato**  
  Indica se il server di report è inizializzato o in attesa di essere unito a una distribuzione con scalabilità orizzontale:  
@@ -64,7 +64,7 @@ ms.locfileid: "48099941"
   
      Per un server di report che fa già parte di una distribuzione con scalabilità orizzontale, è possibile utilizzare questa pagina per aggiungere o rimuovere nodi.  
   
- **inizializzare**  
+ **Initialize**  
  Fare clic su **Inizializza** per aggiungere un server di report alla distribuzione con scalabilità orizzontale. Questo passaggio consente di configurare un server di report per l'utilizzo di una chiave simmetrica in un database del server di report condiviso. È possibile utilizzare **Inizializza** per aggiungere un'istanza del server di report a una distribuzione con scalabilità orizzontale o per la risoluzione dei problemi di migrazione o installazione.  
   
  Un'istanza del server di report è disponibile solo se in precedenza è stata configurata una connessione al database condiviso del server di report. È necessario inoltre eseguire l'inizializzazione da un server di report già inizializzato per l'utilizzo del database del server di report.  

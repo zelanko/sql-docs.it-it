@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741265"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Impostare le proprietà dei database multidimensionali (Analysis Services)
   Sono disponibili numerose proprietà di database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere configurate in Progettazione database di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -36,10 +36,10 @@ ms.locfileid: "50147976"
 ## <a name="database-properties"></a>Proprietà dei database  
  In aggiunta alle attività sopra descritte, è possibile configurare alcune proprietà di un database nella finestra Proprietà.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |Prefisso aggregazioni|Prefisso comune utilizzabile per i nomi di aggregazioni in tutte le partizioni di un database. Per altre informazioni, vedere [Elemento AggregationPrefix &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl).|  
-|Confronto|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Regole di confronto del server a meno che non venga specificato un valore diverso in questa finestra.|  
+|Regole di confronto|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Regole di confronto del server a meno che non venga specificato un valore diverso in questa finestra.|  
 |DataSourceImpersonationInfo|Specifica la modalità di rappresentazione predefinita per tutti gli oggetti origine dei dati nel database. Tale modalità viene usata dal servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante l'elaborazione degli oggetti, la sincronizzazione dei server e l'esecuzione delle istruzioni di data mining OpenQuery e SystemOpenSchema.|  
 |Dimensioni stimate|Fornisce una dimensione stimata dei file di database su disco. Se i dati vengono archiviati in più percorsi, questa stima sarà limitata solo ai file di dati archiviati nella cartella del database.<br /><br /> `EstimatedSize` può essere utilizzata anche come base per stimare la memoria. In genere i requisiti di memoria sono maggiori delle dimensioni dei dati su disco, a causa di strutture di dati aggiuntive create quando il database tabulare viene caricato in memoria.<br /><br /> Per stimare ulteriormente i requisiti di memoria, è inoltre possibile utilizzare Gestione attività per analizzare la memoria del processo di Analysis Services prima e dopo avere l'elaborazione del database e osservare la memoria utilizzata come metodo per capire i requisiti di memoria del database.|  
 |Linguaggio|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Lingua del server a meno che non venga specificato un valore diverso in questa finestra.|  

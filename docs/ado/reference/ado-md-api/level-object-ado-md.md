@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740191"
 ---
 # <a name="level-object-ado-md"></a>Oggetto Level (ADO MD)
 Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.  
@@ -43,11 +43,11 @@ Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di un
   
  Il **proprietà** raccolta contiene le proprietà specifiche del provider. La tabella seguente elenca le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione per il provider per un elenco completo delle proprietà disponibili.  
   
-|nome|Description|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  
-|Description|Una descrizione significativa del livello.|  
+|Descrizione|Una descrizione significativa del livello.|  
 |DimensionUniqueName|Nome univoco della [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Nome univoco della gerarchia.|  
 |LevelCaption|Etichetta o didascalia associata al livello.|  

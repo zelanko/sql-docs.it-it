@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755327"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  Il tempo di riesecuzione dei tentativi viene calcolato mediante la formula seguente:  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0,08 **&#42;**_LoginTimeout_**)**  
   
  Dove *PreviousRetryTime* è inizialmente pari a 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Arrotondamento|Calcolo*RetryTime* |Tempo di riesecuzione per tentativo|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 secondi|  
-|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 secondi|  
-|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 secondi|  
-|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 secondi|   
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondi|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondi|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 secondi|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 secondi|   
   
  Nella figura seguente vengono illustrati questi tempi di riesecuzione dei tentativi di connessione successivi, per ognuno dei quali si verifica il timeout.  
   

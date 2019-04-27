@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657583"
 ---
 # <a name="publish-reports"></a>Pubblicazione di report
   In[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile pubblicare un solo report oppure pubblicare tutti i report e le origini dati condivise di un progetto server di report in un server di report distribuendo il progetto. Prima di pubblicare un report è necessario specificare l'URL del server di report di destinazione. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  

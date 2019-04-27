@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729887"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Scheda Selezione input (vista Grafico accuratezza modello di data mining)
   Usare la scheda **Selezione input** della finestra di progettazione **Grafico accuratezza modello di data mining** per specificare l'origine dati usata per eseguire il test del modello e compilare il grafico di accuratezza.  
   
- **Per altre informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Per ulteriori informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opzioni  
  **Sincronizza colonne**  **e valori di stima**  
@@ -34,9 +34,9 @@ ms.locfileid: "48120871"
  **Selezionare le colonne modello di data mining stimabile da visualizzare nel grafico di accuratezza**  
  Griglia contenente colonne che consentono di controllare i modelli inclusi nel grafico di accuratezza e controllarne la modalità di utilizzo.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Mostra**|Consente di selezionare la casella accanto al nome di ogni colonna stimabile nel modello di data mining che si desidera visualizzare nel grafico.<br /><br /> Se il grafico è troppo complesso per essere visualizzato in modo semplice, deselezionare la casella accanto a una o più colonne per semplificare il grafico.<br /><br /> Nota: è possibile creare un grafico di accuratezza solo se è stata selezionata almeno una colonna.|  
+|**Mostra**|Consente di selezionare la casella accanto al nome di ogni colonna stimabile nel modello di data mining che si desidera visualizzare nel grafico.<br /><br /> Se il grafico è troppo complesso per essere visualizzato in modo semplice, deselezionare la casella accanto a una o più colonne per semplificare il grafico.<br /><br /> Nota: A meno che non sia selezionata almeno una colonna, è possibile creare un grafico di accuratezza.|  
 |**Modello di data mining**|Consente di visualizzare l'elenco di modelli di data mining contenuti nella struttura di data mining.|  
 |**Nome colonna stimabile**|Consente di selezionare una colonna stimabile contenuta nei modelli di data mining utilizzati per la creazione del grafico di accuratezza.|  
 |**Valore stima**|Consente di selezionare un valore per la colonna stimabile. Se non si seleziona alcun valore, il grafico di accuratezza stimerà il livello di accuratezza dell'esecuzione da parte del modello per tutti gli stati della colonna stimabile.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48120871"
  **Seleziona set di dati da utilizzare per il grafico di accuratezza**  
  Gruppo di tre opzioni per la specifica dei dati del test di accuratezza.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Utilizza test case del modello di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining e di applicare il filtro definito sul modello. Per informazioni sui filtri dei modelli, vedere [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Utilizza test case della struttura di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining.|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120871"
  [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Applicare un filtro a un modello di Data Mining](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730219"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Scheda Set di elementi (Visualizzatore modello di data mining)
   È possibile usare il riquadro **Set di elementi** per visualizzare i set di elementi frequenti inclusi in un modello di data mining delle regole di associazione. Poiché in un modello di associazione possono essere inclusi molti set di elementi, i controlli vengono forniti nel visualizzatore come supporto per filtrare i set di elementi mostrati nel visualizzatore.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Association Rules](data-mining/microsoft-association-algorithm.md)e [Visualizzare un modello usando il Visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Association Rules](data-mining/microsoft-association-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -75,12 +75,12 @@ ms.locfileid: "48060341"
  **Dimensione**  
  Consente di visualizzare il numero di elementi esistenti in ogni set.  
   
- **Set di elementi**  
+ **Itemset**  
  Consente di visualizzare la descrizione di ogni set di elementi. Per impostazione predefinita, i set di elementi vengono presentati come un elenco delimitato da virgole di attributi e dei relativi valori. È possibile modificare la modalità di visualizzazione tramite l'opzione **Mostra** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

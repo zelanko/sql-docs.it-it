@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94e34c092b833f6740562e56c3ebbe713ffc2572
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746204"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>Impostazione chiave e tipo della dimensione (Creazione guidata dimensione)
   La pagina **Impostazione chiave e tipo della dimensione** consente di definire l'attributo chiave della dimensione e di indicare se si tratta di una dimensione a modifica lenta.  

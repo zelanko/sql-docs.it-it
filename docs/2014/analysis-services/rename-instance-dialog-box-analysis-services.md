@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748333"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Finestra di dialogo Rinomina istanza (Analysis Services)
   Utilizzare la finestra di dialogo **Rinomina istanza** per rinominare un'istanza esistente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È possibile visualizzare la finestra di dialogo **Rinomina istanza** avviando lo strumento **Ridenominazione istanza** (asinstancerename.exe) in C:\Programmi\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  

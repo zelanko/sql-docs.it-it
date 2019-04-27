@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748383"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni report (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Editor dei form delle azioni report** nella scheda **Azioni** in Progettazione cubi per modificare l'azione del report selezionata nel riquadro **Libreria azioni**.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome dell'azione.  
   
  **Destinazione azione**  
@@ -33,11 +33,11 @@ ms.locfileid: "48196591"
  **Tipo di destinazione**  
  Consente di selezionare il tipo di oggetto a cui associare l'azione. Il server restituisce al client solo le azioni del tipo specificato relative all'oggetto. L'azione è disponibile per il client se il valore di **Condizione** viene soddisfatto e se sono selezionati gli oggetti specificati nella tabella seguente.  
   
-|valore|Oggetto selezionato|  
+|Value|Oggetto selezionato|  
 |-----------|---------------------|  
-|Membri dell'attributo|In **Oggetto di destinazione**è selezionato un membro dell'attributo da un livello basato sull'attributo.<br /><br /> Nota: altre gerarchie utente che usano l'attributo selezionato ereditano l'azione del report.|  
+|Membri dell'attributo|In **Oggetto di destinazione**è selezionato un membro dell'attributo da un livello basato sull'attributo.<br /><br /> Nota: Altre gerarchie utente che usano l'attributo selezionato ereditano l'azione del report.|  
 |Celle|In **Oggetto di destinazione** è selezionato il set denominato. Selezionare **Tutte le celle** per selezionare tutte le celle del cubo.|  
-|Cube|In **Oggetto di destinazione** è selezionato il cubo. Selezionare CURRENTCUBE per utilizzare il cubo corrente.<br /><br /> Nota: l'uso di CURRENTCUBE garantisce maggiore portabilità nel caso in cui il cubo venga rinominato o l'azione venga copiata in altri cubi. È consigliabile utilizzare CURRENTCUBE per rappresentare il cubo corrente.|  
+|Cube|In **Oggetto di destinazione** è selezionato il cubo. Selezionare CURRENTCUBE per utilizzare il cubo corrente.<br /><br /> Nota: Uso di CURRENTCUBE garantisce maggiore portabilità nel caso in cui il cubo venga rinominato o l'azione copiata in altri cubi. È consigliabile utilizzare CURRENTCUBE per rappresentare il cubo corrente.|  
 |Membri della dimensione|In **Oggetto di destinazione** è selezionato un membro della dimensione.|  
 |Gerarchia|In **Oggetto di destinazione** è selezionata la gerarchia.|  
 |Membri della gerarchia|In **Oggetto di destinazione** è selezionato un membro della gerarchia.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48196591"
  **Formato report**  
  Consente di selezionare il formato in cui viene restituito il report. Nella tabella seguente vengono descritti i formati disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |HTML5|Il report viene restituito in un formato conforme a HTML 5.0.|  
 |HTML3|Il report viene restituito in un formato conforme a HTML 3.2.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48196591"
  **Parametri (facoltativi)**  
  Espandere la finestra per visualizzare una griglia in cui è possibile immettere i parametri del report specificati in **Report**. La griglia include le colonne seguenti:  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome parametro**|Consente di digitare il nome del parametro del report da passare al report.|  
 |**Valore parametro**|Consente di digitare il valore del parametro del report da passare al report.<br /><br /> Fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Generatore MDX** e creare un'espressione MDX che restituisca il valore del parametro del report. Per altre informazioni sulla finestra di dialogo **Generatore MDX**, vedere [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Se il parametro è impostato su un'espressione MDX, tale espressione viene valutata quando l'azione viene eseguita, altrimenti viene passata al report senza alcuna modifica.|  
@@ -90,7 +90,7 @@ ms.locfileid: "48196591"
   
  Nella tabella seguente vengono descritte le impostazioni disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita nell'ambito di un'operazione batch o di un'attività di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interattiva|L'azione viene eseguita in seguito alla chiamata dell'utente.|  

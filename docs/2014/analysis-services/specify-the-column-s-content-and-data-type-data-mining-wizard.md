@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745831"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Specificare la colonna&#39;contenuto e il tipo di dati (Creazione guidata Data Mining)
   Utilizzare la pagina **Impostazione tipo di dati e contenuto delle colonne** per modificare la colonna e i tipi di contenuto già impostati durante la creazione guidata. Nella creazione guidata vengono utilizzati i tipi di dati delle colonne di origine e le funzionalità dell'algoritmo selezionato per stabilire i dati predefiniti e i tipi di contenuto per ogni colonna.  
   
- **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Colonne**  

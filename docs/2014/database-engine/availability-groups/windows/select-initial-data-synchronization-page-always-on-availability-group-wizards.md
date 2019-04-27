@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789471"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Pagina Seleziona sincronizzazione dati iniziale (procedure guidate Gruppi di disponibilità AlwaysOn)
   Utilizzare la pagina **Seleziona sincronizzazione dati iniziale** AlwaysOn per indicare le preferenze per la sincronizzazione dati iniziale dei nuovi database secondari. Questa pagina è condivisa da tre procedure guidate: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]e [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  

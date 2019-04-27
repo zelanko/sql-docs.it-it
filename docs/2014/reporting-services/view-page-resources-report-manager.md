@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647044"
 ---
 # <a name="view-page-resources-report-manager"></a>Pagina Visualizza, Risorse (Gestione report)
   La pagina Visualizza per le risorse consente di visualizzare una risorsa. Una risorsa è un elemento che viene archiviato e gestito in un server di report, ma non viene elaborato in un server di report (nel server di report vengono elaborati report e modelli). Le risorse possono essere utilizzate per l'archiviazione di documenti, immagini o altri file arbitrari non elaborati nel server. La maggior parte dei file di immagine (come file JPG, GIF e PNG) può essere visualizzata nella pagina Visualizza di Gestione report. Le altre risorse vengono aperte in una finestra dell'applicazione separata.  

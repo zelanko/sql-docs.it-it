@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668987"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
   Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre una visualizzazione incentrata sul server di pubblicazione o sul server di distribuzione di tutte le attività di replica suddivise in due riquadri. Se si aggiunge un server di pubblicazione nel riquadro sinistro di Monitoraggio replica, verranno visualizzate nel riquadro sinistro informazioni sul server di pubblicazione, sulle relative pubblicazioni, sulle sottoscrizioni a tali pubblicazioni e sui diversi agenti di replica. Oltre a visualizzare informazioni per la topologia di replica, Monitoraggio replica consente di eseguire numerose attività, quali l'avvio e l'arresto degli agenti e la convalida dei dati.  
@@ -104,7 +104,7 @@ ms.locfileid: "54134581"
   
      In questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
- Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+ Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
  In Monitoraggio replica è incluso inoltre un menu di scelta rapida per il nodo del server di pubblicazione. Fare clic con il pulsante destro del mouse su un server di pubblicazione nel riquadro sinistro per:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "54134581"
   
          I messaggi di errore disponibili offrono informazioni dettagliate sul motivo per cui un agente non è in esecuzione e rappresentano un punto di partenza per la risoluzione di problemi relativi agli agenti associati a una pubblicazione.  
   
- Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+ Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
  Monitoraggio replica include inoltre un menu di scelta rapida per il nodo delle pubblicazioni. Fare clic con il pulsante destro del mouse su una pubblicazione nel riquadro sinistro per:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "54134581"
   
          In questa scheda vengono incluse statistiche dettagliate per ogni articolo elaborato durante la sincronizzazione, incluso l'intervallo di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Questa scheda può agevolare l'identificazione di tabelle specifiche che causano rallentamenti ed è il luogo ideale per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge.  
   
- Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).
+ Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Visualizzazione delle informazioni ed esecuzione di attività relative ai profili degli agenti  
  Monitoraggio replica include un certo numero di finestre di dialogo per la gestione dei profili degli agenti. I profili degli agenti sono set di parametri relativi a un agente che ne determinano il comportamento. Per altre informazioni, vedere [Replication Agent Profiles](../agents/replication-agent-profiles.md). Di seguito vengono descritte le finestre di dialogo associate ai profili:  

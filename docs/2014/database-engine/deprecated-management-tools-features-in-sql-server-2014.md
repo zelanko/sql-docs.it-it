@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753953"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Funzionalità degli strumenti di gestione deprecate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità deprecate degli strumenti di gestione ancora disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -26,10 +26,10 @@ ms.locfileid: "48083871"
 |sqlps.exe|Avviso|  
 |osql.exe|Avviso|  
 |SQLMail|Avviso|  
-|Classe SMO: classe Microsoft.SQLServer.Management.Smo.Information|Annuncio|  
-|Classe SMO: classe Microsoft.SQLServer.Management.Smo.Settings|Annuncio|  
-|Classe SMO: classe Microsoft.SQLServer.Management.Smo.DatabaseOptions|Annuncio|  
-|Classe SMO: proprietà Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Annuncio|  
+|Classe SMO: Classe di Microsoft|Annuncio|  
+|Classe SMO: Classe di Microsoft|Annuncio|  
+|Classe SMO: Classe. DatabaseOptions|Annuncio|  
+|Classe SMO: Proprietà. databaseddltrigger. notforreplication|Annuncio|  
 |Sistema del progetto di database, inclusa l'integrazione del controllo del codice sorgente, in SSMS|Annuncio|  
 |Notifiche net send ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Annuncio|  
 |Notifiche con cercapersone ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Annuncio|  

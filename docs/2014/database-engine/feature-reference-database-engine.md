@@ -15,19 +15,19 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779756"
 ---
 # <a name="feature-reference-database-engine"></a>Guida di riferimento alle funzionalità (Motore di database)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] include numerosi strumenti e applicazioni che è possibile utilizzare per la creazione, la gestione e la visualizzazione di oggetti e dati di database. Ci sono inoltre strumenti che è possibile utilizzare per controllare e risolvere i problemi relativi alle prestazioni del server e del database e per abilitare e disabilitare funzionalità, servizi e protocolli di rete. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo di tali strumenti e applicazioni.  
   
  Per accedere a un argomento relativo all'interfaccia utente mentre lo strumento o l'applicazione è in esecuzione, premere F1 oppure fare clic su ? nella finestra di dialogo, nella pagina Web o nella procedura guidata aperta.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Avviare e usare Ottimizzazione guidata motore di database](../relational-databases/performance/database-engine-tuning-advisor.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Avvio e utilizzo di Ottimizzazione guidata motore di database](../relational-databases/performance/database-engine-tuning-advisor.md)  
  Guida per Ottimizzazione guidata [!INCLUDE[ssDE](../includes/ssde-md.md)] e le finestre di dialogo correlate.  
   
  Guida per gli strumenti, le procedure guidate e i servizi forniti con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  

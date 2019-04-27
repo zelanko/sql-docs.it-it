@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664027"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Broker:Forwarded Message Dropped quando Service Broker elimina un messaggio di cui è previsto l'inoltro.  
@@ -35,13 +35,13 @@ ms.locfileid: "52809667"
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Yes|  
 |DBUserName|`nvarchar`|Identificatore dell'istanza di Service broker da cui proviene il messaggio.|40|No|  
 |Errore|`int`|Numero di ID del messaggio in sys.messages per il testo dell'evento.|31|No|  
-|EventClass|`int`|Tipo di classe di evento acquisita. Per Broker:Forwarded Message Dropped, corrisponde sempre a 191.|27|No|  
-|EventSequence|`int`|Numero di sequenza dell'evento.|51|No|  
+|EventClass|`int`|Tipo di classe di evento acquisita. Per Broker:Forwarded Message Dropped, corrisponde sempre a 191.|27|no|  
+|EventSequence|`int`|Numero di sequenza dell'evento.|51|no|  
 |FileName|`nvarchar`|Nome del servizio a cui è destinato il messaggio.|36|No|  
-|GUID|`uniqueidentifier`|ID di conversazione del dialogo. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
+|GUID|`uniqueidentifier`|ID di conversazione del dialogo. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|no|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IndexID|`int`|Numero di hop rimanenti per il messaggio inoltrato.|24|No|  
-|IntegerData|`int`|Numero di frammento del messaggio inoltrato.|25|No|  
+|IntegerData|`int`|Numero di frammento del messaggio inoltrato.|25|no|  
 |LoginSid|`image`|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Yes|  
 |NTDomainName|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Yes|  
 |NTUserName|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
@@ -49,7 +49,7 @@ ms.locfileid: "52809667"
 |ObjectName|`nvarchar`|ID del messaggio inoltrato.|34|No|  
 |OwnerName|`nvarchar`|Identificatore dell'istanza di Service Broker che rappresenta la destinazione del messaggio.|37|No|  
 |RoleName|`nvarchar`|Ruolo dell'handle di conversazione. I possibili valori sono i seguenti:<br /><br /> Initiator. Istanza di Service Broker che ha iniziato la conversazione.<br /><br /> Destinazione. Istanza di Service Broker che funge da destinazione della conversazione.|38|No|  
-|ServerName|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|ServerName|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |Severity|`int`|Numero di gravità per il testo dell'evento.|29|No|  
 |SPID|`int`|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Yes|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  

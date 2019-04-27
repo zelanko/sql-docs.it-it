@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676414"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Panoramica di Preparazione aggiornamento
   In questa sezione vengono forniti cenni preliminari sul processo di aggiornamento, oltre a informazioni sull'utilizzo dell'Analisi guidata di Preparazione aggiornamento e del Visualizzatore report di Preparazione aggiornamento.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Panoramica del processo di aggiornamento](../../../2014/sql-server/install/upgrade-process-overview.md)|Viene descritto il processo consigliato per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Panoramica di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-overview.md)|Vengono forniti cenni preliminari sul nuovo strumento di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] denominato Preparazione aggiornamento.|  

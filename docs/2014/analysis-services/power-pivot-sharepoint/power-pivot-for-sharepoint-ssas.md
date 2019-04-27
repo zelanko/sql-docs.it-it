@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749267"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot per SharePoint (SSAS)
   PowerPivot per SharePoint è un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguito in modalità SharePoint. PowerPivot per SharePoint offre l'hosting nel server dei dati PowerPivot in una farm di SharePoint 2010. I dati PowerPivot sono un modello di dati analitici che viene compilato con uno degli elementi seguenti:  

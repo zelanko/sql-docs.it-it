@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665257"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (driver file di testo)
 > [!NOTE]  
@@ -27,14 +27,14 @@ ms.locfileid: "47612659"
   
  Il **SQLConfigDataSource** funzione che consente di aggiungere, modificare o eliminare un'origine dati utilizza in modo dinamico le parole chiave seguenti.  
   
-|Parola chiave|Description|  
+|Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |CHARACTERSET|Per il driver di testo, OEM o ANSI.|  
 |COLNAMEHEADER|Per il driver di testo, indica se il primo record di dati è necessario specificare i nomi delle colonne. TRUE o FALSE.|  
 |DEFAULTDIR|La specifica del percorso della directory.|  
 |DESCRIPTION|Una descrizione dei dati nell'origine dati.<br /><br /> Consente di impostare la stessa opzione come **descrizione** nella finestra di dialogo programma di installazione.|  
 |DRIVER|Specifica il percorso alla DLL del driver.|  
-|DRIVERID|Un ID intero per il driver. 27 (testo)|  
+|DRIVERID|Un ID intero per il driver. 27 (Text)|  
 |ESTENSIONI|Elenca le estensioni dei file di testo sull'origine dati.<br /><br /> Consente di impostare la stessa opzione come **elenco di estensioni** nella finestra di dialogo programma di installazione.|  
 |FIL|Tipo di file testo|  
 |FILETYPE|Tipo di file per il driver di testo (testo).|  

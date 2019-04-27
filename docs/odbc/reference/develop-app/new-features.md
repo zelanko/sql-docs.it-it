@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658184"
 ---
 # <a name="new-features"></a>Nuove funzionalità
 La nuova funzionalità seguente è stato introdotto in ODBC 3. *x*. Un database ODBC 3. *x* funziona con un'API ODBC 2*x* driver non sarà in grado di usare questa funzionalità. ODBC 3. *x* gestione Driver non eseguire il mapping di queste funzionalità quando si lavora con un'API ODBC 2*x* driver.  
   
--   Le funzioni che accettano un descrittore di handle come argomento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, e **SQLCopyDesc**.  
+-   Le funzioni che accettano un descrittore di handle come argomento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
 -   Le funzioni **SQLSetEnvAttr** e **SQLGetEnvAttr**.  
   

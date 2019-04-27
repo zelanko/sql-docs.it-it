@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748213"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Riquadro Risultati (visualizzazione Stima modello di data mining)
   Nel riquadro **Risultati** vengono visualizzati i risultati della query di stima di data mining progettata nella visualizzazione **Progettazione** del generatore delle query di stima. È possibile copiare una parte o l'intera griglia dei risultati negli Appunti.  
@@ -37,7 +37,7 @@ ms.locfileid: "48071181"
  Consente di rielaborare la query di stima.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
+ [Generatore delle query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
  [Data Mining nuove interfacce Query](data-mining/data-mining-query-tools.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   

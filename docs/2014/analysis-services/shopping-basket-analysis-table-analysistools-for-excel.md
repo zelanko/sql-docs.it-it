@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746504"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Market basket analysis (Strumenti di analisi tabelle per Excel)
   ![Strumento per gli acquisti](media/tat-shopbskt.gif "strumento per gli acquisti")  
@@ -76,9 +76,9 @@ ms.locfileid: "48049751"
 ### <a name="minimum-support"></a>Supporto minimo  
  *Supporto minimo* indica il numero di transazioni che devono contenere un determinato set di elementi per il set di elementi essere considerata significativa. Si potrebbe ad esempio essere interessati solo ai set di elementi acquistati in almeno dieci transazioni diverse. Esistono due modi per controllare la soglia per il significato di set di elementi e utilizzano entrambi la **supporto minimo** parametro.  
   
- **Come valore assoluto:** immettere un numero che rappresenta il numero di transazioni contenenti gli elementi di destinazione. Se, ad esempio, si immette 10, nei risultati vengono inclusi tutti i set di elementi presenti in almeno dieci carrelli acquisti.  
+ **Come valore assoluto:** Immettere un numero che rappresenta il numero di transazioni contenenti gli elementi di destinazione. Se, ad esempio, si immette 10, nei risultati vengono inclusi tutti i set di elementi presenti in almeno dieci carrelli acquisti.  
   
- **Come percentuale:** immettere un numero che rappresenta una percentuale dell'intera raccolta di set di elementi. Se, ad esempio, si specifica 10, tutti i set di elementi vengono contati e i set di elementi di destinazione che devono essere presenti costituiscono almeno il 10% del numero totale di set di elementi. Se si dispone di un set di dati di dimensioni molto grandi, l'utilizzo di una percentuale anziché di un numero può consentire di concentrarsi sui raggruppamenti di elementi più importanti.  
+ **Come percentuale:** Immettere un numero che rappresenta una percentuale dell'intera raccolta di set di elementi. Se, ad esempio, si specifica 10, tutti i set di elementi vengono contati e i set di elementi di destinazione che devono essere presenti costituiscono almeno il 10% del numero totale di set di elementi. Se si dispone di un set di dati di dimensioni molto grandi, l'utilizzo di una percentuale anziché di un numero può consentire di concentrarsi sui raggruppamenti di elementi più importanti.  
   
 > [!NOTE]  
 >  Tenere presente che il numero di set di elementi è diverso dal numero di transazioni nei dati. Ogni transazione può contenere più set di elementi, tuttavia la maggior parte dei set di elementi si ripete diverse volte nel set di dati.  

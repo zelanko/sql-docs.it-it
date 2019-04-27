@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749242"
 ---
 # <a name="powerpivot-data-feeds"></a>Feed di dati PowerPivot
   Un feed di dati fornisce su richiesta un flusso di dati da un'origine dati online a un'applicazione client. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare i feed di dati per aggiungere dati da un'applicazione a un'origine dati PowerPivot in una cartella di lavoro di Excel o un servizio Web specifico di Atom.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755919"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Cosa&#39;incluso nei dati di componenti aggiuntivi Data Mining per Office
   Se durante l'installazione dei componenti aggiuntivi Data mining per Office 2013 si selezionano tutte le opzioni di installazione, verranno aggiunti i modelli e le barre degli strumenti seguenti:  
@@ -47,7 +47,7 @@ ms.locfileid: "52519094"
   
      Ai fini dell'analisi dei dati, è essenziale determinare quali sono i dati da utilizzare e come prepararli. In questo argomento vengono forniti suggerimenti sulla preparazione dei dati per creare il miglior modello possibile.  
   
-     Se non si ha familiarità con il concetto di data mining e si desidera sperimentare gli strumenti, è consigliabile utilizzare la cartella di lavoro dei dati di esempio che viene installata insieme ai componenti aggiuntivi. In questi dati sono inoltre disponibili esempi per la preparazione dei dati per i modelli Time Series o i modelli di associazione.  
+     Se si ha familiarità con il data mining e si vuole solo sperimentare gli strumenti, è consigliabile usare la cartella di lavoro dei dati di esempio che viene installati insieme a componenti aggiuntivi. Esaminando questi dati è anche possibile visualizzare esempi di come preparare i dati per i modelli time series o i modelli di associazione.  
   
      **Dati di esempio**  
   

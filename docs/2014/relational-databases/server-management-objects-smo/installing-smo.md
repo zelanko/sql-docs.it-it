@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753633"
 ---
 # <a name="installing-smo"></a>Installazione di SMO (SQL Server Management Objects)
   Se si desidera sviluppare un'applicazione che utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), è opportuno selezionare l'SDK di strumenti client in fase di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare l'SDK di strumenti client senza installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], installare Shared Management Objects dal Feature Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si desidera verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects sia installato in un computer che eseguirà l'applicazione, è possibile utilizzare Shared Management Objects.msi nel Feature Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

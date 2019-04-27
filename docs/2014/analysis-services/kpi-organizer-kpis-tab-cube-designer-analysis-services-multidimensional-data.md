@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729656"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Libreria KPI** nella scheda **KPI** di Progettazione cubi per accedere e riordinare gli indicatori di prestazioni chiave (KPI) contenuti nel cubo specificato.  
@@ -38,8 +38,8 @@ ms.locfileid: "48136793"
 |Opzione|Definizione|  
 |------------|----------------|  
 |**Nuovo indicatore KPI**|Selezionare questa opzione per visualizzare l' **Editor form KPI** e creare un nuovo indicatore KPI. Per altre informazioni sull' **Editor form KPI**, vedere [Editor form KPI &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Sposta su**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** superiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: se non è possibile spostare ulteriormente l'indicatore KPI, questa opzione è disabilitata.|  
-|**Sposta giù**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** inferiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: se non è possibile spostare ulteriormente l'indicatore KPI, questa opzione è disabilitata.|  
+|**Sposta su**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** superiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: Questa opzione è disabilitata se l'indicatore KPI selezionato non può essere ulteriormente spostato.|  
+|**Sposta giù**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** inferiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: Questa opzione è disabilitata se l'indicatore KPI selezionato non può essere ulteriormente spostato.|  
 |**Elimina**|Selezionare questa opzione per eliminare l'indicatore KPI specificato.|  
   
 ## <a name="see-also"></a>Vedere anche  

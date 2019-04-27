@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754316"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn (SQL Server)
   Affinché due istanze del server possano connettersi tra loro al punto dell' [endpoint del mirroring di database](the-database-mirroring-endpoint-sql-server.md) , è necessario che l'account di accesso di ognuna delle istanze possa accedere all'altra. e inoltre che disponga dell'autorizzazione per la connessione all'endpoint del mirroring del database dell'altra istanza.  

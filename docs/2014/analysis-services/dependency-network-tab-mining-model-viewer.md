@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732197"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Scheda Rete di dipendenze (Visualizzatore modello di data mining)
   La scheda **Rete di dipendenze** consente di visualizzare graficamente tutti gli attributi contenuti nel modello di dati mining e la relativa modalità di correlazione.  
@@ -53,7 +53,7 @@ ms.locfileid: "48226171"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Collegamenti**  
+ **Links**  
  Consente di impostare il numero di collegamenti (bordi) e nodi mostrati dal visualizzatore regolando l'indicatore di scorrimento a destra degli attributi. Trascinando la barra del dispositivo di scorrimento verso il basso viene aumentato il valore soglia in modo da visualizzare solo i collegamenti più attendibili. Per ogni tipo di modello, viene utilizzato un valore leggermente diverso per rappresentare i collegamenti nel grafico:  
   
 -   In un modello di **albero delle decisioni** i bordi rappresentano l'attendibilità predittiva della connessione, determinata in parte dal punteggio di divisione.  
@@ -65,8 +65,8 @@ ms.locfileid: "48226171"
  Una regola generale per tutti i tipi di modelli prevede che maggiore è l'attendibilità del collegamento, maggiore sarà l'attendibilità della relazione predittiva tra i due attributi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

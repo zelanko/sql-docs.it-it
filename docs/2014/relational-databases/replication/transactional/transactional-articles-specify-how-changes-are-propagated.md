@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655676"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Impostazione della modalità di propagazione delle modifiche per gli articoli transazionali
   La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
@@ -60,7 +60,7 @@ ms.locfileid: "52754163"
   
 -   Se si apportano modifiche allo schema in una tabella pubblicata, è necessario rigenerare le procedure personalizzate. Per altre informazioni, vedere [Rigenerare procedure transazionali personalizzate per riflettere le modifiche dello schema](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Ad esempio:  
+-   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Ad esempio:   
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

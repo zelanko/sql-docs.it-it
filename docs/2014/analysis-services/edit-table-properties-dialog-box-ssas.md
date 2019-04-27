@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731493"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Finestra di dialogo Modifica proprietà tabella (SSAS)
   La finestra di dialogo **Modifica proprietà tabella** consente di visualizzare e modificare le proprietà di tabelle importate in Progettazione modelli tramite l'Importazione guidata tabella. Per accedere a questa finestra di dialogo, in Progettazione modelli selezionare una tabella, quindi scegliere **Proprietà tabella** dal menu **Tabella**.  
@@ -90,7 +90,7 @@ ms.locfileid: "48229281"
  **Istruzione SQL**  
  Visualizza l'istruzione SQL eseguita sull'origine dati corrente per recuperare le righe. Per impostazione predefinita, vengono recuperate tutte le righe, tuttavia è possibile anche recuperare un subset di righe progettando un filtro o modificando manualmente l'istruzione SQL.  
   
- **Convalida**  
+ **Validate**  
  Fare clic per verificare che l'istruzione sia sintatticamente corretta per l'origine dati e il provider selezionati.  
   
  **Progetta**  
@@ -100,6 +100,6 @@ ms.locfileid: "48229281"
  Fare clic per applicare tutte le modifiche apportate, inclusa la sostituzione delle colonne.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle e colonne &#40;tabulare di SSAS&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tabelle e colonne &#40;SSAS tabulare&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

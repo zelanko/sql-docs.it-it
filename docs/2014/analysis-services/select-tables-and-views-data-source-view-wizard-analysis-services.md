@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747125"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selezione tabelle e viste (Creazione guidata vista origine dati) (Analysis Services)
   La pagina **Selezione tabelle e viste** consente di selezionare le tabelle o le viste dall'origine dati da includere nella vista origine dati.  
@@ -39,7 +39,7 @@ ms.locfileid: "48104011"
   
  È possibile includere i caratteri jolly inclusi nella tabella seguente in qualsiasi punto della stringa di filtro.  
   
-|Carattere jolly|valore|  
+|Carattere jolly|Value|  
 |------------------------|-----------|  
 |**\***|Qualsiasi stringa di caratteri|  
 |**%**|Qualsiasi stringa di caratteri|  

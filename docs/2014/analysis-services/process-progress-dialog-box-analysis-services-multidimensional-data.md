@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 056e29133faf174cadc790f71d999417e1eb4d84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748813"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Stato elaborazione (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Stato elaborazione** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare l'elaborazione in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La finestra di dialogo **Stato elaborazione** viene visualizzata all'inizio dell'elaborazione in un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

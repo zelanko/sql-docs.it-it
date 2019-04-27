@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9f5f0fb68f7f6b953ab75c5ba4786d98ea36a262
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665280"
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
- Della conformità API ODBC: A livello centrale  
+ Conformità di API ODBC: A livello centrale  
   
  Si connette a un'origine dati, che può essere un' [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [tabelle](../../odbc/microsoft/visual-foxpro-terminology.md). Ignora il Driver ODBC Visual FoxPro i *szUID*, *cbUID*, *szAuthStr*, e *cbAuthStr* argomenti.  
   

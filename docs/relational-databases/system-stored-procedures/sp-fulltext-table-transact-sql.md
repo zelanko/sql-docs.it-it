@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743981"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  Se la tabella viene riattivata e l'indice non viene ripopolato, l'indice precedente rimane disponibile per le query nelle colonne full-text attivate rimanenti, escluse quelle nuove. I dati provenienti da colonne eliminate vengono recuperati nelle query che specificano una ricerca su tutte le colonne full-text.  
   
- Dopo avere definito una tabella per l'indicizzazione full-text, se si imposta un tipo di dati diverso nella colonna chiave univoca full-text tramite la modifica del tipo di dati della colonna o l'impostazione della chiave univoca full-text su un'altra colonna senza eseguire un popolamento completo, potrebbe verificarsi un errore durante le query successive. In questo caso viene visualizzato il messaggio di errore: "La conversione nel tipo *data_type* non è riuscita per il valore di chiave di ricerca full-text *key_value*." Per evitare questo problema, eliminare la definizione full-text per la tabella tramite il **drop** azione **sp_fulltext_table** e ridefinirla tramite **sp_fulltext_table** e**sp_fulltext_column**.  
+ Dopo una tabella è stata definita per l'indicizzazione full-text, il passaggio di full-text colonna chiave univoca da un tipo a altro, la modifica del tipo di dati della colonna o modifica la chiave univoca full-text da una colonna a un altro, senza un popolamento completo può causare un errore durante una query successiva e restituire il messaggio di errore: "La conversione nel tipo *data_type* non è riuscita per il valore di chiave di ricerca full-text *key_value*." Per evitare questo problema, eliminare la definizione full-text per la tabella tramite il **drop** azione **sp_fulltext_table** e ridefinirla tramite **sp_fulltext_table** e**sp_fulltext_column**.  
   
  Il valore massimo definito per le dimensioni della colonna chiave full-text deve essere 900 byte. È consigliabile che le dimensioni della colonna chiave siano ridotte al massimo per motivi di prestazioni.  
   

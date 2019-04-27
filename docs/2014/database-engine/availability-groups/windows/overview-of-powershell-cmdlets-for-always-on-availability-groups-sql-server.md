@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789458"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell è una shell della riga di comando basata su attività e un linguaggio di scripting progettato appositamente per l'amministrazione del sistema. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornisce un set di cmdlet di PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per distribuire, gestire e monitorare gruppi di disponibilità, repliche di disponibilità e database di disponibilità.  
@@ -48,7 +48,7 @@ ms.locfileid: "49169201"
   
 ##  <a name="ConfiguringServerInstance"></a> Configurazione di un'istanza del Server per gruppi di disponibilità AlwaysOn  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|Disabilita la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza del server.|L'istanza del server specificata dal parametro `Path`, `InputObject` o `Name`. (L'edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]).|  
 |`Enable-SqlAlwaysOn`|Abilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che supporta la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per informazioni sul supporto per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
@@ -57,7 +57,7 @@ ms.locfileid: "49169201"
   
 ##  <a name="BnRcmdlets"></a> Backup e ripristino dei database e log delle transazioni  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Crea un backup dei dati o del log.|Qualsiasi database online (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un database nell'istanza del server che ospita la replica primaria)|  
 |`Restore-SqlDatabase`|Ripristina un backup.|Qualsiasi istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza del server che ospita una replica secondaria)<br /><br /> **&#42;&#42;Importante &#42; &#42;**  quando si prepara un database secondario, è necessario utilizzare il `-NoRecovery` parametri in ogni `Restore-SqlDatabase` comando.|  
@@ -66,7 +66,7 @@ ms.locfileid: "49169201"
   
 ##  <a name="DeployManageAGs"></a> Creazione e gestione di un gruppo di disponibilità  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroup`|Crea un nuovo gruppo di disponibilità.|Istanza del server per ospitare la replica primaria|  
 |`Remove-SqlAvailabilityGroup`|Elimina un gruppo di disponibilità.|Istanza del server abilitata per HADR|  
@@ -75,7 +75,7 @@ ms.locfileid: "49169201"
   
 ##  <a name="AGlisteners"></a> Creazione e gestione di un listener del gruppo di disponibilità  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroupListener`|Crea un nuovo listener del gruppo di disponibilità e lo collega a un gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
 |`Set-SqlAvailabilityGroupListener`|Modifica l'impostazione della porta su un listener del gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
@@ -83,7 +83,7 @@ ms.locfileid: "49169201"
   
 ##  <a name="DeployManageARs"></a> Creazione e gestione di una Replica di disponibilità  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityReplica**|Crea una nuova replica di disponibilità È possibile utilizzare il parametro `-AsTemplate` per creare un oggetto della replica di disponibilità in memoria per ogni nuova replica di disponibilità.|Istanza del server che ospita la replica primaria|  
 |`Join-SqlAvailabilityGroup`|Viene creato un join della replica secondaria al gruppo di disponibilità.|Istanza del server che ospita la replica secondaria|  
@@ -92,7 +92,7 @@ ms.locfileid: "49169201"
   
 ##  <a name="DeployManageDbs"></a> Aggiunta e gestione di un Database di disponibilità  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|Nella replica primaria viene aggiunto un database a un gruppo di disponibilità.<br /><br /> In una replica secondaria viene creato un join di un database secondario a un gruppo di disponibilità.|Qualsiasi istanza del server che ospita una replica di disponibilità (il comportamento è diverso per le repliche primarie e per quelle secondarie)|  
 |**Remove-SqlAvailabilityDatabase**|Nella replica primaria il database viene rimosso dal gruppo di disponibilità.<br /><br /> In una replica secondaria il database secondario locale viene rimosso dalla replica secondaria locale.|Qualsiasi istanza del server che ospita una replica di disponibilità (il comportamento è diverso per le repliche primarie e per quelle secondarie)|  
@@ -105,7 +105,7 @@ ms.locfileid: "49169201"
 > [!IMPORTANT]  
 >  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION per eseguire questi cmdlet.  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |------------|-----------------|------------------|  
 |`Test-SqlAvailabilityGroup`|Valuta l'integrità di un gruppo di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  
 |`Test-SqlAvailabilityReplica`|Valuta l'integrità delle repliche di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  

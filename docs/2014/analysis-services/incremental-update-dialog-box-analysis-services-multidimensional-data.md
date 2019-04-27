@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354ec6968698dc5b6a7bbca8ffcd33a34db4389d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730332"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiornamento incrementale (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Aggiornamento incrementale** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per definire le impostazioni per l'aggiornamento incrementale di gruppi di misure e partizioni. Per visualizzare la finestra di dialogo **Aggiornamento incrementale** , fare clic su **Configura** nella colonna **Impostazioni** della griglia **Elenco oggetti** nella finestra di dialogo **Elabora** .  
@@ -27,14 +27,14 @@ ms.locfileid: "48066281"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Gruppo di misure**|Selezionare il gruppo di misure da aggiornare in modo incrementale.<br /><br /> Nota: questa opzione è abilitata solo se si sta aggiornando un cubo in modo incrementale. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
-|**Partizione**|Selezionare la partizione da aggiornare.<br /><br /> Nota: questa opzione è abilitata solo se si sta aggiornando un cubo in modo incrementale. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
+|**Gruppo di misure**|Selezionare il gruppo di misure da aggiornare in modo incrementale.<br /><br /> Nota: Questa opzione è abilitata solo se si sta aggiornando in modo incrementale un cubo. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
+|**Partizione**|Selezionare la partizione da aggiornare.<br /><br /> Nota: Questa opzione è abilitata solo se si sta aggiornando in modo incrementale un cubo. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
 |**Tabella**|Fare clic su questa opzione per aggiornare l'oggetto da una tabella.|  
-|**Origine dati o una vista**|Consente di selezionare l'origine dei dati o la vista origine dati contenente la tabella di origine.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Tabella** .|  
-|**Nome e lo schema di tabella**|Consente di selezionare la tabella di origine utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Tabella** .|  
+|**Origine dati o una vista**|Consente di selezionare l'origine dei dati o la vista origine dati contenente la tabella di origine.<br /><br /> Nota: Questa opzione è abilitata solo se **tabella** sia selezionata.|  
+|**Nome e lo schema di tabella**|Consente di selezionare la tabella di origine utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: Questa opzione è abilitata solo se **tabella** sia selezionata.|  
 |**Query**|Fare clic su questa opzione per aggiornare l'oggetto da una query.|  
-|**Data Source**|Consente di selezionare l'origine dei dati contenente le tabelle in cui eseguire la query.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Query** .|  
-|**Testo della query**|Consente di digitare il testo della query utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Query** .|  
+|**Data Source**|Consente di selezionare l'origine dei dati contenente le tabelle in cui eseguire la query.<br /><br /> Nota: Questa opzione è abilitata solo se **Query** sia selezionata.|  
+|**Testo della query**|Consente di digitare il testo della query utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: Questa opzione è abilitata solo se **Query** sia selezionata.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

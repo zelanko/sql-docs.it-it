@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743597"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Creazione guidata partizione (Analysis Services - Dati multidimensionali)
   La Creazione guidata partizione può essere utilizzata per definire le partizioni per un gruppo di misure in un cubo. Per impostazione predefinita, viene definita un'unica partizione per ogni gruppo di misure in un cubo. Ciò può avere tuttavia ripercussioni negative sulle prestazioni di accesso ed elaborazione nel caso di partizioni di dimensioni elevate. La creazione di più partizioni, contenenti ciascuna una parte dei dati per un gruppo di misure, consente di migliorare le prestazioni di accesso ed elaborazione di tale gruppo di misure.  
@@ -36,7 +36,7 @@ ms.locfileid: "48198531"
   
 -   Denominare e salvare la partizione.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Impostazione informazioni origine &#40;Creazione guidata partizione&#41;](specify-source-information-partition-wizard.md)  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48198531"
 -   [Cerca cartella remota, finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

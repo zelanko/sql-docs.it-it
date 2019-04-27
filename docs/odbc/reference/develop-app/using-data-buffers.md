@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edddcb07702a33e6c2ce5f11feaf1716fc59573b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62751162"
 ---
 # <a name="using-data-buffers"></a>Uso dei buffer dei dati
 Buffer di dati sono descritti dai tre tipi di informazioni: la lunghezza del tipo, indirizzo e byte. Ogni volta che una funzione è necessario uno di questi tipi di informazioni e non è già noto, dispone di un argomento con il quale lo passa all'applicazione.  
