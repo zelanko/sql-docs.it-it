@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662968"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction - classe di evento
   Usare la classe di evento **DTCTransaction** per monitorare lo stato delle transazioni di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordinate con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC). Sono incluse le transazioni che interessano due o più database nella stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]e le transazioni distribuite che interessano due o più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "52770633"
 |**ClientProcessID**|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Yes|  
 |**DatabaseID**|`int`|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**DatabaseName**|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
-|**EventClass**|`int`|Tipo di evento = 19.|27|No|  
+|**EventClass**|`int`|Tipo di evento = 19.|27|no|  
 |**EventSequence**|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Recupero indirizzo<br /><br /> 1=Propagazione transazione<br /><br /> 3=Chiusura connessione<br /><br /> 6=Creazione di una nuova transazione DTC<br /><br /> 7=Integrazione in una transazione DTC<br /><br /> 9=Commit interno<br /><br /> 10=Interruzione interna<br /><br /> 14=Preparazione transazione<br /><br /> 15=Transazione preparata<br /><br /> 16=Chiusura transazione in corso<br /><br /> 17=Commit transazione in corso<br /><br /> 22=Errore del gestore delle transazioni nello stato PREPARED<br /><br /> 23=Sconosciuta|21|Yes|  
 |**GroupID**|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780293"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>Provider SQLXMLOLEDB (SQLXML 4.0)
   Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML tramite ADO.  

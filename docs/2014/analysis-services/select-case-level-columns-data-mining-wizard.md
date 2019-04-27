@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74bb2b88a152d812a29dc399c887d78ed264532f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747723"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Selezione colonne livello case (Creazione guidata modello di data mining)
   Utilizzare la pagina **Selezione colonne livello case** per selezionare gli attributi e le misure della dimensione del cubo di origine sottostante che costituiranno le colonne livello case della struttura di data mining.  
@@ -26,7 +26,7 @@ ms.locfileid: "48129761"
 > [!NOTE]  
 >  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Da cubo esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
   
- **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Attributi e misure correlati**  

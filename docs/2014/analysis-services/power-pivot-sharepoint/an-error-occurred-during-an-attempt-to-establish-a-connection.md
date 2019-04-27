@@ -1,5 +1,5 @@
 ---
-title: "Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: dati PowerPivot | Microsoft Docs"
+title: "Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: I dati PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c808e39a208e81e2869efd389044a70f1af9052a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743394"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: Dati PowerPivot
   Questo errore si verifica se si esegue una query sui dati PowerPivot in un server in cui non è installato PowerPivot per SharePoint. Si verifica anche se viene arrestato il servizio SQL Server Analysis Services (PowerPivot) o se si tenta di visualizzare dati PowerPivot di una versione precedente.  
@@ -25,7 +25,7 @@ ms.locfileid: "48198598"
   
 |||  
 |-|-|  
-|Applicabile a|PowerPivot per SharePoint|  
+|Si applica a|PowerPivot per SharePoint|  
 |Versione prodotto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Impossibile stabilire la connessione dati.|  
 |Testo del messaggio|Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: Dati PowerPivot|  

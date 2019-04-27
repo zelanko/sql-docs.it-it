@@ -1,5 +1,5 @@
 ---
-title: Configurare i tipi di attributo | Documenti Microsoft
+title: Configurare i tipi di attributo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745662"
 ---
-# <a name="attribute-properties---configure-attribute-types"></a>Attributo di proprietà: configurare i tipi di attributo
+# <a name="attribute-properties---configure-attribute-types"></a>Proprietà degli attributi - Configurare i tipi di attributi
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34025568"
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|Valore del tipo di attributo|Description|  
+|Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
 |**Indirizzo**|Rappresenta un indirizzo.|  
 |**AddressBuilding**|Rappresenta l'identificatore di edificio per un indirizzo.|  
@@ -147,7 +147,7 @@ ms.locfileid: "34025568"
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Valore del tipo di attributo|Description|  
+|Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
 |**Account**|Rappresenta l'elemento padre di un conto. Questo attributo viene in genere applicato all'attributo padre di una dimensione di tipo Conto.|  
 |**AccountName**|Rappresenta il nome di un conto. Questo attributo viene in genere applicato agli attributi chiave di una dimensione di tipo Conto.|  
@@ -156,7 +156,7 @@ ms.locfileid: "34025568"
   
 ###  <a name="currency_dimension_attribute_types"></a> Tipi di attributi delle dimensioni di tipo Valuta  
   
-|Valore del tipo di attributo|Description|  
+|Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|Rappresenta la valuta di destinazione di un cambio di valuta. Questo attributo viene in genere applicato all'attributo chiave di una dimensione di tipo Valuta per l'utilizzo in una conversione di valuta. Per altre informazioni sulla conversione di valuta, vedere [conversioni di valuta &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
 |**CurrencyIsoCode**|Rappresenta il codice ISO (International Standards Organization) di una valuta. Per altre informazioni sulla conversione di valuta, vedere [conversioni di valuta &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
@@ -165,7 +165,7 @@ ms.locfileid: "34025568"
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> Tipi di attributi delle dimensioni a modifica lenta  
   
-|Valore del tipo di attributo|Description|  
+|Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Rappresenta la data di fine effettiva per un membro in una dimensione a modifica lenta.|  
 |**ScdOriginalID**|Rappresenta l'identificatore originale per un membro in una dimensione a modifica lenta.|  
@@ -174,7 +174,7 @@ ms.locfileid: "34025568"
   
 ###  <a name="time_dimension_attribute_types"></a> Tipi di attributi delle dimensioni temporali  
   
-|Valore del tipo di attributo|Description|  
+|Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
 |**Data**|Rappresenta una data. Questo tipo di attributo viene in genere applicato all'attributo chiave di una dimensione temporale o di una dimensione temporale del server.|  
 |**DayOfHalfYear**|Rappresenta il numero ordinale di giorno di un semestre.|  
@@ -299,7 +299,7 @@ ms.locfileid: "34025568"
 |**Years**|Rappresenta gli anni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Riferimento alle proprietà degli attributi delle dimensioni](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

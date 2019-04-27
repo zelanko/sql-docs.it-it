@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0771c953875e9871c53892bc14a3e2a537060833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743623"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Outlier (componenti aggiuntivi Data mining di SQL Server)
   ![Procedura guidata rimozione outlier sulla barra multifunzione Data Mining](media/dmc-outliers.gif "procedura guidata rimozione Outlier sulla barra multifunzione Data Mining")  

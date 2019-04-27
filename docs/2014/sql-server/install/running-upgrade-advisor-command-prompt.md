@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753283"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Esecuzione di Preparazione aggiornamento (prompt dei comandi)
   Usare la **UpgradeAdvisorWizardCmd** eseguire Preparazione aggiornamento dal prompt dei comandi dell'utilità. È possibile scegliere di ricevere i risultati in formato XML o in un file con valori delimitati da virgole.  
@@ -43,10 +43,10 @@ where <server_info> is any combination of the following:
  **-?**  
  Visualizza la sintassi del comando.  
   
- **-ConfigFile** _nomefile_  
+ **-ConfigFile** _filename_  
  È il nome del percorso e nome del file di un file XML contenente le impostazioni da usare quando si esegue la **UpgradeAdvisorWizardCmd** utilità.  
   
- *< server_info >*  
+ *<server_info>*  
  Specifica il computer e l'istanza da analizzare. Utilizzare queste opzioni se non si utilizza un file di configurazione.  
   
  *< server_info >* può essere qualsiasi combinazione dei quattro argomenti seguenti:  
@@ -154,7 +154,7 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>b. Eseguire Preparazione aggiornamento utilizzando le impostazioni di configurazione predefinite  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>B. Eseguire Preparazione aggiornamento utilizzando le impostazioni di configurazione predefinite  
  Nell'esempio seguente viene illustrato come eseguire Preparazione aggiornamento dal prompt dei comandi utilizzando le impostazioni di configurazione predefinite e l'autenticazione di Windows.  
   
 ```  

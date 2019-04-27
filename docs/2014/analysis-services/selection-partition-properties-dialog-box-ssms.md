@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747093"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Selezione (finestra di dialogo Proprietà partizione) (SSMS)
   Utilizzare la pagina **Selezione** della finestra di dialogo **Proprietà partizione** in SQL Server Management Studio per selezionare una partizione in un gruppo di misure di cui visualizzare o modificare le proprietà nel riquadro **Generale**, **Memorizzazione attiva nella cache**o **Configurazione errori** .  
@@ -31,9 +31,9 @@ ms.locfileid: "48149351"
   
  La griglia include le colonne seguenti:  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
-|**Nome**|Consente di visualizzare il nome della partizione.|  
+|**Name**|Consente di visualizzare il nome della partizione.|  
 |**Origine**|Consente di visualizzare la tabella o la query utilizzata per reperire i dati di origine per la partizione.|  
 |**Aggregazioni**|Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.|  
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755853"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Pulire i dati in un dominio composito
   In questo argomento vengono fornite informazioni sulla pulizia dei domini compositi in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da due o più singoli domini di cui viene eseguito il mapping a un campo dati costituito da più termini correlati. I singoli domini in un dominio composito devono contenere un'area delle informazioni in comune. Per informazioni dettagliate sui domini compositi, vedere [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "56012722"
 ##  <a name="CDCorrection"></a> Correzione dei dati mediante le regole definitive tra domini  
  Le regole tra domini in un dominio composito consentono di creare regole che indicano la relazione tra i singoli domini in un dominio composito. Le regole tra domini vengono prese in considerazione quando si esegue l'attività di pulizia sui dati di origine relativi ai domini compositi. Oltre a indicare la validità di una regola tra domini, la regola definitiva tra domini *Then* , **Il valore è uguale a**, corregge anche i dati durante l'attività di pulizia dei dati.  
   
- Si consideri l'esempio seguente: un dominio composito, Product, con tre singoli domini: ProductName, CompanyName e ProductVersion. Creare la regola definitiva tra domini seguente:  
+ Considerare l'esempio seguente. Si supponga di avere un dominio composito, Product, con tre singoli domini: ProductName, CompanyName e ProductVersion. Creare la regola definitiva tra domini seguente:  
   
  Se il valore "CompanyName" del dominio contiene *Microsoft* e il valore "ProductName" del dominio è uguale a *Office* e il valore "ProductVersion" è uguale a *2010* THEN il valore "ProductName" del dominio è uguale a *Microsoft Office 2010*.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56012722"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto data quality pulizia, questa regola definitiva tra domini modifica i dati con livello di attendibilità del 100% e il **motivo** colonna Visualizza il messaggio seguente: Correzione dalla regola '*\<Cross-Domain Rule Name >*'. Per ulteriori informazioni sulle regole tra domini, vedere [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con livello di attendibilità del 100% e nella colonna **Motivo** viene visualizzato il messaggio seguente: Con correzione in base alla regola "*\<Nome regola tra domini>*". Per ulteriori informazioni sulle regole tra domini, vedere [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regola definitiva tra domini non funziona per i domini compositi associati al servizio dati di riferimento.  

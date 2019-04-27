@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748125"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Contesto di sicurezza (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Contesto di sicurezza** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare l'utente e il ruolo utilizzati per analizzare i dati o i metadati per un oggetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Contesto di sicurezza** fare clic su **Contesto di sicurezza** nel riquadro **Barra degli strumenti** della scheda **Calcoli** o della scheda **Esplorazione** in Progettazione cubi.  

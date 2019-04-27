@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664086"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Broker:Corrupted Message** quando Service Broker riceve un messaggio danneggiato.  
@@ -44,10 +44,10 @@ ms.locfileid: "52761343"
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Yes|  
 |**NTDomainName**|**nvarchar**|Dominio di Windows a cui appartiene l'utente.|7|Yes|  
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
-|**ObjectName**|**nvarchar**|Nome del servizio dell'altro lato della conversazione e stringa di connessione utilizzata dal database remoto per connettersi al database.|34|No|  
-|**RoleName**|**nvarchar**|Ruolo dell'endpoint che riceve il messaggio. I possibili valori sono i seguenti.<br /><br /> **iniziatore**:<br />                  L'endpoint che riceve il messaggio è l'initiator della conversazione.<br /><br /> **destinazione**:<br />                  L'endpoint che riceve il messaggio è la destinazione della conversazione.|38|No|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
-|**Severity**|**int**|Gravità dell'errore che ha determinato l'eliminazione del messaggio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|29|No|  
+|**ObjectName**|**nvarchar**|Nome del servizio dell'altro lato della conversazione e stringa di connessione utilizzata dal database remoto per connettersi al database.|34|no|  
+|**RoleName**|**nvarchar**|Ruolo dell'endpoint che riceve il messaggio. I possibili valori sono i seguenti.<br /><br /> **initiator**:<br />                  L'endpoint che riceve il messaggio è l'initiator della conversazione.<br /><br /> **target**:<br />                  L'endpoint che riceve il messaggio è la destinazione della conversazione.|38|No|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|**Severity**|**int**|Gravità dell'errore che ha determinato l'eliminazione del messaggio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|29|no|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Yes|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  
 |**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  

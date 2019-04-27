@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773823"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - Configurazione riproduzione (Opzioni di base di riproduzione)
   Nella finestra di dialogo **Configurazione riproduzione** usare la pagina **Opzioni di base di riproduzione** per specificare la modalità di riproduzione di un file o una tabella di traccia.  
@@ -35,10 +35,10 @@ ms.locfileid: "48088301"
  Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un altro server.  
   
  **Salva nel file**  
- Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Consente di visualizzare la finestra di dialogo file standard, in cui è possibile specificare il percorso in cui salvare il file.  
+ Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
   
  **Salva nella tabella**  
- Consente di salvare i risultati di riproduzione in una tabella. In [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] verrà visualizzata la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
+ Consente di salvare i risultati di riproduzione in una tabella. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
   
  **Numero di thread di riproduzione**  
  Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma la riproduzione viene eseguita in modo più veloce e simultaneo.  

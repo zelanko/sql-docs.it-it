@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746803"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilità di configurazione del server (componenti aggiuntivi data mining per Excel)
-  Quando si installano i componenti aggiuntivi Data Mining per Excel, viene installata anche l'utilità di configurazione del server che viene eseguita quando si aprono per la prima volta i componenti aggiuntivi. In questo argomento viene descritto come utilizzare l'utilità per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e impostare un database per l'utilizzo dei modelli di data mining.  
+  Quando si installano i componenti aggiuntivi Data Mining per Excel, un'utilità di configurazione del Server viene installata anche e verrà eseguito alla prima che apertura di componenti aggiuntivi. In questo argomento viene descritto come utilizzare l'utilità per la connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e impostare un database per l'uso di modelli di data mining.  
   
 
   
-##  <a name="bkmk_step1"></a> Passaggio 1: Connettersi ad Analysis Services  
+##  <a name="bkmk_step1"></a> Passaggio 1: Connetti ad Analysis Services  
  Scegliere il server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fornisce gli algoritmi di data mining e archivia i modelli di data mining.  
   
  Quando si crea una connessione per abilitare il data mining, è necessario scegliere un server in cui è possibile provare a utilizzare i modelli di data mining. È consigliabile creare un nuovo database nel server e dedicarlo al data mining oppure chiedere all'amministratore di preparare un server di data mining da utilizzare. In tal modo è possibile compilare modelli senza influire sulle prestazioni degli altri servizi.  
@@ -67,7 +67,7 @@ ms.locfileid: "48069632"
  **Database**  
  Se si sceglie l'opzione per utilizzare un database esistente, è necessario selezionare il nome del database nell'elenco.  
   
-##  <a name="bkmk_step4"></a> Passaggio 4: Concedere le autorizzazioni Appropriate agli utenti di componente aggiuntivo  
+##  <a name="bkmk_step4"></a> Passaggio 4: Assegnazione delle autorizzazioni Appropriate agli utenti di componente aggiuntivo  
  È necessario verificare che tutti gli utenti dei componenti aggiuntivi dispongano delle autorizzazioni necessarie per esplorare, modificare, elaborare o creare strutture e modelli di data mining.  
   
  Per impostazione predefinita, per utilizzare i componenti aggiuntivi è necessaria l'autenticazione integrata di Windows.  

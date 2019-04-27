@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743607"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Finestra di dialogo Nuovo modello di data mining (visualizzazione Struttura di data mining)
   Utilizzare la finestra di dialogo **Nuovo modello di data mining** per aggiungere un nuovo modello alla struttura di data mining.  

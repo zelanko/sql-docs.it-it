@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741246"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Procedura guidata trova database (Seleziona file) (AccessToSQL)
 Nella pagina di selezione file della procedura guidata trova database vengono elencati i file che sono stati trovati durante la ricerca. Per selezionare un file da aggiungere alla SSMA, selezionare la riga che contiene il nome del file. Dopo aver selezionato i file, fare clic **successivo** per visualizzare la pagina di selezione verificare.  

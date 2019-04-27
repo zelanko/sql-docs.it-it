@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48deee5b5928ff812a67f26a780ea765b05d5097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748495"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Impostazioni grafico profitti (visualizzazione Grafico accuratezza modello di data mining)
   Utilizzare la finestra di dialogo **Impostazioni grafico profitti** per configurare le impostazioni per la generazione di un grafico dei profitti. Per altre informazioni sui grafici dei profitti, vedere [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
@@ -39,6 +39,6 @@ ms.locfileid: "48114187"
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test e convalida &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

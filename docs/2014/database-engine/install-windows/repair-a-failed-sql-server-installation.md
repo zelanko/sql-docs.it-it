@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cea01c7e32248354cf745ed56186d246636d5b28
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774945"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Rimuovere un'installazione di SQL Server 2014
   L'operazione di ripristino può essere utilizzata negli scenari seguenti:  

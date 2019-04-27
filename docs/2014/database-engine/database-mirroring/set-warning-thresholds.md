@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754139"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
   Usare questa finestra di dialogo per abilitare e configurare una o più soglie degli avvisi per il database selezionato nell'albero di navigazione della finestra di dialogo **Monitoraggio mirroring del database** .  
@@ -65,7 +65,7 @@ ms.locfileid: "48195476"
  **Avvisi**  
  Elenca gli avvisi supportati:  
   
-|Avviso|Description|  
+|Avviso|Descrizione|  
 |-------------|-----------------|  
 |**Avvisa se il log non inviato supera la soglia**|La soglia indica il numero di kilobyte (KB), del log non inviato nella coda di invio sull'istanza del server principale.|  
 |**Avvisa se il log non ripristinato supera la soglia**|La soglia indica il numero di KB della coda di rollforward sull'istanza del server mirror.|  
@@ -91,6 +91,6 @@ ms.locfileid: "48195476"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

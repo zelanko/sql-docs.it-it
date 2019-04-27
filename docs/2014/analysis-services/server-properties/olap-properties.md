@@ -97,16 +97,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746723"
 ---
 # <a name="olap-properties"></a>Proprietà OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server OLAP elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Si applica a:** solo in modalità server multidimensionale  
+ **Si applica a:** Solo in modalità server multidimensionale  
   
 ## <a name="memory"></a>Memoria  
  `DefaultPageSizeForData`  

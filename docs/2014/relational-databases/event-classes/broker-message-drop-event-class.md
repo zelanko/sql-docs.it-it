@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663968"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe di evento Broker:Message Undeliverable
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Undeliverable** quando Service Broker non è in grado di trattenere un messaggio ricevuto che avrebbe dovuto essere recapitato a un servizio dell'istanza. Per i messaggi che avrebbero dovuto essere inoltrati, vedere [Classe di evento Broker:Forwarded Message Dropped](broker-forwarded-message-dropped-event-class.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "52810433"
 |**EventClass**|`int`|Tipo di classe di evento acquisita. Sempre **160** per **Broker:MessageUndeliverable**.|27|No|  
 |**EventSequence**|`int`|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|`nvarchar`|Indica se il messaggio non recapitabile è un messaggio in sequenza. È possibile specificare uno dei due valori seguenti:<br /><br /> **Messaggio in sequenza**. Il messaggio non recapitabile è un messaggio in sequenza.<br /><br /> **Messaggio non in sequenza**. Il messaggio non recapitabile non è un messaggio in sequenza.|21|Yes|  
-|**GUID**|`uniqueidentifier`|ID della conversazione a cui appartiene il messaggio non recapitabile. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
+|**GUID**|`uniqueidentifier`|ID della conversazione a cui appartiene il messaggio non recapitabile. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|no|  
 |**HostName**|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IntegerData**|`int`|Numero di frammento del messaggio non recapitabile.|25|No|  
 |**IntegerData2**|`int`|Numero di frammento riconosciuto dal messaggio non recapitabile.|55|No|  
@@ -48,12 +48,12 @@ ms.locfileid: "52810433"
 |**NTDomainName**|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Yes|  
 |**NTUserName**|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
 |**ObjectName**|`nvarchar`|Handle di conversazione del dialogo.|34|No|  
-|**RoleName**|`nvarchar`|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|No|  
+|**RoleName**|`nvarchar`|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|no|  
 |**ServerName**|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**Severity**|`int`|Numero di gravità per il testo dell'evento.|29|No|  
 |**SPID**|`int`|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Yes|  
 |**StartTime**|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  
-|**Stato**|`int`|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  
+|**Stato**|`int`|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|no|  
 |**TextData**|`ntext`|Motivo per cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è riuscito a recapitare il messaggio.|1|Yes|  
 |**TransactionID**|`bigint`|ID della transazione assegnato dal sistema.|4|No|  
   

@@ -1,5 +1,5 @@
 ---
-title: Creazione di set denominati in MDX (MultiDimensional Expression) | Documenti Microsoft
+title: Creazione di set denominati in MDX (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740061"
 ---
-# <a name="mdx-named-sets---building-named-sets"></a>MDX è denominato a set - creazione di set denominati
+# <a name="mdx-named-sets---building-named-sets"></a>Set denominati MDX - creazione di set denominati
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Un'espressione set può essere costituita da una dichiarazione lunga e complessa e risultare pertanto difficile da seguire o comprendere oppure essere utilizzata con tale frequenza che la presenza di definizioni ripetute del set può creare confusione. Per semplificare l'utilizzo di espressioni lunghe, complesse o usate di frequente, le espressioni MDX (Multidimensional Expressions) consentono di definire un'espressione di questo tipo come *set denominato*.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "34021278"
      Per altre informazioni sull'uso dell'istruzione CREATE SET per la creazione di set denominati in una sessione, vedere [Creazione di set denominati con ambito sessione &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [CREARE l'istruzione SET & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)   
- [Nozioni fondamentali sulle Query MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Istruzione SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Istruzione CREATE SET &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

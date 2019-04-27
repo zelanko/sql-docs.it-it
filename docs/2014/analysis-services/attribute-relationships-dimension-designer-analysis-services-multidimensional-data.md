@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 978a14c59c92328add341427c990b4f9b14b8f79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650682"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relazione tra attributi (Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Relazioni tra attributi** per creare, modificare o eliminare le relazioni tra attributi della dimensione selezionata.  
@@ -26,7 +26,7 @@ ms.locfileid: "48150311"
 ## <a name="panes"></a>Riquadri  
  La pagina **Relazione tra attributi** contiene i seguenti riquadri:  
   
- [Sulla barra degli strumenti](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra degli strumenti](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  Usare la barra degli strumenti per eseguire operazioni sulla scheda **Relazioni tra attributi** di Progettazione dimensioni.  
   
  [Diagramma delle relazioni tra attributi](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

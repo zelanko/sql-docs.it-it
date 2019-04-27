@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749430"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di PowerPivot
   Una distribuzione PowerPivot per SharePoint eseguita in una farm di SharePoint 2010 utilizza il sottosistema di autenticazione e il modello di autorizzazione forniti dai server SharePoint. L'infrastruttura di sicurezza di SharePoint si estende al contenuto e alle operazioni di PowerPivot poiché tutto il contenuto correlato a PowerPivot viene archiviato nei database del contenuto di SharePoint e tutte le operazioni correlate a PowerPivot vengono effettuate dai servizi condivisi PowerPivot nella farm. L'autenticazione degli utenti che richiedono una cartella di lavoro contenente dati PowerPivot avviene tramite un'identità utente di SharePoint basata sull'identità utente di Windows. Le autorizzazioni di visualizzazione nella cartella di lavoro consentono di determinare se la richiesta viene concessa o negata.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730319"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
   Analysis Services consente di memorizzare i dati nella cache per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
@@ -53,7 +53,7 @@ ms.locfileid: "53350655"
   
 2.  Per ottenere l'ID del gruppo di misure, fare clic con il pulsante destro del mouse sul gruppo di misure e selezionare **Crea script per gruppo di misure**. Scegliere **Crea** o **Modifica**e inviare la query a una finestra. L'ID del gruppo di misure sarà visibile nella definizione dell'oggetto. Copiare l'ID della definizione dell'oggetto.  
   
-#### <a name="step-2-run-the-query"></a>Passaggio 2: Esecuzione della query  
+#### <a name="step-2-run-the-query"></a>Passaggio 2: Eseguire la query  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un database, scegliere **Nuova query**, quindi **XMLA**.  
   

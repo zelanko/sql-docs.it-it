@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781254"
 ---
 # <a name="hello-world-sample"></a>Esempio Hello World
   Nell'esempio Hello World vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure semplice basata sull'integrazione con CLR. Nell'esempio viene inoltre illustrato come restituire dati tramite un record, che viene costruito in modo dinamico dalla stored procedure e restituito al chiamante.  

@@ -1,5 +1,5 @@
 ---
-title: Union (MDX) | Documenti Microsoft
+title: Union  (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653461"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -42,11 +42,11 @@ Alternate syntax 2
  *Espressione set 2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- Questa funzione restituisce l'unione di due o più set specificati *.* Con la sintassi standard e con la sintassi alternativa 1, i duplicati vengono eliminati per impostazione predefinita. Con la sintassi standard, utilizzando il **tutti** flag consente di mantenere duplicati nel set unito. I duplicati vengono eliminati dalla parte finale del set. Con la sintassi alternativa 2, i duplicati vengono sempre mantenuti.  
+## <a name="remarks"></a>Note  
+ Questa funzione restituisce l'unione di due o più set specificati *.* Con la sintassi standard e con la sintassi alternativa 1, i duplicati vengono eliminati per impostazione predefinita. Con la sintassi standard, usando il **tutti** flag consente di mantenere duplicati nel set unito. I duplicati vengono eliminati dalla parte finale del set. Con la sintassi alternativa 2, i duplicati vengono sempre mantenuti.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti illustrano il comportamento del **unione** con ogni sintassi.  
+ Gli esempi seguenti illustrano il comportamento dei **Union** funzionare con ogni sintassi.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Sintassi standard, con eliminazione dei duplicati  
   
@@ -97,6 +97,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

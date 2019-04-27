@@ -1,5 +1,5 @@
 ---
-title: PredictStdev (DMX) | Documenti Microsoft
+title: PredictStdev (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659007"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +32,10 @@ PredictStdev(<scalar column reference>)
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Un valore scalare del tipo specificato da  *\<riferimento alla colonna scalare >*.  
+ Un valore scalare del tipo specificato da  *\<riferimento a colonna scalare >*.  
   
-## <a name="remarks"></a>Remarks  
- Se il riferimento alla colonna è discreto, **PredictStdev** restituisce 0, perché non è possibile calcolare la deviazione standard da valori discreti.  
+## <a name="remarks"></a>Note  
+ Se il riferimento alla colonna è discreto, **PredictStdev** restituirà 0 perché non è possibile calcolare la deviazione standard da valori discreti.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato un natural prediction join per determinare la probabilità che un individuo sia un acquirente di biciclette sulla base del modello di data mining TM Decision Tree e la deviazione standard per la stima.  
@@ -55,8 +55,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749291"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Aggiornamento di dati PowerPivot con SharePoint 2010
   L'aggiornamento dati [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] è un'operazione lato server pianificata che esegue query sulle origini dati esterne per aggiornare i dati [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in una cartella di lavoro di Excel archiviata in una raccolta contenuto.  
@@ -58,7 +58,7 @@ ms.locfileid: "53365553"
   
  Una volta completata la configurazione dell'ambiente server e delle relative autorizzazioni, è possibile procedere all'aggiornamento dati. Per utilizzare l'aggiornamento dati, un utente di SharePoint crea una pianificazione in una cartella di lavoro di PowerPivot, specificando la frequenza dell'aggiornamento dati. La creazione della pianificazione è in genere eseguita dal proprietario o dall'autore della cartella di lavoro che ha pubblicato il file in SharePoint. Questi può creare e gestire le pianificazioni dell'aggiornamento dati per le cartelle di lavoro di cui è proprietario. Per altre informazioni, vedere [pianificare un aggiornamento dei dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
-##  <a name="bkmk_services"></a> Passaggio 1: Abilitare il servizio di archiviazione sicura e generare una chiave master  
+##  <a name="bkmk_services"></a> Passaggio 1: Abilitare il servizio Store sicura e generare una chiave Master  
  L'aggiornamento dati PowerPivot dipende dal fatto che il servizio di archiviazione sicura fornisca le credenziali utilizzate per eseguire i processi di aggiornamento dati e si connetta a origini dati esterne che utilizzano le credenziali archiviate.  
   
  Se PowerPivot per SharePoint è stato installato tramite l'opzione Nuovo server, il servizio di archiviazione sicura viene configurato automaticamente. Per tutti gli altri scenari di installazione, è necessario creare e configurare un'applicazione del servizio e generare una chiave di crittografia master per il servizio di archiviazione sicura.  
@@ -98,7 +98,7 @@ ms.locfileid: "53365553"
   
  Per rendere disponibile la registrazione di controllo delle operazioni del servizio di archiviazione, utile per la risoluzione dei problemi, è necessario abilitarla. Per altre informazioni su come abilitare la registrazione, vedere [configurare Secure Store Service (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
-##  <a name="bkmk_creds"></a> Passaggio 2: Disattivare le opzioni delle credenziali che non si intendono supportare  
+##  <a name="bkmk_creds"></a> Passaggio 2: Disattivare le opzioni delle credenziali che non si desidera supportare  
  Tramite l'aggiornamento dati PowerPivot vengono fornite in una pianificazione tre opzioni relative alle credenziali. Quando il proprietario di una cartella di lavoro pianifica un aggiornamento dati e sceglie una di queste opzioni, determina l'account con il quale verrà eseguito il processo di aggiornamento dati. L'amministratore stabilisce quali opzioni relative alle credenziali sono disponibili ai proprietari della pianificazione.  
   
  È necessario che sia disponibile almeno un'opzione per eseguire l'aggiornamento dati.  
@@ -117,7 +117,7 @@ ms.locfileid: "53365553"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- Per impostazione predefinita, questa opzione relativa alla credenziali è abilitata. Quando questa opzione viene abilitata, tramite il servizio di sistema PowerPivot viene generata un'applicazione di destinazione nel servizio di archiviazione sicura per l'archiviazione del nome utente e della password immessi dal proprietario della pianificazione. Viene creata un'applicazione di destinazione generata usando la convenzione di denominazione: Aggiornamentodatipowerpivot_\<guid >. Viene creata un'applicazione di destinazione per ogni set di credenziali di Windows. Se esiste già un'applicazione di destinazione di proprietà del servizio di sistema PowerPivot in cui sono archiviati il nome utente e la password immessi dal proprietario della pianificazione, tale applicazione di destinazione verrà utilizzata dal servizio di sistema PowerPivot che quindi eviterà di crearne una nuova.  
+ Per impostazione predefinita, questa opzione relativa alla credenziali è abilitata. Quando questa opzione viene abilitata, tramite il servizio di sistema PowerPivot viene generata un'applicazione di destinazione nel servizio di archiviazione sicura per l'archiviazione del nome utente e della password immessi dal proprietario della pianificazione. Un'applicazione di destinazione generata viene creata utilizzando questa convenzione di denominazione: PowerPivotDataRefresh_\<guid>. Viene creata un'applicazione di destinazione per ogni set di credenziali di Windows. Se esiste già un'applicazione di destinazione di proprietà del servizio di sistema PowerPivot in cui sono archiviati il nome utente e la password immessi dal proprietario della pianificazione, tale applicazione di destinazione verrà utilizzata dal servizio di sistema PowerPivot che quindi eviterà di crearne una nuova.  
   
  I principali vantaggi derivanti dall'utilizzo di questa opzione relativa alle credenziali sono la semplicità e la facilità di utilizzo. Il lavoro preliminare è minimo perché le applicazioni di destinazione vengono create automaticamente. Inoltre, l'esecuzione dell'aggiornamento dati con le credenziali del proprietario della pianificazione, che con tutta probabilità è anche l'utente che ha creato la cartella di lavoro, semplifica i requisiti relativi alle autorizzazioni a valle. Quasi sicuramente, questo utente dispone già delle autorizzazioni per il database di destinazione. Quando viene eseguito l'aggiornamento dei dati con identità utente di Windows questa persona, eventuali dati connessioni che specificano il 'utente corrente' funzioneranno automaticamente.  
   
@@ -139,14 +139,14 @@ ms.locfileid: "53365553"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> Passaggio 3: Creare applicazioni di destinazione per l'archiviazione delle credenziali usate nell'aggiornamento dei dati  
+##  <a name="bkmk_stored"></a> Passaggio 3: Creare applicazioni di destinazione per archiviare le credenziali utilizzate nell'aggiornamento dati  
  Dopo avere configurato il servizio di archiviazione sicura, gli amministratori di SharePoint possono creare applicazioni di destinazione per rendere disponibili le credenziali archiviate a scopo di aggiornamento dati, tra cui l'account di aggiornamento dati PowerPivot automatico o qualsiasi altro account utilizzato per eseguire il processo o connettersi a origini dati esterne.  
   
  Ricordare che è necessario creare applicazioni di destinazione per rendere utilizzabili determinate opzioni relative alle credenziali. In modo specifico, è necessario creare applicazioni di destinazione per l'account di aggiornamento dati automatico PowerPivot, più eventuali credenziali archiviate aggiuntive che si prevede verranno utilizzate nelle operazioni di aggiornamento dati.  
   
  Per altre informazioni su come creare applicazioni di destinazione contenenti credenziali archiviate, vedere [configurare l'Account di aggiornamento dati PowerPivot automatico &#40;PowerPivot per SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [ Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot &#40;PowerPivot per SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
-##  <a name="bkmk_scale"></a> Passaggio 4: Configurare il server per l'aggiornamento dei dati scalabile  
+##  <a name="bkmk_scale"></a> Passaggio 4: Configurare il server per l'aggiornamento dati scalabile  
  Per impostazione predefinita, ogni installazione di PowerPivot per SharePoint supporta sia le query su richiesta sia l'aggiornamento dati pianificato.  
   
  Per ogni installazione, è possibile specificare se l'istanza del server Analysis Services supporta sia le query sia l'aggiornamento dati pianificato o se è dedicata a un tipo specifico di operazione. Se si dispone di più installazioni di PowerPivot per SharePoint nella farm, è opportuno dedicare un server alle operazioni di aggiornamento dati se si verificano ritardi o errori durante i processi.  
@@ -162,7 +162,7 @@ ms.locfileid: "53365553"
   
  Tenere presente che i server SharePoint sono applicazioni a 64 bit. Assicurarsi di installare la versione a 64 bit dei provider di dati utilizzati per supportare le operazioni di aggiornamento dati.  
   
-##  <a name="bkmk_accounts"></a> Passaggio 6: Concedere le autorizzazioni per creare pianificazioni e accedere a origini dati esterne  
+##  <a name="bkmk_accounts"></a> Passaggio 6: Concedere le autorizzazioni per creare pianificazioni e accedere alle origini dati esterne  
  Gli autori o i proprietari delle cartelle di lavoro devono disporre dell'autorizzazione **Collaborazione** per pianificare l'aggiornamento dati in una cartella di lavoro. Dato questo livello di autorizzazione, che potrà aprire e modificare pagina Configurazione dell'aggiornamento dati della cartella di lavoro per specificare le credenziali e le informazioni utilizzate per aggiornare i dati di pianificazione.  
   
  Oltre alle autorizzazioni di SharePoint, è necessario rivedere le autorizzazioni di database per le origini dati esterne per assicurarsi che gli account utilizzati durante l'aggiornamento dati dispongano di diritti di accesso sufficienti per i dati. La determinazione dei requisiti relativi alle autorizzazioni richiede un'attenta valutazione poiché le autorizzazioni che è necessario concedere variano a seconda della stringa di connessione nella cartella di lavoro e dell'identità utente con cui viene eseguito il processo di aggiornamento dati.  
@@ -228,7 +228,7 @@ ms.locfileid: "53365553"
 ##  <a name="bkmk_upgradewrkbk"></a> Passaggio 7: Abilitare l'aggiornamento della cartella di lavoro per l'aggiornamento dei dati  
  Per impostazione predefinita, le cartelle di lavoro create utilizzando la versione [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] di PowerPivot per Excel non possono essere configurate per l'aggiornamento dati pianificato in una versione [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] di PowerPivot per SharePoint. Se si ospitano versioni più e meno recenti delle cartelle di lavoro di PowerPivot nell'ambiente SharePoint, è necessario aggiornare qualsiasi cartella di lavoro di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] prima di poterla pianificare per l'aggiornamento dati automatico nel server.  
   
-##  <a name="bkmk_verify"></a> Passaggio 8: Verificare la configurazione dell'aggiornamento dei dati  
+##  <a name="bkmk_verify"></a> Passaggio 8: Verifica della configurazione di aggiornamento dati  
  Per verificare l'aggiornamento dati, è necessario che la cartella di lavoro di PowerPivot sia pubblicata in un sito di SharePoint. È necessario disporre delle autorizzazioni di collaborazione per la cartella di lavoro e delle autorizzazioni necessarie per accedere a eventuali origini dati incluse nella pianificazione dell'aggiornamento dati.  
   
  Quando si crea la pianificazione, selezionare la **aggiorna anche appena possibile** casella di controllo per eseguire immediatamente l'aggiornamento dati. È quindi possibile controllare la pagina della cronologia dell'aggiornamento dati di quella cartella di lavoro per assicurarsi che sia stato eseguito correttamente. Ricordare che il processo timer dell'aggiornamento dati PowerPivot viene eseguito ogni minuto. Dovrà trascorrere almeno questo tempo prima di ottenere la conferma del completamento dell'aggiornamento dati.  

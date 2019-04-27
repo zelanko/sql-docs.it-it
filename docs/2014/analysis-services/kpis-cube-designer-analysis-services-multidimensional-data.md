@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729638"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare la scheda **KPI** in Progettazione cubi per visualizzare e modificare gli indicatori di prestazioni chiave (KPI) per il cubo selezionato.  
@@ -46,7 +46,7 @@ ms.locfileid: "48089931"
   
 ## <a name="see-also"></a>Vedere anche  
  [Indicatori di prestazioni chiave &#40;KPI&#41; nei modelli multidimensionali](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

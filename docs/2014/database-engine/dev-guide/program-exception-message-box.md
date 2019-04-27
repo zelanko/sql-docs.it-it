@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780697"
 ---
 # <a name="program-exception-message-box"></a>Programmare la finestra di messaggio eccezione
   È possibile usare la finestra di messaggio eccezione nelle applicazioni per offrire un controllo maggiore sull'invio e la ricezione di messaggi rispetto a quello garantito dalla classe <xref:System.Windows.Forms.MessageBox>. Per altre informazioni, vedere [finestra di messaggio eccezione programmazione](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Per informazioni su come ottenere e distribuire il file dll della finestra di messaggio eccezione, vedere [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  

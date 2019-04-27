@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743643"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form set denominato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Editor form set denominato** nella scheda **Calcoli** in Progettazione cubi per creare o modificare un set denominato.  
@@ -27,7 +27,7 @@ ms.locfileid: "48119742"
 >  Questo riquadro viene visualizzato solo in visualizzazione Form.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome del set denominato.  
   
  **Espressione**  

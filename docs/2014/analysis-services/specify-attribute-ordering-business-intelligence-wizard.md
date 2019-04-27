@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746313"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Impostazione ordinamento attributi (Configurazione guidata funzionalità di Business Intelligence)
   La pagina **Impostazione ordinamento attributi** consente di specificare gli attributi di ordinamento e i relativi criteri nella dimensione selezionata.  
@@ -35,13 +35,13 @@ ms.locfileid: "48197961"
  **Criteri**  
  Consente di specificare i criteri dell' **Attributo di ordinamento** da usare per ordinare i membri nel corrispondente **Attributo**. Nella tabella seguente vengono elencati i criteri disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Nome**|Consente di ordinare **Attributo** in base ai nomi dei membri dell'attributo in **Attributo di ordinamento**.|  
+|**Name**|Consente di ordinare **Attributo** in base ai nomi dei membri dell'attributo in **Attributo di ordinamento**.|  
 |**Key**|Consente di ordinare **Attributo** in base alle chiavi dei membri dell'attributo in **Attributo di ordinamento**.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

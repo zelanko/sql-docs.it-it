@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752746"
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lezione 5-1: definizione di una relazione di riferimento
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

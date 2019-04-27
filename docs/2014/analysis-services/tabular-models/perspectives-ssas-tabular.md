@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 957657e71103b248cdafb645bf44a68a9b486a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756846"
 ---
 # <a name="perspectives-ssas-tabular"></a>Prospettive (SSAS tabulare)
   Nei modelli tabulari, le prospettive consentono di definire subset visualizzabili di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello.  
@@ -36,19 +36,19 @@ ms.locfileid: "48169091"
   
  Se un utente si connette a un modello (come origine dati) con prospettive definite, potrà selezionare la prospettiva desiderata. Se ad esempio ci si connette a un'origine dati del modello di Excel, gli utenti del reparto risorse umane potranno selezionare la prospettiva Risorse umane nella pagina Selezione tabelle e viste della Connessione guidata dati. Nell'elenco di campi della tabella pivot verranno visualizzati solo i campi (tabelle, colonne e misure) definiti per la prospettiva Risorse umane.  
   
- Le prospettive non sono pensate per essere utilizzate come meccanismo di sicurezza, ma piuttosto come strumento per migliorare l'esperienza utente. Tutte le impostazioni di sicurezza di una determinata prospettiva vengono ereditate dal modello sottostante. Le prospettive non possono consentire l'accesso agli oggetti del modello se l'utente non dispone già del relativo diritto di accesso. È quindi necessario risolvere la sicurezza del database modello prima di poter fornire l'accesso agli oggetti del modello tramite una prospettiva. I ruoli di sicurezza possono essere utilizzati per proteggere i metadati e i dati del modello. Per altre informazioni, vedere [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Le prospettive non sono pensate per essere utilizzate come meccanismo di sicurezza, ma piuttosto come strumento per migliorare l'esperienza utente. Tutte le impostazioni di sicurezza di una determinata prospettiva vengono ereditate dal modello sottostante. Le prospettive non possono consentire l'accesso agli oggetti del modello se l'utente non dispone già del relativo diritto di accesso. È quindi necessario risolvere la sicurezza del database modello prima di poter fornire l'accesso agli oggetti del modello tramite una prospettiva. I ruoli di sicurezza possono essere utilizzati per proteggere i metadati e i dati del modello. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_testpersp"></a> Test delle prospettive  
  Quando si crea un modello, è possibile utilizzare la caratteristica Analizza in Excel in Progettazione modelli per eseguire un test circa l'efficacia delle prospettive definite. Se si fa clic su **Analizza in Excel** nel menu **Modello**in Progettazione modelli prima che venga aperto Excel, verrà visualizzata la finestra di dialogo **Scegli credenziali e prospettiva** . In questa finestra di dialogo è possibile specificare il nome utente corrente, un utente diverso, un ruolo e una prospettiva che verranno utilizzati per la connessione al database dell'area di lavoro modello come origine dati nonché per la visualizzazione dei dati.  
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Creare e gestire prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)|Viene descritto come creare e gestire prospettive utilizzando la finestra di dialogo Prospettive in Progettazione modelli.|  
+|[Creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)|Viene descritto come creare e gestire prospettive utilizzando la finestra di dialogo Prospettive in Progettazione modelli.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
- [Gerarchie di &#40;tabulare di SSAS&#41;](hierarchies-ssas-tabular.md)  
+ [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
+ [Gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)  
   
   

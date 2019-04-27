@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748413"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Ripristina Database (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Ripristina database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da un file di backup usando il formato file di backup di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con estensione abf.  
@@ -35,7 +35,7 @@ ms.locfileid: "48091031"
   
  La finestra di dialogo **Ripristina database** include le seguenti pagine.  
   
-## <a name="pages"></a>Pagine  
+## <a name="pages"></a>Pages  
  **Generale**  
  Utilizzare questa pagina per selezionare il database da ripristinare, il file di backup dal quale eseguire il ripristino del database, le opzioni generali e la password da utilizzare per il ripristino del database. Per altre informazioni su questa pagina, vedere [Generale &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services - Dati multidimensionali&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   

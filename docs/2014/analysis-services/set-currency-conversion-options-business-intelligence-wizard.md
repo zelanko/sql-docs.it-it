@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746823"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Impostazione opzioni di conversione valuta (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Impostazione opzioni di conversione valuta** per definire i calcoli di conversione della valuta per un gruppo di misure contenente tassi di cambio.  
@@ -43,7 +43,7 @@ ms.locfileid: "48205731"
  Selezionare questa opzione per indicare che i tassi di cambio nel gruppo di misure di tipo Tasso rappresentano un moltiplicatore per la valuta di esempio specificata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747815"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria script (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Libreria script** della scheda **Calcoli** in Progettazione cubi per accedere ai membri calcolati, ai set denominati e ai comandi di script contenuti nello script del cubo per il cubo specificato e riordinarli.  
@@ -27,7 +27,7 @@ ms.locfileid: "48069187"
 >  Questo riquadro non viene visualizzato in visualizzazione Form.  
   
 ## <a name="options"></a>Opzioni  
- **Passaggio**  
+ **Step**  
  Consente di visualizzare l'ordine di esecuzione di membri calcolati, set denominati e comandi di script all'interno dello script del cubo.  
   
  Fare clic su **Sposta su** o **Sposta giù** nel riquadro **Barra degli strumenti** oppure scegliere i comandi corrispondenti dal menu di scelta rapida per modificare l'ordine di esecuzione dei calcoli.  
@@ -48,8 +48,8 @@ ms.locfileid: "48069187"
 |**Nuovo membro calcolato**|Scegliere questa opzione per visualizzare **Calculated Member Form Editor** (Editor form membro calcolato) e creare un nuovo membro calcolato. Per altre informazioni sul riquadro **Calculated Member Form Editor**(Editor form membro calcolato), vedere [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nuovo Set denominato**|Scegliere questa opzione per visualizzare **Named Set Form Editor** (Editor form set denominato) e creare un nuovo set denominato. Per altre informazioni sul riquadro **Named Set Form Editor**(Editor form membro calcolato), vedere [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nuovo comando Script**|Scegliere questa opzione per visualizzare **Script Editor** (Editor script) e creare un nuovo comando di script. Per altre informazioni sul riquadro **Script Editor**(Editor form membro calcolato), vedere [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Sposta su**|Scegliere questa opzione per spostare il calcolo selezionato verso l'alto di una posizione.<br /><br /> Nota: questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
-|**Sposta giù**|Scegliere questa opzione per spostare il calcolo selezionato verso il basso di una posizione.<br /><br /> Nota: questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
+|**Sposta su**|Scegliere questa opzione per spostare il calcolo selezionato verso l'alto di una posizione.<br /><br /> Nota: Questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
+|**Sposta giù**|Scegliere questa opzione per spostare il calcolo selezionato verso il basso di una posizione.<br /><br /> Nota: Questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
 |**Elimina**|Scegliere questa opzione per eliminare il calcolo selezionato.|  
   
 ## <a name="see-also"></a>Vedere anche  

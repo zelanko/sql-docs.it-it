@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732632"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Visualizzare o modificare flag di modellazione (Data mining)
   I flag di modellazione sono proprietà impostate in una colonna della struttura di data mining o in colonne del modello di data mining per controllare la modalità di elaborazione dei dati durante l'analisi da parte dell'algoritmo.  
@@ -52,7 +52,7 @@ ms.locfileid: "48050137"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
- [Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
+ [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
   
   

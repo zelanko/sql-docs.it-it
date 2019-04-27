@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738557"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associazione e trasferimento dati di valori di colonna e parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "52521925"
   
 3.  SQLExecute chiamate o SQLExecDirect. Verrà restituito SQL_NEED_DATA se sono presenti parametri SQL_PARAM_INPUT o SQL_PARAM_INPUT_OUTPUT da gestire come parametri data-at-execution. In questo caso, l'applicazione effettua quanto segue:  
   
-    -   Chiama la funzione SQLParamData. Restituisce il *ParameterValuePtr* valore per un parametro data-at-execution e un codice restituito di SQL_NEED_DATA. Quando tutti i dati dei parametri è stato passato al driver, SQLParamData restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Per i parametri data-at-execution *ParameterValuePtr*, che corrisponde al descrittore di campo SQL_DESC_DATA_PTR, può essere considerato come un token per identificare in modo univoco un parametro per il quale è richiesto un valore. Tale "token" viene passato dall'applicazione al driver in fase di associazione, quindi viene passato nuovamente all'applicazione in fase di esecuzione.  
+    -   Calls SQLParamData. Restituisce il *ParameterValuePtr* valore per un parametro data-at-execution e un codice restituito di SQL_NEED_DATA. Quando tutti i dati dei parametri è stato passato al driver, SQLParamData restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Per i parametri data-at-execution *ParameterValuePtr*, che corrisponde al descrittore di campo SQL_DESC_DATA_PTR, può essere considerato come un token per identificare in modo univoco un parametro per il quale è richiesto un valore. Tale "token" viene passato dall'applicazione al driver in fase di associazione, quindi viene passato nuovamente all'applicazione in fase di esecuzione.  
   
 4.  Per inviare dati di riga di parametro con valori di tabella per i parametri con valori di tabella null, se il parametro con valori di tabella non è presenti righe, un'applicazione chiama con SQLPutData *StrLen_or_Ind* impostato su SQL_DEFAULT_PARAM.  
   

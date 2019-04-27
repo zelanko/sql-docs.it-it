@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731560"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Ruolo di sicurezza duplicato di (Analysis Services - Dati multidimensionali)
   Usare la **duplicati sicurezza ruolo di Analysis Services - \<nome database >- \<copia dal nome del ruolo >** nella finestra di dialogo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] duplicare un ruolo esistente in un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Per visualizzare la finestra di dialogo **Duplica ruolo**, è possibile fare clic con il pulsante destro del mouse su un ruolo in Esplora oggetti e quindi scegliere **Duplica**.  
@@ -31,6 +31,6 @@ ms.locfileid: "48194551"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [I ruoli di sicurezza &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Ruoli di sicurezza &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

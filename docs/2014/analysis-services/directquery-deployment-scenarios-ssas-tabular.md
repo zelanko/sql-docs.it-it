@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731667"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scenari di distribuzione DirectQuery (SSAS tabulare)
   In questo argomento viene fornita una procedura dettagliata del processo di progettazione e distribuzione per i modelli DirectQuery. È possibile configurare DirectQuery per l'utilizzo dei soli dati relazionali (solo DirectQuery) oppure è possibile configurare il modello per alternare l'utilizzo dei soli dati memorizzati nella cache o dei soli dati relazionali (modalità ibrida). In questo argomento viene illustrato il processo di implementazione per entrambe le modalità e vengono descritte le possibili differenze nei risultati della query a seconda della modalità e della configurazione della sicurezza.  
@@ -78,7 +78,7 @@ ms.locfileid: "48135181"
   
 |||  
 |-|-|  
-|**Solo DirectQuery**|Per la proprietà  **Impostazioni di rappresentazione** , specificare l'account che verrà utilizzato per la connessione all'origine dati SQL Server.<br /><br /> Se si usa il valore **ImpersonateCurrentUser**, l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che ospita il modello passerà le credenziali dell'utente corrente del modello per il database di SQL Server.|  
+|**Solo DirectQuery**|Per la proprietà  **Impostazioni di rappresentazione** , specificare l'account che verrà utilizzato per la connessione all'origine dati SQL Server.<br /><br /> Se si utilizza il valore **ImpersonateCurrentUser**, l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che ospita il modello passerà le credenziali dell'utente corrente del modello al database di SQL Server.|  
 |**Modalità ibrida**|Per la proprietà **Impostazioni di rappresentazione** , specificare l'account che verrà utilizzato per accedere ai dati nell'origine dati SQL Server.<br /><br /> Questa impostazione non influisce sulle credenziali utilizzate per elaborare la cache utilizzata dal modello.|  
   
  **Passaggio 7. Distribuire il modello**  
@@ -94,7 +94,7 @@ ms.locfileid: "48135181"
   
  **Passaggio 8. Verificare il modello distribuito**  
   
- In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aprire l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in cui è stato distribuito il modello. Fare clic con il pulsante destro del mouse sul nome del database e scegliere **Proprietà**.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]aprire l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in cui è stato distribuito il modello. Fare clic con il pulsante destro del mouse sul nome del database e scegliere **Proprietà**.  
   
 -   La proprietà **DirectQueryMode**è stata impostata al momento di definire le proprietà di distribuzione.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48135181"
  **Solo DirectQuery**  
  Questa opzione è da preferire quando si desidera garantire una singola origine dati o quando la memoria non è in grado di contenere i dati a causa delle loro dimensioni troppo elevate. Se si utilizza un'origine dati relazionale di grandi dimensioni, in fase di progettazione è possibile creare il modello utilizzando un subset dei dati. Quando si distribuisce il modello in modalità Solo DirectQuery, è possibile modificare la definizione dell'origine dati per includere tutti i dati obbligatori.  
   
- Preferire questa opzione anche quando si desidera utilizzare la sicurezza fornita dall'origine dati relazionale per controllare l'accesso utente ai dati. Con i modelli tabulari memorizzati nella cache, è anche possibile usare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ruoli per l'accesso ai dati di controllo, ma i dati memorizzati nella cache devono essere protetti. Utilizzare sempre questa opzione se il contesto di sicurezza richiede che i dati non vengano mai memorizzati nella cache.  
+ Preferire questa opzione anche quando si desidera utilizzare la sicurezza fornita dall'origine dati relazionale per controllare l'accesso utente ai dati. Con i modelli tabulari memorizzati nella cache, è anche possibile utilizzare i ruoli di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per controllare l'accesso ai dati, tuttavia anche i dati archiviati nella cache devono essere protetti. Utilizzare sempre questa opzione se il contesto di sicurezza richiede che i dati non vengano mai memorizzati nella cache.  
   
  Nella tabella seguente vengono descritti i possibili risultati della distribuzione per la modalità Solo DirectQuery:  
   

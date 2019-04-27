@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788007"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Visualizzazione delle proprietà della replica di disponibilità (SQL Server)
   In questo argomento viene illustrato come visualizzare le proprietà di una replica di disponibilità per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48097271"
 5.  Nella finestra di dialogo **Proprietà replica di disponibilità** usare la pagina **Generale** per visualizzare le proprietà della replica. Se si è connessi alla replica primaria, è possibile modificare le proprietà seguenti: modalità di disponibilità, modalità di failover, accesso alla connessione per il ruolo primario, accesso in lettura per il ruolo secondario (secondario leggibile) e valore del timeout di sessione. Per altre informazioni, vedere [proprietà Replica di disponibilità &#40;pagina Generale&#41;](availability-replica-properties-general-page.md).  
   
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per visualizzare le proprietà e gli stati delle repliche di disponibilità**  
   
  Per visualizzare le proprietà e gli stati delle repliche di disponibilità, utilizzare la funzione di sistema e le viste seguenti:  

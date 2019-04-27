@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747147"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Selezione metodo di definizione (Creazione guidata modello di data mining)
   Usare la pagina **Selezione metodo di definizione** per selezionare l'origine per la creazione di un nuovo modello di data mining. Le schermate della procedura guidata variano a seconda della selezione effettuata, poiché per creare una struttura di data mining basata su un cubo sono necessari passaggi diversi rispetto a una struttura di data mining basata su un'origine dei dati relazionale.  
   
- **Per altre informazioni:** [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md), [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Per altre informazioni:** [Creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md), [Creazione guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="options"></a>Opzioni  
  **Da esistenti database relazionale o data warehouse**  

@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un modello utilizzando il visualizzatore Microsoft Time Series | Documenti Microsoft
+title: Visualizzare un modello usando il visualizzatore Microsoft Time Series | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd57ae140adee0909c0f00647a334bd62f26c170
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671339"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34015438"
  Per altre informazioni su questi algoritmi, vedere [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) e [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
 > [!NOTE]  
->  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
+>  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Schede del visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series include le schede seguenti:  
@@ -41,7 +41,7 @@ ms.locfileid: "34015438"
  **Nota** Le informazioni visualizzate per il contenuto del modello e nella Legenda data mining variano a seconda dell'algoritmo usato dal modello. Tuttavia, le schede **Modello** e **Grafici** sono identiche indipendentemente dalla combinazione di algoritmi.  
   
 ###  <a name="BKMK_Tree"></a> Modello  
- Quando si compila un modello Time Series, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il modello completato viene presentato come un albero. Se i dati contengono più serie di case, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero distinto per ognuna di esse. Si supponga ad esempio di elaborare stime di vendita per le aree Pacifico, Nord America ed Europa. Le stime per ognuna di queste aree sono serie di casi. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero separato per ciascuna serie. Per visualizzare una determinata serie, selezionarla nell'elenco **Albero** .  
+ Quando si compila un modello Time Series, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il modello completato viene presentato come un albero. Se i dati contengono più serie di case, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero distinto per ognuna di esse. Si supponga ad esempio di elaborare stime di vendita per le aree Pacifico, Nord America ed Europa. Le stime per ognuna di queste aree sono serie di casi. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] compila un albero separato per ogni serie. Per visualizzare una determinata serie, selezionarla nell'elenco **Albero** .  
   
  Per ogni albero, il modello Time Series contiene un nodo **Tutti** e quindi si divide in una serie di nodi che rappresentano le strutture periodiche individuate dall'algoritmo. È possibile fare clic su ogni nodo per visualizzare statistiche, ad esempio il numero di case e l'equazione.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "34015438"
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Tempo Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

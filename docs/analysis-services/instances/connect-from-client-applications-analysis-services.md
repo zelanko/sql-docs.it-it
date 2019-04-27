@@ -1,5 +1,5 @@
 ---
-title: Connessione dalle applicazioni client (Analysis Services) | Documenti Microsoft
+title: Connessione dalle applicazioni client (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748643"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connessione dalle applicazioni client (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019588"
   
 -   [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Per l'autorizzazione di accesso per gli oggetti e operazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Connettersi tramite SQL Server Management Studio (SSMS)  
  Connettersi ad Analysis Services in SSMS per gestire le istanze del server e i database in modo interattivo. È inoltre possibile eseguire query MDX e XMLA per eseguire attività amministrative o recuperare dati. Diversamente da altri strumenti e applicazioni che caricano i database solo quando viene inviata una query, SSMS carica tutti i database quando ci si connette al server, presupponendo che si dispone dell'autorizzazione per visualizzare il database. Ciò significa che se nel server sono presenti numerosi database tabulari, tutti vengono caricati nella memoria di sistema quando ci si connette tramite SSMS.  
@@ -131,6 +131,6 @@ ms.locfileid: "34019588"
  [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Rappresentazione](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Creare un'origine dati & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

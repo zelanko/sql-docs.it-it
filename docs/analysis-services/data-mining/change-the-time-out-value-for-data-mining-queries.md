@@ -1,5 +1,5 @@
 ---
-title: Modificare il valore di timeout di query di Data Mining | Documenti Microsoft
+title: Modificare il valore di timeout per la query di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c67744ea3862185b59d1a0af3e1bb144eba57e23
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670993"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Modificare il valore di timeout per le query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34016598"
 3.  Fare clic sulla casella di testo **Timeout query** e digitare un valore per il numero di secondi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività Query di data Mining](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Attività e procedure relative alle query di data mining](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

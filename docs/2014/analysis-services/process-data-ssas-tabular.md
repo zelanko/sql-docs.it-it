@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748785"
 ---
 # <a name="process-data-ssas-tabular"></a>Elaborare dati (SSAS tabulare)
   Quando si importano dati in un modello tabulare, nella modalità cache si acquisisce uno snapshot di tali dati al momento dell'importazione. In alcuni casi, tali dati potrebbero non cambiare mai, pertanto non devono essere aggiornati nel modello. Tuttavia, è più probabile che i dati che si importano cambino regolarmente, pertanto affinché il modello rifletta i dati più recenti delle origini dati, è necessario elaborarli (aggiornarli) e calcolare nuovamente i dati calcolati. Per aggiornare i dati nel modello, è necessario eseguire un'azione di elaborazione in tutte le tabelle, in una singola tabella, in base a una partizione o a una connessione all'origine dati.  
@@ -25,9 +25,9 @@ ms.locfileid: "48048431"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Elaborare manualmente i dati &#40;tabulare di SSAS&#41;](manually-process-data-ssas-tabular.md)|Viene descritto come elaborare manualmente i dati dell'area di lavoro modello.|  
-|[Risolvere i problemi di elaborazione dei dati &#40;tabulare di SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)|Viene descritto come risolvere i problemi relativi alle operazioni di elaborazione.|  
+|[Elaborare manualmente i dati &#40;SSAS tabulare&#41;](manually-process-data-ssas-tabular.md)|Viene descritto come elaborare manualmente i dati dell'area di lavoro modello.|  
+|[Risolvere i problemi relativi all'elaborazione dei dati &#40;SSAS tabulare&#41;](troubleshoot-process-data-ssas-tabular.md)|Viene descritto come risolvere i problemi relativi alle operazioni di elaborazione.|  
   
   

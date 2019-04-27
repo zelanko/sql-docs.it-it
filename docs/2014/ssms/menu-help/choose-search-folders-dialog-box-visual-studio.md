@@ -1,8 +1,9 @@
 ---
 title: Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,46 +12,47 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678933"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio)
-  Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
   
- Aggiungere cartelle all'elenco **Cartelle selezionate** , digitare un nome per il set di cartelle corrente nel campo **Insieme di cartelle** e fare clic su **Applica** per salvarlo. Questo ambito di ricerca personalizzato può quindi essere selezionato in base al nome nell'elenco a discesa **Cerca in** delle schede **Cerca nei file** e **Sostituisci nei file**. Per eliminare un insieme personalizzato di cartelle dagli elenchi **Cerca in** , selezionarne il nome nel campo **Insieme di cartelle** e fare clic su **Elimina**.  
+Aggiungere cartelle all'elenco **Cartelle selezionate** , digitare un nome per il set di cartelle corrente nel campo **Insieme di cartelle** e fare clic su **Applica** per salvarlo. Questo ambito di ricerca personalizzato può quindi essere selezionato in base al nome nell'elenco a discesa **Cerca in** delle schede **Cerca nei file** e **Sostituisci nei file**. Per eliminare un insieme personalizzato di cartelle dagli elenchi **Cerca in** , selezionarne il nome nel campo **Insieme di cartelle** e fare clic su **Elimina**.  
   
 ## <a name="options"></a>Opzioni  
- Sono disponibili i controlli seguenti per assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca.  
+Sono disponibili i controlli seguenti per assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca.  
   
- **Insieme di cartelle**  
- Elenca le directory disponibili per la ricerca. Per creare un nuovo insieme di cartelle, digitare un nome, aggiungere un insieme di cartelle di ricerca all'elenco **Cartelle selezionate** e quindi fare clic su **Applica**.  
+**Insieme di cartelle**  
+Elenca le directory disponibili per la ricerca. Per creare un nuovo insieme di cartelle, digitare un nome, aggiungere un insieme di cartelle di ricerca all'elenco **Cartelle selezionate** e quindi fare clic su **Applica**.  
   
- **Applica**  
- Consente di salvare l'insieme di cartelle di ricerca contenute nell'elenco **Cartelle selezionate** come insieme denominato di cartelle. Tale insieme di cartelle può quindi essere selezionato nel campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** . Lascia aperta la finestra di dialogo Seleziona cartelle di ricerca.  
+**Applica**  
+Consente di salvare l'insieme di cartelle di ricerca contenute nell'elenco **Cartelle selezionate** come insieme denominato di cartelle. Tale insieme di cartelle può quindi essere selezionato nel campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** . Lascia aperta la finestra di dialogo Seleziona cartelle di ricerca.  
   
- **Elimina**  
- Consente di rimuovere l'insieme di cartelle selezionato dal campo **Insieme di cartelle** e dal campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** .  
+**Elimina**  
+Consente di rimuovere l'insieme di cartelle selezionato dal campo **Insieme di cartelle** e dal campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** .  
   
- **Cartelle disponibili**  
- Consente di selezionare un'unità o una cartella per popolare l' **elenco Cartelle**.  
+**Cartelle disponibili**  
+Consente di selezionare un'unità o una cartella per popolare l' **elenco Cartelle**.  
   
- **elenco Cartelle**  
- Elenca le unità e le cartelle disponibili all'interno del volume selezionato nell'elenco a discesa **Cartelle disponibili** . Fare doppio clic per espandere un'unità o una cartella elencata. Selezionare una cartella oppure tenere premuto MAIUSC o CTRL per selezionare più cartelle. Fare clic su **Aggiungi (>)** per includere le cartelle selezionate nell'elenco **Cartelle selezionate** .  
+**elenco Cartelle**  
+Elenca le unità e le cartelle disponibili all'interno del volume selezionato nell'elenco a discesa **Cartelle disponibili** . Fare doppio clic per espandere un'unità o una cartella elencata. Selezionare una cartella oppure tenere premuto MAIUSC o CTRL per selezionare più cartelle. Fare clic su **Aggiungi (>)** per includere le cartelle selezionate nell'elenco **Cartelle selezionate** .  
   
- **Parent**  
- Consente di spostare la selezione di un livello superiore nella gerarchia dell' **elenco Cartelle** .  
+**Parent**  
+Consente di spostare la selezione di un livello superiore nella gerarchia dell' **elenco Cartelle** .  
   
- **Aggiungi (>)**  
- Consente di aggiungere le cartelle selezionate nell' **elenco Cartelle** all'elenco **Cartelle selezionate** .  
+**Aggiungi (>)**  
+Consente di aggiungere le cartelle selezionate nell' **elenco Cartelle** all'elenco **Cartelle selezionate** .  
   
- **Rimuovi (<)**  
- Consente di rimuovere le cartelle selezionate dall'elenco **Cartelle selezionate** .  
+**Rimuovi (<)**  
+Consente di rimuovere le cartelle selezionate dall'elenco **Cartelle selezionate** .  
   
- **Cartelle selezionate**  
- Contiene l'elenco delle cartelle aggiunte dall' **elenco Cartelle**. Tali cartelle verranno incluse nell' **Insieme di cartelle**denominato.  
+**Cartelle selezionate**  
+Contiene l'elenco delle cartelle aggiunte dall' **elenco Cartelle**. Tali cartelle verranno incluse nell' **Insieme di cartelle**denominato.  
   
- **Applica**  
- Consente di salvare l'insieme di cartelle di ricerca contenute nell'elenco **Cartelle selezionate** come insieme denominato di cartelle. Tale insieme di cartelle può quindi essere selezionato nel campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** . Chiude la finestra di dialogo Seleziona cartelle di ricerca.  
+**Applica**  
+Consente di salvare l'insieme di cartelle di ricerca contenute nell'elenco **Cartelle selezionate** come insieme denominato di cartelle. Tale insieme di cartelle può quindi essere selezionato nel campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** . Chiude la finestra di dialogo Seleziona cartelle di ricerca.  

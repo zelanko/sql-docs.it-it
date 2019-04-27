@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746234"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Impostazione utilizzo colonne modello di data mining (Creazione guidata modello di data mining)
   Usare la pagina **Impostazione utilizzo colonne modello di data mining** per specificare le modalità d'uso delle colonne del modello di data mining e aggiungere tabelle annidate.  
@@ -26,7 +26,7 @@ ms.locfileid: "48175631"
 > [!NOTE]  
 >  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Da cubo esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
   
- **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Tabelle/colonne**  
@@ -35,7 +35,7 @@ ms.locfileid: "48175631"
  **Input**  
  Selezionare questa opzione per utilizzare la tabella o la colonna come input nel modello di data mining.  
   
- **Prevedibili**  
+ **Predictable**  
  Selezionare questa opzione per stimare i valori della tabella o della colonna tramite le colonne o le tabelle **Input** .  
   
  **Aggiungi tabelle nidificate**  

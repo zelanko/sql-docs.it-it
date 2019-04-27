@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653705"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>Lezione 3: Aggiunta ed elaborazione di modelli
   La struttura di data mining creata nella lezione precedente contiene un singolo modello di data mining basato sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees. È possibile usare questo modello per identificare i clienti per la campagna di mailing diretto. Tuttavia, per assicurarsi che l'analisi sia approfondita, è consigliabile creare modelli correlati utilizzando algoritmi diversi e confrontarne i risultati. In questo modo è possibile ottenere anche informazioni diverse. Pertanto, verranno creati due modelli aggiuntivi, che verranno quindi elaborati e distribuiti.  

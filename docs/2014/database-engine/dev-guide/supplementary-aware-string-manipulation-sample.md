@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780491"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Esempio di modifica di stringhe in grado di riconoscere caratteri supplementari
   In questo esempio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene illustrata l'elaborazione di stringhe con supporto per i caratteri supplementari. Nell'esempio viene illustrata l'implementazione di cinque funzioni per i valori stringa Transact-SQL che offrono le stesse funzioni di manipolazione dei valori stringa di quelle predefinite, nonché ulteriori capacità di supporto dei caratteri supplementari, che consentono di gestire sia le stringhe Unicode sia quelle contenenti caratteri supplementari. Le cinque funzioni sono LENS (), `lefts(), rights(), subs()` e `replace_s()` equivalenti per le funzioni predefinite `LEN(), LEFT(), RIGHT(), SUBSTRING()` e `REPLACE()` funzioni per valori stringa.  

@@ -1,5 +1,5 @@
 ---
-title: '&gt; (Maggiore di) (MDX) | Documenti Microsoft'
+title: '&gt; (Maggiore di) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b7eb0cdcfbe6a22a18236362b4a2277eb42eb42
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653491"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt; (Maggiore di) (MDX)
 
@@ -37,7 +37,7 @@ MDX_Expression > MDX_Expression
   
 -   **true** se entrambi i parametri sono non null e il primo parametro è un valore che è maggiore del valore del secondo parametro.  
   
--   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale o inferiore al valore del secondo parametro.  
+-   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale a o inferiore al valore del secondo parametro.  
   
 -   Null se uno o entrambi i parametri restituiscono un valore Null.  
   

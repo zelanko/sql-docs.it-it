@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe778141f128a05c00d6a51a66394ed5c70fdb0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746689"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Specifica di una stringa di connessione (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di specificare una stringa di connessione per connettersi a un'origine dati OLE DB oppure ODBC. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

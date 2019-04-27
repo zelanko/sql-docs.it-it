@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743667"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Nuova misura (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Nuova misura** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere una nuova misura a un gruppo di misure in Progettazione cubi. Per visualizzare la finestra di dialogo **Nuova misura** è possibile:  

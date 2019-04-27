@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743457"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli prospettiva (scheda Prospettive, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **dei dettagli della prospettiva** della scheda **Prospettiva** in Progettazione cubi per gestire i metadati disponibili per gli utenti che eseguono query sulla prospettiva selezionata.  
@@ -42,7 +42,7 @@ ms.locfileid: "48209821"
 ## <a name="context-menu"></a>Menu di scelta rapida  
  Nel menu di scelta rapida visualizzato quando si fa clic con il pulsante destro del mouse su una cella qualsiasi della prospettiva visualizzata nel riquadro **Perspective Details** (Dettagli prospettiva) sono disponibili le opzioni seguenti:  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Nuova prospettiva**|Fare clic su questo pulsante per creare una nuova prospettiva nel cubo selezionato.|  
 |**Elimina prospettiva**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare la prospettiva selezionata.|  

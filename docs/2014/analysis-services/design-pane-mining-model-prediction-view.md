@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732127"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Riquadro Progettazione (visualizzazione Stima modello di data mining)
   Il riquadro **Progettazione** contiene il generatore delle query di stima che consente di compilare le stime di data mining. È possibile progettare query di stima che utilizzano tabelle di dati di input da una vista origine dati per generare stime bulk oppure creare query di stima singleton per fornire valori singoli.  
@@ -30,7 +30,7 @@ ms.locfileid: "48189764"
 > [!NOTE]  
 >  Qualsiasi modifica manuale eventualmente apportata alla query andrà perduta quando si torna alla visualizzazione della struttura. Per salvare la query DMX, è possibile copiarla negli Appunti di Windows e incollarla quindi in un file di testo.  
   
- **Per altre informazioni, vedere** [Query di data mining](data-mining/data-mining-queries.md)  
+ **Per altre informazioni:** [Query di data mining](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opzioni  
  **Passare alla visualizzazione dei risultati della query**  
@@ -69,7 +69,7 @@ ms.locfileid: "48189764"
  **Input Query singleton**  
  Questa opzione viene attivata quando si sceglie il pulsante **Query singleton** e presenta le colonne seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Colonna del modello di data mining**|Elenca le colonne del modello di data mining contenute nel modello di data mining selezionato nella tabella **Modello di data mining** .|  
 |**Valore**|Consente di selezionare un valore nell'elenco che contiene ogni possibile stato della colonna del modello di data mining selezionata.<br /><br /> Se la colonna è la colonna di una tabella nidificata, fare clic sulla cella del valore per aprire la finestra di dialogo **Input tabella nidificata** .|  
@@ -83,10 +83,10 @@ ms.locfileid: "48189764"
  Consente di selezionare una colonna nell'elenco di colonne derivato dalla tabella di origine. Se è stata selezionata l'opzione **Funzione di stima** in **Origine**, l'elenco conterrà la funzione di stima disponibile per il modello di data mining specificato.  
   
  **Gruppo**  
- Usare questa opzione con la colonna **And/Or** per raggruppare le espressioni. Ad esempio, `(expr1 Or expr2) And expr3`.  
+ Usare questa opzione con la colonna **And/Or** per raggruppare le espressioni. Ad esempio `(expr1 Or expr2) And expr3`.  
   
  **And/Or**  
- Utilizzare questa opzione per creare una query logica. Ad esempio, `(expr1 Or expr2) And expr3`.  
+ Utilizzare questa opzione per creare una query logica. Ad esempio `(expr1 Or expr2) And expr3`.  
   
  **Criteri/Argomento**  
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773739"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilizzo di indici columnstore cluster
   Attività per l'utilizzo di indici columnstore cluster in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

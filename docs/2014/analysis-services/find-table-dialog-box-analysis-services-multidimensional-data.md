@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731200"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Trova tabella (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Trova tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per trovare una tabella nella vista origine dati associata a una dimensione, a un cubo o a una struttura di data mining. Questa finestra di dialogo può essere visualizzata in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] nei modi seguenti:  

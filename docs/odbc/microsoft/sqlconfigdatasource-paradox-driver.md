@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665343"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (driver Paradox)
 > [!NOTE]  
@@ -27,14 +27,14 @@ ms.locfileid: "47694594"
   
  Il **SQLConfigDataSource** funzione che consente di aggiungere, modificare o eliminare un'origine dati utilizza in modo dinamico le parole chiave seguenti.  
   
-|Parola chiave|Description|  
+|Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|La sequenza nella quale vengono ordinati i campi.<br /><br /> Quando viene usato il driver Paradox, la sequenza può essere ASCII (impostazione predefinita), internazionale, Finnish-Swedish o Danish-Norwegian.<br /><br /> Consente di impostare la stessa opzione come **sequenza di collazione** nella finestra di dialogo programma di installazione.|  
 |DBQ|Il nome del file di database.<br /><br /> Consente di impostare la stessa opzione come **Database** nella finestra di dialogo programma di installazione.|  
 |DEFAULTDIR|La specifica del percorso della directory.|  
 |DESCRIPTION|Una descrizione dei dati nell'origine dati.<br /><br /> Consente di impostare la stessa opzione come **descrizione** nella finestra di dialogo programma di installazione.|  
 |DRIVER|Specifica il percorso alla DLL del driver.|  
-|DRIVERID|Un ID intero per il driver.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
+|DRIVERID|Un ID intero per il driver.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
 |ESCLUSIVO|Determina se il database verrà aperto in modalità esclusiva (accessibili da un solo utente alla volta) o condiviso in modalità (accessibili da più di un utente alla volta). Può essere true (modalità esclusiva) o false (modalità condivisa).<br /><br /> Consente di impostare la stessa opzione come **esclusivo** nella finestra di dialogo programma di installazione.|  
 |FIL|Tipo Paradox file 3.x, Paradox 4.x o Paradox 5.x|  
 |FILETYPE|Tipo di file per il driver di testo (testo).|  

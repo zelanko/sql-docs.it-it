@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748921"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Raccolta dati di utilizzo di PowerPivot
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot. Per altre informazioni su come abilitare e configurare la raccolta di dati di utilizzo per PowerPivot vedere eventi [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- Per informazioni sui dati di utilizzo nel Dashboard di gestione PowerPivot, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Per informazioni sui dati di utilizzo nel dashboard di gestione PowerPivot, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Contenuto dell'argomento:**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "48187481"
   
  Nel sistema di raccolta dati sull'utilizzo, le informazioni sugli eventi accedono al sistema di raccolta dati sull'utilizzo nel server applicazioni o nel computer front-end Web. I dati sull'utilizzo vengono spostati nel sistema in risposta a processi timer che causano lo spostamento dei dati da file di dati temporanei nel server fisico all'archiviazione persistente in un server di database. Nel diagramma seguente vengono illustrati i componenti e i processi che causano lo spostamento dei dati sull'utilizzo attraverso il sistema di raccolta dati e di creazione report.  
   
- **Nota:** verificare che la raccolta dati di utilizzo sia abilitata. A tal fine, passare a **Monitoraggio** in Amministrazione centrale SharePoint. Per altre informazioni, vedere [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+ **Nota:** Verificare l'utilizzo è abilitata la raccolta dei dati. A tal fine, passare a **Monitoraggio** in Amministrazione centrale SharePoint. Per altre informazioni, vedere [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  ![Componenti e i processi di raccolta dati di utilizzo. ](../media/gmni-usagedata.gif "Componenti e i processi di raccolta dati di utilizzo.")  
   
-|Fase|Description|  
+|Fase|Descrizione|  
 |-----------|-----------------|  
 |1|La raccolta dati di utilizzo viene attivata dagli eventi generati dai componenti di PowerPivot e dai provider di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in distribuzioni di SharePoint. Gli eventi configurabili che è possibile abilitare o disabilitare includono richieste di connessione, richieste di caricamento e scaricamento ed eventi relativi ai tempi di risposta alle query monitorati dal servizio PowerPivot nel server applicazioni. Altri eventi gestiti unicamente dal server e che non è possibile disabilitare. Sono inclusi gli eventi relativi all'integrità del server e all'aggiornamento dati.<br /><br /> Inizialmente, i dati di utilizzo vengono raccolti e archiviati in file di log locali mediante le funzionalità di raccolta dati del sistema SharePoint. Questi file e i relativi percorsi fanno parte del sistema di raccolta dati di utilizzo standard in SharePoint. Il percorso dei file è lo stesso in ogni server nella farm. Per visualizzare o modificare il percorso della directory di registrazione, passare a **Monitoraggio** in Amministrazione centrale SharePoint, quindi fare clic su **Configura raccolta dati di utilizzo e integrità**.|  
 |2|A intervalli pianificati, ogni ora per impostazione predefinita, tramite il processo timer Importazione dati di utilizzo di Microsoft SharePoint Foundation i dati di utilizzo vengono spostati dai file locali al database dell'applicazione di servizio PowerPivot. Se in una farm sono presenti più applicazioni del servizio PowerPivot, ciascuna disporrà di un proprio database. Negli eventi sono incluse informazioni interne mediante le quali viene identificata l'applicazione di servizio PowerPivot tramite cui è stato generato l'evento. Gli identificatori dell'applicazione garantiscono che i dati di utilizzo vengano associati all'applicazione che li ha creati.|  
@@ -53,19 +53,19 @@ ms.locfileid: "48187481"
 ##  <a name="sources"></a> Origini dei dati sull'utilizzo  
  Quando la raccolta dati di utilizzo viene abilitata, i dati vengono generati per gli eventi server seguenti.  
   
-|Evento|Description|Configurabile|  
+|Evento|Descrizione|Configurabile|  
 |-----------|-----------------|------------------|  
 |Connessioni|Connessioni server effettuate per conto di un utente che esegue query sui dati PowerPivot in una cartella di lavoro di Excel. Gli eventi connessione identificano l'utente che ha aperto una connessione a una cartella di lavoro di PowerPivot. Nei report, queste informazioni vengono utilizzate per identificare gli utenti più frequenti, le origini dati PowerPivot a cui gli stessi utenti hanno effettuato l'accesso e le tendenze delle connessioni nel tempo.|È possibile abilitare e disabilitare [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Tempi di risposta alle query|Statistiche di risposta alle query che consentono di suddividere le query in base al tempo necessario per il loro completamento. Le statistiche di risposta alle query indicano il tempo impiegato dal server per rispondere alle richieste di query.|È possibile abilitare e disabilitare [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Caricamento dati|Operazioni di caricamento dati eseguite dal [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Gli eventi di caricamento dati consentono di identificare le origini dati utilizzate con maggiore frequenza.|È possibile abilitare e disabilitare [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Scaricamento dati|Operazioni di scaricamento dati eseguite dalle applicazioni del servizio PowerPivot. Un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] consente di scaricare le origini dati PowerPivot inattive se non vengono utilizzate o quando la quantità di memoria del server è insufficiente per eseguire i processi di aggiornamento dati.|È possibile abilitare e disabilitare [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Stato di integrità del server|Operazioni server che consentono di indicare l'integrità del server, misurata in utilizzo della memoria e della CPU. Questi dati sono cronologici. Non forniscono informazioni in tempo reale sul carico di elaborazione corrente nel server.|No. I dati di utilizzo vengono sempre raccolti per questo evento.|  
-|Aggiornamento dati|Operazioni di aggiornamento dati avviate dal servizio PowerPivot per gli aggiornamenti dati pianificati. I dati cronologici sull'utilizzo per l'aggiornamento dati vengono raccolti a livello dell'applicazione per i report operativi e vengono riflessi nelle pagine Gestisci aggiornamento dati per le singole cartelle di lavoro.<br /><br /> **Nota:** per distribuzioni di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] e SharePoint 2013, l'aggiornamento dati è gestito da Excel Services e non dal server Analysis Services.|No. I dati di utilizzo relativi all'aggiornamento dati vengono sempre raccolti se l'aggiornamento dati per l'applicazione del servizio PowerPivot è abilitato.|  
+|Aggiornamento dati|Operazioni di aggiornamento dati avviate dal servizio PowerPivot per gli aggiornamenti dati pianificati. I dati cronologici sull'utilizzo per l'aggiornamento dati vengono raccolti a livello dell'applicazione per i report operativi e vengono riflessi nelle pagine Gestisci aggiornamento dati per le singole cartelle di lavoro.<br /><br /> **Nota:** Per [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] e distribuzioni di SharePoint 2013, l'aggiornamento dei dati è gestito da Excel Services e non il Server di Analysis Services.|No. I dati di utilizzo relativi all'aggiornamento dati vengono sempre raccolti se l'aggiornamento dati per l'applicazione del servizio PowerPivot è abilitato.|  
   
 ##  <a name="servicesjobs"></a> Processi timer e servizi  
  Nella tabella seguente vengono descritti gli archivi di raccolta dati e servizi nel sistema di raccolta dati di utilizzo. Per istruzioni su come eseguire l'override delle pianificazioni del processo timer per forzare l'aggiornamento dei dati del server dei dati di utilizzo e integrità nei report del Dashboard di gestione PowerPivot, vedere [aggiornamento dati PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). È possibile visualizzare i processi timer in Amministrazione centrale SharePoint. Passare a **Monitoraggio**, quindi fare clic su **Controlla stato processo**. Fare clic su **Rivedi definizioni processi**.  
   
-|Componente|Pianificazione predefinita|Description|  
+|Componente|Pianificazione predefinita|Descrizione|  
 |---------------|----------------------|-----------------|  
 |Servizio Timer di SharePoint (SPTimerV4)||Questo servizio di Windows viene eseguito in modalità locale in ogni computer membro della farm ed elabora tutti i processi timer definiti a livello di farm.|  
 |Importazione dati di utilizzo di Microsoft SharePoint Foundation|Ogni 30 minuti in SharePoint 2010. Ogni 5 minuti in SharePoint 2013.|Questo processo timer viene configurato globalmente a livello di farm. I dati di utilizzo vengono spostati dai file di log locali al database di raccolta dati di utilizzo centrale. È possibile eseguire manualmente questo processo timer per forzare un'operazione di importazione dati.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48187481"
 ##  <a name="reporting"></a> Report relativi ai dati di utilizzo  
  Per visualizzare i dati di utilizzo nei dati PowerPivot, è possibile visualizzare report predefiniti nel dashboard di gestione PowerPivot. I report predefiniti consolidano i dati di utilizzo recuperati dalle strutture di dati di report nel database dell'applicazione del servizio. Poiché i dati di report sottostanti vengono aggiornati ogni giorno, i report sull'utilizzo predefiniti conterranno le informazioni aggiornate solo dopo che il processo timer di Elaborazione dati di utilizzo di Microsoft SharePoint Foundation copia i dati in un database dell'applicazione del servizio PowerPivot. Tale operazione si verifica una volta al giorno per impostazione predefinita.  
   
- Per altre informazioni su come visualizzare i report, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Per ulteriori informazioni su come visualizzare i report, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740791"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Utilizzare un modello per creare un'azione
   Nella vista **Azioni** di Progettazione cubi sono inclusi diversi modelli usabili per la creazione di azioni comuni. L'accesso a Progettazione cubi può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "48154492"
 -   Inserire le informazioni necessarie per completare la compilazione dell'azione in base al modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azioni &#40;Analysis Services - dati multidimensionali&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

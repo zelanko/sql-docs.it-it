@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650463"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Backup database (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per eseguire il backup di un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un file di backup in formato file di backup di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con estensione abf.  
@@ -88,7 +88,7 @@ ms.locfileid: "48067321"
  **Percorso backup partizioni remote**  
  Consente di visualizzare il percorso delle partizioni remote associate al database selezionato, nonché il file di backup remoto utilizzato per il backup di dati e metadati per le partizioni remote. Sono disponibili le colonne seguenti.  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Server**|Visualizza l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce le partizioni remote.|  
 |**Database**|Visualizza il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che contiene le partizioni remote.|  

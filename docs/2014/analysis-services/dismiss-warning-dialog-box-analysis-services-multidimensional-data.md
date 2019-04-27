@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb9ad70b14298c602ca1af3fc60b66bbe5c9af43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731657"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Ignora avviso (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Ignora avviso** per ignorare una particolare istanza di un avviso.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba7914456e4ffcf19a52c6e7f7206a390147cc2f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662424"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>Classe di evento FT:Crawl Aborted
   La classe di evento **FT:Crawl Aborted** indica che si è verificata un'eccezione durante una ricerca per indicizzazione full-text. In genere, l'errore causa l'arresto della ricerca. Per ulteriori informazioni sull'errore, controllare il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows o il log di tipo ricerca per indicizzazione.  
@@ -31,7 +31,7 @@ ms.locfileid: "52772683"
 |**DatabaseID**|**int**|ID del database nel quale viene eseguita la ricerca per indicizzazione full-text. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella tabella **sysmessages** .|31|Yes|  
 |**EventClass**|**int**|Tipo di evento = 157.|27|No|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
 |**ObjectID**|**int**|ID assegnato dal sistema all'oggetto sul quale viene eseguita la ricerca per indicizzazione full-text quando si verifica l'errore.|22|Yes|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  

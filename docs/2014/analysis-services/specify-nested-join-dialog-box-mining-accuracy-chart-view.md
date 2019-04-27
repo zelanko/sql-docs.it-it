@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746474"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Specifica join nidificato (visualizzazione Grafico accuratezza modello di data mining)
   La finestra di dialogo **Specifica join nidificato** consente di creare una relazione tra la tabella nidificata e la tabella dei case. Per aprire la finestra di dialogo **Specifica join nidificato** , selezionare la tabella nidificata e fare clic su **Modifica join**.  

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc09c5306d5c4fb9e63b1cba9b859f9633fcccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745841"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Vista standard (scheda Aggregazioni, Progettazione cubi)
   Utilizzare **Vista standard** nella progettazione delle aggregazioni per visualizzare le aggregazioni. È anche possibile creare e modificare progettazioni delle aggregazioni in questa vista utilizzando **Progettazione guidata aggregazioni** oppure la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo**.  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Progettare le aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.|  
 |**Ottimizzazione basata sulle statistiche sull'utilizzo**|Fare clic per visualizzare la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo** .|  

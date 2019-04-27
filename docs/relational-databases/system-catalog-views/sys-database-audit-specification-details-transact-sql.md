@@ -1,5 +1,5 @@
 ---
-title: Sys. database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652479"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server per tutti i database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Per un elenco di tutti audit_action_id e dei relativi nomi, eseguire una query [DM audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|ID della specifica del controllo.|  
 |**audit_action_id**|**int**|ID dell'azione di controllo.|  
-|**audit_action_name**|**sysname**|Nome dell'azione di controllo o del gruppo di azioni di controllo.|  
+|**audit_action_name**|**Sysname**|Nome dell'azione di controllo o del gruppo di azioni di controllo.|  
 |**Classe**|**int**|Identifica la classe dell'oggetto controllato.|  
-|**class_ desc**|**nvarchar(60)**|Descrizione della classe dell'oggetto controllato:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|Descrizione della classe dell'oggetto controllato:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|ID principale dell'oggetto controllato, ad esempio un ID di tabella di un'azione di controllo di una tabella.|  
 |**minor_id**|**Int**|ID secondario dell'oggetto controllato, interpretato in base alla classe, ad esempio ID della colonna di un'azione di controllo di una tabella.|  
 |**audited_principal_id**|**int**|Entità controllata.|  
-|**audited_result**|**nvarchar(60)**|Risultati dell'azione di controllo:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|Risultati dell'azione di controllo:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Indica se l'oggetto è un gruppo:<br /><br /> 0: L'oggetto non è un gruppo<br /><br /> 1: L'oggetto è un gruppo|  
   
 ## <a name="permissions"></a>Permissions  

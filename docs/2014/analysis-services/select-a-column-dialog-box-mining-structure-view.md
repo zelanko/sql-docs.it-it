@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747753"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Finestra di dialogo Seleziona colonna (visualizzazione Struttura di data mining)
   Utilizzare la finestra di dialogo **Seleziona colonna** per aggiungere colonne alla struttura di data mining. Nella finestra di dialogo sono incluse diverse opzioni a seconda che si utilizzi un modello di data mining OLAP o relazionale.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748023"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Salva file con nome (Analysis Services - Dati multidimensionali)
   La finestra di dialogo **Salva file con nome** visualizza un elenco di file disponibili nelle cartelle dei log e dei dati definiti per un istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Salva file con nome** è possibile:  

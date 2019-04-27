@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756503"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Barra degli strumenti** consente di eseguire azioni comuni nella scheda **KPI** di Progettazione cubi.  

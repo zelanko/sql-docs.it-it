@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732162"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Distribuzione e scalabilità di modelli di data mining (componenti aggiuntivi Data mining per Excel)
   Gli strumenti disponibili nel **modello di utilizzo** e **gestione** gruppo vengono forniti che consentono di gestire ed esplorare modelli di data mining esistente. È possibile utilizzare questi strumenti per visualizzare tutti i modelli archiviati in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e non solo quelli creati utilizzando i componenti aggiuntivi.  

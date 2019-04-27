@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666778"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utilizzo di sqlcmd con variabili di scripting
   Per variabile di scripting si intende una variabile utilizzata negli script. Le variabili di scripting consentono di utilizzare uno script in più scenari. Se, ad esempio, si desidera eseguire uno script su più server, è possibile utilizzare una variabile di scripting per il nome del server anziché modificare lo script per ogni server. È infatti sufficiente modificare il nome del server fornito alla variabile di scripting per eseguire lo stesso script su server diversi.  
@@ -103,7 +103,7 @@ ms.locfileid: "48113781"
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
  Le variabili definite con **sqlcmd** sono note come variabili di scripting. Nella tabella seguente sono elencate le variabili di scripting di **sqlcmd** .  
   
-|Variabile|Opzione correlata|L/S|Default|  
+|Variabile|Opzione correlata|L/S|Impostazione predefinita|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -111,7 +111,7 @@ ms.locfileid: "48113781"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/S|"8" (secondi)|  
-|SQLCMDSTATTIMEOUT|-t|L/S|"0" = attesa illimitata|  
+|SQLCMDSTATTIMEOUT|-T|L/S|"0" = attesa illimitata|  
 |SQLCMDHEADERS|-H|L/S|"0"|  
 |SQLCMDCOLSEP|-S|L/S|" ".|  
 |SQLCMDCOLWIDTH|-w|L/S|"0"|  

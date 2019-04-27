@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748043"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Dati di esempio (componenti aggiuntivi Data mining di SQL Server)
   ![Creazione guidata dei dati di partizione nella barra multifunzione Data Mining](media/dmc-partition.gif "Creazione guidata partizione dati sulla barra multifunzione Data Mining")  

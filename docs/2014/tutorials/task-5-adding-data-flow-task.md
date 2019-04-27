@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753004"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Attività 5: Aggiunta dell'attività Flusso di dati
+# <a name="task-5-adding-data-flow-task"></a>Attività 5: Aggiunta di attività flusso di dati
   In questa attività viene aggiunta un'Attività Flusso di dati al flusso di controllo del pacchetto SSIS.  
   
 1.  Trascinare e rilasciare **Data Flow Task** dalla **casella degli strumenti SSIS** per il **flusso di controllo** scheda nella finestra di progettazione SSIS. Se non viene visualizzato il **casella degli strumenti SSIS**, fare clic in qualsiasi punto nel **flusso di controllo** scheda, fare clic su **SSIS** nella barra dei menu e fare clic su **casella degli strumenti SSIS**.  

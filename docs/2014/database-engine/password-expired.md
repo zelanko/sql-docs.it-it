@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774744"
 ---
 # <a name="password-expired"></a>Password scaduta
   Questa finestra di dialogo viene visualizzata quando si esegue la connessione a un server con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso in cui la password immessa sia corretta ma scaduta. Viene visualizzata anche quando si esegue la connessione a un server usando un nuovo account creato con l'opzione **Cambiamento obbligatorio password all'accesso successivo** . La finestra di dialogo **Password scaduta** consente di cambiare la password per l'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746274"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Impostazione convenzioni di denominazione (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Impostazione convenzioni di denominazione** per definire le convenzioni di denominazione utilizzate in Generazione guidata schema per la creazione di oggetti dello schema.  
@@ -27,7 +27,7 @@ ms.locfileid: "48226251"
  **Opzione**  
  Consente di impostare le convenzioni di denominazione utilizzate nella procedura guidata. Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Separatore**|Consente di specificare il carattere che separa le parole in un nome di oggetto. Nella colonna **Valore** selezionare **Carattere di sottolineatura**, **Spazio**o **Nessuno**. Il valore predefinito è **Carattere di sottolineatura**.|  
 |**Prefisso colonna chiave primaria**|Consente di specificare la stringa utilizzata come prefisso per il nome di ogni colonna chiave primaria. Il valore predefinito è **PK**.|  

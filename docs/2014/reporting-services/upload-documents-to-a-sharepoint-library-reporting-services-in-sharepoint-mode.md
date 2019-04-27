@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647627"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Caricare documenti in una raccolta di SharePoint (Reporting Services in modalità SharePoint)
   Definizioni e modelli di report possono essere caricati in una raccolta di SharePoint. Quando si carica un elemento del server di report, è necessario selezionare una raccolta o una cartella all'interno di una raccolta. Gli elementi del server di report non possono infatti essere caricati in un elenco o in una pagina.  

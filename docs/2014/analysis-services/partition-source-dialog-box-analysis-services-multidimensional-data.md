@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743567"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Origine partizione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Origine partizione[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in**  per specificare l'origine dei dati di una tabella dei fatti per una partizione. Per visualizzare la finestra di dialogo **Origine partizione**, è possibile:  
@@ -31,7 +31,7 @@ ms.locfileid: "48203181"
   
 |Opzione|Definizione|  
 |------------|----------------|  
-|**Tipo di associazione**|Consente di selezionare il tipo di associazione da utilizzare per l'origine della partizione specificata. Sono disponibili le opzioni seguenti:<br /><br /> **Associazione tabella**: selezionare questa opzione per visualizzare il **dettagli dell'associazione di tabella** riquadro e indicare che la partizione è associata al contenuto di una tabella in una vista origine dati o origine di dati. Per altre informazioni sul riquadro **Dettagli dell'associazione di tabella**, vedere [Dettagli dell'associazione di tabella &#40;Finestra di dialogo origine partizione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Dettaglio**: selezionare questa opzione per visualizzare il **dettagli dell'associazione di Query** riquadro e indicare che la partizione è associata al contenuto di una query eseguita su un'origine dati. Per altre informazioni sul riquadro **Dettagli dell'associazione di query**, vedere [Dettagli dell'associazione di query &#40;Finestra di dialogo origine partizione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
+|**Tipo di associazione**|Consente di selezionare il tipo di associazione da utilizzare per l'origine della partizione specificata. Sono disponibili le opzioni seguenti:<br /><br /> **Associazione tabella**: Selezionare questa opzione per visualizzare il riquadro dei **dettagli dell'associazione di tabella** e indicare che la partizione è associata al contenuto di una tabella in un'origine dati o in una vista origine dati. Per altre informazioni sul riquadro **Dettagli dell'associazione di tabella**, vedere [Dettagli dell'associazione di tabella &#40;Finestra di dialogo origine partizione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detail**: Selezionare questa opzione per visualizzare il riquadro **Dettagli dell'associazione di query** e indicare che la partizione è associata al contenuto di una query eseguita in un'origine dati. Per altre informazioni sul riquadro **Dettagli dell'associazione di query**, vedere [Dettagli dell'associazione di query &#40;Finestra di dialogo origine partizione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
 |**Detail**|Consente di visualizzare la finestra di dialogo **Dettagli dell'associazione di tabella** o **Dettagli dell'associazione di query** , a seconda del valore dell'opzione **Tipo di associazione** .|  
   
 ## <a name="see-also"></a>Vedere anche  

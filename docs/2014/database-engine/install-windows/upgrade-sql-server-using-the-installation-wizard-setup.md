@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775407"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Eseguire l'aggiornamento a SQL Server 2014 utilizzando l'Installazione guidata (programma di installazione)
   Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un singolo albero delle funzionalità per aggiornare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile eseguire l'installazione side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a una versione precedente oppure eseguire la migrazione di database e impostazioni di configurazione esistenti da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicarli a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

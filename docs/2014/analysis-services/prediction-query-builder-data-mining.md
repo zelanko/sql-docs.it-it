@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748683"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Generatore delle query di stima (Data Mining)
   Utilizzare la vista **Stima modello di data mining** per creare stime basate sui modelli di data mining inclusi in una relativa struttura.  
@@ -25,7 +25,7 @@ ms.locfileid: "48095051"
   
 -   [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni su &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Query di data mining](data-mining/data-mining-queries.md)  
   

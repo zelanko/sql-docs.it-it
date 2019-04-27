@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e208fbfe1205c09b51796628610f2def8798fea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740481"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +188,7 @@ from @Items
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio mostra che è possibile usare un flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
@@ -216,7 +216,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 #define UNICODE  
@@ -376,7 +376,7 @@ EXIT:
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio mostra che è possibile usare un flusso di righe, più righe per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
@@ -404,7 +404,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 #define UNICODE  

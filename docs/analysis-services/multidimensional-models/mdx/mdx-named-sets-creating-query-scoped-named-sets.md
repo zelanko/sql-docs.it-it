@@ -1,5 +1,5 @@
 ---
-title: Creazione di Query con ambito di set denominati (MDX) | Documenti Microsoft
+title: Creazione di Query con ambito denominato set (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739981"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Denominata set - creazione con ambito Query MDX di set denominati
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Set denominati MDX set denominati - creazione-con ambito Query
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Se un set denominato è richiesto esclusivamente per una sola query MDX (Multidimensional Expressions), è possibile definirlo specificando la parola chiave WITH. Un set denominato creato specificando questa parola chiave non esiste più dopo l'esecuzione della query.  
   
@@ -90,7 +90,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [Creazione con ambito sessione denominati set & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Istruzione SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Creazione di set denominati con ambito sessione &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

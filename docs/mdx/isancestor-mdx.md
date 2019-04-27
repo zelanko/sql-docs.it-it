@@ -1,5 +1,5 @@
 ---
-title: IsAncestor (MDX) | Documenti Microsoft
+title: IsAncestor (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aacd6825a81ff172d8fdf79373f5b251d6e18b9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653471"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 
@@ -29,17 +29,17 @@ IsAncestor(Member_Expression1, Member_Expression2)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Member_expression1*  
+ *Member_Expression1*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
  *Member_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
- Il **IsAncestor** risultato della funzione **true** se il primo membro specificato è un predecessore del secondo membro specificato. In caso contrario, la funzione restituisce **false**.  
+## <a name="remarks"></a>Note  
+ Il **IsAncestor** funzione restituisce **true** se il primo membro specificato è un predecessore del secondo membro specificato. In caso contrario, la funzione restituisce **false**.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente restituisce **true** se [Date]. [ Fiscal]. CurrentMember è un predecessore di 2003:  
+ Nell'esempio seguente viene restituito **true** se [Date]. [ Fiscal]. CurrentMember è un predecessore di 2003:  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  
   
@@ -52,7 +52,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Predecessore &#40;MDX&#41;](../mdx/ancestor-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Ancestor &#40;MDX&#41;](../mdx/ancestor-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

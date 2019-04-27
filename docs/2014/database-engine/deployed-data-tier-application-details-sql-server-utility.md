@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754097"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
   Le informazioni incluse nella vista Applicazioni livello dati distribuite di Gestione Utilità forniscono dati di utilizzo relativi a singole applicazioni livello dati, cronologia dell'utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di applicazione del livello dati per utilizzo della CPU, file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per le singole applicazioni di livello dati.  
@@ -78,7 +78,7 @@ ms.locfileid: "53354919"
   
 -   Trustworthy: (True o False)  
   
--   Confronto  
+-   Regole di confronto  
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "53354919"
   
 -   Trustworthy: (True o False)  
   
--   Confronto  
+-   Regole di confronto  
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   

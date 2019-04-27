@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bada5acfd14b824be79fca692debf1a3479f056d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746793"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Scheda Transizioni di stato in Sequence Clustering (Visualizzatore modello di data mining)
   La scheda **Transizioni di stato** in **Visualizzatore Microsoft Sequence Clustering** consente di esaminare le transizioni tra le coppie attributo-valore o gli stati nel cluster selezionato.  
   
  Utilizzare questa vista di un modello Sequence Clustering per visualizzare i modelli. Un collegamento e un nodo del diagramma rappresentano rispettivamente la probabilità di una transizione e uno stato di sequenza.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -52,17 +52,17 @@ ms.locfileid: "48216642"
  **Cluster**  
  Consente di scegliere un cluster da visualizzare nel visualizzatore. Per impostazione predefinita è selezionata l'opzione **Popolazione (Tutto)** , ovvero nel grafico vengono inclusi gli stati e le transizioni dell'intero modello. Se si sceglie un cluster particolare, vengono visualizzati solo gli stati e le transizioni presenti in tale cluster.  
   
- **Suggerimento:** è possibile rinominare i cluster tramite la scheda **Diagramma dei cluster** . È sufficiente selezionare un cluster, fare clic con il pulsante destro del mouse su di esso e selezionare **Rinomina**. La ridenominazione dei cluster con un'etichetta più descrittiva rende più semplice il confronto tra cluster nella scheda **Transizioni di stato** .  
+ **Suggerimento:** È possibile rinominare i cluster tramite il **diagramma dei Cluster** scheda. È sufficiente selezionare un cluster, fare clic con il pulsante destro del mouse su di esso e selezionare **Rinomina**. La ridenominazione dei cluster con un'etichetta più descrittiva rende più semplice il confronto tra cluster nella scheda **Transizioni di stato** .  
   
  **Mostra etichette sui bordi**  
  Selezionare questa opzione per visualizzare i numeri su ogni bordo del grafico tramite i quali viene indicata la probabilità della transizione.  
   
- **Collegamenti**  
+ **Links**  
  Utilizzare il dispositivo di scorrimento per controllare il numero di stati e transizioni visualizzati nel grafico. Abbassando il dispositivo di scorrimento vengono mostrati solo gli stati e le transizioni con la probabilità più elevata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

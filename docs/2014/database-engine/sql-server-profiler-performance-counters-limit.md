@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74ac3839567366c429c64e0139f8e86793aa942a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773443"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server Profiler - Limite contatori prestazioni
   Utilizzare la finestra di dialogo Limite contatori prestazioni per limitare le informazioni generate da un file di log delle prestazioni del monitoraggio di sistema quando viene correlato con una traccia di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . La finestra di dialogo consente di selezionare i contatori da visualizzare e utilizzare per la correlazione.  

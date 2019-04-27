@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729901"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Finestra di dialogo Inserisci funzione (SSAS)
   La finestra di dialogo **Inserisci funzione** consente di scegliere da un elenco di funzioni utilizzabili quando si compilano formule. Per accedere a questa finestra di dialogo da Progettazione modelli, nella barra della formula sopra ogni tabella fare clic sul pulsante della funzione (**fx**). Per ulteriori informazioni sulla scelta di funzioni da utilizzare nelle formule, vedere le sezioni relative all'introduzione a DAX e alla compilazione di una formula.  
   
 |||  
 |-|-|  
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |**Selezionare una categoria**|Se si conosce a grandi linee il tipo di funzione necessario, scegliere una categoria dall'elenco o selezionare **Tutte** per visualizzare un elenco di funzioni in ordine alfabetico.|  
 |**Selezionare una funzione**|Consente di visualizzare un elenco delle funzioni nella categoria selezionata.|  
 |**Descrizione**|Consente di visualizzare una descrizione della funzione, insieme a tutti gli argomenti richiesti o facoltativi, ad esempio nomi di colonne ed espressioni.|  
@@ -51,6 +51,6 @@ ms.locfileid: "48125943"
  La finestra di dialogo **Inserisci funzione** è disponibile solo quando si compila una formula. È possibile creare i calcoli in una colonna calcolata o in una tabella o grafico pivot. Le formule compilate espressamente per essere usate in una tabella pivot vengono chiamate anche *misure*. Per altre informazioni, vedere [Creare una colonna calcolata &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [Creare e gestire misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Calcoli &#40;tabulare di SSAS&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Calcoli &#40;SSAS tabulare&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

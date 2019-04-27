@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749007"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Avviare o arrestare un server PowerPivot per SharePoint
   Servizio di sistema PowerPivot e un' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] istanza vengono utilizzati insieme nello stesso server applicazioni locale per supportare l'elaborazione dati e richieste coordinata in una farm di SharePoint.  
@@ -54,7 +54,7 @@ ms.locfileid: "48096607"
 ##  <a name="effects"></a> Effetti dell'arresto di un Server PowerPivot  
  Nella tabella seguente vengono descritti gli effetti dell'arresto del servizio di sistema PowerPivot e del servizio Analysis Services in un server SharePoint.  
   
-|Effetto su|Description|  
+|Effetto su|Descrizione|  
 |---------------|-----------------|  
 |Query esistenti|Le query in esecuzione in un server Analysis Services verranno arrestate immediatamente. L'utente otterrà un errore di dati non trovati o di connessione all'origine dati non trovata.|  
 |Processi di aggiornamento dati esistenti in fase di elaborazione|I processi in esecuzione nel server Analysis Services corrente verranno arrestati immediatamente. L'aggiornamento dati avrà esito negativo e un errore verrà registrato nella cronologia dell'aggiornamento dati.<br /><br /> È possibile visualizzare lo stato dei processi correnti prima di arrestare il servizio tramite la pagina Controlla stato processo in Amministrazione centrale SharePoint.<br /><br /> Anche se è possibile conoscere quali processi sono in fase di elaborazione, non vi è modo di visualizzare la coda per verificare se stanno per essere avviati altri processi.|  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4702ad3ab9c36a5859064d1efe4b055decae8ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740451"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Schema XSD con annotazioni di esempio per gli esempi XPath (SQLXML 4.0)
   Le query Xpath di esempio presenti in questa sezione si riferiscono a uno schema di mapping. Lo schema di mapping è un file XML Schema con annotazioni (XSD). Per altre informazioni sugli schemi di mapping, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  

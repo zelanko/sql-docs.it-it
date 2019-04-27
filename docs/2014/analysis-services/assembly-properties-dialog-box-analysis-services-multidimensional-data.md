@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36ad3870fbbbfbcb457e54929bcd4729b7814d8b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643561"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Proprietà assembly (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Proprietà assembly** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un riferimento ad assembly in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile visualizzare la finestra di dialogo **Proprietà assembly** facendo clic con il pulsante destro del mouse su un assembly in **Esplora oggetti** e scegliendo **Proprietà**.  
@@ -27,12 +27,12 @@ ms.locfileid: "50147716"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Nome**|Consente di modificare il nome del riferimento a un assembly.<br /><br /> Nota: cambiando questo valore non si modifica il nome dell'assembly definito nel riferimento, ma il nome usato dall'istanza o dal database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per indicare il riferimento all'assembly.|  
+|**Name**|Consente di modificare il nome del riferimento a un assembly.<br /><br /> Nota: Se si modifica questo valore non modifica il nome dell'assembly a cui fa riferimento all'assembly, ma la modifica del nome utilizzato il di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza o dal database quando si fa riferimento il riferimento all'assembly.|  
 |**ID**|Consente di visualizzare l'ID dell'assembly a cui si riferisce il riferimento a un assembly.|  
 |**Descrizione**|Consente di modificare la descrizione del riferimento a un assembly.|  
 |**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione del riferimento a un assembly.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento ai metadati per il riferimento a un assembly.|  
-|**Tipo**|Consente di visualizzare il tipo del riferimento a un assembly. Vengono visualizzati i valori seguenti:<br /><br /> **Assembly .NET**: il riferimento all'assembly fa riferimento a un [!INCLUDE[msCoName](../includes/msconame-md.md)] assembly .NET Framework.<br /><br /> **DLL COM**: il riferimento all'assembly fa riferimento a una libreria COM.|  
+|**Tipo**|Consente di visualizzare il tipo del riferimento a un assembly. Vengono visualizzati i valori seguenti:<br /><br /> **Assembly .NET**: Il riferimento a un assembly si riferisce a un assembly di [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework.<br /><br /> **DLL COM**: Il riferimento a un assembly si riferisce a una libreria COM.|  
 |**Origine**|Consente di visualizzare l'origine del riferimento a un assembly. Questa proprietà in genere contiene il percorso completo e il nome file di assembly a cui si riferisce il riferimento a un assembly.|  
 |**Set di autorizzazioni**|Consente di selezionare il set di autorizzazioni utilizzato per determinare l'accesso al riferimento a un assembly. Per ulteriori informazioni sui valori disponibili per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
 |**Impostazioni di rappresentazione**|Consente di selezionare le impostazioni di rappresentazione da utilizzare per l'accesso al riferimento a un assembly. Per altre informazioni sui valori disponibili per questa proprietà, vedere [Elemento ImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  

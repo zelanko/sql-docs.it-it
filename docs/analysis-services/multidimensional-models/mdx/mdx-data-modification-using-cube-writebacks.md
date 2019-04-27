@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei writeback dei cubi (MDX) | Documenti Microsoft
+title: Utilizzo dei writeback dei cubi (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740123"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>Modifica dei dati MDX - utilizzo dei writeback dei cubi
+# <a name="mdx-data-modification---using-cube-writebacks"></a>Modifica dei dati MDX - Uso di writeback dei cubi
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  È possibile aggiornare un cubo usando l'istruzione [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md). Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
+  È possibile aggiornare un cubo usando l'istruzione [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintassi dell'istruzione UPDATE CUBE  
  La sintassi dell'istruzione UPDATE CUBE è la seguente:  
@@ -111,6 +111,6 @@ USE_EQUAL_ALLOCATION
 -   Modifica della granularità di una dimensione inclusa nel writeback.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica di dati & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Modifica dei dati &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

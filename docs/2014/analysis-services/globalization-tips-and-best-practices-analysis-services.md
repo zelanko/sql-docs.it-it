@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730818"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
@@ -69,7 +69,7 @@ ms.locfileid: "53357314"
   
      In Cina e a Singapore, il supporto tecnico Microsoft tende a usare il cinese semplificato con il pinyin come criterio di ordinamento preferito. Le regole di confronto consigliate sono Chinese_PRC (per SQL Server 2000), Chinese_PRC_90 (per SQL Server 2005) o Chinese_Simplified_Pinyin_100 (per SQL Server 2008 e versioni successive).  
   
-     A Taiwan, è più comune usare il cinese tradizionale e il criterio di ordinamento consigliato è basato sul numero dei tratti: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
+     Taiwan è più comune per visualizzare il cinese tradizionale con l'ordinamento consigliato è basato sul numero: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
   
      Anche altre aree, ad esempio Hong Kong e Macao, usano il cinese tradizionale. Per le regole di confronto, a Hong Kong non è insolito usare Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005). A Macao viene usato abbastanza spesso Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 e versioni successive).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "53357314"
   
 3.  **Usare i formati di data ISO per informazioni di data e ora universali**  
   
-     Uno [esperto di Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) consiglia: "Io uso sempre il formato di data ISO aaaa-mm-gg per tutte le stringhe di data che passo nelle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del server o del client. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
+     Uno [esperto di Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) consiglia: "Usare sempre il ISO Data formato aaaa-mm-gg per tutte le stringhe di data che passo nelle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del server o client. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

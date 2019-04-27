@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8baaed268e01c9335484bab411c87afb17b482b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747213"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Seleziona tabella (vista Grafico accuratezza modello di data mining)
   Utilizzare la finestra di dialogo **Seleziona tabella** per specificare una tabella da utilizzare per il test dei modelli di data mining contenuti nella struttura di data mining selezionata.  
@@ -35,6 +35,6 @@ ms.locfileid: "48140191"
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test e convalida &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

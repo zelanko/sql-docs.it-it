@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740281"
 ---
 # <a name="hierarchy-object-ado-md"></a>Oggetto Hierarchy (ADO MD)
 Rappresenta uno dei modi in cui i membri di un [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) può essere aggregata o "raggruppate". Una dimensione può essere aggregata una o più gerarchie.  
@@ -39,13 +39,13 @@ Rappresenta uno dei modi in cui i membri di un [dimensione](../../../ado/referen
   
  Il **proprietà** raccolta contiene le proprietà specifiche del provider. La tabella seguente elenca le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione per il provider per un elenco completo delle proprietà disponibili.  
   
-|nome|Description|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |AllMember|Il membro al livello massimo di rollup nella gerarchia.|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  
 |DefaultMember|Nome univoco del membro predefinito per questa gerarchia.|  
-|Description|Una descrizione significativa della gerarchia.|  
+|Descrizione|Una descrizione significativa della gerarchia.|  
 |DimensionType|Tipo di dimensione a cui appartiene questa gerarchia.|  
 |DimensionUniqueName|Nome univoco della dimensione.|  
 |HierarchyCaption|Etichetta o didascalia associata alla gerarchia.|  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 677edade776d0c8f845c2d9d31070d27a777c11c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646109"
 ---
 # <a name="pathname-property-wmi-msreportserverconfigurationsetting"></a>Proprietà PathName (MSReportServer_ConfigurationSetting WMI)
   Specifica il percorso di installazione di un'istanza del server di report. Di sola lettura.  

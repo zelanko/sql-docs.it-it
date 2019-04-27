@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730383"
 ---
 # <a name="import-data-ssas-tabular"></a>Importare dati (SSAS tabulare)
   È possibile importare dati in un modello tabulare da diverse origini. Negli argomenti contenuti in questa sezione viene descritto come utilizzare l'Importazione guidata dati in Progettazione modelli per connettersi ai dati e selezionare quelli da importare in un progetto di modello.  
@@ -37,12 +37,12 @@ ms.locfileid: "48145994"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Importare da un'origine dati relazionale &#40;tabulare di SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Viene descritto come importare dati da origini dati relazionali quali un database di Microsoft SQL Server, Oracle o Teradata.|  
 |[Importa da un'origine dati multidimensionale &#40;tabulare di SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Viene descritto come importare dati da un cubo multidimensionale di SQL Server Analysis Services.|  
 |[Importare da un Feed di dati &#40;tabulare di SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Viene descritto come importare dati da un feed di dati quale un report di Microsoft Reporting Services o un set di dati di Azure DataMarket.|  
 |[Importa da un File di testo &#40;tabulare di SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Viene descritto come importare dati da una cartella di lavoro di Microsoft Excel o da un file di testo.|  
-|[Copiare e incollare i dati &#40;tabulare di SSAS&#41;](copy-and-paste-data-ssas-tabular.md)|Viene descritto come aggiungere dati a una tabella esistente in Progettazione modelli tramite Incolla e Accoda il contenuto degli Appunti.|  
+|[Copiare e incollare dati &#40;SSAS tabulare&#41;](copy-and-paste-data-ssas-tabular.md)|Viene descritto come aggiungere dati a una tabella esistente in Progettazione modelli tramite Incolla e Accoda il contenuto degli Appunti.|  
   
   

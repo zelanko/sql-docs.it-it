@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664405"
 ---
 # <a name="browsing-an-association-rules-model"></a>Esplorazione di un modello Association Rules
   Quando si apre un modello di associazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore Microsoft Association Rules in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  Il visualizzatore consente di visualizzare immediatamente gli elementi correlati l'uno con l'altro e le regole che è possibile utilizzare per la stima o creare indicazioni.  
@@ -149,9 +149,9 @@ ms.locfileid: "52537180"
   
  Se si desidera impostare parametri avanzati o alter probabilità minima e il supporto, usare il [associare guidata &#40;Client di Data Mining per Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) procedura guidata, o creare il proprio modello utilizzando la [aggiunta modello a Struttura &#40;aggiuntivi di Data Mining per Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opzione di modellazione.  
   
--   **Set di elementi:** Durante la creazione del modello è inoltre possibile stabilire il numero di set di elementi generati tramite l'assegnazione di un valore specifico al parametro MINIMUM_PROBABILITY. Questo parametro è disponibile nella finestra di dialogo parametri algoritmo.  
+-   **Set di elementi:** Quando si crea il modello, è anche possibile controllare il numero di set di elementi generati tramite l'assegnazione di un valore al parametro MINIMUM_PROBABILITY. Questo parametro è disponibile nella finestra di dialogo parametri algoritmo.  
   
--   **Regole:** L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules utilizza i valori di probabilità per limitare il numero di regole generate. È possibile controllare il numero di regole impostando i parametri `MINIMUM_PROBABILITY` o `MINIMUM _IMPORTANCE`.  
+-   **Regole:** Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Microsoft Association Rules utilizza i valori di probabilità per limitare il numero di regole generate. È possibile controllare il numero di regole impostando i parametri `MINIMUM_PROBABILITY` o `MINIMUM _IMPORTANCE`.  
   
  Per altre informazioni sulla configurazione dei parametri avanzati, vedere [algoritmi di Data Mining &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

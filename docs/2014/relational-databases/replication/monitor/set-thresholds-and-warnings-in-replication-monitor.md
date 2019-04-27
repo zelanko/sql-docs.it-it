@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667184"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
   In Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
@@ -61,7 +61,7 @@ ms.locfileid: "52781193"
   
 2.  Fare clic sulla scheda **Avvisi** . Per visualizzare ulteriori informazioni sulle opzioni di questa scheda, fare clic su **?** sulla barra dei menu.  
   
-3.  Abilitare un avviso selezionando la casella di controllo appropriata tra **Avvisa se una sottoscrizione scade entro il valore soglia** oppure **Avvisa se la latenza supera la soglia**.  
+3.  Abilitare un avviso selezionando la casella di controllo appropriata tra **Avvisa se una sottoscrizione scade entro il valore soglia** e **Avvisa se la latenza supera il valore soglia**.  
   
 4.  Impostare una soglia per gli avvisi nella colonna **Soglia** . Se, ad esempio, nel passaggio 3 è stata selezionata la casella di controllo **Avvisa se la latenza supera il valore soglia** , è possibile impostare una latenza di **60 secondi** nella colonna **Soglia** .  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736082"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "52508536"
 |9|Statistiche|Indica un valore numerico che rappresenta una statistica per un regressore.|  
 |10|Nome univoco nodo|Indica che il valore non deve essere gestito come valore numerico o stringa, ma come l'identificatore univoco di un altro nodo di contenuto del modello.<br /><br /> In un modello di rete neurale, ad esempio, gli ID forniscono puntatori dai nodi presenti nel livello di output ai nodi nel livello nascosto, e dai nodi presenti nel livello nascosto ai nodi nel livello di input.|  
 |11|Intercetta|Indica un valore numerico che rappresenta l'intercetta in una formula di regressione.|  
-|12|Periodicità|Indica che il valore denota una struttura periodica nel modello.<br /><br /> Si applica solo a modelli Time Series che contengono un modello ARIMA.<br /><br /> Nota: L'algoritmo Microsoft Time Series rileva automaticamente le strutture periodiche basate sui dati di training; pertanto le periodicità del modello finale possono includere valori di periodicità che non sono stati forniti come parametri durante la creazione del modello.|  
+|12|Periodicità|Indica che il valore denota una struttura periodica nel modello.<br /><br /> Si applica solo a modelli Time Series che contengono un modello ARIMA.<br /><br /> Nota: L'algoritmo Microsoft Time Series rileva automaticamente le strutture periodiche basate sui dati di training. pertanto le periodicità del modello finale possono includere valori di periodicità che non sono stati forniti come parametri durante la creazione del modello.|  
 |13|Ordine autoregressivo|Indica che il valore rappresenta il numero di serie autoregressive.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |14|Ordine media mobile|Rappresenta un valore che indica il numero di medie mobili in una serie.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |15|Ordine delle differenze|Rappresenta un valore che indica il numero di volte in cui viene differenziata la serie.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  

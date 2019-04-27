@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737537"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori relazionali nelle query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "56030644"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Specificare un operatore relazionale nella query XPath e utilizzare una funzione booleana per confrontare il risultato  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Specificare un operatore relazionale nella query XPath e utilizzare una funzione booleana per confrontare il risultato  
  Questa query restituisce tutti i  **\<ordine >** figli del nodo di contesto che includono un' **SalesPersonID** attributo valore inferiore a 270:  
   
 ```  
@@ -95,7 +95,7 @@ ms.locfileid: "56030644"
 ```  
   
 > [!NOTE]  
->  Quando viene specificata questa query in un modello, il carattere < deve essere codificato come entità perché ha un significato speciale in un documento XML. In un modello utilizzare `<` per specificare il carattere <.  
+>  Quando viene specificata questa query in un modello, la < carattere deve essere codificato come entità perché il < carattere ha un significato speciale in un documento XML. In un modello, usare `<` per specificare il < carattere.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   

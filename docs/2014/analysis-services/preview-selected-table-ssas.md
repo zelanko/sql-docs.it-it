@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0148a2997d1b0c90873be41981459ea33e845c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748754"
 ---
 # <a name="preview-selected-table-ssas"></a>Anteprima tabella selezionata (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di visualizzare in anteprima i dati nella tabella selezionata, selezionare le colonne da includere nell'importazione dei dati e filtrare i dati nelle colonne selezionate. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

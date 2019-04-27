@@ -59,16 +59,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746833"
 ---
 # <a name="data-mining-properties"></a>Proprietà di data mining
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà di data mining del server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Si applica a:** solo in modalità server multidimensionale  
+ **Si applica a:** Solo in modalità server multidimensionale  
   
 ## <a name="non-specific-category"></a>Categoria Non-Specific  
  `AllowSessionMiningModels`  
@@ -119,7 +119,7 @@ ms.locfileid: "48224391"
 >  Oltre alle proprietà che definiscono i servizi data mining disponibili nel server, esistono proprietà di data mining che definiscono il comportamento di algoritmi specifici. Configurare tali proprietà quando si crea un modello di data mining singolo, non a livello di server. Per altre informazioni, vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura fisica &#40;Analysis Services - Data Mining&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

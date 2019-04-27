@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4185751f0aded344577acb6206f259debdb37642
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831455"
 ---
 # <a name="copy-project-items"></a>Copia di elementi di progetto
   Questo argomento descrive come copiare gli oggetti all'interno di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o tra progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È anche possibile copiare oggetti tra gli altri tipi di progetti di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per copiare tra progetti, il progetto deve far parte della stessa soluzione di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Progetti di Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md).  

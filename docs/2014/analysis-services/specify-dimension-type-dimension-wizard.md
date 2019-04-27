@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746733"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Impostazione tipo di dimensione (Creazione guidata dimensione)
   Usare la pagina **Impostazione tipo di dimensione** per definire il tipo di dimensione e aggiungere alla dimensione i tipi di attributo speciali associati al tipo di dimensione selezionato.  
@@ -30,7 +30,7 @@ ms.locfileid: "50145586"
  **Tipo di dimensione**  
  Consente di selezionare il tipo di dimensione. Nella tabella seguente vengono descritti i tipi di dimensione disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Accounts**|Le dimensioni di tipo Conti contengono dati e metadati che rappresentano un elenco di conti.<br /><br /> Per altre informazioni sulle dimensioni di tipo Conti, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Le dimensioni di tipo Distinta base sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni di inventario o di produzione, ad esempio elenchi di parti per i prodotti.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -38,7 +38,7 @@ ms.locfileid: "50145586"
 |**Currency**|Le dimensioni di tipo Valuta contengono dati e metadati che rappresentano informazioni di valuta.<br /><br /> Per altre informazioni sulle dimensioni di tipo Valuta, vedere [Creare una dimensione di tipo Valuta](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
 |**Customers**|Le dimensioni di tipo Customer sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni di cliente o di contatto.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Geography**|Le dimensioni di tipo Geography sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni geografiche, ad esempio città o CAP.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Organizzazione**|Le dimensioni di tipo Organization sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni sull'organizzazione, ad esempio dipendenti o filiali.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Organization**|Le dimensioni di tipo Organization sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni sull'organizzazione, ad esempio dipendenti o filiali.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Prodotti**|Le dimensioni di tipo Product sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni di prodotto.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Promotion**|Le dimensioni di tipo Promotion sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni promozionali di marketing.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Quantitative**|Le dimensioni di tipo Quantitative sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni quantitative.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -53,7 +53,7 @@ ms.locfileid: "50145586"
 > [!NOTE]  
 >  Le opzioni descritte in questa sezione diventano disponibili solo se il **Tipo dimensione** selezionato è associato a tipi di attributo speciali. Non tutti i tipi di dimensione sono associati a tipi di attributo speciali.  
   
- **includere**  
+ **Include**  
  Selezionare la casella di controllo per includere il tipo di attributo nella dimensione.  
   
  **Tipo di attributo**  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7396b5c5bf46abcbc60ac9e3a984fb2d7a7a2ee5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729397"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lezione 2: Definizione e distribuzione di un cubo
   Dopo aver definito una vista origine dati nel progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è possibile definire un cubo iniziale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

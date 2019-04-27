@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672524"
 ---
 # <a name="attribute-conformance"></a>Conformità dell'attributo
 Nella tabella seguente indica il livello di conformità di ogni attributo di ambiente ODBC, in cui si è ben definito.  
@@ -93,7 +93,7 @@ Nella tabella seguente indica il livello di conformità di ogni attributo di amb
 |SQL_ATTR_ROW_BIND_TYPE|Core|  
 |SQL_ATTR_ROW_NUMBER|Livello 1|  
 |SQL_ATTR_ROW_OPERATION_PTR|Livello 1|  
-|VENGONO IMPOSTATI SQL_ATTR_ROW_STATUS_PTR|Core|  
+|SQL_ATTR_ROW_STATUS_PTR|Core|  
 |SQL_ATTR_ROWS_FETCHED_PTR|Core|  
 |SQL_ATTR_SIMULATE_CURSOR|Livello 2|  
 |SQL_ATTR_USE_BOOKMARKS|Livello 2|  

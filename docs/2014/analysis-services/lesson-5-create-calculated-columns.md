@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728645"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lezione 6: Creare colonne calcolate
   In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per altre informazioni, vedere [Colonne calcolate &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "48134042"
  Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 5: Creare relazioni](lesson-4-create-relationships.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 5: Creare relazioni](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Creare colonne calcolate  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134042"
      I valori vengono quindi popolati per tutte le righe nella colonna calcolata. Scorrendo la tabella verso il basso, si vedrà che le righe possono avere valori diversi per questa colonna, in base ai dati presenti in ogni riga.  
   
     > [!NOTE]  
-    >  Se viene visualizzato un errore, verificare che i nomi di colonna nella formula corrispondano ai nomi di colonna modificati in [Lezione 3: Rinominare colonne](rename-columns.md).  
+    >  Se si riceve un errore, verificare i nomi di colonna nella formula corrispondano ai nomi di colonna modificati in [lezione 3: Rinominare le colonne](rename-columns.md).  
   
 5.  Rinominare la colonna `Month Calendar`.  
   

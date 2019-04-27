@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774535"
 ---
 # <a name="manage-checkouts"></a>Gestione delle estrazioni
   Dopo aver aggiunto un file al controllo del codice sorgente, prima di poterlo modificare è necessario estrarlo. Quando un file viene estratto dal controllo del codice sorgente, il provider del controllo del codice sorgente crea una copia dell'ultima versione sul disco locale e rimuove l'attributo di sola lettura del file. In alcuni casi potrebbe essere necessario modificare un file senza estrarlo. Per altre informazioni sulla modifica di un file senza estrarlo, vedere [modifica di file](../../2014/database-engine/edit-checked-in-files.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48183786"
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Estrazione di file](../../2014/database-engine/check-out-files.md)|Vengono fornite istruzioni su come estrarre un file per poterlo modificare.|  
 |[Annullare estrazioni](../../2014/database-engine/undo-checkouts.md)|Viene spiegato come annullare un'estrazione esistente.|  

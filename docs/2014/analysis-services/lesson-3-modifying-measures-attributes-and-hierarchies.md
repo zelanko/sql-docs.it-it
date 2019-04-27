@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729357"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lezione 3: Modifica le misure, attributi e gerarchie
   Dopo aver definito il cubo iniziale, è possibile rendere il cubo maggiormente utile e semplice. A tale scopo, aggiungere le gerarchie che supportano la navigazione e l'aggregazione a vari livelli, applicare formati a una misura specifica e definire calcoli e relazioni.  

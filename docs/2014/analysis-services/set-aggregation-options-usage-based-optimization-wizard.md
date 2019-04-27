@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746643"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Impostazione opzioni di aggregazione (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Usare la pagina **Impostazione opzioni di aggregazione** per avviare il processo di progettazione delle aggregazioni e specificare i limiti di archiviazione o delle prestazioni per le aggregazioni generate tramite l'Ottimizzazione guidata basata sulle statistiche sull'uso.  

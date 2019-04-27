@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754243"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
   È necessario specificare un valore per il parametro `BUCKET_COUNT` durante la creazione della tabella ottimizzata per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  

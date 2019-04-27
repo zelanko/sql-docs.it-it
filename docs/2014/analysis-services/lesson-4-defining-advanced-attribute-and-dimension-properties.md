@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Definizione di Advanced attributo e proprietà dimensione | Microsoft Docs'
+title: 'Lezione 4: La definizione di Advanced attributo e proprietà dimensione | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728749"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione di attributo avanzato e proprietà dimensione
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: La definizione di attributo avanzato e proprietà dimensione
   In questa lezione verranno illustrate le procedure per l'utilizzo di alcune proprietà avanzate degli attributi, delle gerarchie degli attribuiti e delle proprietà delle dimensioni.  
   
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "48184071"
   
  In questa lezione sono incluse le attività seguenti:  
   
- [Uso di una versione modificata del progetto Analysis Services Tutorial](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
+ [Utilizzo di una versione modificata del progetto Analysis Services Tutorial](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  In questa attività vengono illustrate le procedure per aprire, controllare e distribuire una versione modificata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, con più gruppi di misure e dimensioni aggiuntive.  
   
  [Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  

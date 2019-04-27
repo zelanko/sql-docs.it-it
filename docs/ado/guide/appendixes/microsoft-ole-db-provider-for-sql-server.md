@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678669"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provider Microsoft OLE DB per la panoramica di SQL Server
 Il Provider Microsoft OLE DB per SQL Server, SQLOLEDB, consente di ADO per accedere a Microsoft SQL Server.
 
-**Nota:** non è consigliabile usare il driver per i nuovi sviluppi. Viene chiamato il nuovo provider OLE DB di [Driver Microsoft OLE DB per SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti in futuro.
+**NOTA:**  Non è consigliabile usare il driver per i nuovi sviluppi. Viene chiamato il nuovo provider OLE DB di [Driver Microsoft OLE DB per SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti in futuro.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
  Per connettersi a questo provider, impostare il *Provider* argomento per il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  La stringa è costituita da queste parole chiave:
 
-|Parola chiave|Description|
+|Parola chiave|Descrizione|
 |-------------|-----------------|
 |**Provider**|Specifica il Provider OLE DB per SQL Server.|
 |**Zdroj dat** o **Server**|Specifica il nome di un server.|
@@ -61,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifica del provider
  Il provider supporta vari parametri di connessione specifica del provider oltre a quelli definiti da ADO. Come con le proprietà di connessione ADO, è possibile impostare queste proprietà specifiche del provider tramite il [delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) o può essere impostato come parte del **ConnectionString**.
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |Trusted_Connection|Indica la modalità di autenticazione utente. Può essere impostata su **Yes** oppure **No**. Il valore predefinito è **No**. Se questa proprietà è impostata su **Yes**, SQLOLEDB Usa la modalità di autenticazione di Microsoft Windows NT per autorizzare l'accesso utente al database di SQL Server specificato dal **posizione** e [Datasource ](../../../ado/reference/ado-api/datasource-property-ado.md) i valori delle proprietà. Se questa proprietà è impostata su **No**, SQLOLEDB Usa la modalità mista per autorizzare l'accesso utente al database di SQL Server. L'account di accesso di SQL Server e la password vengono specificati nel **Id utente** e **Password** proprietà.|
 |Lingua corrente|Indica un nome di lingua di SQL Server. Identifica la lingua utilizzata per la selezione e la formattazione dei messaggi di sistema. Il linguaggio deve essere installato in SQL Server, in caso contrario, apertura della connessione avrà esito negativo.|
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Il Provider Microsoft OLE DB per SQL Server inserisce diverse proprietà dinamiche nel **delle proprietà** raccolta di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [ Comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti.
 
- Le tabelle seguenti sono un incrociato dei nomi per ogni proprietà dinamica ADO e OLE DB. Riferimento dei programmatori OLE DB è relativo a un nome di proprietà di ADO con il termine "Description". È possibile trovare altre informazioni su queste proprietà in riferimento OLE DB Programmer. Cercare il nome della proprietà OLE DB in corrispondenza dell'indice oppure vedere [appendice c: OLE DB proprietà](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Le tabelle seguenti sono un incrociato dei nomi per ogni proprietà dinamica ADO e OLE DB. Riferimento dei programmatori OLE DB è relativo a un nome di proprietà di ADO con il termine "Description". È possibile trovare altre informazioni su queste proprietà in riferimento OLE DB Programmer. Cercare il nome della proprietà OLE DB nell'indice o vedere [appendice c: Proprietà OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Proprietà dinamiche di connessione
  Le proprietà seguenti vengono aggiunti per il **le proprietà** insieme del **connessione** oggetto.

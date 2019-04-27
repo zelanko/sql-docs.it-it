@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663787"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose - classe di evento
   Gli eventi di chiusura del cursore vengono generati quando un cursore viene chiuso e deallocato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La classe di evento **CursorClose** descrive gli eventi di chiusura del cursore che si verificano nei cursori API e viene generata quando viene chiusa un'istruzione di cursore [!INCLUDE[tsql](../../includes/tsql-md.md)] di ODBC, OLE DB o DB-Library.  
@@ -35,7 +35,7 @@ ms.locfileid: "52770553"
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |**EventClass**|**int**|Tipo di evento registrato = 78.|27|No|  
-|**EventSequence**|**int**|Sequenza della classe di evento **CursorClose** nel batch.|51|No|  
+|**EventSequence**|**int**|Sequenza della classe di evento **CursorClose** nel batch.|51|no|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |**Handle**|**int**|Handle dell'oggetto a cui si fa riferimento nell'evento.|33|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

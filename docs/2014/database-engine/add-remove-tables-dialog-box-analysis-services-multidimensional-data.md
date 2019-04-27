@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792133"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo di aggiungere e rimuovere le tabelle (Analysis Services - dati multidimensionali)
   Per aggiungere o rimuovere tabelle di un'origine dati in una vista origine dati usare la finestra di dialogo **Aggiungi/Rimuovi tabelle** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per visualizzare la finestra di dialogo **Aggiungi/Rimuovi tabelle** è possibile:  
@@ -54,6 +54,6 @@ ms.locfileid: "48200421"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Progettazione vista origine dati &#40;Analysis Services - dati multidimensionali&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

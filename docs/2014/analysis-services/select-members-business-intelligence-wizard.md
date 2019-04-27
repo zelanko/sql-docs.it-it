@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747514"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Selezione membri (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Selezione membri** per determinare i membri ai quali, durante la Configurazione guidata funzionalità di Business Intelligence, dovrà essere applicata la funzionalità di conversione valuta specificata nella pagina **Impostazione opzioni di conversione valuta** .  
@@ -32,7 +32,7 @@ ms.locfileid: "48105145"
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Tipi di misure predefiniti**|Consente di includere la funzionalità di conversione valuta per la misura specificata.|  
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da usare quando la misura selezionata in **Tipi di misure predefiniti** viene convertita.|  
@@ -42,23 +42,23 @@ ms.locfileid: "48105145"
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Membro conto**|Consente di includere la funzionalità di conversione valuta per il membro della gerarchia conto specificato.|  
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da utilizzare quando le misure per il membro selezionato in **Membro conto** vengono convertite.|  
   
  **Gerarchia conto basata sul tipo**  
- Selezionare questa opzione per applicare la funzionalità di conversione valuta a tutti i membri di attributi inclusi nella gerarchia conto cui `Type` è impostata su un tipo di account specificato.  
+ Consente di applicare la funzionalità di conversione valuta a tutti i membri di attributi inclusi nella gerarchia conto la cui proprietà `Type` è impostata su un tipo di conto specificato.  
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Tipo di account**|Consente di includere la funzionalità di conversione valuta per il tipo di conto specificato.|  
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da utilizzare quando le misure per i membri degli attributi che utilizzano il tipo di conto selezionato in **Tipo conto** vengono convertite.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

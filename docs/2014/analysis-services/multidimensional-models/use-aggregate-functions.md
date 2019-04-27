@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740731"
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
   Quando una dimensione viene usata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è `Sum`. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
   
  In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione predefiniti includono `Sum`, `Min`, `Max`, `Count`, **Distinct Count**e diverse altre funzioni più specialistiche. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- Le misure create tramite la Creazione guidata cubo vengono assegnate a un tipo di aggregazione come parte della definizione della misura. Il tipo di aggregazione è sempre `Sum`, supponendo che la colonna di origine contenga dati numerici. `Sum` viene assegnato a prescindere dal tipo di dati della colonna di origine. Se ad esempio si usa la Creazione guidata cubo per creare misure, e si inseriscono tutte le colonne di una tabella dei fatti, si noterà che tutte le misure risultanti presentano un'aggregazione di `Sum`, anche se l'origine è una colonna data e ora. Controllare sempre i metodi di aggregazione pre-assegnati per le misure create tramite la procedura guidata, per assicurarsi che la funzione di aggregazione sia adatta.  
+ Le misure create tramite la Creazione guidata cubo vengono assegnate a un tipo di aggregazione come parte della definizione della misura. Il tipo di aggregazione è sempre `Sum`, supponendo che la colonna di origine contenga dati numerici. `Sum`viene assegnato a prescindere dal tipo di dati della colonna di origine. Se ad esempio si usa la Creazione guidata cubo per creare misure, e si inseriscono tutte le colonne di una tabella dei fatti, si noterà che tutte le misure risultanti presentano un'aggregazione di `Sum`, anche se l'origine è una colonna data e ora. Controllare sempre i metodi di aggregazione pre-assegnati per le misure create tramite la procedura guidata, per assicurarsi che la funzione di aggregazione sia adatta.  
   
  È possibile assegnare o modificare il metodo di aggregazione sia nella definizione del cubo, tramite [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], sia tramite MDX. Per altre istruzioni, vedere [Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md) o [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48199577"
 |`Max`|Semiadditive|Recupera il valore massimo per tutti i membri figlio.|  
 |`DistinctCount`|Nonadditive|Recupera il numero di tutti i membri figlio univoci. Per altri dettagli, vedere [Informazioni sulle misure Distinct Count](use-aggregate-functions.md#bkmk_distinct) nella sezione successiva.|  
 |`None`|Nonadditive|Non viene eseguita alcuna aggregazione e tutti i valori per i membri foglia e non foglia in una dimensione vengono specificati direttamente dalla tabella dei fatti per il gruppo di misure contenente la misura. Se non è possibile leggere alcun valore dalla tabella dei fatti per un membro, il valore per il membro è impostato su Null.|  
-|`ByAccount`|Semiadditive|Calcola l'aggregazione in base alla funzione di aggregazione assegnata al tipo di conto per un membro in una dimensione di tipo Conti. Se è presente alcuna dimensione di tipo di account nel gruppo di misure, considerato come il `None` funzione di aggregazione.<br /><br /> Per altre informazioni sulle dimensioni di tipo Conti, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](database-dimensions-finance-account-of-parent-child-type.md).|  
+|`ByAccount`|Semiadditive|Calcola l'aggregazione in base alla funzione di aggregazione assegnata al tipo di conto per un membro in una dimensione di tipo Conti. Se nel gruppo di misure non è presente alcuna dimensione di tipo Conti, deve essere considerata come la funzione di aggregazione `None`.<br /><br /> Per altre informazioni sulle dimensioni di tipo Conti, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](database-dimensions-finance-account-of-parent-child-type.md).|  
 |`AverageOfChildren`|Semiadditive|Calcola la media dei valori per tutti i membri figlio non vuoti.|  
 |`FirstChild`|Semiadditive|Recupera il valore del primo membro figlio.|  
 |`LastChild`|Semiadditive|Recupera il valore dell'ultimo membro figlio.|  
@@ -68,8 +68,8 @@ ms.locfileid: "48199577"
  Una misura Distinct Count con conteggio dei membri è basata su una colonna chiave esterna nella tabella dei fatti, identificata dalla proprietà **Colonna di origine** della misura. Questa colonna viene unita in join alla colonna della tabella della dimensione che identifica i membri conteggiati mediante la misura Distinct Count.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le misure e gruppi di misure](measures-and-measure-groups.md)   
- [Riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Misure e gruppi di misure](measures-and-measure-groups.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [Definire una funzione semiadditiva](define-semiadditive-behavior.md)  
   
   

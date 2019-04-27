@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748363"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Oggetti relazionali (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Oggetti relazionali** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare tabelle, viste o altri oggetti di un'origine dati in cui si desidera impostare la memorizzazione nella cache attiva. Per visualizzare questa finestra di dialogo di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile fare clic sul pulsante con i punti di sospensione (**...**) per una delle opzioni disponibili in **Specifica tabelle di rilevamento** della scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** .  

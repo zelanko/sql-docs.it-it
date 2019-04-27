@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780986"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Procedure per la gestione di colonne di tipo text e image (ODBC)
   Il driver ODBC di Microsoft® SQL Server supporta l'utilizzo dei parametri text e image e il recupero dei dati dalle colonne di tipo text, ntext e image nei set di risultati.  

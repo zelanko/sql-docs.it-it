@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774416"
 ---
 # <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
   Oltre alle tabelle ottimizzate per la memoria per l'accesso efficiente ai dati e alle stored procedure compilate in modo nativo per l'elaborazione efficiente delle query e l'esecuzione della logica di business, [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduce un terzo tipo di oggetto: il tipo di tabella ottimizzata per la memoria. Una variabile di tabella creata utilizzando un tipo di tabella ottimizzata per la memoria è una variabile di tabella ottimizzata per la memoria.  
@@ -36,7 +36,7 @@ ms.locfileid: "58530743"
   
 -   Le variabili di tabella possono essere utilizzate per simulare i cursori in stored procedure compilate in modo nativo, con cui è possibile risolvere le limitazioni della superficie di attacco in stored procedure compilate in modo nativo.  
   
- Come per le tabelle ottimizzate per la memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera una DLL per ogni tipo di tabella ottimizzata per la memoria. La compilazione viene richiamata quando il tipo di tabella ottimizzata per la memoria viene creato, non quando viene utilizzato per creare variabili di tabella ottimizzata per la memoria. La DLL include le funzioni per accedere agli indici e recuperare dati dalle variabili di tabella. Quando una variabile di tabella ottimizzata per la memoria viene dichiarata in base al tipo di tabella, nella sessione utente viene creata un'istanza delle strutture di indice e della tabella corrispondenti al tipo di tabella. La variabile di tabella può quindi essere utilizzata in modo analogo alle variabili di tabella basata su disco. È possibile inserire, aggiornare ed eliminare righe nella variabile di tabella, nonché utilizzare le variabili nelle query di [!INCLUDE[tsql](../includes/tsql-md.md)] . È inoltre possibile passare le variabili alle stored procedure compilate in modo nativo e interpretate, come parametri con valori di tabella.  
+ Come per le tabelle ottimizzate per la memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera una DLL per ogni tipo di tabella ottimizzata per la memoria. (La compilazione viene richiamata quando viene creato il tipo di tabella con ottimizzazione per la memoria e non quando viene utilizzato per creare le variabili di tabella con ottimizzazione per la memoria). La DLL include le funzioni per l'accesso a indici e il recupero dei dati dalle variabili di tabella. Quando una variabile di tabella ottimizzata per la memoria viene dichiarata in base al tipo di tabella, nella sessione utente viene creata un'istanza delle strutture di indice e della tabella corrispondenti al tipo di tabella. La variabile di tabella può quindi essere utilizzata in modo analogo alle variabili di tabella basata su disco. È possibile inserire, aggiornare ed eliminare righe nella variabile di tabella, nonché utilizzare le variabili nelle query di [!INCLUDE[tsql](../includes/tsql-md.md)] . È inoltre possibile passare le variabili alle stored procedure compilate in modo nativo e interpretate, come parametri con valori di tabella.  
   
  L'esempio seguente viene illustrato un tipo di tabella con ottimizzazione per la memoria dall'esempio basato su AdventureWorks OLTP In memoria ([esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67b7e72e0c4b248e8951667561eaf7548bfba1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778856"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Proprietà indice full-text (pagina Colonne)
   **Per visualizzare o modificare le proprietà di un indice full-text**  
@@ -42,6 +42,6 @@ ms.locfileid: "48141641"
 |**Semantica statistica**|Consente di selezionare se abilitare l'indicizzazione semantica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica** e alla lingua selezionata non è associato alcun modello di lingua semantico, la casella di controllo **Semantica statistica** è disabilitata. Se si seleziona **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella casella combinata a discesa saranno limitate a quelle per cui è disponibile un modello di lingua semantico.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Popolare gli indici full-text](../relational-databases/search/populate-full-text-indexes.md)  
+ [Popolamento degli indici full-text](../relational-databases/search/populate-full-text-indexes.md)  
   
   

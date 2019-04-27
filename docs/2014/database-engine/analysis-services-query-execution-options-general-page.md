@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5da62b03c3bbda0d17be404ccf0e96bfa712b64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791826"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Opzioni di esecuzione di Query di Analysis Services (pagina Generale)
   Utilizzare questa pagina per specificare le opzioni di visualizzazione dei risultati di una query di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

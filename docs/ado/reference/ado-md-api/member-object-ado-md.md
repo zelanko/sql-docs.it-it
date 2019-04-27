@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740081"
 ---
 # <a name="member-object-ado-md"></a>Oggetto Member (ADO MD)
 Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un set di celle.  
@@ -29,7 +29,7 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
 ## <a name="remarks"></a>Note  
  Le proprietà di un **membro** differiscono a seconda del contesto in cui viene utilizzata. A **membro** di un [a livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) in un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ha un [figli](../../../ado/reference/ado-md-api/children-property-ado-md.md) proprietà che restituisce il **membri** su il livello inferiore successivo della gerarchia dal corrente **membro**. Per un **membro** di un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md), il **figli** raccolta è sempre vuota. Inoltre, il [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) proprietà si applica solo a **membri** di un **livello**.  
   
- Oggetto **membro** dei **posizione** ha due proprietà che sono utili quando si visualizza il [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Si verifica un errore se si accede a queste proprietà su un **membro** di un **livello**.  
+ Oggetto **membro** di **posizione** ha due proprietà che sono utili quando si visualizzano i [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Si verifica un errore se si accede a queste proprietà su un **membro** di un **livello**.  
   
  Con le raccolte e le proprietà di un **membro** oggetto di un **livello**, è possibile eseguire le operazioni seguenti:  
   
@@ -69,12 +69,12 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
   
  Il **proprietà** raccolta contiene le proprietà specifiche del provider. La tabella seguente elenca le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione per il provider per un elenco completo delle proprietà disponibili.  
   
-|nome|Description|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |ChildrenCardinality|Numero di elementi figlio del membro.|  
 |CubeName|Nome del cubo.|  
-|Description|Una descrizione significativa del membro.|  
+|Descrizione|Una descrizione significativa del membro.|  
 |DimensionUniqueName|Nome univoco della [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Nome univoco della gerarchia.|  
 |LevelNumber|La distanza tra il livello e la radice della gerarchia.|  
@@ -83,8 +83,8 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
 |MemberGUID|GUID del membro.|  
 |MemberName|Nome del membro.|  
 |MemberOrdinal|Il numero ordinale del membro.|  
-|Tipo di membro|Tipo del membro.|  
-|MemberUniqueName + + +|Nome univoco del membro.|  
+|MemberType|Tipo del membro.|  
+|MemberUniqueName|Nome univoco del membro.|  
 |ParentCount|Il conteggio del numero di elementi padre con questo membro.|  
 |ParentLevel|Il numero del livello dell'elemento padre del membro.|  
 |ParentUniqueName|Nome univoco del padre membro.|  

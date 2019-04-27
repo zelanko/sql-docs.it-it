@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664257"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence
   Utilizzare questa procedura guidata per definire le funzionalità di Business Intelligence ed impostare le opzioni avanzate di cubi e dimensioni. La procedura guidata consente di impostare proprietà di oggetti esistenti, creare nuovi oggetti e generare script MDX (Multidimensional Expression) per offrire, ad esempio, funzionalità di Business Intelligence per le dimensioni e di conversione di valuta.  
@@ -45,7 +45,7 @@ ms.locfileid: "48079124"
   
  Dopo aver ottimizzato un cubo o una dimensione mediante Configurazione guidata funzionalità di Business Intelligence, è possibile utilizzare gli strumenti Progettazione cubi, Progettazione dimensioni o Configurazione guidata funzionalità di Business Intelligence per modificare le rispettive proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Scelta funzionalità avanzata &#40;configurazione guidata Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
   

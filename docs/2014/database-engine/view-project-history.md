@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773497"
 ---
 # <a name="view-project-history"></a>Visualizzare cronologia progetti
   Nella cronologia di un progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) è incluso un elenco di tutte le azioni eseguite su ognuno dei file del progetto, ad esempio la creazione, l'aggiunta, l'eliminazione e il recupero di file.  

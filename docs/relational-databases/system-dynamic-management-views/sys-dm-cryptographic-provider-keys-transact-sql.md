@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d83a1a60162ba0124b8ff379f241b6bd64e89675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742020"
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Numero di identificazione della chiave nel provider.|  
 |**key_name**|**nvarchar(512)**|Nome della chiave nel provider.|  
@@ -54,7 +54,7 @@ dm_cryptographic_provider_keys ( provider_id )
 |**algorithm_id**|**int**|Numero di identificazione dell'algoritmo nel provider.|  
 |**algorithm_tag**|**int**|Tag dell'algoritmo nel provider.|  
 |**key_type**|**nchar(256)**|Tipo di chiave nel provider.|  
-|**lunghezza_chiave**|**int**|Lunghezza della chiave nel provider.|  
+|**key_length**|**int**|Lunghezza della chiave nel provider.|  
   
 ## <a name="permissions"></a>Permissions  
  Quando viene eseguita una query sulla vista, verrà autenticato il contesto utente con il provider e verranno enumerate tutte le chiavi visibili all'utente.  

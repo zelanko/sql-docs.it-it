@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792003"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la soluzione di ripristino di emergenza a disponibilità elevata introdotta in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], richiede WSFC (Windows Server Failover Clustering). Sebbene inoltre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipenda dal clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è possibile utilizzare un'istanza di clustering di failover per ospitare una replica di disponibilità per un gruppo di disponibilità. È importante conoscere la funzione di ogni tecnologia di clustering e sapere quali sono le considerazioni necessarie per la progettazione di un ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -120,7 +120,7 @@ ms.locfileid: "53352317"
   
 -   **White paper:**  
   
-     [Guida all'architettura AlwaysOn: Creazione di una disponibilità elevata e una soluzione di ripristino di emergenza usando istanze del Cluster di Failover e gruppi di disponibilità](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn Architecture Guide: compilazione di una soluzione a disponibilità elevata e con ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

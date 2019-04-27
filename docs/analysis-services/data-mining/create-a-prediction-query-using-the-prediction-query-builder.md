@@ -1,5 +1,5 @@
 ---
-title: Creare una Query di stima utilizzando Generatore di Query di stima | Documenti Microsoft
+title: Creare una Query di stima utilizzando Generatore Query di stima | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740201"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34014688"
   
 -   **Query**  
   
--   **Risultato**  
+-   **Result**  
   
  La modalità**Progettazione** consente di compilare una query di stima scegliendo dati di input, eseguendo il mapping dei dati al modello e aggiungendo quindi funzioni di stima in istruzioni compilate tramite la griglia. Nella griglia di progettazione sono presenti questi blocchi predefiniti:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34014688"
  **Alias**  
  Determina il nome della colonna nel set di risultati.  
   
- **Visualizza**  
+ **Mostra**  
  Determina se la selezione nella colonna **Origine** viene visualizzata o meno nei risultati.  
   
  **Gruppo**  
@@ -88,7 +88,7 @@ ms.locfileid: "34014688"
 8.  Eseguire la query facendo clic sul primo pulsante della barra degli strumenti della scheda **Stima modello di data mining** e quindi selezionando **Risultato**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una Query Singleton in Progettazione modelli di Data Mining](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Creare una query singleton in Progettazione modelli di data mining](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

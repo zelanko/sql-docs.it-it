@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c169795ceb4c16d7928a9cc55b9f9bc9b9917dda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730134"
 ---
 # <a name="connect-to-analysis-services"></a>Connetti ad Analysis Services
   In questa sezione sono contenute le informazioni sulle proprietà della stringa di connessione, sulle librerie client usate per le connessioni, quali metodi di autenticazione sono supportati da Analysis Services e come impostare o cancellare le connessioni prima di disconnettere un server.  
@@ -33,17 +33,17 @@ ms.locfileid: "48195247"
 |Collegamento|Descrizione dell'attività|  
 |----------|----------------------|  
 |[Connessione dalle applicazioni client &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Se non si ha familiarità con Analysis Services, leggere questo argomento per un'introduzione agli strumenti e alle applicazioni di uso più comune con Analysis Services.|  
-|[Proprietà della stringa di connessione &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services include numerose proprietà di server e database che consentono di personalizzare una connessione per un'applicazione specifica indipendentemente dalla configurazione dell'istanza o del database.|  
+|[Connection String Properties &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services include numerose proprietà di server e database che consentono di personalizzare una connessione per un'applicazione specifica indipendentemente dalla configurazione dell'istanza o del database.|  
 |[Metodologie di autenticazione supportate da Analysis Services](authentication-methodologies-supported-by-analysis-services.md)|Questo argomento offre una sintetica introduzione ai metodi di autenticazione utilizzati da Analysis Services.|  
 |[Configurare Analysis Services per la delega vincolata Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)|Per molte soluzioni di Business Intelligence è necessaria la rappresentazione per assicurare che a ogni utente vengano restituiti solo dati autorizzati. In questo argomento sono disponibili informazioni sull'utilizzo della rappresentazione. In questo argomento vengono inoltre descritti i passaggi per configurare Analysis Services per la delega vincolata Kerberos.|  
 |[Registrazione del nome SPN per un'istanza di Analysis Services](spn-registration-for-an-analysis-services-instance.md)|L'autenticazione Kerberos richiede un nome SPN valido per i servizi che rappresentano o delegano le identità utente in soluzioni multiserver. Utilizzare le informazioni contenute in questo argomento per apprendere la costruzione e i passaggi per la registrazione del nome SPN per Analysis Services.|  
 |[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|L'autenticazione di base e i limiti tra domini rappresentano due motivi importanti per configurare Analysis Services per l'accesso HTTP.|  
-|[Provider di dati utilizzati per le connessioni di Analysis Services](data-providers-used-for-analysis-services-connections.md)|Analysis Services offre tre librerie client per accedere alle operazioni server o ai dati di Analysis Services. Questo argomento offre una sintetica introduzione ad ADOMD.NET, agli oggetti di gestione di Analysis Services (AMO) e al provider OLE DB di Analysis Services (MSOLAP).|  
-|[Disconnettere utenti e sessioni nel Server Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Cancellare le connessioni e le sessioni esistenti prima di portare un server offline o eseguire test delle prestazioni di base.|  
+|[Provider di dati utilizzati per le connessioni ad Analysis Services](data-providers-used-for-analysis-services-connections.md)|Analysis Services offre tre librerie client per accedere alle operazioni server o ai dati di Analysis Services. Questo argomento offre una sintetica introduzione ad ADOMD.NET, agli oggetti di gestione di Analysis Services (AMO) e al provider OLE DB di Analysis Services (MSOLAP).|  
+|[Disconnettere utenti e sessioni sul server Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Cancellare le connessioni e le sessioni esistenti prima di portare un server offline o eseguire test delle prestazioni di base.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione successiva all'installazione &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
  [Configurare le proprietà del Server in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Lo script attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

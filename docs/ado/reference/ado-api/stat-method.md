@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740341"
 ---
 # <a name="stat-method"></a>Metodo Stat
 Recupera le informazioni su un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -43,7 +43,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Specifica che questo metodo non restituisce alcuni dei membri nella struttura STATSTG, risparmiando un'operazione di allocazione di memoria. I valori sono ricavati dall'enumerazione STATFLAG. L'enumerazione STATFLAG presenta due valori  
   
-|Costante|valore|  
+|Costante|Value|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  

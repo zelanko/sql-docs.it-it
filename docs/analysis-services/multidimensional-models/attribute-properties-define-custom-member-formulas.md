@@ -1,5 +1,5 @@
 ---
-title: Definire formule personalizzate membro | Documenti Microsoft
+title: Definire formule personalizzate membro | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666588"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>Attributo di proprietà: definire formule personalizzate membro
+# <a name="attribute-properties---define-custom-member-formulas"></a>Proprietà degli attributi - Definire formule personalizzate per i membri
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile definire un'espressione MDX (MultiDimensional Expression), denominata formula personalizzata membro, per indicare i valori dei membri di un attributo specificato. L'espressione utilizzata per specificare il valore di ogni membro di un attributo è indicata in una colonna di una tabella di una vista origine dati.  
   
@@ -33,23 +33,23 @@ ms.locfileid: "34021668"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   Trimestre 1: 700  
   
-    -   Quarter 2: 500  
+    -   Trimestre 2: 500  
   
     -   Quarter 3: 100  
   
-    -   Quarter 4: 800  
+    -   Trimestre 4: 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   Trimestre 1: 600  
   
-    -   Quarter 2: 200  
+    -   Trimestre 2: 200  
   
     -   Quarter 3: 300  
   
-    -   Quarter 4: 400  
+    -   Trimestre 4: 400  
   
  Se si utilizza una formula personalizzata membro, il valore del membro è invece specificato dalla formula personalizzata di rollup. Ad esempio, la formula personalizzata membro seguente può essere utilizzata per determinare il valore 450 per il membro figlio Quarter 4 del membro 2004 nella dimensione Time.  
   
@@ -67,7 +67,7 @@ Time.[Quarter 3] * 1.5
  Se si utilizzano sia membri calcolati che formule personalizzate di rollup per i membri di un attributo, è importante tenere presente l'ordine di valutazione. I membri calcolati vengono risolti prima delle formule personalizzate di rollup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Impostare formule personalizzate membro per gli attributi in una dimensione](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

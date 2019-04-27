@@ -10,11 +10,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747073"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installare R Server (Standalone) con il programma di installazione di SQL Server o Machine Learning Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -149,7 +149,7 @@ Per lo sviluppo di R e Python, è comune disporre di più versioni nello stesso 
 
 La tabella seguente elenca i percorsi per le distribuzioni R e Python create da programmi di installazione di Microsoft. Per motivi di completezza, la tabella include percorsi di navigazione generati dal programma di installazione di SQL Server, nonché il programma di installazione autonomo per Microsoft Machine Learning Server.
 
-|Versione| Metodo di installazione | Cartella predefinita|
+|Version| Metodo di installazione | Cartella predefinita|
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (Standalone) |  Installazione guidata di SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (Standalone) |  Programma di installazione di Windows autonomo |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648874"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Esercitazioni su Analysis Services (SSAS)
   In questa sezione sono incluse le esercitazioni per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
@@ -37,7 +37,7 @@ ms.locfileid: "53359013"
  La maggior parte delle esercitazioni su SQL Server 2008 R2 può essere eseguita in un server [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Se non si ha familiarità con il concetto di data mining, utilizzare questo collegamento per trovare le esercitazioni sul data mining in SQL Server 2008 R2 che è possibile utilizzare anche in un'istanza di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] di Analysis Services.  
   
 ## <a name="see-also"></a>Vedere anche  
- [WIKI di TechNet: Esempi SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [WIKI di TechNet: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Set di dati picnic (dati di esempio)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

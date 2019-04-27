@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664347"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Activation** quando un monitoraggio di coda avvia una stored procedure di attivazione o invia una notifica QUEUE_ACTIVATION oppure quando è presente una stored procedure di attivazione avviata da un monitoraggio di coda.  
@@ -32,7 +32,7 @@ ms.locfileid: "52752873"
 |**DatabaseID**|`int`|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita alcuna istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**EventClass**|`int`|Tipo di classe di evento acquisita. Sempre **163** per **Broker:Activation**.|27|No|  
 |**EventSequence**|`int`|Numero di sequenza dell'evento.|51|No|  
-|**EventSubClass**|`nvarchar`|Azione specifica indicata dall'evento. I valori validi sono:<br /><br /> **Avviare**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha avviato una stored procedure di attivazione.<br /><br /> **Terminata**: La stored procedure di attivazione è terminata.<br /><br /> **interrotto**: La stored procedure è terminata con un errore.|21|No|  
+|**EventSubClass**|`nvarchar`|Azione specifica indicata dall'evento. I valori validi sono:<br /><br /> **start**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha avviato una stored procedure di attivazione.<br /><br /> **ended**: La stored procedure è stata chiusa correttamente.<br /><br /> **aborted**: La stored procedure è terminata con un errore.|21|No|  
 |**HostName**|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IntegerData**|`int`|Numero di attività in corso nella coda.|25|No|  
 |**IsSystem**|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|No|  

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650979"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Valutazione di accedere agli oggetti di Database per la conversione (AccessToSQL)
 Prima di caricare gli oggetti e la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario determinare quanto la migrazione avrà esito positivo, e quanto tempo potrebbe richiedere la conversione. SSMA è possibile creare un report di valutazione che mostra la percentuale di oggetti che sono state convertite correttamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintassi di SQL Azure e l'ora le stime per eseguire la migrazione. SSMA consente inoltre di visualizzare i problemi specifici che generava errori di conversione.  
@@ -44,7 +44,7 @@ Durante la creazione di un report di valutazione, SSMA converte gli oggetti di d
   
     SSMA Mostra lo stato di avanzamento nella barra di stato nella parte inferiore della finestra. Se il riquadro di Output è visibile, si noteranno anche messaggi nel riquadro di Output.  
   
-Una volta completata, la valutazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access: viene visualizzata la finestra di Report di valutazione.  
+Una volta completata, la valutazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access: Verrà visualizzata la finestra di Report di valutazione.  
   
 ## <a name="using-assessment-reports"></a>Uso dei report di valutazione  
 Nella finestra di Report di valutazione sono contenuti tre riquadri: uno strumento di esplorazione, un riquadro dei dettagli e un riquadro del messaggio.  

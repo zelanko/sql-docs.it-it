@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661853"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Finestre degli strumenti in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre numerose ed efficaci finestre degli strumenti per tutte le fasi di sviluppo e amministrazione. Alcuni strumenti possono essere utilizzati su qualsiasi componente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre altri sono disponibili solo per alcuni componenti. Nella tabella seguente vengono descritti gli strumenti che è possibile utilizzare per tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

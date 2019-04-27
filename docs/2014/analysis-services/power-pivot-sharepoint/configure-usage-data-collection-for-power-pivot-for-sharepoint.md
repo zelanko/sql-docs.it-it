@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749476"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot.  
@@ -129,7 +129,7 @@ ms.locfileid: "52411278"
  Per altre informazioni su come i dati di utilizzo vengono raccolti e archiviati, vedere [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definire le categorie delle risposte alle query veloce, media e lenta per la creazione di report  
- Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, rapida, prevista, con esecuzione prolungata e superata. Ogni richiesta a un server PowerPivot rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
+ Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, rapida, prevista, a esecuzione prolungata e superata. Ogni richiesta a un server PowerPivot rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
   
  Le informazioni sulle risposte alle query vengono utilizzate nei report di attività. All'interno dei report, ogni categoria viene utilizzata in modo diverso per rivelare nel modo migliore le tendenze delle prestazioni del sistema PowerPivot. Ad esempio, le richieste semplici vengono escluse completamente per mostrare unicamente le tendenze più significative attraverso le categorie rimanenti. Le statistiche sulle richieste con esecuzione prolungata o superate sono invece molto presenti nei report per dare la possibilità agli amministratori o ai proprietari della cartella di lavoro di intraprendere immediatamente azioni correttive.  
   
@@ -182,13 +182,13 @@ ms.locfileid: "52411278"
   
 |Impostazione|Valore predefinito|Tipo|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato >|Boolean|Questi valori sono abilitati o disabilitati.|  
-|**Query Reporting interval**|300 (in secondi)|Integer|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
-|**Usage data history**|365 (in giorni)|Integer|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
-|Limite massimo risposta semplice|500 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
-|Limite massimo risposta rapida|1000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
-|Limite massimo risposta prevista|3000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
-|Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
+|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<enabled>|Boolean|Questi valori sono abilitati o disabilitati.|  
+|**Query Reporting interval**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
+|**Usage data history**|365 (in giorni)|Valore intero|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
+|Limite massimo risposta semplice|500 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
+|Limite massimo risposta rapida|1000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
+|Limite massimo risposta prevista|3000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
+|Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'impostazione di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   

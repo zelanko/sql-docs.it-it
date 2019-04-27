@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748173"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Verifica delle query che verranno ottimizzate (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Usare la pagina **Verifica delle query che verranno ottimizzate** per visualizzare e selezionare le query recuperate dal log di query che verranno usate dall'Ottimizzazione guidata basata sulle statistiche di utilizzo per progettare le aggregazioni relative alle partizioni selezionate.  

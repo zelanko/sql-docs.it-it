@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643535"
 ---
 # <a name="analysis-services-powershell"></a>PowerShell per Analysis Services
   In [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] sono inclusi cmdlet e un provider PowerShell per Analysis Services (SQLAS) in modo che sia possibile utilizzare Windows PowerShell per la navigazione, l'amministrazione e l'esecuzione di query sugli oggetti di Analysis Services.  
@@ -61,10 +61,10 @@ Per altre informazioni sulla sintassi ed esempi, vedere [Analysis Services Power
 |Istanze e database multidimensionali|Supportata per l'amministrazione locale e remota.<br /><br /> La partizione di tipo merge richiede una connessione locale.|  
 |Istanze e database tabulari|Supportata per l'amministrazione locale e remota.<br /><br /> Per altre informazioni, vedere un blog di agosto 2011 [gestione di modelli tabulari tramite PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Database e istanze di PowerPivot per SharePoint|Supporto limitato. È possibile utilizzare connessioni HTTP e il provider per SQLAS per visualizzare informazioni sulle istanze e sui database.<br /><br /> Tuttavia, l'utilizzo che i cmdlet non è supportato. Non utilizzare PowerShell per Analysis Services per eseguire il backup e ripristino in memoria del database PowerPivot, né aggiungere o rimuovere ruoli, elaborare dati o eseguire script XMLA arbitrario.<br /><br /> Per scopi di configurazione, in PowerPivot per SharePoint è disponibile il supporto PowerShell predefinito che viene fornito separatamente. Per altre informazioni, vedere [informazioni di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
-|Connessioni native a cubi locali<br /><br /> "Dati Source=c:\backup\test.cub"|Non supportato.|  
+|Connessioni native a cubi locali<br /><br /> "Data Source=c:\backup\test.cub"|Non supportato.|  
 |Connessioni HTTP a file di connessione (con estensione bism) di Business Intelligence Semantic Model in SharePoint<br /><br /> "Data Source =http://server/shared_docs/name.bism"|Non supportato.|  
-|Connessioni incorporate ai database PowerPivot<br /><br /> "Data Source = $Embedded$"|Non supportato.|  
-|Contesto del server locale nelle stored procedure di Analysis Services<br /><br /> "Data Source = *"|Non supportato.|  
+|Connessioni incorporate ai database PowerPivot<br /><br /> "Data Source=$Embedded$"|Non supportato.|  
+|Contesto del server locale nelle stored procedure di Analysis Services<br /><br /> "Data Source=*"|Non supportato.|  
   
 ##  <a name="bkmk_auth"></a> Requisiti di autenticazione e considerazioni sulla sicurezza  
  Quando si stabilisce la connessione ad Analysis Services, è necessario creare tale connessione utilizzando un'identità utente di Windows. Nella maggior parte dei casi, una connessione viene creata tramite la sicurezza integrata di Windows, dove l'identità dell'utente corrente imposta il contesto di sicurezza nel quale vengono eseguite le operazioni del server. Tuttavia, metodi di autenticazione aggiuntivi diventano disponibili quando si configura l'accesso HTTP ad Analysis Services. In questa sezione viene illustrato in che modo il tipo di connessione determina quali opzioni di autenticazione è possibile utilizzare.  
@@ -147,7 +147,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> Abilitare l'amministrazione remota  
- Prima che sia possibile utilizzare PowerShell per Analysis Services con un'istanza di Analysis Services remota, è necessario abilitare innanzitutto l'amministrazione remota e la condivisione di file. L'errore seguente indica un problema di configurazione del firewall: "Il server RPC non è disponibile. (Eccezione da HRESULT: 0x800706ba) ".  
+ Prima che sia possibile utilizzare PowerShell per Analysis Services con un'istanza di Analysis Services remota, è necessario abilitare innanzitutto l'amministrazione remota e la condivisione di file. L'errore seguente indica un problema di configurazione del firewall: "Il server RPC non è disponibile. (Eccezione da HRESULT: 0x800706BA)".  
   
 1.  Verificare che sia il computer locale sia quello remoto dispongano delle versioni di [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] degli strumenti client e server.  
   

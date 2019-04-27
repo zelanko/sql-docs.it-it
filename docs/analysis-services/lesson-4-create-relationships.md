@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753152"
 ---
 # <a name="lesson-4-create-relationships"></a>Lezione 4: Crea relazioni
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +35,7 @@ Quando sono stati importati i dati tramite l'importazione guidata tabella, si so
 
     La finestra Progettazione modelli viene ora visualizzata nella vista diagramma, un formato grafico in cui sono visualizzate tutte le tabelle importate, con linee tra di esse. Le linee tra le tabelle indicano le relazioni create automaticamente quando sono stati importati i dati.
     
-    ![come-tabulare-lesson4-diagramma](../analysis-services/media/as-tabular-lesson4-diagram.png)
+    ![as-tabular-lesson4-diagram](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
     Usare i controlli della mini mappa nell'angolo inferiore destro di Progettazione modelli per regolare la vista in modo da includere il maggior numero di tabelle possibile. È possibile fare clic e trascinare le tabelle in posizioni diverse, avvicinandole o disponendole in un ordine particolare. Lo spostamento delle tabelle non influisce sulle relazioni già presenti tra le tabelle. Per visualizzare tutte le colonne in una determinata tabella, fare clic e trascinare un bordo della tabella per espanderla o ridurla.  
   
@@ -61,11 +61,11 @@ Quando sono stati importati i dati tramite l'importazione guidata tabella, si so
 ### <a name="take-a-closer-look"></a>Un attento
 Nella vista diagramma, si noterà una freccia, un asterisco e un numero sulle linee che mostrano la relazione tra tabelle.
 
-![come-tabulare-lesson4-line](../analysis-services/media/as-tabular-lesson4-line.png)
+![as-tabular-lesson4-line](../analysis-services/media/as-tabular-lesson4-line.png)
 
 La freccia indica la direzione del filtro, che l'asterisco indica che la tabella è il lato "molti" nella cardinalità della relazione e il 1 sono illustrati in questa tabella è il uno lato della relazione. Se è necessario modificare una relazione. ad esempio, modificare la direzione filtro relazione o la cardinalità, fare doppio clic sulla linea della relazione nella vista diagramma per aprire la finestra di dialogo Modifica relazione.
 
-![come-tabulare-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
+![as-tabular-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
 È probabile che non sarà mai necessario modificare una relazione. Queste funzionalità sono pensate per modellazione avanzata dei dati e all'esterno dell'ambito di questa esercitazione. Per altre informazioni, vedere [bidirezionale tra i filtri per i modelli tabulari in SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -77,7 +77,7 @@ In alcuni casi, potrebbe essere necessario creare relazioni aggiuntive tra tabel
 
     Verrà visualizzata una linea continua che è stata creata una relazione attiva tra la **OrderDate** colonna il **Internet Sales** tabella e il **data** colonna il **Data** tabella. 
   
-      ![come-tabulare-lesson4-nuovo](../analysis-services/media/as-tabular-lesson4-new.png) 
+      ![as-tabular-lesson4-new](../analysis-services/media/as-tabular-lesson4-new.png) 
   
     > [!NOTE]  
     > Quando si creano relazioni, la direzione della cardinalità e filtro tra la tabella primaria e la tabella di ricerca correlata viene selezionata automaticamente.  
@@ -88,7 +88,7 @@ In alcuni casi, potrebbe essere necessario creare relazioni aggiuntive tra tabel
   
 3.  Creare infine un'ulteriore relazione; nel **FactInternetSales** di tabella, fare clic e tenere premuto il **ShipDate** colonna, quindi trascinare il cursore il **data** colonna il **DimDate**tabella e quindi rilasciare.  
     
-     ![come-tabulare-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
+     ![as-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [Lezione 5: Creare colonne calcolate](../analysis-services/lesson-5-create-calculated-columns.md).

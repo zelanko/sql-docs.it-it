@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650054"
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,15 +26,15 @@ ms.locfileid: "54185137"
   
  I modelli e le tendenze possono essere raccolti e definiti in un *modello di data mining*. È possibile applicare i modelli di data mining a scenari specifici, ad esempio:  
   
--   **Previsione**: stima delle vendite, dei carichi del server o del tempo di inattività del server  
+-   **Previsione**: Stima delle vendite, dei carichi del server o inattività del server  
   
--   **Rischio e probabilità**: scelta dei clienti migliori per mailing diretti, determinazione del punto di pareggio probabile per scenari di rischio e assegnazione di probabilità a diagnosi o ad altri risultati  
+-   **Rischio e probabilità**: Scelta dei clienti migliori per mailing diretti, determinazione del punto di pareggio probabile per scenari di rischio e assegnazione di probabilità a diagnosi o ad altri risultati  
   
--   **Raccomandazioni**: determinazione dei prodotti che probabilmente vengono venduti insieme e generazione di indicazioni  
+-   **Raccomandazioni**: Determinazione di prodotti che probabilmente vengono venduti insieme, generazione di indicazioni  
   
--   **Individuazione delle sequenze**: analisi delle scelte dei clienti in un carrello acquisti e stima dei possibili eventi successivi  
+-   **Individuazione delle sequenze**: Analisi delle scelte dei clienti in un carrello acquisti e stima dei possibili eventi successivi  
   
--   **Raggruppamento**: separazione di clienti o eventi in cluster di elementi correlati, analisi e stima delle affinità  
+-   **Raggruppamento**: Separazione di clienti o eventi in cluster di elementi correlati, analisi e stima delle affinità  
   
  La compilazione di un modello di data mining rientra in un processo più ampio che include tutte le fasi necessarie, dalla formulazione di domande sui dati e dalla creazione di un modello per rispondere a tali domande, alla distribuzione del modello in un ambiente di lavoro. È possibile definire tale processo suddividendolo nei sei passaggi di base seguenti:  
   

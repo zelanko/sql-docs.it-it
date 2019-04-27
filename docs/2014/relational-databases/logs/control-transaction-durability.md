@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743167"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
   Il commit delle transazioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, l'impostazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oppure con durabilità ritardata (noto come Lazy Commit).  
@@ -131,7 +131,7 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabella 1: durabilità nei blocchi atomici  
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabella 1: Durabilità nei blocchi atomici  
   
 |Opzione di durabilità nei blocchi atomici|Nessuna transazione esistente|Transazione in corso (completamente durevole o con durabilità ritardata)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  

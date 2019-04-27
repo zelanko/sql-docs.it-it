@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746783"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Scheda Diagramma dei cluster in Sequence Clustering (Visualizzatore modello di data mining)
   La scheda **Diagramma dei cluster** in **Visualizzatore Microsoft Sequence Clustering** consente di visualizzare graficamente tutti i cluster contenuti nel modello Sequence Clustering.  
   
  Utilizzare questa vista di un modello Sequence Clustering per eseguire il drill-through da ogni cluster nei case di supporto, se il drill-through è stato abilitato. È anche possibile assegnare nomi descrittivi ai cluster e modificare la variabile ombreggiatura per valutare immediatamente la distribuzione di valori  
   
- **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -70,15 +70,15 @@ ms.locfileid: "48174201"
  **Variabile ombreggiatura**  
  Consente di selezionare un attributo dal modello di data mining da utilizzare per l'ombreggiatura del diagramma del cluster.  
   
- **State**  
+ **Stato**  
  Consente di selezionare uno stato che corrisponde a **Variabile ombreggiatura**. Ad esempio, per visualizzare le sequenze in cui è incluso un particolare prodotto, è necessario selezionare la colonna [Product] come attributo per **Variabile ombreggiatura**e il nome di prodotto specifico come valore **State** .  
   
- **Collegamenti**  
+ **Links**  
  Le righe del diagramma indicano le associazioni tra i cluster di sequenza. È possibile modificare il numero di collegamenti mostrati dal visualizzatore regolando il dispositivo di scorrimento a destra dei cluster. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

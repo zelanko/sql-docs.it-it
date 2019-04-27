@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749458"
 ---
 # <a name="delete-powerpivot-gallery"></a>Eliminare la raccolta PowerPivot
   Con l'eliminazione di una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eliminati tutti i relativi elementi, inclusa la cronologia dell'aggiornamento dati per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configurate per l'aggiornamento dati pianificato.  
@@ -26,7 +26,7 @@ ms.locfileid: "48114161"
   
  Per eliminare una raccolta, è necessario essere proprietari del sito.  
   
-### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>Eliminare una raccolta PowerPivot SharePoint 2013  
+### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>Delete PowerPivot Gallery SharePoint 2013  
   
 1.  Fare clic su Settings ![impostazioni SharePoint](../media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint"), quindi fare clic su **Impostazioni sito**.  
   

@@ -1,6 +1,6 @@
 ---
-title: I nomi di database - Parallel Data Warehouse riservati | Documenti Microsoft
-description: Nomi di database riservato in Analitica piattaforma Parallel Data Warehouse di System.
+title: Nomi di database - Parallel Data Warehouse riservati | Microsoft Docs
+description: Nomi di database riservato in Analitica Platform System Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 713927c6c0b32cb87353b39e562e3a6ab1a94132
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679270"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Nomi di database riservato in Parallel Data Warehouse
 Un nome di database riservato è un nome non può essere assegnato a un database utente in SQL Server PDW.  
   
-Elenco di nomi di database riservato:  
+Elenco di nomi di database riservati:  
   
 -   master  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658258"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammatica SQL ODBC supportata aggiuntiva
 I driver ODBC supportano completamente la grammatica di almeno 2.5 di ODBC e le clausole seguenti nella grammatica Core ed estesa ODBC versione 2.5. Informazioni aggiuntive possono essere visualizzate dal momento del passaggio per la [istruzione ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [i nomi di correlazione](../../odbc/microsoft/correlation-names.md), e [chiamata di procedura](../../odbc/microsoft/procedure-invocation.md) argomenti.  
@@ -40,7 +40,7 @@ I driver ODBC supportano completamente la grammatica di almeno 2.5 di ODBC e le 
   
 -   [Aritmetica delle date](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: valori letterali data, ora e timestamp](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: Date, Time e Timestamp valori letterali](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [Istruzione DROP INDEX](../../odbc/microsoft/drop-index-statement.md)  
   

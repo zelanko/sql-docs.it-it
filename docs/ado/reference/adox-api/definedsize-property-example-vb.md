@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11d57cc1e5d880acebb4a44678ec147d24a5582d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661523"
 ---
 # <a name="definedsize-property-example-vb"></a>Esempio della proprietà DefinedSize (VB)
 Questo esempio viene illustrato il [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Il codice verrà ridefinire le dimensioni della colonna FirstName della **dipendenti** tabella del *Northwind* database. Quindi, la modifica i valori del nome [campo](../../../ado/reference/ado-api/field-object.md) di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) base il **dipendenti** tabella viene visualizzata. Si noti che per impostazione predefinita, il campo FirstName diventa riempito con spazi dopo si ridefinisce il **DefinedSize** proprietà.  

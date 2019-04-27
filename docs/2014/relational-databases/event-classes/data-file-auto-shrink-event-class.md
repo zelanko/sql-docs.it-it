@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663173"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink - classe di evento
   La classe di evento **Data File Auto Shrink** indica che il file di dati è stato compattato. Questo evento non viene generato se il file di dati viene compattato a causa di un'istruzione ALTER DATABASE esplicita. Includere la classe di evento **Data File Auto Shrink** nelle tracce che eseguono il monitoraggio delle modifiche alle dimensioni del file di dati.  
@@ -37,7 +37,7 @@ ms.locfileid: "52813623"
 |**Durata**|**bigint**|Periodo di tempo, in millisecondi, necessario per compattare il file.|13|Yes|  
 |**EndTime**|**datetime**|Ora di fine dell'operazione di compattazione automatica.|18|Yes|  
 |**EventClass**|**int**|Tipo di evento registrato = 94.|27|No|  
-|**EventSequence**|**int**|Sequenza della classe di evento nel batch.|51|No|  
+|**EventSequence**|**int**|Sequenza della classe di evento nel batch.|51|no|  
 |**Filename**|**nvarchar**|Nome logico del file compattato.|36|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IntegerData**|**int**|Numero di pagine da 8 KB rimosse dal file per ridurne le dimensioni.|25|Yes|  
@@ -45,7 +45,7 @@ ms.locfileid: "52813623"
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Yes|  
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Yes|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Yes|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  

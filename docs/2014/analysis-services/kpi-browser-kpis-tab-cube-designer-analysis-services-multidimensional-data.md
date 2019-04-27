@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730616"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Visualizzatore KPI** della scheda **KPI** in Progettazione cubi per visualizzare e testare i risultati degli indicatori di prestazioni chiave (KPI). Prima dell'esplorazione è necessario distribuire gli indicatori KPI a un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -39,15 +39,15 @@ ms.locfileid: "48174601"
  **Operatore**  
  Consente di selezionare l'operatore che definisce il modo in cui l'espressione contenuta in **Espressione filtro** viene applicata alla gerarchia selezionata. Nella tabella seguente vengono descritti gli operatori disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Uguale a**|I risultati sono limitati al set definito in **Espressione filtro**.|  
+|**Equal**|I risultati sono limitati al set definito in **Espressione filtro**.|  
 |**Non è uguale**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
 |**In**|I risultati sono limitati al set denominato scelto in **Espressione filtro**.|  
 |**Non In**|I risultati sono limitati ai membri esclusi dal set denominato scelto in **Espressione filtro**.|  
 |**Contiene**|I risultati sono limitati ai membri i cui nomi contengono la stringa inclusa in **Espressione filtro**.|  
 |**Inizia con**|I risultati sono limitati ai membri i cui nomi iniziano con la stringa inclusa in **Espressione filtro**.|  
-|**Intervallo (inclusivo)**|I risultati sono limitati all'intervallo scelto in **Espressione filtro**.|  
+|**Range (Inclusive)**|I risultati sono limitati all'intervallo scelto in **Espressione filtro**.|  
 |**Intervallo (esclusivo)**|I risultati sono limitati ai membri esclusi dall'intervallo scelto in **Espressione filtro**.|  
 |**MDX**|I risultati sono limitati al set di espressioni MDX incluso in **Espressione filtro**.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48174601"
  **Stato**  
  Consente di visualizzare l'icona di stato dell'indicatore KPI.  
   
- **Tendenza**  
+ **Trend**  
  Consente di visualizzare l'icona di tendenza dell'indicatore KPI.  
   
  **Weight**  

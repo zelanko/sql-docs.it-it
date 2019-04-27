@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729073"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
   Sono disponibili azioni di diverso tipo, le quali devono pertanto essere create in modo appropriato. Di seguito vengono indicati i diversi tipi di azione.  
@@ -57,7 +57,7 @@ ms.locfileid: "50146588"
 ## <a name="types-of-actions"></a>Tipi di azioni  
  La tabella seguente elenca i tipi di azioni inclusi in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Tipo di azione|Description|  
+|Tipo di azione|Descrizione|  
 |-----------------|-----------------|  
 |CommandLine|Esegue un comando al prompt dei comandi|  
 |Set di dati|Restituisce un set di dati a un'applicazione client.|  

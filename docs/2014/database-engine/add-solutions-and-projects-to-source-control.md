@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792091"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Aggiungere soluzioni e progetti al controllo del codice sorgente
   Quando viene aggiunta una soluzione al controllo del codice sorgente, la soluzione diviene parte di un archivio dinamico di controllo delle versioni creato e gestito dal provider del controllo del codice sorgente. Ogni volta che viene archiviata, la nuova versione della soluzione diviene parte dell'archivio ed è disponibile per altri utenti inclusi nel controllo del codice sorgente.  
@@ -29,7 +29,7 @@ ms.locfileid: "48188001"
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Aggiungere soluzioni al controllo del codice sorgente](../../2014/database-engine/add-solutions-to-source-control.md)|Vengono descritti i tipi di progetto che è possibile aggiungere e vengono date istruzioni per l'aggiunta di una soluzione al controllo del codice sorgente.|  
 |[Aggiungere progetti al controllo del codice sorgente](../../2014/database-engine/add-projects-to-source-control.md)|Vengono date istruzioni per aggiungere un progetto a una soluzione.|  

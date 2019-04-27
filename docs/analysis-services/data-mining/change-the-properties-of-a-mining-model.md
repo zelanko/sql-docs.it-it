@@ -1,5 +1,5 @@
 ---
-title: Modificare le proprietà di un modello di Data Mining | Documenti Microsoft
+title: Modificare le proprietà di un modello di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3650b284e8817c2b7f8aee6a0beca71c275d6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670381"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modificare le proprietà di un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34014848"
   
  Le proprietà del modello seguenti sono associate a editor avanzati che è possibile utilizzare per creare espressioni o configurare proprietà più complesse. Di seguito sono elencate queste proprietà.  
   
--   Proprietà **Filter**: consente di aprire la [finestra di dialogo Filtro dei set di dati o Filtro modello](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7).  
+-   **Filtro** proprietà: Apre la [filtro dei Set di dati o finestra di dialogo Filtro modello](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7).  
   
--   Proprietà **AlgorithmParameters**: consente di aprire la [finestra di dialogo Parametri algoritmo &#40;visualizzazione Modelli di data mining&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060).  
+-   **AlgorithmParameters** proprietà: Apre la [finestra di dialogo parametri algoritmo &#40;visualizzazione di modelli di Data Mining&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060).  
   
  Per informazioni su come impostare le proprietà in un modello di data mining, vedere [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md).  
   
@@ -48,6 +48,6 @@ ms.locfileid: "34014848"
      Il nuovo valore diventerà effettivo quando si seleziona un elemento diverso nella finestra di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

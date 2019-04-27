@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7976ba0779553824e78856d212933272b3cd452e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729549"
 ---
 # <a name="defining-a-dimension"></a>Definizione di una dimensione
   Nell'attività seguente si utilizzerà la Creazione guidata dimensione per compilare una dimensione Date.  

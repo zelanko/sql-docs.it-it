@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729611"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lezione 1: Definizione di una vista origine dati all'interno di un'analisi di progetto di servizi
   La progettazione di un'applicazione di Business Intelligence in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inizia con la creazione di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nel progetto vengono definiti tutti gli elementi della soluzione, a partire da una vista origine dati.  

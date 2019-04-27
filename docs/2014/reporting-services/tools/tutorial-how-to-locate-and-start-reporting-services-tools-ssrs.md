@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657998"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
   In questa esercitazione vengono descritti gli strumenti utilizzati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report. In questa esercitazione vengono descritte le procedure per individuare e aprire ogni strumento. Se si ha familiarità con gli strumenti, è possibile passare ad altre esercitazioni che consentono di acquisire capacità importanti per l'utilizzo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per altre informazioni sulle altre esercitazioni, vedere [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

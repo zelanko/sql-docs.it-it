@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729197"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lezione 4: Contrassegna come tabella data
   Nella lezione 2: Aggiungere dati, è importato una tabella delle dimensioni denominata DimDate. Poi rinominata la tabella DimDate, nella lezione 3: Rinominare colonne Data. Mentre nel modello questa tabella è ora denominata Date, può anche essere nota come *tabella data*, in quanto sono contenuti dati relativi a data e ora.  

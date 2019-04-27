@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781027"
 ---
 # <a name="performing-transactions-odbc"></a>Esecuzione di transazioni (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il driver ODBC Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano le funzioni della gestione delle transazioni di API ODBC. [!INCLUDE[msCoName](../../includes/msconame-md.md)] offre supporto completo per le transazioni locali su un server singolo. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilizza queste funzionalità per supportare le funzioni API ODBC per la gestione delle transazioni.  

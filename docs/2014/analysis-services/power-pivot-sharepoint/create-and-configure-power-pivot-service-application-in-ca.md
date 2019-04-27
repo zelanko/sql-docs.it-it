@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac1b7ad9e5308437dacf51b7960822e7636ab3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749380"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Creare e configurare un'applicazione del servizio PowerPivot in Amministrazione centrale
   Un'applicazione del servizio PowerPivot è un'istanza del servizio condiviso del servizio di sistema PowerPivot. Ogni applicazione del servizio possiede impostazioni di configurazione, proprietà, un'identità e un sistema di archiviazione dati interno propri.  

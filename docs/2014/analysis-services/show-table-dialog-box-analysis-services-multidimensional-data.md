@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746484"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Mostra tabelle (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Mostra tabelle** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per includere tabelle della vista origine dati associata a una dimensione, a un cubo o a una struttura di data mining. Questa finestra di dialogo può essere visualizzata in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nei modi seguenti:  

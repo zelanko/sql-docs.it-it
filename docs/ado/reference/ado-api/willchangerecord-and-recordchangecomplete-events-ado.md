@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642898"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventi WillChangeRecord e RecordChangeComplete (ADO)
 Il **WillChangeRecord** eventi viene chiamato prima uno o più record (righe) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) modificare. Il **RecordChangeComplete** eventi viene chiamato dopo che uno o più record di modifica.  
@@ -62,7 +62,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  Oggetto **Recordset** oggetto. Il **Recordset** per cui si è verificato questo evento.  
   
 ## <a name="remarks"></a>Note  
- Oggetto **WillChangeRecord** oppure **RecordChangeComplete** evento può verificarsi per il primo campo modificato in una riga a causa di quanto segue **Recordset** operations: [ Update](../../../ado/reference/ado-api/update-method.md), [eliminare](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Il valore della **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) determina le operazioni che causano il verificarsi degli eventi.  
+ Oggetto **WillChangeRecord** oppure **RecordChangeComplete** evento può verificarsi per il primo campo modificato in una riga a causa di quanto segue **Recordset** operazioni: [Update](../../../ado/reference/ado-api/update-method.md), [eliminare](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Il valore della **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) determina le operazioni che causano il verificarsi degli eventi.  
   
  Durante la **WillChangeRecord** evento, il **Recordset** [filtro](../../../ado/reference/ado-api/filter-property.md) è impostata su **adFilterAffectedRecords**. È possibile modificare questa proprietà durante l'elaborazione dell'evento.  
   

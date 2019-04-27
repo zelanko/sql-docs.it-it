@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731343"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrare il cubo di origine per una struttura di data mining
   Quando si crea una struttura di data mining che si basa sui dati in un modello multidimensionale (cubo OLAP), è possibile *slice* del cubo che dipende dalla struttura di data mining. Il sezionamento consente di creare subset di dati, come un filtro da applicare ai dati utilizzati per il training del modello di data mining.  
@@ -53,7 +53,7 @@ ms.locfileid: "48123527"
      A questo punto, il cubo di origine è filtrato come definito dalla sezione del cubo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data mining struttura attività e procedure](data-mining/mining-structure-tasks-and-how-tos.md)   
+ [Attività e procedure relative alla struttura di data mining](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Creare una nuova struttura di data mining OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   
   

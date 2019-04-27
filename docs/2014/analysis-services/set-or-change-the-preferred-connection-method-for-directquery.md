@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746613"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Impostare o modificare il metodo di connessione preferito per DirectQuery
   Quando si crea un modello per l'utilizzo nella modalità DirectQuery, è innanzitutto necessario configurare l'ambiente di progettazione affinché supporti l'utilizzo di DirectQuery. A questo scopo, vedere [abilitare la modalità DirectQuery &#40;modello tabulare di SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -33,23 +33,23 @@ ms.locfileid: "48186691"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>Per impostare il metodo di connessione preferito per un modello DirectQuery  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], aprire il file di soluzione per il modello DirectQuery.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il file della soluzione per il modello DirectQuery.  
   
 2.  In Visual Studio scegliere **Proprietà** dal menu **Progetto**.  
   
 3.  Nel riquadro **Proprietà** modificare la proprietà **DirectQueryMode**su uno dei valori che supportano l'utilizzo di DirectQuery:  
   
-    -   **InMemorywithDirectQuery**: se si utilizza questa opzione, il modello viene distribuito, ma è necessario elaborare la cache prima di poter eseguire query sul modello.  
+    -   **In-Memory con DirectQuery**: Se si usa questa opzione, il modello viene distribuito, ma è necessario elaborare la cache prima di poter eseguire le query eseguite sul modello.  
   
-    -   **DirectQuery with InMemory**: se si utilizza questa opzione, la cache potrà essere utilizzata dai client se è già stata elaborata. Se si distribuisce il modello con questa impostazione e non si elabora la cache, alcuni client riceveranno un errore al tentativo di connettersi al modello.  
+    -   **DirectQuery with InMemory**: Se si usa questa opzione, la cache sarà disponibile per l'uso da parte dei client se è già stata elaborata. Se si distribuisce il modello con questa impostazione e non si elabora la cache, alcuni client riceveranno un errore al tentativo di connettersi al modello.  
   
-    -   **DirectQuery only:** se si utilizza questa opzione, i metadati vengono distribuiti, ma il modello non contiene dati. I client che tentano di connettersi utilizzando la modalità in memoria riceveranno un errore che indica che il modello non esiste o non è stato elaborato.  
+    -   **Solo DirectQuery**: Se si usa questa opzione, i metadati vengono distribuiti ma il modello non contiene dati in esso. I client che tentano di connettersi utilizzando la modalità in memoria riceveranno un errore che indica che il modello non esiste o non è stato elaborato.  
   
 4.  In caso di errori, in Visual Studio aprire l' **Elenco errori** e risolvere eventuali problemi che impedirebbero di distribuire il modello nella modalità DirectQuery.  
   
 ### <a name="to-verify-or-change-the-preferred-connection-method-for-a-directquery-model"></a>Per verificare o modificare il metodo di connessione preferito per un modello DirectQuery  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] connettersi all'istanza in cui è stato distribuito il modello di DirectQuery.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]connettersi all'istanza in cui è stato distribuito il modello di DirectQuery.  
   
 2.  Fare clic con il pulsante destro del mouse sul database modello, quindi scegliere **Proprietà**.  
   

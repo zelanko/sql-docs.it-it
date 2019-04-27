@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e50d43bc030ad3267076422b8f6610b68e447ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746514"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>Impostazione operatore unario (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Impostazione operatore unario** per identificare la relazione padre-figlio relativa alla colonna contenente un operatore unario (per le aggregazioni di tipo regolare) o un valore che rappresenta un fattore di ponderazione (per le aggregazioni di tipo ponderato). Per altre informazioni sulle aggregazioni di tipo regolare e ponderato, vedere [Aggregazioni e progettazione di aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48066921"
  Consente di selezionare la colonna di origine contenente l'operatore unario o il fattore di ponderazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

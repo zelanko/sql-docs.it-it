@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730270"
 ---
 # <a name="creating-an-analysis-services-project"></a>Creazione di un progetto di Analysis Services
   Nell'attività seguente si utilizza [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una nuova [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto denominato `Analysis Services Tutorial`, sulla base di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] modello di progetto. Un *progetto* è una raccolta di oggetti correlati. I progetti sono contenuti in una soluzione che include uno o più progetti. Per altre informazioni, vedere [Creare un progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48066952"
  [Definizione di un'origine dei dati](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione multidimensionali di modelli di utilizzo di SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Creare un progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

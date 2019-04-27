@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ac8e3de76709f4ae8e4839d79d1f40aae9195ce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748892"
 ---
 # <a name="technical-reference-ssas"></a>Guida di riferimento tecnico (SSAS)
   Individuare gli strumenti, i linguaggi e la documentazione di riferimento di PowerShell per l'utilizzo o l'amministrazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "50147836"
  [Gli errori e riferimento degli eventi &#40;PowerPivot per SharePoint&#41;](../power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md)  
   
  ![Icona cartella File piccola](../../integration-services/media/filefolder-small.gif "icona cartella File piccola") **riferimento di PowerShell**  
- [PowerShell per Analysis Services](../analysis-services-powershell.md)  
+ [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
  [Informazioni di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743197"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Esegue il commit delle righe restanti da inviare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +34,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Note  
- Dopo aver chiamato il metodo [BCPDone](ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
+ Dopo aver chiamato il metodo [BCPDone](ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
@@ -46,7 +46,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare l'interfaccia **IBCPSession** .  
   
- Prima di eseguire l'esempio, è necessario eseguire il seguente codice [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Prima di eseguire l'esempio, è necessario eseguire il seguente codice [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b8505017ca0b279a6cc1d7782bff66b120d2851
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646819"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Metodo ListSSLCertificateBindings (MSReportServer_ConfigurationSetting WMI)
   Restituisce un elenco dei certificati SSL installati presenti nel computer.  

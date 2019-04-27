@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779031"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Proprietà indice full-text (pagina Pianificazioni)
-  Utilizzare questa pagina per visualizzare e creare pianificazioni per l'esecuzione di un processo di SQL Server Agent che avvia un popolamento incrementale di aggiornamenti nella tabella di base dell'indice full-text. Se la tabella di base o la vista non contiene una colonna del `timestamp` tipo di dati viene eseguito un popolamento completo.  
+  Utilizzare questa pagina per visualizzare e creare pianificazioni per l'esecuzione di un processo di SQL Server Agent che avvia un popolamento incrementale di aggiornamenti nella tabella di base dell'indice full-text. Se la tabella di base o la vista indicizzata non contiene una colonna del tipo di dati `timestamp`, viene eseguito un popolamento completo.  
   
  **Per visualizzare o modificare le proprietà di un indice full-text**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48059821"
  **Pianificazioni**  
  Vengono elencati tutti i popolamenti incrementali, se disponibili, della tabella di base per l'indice full-text.  
   
- **Nome**  
+ **Name**  
  Visualizza il nome di ogni popolamento pianificato.  
   
  **Tipo popolamento**  
@@ -47,6 +47,6 @@ ms.locfileid: "48059821"
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare la procedura guidata l'indicizzazione Full-Text](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
- [Popolare gli indici full-text](../relational-databases/search/populate-full-text-indexes.md)  
+ [Popolamento degli indici full-text](../relational-databases/search/populate-full-text-indexes.md)  
   
   

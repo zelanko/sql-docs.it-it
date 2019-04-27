@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662371"
 ---
 # <a name="lockescalation-event-class"></a>Classe di evento Lock:Escalation
   La classe di evento **Lock:Escalation** indica che un blocco con granularità fine è stato convertito in un blocco con granularità grossolana, ad esempio un blocco di riga è stato convertito in blocco di oggetto. La classe di evento dell'escalation è l'ID evento 60.  

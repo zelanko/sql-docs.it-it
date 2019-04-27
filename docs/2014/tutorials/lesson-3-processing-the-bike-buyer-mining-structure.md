@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655800"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lezione 3: L'elaborazione della struttura di Data Mining Bike Buyer
   In questa lezione si utilizzerà l'inserimento in istruzione e la vista vTargetMail il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] per elaborare le strutture di data mining e modelli di data mining creato nel database di esempio [lezione 1: Creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) e [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  

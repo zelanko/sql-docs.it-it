@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792339"
 ---
 # <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
   In questo argomento viene descritto come eseguire la corrispondenza dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di corrispondenza identifica i cluster di record corrispondenti in base alle regole di corrispondenza nei criteri di corrispondenza, definisce un record da ogni cluster come superstite in base a una regola di sopravvivenza ed esporta i risultati. In DQS il processo di corrispondenza, definito anche deduplicazione, è computerizzato ma è possibile creare alcune regole di corrispondenza in modo interattivo e selezionare la regola di sopravvivenza tra diverse opzioni, in modo da controllare comunque il processo.  
@@ -38,7 +38,7 @@ ms.locfileid: "56019692"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire un progetto corrispondente, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="StartingaMatchingProject"></a> Primo passaggio: Avvio di un progetto corrispondente  
@@ -107,7 +107,7 @@ ms.locfileid: "56019692"
   
  La sopravvivenza è facoltativa. È possibile esportare i risultati senza eseguire la sopravvivenza. In tal caso viene utilizzato il record pivot definito nell'analisi di corrispondenza. Se due o più record in un cluster soddisfano la regola di sopravvivenza, il processo di sopravvivenza selezionerà l'ID record minore tra i record in conflitto come superstite. È possibile esportare i superstiti in diversi file o tabelle utilizzando regole di sopravvivenza diverse.  
   
-1.  Nel **esportare** pagina, selezionare la destinazione in cui si desidera esportare i dati corrispondenti in **tipo di destinazione**: **SQL Server**, **File con estensione CSV**, o **il File di Excel**.  
+1.  Nella pagina **Esporta** selezionare la destinazione in cui si vogliono esportare i dati corrispondenti in **Tipo destinazione**: **SQL Server**, **File CSV** o **File di Excel**.  
   
     > [!IMPORTANT]  
     >  Se si utilizza la versione a 64 bit di Excel, non è possibile esportare i dati corrispondenti in un file di Excel. È possibile eseguire l'esportazione solo in un database di SQL Server o in un file con estensione csv.  
@@ -164,7 +164,7 @@ ms.locfileid: "56019692"
     > [!NOTE]  
     >  Se un progetto corrispondente viene completato e quindi riutilizzato, verrà utilizzata la stessa Knowledge Base di quando il progetto è stato pubblicato. Non verrà utilizzata alcuna modifica apportata alla Knowledge Base dopo il completamento del progetto. Per utilizzare tali modifiche o una nuova Knowledge Base, sarà necessario creare un nuovo progetto corrispondente. Se invece il progetto corrispondente è stato creato ma non completato, verranno utilizzate tutte le modifiche pubblicate nei criteri di corrispondenza quando si esegue la corrispondenza nel progetto.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo l'esecuzione di un progetto corrispondente  
+##  <a name="FollowUp"></a> Completamento: dopo l'esecuzione di un progetto corrispondente  
  Dopo avere eseguito un progetto corrispondente, è possibile modificare i criteri di corrispondenza nella Knowledge Base e creare ed eseguire un altro progetto corrispondente in base ai criteri di corrispondenza aggiornati. Per altre informazioni, vedere [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Schede Profiler e Risultati  
@@ -175,27 +175,27 @@ ms.locfileid: "56019692"
   
  Le statistiche relative al database di origine includono:  
   
--   **I record**: Numero complessivo di record nel database  
+-   **Record**: Numero complessivo di record nel database  
   
--   **Valori totali**: Il numero totale di valori nei campi  
+-   **Valori totali**: numero totale di valori nei campi  
   
--   **Nuovi valori**: Il numero totale di valori nuovi dall'esecuzione precedente e la loro percentuale rispetto al totale  
+-   **Nuovi valori**: numero totale di valori nuovi dall'esecuzione precedente e percentuale di tali valori rispetto al totale  
   
--   **Valori univoci**: Il numero totale di valori univoci nei campi e la loro percentuale rispetto al totale  
+-   **Valori univoci**: numero totale di valori univoci nei campi e percentuale di tali valori rispetto al totale  
   
--   **Nuovi valori univoci**: Il numero totale di valori univoci nuovi nei campi e relativa percentuale rispetto al totale  
+-   **Nuovi valori univoci**: numero totale di valori univoci nuovi nei campi e percentuale di tali valori rispetto al totale  
   
  Le statistiche relative ai campi includono:  
   
--   **Campo**: Nome del campo in cui è stato incluso nei mapping.  
+-   **Campo**: nome del campo incluso nei mapping.  
   
--   **Dominio**: Nome del dominio di cui è stato eseguito il mapping al campo.  
+-   **Dominio**: nome del dominio di cui è stato eseguito il mapping al campo.  
   
--   **Nuovo**: Il numero di nuove corrispondenze trovate e relativa percentuale del totale  
+-   **Nuovo**: numero di nuove corrispondenze trovate e percentuale di tali corrispondenze rispetto al totale  
   
--   **Univoco**: Il numero di record univoci nel campo e relativa percentuale del totale  
+-   **Univoco**: numero di record univoci nel campo e percentuale di tali record rispetto al totale  
   
--   **Completezza**: La percentuale di esecuzione della regola è stata completata.  
+-   **Completezza**: percentuale di completamento dell'esecuzione della regola.  
   
 ### <a name="matching-policy-notifications"></a>Notifiche relative ai criteri di corrispondenza  
  Per l'attività relativa ai criteri di corrispondenza, le condizioni seguenti generano notifiche:  

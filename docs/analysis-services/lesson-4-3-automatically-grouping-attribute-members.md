@@ -1,5 +1,5 @@
 ---
-title: Raggruppamento automatico dei membri dell'attributo | Documenti Microsoft
+title: Raggruppamento automatico dei membri di attributo | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737721"
 ---
-# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lezione 4-3 - automaticamente i membri di attributo di raggruppamento
+# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lezione 4-3: raggruppamento automaticamente i membri di attributo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Quando si esplora un cubo, in genere i membri di una gerarchia di attributi si dimensionano in base a quelli di un'altra gerarchia di attributi. Ad esempio, le vendite clienti si potrebbero raggruppare per città, per prodotto acquistato o per sesso. Tuttavia, con alcuni tipi di attributi, è utile ottenere la creazione automatica di raggruppamenti di membri di attributi da parte di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in base alla distribuzione dei membri all'interno di una gerarchia di attributi. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ad esempio, è possibile ottenere la creazione di gruppi di valori di reddito annuale per i clienti. In questo caso, gli utenti che esplorano la gerarchia di attributi vedranno i nomi e i valori dei gruppi anziché i membri stessi. L'operazione limiterà inoltre il numero di livelli presentato agli utenti, cosa che può essere più utile per l'analisi.  
@@ -27,7 +27,7 @@ La proprietà **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalli di gruppi in modo che la popolazione totale dei membri della dimensione sia distribuita equamente nei gruppi.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea gruppi eseguendo il clustering unidimensionale sui valori di input utilizzando il metodo di clustering K-Medie con le distribuzioni di Gauss. Questa opzione è valida solo per le colonne numeriche.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea gruppi eseguendo il clustering unidimensionale sui valori di input usando il metodo di clustering K-Medie con le distribuzioni di Gauss. Questa opzione è valida solo per le colonne numeriche.  
   
 Dopo avere specificato un metodo di raggruppamento è necessario specificare il numero di gruppi usando la proprietà **DiscretizationBucketCount** . Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -49,7 +49,7 @@ Nelle attività di questo argomento si abiliteranno diversi tipi di raggruppamen
   
     Nella figura seguente vengono illustrate le proprietà modificate per **Yearly Income**.  
   
-    ![Le proprietà modificate per Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "le proprietà modificate per Yearly Income")  
+    ![Le proprietà modificate per Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "proprietà modificate per Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Raggruppamento dei membri delle gerarchie di attributi nella dimensione Employee  
   
@@ -95,7 +95,7 @@ Nelle attività di questo argomento si abiliteranno diversi tipi di raggruppamen
   
     Nella figura seguente vengono illustrate le vendite dimensionate per ore di permesso per malattia.  
   
-    ![Vendite dimensionate per malattia dipendente lascia ore](../analysis-services/media/l4-discretizationmethod-2.gif "vendite dimensionate per malattia dipendente lascia ore")  
+    ![Le vendite dimensionate dall'assenza per malattia dipendente lascia ore](../analysis-services/media/l4-discretizationmethod-2.gif "vendite dimensionate dall'assenza per malattia dipendente lascia ore")  
   
 10. Rimuovere la gerarchia di attributi **Sick Leave Hours** dall'area colonna del riquadro **Dati** .  
   
@@ -124,10 +124,10 @@ Nelle attività di questo argomento si abiliteranno diversi tipi di raggruppamen
     Si noti che vi sono tre gruppi di membri dell'attributo **Vacation Hours** che presentano valori di vendita per i prodotti. Gli altri sette gruppi contengono membri che non hanno dati di vendita.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Come nascondere e disabilitare le gerarchie di attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[Come nascondere e disabilitare le gerarchie degli attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[I membri dell'attributo gruppo & #40; discretizzazione & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Raggruppare membri di attributo &#40;discretizzazione&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749213"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Condividere feed di dati utilizzando una libreria di feed di dati (PowerPivot per SharePoint)
   Un feed di dati è un flusso di dati XML generato da un servizio o da un'applicazione che espone i dati nel formato wire Atom. Viene utilizzato sempre più frequentemente per trasferire dati tra applicazioni e visualizzatori lato client. In una distribuzione PowerPivot per SharePoint, i feed di dati vengono usati per popolare un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] origine dati con dati provenienti da un'applicazione compatibile con Atom o un servizio.  
@@ -35,7 +35,7 @@ ms.locfileid: "48178551"
   
  [Modificare un documento di servizio dati](#modifydsdoc)  
   
- [Passaggio successivo: Utilizzo di un documento di servizio dati](#usedsdoc)  
+ [Passaggio successivo: Usare un documento di servizio dati](#usedsdoc)  
   
 > [!NOTE]  
 >  Anche se i feed di dati vengono usati per aggiungere dati Web a un'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creata in [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], un documento di servizio dati può essere elaborato da qualsiasi applicazione client in grado di leggere un feed Atom.  
@@ -110,7 +110,7 @@ ms.locfileid: "48178551"
 > [!IMPORTANT]  
 >  Anche se il documento di servizio dati viene letto una sola volta, l'accesso ai servizi dati tramite cui vengono forniti i dati effettivi può essere eseguito a intervalli regolari per ottenere feed più recenti. Per altre informazioni su come aggiornare i dati, vedere [aggiornamento dati PowerPivot](power-pivot-data-refresh.md).  
   
-##  <a name="usedsdoc"></a> Passaggio successivo: Utilizzo di un documento di servizio dati  
+##  <a name="usedsdoc"></a> Passaggio successivo: Usare un documento di servizio dati  
  Per usare un documento di servizio dati che è stato creato in una raccolta di SharePoint, Usa la **da feed di dati** opzione in un'origine dati PowerPivot di importazione. Per istruzioni, vedere [usare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## <a name="see-also"></a>Vedere anche  

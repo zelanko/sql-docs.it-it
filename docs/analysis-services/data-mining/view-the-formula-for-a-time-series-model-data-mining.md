@@ -1,5 +1,5 @@
 ---
-title: Visualizzare la Formula per una serie temporale (Data Mining) modello | Documenti Microsoft
+title: Visualizzare la Formula per una serie temporale (Data Mining) modello | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659726"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Visualizzare la formula per un modello Time Series (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34017228"
   
      La formula ARTXP viene visualizzata nella prima metà di **Legenda data mining**come **Equazione nodo dell'albero**.  
   
-     ![visualizzazione della formula time series nella legenda](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "visualizzazione della formula time series nella legenda")  
+     ![visualizzazione della formula time series in legenda](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "visualizzazione della formula time series nella legenda")  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>Per visualizzare la formula ARIMA per un modello Time Series  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34017228"
     >  Se si esplora il contenuto di un modello misto che usa modelli sia ARIMA che ARTXP, i due modelli si troveranno in alberi separati, uniti nel nodo radice che rappresenta il modello. Anche se i modelli ARIMA e ARTXP vengono presentati in un unico visualizzatore per comodità, le strutture sono molto diverse, così come le equazioni, le quali non possono essere combinate o confrontate. L'albero ARTXP è più simile a un albero delle decisioni, mentre l'albero ARIMA rappresenta una serie di medie mobili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Driver Access) | Microsoft Docs
+title: SQLConfigDataSource (Access Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665406"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (driver Access)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47637939"
   
  Il **SQLConfigDataSource** funzione che consente di aggiungere, modificare o eliminare un'origine dati utilizza in modo dinamico le parole chiave seguenti.  
   
-|Parola chiave|Description|  
+|Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|La sequenza nella quale vengono ordinati i campi.<br /><br /> Consente di impostare la stessa opzione come **sequenza di collazione** nella finestra di dialogo programma di installazione.|  
 |COMPACT_DB|Esegue la compattazione dei dati in un file di database. Ha il formato seguente: COMPACT_DB = < nome_percorso >< optionaL_sort_order >\<parola chiave facoltativa ENCRYPT >.<br /><br /> Quando si usa la parola chiave COMPACT_DB nella stessa istruzione con una parola chiave DSN, il driver ignora la parola chiave DSN. Pertanto, la compattazione di un database e specificando un DSN è un processo in due passaggi.|  

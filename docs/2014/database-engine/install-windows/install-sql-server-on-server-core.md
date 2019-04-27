@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775773"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installare SQL Server 2014 in Server Core
   È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. In questo argomento vengono fornite informazioni dettagliate specifiche dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in Server Core.  
@@ -41,16 +41,16 @@ ms.locfileid: "53364033"
 |Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Yes|  
 |Ricerca full-text|Yes|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Yes|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|no|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No|  
 |Connettività strumenti client|Yes|  
 |Server Integration Services<sup>[1]</sup>|Yes|  
-|Compatibilità con le versioni precedenti di strumenti client.|No|  
-|SDK di strumenti client|No|  
+|Compatibilità con le versioni precedenti di strumenti client.|no|  
+|SDK di strumenti client|no|  
 |Documentazione online di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |No|  
 |Strumenti di gestione - Di base|Solo remoto<sup>[2]</sup>|  
 |Strumenti di gestione - Completa|Solo remoto<sup>[2]</sup>|  
-|Controller di Riesecuzione distribuita|No|  
+|Controller di Riesecuzione distribuita|no|  
 |Client Riesecuzione distribuita|Solo remoto<sup>[2]</sup>|  
 |SDK di Connettività SQL Client|Yes|  
 |Microsoft Sync Framework|Sì<sup>[3]</sup>|  

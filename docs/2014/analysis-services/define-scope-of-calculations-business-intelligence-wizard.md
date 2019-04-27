@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732097"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Definizione ambito dei calcoli (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Definizione ambito dei calcoli** per associare i nuovi calcoli temporali a singole misure.  
@@ -34,7 +34,7 @@ ms.locfileid: "48224232"
  Consente di deselezionare tutte le misure presenti nell'elenco **Misure disponibili**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

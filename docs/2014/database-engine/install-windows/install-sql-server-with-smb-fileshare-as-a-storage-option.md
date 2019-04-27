@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775334"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB
   A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] i database di sistema (Master, Model, MSDB e TempDB) e i database utente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -114,7 +114,7 @@ ms.locfileid: "54136051"
   
 -   Alcune terze parti, ad esempio i dispositivi NetApp, non supportano tutte le chiamate all'API di SQL Server. Questi può consentire di ottenere:   
     2015-06-04 13:14:19.97 spid9s errore: 17053, gravità: 16, stato: 1.  
-    2015-06-04 13:14:19.97 spid9s Dodevioctlout GetOverlappedResult(): Errore del sistema operativo 1 (funzione non corretta.) ha rilevato.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() : Errore del sistema operativo 1 (funzione non corretta.) ha rilevato.  
   
      Per NTFS, questo errore non provoca problemi,  ma per ReFS può provocare una riduzione significativa delle prestazioni.  
   

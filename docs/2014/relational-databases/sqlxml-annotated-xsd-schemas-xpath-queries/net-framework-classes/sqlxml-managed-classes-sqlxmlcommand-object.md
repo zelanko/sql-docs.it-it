@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740514"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Oggetto SqlXmlCommand (classi gestite SQLXML)
   Si tratta del costruttore per l'oggetto SqlXmlCommand:  
@@ -53,7 +53,7 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>Metodi  
  Oggetto TheSqlXmlCommand supporta diversi metodi, inclusi i seguenti metodi per l'esecuzione di un comando:  
   
- void ExecuteNonQuery)  
+ void ExecuteNonQuery()  
  Esegue il comando, ma non restituisce alcun valore. Questo metodo è utile se si desidera eseguire un comando senza query, ovvero un comando che non restituisca alcun valore. Un esempio di questo comportamento consiste nell'eseguire un updategram o un Diffgram che aggiorna record ma non restituisce alcun valore.  
   
  Stream ExecuteStream()  
@@ -70,7 +70,7 @@ public SqlXmlCommand(string cnString)
  SqlXmlParameter CreateParameter()  
  Crea un oggetto SqlXmlParameter. È possibile impostare i valori per il *Name* e *valore* i parametri di questo oggetto. Questo metodo è utile se si desidera passare parametri a un comando. Per un esempio funzionante, vedere [l'esecuzione di query SQL &#40;classi gestite SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
- ClearParameters() void  
+ void ClearParameters()  
  Cancella i parametri creati per un oggetto comando specifico. Questo metodo è utile se si desidera eseguire più query sullo stesso oggetto comando.  
   
 ## <a name="properties"></a>Proprietà  

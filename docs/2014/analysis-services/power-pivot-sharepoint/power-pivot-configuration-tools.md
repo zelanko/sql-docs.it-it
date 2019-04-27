@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749652"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Configurare, ripristinare o rimuovere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione PowerPivot.  
@@ -50,7 +50,7 @@ ms.locfileid: "53210870"
   
  Gli strumenti possono essere utilizzati solo con un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Non utilizzarli con installazioni di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|nome|Versione supportata di SharePoint|Configurazione dettagliata|  
+|Nome|Versione supportata di SharePoint|Configurazione dettagliata|  
 |----------|-------------------------------------|----------------------------|  
 |configurazione di PowerPivot per SharePoint 2013|SharePoint 2013|[Configurare o ripristinare PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |Strumento di configurazione PowerPivot|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|[Configurare o ripristinare PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|  

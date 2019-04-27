@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ad91ac53d2ff041c3da32fd9a609e67e8b9d1c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730822"
 ---
 # <a name="analysis-services-instance-management"></a>Gestione di un'istanza di Analysis Services
   Un'istanza di Analysis Services è una copia del file eseguibile `msmdsrv.exe` che viene eseguita come un servizio del sistema operativo. Ogni istanza è completamente indipendente dalle altre istanze nello stesso server, disponendo di impostazioni proprie di configurazione, autorizzazioni, porte, account di avvio, archiviazione di file e proprietà della modalità server.  
@@ -41,16 +41,16 @@ ms.locfileid: "48196221"
  In generale, la maggior parte delle attività amministrative da eseguire non variano a seconda della modalità. Un amministratore di sistema di Analysis Services può utilizzare le stesse routine e gli stessi script per gestire qualsiasi istanza di Analysis Services nella rete, indipendentemente dalla modalità di installazione.  
   
 > [!NOTE]  
->  L'eccezione è PowerPivot per SharePoint. L'amministrazione server di una distribuzione di PowerPivot è sempre all'interno del contesto di una farm SharePoint. PowerPivot si differenzia dalle altre modalità server poiché è sempre a istanza singola ed è sempre gestito tramite Amministrazione centrale SharePoint o lo strumento di configurazione PowerPivot. Sebbene sia possibile connettersi a PowerPivot per SharePoint in SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], non è consigliabile. In una farm SharePoint è presente un'infrastruttura mediante la quale viene sincronizzato lo stato del server e controllata la disponibilità del server. L'utilizzo di altri strumenti può interferire con queste operazioni. Per altre informazioni sull'amministrazione server PowerPivot, vedere [PowerPivot per SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  L'eccezione è PowerPivot per SharePoint. L'amministrazione server di una distribuzione di PowerPivot è sempre all'interno del contesto di una farm SharePoint. PowerPivot si differenzia dalle altre modalità server poiché è sempre a istanza singola ed è sempre gestito tramite Amministrazione centrale SharePoint o lo strumento di configurazione PowerPivot. Benché sia possibile, non è consigliabile connettersi a PowerPivot per SharePoint in SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In una farm SharePoint è presente un'infrastruttura mediante la quale viene sincronizzato lo stato del server e controllata la disponibilità del server. L'utilizzo di altri strumenti può interferire con queste operazioni. Per altre informazioni sull'amministrazione server PowerPivot, vedere [PowerPivot per SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Collegamento|Descrizione dell'attività|  
 |----------|----------------------|  
 |[Configurazione successiva all'installazione &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Descrive le attività necessarie e facoltative per completare o modificare un'installazione di Analysis Services.|  
 |[Connettersi ad Analysis Services](connect-to-analysis-services.md)|Descrive le proprietà delle stringhe di connessione, le librerie client, le metodologie di autenticazione e le procedure per stabilire o cancellare le connessioni.|  
 |[Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md)|Vengono descritti strumenti e tecniche per monitorare un'istanza del server, incluso il modo di utilizzare Performance Monitor e SQL Server Profiler.|  
-|[Lo script attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Viene illustrato come automatizzare molte attività amministrative, tra cui l'elaborazione.|  
+|[Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Viene illustrato come automatizzare molte attività amministrative, tra cui l'elaborazione.|  
 |[Scenari di globalizzazione per Analysis Services multidimensionale](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Illustra il supporto per la lingua e le regole di confronto, i passaggi per modificare entrambe le proprietà e i suggerimenti per l'impostazione e il test dei comportamenti della lingua e delle regole di confronto.|  
 |[Registrare le operazioni in Analysis Services](log-operations-in-analysis-services.md)|Descrive i log e illustra come configurarli.|  
   

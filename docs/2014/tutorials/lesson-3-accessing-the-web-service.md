@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653784"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Lezione 3: L'accesso al servizio Web
   Dopo avere aggiunto al progetto un riferimento al servizio Web ReportServer, il passaggio successivo consiste nel creare un'istanza della classe proxy del servizio Web. Per accedere ai metodi del servizio Web, è quindi possibile eseguire una chiamata dalla classe proxy. Quando l'applicazione chiama questi metodi, il codice della classe proxy generato da [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gestisce le comunicazioni tra l'applicazione e il servizio Web.  
@@ -23,7 +23,7 @@ ms.locfileid: "56024832"
  Verrà innanzitutto creata un'istanza della classe proxy del servizio Web, ovvero <xref:ReportService2010.ReportingService2010>, quindi verrà utilizzata la classe proxy per chiamare il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servizio Web. La chiamata del metodo verrà utilizzata per recuperare il nome e la descrizione di uno dei report di esempio, ovvero Company Sales.  
   
 > [!NOTE]  
->  Quando si accede a un servizio Web in esecuzione in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, è necessario aggiungere "$SQLExpress" al percorso "ReportServer". Ad esempio:  
+>  Quando si accede a un servizio Web in esecuzione in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, è necessario aggiungere "$SQLExpress" al percorso "ReportServer". Ad esempio:   
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   

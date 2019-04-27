@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730429"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connessione dalle applicazioni client (Analysis Services)
   Se non si ha familiarità con Analysis Services, utilizzare le informazioni contenute in questo argomento per connettersi a un'istanza esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando strumenti e applicazioni comuni. In questo argomento viene inoltre illustrato come connettersi con identità utente diverse a scopo di test.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656049"
 ---
 # <a name="sqlsetconnectattr-function"></a>Pagina relativa alla funzione SQLSetConnectAttr
 **Conformità**  
@@ -130,17 +130,17 @@ SQLRETURN SQLSetConnectAttr(
   
 |attribute|Impostare prima o dopo la connessione?|  
 |---------------|-------------------------------------|  
-|SQL_ATTR_ACCESS_MODE|[1]|  
+|SQL_ATTR_ACCESS_MODE|Either[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Prima o dopo|  
-|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|[4]|  
+|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|Either[4]|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK|Prima o dopo|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT|Prima o dopo|  
 |SQL_ATTR_ASYNC_ENABLE|[2]|  
 |SQL_ATTR_AUTO_IPD|Prima o dopo|  
-|SQL_ATTR_AUTOCOMMIT|[5]|  
+|SQL_ATTR_AUTOCOMMIT|Either[5]|  
 |SQL_ATTR_CONNECTION_DEAD|After|  
 |SQL_ATTR_CONNECTION_TIMEOUT|Prima o dopo|  
-|SQL_ATTR_CURRENT_CATALOG|[1]|  
+|SQL_ATTR_CURRENT_CATALOG|Either[1]|  
 |SQL_ATTR_DBC_INFO_TOKEN|After|  
 |SQL_ATTR_ENLIST_IN_DTC|After|  
 |SQL_ATTR_LOGIN_TIMEOUT|Prima|  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782220"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>Opzione di configurazione del server EKM provider enabled
   L'opzione `EKM provider enabled` consente di controllare il supporto per dispositivi EKM in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, questa opzione è disattivata.  

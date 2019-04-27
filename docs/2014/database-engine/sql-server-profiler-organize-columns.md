@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773442"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - Organizza colonne
   Utilizzare la finestra di dialogo **Organizza colonne** per selezionare le colonne di dati per il raggruppamento o l'aggregazione degli eventi visualizzati in una traccia, in modo da semplificare la visualizzazione e l'analisi di tabelle o di file di traccia di grandi dimensioni.  

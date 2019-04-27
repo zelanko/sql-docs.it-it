@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781316"
 ---
 # <a name="interfaces-ole-db"></a>Interfacce (OLE DB)
   Oltre alle interfacce OLE DB principali fornite da di Microsoft Data Access Components (MDAC), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa le interfacce OLE DB aggiuntive seguenti:  

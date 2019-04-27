@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a5f82386128c8b4cac8e8a68719d4ece3f3489ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747733"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Seleziona una vista origine dati (Creazione guidata cubo)
   Utilizzare la pagina **Selezionare la vista origine dati** per selezionare la vista origine dati per il cubo vuoto.  
@@ -30,7 +30,7 @@ ms.locfileid: "48210021"
  **Vista origine dati**  
  Consente di selezionare la vista origine dati che verrà utilizzata per il cubo vuoto.  
   
- **Nessuno**  
+ **None**  
  Selezionare questa opzione se non si desidera utilizzare una vista origine dati. Questa opzione è adatta se si intende generare la vista origine dati in un secondo momento o se si intende utilizzare solo il cubo con i gruppi di misure collegati.  
   
 ## <a name="see-also"></a>Vedere anche  

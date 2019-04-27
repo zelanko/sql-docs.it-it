@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731586"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Estendi da esempio (Strumenti di analisi tabelle per Excel)
   ![Pulsante Estendi da esempio in strumenti di analisi tabelle](media/tat-fillex.gif "pulsante Estendi da esempio in strumenti di analisi tabelle")  
@@ -60,9 +60,9 @@ ms.locfileid: "48160902"
   
  Ad esempio, se è necessario completare un foglio di lavoro che indica la distanza di spedizione per gli ordini, è prevedibile da un punto di vista logico che la destinazione abbia un impatto significativo sul valore della distanza di spedizione. In questo caso, il report potrebbe contenere la riga seguente:  
   
-|colonna|valore|Predilige|Impatto relativo|  
+|colonna|Value|Predilige|Impatto relativo|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500 chilometri|80%|  
+|StateProvinceCode|AB|> gt;500 chilometri|80%|  
   
  Ciò significa che il valore AB nella **StateProvinceCode** colonna fortemente consente di stimare una distanza di spedizione di > gt;500 chilometri.  
   

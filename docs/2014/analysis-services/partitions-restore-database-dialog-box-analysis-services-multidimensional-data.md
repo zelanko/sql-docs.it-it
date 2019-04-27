@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743477"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partizioni (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
   Usare la pagina **Partizioni** della finestra di dialogo **Ripristina database** di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per specificare il percorso di ripristino delle partizioni locali, nel caso in cui debbano essere ripristinate partizioni remote e i file di backup remoto da usare per eseguire questa operazione.  
@@ -60,10 +60,10 @@ ms.locfileid: "51639868"
   
  La griglia seguente, attivata se l'opzione è selezionata, viene utilizzata per specificare una cartella di ripristino per ogni partizione locale:  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Cube**|Visualizza il nome del cubo contenente la partizione locale.|  
-|**Gruppo di misure**|Visualizza il nome del gruppo di misure contenente la partizione locale.|  
+|**MeasureGroup**|Visualizza il nome del gruppo di misure contenente la partizione locale.|  
 |**Partizione**|Visualizza il nome della partizione locale.|  
 |**Dimensioni (MB)**|Visualizza le dimensioni (in megabyte) della partizione locale.|  
 |**Cartella originale**|Visualizza il nome della cartella originale in cui era archiviata la partizione locale.|  
@@ -77,7 +77,7 @@ ms.locfileid: "51639868"
   
  La griglia seguente, attivata se l'opzione è selezionata, viene utilizzata per specificare una cartella di ripristino per ogni partizione locale:  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Server**|Visualizza il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce la partizione remota.|  
 |**Data Source**|Visualizza il nome dell'origine dei dati nel file di backup che rappresenta il database contenente la partizione remota.|  

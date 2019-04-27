@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be709cb574d1dc7fac6f1b4948c6deb227dff100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747693"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Selezionare un'origine dati (Configurazione guidata vista origine dati) (Analysis Services)
   Utilizzare la pagina **Selezionare un'origine dati** per selezionare un'origine dei dati per la vista origine dati.  

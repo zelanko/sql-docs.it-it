@@ -1,5 +1,5 @@
 ---
-title: Utilizzare le funzioni di aggregazione | Documenti Microsoft
+title: Usare funzioni di aggregazione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743087"
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34026038"
 |**Min**|Semiadditive|Recupera il valore minimo per tutti i membri figlio.|  
 |**Max**|Semiadditive|Recupera il valore massimo per tutti i membri figlio.|  
 |**DistinctCount**|Nonadditive|Recupera il numero di tutti i membri figlio univoci. Per altri dettagli, vedere [Informazioni sulle misure Distinct Count](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) nella sezione successiva.|  
-|**Nessuno**|Nonadditive|Non viene eseguita alcuna aggregazione e tutti i valori per i membri foglia e non foglia in una dimensione vengono specificati direttamente dalla tabella dei fatti per il gruppo di misure contenente la misura. Se non è possibile leggere alcun valore dalla tabella dei fatti per un membro, il valore per il membro è impostato su Null.|  
+|**None**|Nonadditive|Non viene eseguita alcuna aggregazione e tutti i valori per i membri foglia e non foglia in una dimensione vengono specificati direttamente dalla tabella dei fatti per il gruppo di misure contenente la misura. Se non è possibile leggere alcun valore dalla tabella dei fatti per un membro, il valore per il membro è impostato su Null.|  
 |**ByAccount**|Semiadditive|Calcola l'aggregazione in base alla funzione di aggregazione assegnata al tipo di conto per un membro in una dimensione di tipo Conti. Se nel gruppo di misure non è presente alcuna dimensione di tipo Conti, deve essere considerata come la funzione di aggregazione **None** .<br /><br /> Per altre informazioni sulle dimensioni di tipo Conti, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Semiadditive|Calcola la media dei valori per tutti i membri figlio non vuoti.|  
 |**FirstChild**|Semiadditive|Recupera il valore del primo membro figlio.|  
@@ -65,8 +65,8 @@ ms.locfileid: "34026038"
  Una misura Distinct Count con conteggio dei membri è basata su una colonna chiave esterna nella tabella dei fatti, identificata dalla proprietà **Colonna di origine** della misura. Questa colonna viene unita in join alla colonna della tabella della dimensione che identifica i membri conteggiati mediante la misura Distinct Count.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Riferimento alla funzione MDX & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
- [Definisci funzioni semiadditive](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [Misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Definire una funzione semiadditiva](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

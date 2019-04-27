@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749370"
 ---
 # <a name="powerpivot-data-access"></a>Accesso ai dati PowerPivot
   In questo argomento viene illustrata la modalità in cui i dati vengono recuperati da una cartella di lavoro di PowerPivot pubblicata in una raccolta di SharePoint.  
@@ -41,7 +41,7 @@ ms.locfileid: "48164091"
  Non tutti i dati in una cartella di lavoro di PowerPivot vengono gestiti da PowerPivot per SharePoint. Tramite Excel Services vengono elaborati i dati di celle e tabelle in un foglio di lavoro. Solo le tabelle e i grafici pivot e i sezionamenti che non risultano allineati ai dati PowerPivot vengono gestiti da PowerPivot per SharePoint.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connettersi ad Analysis Services](../instances/connect-to-analysis-services.md)   
+ [Connetti ad Analysis Services](../instances/connect-to-analysis-services.md)   
  [Accesso ai dati di modello tabulare](../tabular-models/tabular-model-data-access.md)  
   
   

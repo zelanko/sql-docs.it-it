@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746813"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Scheda Profili cluster Sequence Clustering (Visualizzatore modello di data mining)
   Nella scheda **Profili cluster** in **Visualizzatore Microsoft Sequence Clustering** è disponibile una vista contraddistinta dal colore delle sequenze incluse in ogni cluster.  
   
  Utilizzare questa vista di un modello Sequence Clustering per visualizzare rapidamente la modalità di raggruppamento delle sequenze individuate dal modello. È possibile vedere immediatamente il numero di sequenze lunghe e corte. Inoltre, è possibile fare clic su un cluster e visualizzare **Legenda data mining** per vedere esattamente gli stati rappresentati dai colori in ogni sequenza.  
   
- **Per altre informazioni:**[algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Sequence Clustering  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:**  [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -50,18 +50,18 @@ ms.locfileid: "48068791"
   
  Due set di istogrammi vengono visualizzati per ogni cluster nel modello, ognuno in una riga diversa del grafico:  
   
--   **\<nome attributo > Samples**: negli istogrammi di questa riga mostrano le sequenze di elementi rappresentativi di ogni cluster. In termini DMX, si tratta dei case di esempio per ogni cluster.  
+-   **\<nome attributo > Samples**: Gli istogrammi di questa riga mostrano le sequenze di elementi rappresentativi di ogni cluster. In termini DMX, si tratta dei case di esempio per ogni cluster.  
   
--   **\<nome attributo >**: gli istogrammi di questa riga descrivono tutti gli elementi contenuti nel cluster e la distribuzione complessiva. Fare clic su un istogramma quando **Legenda data mining** è visibile ed è possibile visualizzare i valori numerici per ognuno  
+-   **\<nome attributo >**: Gli istogrammi di questa riga descrivono tutti gli elementi contenuti nel cluster e la distribuzione complessiva. Fare clic su un istogramma quando **Legenda data mining** è visibile ed è possibile visualizzare i valori numerici per ognuno  
   
  **Stati**  
  Questa colonna del grafico è facoltativa e può essere visualizzata o rimossa selezionando l'opzione **Mostra legenda** . Tramite la colonna **Stati** è possibile comprendere la correlazione tra stati e colori nell'istogramma dei cluster corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizzatori modello di Data Mining](data-mining/data-mining-model-viewers.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)   
  [Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

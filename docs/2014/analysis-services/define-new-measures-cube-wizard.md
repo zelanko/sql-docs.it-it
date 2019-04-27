@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3769eaaa3b07c8f62ba8d558a44fdd16c85c2305
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732107"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definizione nuove misure (Creazione guidata cubo)
   La pagina **Definizione nuove misure** consente di definire nuove misure per un cubo creato senza utilizzare un'origine dei dati.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749009"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Visualizzare la cronologia dell'aggiornamento dati (PowerPivot per SharePoint)
   La cronologia dell'aggiornamento dati è un record di tutte le attività di aggiornamento dei dati PowerPivot in una cartella di lavoro di Excel. Le operazioni di aggiornamento dati vengono eseguite in un'istanza del server Analysis Services di una farm di SharePoint in base a una pianificazione fornita dall'utente. Per impostazione predefinita, la cronologia dell'aggiornamento dati viene mantenuta per un anno. L'amministratore di una farm può tuttavia specificare criteri di memorizzazione diversi per la cronologia relativa all'utilizzo e agli eventi, in modo da stabilire la durata di mantenimento in memoria dei record dell'aggiornamento dati.  
@@ -56,19 +56,19 @@ ms.locfileid: "48118971"
  Viene visualizzata la pagina della cronologia, in cui viene mostrato un record completo per tutte le attività di aggiornamento relative ai dati PowerPivot nella cartella di lavoro di Excel corrente.  
   
 ##  <a name="viewITOps"></a> Visualizzare la cronologia dell'aggiornamento dati per tutte le cartelle di lavoro  
- Utilizzando il dashboard di gestione PowerPivot in Amministrazione centrale, gli amministratori della farm e gli amministratori dell'applicazione di servizio possono ottenere una vista completa della cronologia e dello stato di aggiornamento dei dati per tutte le cartelle di lavoro PowerPivot. Per altre informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Utilizzando il dashboard di gestione PowerPivot in Amministrazione centrale, gli amministratori della farm e gli amministratori dell'applicazione di servizio possono ottenere una vista completa della cronologia e dello stato di aggiornamento dei dati per tutte le cartelle di lavoro PowerPivot. Per ulteriori informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="pageelements"></a> Utilizzare le informazioni sulla cronologia  
  Nella pagina della cronologia dell'aggiornamento dati vengono fornite informazioni dettagliate sulle singole operazioni di aggiornamento. È possibile utilizzare le informazioni contenute in questa pagina per verificare se l'aggiornamento è stato eseguito o il motivo per cui non è stato completato correttamente.  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
 |Nome|Consente di specificare il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati PowerPivot.|  
 |Stato corrente|I valori disponibili sono **Pianificato**, **Aggiornamento in corso**, **Operazione completata**o **Operazione non riuscita**.<br /><br /> Il valore**Pianificato** viene visualizzato quando si crea per la prima volta la pianificazione. Dopo la prima esecuzione dell'aggiornamento dei dati, questo messaggio di stato non viene più visualizzato.<br /><br /> **Aggiornamento in corso** indica che è in corso l'aggiornamento dei dati. Una richiesta si trova nella coda dei processi o è in esecuzione nel server.<br /><br /> **Operazione completata** indica che l'ultima operazione di aggiornamento dei dati è stata completata e la cartella di lavoro aggiornata viene nuovamente archiviata nella raccolta di SharePoint.<br /><br /> **Operazione non riuscita** indica che l'ultima operazione di aggiornamento dei dati non è stata completata. I dati aggiornati non sono stati salvati. Nella cartella di lavoro sono inclusi gli stessi dati presenti prima dell'inizio dell'aggiornamento.|  
 |Ultimo aggiornamento riuscito|Consente di specificare la data in cui l'ultimo aggiornamento dei dati è stato completato correttamente.|  
 |Prossimo aggiornamento pianificazione|Consente di specificare la data in cui è previsto il prossimo aggiornamento dei dati in base alla pianificazione.<br /><br /> Il collegamento **Configura pianificazione** reindirizza l'utente alla pagina di definizione della pianificazione. Se si dispone di autorizzazioni di collaborazione nella cartella di lavoro, è possibile fare clic sul collegamento per visualizzare e modificare le informazioni sulla pianificazione che regolano l'aggiornamento automatico dei dati PowerPivot nella cartella di lavoro.|  
 |Started|All'interno della sezione relativa ai dettagli della cronologia, **Avvio eseguito** indica il tempo di elaborazione effettivo. Il tempo di elaborazione effettivo potrebbe essere diverso da quello pianificato. L'elaborazione inizierà quando è disponibile memoria sufficiente sul server. Se il server è molto occupato, l'elaborazione potrebbe iniziare diverse ore dopo l'ora di inizio specificata.|  
-|Completato|All'interno della sezione relativa ai dettagli della cronologia, **Completato** indica il momento in cui l'operazione di aggiornamento dei dati è stata completata. Sono specificate la data e l'ora in cui la cartella di lavoro è stata nuovamente archiviata nella raccolta.<br /><br /> Se l'aggiornamento dei dati ha esito negativo, la causa dell'errore viene illustrata in uno o più i messaggi di errore. È possibile espandere ogni record per visualizzare i dettagli sullo stato. Ogni origine dati viene elencata singolarmente, accanto ai messaggi relativi all'esito positivo o negativo nel quali viene spiegato il motivo per cui l'aggiornamento dei dati non è stato completato.|  
+|Operazione completata|All'interno della sezione relativa ai dettagli della cronologia, **Completato** indica il momento in cui l'operazione di aggiornamento dei dati è stata completata. Sono specificate la data e l'ora in cui la cartella di lavoro è stata nuovamente archiviata nella raccolta.<br /><br /> Se l'aggiornamento dei dati ha esito negativo, la causa dell'errore viene illustrata in uno o più i messaggi di errore. È possibile espandere ogni record per visualizzare i dettagli sullo stato. Ogni origine dati viene elencata singolarmente, accanto ai messaggi relativi all'esito positivo o negativo nel quali viene spiegato il motivo per cui l'aggiornamento dei dati non è stato completato.|  
 |Time|Viene fornito il tempo totale dall'avvio dell'aggiornamento dei dati fino al completamento.|  
 |Stato|Viene fornito un record cronologico relativo all'esito positivo o negativo di un'operazione di aggiornamento.|  
   

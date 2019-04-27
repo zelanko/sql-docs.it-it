@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747835"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Generazione guidata schema (Analysis Services - Dati multidimensionali)
   Utilizzare la Generazione guidata schema per generare automaticamente lo schema relazionale per un database dell'area di interesse basato su cubi e dimensioni esistenti. È inoltre possibile popolare tabelle generate dalla procedura guidata per le dimensioni temporali e gestire la convenzione di denominazione e le opzioni per il database dell'area di interesse.  
@@ -35,7 +35,7 @@ ms.locfileid: "48123311"
   
  Dopo avere generato e salvato uno schema relazionale tramite la Generazione guidata schema è possibile utilizzare la procedura guidata per modificare e ripopolare successivamente lo schema relazionale.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Specificare la destinazione &#40;Generazione guidata Schema&#41; &#40;Analysis Services - dati multidimensionali&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   

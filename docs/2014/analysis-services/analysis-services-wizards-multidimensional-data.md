@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643721"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Procedure guidate di Analysis Services (Dati multidimensionali)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono disponibili procedure guidate per l'utilizzo in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nella tabella seguente vengono descritte le procedure guidate disponibili.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Guida sensibile al contesto della Progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)|Utilizzare la Progettazione guidata aggregazioni per definire aggregazioni per una progettazione delle aggregazioni, utilizzata per creare istanze di aggregazione per le partizioni in un gruppo di misure.|  
 |[Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)|Utilizzare la Configurazione guidata funzionalità di Business Intelligence per aggiungere caratteristiche avanzate di Business Intelligence, ad esempio caratteristiche per la contabilità e la conversione valuta, a un cubo o a una dimensione.|  
@@ -38,7 +38,7 @@ ms.locfileid: "48189751"
 |[Guida sensibile al contesto del Collegamento guidato oggetti](linked-object-wizard-f1-help.md)|Utilizzare il Collegamento guidato oggetti per definire una dimensione collegata o un gruppo di misure collegato e, facoltativamente, per importare oggetti correlati.|  
 |[Partizione della Guida F1 di procedura guidata &#40;Analysis Services - dati multidimensionali&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Utilizzare la Creazione guidata partizione per definire una partizione locale o una partizione remota.|  
 |[Guida F1 di procedura guidata di generazione dello schema &#40;Analysis Services - dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Utilizzare la Generazione guidata schema per definire una vista origine dati e, facoltativamente, per generare uno script per lo schema relazionale tra la vista origine dati e un'origine dati, da un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esistente.|  
-|[Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo](usage-based-optimization-wizard-f1-help.md)|Utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per definire aggregazioni per una progettazione delle aggregazioni basata sulle query archiviate nel log di query per un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo](usage-based-optimization-wizard-f1-help.md)|Utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per definire aggregazioni per una progettazione delle aggregazioni basata sulle query archiviate nel log di query per un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

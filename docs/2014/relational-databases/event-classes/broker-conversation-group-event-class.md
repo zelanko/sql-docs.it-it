@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23e39e48b8c4c20ab0e847d87b7193179e8d74ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664234"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group  - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Conversation Group** .  
@@ -32,7 +32,7 @@ ms.locfileid: "52785983"
 |**ClientProcessID**|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Yes|  
 |**DatabaseID**|`int`|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**EventClass**|`int`|Tipo di classe di evento acquisita. Per **Broker:Conversation Group** è sempre **136**.|27|No|  
-|**EventSequence**|`int`|Numero di sequenza dell'evento.|51|No|  
+|**EventSequence**|`int`|Numero di sequenza dell'evento.|51|no|  
 |**EventSubClass**|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Crea**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha creato un nuovo gruppo di conversazioni.<br /><br /> **Elimina**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eliminato un gruppo di conversazioni.|21|Yes|  
 |**GUID**|`uniqueidentifier`|Identificatore del gruppo di conversazioni descritto dall'evento.|54|No|  
 |**HostName**|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

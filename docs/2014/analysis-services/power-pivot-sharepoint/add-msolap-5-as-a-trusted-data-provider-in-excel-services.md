@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354ca92c8ed66c7669863cc234fe4999ab95e662
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743297"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services
   MSOLAP.5 si riferisce al provider OLE DB di Analysis Services per SQL Server 2012. In Excel Services questo provider deve essere considerato attendibile prima di effettuare la richiesta di connessione che comporta la disponibilità di dati PowerPivot in un server.  
@@ -37,7 +37,7 @@ ms.locfileid: "48051179"
   
 4.  Se non è elencato, fare clic su **Aggiungi provider di dati attendibile**.  
   
-5.  In ID Provider, digitare `MSOLAP.5`.  
+5.  In ID provider, digitare `MSOLAP.5`.  
   
 6.  Per Tipo di provider, assicurarsi che sia selezionato OLE DB.  
   

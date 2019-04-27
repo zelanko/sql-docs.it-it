@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678375"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Inviare commenti e suggerimenti dati di telemetria a Microsoft per il sistema di piattaforma Analitica
 Sistema di piattaforma Analitica dispone di una funzionalità di telemetria facoltativo che invia i dati della Console di amministrazione di Microsoft. 

@@ -1,5 +1,5 @@
 ---
-title: Creazione con ambito sessione set denominati (MDX) | Documenti Microsoft
+title: Creazione con ambito sessione denominati set (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739991"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Denominata set - creazione con ambito sessione MDX set denominati
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Set denominati MDX set denominati - creazione-con ambito sessione
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Per creare un set denominato disponibile per un'intera sessione MDX (Multidimensional Expressions), è possibile usare l'istruzione [CREATE SET](../../../mdx/mdx-data-definition-create-set.md). Un set denominato creato utilizzando l'istruzione CREATE SET non viene rimosso fino alla chiusura della sessione MDX.  
+  Per creare un set denominato disponibile per un'intera sessione MDX (Multidimensional Expressions), è possibile usare l'istruzione [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) . Un set denominato creato utilizzando l'istruzione CREATE SET non viene rimosso fino alla chiusura della sessione MDX.  
   
  Come descritto in questo argomento, la sintassi della parola chiave WITH è intuitiva e facile da utilizzare.  
   
@@ -50,6 +50,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di Query con ambito denominato set & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Creazione di set denominati con ambito query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   
