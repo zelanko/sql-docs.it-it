@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714119"
 ---
 # <a name="using-data-sources"></a>Uso delle origini dati
 Origini dati vengono in genere create dall'utente finale o un riferimento con un programma denominato il *Amministratore ODBC*. L'amministratore ODBC richiede all'utente per il driver da usare e quindi chiama tale driver. Il driver consente di visualizzare una finestra di dialogo che richiede le informazioni che necessarie per connettersi all'origine dati. Dopo che l'utente immette le informazioni, il driver viene archiviato nel sistema.  

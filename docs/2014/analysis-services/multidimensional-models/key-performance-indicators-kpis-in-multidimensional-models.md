@@ -1,33 +1,23 @@
 ---
 title: Indicatori di prestazioni (KPI) nei modelli multidimensionali chiave | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725727"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) o di membri calcolati. Gli indicatori KPI dispongono inoltre di metadati aggiuntivi che offrono informazioni sulla modalità di visualizzazione dei risultati dei calcoli degli indicatori stessi nelle applicazioni client.  
@@ -48,7 +38,7 @@ ms.locfileid: "50145222"
 |Nome|Definizione|  
 |----------|----------------|  
 |Obiettivo|Calcolo o espressione numerica MDX che restituisce il valore di destinazione dell'indicatore di prestazioni chiave.|  
-|valore|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
+|Value|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
 |Stato|Espressione MDX che rappresenta lo stato dell'indicatore di prestazioni chiave in un punto nel tempo specifico.<br /><br /> L'espressione MDX relativa allo stato deve restituire un valore normalizzato compreso tra -1 e 1. I valori minori o uguali a -1 vengono interpretati come "errati" o "bassi". Un valore pari a zero (0) viene interpretato come "accettabile" o "medio". I valori maggiori di o uguali a 1 vengono interpretati come "buoni" o "alti".<br /><br /> Facoltativamente, può venire restituito un numero illimitato di valori intermedi e questi valori possono essere utilizzati per visualizzare un numero qualsiasi di stati aggiuntivi, se l'applicazione client lo consente.|  
 |Tendenza|Espressione MDX che valuta il valore dell'indicatore di prestazioni chiave nel tempo. La tendenza può essere rappresentata da qualsiasi criterio basato sul tempo che sia utile in un contesto aziendale specifico.<br /><br /> L'espressione MDX relativa alla tendenza consente a un utente aziendale di determinare se l'indicatore di prestazioni chiave sta migliorando o peggiorando nel tempo.|  
 |Indicatore di stato|Elemento visivo che offre un'indicazione immediata dello stato dell'indicatore di prestazioni chiave. Il tipo di visualizzazione dell'elemento è determinato dal valore dell'espressione MDX che valuta lo stato.|  

@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810422"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
@@ -93,11 +93,11 @@ ms.locfileid: "54124521"
   
  La porta della connessione DAC viene assegnata dinamicamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante l'avvio. Durante la connessione all'istanza predefinita, l'applicazione livello dati evita di usare una richiesta SSRP (Resolution Protocol) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al servizio SQL Server Browser. Essa si connette prima sulla porta TCP 1434. Se questo tentativo di connessione termina con esito negativo, la connessione DAC esegue una chiamata SSRP per ottenere la porta. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non è in attesa di richieste SSRP, la richiesta di connessione restituisce un errore. Vedere il log degli errori per ottenere il numero di porta su cui è in attesa la connessione DAC. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare connessioni amministrative remote, è necessario inizializzare l'applicazione livello dati con un numero di porta esplicito:  
   
- **SQLCMD-Stcp:**  _\<server >,\<porta >_  
+ **sqlcmd-Stcp:** _\<server>,\<port>_  
   
  Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elenca il numero di porta relativo all'applicazione livello dati, che per impostazione predefinita è 1434. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare solo applicazioni livello dati locali, eseguire la connessione utilizzando l'adattatore loopback con il comando seguente:  
   
- **SQLCMD-S127.0.0.1**,`1434`  
+ **sqlcmd-S127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Esempio  
  In questo esempio un amministratore si accorge che il server `URAN123` non risponde e desidera diagnosticare il problema. A tale scopo, l'utente attiva l'utilità della riga di comando `sqlcmd` e si connette al server `URAN123` utilizzando `-A` per indicare la connessione DAC.  

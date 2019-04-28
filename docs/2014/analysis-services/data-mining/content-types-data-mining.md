@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723133"
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
@@ -50,14 +50,14 @@ ms.locfileid: "48190091"
   
  I valori di una colonna attributo discreta non possono implicare l'ordinamento, anche se si tratta di valori numerici. Anche se i valori utilizzati per la colonna discreta sono numerici, non è inoltre possibile calcolare valori frazionari. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti.  
   
- Il `Discrete` tipo di contenuto è supportato da tutti i tipi di dati di data mining.  
+ Il tipo di contenuto `Discrete` è supportato da tutti i tipi di dati di data mining.  
   
 ## <a name="continuous"></a>Continuo  
  Il tipo di contenuto*Continuous* indica che la colonna contiene valori che rappresentano dati numerici su una scala che consente valori provvisori. A differenza di una colonna discreta, che rappresenta dati numerabili finiti, una colonna continua rappresenta misure scalabili e i dati possono contenere un numero infinito di valori frazionari. Una colonna di temperature è un esempio di colonna attributo continua.  
   
  Quando una colonna contiene dati numerici continui e quando è noto il modo in cui i dati devono essere distribuiti, è possibile migliorare potenzialmente l'accuratezza dell'analisi specificando la distribuzione prevista dei valori. Poiché la distribuzione della colonna viene specificata a livello della struttura di data mining, l'impostazione si applica a tutti i modelli basati sulla struttura. Per altre informazioni, vedere [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md).  
   
- Il `Continuous` tipo di contenuto è supportato dai tipi di dati seguenti: `Date`, `Double`, e `Long`.  
+ Il tipo di contenuto `Continuous` è supportato dai tipi di dati `Date`, `Double` e `Long`.  
   
 ## <a name="discretized"></a>Discretizzato  
  Per*discretizzazione* si intende il processo di raggruppamento in bucket dei valori di un set di dati continuo in modo da limitare il numero di valori possibili. È possibile discretizzare solo dati numerici.  
@@ -68,22 +68,22 @@ ms.locfileid: "48190091"
   
  Il tipo di contenuto `Discretized` è supportato dai tipi di dati `Date`, `Double`, `Long` e `Text`.  
   
-## <a name="key"></a>Key  
- Il tipo di contenuto *key* indica che la colonna identifica in modo univoco una riga. In una tabella del case la colonna chiave è in genere un identificatore numerico o di testo. Impostare il tipo di contenuto `key` per indicare che la colonna non deve essere utilizzata per l'analisi, solo per i record di rilevamento.  
+## <a name="key"></a>Chiave  
+ Il tipo di contenuto *key* indica che la colonna identifica in modo univoco una riga. In una tabella del case la colonna chiave è in genere un identificatore numerico o di testo. Impostare il tipo di contenuto su `key` per indicare che la colonna non deve essere utilizzata per l'analisi, ma solo per la registrazione di record.  
   
- Anche le tabelle nidificate contengono chiavi, ma in questo caso l'utilizzo è leggermente diverso. Impostare il tipo di contenuto `key` in una tabella nidificata se la colonna è l'attributo che si desidera analizzare. I valori nella chiave della tabella nidificata devono essere univoci per ogni case, ma possono esistere duplicati nell'intero set di case.  
+ Anche le tabelle nidificate contengono chiavi, ma in questo caso l'utilizzo è leggermente diverso. Impostare il tipo di contenuto su `key` in una tabella nidificata se la colonna corrisponde all'attributo che si desidera analizzare. I valori nella chiave della tabella nidificata devono essere univoci per ogni case, ma possono esistere duplicati nell'intero set di case.  
   
  Se ad esempio si analizzano i prodotti acquistati dai clienti, è possibile impostare il tipo di contenuto chiave (key) per la colonna **CustomerID** nella tabella del case e di nuovo il tipo di contenuto chiave (key) per la colonna **PurchasedProducts** nella tabella annidata.  
   
 > [!NOTE]  
 >  Le tabelle nidificate sono disponibili solo se si utilizzano dati di un'origine dati esterna definiti come vista origine dati di Analysis Services.  
   
- Questo tipo di contenuto è supportato dai tipi di dati seguenti: `Date`, `Double`, `Long`, e `Text`.  
+ Questo tipo di contenuto è supportato dai tipi di dati `Date`, `Double`, `Long` e `Text`.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  Il tipo di contenuto *key sequence* può essere usato solo nei modelli Sequence Clustering. Quando si imposta tipo di contenuto su `key sequence`, la colonna contiene valori che rappresentano una sequenza di eventi. I valori sono ordinati, ma non è necessario che siano equidistanti.  
   
- Questo tipo di contenuto è supportato dai tipi di dati seguenti: `Double`, `Long`, `Text`, e `Date`.  
+ Questo tipo di contenuto è supportato dai tipi di dati `Double`, `Long`, `Text` e `Date`.  
   
 ## <a name="key-time"></a>Chiave temporale  
  Il tipo di contenuto *key time* può essere usato solo nei modelli Time Series. Quando si imposta il tipo di contenuto su `key time`, i valori vengono ordinati e rappresentano una scala cronologica.  
@@ -113,10 +113,10 @@ ms.locfileid: "48190091"
  Oltre ai tipi di contenuto precedenti che sono di uso comune con tutti i modelli, per alcuni tipi di dati è possibile utilizzare le colonne classificate per definire i tipi di contenuto. Per altre informazioni sulle colonne classificate, vedere [Colonne classificate &#40;Data mining&#41;](classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [I tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Tipi di dati &#40;Data Mining&#41;](data-types-data-mining.md)   
+ [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [Tipi di dati &#40;data mining&#41;](data-types-data-mining.md)   
  [Tipi di dati &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
- [Modificare le proprietà di una struttura di Data Mining](change-the-properties-of-a-mining-structure.md)   
+ [Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  
   
   

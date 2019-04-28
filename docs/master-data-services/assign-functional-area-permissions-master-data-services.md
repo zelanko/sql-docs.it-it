@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b6faced4ac5f4d585c48571833a61b1ca96bccb3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817231"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Assegnare autorizzazioni per aree funzionali (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52790163"
 
   Assegnare autorizzazioni per aree funzionali per consentire a utenti e gruppi di accedere alle aree funzionali di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
@@ -48,7 +48,7 @@ ms.locfileid: "52790163"
   
 7.  Al termine, scegliere **Salva**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

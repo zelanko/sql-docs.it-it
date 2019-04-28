@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806703"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Piano di manutenzione (Proprietà sottopiano)
   Usare la finestra di dialogo **Piano di manutenzione (Proprietà sottopiano)** per specificare il nome, la descrizione e la pianificazione per un sottopiano di un piano di manutenzione. Per visualizzare questa finestra di dialogo, fare clic su **Proprietà sottopiano** nella scheda **Progettazione** del piano di manutenzione o fare doppio clic su un sottopiano nella griglia della finestra di progettazione.  

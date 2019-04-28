@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861521"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Istruzioni per la generazione di risultati e senza risultati
 Istruzioni SQL possono essere suddivisi nelle categorie seguenti cinque a regime di controllo libero:  

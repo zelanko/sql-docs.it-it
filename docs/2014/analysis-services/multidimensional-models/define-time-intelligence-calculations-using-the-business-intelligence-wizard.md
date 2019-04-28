@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a67270205e6c6977e01c274f0f864dc77ce8b13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726425"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence
   La funzionalità avanzata di Business Intelligence per le gerarchie temporali corrisponde alla funzionalità avanzata a livello di cubo basata sull'aggiunta di calcoli temporali o viste temporali a una gerarchia selezionata. Questa funzionalità avanzata supporta le categorie di calcolo seguenti:  
@@ -42,14 +42,14 @@ ms.locfileid: "48059529"
   
 -   Confronti di periodi paralleli.  
   
- È possibile applicare la funzionalità di Business Intelligence per le gerarchie temporali a cubi che dispongono di una dimensione temporale, ovvero una dimensione la cui proprietà `Type` è impostata su `Time`. Gli attributi temporali di tale dimensione devono inoltre disporre di impostazioni adeguate, ad esempio Anni o Mesi, per la corrispondente proprietà `Type`. Il `Type` della dimensione e dei relativi attributi verrà impostata correttamente se si usa la creazione guidata dimensione per creare la dimensione temporale.  
+ È possibile applicare la funzionalità di Business Intelligence per le gerarchie temporali a cubi che dispongono di una dimensione temporale, ovvero una dimensione la cui proprietà `Type` è impostata su `Time`. Gli attributi temporali di tale dimensione devono inoltre disporre di impostazioni adeguate, ad esempio Anni o Mesi, per la corrispondente proprietà `Type`. La proprietà `Type` della dimensione e dei relativi attributi verrà impostata correttamente se per la creazione della dimensione temporale si utilizza Creazione guidata dimensione.  
   
  Per aggiungere funzionalità di Business Intelligence per le gerarchie temporali a un cubo, è possibile usare la Configurazione guidata funzionalità di Business Intelligence, quindi selezionare l'opzione **Definizione funzionalità di Business Intelligence per le gerarchie temporali** nella pagina **Scelta funzionalità avanzata** . Questa procedura guidata consente di eseguire in modo semplificato la selezione di una gerarchia a cui aggiungere la funzionalità di Business Intelligence per le gerarchie temporali e la definizione dei membri della gerarchia ai quali verrà applicata la funzionalità di Business Intelligence per le gerarchie temporali. Nell'ultima pagina della procedura guidata vengono visualizzate le modifiche che verranno apportate al database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per aggiungere la funzionalità di Business Intelligence per le gerarchie temporali selezionata.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Selezione di una gerarchia temporale  
  Nella pagina **Scelta calcoli e gerarchia di destinazione** selezionare la gerarchia temporale a cui si desidera applicare la funzionalità avanzata. Questa funzionalità avanzata può essere applicata solo a una gerarchia temporale durante l'esecuzione di Configurazione guidata funzionalità di Business Intelligence. Se si desidera applicare la funzionalità avanzata a più gerarchie temporali, è necessario eseguire nuovamente la procedura guidata.  
   
- Dopo aver selezionato una gerarchia temporale, nell'elenco **Calcoli temporali disponibili** selezionare i calcoli da applicare alla gerarchia. I calcoli disponibili dipendono dai livelli nella gerarchia e nel `Type` impostazione delle proprietà per l'attributo di ogni livello. Ad esempio, una gerarchia Anni supporta Da inizio anno e Incremento rispetto all'anno precedente, a differenza di una gerarchia Trimestri.  
+ Dopo aver selezionato una gerarchia temporale, nell'elenco **Calcoli temporali disponibili** selezionare i calcoli da applicare alla gerarchia. I calcoli disponibili dipendono dai livelli inclusi nella gerarchia e dalle impostazioni della proprietà `Type` per l'attributo di ogni livello. Ad esempio, una gerarchia Anni supporta Da inizio anno e Incremento rispetto all'anno precedente, a differenza di una gerarchia Trimestri.  
   
 > [!NOTE]  
 >  Il file modello Timeintelligence.xml definisce i calcoli temporali visualizzati in **Calcoli temporali disponibili**. Se i calcoli disponibili non soddisfano le specifiche esigenze, è possibile modificare i calcoli esistenti oppure aggiungerne di nuovi al file Timeintelligence.xml.  

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721018"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lezione 2: Preparazione della cartella Snapshot
   In questa lezione verrà configurata la cartella snapshot utilizzata per la creazione e l'archiviazione dello snapshot di pubblicazione.  
@@ -51,7 +51,7 @@ ms.locfileid: "54128491"
 10. Fare clic su **OK** per chiudere la finestra di dialogo **Proprietà di repldata** e creare la condivisione repldata.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo è stata configurata la condivisione per la cartella snapshot. Il passaggio successivo consiste nella configurazione della distribuzione. Vedere [lezione 3: Configurazione della distribuzione](lesson-3-configuring-distribution.md).  
+ In questo modo è stata configurata la condivisione per la cartella snapshot. Il passaggio successivo consiste nella configurazione della distribuzione. Vedere [Lezione 3: Configurazione della distribuzione](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza della cartella snapshot](security/secure-the-snapshot-folder.md)  

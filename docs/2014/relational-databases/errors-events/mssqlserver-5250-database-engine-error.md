@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867935"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
     
@@ -30,7 +30,7 @@ ms.locfileid: "48143221"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Testo del messaggio|Errore di database: la pagina PAGE_TYPE P_ID per il database 'NAME' (ID database DB_ID) non è valida. Impossibile correggere questo errore. È necessario eseguire un ripristino dal backup.|  
+|Testo del messaggio|Errore di database: La pagina PAGE_TYPE P_ID per il database 'NAME' (ID database DB_ID) non è valida. Impossibile correggere questo errore. È necessario eseguire un ripristino dal backup.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Una pagina di intestazione o una pagina di avvio del file nel database specificato è danneggiata.  

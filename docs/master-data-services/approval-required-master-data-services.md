@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817704"
 ---
 # <a name="approval-required-master-data-services"></a>Approvazione necessaria (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "52759179"
 >   
 >  Le modifiche apportate da una regola business non richiedono l'approvazione.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema  

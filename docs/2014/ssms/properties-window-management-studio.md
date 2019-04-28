@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823788"
 ---
 # <a name="properties-window-management-studio"></a>Finestra Proprietà (Management Studio)
   Utilizzare questa finestra per visualizzare le proprietà degli elementi selezionati. È inoltre possibile utilizzare la finestra Proprietà per visualizzare le proprietà di file, progetti e soluzioni. La finestra Proprietà è disponibile facendo clic su **Finestra proprietà** del menu **Visualizza** .  

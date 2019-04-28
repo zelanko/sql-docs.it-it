@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812595"
 ---
 # <a name="compare-files"></a>Confronto di file
   È possibile confrontare i file per stabilire come hanno acquisito lo stato presente. Se viene rilevato, ad esempio, un difetto in una build del progetto del codice dopo l'archiviazione di una particolare versione del file di origine, è possibile confrontare la versione attuale con una precedente. Questo confronto aiuta a individuare il codice responsabile del difetto.  

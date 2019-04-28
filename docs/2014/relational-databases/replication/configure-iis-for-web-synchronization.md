@@ -15,25 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722369"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Come si fa: Configurare una sottoscrizione per utilizzare la sincronizzazione Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurare una sottoscrizione per utilizzare la sincronizzazione Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Come si fa: Configurare una sottoscrizione per utilizzare la sincronizzazione Web (programmazione Transact-SQL della replica)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Procedura: Configurare una sottoscrizione per utilizzare la sincronizzazione Web (programmazione Transact-SQL della replica)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Come si fa: Configurare una sottoscrizione per utilizzare la sincronizzazione Web (programmazione RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Procedura: Configurare una sottoscrizione per utilizzare la sincronizzazione Web (programmazione RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportate le versioni 5.0, 6.0 e 7.0 di IIS. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
   
 > [!IMPORTANT]  
->  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori tra cui: "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
+>  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori tra cui: "Il formato di un messaggio durante la sincronizzazione Web non è valido. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
   
 > [!CAUTION]  
 >  Non utilizzare contemporaneamente sia WebSync sia percorsi alternativi della cartella snapshot.  
@@ -217,7 +217,7 @@ ms.locfileid: "53372753"
   
 #### <a name="to-configure-iis-authentication"></a>Per configurare l'autenticazione di IIS  
   
--   Quando i Sottoscrittori si connettono a IIS, è necessario che vengano autenticati da IIS affinché possano accedere a risorse e processi. IIS offre tre tipi di autenticazione: anonima, di base e integrata. L'autenticazione può essere applicata all'intero sito Web oppure alla directory virtuale creata.  
+-   Quando i Sottoscrittori si connettono a IIS, è necessario che vengano autenticati da IIS affinché possano accedere a risorse e processi. IIS offre tre tipi di autenticazione: Anonima, base e integrata. L'autenticazione può essere applicata all'intero sito Web oppure alla directory virtuale creata.  
   
      È consigliabile utilizzare l'autenticazione di base con SSL. SSL è necessario indipendentemente dal tipo di autenticazione utilizzato. Per ulteriori informazioni sulla configurazione dell'autenticazione, vedere la documentazione di IIS.  
   

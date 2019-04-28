@@ -17,18 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701933"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
   Un'azione è un'operazione inizializzata dall'utente finale su un cubo o una parte di un cubo selezionati. L'operazione consente di avviare un'applicazione con l'elemento selezionato come parametro oppure di recuperare informazioni sull'elemento selezionato. Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](actions-analysis-services-multidimensional-data.md).  
   
  Usare la scheda **Azioni** di Progettazione cubi per compilare azioni per un cubo. Specificare le opzioni seguenti:  
   
- **Nome**  
+ **Name**  
  Selezionare un nome che identifichi l'azione.  
   
  **Destinazione azione**  
@@ -58,7 +58,7 @@ ms.locfileid: "50146426"
  **Contenuto azione**  
  Selezionare il tipo di azione. Nella tabella seguente vengono riepilogati i tipi disponibili.  
   
-|Tipo|Description|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
 |Set di dati|Consente di recuperare un set di dati.|  
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -71,7 +71,7 @@ ms.locfileid: "50146426"
  **Proprietà aggiuntive**  
  Selezionare la proprietà. Nella tabella seguente vengono riepilogate le proprietà disponibili.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattiva<br /><br /> Su apertura|  
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
@@ -88,7 +88,7 @@ ms.locfileid: "50146426"
  **Server di report**  
  Le proprietà descritte nella tabella seguente sono specifiche del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Nome server**|Nome del computer in cui il server di report è in esecuzione.|  
 |**Percorso server**|Percorso esposto dal server di report.|  
@@ -112,7 +112,7 @@ parametervalue1
 & ...  
 ```  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813656"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn (SQL Server)
   Le transazioni tra database e quelle distribuite non sono supportate da [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o dal mirroring del database perché l'atomicità e integrità delle transazioni non può essere garantita per i motivi seguenti:  
   
--   In caso di transazioni tra database, il relativo commit viene eseguito in modo indipendente. Pertanto, anche per i database presenti in un solo gruppo di disponibilità, potrebbe verificarsi un failover dopo il commit di una transazione da parte di un database, ma prima che la stessa operazione venga effettuata da un altro database. Per il mirroring del database questo problema è ancora più complesso perché dopo un failover, il database con mirroring si trova in genere in un'istanza del server diversa dall'altro database e, anche se viene eseguito il mirroring di entrambi i database tra gli stessi due partner, non esiste garanzia alcuna che verrà eseguito il failover di entrambi i database contemporaneamente.  
+-   Per le transazioni tra database: Ogni database esegue il commit in modo indipendente. Pertanto, anche per i database presenti in un solo gruppo di disponibilità, potrebbe verificarsi un failover dopo il commit di una transazione da parte di un database, ma prima che la stessa operazione venga effettuata da un altro database. Per il mirroring del database questo problema è ancora più complesso perché dopo un failover, il database con mirroring si trova in genere in un'istanza del server diversa dall'altro database e, anche se viene eseguito il mirroring di entrambi i database tra gli stessi due partner, non esiste garanzia alcuna che verrà eseguito il failover di entrambi i database contemporaneamente.  
   
--   In caso di transazioni distribuite, dopo un failover, tramite il nuovo server principale o la nuova replica primaria non è possibile effettuare la connessione al Distributed Transaction Coordinator (DTC) nel server principale o nella replica primaria precedente. Per questo motivo, tramite il nuovo server principale o la nuova replica primaria non è possibile ottenere lo stato delle transazioni.  
+-   Per le transazioni distribuite: Dopo un failover, il nuovo server principale/replica primaria non riesce a connettersi al distributed transaction coordinator sulla replica di server principale/primario precedente. Per questo motivo, tramite il nuovo server principale o la nuova replica primaria non è possibile ottenere lo stato delle transazioni.  
   
  Nell'esempio di mirroring del database seguente si illustra come può verificarsi un'incoerenza logica. In questo esempio un'applicazione utilizza una transazione tra database per inserire due righe di dati. Una riga viene inserita in una tabella in un database con mirroring, A, l'altra viene inserita in un altro database, B. Il database A viene sottoposto a mirroring in modalità a protezione elevata con failover automatico. Durante il commit della transazione, il database A diventa non disponibile e viene automaticamente eseguito il failover della sessione di mirroring sul mirror del database A.  
   

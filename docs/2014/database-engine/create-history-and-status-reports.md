@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807505"
 ---
 # <a name="create-history-and-status-reports"></a>Creazione di report relativi alla cronologia e allo stato
   È possibile creare un report relativo alla cronologia o allo stato corrente dei file nella soluzione attualmente caricata. È inoltre possibile visualizzare l'anteprima e quindi inviare il report a una stampante, a un file o agli Appunti. I report non vengono generati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma da [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712788"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Impostazione dei formati di dati per la compatibilità mediante bcp (SQL Server)
   In questo argomento viene descritto l'attributi del formato dati, prompt specifici di campo e l'archiviazione dei dati di campo per campo in un file in formato non xml di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` comando. La comprensione di questi concetti può risultare utile per l'esportazione bulk di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fini di importazione in un altro programma, ad esempio un altra applicazione di database. I formati di dati predefiniti (native, character o Unicode) nella tabella di origine potrebbero non essere compatibili con il layout di dati previsto dall'altra applicazione. In questo caso, quando si esportano i dati è necessario descriverne il layout.  
@@ -44,7 +44,7 @@ ms.locfileid: "48214771"
   
 -   tipo di archiviazione di file  
   
-     Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. Dati possono essere esportati in un file di dati come tipo di tabella di database (formato nativo), nella relativa rappresentazione di caratteri (formato carattere) o come qualsiasi tipo di dati in cui è supportata la conversione implicita; ad esempio, la copia una `smallint` come un `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente. Per altre informazioni, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
+     Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file utilizzando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) o utilizzando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo `smallint` come `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente. Per altre informazioni, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
   
 -   Lunghezza del prefisso  
   
@@ -59,12 +59,12 @@ ms.locfileid: "48214771"
      Nei campi dati di tipo carattere, i caratteri di terminazione facoltativi consentono di indicare la fine di ogni campo nel file di dati (tramite un *carattere di terminazione del campo*) e di ogni riga (tramite un *carattere di terminazione della riga*). I caratteri di terminazione indicano ai programmi che leggono il file il punto in cui termina il campo o la riga e inizia il campo o la riga successiva. Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ##  <a name="FieldSpecificPrompts"></a> Panoramica dei prompt specifici dei campi  
- Se un oggetto interattivo `bcp` comando contiene il **nelle** o **out** opzione ma non contiene entrambi l'opzione del file di formato (**-f**) o un formato di dati passa ( **- n**, **- c**, **-w**, oppure **-N**), ogni colonna nella tabella di origine o destinazione, il comando richiede per ognuno dei precedenti attributi, a sua volta. In ogni prompt, il `bcp` comando fornisce un valore predefinito in base il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati della colonna della tabella. Accettare il valore predefinito per tutti i prompt equivale a specificare il formato nativo (**-n**) nella riga di comando. Ogni prompt mostra un valore predefinito fra parentesi: [*predefinito*]. Per accettare i valori predefiniti, premere INVIO. Per specificare un valore diverso da quello predefinito, immettere il valore desiderato al prompt.  
+ Se un oggetto interattivo `bcp` comando contiene il **nelle** o **out** opzione ma non contiene entrambi l'opzione del file di formato (**-f**) o un formato di dati passa ( **- n**, **- c**, **-w**, oppure **-N**), ogni colonna nella tabella di origine o destinazione, il comando richiede per ognuno dei precedenti attributi, a sua volta. In ogni prompt, il comando `bcp` offre un valore predefinito in base al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna di tabella. Accettare il valore predefinito per tutti i prompt equivale a specificare il formato nativo (**-n**) nella riga di comando. Ogni prompt mostra un valore predefinito fra parentesi: [*predefinito*]. Per accettare i valori predefiniti, premere INVIO. Per specificare un valore diverso da quello predefinito, immettere il valore desiderato al prompt.  
   
 ### <a name="example"></a>Esempio  
- L'esempio seguente usa il `bcp` comando per eseguire bulk esportare dati dal `HumanResources.myTeam` tabella in modo interattivo al `myTeam.txt` file. Prima di eseguire l'esempio è necessario creare questa tabella. Per informazioni sulla modalità di creazione e sulla tabella, vedere [Tabella di esempio HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
+ Nell'esempio seguente il comando `bcp` viene utilizzato per l'esportazione bulk interattiva dei dati dalla tabella `HumanResources.myTeam` al file `myTeam.txt`. Prima di eseguire l'esempio è necessario creare questa tabella. Per informazioni sulla modalità di creazione e sulla tabella, vedere [Tabella di esempio HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
   
- Il comando specifica un file di formato né un tipo di dati, causando `bcp` per la richiesta di informazioni sul formato di dati. Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
+ Il comando non specifica un file di formato né un tipo di dati. Ciò provoca la richiesta di informazioni di formato dati da parte di `bcp`. Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -93,7 +93,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  Per ogni colonna della tabella, in ordine e se necessario, vengono visualizzati prompt equivalenti.  
   
 ##  <a name="FieldByFieldNonXmlFF"></a> Archiviazione di dati campo per campo in un file di formato non XML  
- Dopo che tutti in cui vengono specificate le colonne della tabella, la `bcp` prompt dei comandi si vuole generare un file di formato non XML che archivia l'appena inserite informazioni campo per campo (vedere l'esempio precedente). Se si sceglie di generare un file di formato, è possibile utilizzarlo ogni volta che si esportano dati da quella tabella o si importano dati di struttura simile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Una volta specificate tutte le colonne della tabella, il comando `bcp` chiede se si desidera generare un file di formato non XML per l'archiviazione delle informazioni campo per campo appena inserite (vedere l'esempio precedente). Se si sceglie di generare un file di formato, è possibile utilizzarlo ogni volta che si esportano dati da quella tabella o si importano dati di struttura simile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Il file di formato può essere utilizzato per eseguire l'importazione bulk dal file di dati a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per eseguire l'esportazione bulk di dati dalla tabella senza dover nuovamente specificare il formato. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
@@ -123,7 +123,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sull'importazione ed esportazione in blocco di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [Formati di dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  

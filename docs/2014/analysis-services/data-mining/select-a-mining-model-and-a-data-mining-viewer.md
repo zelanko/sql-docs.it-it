@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f1014578527684e9e9e5b66065a5166941f16f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733851"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Selezionare un modello di data mining e un visualizzatore data mining
   È possibile esplorare il contenuto di un modello di data mining usando uno dei visualizzatori disponibili nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. È facile passare tra i modelli o modificare il visualizzatore utilizzato.  
   
 -   L'elenco a discesa **Modello di data mining** nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene un elenco di tutti i modelli di data mining presenti nella struttura di data mining corrente.  
   
--   Vengono forniti visualizzatori personalizzati per ogni tipo di modello. Per una panoramica di tutti i visualizzatori personalizzati, vedere [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md). Per la procedura dettagliata relativa all'uso dei visualizzatori personalizzati per comprendere un modello, vedere [Lezione 4: Esplorazione dei modelli di mailing diretto&#40;Esercitazione di base sul data mining&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
+-   Vengono forniti visualizzatori personalizzati per ogni tipo di modello. Per una panoramica di tutti i visualizzatori personalizzati, vedere [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md). Per una procedura dettagliata di come utilizzare i visualizzatori personalizzati per comprendere un modello, vedere [lezione 4: Esplorazione dei modelli di Mailing diretto &#40;Basic Data Mining Tutorial&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
   
 -   Nel Visualizzatore contenuto generico [!INCLUDE[msCoName](../../includes/msconame-md.md)] vengono visualizzati i modelli individuati dall'algoritmo in una rappresentazione standard dei nodi in un albero. Anche se la visualizzazione albero generica mostra in dettaglio tutto il contenuto relativo al modello, risulta più difficile da interpretare. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812748"
 ---
 # <a name="change-source-control"></a>Modificare il controllo del codice sorgente
   Consente di creare e gestire le connessioni e le associazioni che collegano una soluzione o un progetto salvato localmente a una cartella del database del controllo del codice sorgente.  
@@ -80,7 +80,7 @@ ms.locfileid: "48092541"
 |Unknown|Lo stato dell'elemento incluso nel controllo del codice sorgente non è ancora stato determinato.|  
 |Non incluso nel controllo del codice sorgente|L'elemento non è inserito nel controllo del codice sorgente.|  
   
- **annullamento del binding**  
+ **Unbind**  
  Visualizzare il **controllo del codice sorgente** finestra di dialogo che consente di rimuovere gli elementi selezionati dal controllo del codice sorgente e disassociarli in modo permanente gli elementi dalle cartelle attuali.  
   
 ## <a name="see-also"></a>Vedere anche  

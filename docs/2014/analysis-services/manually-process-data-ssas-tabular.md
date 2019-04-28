@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728337"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Elaborare manualmente i dati (SSAS tabulare)
   In questo argomento viene illustrato come elaborare manualmente i dati dell'area di lavoro in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48189767"
   
 2.  In **Modalità** della finestra di dialogo **Elabora partizioni**selezionare una delle modalità di elaborazione seguenti:  
   
-    |Elabora partizioni|Description|  
+    |Elabora partizioni|Descrizione|  
     |----------|-----------------|  
     |**Elaborazione predefinita**|Rileva lo stato di elaborazione di un oggetto partizione ed esegue l'elaborazione necessaria per recapitare oggetti partizione non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Vengono caricati i dati per le tabelle vuote e le partizioni; vengono compilate o ricompilate le gerarchie, le colonne calcolate e le relazioni.|  
     |**Elaborazione completa**|Elabora un oggetto partizione e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa per un oggetto che è stato già elaborato, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vengono eliminati tutti i dati dell'oggetto, quindi quest'ultimo viene elaborato. Questo tipo di elaborazione è necessario quando è stata apportata una modifica strutturale a un oggetto.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48189767"
  Fare clic per arrestare l'operazione di elaborazione. Questa opzione è utile se l'operazione è troppo lunga o se si sono verificati troppi errori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborare i dati &#40;tabulare di SSAS&#41;](process-data-ssas-tabular.md)   
- [Risolvere i problemi di elaborazione dei dati &#40;tabulare di SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Elaborare dati &#40;SSAS tabulare&#41;](process-data-ssas-tabular.md)   
+ [Risolvere i problemi relativi all'elaborazione dei dati &#40;SSAS tabulare&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

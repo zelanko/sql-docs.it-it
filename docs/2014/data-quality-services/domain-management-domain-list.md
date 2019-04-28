@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792748"
 ---
 # <a name="domain-management-domain-list"></a>Gestione dominio: Elenco di domini
   In questo argomento vengono descritti i controlli dell'elenco Domini nella pagina **Gestione dominio** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilizzare questo riquadro per selezionare un dominio su cui eseguire le operazioni di gestione. Lo stesso riquadro viene utilizzato per tutte le pagine a schede della pagina **Gestione dominio** .  

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726061"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Concedere le autorizzazioni per il database (Analysis Services)
   Se si affronta l'amministrazione del database di Analysis Services avendo già esperienza con i database relazionali, il primo aspetto da comprendere è che, per quanto riguarda l'accesso ai dati, il database non è l'oggetto principale a protezione diretta in Analysis Services.  
   
- La struttura di query primaria in Analysis Services è rappresentata da un cubo (o un modello tabulare), con le autorizzazioni utente impostate per specifici oggetti. A differenza del motore di database relazionale, in cui gli account di accesso al database e le autorizzazioni utente (spesso `db_datareader`) vengono impostati nel database stesso, un database di Analysis Services è per lo più un contenitore per gli oggetti query principali in un modello di dati. Se l'obiettivo immediato è consentire l'accesso ai dati per un cubo o un modello tabulare, per ora è possibile ignorare le autorizzazioni di database e passare direttamente all'argomento: [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ La struttura di query primaria in Analysis Services è rappresentata da un cubo (o un modello tabulare), con le autorizzazioni utente impostate per specifici oggetti. A differenza del motore di database relazionale, in cui gli account di accesso al database e le autorizzazioni utente (spesso `db_datareader`) vengono impostati nel database stesso, un database di Analysis Services è per lo più un contenitore per gli oggetti query principali in un modello di dati. Se l'obiettivo immediato è consentire l'accesso ai dati per un cubo o un modello tabulare, è possibile ignorare le autorizzazioni di database per il momento e passare direttamente all'argomento: [Concedere le autorizzazioni del cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Le autorizzazioni di database in Analysis Services consentono di eseguire funzioni amministrative, che in senso lato equivalgono all'autorizzazione del database Controllo completo, mentre in un contesto più specifico consentono di delegare le operazioni di elaborazione. I livelli di autorizzazione per un database di Analysis Services sono specificati nel riquadro **Generale** della finestra di dialogo **Crea ruolo** , illustrata nella figura seguente e descritta di seguito.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149011"
 > [!NOTE]  
 >  Agli amministratori del server (membri del ruolo di amministratore del server) viene assegnata implicitamente l'autorizzazione Controllo completo per ogni database del server.  
   
- `Process Database` : Questa autorizzazione viene usata per delegare l'elaborazione a livello di database. L'amministratore può ripartire questa attività creando un ruolo che consenta a un'altra persona o servizio di richiamare le operazioni di elaborazione per un oggetto del database. In alternativa, è anche possibile creare i ruoli che consentono l'elaborazione in oggetti specifici. Per altre informazioni, vedere [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
+ `Process Database` : Questa autorizzazione viene usata per delegare l'elaborazione a livello di database. L'amministratore può ripartire questa attività creando un ruolo che consenta a un'altra persona o servizio di richiamare le operazioni di elaborazione per un oggetto del database. In alternativa, è anche possibile creare i ruoli che consentono l'elaborazione in oggetti specifici. Per altre informazioni, vedere [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
   
- `Read Definition` Base di questa autorizzazione concede la possibilità di leggere i metadati degli oggetti, meno la possibilità di visualizzare i dati associati. In genere, questa autorizzazione viene usata nei ruoli creati per un'elaborazione dedicata, offrendo la possibilità di usare strumenti quali [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per elaborare un database in modo interattivo. Senza `Read Definition`, l'autorizzazione `Process Database` è valida sono negli scenari con script. Se si prevede di automatizzare l'elaborazione, ad esempio tramite SSIS o un'altra utilità di pianificazione, è possibile creare un ruolo che disponga `Process Database` senza `Read Definition`. In caso contrario, provare a usare insieme le due proprietà nello stesso ruolo per supportare sia l'elaborazione automatica che interattiva tramite gli strumenti di SQL Server che visualizzano il modello di dati in un'interfaccia utente.  
+ `Read Definition` Base di questa autorizzazione concede la possibilità di leggere i metadati degli oggetti, meno la possibilità di visualizzare i dati associati. In genere, questa autorizzazione viene usata nei ruoli creati per un'elaborazione dedicata, offrendo la possibilità di usare strumenti quali [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per elaborare un database in modo interattivo. Senza `Read Definition`, l'autorizzazione `Process Database` è valida sono negli scenari con script. Per automatizzare l'elaborazione, ad esempio tramite SSIS o un'altra utilità di pianificazione, è possibile creare un ruolo con l'autorizzazione `Process Database` senza `Read Definition`. In caso contrario, provare a usare insieme le due proprietà nello stesso ruolo per supportare sia l'elaborazione automatica che interattiva tramite gli strumenti di SQL Server che visualizzano il modello di dati in un'interfaccia utente.  
   
 ## <a name="full-control-administrator-permissions"></a>Autorizzazioni Controllo completo (amministratore)  
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], per amministratore di database si intende un'identità utente di Windows assegnata a un ruolo che include le autorizzazioni Controllo completo (amministratore). Un amministratore di database può eseguire qualsiasi attività all'interno del database, tra cui:  
@@ -66,7 +66,7 @@ ms.locfileid: "48149011"
   
 2.  Nel riquadro **Generale** immettere un nome, ad esempio DBAdmin.  
   
-3.  Selezionare la casella di controllo **Controllo completo (amministratore)** per il cubo. Si noti che `Process Database` e `Read Definition` vengono selezionati automaticamente. Entrambe queste autorizzazioni vengono sempre incluse nei ruoli che includono `Full Control`.  
+3.  Selezionare la casella di controllo **Controllo completo (amministratore)** per il cubo. Si noti che `Process Database` e `Read Definition` vengono selezionati automaticamente. Entrambe le autorizzazioni vengono sempre incluse nei ruoli con `Full Control`.  
   
 4.  Nel riquadro **Appartenenza** immettere gli account utente e di gruppo di Windows che si connettono ad Analysis Services con questo ruolo.  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701373"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione
   È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può usare le classificazioni per aggregare i conti nel tempo.  
@@ -45,13 +45,13 @@ ms.locfileid: "48183441"
   
 -   Nella colonna **Tipi di conto del server** è identificato il tipo di conto corrispondente riconosciuto da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La tabella seguente elenca i tipi di conto riconosciuti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e l'aggregazione predefinita per ognuno di essi. Se nella tabella della dimensione vengono usati gli stessi nomi dei tipi di conto riconosciuti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , queste selezioni vengono eseguite automaticamente.  
   
-    |Tipo di conto del server|Aggregazione|Description|  
+    |Tipo di conto del server|Aggregazione|Descrizione|  
     |-------------------------|-----------------|-----------------|  
     |**Statistiche**|`None`|Rapporto calcolato oppure conteggio che non viene aggregato nel tempo. Questo tipo di conto non viene convertito da una valuta all'altra in base alle regole di conversione.|  
     |**Liability**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è debitori in un dato momento. Questo tipo di conto non cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Asset**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è in possesso in un dato momento. Questo tipo di conto cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Balance**|`LastNonEmpty`|Conteggio risultante in un dato momento. Questo tipo di conto cresce, ma non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati.|  
-    |**Flow**|`Sum`|Conteggio incrementale. Consente di aggregare questo tipo di account come un `Sum` nel corso del tempo, ma non viene convertito in base alle regole di conversione di valuta.|  
+    |**Flow**|`Sum`|Conteggio incrementale. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo, ma non viene convertito in base alle regole di conversione della valuta.|  
     |**Expense**|`Sum`|Importo di denaro o valore dei beni speso. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
     |**Income**|`Sum`|Importo di denaro o valore dei beni ricevuto. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
   

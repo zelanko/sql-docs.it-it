@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727316"
 ---
 # <a name="user-hierarchy-properties"></a>Proprietà delle gerarchie definite dall'utente
   Nella tabella seguente vengono descritte le proprietà di una gerarchia definita dall'utente.  
@@ -32,7 +32,7 @@ ms.locfileid: "60154988"
 |DisplayFolder|Specifica la cartella nella quale la gerarchia viene visualizzata per gli utenti.|  
 |ID|Contiene l'identificatore univoco (ID) della gerarchia.|  
 |MemberNamesUnique|Determina se i nomi dei membri nella gerarchia devono essere univoci. I valori sono True e False. Il valore predefinito è False.|  
-|Nome|Contiene il nome della gerarchia.|  
+|nome|Contiene il nome della gerarchia.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie definite dall'utente](user-hierarchies.md)   

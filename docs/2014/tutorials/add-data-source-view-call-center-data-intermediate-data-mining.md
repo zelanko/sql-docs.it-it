@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823301"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati per i dati del call center (Esercitazione intermedia sul data mining)
   In questa attività verrà aggiunta una vista origine dati da utilizzare per accedere ai dati del call center. Gli stessi dati verranno utilizzati per compilare sia il modello di rete neurale iniziale per l'esplorazione, sia il modello di regressione logistica che verrà utilizzato per preparare i consigli.  

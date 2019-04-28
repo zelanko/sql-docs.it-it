@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866373"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Attività 7: Trasformazione Aggiunta DQS Cleansing al flusso di dati
   In questa attività viene aggiunta una trasformazione DQS Cleansing al flusso di dati per pulire i dati di input del fornitore tramite DQS. Visualizzare **[trasformazione DQS Cleansing](https://msdn.microsoft.com/library/ee677619.aspx)** per altri dettagli sulla trasformazione.  
   
 1.  Fare doppio clic su **DQS Cleansing** nel **flusso di dati** scheda, quindi scegliere **rinominare**. Tipo di **Pulisci dati fornitore**, quindi premere **invio**.  

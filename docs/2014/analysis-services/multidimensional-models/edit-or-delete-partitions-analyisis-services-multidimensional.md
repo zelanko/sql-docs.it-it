@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726101"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Modificare o eliminare partizioni (Analyisis Services - Multidimensionale)
   Le partizioni dei cubi vengono modificate tramite la scheda **Partizioni** di Progettazione cubi in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. Nella scheda **Partizioni** sono elencate le partizioni di tutti i gruppi di misure di un cubo. Sono inoltre elencate le partizioni writeback per le quali è abilitata la funzionalità di writeback.  
@@ -49,7 +49,7 @@ ms.locfileid: "48104908"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Progettazione di aggregazioni &#40;Analysis Services - multidimensionale&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Unire partizioni in Analysis Services &#40;SSAS - multidimensionale&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Progettazione di aggregazioni &#40;Analysis Services - Multidimensionale&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Unire partizioni in Analysis Services &#40;SSAS - Multidimensionale&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

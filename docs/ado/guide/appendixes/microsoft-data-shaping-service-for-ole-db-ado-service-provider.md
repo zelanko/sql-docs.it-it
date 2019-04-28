@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719748"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping servizi per Panoramica OLE DB
 > [!IMPORTANT]
@@ -37,7 +37,7 @@ ms.locfileid: "51350065"
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Quando viene richiamato questo provider di servizi, le seguenti proprietà dinamiche vengono aggiunti per il [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme del[connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.
 
-|Nome della proprietà dinamica|Description|
+|Nome della proprietà dinamica|Descrizione|
 |---------------------------|-----------------|
 |**Nomi univoci nuova forma**|Indica se **Recordset** gli oggetti con valori duplicati per loro **Reshape Name** sono consentite proprietà. Se questa proprietà dinamica **True** e un nuovo **Recordset** viene creato con lo stesso nome specificato dall'utente reshape esistente **Recordset**, quindi il nuovo  **Recordset** reshape name dell'oggetto viene modificato per renderlo univoco. Se questa proprietà è **False** e un nuovo **Recordset** viene creato con lo stesso nome specificato dall'utente reshape esistente **Recordset**, entrambi **Recordset**  gli oggetti abbiano lo stesso nome di modifica della forma. Di conseguenza, nessuno dei due **Recordset** possono essere ridefinite fino a quando esistono entrambi gli oggetti.<br /><br /> Il valore predefinito della proprietà è **False**.|
 |**Provider di dati**|Indica il nome del provider che fornirà le righe da assumere una forma. Questo valore può essere NONE se non verrà utilizzato un provider per fornire le righe.|
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Per altre informazioni sul data shaping, vedere [Data Shaping](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

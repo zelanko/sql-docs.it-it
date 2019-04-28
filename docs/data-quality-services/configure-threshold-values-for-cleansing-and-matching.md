@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fdab2d77dddf565e2d94b27b2b7b46c70aafa4f0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864681"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze
 
@@ -34,7 +34,7 @@ ms.locfileid: "56010562"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per configurare i valori soglia è necessario disporre del ruolo dqs_administrator per il database DQS_MAIN.  
   
 ##  <a name="Configure"></a> Configurazione dei valori soglia  

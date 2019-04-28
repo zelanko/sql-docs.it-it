@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33028 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868664"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Dettagli  
   
 |||  
@@ -33,10 +34,10 @@ ms.locfileid: "48150321"
 |Testo del messaggio|Impossibile aprire la sessione per % S_MSG '%.* ls.' Codice di errore del provider: %d.|  
   
 ## <a name="explanation"></a>Spiegazione  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stato in grado di aprire il provider del servizio di crittografia elencato nel messaggio di errore. Il codice di errore è stato indicato dal provider del servizio di crittografia. Per ulteriori informazioni sull'errore, potrebbe essere necessario contattare il provider.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stato in grado di aprire il provider del servizio di crittografia elencato nel messaggio di errore. Il codice di errore è stato indicato dal provider del servizio di crittografia. Per ulteriori informazioni sull'errore, potrebbe essere necessario contattare il provider.  
   
-|Codice di errore|Description|  
-|----------------|-----------------|  
+|Codice di errore|Descrizione|  
+|--------------|---------------|  
 |0|Esito positivo. Nessun errore.|  
 |1|Esito negativo. Si verificato un errore non specificato o imprevisto. Non sono disponibili informazioni aggiuntive.|  
 |2|Buffer insufficiente. Impossibile allocare lo spazio per il provider del servizio di crittografia.|  
@@ -46,6 +47,5 @@ ms.locfileid: "48150321"
 |6|Argomento non valido. Un argomento non valido è stato passato al provider del servizio di crittografia.|  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Risolvere l'errore o contattare il provider del servizio di crittografia per ulteriori informazioni.  
-  
+Risolvere l'errore o contattare il provider del servizio di crittografia per ulteriori informazioni.  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714178"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52796383"
 |**sync_ins_proc**|**int**|ID della stored procedure che gestisce le transazioni di sincronizzazione per gli inserimenti.|  
 |**sync_upd_proc**|**int**|ID della stored procedure che gestisce le transazioni di sincronizzazione per gli aggiornamenti.|  
 |**sync_del_proc**|**int**|ID della stored procedure che gestisce le transazioni di sincronizzazione per le eliminazioni.|  
-|**generare**|**bit**|Indica che vengono generate automaticamente stored procedure:<br /><br /> **0** = false, generazione non automatica.<br /><br /> **1** = true, automatica.|  
+|**autogen**|**bit**|Indica che vengono generate automaticamente stored procedure:<br /><br /> **0** = false, generazione non automatica.<br /><br /> **1** = true, automatica.|  
 |**sync_upd_trig**|**int**|ID del trigger per la gestione automatica delle versioni nella tabella degli articoli.|  
 |**conflict_tableid**|**int**|ID della tabella dei conflitti.|  
 |**ins_conflict_proc**|**int**|L'ID della procedura utilizzata per scrivere il conflitto per la **conflict_table**.|  

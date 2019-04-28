@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b424c87993de202f0164a1e407cda5a203bed6d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733311"
 ---
 # <a name="mining-structure-columns"></a>Colonne della struttura di data mining
   In una struttura di data mining si definiscono le colonne al momento della creazione della struttura, scegliendo colonne di dati esterni e specificando quindi la modalità di utilizzo dei dati per la modellazione. Pertanto, le colonne della struttura di data mining non sono semplici copie dei dati di un'origine dati, ma definiscono la modalità in cui i dati dell'origine devono essere utilizzati dal modello di data mining. È possibile assegnare proprietà che determinano come vengono discretizzati i dati, proprietà che descrivono come sono distribuiti i valori dei dati  
@@ -33,19 +33,19 @@ ms.locfileid: "48159792"
   
  La definizione di una colonna della struttura di data mining deve contenere le informazioni seguenti:  
   
--   **ID**: nome univoco della colonna, spesso identico al nome. Non è possibile modificare questo elemento dopo avere creato la struttura di data mining, mentre è possibile modificare il nome.  
+-   **ID**: Il nome univoco della colonna, spesso lo stesso come il nome. Non è possibile modificare questo elemento dopo avere creato la struttura di data mining, mentre è possibile modificare il nome.  
   
--   **Nome**: nome o alias della colonna.  
+-   **Nome**: Un nome o alias della colonna.  
   
--   **Contenuto**: enumerazione che descrive se i dati sono discreti o continui.  
+-   **Contenuto**: Enumerazione che descrive se i dati sono discreti o continui.  
   
--   **Tipo**: enumerazione che indica il tipo di dati generale.  
+-   **Tipo**: Enumerazione che indica il tipo di dati generale.  
   
--   **Distribuzione**: enumerazione che descrive la distribuzione prevista dei valori. Una distribuzione viene inclusa se la colonna è continua.  
+-   **Distribuzione**: Enumerazione che descrive la distribuzione prevista dei valori. Una distribuzione viene inclusa se la colonna è continua.  
   
--   **Flag di modellazione**: enumerazione che indica come gestire valori mancanti e così via. È anche possibile definire flag di modellazione nel modello di data mining, ma i flag del modello sono diversi da quelli utilizzati nelle colonne della struttura.  
+-   **Flag di modellazione**: Enumerazione che indica come gestire valori mancanti e così via. È anche possibile definire flag di modellazione nel modello di data mining, ma i flag del modello sono diversi da quelli utilizzati nelle colonne della struttura.  
   
--   **Associazioni**: proprietà che specificano i dati di origine.  
+-   **Associazioni**: Proprietà che specificano i dati di origine.  
   
  Gli algoritmi di terze parti possono includere inoltre proprietà personalizzate che è possibile definire nella colonna della struttura di data mining.  
   
@@ -56,17 +56,17 @@ ms.locfileid: "48159792"
   
 |Argomento|Collegamenti|  
 |-----------|-----------|  
-|Vengono descritti i tipi di dati che è possibile utilizzare per definire una colonna della struttura di data mining.|[Tipi di dati &#40;Data Mining&#41;](data-types-data-mining.md)|  
-|Vengono descritti i tipi di contenuto disponibili per ogni tipo di dati contenuto in una colonna della struttura di data mining. I tipi di contenuto sono dipendenti dal tipo di dati. Il tipo di contenuto è assegnato a livello del modello e determina la modalità di utilizzo dei dati della colonna nel modello.|[I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)|  
+|Vengono descritti i tipi di dati che è possibile utilizzare per definire una colonna della struttura di data mining.|[Tipi di dati &#40;Data mining&#41;](data-types-data-mining.md)|  
+|Vengono descritti i tipi di contenuto disponibili per ogni tipo di dati contenuto in una colonna della struttura di data mining. I tipi di contenuto sono dipendenti dal tipo di dati. Il tipo di contenuto è assegnato a livello del modello e determina la modalità di utilizzo dei dati della colonna nel modello.|[Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)|  
 |Viene introdotto il concetto di tabelle nidificate e viene illustrato in che modo è possibile aggiungere le tabelle nidificate all'origine dati come colonne della struttura di data mining.|[Colonne classificate &#40;Data Mining&#41;](classified-columns-data-mining.md)|  
-|Vengono elencate e illustrate le proprietà di distribuzione che è possibile impostare in una colonna della struttura di data mining per specificare la distribuzione prevista di valori nella colonna.|[Distribuzioni delle colonne &#40;Data Mining&#41;](column-distributions-data-mining.md)|  
-|Viene illustrato il concetto di discretizzazione (talvolta definito *suddivisione in contenitori*) e vengono descritti i metodi forniti in Analysis Services per discretizzare dati numerici continui.|[Metodi di discretizzazione &#40;Data Mining&#41;](discretization-methods-data-mining.md)|  
-|Vengono descritti i flag di modellazione che è possibile impostare in una colonna della struttura di data mining.|[Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Vengono elencate e illustrate le proprietà di distribuzione che è possibile impostare in una colonna della struttura di data mining per specificare la distribuzione prevista di valori nella colonna.|[Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md)|  
+|Viene illustrato il concetto di discretizzazione (talvolta definito *suddivisione in contenitori*) e vengono descritti i metodi forniti in Analysis Services per discretizzare dati numerici continui.|[Metodi di discretizzazione &#40;Data mining&#41;](discretization-methods-data-mining.md)|  
+|Vengono descritti i flag di modellazione che è possibile impostare in una colonna della struttura di data mining.|[Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)|  
 |Vengono descritte le colonne classificate, un tipo speciale di colonna, che è possibile utilizzare per correlare una colonna della struttura di data mining a un'altra.|[Colonne classificate &#40;Data Mining&#41;](classified-columns-data-mining.md)|  
 |Vengono fornite informazioni sull'aggiunta e la modifica delle colonne della struttura di data mining.|[Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Colonne del modello di data mining](mining-model-columns.md)  
   
   

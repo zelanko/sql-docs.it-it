@@ -1,5 +1,5 @@
 ---
-title: server_event_notifications (Transact-SQL) | Microsoft Docs
+title: sys.server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860908"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni oggetto notifica degli eventi a livello del server.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della notifica degli eventi a livello del server. Tale nome è univoco tra tutte le notifiche degli eventi a livello del server.|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto. È univoco all'interno di **master** database.|  
 |**parent_class**|**tinyint**|Classe padre. È sempre 100 = Server.|  
 |**parent_class_desc**|**nvarchar(60)**|Descrizione della classe padre. È sempre SERVER.|  
-|**parent_ID**|**int**|È sempre 0.|  
+|**parent_id**|**int**|È sempre 0.|  
 |**create_date**|**datetime**|Data di creazione.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica dell'oggetto con un'istruzione ALTER.|  
 |**service_name**|**nvarchar(256)**|Nome del servizio di destinazione a cui viene inviata la notifica.|  

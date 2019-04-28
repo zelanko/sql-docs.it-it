@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44af3840dc6e54a461bedc19db45de12204e8c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794229"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Utilizzo dimensioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Barra degli strumenti** per eseguire operazioni frequenti, ad esempio l'aggiunta di una dimensione al cubo o l'elaborazione del cubo, nella scheda **Utilizzo dimensioni** in Progettazione cubi.  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Aggiungere funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
 |**Process**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo.|  

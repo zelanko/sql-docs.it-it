@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6b72e4872de2f1e744ac55a60c5abb34aea0f32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793432"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Selezione utenti (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Selezione utenti** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare gli utenti in base ai quali filtrare le query archiviate nel log di query per l'Ottimizzazione guidata basata sulle statistiche di utilizzo.  

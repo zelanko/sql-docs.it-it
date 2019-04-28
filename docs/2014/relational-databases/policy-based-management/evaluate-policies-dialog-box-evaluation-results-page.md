@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705136"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Finestra di dialogo Valuta criteri, pagina Risultati valutazione
   Utilizzare questa finestra di dialogo per visualizzare i risultati di valutazione dei criteri e applicare criteri della Gestione basata su criteri a un set di destinazioni non conforme ai criteri.  
   
 ## <a name="options"></a>Opzioni  
- **Risultati: criteri**  
+ **Risultati: Policy**  
  Nome dei criteri da valutare. Il contenuto di questa casella è di sola lettura.  
   
  **Risultati: Messaggio**  
@@ -32,7 +32,7 @@ ms.locfileid: "52798323"
  **Dettagli destinazione: Server**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto alla quale vengono valutati i criteri.  
   
- **Dettagli destinazione: Destinazione**  
+ **Dettagli destinazione: Target**  
  Destinazione rispetto alla quale vengono valutati i criteri.  
   
  **Dettagli destinazione: Dettagli**  

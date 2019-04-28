@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727937"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizzatori modello di data mining (Progettazione modelli di data mining)
   Usare la scheda **Visualizzatore modello di data mining** per l'esplorazione dei modelli di data mining contenuti in una struttura di data mining.  

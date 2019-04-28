@@ -1,5 +1,5 @@
 ---
-title: Livello di compatibilità di un Database multidimensionale (Analysis Services) | Documenti Microsoft
+title: Livello di compatibilità di un Database multidimensionale (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825890"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Livello di compatibilità di un database multidimensionale (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024228"
   
  Per un database multidimensionale, tra i valori validi per la proprietà **CompatibilityLevel** sono inclusi i seguenti:  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**1050**|Questo valore non è visibile negli script o negli strumenti, ma corrisponde ai database creati in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Qualsiasi database il cui **CompatibilityLevel** non è impostato in modo esplicito viene eseguito in modo implicito al livello **1050** .|  
 |**1100**|Si tratta del valore predefinito per i nuovi database creati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questa impostazione può essere specificata anche per i database creati in versioni precedenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per consentire l'utilizzo di funzionalità che sono supportate solo a questo livello di compatibilità (vale a dire, archivio di stringhe esteso per misure Distinct Count o attributi della dimensione contenenti dati di tipo stringa).<br /><br /> I database con la proprietà **CompatibilityLevel** impostata su **1100** ottengono una proprietà aggiuntiva, **StringStoresCompatibilityLevel**, che consente di scegliere la modalità di archiviazione alternativa delle stringhe per partizioni e dimensioni.|  

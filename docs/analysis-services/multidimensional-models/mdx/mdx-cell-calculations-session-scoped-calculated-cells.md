@@ -1,5 +1,5 @@
 ---
-title: Creazione con ambito sessione celle calcolate | Documenti Microsoft
+title: Creazione con ambito sessione celle calcolate | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799547"
 ---
-# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>Calcoli MDX di cella - celle calcolate con ambito sessione
+# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>Calcoli di celle MDX - con ambito sessione celle calcolate
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  Il valore `String_Expression` contiene un elenco di espressioni set MDX unidimensionali ortogonali, ognuna delle quali deve essere risolta in una delle categorie di set elencate nella tabella seguente.  
   
-|Category|Description|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
@@ -81,6 +81,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio è la funzione MDX **Descendants**(*Member_Expression*, *Level_Expression*, *Desc_Flag*).<br /><br /> Per altre informazioni, vedere [Descendants &#40;MDX&#41;](../../../mdx/descendants-mdx.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di calcoli di celle in MDX & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+ [Compilazione di formule per il calcolo di celle in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   

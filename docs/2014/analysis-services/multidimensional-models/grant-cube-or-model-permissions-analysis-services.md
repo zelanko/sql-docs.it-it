@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725965"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
   Un cubo o un modello tabulare è l'oggetto query primario in un modello di dati di Analysis Services. Quando un utente si connette ai dati tabulari o multidimensionali da Excel per l'esplorazione ad hoc dei dati, in genere inizia selezionando un cubo o un modello tabulare specifico come struttura di dati necessaria per l'oggetto report Pivot. Questo argomento illustra come concedere le autorizzazioni necessarie per l'accesso ai dati tabulari o del cubo.  
@@ -55,9 +55,9 @@ ms.locfileid: "48149711"
   
 2.  Procedere al passaggio successivo per impostare le autorizzazioni per il cubo.  
   
-     Si noti che il riquadro Origine dati verrà ignorato. La maggior parte degli utenti normali dei dati di Analysis Services non necessita di autorizzazioni per l'oggetto origine dati. Per informazioni dettagliate sui livelli di autorizzazione, vedere [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) .  
+     Si noti che il riquadro Origine dati verrà ignorato. La maggior parte degli utenti normali dei dati di Analysis Services non necessita di autorizzazioni per l'oggetto origine dati. Per informazioni dettagliate sui livelli di autorizzazione, vedere [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Passaggio 3: Impostare le autorizzazioni per il cubo  
+#### <a name="step-3-set-cube-permissions"></a>Passaggio 3: Impostare le autorizzazioni del cubo  
   
 1.  Nel **cubi** riquadro, selezionare un cubo e quindi fare clic su `Read` oppure **lettura/scrittura** accesso.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48149711"
   
      Se alla connessione si verifica un errore, controllare la configurazione della porta per Analysis Services e verificare che il server accetti le connessioni remote. Per la configurazione della porta, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Passaggio 5: Generare uno script per la definizione e le assegnazioni di ruolo  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Passaggio 5: Le assegnazioni e crea script per definizione ruolo  
   
 1.  Come passaggio finale, generare uno script per acquisire la definizione del ruolo appena creata.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48149711"
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

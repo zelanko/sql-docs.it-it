@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718028"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Cosa&#39;s novità di SQLXML 4.0 SP1
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 sono inclusi diversi aggiornamenti e miglioramenti. In questo argomento viene fornito un riepilogo degli aggiornamenti e vengono riportati i collegamenti a informazioni più dettagliate, se disponibili. In SQLXML 4.0 SP1 sono stati apportati ulteriori miglioramenti per supportare i nuovi tipi di dati introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vengono inoltre presentati gli argomenti seguenti:  
@@ -94,7 +94,7 @@ ms.locfileid: "53371233"
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>Supporto per i tipi di dati introdotti in SQL Server 2005 e SQL Server 2008  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdotto il `xml` tipo di dati e SQLXML 4.0 supporta il `xml` tipo di dati. Per altre informazioni, vedere [xml supporto dei tipi di dati in SQLXML 4.0](xml-data-type-support-in-sqlxml-4-0.md).  
   
- Per esempi relativi all'uso del tipo di dati `xml` in SQLXML in caso di mapping di viste XML, di caricamento bulk XML o di esecuzione di updategram XML, fare riferimento agli esempi forniti negli argomenti seguenti.  
+ Per esempi relativi all'utilizzo del tipo di dati `xml` in SQLXML in caso di mapping di viste XML, di caricamento bulk XML o di esecuzione di updategram XML, fare riferimento agli esempi forniti negli argomenti seguenti.  
   
 -   [Mapping predefinito degli attributi ed elementi XSD a tabelle e colonne](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "53371233"
   
      Questa chiave viene introdotta in modo che sia possibile scegliere di mantenere gli spazi vuoti nei dati. Se si aggiunge tale chiave del Registro di sistema e se ne imposta il valore su 0, gli spazi vuoti (LF, CR e TAB) nei dati XML vengono restituiti codificati nel caso di valori di attributi. Nel caso di valori di elementi, solo il carattere CR viene restituito codificato.  
   
-     Ad esempio:  
+     Ad esempio:   
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

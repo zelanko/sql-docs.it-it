@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828045"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -143,7 +143,7 @@ ms.locfileid: "58392779"
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
   
- Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione "univoco allo scenario con dimensione" nel white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
   
 ### <a name="destinations"></a>Destinazioni  
  Per ottenere prestazioni migliori con le destinazioni, valutare l'opportunità di usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di testarne le prestazioni.  
@@ -166,9 +166,9 @@ ms.locfileid: "58392779"
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
   
--   Articolo tecnico relativo [SQL Server 2005 Integration Services: Una strategia per le prestazioni](https://go.microsoft.com/fwlink/?LinkId=98899), su technet.microsoft.com  
+-   Articolo tecnico [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899) (SQL Server 2005 Integration Services: una strategia per le prestazioni) in technet.microsoft.com  
   
--   Articolo tecnico relativo [Integration Services: Le tecniche di ottimizzazione delle prestazioni](https://go.microsoft.com/fwlink/?LinkId=98900), su technet.microsoft.com  
+-   Articolo tecnico su [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900) (Integration Services: tecniche per l'ottimizzazione delle prestazioni) in technet.microsoft.com  
   
 -   Articolo tecnico sull' [aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)su sqlcat.com  
   

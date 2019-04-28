@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721042"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
   In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esistono tre modi per eseguire questa operazione: `WITH RECOMPILE` option nella definizione della stored procedure o quando viene chiamata la procedura, il `RECOMPILE` hint per la query nelle singole istruzioni o utilizzando il `sp_recompile` stored procedure di sistema. Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  

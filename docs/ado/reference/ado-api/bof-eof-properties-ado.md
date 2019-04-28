@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821442"
 ---
 # <a name="bof-eof-properties-ado"></a>Proprietà BOF ed EOF (ADO)
 -   **Proprietà BOF** indica che la posizione del record corrente è precedente al primo record in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -50,8 +50,8 @@ ms.locfileid: "47748119"
   
 ||Metodi MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Spostare < 0|Spostare 0|MoveNext,<br /><br /> Sposta > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**Proprietà BOF**=**True**, **EOF**=**False**|Allowed|Errore|Errore|Allowed|  
-|**Proprietà BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Errore|Errore|  
+|**BOF**=**True**, **EOF**=**False**|Allowed|Errore|Errore|Allowed|  
+|**BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Errore|Errore|  
 |Entrambi **True**|Errore|Errore|Errore|Errore|  
 |Entrambi **False**|Allowed|Allowed|Allowed|Allowed|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47748119"
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Impostare su **True**|Impostare su **True**|  
 |**Spostare** 0|Nessuna modifica|Nessuna modifica|  
-|**MovePrevious**, **spostare** < 0|Impostare su **True**|Nessuna modifica|  
+|**MovePrevious**, **Move** < 0|Impostare su **True**|Nessuna modifica|  
 |**MoveNext**, **spostare** > 0|Nessuna modifica|Impostare su **True**|  
   
 ## <a name="applies-to"></a>Si applica a  

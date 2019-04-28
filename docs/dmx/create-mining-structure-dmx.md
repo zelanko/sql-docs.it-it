@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854337"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *struttura*  
+ *structure*  
  Nome univoco della struttura.  
   
  *elenco di definizioni di colonna*  
  Elenco delimitato da virgole contenente le definizioni delle colonne.  
   
- *dati di controllo-maxpercent*  
+ *holdout-maxpercent*  
  Valore intero tra 1 e 100 che indica la percentuale di dati accantonata per l'esecuzione di test.  
   
- *dati di controllo-maxcases*  
+ *holdout-maxcases*  
  Valore intero che indica il numero massimo di case da utilizzare per l'esecuzione di test.  
   
  Se il valore massimo specificato per i case è maggiore del numero dei case di input, tutti i case di input sono utilizzati per l'esecuzione di test e viene generato un avviso.  
@@ -60,7 +60,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Per essere certi che una partizione sia riproducibile, è necessario specificare un valore di inizializzazione.  
   
- Valore predefinito: REPEATABLE (0)  
+ Impostazione predefinita: REPEATABLE(0)  
   
 ## <a name="remarks"></a>Note  
  Per definire una struttura di data mining è necessario specificare un elenco di colonne, specificando facoltativamente le relazioni gerarchiche tra le stesse e partizionando facoltativamente la struttura di data mining in set di dati di training e test.  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire le colonne di una struttura, vedere gli argomenti seguenti:  
   
--   [Tipi di dati &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipi di dati &#40;Data mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [I tipi di contenuto &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipi di contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuzioni delle colonne &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuzioni delle colonne &#40;Data mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Flag di modellazione &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Flag di modellazione &#40;data mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
@@ -137,7 +137,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come creare una struttura di data mining con controllo mediante DMX.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>Esempio 1: Aggiunta di un struttura priva di set di training  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>Esempio 1: Aggiunta di una struttura con alcun Set di Training  
  Nell'esempio seguente viene creata una nuova struttura di data mining denominata `New Mailing` senza creare alcun modello di data mining associato e senza utilizzare alcun controllo. Per informazioni su come aggiungere un modello di data mining alla struttura, vedere [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Esempio 2: Specifica della percentuale di controllo e del valore di inizializzazione  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Esempio 2: Valore di inizializzazione e specificando la percentuale di controllo  
  È possibile aggiungere la clausola seguente dopo l'elenco di definizioni di colonna per definire un set di dati da utilizzare per il test di tutti i modelli di data mining associati alla struttura di data mining. Con l'istruzione viene creato un set di test che corrisponde al 25% dei case di input totali, senza alcun limite nel numero massimo di case. Come valore di inizializzazione per la creazione della partizione è utilizzato 5000. Se si specifica un valore di inizializzazione, verranno scelti gli stessi case per il set di test ogni volta che la struttura di data mining viene elaborata, purché i dati sottostanti non cambino.  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Esempio 3: Specifica della percentuale di controllo e del numero massimo di case  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Esempio 3: Specifica di controllo percentuale e numero massimo di case  
  La clausola seguente consente di creare un set di test che corrisponde al 25% dei case di input totali o a 2000 case, a seconda del valore minore. Poiché come valore di inizializzazione è specificato 0, il nome della struttura di data mining è utilizzato per creare il valore di inizializzazione utilizzato per avviare il campionamento dei case di input.  
   
 ```  

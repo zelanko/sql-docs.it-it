@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727837"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Scheda Modello (Visualizzatori modello di data mining)
   Nella scheda **Modello** del Visualizzatore Microsoft Time Series viene visualizzata una rappresentazione di una serie temporale come nodo in un grafico, simile a quella usata nei modelli di albero delle decisioni.  
   
  Utilizzare questa vista di un modello Time Series per estrarre informazioni utili sull'analisi della serie temporale, inclusi l'equazione per il grafico e i termini e i coefficienti ARIMA.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)e [Visualizzare un modello usando il Visualizzatore Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)e [Algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -71,8 +71,8 @@ ms.locfileid: "48164171"
  Consente di modificare il numero di livelli visualizzati nell'albero.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

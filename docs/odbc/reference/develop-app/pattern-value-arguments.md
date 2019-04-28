@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861728"
 ---
 # <a name="pattern-value-arguments"></a>Argomenti del valore dei criteri
 Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argomento **SQLTables**, accettare i criteri di ricerca. Questi argomenti accettano criteri di ricerca se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; argomenti di tipo identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE sono.  
@@ -37,8 +37,8 @@ Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argome
   
 |Criterio di ricerca|Descrizione|  
 |--------------------|-----------------|  
-|%A %|Tutti gli identificatori che contengono la lettera A|  
-|ABC|Tutti gli identificatori di quattro caratteri iniziano con ABC|  
+|%A%|Tutti gli identificatori che contengono la lettera A|  
+|ABC_|Tutti gli identificatori di quattro caratteri iniziano con ABC|  
 |ABC\\_|L'identificatore ABC, presupponendo che il carattere di escape è una barra rovesciata (\\)|  
 |\\\\%|Tutti gli identificatori che iniziano con una barra rovesciata (\\), presupponendo che il carattere di escape è una barra rovesciata|  
   

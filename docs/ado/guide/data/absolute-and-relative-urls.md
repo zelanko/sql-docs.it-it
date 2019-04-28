@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802931"
 ---
 # <a name="absolute-and-relative-urls"></a>URL relativi e assoluti
 Un URL specifica la posizione di una destinazione archiviata in un computer locale o in rete. La destinazione può essere un file, directory, pagina HTML, image, programma e così via *.*  
@@ -42,7 +42,7 @@ Un URL specifica la posizione di una destinazione archiviata in un computer loca
  *path*  
  Specifica la sequenza di directory che conduce alla destinazione. Se *resource* viene omesso, la destinazione è l'ultima directory nella *percorso*.  
   
- *Risorsa*  
+ *resource*  
  Se incluso, *risorsa* è la destinazione e in genere è il nome di un file. Potrebbe essere un' *semplice file,* contenente un singolo flusso binario di byte, o una *documenti strutturati,* contenente uno o più risorse di archiviazione e i flussi binari di byte.  
   
 ## <a name="url-scheme-registration"></a>Registrazione dello schema URL  
@@ -90,5 +90,5 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

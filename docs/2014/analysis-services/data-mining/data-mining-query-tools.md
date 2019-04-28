@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722914"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfacce di query di data mining
   Le query di data mining sono basate sul linguaggio DMX (Data Mining Extensions). È possibile utilizzare DMX per tutte le attività di stima e di modellazione, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È inoltre possibile recuperare i modelli e le statistiche generate durante l'elaborazione del modello.  
@@ -77,7 +77,7 @@ ms.locfileid: "50148236"
 ###  <a name="bkmk_SSIS"></a> Componenti di data mining di Integration Services  
  È anche possibile includere le query di stima in un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le attività e le trasformazioni seguenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supportano la creazione ed esecuzione di query di stima DMX e istruzioni DMX.  
   
-|Componente|Description|  
+|Componente|Descrizione|  
 |---------------|-----------------|  
 |Attività Query di data mining|Consente di eseguire query DMX e altre istruzioni DMX come parte di un flusso di controllo.<br /><br /> In questo editor attività è presente il generatore delle query di stima e una casella di testo che consente di modificare la query DMX manualmente. Tuttavia, l'editor attività non può convalidare la query su oggetti in una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pertanto, è consigliabile creare una query all'interno di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e incollare il testo dell'istruzione o eseguire una query nell'editor attività.|  
 |Query di data mining - trasformazione|Consente di eseguire una query di stima in un flusso di dati utilizzando i dati forniti da un'origine del flusso di dati.<br /><br /> In questo editor attività è presente il generatore delle query di stima e una casella di testo che consente di modificare la query DMX manualmente.<br /><br /> La trasformazione può essere utilizzata solo per la creazione di query in cui vengono utilizzati dati nel flusso di dati; ovvero, query in cui viene utilizzata la sintassi PREDICTION JOIN. Questo componente non può essere utilizzato per l'esecuzione di query sul contenuto o di altri tipi di istruzioni DMX.|  

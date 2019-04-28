@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817140"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "52785753"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente di distribuzione.|  
-|**name**|**Nvarchar(100)**|Nome dell'agente di distribuzione.|  
+|**name**|**nvarchar(100)**|Nome dell'agente di distribuzione.|  
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**publication**|**sysname**|Nome della pubblicazione.|  
 |**subscriber_id**|**smallint**|ID del Sottoscrittore, utilizzato solo da agenti noti. Per gli agenti anonimi questa colonna è riservata.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
-|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anonimo.|  
+|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = Push.<br /><br /> **1** = Pull.<br /><br /> **2** = anonimo.|  
 |**local_job**|**bit**|Indica se è presente un processo di SQL Server Agent nel server di distribuzione locale.|  
 |**job_id**|**binary(16)**|Numero di identificazione del processo.|  
 |**subscription_guid**|**binary(16)**|ID delle sottoscrizioni dell'agente.|  
@@ -50,24 +50,24 @@ ms.locfileid: "52785753"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Data e ora in cui è stato creato l'agente di distribuzione o di merge.|  
-|**queue_id**|**sysname**|Identificatore per l'individuazione della coda per le sottoscrizioni ad aggiornamento in coda. Per le sottoscrizioni non impostate per l'aggiornamento in coda il valore è NULL. Per le pubblicazioni basate sul servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)], corrisponde a un valore GUID che identifica in modo univoco la coda da utilizzare per la sottoscrizione. Per le pubblicazioni in coda basate su SQL Server, la colonna contiene il valore **SQL**.<br /><br /> Nota: L'utilizzo del servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)] è deprecato e non è più supportato.|  
+|**queue_id**|**sysname**|Identificatore per l'individuazione della coda per le sottoscrizioni ad aggiornamento in coda. Per le sottoscrizioni non impostate per l'aggiornamento in coda il valore è NULL. Per le pubblicazioni basate sul servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)], corrisponde a un valore GUID che identifica in modo univoco la coda da utilizzare per la sottoscrizione. Per le pubblicazioni in coda basate su SQL Server, la colonna contiene il valore **SQL**.<br /><br /> Nota: Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi è stato deprecato e non è più supportata.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Indica se è possibile attivare l'agente in remoto.<br /><br /> **0** specifica che l'agente non può essere attivato in remoto.<br /><br /> **1** specifica che l'agente verrà attivato in remoto nel computer remoto specificato nella *offload_server* proprietà.|  
 |**offload_server**|**sysname**|Nome di rete del server da utilizzare per l'attivazione remota dell'agente.|  
 |**dts_package_name**|**sysname**|Nome del pacchetto DTS. Ad esempio, per un pacchetto denominato **DTSPub_Package**, specificare `@dts_package_name = N'DTSPub_Package'`.|  
-|**dts_package_password**|**nvarchar(524**|Password del pacchetto.|  
+|**dts_package_password**|**nvarchar(524)**|Password del pacchetto.|  
 |**dts_package_location**|**int**|Posizione del pacchetto. La posizione del pacchetto può essere **distributore** oppure **sottoscrittore**.|  
 |**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'agente di distribuzione o di merge durante la prima esecuzione dell'agente.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al Sottoscrittore. I possibili valori sono i seguenti:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di SQL Server<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.|  
 |**subscriber_login**|**sysname**|Account di accesso utilizzato per la connessione al Sottoscrittore.|  
-|**subscriber_password**|**nvarchar(524**|Valore crittografato della password utilizzata per la connessione al Sottoscrittore.|  
+|**subscriber_password**|**nvarchar(524)**|Valore crittografato della password utilizzata per la connessione al Sottoscrittore.|  
 |**reset_partial_snapshot_progress**|**bit**|Indica se uno snapshot scaricato parzialmente deve essere scartato in modo da consentire il riavvio dell'intero processo di snapshot.|  
 |**job_step_uid**|**uniqueidentifier**|ID univoco del processo di SQL Server Agent passaggio in cui l'agente viene avviato.|  
 |**subscriptionstreams**|**tinyint**|Imposta il numero di connessioni consentite per ogni agente di distribuzione per l'applicazione parallela di più batch di modifiche in un Sottoscrittore. È supportato un intervallo di valori compreso tra 1 e 64.|  
 |**memory_optimized**|**bit**|1 indica il sottoscrittore può essere utilizzato per le tabelle ottimizzate per la memoria.|  
 |**job_login**|**sysname**||  
-|**job_password**|**nvarchar(524**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

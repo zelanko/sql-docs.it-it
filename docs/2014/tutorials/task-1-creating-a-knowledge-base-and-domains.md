@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822195"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Attività 1: Creazione di una Knowledge Base e dei domini
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Attività 1: Creazione di una Knowledge Base e domini
   In questa attività si crea il **Suppliers** della knowledge base e i domini che viene usato per la corrispondenza dei dati e pulizia dei dati per rimuovere i duplicati.  
   
 1.  Avvio veloce **Client Data Quality**. Fare clic su **avviare**, scegliere **tutti i programmi**, fare clic su **Microsoft SQL Server 2012**, fare clic su **Data Quality Services**, quindi fare clic su  **Client Data Quality**.  
@@ -46,7 +46,7 @@ ms.locfileid: "56011102"
   
      ![Dialogo Crea dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "dialogo Crea dominio")  
   
-9. Ripetere il passaggio precedente per creare i seguenti domini con tutte le impostazioni predefinite. Per mantenere semplice l'esercitazione, si imposta la **tipo di dati** di tutti i domini come **stringa**. Gli altri tipi di dati consentiti sono: Integer, Decimal e Date. Quando la **utilizza valori iniziali** opzione è selezionata (impostazione predefinita), tutti i sinonimi vengono sostituiti con il valore iniziale del gruppo di sinonimi nell'output. L'impostazione **Normalizza stringa** opzione (predefinito) Rimuove i caratteri speciali nei valori di dominio. Il **formato Output in** opzione consente di selezionare la formattazione che viene applicato quando i valori dei dati nel dominio. Selezionare **Abilita correttore ortografico** (predefinito) per eseguire correttore ortografico su tutti i valori stringa durante l'inserimento nel dominio. Il **Language** impostazione consente di specificare la versione di lingua le **correttore ortografico** da applicare. Selezionare **Disabilita algoritmi di errore di sintassi** per popolare il dominio senza verificare i valori di stringa per gli errori di sintassi. Visualizzare [creare un dominio](https://msdn.microsoft.com/library/hh510401.aspx) argomento in MSDN library per altri dettagli.  
+9. Ripetere il passaggio precedente per creare i seguenti domini con tutte le impostazioni predefinite. Per mantenere semplice l'esercitazione, si imposta la **tipo di dati** di tutti i domini come **stringa**. Gli altri tipi di dati consentiti sono: Valore integer, Decimal e Date. Quando la **utilizza valori iniziali** opzione è selezionata (impostazione predefinita), tutti i sinonimi vengono sostituiti con il valore iniziale del gruppo di sinonimi nell'output. L'impostazione **Normalizza stringa** opzione (predefinito) Rimuove i caratteri speciali nei valori di dominio. Il **formato Output in** opzione consente di selezionare la formattazione che viene applicato quando i valori dei dati nel dominio. Selezionare **Abilita correttore ortografico** (predefinito) per eseguire correttore ortografico su tutti i valori stringa durante l'inserimento nel dominio. Il **Language** impostazione consente di specificare la versione di lingua le **correttore ortografico** da applicare. Selezionare **Disabilita algoritmi di errore di sintassi** per popolare il dominio senza verificare i valori di stringa per gli errori di sintassi. Visualizzare [creare un dominio](https://msdn.microsoft.com/library/hh510401.aspx) argomento in MSDN library per altri dettagli.  
   
     -   Supplier Name  
   

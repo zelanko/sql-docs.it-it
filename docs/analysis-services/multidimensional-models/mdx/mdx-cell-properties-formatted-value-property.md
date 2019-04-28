@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE e FORMAT_STRING in FORMATTED_VALUE | Documenti Microsoft
+title: LANGUAGE e FORMAT_STRING in FORMATTED_VALUE | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807565"
 ---
-# <a name="mdx-cell-properties---formattedvalue-property"></a>Proprietà di cella MDX - proprietà FORMATTED_VALUE
+# <a name="mdx-cell-properties---formattedvalue-property"></a>Proprietà delle celle MDX - proprietà FORMATTED_VALUE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34026958"
 |------------|----------------------|-----------------|  
 |A|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
 |B|€ 5.040,00|La proprietà FORMAT_STRING è impostata su `Currency` (valore ereditato da A) e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna), da qui il simbolo dell'euro e i separatori decimale e delle migliaia diversi.|  
-|C|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
+|c|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
 |D|5.04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.|  
 |E|5,04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE è impostata in modo esplicito su `1034,` da qui la virgola ( `,` ) come separatore decimale.|  
 |F|50.40%|La proprietà FORMAT_STRING è impostata su `Percent` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata modificata da 5040 a 0.5040|  
@@ -130,7 +130,7 @@ ms.locfileid: "34026958"
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|La proprietà FORMAT_STRING è impostata in modo implicito su `General Date` dall'espressione CDate() e la proprietà LANGUAGE è impostata su `1033` (Inglese), valore ereditato dalle impostazioni locali del sistema|  
 |B|Thursday, March 12, 1959|La proprietà FORMAT_STRING è impostata in modo esplicito su `Long Date` e la proprietà LANGUAGE è impostata su `1033` (inglese), valore ereditato dalle impostazioni locali del sistema|  
-|C|12/03/1959 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1034` (spagnolo).<br /><br /> Rispetto allo stile di formattazione americano, mese e giorno sono invertiti.|  
+|c|12/03/1959 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1034` (spagnolo).<br /><br /> Rispetto allo stile di formattazione americano, mese e giorno sono invertiti.|  
 |D|jueves, 12 de marzo de 1959|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Date` e `1034` (spagnolo).<br /><br /> In spagnolo mese e giorno della settimana sono riportati per esteso|  
 |E|1959/03/12 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1041` (giapponese).<br /><br /> La data presenta ora il formato anno/mese/giorno ora:minuti:secondi|  
 |F|1959年3月12日|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Date` e `1041` (giapponese).|  
@@ -142,9 +142,9 @@ ms.locfileid: "34026958"
 |L|06:30|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Short Time` e `1041` (giapponese).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di FORMAT_STRING & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [Utilizzando le proprietà della cella & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Creazione e utilizzo di valori di proprietà & #40; MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Nozioni fondamentali sulle Query MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Contenuto di FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Utilizzo delle proprietà delle celle &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795299"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Eliminare una colonna (SSAS tabulare)
   In questo argomento viene descritto come eliminare una colonna da una tabella di modello tabulare.  
@@ -39,7 +39,7 @@ ms.locfileid: "48178481"
 3.  Nella finestra di anteprima della tabella nella finestra di dialogo **Modifica proprietà tabella** deselezionare la colonna che si desidera eliminare, quindi scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere colonne a una tabella &#40;tabulare di SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partizioni &#40;tabulare di SSAS&#41;](partitions-ssas-tabular.md)  
+ [Aggiungere colonne a una tabella &#40;SSAS tabulare&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md)  
   
   

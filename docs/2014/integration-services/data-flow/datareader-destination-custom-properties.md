@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827620"
 ---
 # <a name="datareader-destination-custom-properties"></a>Proprietà personalizzate della destinazione DataReader
   La destinazione DataReader include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -26,7 +26,7 @@ ms.locfileid: "58376649"
 |-------------------|---------------|-----------------|  
 |DataReader|String|Nome di classe della destinazione DataReader.|  
 |FailOnTimeout|Boolean|Indica se generare un errore quando si verifica un `ReadTimeout`. Il valore predefinito di questa proprietà è **False**.|  
-|ReadTimeout|Integer|Numero di millisecondi prima di un timeout. Il valore predefinito di questa proprietà è 30000 (30 secondi).|  
+|ReadTimeout|Valore intero|Numero di millisecondi prima di un timeout. Il valore predefinito di questa proprietà è 30000 (30 secondi).|  
   
  L'input e le colonne di input della destinazione DataReader non includono proprietà personalizzate.  
   

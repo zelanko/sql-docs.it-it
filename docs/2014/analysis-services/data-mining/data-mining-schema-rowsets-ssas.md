@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fef47b83e341e9c8fed6a4824da882550c9a892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722623"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Esecuzione di query sui set di righe dello schema di data mining (Analysis Services - Data mining)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]molti dei set di righe esistenti dello schema di data mining OLE DB sono esposti come set di tabelle di sistema su cui è possibile eseguire query tramite istruzioni DMX (Data Mining Extensions). Mediante la creazione di query sul set di righe dello schema di data mining, è possibile identificare i servizi disponibili, ottenere aggiornamenti sullo stato dei modelli e delle strutture e trovare dettagli sul contenuto del modello o sui parametri. Per una descrizione dei set di righe dello schema di data mining, vedere [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48173171"
 ## <a name="list-of-data-mining-schema-rowsets"></a>Elenco di set di righe dello schema di data mining  
  Nella tabella seguente sono elencati i set di righe dello schema di data mining che possono essere utili per l'esecuzione delle query e il monitoraggio.  
   
-|Nome del set di righe|Description|  
+|Nome del set di righe|Descrizione|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|Elenca tutti i modelli di data mining nel contesto corrente.<br /><br /> Include informazioni quali la data di creazione, i parametri utilizzati per creare il modello e la dimensione del set di training.|  
 |DMSCHEMA_MINING_COLUMNS|Elenca tutte le colonne utilizzate nei modelli di data mining nel contesto corrente.<br /><br /> Le informazioni specificano il mapping a una colonna di origine della struttura di data mining, il tipo di dati, la precisione e le funzioni di stima che possono essere utilizzate con la colonna.|  
@@ -52,7 +52,7 @@ ms.locfileid: "48173171"
 ## <a name="examples"></a>Esempi  
  Nella sezione seguente sono riportati alcuni esempi di query sui set di righe dello schema di data mining.  
   
-### <a name="example-1-list-data-mining-services"></a>Esempio 1: Elenco di servizi di data mining  
+### <a name="example-1-list-data-mining-services"></a>Esempio 1: Elenco servizi di Data Mining  
  Nella query seguente viene restituito un elenco di servizi di data mining disponibili sul server corrente, che indica gli algoritmi abilitati. Le colonne specificate per ogni servizio di data mining includono i flag di modellazione e i tipi di contenuto che possono essere utilizzati con ogni algoritmo, il GUID di ogni servizio e gli eventuali limiti di stima che potrebbero essere stati specificati per ogni servizio.  
   
 ```  
@@ -60,7 +60,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Esempio 2: Elenco di parametri del modello di data mining  
+### <a name="example-2-list-mining-model-parameters"></a>Esempio 2: Elenco dei parametri del modello di Data Mining  
  Nell'esempio seguente vengono restituiti i parametri utilizzati per creare uno specifico modello di data mining:  
   
 ```  
@@ -69,7 +69,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Esempio 3: Elenco di tutti i set di righe  
+### <a name="example-3-list-all-rowsets"></a>Esempio 3: Elencare tutti i set di righe  
  Nell'esempio seguente viene restituito un elenco completo di set di righe disponibili nel server corrente:  
   
 ```  

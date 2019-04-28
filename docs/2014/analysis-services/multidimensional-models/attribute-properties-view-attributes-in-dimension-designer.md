@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727522"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Visualizzare attributi in Progettazione dimensioni
   Gli attributi vengono creati in oggetti dimensione. È possibile visualizzare e configurare gli attributi tramite Progettazione dimensioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni sono elencati gli attributi inclusi in una dimensione. Utilizzare questo riquadro per aggiungere, rimuovere o configurare attributi. È inoltre possibile selezionare gli attributi da utilizzare come livello in una nuova gerarchia o da aggiungere come livello in una gerarchia esistente.  
   
  Per visualizzare gli attributi in una dimensione, aprire Progettazione dimensioni per tale dimensione. Nel riquadro **Attributi** della scheda **Struttura dimensione**  della finestra di progettazione vengono visualizzati gli attributi inclusi nella dimensione. È possibile passare da una visualizzazione elenco, albero o griglia scegliendo **Mostra attributi in** nel **dimensione** dal menu di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e quindi facendo clic su uno dei comandi illustrati nella tabella seguente.  
   
-|Mostra attributi in|Description|  
+|Mostra attributi in|Descrizione|  
 |------------------------|-----------------|  
 |**Elenco**|Consente di visualizzare gli attributi in formato di elenco.<br /><br /> Fare clic con il pulsante destro del mouse su un attributo per eliminarlo dall'elenco, rinominarlo oppure modificarne l'utilizzo.<br /><br /> Utilizzare questa visualizzazione per compilare gerarchie. Le informazioni sugli attributi e le proprietà membro non sono visibili.|  
 |**Struttura ad albero**|Consente di visualizzare gli attributi in formato di albero, con la dimensione come nodo di livello principale dell'albero. Utilizzare questa visualizzazione per visualizzare e creare proprietà membro. Può inoltre essere utilizzata per compilare gerarchie. Espandere un attributo per visualizzarne le relazioni tra attributi o per creare una nuova relazione tra attributi, eseguendo le operazioni seguenti:<br /><br /> Fare clic sulla dimensione, su un attributo o su una proprietà membro per visualizzarne le proprietà nella finestra **Proprietà** .<br /><br /> Fare clic con il pulsante destro del mouse su una proprietà membro o su un attributo per eliminarlo dall'elenco, rinominarlo oppure modificarne l'utilizzo.|  
@@ -38,7 +38,7 @@ ms.locfileid: "48180041"
 |Icona|Utilizzo dell'attributo|  
 |----------|---------------------|  
 |![Icona di attributo](../media/as-icon-attribute.gif "icona di attributo")|Regular o AccountType|  
-|![Icona di attributo chiave](../media/as-icon-key-attribute.gif "icona di attributo chiave")|Key|  
+|![Icona di attributo chiave](../media/as-icon-key-attribute.gif "icona di attributo chiave")|Chiave|  
 |![Icona di attributo padre](../media/as-icon-parent-attribute.gif "icona di attributo padre")|Parent|  
   
 ## <a name="see-also"></a>Vedere anche  

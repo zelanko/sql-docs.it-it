@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6665d039587a09bb373179ac6f9675791b45f53b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815555"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Creare o configurare un listener del gruppo di disponibilità (SQL Server)
   In questo argomento viene illustrato come creare o configurare un singolo *listener del gruppo di disponibilità* per un gruppo di disponibilità AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -67,8 +67,8 @@ ms.locfileid: "53360043"
   
 |Permissions|Collegamento|  
 |-----------------|----------|  
-|Il nome dell'oggetto cluster WSFC che ospita il gruppo di disponibilità deve avere l'autorizzazione per la **creazione degli oggetti computer** .<br /><br /> Per impostazione predefinita, in Active Directory un nome di oggetto cluster non ha l'autorizzazione per la **creazione degli oggetti computer** assegnata in modo esplicito e può creare 10 oggetti computer virtuali. Dopo aver creato 10 oggetti computer virtuali, la creazione di ulteriori oggetti di questo tipo avrà esito negativo. È possibile evitare questo problema concedendo in modo esplicito l'autorizzazione al nome dell'oggetto cluster WSFC. Si noti che gli oggetti computer virtuali per i gruppi di disponibilità eliminati non vengono rimossi automaticamente da Active Directory e continuano a essere conteggiati ai fini del limite predefinito di 10 oggetti a meno che non vengano eliminati manualmente.<br /><br /> Nota: In alcune organizzazioni i criteri di sicurezza impediscono la concessione **crea oggetti Computer** l'autorizzazione a singoli account utente.|*Passaggi per la configurazione dell'account per chi installa il cluster* in [Guida dettagliata al Cluster di Failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Passaggi per la pre-installazione del cluster del nome account* in [Guida dettagliata al Cluster di Failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Se l'organizzazione richiede la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener, sarà necessaria l'appartenenza al gruppo **Account Operator** o l'assistenza dell'amministratore di dominio.<br /><br /> Suggerimento: In genere, è più semplice non effettuare la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener. Se è possibile, procedere con la creazione e la configurazione automatica dell'account durante l'esecuzione della procedura guidata Disponibilità elevata WSFC.|*Passaggi per la configurazione pre-installazione di un account per un servizio o applicazione cluster* in [Guida dettagliata al Cluster di Failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|Il nome dell'oggetto cluster WSFC che ospita il gruppo di disponibilità deve avere l'autorizzazione per la **creazione degli oggetti computer** .<br /><br /> Per impostazione predefinita, in Active Directory un nome di oggetto cluster non ha l'autorizzazione per la **creazione degli oggetti computer** assegnata in modo esplicito e può creare 10 oggetti computer virtuali. Dopo aver creato 10 oggetti computer virtuali, la creazione di ulteriori oggetti di questo tipo avrà esito negativo. È possibile evitare questo problema concedendo in modo esplicito l'autorizzazione al nome dell'oggetto cluster WSFC. Si noti che gli oggetti computer virtuali per i gruppi di disponibilità eliminati non vengono rimossi automaticamente da Active Directory e continuano a essere conteggiati ai fini del limite predefinito di 10 oggetti a meno che non vengano eliminati manualmente.<br /><br /> Nota: in alcune organizzazioni i criteri di sicurezza non permettono di concedere l'autorizzazione per la **creazione di oggetti computer** a singoli account utente.|*Passaggi per la configurazione dell'account per chi installa il cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Passaggi per la configurazione pre-installazione dell'account del nome cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Se l'organizzazione richiede la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener, sarà necessaria l'appartenenza al gruppo **Account Operator** o l'assistenza dell'amministratore di dominio.<br /><br /> Suggerimento: In genere, è più semplice non effettuare la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener. Se è possibile, procedere con la creazione e la configurazione automatica dell'account durante l'esecuzione della procedura guidata Disponibilità elevata WSFC.|*Passaggi per la configurazione pre-installazione di un account per un servizio o un'applicazione cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
   
 ###  <a name="SqlPermissions"></a> Autorizzazioni di SQL Server  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53360043"
   
 -   [Collegamento ipertestuale "https://technet.microsoft.com/library/cc904295(WS.10).aspx" quote di Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la creazione di un listener del gruppo di disponibilità  
+##  <a name="FollowUp"></a> Completamento: Dopo aver creato un listener del gruppo di disponibilità  
   
 ###  <a name="MultiSubnetFailover"></a> Parola chiave MultiSubnetFailover e funzionalità associate  
  `MultiSubnetFailover` è una nuova parola chiave della stringa di connessione utilizzata per accelerare il failover con i gruppi di disponibilità AlwaysOn e le istanze del cluster di failover AlwaysOn in SQL Server 2012. Le tre seguenti funzionalità secondarie vengono abilitate quando `MultiSubnetFailover=True` è impostato nella stringa di connessione:  
@@ -224,21 +224,21 @@ ms.locfileid: "53360043"
   
  **MultiSubnetFailover=True non supportato da .NET Framework 3.5 o OLEDB**  
   
- **Problema:** se nel gruppo di disponibilità o nell'istanza del cluster di failover è disponibile un nome di listener (noto come nome di rete o punto di accesso client in Gestione cluster WSFC) dipendente da più indirizzi IP di subnet diverse e si sta usando ADO.NET con .NET Framework 3.5SP1 o SQL Native Client 11.0 OLEDB, potenzialmente il 50% delle richieste di connessione client al listener del gruppo di disponibilità riscontrerà un timeout di connessione.  
+ **Problema:** Se il gruppo di disponibilità o l'istanza del Cluster di Failover dispone di un nome di listener (noto come nome di rete o punto di accesso Client in Gestione Cluster WSFC) dipendente più indirizzi IP dalla subnet diverse e si sta utilizzando ADO.NET con .NET Framework 3.5SP1 o SQL Native Client 11.0 OLEDB, potenzialmente 50% delle richieste di connessione client al listener del gruppo di disponibilità riscontrerà un timeout di connessione.  
   
- **Soluzioni alternative:** è consigliabile effettuare una delle seguenti attività.  
+ **Soluzioni alternative:** È consigliabile effettuare una delle seguenti attività.  
   
 -   Se non si dispone dell'autorizzazione per usare le risorse cluster, modificare il timeout di connessione in 30 secondi (questo valore corrisponde a un periodo di timeout TCP di 20 secondi più un buffer di 10).  
   
-     **I professionisti**: se si verifica un failover tra subnet, il tempo di recupero del client è breve.  
+     **Vantaggi**: Se si verifica un failover tra subnet, tempo di recupero del client è breve.  
   
-     **Svantaggi**: la metà delle connessioni client impiegherà più di 20 secondi  
+     **Svantaggi**: Metà delle connessioni client impiegherà più di 20 secondi  
   
 -   Se si dispone dell'autorizzazione per utilizzare le risorse cluster, l'approccio migliore consiste nell'impostare il nome di rete del listener del gruppo di disponibilità su `RegisterAllProvidersIP=0`. Per altre informazioni, vedere "Impostazione RegisterAllProvidersIP" più avanti in questa sezione.  
   
-     **Vantaggi:** non è necessario aumentare il valore di timeout della connessione client.  
+     **Vantaggi:** Non necessario aumentare il valore di timeout di connessione client.  
   
-     **Svantaggi:** se si verifica un failover tra subnet, il tempo di recupero del client potrebbe essere di 15 o più minuti, a seconda dell'impostazione di `HostRecordTTL` e della pianificazione della replica DNS/AD tra siti.  
+     **Svantaggi:** Se si verifica un failover tra subnet, il tempo di recupero client potrebbe essere di 15 minuti o, a seconda di `HostRecordTTL` impostazione e della pianificazione della replica DNS/AD tra siti.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Impostazione RegisterAllProvidersIP  
  Se si utilizza [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per creare un listener del gruppo di disponibilità, il punto di accesso client viene creato in WSFC con la proprietà `RegisterAllProvidersIP` impostata su 1 (true). L'effetto del valore di questa proprietà dipende dalla stringa di connessione client, come indicato di seguito:  
@@ -301,7 +301,7 @@ Start-ClusterResource yourAGResource
   
         3.  Aggiungere una dipendenza alla risorsa del gruppo di disponibilità WSFC.  
   
-         Per informazioni sulle finestre di dialogo e le schede di gestione Cluster di Failover, vedere [interfaccia utente: Lo Snap-In Gestione Cluster di Failover](https://technet.microsoft.com/library/cc772502.aspx).  
+         Per informazioni sulle finestre di dialogo e le schede di Gestione cluster di failover, vedere [Interfaccia utente: snap-in Gestione cluster di failover](https://technet.microsoft.com/library/cc772502.aspx).  
   
     -   **Utilizzo di Windows PowerShell per i cluster di failover:**  
   

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f817a74d71d12e02d4cb742a0d5423b9a8ac7807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725467"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Compilazione di formule per il calcolo di celle in MDX (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) sono disponibili numerosi strumenti per la generazione di valori calcolati, ad esempio membri calcolati, rollup personalizzati e membri personalizzati. Utilizzando tali caratteristiche è tuttavia difficile agire su un set specifico di celle o su una singola cella.  
@@ -35,9 +35,9 @@ ms.locfileid: "48226021"
   
  Per quanto concerne l'ambito di creazione, le celle calcolate sono simili sia ai set denominati che ai membri calcolati, poiché possono essere create temporaneamente per la durata di una sessione o di una singola query oppure possono essere rese disponibili a livello globale nell'ambito di un cubo.  
   
--   **Ambito query** Per creare una cella calcolata definita come parte di una query MDX e il cui ambito è pertanto limitato alla query, è necessario specificare la parola chiave WITH. La cella calcolata può essere quindi utilizzata in un'istruzione MDX SELECT. In questo modo, la cella calcolata creata utilizzando il `WITH` parola chiave può essere modificato senza alterare l'istruzione SELECT.  
+-   **Ambito query** Per creare una cella calcolata definita come parte di una query MDX e il cui ambito è pertanto limitato alla query, è necessario specificare la parola chiave WITH. La cella calcolata può essere quindi utilizzata in un'istruzione MDX SELECT. Utilizzando questo approccio è possibile modificare la cella calcolata creata utilizzando la parola chiave `WITH` senza alterare l'istruzione SELECT.  
   
-     Per altre informazioni sulla creazione di membri calcolati mediante la parola chiave WITH, vedere [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
+     Per altre informazioni sulla creazione di membri calcolati mediante la parola chiave WITH, vedere [Creazione di formule per il calcolo di celle con ambito query &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
 -   **Ambito sessione** Per creare una cella calcolata il cui ambito risulti più ampio del contesto della query, ovvero il cui ambito corrisponda alla durata della sessione MDX, è necessario usare l'istruzione CREATE CELL CALCULATION o l'istruzione ALTER CUBE.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48226021"
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione ALTER CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
  [Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [Creazione di calcoli di celle con ambito Query &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Creazione di formule per il calcolo di celle con ambito query &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

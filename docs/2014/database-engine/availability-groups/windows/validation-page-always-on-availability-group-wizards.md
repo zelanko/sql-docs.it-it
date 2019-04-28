@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812985"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>Pagina Convalida (procedure guidate gruppi di disponibilità AlwaysOn)
   Questo argomento della Guida descrive le opzioni della pagina **Convalida** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare questa pagina per verificare che l'ambiente supporta tutte le scelte di configurazione effettuate nelle pagine precedenti della procedura guidata.  
@@ -30,13 +30,13 @@ ms.locfileid: "48152954"
  **Risultati della convalida del gruppo di disponibilità.**  
  In questa griglia vengono visualizzati i risultati di ogni passaggio di convalida completato. Le colonne della griglia sono le seguenti:  
   
- **Nome**  
+ **Name**  
  Visualizza una frase che descrive un passaggio specifico.  
   
  **Result**  
  Visualizza uno dei seguenti testi di collegamenti ipertestuali. Per ulteriori informazioni sul risultato del passaggio di convalida specificato, fare clic sul collegamento ipertestuale.  
   
-|Risultato|Description|  
+|Risultato|Descrizione|  
 |------------|-----------------|  
 |**Errore**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
 |**Operazione ignorata**|Indica che il passaggio di convalida è stato ignorato perché non è necessario in base alle selezioni. Fare clic sul collegamento per visualizzare il motivo per cui un passaggio è stato ignorato.|  

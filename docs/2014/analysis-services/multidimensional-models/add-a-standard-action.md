@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727405"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
   Utilizzando la visualizzazione Azioni in Progettazione cubi è possibile aggiungere un'azione a un database. L'accesso a tale visualizzazione può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una volta creata, un'azione diventa disponibile agli utenti dopo aver rielaborato il cubo attinente. Per altre informazioni, vedere [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "48161091"
   
     -   Nell'elenco a discesa **Tipo** selezionare il tipo di azione che si desidera creare. Nella tabella seguente sono elencati i tipi di azioni disponibili.  
   
-        |Tipo|Description|  
+        |Tipo|Descrizione|  
         |----------|-----------------|  
         |Set di dati|Consente di recuperare un set di dati.|  
         |Proprietario|Consente di eseguire un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48161091"
   
     -   Nell'elenco a discesa **Chiamata** specificare come viene richiamata l'azione. Nella tabella seguente sono descritte le opzioni disponibili per il richiamo di un'azione.  
   
-        |Opzione|Description|  
+        |Opzione|Descrizione|  
         |------------|-----------------|  
         |Interattiva|L'azione viene attivata dall'interazione dell'utente.|  
         |Batch|L'azione viene eseguita come operazione batch.|  

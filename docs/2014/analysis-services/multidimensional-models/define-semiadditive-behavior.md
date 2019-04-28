@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726288"
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
   Le misure semiadditive, che non aggregano in modo uniforme di tutte le dimensioni, sono molto comuni in numerosi scenari aziendali. Ogni cubo basato su snapshot di saldi nel tempo sono caratterizzati da questo problema. Questi snapshot si trovano in applicazioni per la gestione di titoli, saldi contabili, budget, risorse umane, polizze e risarcimenti assicurativi e numerosi altri scenari aziendali.  
@@ -35,7 +35,7 @@ ms.locfileid: "48190271"
  Nella pagina **Definizione funzioni semiadditive** della procedura guidata selezionare la modalità di definizione delle funzioni semiadditive selezionando una delle opzioni seguenti:  
   
  **Disabilita funzioni semiadditive**  
- Consente di rimuovere le funzioni semiadditive da un cubo in cui tali funzioni sono state precedentemente definite. Questa selezione consente di reimpostare una misura a `SUM` se è impostata su uno qualsiasi dei tipi di funzione di aggregazione seguenti:  
+ Consente di rimuovere le funzioni semiadditive da un cubo in cui tali funzioni sono state precedentemente definite. Se si seleziona questa opzione, una misura viene reimpostata su `SUM` se è impostata su uno dei tipi di funzione di aggregazione seguenti:  
   
 -   By Account  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48190271"
   
  Questa opzione non modifica le misure con una funzione di aggregazione regolare: `Sum`, `Min`, `Max`, `Count`, o `Distinct``Count`.  
   
- **È stata rilevata la dimensione di tipo Conti, "Conto", che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
+ **La procedura guidata ha rilevato il ' Account "dimensione di tipo conti, che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
  Tutte le misure di un gruppo di misure dimensionate in base a una dimensione di tipo Conti verranno impostate dal sistema sulla funzione di aggregazione By Account e i membri della dimensione verranno aggregati dal server in base alle funzioni semiadditive specificate per ogni tipo di conto.  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ ms.locfileid: "48190271"
   
  Per ogni misura è possibile selezionare tra i tipi di funzionalità semiadditive descritti nella tabella seguente.  
   
-|Funzione semiadditiva|Description|  
+|Funzione semiadditiva|Descrizione|  
 |---------------------------|-----------------|  
 |Average of Children|La funzione di aggregazione di un membro corrisponde alla media dei relativi figli.|  
 |ByAccount|Il sistema legge le funzioni semiadditive specificate per il tipo di conto.|  

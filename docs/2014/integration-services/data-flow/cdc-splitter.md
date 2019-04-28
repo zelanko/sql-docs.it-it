@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828238"
 ---
 # <a name="cdc-splitter"></a>CDC Splitter
   La barra di divisione CDC suddivide un singolo flusso di righe delle modifiche da un flusso di dati dell'origine CDC in diversi flussi di dati per operazioni di inserimento, aggiornamento ed eliminazione. Il flusso di dati viene suddiviso in base alla colonna obbligatoria `__$operation` e ai relativi valori standard nelle tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -40,11 +40,11 @@ ms.locfileid: "58387744"
   
  L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Codice di errore**: Impostare su 1.  
+-   **Error Code** (Codice errore): impostare su 1.  
   
--   **Errore colonna**: La colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
   
--   **Error Row Columns**: Le colonne di input della riga che ha causato l'errore.  
+-   **Error Row Columns** (Colonne riga errore): colonne di input della riga che ha provocato l'errore.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configurazione della barra di divisione CDC  
  Non sono disponibili proprietà configurabili per la barra di divisione CDC.  

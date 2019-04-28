@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11480432c19f84d58c5804927c3c22ac31be4342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711815"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Modificare il valore di timeout per le query di data mining
   Quando si compila un grafico di accuratezza o si esegue una query di stima, talvolta la generazione di tutti i dati necessari per la stima può richiedere una notevole quantità di tempo. Per impedire il timeout della query, è possibile modificare il valore che controlla l'intervallo di tempo durante il quale il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attende il completamento di una query.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077456"
 3.  Fare clic sulla casella di testo **Timeout query** e digitare un valore per il numero di secondi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività Query di data Mining](data-mining-query-tasks-and-how-tos.md)   
+ [Attività e procedure relative alle query di data mining](data-mining-query-tasks-and-how-tos.md)   
  [Query di data mining](data-mining-queries.md)  
   
   

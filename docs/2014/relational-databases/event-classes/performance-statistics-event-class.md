@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827194"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
   La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonne di dati della classe di evento Performance Statistics  
- Le tabelle seguenti descrivono le colonne di dati di classe di evento associate a ognuna delle sottoclassi di evento: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 ed EventSubClass 5.  
+ Le tabelle seguenti descrivono le colonne di dati di classe di evento associate a ognuna delle sottoclassi di evento: EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4, and EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
@@ -34,7 +34,7 @@ ms.locfileid: "52761843"
 |BigintData1|`bigint`|NULL|52|Yes|  
 |BinaryData|`image`|NULL|2|Yes|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0 = Nuovo testo SQL del batch non presente nella cache.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> 1 di tipo 0|21|Yes|  
 |IntegerData2|`int`|NULL|55|Yes|  
 |ObjectID|`int`|NULL|22|Yes|  

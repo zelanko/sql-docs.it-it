@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714148"
 ---
 # <a name="why-was-odbc-created"></a>Motivi per la creazione di ODBC
-In passato, le aziende utilizzato un singolo DBMS. L'accesso al database è stato eseguito il front-end del sistema o mediante le applicazioni scritte per lavorare esclusivamente con tale sistema. Tuttavia, quando le dimensioni sono aumentate dell'utilizzo di computer e ulteriori componenti hardware e software è diventato disponibile, le aziende è stata avviata acquisire diversi DBMS. I motivi sono molti: persone bought Qual era più conveniente, qual è più veloce, le risorse di cui già conosce, ciò che è stato più recente sul mercato, cosa ha funzionato ottimale per una singola applicazione. Per altri motivi erano riorganizzazione e fusioni, in cui i reparti che in precedenza aveva un DBMS singolo ora include diversi.  
+In passato, le aziende utilizzato un singolo DBMS. L'accesso al database è stato eseguito il front-end del sistema o mediante le applicazioni scritte per lavorare esclusivamente con tale sistema. Tuttavia, quando le dimensioni sono aumentate dell'utilizzo di computer e ulteriori componenti hardware e software è diventato disponibile, le aziende è stata avviata acquisire diversi DBMS. I motivi sono numerosi: Persone bought Qual era più conveniente, qual è più veloce, le risorse di cui già conosce, ciò che è stato più recente sul mercato, cosa ha funzionato ottimale per una singola applicazione. Per altri motivi erano riorganizzazione e fusioni, in cui i reparti che in precedenza aveva un DBMS singolo ora include diversi.  
   
  Il problema sono aumentate ancora più complesso con l'avvento dei personal computer. Questi computer portati in una serie di strumenti per l'esecuzione di query, analisi e visualizzazione dei dati, insieme a un numero di database convenienti e facile da usare. Da questo momento, una singola azienda è spesso dati sparsi tra una miriade di desktop, server e minicomputer, archiviati in un'ampia gamma di database incompatibili e dell'accesso da una vasta gamma di strumenti diversi, alcuni dei quali è stato possibile ottenere tutti i dati.  
   

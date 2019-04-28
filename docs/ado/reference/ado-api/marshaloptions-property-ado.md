@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864136"
 ---
 # <a name="marshaloptions-property-ado"></a>Proprietà MarshalOptions (ADO)
 Indica quali record del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sono da sottoporre a marshalling al server.  

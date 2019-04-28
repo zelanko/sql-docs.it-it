@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3ab7c0ebe10537e3c84bd532f83791a6d193b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725445"
 ---
 # <a name="supported-mdx-mdx"></a>Istruzioni e funzioni MDX supportate (MDX)
   Negli script MDX (Multidimensional Expressions) è possibile utilizzare le istruzioni e le funzioni seguenti:  
   
- [&#40;Commento&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [&#40;commento&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [- &#40;Commento&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [-- &#40;commento&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
  [Commento &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "48099251"
   
  [Istruzione FREEZE &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [Se istruzione &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [Istruzione IF &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
- [In questo &#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [This &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
 >  Il linguaggio MDX supporta l'assegnazione alle seguenti proprietà delle celle: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` e `FONT_SIZE`. Per altre informazioni, vedere [Utilizzo delle proprietà delle celle &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX supporta inoltre l'assegnazione per la `NON_EMPTY_BEHAVIOR` proprietà del [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) istruzione.  

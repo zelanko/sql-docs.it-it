@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814067"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità AlwaysOn)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Riepilogo** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare la griglia di questa pagina per rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una o più modifiche, fare clic su **Indietro** per tornare alla pagina o alle pagine pertinenti. Al termine, fare clic su **Avanti** per tornare alla pagina **Riepilogo** . Dopo avere effettuato le scelte desiderate, fare clic su **Fine**.  

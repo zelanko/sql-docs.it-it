@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725375"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Creazione di set denominati con ambito query (MDX)
   Se un set denominato è richiesto esclusivamente per una sola query MDX (Multidimensional Expressions), è possibile definirlo specificando la parola chiave WITH. Un set denominato creato specificando questa parola chiave non esiste più dopo l'esecuzione della query.  
@@ -95,6 +95,6 @@ FROM Sales
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Creazione della sessione con ambito di set denominati &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Creazione di set denominati con ambito sessione &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

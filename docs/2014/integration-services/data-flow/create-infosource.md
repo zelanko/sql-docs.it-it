@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827949"
 ---
 # <a name="create-infosource"></a>Crea InfoSource
   Usare la finestra di dialogo **Crea InfoSource** per creare un nuovo InfoSource. Per creare il nuovo InfoSource, usare la finestra di dialogo **Crea InfoSource per dati transazione** o **Crea InfoSource per dati master** .  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812635"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
   Il servizio adattatore cloud viene creato durante il provisioning di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Macchine virtuali di Windows Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  
@@ -48,23 +48,23 @@ ms.locfileid: "52518263"
   
 -   **Parametri del file di configurazione** -  
   
-    -   \<configurazione >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<Aggiungi chiave = valore "WebServicePort" = "" / >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Aggiungi chiave = valore "WebServiceCertificate" = "GUID" / >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Aggiungi chiave = valore "ExposeExceptionDetails" = "true" / >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</ Configuration >  
+    -   \</configuration>  
   
 -   **Dettagli del certificato** -il certificato ha i valori seguenti:  
   
-    -   -Soggetto "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   Il certificato deve disporre di un solo utilizzo chiavi avanzato (EKU) nell'attributo Autenticazione server.  
   

@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721165"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lezione 1: Creazione di Windows account per la replica
   In questa lezione verranno creati account di Windows per l'esecuzione degli agenti di replica. Verrà creato un account di Windows separato nel server locale per gli agenti seguenti:  
   
-|Agent|Località|Nome account|  
+|Agent|Location|Nome account|  
 |-----------|--------------|------------------|  
 |agente snapshot|Server di pubblicazione|\<*nome_computer*>\repl_snapshot|  
 |Agente di lettura log|Server di pubblicazione|\<*nome_computer*>\repl_logreader|  
@@ -62,7 +62,7 @@ ms.locfileid: "54127461"
 6.  Scegliere **Chiudi**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo sono stati creati gli account di Windows per gli agenti di replica. Il passaggio successivo consiste nella configurazione della cartella snapshot. Vedere [lezione 2: Preparazione della cartella Snapshot](lesson-2-preparing-the-snapshot-folder.md).  
+ In questo modo sono stati creati gli account di Windows per gli agenti di replica. Il passaggio successivo consiste nella configurazione della cartella snapshot. Vedere [Lezione 2: Preparazione della cartella Snapshot](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)  

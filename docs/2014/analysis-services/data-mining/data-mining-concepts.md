@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723021"
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
   Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
   
  I modelli e le tendenze possono essere raccolti e definiti in un *modello di data mining*. È possibile applicare i modelli di data mining a scenari specifici, ad esempio:  
   
--   **Previsioni**: stima delle vendite, dei carichi del server o del tempo di inattività del server  
+-   **Previsione**: Stima delle vendite, dei carichi del server o inattività del server  
   
--   **Rischio e probabilità**: scelta dei clienti migliori per mailing diretti, determinazione del punto di pareggio probabile per scenari di rischio e assegnazione di probabilità a diagnosi o ad altri risultati  
+-   **Rischio e probabilità**: Scelta dei clienti migliori per mailing diretti, determinazione del punto di pareggio probabile per scenari di rischio e assegnazione di probabilità a diagnosi o ad altri risultati  
   
--   **Indicazioni**: determinazione dei prodotti che probabilmente vengono venduti insieme e generazione di indicazioni  
+-   **Raccomandazioni**: Determinazione di prodotti che probabilmente vengono venduti insieme, generazione di indicazioni  
   
--   **Individuazione delle sequenze**: analisi delle scelte dei clienti in un carrello acquisti e stima dei possibili eventi successivi  
+-   **Individuazione delle sequenze**: Analisi delle scelte dei clienti in un carrello acquisti e stima dei possibili eventi successivi  
   
--   **Raggruppamento**: separazione di clienti o eventi in cluster di elementi correlati, analisi e stima delle affinità  
+-   **Raggruppamento**: Separazione di clienti o eventi in cluster di elementi correlati, analisi e stima delle affinità  
   
  La compilazione di un modello di data mining rientra in un processo più ampio che include tutte le fasi necessarie, dalla formulazione di domande sui dati e dalla creazione di un modello per rispondere a tali domande, alla distribuzione del modello in un ambiente di lavoro. È possibile definire tale processo suddividendolo nei sei passaggi di base seguenti:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48067681"
   
  Data Mining di Microsoft SQL Server offre un ambiente integrato per la creazione e l'utilizzo dei modelli di data mining. In questo ambiente è incluso SQL Server Development Studio, in cui sono contenuti algoritmi di data mining e strumenti query che facilitano la compilazione di una soluzione completa per un'ampia varietà di progetti, e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in cui sono disponibili strumenti per l'esplorazione di modelli e la gestione di oggetti di data mining. Per altre informazioni, vedere [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- Per un esempio di applicazione degli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uno scenario aziendale, vedere [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md).  
+ Per un esempio di applicazione degli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uno scenario aziendale, vedere [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md).  
   
 ##  <a name="DefiningTheProblem"></a> Definizione del problema  
  Il primo passaggio del processo di data mining, illustrato nel diagramma seguente, consiste nel definire chiaramente il problema e nel considerare le modalità con cui i dati possono essere usati per risolvere il problema.  
@@ -176,7 +176,7 @@ ms.locfileid: "48067681"
 -   La pratica di aggiornare dinamicamente i modelli, parallelamente all'ingresso di ulteriori dati nell'organizzazione, e di apportare modifiche costanti per migliorare l'efficacia della soluzione deve essere parte integrante della strategia di distribuzione. Per altre informazioni, vedere [Gestione degli oggetti e delle soluzioni di data mining](management-of-data-mining-solutions-and-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di Data Mining](data-mining-solutions.md)   
+ [Soluzioni di data mining](data-mining-solutions.md)   
  [Strumenti di data mining](data-mining-tools.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864430"
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
@@ -87,26 +87,26 @@ Update(CADORecordBinding *binding)
  Per altre informazioni, vedere [appendice a: Tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), di riferimento per programmatori OLE DB.
 
 ### <a name="begin-binding-entries"></a>Iniziare a voci di associazione
- **Le macro BEGIN_ADO_BINDING**(*classe*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Dati a lunghezza fissa
- **ADO_FIXED_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, lo stato, modificare*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*ordinale, tipo di dati, del Buffer, modificare*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dati numerici
- **ADO_NUMERIC_ENTRY**(*ordinale, tipo di dati, Buffer, precisione, scala, lo stato, modificare*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
- **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, Buffer, precisione, scala, modificare*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Dati a lunghezza variabile
  **ADO_VARIABLE_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, lunghezza, modificare*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinale, tipo di dati, Buffer, le dimensioni, lunghezza, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinale, tipo di dati, Buffer, le dimensioni, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>Associazione voci finali
  **END_ADO_BINDING**()

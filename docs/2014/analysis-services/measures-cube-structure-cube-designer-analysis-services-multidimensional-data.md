@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727977"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Misure (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Misure** per gestire i membri e i gruppi di misure nella scheda **Struttura cubo** di Progettazione cubi.  
@@ -32,7 +32,7 @@ ms.locfileid: "48090314"
   
  Per visualizzare le misure, espandere i gruppi di misure. Fare clic su una misura o un gruppo di misure selezionato per rinominare rispettivamente la misura o il gruppo.  
   
- Griglia  
+ Grid  
  Consente di visualizzare una griglia di misure e le relative proprietà a cui si accede più di frequente. Fare clic su **Aggiungi nuova misura** per visualizzare la finestra di dialogo **Nuova misura** e aggiungere una nuova misura alla griglia.  
   
  La griglia include le colonne seguenti:  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808399"
 ---
 # <a name="connection-properties-dialog-box"></a>Proprietà connessione - finestra di dialogo
   Utilizzare questa finestra di dialogo per visualizzare le proprietà della connessione corrente. Questa finestra di dialogo è disponibile se si fa clic su **Visualizza proprietà connessione** in varie finestre di dialogo di Esplora oggetti. Le proprietà visualizzate in questa pagina sono di sola lettura.  

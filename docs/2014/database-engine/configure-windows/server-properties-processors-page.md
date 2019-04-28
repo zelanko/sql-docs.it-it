@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809277"
 ---
 # <a name="server-properties-processors-page"></a>Proprietà server (pagina Processori)
   Utilizzare questa pagina per visualizzare o modificare le opzioni del processore. Le impostazioni Affinità processori sono abilitate solo se sono installati più processori.  

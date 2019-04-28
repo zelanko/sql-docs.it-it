@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815754"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On (SQL Server)
   Il modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consente di valutare un set di criteri di gestione basata su criteri (PBM, Policy Based Management) predefiniti. Questi criteri possono essere utilizzati per la visualizzazione dell'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di disponibilità relativi in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "53350015"
 > [!IMPORTANT]  
 >  **<sup>*</sup>**  Per i criteri AlwaysOn, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria AlwaysOn causa l'interruzione della funzionalità di valutazione dell'integrità. Evitare pertanto di modificare i nomi di categorie AlwaysOn.  
   
-##  <a name="Dashboard"></a> Dashboard AlwaysOn  
+##  <a name="Dashboard"></a> AlwaysOn Dashboard  
  Il dashboard AlwaysOn fornisce una vista immediata dell'integrità di un gruppo di disponibilità. Nel dashboard AlwaysOn sono incluse le nuove funzionalità seguenti:  
   
 -   Consente di visualizzare facilmente i dettagli relativi a un gruppo di disponibilità specificato, le repliche di disponibilità e i database corrispondenti.  
@@ -104,7 +104,7 @@ ms.locfileid: "53350015"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Il modello dell'integrità AlwaysOn-parte 1: architettura del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
 -   [Il modello dell'integrità AlwaysOn-parte 2: estensione del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864517"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Uso di ADO con Microsoft Visual Basic e Visual Basic for Applications
 Configurazione di un progetto di ADO e la scrittura di codice ADO è simile se si usa Visual Basic o Visual Basic per le applicazioni. In questo argomento risolve l'uso di ADO con Visual Basic e Visual Basic per le applicazioni e note eventuali differenze.
@@ -99,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Creare istanze degli oggetti con **CreateObject** sono con associazione tardiva, il che significa che non sono fortemente tipizzati e completamento tramite la riga di comando è disabilitato. Tuttavia, consentono di ignorare la libreria ADO di riferimento dal progetto e consente di creare un'istanza di versioni specifiche di oggetti. Esempio:
+ Creare istanze degli oggetti con **CreateObject** sono con associazione tardiva, il che significa che non sono fortemente tipizzati e completamento tramite la riga di comando è disabilitato. Tuttavia, consentono di ignorare la libreria ADO di riferimento dal progetto e consente di creare un'istanza di versioni specifiche di oggetti. Ad esempio:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

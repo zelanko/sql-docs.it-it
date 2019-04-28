@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af799e8e806696022635a04d808213ffb5c0e779
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794302"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali (SSAS tabulare)
   Per utilizzare le funzionalità di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data e una colonna (datetime) dell'identificatore univoco del tipo di dati Date. Una volta specificata una colonna nella tabella relativa alla data come identificatore univoco, è possibile creare le relazioni tra le colonne nella tabella in questione e tutte le tabelle dei fatti.  
@@ -39,7 +39,7 @@ ms.locfileid: "48148571"
   
 2.  Fare clic sul menu **Tabella** , selezionare **Data**, quindi scegliere **Contrassegna come tabella data**  
   
-3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Esempio:  
+3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Ad esempio:   
   
     |date|  
     |----------|  
@@ -52,7 +52,7 @@ ms.locfileid: "48148571"
 4.  Se necessario, creare tutte le relazioni tra le tabelle dei fatti e la tabella relativa alla data.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Calcoli &#40;tabulare di SSAS&#41;](calculations-ssas-tabular.md)   
+ [Calcoli &#40;SSAS tabulare&#41;](calculations-ssas-tabular.md)   
  [Funzioni di Business Intelligence di tempo &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

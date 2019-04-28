@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823131"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati per la previsione (Esercitazione intermedia sul data mining)
   In questa attività verrà aggiunta una vista origine dati da utilizzare per lo scenario di previsione. I modelli di previsione richiedono che i dati contengano una colonna che può essere utilizzata per identificare gli intervalli di una serie temporale. Se si prevede di analizzare più serie di dati, è necessario che tutte le serie terminino alla stessa data o intervallo temporale.  

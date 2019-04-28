@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42f1ed629413bd68f01abd12679907f58d204a78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722503"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>Filtrare un set di elementi in un modello Association Rules
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile filtrare i set di elementi visualizzati nella scheda **Set di elementi** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  

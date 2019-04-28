@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37afa05887059607edc257c3957495a8db335d3c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728147"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Modello denominazione livelli (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Modello denominazione livelli** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare il modello di denominazione dei livelli per un attributo padre in una dimensione. Per altre informazioni sui modelli di denominazione dei livelli, vedere [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). È possibile visualizzare il **modello denominazione livelli** finestra di dialogo facendo clic sul pulsante con puntini di sospensione (**...** ) sul `NamingTemplate` valore di una traduzione per un attributo nel **dettagli di traduzione** riquadro il **traduzioni** scheda della finestra di **progettazione dimensioni**.  
@@ -29,7 +29,7 @@ ms.locfileid: "50144770"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Definire il modello di livello**|Consente di visualizzare una griglia in cui è possibile progettare la gerarchia di livelli nell'attributo padre. La griglia include le colonne seguenti:<br /><br /> **Livello**: Visualizza la posizione ordinale del livello per i quali il nome specificato in **nome** viene usato. Per aggiungere un nuovo modello di denominazione per un livello, selezionare **Nome** nella riga contenente un asterisco (\*) in **Livello**.<br /><br /> **Nome**: contiene il modello di denominazione utilizzato per il livello indicato in **livello**. Per aggiungere un segnaposto per la posizione ordinale del livello nel modello di denominazione, aggiungere un asterisco (*). Per aggiungere un asterisco come parte del nome creato dal modello di denominazione, aggiungere due asterischi (\*\*).|  
+|**Definire il modello di livello**|Consente di visualizzare una griglia in cui è possibile progettare la gerarchia di livelli nell'attributo padre. La griglia include le colonne seguenti:<br /><br /> **Livello**: Consente di visualizzare la posizione ordinale del livello per il quale viene usato il nome specificato in **Nome** . Per aggiungere un nuovo modello di denominazione per un livello, selezionare **Nome** nella riga contenente un asterisco (\*) in **Livello**.<br /><br /> **Nome**: Contiene il modello di denominazione usato per il livello indicato in **Livello**. Per aggiungere un segnaposto per la posizione ordinale del livello nel modello di denominazione, aggiungere un asterisco (*). Per aggiungere un asterisco come parte del nome creato dal modello di denominazione, aggiungere due asterischi (\*\*).|  
 |**Cancella tutto**|Selezionare questa opzione per rimuovere tutte le righe in **Definire il modello di livello**.|  
 |**Result**|Consente di visualizzare il modello di denominazione dei livelli creato nella finestra di dialogo.|  
   

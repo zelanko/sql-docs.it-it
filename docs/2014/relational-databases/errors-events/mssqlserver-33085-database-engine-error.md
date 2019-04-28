@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33085 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 33085 (Database Engine error)
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f3692ab986f3648bd1ab5b411207fe4948ca216
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868515"
 ---
 # <a name="mssqlserver33085"></a>MSSQLSERVER_33085
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Dettagli  
   
 |||  
@@ -33,10 +34,10 @@ ms.locfileid: "48169281"
 |Testo del messaggio|Impossibile trovare uno o più metodi nella libreria del provider del servizio di crittografia '%.* ls.'|  
   
 ## <a name="explanation"></a>Spiegazione  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stato in grado di usare il provider del servizio di crittografia elencato nel messaggio di errore. Il provider del servizio di crittografia non supporta un metodo obbligatorio. Lo stato dell'errore indica il metodo non trovato.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stato in grado di usare il provider del servizio di crittografia elencato nel messaggio di errore. Il provider del servizio di crittografia non supporta un metodo obbligatorio. Lo stato dell'errore indica il metodo non trovato.  
   
-|State|Description|  
-|-----------|-----------------|  
+|State|Descrizione|  
+|---------|---------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  
 |3|SqlCryptOpenSession|  
@@ -56,6 +57,5 @@ ms.locfileid: "48169281"
 |17|SqlCryptDecrypt|  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Per ulteriori informazioni, contattare il provider del servizio di crittografia.  
-  
+Per ulteriori informazioni, contattare il provider del servizio di crittografia.  
   

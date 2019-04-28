@@ -1,5 +1,5 @@
 ---
-title: Sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856101"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47826185"
   
 -   Trigger DDL a livello di server se nel contesto del database master.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |referencing_id|**int**|ID dell'entità di riferimento. Non ammette i valori Null.|  
 |referencing_minor_id|**int**|ID di colonna quando l'entità di riferimento è una colonna, in caso contrario, 0. Non ammette i valori Null.|  
@@ -70,24 +70,24 @@ ms.locfileid: "47826185"
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
-|Tabella|Sì*|Sì|  
-|Vista|Sì|Sì|  
-|Indice filtrato|Sì**|no|  
-|Statistiche filtrate|Sì**|no|  
-|Stored procedure*** [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|Sì|  
-|stored procedure CLR|no|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|no|Sì|  
-|Trigger CLR (DML e DDL)|no|no|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|no|  
-|Stored procedure estese|no|Sì|  
-|Coda|no|Sì|  
-|Sinonimo|no|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|no|Sì|  
-|Raccolta di XML Schema|no|Sì|  
-|Funzione di partizione|no|Sì|  
+|Tabella|Sì*|Yes|  
+|visualizzazione|Yes|Yes|  
+|Indice filtrato|Sì**|No|  
+|Statistiche filtrate|Sì**|No|  
+|Stored procedure*** [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
+|stored procedure CLR|No|Yes|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
+|Funzione CLR definita dall'utente|No|Yes|  
+|Trigger CLR (DML e DDL)|No|No|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
+|Stored procedure estese|No|Yes|  
+|Coda|No|Yes|  
+|Sinonimo|no|Yes|  
+|Tipo (alias e tipo di CLR definito dall'utente)|no|Yes|  
+|Raccolta di XML Schema|No|Yes|  
+|Funzione di partizione|No|Yes|  
   
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   

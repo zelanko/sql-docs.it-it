@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808762"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>Connetti al server (pagina Account di accesso) - Analysis Services
   Usare questa scheda per visualizzare o specificare le opzioni seguenti per la connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48192241"
  Consente di selezionare l'istanza del server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
  **Autenticazione**  
- La modalità di autenticazione supportata per la connessione a un'istanza di Analysis Services è l'autenticazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
+ Modalità di autenticazione seguenti sono supportate quando ci si connette a un'istanza di Analysis Services: [!INCLUDE[msCoName](../includes/msconame-md.md)] Autenticazione di Windows.  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
  Tale modalità consente di connettersi tramite un account utente di Windows.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869596"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "53355034"
 |Testo del messaggio|Accesso non riuscito per l'utente '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Spiegazione  
- Quando un tentativo di connessione viene rifiutato a causa di un errore di autenticazione dovuto a una password o un nome utente errati, al client viene restituito un messaggio simile al seguente:  "Accesso non riuscito per l'utente '<nome_utente>' (Microsoft SQL Server, Errore: 10061) 18456)".  
+ Quando un tentativo di connessione viene rifiutato a causa di un errore di autenticazione che include un nome utente o password errata, al client viene restituito un messaggio simile al seguente:  "Accesso non riuscito per l'utente '<nome_utente>' (Microsoft SQL Server, errore: 18456)".  
   
  Al client vengono restituite informazioni aggiuntive tra cui le seguenti:  
   
@@ -43,13 +43,13 @@ ms.locfileid: "53355034"
   
  "Nome server: <nome_computer>"  
   
- "Numero errore: 18456" 18456"  
+ "Numero errore: 18456"  
   
- "Gravità: 14" 14"  
+ "Gravità: 14"  
   
  "Stato: 1"  
   
- "Numero riga: 65536" 65536"  
+ "Numero riga: 65536"  
   
  Può essere inoltre restituito il messaggio seguente:  
   
@@ -88,9 +88,9 @@ ms.locfileid: "53355034"
 ## <a name="examples"></a>Esempi  
  In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la password non è corretta.  
   
-|date|Origine|Message|  
+|date|Source|Message|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Accesso|Errore: 18456, Gravità: 14, Stato: 8.|  
+|2007-12-05 20:12:56.34|Accesso|Errore: 18456, gravità: 14, stato: 8.|  
 |2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: \<indirizzo ip >]|  
   
 > [!NOTE]  
@@ -109,6 +109,6 @@ ms.locfileid: "53355034"
   
  Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta i database indipendenti, verificare che l'account di accesso non sia stato eliminato dopo la migrazione a un utente del database indipendente.  
   
- Quando ci si connette in locale a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le connessioni da servizi in esecuzione con **NT AUTHORITY\NETWORK SERVICE** devono essere autenticate usando computer con nomi di dominio completi. Per altre informazioni, vedere [How To: Usare l'Account del servizio di rete per accedere alle risorse in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+ Quando ci si connette in locale a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le connessioni da servizi in esecuzione con **NT AUTHORITY\NETWORK SERVICE** devono essere autenticate usando computer con nomi di dominio completi. Per altre informazioni, vedere [Procedura: Usare l'Account del servizio di rete per accedere alle risorse in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

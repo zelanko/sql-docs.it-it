@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722723"
 ---
 # <a name="discretization-methods-data-mining"></a>Metodi di discretizzazione (data mining)
   Per il corretto funzionamento di alcuni algoritmi usati per la creazione dei modelli di data mining in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono necessari tipi di contenuto specifici. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes, ad esempio, non può utilizzare colonne continue come input, né stimare valori continui. Alcune colonne, inoltre, possono contenere un numero talmente elevato di valori da impedire all'algoritmo di identificare con facilità schemi significativi nei dati, in base ai quali creare un modello.  
@@ -43,7 +43,7 @@ ms.locfileid: "48187052"
   
  Nella tabella seguente vengono descritti i metodi che è possibile utilizzare per la discretizzazione dei dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Metodo di discretizzazione|Description|  
+|Metodo di discretizzazione|Descrizione|  
 |---------------------------|-----------------|  
 |`AUTOMATIC`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il metodo di discretizzazione da usare.|  
 |`CLUSTERS`|L'algoritmo suddivide i dati in gruppi eseguendo il campionamento dei dati di training, l'inizializzazione su un numero di punti casuali e quindi diverse iterazioni dell'algoritmo Microsoft Clustering tramite il metodo di clustering EM (Expectation Maximization). Il metodo `CLUSTERS` è utile in quanto è valido per qualsiasi curva di distribuzione, ma richiede tempi di elaborazione più lunghi rispetto agli altri metodi di discretizzazione.<br /><br /> È possibile utilizzare tale metodo solo per le colonne numeriche.|  
@@ -51,19 +51,19 @@ ms.locfileid: "48187052"
   
 ## <a name="remarks"></a>Note  
   
--   È possibile usare il `EQUAL_AREAS` metodo per discretizzare le stringhe.  
+-   Per discretizzare le stringhe, è possibile utilizzare il metodo `EQUAL_AREAS`.  
   
--   Il `CLUSTERS` metodo utilizza un campione casuale di 1000 record per discretizzare i dati. Se si desidera evitare che l'algoritmo esegua il campionamento dei dati, utilizzare il metodo `EQUAL_AREAS`.  
+-   Per discretizzare i dati, il metodo `CLUSTERS` utilizza un campione casuale di 1000 record. Se si desidera evitare che l'algoritmo esegua il campionamento dei dati, utilizzare il metodo `EQUAL_AREAS`.  
   
--   Nell'esercitazione relativa al modello di data mining di rete neurale viene descritto il modo in cui la discretizzazione può essere personalizzata. Per altre informazioni, vedere [lezione 5: compilazione rete neurale e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   Nell'esercitazione relativa al modello di data mining di rete neurale viene descritto il modo in cui la discretizzazione può essere personalizzata. Per altre informazioni, vedere [lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)   
- [I tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati &#40;Data Mining&#41;](data-types-data-mining.md)   
+ [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)   
+ [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tipi di dati &#40;Data mining&#41;](data-types-data-mining.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)   
- [Distribuzioni delle colonne &#40;Data Mining&#41;](column-distributions-data-mining.md)  
+ [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md)  
   
   

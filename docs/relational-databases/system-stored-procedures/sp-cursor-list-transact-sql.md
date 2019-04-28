@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724046"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_return=] *cursor_variable_name*OUTPUT  
  Nome di una variabile di cursore dichiarata. *cursor_variable_name* viene **cursore**, non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  Specifica il livello dei cursori da segnalare. *cursor_scope* viene **int**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce tutti i cursori locali.|  
 |2|Restituisce tutti i cursori globali.|  
@@ -62,7 +62,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Di seguito è riportato il formato del cursore restituito da sp_cursor_list. Il formato del cursore è analogo a quello restituito da sp_describe_cursor.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Nome utilizzato per fare riferimento al cursore. Se il riferimento al cursore è stato impostato tramite il nome specificato in un'istruzione DECLARE CURSOR, il nome di riferimento corrisponde al nome del cursore. Se il riferimento al cursore è stato impostato tramite una variabile, il riferimento corrisponde al nome della variabile di cursore.|  
 |cursor_name|**sysname**|Nome del cursore che deriva da un'istruzione DECLARE CURSOR. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se il cursore è stato creato impostando una variabile di cursore su un cursore **cursor_name** restituisce il nome della variabile di cursore.  Nelle versioni precedenti questa colonna di output restituisce un nome generato dal sistema.|  

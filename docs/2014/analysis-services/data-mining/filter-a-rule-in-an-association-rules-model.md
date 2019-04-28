@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722483"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrare una regola in un modello Association Rules
   È possibile utilizzare i filtri con i modelli di associazione per limitare i risultati alle sole associazioni desiderate. È ad esempio possibile filtrare le regole in modo da visualizzare solo quelle che includono un prodotto specifico.  
@@ -44,7 +44,7 @@ ms.locfileid: "48118631"
   
 5.  Aumentare o ridurre il valore di **Priorità minima**per visualizzare rispettivamente un numero minore o maggiore di regole.  
   
-6.  Selezionare una delle opzioni seguenti nell'area **Mostra**: **Mostra nome e valore dell'attributo**, **Mostra solo il nome dell'attributo**o **Mostra solo il valore dell'attributo**.  
+6.  Per la **mostrare**, selezionare una delle opzioni seguenti: **Mostra il nome dell'attributo e valore**, **Mostra solo nomi di attributo**, o **Mostra solo il valore attributo**.  
   
 7.  Aumentare o ridurre il valore di **Numero massimo di righe**rispettivamente per incrementare il numero totale di regole che soddisfano le condizioni specificate o limitare il numero di regole restituite. Le regole vengono ordinate in base alla probabilità. È pertanto possibile eliminare le regole aggiuntive che soddisfano le condizioni specificate in base alle probabilità o alla priorità.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48118631"
 -   [Esempi di query sul modello di associazione](association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Visualizzare un modello usando il visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Lezione 3: Creazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

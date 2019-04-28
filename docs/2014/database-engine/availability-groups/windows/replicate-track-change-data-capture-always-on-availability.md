@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814057"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
@@ -191,9 +191,9 @@ ms.locfileid: "57579321"
   
 -   Quando si usano la replica di tipo merge e il database di pubblicazione è in un gruppo di disponibilità:  
   
-    -   Sottoscrizione push: sia nel server di pubblicazione che nel database di distribuzione deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Sottoscrizione push: Sia il server di pubblicazione e il server di distribuzione devono eseguire almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Sottoscrizione pull: nel server di pubblicazione e nei database di distribuzione e sottoscrittore deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
+    -   Sottoscrizione pull: I database di pubblicazione, server di distribuzione e sottoscrittore devono essere almeno su [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
   
 -   L'inserimento del database di distribuzione in un gruppo di disponibilità non è supportato.  
   
@@ -206,9 +206,9 @@ ms.locfileid: "57579321"
 |-|-|-|-|  
 ||**Server di pubblicazione**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
 |**Transazionale**|Sì<sup>1</sup>|No|Sì<sup>2</sup>|  
-|**P2P**|No|No|No|  
+|**P2P**|no|No|No|  
 |**Merge**|Yes|No|Sì<sup>2</sup>|  
-|**Snapshot**|Yes|No|Sì<sup>2</sup>|  
+|**Snapshot**|Yes|no|Sì<sup>2</sup>|  
   
  <sup>1</sup> non include il supporto per la replica transazionale bidirezionale e reciproca.  
   

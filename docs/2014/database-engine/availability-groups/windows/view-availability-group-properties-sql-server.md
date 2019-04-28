@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813252"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Visualizzazione delle Proprietà dei gruppi di disponibilità (SQL Server)
   In questo argomento viene illustrato come visualizzare le proprietà di un gruppo di disponibilità per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -33,13 +33,13 @@ ms.locfileid: "48126350"
   
 3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui si desidera visualizzare le proprietà e selezionare il comando **Proprietà** .  
   
-4.  Nella finestra di dialogo **Proprietà gruppo di disponibilità** , utilizzare le pagine **Generale** e **Preferenze di backup** per visualizzare e, talvolta, modificare le proprietà del gruppo di disponibilità selezionato. Per altre informazioni, vedere [Proprietà dei gruppi di disponibilità/Nuovo gruppo di disponibilità &#40;pagina Generale&#41;](availability-group-properties-new-availability-group-general-page.md) e [Proprietà dei gruppi di disponibilità/Nuovo gruppo di disponibilità &#40;pagina Preferenze di backup&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  Nella finestra di dialogo **Proprietà gruppo di disponibilità** , utilizzare le pagine **Generale** e **Preferenze di backup** per visualizzare e, talvolta, modificare le proprietà del gruppo di disponibilità selezionato. Per altre informazioni, vedere [proprietà gruppo di disponibilità e nuovo gruppo di disponibilità &#40;pagina Generale&#41; ](availability-group-properties-new-availability-group-general-page.md) e [le proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità &#40;pagina delle preferenze di Backup&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Utilizzare la pagina **Autorizzazioni** per visualizzare gli account di accesso, i ruoli e le autorizzazioni esplicite correnti associati al gruppo di disponibilità. Per ulteriori informazioni, vedere [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
 
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per visualizzare le proprietà e lo stato di un gruppo di disponibilità**  
   
  Per eseguire una query sulle proprietà e sugli stati dei gruppi di disponibilità per cui l'istanza del server ospita una replica di disponibilità, utilizzare le viste seguenti:  
@@ -64,7 +64,7 @@ ms.locfileid: "48126350"
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per visualizzare le informazioni sui gruppi di disponibilità**  
   
--   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+-   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   

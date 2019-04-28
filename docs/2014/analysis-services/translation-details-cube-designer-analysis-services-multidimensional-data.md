@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794282"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli traduzione (scheda Traduzioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Dettagli della transizione** della scheda **Transazioni** di Progettazione cubi per definire e gestire le traduzioni per il cubo attualmente selezionato.  
@@ -32,35 +32,35 @@ ms.locfileid: "48118751"
   
 -   Gruppo di misure  
   
-     Proprietà`Caption`   
+     Proprietà `Caption`  
   
 -   Misura  
   
-     `Caption` e `DisplayFolder` proprietà  
+     Proprietà `Caption` e `DisplayFolder`  
   
 -   Dimension  
   
-     Proprietà`Caption`   
+     Proprietà `Caption`  
   
 -   Perspective  
   
-     Proprietà`Caption`   
+     Proprietà `Caption`  
   
 -   Indicatore di prestazioni chiave (KPI)  
   
-     `Caption`, `Description`, e `DisplayFolder` proprietà  
+     Proprietà `Caption`, `Description` e `DisplayFolder`.  
   
 -   Azione  
   
-     Proprietà`Caption`   
+     Proprietà `Caption`  
   
 -   Set denominato  
   
-     Proprietà`Caption`   
+     Proprietà `Caption`  
   
 -   membro calcolato  
   
-     Proprietà`Caption`   
+     Proprietà `Caption`  
   
  **\<Lingua >**  
  Consente di digitare il valore della proprietà relativa all'oggetto del cubo nella lingua selezionata.  

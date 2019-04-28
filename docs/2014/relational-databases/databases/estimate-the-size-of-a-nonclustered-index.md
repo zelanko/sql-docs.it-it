@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871410"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Stima delle dimensioni di un indice non cluster
   Per stimare la quantità di spazio necessaria per archiviare un indice non cluster, effettuare le operazioni seguenti:  
@@ -118,7 +118,7 @@ ms.locfileid: "48146741"
     >  È possibile estendere un indice non cluster includendo colonne non chiave oltre alle colonne chiave. Tali colonne aggiuntive vengono archiviate solo al livello foglia dell'indice non cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  È possibile combinare `varchar`, `nvarchar`, `varbinary`, o `sql_variant` colonne che determinano la larghezza totale definita della tabella superano gli 8.060 byte. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna `varchar`, `varbinary` o `sql_variant` e di 4.000 byte per le colonne `nvarchar`. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella. Lo stesso vale inoltre per le righe foglia dell'indice non cluster che presentano colonne incluse.  
+    >  È possibile combinare colonne `varchar`, `nvarchar`, `varbinary` o `sql_variant` che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna `varchar`, `varbinary` o `sql_variant` e di 4.000 byte per le colonne `nvarchar`. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella. Lo stesso vale inoltre per le righe foglia dell'indice non cluster che presentano colonne incluse.  
   
      Se l'indice non cluster non dispone di colonne incluse, utilizzare i valori del passaggio 1, incluse le eventuali modifiche determinate al passaggio 1.3:  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146741"
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio verrà utilizzata per archiviare i tipi di dati LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, e `image` è complesso. È comunque sufficiente aggiungere le dimensioni medie dei valori LOB previsti, moltiplicarle per ***Num_Rows***e aggiungere il prodotto alle dimensioni totali dell'indice non cluster.  
+     L'algoritmo per determinare con esattezza la quantità di spazio utilizzata per archiviare i tipi di dati LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` e `image` è complesso. È comunque sufficiente aggiungere le dimensioni medie dei valori LOB previsti, moltiplicarle per ***Num_Rows***e aggiungere il prodotto alle dimensioni totali dell'indice non cluster.  
   
 -   Compressione  
   

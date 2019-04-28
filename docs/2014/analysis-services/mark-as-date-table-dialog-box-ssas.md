@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cb946a717399ee58b06ed4bf0af783170f6e4bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728017"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>Finestra di dialogo Contrassegna come tabella data (SSAS)
   La finestra di dialogo **Contrassegna come tabella data** viene visualizzata quando si fa clic sul menu **Tabella** , si sceglie **Data**, quindi si fa clic in **Contrassegna come tabella data**. Le tabelle relative alla data vengono utilizzate con le funzioni di Business Intelligence per la gerarchia temporale. Per creare una relazione con una tabella dati, è necessario specificare una colonna con valori univoci da utilizzare come identificatore univoco per la tabella.  

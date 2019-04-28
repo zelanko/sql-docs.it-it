@@ -33,11 +33,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807363"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Creare una sessione Eventi estesi utilizzando la procedura guidata (Esplora oggetti)
   Per consentire di selezionare e acquisire gli eventi nel server, gli eventi estesi includono una Creazione guidata nuova sessione, che consente di eseguire in modo semplificato i passaggi per la creazione di una sessione Eventi estesi. Creazione guidata nuova sessione espone la maggior parte della funzionalità di Eventi estesi. La [finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) consente inoltre di definire una sessione di Eventi estesi che acquisisce, visualizza e analizza i dati. La finestra di dialogo Nuova sessione espone tutta la funzionalità di Eventi estesi.  

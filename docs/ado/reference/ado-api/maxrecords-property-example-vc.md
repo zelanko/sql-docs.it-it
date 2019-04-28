@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863698"
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio della proprietà MaxRecords (VC++)
 Questo esempio Usa la [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente le 10 libri più costosi indicati nel ***titoli*** tabella.  
@@ -169,12 +169,12 @@ void PrintComError(_com_error &e) {
  **Titoli di dieci principali in base al prezzo:**  
 **Ma è facile? ---22.95**  
 **Utenti singoli Non spaventati e un computer: Variazioni di comportamento---21.59**  
-**Cipolle Leeks e aglio: cucina segreti di Mar---20.95**  
+**Cipolle Leeks e aglio: Cucina segreti di Mar---20.95**  
 **Segreti di Silicon Valley---20,00**  
 **Guida di Database del dirigente occupato---i 19,99 dollari**  
 **Parlare direttamente sui computer---i 19,99 dollari**  
 **Considera Silicon Valley Gastronomic---i 19,99 dollari**  
-**Interruzioni prolungate nel Data privative: Quattro casi di Studio---i 19,99 dollari**  
+**Privative interruzioni prolungate nel Data: Quattro casi di Studio---i 19,99 dollari**  
 **Sushi tutti gli utenti? ---14,99**  
 **Cinquanta gli anni in Palace Buckingham cucine---11.95**   
 ## <a name="see-also"></a>Vedere anche  

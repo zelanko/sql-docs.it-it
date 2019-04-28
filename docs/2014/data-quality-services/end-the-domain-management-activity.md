@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ec0413f72261bf2890c372773a13a662e9182498
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792758"
 ---
 # <a name="end-the-domain-management-activity"></a>Sospensione dell'attività di gestione del dominio
   In questo argomento viene descritto come completare, chiudere o annullare l'attività di gestione del dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La gestione del dominio non viene eseguita da una procedura guidata, pertanto i controlli descritti sotto possono essere utilizzati da qualsiasi pagina dell'attività di gestione del dominio.  
@@ -24,11 +24,11 @@ ms.locfileid: "56011192"
  **Fine**  
  Fare clic per completare l'attività di gestione del dominio. Verrà visualizzata una finestra popup con le opzioni seguenti:  
   
--   **Sì - pubblica la knowledge base e Chiudi**: La knowledge base verrà pubblicata per l'utente corrente o di altri utenti da usare. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la schermata Apri Knowledge Base.  
+-   **Sì - Pubblica la Knowledge Base e chiudi**: la Knowledge Base verrà pubblicata per consentirne l'uso da parte dell'utente corrente o di altri utenti. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la schermata Apri Knowledge Base.  
   
--   **No - Salva il lavoro sulla knowledge base e uscire**: Il lavoro verrà salvato, la knowledge base rimarrà bloccata e lo stato della knowledge base verrà impostato su In lavorazione. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
+-   **No - Salva il lavoro relativo alla knowledge base e chiudi**: il lavoro verrà salvato, la Knowledge Base rimarrà bloccata e il suo stato verrà impostato come In lavorazione. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
   
--   **Annulla - Rimani nella schermata corrente**: La finestra popup verrà chiusa e verrà di nuovo visualizzata la schermata Gestione dominio.  
+-   **Annulla - Rimani nella schermata corrente**: la finestra popup verrà chiusa e verrà di nuovo visualizzata la schermata Gestione dominio.  
   
  **Annulla**  
  Fare clic per terminare l'attività Gestione dominio. Il lavorò verrà perso e sarà visualizzata di nuovo la home page di DQS.  

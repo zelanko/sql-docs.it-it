@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864948"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Estrarre dati tramite l'origine ODBC
   In questa procedura viene descritto come estrarre dati utilizzando un'origine ODBC. Per aggiungere e configurare un'origine ODBC, è necessario che il pacchetto includa già almeno un'attività Flusso di dati.  
@@ -32,11 +32,11 @@ ms.locfileid: "58376119"
   
 5.  Selezionare il metodo di accesso ai dati.  
   
-    -   **Nome tabella**: Selezionare una tabella o vista nel database o digitare un'espressione regolare per identificare la tabella a cui si connette la gestione connessione ODBC.  
+    -   **Nome tabella**: selezionare una tabella o una vista nel database o digitare un'espressione regolare per identificare la tabella a cui è connessa la gestione connessione ODBC.  
   
          Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.  
   
-    -   **Comando SQL**: Digitare un comando SQL oppure fare clic su **esplorare** per caricare la query SQL da un file di testo.  
+    -   **Comando SQL**: digitare un comando SQL o fare clic su **Sfoglia** per caricare la query SQL da un file di testo.  
   
 6.  È possibile fare clic su **Anteprima** per visualizzare fino a 200 righe dei dati estratti dall'origine ODBC.  
   

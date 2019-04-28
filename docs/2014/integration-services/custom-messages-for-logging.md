@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828781"
 ---
 # <a name="custom-messages-for-logging"></a>Messaggi personalizzati per la registrazione
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili numerosi eventi personalizzati per la scrittura di voci di log per i pacchetti e per molte attività. È possibile utilizzare tali voci per salvare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o messaggi definiti dall'utente da analizzare in un secondo momento. È ad esempio possibile registrare la data e l'ora di inizio e di fine di un'operazione di inserimento bulk per identificare problemi di prestazioni durante l'esecuzione del pacchetto.  
@@ -116,7 +116,7 @@ ms.locfileid: "58389499"
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indica che l'attività ha iniziato a eseguire un pacchetto DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indica che l'attività è terminata.<br /><br /> Nota: L'esecuzione del pacchetto DTS 2000 può continuare anche dopo il termine dell'attività.|  
+|`ExecuteDTS80PackageTaskEnd`|Indica che l'attività è terminata.<br /><br /> Nota: Il pacchetto DTS 2000 può continuare a eseguire dopo il termine dell'attività.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Offre informazioni descrittive sull'attività.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Restituisce il risultato dell'esecuzione del pacchetto DTS 2000 eseguito dall'attività.|  
   

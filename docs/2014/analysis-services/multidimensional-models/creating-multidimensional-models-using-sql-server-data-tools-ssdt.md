@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41ddab5d08673ea71cefb7cf44169e8da6777292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727259"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Creazione di modelli multidimensionali tramite SQL Server Data Tools (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre due diversi ambienti per la compilazione, la distribuzione e la gestione di soluzioni [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ovvero [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In entrambi questi ambienti viene implementato un sistema di progetto. Per altre informazioni sui progetti di Visual Studio, vedere [Progetti come contenitori](https://go.microsoft.com/fwlink/?LinkId=63960) in MSDN Library.  

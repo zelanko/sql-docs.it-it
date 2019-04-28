@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861646"
 ---
 # <a name="quoted-identifiers"></a>Identificatori delimitati
 In un'istruzione SQL, gli identificatori che contengono caratteri speciali o parole chiave di corrispondenza devono essere racchiuso *caratteri di identificatore offerta*; gli identificatori racchiusi tra tali caratteri sono note come *racchiusi tra virgolette gli identificatori*(noto anche come *identificatori delimitati* in SQL-92). Ad esempio, l'identificatore di contabilità è racchiuso tra virgolette in quanto segue **seleziona** istruzione:  

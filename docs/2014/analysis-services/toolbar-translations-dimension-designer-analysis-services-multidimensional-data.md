@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a40ad5418038aec31b64400932173117f17bef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794186"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Traduzioni, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare i pulsanti della barra degli strumenti per eseguire operazioni comuni nella vista **Traduzioni** di **Progettazione dimensioni**.  

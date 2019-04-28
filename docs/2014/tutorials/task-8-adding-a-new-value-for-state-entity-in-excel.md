@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866509"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Attività 8: Aggiunta di un nuovo valore per l'entità State in Excel
   In questa attività viene aggiunto un valore per l'entità State in Excel e viene pubblicata la modifica nel server MDS.  
@@ -30,7 +30,7 @@ ms.locfileid: "56032032"
   
 4.  Fare doppio clic su **stato** nell'elenco. Tutti i membri del **stato** deve essere visualizzato entità da MDS nel foglio di lavoro.  
   
-5.  A questo punto, aggiungere una riga alla fine con i seguenti valori: **Carolina del Nord** per **Name** e **NC** per **codice**. La codifica tramite colori consente di differenziare tutti i record nuovi/aggiornati dagli altri record.  
+5.  A questo punto, aggiungere una riga alla fine con i valori seguenti: **Carolina del Nord** per **Name** e **NC** per **codice**. La codifica tramite colori consente di differenziare tutti i record nuovi/aggiornati dagli altri record.  
   
      ![Excel - Aggiungi Nord Carolina agli stati](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - Aggiungi Nord Carolina agli Stati")  
   

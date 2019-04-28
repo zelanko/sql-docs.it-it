@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823278"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Aggiunta di un modello di regressione logistica alla struttura del call center (Esercitazione intermedia sul data mining)
   Oltre ad analizzare i fattori che potrebbero influire sul funzionamento del call center, è inoltre necessario fornire alcuni consigli specifici su come il personale può migliorare la qualità del servizio. In questa attività verrà utilizzata la stessa struttura di data mining utilizzata per compilare il modello esplorativo e verrà aggiunto un modello di data mining che sarà utilizzato per la creazione di stime.  

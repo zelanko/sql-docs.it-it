@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794482"
 ---
 # <a name="translations-analysis-services"></a>Traduzioni (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
@@ -32,7 +32,7 @@ ms.locfileid: "50145956"
   
  La definizione di una traduzione crea i metadati e la didascalia tradotta all'interno del modello, ma per eseguire il rendering delle stringhe localizzate in un'applicazione client, è necessario impostare la proprietà `Language` per l'oggetto o passare un parametro `Locale Identifier` nella stringa di connessione, impostando ad esempio `LocaleIdentifier=1036` per restituire le stringhe francesi. Pensare di usare `Locale Identifier` se si vuole supportare più traduzioni simultanee dello stesso oggetto in lingue diverse. L'impostazione della proprietà `Language` funziona, ma influisce anche sull'elaborazione e l'esecuzione di query comportando conseguenze impreviste. È preferibile scegliere di impostare il parametro `Locale Identifier` in quanto viene usato solo per restituire le stringhe tradotte.  
   
- Una traduzione è costituita da un identificatore delle impostazioni locali (LCID), una didascalia tradotta per l'oggetto (ad esempio, il nome di una dimensione o di un attributo) e facoltativamente un'associazione a una colonna che fornisce i valori dei dati nella lingua di destinazione. È possibile avere più traduzioni, ma è possibile usarne solo una per ogni connessione specifica. In teoria, non vi sono limiti al numero di traduzioni che è possibile incorporare nel modello, ma ogni traduzione aggiunge complessità al test e tutte le traduzioni devono condividere le stesse regole di confronto, pertanto quando si progetta la soluzione tenere presenti questi vincoli normali.  
+ Una traduzione è costituita da un identificatore delle impostazioni locali (LCID), una didascalia tradotta per l'oggetto (ad esempio, il nome di una dimensione o di un attributo), e facoltativamente un'associazione a una colonna che fornisce i valori dei dati nella lingua di destinazione. È possibile avere più traduzioni, ma è possibile usarne solo una per ogni connessione specifica. In teoria, non vi sono limiti al numero di traduzioni che è possibile incorporare nel modello, ma ogni traduzione aggiunge complessità al test e tutte le traduzioni devono condividere le stesse regole di confronto, pertanto quando si progetta la soluzione tenere presenti questi vincoli normali.  
   
 > [!TIP]  
 >  È possibile usare le applicazioni client quali Excel, Management Studio e [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per restituire le stringhe tradotte. Per informazioni dettagliate, vedere [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
@@ -54,7 +54,7 @@ ms.locfileid: "50145956"
   
  I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà `FormatString`. Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) nelle Esercitazioni su Analysis Services illustrerà in dettaglio i passaggi per creare e testare le traduzioni.  
+ [Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md) nelle esercitazioni su Analysis Services illustrerà i passaggi per creare e testare le traduzioni.  
   
 ## <a name="defining-translations"></a>Definizione di traduzioni  
  La definizione di una traduzione crea un oggetto `Translation` come elemento figlio dell'oggetto cubo, dimensione o database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Usare [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per aprire la soluzione e definire le traduzioni.  

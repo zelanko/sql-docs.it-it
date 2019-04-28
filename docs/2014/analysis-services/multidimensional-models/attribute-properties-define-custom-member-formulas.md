@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701675"
 ---
 # <a name="define-custom-member-formulas"></a>Definire formule personalizzate membro
   È possibile definire un'espressione MDX (MultiDimensional Expression), denominata formula personalizzata membro, per indicare i valori dei membri di un attributo specificato. L'espressione utilizzata per specificare il valore di ogni membro di un attributo è indicata in una colonna di una tabella di una vista origine dati.  
@@ -39,23 +39,23 @@ ms.locfileid: "48186021"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   Trimestre 1: 700  
   
-    -   Quarter 2: 500  
+    -   Trimestre 2: 500  
   
     -   Quarter 3: 100  
   
-    -   Quarter 4: 800  
+    -   Trimestre 4: 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   Trimestre 1: 600  
   
-    -   Quarter 2: 200  
+    -   Trimestre 2: 200  
   
     -   Quarter 3: 300  
   
-    -   Quarter 4: 400  
+    -   Trimestre 4: 400  
   
  Se si utilizza una formula personalizzata membro, il valore del membro è invece specificato dalla formula personalizzata di rollup. Ad esempio, la formula personalizzata membro seguente può essere utilizzata per determinare il valore 450 per il membro figlio Quarter 4 del membro 2004 nella dimensione Time.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186021"
 Time.[Quarter 3] * 1.5  
 ```  
   
- Le formule personalizzate membro vengono archiviate in una colonna della tabella della dimensione. Abilitare le formule personalizzate di rollup, impostare il `CustomRollupColumn` proprietà su un attributo.  
+ Le formule personalizzate membro vengono archiviate in una colonna della tabella della dimensione. Per abilitare le formule personalizzate di rollup, impostare la proprietà `CustomRollupColumn` di un attributo.  
   
  Per applicare una singola espressione MDX a tutti i membri di un attributo, creare un calcolo denominato nella tabella della dimensione che restituisce un'espressione sotto forma di una stringa letterale. Specificare quindi il calcolo denominato nella proprietà `CustomRollupColumn` dell'attributo che si desidera configurare. Un calcolo denominato è una colonna di una tabella di una vista origine dati che restituisce valori di riga definiti da un'espressione SQL. Per altre informazioni sulla creazione di calcoli denominati, vedere [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
@@ -73,7 +73,7 @@ Time.[Quarter 3] * 1.5
  Se si utilizzano sia membri calcolati che formule personalizzate di rollup per i membri di un attributo, è importante tenere presente l'ordine di valutazione. I membri calcolati vengono risolti prima delle formule personalizzate di rollup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Impostare formule personalizzate membro per gli attributi in una dimensione](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

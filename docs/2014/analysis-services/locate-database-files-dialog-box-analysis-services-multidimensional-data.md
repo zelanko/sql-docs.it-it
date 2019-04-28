@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728168"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Individua file di database (Analysis Services - Dati multidimensionali)
   Nella finestra di dialogo **Individua file di database** viene visualizzato un elenco di file disponibili nelle cartelle di dati e log definite per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Individua file di database** :  

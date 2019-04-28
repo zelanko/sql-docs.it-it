@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805937"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Configurazione del data warehouse del punto di controllo dell'utilità (Utilità SQL Server)
   I dati raccolti dalle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono archiviati nel data warehouse di gestione dell'utilità. Il nome del file del data warehouse di gestione dell'utilità è sysutility_mdw.  
@@ -28,7 +28,7 @@ ms.locfileid: "52804043"
   
 -   Frequenza di caricamento di set di raccolta: Ogni 15 minuti.  
   
- La directory dell'utilità UMDW è configurabile: \<Unità di sistema >: \Programmi\Microsoft SQL Server\MSSQL10_50. < nome_puntodicontrolloutilità > \MSSQL\Data\\, dove \<unità sistema > è solitamente l'unità C:\. Il file di log, Sysutility_mdw_\<GUIDA>_LOG, si trova nella stessa directory.  
+ La directory dell'utilità UMDW è configurabile: \<Unità di sistema >: \Programmi\Microsoft SQL Server\MSSQL10_50. < nome_puntodicontrolloutilità > \MSSQL\Data\\, dove \<unità sistema > è in genere C:\ Guida. Il file di log, Sysutility_mdw_\<GUIDA>_LOG, si trova nella stessa directory.  
   
 > [!NOTE]  
 >  È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

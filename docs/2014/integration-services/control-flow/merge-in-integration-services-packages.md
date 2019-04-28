@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831872"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'istruzione SQL in un'attività Esegui SQL può contenere un'istruzione MERGE. che consente di eseguire più operazioni INSERT, UPDATE e DELETE in una singola istruzione.  

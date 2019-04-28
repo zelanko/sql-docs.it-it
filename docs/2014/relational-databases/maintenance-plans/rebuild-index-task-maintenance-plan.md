@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806996"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Attività Ricompila indice (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Ricompila indice** per ricreare gli indici nelle tabelle del database con un nuovo fattore di riempimento. Il fattore di riempimento determina la quantità di spazio vuoto in ogni pagina dell'indice che potrà essere utilizzato per contenere espansioni future. Poiché il fattore di riempimento non viene gestito, a mano a mano che si aggiungono dati alla tabella lo spazio libero disponibile si riduce. La riorganizzazione delle pagine di dati e di indici consente di ristabilire lo spazio libero.  

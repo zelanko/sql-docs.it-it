@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827394"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Indirizzare il flusso CDC in base al tipo di modifica
   Per aggiungere e configurare una trasformazione CDC Splitter, il pacchetto deve contenere almeno un'attività Flusso di dati e un'origine CDC.  
@@ -36,11 +36,11 @@ ms.locfileid: "58377269"
   
 6.  Selezionare uno degli output seguenti:  
   
-    -   Eliminare l'output: L'output in cui vengono indirizzate le righe delle modifiche DELETE.  
+    -   Output di eliminazione: output a cui vengono indirizzate le righe delle modifiche DELETE.  
   
-    -   Output di inserimento: L'output in cui vengono indirizzate le righe delle modifiche INSERT.  
+    -   Output di inserimento: output a cui vengono indirizzate le righe delle modifiche INSERT.  
   
-    -   Aggiornare l'output: L'output in cui prima/dopo la modifica di aggiornare le righe e tipo Merge le righe delle modifiche vengono indirizzati.  
+    -   Output di aggiornamento: output a cui vengono indirizzate le righe delle modifiche prima/dopo UPDATE e le righe delle modifiche MERGE.  
   
 7.  È eventualmente possibile configurare le proprietà avanzate utilizzando la finestra di dialogo **Editor avanzato** .  
   

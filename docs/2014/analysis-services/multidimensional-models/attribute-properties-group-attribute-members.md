@@ -24,18 +24,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701741"
 ---
 # <a name="group-attribute-members-discretization"></a>Raggruppare membri di attributo (discretizzazione)
   Un gruppo di membri è una raccolta generata dal sistema di membri consecutivi di una dimensione. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i membri di un attributo possono essere raggruppati in gruppi di membri tramite un processo denominato "discretizzazione". Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
   
  La proprietà `DiscretizationMethod` di un attributo controlla la modalità di raggruppamento dei membri.  
   
-|Impostazione di `DiscretizationMethod`|Description|  
+|Impostazione di `DiscretizationMethod`|Descrizione|  
 |--------------------------------------|-----------------|  
 |`None`|Visualizza i membri.|  
 |`Automatic`|Seleziona il metodo in grado di rappresentare in modo ottimale i dati, ovvero il metodo `EqualAreas` o il metodo `Clusters`.|  
@@ -71,7 +71,7 @@ ms.locfileid: "51814044"
   
  Il parametro `<Bucket name>` è costituito da un'espressione stringa in cui può essere incorporato un set di variabili per rappresentare informazioni sui membri o sui gruppi di membri nell'ambito del nome del gruppo di membri:  
   
-|Variabile|Description|  
+|Variabile|Descrizione|  
 |--------------|-----------------|  
 |%{First bucket member}|Nome del primo membro da includere nel gruppo di membri corrente.|  
 |%{Last bucket member}|Nome dell'ultimo membro da includere nel gruppo di membri corrente.|  

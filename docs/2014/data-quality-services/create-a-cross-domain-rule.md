@@ -14,18 +14,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793192"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
   In questo argomento viene descritto come creare una regola tra domini per un dominio composito in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola tra domini consente di testare la relazione tra i valori nei singoli domini inclusi in un dominio composito. Una regola tra domini deve rimanere valida in tutto un dominio composito affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Una regola tra domini viene utilizzata per convalidare, correggere e standardizzare i valori di dominio.  
   
  Le clausole If e Then di una regola tra domini sono definite ognuna per uno dei singoli domini del dominio composito. Ogni clausola deve essere definita per un singolo dominio diverso. Una regola tra domini deve essere correlata a più singoli domini. Non è possibile definire una regola di dominio semplice (solo per un singolo dominio) per un dominio composito. Questa operazione viene effettuata definendo una regola di dominio per un singolo dominio. Le clausole If e Then possono contenere ognuna una o più condizioni.  
   
- Una regola tra domini con condizioni definitive applicherà la logica delle regole ai sinonimi del valore nelle condizioni, oltre ai valori stessi. Le condizioni definitive per le clausole If e Then sono: Il valore è uguale a, Il valore è diverso da, Il valore è in o Il valore non è in. Ad esempio, si supponga di avere la regola tra domini seguente per un dominio composito: "Per 'City', se Value è uguale a 'Los Angeles', quindi per 'State', valore è uguale a"CA' ". Se 'Los Angeles e 'LA' sono sinonimi, questa regola restituirà un risultato corretto per 'Los Angeles CA' e 'LA CA' ma un risultato in errore per 'Los Angeles WA' e 'LA WA'.  
+ Una regola tra domini con condizioni definitive applicherà la logica delle regole ai sinonimi del valore nelle condizioni, oltre ai valori stessi. Le condizioni definitive per le clausole If e Then sono: Il valore è uguale a, Il valore è diverso da, Il valore è in o Il valore non è in. Si supponga ad esempio di avere la seguente regola tra domini per un dominio composito: "Se per 'City' il valore è uguale a 'Los Angeles', per 'State' il valore è uguale a 'CA'. Se 'Los Angeles e 'LA' sono sinonimi, questa regola restituirà un risultato corretto per 'Los Angeles CA' e 'LA CA' ma un risultato in errore per 'Los Angeles WA' e 'LA WA'.  
   
  Oltre a indicare la validità di una regola tra domini, la clausola definitiva *Then* in una regola tra domini, **Il valore è uguale a**, corregge anche i dati durante l'attività di pulizia dei dati. Per ulteriori informazioni, vedere [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56012025"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola tra domini.  
   
 ##  <a name="Create"></a> Creare le regole tra domini  
@@ -94,7 +94,7 @@ ms.locfileid: "56012025"
   
 2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver creato una regola tra domini  
+##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola tra domini  
  Dopo avere creato una regola tra domini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

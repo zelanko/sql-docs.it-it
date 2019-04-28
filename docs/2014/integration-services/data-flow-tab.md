@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fed53298272e4fddb33175c06a8b4b40452e3365
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828720"
 ---
 # <a name="data-flow-tab"></a>Scheda Flusso di dati
   Utilizzare la scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per creare flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  

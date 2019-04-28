@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721501"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debug di un gestore della logica di business (programmazione della replica)
   Utilizzare un gestore della logica di business per richiamare logica di business personalizzata quando viene sincronizzata una sottoscrizione di tipo merge. Per altre informazioni, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "54128761"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Per eseguire il debug di un gestore della logica di business in un computer locale  
   
-1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione della pubblicazione. Per altre informazioni, vedere [Configure Publishing and Distribution](configure-publishing-and-distribution.md) e [creare una pubblicazione](publish/create-a-publication.md).  
+1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione della pubblicazione. Per altre informazioni, vedere [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md) e [Creare una pubblicazione](publish/create-a-publication.md).  
   
 2.  Creare e registrare un gestore della logica di business. Per altre informazioni, vedere [Implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md).  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721143"
 ---
 # <a name="initialize-subscriptions"></a>Inizializzazione sottoscrizioni
   È necessario inizializzare i Sottoscrittori prima che possano iniziare a ricevere dati replicati. Non è necessario un set di dati iniziale, ma è necessario che il Sottoscrittore disponga almeno dello schema per ogni oggetto replicato, nonché delle tabelle dei metadati e delle procedure necessarie per la replica.  
@@ -32,7 +32,7 @@ ms.locfileid: "52794473"
 >  Durante la procedura guidata è possibile che venga richiesto di selezionare la connessione al server di distribuzione per consentire l'avvio del processo appropriato per l'agente di distribuzione o l'agente di merge.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Inizializzare una sottoscrizione](initialize-a-subscription.md)   
  [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  

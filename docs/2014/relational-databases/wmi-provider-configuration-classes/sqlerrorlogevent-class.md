@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721074"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
   Fornisce proprietà per la visualizzazione di eventi in un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato.  
@@ -46,7 +46,7 @@ class SQLErrorLogEvent
 |InstanceName|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
 |LogDate|Tipo di dati: `datetime`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Data e ora della registrazione dell'evento nel file di log.|  
 |Message|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Messaggio di evento.|  
-|Classe ProcessInfo|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Informazioni sull'ID del processo server di origine (SPID) per l'evento.|  
+|ProcessInfo|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Informazioni sull'ID del processo server di origine (SPID) per l'evento.|  
   
 ## <a name="remarks"></a>Note  
   

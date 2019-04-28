@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722853"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Attività e procedure relative alle query di data mining
   La possibilità di creare query è fondamentale se si utilizzeranno i modelli di data mining. Questa sezione include collegamenti a esempi relativi alla creazione di query rispetto a un modello di data mining mediante gli strumenti disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni sulle query di data mining o sui diversi tipi di query che è possibile creare, vedere [Query di data mining](data-mining-queries.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "48189641"
 ## <a name="using-other-data-mining-query-tools"></a>Utilizzo di altri strumenti di query di data mining  
  Oltre a usare il generatore delle query di stima, è possibile digitare una query direttamente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite DMX o XMLA. È inoltre possibile creare le query di stima a livello di codice e inviarle a un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Negli argomenti seguenti vengono fornite informazioni sulla creazione e utilizzo delle query di stima all'esterno del generatore delle query di stima.  
   
- [Creare una query di stima singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
+ [Creare una Query di stima Singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
  Viene illustrato come usare gli strumenti disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire una query di stima.  
   
  [Creare una query di stima singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
@@ -59,7 +59,7 @@ ms.locfileid: "48189641"
  Viene illustrato come creare una query sul contenuto del modello di data mining utilizzando i modelli XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione query e riferimenti al linguaggio di espressione &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Stored procedure di Data Mining &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Riferimento al linguaggio di query ed espressioni &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Stored procedure di data mining &#40;Analysis Services - Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

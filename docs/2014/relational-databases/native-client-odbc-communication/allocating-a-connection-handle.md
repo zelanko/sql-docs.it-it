@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865000"
 ---
 # <a name="allocating-a-connection-handle"></a>Allocazione di un handle di connessione
   Prima che l'applicazione possa connettersi a un'origine dati o a un driver, è necessario che allochi un handle di connessione. Questa operazione viene eseguita chiamando **SQLAllocHandle** con il *HandleType* parametro impostato su SQL_HANDLE_DBC e *InputHandle* che punta a un handle di ambiente inizializzato.  

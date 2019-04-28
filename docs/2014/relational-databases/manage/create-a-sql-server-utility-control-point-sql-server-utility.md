@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806373"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Creazione di un punto di controllo dell'utilità di SQL Server (Utilità SQL Server)
   Un'organizzazione può avere più istanze di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire molte istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni livello dati. Ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha soltanto un punto di controllo dell'utilità. È necessario creare un nuovo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni applicazione livello dati è membro di una sola utilità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è gestita da un singolo punto di controllo dell'utilità.  
@@ -76,7 +76,7 @@ ms.locfileid: "53377663"
   
 -   La procedura deve essere eseguita da un utente che disponga di autorizzazioni sysadmin, le stesse necessarie per la creazione di un punto di controllo dell'utilità.  
   
--   Tutte le istanze gestite di SQL Server devono essere rimosse dal punto di controllo dell'utilità, che rappresenta un'istanza gestita di SQL Server. Per altre informazioni, vedere [come: Rimuovere un'istanza di SQL Server da utilità SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Tutte le istanze gestite di SQL Server devono essere rimosse dal punto di controllo dell'utilità, che rappresenta un'istanza gestita di SQL Server. Per altre informazioni, vedere [Procedura: Rimuovere un'istanza di SQL Server da utilità SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilizzare questa procedura per rimuovere un punto di controllo dell'utilità di SQL Server da Utilità SQL Server. Al termine dell'operazione sarà nuovamente possibile creare un punto di controllo dell'utilità nell'istanza di SQL Server.  
   

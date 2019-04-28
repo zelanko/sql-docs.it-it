@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725405"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Creazione di celle calcolate con ambito sessione
     
@@ -76,7 +76,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  Il valore `String_Expression` contiene un elenco di espressioni set MDX unidimensionali ortogonali, ognuna delle quali deve essere risolta in una delle categorie di set elencate nella tabella seguente.  
   
-|Category|Description|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
@@ -84,6 +84,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio di questo è il `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) funzione MDX.<br /><br /> Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di calcoli di celle in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Compilazione di formule per il calcolo di celle in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794005"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Traduzioni (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la scheda **Traduzioni** di Progettazione dimensioni per definire e gestire le traduzioni, le gerarchie e gli attributi per la dimensione.  
@@ -26,7 +26,7 @@ ms.locfileid: "48186291"
 ## <a name="panes"></a>Riquadri  
  La scheda **Traduzioni** include i riquadri seguenti:  
   
- [Sulla barra degli strumenti](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra degli strumenti](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Usare la barra degli strumenti per eseguire le operazioni più frequenti nella scheda **Traduzioni** di Progettazione dimensioni.  
   
  [Dettagli di traduzione](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

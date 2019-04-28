@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726375"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
   L'utilità **Microsoft.AnalysisServices.Deployment** consente di avviare il motore di distribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal prompt dei comandi. Come file di input vengono usati i file di output XML generati dalla compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. I file di input sono facilmente modificabili in modo da personalizzare la distribuzione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lo script di distribuzione generato può quindi essere eseguito subito oppure salvato per essere distribuito in una fase successiva.  
@@ -69,7 +69,7 @@ ms.locfileid: "48106771"
 ##  <a name="Modes"></a> Modalità  
  L'utilità può essere eseguita nelle modalità riportate nella tabella seguente.  
   
-|Mode|Description|  
+|Modalità|Descrizione|  
 |----------|-----------------|  
 |Modalità automatica|Non viene visualizzata alcuna interfaccia utente e tutte le informazioni necessarie per la distribuzione vengono recuperate dai file di input. In questa modalità lo stato di avanzamento non viene visualizzato. È invece possibile utilizzare un file di log facoltativo per acquisire le informazioni sullo stato e sugli errori per una verifica successiva.|  
 |Modalità di risposta|Viene visualizzata l'interfaccia utente Distribuzione guidata e le risposte dell'utente vengono memorizzate nei file di input specificati per la distribuzione successiva. In questa modalità la distribuzione non viene eseguita. Questa modalità ha lo scopo di acquisire le risposte dell'utente.|  

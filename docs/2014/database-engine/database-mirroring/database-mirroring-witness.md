@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807628"
 ---
 # <a name="database-mirroring-witness"></a>Server di controllo del mirroring del database
   Per supportare il failover automatico, è necessario configurare una sessione di mirroring del database in modalità a protezione elevata e usare l'istanza di un terzo server, noto come *server di controllo*. Il server di controllo del mirroring è un'istanza facoltativa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente al server mirror in una sessione in modalità a protezione elevata di stabilire se avviare un failover automatico. A differenza dei due partner, il server di controllo del mirroring non serve il database, Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
@@ -78,7 +78,7 @@ ms.locfileid: "48183831"
 ## <a name="see-also"></a>Vedere anche  
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)   
- [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md)   
  [Stati di mirroring &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

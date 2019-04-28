@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793169"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
   In questo argomento viene descritto come creare dei criteri di corrispondenza in una Knowledge Base di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La preparazione del processo di corrispondenza in DQS si effettua eseguendo l'attività dei criteri di corrispondenza su dati di esempio. In tale attività vengono create e testate una o più regole di corrispondenza nei criteri, quindi viene pubblicata la Knowledge Base per rendere le regole di corrispondenza pubblicamente disponibili per l'uso. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza, ma tali criteri possono contenere più regole di corrispondenza.  
@@ -33,7 +33,7 @@ ms.locfileid: "56025352"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare i criteri di corrispondenza, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="MatchingRules"></a> Modalità di impostazione dei parametri relativi alle regole di corrispondenza  
@@ -41,13 +41,13 @@ ms.locfileid: "56025352"
   
  I fattori che si immettono in una regola di corrispondenza includono gli elementi seguenti:  
   
--   Peso: Per ogni dominio nella regola, immettere un valore numerico che determina come l'analisi di corrispondenza per il dominio verrà confrontato con cui per ciascun altro dominio nella regola. Il peso indica il contributo del punteggio del campo al punteggio di corrispondenza complessivo tra due record. I punteggi calcolati assegnati a ciascun campo di origine vengono sommati insieme per ottenere un punteggio di corrispondenza composito per i due record. Per ciascun campo che non rappresenti un prerequisito (con una somiglianza esatta o simile), impostare il peso tra 10 e 100. La somma dei pesi dei domini che non sono prerequisiti deve essere pari a 100. Se il valore è un prerequisito, il peso viene impostato su 0 e non è possibile modificarlo.  
+-   Peso: per ogni dominio nella regola, immettere un valore numerico che verrà usato per determinare la modalità di confronto della corrispondenza analizzata per quel dominio con il valore corrispondente a ogni altro dominio nella regola. Il peso indica il contributo del punteggio del campo al punteggio di corrispondenza complessivo tra due record. I punteggi calcolati assegnati a ciascun campo di origine vengono sommati insieme per ottenere un punteggio di corrispondenza composito per i due record. Per ciascun campo che non rappresenti un prerequisito (con una somiglianza esatta o simile), impostare il peso tra 10 e 100. La somma dei pesi dei domini che non sono prerequisiti deve essere pari a 100. Se il valore è un prerequisito, il peso viene impostato su 0 e non è possibile modificarlo.  
   
--   Somiglianza esatta: Selezionare **Exact** se i valori nello stesso campo di due record diversi devono essere identici affinché i valori vengano considerati corrispondenti. Se sono identici, il punteggio di corrispondenza per quel dominio verrà impostato su "100" e verrà utilizzato in DQS insieme ai punteggi per gli altri domini nella regola per determinare il punteggio di corrispondenza aggregato. Se non sono identici, il punteggio di corrispondenza per quel dominio verrà impostato su "0" e l'elaborazione della regola proseguirà passando alla condizione successiva. Se si imposta una regola di corrispondenza per un dominio numerico e si seleziona **Simile**, è possibile immettere una tolleranza come percentuale o come numero intero. Se si seleziona **Simile**per un dominio di tipo data, è possibile immettere una tolleranza come giorno, mese o anno (numero intero). Non è prevista l'immissione di una percentuale per un dominio di tipo data. L'opzione non è disponibile se si seleziona **Esatta**.  
+-   Somiglianza con Esatta: selezionare **Esatta** se i valori nello stesso campo di due record diversi devono essere identici perché vengano considerati corrispondenti. Se sono identici, il punteggio di corrispondenza per quel dominio verrà impostato su "100" e verrà utilizzato in DQS insieme ai punteggi per gli altri domini nella regola per determinare il punteggio di corrispondenza aggregato. Se non sono identici, il punteggio di corrispondenza per quel dominio verrà impostato su "0" e l'elaborazione della regola proseguirà passando alla condizione successiva. Se si imposta una regola di corrispondenza per un dominio numerico e si seleziona **Simile**, è possibile immettere una tolleranza come percentuale o come numero intero. Se si seleziona **Simile**per un dominio di tipo data, è possibile immettere una tolleranza come giorno, mese o anno (numero intero). Non è prevista l'immissione di una percentuale per un dominio di tipo data. L'opzione non è disponibile se si seleziona **Esatta**.  
   
--   Somiglianza simile: Selezionare **simile** se due valori nello stesso campo di due record diversi possono essere considerati corrispondenti anche se i valori non sono identici. Durante l'esecuzione della regola in DQS, viene calcolato il punteggio di corrispondenza per quel dominio e tale punteggio viene utilizzato insieme ai punteggi per gli altri domini nella regola per determinare il punteggio di corrispondenza aggregato. La somiglianza minima tra i valori di un campo è 60%. Se il punteggio di corrispondenza calcolato per un campo di due record è minore di 60, il punteggio di somiglianza viene impostato automaticamente su 0. Se si imposta una regola di corrispondenza per un campo numerico e si seleziona **Simile**, è possibile immettere una tolleranza come percentuale o come numero intero. Se si imposta una regola di corrispondenza per un campo data e si seleziona **Simile**, è possibile immettere una tolleranza numerica.  
+-   Somiglianza con Simile: selezionare **Simile** se due valori nello stesso campo di due record diversi possono essere considerati corrispondenti anche se non sono identici. Durante l'esecuzione della regola in DQS, viene calcolato il punteggio di corrispondenza per quel dominio e tale punteggio viene utilizzato insieme ai punteggi per gli altri domini nella regola per determinare il punteggio di corrispondenza aggregato. La somiglianza minima tra i valori di un campo è 60%. Se il punteggio di corrispondenza calcolato per un campo di due record è minore di 60, il punteggio di somiglianza viene impostato automaticamente su 0. Se si imposta una regola di corrispondenza per un campo numerico e si seleziona **Simile**, è possibile immettere una tolleranza come percentuale o come numero intero. Se si imposta una regola di corrispondenza per un campo data e si seleziona **Simile**, è possibile immettere una tolleranza numerica.  
   
--   Prerequisito: Selezionare **prerequisiti** per specificare che i valori nello stesso campo in due record diversi deve restituire una corrispondenza del 100%, o i record non devono essere considerati corrispondenti e le altre clausole nella regola devono essere ignorate. Quando si seleziona **Prerequisito** , il campo relativo al peso per il dominio viene rimosso in modo che non sia possibile definire alcun peso per il dominio. Sarà necessario reimpostare il peso di uno o più domini in modo che la somma dei pesi sia uguale a 100. I domini prerequisiti non contribuiscono al punteggio di corrispondenza dei record. Il punteggio di corrispondenza dei record viene determinato confrontando i valori nei campi per i quali la somiglianza è impostata su Simile o Esatta. Quando si rende un campo prerequisito, la somiglianza per quel dominio viene impostata automaticamente su Esatta.  
+-   Prerequisito: selezionare **Prerequisito** per specificare che i valori nello stesso campo in due record diversi devono restituire una corrispondenza del 100% e che, in caso contrario, i record non devono essere considerati corrispondenti e le altre clausole della regola devono essere ignorate. Quando si seleziona **Prerequisito** , il campo relativo al peso per il dominio viene rimosso in modo che non sia possibile definire alcun peso per il dominio. Sarà necessario reimpostare il peso di uno o più domini in modo che la somma dei pesi sia uguale a 100. I domini prerequisiti non contribuiscono al punteggio di corrispondenza dei record. Il punteggio di corrispondenza dei record viene determinato confrontando i valori nei campi per i quali la somiglianza è impostata su Simile o Esatta. Quando si rende un campo prerequisito, la somiglianza per quel dominio viene impostata automaticamente su Esatta.  
   
  Il punteggio di corrispondenza minimo è la soglia a cui, od oltre cui, due record vengono considerati corrispondenti (lo stato per tali record viene impostato su "Con corrispondenza"). Immettere un valore intero in incrementi di 1 o fare clic sulla freccia Su o Giù per aumentare o diminuire il valore in incrementi di 10. Il valore minimo è 80. Se il punteggio di corrispondenza è inferiore a 80, i due record non vengono considerati corrispondenti. Non è possibile modificare l'intervallo del punteggio di corrispondenza minimo in questa pagina. Il punteggio di corrispondenza minimo più basso è pari a 80. Se si è un amministratore DQS, tuttavia, è possibile modificare il punteggio di corrispondenza minimo più basso nella pagina Amministrazione.  
   
@@ -173,20 +173,20 @@ ms.locfileid: "56025352"
   
 7.  Se si è soddisfatti dei risultati di tutte le regole, fare clic su **Fine** per completare il processo per i criteri di corrispondenza, quindi fare clic su uno degli elementi seguenti:  
   
-    -   **Sì - pubblica la knowledge base e Chiudi**: La knowledge base verrà pubblicata per l'utente corrente o di altri utenti da usare. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la schermata Apri Knowledge Base.  
+    -   **Sì - Pubblica la Knowledge Base e chiudi**: la Knowledge Base verrà pubblicata per consentirne l'uso da parte dell'utente corrente o di altri utenti. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la schermata Apri Knowledge Base.  
   
-    -   **No - Salva il lavoro sulla knowledge base e uscire**: Il lavoro verrà salvato, la knowledge base rimarrà bloccata e lo stato della knowledge base verrà automaticamente impostato **In lavorazione**. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
+    -   **No - Salva il lavoro relativo alla knowledge base e chiudi**: il lavoro verrà salvato, la Knowledge Base rimarrà bloccata e il suo stato verrà impostato come **In lavorazione**. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
   
-    -   **Annulla - Rimani nella schermata corrente**: La finestra popup verrà chiusa e verrà di nuovo visualizzata la schermata Gestione dominio.  
+    -   **Annulla - Rimani nella schermata corrente**: la finestra popup verrà chiusa e verrà di nuovo visualizzata la schermata Gestione dominio.  
   
-8.  Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. Nello stato della Knowledge Base verrà visualizzata la stringa "Criteri di corrispondenza -" e lo stato corrente. Se si è scelto **Close** mentre si è nel **risultati corrispondenza** dello schermo, verrà visualizzato lo stato: "Criteri di corrispondenza - risultati". Se fatto clic su Chiudi mentre è attiva la **criteri di corrispondenza** dello schermo, verrà visualizzato lo stato: "Criteri di corrispondenza - criteri di corrispondenza". Dopo avere fatto clic su **Chiudi**per eseguire l'attività **Individuazione informazioni** è necessario tornare all'attività **Criteri di corrispondenza** ; fare clic su **Fine**, quindi su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
+8.  Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. Nello stato della Knowledge Base verrà visualizzata la stringa "Criteri di corrispondenza -" e lo stato corrente. Se si è fatto clic su **Chiudi** dalla schermata **Risultati corrispondenza**, nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Risultati". Se si è fatto clic su Chiudi nella schermata **Risultati corrispondenza**, nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Criteri di corrispondenza". Dopo avere fatto clic su **Chiudi**per eseguire l'attività **Individuazione informazioni** è necessario tornare all'attività **Criteri di corrispondenza** ; fare clic su **Fine**, quindi su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   
     > [!NOTE]  
     >  Clic su **Chiudi** mentre un processo di corrispondenza è in esecuzione, tale processo non verrà interrotto quando si fa clic su **Chiudi**. È possibile riaprire la Knowledge Base e verificare che il processo sia ancora in esecuzione oppure, se completato, che ne vengano visualizzati i risultati. Se il processo non è stato completato, lo stato di avanzamento verrà visualizzato sullo schermo.  
   
 9. Fare clic su **Annulla** per interrompere l'attività relativa ai criteri di corrispondenza. Il lavorò verrà perso e verrà visualizzata di nuovo la home page di DQS.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la creazione di criteri di corrispondenza  
+##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione dei criteri di corrispondenza  
  Dopo avere creato dei criteri di corrispondenza, è possibile eseguire un progetto di corrispondenza basato sulla Knowledge Base contenente i criteri. Per altre informazioni, vedere [Eseguire un progetto corrispondente](../../2014/data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  
@@ -199,15 +199,15 @@ ms.locfileid: "56025352"
   
  Le statistiche relative al database di origine includono:  
   
--   **I record**: Il numero totale di record nel database di origine  
+-   **Record**: numero complessivo di record nel database di origine  
   
--   **Valori totali**: Il numero totale di valori nei campi dell'origine dati  
+-   **Valori totali**: numero complessivo di valori nei campi dell'origine dati  
   
--   **Nuovi valori**: Il numero totale di valori nuovi dall'esecuzione precedente e la loro percentuale rispetto al totale  
+-   **Nuovi valori**: numero totale di valori nuovi dall'esecuzione precedente e percentuale di tali valori rispetto al totale  
   
--   **Valori univoci**: Il numero totale di valori univoci nei campi e la loro percentuale rispetto al totale  
+-   **Valori univoci**: numero totale di valori univoci nei campi e percentuale di tali valori rispetto al totale  
   
--   **Nuovi valori univoci**: Il numero totale di valori univoci nuovi nei campi e relativa percentuale rispetto al totale  
+-   **Nuovi valori univoci**: numero totale di valori univoci nuovi nei campi e percentuale di tali valori rispetto al totale  
   
  Le statistiche relative ai campi includono:  
   
@@ -215,11 +215,11 @@ ms.locfileid: "56025352"
   
 -   **Nome dominio**  
   
--   **Nuovo**: Il numero di valori nuovi e percentuale di valori nuovi rispetto ai valori esistenti nel dominio  
+-   **Nuovi**: numero di valori nuovi e percentuale dei valori nuovi rispetto ai valori esistenti nel dominio  
   
--   **Univoco**: Il numero di record univoci nel campo e relativa percentuale del totale  
+-   **Univoci**: numero di record univoci nel campo e relativa percentuale del totale  
   
--   **Completezza**: La completezza di ogni campo di origine che viene eseguito il mapping per l'attività di corrispondenza  
+-   **Completezza**: completezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di individuazione delle corrispondenze  
   
 ###  <a name="Notifications"></a> Notifiche relative ai criteri di corrispondenza  
  Per l'attività relativa ai criteri di corrispondenza, le condizioni seguenti generano notifiche:  

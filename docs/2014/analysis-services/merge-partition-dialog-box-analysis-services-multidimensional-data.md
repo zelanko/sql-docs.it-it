@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c18ffdaa50c6ee48896f2d2e6e65db46c8fe3349
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727907"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Unisci partizione (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Unisci partizione** in **SQL Server Management Studio** per unire le partizioni relative a un gruppo di misure in un cubo. Per visualizzare la finestra di dialogo **Unisci partizione** , è possibile fare clic con il pulsante destro del mouse sulla cartella Partizioni o su una partizione in **Esplora oggetti** e quindi scegliere **Unisci partizioni** dal menu di scelta rapida.  
@@ -27,7 +27,7 @@ ms.locfileid: "48117423"
  **Server**  
  Consente di selezionare il nome dell'istanza di Analysis Services contenente la partizione di destinazione.  
   
- **Nome**  
+ **Name**  
  Consente di selezionare il nome di una partizione esistente da utilizzare come partizione di destinazione.  
   
  **Cartella**  
@@ -41,14 +41,14 @@ ms.locfileid: "48117423"
   
  La griglia include le colonne seguenti:  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Merge**|Consente di unire la partizione di origine alla partizione di destinazione.|  
 |**Nome partizione**|Visualizza il nome della partizione di origine.|  
 |**Ultima elaborazione**|Visualizza la data e l'ora dell'ultima elaborazione della partizione di origine.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Unire partizioni in Analysis Services &#40;SSAS - multidimensionale&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Unire partizioni in Analysis Services &#40;SSAS - Multidimensionale&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

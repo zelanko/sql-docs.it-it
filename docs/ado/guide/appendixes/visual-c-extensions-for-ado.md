@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864498"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Estensioni di Visual C++ per ADO
 Il metodo preferito di programmazione ADO in Visual C++ Usa la **#import** direttiva, come descritto in [programmazione ADO in Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md). Tuttavia, le versioni precedenti di ADO forniti con un metodo alternativo di programmazione con Visual C++: le estensioni di Visual C++. Questa sezione viene illustrata questa funzionalità per gli utenti che devono mantenere il codice di estensioni di Visual C++, ma nuovo codice ADO deve essere scritto usando &**importare**.

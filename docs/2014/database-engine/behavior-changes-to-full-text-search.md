@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813194"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Differenze di comportamento nella ricerca full-text
   In questo argomento vengono descritte le modifiche del comportamento nella ricerca full-text. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "52508872"
   
 |**Nome**|**Risultati con word breaker precedente e dello stemmer**|**Risultati con i nuovi word breaker e stemmer**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(in cui le condizioni non sono caratteri validi in lingua inglese)*|'jěˊÿqℭžl'|je yq zl|  
+|jěˊÿｑℭžl<br /><br /> *(in cui le condizioni non sono caratteri validi in lingua inglese)*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(dove v e z sono parole non significative)*|*(Nessun risultato)*|v-z|  

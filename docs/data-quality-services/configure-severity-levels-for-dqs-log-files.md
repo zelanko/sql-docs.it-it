@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 598d0512593c737f1138577f36dfd5f8232d1c91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864477"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurare livelli di gravità per i file di log DQS
 
@@ -48,11 +48,11 @@ ms.locfileid: "56010991"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per configurare le impostazioni di gravità del log, è necessario disporre del ruolo dqs_administrator per il database DQS_MAIN.  
   
 ##  <a name="ConfigureActivity"></a> Configurare i livelli di gravità a livello di attività  
- In DQS è possibile configurare le impostazioni di gravità del log per le attività seguenti: gestione del dominio, individuazione delle informazioni, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e servizi dati di riferimento. A tale scopo, procedere come indicato di seguito:  
+ In DQS è possibile configurare le impostazioni di gravità del log per le attività seguenti: gestione del dominio, individuazione delle informazioni, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e servizi dati di riferimento. A tale scopo:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

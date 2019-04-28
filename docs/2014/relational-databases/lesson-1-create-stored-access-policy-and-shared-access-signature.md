@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806732"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lezione 2. creare i criteri per il contenitore e generare una chiave di firma di accesso condivisa (SAS, Shared Access Signature)
   In questa lezione, verrà illustrato come creare criteri del contenitore BLOB e generare una chiave SAS.  
@@ -25,7 +25,7 @@ ms.locfileid: "48124081"
   
  È possibile creare i criteri e una firma di accesso condivisa utilizzando uno dei metodi seguenti:  
   
--   Operazioni dell'API REST di Microsoft Azure: [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)e [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Operazioni API REST di Azure: [Crea contenitore](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), e [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Metodo CloudBlobContainer.GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) in Microsoft Azure SDK.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "48124081"
   
  **Lezione successiva:**  
   
- [Lezione 3: Creare le credenziali di SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+ [Lezione 3: Creare una credenziale di SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
   

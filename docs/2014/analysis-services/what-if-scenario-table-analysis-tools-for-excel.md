@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793228"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Scenario di Analisi di simulazione (Strumenti di analisi tabelle per Excel)
   ![Il pulsante di Scenario in strumenti di analisi tabelle](media/tat-whatif.gif "pulsante lo Scenario di simulazione in strumenti di analisi tabelle")  
@@ -84,7 +84,7 @@ ms.locfileid: "48140361"
   
  **'Gli acquisti Bicycle' = Sì**  
   
- **Confidenza: equa**  
+ **Confidenza: Equa**  
   
  Poiché questo risultato è basato su una riga esistente della tabella dati, indica che, se tutti i dati relativi a un determinato cliente rimangono invariati eccetto l'età, che è stata aumentata a 25 anni, è probabile che il cliente acquisterà una bicicletta.  
   

@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810064"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
   Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita con Gestione memoria di SQL Server per un processo di SQL Server usato da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "53376683"
 |Tipo di sistema operativo|Consentita quantità di memoria minima per **numero massimo di memoria del server**|  
 |-------------|----------------------------------------------------------------|  
 |32 bit|64 MB|  
-|64 bit|ALMENO 128 MB|  
+|64 bit|128 MB|  
   
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Come configurare le opzioni per la memoria tramite SQL Server Management Studio  
  Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita tramite Gestione memoria di SQL Server per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili.  

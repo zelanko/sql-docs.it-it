@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817030"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "52748424"
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione predefinito.|  
 |**name**|**sysname**|Nome della pubblicazione.|  
 |**description**|**nvarchar(255)**|Breve descrizione della pubblicazione.|  
-|**conservazione**|**int**|Il periodo di memorizzazione per il set di intera pubblicazione, in cui l'unità è indicato dal valore della **retention_period_unit** colonna.|  
+|**retention**|**int**|Il periodo di memorizzazione per il set di intera pubblicazione, in cui l'unità è indicato dal valore della **retention_period_unit** colonna.|  
 |**publication_type**|**tinyint**|Indica se la pubblicazione viene filtrata:<br /><br /> **0** = pubblicazione non filtrata.<br /><br /> **1** = filtrato.|  
 |**pubid**|**uniqueidentifier**|Numero di identificazione univoco della pubblicazione. Viene generato durante l'aggiunta della pubblicazione.|  
-|**DesignMasterID**|**uniqueidentifier**|Riservato per utilizzi futuri.|  
+|**designmasterid**|**uniqueidentifier**|Riservato per utilizzi futuri.|  
 |**parentid**|**uniqueidentifier**|Indica la pubblicazione padre da cui la pubblicazione corrente di pari livello o subset è stata creata (utilizzato per tipologie gerarchiche di pubblicazione).|  
 |**sync_mode**|**tinyint**|Modalità di sincronizzazione della pubblicazione:<br /><br /> **0** = nativa.<br /><br /> **1** = carattere.|  
 |**allow_push**|**int**|Indica se la pubblicazione consente sottoscrizioni push.<br /><br /> **0** = le sottoscrizioni push non sono consentite.<br /><br /> **1** = sono consentite sottoscrizioni push.|  
@@ -59,7 +59,7 @@ ms.locfileid: "52748424"
 |**ftp_port**|**int**|Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Subdirectory della posizione in cui i file di snapshot saranno disponibili per l'agente di merge.|  
 |**ftp_login**|**sysname**|Nome utente utilizzato per la connessione al servizio FTP.|  
-|**ftp_password**|**nvarchar(524**|Password dell'utente utilizzata per la connessione al servizio FTP.|  
+|**ftp_password**|**nvarchar(524)**|Password dell'utente utilizzata per la connessione al servizio FTP.|  
 |**conflict_retention**|**int**|Viene specificato il periodo di memorizzazione dei conflitti espresso in giorni. Trascorso questo periodo, la riga con conflitti viene eliminata dalla tabella con conflitti.|  
 |**keep_before_values**|**int**|Specifica se alla pubblicazione viene applicata l'ottimizzazione di sincronizzazione:<br /><br /> **0** = sincronizzazione non è ottimizzata e verranno verificate le partizioni inviate a tutti i sottoscrittori quando si modificano i dati in una partizione.<br /><br /> **1** = la sincronizzazione è ottimizzata e vengono coinvolti solo i sottoscrittori con righe nella partizione modificata.|  
 |**allow_subscription_copy**|**bit**|Specifica se la funzione di copia del database di sottoscrizione è abilitata. **0** significa copia non è consentita.|  
@@ -77,7 +77,7 @@ ms.locfileid: "52748424"
 |**allow_subscriber_initiated_snapshot**|**bit**|Indica che i Sottoscrittori possono inizializzare il processo che genera lo snapshot per una pubblicazione che utilizza filtri con parametri. **1** indica che i sottoscrittori possono inizializzare il processo di snapshot.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Specifica la durata, espressa in minuti, dell'attesa nella coda del processo di generazione dello snapshot da parte di un Sottoscrittore in caso di utilizzo di filtri con parametri.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Specifica la durata, espressa in minuti, dell'attesa del completamento del processo di generazione dello snapshot da parte di un Sottoscrittore in caso di utilizzo di filtri con parametri.|  
-|**server di distribuzione**|**sysname**|Nome del server di distribuzione per la pubblicazione.|  
+|**distributor**|**sysname**|Nome del server di distribuzione per la pubblicazione.|  
 |**snapshot_jobid**|**binary(16)**|Identifica il processo dell'agente che genera lo snapshot quando il Sottoscrittore è in grado di inizializzare il processo di generazione dello snapshot.|  
 |**allow_web_synchronization**|**bit**|Specifica se la pubblicazione è abilitata per la sincronizzazione Web, dove **1** significa che la sincronizzazione Web è abilitata per la pubblicazione.|  
 |**web_synchronization_url**|**nvarchar(500)**|Specifica il valore predefinito dell'URL Internet utilizzato per la sincronizzazione tramite il Web.|  

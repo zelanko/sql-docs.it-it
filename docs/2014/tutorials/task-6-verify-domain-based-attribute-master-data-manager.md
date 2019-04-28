@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866169"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master
   In questa attività si verifica che l'entità **State** venga creata in **MDS** e che l'attributo **State** dell'entità **Supplier** sia un attributo basato su dominio che dipende dall'entità **State** tramite **Gestione dati master**.  
   
 1.  Passare all'applicazione Web **Gestione dati master**.  
@@ -38,7 +38,7 @@ ms.locfileid: "56037732"
   
 8.  Ripetere i passaggi precedenti per gli altri stati.  
   
-    |Codice|nome|  
+    |Codice|Nome|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  

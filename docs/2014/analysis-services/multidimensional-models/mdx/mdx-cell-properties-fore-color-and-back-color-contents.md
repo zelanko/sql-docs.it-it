@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b4bf37eef74824c51a81b97f8b2e5b204df3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725425"
 ---
 # <a name="forecolor-and-backcolor-contents-mdx"></a>Contenuto di FORE_COLOR e BACK_COLOR (MDX)
   Nelle proprietà `FORE_COLOR` e `BACK_COLOR` di una cella sono archiviate, rispettivamente, informazioni sui colori del testo e dello sfondo della cella, nel formato RGB di Microsoft Windows.  
@@ -32,6 +32,6 @@ ms.locfileid: "48051071"
  I valori validi per i colori RGB standard sono compresi tra zero (0) e 16.777.215 (&H00FFFFFF). Il primo byte di un numero in questo intervallo è sempre uguale a 0. I 3 byte successivi, dal meno significativo al più significativo, determinano rispettivamente le quantità di rosso, verde e blu. Ognuno dei componenti rosso, verde e blu è rappresentato da un numero compreso tra 0 e 255 (&HFF).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle proprietà di cella &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)  
+ [Uso delle proprietà delle celle &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)  
   
   

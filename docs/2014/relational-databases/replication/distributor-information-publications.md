@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721363"
 ---
 # <a name="distributor-information-dialog-box"></a>Finestra di dialogo informazioni sul server di distribuzione 
 In questo argomento vengono fornite informazioni sul **server di distribuzione** nella finestra di dialogo 

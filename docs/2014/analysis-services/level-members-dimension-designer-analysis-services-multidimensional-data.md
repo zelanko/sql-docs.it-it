@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728158"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Livello e membri (scheda Esplorazione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare questo riquadro per visualizzare i membri della gerarchia e della lingua attualmente selezionate. Per selezionare una gerarchia o una lingua da visualizzare, utilizzare le opzioni **Gerarchia** e **Lingua** nel riquadro **Barra degli strumenti** . Per altre informazioni sul riquadro Barra degli strumenti, vedere [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Modalità writeback  
- La funzionalità di questo riquadro cambia se la modalità writeback è abilitata. La dimensione selezionata deve essere abilitata per la scrittura (in altre parole, il `WriteEnabled` della dimensione deve essere impostata su true) e la dimensione deve essere distribuita a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza per poter abilitare la modalità writeback.  
+ La funzionalità di questo riquadro cambia se la modalità writeback è abilitata. Per abilitare la modalità writeback la dimensione selezionata deve essere abilitata per la scrittura, ovvero la proprietà `WriteEnabled` della dimensione deve essere impostata su True, e la dimensione deve essere distribuita a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Per abilitare la modalità di writeback, puoi selezionare **Writeback** dal riquadro **Toolbar**, oppure fare clic con il pulsante destro del mouse sul riquadro **Level e Members** e selezionare **Writeback** dal menu di scelta rapida.  
   

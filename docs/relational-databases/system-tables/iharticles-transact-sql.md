@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817130"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "52802613"
 |**status**|**tinyint**|Maschera di bit delle opzioni e dello stato dell'articolo, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **0** = nessuna proprietà aggiuntiva.<br /><br /> **1** = attivo.<br /><br /> **8** = Include il nome della colonna nelle istruzioni INSERT.<br /><br /> **16** = utilizza istruzioni con parametrizzata.<br /><br /> Ad esempio, un articolo attivo che utilizza istruzioni con parametri includerà il valore 17 in questa colonna. Il valore 0 indica che l'articolo è inattivo e che non sono state definite proprietà aggiuntive.|  
 |**type**|**tinyint**|Tipo di articolo:<br /><br /> **1** = articolo basato su log.|  
 |**upd_cmd**|**nvarchar(255)**|Tipo di comando di replica utilizzato per la replica degli aggiornamenti con articoli di tabella. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**schema_option**|**binary(8)**|Mappa di bit dell'opzione di generazione dello schema per l'articolo specificato, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **0x00** = disabilita la creazione di script dall'agente Snapshot e utilizza lo script CreationScript fornito.<br /><br /> **0x01** = genera la creazione di oggetti (CREATE TABLE, CREATE PROCEDURE e così via).<br /><br /> **0x10** = genera un indice cluster corrispondente.<br /><br /> **0x40** = indici non cluster corrispondenti genera.<br /><br /> **0x80** = Include l'integrità referenziale dichiarata nelle chiavi primarie.<br /><br /> **0x1000** = replica le regole di confronto a livello di colonna. Nota: Per impostazione predefinita questa opzione viene impostata per i server di pubblicazione Oracle per consentire confronti con distinzione tra maiuscole e minuscole.<br /><br /> **0x4000** = replica le chiavi univoche se definite in un articolo di tabella.<br /><br /> **0x8000** = replica le chiavi univoche in una tabella e una chiave primaria articolo come vincoli tramite istruzioni ALTER TABLE.|  
+|**schema_option**|**binary(8)**|Mappa di bit dell'opzione di generazione dello schema per l'articolo specificato, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **0x00** = disabilita la creazione di script dall'agente Snapshot e utilizza lo script CreationScript fornito.<br /><br /> **0x01** = genera la creazione di oggetti (CREATE TABLE, CREATE PROCEDURE e così via).<br /><br /> **0x10** = genera un indice cluster corrispondente.<br /><br /> **0x40** = indici non cluster corrispondenti genera.<br /><br /> **0x80** = Include l'integrità referenziale dichiarata nelle chiavi primarie.<br /><br /> **0x1000** = replica le regole di confronto a livello di colonna. Nota: Questa opzione è impostata per impostazione predefinita per i server di pubblicazione Oracle abilitare i confronti tra maiuscole e minuscole.<br /><br /> **0x4000** = replica le chiavi univoche se definite in un articolo di tabella.<br /><br /> **0x8000** = replica le chiavi univoche in una tabella e una chiave primaria articolo come vincoli tramite istruzioni ALTER TABLE.|  
 |**dest_owner**|**sysname**|Proprietario della tabella nel database di destinazione.|  
 |**dest_table**|**sysname**|Nome della tabella di destinazione.|  
-|**nome_tablespace**|**nvarchar(255)**|Identifica lo spazio tabella utilizzato dalla tabella di registrazione per l'articolo.|  
+|**tablespace_name**|**nvarchar(255)**|Identifica lo spazio tabella utilizzato dalla tabella di registrazione per l'articolo.|  
 |**objid**|**int**|Questa colonna non viene utilizzata e viene inclusa solo per rendere il [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) visualizzare delle **IHarticles** tabella compatibile con il [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vista utilizzata per gli articoli di SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Questa colonna non viene utilizzata e viene inclusa solo per rendere il [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) visualizzare delle **IHarticles** tabella compatibile con il [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vista utilizzata per gli articoli di SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**description**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  

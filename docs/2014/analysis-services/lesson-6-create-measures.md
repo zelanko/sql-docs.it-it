@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728107"
 ---
 # <a name="lesson-7-create-measures"></a>Lezione 7: Creare misure
   In questa lezione verranno create misure da includere nel modello. Analogamente alle colonne calcolate create nella lezione precedente, una misura è essenzialmente un calcolo creato utilizzando una formula DAX. A differenza delle colonne calcolate, tuttavia, le misure vengono valutate in base a un *filtro* selezionato dall'utente, ad esempio una colonna o un filtro dei dati specifico aggiunto al campo Etichette di riga in una tabella pivot.   Viene quindi calcolato un valore per ogni cella nel filtro tramite la misura applicata. Le misure sono calcoli potenti e flessibili che può essere utile includere in pressoché tutti i modelli tabulari per eseguire calcoli dinamici sui dati numerici. Per altre informazioni, vedere [Misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48213241"
  Tempo stimato per il completamento della lezione: **30 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 6: Creare colonne calcolate](lesson-5-create-calculated-columns.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 6: Creare colonne calcolate](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Creare misure  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48213241"
     |Nome misura|colonna|Somma automatica (∑)|Formula|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
-    |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
-    |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
-    |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
-    |Internet Total Sales|Sales Amount|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
-    |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
-    |Internet Total Freight|Freight|SUM|=SUM([Freight])|  
+    |Internet Total Units|Order Quantity|Sum|=SUM([Order Quantity])|  
+    |Internet Total Discount Amount|Discount Amount|Sum|=SUM([Discount Amount])|  
+    |Internet Total Product Cost|Total Product Cost|Sum|=SUM([Total Product Cost])|  
+    |Internet Total Sales|Sales Amount|Sum|=SUM([Sales Amount])|  
+    |Internet Total Margin|Margin|Sum|=SUM([Margin])|  
+    |Internet Total Tax Amt|Tax Amt|Sum|=SUM([Tax Amt])|  
+    |Internet Total Freight|Freight|Sum|=SUM([Freight])|  
   
 2.  Facendo clic su una cella vuota nella griglia delle misure e utilizzando la barra della formula è possibile creare le misure seguenti e assegnare loro un nome:  
   
@@ -117,6 +117,6 @@ ms.locfileid: "48213241"
  Le misure create per la tabella Internet Sales possono essere utilizzate per analizzare dati finanziari critici, quali vendite, costi e margine di profitto per elementi definiti dal filtro selezionato dall'utente.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Per continuare questa esercitazione, passare alla lezione successiva, [Lezione 8: Creare indicatori di prestazioni chiave](lesson-7-create-key-performance-indicators.md).  
+ Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 8: Creare indicatori di prestazioni chiave](lesson-7-create-key-performance-indicators.md).  
   
   

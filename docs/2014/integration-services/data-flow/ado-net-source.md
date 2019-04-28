@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1bc6c150f8c8f4f4e6f68b275a901ab8f1f5e8e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832483"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
   L'origine ADO NET utilizza i dati di un provider .NET e li rende disponibili per il flusso di dati.  

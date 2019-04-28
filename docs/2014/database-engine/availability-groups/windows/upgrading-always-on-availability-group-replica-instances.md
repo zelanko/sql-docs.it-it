@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812940"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Aggiornamento dei server dei gruppi di disponibilità con tempi di inattività e perdita dei dati minimi
   Quando si aggiornano istanze del server da SQL Server 2012 a un Service Pack o a una versione più recente, è possibile ridurre i tempi di inattività per un gruppo di disponibilità alla durata di un singolo failover manuale eseguendo un aggiornamento in sequenza. L'aggiornamento in sequenza può essere effettuato sia per passare a versioni successive di SQL Server sia per aggiornare la versione corrente con hotfix o Service Pack.  

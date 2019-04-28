@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77a0c6f2f0100e7e0c0e73ee70bc8705135d259f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722813"
 ---
 # <a name="data-types-data-mining"></a>Tipi di dati (data mining)
   Quando si crea un modello di data mining o una struttura di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario definire i tipi di dati per ogni colonna della struttura. Il tipo di dati indica al motore di data mining se i dati presenti nell'origine dati sono numerici o di testo e il modo in cui devono essere elaborati. Se nei dati di origine ad esempio sono contenuti dati numerici, è possibile specificare se i numeri devono essere considerati come numeri interi o se devono essere utilizzate posizioni decimali.  
   
  Ogni tipo di dati supporta uno o più tipi di contenuto. Se si imposta il tipo di contenuto, è possibile personalizzare le modalità di elaborazione o di calcolo dei dati presenti nella colonna nel modello di data mining.  
   
- Se ad esempio in una colonna sono presenti dati numerici, è possibile scegliere di gestirli come tipi di dati numerici o di testo. Se si sceglie il tipo di dati numerico, è possibile impostare numerosi tipi di contenuto diversi, ovvero discretizzare i numeri o gestirli come valori continui. Per un elenco di tutti i tipi di contenuto, vedere [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
+ Se ad esempio in una colonna sono presenti dati numerici, è possibile scegliere di gestirli come tipi di dati numerici o di testo. Se si sceglie il tipo di dati numerico, è possibile impostare numerosi tipi di contenuto diversi, ovvero discretizzare i numeri o gestirli come valori continui. Per un elenco di tutti i tipi di contenuto, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta i tipi di dati riportati di seguito per le colonne della struttura di data mining:  
   
@@ -49,10 +49,10 @@ ms.locfileid: "48225251"
  Se si modifica il tipo di dati di una colonna, è necessario rielaborare sempre la struttura di data mining e qualsiasi modello di data mining basato su tale struttura. Se si modifica il tipo di dati, in alcuni casi tale colonna non può più essere utilizzata in un modello particolare. In una situazione di questo tipo in Analysis Services verrà generato un errore quando si rielabora il modello oppure verrà rielaborato il modello senza la colonna specifica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)   
- [I tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)   
+ [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tipi di dati &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [Colonne del modello di data mining](mining-model-columns.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  

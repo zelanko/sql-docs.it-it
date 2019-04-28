@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727697"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
   Un oggetto <xref:Microsoft.AnalysisServices.AggregationDesign> definisce un set di definizioni di aggregazione che possono essere condivise tra più partizioni.  

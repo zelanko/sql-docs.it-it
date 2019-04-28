@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871108"
 ---
 # <a name="resource-database"></a>Database Resource
   Il database Resource è un database di sola lettura che contiene tutti gli oggetti di sistema inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli oggetti di sistema, ad esempio sys.objects, sono archiviati fisicamente nel database Resource in modo persistente, ma nello schema sys di ogni database ne è presente un'implementazione logica. Il database Resource non contiene dati o metadati degli utenti.  
