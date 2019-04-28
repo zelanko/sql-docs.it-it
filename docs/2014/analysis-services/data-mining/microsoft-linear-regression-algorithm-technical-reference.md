@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721903"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Linear Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression è una versione speciale dell'algoritmo Microsoft Decision Trees ottimizzata per la modellazione delle coppie di attributi continui. In questo argomento viene illustrata l'implementazione dell'algoritmo, viene mostrato come personalizzarne il comportamento e vengono forniti collegamenti a ulteriori informazioni sull'esecuzione di query sui modelli.  
@@ -48,7 +48,7 @@ ms.locfileid: "48106071"
 ### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente sono elencati i parametri forniti per l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression.  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Definisce il numero di attributi di input che l'algoritmo è in grado di gestire prima di richiamare la funzionalità di selezione degli attributi. Impostare questo valore su 0 per disabilitare la funzionalità di selezione degli attributi.<br /><br /> Il valore predefinito è 255.|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Definisce il numero di attributi di output che l'algoritmo è in grado di gestire prima di richiamare la funzionalità di selezione degli attributi. Impostare questo valore su 0 per disabilitare la funzionalità di selezione degli attributi.<br /><br /> Il valore predefinito è 255.|  
@@ -57,10 +57,10 @@ ms.locfileid: "48106071"
 ### <a name="modeling-flags"></a>Flag di modellazione  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression supporta i flag di modellazione indicati di seguito. Quando si crea la struttura o il modello di data mining, i flag di modellazione vengono definiti per specificare la modalità di gestione dei valori presenti in ogni colonna durante l'analisi. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md).  
   
-|Flag di modellazione|Description|  
+|Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
 |NOT NULL|Indica che la colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alle colonne della struttura di data mining.|  
-|REGRESSOR|Indica che la colonna contiene valori numerici continui che devono essere considerati come potenziali variabili indipendenti durante l'analisi.<br /><br /> Nota: l'applicazione di un flag REGRESSOR a una colonna non ne garantisce l'uso come regressore nel modello finale.<br /><br /> Si applica alle colonne del modello di data mining.|  
+|REGRESSOR|Indica che la colonna contiene valori numerici continui che devono essere considerati come potenziali variabili indipendenti durante l'analisi.<br /><br /> Nota: Quando si contrassegna una colonna come regressore non garantisce che la colonna verrà utilizzata come regressore nel modello finale.<br /><br /> Si applica alle colonne del modello di data mining.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressori nei modelli di regressione lineare  
  I modelli di regressione lineare sono basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Tuttavia, anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni può contenere un albero o i nodi che rappresentano una regressione su un attributo continuo.  
@@ -83,11 +83,11 @@ ms.locfileid: "48106071"
 |Attributo stimabile|Continuous, Cyclical e Ordered|  
   
 > [!NOTE]  
->  `Cyclical` e `Ordered` sono supportati i tipi di contenuto, ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
+>  I tipi di contenuto `Cyclical` e `Ordered` sono supportati, ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
- [Esempi di Query del modello di regressione lineare](linear-regression-model-query-examples.md)   
- [Contenuto del modello per modelli di regressione lineare di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

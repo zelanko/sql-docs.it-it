@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ac00587321f3a328cb9927e5ed28c26d3a8d0d2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697210"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Estensioni per l'elaborazione dati e provider di dati .NET Framework (SSRS)
   Un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un componente installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], progettato per recuperare i dati da un tipo specifico di origine dati e offrire funzionalità aggiuntive per supportare la progettazione e l'elaborazione dei report. Un'estensione per l'elaborazione dati di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è un componente reso disponibile da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o da terze parti in grado di supportare le interfacce <xref:System.Data> che consentono di recuperare e modificare i dati da un tipo specifico di origine dati.  
