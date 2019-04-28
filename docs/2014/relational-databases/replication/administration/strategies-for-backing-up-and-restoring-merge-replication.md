@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688910"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
   Per la replica di tipo merge, eseguire periodicamente il backup dei database seguenti:  
@@ -51,7 +51,7 @@ ms.locfileid: "54131911"
   
 -   Se la pubblicazione non è filtrata, sarà possibile aggiornare il database di pubblicazione eseguendo la sincronizzazione con il Sottoscrittore più aggiornato.  
   
--   Se la pubblicazione è filtrata, l'aggiornamento del database di pubblicazione potrebbe non essere possibile. Si consideri una tabella partizionata in modo che ogni sottoscrizione riceve i dati dei clienti solo per una singola area: Nord, est, Sud e Ovest. Se per ogni partizione di dati è disponibile almeno un Sottoscrittore, la sincronizzazione con un Sottoscrittore per ogni partizione dovrebbe consentire di aggiornare il database di pubblicazione. Tuttavia, se ad esempio i dati nella partizione Ovest non sono stati replicati in alcun Sottoscrittore, questi dati nel server di pubblicazione non potranno essere aggiornati.  
+-   Se la pubblicazione è filtrata, l'aggiornamento del database di pubblicazione potrebbe non essere possibile. Considerare una tabella partizionata in modo che ogni sottoscrizione riceva i dati relativi ai clienti solo per una singola area: Nord, Est, Sud e Ovest. Se per ogni partizione di dati è disponibile almeno un Sottoscrittore, la sincronizzazione con un Sottoscrittore per ogni partizione dovrebbe consentire di aggiornare il database di pubblicazione. Tuttavia, se ad esempio i dati nella partizione Ovest non sono stati replicati in alcun Sottoscrittore, questi dati nel server di pubblicazione non potranno essere aggiornati.  
   
 > [!IMPORTANT]  
 >  Il ripristino delle tabelle pubblicate in seguito alla sincronizzazione di un database di pubblicazione con un database di sottoscrizione può avvenire in un momento più recente rispetto ad altre tabelle non pubblicate di cui è stato ripristinato il backup.  

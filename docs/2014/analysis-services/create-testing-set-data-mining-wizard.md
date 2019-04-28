@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679871"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crea set di testing (Creazione guidata modello di data mining)
   Usare la pagina **Crea set di testing** per specificare la quantità di dati da usare per il training e la quantità di dati da riservare per l'uso come set di test. La separazione dei dati in set di training e set di testing durante la creazione di una struttura di data mining rende molto più facile la determinazione dell'accuratezza dei modelli di data mining che vengono creati successivamente.  
@@ -35,7 +35,7 @@ ms.locfileid: "48096351"
   
 -   Non è possibile partizionare i dati se si sta tentando di stimare un valore archiviato in una tabella nidificata.  
   
- **Per altre informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md), [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md), [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Per altre informazioni:** [Test e convalida &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md), [esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opzioni  
  **Percentuale di dati per i test**  

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726815"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
   Una vista origine dati è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e delle dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
@@ -32,9 +32,9 @@ ms.locfileid: "48126111"
  In un progetto o un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile compilare più viste origine dati per una o più origini dati e costruire ognuna in modo da soddisfare i requisiti per una diversa soluzione.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Definizione di un tipo di dati della vista origine &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [Definizione di una vista origine dati &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [Vista di origine aggiungendo o rimuovendo tabelle o viste in una Data &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
  [Modificare le proprietà in una vista origine dati &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
@@ -46,15 +46,15 @@ ms.locfileid: "48126111"
   
  [Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [Sostituire una tabella o una Query denominata in una vista origine dati &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [Sostituire una tabella o una query denominata in una vista origine dati &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [Esplorare i dati in una vista origine dati &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
  [Eliminare una vista origine dati &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [Aggiornare lo Schema in una vista origine dati &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Aggiornare lo schema in una vista origine dati &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   

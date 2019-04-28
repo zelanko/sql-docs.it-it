@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721943"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'accesso a livello di codice a tutte le funzionalità configurabili dall'utente in una topologia di replica viene fornito da stored procedure di sistema. Mentre le stored procedure possono essere eseguite singolarmente utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o l'utilità della riga di comando sqlcmd, può rivelarsi vantaggioso scrivere file script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che consentono di eseguire una sequenza logica di attività di replica.  

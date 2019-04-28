@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732187"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Provider OLE DB per Analysis Services (Analysis Services - Dati multidimensionali)
   Il provider OLE DB per Analysis Services è un'interfaccia per applicazioni che interagiscono con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consente di compilare applicazioni client che interagiscono con dati multidimensionali. Questo provider fornisce inoltre metodi per l'analisi di data mining online e offline di dati multidimensionali e dati relazionali ed è incluso in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Può essere ridistribuito da applicazioni client di terze parti.  

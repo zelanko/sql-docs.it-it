@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861401"
 ---
 # <a name="retrieving-bookmarks"></a>Recupero di segnalibri
 Se l'applicazione utilizzerà i segnalibri, è necessario impostare l'attributo di istruzione SQL_ATTR_USE_BOOKMARKS a SQL_UB_VARIABLE prima di preparazione o l'esecuzione dell'istruzione. Ciò è necessario perché creare e gestire i segnalibri possono essere un'operazione dispendiosa, in modo che i segnalibri devono essere abilitati solo quando un'applicazione può rendere buona loro utilizzo.  

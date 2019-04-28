@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721198"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
   In questo argomento viene descritto come implementare un gestore della logica di business per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite la programmazione della replica o RMO (Replication Management Objects).  
@@ -58,7 +58,7 @@ ms.locfileid: "52816893"
   
 2.  Aggiungere i riferimenti al progetto per gli spazi dei nomi seguenti.  
   
-    |Riferimento all'assembly|Località|  
+    |Riferimento all'assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (installazione predefinita)|  
     |<xref:System.Data>|GAC (componente di .NET Framework)|  
@@ -131,7 +131,7 @@ ms.locfileid: "52816893"
   
 2.  Aggiungere i riferimenti al progetto per gli spazi dei nomi seguenti.  
   
-    |Riferimento all'assembly|Località|  
+    |Riferimento all'assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (installazione predefinita)|  
     |<xref:System.Data>|GAC (componente di .NET Framework)|  

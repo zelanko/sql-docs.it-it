@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692009"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Client di data mining per Excel (componenti aggiuntivi Data mining di SQL Server)
   Il client di data mining per Excel è un set di strumenti che consentono di eseguire attività comuni di data mining, dalla pulizia dei dati alla compilazione dei modelli e alle query di stima. È possibile utilizzare i dati in intervalli o tabelle di Excel o accedere alle origini dati esterne.  
@@ -55,7 +55,7 @@ ms.locfileid: "48063557"
  [Esplorare i dati &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)  
  Per la compilazione e l'archiviazione dei modelli i componenti aggiuntivi supportano le connessioni dati seguenti:  
   
--   Connessione a un server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], per l'archiviazione e l'elaborazione di modelli.  
+-   Connessione a un server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , per l'archiviazione e l'elaborazione di modelli.  
   
 -   Connessioni facoltative a origini dati esterne. È possibile compilare il modello utilizzando qualsiasi tipo di dati che può essere definito come origine dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oppure utilizzando i dati già presenti in Excel.  
   
@@ -77,12 +77,12 @@ ms.locfileid: "48063557"
  [Procedura guidata classificazione &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  La procedura guidata **Classificazione** consente di generare un modello di classificazione in base a dati esistenti di una tabella di Excel, un intervallo di Excel o un'origine dati esterna. Un modello di classificazione consente di estrarre modelli dai dati che indicano somiglianze e di eseguire stime basate su raggruppamenti di valori. È possibile utilizzare un modello di classificazione, ad esempio, per stimare i rischi in base ai modelli di ricavo o costi.  
   
- La procedura guidata **Classificazione**  supporta l'uso di questi algoritmi di data mining di Microsoft: Decision Trees, Logistic Regression, Naïve Bayes, Neural Networks.  
+ Il **classifica** guidata supporta l'uso di questi algoritmi di data mining di Microsoft: La decisione algoritmo Trees, Logistic Regression, Naïve Bayes e neural Networks.  
   
  [Procedura guidata stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  La procedura guidata **Valutazione** consente di creare un modello di valutazione. Un modello di valutazione consente di estrarre modelli dai dati e di utilizzarli per stimare un risultato numerico come valuta, importo delle vendite, data o ora.  
   
- La procedura guidata **Valutazione** utilizza questi algoritmi di data mining di Microsoft: Decision Trees, Linear Regression, Logistic Regression e Neural Networks.  
+ Il **stima** guidata utilizza questi algoritmi di data mining di Microsoft: Gli alberi delle decisioni, Linear Regression, Logistic Regression e Neural Networks.  
   
  [Analizza fattori di influenza chiave &#40;strumenti di analisi tabelle per Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  Le procedura guidata Cluster consente di compilare un modello di clustering. Un modello di clustering consente di rilevare gruppi di righe che condividono caratteristiche simili. Questa procedura guidata è utile per esplorare i modelli in qualsiasi tipo di dati.  
@@ -126,7 +126,7 @@ ms.locfileid: "48063557"
  Per gli utenti esperti, questo strumento fornisce un'interfaccia di trascinamento a DMX. È possibile creare facilmente query di stima o nuovi modelli senza preoccuparsi della sintassi.  
   
 ##  <a name="bkmk_ViewModels"></a> Visualizzazione di modelli  
- I modelli creati vengono automaticamente aperti per l'esplorazione. Tuttavia, è possibile esplorare i modelli nel server e generare nuove visualizzazioni. Usare la [forme di Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md) per esportare i diagrammi di modello in un'area di disegno personalizzabile.  
+ I modelli creati vengono automaticamente aperti per l'esplorazione. Tuttavia, è possibile esplorare i modelli nel server e generare nuove visualizzazioni. Utilizzare [Forme di Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md) per esportare i diagrammi di modello in un'area di disegno personalizzabile.  
   
  [Esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
  Visualizzare i modelli creati utilizzando i grafici interattivi personalizzati in ogni tipo di modello.  
@@ -141,15 +141,15 @@ ms.locfileid: "48063557"
  Se si dispone delle autorizzazioni appropriate, è possibile eliminare, modificare, rinominare o elaborare modelli e strutture di data mining esistenti senza uscire da Excel.  
   
  [Traccia &#40;Client di Data Mining per Excel&#41;](trace-data-mining-client-for-excel.md)  
- Fare clic su **traccia** per visualizzare un'acquisizione in corso dell'interazione tra il client di Excel e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] server. Tutte le attività vengono archiviate come istruzioni DMX o XMLA in modo da poter risolvere eventuali problemi della sessione di data mining o salvare le informazioni per riutilizzarle in seguito.  
+ Fare clic su **Traccia** per visualizzare un'acquisizione in esecuzione dell'interazione tra il client di Excel e il server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Tutte le attività vengono archiviate come istruzioni DMX o XMLA in modo da poter risolvere eventuali problemi della sessione di data mining o salvare le informazioni per riutilizzarle in seguito.  
   
  [Connessione al server di data mining](connect-to-a-data-mining-server.md)  
- Per utilizzare Excel come client di data mining, è necessario stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Tale connessione consente di accedere al motore di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Se si dispone delle autorizzazioni appropriate, tramite la connessione è inoltre possibile archiviare gli eventuali modelli individuati e modificare oggetti di data mining esistenti.  
+ Per utilizzare Excel come client di data mining, è necessario stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Tale connessione consente di accedere al motore di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se si dispone delle autorizzazioni appropriate, tramite la connessione è inoltre possibile archiviare gli eventuali modelli individuati e modificare oggetti di data mining esistenti.  
   
- Il **connessioni** sulla barra degli strumenti è disponibili procedure guidate per la gestione delle connessioni a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per utilizzare gli algoritmi e gli strumenti di data mining, è necessario stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È possibile creare la connessione durante l'installazione del componente aggiuntivo o aggiungere una connessione in un secondo momento.  
+ Sulla barra degli strumenti **Connessioni** sono disponibili procedure guidate per la gestione delle connessioni a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per utilizzare gli algoritmi e gli strumenti di data mining, è necessario stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile creare la connessione durante l'installazione del componente aggiuntivo o aggiungere una connessione in un secondo momento.  
   
  **Introduzione**  
- Scegliere il **Guida introduttiva** pulsante per avviare la configurazione guidata che illustra il processo di creazione di una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]e ottenere le autorizzazioni necessarie per eseguire il data mining.  
+ Fare clic sul pulsante **Riquadro attività iniziale** per avviare la configurazione guidata che consente di eseguire in modo semplificato il processo di creazione di una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]e di ottenere le autorizzazioni necessarie per il data mining.  
   
  **?**  
  Il menu a discesa **?** fornisce collegamenti alla Guida, a siti Web e a una configurazione guidata per il completamento dell'installazione e l'avvio del data mining.  

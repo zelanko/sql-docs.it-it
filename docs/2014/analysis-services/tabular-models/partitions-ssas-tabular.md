@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795498"
 ---
 # <a name="partitions-ssas-tabular"></a>Partizioni (SSAS tabulare)
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Quelle create tramite la finestra di dialogo Partizioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la creazione di modelli vengono applicate al database dell'area di lavoro modello. Quando il modello viene distribuito, le partizioni definite per il database dell'area di lavoro modello vengono duplicate nel database modello distribuito. È possibile creare e gestire ulteriori partizioni per un database modello distribuito utilizzando la finestra di dialogo Partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Nelle informazioni fornite in questo argomento vengono descritte le partizioni generate durante la creazione di modelli utilizzando la finestra di dialogo Gestione partizioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per informazioni sulla creazione e gestione delle partizioni per un modello distribuito, vedere [Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680308"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Connessione a un file flat (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di connettersi a un file flat (con estensione txt), a un file con valori delimitati da tabulazioni (con estensione tab) o a un file con valori delimitati da virgole (con estensione csv). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -41,7 +41,7 @@ ms.locfileid: "48148951"
  **Separatore di colonna**  
  Selezionare i separatori di colonna disponibili da un apposito elenco. Scegliere un separatore che non sia già presente nel testo.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Tabulazione (t)|Le colonne sono separate da un carattere di tabulazione (t).|  
 |Virgola (,)|Le colonne sono separate da una virgola (,).|  
@@ -62,7 +62,7 @@ ms.locfileid: "48148951"
 > [!NOTE]  
 >  Solo le prime 50 righe nel file vengono visualizzate in questa anteprima.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Casella di controllo nell'intestazione di colonna**|Selezionare la casella di controllo per includere la colonna nell'importazione dei dati. Deselezionare la casella di controllo per rimuovere la colonna dall'importazione dei dati.|  
 |**Pulsante freccia in giù nell'intestazione di colonna**|Consente di ordinare e filtrare i dati nella colonna.|  

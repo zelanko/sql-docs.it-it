@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_2511 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 2511 (Database Engine error)
 ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1748e8b483eecee43da921bd268d419408924af3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868965"
 ---
 # <a name="mssqlserver2511"></a>MSSQLSERVER_2511
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Dettagli  
   
 |||  
@@ -30,12 +31,11 @@ ms.locfileid: "48062020"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_KEYS_OUT_OF_ORDER|  
-|Testo del messaggio|Errore di tabella: ID di oggetto %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %.*ls). Chiavi non ordinate alla pagina %S_PGID, slot %d e %d.|  
+|Testo del messaggio|Errore di tabella: Oggetto con ID %d, ID indice %d, ID di partizione % I64d, unità allocazione con ID % I64d (tipo %. * ls). Chiavi non ordinate alla pagina %S_PGID, slot %d e %d.|  
   
 ## <a name="explanation"></a>Spiegazione  
- Nell'indice specificato sono state rilevate chiavi non ordinate. La pagina in cui sono contenute le chiavi può essere danneggiata.  
+Nell'indice specificato sono state rilevate chiavi non ordinate. La pagina in cui sono contenute le chiavi può essere danneggiata.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Ricompilare l'indice specificato utilizzando l'istruzione ALTER INDEX REBUILD.  
-  
+Ricompilare l'indice specificato utilizzando l'istruzione ALTER INDEX REBUILD.  
   

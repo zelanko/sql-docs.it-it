@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680425"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Completamento procedura guidata (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Completamento procedura guidata** per salvare la progettazione delle aggregazioni e assegnarla nelle partizioni selezionate. Se lo si desidera, è inoltre possibile elaborare le partizioni selezionate al termine della progettazione e del salvataggio delle aggregazioni da parte dell'Ottimizzazione guidata basata sulle statistiche di utilizzo.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719842"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service per OLE DB Panoramica
 Il Microsoft Cursor Service per OLE DB integrano le funzioni di supporto del cursore del provider di dati. Di conseguenza, l'utente percepisce funzionalità relativamente uniforme di tutti i provider di dati.
@@ -57,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  La proprietà dinamica DBPROP_SERVERDATAONINSERT non è supportata dal servizio di cursore, anche se è supportata dal provider di dati sottostante.
 
-|Nome proprietà|Description|
+|Nome proprietà|Descrizione|
 |-------------------|-----------------|
 |Ricalcolo automatico (DBPROP_ADC_AUTORECALC)|Per i recordset creato con il Data shaping, questo valore indica quanto spesso vengono calcolate le colonne calcolate e di aggregazione. Il valore predefinito (valore = 1) consiste nel ricalcolare ogni volta che il Data Shaping determina che i valori sono stati modificati. Se il valore è 0, le colonne calcolate o aggregate vengono calcolate solo quando la gerarchia viene creata inizialmente.|
 |Dimensioni del batch (DBPROP_ADC_BATCHSIZE)|Indica il numero di istruzioni update che possono essere raggruppate prima dell'invio all'archivio dati. Le altre istruzioni in un batch, archiviare meno round trip per i dati.|
@@ -83,7 +83,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamento delle proprietà predefinite
  Cursor Service per OLE DB influisce anche sul comportamento di determinate proprietà predefinite.
 
-|Nome proprietà|Description|
+|Nome proprietà|Descrizione|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Integra i tipi di cursori che sono disponibili per un **Recordset**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Integra i tipi di blocchi disponibili per un **Recordset**. Abilita aggiornamenti in batch.|

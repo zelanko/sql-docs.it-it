@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725139"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totali visualizzati e non visualizzati
   I totali visualizzati sono totali alla fine di una colonna o riga in cui vengono sommati tutti gli elementi visibili della colonna o riga. Questo è il comportamento predefinito per la maggior parte delle tabelle visualizzate. Tuttavia, in alcuni casi per l'utente è utile visualizzare solo alcune colonne di una tabella, conservando però i totali per la riga intera, compresi gli elementi non visualizzati. Questi vengono chiamati `Non Visual Totals`, perché il totale è il risultato di valori visualizzati e non visualizzati.  
@@ -90,7 +90,7 @@ ms.locfileid: "48197051"
   
 |||||  
 |-|-|-|-|  
-||Tutti i prodotti|Accessories|Clothing|  
+||All Products|Accessories|Clothing|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -98,12 +98,12 @@ ms.locfileid: "48197051"
  Se si confrontano i risultati precedenti, è possibile osservare che la riga [All Resellers] si aggiunge ai valori visualizzati di [Value Added Reseller] e [Warehouse] ma che la colonna [All Products] mostra il valore totale per tutti i prodotti, compresi quelli non visualizzati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave per MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [La caratteristica Auto Exist](autoexists.md)   
- [Utilizzo di membri, tuple e set di &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Autoexists](autoexists.md)   
+ [Utilizzo di membri, tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Query MDX di base &#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [Restrizione della Query con Progettazione Query e assi di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [Definizione del contesto di cubo in una Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [Restrizione della query con gli assi della query e di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [Definizione del contesto di cubo in una query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

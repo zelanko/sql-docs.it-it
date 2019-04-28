@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680372"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server (installazione)
   Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], è possibile utilizzare l'Installazione guidata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o il prompt dei comandi.  
@@ -78,9 +78,9 @@ ms.locfileid: "53363713"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Aggiornamento a un cluster di failover su più subnet di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Esistono due possibili scenari di aggiornamento:  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover è attualmente configurato su una singola subnet: È necessario aggiornare prima il cluster esistente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] avviando il programma di installazione e seguendo il processo di aggiornamento. Dopo aver completato l'aggiornamento del cluster di failover esistente, aggiungere un nodo che si trova su una subnet diversa utilizzando la funzionalità AddNode. Confermare l'impostazione della dipendenza delle risorse indirizzo IP su OR nella pagina di configurazione della rete cluster. A questo punto è disponibile un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover è attualmente configurato su una singola subnet: Prima di tutto è necessario aggiornare il cluster esistente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] avviando il programma di installazione e seguendo il processo di aggiornamento. Dopo aver completato l'aggiornamento del cluster di failover esistente, aggiungere un nodo che si trova su una subnet diversa utilizzando la funzionalità AddNode. Confermare l'impostazione della dipendenza delle risorse indirizzo IP su OR nella pagina di configurazione della rete cluster. A questo punto è disponibile un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-2.  Il cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è attualmente configurato in più subnet con la tecnologia V-LAN estesa. È necessario prima aggiornare il cluster esistente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Dal momento che la tecnologia V-LAN estesa consente di configurare una singola subnet, la configurazione della rete deve essere impostata su più subnet. Inoltre, è necessario modificare la dipendenza delle risorse indirizzo IP utilizzando lo strumento di amministrazione del cluster di failover Windows e impostare la dipendenza IP su OR.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover è attualmente configurato su più subnet usando l'estensione la tecnologia V-LAN estesa: Prima di tutto è necessario aggiornare il cluster esistente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Dal momento che la tecnologia V-LAN estesa consente di configurare una singola subnet, la configurazione della rete deve essere impostata su più subnet. Inoltre, è necessario modificare la dipendenza delle risorse indirizzo IP utilizzando lo strumento di amministrazione del cluster di failover Windows e impostare la dipendenza IP su OR.  
   
 ###  <a name="BestPractices"></a> Procedure consigliate prima di aggiornare un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster di Failover  
  Per eliminare il tempo di inattività imprevisto provocato da un riavvio, preinstallare il pacchetto che non richiede il riavvio di .NET Framework 4.0 in tutti i nodi del cluster di failover prima di eseguire l'aggiornamento nei nodi del cluster. Per preinstallare i prerequisiti, è consigliabile effettuare le operazioni seguenti:  

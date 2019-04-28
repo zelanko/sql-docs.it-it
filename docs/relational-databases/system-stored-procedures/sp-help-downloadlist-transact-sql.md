@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796184"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|Oggetto su cui viene eseguita l'istruzione.|  
 |**object_id**|**uniqueidentifier**|Numero di identificazione dell'oggetto interessato dall'istruzione (**job_id** per un oggetto processo o 0x00 per un oggetto server) o un valore di dati specifico per il **operation_code**.|  
 |**target_server**|**nvarchar(30)**|Server di destinazione in cui deve essere eseguito il download dell'istruzione.|  
-|**error_message**|**nvarchar(1024)**|Eventuale messaggio di errore inviato dal server di destinazione se si verifica un problema durante l'elaborazione dell'istruzione.<br /><br /> Nota: I messaggi di errore impediscono l'esecuzione di ulteriori operazioni di download nel server di destinazione.|  
+|**error_message**|**nvarchar(1024)**|Eventuale messaggio di errore inviato dal server di destinazione se si verifica un problema durante l'elaborazione dell'istruzione.<br /><br /> Nota: Eventuali messaggi di errore impediscono ulteriori operazioni di download dal server di destinazione.|  
 |**date_posted**|**datetime**|Data di inserimento dell'istruzione nella tabella.|  
 |**date_downloaded**|**datetime**|Data di download dell'istruzione nel server di destinazione.|  
 |**status**|**tinyint**|Stato del processo:<br /><br /> **0** = non ancora scaricato<br /><br /> **1** = scaricato correttamente.|  

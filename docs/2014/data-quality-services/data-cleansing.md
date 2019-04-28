@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793043"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La pulizia dei dati è il processo di analisi della qualità dei dati in un'origine dati, con l'approvazione o il rifiuto manuale dei suggerimenti del sistema e la conseguente modifica dei dati. La pulizia dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) include un processo assistito da computer, che analizza la conformità dei dati alle informazioni in una Knowledge Base, e un processo interattivo, che consente all'amministratore dei dati di rivedere e modificare i risultati del processo assistito da computer per assicurarsi che la pulizia dei dati risponda esattamente alle aspettative.  
@@ -63,15 +63,15 @@ ms.locfileid: "56020383"
 ##  <a name="Interactive"></a> Pulizia interattiva  
  In base al processo di pulizia assistito da computer, all'amministratore dei dati vengono fornite le informazioni necessarie per prendere una decisione sulla modifica dei dati. DQS consente di suddividere i dati in categorie nelle cinque schede seguenti:  
   
--   **Suggeriti**: I valori per i quali sono stati trovati suggerimenti con un livello di confidenza più elevato di *soglia di suggerimento automatico* ma inferiore al valore di *soglia di correzione automatica* valore. È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
+-   **Suggeriti**: valori per i quali DQS ha trovato suggerimenti con un livello di confidenza superiore al valore *soglia di suggerimento automatico* ma inferiore al valore *soglia di correzione automatica*. È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
   
--   **Nuovo**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping ad altre schede. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
+-   **Nuovi**: Valori validi per il quale DQS non ha informazioni sufficienti (suggerimenti) e pertanto non è possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
   
--   **Invalid**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
+-   **Non validi**: Valori che sono stati contrassegnati come non validi nel dominio della knowledge base o valori che non hanno superato una regola o un riferimento di dominio dati. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
   
--   **Correzione**: I valori corretti da DQS durante il processo di pulizia automatico perché è stata trovata una correzione per il valore con un livello di confidenza superiore di *soglia di correzione automatica* valore. Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
+-   **Con correzione**: valori corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore *soglia di correzione automatica*. Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
   
--   **Corretto**: valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
+-   **Corretti**: Valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
   
 > [!NOTE]  
 >  Nelle schede **Suggeriti**, **Con correzione**e **Corretti** viene visualizzato il valore iniziale per un dominio, se applicabile, nella colonna **Correggi in** rispetto al relativo valore del dominio.  

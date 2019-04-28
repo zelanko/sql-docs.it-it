@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808672"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Connetti al server (pagina Parametri aggiuntivi per la connessione)
   Nella finestra di dialogo di **connessione** al server di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono disponibili le opzioni relative ai valori della stringa di connessione più comuni. Usare la pagina **Parametri aggiuntivi per la connessione** per aggiungere più parametri di connessione alla stringa di connessione.  
@@ -45,14 +45,14 @@ ms.locfileid: "48087951"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Esempio 1: Connessione al Motore di database  
+### <a name="example-a-connecting-to-the-database-engine"></a>Esempio a: Connessione al motore di database  
  Per connettersi al database [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] in un server denominato ACCOUNTING, immettere quanto indicato di seguito nella pagina **Parametri aggiuntivi per la connessione** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Esempio B: Connessione ad Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Esempio b: La connessione ad Analysis Services  
  Per connettersi ad Analysis Services e fare in modo che tutte le partizioni in attesa di notifiche vengano sottoposte a query in tempo reale (ignorando la memorizzazione nella cache) e per impostare il valore di timeout del writeback su 5, immettere quanto indicato di seguito nella pagina **Parametri aggiuntivi per la connessione** :  
   
 ```  

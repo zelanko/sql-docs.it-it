@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691591"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (Management Studio)
 
@@ -52,7 +52,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
 
 8. Completare la procedura guidata.
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurare una sottoscrizione aggiornabile dal sottoscrittore
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurare una sottoscrizione aggiornabile dal Sottoscrittore
 
 
 1. Connettersi al Sottoscrittore in SQL Server Management Studio e quindi espandere il nodo del server.
@@ -200,7 +200,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
 1. Nel server di pubblicazione eseguire [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento in coda. 
 
     * Se il valore di allow_queued_tran nel set di risultati è 1, la pubblicazione supporta le sottoscrizioni ad aggiornamento immediato.
-    * Se il valore di allow_queued_tran nel set di risultati è 0, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento in coda. Per altre informazioni, vedere Procedura: Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali (programmazione Transact-SQL della replica).
+    * Se il valore di allow_queued_tran nel set di risultati è 0, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento in coda. Per altre informazioni, vedere Procedura: Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali (Programmazione Transact-SQL della replica).
 
 2. Nel server di pubblicazione eseguire [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)per verificare che la pubblicazione supporti le sottoscrizioni push. 
 

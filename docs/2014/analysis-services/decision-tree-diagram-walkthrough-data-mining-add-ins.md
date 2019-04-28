@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732434"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Descrizione dettagliata del diagramma dell'albero delle decisioni (componenti aggiuntivi Data Mining dei dati)
   Se è stato creato un modello di albero delle decisioni, è possibile creare un diagramma personalizzato in Visio tramite la forma Albero delle decisioni o la forma Rete di dipendenze. In questo argomento descrive le personalizzazioni è possibile eseguire utilizzando la **albero delle decisioni** questi controlli e forme:  

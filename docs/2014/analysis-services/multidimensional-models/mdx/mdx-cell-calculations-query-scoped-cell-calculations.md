@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699827"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Creazione di formule per il calcolo di celle con ambito query (MDX)
-  Nel linguaggio MDX (Multidimensional Expressions) è possibile utilizzare la parola chiave `WITH` per descrivere celle calcolate nel contesto di una query. Il `WITH` parola chiave ha la sintassi seguente:  
+  Nel linguaggio MDX (Multidimensional Expressions) è possibile utilizzare la parola chiave `WITH` per descrivere celle calcolate nel contesto di una query. La parola chiave `WITH` ha la sintassi seguente:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +30,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  Il valore `CellCalc_Identifier` contiene il nome delle celle calcolate. Il valore `String_Expression` contiene un elenco di espressioni set MDX ortogonali e unidimensionali. Ognuna di tali espressioni set deve essere risolta in una delle categorie elencate nella tabella seguente.  
   
-|Category|Description|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
