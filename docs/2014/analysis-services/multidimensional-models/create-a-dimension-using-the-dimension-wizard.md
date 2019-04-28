@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad05272b38a2f3dec72c4be160f48981e4fd43a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700313"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Creare una dimensione utilizzando la Creazione guidata dimensione
   È possibile creare una nuova dimensione utilizzando Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -73,6 +73,6 @@ ms.locfileid: "48118070"
     >  È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una dimensione usando una tabella esistente](create-a-dimension-by-using-an-existing-table.md)  
+ [Creare una dimensione utilizzando una tabella esistente](create-a-dimension-by-using-an-existing-table.md)  
   
   

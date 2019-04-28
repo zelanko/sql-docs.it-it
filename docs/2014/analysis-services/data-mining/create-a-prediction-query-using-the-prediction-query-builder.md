@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715148"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
   È possibile creare query di stima mentre si compila una soluzione di data mining in BI Development Studio, o facendo clic con il pulsante destro del mouse su un modello di data mining esistente in SQL Server Management Studio e scegliendo quindi l'opzione **Compila query di stima**.  
@@ -92,7 +92,7 @@ ms.locfileid: "48189690"
 8.  Eseguire la query facendo clic sul primo pulsante della barra degli strumenti della scheda **Stima modello di data mining** e quindi selezionando **Risultato**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una Query Singleton in Progettazione modelli di Data Mining](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Creare una query singleton in Progettazione modelli di data mining](create-a-singleton-query-in-the-data-mining-designer.md)   
  [Query di data mining](data-mining-queries.md)  
   
   

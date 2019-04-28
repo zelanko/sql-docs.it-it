@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9236bfbd945386aa249291b490ad41680a3ff5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700946"
 ---
 # <a name="enable-dimension-writeback"></a>Attivazione writeback della dimensione
   Aggiungere a un cubo o a una dimensione la funzionalità avanzata di writeback della dimensione per consentire agli utenti di modificare manualmente la struttura e i membri della dimensione. Gli aggiornamenti di una dimensione abilitata per la scrittura vengono registrati direttamente nella tabella della dimensione. Questa funzionalità avanzata modifica l'impostazione della proprietà `WriteEnabled` per una dimensione.  
@@ -39,10 +39,10 @@ ms.locfileid: "48171651"
  Nella prima pagina della procedura guidata **Abilitazione writeback della dimensione** specificare la dimensione alla quale si desidera applicare il writeback della dimensione. La funzionalità avanzata di writeback della dimensione aggiunta alla dimensione selezionata risulterà tra le modifiche apportate alla dimensione. Tali modifiche verranno ereditate da tutti i cubi che includono la dimensione selezionata.  
   
 ## <a name="setting-dimension-writeback-capability"></a>Impostazione della funzionalità di writeback della dimensione  
- Nella seconda pagina della procedura guidata **Abilitazione writeback della dimensione** è possibile effettivamente impostare l'opzione **Consenti writeback della dimensione** . Quando si seleziona questa opzione automaticamente impostata il `WriteEnabled` proprietà della dimensione su `True`. Deselezionando questa opzione viene impostata automaticamente la proprietà `False`.  
+ Nella seconda pagina della procedura guidata **Abilitazione writeback della dimensione** è possibile effettivamente impostare l'opzione **Consenti writeback della dimensione** . Selezionando questa opzione, la proprietà `WriteEnabled` della dimensione viene impostata automaticamente su `True`. Deselezionando questa opzione la proprietà viene impostata automaticamente su `False`.  
   
 ## <a name="remarks"></a>Note  
- Quando si crea un nuovo membro, è necessario includere ogni attributo di una dimensione. Non è possibile inserire un membro senza specificare un valore per l'attributo chiave della dimensione. La creazione di membri è pertanto soggetta a tutti i vincoli, ad esempio valori di chiave non Null, definiti nella tabella della dimensione. È necessario considerare anche le colonne specificate dalle proprietà della dimensione, ad esempio quelle specificate nel `CustomRollupColumn`, `CustomRollupPropertiesColumn` o il `UnaryOperatorColumn` le proprietà della dimensione.  
+ Quando si crea un nuovo membro, è necessario includere ogni attributo di una dimensione. Non è possibile inserire un membro senza specificare un valore per l'attributo chiave della dimensione. La creazione di membri è pertanto soggetta a tutti i vincoli, ad esempio valori di chiave non Null, definiti nella tabella della dimensione. È consigliabile considerare inoltre le colonne che possono essere specificate dalle proprietà della dimensione, ad esempio le colonne specificate nelle proprietà della dimensione `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn`.  
   
 > [!WARNING]  
 >  Se si utilizza SQL Azure come origine dati per eseguire il writeback in un database di Analysis Services, l'operazione non viene completata. Questo si verifica per motivi strutturali, dal momento che l'opzione provider che abilita il servizio MARS (Multiple Active Result Sets) non è abilitata per impostazione predefinita.  

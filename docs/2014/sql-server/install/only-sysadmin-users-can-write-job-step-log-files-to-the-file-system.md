@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cb21caf909303fb751d9d616ef67efbac355425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806029"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Solo gli utenti sysadmin possono scrivere file di log dei passaggi del processo nel file system
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] scrive facoltativamente un log per ogni passaggio del processo.  
@@ -28,7 +28,7 @@ ms.locfileid: "48166231"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Nelle [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System per i processi che sono proprietà dei membri delle **sysadmin** ruolo predefinito del server. Se il proprietario del processo non è un membro del **sysadmin** ruolo e se l'account proxy è abilitato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System utilizzando le credenziali dell'account proxy.  
   
  Dopo l'aggiornamento, i processi che appartengono a utenti che non sono membri del **sysadmin** ruolo predefinito del server non possono più scrivere log nel file System. Al contrario, questi utenti possono selezionare l'opzione per scrivere i log in una tabella nel **msdb** database. I membri del **sysadmin** ruolo può ancora scrivere file di log nel file System.  

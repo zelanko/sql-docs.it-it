@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699576"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Creazione di set denominati con ambito sessione (MDX)
   Per creare un set denominato disponibile per un'intera sessione MDX (Multidimensional Expressions), è possibile usare l'istruzione [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Un set denominato creato utilizzando l'istruzione CREATE SET non viene rimosso fino alla chiusura della sessione MDX.  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di Query con ambito di set denominati &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Creazione di set denominati con ambito query &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

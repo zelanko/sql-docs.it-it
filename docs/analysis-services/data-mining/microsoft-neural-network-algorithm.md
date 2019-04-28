@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Neural Network | Documenti Microsoft
+title: Algoritmo Microsoft Neural Network | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724972"
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Algoritmo Microsoft Neural Network
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network è un'implementazione dell'architettura di rete neurale diffusa e flessibile per l'apprendimento automatico.  Il funzionamento dell'algoritmo si basa sulla verifica di ogni possibile stato dell'attributo di input rispetto a ogni possibile stato dell'attributo di stima e sul calcolo delle probabilità per ogni combinazione in base ai dati di training. Queste probabilità possono quindi essere usate a scopo di classificazione o regressione o per stimare un risultato, sulla base di alcuni attributi di input. Una rete neurale può essere usata anche per l'analisi di associazione.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "34015542"
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network crea una rete composta da un massimo di tre livelli di nodi, a volte definiti *neuroni*. Tali livelli rappresentano il *livello di input*, il *livello nascosto*e il *livello di output*.  
   
- **Livello di input** : i nodi di input definiscono tutti i valori dell'attributo di input per il modello di data mining e le relative probabilità.  
+ **Livello di input:** Nodi di input definiscono tutti i valori di attributo di input per il modello di data mining e le relative probabilità.  
   
- **Livello nascosto** : i nodi nascosti ricevono input dai nodi di input e forniscono output ai nodi di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al nodo nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
+ **Livello nascosto:** I nodi nascosti ricevono input dai nodi di input e forniscono output ai nodi di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al nodo nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
   
- **Livello di output** : i nodi di output rappresentano valori dell'attributo stimabile per il modello di data mining.  
+ **Livello di output:** I nodi di output rappresentano valori dell'attributo stimabile per il modello di data mining.  
   
  Per una spiegazione dettagliata della creazione dei livelli di output, input e nascosti e dell'assegnazione dei punteggi a tali livelli, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34015542"
   
  Per informazioni generali sulla creazione di query su un modello di data mining, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Non supporta il drill-through di dimensioni di data mining. Questo perché la struttura dei nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "34015542"
 -   Non supporta la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per i modelli di rete neurale & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Esempi di Query del modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Esempi di query sul modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   

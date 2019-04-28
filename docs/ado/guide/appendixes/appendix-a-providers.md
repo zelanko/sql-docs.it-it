@@ -1,5 +1,5 @@
 ---
-title: 'Appendice a: provider | Microsoft Docs'
+title: 'Appendice A: I provider | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719914"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>Appendice a: i dati e i provider di servizi
+# <a name="appendix-a-data-and-service-providers"></a>Appendice A: Provider di servizi e dati
 Questa sezione vengono illustrati tre tipi di provider: provider di dati, i provider di servizi e componenti del servizio. I provider possono essere suddivise in due categorie: quelli che forniscono i dati e quelli che forniscono servizi. Oggetto *provider di dati* possiede i propri dati e la espone in formato tabulare per l'applicazione. Oggetto *provider di servizi* incapsula un servizio tramite producono e usano i dati, in modo da integrare le funzionalità nelle applicazioni ADO. Un provider di servizi può inoltre essere definito un *componente servizio*, che è necessario collaborare con altri provider di servizi o componenti.
 
 ## <a name="data-providers"></a>Provider di dati

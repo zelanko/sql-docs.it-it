@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704002"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Aggiungere un modello di data mining a una struttura di data mining esistente
   È possibile aggiungere più modelli di data mining a una struttura, dopo avere aggiunto il modello iniziale. Ogni modello deve contenere le colonne presenti nella struttura, ma è possibile definire l'utilizzo delle colonne in modo diverso per ogni modello di data mining. Per altre informazioni sulla definizione delle colonne dei modelli di data mining, vedere [Colonne del modello di data mining](mining-model-columns.md).  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681168"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Cambia impostazioni (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Cambia impostazioni** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per cambiare le impostazioni mediante le quali viene controllata l'elaborazione degli oggetti elencati nella finestra di dialogo **Elabora** . Per visualizzare la finestra di dialogo **Cambia impostazioni** , è possibile fare clic su **Cambia impostazioni** nella finestra di dialogo **Elabora** .  
@@ -36,7 +36,7 @@ ms.locfileid: "48077861"
  **Numero massimo attività parallele**  
  Consente di selezionare il numero massimo di attività eseguite in parallelo nell'ambito dell'operazione di elaborazione o di scegliere **Dipendente dal server** per consentire a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di selezionare il numero ottimale di attività parallele.  
   
- **Sequenziale**  
+ **Sequential**  
  Fare clic su questa opzione per elaborare gli oggetti in modo sequenziale.  
   
  **Modalità transazione**  

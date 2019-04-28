@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd6c1da0c11c8fa71570dbb7034c885877e22b7a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805730"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql non supporta più comandi
   Il **osql** utilità non supporta la **ED** e **!!** .  

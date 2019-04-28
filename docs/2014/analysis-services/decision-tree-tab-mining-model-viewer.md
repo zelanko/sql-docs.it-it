@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732682"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Scheda Albero delle decisioni (Visualizzatore modello di data mining)
   Nel riquadro **Albero delle decisioni** è disponibile una rappresentazione visiva delle regole delle decisioni create in un modello di albero delle decisioni. Nelle regole delle decisioni viene descritto il percorso verso un determinato risultato.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Decision Trees](data-mining/microsoft-decision-trees-algorithm.md), [Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Decision Trees](data-mining/microsoft-decision-trees-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -66,8 +66,8 @@ ms.locfileid: "48194491"
  Consente di spostare a destra o a sinistra la barra del dispositivo di scorrimento per modificare il numero di livelli visualizzati nel grafico dell'albero. Per vedere tutti i nodi nel modello, far scorrere la barra completamente a destra.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

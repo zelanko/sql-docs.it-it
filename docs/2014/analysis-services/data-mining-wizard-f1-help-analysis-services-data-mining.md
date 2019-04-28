@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689428"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Guida sensibile al contesto della Creazione guidata modello di data mining (Analysis Services - Data mining)
   Usare la **Creazione guidata modello di data mining** per creare una nuova struttura di data mining e un modello di data mining associato facoltativo.  
@@ -58,9 +58,9 @@ ms.locfileid: "48087761"
  Dopo aver creato la struttura di data mining e un modello di data mining facoltativo, è possibile usare **Progettazione modelli di data mining** per modificare le proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Progettazione modelli di Data Mining](data-mining/data-mining-designer.md)   
- [Creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)   
+ [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Progettazione modelli di data mining](data-mining/data-mining-designer.md)   
+ [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)   
  [Selezione metodo di definizione &#40;Creazione guidata di Data Mining&#41;](select-the-definition-method-data-mining-wizard.md)   
  [Creare la struttura di Data Mining &#40;Creazione guidata di Data Mining&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Selezione vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   

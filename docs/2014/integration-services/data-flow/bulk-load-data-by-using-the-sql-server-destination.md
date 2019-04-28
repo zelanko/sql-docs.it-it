@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828130"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Caricamento bulk dei dati tramite la destinazione SQL Server
   È possibile aggiungere e configurare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine dati.  
@@ -54,7 +54,7 @@ ms.locfileid: "58387409"
     > [!NOTE]  
     >  La destinazione esegue automaticamente il mapping delle colonne con lo stesso nome.  
   
-9. Fare clic su **avanzate** e impostare le opzioni di caricamento bulk: **Mantieni valori identity**, **Mantieni valori null**, **Table lock**, **vincoli Check**, e **attivano i trigger**.  
+9. Fare clic su **Avanzate** e impostare le opzioni di caricamento bulk: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Verifica vincoli**e **Attiva trigger**.  
   
      Facoltativamente, specificare la prima e l'ultima riga di input da inserire, il numero massimo di errori che possono verificarsi prima che l'operazione di inserimento venga arrestata e le colonne in base alle quali viene ordinato l'inserimento.  
   

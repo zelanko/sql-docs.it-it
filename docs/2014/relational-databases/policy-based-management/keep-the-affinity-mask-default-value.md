@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704950"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Valore predefinito per la maschera di affinità
   Questa regola consente di controllare se l'opzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la maschera di affinità è impostata su 0, ovvero il valore predefinito. L'opzione relativa alla maschera di affinità determina in modo dinamico l'affinità della CPU.  

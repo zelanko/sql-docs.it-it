@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699843"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi
   Nelle versioni precedenti i membri calcolati non erano consentiti nelle sub-SELECT o nei sottocubi. A partire da SQL Server 2008 sono invece consentiti e abilitati da una proprietà di connessione. Inoltre, con SQL Server 2008 R2 è stato introdotto un nuovo comportamento per i membri calcolati in sub-SELECT e sottocubi.  
@@ -28,7 +28,7 @@ ms.locfileid: "50148255"
   
 |||  
 |-|-|  
-|valore|Description|  
+|Value|Descrizione|  
 |0|I membri calcolati non sono consentiti in sub-SELECT o sottocubi.<br /><br /> Durante la valutazione della sub-SELECT o del sottocubo viene generato un errore se si fa riferimento a un membro calcolato.|  
 |1|I membri calcolati sono consentiti in sub-SELECT o sottocubi, ma nel sottospazio di restituzione non viene introdotto alcun predecessore.|  
 |2|I membri calcolati sono consentiti in sub-SELECT o sottocubi e nel sottospazio di restituzione vengono introdotti i predecessori. Inoltre, nella selezione dei membri calcolati è consentita la granularità mista.|  

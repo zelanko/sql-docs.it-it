@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47bb42b4709c7978c9319e0021bac4d188d29fab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679548"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmi di data mining (componenti aggiuntivi Data mining di SQL Server)
   I componenti aggiuntivi Data mining per Office supportano la creazione di modelli analitici utilizzando gli algoritmi di data mining seguenti. Tutti gli algoritmi sono basati sui metodi di apprendimento automatico noti e sono stati implementati da Microsoft Research.  

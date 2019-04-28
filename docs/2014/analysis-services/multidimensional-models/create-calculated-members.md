@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80226e3e82dec9e3c163ed96106d1b24846fca0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700202"
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
   È possibile creare misure o membri di dimensioni personalizzati, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
@@ -30,7 +30,7 @@ ms.locfileid: "48077681"
   
  I membri calcolati vengono creati nei cubi. Per creare un membro calcolato, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo membro calcolato** sulla barra degli strumenti. Verrà visualizzato un form in cui è possibile specificare le opzioni seguenti per il membro calcolato.  
   
- **Nome**  
+ **Name**  
  Selezionare il nome del membro calcolato. Questo nome viene visualizzato nell'intestazione della colonna o della riga contenente i valori del membro calcolato quando gli utenti finali esplorano il cubo.  
   
  **Gerarchia padre**  

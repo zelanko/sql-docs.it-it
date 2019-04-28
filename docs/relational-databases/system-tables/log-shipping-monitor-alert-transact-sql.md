@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e5bdee7bfd46e99424169e0890c6aa6bf4d4187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719544"
 ---
 # <a name="logshippingmonitoralert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Archivia l'ID del processo di gestione degli avvisi per il log shipping. Questa tabella è archiviata nel **msdb** database.   
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**alert_job_id**|**uniqueidentifier**|ID del processo di gestione degli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per il log shipping.|  
   

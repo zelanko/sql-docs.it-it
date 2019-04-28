@@ -1,5 +1,5 @@
 ---
-title: 'Appendice d: esempi ADO | Microsoft Docs'
+title: 'Appendice D: Esempi di ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719779"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Appendice d: esempi ADO in Windows SDK
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Appendice D: Esempi di ADO in Windows SDK
 il SDK di Windows contiene molte applicazioni di esempio che illustrano l'uso di codice ADO e servizi desktop remoto. Questi esempi sono utili per imparare a utilizzare ADO e servizi desktop remoto, ma non sono progettati per essere distribuito nei server di produzione.
 
 > [!NOTE]
@@ -34,4 +34,4 @@ il SDK di Windows contiene molte applicazioni di esempio che illustrano l'uso di
  La documentazione di ADO contiene anche gli esempi di codice in più lingue, sono inclusi come argomenti all'interno di questa Guida in linea. Per altre informazioni su questi esempi, vedere [esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples.md) [esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [codice ADO Esempi VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [esempi di codice ADO in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md) [configurazione di servizi desktop remoto](../../../ado/guide/remote-data-service/configuring-rds.md) [appendice c: Programmazione con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [cronologia di ADO](../../../ado/guide/ado-history.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples.md) [esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [codice ADO Esempi VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [esempi di codice ADO in oggetto visivo C++ ](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [appendice a: I provider](../../../ado/guide/appendixes/appendix-a-providers.md) [configurazione di RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [appendice c: Programmazione con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [cronologia di ADO](../../../ado/guide/ado-history.md)

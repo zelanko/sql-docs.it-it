@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721809"
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
   Prima di sviluppare un'applicazione che utilizza funzionalità di replica, è necessario eseguire i passaggi generali per la pianificazione seguenti:  
@@ -108,8 +108,8 @@ ms.locfileid: "54129141"
 |[Concetti di base relativi a RMO (Replication Management Objects)](replication-management-objects-concepts.md)|Codice gestito|Amministrazione, monitoraggio e sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication>|Codice gestito|Sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Codice gestito|Creazione di gestori della logica di business per integrare la logica personalizzata con il processo di sincronizzazione di unione.|  
-|[Stored procedure per la replica &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|Generazione di script|Amministrazione e monitoraggio.|  
-|[Replication Agent Executables Concepts](replication-agent-executables-concepts.md)|Generazione di script|Sincronizzazione.|  
+|[Stored procedure per la replica &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|Scripting|Amministrazione e monitoraggio.|  
+|[Replication Agent Executables Concepts](replication-agent-executables-concepts.md)|Scripting|Sincronizzazione.|  
   
 ## <a name="example"></a>Esempio  
  La società [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] ha la necessità di pubblicare dati per 200 rappresentanti distribuiti in tutto il mondo. I rappresentanti viaggiano spesso e avranno quindi l'esigenza di utilizzare computer portatili o PDA per modificare i dati relativi ai clienti e aggiungere nuovi ordini. Le modifiche dovranno quindi essere sincronizzate con il server di pubblicazione nel momento in cui il rappresentante connette il computer portatile alla rete.  

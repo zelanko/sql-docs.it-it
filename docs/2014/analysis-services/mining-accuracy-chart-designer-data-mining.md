@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703178"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Finestra di progettazione Grafico accuratezza modello di data mining (Data mining)
   Utilizzare la visualizzazione **Grafico accuratezza modello di data mining** per confrontare le prestazioni dei modelli di data mining compilati nella struttura di data mining selezionata.  
@@ -35,9 +35,9 @@ ms.locfileid: "48171971"
   
 -   [Scheda matrice di classificazione &#40;visualizzazione Grafico accuratezza di Data Mining&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     Matrice di classificazione consente di visualizzare per i modelli selezionati nella `Input Selection` scheda.  
+     Consente di visualizzare la matrice di classificazione per i modelli selezionati nella scheda `Input Selection`.  
   
--   [Scheda convalida incrociata &#40;visualizzazione Grafico accuratezza di Data Mining&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Scheda Convalida incrociata &#40;Grafico accuratezza modello di data mining&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Consente di impostare le opzioni e generare i risultati della convalida incrociata per la struttura di data mining selezionata.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48171971"
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione struttura di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Visualizzazione di modelli di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-models-view-data-mining-model-designer.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

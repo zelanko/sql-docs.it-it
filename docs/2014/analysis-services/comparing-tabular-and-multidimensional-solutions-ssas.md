@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680821"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Confronto tra soluzioni tabulari e multidimensionali (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce due approcci distinti per la modellazione dei dati: tabulari e multidimensionali. Benché sia presente una sovrapposizione significativa dei due approcci, ci sono anche differenze importanti quali la decisione su come procedere. In questo argomento vengono confrontate le funzionalità e viene illustrato il modo in cui ogni approccio risolve i requisiti di progetto comuni. Ad esempio, se il supporto di un'origine dati specifica è di importanza fondamentale, la sezione sulle origini dati consente di facilitare la decisione su quale approccio di modellazione adottare.  
@@ -47,7 +47,7 @@ ms.locfileid: "53365843"
   
 -   [Passaggio successivo: Creare una soluzione](#bkmk_Next)  
   
- Altre informazioni sono disponibili in questo articolo tecnico su MSDN: [Scegliere un'esperienza di modellazione tabulare o multidimensionale in SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588).  
+ Informazioni aggiuntive sono disponibili in questo articolo tecnico su MSDN: [Scegliere un'esperienza di modellazione tabulare o multidimensionale in SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588).  
   
 ##  <a name="bkmk_overview"></a> Panoramica di modellazione in Analysis Services  
  Analysis Services offre un'esperienza di sviluppo del modello, nonché la distribuzione di modelli tramite l'hosting di database in un'istanza di Analysis Services. Tra i tipi di modello sono inclusi tabulari e multidimensionali. Come prevedibile, l'hosting di database supporta le soluzioni tabulari e multidimensionali create dall'utente, ma l'hosting del database include anche PowerPivot per SharePoint.  
@@ -98,10 +98,10 @@ ms.locfileid: "53365843"
 ||||  
 |-|-|-|  
 ||**Multidimensionale**|**Tabella**|  
-|Azioni|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|No|  
+|Azioni|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|no|  
 |Oggetti Aggregation|[Sì](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
 |Misure calcolate|[Sì](multidimensional-models/create-calculated-members.md)|Yes|  
-|Assembly personalizzati|[Sì](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
+|Assembly personalizzati|[Sì](multidimensional-models/multidimensional-model-assemblies-management.md)|no|  
 |Rollup personalizzati|Yes|No|  
 |Distinct Count|[Sì](multidimensional-models/use-aggregate-functions.md)|Sì (tramite DAX) *|  
 |Drill-through|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
@@ -191,7 +191,7 @@ ms.locfileid: "53365843"
 |Siti di Power BI in Office 365|In un sito di Power BI, i report Power View possono connettersi a modelli di dati tabulari in esecuzione in locale.|  
 |Server locali (istanze di SQL Server e SharePoint)|Un server di database locale (ossia, un'istanza di SQL Server con Analysis Services installato) è ancora il mezzo principale per rendere disponibili i dati di Analysis Services per report e le applicazioni client. Le soluzioni tabulari, multidimensionali e di data mining vengono eseguite in istanze di Analysis Services su una rete, senza la dipendenza da SharePoint.<br /><br /> SQL Server si integra con SharePoint aggiungendo supporto per l'accesso ai dati PowerPivot e a quelli tabulari. L'investimento in termini di integrazione di SharePoint e SQL Server cresce all'aumentare del numero di funzionalità utilizzate da ciascun prodotto. Se si dispone di SharePoint, è possibile installare SQL Server PowerPivot per SharePoint per abilitare l'accesso ai dati PowerPivot e ottenere i file di connessione con estensione bism di PowerPivot utilizzati per accedere a database tabulari in esecuzione in un'istanza di Analysis Services esterna su un server di rete.<br /><br /> Se si dispone di SQL Server e SharePoint, è possibile supportare la seguente combinazione di servizi e applicazioni:<br /><br /> Modelli di Analysis Services (tabulari o multidimensionali)<br /><br /> Servizi di SharePoint di livello intermedio (ad esempio Excel Services, Reporting Services in SharePoint o servizi PerformancePoint)<br /><br /> Client del browser o rich client (Excel) per l'esplorazione e l'analisi più approfondita dei dati.|  
   
-##  <a name="bkmk_Next"></a> Passaggio successivo: Compilare una soluzione  
+##  <a name="bkmk_Next"></a> Passaggio successivo: Creare una soluzione  
  Dopo aver compreso come confrontare le soluzioni, provare le esercitazioni seguenti per apprendere i passaggi relativi alla creazione di ciascuna soluzione. Nei collegamenti seguenti sono disponibili le esercitazioni in cui vengono illustrati i passaggi.  
   
 -   Compilare un modello tabulare usando [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](tabular-modeling-adventure-works-tutorial.md).  

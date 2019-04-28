@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4195e8f17f822bc84bf72bb41420a477ab683017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795478"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analizzare in Excel (SSAS tabulare)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]la caratteristica Analizza in Excel consente agli autori di modelli tabulari di analizzare rapidamente i progetti di modelli durante lo sviluppo. La caratteristica Analizza in Excel consente di aprire Microsoft Excel, di creare una connessione dell'origine dati al database dell'area di lavoro modello e di aggiungere automaticamente una tabella pivot al foglio di lavoro. Gli oggetti del database dell'area di lavoro (tabelle, colonne e misure) sono inclusi come campi nel relativo elenco della tabella pivot. Gli oggetti e i dati possono essere quindi visualizzati all'interno del contesto dell'utente effettivo o del ruolo e della prospettiva.  
@@ -54,11 +54,11 @@ ms.locfileid: "48081731"
   
 |**Argomento**|**Descrizione**|  
 |---------------|---------------------|  
-|[Analizzare un modello tabulare in Excel &#40;tabulare di SSAS&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|In questo argomento viene descritto come utilizzare la caratteristica Analizza in Excel in Progettazione modelli per aprire Excel, creare una connessione dell'origine dati al database dell'area di lavoro modello e aggiungere una tabella pivot al foglio di lavoro.|  
+|[Analizzare un modello tabulare in Excel &#40;SSAS tabulare&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|In questo argomento viene descritto come utilizzare la caratteristica Analizza in Excel in Progettazione modelli per aprire Excel, creare una connessione dell'origine dati al database dell'area di lavoro modello e aggiungere una tabella pivot al foglio di lavoro.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analizzare un modello tabulare in Excel &#40;tabulare di SSAS&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
- [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)  
+ [Analizzare un modello tabulare in Excel &#40;SSAS tabulare&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
+ [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)  
   
   

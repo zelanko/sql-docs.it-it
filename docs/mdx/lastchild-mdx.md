@@ -1,5 +1,5 @@
 ---
-title: LastChild (MDX) | Documenti Microsoft
+title: LastChild (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77c8d0c3f1332b222a028747619ce792915dbe87
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62797897"
 ---
 # <a name="lastchild-mdx"></a>LastChild (MDX)
 
@@ -42,6 +42,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [FirstChild &#40;MDX&#41;](../mdx/firstchild-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

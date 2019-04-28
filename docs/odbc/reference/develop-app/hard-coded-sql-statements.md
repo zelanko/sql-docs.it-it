@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724216"
 ---
 # <a name="hard-coded-sql-statements"></a>Istruzioni SQL hard-coded
 Le applicazioni che eseguono attività fissa in genere contengono istruzioni SQL hard-coded. Ad esempio, un sistema di immissione dell'ordine potrebbe usare la chiamata seguente a ordini di vendita aperti elenco:  
@@ -29,7 +29,7 @@ Le applicazioni che eseguono attività fissa in genere contengono istruzioni SQL
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Esistono diversi vantaggi per le istruzioni SQL hard-coded: possono essere verificate quando l'applicazione viene scritta; sono più semplici da implementare rispetto a istruzioni costruite in fase di esecuzione. e semplificano l'applicazione.  
+ Esistono diversi vantaggi per le istruzioni SQL hard-coded: Possono essere verificate quando l'applicazione viene scritta; sono più semplici da implementare rispetto a istruzioni costruite in fase di esecuzione. e semplificano l'applicazione.  
   
  Usando i parametri delle istruzioni e preparazione di istruzioni forniscono modi ancora migliori per usare le istruzioni SQL hard-coded. Si supponga, ad esempio, che la tabella di parti contiene le colonne PartID, descrizione e il prezzo. Un modo per inserire una nuova riga in questa tabella, è possibile costruire ed eseguire un' **Inserisci** istruzione:  
   

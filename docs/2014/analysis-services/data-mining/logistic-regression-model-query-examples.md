@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13afa5437c0628092ee5c0d09f1fc61e0298bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722183"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Esempi di query sul modello di regressione logistica
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime utilizzando nuovi dati.  
@@ -41,7 +41,7 @@ ms.locfileid: "48094681"
 ##  <a name="bkmk_top"></a> Acquisizione di informazioni sul modello di regressione logistica  
  I modelli di regressione logistica vengono creati utilizzando l'algoritmo Microsoft Neural Network con un particolare set di parametri. In un modello di regressione logistica sono pertanto contenute alcune delle informazioni presenti in un modello di rete neurale, ma in forma meno complessa. Per comprendere la struttura del contenuto del modello e i tipi di informazioni archiviati dai diversi tipi di nodo, vedere [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
- Per proseguire negli scenari di query, è possibile creare un modello di regressione logistica come descritto nella sezione seguente di Esercitazione intermedia sul data mining: [Lezione 5: Compilazione dei modelli di rete neurale e di regressione logistica &#40;Esercitazione intermedia sul data mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+ Per proseguire negli scenari di query, è possibile creare un modello di regressione logistica come descritto nella sezione seguente dell'esercitazione intermedia sul Data Mining dei dati: [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
  È possibile usare anche la struttura di data mining, Targeted Mailing, da [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -65,7 +65,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a> Esempio di query 1: Recupero di parametri di modello tramite un set di righe dello schema di data mining  
+###  <a name="bkmk_Query1"></a> Esempio di Query 1: Recupero di parametri di modello tramite un set di righe dello schema di data mining  
  L'esecuzione di una query sul set di righe dello schema di data mining consente di trovare i metadati relativi al modello, ad esempio la data e l'ora di creazione, la data e l'ora dell'ultima elaborazione, il nome della struttura di data mining su cui si basa il modello e il nome della colonna utilizzata come attributo stimabile. Nell'esempio seguente vengono restituiti i parametri utilizzati quando è stato creato il modello, il nome e il tipo di modello e la relativa data di creazione.  
   
 ```  
@@ -80,7 +80,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a> Esempio di query 2: Ricerca di dettagli aggiuntivi sul modello tramite DMX  
+###  <a name="bkmk_Query2"></a> Esempio di Query 2: Ricerca di dettagli aggiuntivi sul modello tramite DMX  
  Nella query seguente vengono restituite informazioni di base sul modello di regressione logistica. Si tenga presente che un modello di regressione logistica è per molti aspetti simile a un modello di rete neurale, inclusa la presenza di un nodo delle statistiche marginali (NODE_TYPE = 24) che descrive i valori utilizzati come input. In questa query di esempio viene utilizzato il modello di mailing diretto e i valori di tutti gli input vengono recuperati dalla tabella nidificata, NODE_DISTRIBUTION.  
   
 ```  
@@ -108,7 +108,7 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>Query di stima per un modello di regressione logistica  
  È possibile usare la funzione [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx) con ogni tipo di modello di data mining per fornire nuovi dati al modello ed eseguire stime in base ai nuovi valori. Sono inoltre disponibili funzioni che consentono di restituire informazioni aggiuntive sulla stima, ad esempio la probabilità che una stima sia corretta. In questa sezione vengono forniti alcuni esempi di query di stima su un modello di regressione logistica.  
   
-###  <a name="bkmk_Query3"></a> Query di esempio 3: Esecuzione di stime per un valore continuo  
+###  <a name="bkmk_Query3"></a> Esempio di Query 3: Esecuzione di stime per un valore continuo  
  Poiché la regressione logistica supporta anche l'utilizzo di attributi continui sia per l'input sia per la stima, è facile creare modelli che correlano i vari fattori nei dati. È possibile utilizzare query di stima per esplorare la relazione fra questi fattori.  
   
  Nell'esempio di query riportato di seguito, basato sul modello di call center tratto dall'esercitazione intermedia, viene creata una query singleton che stima il livello di servizio per il turno del venerdì mattina. Tramite la funzione [PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx) viene restituita una tabella annidata che contiene statistiche importanti per comprendere la validità del valore stimato.  
@@ -135,9 +135,9 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 ||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Per altre informazioni su probabilità, supporto e deviazione standard di valori nella tabella NODE_DISTRIBUTION nidificata, vedere [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Per altre informazioni su probabilità, supporto e deviazione standard di valori nella tabella NODE_DISTRIBUTION nidificata, vedere [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
-###  <a name="bkmk_Query4"></a> Query di esempio 4: Esecuzione di stime per un valore discreto  
+###  <a name="bkmk_Query4"></a> Esempio di Query 4: Esecuzione di stime per un valore discreto  
  La regressione logistica viene in genere utilizzata negli scenari nei quali si desidera analizzare i fattori che contribuiscono a un risultato binario. Anche se tramite il modello usato nell'esercitazione viene stimato un valore continuo, **ServiceGrade**, in uno scenario reale è necessario configurare il modello per stimare se il livello di servizio ha soddisfatto un valore target discretizzato. In alternativa, è possibile restituire le stime usando un valore continuo, ma in un secondo momento è necessario raggruppare i risultati stimati in **Buono**, **Discreto**o **Scarso**.  
   
  Nell'esempio riportato di seguito viene illustrato come modificare la modalità di raggruppamento dell'attributo stimabile. A tale scopo, creare una copia della struttura di data mining, quindi modificare il metodo di discretizzazione della colonna di destinazione in modo che i valori siano raggruppati anziché continui.  
@@ -194,7 +194,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|Funzione di stima|Utilizzo|  
+|Funzione di stima|Uso|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità adattata dello stato specificato.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
@@ -209,10 +209,10 @@ NATURAL PREDICTION JOIN
 >  Per i modelli di reti neurali e di regressione logistica la funzione [PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx) restituisce un solo valore che rappresenta la dimensione del set di training per l'intero modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di Data Mining](data-mining-queries.md)   
+ [Query di data mining](data-mining-queries.md)   
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
- [Riferimento tecnico l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Contenuto dei modelli di regressione logistica modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

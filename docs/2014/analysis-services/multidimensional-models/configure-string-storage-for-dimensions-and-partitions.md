@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700919"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
   È possibile riconfigurare l'archiviazione di stringhe per contenere stringhe molto grandi in attributi di dimensione o partizioni che superano il limite di dimensioni del file di 4 GB impostato per gli archivi di stringhe. Se nelle dimensioni o partizioni sono inclusi archivi di stringhe di queste dimensioni, è possibile risolvere il problema del vincolo delle dimensioni file modificando la proprietà **StringStoresCompatibilityLevel** a livello di dimensione o di partizione, per oggetti locali nonché collegati (locali o remoti).  
@@ -25,7 +25,7 @@ ms.locfileid: "48060391"
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1050**|Viene specificata l'architettura dell'archivio di stringhe predefinita, soggetta a dimensioni del file massime di 4 GB per archivio.|  
 |**1100**|Viene specificato un archivio di stringhe più ampio in grado di supportare fino a 4 miliardi di stringhe univoche per archivio.|  
@@ -88,9 +88,9 @@ ms.locfileid: "48060391"
  È necessario utilizzare l'opzione Elaborazione completa su ogni oggetto in cui viene utilizzata la nuova architettura dell'archivio di stringhe. Prima dell'elaborazione, assicurarsi di eseguire un'analisi di impatto sulla dimensione per controllare se anche per gli oggetti dipendenti è necessaria la rielaborazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [L'elaborazione e modalità di archiviazione delle partizioni](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Elaborazione e modalità di archiviazione delle partizioni](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Archiviazione di dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689025"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Restituisce il nome del tipo SQL per il nome di un tipo di token specificato.  
@@ -69,15 +69,15 @@ fIsMaxType
 |`SQLDATETIME`|Prima o dopo|**datetime**|  
 |`SQLBITN`|Prima o dopo|**bit-null**|  
 |`SQLBIT`|Prima o dopo|**bit**|  
-|`SQLBIGCHAR`|no|**char**|  
-|`SQLCHARACTER`|no|**char**|  
-|`SQLBIGVARCHAR`|no|**varchar**|  
+|`SQLBIGCHAR`|No|**char**|  
+|`SQLCHARACTER`|No|**char**|  
+|`SQLBIGVARCHAR`|No|**varchar**|  
 |`SQLVARCHAR`|no|**varchar**|  
 |`SQLTEXT`|Prima o dopo|**text**|  
-|`SQLBIGBINARY`|no|**binary**|  
+|`SQLBIGBINARY`|No|**binary**|  
 |`SQLBINARY`|no|**Binario**|  
-|`SQLBIGVARBINARY`|no|**varbinary**|  
-|`SQLVARBINARY`|no|**varbinary**|  
+|`SQLBIGVARBINARY`|No|**Varbinary**|  
+|`SQLVARBINARY`|No|**Varbinary**|  
 |`SQLIMAGE`|Prima o dopo|**Immagine**|  
 |`SQLINTN`|Prima o dopo|**int-null**|  
 |`SQLDATETIMN`|Prima o dopo|**datetime-null**|  
@@ -89,26 +89,26 @@ fIsMaxType
 |`SQLAOPMIN`|Prima o dopo|**Min**|  
 |`SQLAOPMAX`|Prima o dopo|**Max**|  
 |`SQLDATETIM4`|Prima o dopo|**smalldatetime**|  
-|`SQLMONEY4`|Prima o dopo|**smallmoney**|  
+|`SQLMONEY4`|Prima o dopo|**Smallmoney**|  
 |`SQLFLT4`|Prima o dopo|**Real**|  
 |`SQLUNIQUEID`|Prima o dopo|**uniqueidentifier**|  
-|`SQLNCHAR`|no|**nchar**|  
-|`SQLNVARCHAR`|no|**Nvarchar**|  
-|`SQLNTEXT`|Prima o dopo|**ntext**|  
+|`SQLNCHAR`|No|**Nchar**|  
+|`SQLNVARCHAR`|No|**Nvarchar**|  
+|`SQLNTEXT`|Prima o dopo|**Ntext**|  
 |`SQLVARIANT`|Prima o dopo|**sql_variant**|  
 |`SQLINT8`|Prima o dopo|**Bigint**|  
-|`SQLCHARACTER`|Sì|**ntext**|  
-|`SQLBIGCHAR`|Sì|**ntext**|  
-|`SQLBIGVARCHAR`|Sì|**ntext**|  
-|`SQLVARCHAR`|Sì|**ntext**|  
-|`SQLBINARY`|Sì|**varbinary(max)**|  
-|`SQLBIGBINARY`|Sì|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|Sì|**varbinary(max)**|  
-|`SQLVARBINARY`|Sì|**varbinary(max)**|  
-|`SQLNCHAR`|Sì|**nvarchar(max)**|  
-|`SQLNVARCHAR`|Sì|**nvarchar(max)**|  
-|`SQLXML`|Sì|**Xml**|  
-|`SQLUDT`|Prima o dopo|**tipo definito dall'utente**|  
+|`SQLCHARACTER`|Yes|**ntext**|  
+|`SQLBIGCHAR`|Yes|**ntext**|  
+|`SQLBIGVARCHAR`|Yes|**ntext**|  
+|`SQLVARCHAR`|Yes|**ntext**|  
+|`SQLBINARY`|Yes|**varbinary(max)**|  
+|`SQLBIGBINARY`|Yes|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Yes|**varbinary(max)**|  
+|`SQLVARBINARY`|Yes|**varbinary(max)**|  
+|`SQLNCHAR`|Yes|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Yes|**nvarchar(max)**|  
+|`SQLXML`|Yes|**Xml**|  
+|`SQLUDT`|Prima o dopo|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
  I valori di parametro del token per i tipi di data/ora sono descritti nella colonna della tabella in "Tipo in SQLNCLI. h" [modifiche apportate alla copia Bulk per avanzate di data e ora i tipi &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  

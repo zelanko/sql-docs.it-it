@@ -1,5 +1,5 @@
 ---
-title: DrillupLevel (MDX) | Documenti Microsoft
+title: DrillupLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00851557b502bda3a98763eff4bac9c3abdccff
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690772"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 
@@ -35,10 +35,10 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
-## <a name="remarks"></a>Remarks  
- Il **DrillupLevel** funzione restituisce un set di membri organizzato gerarchicamente in base ai membri inclusi nel set specificato. L'ordine dei membri nel set specificato viene mantenuto.  
+## <a name="remarks"></a>Note  
+ Il **DrillupLevel** funzione restituisce un set di membri organizzato gerarchicamente in base i membri inclusi nel set specificato. L'ordine dei membri nel set specificato viene mantenuto.  
   
- Se si specifica un'espressione di livello il **DrillupLevel** funzione restituisce il set recuperando solo i membri che sono di sopra del livello specificato. Se si specifica un'espressione di livello ma nessun membro del livello specificato è rappresentato nel set specificato, viene restituito tale set.  
+ Se viene specificata un'espressione di livello, il **DrillupLevel** funzione costruisce il set recuperando solo i membri che sono di sopra del livello specificato. Se si specifica un'espressione di livello ma nessun membro del livello specificato è rappresentato nel set specificato, viene restituito tale set.  
   
  Se non si specifica un'espressione di livello, la funzione genera il set recuperando solo i membri del livello superiore rispetto al livello inferiore della prima dimensione indicata nel set specificato.  
   
@@ -58,6 +58,6 @@ SELECT DrillUpLevel
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

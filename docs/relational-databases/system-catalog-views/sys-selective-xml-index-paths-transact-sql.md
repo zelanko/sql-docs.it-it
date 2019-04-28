@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860838"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  Verranno aggiunte due nuove righe in sys.selective_xml_index_paths corrispondenti all'indice sxi1.  
 
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella con la colonna XML.|  
 |**index_id**|**int**|ID univoco dell'indice XML selettivo.|  
@@ -62,8 +62,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|ID del tipo di sistema della colonna.|  
 |**user_type_id**|**tinyint**|ID del tipo di utente della colonna.|  
 |**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = La colonna è di tipo varchar(max), nvarchar(max), varbinary(max) o xml.|  
-|**Precisione**|**tinyint**|Precisione massima del tipo se numerico. In caso contrario, 0|  
-|**Scalabilità**|**tinyint**|Scala massima del tipo se numerico. Altrimenti, è impostato su 0.|  
+|**precisione**|**tinyint**|Precisione massima del tipo se numerico. In caso contrario, 0|  
+|**scala**|**tinyint**|Scala massima del tipo se numerico. Altrimenti, è impostato su 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = hint SINGLETON non presente.<br /><br /> 1 = hint di ottimizzazione SINGLETON applicato.|  
   

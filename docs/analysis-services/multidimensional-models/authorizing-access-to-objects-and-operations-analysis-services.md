@@ -1,5 +1,5 @@
 ---
-title: Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services) | Documenti Microsoft
+title: Autorizzare l'accesso a oggetti e operazioni (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717588"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34024038"
 ## <a name="top-down-overview-of-analysis-services-authorization"></a>Panoramica dall'alto verso il basso dell'autorizzazione di Analysis Services  
  Questa sezione descrive il flusso di lavoro di base per la configurazione delle autorizzazioni.  
   
- **Passaggio 1: Amministrazione del server**  
+ **Passaggio 1: Amministrazione server**  
   
  Decidere innanzitutto chi dovrà disporre dei diritti di amministratore a livello di server. Durante l'installazione, l'amministratore locale che installa SQL Server deve specificare uno o più account di Windows come amministratore del server di Analysis Services. Gli amministratori del server dispongono di tutte le autorizzazioni possibili in un server, compresa l'autorizzazione per visualizzare, modificare ed eliminare un oggetto nel server o visualizzare i dati associati. Al termine dell'installazione, un amministratore del server può aggiungere o rimuovere gli account per modificare l'appartenenza di questo ruolo. Per informazioni dettagliate su questo livello di autorizzazione, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34024038"
   
  Una volta creata, la soluzione multidimensionale o tabulare viene distribuita nel server come database. Un amministratore del server può delegare le attività di amministrazione del database definendo un ruolo con autorizzazioni di Controllo completo per il database specifico. I membri di questo ruolo possono elaborare o eseguire query sugli oggetti nonché creare ruoli aggiuntivi per l'accesso a cubi, dimensioni e altri oggetti all'interno del database stesso. Per altre informazioni, vedere [Concedere autorizzazioni per il database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
- **Passaggio 3: Abilitazione dell'accesso a un cubo o a un modello per carichi di lavoro di query e di elaborazione**  
+ **Passaggio 3: Abilitare l'accesso cubo o un modello per i carichi di lavoro di query ed elaborazione**  
   
  Per impostazione predefinita, solo gli amministratori del server e del database dispongono dell'accesso ai cubi e ai modelli tabulari. Per rendere queste strutture di dati disponibili ad altri utenti dell'organizzazione sono necessarie assegnazioni di ruolo aggiuntive che eseguono il mapping degli account utente e di gruppo di Windows ai cubi o modelli oltre alle autorizzazioni che specificano i privilegi di **lettura**. Per informazioni dettagliate, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34024038"
 > [!NOTE]  
 >  Gli utenti non necessitano di alcuna autorizzazione per le tabelle relazionali nel database relazionale sottostante da cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] carica i dati, né di alcuna autorizzazione a livello di file nel computer in cui è in esecuzione l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **Passaggio 4 (facoltativo): Concessione o meno dell'accesso a oggetti interni del cubo**  
+ **Passaggio 4 (facoltativo): Consentire o negare l'accesso a oggetti interni del cubo**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce le impostazioni di sicurezza per impostare le autorizzazioni su singoli oggetti, compresi i membri della dimensione e le celle all'interno di un modello di dati. Per informazioni dettagliate, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) e [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   

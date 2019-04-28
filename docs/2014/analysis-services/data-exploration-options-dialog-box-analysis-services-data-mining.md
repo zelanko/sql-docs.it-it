@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679538"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Finestra di dialogo Opzioni di esplorazione dati (Analysis Services – Data Mining)
   Utilizzare la finestra di dialogo **Opzioni di esplorazione dati** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per impostare le opzioni di campionamento e dei grafici per la finestra di dialogo **Esplora dati** . Per visualizzare la finestra di dialogo **Opzioni di esplorazione dati** è possibile fare clic su **Opzioni di campionamento** nella finestra di dialogo **Esplora dati** .  

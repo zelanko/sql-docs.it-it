@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712798"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
   Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
@@ -37,7 +37,7 @@ ms.locfileid: "52539755"
 |Scheda|\t<br /><br /> Questo è il carattere di terminazione del campo predefinito.|  
 |Carattere di nuova riga|\n<br /><br /> Questo è il carattere di terminazione della riga predefinito.|  
 |Ritorno a capo/avanzamento riga|\r|  
-|Barra rovesciata<sup>1</sup>|\\\|  
+|Backslash<sup>1</sup>|\\\|  
 |Terminazione null (non visibile)<sup>2</sup>|\0|  
 |Tutti i caratteri stampabili (i caratteri di controllo non sono stampabili, ad eccezione dei caratteri Null, di tabulazione, di nuova riga e di ritorno a capo)|(*, A, t, l e così via)|  
 |Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(**\t\*\*, end, !!!!!!!!!!, \t-\n e così via)|  
@@ -82,7 +82,7 @@ ms.locfileid: "52539755"
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione può essere utile per un campo dati `char` o `nchar`. Ad esempio:  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati `char` o `nchar`. Ad esempio:   
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -164,12 +164,12 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
 |Opzione|attribute|  
 |------------|---------------|  
-|LA PROPRIETÀ DATAFILETYPE **='`char`'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
+|DATAFILETYPE **='`char`'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |FIELDTERMINATOR **='**`,`**'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
 |ROWTERMINATOR **='**`\n`**'**|Specifica il carattere di nuova riga come carattere di terminazione della riga.|  
   

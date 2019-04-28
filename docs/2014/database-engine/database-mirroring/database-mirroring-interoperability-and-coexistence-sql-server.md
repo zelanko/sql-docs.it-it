@@ -1,5 +1,5 @@
 ---
-title: 'Mirroring del database: Interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
+title: 'Il mirroring del database: Interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807307"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mirroring del database: Interoperabilità e coesistenza (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Il mirroring del database: Interoperabilità e coesistenza (SQL Server)
   È possibile utilizzare il mirroring del database con i componenti e le funzionalità seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Istanze del Cluster di Failover AlwaysOn (SQL Server Failover Clustering)](database-mirroring-and-sql-server-failover-cluster-instances.md)  

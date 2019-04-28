@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691876"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML - classe di evento
   La classe di evento Showplan XML viene generata quando in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL. Includere la classe di evento Showplan XML per identificare gli operatori Showplan. In questa classe ciascun evento viene archiviato come documento XML correttamente definito.  

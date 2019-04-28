@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710376"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Esempio delle proprietà NumericScale e Precision dell'oggetto Column (VC++)
 Questo esempio viene illustrato il [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [precisione](../../../ado/reference/adox-api/precision-property-adox.md) le proprietà del [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto. Questo codice consente di visualizzare il valore per il **Order Details** sommario è la *Northwind* database.  

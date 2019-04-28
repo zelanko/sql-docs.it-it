@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681088"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calcoli (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare la scheda **Calcoli** in Progettazione cubi per visualizzare e modificare i calcoli, inclusi i membri calcolati, i set denominati e i comandi di script MDX (Multidimensional Expressions) per il cubo selezionato.  
@@ -56,7 +56,7 @@ ms.locfileid: "48103911"
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Creare set denominati](multidimensional-models/create-named-sets.md)  
   

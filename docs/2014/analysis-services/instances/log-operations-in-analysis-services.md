@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703308"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
   Un'istanza di Analysis Services registrerà le notifiche di server, errori e avvisi per il file msmdsrv log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](https://support.microsoft.com/kb/2965035).  
@@ -38,7 +38,7 @@ ms.locfileid: "53363753"
 -   [Suggerimenti e procedure consigliate](#bkmk_tips)  
   
 > [!NOTE]  
->  Per informazioni sulla registrazione, potrebbe essere utile interessarsi alle operazioni di traccia che mostrano i percorsi di elaborazione e di esecuzione delle query. Oggetti di traccia per analisi ad hoc e prolungate (come il controllo dell'accesso ai cubi) e consigli sull'uso ottimale dell'Utilità Traccia eventi, di SQL Server Profiler e di Xevent sono disponibili accedendo ai collegamenti forniti nella pagina [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md).  
+>  Per informazioni sulla registrazione, potrebbe essere utile interessarsi alle operazioni di traccia che mostrano i percorsi di elaborazione e di esecuzione delle query. Oggetti di traccia per analisi ad hoc e prolungate (come il controllo dell'accesso ai cubi) ai, nonché indicazioni su come utilizzare al meglio registratore di volo e SQL Server Profiler XEvent sono disponibili ai tramite i collegamenti in questa pagina: [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Posizione e tipi di log  
  Analysis Services fornisce i log descritti di seguito.  
@@ -49,7 +49,7 @@ ms.locfileid: "53363753"
 |Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|No|  
 |File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|No|  
   
- Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ È consigliabile il collegamento seguente per le risorse di informazioni aggiuntive non trattate in questo argomento: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Informazioni generali sulle impostazioni di configurazione dei file di log  
  È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Visualizzare [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) per istruzioni sulla modifica del file.  
@@ -149,7 +149,7 @@ ms.locfileid: "53363753"
   
  **Configurare le segnalazioni di arresti anomali**  
   
- Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Per istruzioni su come configurare i file di dump, è possibile usare ancora il seguente articolo della Knowledge Base anche se non molto recente: [Come configurare Analysis Services per generare file di dump di memoria](https://support.microsoft.com/kb/919711).  
+ Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Questo articolo non recente della Knowledge base viene ancora usato per fornire istruzioni su come configurare i file di dump: [Come configurare Analysis Services per generare file di dump di memoria](https://support.microsoft.com/kb/919711).  
   
  L'impostazione di configurazione che verrà modificata con maggiore probabilità è `CreateAndSendCrashReports`, usata per determinare se verrà generato o meno un file di dump di memoria.  
   

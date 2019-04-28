@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37cf1cb1a6fe2193ec30ad3163950834351c3364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861541"
 ---
 # <a name="procedures-odbc"></a>Procedure ODBC
 Oggetto *procedure* è un oggetto eseguibile archiviato nell'origine dati. In genere, si tratta di una o più istruzioni SQL precompilate.  

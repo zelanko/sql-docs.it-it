@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cde44399dcee1492ab56fb2f32b2fd1da060c1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726905"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>Definire il tipo di relazione tra attributi
   Si definisce il tipo di relazione di una relazione tra attributi utilizzando la scheda **Relazioni tra attributi** in Progettazione dimensioni a cui è possibile accedere da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

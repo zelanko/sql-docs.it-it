@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690855"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 

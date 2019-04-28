@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722210"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include strumenti client che è possibile utilizzare per gestire strutture e modelli di data mining esistenti. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
@@ -80,14 +80,14 @@ ms.locfileid: "50147576"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrizioni:** nessuna.  
+ **Restrizioni:** Nessuna.  
   
 ### <a name="data-mining-extensions-dmx"></a>Data Mining Extensions (DMX)  
  È possibile utilizzare DMX con altre interfacce di comando, ad esempio [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net, per creare, eliminare ed eseguire query su strutture e modelli di data mining.  
   
 -   [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](/sql/dmx/dmx-statements-data-definition)  
   
- **Restrizioni:** alcune proprietà non possono essere modificate usando DMX.  
+ **Restrizioni:** Alcune proprietà non possono essere modificate usando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XMLA (XML for Analysis) è il linguaggio DDL (Data Definition Language) per Analysis Services. XMLA consente di controllare la maggior parte degli oggetti di data mining e delle operazioni del server. Tutte le operazioni di gestione tra il client e il server possono essere eseguite tramite XMLA. Per semplicità è possibile usare il linguaggio ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) per eseguire il wrapping degli elementi XML.  

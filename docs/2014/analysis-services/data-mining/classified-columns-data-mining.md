@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715178"
 ---
 # <a name="classified-columns-data-mining"></a>Colonne classificate (Data mining)
   Quando si definisce una colonna classificata, si crea una relazione tra la colonna corrente e un'altra colonna nella struttura di data mining. Nei dati nella colonna della struttura di data mining definita come colonna classificata sono contenute informazioni relative alle categorie in cui vengono descritti i valori in un'altra colonna nella struttura di data mining.  
@@ -60,8 +60,8 @@ ms.locfileid: "48193751"
  Il valore della colonna indica il peso o fattore di replica del case del valore associato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati &#40;Data Mining&#41;](data-types-data-mining.md)  
+ [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tipi di dati &#40;Data mining&#41;](data-types-data-mining.md)  
   
   

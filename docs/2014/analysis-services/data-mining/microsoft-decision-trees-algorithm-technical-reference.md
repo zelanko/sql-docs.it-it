@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722003"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo ibrido che incorpora diversi metodi per la creazione di un albero e supporta più attività analitiche, tra le quali sono incluse la regressione, la classificazione e l'associazione. Tale algoritmo supporta la modellazione di attributi discreti e continui.  
@@ -61,7 +61,7 @@ ms.locfileid: "53365403"
  Per una spiegazione più dettagliata sul modo in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] funzionamento dell'algoritmo Decision Trees con colonne stimabili discrete, vedere [Learning Bayesian Networks: La combinazione di conoscenza e dati statistici](https://go.microsoft.com/fwlink/?LinkId=45963). Per altre informazioni sul funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees nel caso di colonne stimabili continue, vedere l'appendice dell'articolo [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(Modelli di albero autoregressivi per l'analisi delle serie temporali).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Metodi di valutazione e caratteristica di selezione degli attributi  
- L'algoritmo Microsoft Decision Trees offre tre formule per valutare l'Information Gain, ovvero l'entropia di Shannon, la rete Bayes con probabilità a priori K2 e la rete Bayes Dirichlet con probabilità a priori a distribuzione uniforme. Tutti e tre i metodi sono consolidati nel campo del data mining. È consigliabile provare a utilizzare diversi parametri e metodi di valutazione in modo da individuare quelli che forniscono i migliori risultati. Per ulteriori informazioni sui metodi di valutazione, vedere [Feature Selection](../../sql-server/install/feature-selection.md).  
+ L'algoritmo Microsoft Decision Trees offre tre formule per valutare l'information gain: Entropia di Shannon, la rete Bayes con K2 precedenti e rete Bayes con a priori a distribuzione Dirichlet uniforme. Tutti e tre i metodi sono consolidati nel campo del data mining. È consigliabile provare a utilizzare diversi parametri e metodi di valutazione in modo da individuare quelli che forniscono i migliori risultati. Per ulteriori informazioni sui metodi di valutazione, vedere [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Tutti gli algoritmi di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usano automaticamente la selezione di funzionalità per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la funzionalità di selezione degli attributi dipende dall'algoritmo impiegato per la compilazione del modello. I parametri dell'algoritmo che controllano la caratteristica di selezione degli attributi per un modello di albero delle decisioni sono MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "53365403"
  *SCORE_METHOD*  
  Determina il metodo utilizzato per calcolare il punteggio di divisione. Sono disponibili le opzioni seguenti:  
   
-|ID|nome|  
+|ID|Nome|  
 |--------|----------|  
 |1|Entropia|  
 |3|Bayes con probabilità a priori K2|  
@@ -163,11 +163,11 @@ ms.locfileid: "53365403"
  *SPLIT_METHOD*  
  Determina il metodo utilizzato per la divisione del nodo. Sono disponibili le opzioni seguenti:  
   
-|ID|nome|  
+|ID|Nome|  
 |--------|----------|  
 |1|**Binario:** Indica che indipendentemente dal numero effettivo dei valori dell'attributo, l'albero deve essere suddiviso in due rami.|  
 |2|**Completamento:** Indica che l'albero possono essere create tante divisioni quanti sono i valori di attributo.|  
-|3|**Entrambi:** Specifica che Analysis Services consente di scegliere se usare una divisione binaria o completa per ottenere risultati migliori.|  
+|3|**Both:** Specifica che Analysis Services consente di scegliere se usare una divisione binaria o completa per ottenere risultati migliori.|  
   
  Il valore predefinito è 3.  
   

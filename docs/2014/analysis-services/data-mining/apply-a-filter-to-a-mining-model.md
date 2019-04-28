@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692093"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
   Se la struttura di data mining contiene una tabella nidificata, è possibile applicare un filtro alla tabella del case, alla tabella nidificata o a entrambe.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Fare clic nella casella di testo **Valore** e digitare un valore.  
   
-     Ad esempio, scegliere `Income` come colonna, selezionare l'operatore maggiore di (>), quindi digitare `30000`.  
+     Ad esempio, selezionare `Income` come colonna, selezionare il valore maggiore rispetto a operator (>) e quindi digitare `30000`.  
   
 9. Fare clic sulla riga successiva nella griglia.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selezionare un operatore e digitare un valore come descritto nei passaggi 7 e 8.  
   
-     Ad esempio, scegliere nuovamente `Income` come colonna, selezionare l'operatore minore di (<), quindi digitare `40000`.  
+     Ad esempio, selezionare `Income` nuovamente alla colonna, selezionare l'operatore minore di (<) e quindi digitare `40000`.  
   
 12. Fare clic sulla riga successiva nella griglia.  
   

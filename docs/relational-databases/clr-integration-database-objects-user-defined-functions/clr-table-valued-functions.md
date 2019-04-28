@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707139"
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definizione di una funzione con valori di tabella in Transact-SQL  
- La sintassi per la definizione di una funzione con valori di tabella CLR è simile a quella di un [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione con valori di tabella, con l'aggiunta del **EXTERNAL NAME** clausola. Ad esempio:  
+ La sintassi per la definizione di una funzione con valori di tabella CLR è simile a quella di un [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione con valori di tabella, con l'aggiunta del **EXTERNAL NAME** clausola. Ad esempio:   
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864507"
 ---
 # <a name="item-property-example-vb"></a>Esempio della proprietà Item (VB)
 Questo esempio viene illustrato come la [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà accede ai membri di una raccolta. Nell'esempio viene aperto il ***autori*** tabella del ***Pubs*** database con un comando con parametri.  
@@ -137,7 +137,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
