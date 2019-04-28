@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731713"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni drill-through (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro dell'**editor dei form delle azioni drill-through** nella scheda **Azioni** di Progettazione cubi per modificare l'azione drill-through selezionata nel riquadro **Libreria azioni**. Per altre informazioni sulle azioni drill-through, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "48213231"
   
  La griglia include le colonne seguenti:  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Dimensions**|Consente di selezionare la dimensione utilizzata per restituire l'attributo. Selezionare MEASURES per eseguire il drill-through sulle misure.|  
 |**Restituire colonne**|Consente di selezionare l'attributo o la misura dalla dimensione selezionata da restituire all'esecuzione dell'azione.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48213231"
   
  Nella tabella seguente vengono descritte le impostazioni disponibili.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un'attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interattiva|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
@@ -104,7 +104,7 @@ ms.locfileid: "48213231"
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Sulla barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730545"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0
   In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -113,7 +113,7 @@ ms.locfileid: "53363723"
   
  È necessario formattare l'unità per il file system NTFS. Il percorso della cartella creata non deve contenere spazi.  
   
-1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources.  
+1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI e una cartella Resources.  
   
      ![Esplora file con i file da copiare](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Esplora File con i file da copiare")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "53363723"
   
 3.  Incollare i file copiati in precedenza in questa nuova cartella.  
   
-4.  Verificare che nella cartella \inetpub\wwwroot\OLAP nel server Web siano contenuti i file MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources. La struttura di cartelle dovrebbe essere simile alla seguente:  
+4.  Verificare che nella cartella \inetpub\wwwroot\OLAP nel server web contiene quanto segue: MSMDPUMP. DLL, MSMDPUMP. INI e una cartella Resources. La struttura di cartelle dovrebbe essere simile alla seguente:  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -182,7 +182,7 @@ ms.locfileid: "53363723"
   
  L'**autenticazione anonima** viene spesso usata durante il test iniziale, perché la relativa semplicità di configurazione consente di convalidare rapidamente la connettività HTTP ad Analysis Services. In soli pochi passaggi è possibile assegnare un account utente univoco come identità, concedere all'account le autorizzazioni in Analysis Services, utilizzare l'account per verificare l'accesso ai dati in un'applicazione client e infine disabilitare l'autenticazione anonima al completamento del test.  
   
- È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non hanno account utente di Windows, ma si attengono alle procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato nell'articolo [Abilitare l'autenticazione anonima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
+ È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non dispongono di account utente di Windows, ma si attengono le procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato in questo articolo: [Abilitare l'autenticazione anonima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
   
  Quando è abilitata l'autenticazione anonima, la connessione come utente anonimo è consentita per qualsiasi connessione utente all'endpoint HTTP. Sarà in grado di controllare le connessioni di singolo utente, né utilizzare l'identità dell'utente per selezionare i dati da un modello. Come è possibile vedere, l'utilizzo dell'autenticazione anonima ha impatto su vari aspetti, dalla progettazione dei modelli, all'aggiornamento dei dati e all'accesso a questi ultimi. Tuttavia, se gli utenti non dispongono di un account di accesso di Windows con cui iniziare, è possibile che l'unica opzione disponibile sia l'account anonimo.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "53363723"
   
  Se è stato configurato un oggetto denominato o predefinito di istanza di Analysis Services in ascolto su una porta fissa, è necessario aggiungere il numero di porta al nome del server (ad esempio, \<ServerName > AW-lt;nomeserver>AW-Srv01:55555</nomeserver&gt\</ServerName >) ed è necessario consentire in ingresso connessioni a tale porta nel Firewall di Windows.  
   
-## <a name="step-5-grant-data-access-permissions"></a>Passaggio 5: Concedere le autorizzazioni di accesso ai dati  
+## <a name="step-5-grant-data-access-permissions"></a>Passaggio 5: Concedere le autorizzazioni di accesso  
  Come indicato in precedenza, sarà necessario concedere le autorizzazioni nell'istanza di Analysis Services. A ogni oggetto di database verranno assegnati ruoli mediante i quali viene fornito un livello specificato di autorizzazioni (lettura o lettura/scrittura) e ogni ruolo disporrà di membri costituiti da identità utente di Windows.  
   
  Per impostare le autorizzazioni è possibile utilizzare SQL Server Management Studio. Nella cartella **Database** | **Ruoli** è possibile creare ruoli, specificare le autorizzazioni del database, assegnare l'appartenenza agli account utente e di gruppo Windows, nonché concedere le autorizzazioni di lettura o scrittura per oggetti specifici. In genere, le autorizzazioni di **lettura** per un cubo sono sufficienti per le connessioni client, mediante le quali vengono usati, ma non aggiornati, i dati del modello.  

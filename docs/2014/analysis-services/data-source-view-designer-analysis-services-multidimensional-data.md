@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732666"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Progettazione vista origine dati (Analysis Services - Dati multidimensionali)
   Una vista origine dati è una vista logica di un'origine dati relazionale esterna utilizzata per creare cubi e dimensioni in un modello multidimensionale.  
@@ -49,11 +49,11 @@ ms.locfileid: "48075311"
 |Rinominare colonne o tabelle oppure creare nuove colonne calcolate. Ad esempio, concatenare un nome e un cognome in una nuova colonna per il nome completo.|[Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
 |Aggiungere manualmente relazioni tra tabelle.|[Definire relazioni logiche in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
 |Creare una query denominata per definire un nuovo oggetto basato su una query T-SQL.|[Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|Esplorare i dati sottostanti per visualizzare i valori di dati effettivi rappresentati dagli oggetti del modello.<br /><br /> L'esplorazione dei dati consente di controllare visivamente e copiare i dati restituiti dalla query o dalla tabella dimensionale sottostante. L'esplorazione dei dati utilizza per impostazione predefinita la prima metodologia di campionamento di conteggio, con un conteggio di esempio di 5000, ma è possibile revisionare queste impostazioni.|[Esplorare i dati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|Creare un diagramma di tutte o parte delle tabelle e relazioni in una vista origine dati.|[Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|Esplorare i dati sottostanti per visualizzare i valori di dati effettivi rappresentati dagli oggetti del modello.<br /><br /> L'esplorazione dei dati consente di controllare visivamente e copiare i dati restituiti dalla query o dalla tabella dimensionale sottostante. L'esplorazione dei dati utilizza per impostazione predefinita la prima metodologia di campionamento di conteggio, con un conteggio di esempio di 5000, ma è possibile revisionare queste impostazioni.|[Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|Creare un diagramma di tutte o parte delle tabelle e relazioni in una vista origine dati.|[Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Vista di origine aggiungendo o rimuovendo tabelle o viste in una Data &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   
