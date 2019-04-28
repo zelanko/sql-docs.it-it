@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715358"
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
   Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
@@ -56,7 +56,7 @@ ms.locfileid: "48087491"
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> Esempio di query 1: Recupero di metadati del modello tramite DMX  
+###  <a name="bkmk_Query1"></a> Esempio di Query 1: Recupero di metadati del modello tramite DMX  
  Con la query seguente vengono restituiti i metadati di base sul modello di clustering `TM_Clustering`creato nell'Esercitazione di base sul data mining. I metadati disponibili nel nodo padre di un modello di clustering includono il nome del modello, il database in cui è archiviato e il numero di nodi figlio del modello. Questa query utilizza una query contenuto DMX per recuperare i metadati dal nodo padre del modello:  
   
 ```  
@@ -84,7 +84,7 @@ WHERE NODE_TYPE = 1
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> Esempio di query 2: Recupero di metadati del modello dal set di righe dello schema  
+###  <a name="bkmk_Query2"></a> Esempio di Query 2: Recupero di metadati del modello dal set di righe dello schema  
  Se si esegue una query sul set di righe dello schema di data mining, è possibile trovare le stesse informazioni restituite in una query contenuto DMX. Tuttavia, il set di righe dello schema contiene alcune colonne aggiuntive, tra cui i parametri utilizzati durante la creazione del modello, la data e l'ora dell'ultima elaborazione del modello e il proprietario del modello.  
   
  Nell'esempio seguente vengono restituite le date di creazione, modifica e ultima elaborazione del modello. Vengono inoltre restituiti i parametri di clustering utilizzati per la compilazione del modello e la dimensione del set di training. Queste informazioni possono essere utili per documentare il modello o per determinare quali opzioni di clustering sono state utilizzate per creare un modello esistente.  
@@ -110,7 +110,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>Ricerca di informazioni sui cluster  
  Tramite le query contenuto più utili sui modelli di clustering generalmente viene restituito lo stesso tipo di informazioni che è possibile esplorare usando il **Visualizzatore cluster**. ovvero i profili e le caratteristiche del cluster e l'analisi discriminante tra cluster. In questa sezione vengono forniti esempi di query che recuperano queste informazioni.  
   
-###  <a name="bkmk_Query3"></a> Esempio di query 3: Restituzione di un cluster o di un elenco di cluster  
+###  <a name="bkmk_Query3"></a> Esempio di Query 3: Restituzione di un Cluster o un elenco di cluster  
  Poiché tutti i cluster includono un nodo di tipo 5, è possibile recuperare facilmente un elenco dei cluster eseguendo una query sul contenuto del modello per individuare solo i nodi di tale tipo. È inoltre possibile filtrare i nodi restituiti per probabilità o per supporto, come illustrato in questo esempio.  
   
 ```  
@@ -136,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> Esempio di query 4: Restituzione di attributi per un cluster  
+###  <a name="bkmk_Query4"></a> Esempio di Query 4: Restituzione di attributi per un cluster  
  Nel **Visualizzatore cluster** viene visualizzato un profilo con l'elenco degli attributi e dei valori per ogni cluster. Viene inoltre visualizzato un istogramma che indica la distribuzione dei valori per l'intero popolamento dei case nel modello. Se si esplora il modello nel visualizzatore, è possibile copiare facilmente l'istogramma dalla Legenda data mining e quindi incollarlo in Excel o in un documento di Word. È inoltre possibile utilizzare il riquadro Caratteristiche cluster del visualizzatore per confrontare graficamente gli attributi di cluster diversi.  
   
  Se tuttavia è necessario ottenere valori per più di un cluster alla volta, risulta più semplice eseguire una query sul modello. Ad esempio, quando si esplora il modello, si potrebbe notare che i primi due cluster differiscono tra loro in relazione a un attributo, ovvero `Number Cars Owned`. Pertanto, si desidera estrarre i valori per ogni cluster.  
@@ -178,7 +178,7 @@ WHERE NODE_TYPE = 5
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> Esempio di query 5: Restituzione del profilo di un cluster tramite stored procedure di sistema  
+###  <a name="bkmk_Query5"></a> Esempio di Query 5: Restituzione del profilo di un Cluster con sistema Stored procedure  
  Come alternativa rapida, anziché scrivere query usando DMX, è anche possibile chiamare le stored procedure di sistema usate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i cluster. Nell'esempio seguente viene illustrato come utilizzare le stored procedure interne per restituire il profilo per un cluster con ID 002.  
   
 ```  
@@ -204,7 +204,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> Esempio di query 6: Individuazione dei fattori discriminanti per un cluster  
+###  <a name="bkmk_Query6"></a> Esempio di Query 6: Individuazione dei fattori discriminanti per un Cluster  
  La scheda **Analisi discriminante tra cluster** del **Visualizzatore cluster** consente di confrontare facilmente un cluster con un altro cluster o con tutti i case rimanenti (il complemento del cluster).  
   
  La creazione di query per restituire queste informazioni può tuttavia essere complessa e potrebbe essere necessario eseguire un'elaborazione aggiuntiva sul client per archiviare i risultati temporanei e confrontare i risultati di due o più query. Come alternativa rapida, è possibile utilizzare le stored procedure di sistema.  
@@ -235,7 +235,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> Esempio d query 7: Restituzione di case appartenenti a un cluster  
+###  <a name="bkmk_Query7"></a> Esempio di Query 7: Restituzione di case appartenenti a un cluster  
  Se per il modello di data mining è stato abilitato il drill-through, è possibile creare query tramite cui vengono restituite informazioni dettagliate sui case utilizzati nel modello. Inoltre, se il drill-through è stato abilitato per la struttura di data mining, è possibile includere le colonne della struttura sottostante usando la funzione [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
  Nell'esempio seguente vengono restituite due colonne utilizzate nel modello, Age e Region, e un'altra colonna, First Name, che non è stata utilizzata nel modello. La query restituisce solo i case classificati in Cluster 1.  
@@ -257,8 +257,8 @@ WHERE IsInNode('001')
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> Esempio di query 8: Stima dei risultati da un modello di clustering  
- Se il modello di clustering creato contiene un attributo stimabile, è possibile utilizzarlo per eseguire stime sui risultati. Tuttavia, il modello gestisce l'attributo stimabile in modo diverso a seconda del fatto che la colonna stimabile venga impostata `Predict` o `PredictOnly`. Se si imposta l'utilizzo della colonna da `Predict`, i valori per tale attributo vengono aggiunti al modello di clustering e vengono visualizzati come attributi nel modello finito. Se invece si imposta l'utilizzo della colonna su `PredictOnly`, i valori non vengono utilizzati per creare cluster. Al contrario, una volta completata la modalità, l'algoritmo di clustering crea nuovi valori per il `PredictOnly` attributo basato su cluster a cui appartiene ogni case.  
+###  <a name="bkmk_Query8"></a> Esempio di Query 8: Stima dei risultati da un modello di clustering  
+ Se il modello di clustering creato contiene un attributo stimabile, è possibile utilizzarlo per eseguire stime sui risultati. Tuttavia, il modello gestisce l'attributo stimabile in modo diverso a seconda che la colonna stimabile venga impostata su `Predict` o su `PredictOnly`. Se si imposta l'utilizzo della colonna su `Predict`, i valori relativi a tale attributo vengono aggiunti al modello di clustering e vengono visualizzati come attributi nel modello finito. Se invece si imposta l'utilizzo della colonna su `PredictOnly`, i valori non vengono utilizzati per creare cluster. Al contrario, al termine della modalità, l'algoritmo di clustering crea nuovi valori per l'attributo `PredictOnly` in base ai cluster a cui appartiene ogni case.  
   
  Con la query seguente viene fornito un nuovo case singolo al modello, in cui le uniche informazioni sul case sono l'età e il sesso. L'istruzione SELECT specifica la coppia attributo/valore stimabile di interesse, mentre la funzione [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) indica la probabilità che un case con tali attributi genererà il risultato di destinazione.  
   
@@ -310,7 +310,7 @@ NATURAL PREDICTION JOIN
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> Esempio di query 9: Determinazione dell'appartenenza al cluster  
+###  <a name="bkmk_Query9"></a> Esempio di Query 9: Determinazione dell'appartenenza al cluster  
  In questo esempio vengono usate la funzione [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) per restituire il cluster a cui è più probabile che appartenga il nuovo case e la funzione [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) per restituire la probabilità di appartenenza a tale cluster.  
   
 ```  
@@ -333,7 +333,7 @@ NATURAL PREDICTION JOIN
   
  [Torna all'inizio](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> Esempio di query 10: Restituzione di tutti i cluster possibili con probabilità e distanza  
+###  <a name="bkmk_Query10"></a> Esempio di Query 10: Restituzione di tutti i cluster possibili con probabilità e distanza  
  Nell'esempio precedente il punteggio di probabilità non è molto alto. Per determinare se è disponibile un cluster migliore, è possibile usare la funzione [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) insieme alla funzione [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) per restituire una tabella annidata che includa tutti i cluster possibili, oltre alla probabilità che il nuovo case appartenga a ogni cluster. La parola chiave FLATTENED viene utilizzata per modificare il set di righe gerarchico in una tabella flat per semplificare la visualizzazione.  
   
 ```  
@@ -370,7 +370,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|Funzione di stima|Utilizzo|  
+|Funzione di stima|Uso|  
 |[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Viene restituita la distanza del case di input dal cluster specificato o la distanza del case di input dal cluster più probabile, se non viene specificato alcun cluster.<br /><br /> Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
@@ -389,8 +389,8 @@ NATURAL PREDICTION JOIN
  Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di Data Mining](data-mining-queries.md)   
- [Riferimento tecnico per Microsoft Clustering algoritmo](microsoft-clustering-algorithm-technical-reference.md)   
+ [Query di data mining](data-mining-queries.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)  
   
   

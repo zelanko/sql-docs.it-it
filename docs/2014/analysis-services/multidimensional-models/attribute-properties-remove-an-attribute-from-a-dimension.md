@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00181ef49b8656065aea9382d21df0b16cff187a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703767"
 ---
 # <a name="remove-an-attribute-from-a-dimension"></a>Rimuovere un attributo da una dimensione
   Per rimuovere un attributo da una dimensione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], fare clic con il pulsante destro del mouse sull'attributo nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e quindi scegliere **Elimina**. Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**. In questo modo l'attributo viene rimosso dalla dimensione, ma l'operazione non ha alcuna ripercussione sulla vista origine dati associata alla dimensione.  

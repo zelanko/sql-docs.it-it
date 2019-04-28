@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699236"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Database modelli multidimensionali (SSAS)
   Un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una raccolta di origini dati, viste origine dati, cubi, dimensioni e ruoli. Facoltativamente, in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere incluse strutture per data mining e assembly personalizzati che consentono di aggiungere funzioni definite dall'utente al database.  
@@ -50,18 +50,18 @@ ms.locfileid: "48082801"
   
  [Spostare un database di Analysis Services](move-an-analysis-services-database.md)  
   
- [Rinominare un Database multidimensionale di &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [Rinominare un database multidimensionale &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
  [Impostare la compatibilità a livello di un Database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Impostare le proprietà di Database multidimensionale &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Impostare le proprietà dei database multidimensionali &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Sincronizzare database di Analysis Services](synchronize-analysis-services-databases.md)  
   
  [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connettersi in modalità Online a un Database di Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Connettersi in modalità online a un database di Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Creare un progetto di Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Query su dati multidimensionali con MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   

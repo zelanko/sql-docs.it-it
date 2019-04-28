@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702139"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
@@ -59,7 +59,7 @@ ms.locfileid: "48226621"
 > [!NOTE]  
 >  Se il tipo di dimensione e i tipi di attributo standard non sono stati definiti al momento della creazione della dimensione, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per impostare tali valori dopo aver creato la dimensione. Per altre informazioni, vedere [Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione](bi-wizard-add-dimension-intelligence-to-a-dimension.md) o (per una dimensione di tipo conti) [Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- La procedura guidata imposta automaticamente il tipo di dimensione in base ai tipi di attributo specificati. I tipi di attributo specificati nella procedura guidata hanno impostato il `Type` proprietà per gli attributi. L'impostazione della proprietà `Type` per la dimensione ed i suoi attributi offre informazioni sui contenuti di una dimensione alle applicazioni server e client. In alcuni casi, questi `Type` solo le impostazioni delle proprietà forniscono materiale sussidiario per le applicazioni client ed è facoltative. In altri casi, ad esempio per gli account, tempo o valuta le dimensioni, questi `Type` le impostazioni delle proprietà determinano comportamenti specifici basati su server e possono essere necessarie per implementare determinati comportamenti del cubo.  
+ La procedura guidata imposta automaticamente il tipo di dimensione in base ai tipi di attributo specificati. I tipi di attributo specificati nella procedura guidata hanno impostato la proprietà `Type` per gli attributi. L'impostazione della proprietà `Type` per la dimensione ed i suoi attributi offre informazioni sui contenuti di una dimensione alle applicazioni server e client. In alcuni casi, l'impostazione di proprietà `Type` offre informazioni solo alle applicazioni client ed è facoltativa. In altri casi, ad esempio per le dimensioni Conto, Periodo o Valuta, le impostazioni della proprietà `Type` determinano comportamenti specifici basati sul server e possono essere necessarie per implementare determinati comportamenti del cubo.  
   
  Per altre informazioni sui tipi di dimensione e attributo, vedere [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [Configurare tipi di attributi](attribute-properties-configure-attribute-types.md).  
   
@@ -87,10 +87,10 @@ ms.locfileid: "48226621"
  Nella pagina **Completamento procedura guidata** si completa la procedura guidata digitando un nome per la dimensione nuova e rivedendo la struttura della dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una dimensione generando una tabella Non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Creare una dimensione temporale generando una tabella temporale](create-a-time-dimension-by-generating-a-time-table.md)   
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Creare una dimensione temporale generando una tabella temporale](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)   
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
  [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

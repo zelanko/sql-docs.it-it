@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679799"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
   In questo argomento viene descritto come specificare i percorsi del nodo da indicizzare e gli hint di ottimizzazione per l'indicizzazione in fase di creazione o modifica di indici XML selettivi.  
@@ -29,7 +29,7 @@ ms.locfileid: "58528803"
  Per altre informazioni sugli indici XML selettivi, vedere [Indici XML selettivi &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Informazioni sui tipi XQuery e SQL Server in dati XML non tipizzati  
- Gli indici XML selettivi supportano due sistemi di tipi: I tipi XQuery e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi. Il percorso indicizzato può essere utilizzato per la corrispondenza di un'espressione XQuery o del tipo restituito del metodo value() del tipo di dati XML.  
+ Negli indici XML selettivi sono supportati due sistemi di tipi: tipi XQuery e tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il percorso indicizzato può essere utilizzato per la corrispondenza di un'espressione XQuery o del tipo restituito del metodo value() del tipo di dati XML.  
   
 -   Se un percorso da indicizzare non viene annotato oppure viene annotato con la parola chiave XQUERY, il percorso corrisponde a un'espressione XQuery. Esistono due varianti per i percorsi dei nodi con annotazioni XQuery:  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi corrispondono al valore restituito del metodo value().  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi supportano l'hint di ottimizzazione: SINGLETON.  
+-   I tipi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano l'hint di ottimizzazione SINGLETON.  
   
  È obbligatori specificare un tipo per i percorsi che restituiscono i tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilizzare lo stesso tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrebbe utilizzato nel metodo value().  
   
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>Scelta dei nodi da indicizzare  
  Per identificare il subset corretto di nodi da aggiungere a un indice XML selettivo, è possibile utilizzare i due semplici principi indicati di seguito.  
   
-1.  **Principio 1**: Per valutare una specifica espressione XQuery, indicizzare tutti i nodi da esaminare.  
+1.  **Principio 1**: per valutare una specifica espressione XQuery, indicizzare tutti i nodi da esaminare.  
   
     -   Indicizzare tutti i nodi la cui esistenza o il cui valore viene utilizzato nell'espressione XQuery.  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Il nodo `b`, poiché viene applicato un predicato per il nodo`b` nell'espressione XQuery.  
   
-2.  **Principio 2**: Per prestazioni ottimali, indicizzare tutti i nodi necessari per valutare una specifica espressione XQuery. Se si indicizzano solo alcuni nodi, l'indice XML selettivo migliora la valutazione delle sottoespressioni che includono solo nodi indicizzati.  
+2.  **Principio 2**: per ottenere prestazioni ottimali, indicizzare tutti i nodi necessari per valutare una specifica espressione XQuery. Se si indicizzano solo alcuni nodi, l'indice XML selettivo migliora la valutazione delle sottoespressioni che includono solo nodi indicizzati.  
   
  Per migliorare le prestazioni dell'istruzione SELECT precedentemente illustrata, è possibile creare l'indice XML selettivo seguente:  
   
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Se una query richiede il valore di un nodo indicizzato con l'hint node(), non è possibile utilizzare l'indice XML selettivo.  
   
 ### <a name="singleton-optimization-hint"></a>Hint di ottimizzazione SINGLETON  
- Si applica a: XQuery o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati  
+ Si applica a: tipi di dati XQuery o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  L'hint di ottimizzazione SINGLETON specifica la cardinalità di un nodo. Questo hint migliora le prestazioni delle query, poiché è risaputo che un nodo viene visualizzato al massimo una volta nel relativo elemento padre o predecessore.  
   

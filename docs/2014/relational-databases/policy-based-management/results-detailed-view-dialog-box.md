@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691702"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Finestra di dialogo Visualizzazione dettagliata risultati
   In questa finestra di dialogo vengono visualizzati i risultati della valutazione dei criteri avviata utilizzando la finestra di dialogo **Valuta criteri** e facendo clic su **Valuta**. Questa finestra di dialogo, il cui contenuto è di sola lettura, consente di identificare la parte di un'espressione di proprietà in cui può essersi verificato un errore.  

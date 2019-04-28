@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700572"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Creare e gestire una partizione remota (Analysis Services)
   In caso di partizionamento di un gruppo di misure, è possibile configurare un database secondario in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] come archiviazione della partizione.  
@@ -67,7 +67,7 @@ ms.locfileid: "53356643"
   
 2.  Nel server subordinato: In Esplora soluzioni, creare una nuova origine dati che punta al database del cubo, db-master. Usare il provider **OLE DB nativo\Microsoft OLE DB per Analysis Services 11.0**.  
   
-3.  Nel server subordinato: Distribuzione della soluzione.  
+3.  Nel server subordinato: Distribuire la soluzione.  
   
 #### <a name="enable-features-in-ssms"></a>Abilitare funzionalità (in SSMS)  
   

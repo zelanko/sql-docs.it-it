@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693516"
 ---
 # <a name="clientnetworkprotocol-class"></a>Classe ClientNetworkProtocol
   Il [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) installati in un'istanza client che consente la comunicazione con un'istanza di protocolli di rete rappresenta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] attraverso una rete.  

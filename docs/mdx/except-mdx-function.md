@@ -1,5 +1,5 @@
 ---
-title: Except (MDX) | Documenti Microsoft
+title: Except (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03d9b5140eb0cbf9d868e43c65213efe917994a9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690874"
 ---
 # <a name="except-mdx-function"></a>Except-funzione (MDX)
 
@@ -35,8 +35,8 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- Se **tutti** è specificato, i duplicati individuati nel primo set vengono mantenuti; duplicati trovati nel secondo set verranno comunque rimosse. I membri verranno restituiti nell'ordine in cui sono visualizzati nel primo set.  
+## <a name="remarks"></a>Note  
+ Se **tutti** è specificato, i duplicati individuati nel primo set vengono mantenuti; duplicati individuati nel secondo set verranno comunque rimosse. I membri verranno restituiti nell'ordine in cui sono visualizzati nel primo set.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questa funzione.  
@@ -58,7 +58,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [- &#40;Ad eccezione di&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [- &#40;Except&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

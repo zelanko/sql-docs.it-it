@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9979c894d4dc74fc3f9c2783bdc7a46131f94e5c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697700"
 ---
 # <a name="report-data-f1-help"></a>Guida sensibile al contesto di Dati report
   Negli argomenti di questa sezione vengono fornite le informazioni sulle opzioni che è possibile impostare per origini dati, origini dati condivise e set di dati, nonché le informazioni sulle finestre Progettazione query disponibili in Progettazione report.  

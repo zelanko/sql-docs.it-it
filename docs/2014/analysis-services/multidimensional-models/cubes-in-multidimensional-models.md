@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700146"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubi nei modelli multidimensionali
   Un cubo è una struttura multidimensionale che contiene informazioni per scopi analitici. Un cubo è principalmente costituito da dimensioni e misure. Le dimensioni definiscono la struttura del cubo utilizzata per effettuare delle sezioni, mentre le misure forniscono valori numerici aggregati di interesse per l'utente finale. Come struttura logica, un cubo consente a un'applicazione client di recuperare i valori delle misure, come se si trovassero nelle celle del cubo. Le celle vengono definite per ogni possibile valore riepilogato. Una cella del cubo è definita dall'intersezione dei membri della dimensione e contiene i valori aggregati delle misure a quell'intersezione specifica.  
@@ -32,7 +32,7 @@ ms.locfileid: "48103957"
 ## <a name="components-of-cubes"></a>Componenti dei cubi  
  Un cubo è composto dagli elementi seguenti:  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |Dimensioni|[Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)|  
 |Misure e gruppi di misure|[Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|  
@@ -40,13 +40,13 @@ ms.locfileid: "48103957"
 |prospettive|[Prospettive nei modelli multidimensionali](perspectives-in-multidimensional-models.md)|  
 |Gerarchie|[Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)|  
 |Azioni|[Azioni nei modelli multidimensionali](actions-in-multidimensional-models.md)|  
-|Indicatori KPI|[Indicatori di prestazioni chiave &#40;KPI&#41; nei modelli multidimensionali](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Indicatori KPI|[Indicatori KPI nei modelli multidimensionali](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calcoli|[Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md)|  
 |Traduzioni|[Traduzioni nei modelli multidimensionali](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare un cubo mediante la Creazione guidata cubo](create-a-cube-using-the-cube-wizard.md)|Viene illustrato come utilizzare la Creazione guidata cubo per definire un cubo, le dimensioni, gli attributi delle dimensioni e le gerarchie definite dall'utente.|  
 |[Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|Descrive come definire i gruppi di misure.|  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d1186c1d2c000786c25cab150b64eaae73c6b6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679885"
 ---
 # <a name="cube-wizard-f1-help"></a>Guida sensibile al contesto della Creazione guidata cubo
   Utilizzare la Creazione guidata cubo per creare un cubo per un progetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48171691"
   
  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Cubi**in **Esplora soluzioni** per scegliere un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuovo cubo**. Dopo avere creato un cubo mediante la Creazione guidata cubo, è possibile utilizzare Progettazione cubi per modificarne le proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Selezione metodo di creazione &#40;Creazione guidata cubo&#41;](select-creation-method-cube-wizard.md)  
   

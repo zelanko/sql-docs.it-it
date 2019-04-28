@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714764"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
   In questo argomento si illustrano i limiti della capacità di calcolo per differenti edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con i processori con l'Hyper-Threading.  
@@ -83,7 +83,7 @@ ms.locfileid: "53202470"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: Gestione delle licenze basate su core<sup>1</sup>|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
-|Developer|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Sviluppatore|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Copia di valutazione|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Business Intelligence|Limitato a meno di 4 socket o 16 core|Valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|  

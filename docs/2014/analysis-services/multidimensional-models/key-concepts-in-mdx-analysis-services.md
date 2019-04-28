@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700641"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concetti chiave di MDX (Analysis Services)
   Prima di usare MDX (Multidimensional Expressions) per eseguire query su dati multidimensionali o creare espressioni MDX in un cubo, è utile comprendere i concetti e i termini relativi ai dati multidimensionali.  
@@ -103,7 +103,7 @@ ms.locfileid: "52512803"
 ## <a name="key-attributes"></a>Attributi chiave  
  I modelli sono una raccolta di oggetti correlati che si basano su chiavi e indici per creare le associazioni. I modelli Analysis Services non sono diversi. Per ogni dimensione, che è uguale a una tabella in un modello relazionale, è presente un attributo chiave. L' **attributo** chiave è usato nelle relazioni di chiave esterna con la tabella dei fatti (gruppo di misure). Tutti gli attributi non chiave della dimensione sono collegati, direttamente o indirettamente, all'attributo chiave.  
   
- Spesso, ma non sempre, l'attributo chiave è anche l' **attributo di granularità**. La granularità indica il livello di dettaglio o di precisione nei dati. Anche in questo caso un esempio semplifica la comprensione di questo concetto. Esaminare i valori relativi alle date. Per le vendite giornaliere sono necessari valori di dati specificati in modo giornaliero. Per le quote, potrebbero essere sufficienti valori di dati trimestrali, ma se i dati analitici sono costituiti dai risultati di una competizione sportiva, è possibile che la granularità corrisponda ai millisecondi. Il livello di precisione dei valori di dati corrisponde alla granularità.  
+ Spesso, ma non sempre, l'attributo chiave è anche l' **attributo di granularità**. La granularità indica il livello di dettaglio o di precisione nei dati. Anche in questo caso un esempio semplifica la comprensione di questo concetto. Prendere in considerazione i valori di data: Per le vendite giornaliere, è necessario i valori di data specificati per il giorno; per le quote, ogni tre mesi potrebbe essere sufficiente, ma se i dati analitici sono costituiti da un evento sportivo di risultati di competizione, il livello di dettaglio potrebbe essere necessario molto bene ai millisecondi. Il livello di precisione dei valori di dati corrisponde alla granularità.  
   
  Valuta è un altro esempio: un'applicazione finanziaria tenga traccia dei valori monetari con a molte cifre decimali, mentre raccolta fondi della tua scuola locali potrebbero essere sufficienti valori al dollaro più vicino. La comprensione della granularità è importante, perché è consigliabile evitare di archiviare dati non necessari. L'eliminazione di millisecondi da un timestamp o di centesimi da un importo di vendita può permettere di risparmiare tempo di archiviazione ed elaborazione quando un livello così specifico di dati non è rilevante ai fini dell'analisi.  
   

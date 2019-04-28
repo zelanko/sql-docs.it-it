@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699020"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modellazione multidimensionale (SSAS)
   Una soluzione multidimensionale Analysis Services utilizza strutture cubo per l'analisi dei dati aziendali in più dimensioni. La modalità multidimensionale è la modalità server predefinita di Analysis Services, in cui sono inclusi una query e un motore di calcolo per i dati OLAP, con modalità di archiviazione MOLAP, ROLAP e HOLAP per bilanciare prestazioni con requisiti di dati scalabili. Il motore OLAP di Analysis Services è il server OLAP leader del settore che offre ottimi risultati con un'ampia gamma di strumenti di Business Intelligence. La maggior parte delle distribuzioni di Analysis Services viene installata come server OLAP classico.  
@@ -26,10 +26,10 @@ ms.locfileid: "48117561"
   
  Un altro importante vantaggio all'utilizzo di database multidimensionali di Analysis Services è l'integrazione con gli strumenti di generazione report di BI di uso comune quali Excel, Reporting Services e PerformancePoint, nonché di applicazioni personalizzate e soluzioni di terze parti.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [I database modello multidimensionale &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Database modelli multidimensionali &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Elaborazione degli oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
   

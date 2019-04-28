@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732969"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
   Nella scheda **Struttura di data mining** della finestra di progettazione di data mining è possibile impostare o modificare le proprietà di una struttura di data mining e delle colonne e tabelle annidate associate. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
@@ -38,7 +38,7 @@ ms.locfileid: "48190011"
   
 ### <a name="properties-of-the-mining-structure"></a>Proprietà della struttura di data mining  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training.<br /><br /> Nota: Questa proprietà deve essere impostata su `KeepTrainingCases` per abilitare il drill-through e il controllo.|  
 |**Regole di confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
@@ -54,13 +54,13 @@ ms.locfileid: "48190011"
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Proprietà delle colonne della struttura di data mining  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifica la colonna descritta da una colonna classificata.|  
 |**Contenuto**|Tipo di contenuto della colonna.|  
 |**Descrizione**|Descrive la colonna. È consigliabile che la descrizione della colonna fornisca informazioni sulla derivazione o l'alterazione dei dati della colonna per il data mining.|  
-|**DiscretizationBucketCount**|Visualizza il numero di bucket della colonna discretizzata.<br /><br /> Attivata solo se il tipo di contenuto è impostato su `Discretized`.<br /><br /> Questa proprietà è di sola lettura.|  
-|**DiscretizationMethod**|Visualizza il metodo utilizzato per discretizzare la colonna.<br /><br /> Attivata solo se il tipo di contenuto è impostato su `Discretized`.<br /><br /> Questa proprietà è di sola lettura.|  
+|**DiscretizationBucketCount**|Visualizza il numero di bucket della colonna discretizzata.<br /><br /> Attivato solo se il tipo di contenuto è impostato su `Discretized`.<br /><br /> Questa proprietà è di sola lettura.|  
+|**DiscretizationMethod**|Visualizza il metodo utilizzato per discretizzare la colonna.<br /><br /> Attivato solo se il tipo di contenuto è impostato su `Discretized`.<br /><br /> Questa proprietà è di sola lettura.|  
 |**Distribuzione**|Specifica la distribuzione del contenuto della colonna.|  
 |**ID**|Visualizza l'identificatore della colonna.<br /><br /> Se si modifica il valore della proprietà Name della colonna, non influisce sul valore della proprietà ID.|  
 |**IsKey**|Indica se la colonna è una colonna chiave.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48190011"
  Per altre informazioni sull'impostazione o sulla modifica delle proprietà, vedere [attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una struttura di Data Mining relazionale](create-a-relational-mining-structure.md)   
+ [Creare una struttura di data mining relazionale](create-a-relational-mining-structure.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  
   
   

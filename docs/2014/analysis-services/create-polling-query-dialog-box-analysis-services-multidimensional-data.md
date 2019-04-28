@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679729"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query di polling (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea query di polling** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di polling nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Una query di polling è in genere una query singleton che restituisce un valore utilizzabile da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per determinare se sono state apportate modifiche a una tabella o a un altro oggetto relazionale. Per visualizzare la finestra di dialogo **Crea query di polling**, è possibile fare clic sul pulsante con i puntini di sospensione (**...**) nella colonna **Query di polling** della griglia relativa all'opzione **Polling pianificato** nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Per altre informazioni sulla scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** vedere [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&41#;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
@@ -58,21 +58,21 @@ ms.locfileid: "48181463"
  **Barra degli strumenti**  
  La barra degli strumenti consente di gestire i set di dati, selezionare i riquadri da visualizzare e controllare le varie funzioni di query.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Passa a Generatore Query generico**|Selezionare questo comando per visualizzare solo le opzioni disponibili nella vista Generatore query generico. Verranno visualizzate solo le opzioni seguenti.<br /><br /> **Riquadro SQL**<br /><br /> **Riquadro risultati**<br /><br /> **Barra degli strumenti**, contenente solo **Passa a Generatore query Visual Database Tools** ed **Esegui**<br /><br /> <br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Passa a Generatore Query Visual Database Tools**|Selezionare questo comando per visualizzare tutte le opzioni disponibili nella vista Generatore query Visual Database Tools.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query generico** .|  
-|**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde il **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde il **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il **Riquadro risultati**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Passa a Generatore Query generico**|Selezionare questo comando per visualizzare solo le opzioni disponibili nella vista Generatore query generico. Verranno visualizzate solo le opzioni seguenti.<br /><br /> **Riquadro SQL**<br /><br /> **Riquadro risultati**<br /><br /> **Barra degli strumenti**, contenente solo **Passa a Generatore query Visual Database Tools** ed **Esegui**<br /><br /> <br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Passa a Generatore Query Visual Database Tools**|Selezionare questo comando per visualizzare tutte le opzioni disponibili nella vista Generatore query Visual Database Tools.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query generico** sia selezionata.|  
+|**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde il **riquadro griglia**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde il **riquadro SQL**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il **Riquadro risultati**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
 |**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel **riquadro dei risultati**.|  
-|**Verifica istruzione SQL**|Consente di verificare l'istruzione SQL nella query.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel **riquadro. griglia**<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Rimuovi filtro**|Consente di rimuovere i criteri di ordinamento, se applicabili, per la riga selezionata nel **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Usa Group By**|Consente di aggiungere funzionalità di raggruppamento alla query.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Aggiungi tabella**|Consente di visualizzare la finestra di dialogo **Aggiungi tabella** per aggiungere una nuova tabella o vista alla query. Per altre informazioni sulla finestra di dialogo **Aggiungi tabella**, vedere [Finestra di dialogo Aggiungi tabella &#40;Analysis Services - Dati multidimensionali&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Verifica istruzione SQL**|Consente di verificare l'istruzione SQL nella query.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel **riquadro. griglia**<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel **riquadro griglia**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Rimuovi filtro**|Consente di rimuovere i criteri di ordinamento, se applicabili, per la riga selezionata nel **riquadro griglia**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Usa Group By**|Consente di aggiungere funzionalità di raggruppamento alla query.<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
+|**Aggiungi tabella**|Consente di visualizzare la finestra di dialogo **Aggiungi tabella** per aggiungere una nuova tabella o vista alla query. Per altre informazioni sulla finestra di dialogo **Aggiungi tabella**, vedere [Finestra di dialogo Aggiungi tabella &#40;Analysis Services - Dati multidimensionali&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Nota: Questa opzione viene visualizzata solo se **passa a Generatore Query Visual Database Tools** sia selezionata.|  
   
  **Riquadro Diagramma**  
  Consente di visualizzare gli oggetti a cui fa riferimento la query sotto forma di diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.  

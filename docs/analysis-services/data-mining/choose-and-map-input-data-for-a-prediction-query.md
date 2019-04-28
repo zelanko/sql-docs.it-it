@@ -1,5 +1,5 @@
 ---
-title: Scegliere ed eseguire il mapping di dati di Input per una Query di stima | Documenti Microsoft
+title: Scegliere ed eseguire il mapping dei dati di Input per una Query di stima | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724862"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34015058"
   
 3.  In **Nome tabella/vista**selezionare la tabella contenente i dati che si vogliono usare per testare i modelli.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
      Verrà automaticamente eseguito il mapping tra le colonne della struttura di data mining e le colonne con lo stesso nome contenute nella tabella di input.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34015058"
   
 4.  Selezionare una nuova colonna dall'elenco di colonne disponibili nell'origine dati esterna. Selezionare la voce vuota dell'elenco per eliminare il mapping delle colonne.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
      I nuovi mapping delle colonne verranno visualizzati nella finestra di progettazione.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34015058"
   
 3.  Fare clic su **Rimuovi relazione**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
      Verrà rimossa la relazione tra la tabella del case e la tabella nidificata.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34015058"
      Se esiste già una relazione, viene eseguito il mapping automatico tra le colonne del modello di data mining e le colonne con lo stesso nome della tabella di input. È possibile modificare la relazione tra la tabella nidificata e la tabella del case facendo clic su **Modifica join**, che consente di aprire la finestra di dialogo **Crea relazione** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di stima & #40; Data Mining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

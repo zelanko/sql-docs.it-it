@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679928"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Creazione formula personalizzata membro (Dimensione) (Configurazione guidata funzionalità di Business Intelligence)
   Usare la **creare una Formula personalizzata membro** pagina per selezionare una dimensione a cui la configurazione guidata di Business Intelligence, verranno associati attributi con colonne formula personalizzata membro colonne-che contengono espressioni MDX (MDX) istruzioni che definiscono valori membro per quell'attributo.  

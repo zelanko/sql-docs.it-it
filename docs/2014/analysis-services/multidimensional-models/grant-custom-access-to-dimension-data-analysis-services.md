@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726607"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
   Dopo avere abilitato l'accesso in lettura a un cubo, è possibile impostare ulteriori autorizzazioni che consentono o negano in modo esplicito l'accesso ai membri della dimensione, comprese le misure presenti all'interno della Dimensione di tipo misure in cui sono contenute tutte le misure usate in un cubo. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
@@ -112,7 +112,7 @@ ms.locfileid: "48091737"
   
 -   Se il ruolo del database non definisce un membro predefinito per l'attributo, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà usato il membro predefinito definito per l'attributo stesso. Il membro predefinito per un attributo, a meno che l'utente non ne specifichi uno diverso e a condizione che l'attributo non sia definito come non aggregabile, è il membro `All`.  
   
- Ad esempio, si supponga che un ruolo del database specifichi `Male` come membro predefinito per il `Gender` attributo. A meno che una query non includa in modo esplicito l'attributo `Gender` e non specifichi un membro diverso per l'attributo, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà restituito un set di dati contenente solo i clienti di sesso maschile. Per altre informazioni sull'impostazione del membro predefinito, vedere [Definire un membro predefinito](attribute-properties-define-a-default-member.md).  
+ Si supponga, ad esempio, che un ruolo del database specifichi `Male` come membro predefinito per l'attributo `Gender`. A meno che una query non includa in modo esplicito l'attributo `Gender` e non specifichi un membro diverso per l'attributo, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà restituito un set di dati contenente solo i clienti di sesso maschile. Per altre informazioni sull'impostazione del membro predefinito, vedere [Definire un membro predefinito](attribute-properties-define-a-default-member.md).  
   
  **Consenti totale visualizzato**  
  La proprietà VisualTotals indica se i valori di cella aggregati visualizzati vengono calcolati in base a tutti i valori di cella o solo in base ai valori di cella visibili al ruolo del database.  
@@ -127,9 +127,9 @@ ms.locfileid: "48091737"
  Fare clic su questa opzione per testare la sintassi MDX definita in questa pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concedere le autorizzazioni del cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

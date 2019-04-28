@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680614"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Completamento procedura guidata (Creazione guidata modello di data mining)
   Usare la pagina **Completamento procedura guidata** per esaminare la struttura di data mining che verrà creata al termine della procedura guidata. È anche possibile modificare il nome della struttura di data mining.  
@@ -28,7 +28,7 @@ ms.locfileid: "48202571"
 > [!NOTE]  
 >  Questa pagina cambia a seconda dell'opzione selezionata, cioè **Da database relazionale o data warehouse esistente** o **Da cubo esistente**, nella pagina **Selezione metodo di definizione** della procedura guidata.  
   
- **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Progettazione modelli di data mining](data-mining/data-mining-designer.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [progettazione Data Mining](data-mining/data-mining-designer.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Nome struttura di data mining**  

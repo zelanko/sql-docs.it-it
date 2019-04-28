@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722693"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Distribuzione di soluzioni di data mining
   L'ultimo passaggio del processo di data mining consiste nel distribuire i modelli in un ambiente di produzione. La distribuzione è importante perché rende disponibili i modelli agli utenti in modo da poter eseguire le attività seguenti:  
@@ -43,7 +43,7 @@ ms.locfileid: "48087641"
   
  [Risorse correlate](#bkmk_Resources)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Distribuire una soluzione di data mining in versioni precedenti di SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Esportare e importare gli oggetti di data mining](export-and-import-data-mining-objects.md)  
@@ -85,6 +85,6 @@ ms.locfileid: "48087641"
 ## <a name="see-also"></a>Vedere anche  
  [Elaborazione degli oggetti modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Data Mining nuove interfacce Query](data-mining-query-tools.md)   
- [Requisiti e considerazioni sull'elaborazione &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

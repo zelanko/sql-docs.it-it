@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726606"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Concedere le autorizzazioni di elaborazione (Analysis Services)
   L'amministratore può creare un ruolo dedicato alle operazioni di elaborazione di Analysis Services, consentendo di delegare tale attività specifica ad altri utenti o ad applicazioni usate per l'elaborazione automatica pianificata. Le autorizzazioni di elaborazione possono essere concesse a livello del database, del cubo, della dimensione o della struttura di data mining. A meno che non si usi un cubo o un database tabulare di grandi dimensioni è consigliabile concedere i diritti di elaborazione a livello di database, compresi tutti gli oggetti, anche quelli con dipendenze tra di loro.  
@@ -27,9 +27,9 @@ ms.locfileid: "48181268"
  Le autorizzazioni vengono concesse tramite i ruoli che associano gli oggetti alle autorizzazioni e gli account utente e di gruppo di Windows. Tenere presente che le autorizzazioni si sommano tra loro. Si supponga, ad esempio, uno scenario in cui un ruolo concede l'autorizzazione per l'elaborazione di un cubo, mentre un secondo ruolo concede allo stesso utente l'autorizzazione per l'elaborazione di una dimensione. Le autorizzazioni concesse dai due diversi ruoli si sommano, assegnando all'utente l'autorizzazione sia per l'elaborazione del cubo che per l'elaborazione della dimensione specifica all'interno del database.  
   
 > [!IMPORTANT]  
->  Un utente il cui ruolo dispone solo delle autorizzazioni di elaborazione non sarà in grado di usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per connettersi a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed elaborare gli oggetti. Tali strumenti richiedono il `Read Definition` dell'autorizzazione per accedere ai metadati degli oggetti. Se non è possibile usare uno dei due strumenti, sarà necessario usare lo script XMLA per eseguire un'operazione di elaborazione.  
+>  Un utente il cui ruolo dispone solo delle autorizzazioni di elaborazione non sarà in grado di usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per connettersi a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed elaborare gli oggetti. Tali strumenti richiedono l'autorizzazione `Read Definition` per l'accesso ai metadati degli oggetti. Se non è possibile usare uno dei due strumenti, sarà necessario usare lo script XMLA per eseguire un'operazione di elaborazione.  
 >   
->  È inoltre consigliabile concedere `Read Definition` autorizzazioni a scopo di test. Un utente che dispone di entrambe `Read Definition` e `Process Database` autorizzazioni possono elaborare gli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in modo interattivo. Per informazioni dettagliate, vedere [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
+>  È inoltre consigliabile concedere le autorizzazioni `Read Definition` a scopo di test. Un utente che dispone di entrambe le autorizzazioni `Read Definition` e `Process Database` può elaborare gli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in modo interattivo. Per informazioni dettagliate, vedere [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>Impostare le autorizzazioni di elaborazione a livello di database  
  Questa sezione descrive come consentire l'elaborazione agli utenti non amministratori per tutti i cubi, le dimensioni, le strutture di data mining e i modelli di data mining all'interno del database.  
@@ -93,7 +93,7 @@ ms.locfileid: "48181268"
 ## <a name="see-also"></a>Vedere anche  
  [Elaborare Database, tabelle o partizioni](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Elaborazione degli oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)   
- [Concedere le autorizzazioni del database &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Concessione di autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

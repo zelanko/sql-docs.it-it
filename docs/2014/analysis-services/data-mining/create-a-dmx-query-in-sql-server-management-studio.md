@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715348"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Creare una query DMX in SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di funzionalità che consentono di creare query di stima, query sul contenuto e query di definizione dei dati su modelli e strutture di data mining.  
@@ -81,12 +81,12 @@ ms.locfileid: "48101411"
   
  Per esempi relativi alla creazione di tipi specifici di query dai modelli, vedere gli argomenti seguenti:  
   
- [Creare una query di stima singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
+ [Creare una Query di stima Singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
   
  [Creare una query sul contenuto di un modello di data mining](create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Mining nuove interfacce Query](data-mining-query-tools.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

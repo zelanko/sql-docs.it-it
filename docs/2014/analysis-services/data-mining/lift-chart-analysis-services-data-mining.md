@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722285"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
   Oggetto **grafico di accuratezza** rappresenta graficamente i miglioramenti da un modello di data mining fornisce rispetto a un'ipotesi casuale. inoltre, consente di misurare la modifica in termini di un *lift* punteggio. Confrontando i punteggi di accuratezza per varie porzioni del set di dati e per modelli differenti, è possibile determinare quale modello sia migliore, nonché quale percentuale dei case nel set di dati può trarre vantaggio dall'applicazione le stime del modello.  

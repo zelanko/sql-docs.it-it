@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715032"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
   Esistono due tipi di dati spaziali. Il tipo di dati `geometry` supporta dati planari o euclidei (terra piatta). Il tipo di dati `geometry` è conforme a Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0 e a SQL MM (standard ISO).  
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- Le istanze `CompoundCurve` consentono componenti sia `LineString` sia `CircularString`, in modo che solo due punti nei segmenti di linea della sezione del grafico a torta debbano essere noti.  In questo esempio di codice viene illustrato come utilizzare un'istanza `CompoundCurve` per archiviare la stessa figura:  
+ `CompoundCurve` le istanze consentono entrambe `LineString` e `CircularString` componenti in modo che solo due punti nei segmenti di linea della sezione a torta debbano essere noti.  In questo esempio di codice viene illustrato come utilizzare un'istanza `CompoundCurve` per archiviare la stessa figura:  
   
 ```sql  
 DECLARE @g geometry;  

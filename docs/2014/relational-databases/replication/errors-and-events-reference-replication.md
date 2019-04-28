@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721323"
 ---
 # <a name="errors-and-events-reference-replication"></a>Guida di riferimento a errori ed eventi (replica)
   In questa sezione della documentazione vengono fornite informazioni sulla causa e sulla risoluzione di diversi errori correlati alla replica.  
@@ -76,7 +76,7 @@ ms.locfileid: "52781033"
 |MSSQL_ENG021642. Vedere [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato '%s'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso.|  
 |MSSQL_ENG021663. Vedere [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Impossibile trovare una chiave primaria valida per la tabella di origine [%s].[%s].|  
 |MSSQL_ENG021684. Vedere [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Le autorizzazioni associate all'account di accesso di amministratore per il server di pubblicazione Oracle '%s' non sono sufficienti.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s'' deve essere un account di accesso Windows valido nel formato: 'Computer\Account di accesso' o 'Dominio\account di accesso'. Vedere la documentazione relativa a '%s'.|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s'' deve essere un account di accesso Windows valido nel formato: 'COMPUTER\\Account di accesso' o 'DOMINIO\\Account di accesso'. Vedere la documentazione relativa a '%s'.|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|Per continuare è necessario aggiungere il processo di agente '%s' tramite '%s'. Vedere la documentazione relativa a '%s'.|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|Impossibile eseguire '%1' in '%2'.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|Impossibile modificare la cronologia di generazione in '%1'. Per risolvere il problema, riavviare la sincronizzazione con la registrazione dettagliata della cronologia e specificare un file di output in cui registrare i dati.|  

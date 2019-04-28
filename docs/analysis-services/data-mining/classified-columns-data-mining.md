@@ -1,5 +1,5 @@
 ---
-title: Classificare le colonne (Data Mining) | Documenti Microsoft
+title: Colonne (Data Mining) classificate | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b014f82376b15d9d29834103d8827bf31231ef90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724836"
 ---
 # <a name="classified-columns-data-mining"></a>Colonne classificate (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "34019948"
  Il valore della colonna indica il peso o fattore di replica del case del valore associato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di Data Mining tipi & #40; & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati & #40; Data Mining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipi di dati &#40;Data mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

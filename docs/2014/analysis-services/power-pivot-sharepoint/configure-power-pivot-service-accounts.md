@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749833"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurare gli account del servizio PowerPivot
   In un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sono inclusi due servizi che supportano le operazioni server. Il **SQL Server Analysis Services (PowerPivot)** è un servizio Windows che fornisce l'elaborazione dei dati PowerPivot e supporto query in un server applicazioni. L'account di accesso per questo servizio viene sempre specificato durante l'installazione di SQL Server quando si installa Analysis Services in modalità integrata SharePoint.  
@@ -116,7 +116,7 @@ ms.locfileid: "52526658"
 |Requisiti relativi alle autorizzazioni|Per questo account non sono richieste autorizzazioni di amministratore di sistema locale nel computer. Questo account deve, tuttavia, disporre delle autorizzazioni dell'amministratore di sistema di Analysis Services nel [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] locale installato nello stesso computer. Queste autorizzazioni vengono concesse automaticamente dal programma di installazione di SQL Server o quando si imposta o modifica l'identità del pool di applicazioni in Amministrazione centrale.<br /><br /> Le autorizzazioni amministrative sono necessarie per inoltrare query al [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Sono necessarie anche per il monitoraggio dell'integrità, per la chiusura di sessioni inattive e per l'attesa degli eventi di traccia.<br /><br /> L'account deve disporre di autorizzazioni di connessione, lettura e scrittura per il database dell'applicazione del servizio PowerPivot. Queste autorizzazioni vengono concesse automaticamente quando si crea l'applicazione e aggiornate automaticamente quando si modificano gli account o le password in Amministrazione centrale.<br /><br /> L'applicazione del servizio PowerPivot verifica che un utente SharePoint sia autorizzato a visualizzare i dati prima di recuperare il file, ma non rappresenta l'utente. Non esistono requisiti relativi alle autorizzazioni per la rappresentazione.|  
 |Requisiti relativi alla distribuzione con scalabilità orizzontale|Nessuna.|  
   
-##  <a name="updatemanually"></a> Risoluzione dei problemi: Concedere manualmente le autorizzazioni amministrative  
+##  <a name="updatemanually"></a> Risoluzione dei problemi: Concedere manualmente autorizzazioni amministrative  
  Le autorizzazioni amministrative non vengono aggiornate se l'utente che aggiorna le credenziali non è l'amministratore locale del computer. In questo caso, è possibile concedere manualmente le autorizzazioni amministrative. Il modo più semplice per eseguire questa operazione consiste nell'eseguire Processo timer configurazione PowerPivot in Amministrazione centrale. In questo modo è possibile reimpostare le autorizzazioni per tutti i server PowerPivot nella farm. Si noti che questo approccio funziona solo se il processo timer SharePoint è in esecuzione come amministratore della farm e come amministratore locale nel computer.  
   
 1.  In Monitoraggio scegliere **Rivedi definizioni processi**.  
@@ -151,7 +151,7 @@ ms.locfileid: "52526658"
   
 11. Digitare il nome dell'account che viene usato per pool di applicazioni di servizio PowerPivot e quindi fare clic su **OK**.  
   
-##  <a name="expired"></a> Risoluzione dei problemi: Risolvere gli errori HTTP 503 dovuti alle password scadute per Amministrazione centrale o il servizio di applicazione Web di SharePoint  
+##  <a name="expired"></a> Risoluzione dei problemi: Risolvere HTTP 503 errori dovuti alle password scadute per amministrazione centrale o SharePoint Foundation al servizio dell'applicazione Web  
  Se il servizio Amministrazione centrale o il servizio di applicazione Web di SharePoint Foundation smettono di funzionare a causa della reimpostazione di un account o della scadenza di una password, verrà generato un messaggio di errore HTTP 503 "Servizio non disponibile" quando si tenta di aprire Amministrazione centrale SharePoint o un sito di SharePoint. Per riportare online il server, eseguire le operazioni seguenti: Quando Amministrazione centrale è disponibile, è possibile aggiornare le informazioni scadute relative all'account.  
   
 1.  In Strumenti di amministrazione fare clic su **Gestione Internet Information Services**.  

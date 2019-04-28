@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 70640df678dcd6ee48145912504e542d62e2ae75
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717263"
 ---
 # <a name="supplemental-lessons"></a>Lezioni supplementari
   In questa sezione vengono fornite lezioni e informazioni aggiuntive sull'utilizzo delle funzionalità avanzate dei modelli tabulari.  

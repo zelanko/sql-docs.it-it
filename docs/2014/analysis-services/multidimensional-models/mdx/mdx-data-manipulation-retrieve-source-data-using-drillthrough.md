@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93a9f80d25619aafe6a8a46f7baa7b7106b93351
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699868"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Utilizzo dell'istruzione DRILLTHROUGH per il recupero di dati di origine (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) è disponibile l'istruzione [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough), che consente di recuperare un set di righe dai dati di origine per una cella di un cubo.  
@@ -29,7 +29,7 @@ ms.locfileid: "48076217"
  Per eseguire un'istruzione `DRILLTHROUGH` su un cubo, è necessario definire un'azione drill-through per tale cubo. Per definire un'azione drill-through, in Progettazione cubi di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]nel riquadro **Azioni** fare clic sul pulsante **Nuova azione drill-through**della barra degli strumenti. Nella nuova azione drill-through specificare il nome, la destinazione e la condizione dell'azione, nonché le colonne restituite dall'istruzione `DRILLTHROUGH`.  
   
 ## <a name="drillthrough-statement-syntax"></a>Sintassi dell'istruzione DRILLTHROUGH  
- Il `DRILLTHROUGH` istruzione Usa la sintassi seguente:  
+ La sintassi dell'istruzione `DRILLTHROUGH` è la seguente:  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  
@@ -38,7 +38,7 @@ ms.locfileid: "48076217"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- Il `SELECT` clausola identifica la cella del cubo che contiene i dati di origine da recuperare. Questa clausola `SELECT` è identica a una normale istruzione `SELECT` MDX, con la differenza che in questo caso nella clausola `SELECT` è possibile specificare solo un membro per ogni asse. Se su un asse sono specificati più membri, verrà generato un errore.  
+ La clausola `SELECT` identifica la cella del cubo che contiene i dati di origine da recuperare. Questa clausola `SELECT` è identica a una normale istruzione `SELECT` MDX, con la differenza che in questo caso nella clausola `SELECT` è possibile specificare solo un membro per ogni asse. Se su un asse sono specificati più membri, verrà generato un errore.  
   
  La sintassi `<Max_Rows>` specifica il numero massimo di righe in ogni set di righe restituito. Se il provider OLE DB utilizzato per connettersi all'origine dei dati non supporta `DBPROP_MAXROWS`, l'impostazione `<Max_Rows>` verrà ignorata.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48076217"
  La sintassi `<Return_Columns>` identifica le colonne del database sottostante da restituire.  
   
 ## <a name="drillthrough-statement-example"></a>Esempio di istruzione DRILLTHROUGH  
- Nell'esempio seguente viene illustrato l'utilizzo del `DRILLTHROUGH` istruzione. In questo esempio l'istruzione DRILLTHROUGH esegue una query sugli elementi foglia delle dimensioni Store, Product e Time, lungo la dimensione Stores (l'asse di sezionamento), e quindi restituisce il gruppo di misure del reparto, l'ID del reparto e il nome del dipendente.  
+ Nell'esempio seguente viene illustrato l'utilizzo dell'istruzione `DRILLTHROUGH`. In questo esempio l'istruzione DRILLTHROUGH esegue una query sugli elementi foglia delle dimensioni Store, Product e Time, lungo la dimensione Stores (l'asse di sezionamento), e quindi restituisce il gruppo di misure del reparto, l'ID del reparto e il nome del dipendente.  
   
 ```  
 DRILLTHROUGH  
@@ -57,6 +57,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [La modifica dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Manipolazione dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

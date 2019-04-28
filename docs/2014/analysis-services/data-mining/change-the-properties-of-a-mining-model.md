@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689051"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modificare le proprietà di un modello di data mining
-  Alcune proprietà dei modelli di data mining si applicano all'intero modello, altre solo a singole colonne. Esempi di proprietà che si applicano all'intero modello sono le `Drillthrough` proprietà, che specifica se i dati del case devono essere disponibili per l'esecuzione di query, e il `Description` proprietà. Le proprietà che si applicano alle singole colonne sono `Usage` e `ModelingFlags`, che controllano il modo in cui i dati della colonna vengono utilizzati all'interno del modello.  
+  Alcune proprietà dei modelli di data mining si applicano all'intero modello, altre solo a singole colonne. Esempi di proprietà che si applicano all'intero modello sono la proprietà `Drillthrough`, che specifica se i dati del case devono essere disponibili per le query, e la proprietà `Description`. Le proprietà che si applicano alle singole colonne sono `Usage` e `ModelingFlags`, che controllano il modo in cui i dati della colonna vengono utilizzati all'interno del modello.  
   
  Le proprietà del modello seguenti sono associate a editor avanzati che è possibile utilizzare per creare espressioni o configurare proprietà più complesse. Di seguito sono elencate queste proprietà.  
   
--   `Filter` proprietà: apre la [filtro dei Set di dati o finestra di dialogo Filtro modello](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` Proprietà: Apre la [filtro dei Set di dati o finestra di dialogo Filtro modello](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` proprietà: apre la [finestra di dialogo parametri algoritmo &#40;visualizzazione di modelli di Data Mining&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` Proprietà: Apre la [finestra di dialogo parametri algoritmo &#40;visualizzazione di modelli di Data Mining&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Per informazioni su come impostare le proprietà in un modello di data mining, vedere [Colonne del modello di data mining](mining-model-columns.md).  
   

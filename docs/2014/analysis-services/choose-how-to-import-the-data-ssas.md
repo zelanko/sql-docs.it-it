@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de6a4bf18a6502eba733fd48728e846ba8d1d20f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681158"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>Scelta della modalità di importazione dei dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di scegliere la modalità di importazione dei dati dall'origine dati selezionata. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

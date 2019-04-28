@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680477"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)
   Per configurare o ripristinare un'installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot per SharePoint 2010, usare lo strumento di configurazione PowerPivot. Tramite lo strumento di configurazione viene innanzitutto analizzato il sistema, dopodiché viene restituito un elenco di azioni necessarie per completare o ripristinare l'installazione. Con l'installazione guidata [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono installati lo strumento di configurazione PowerPivot per SharePoint 2010 e quello per SharePoint 2013. In questo argomento viene descritto lo strumento di configurazione PowerPivot per SharePoint 2010. Per altre informazioni su SharePoint 2010, vedere [Configura o Ripristina PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "53360343"
   
      **Passphrase** : digitare una passphrase. Per una nuova farm di SharePoint, la passphrase viene usata ogni volta che si aggiunge un nuovo server o una nuova applicazione alla farm di SharePoint. Se si tratta di una farm esistente, immettere la passphrase che consente di aggiungere un'applicazione server alla farm.  
   
-5.  **Porta:** facoltativamente, digitare un numero di porta per la connessione all'applicazione Web Amministrazione centrale oppure usare il numero generato casualmente che viene fornito. Viene verificato che il numero sia disponibile prima di fornirlo come opzione.  
+5.  **Porta:** Facoltativamente, digitare un numero di porta per la connessione all'applicazione web Amministrazione centrale oppure utilizzare il numero generato casualmente fornito. Viene verificato che il numero sia disponibile prima di fornirlo come opzione.  
   
 6.  Fare clic su **registrare SQL Server Analysis Services (PowerPivot) sul Server locale**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53360343"
   
  Nella tabella seguente vengono descritti i valori usati per configurare il server.  
   
-|Pagina|Valore di input|Origine|Descrizione|  
+|Pagina|Valore di input|Source|Descrizione|  
 |----------|-----------------|------------|-----------------|  
 |**Configurare o ripristinare PowerPivot per SharePoint**|Account predefinito|Utente corrente|L'account predefinito è un account utente di Windows di dominio usato per eseguire il provisioning di servizi condivisi nella farm. Viene usato per eseguire il provisioning dell'applicazione del servizio PowerPivot, il servizio di archiviazione sicura, Excel Services, l'identità del pool di applicazioni Web, l'amministratore della raccolta siti e l'account di aggiornamento dati automatico PowerPivot.<br /><br /> Per impostazione predefinita, lo strumento immetto l'account di dominio dell'utente corrente. A meno che non si intenda configurare un server a scopo di valutazione, è necessario sostituirlo con un account utente di dominio diverso.<br /><br /> È inoltre possibile modificare in seguito le identità del servizio tramite Amministrazione centrale.<br /><br /> Facoltativamente, è possibile usare lo strumento di configurazione PowerPivot per specificare gli account dedicati per gli elementi seguenti:<br /><br /> applicazione Web, tramite la pagina **Creare applicazione Web predefinita** (supponendo che si stia creando un'applicazione Web per la farm).<br /><br /> PowerPivot account di aggiornamento dati automatico, tramite il **creare Account automatico per Datarefresh** pagina in questo strumento.|  
 ||Server di database|Istanza denominata di PowerPivot locale, se disponibile|Se un'istanza del motore di database è installata come un'istanza denominata di PowerPivot, il campo del server di database verrà popolato con questa istanza. Se il motore di database non è installato, questo campo è vuoto. È necessario fornire un'istanza. Può trattarsi di qualsiasi versione o edizione di SQL Server supportata per le farm SharePoint.|  

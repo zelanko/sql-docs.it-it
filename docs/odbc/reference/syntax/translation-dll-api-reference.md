@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5274b2bb8bfb1b51207c3b0c85e0a516045670e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719854"
 ---
 # <a name="translation-dll-api-reference"></a>Informazioni di riferimento sull'API DLL di conversione
 In questa sezione viene descritta la sintassi della traduzione dell'API di DLL, che è costituito da due funzioni: **SQLDriverToDataSource** e **SQLDataSourceToDriver**. Queste funzioni devono essere incluso nella DLL che esegue la conversione del driver.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2691573c6a3ca0ae860339177780f707c5277b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726991"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Creare ed eseguire uno script MDX in SQL Server Data Tools
   Per creare ed eseguire uno script MDX in  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario lavorare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con un cubo già creato e pronto per la modifica.  
@@ -37,7 +37,7 @@ ms.locfileid: "48218611"
   
 ## <a name="see-also"></a>Vedere anche  
  [Script MDX di base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Istruzioni di Scripting MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
+ [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Istruzioni di scripting MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

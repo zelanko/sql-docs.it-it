@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681188"
 ---
 # <a name="choosing-data-for-data-mining"></a>Scelta di dati per il data mining
   Quando si inizia il data mining, si potrebbe chiedere "quanti dati è necessario?" o "Sono previsti requisiti speciali che è necessario conoscere durante la pulizia o formattazione dei dati?"  
@@ -73,7 +73,7 @@ ms.locfileid: "53355818"
   
  Se si dispone di un set di dati di dimensioni adeguate, incentrare l'analisi sulla qualità dei dati invece di aggiungere più dati. A un certo punto, tutti i modelli statisticamente validi saranno stati trovati e aggiungere più dati non ne migliora la validità. Viceversa, l'aggiunta di altri dati può talvolta introdurre correlazioni accidentali.  
   
-### <a name="discrete-vs-continuous-numbers"></a>Numeri discreti e numeri continui  
+### <a name="discrete-vs-continuous-numbers"></a>Numeri discreti e Numeri continui  
  Oggetto *discreti* colonna contiene un numero finito di valori. I caratteri di testo ad esempio vengono sempre trattati come valori discreti.  
   
  I valori discreti hanno alcuni attributi importanti. Ad esempio, se si considerano i numeri come discreti, non vi è un ordine implicito tra loro e non è possibile calcolare la media o la somma dei numeri. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti che non si utilizzerebbero mai per eseguire operazioni matematiche.  

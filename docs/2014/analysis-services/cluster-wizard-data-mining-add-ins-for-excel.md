@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7803b5a5a2fccd3381b827eb15a19e036ffa017e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680758"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Cluster (componenti aggiuntivi Data mining per Excel)
   ![Creazione guidata cluster sulla barra multifunzione Data Mining](media/dmc-cluster.gif "guidata Cluster sulla barra multifunzione Data Mining")  

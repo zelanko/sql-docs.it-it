@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 459afedd5d9e9e417410961d010c6b650eb0a01e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701385"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Disporre le forme nel diagramma di relazione tra attributi
   È possibile modificare il layout delle forme nella scheda **Relazioni tra attributi** della vista Struttura dimensione vista in Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

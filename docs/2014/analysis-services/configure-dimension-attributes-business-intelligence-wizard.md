@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6992d667383539092f13602c277eec4ee2f7c7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680511"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurazione attributi dimensione (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Configurazione attributi dimensione** per eseguire il mapping tra gli attributi di dimensione e i tipi di attributo utilizzati da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per identificare gli attributi per le dimensioni di tipo Conto.  
@@ -33,7 +33,7 @@ ms.locfileid: "48133691"
  **Attributi della dimensione**  
  Consente di visualizzare i tipi di attributo validi di cui è possibile eseguire il mapping agli attributi della dimensione esistenti.  
   
- **includere**  
+ **Include**  
  Selezionare una casella di controllo per includere nella dimensione il tipo di attributo corrispondente.  
   
  **Tipo di attributo**  
@@ -49,7 +49,7 @@ ms.locfileid: "48133691"
 >  Questa opzione non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence è stata avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

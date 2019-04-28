@@ -1,5 +1,5 @@
 ---
-title: I contatori delle prestazioni (SSAS) | Documenti Microsoft
+title: I contatori delle prestazioni (SSAS) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709732"
 ---
 # <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019238"
   
 ## <a name="counters-by-groups"></a>Contatori per gruppi  
   
-|Gruppo|Description|  
+|Raggruppa|Descrizione|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistiche correlate alla cache delle aggregazioni di Analysis Services.|  
 |[Connessione](#bkmk_Connection)|Statistiche correlate alle connessioni di Microsoft Analysis Services.|  
@@ -49,7 +49,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_Cache"></a> Cache  
  Statistiche correlate alla cache delle aggregazioni di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |KB memoria corrente|Memoria attualmente utilizzata dalla cache delle aggregazioni, in KB.|  
 |KB aggiunti/sec|Velocità con cui la memoria viene aggiunta alla cache, in KB al secondo.|  
@@ -71,7 +71,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_Connection"></a> Connessione  
  Statistiche correlate alle connessioni di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Connessioni correnti|Numero corrente delle connessioni client stabilite.|  
 |Richieste/sec|Frequenza delle richieste di connessione  in arrivo.|  
@@ -85,7 +85,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_DataMiningModelProcessing"></a> Elaborazione modello di data mining  
  Statistiche correlate all'elaborazione del modello di data mining di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Case/sec|Frequenza di elaborazione dei case.|  
 |Modelli elaborati correnti|Numero corrente dei modelli in fase di elaborazione.|  
@@ -93,7 +93,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_DataMiningPrediction"></a> Stima data mining  
  Statistiche correlate alle stime basate sui modelli di data mining di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Query di data mining simultanee|Numero corrente delle query di data mining in fase di elaborazione.|  
 |Stime/sec|Numero di stime generate nelle query di data mining|  
@@ -106,7 +106,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_Locks"></a> Locks  
  Statistiche correlate ai blocchi del server interni di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Attese di latch correnti|Numero corrente dei thread in attesa di un latch.  Si riferisce alle richieste di latch che non possono essere soddisfatte immediatamente e sono in stato di attesa.|  
 |Attese latch/sec|Frequenza delle richieste di latch che non possono essere soddisfatte immediatamente e devono attendere la concessione del latch.|  
@@ -122,7 +122,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_MDX"></a> MDX  
  Statistiche correlate ai calcoli MDX di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Numero di calcoli copertura|Numero totale di nodi di valutazione creati dai piani di esecuzione MDX, compresi quelli attivi e memorizzati nella cache.|  
 |Numero corrente di nodi di valutazione|Numero corrente (approssimativo) di nodi di valutazione creati dai piani di esecuzione MDX, compresi quelli attivi e memorizzati nella cache.|  
@@ -155,7 +155,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_Memory"></a> Memoria  
  Statistiche correlate alla memoria interna del server di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Riserva di paging da 64 KB allocata|Memory presa in prestito dal sistema, in KB.  Tale memoria viene allocata ad altre aree del server.|  
 |KB riserva di paging in elenco lookaside da 64 KB|Memoria corrente (in KB) nell'elenco lookaside da 64 KB.  Si riferisce alle pagine di memoria pronte all'uso.|  
@@ -179,7 +179,7 @@ ms.locfileid: "34019238"
 |Cache dei file - errori di pagina/sec|Frequenza degli errori di pagina nella cache dei file.|  
 |Cache dei file - letture/sec|Numero delle operazioni di lettura eseguite nella cache dei file al secondo.|  
 |Cache dei file - letture in KB/sec|Frequenza delle operazioni di lettura eseguite nella cache dei file, in KB al secondo.|  
-|Cache dei file - scritture/sec|Scrittura pagine nella cache dei file al secondo.  Le operazioni di scrittura sono asincrone.|  
+|Cache dei file - scritture/sec|Cache dei file pagine scritte/sec.  Le operazioni di scrittura sono asincrone.|  
 |Cache dei file - scritture in KB/sec|KB cache dei file scritti/sec.  Le operazioni di scrittura sono asincrone.|  
 |Cache dei file - errori di I/O/sec|Frequenza degli errori di I/O nella cache dei file.|  
 |Cache dei file - errori di I/O|Totale degli errori di I/O nella cache dei file.|  
@@ -232,7 +232,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_ProactiveCaching"></a> Memorizzazione nella cache attiva  
  Statistiche correlate al caching attivo di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Notifiche/sec|Frequenza delle notifiche inviate dal database relazionale.|  
 |Annullamenti elaborazione/sec|Frequenza di annullamenti dell'elaborazione causati dalle notifiche.|  
@@ -242,7 +242,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_ProcAggregations"></a> Elaborazione di aggregazioni  
  Statistiche correlate all'elaborazione di aggregazioni di Microsoft Analysis Services nei file di dati MOLAP.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Partizioni correnti|Numero corrente delle partizioni da elaborare.|  
 |Totale partizioni|Numero totale delle partizioni elaborate (con esito positivo o negativo).|  
@@ -256,7 +256,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_ProcIndexes"></a> Elaborazione di indici  
  Statistiche correlate all'elaborazione di Microsoft Analysis Services degli indici per i file di dati MOLAP.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Partizioni correnti|Numero corrente delle partizioni da elaborare.|  
 |Totale partizioni|Numero totale delle partizioni elaborate (con esito positivo o negativo).|  
@@ -266,7 +266,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_Processing"></a> Elaborazione  
  Statistiche correlate all'elaborazione dei dati di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Righe lette/sec|Velocità di lettura delle righe da tutti i database relazionali.|  
 |Totale righe lette|Numero totale delle righe lette da tutti i database relazionali.|  
@@ -278,7 +278,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_StorageEngineQuery"></a> Query motore di archiviazione  
  Statistiche correlate alle query del motore di archiviazione di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Query correnti gruppo di misure|Numero corrente delle query sul gruppo di misure in fase di elaborazione.|  
 |Query gruppo di misure/sec|Frequenza delle query sul gruppo di misure|  
@@ -321,7 +321,7 @@ ms.locfileid: "34019238"
 ###  <a name="bkmk_Threads"></a> Thread  
  Statistiche correlate ai thread di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Thread inattivi per analisi dei thread brevi|Numero dei thread inattivi nel pool dei thread per l'analisi dei thread brevi.|  
 |Thread occupati per analisi dei thread brevi|Numero dei thread occupati nel pool dei thread per l'analisi dei thread brevi.|  

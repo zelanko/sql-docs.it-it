@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703123"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
   Introduzione all'esercitazione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. In questa esercitazione viene descritto come utilizzare [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per sviluppare e distribuire un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzando la società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per tutti gli esempi.  
@@ -51,14 +51,14 @@ ms.locfileid: "48049422"
   
 |Lezione|Tempo stimato per il completamento|  
 |------------|--------------------------------|  
-|[Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minuti|  
+|[Lezione 1: Definizione di una vista origine dati all'interno di un'analisi di progetto di servizi](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minuti|  
 |[Lezione 2: Definizione e distribuzione di un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minuti|  
-|[Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minuti|  
-|[Lezione 4: Definizione di attributo avanzato e proprietà dimensione](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
+|[Lezione 3: Modifica le misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minuti|  
+|[Lezione 4: La definizione di attributo avanzato e proprietà dimensione](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
 |[Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minuti|  
 |[Lezione 6: Definizione di calcoli](lesson-6-defining-calculations.md)|45 minuti|  
 |[Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
-|[Lezione 8: Definizione di azioni](lesson-8-defining-actions.md)|30 minuti|  
+|[Lezione 8: Definizione delle azioni](lesson-8-defining-actions.md)|30 minuti|  
 |[Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md)|30 minuti|  
 |[Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)|15 minuti|  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48049422"
 >  Il database del cubo che verrà creato in questa esercitazione è una versione semplificata del progetto di modello multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fa parte dei database di esempio di Adventure Works disponibile per il download sul sito codeplex. La versione per l'esercitazione del database multidimensionale Adventure Works è semplificata per focalizzare maggiormente l'attenzione sulle specifiche competenze con cui si desidera subito familiarizzare. Dopo avere completato l'esercitazione, esplorare il progetto di modello multidimensionale per proprio conto per accrescere la comprensione della modellazione multidimensionale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Per iniziare questa esercitazione, passare alla prima lezione: [Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Per iniziare l'esercitazione, passare alla prima lezione: [Lezione 1: Definizione di una vista origine dati all'interno di un'analisi progetto Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

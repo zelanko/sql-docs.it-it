@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689490"
 ---
 # <a name="data-mining-wizards"></a>Procedure guidate di data mining
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono disponibili procedure guidate per l'utilizzo in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  Nella tabella seguente vengono descritte le procedure guidate che è possibile utilizzare per creare origini, viste e oggetti di data mining.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[La Guida F1 di creazione guidata dell'origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Utilizzare la Creazione guidata origine dati per definire una nuova origine dati.|  
 |[Guida F1 del guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Utilizzare la Creazione guidata vista origine dati per definire una nuova vista origine dati.|  
@@ -39,10 +39,10 @@ ms.locfileid: "48099231"
  Per informazioni sulle procedure guidate che consentono di progettare e usare dati multidimensionali, vedere [Procedure guidate di Analysis Services &#40;Dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di Data Mining](data-mining/data-mining-tools.md)   
- [Esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Strumenti di data mining](data-mining/data-mining-tools.md)   
+ [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Creare una struttura di Data Mining OLAP](data-mining/create-an-olap-mining-structure.md)   
- [Creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)   
+ [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)   
  [Creare una nuova struttura di Data Mining relazionale](data-mining/create-a-new-relational-mining-structure.md)   
  [Creare una nuova struttura di data mining OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   

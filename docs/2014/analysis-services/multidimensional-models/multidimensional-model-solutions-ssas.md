@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18cd30d13e38ff8a58a381d8d8f81aa81dab376
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725115"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Soluzioni di modelli multidimensionali (SSAS)
     
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Negli argomenti seguenti vengono fornite istruzioni sulla progettazione di oggetti di database multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [I database modello multidimensionale &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Database modelli multidimensionali &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Descrive come definire un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Origini dati supportate &#40;multidimensionale di SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  

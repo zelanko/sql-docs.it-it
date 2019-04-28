@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 596eaa30b1a46c93db26da976f997b2a0beae8aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709942"
 ---
 # <a name="precision-property-adox"></a>Proprietà Precision (ADOX)
 Indica la precisione massima di valori di dati di [colonna](../../../ado/reference/adox-api/column-object-adox.md).  
@@ -42,6 +42,6 @@ Indica la precisione massima di valori di dati di [colonna](../../../ado/referen
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di codice: NumericScale e Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Esempio di codice: Esempio NumericScale e Precision Properties (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Proprietà Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 449cf64468f7dcb3925b09af08fd0661f23b1cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695751"
 ---
 # <a name="create-a-master-data-services-database"></a>Creare un database Master Data Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "47818589"
 
   Creare un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] quando è necessario un nuovo database per supportare l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e il servizio Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   Per informazioni sui requisiti del computer che ospita il database, vedere [Requisiti del database &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47818589"
   
 4.  Completare la procedura guidata **Crea database** per creare e configurare il database. Per altre informazioni sulle opzioni dell'interfaccia utente nella procedura guidata, vedere [Procedura guidata Crea database &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Configurare le impostazioni di sistema per il database e l'applicazione Web. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md).  
   

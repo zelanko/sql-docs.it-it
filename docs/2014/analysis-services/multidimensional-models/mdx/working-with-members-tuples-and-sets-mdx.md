@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699130"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Utilizzo di membri, tuple e set (MDX)
   MDX offre numerose funzioni che restituiscono uno o più membri, tuple o set oppure eseguono operazioni su un membro, una tupla o un set.  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- È anche possibile usare il `FirstChild` funzione per restituire lo stesso membro, come nell'esempio seguente.  
+ È inoltre possibile restituire lo stesso membro utilizzando la funzione `FirstChild`, come nell'esempio seguente.  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
   
 ```  
   
- Per altre informazioni sulle funzioni di membro MDX, vedere [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Per altre informazioni sulle funzioni di membro MDX, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="tuple-functions"></a>funzioni di tupla  
  MDX offre diverse funzioni che restituiscono tuple e che possono essere utilizzate in tutti i casi in cui viene accettata una tupla. La funzione [Item &#40;Tuple&#41; &#40;MDX&#41;](/sql/mdx/item-tuple-mdx), ad esempio, può essere usata per estrarre la prima tupla dal set e si rivela estremamente utile quando si è certi che un set è costituito da una singola tupla e si desidera specificare tale tupla per una funzione che ne richiede una.  
@@ -127,8 +127,8 @@ FROM [Adventure Works]
  Con una funzione per i valori stringa vengono eseguite operazioni su un'espressione MDX per la restituzione di una stringa. La funzione [UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx), ad esempio, restituisce un valore stringa contenente il nome univoco di una dimensione, una gerarchia, un livello o un membro. Per altre informazioni sulle funzioni per i valori stringa, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave per MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

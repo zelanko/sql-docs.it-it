@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520afc917b3ee91e7b41eb74c21d050127deed56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680495"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Completamento procedura guidata (Creazione guidata dimensione)
   Usare la pagina **Completamento procedura guidata** per eseguire le procedure seguenti:  
@@ -34,7 +34,7 @@ ms.locfileid: "48223401"
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Dimensioni**in **Esplora soluzioni** per scegliere un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuova dimensione**.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare un nome per la nuova dimensione.  
   
  **Anteprima**  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679838"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Convalida incrociata (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante convalida incrociata, barra multifunzione Data Mining](media/dmc-xvalid.gif "pulsante convalida incrociata, barra multifunzione Data Mining")  
@@ -96,15 +96,15 @@ ms.locfileid: "48171751"
   
 -   Media della deviazione rispetto al valore medio per una misura specifica, calcolata in tutte le partizioni di un modello.  
   
-#### <a name="classification-passfail"></a>Classificazione: Test superato/Test non superato  
+#### <a name="classification-passfail"></a>Classificazione: Esito positivo o negativo  
  Questa misura è utilizzata nei modelli di classificazione quando non si specifica un valore di destinazione per l'attributo stimabile. Se, ad esempio, si crea un modello per la stima di più possibilità, questa misura indica l'efficacia del modello nella stima di tutti i valori possibili.  
   
  Esito positivo o negativo viene calcolato il conteggio dei case che soddisfano le condizioni seguenti: **passare** se lo stato stimato con la probabilità più elevata corrisponde allo stato di input e probabilità è maggiore del valore specificato per **Soglia di stato**; in caso contrario, **esito negativo**.  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>Classificazione: veri o falsi positivi e negativi  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>Classificazione: Veri o falsi positivi e negativi  
  Questo test viene utilizzato per tutti i modelli di classificazione con una destinazione specificata. La misura indica come viene classificato ogni case in risposta a domande relative a ciò che è stato stimato dal modello e al risultato effettivo ottenuto.  
   
-|Misura|Description|  
+|Misura|Descrizione|  
 |-------------|-----------------|  
 |Vero positivo|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il case contiene il valore di destinazione.<br /><br /> Tramite il modello è stato stimato che il case contiene il valore di destinazione.|  
 |Falso positivo|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il valore effettivo è uguale a quello di destinazione.<br /><br /> Tramite il modello è stato stimato che il case contiene il valore di destinazione.|  

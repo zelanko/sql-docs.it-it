@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680560"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurare l'account di aggiornamento dati automatico PowerPivot (PowerPivot per SharePoint)
   L'account di aggiornamento dati automatico PowerPivot è un account progettato per l'esecuzione dei processi di aggiornamento dei dati PowerPivot in una farm di SharePoint. Configurandolo, si abilita il **utilizza l'aggiornamento dati configurato dall'amministratore account** opzione in una pagina di pianificazione di aggiornamento dati (vedere sotto). Gli autori delle cartelle di lavoro che pianificano l'aggiornamento dati possono scegliere questa opzione se desiderano utilizzare l'account di aggiornamento dati automatico per eseguire un processo di aggiornamento dati. Per altre informazioni su come visualizzare le opzioni delle credenziali nella pianificazione dell'aggiornamento dati, vedere [pianificare un aggiornamento dei dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  

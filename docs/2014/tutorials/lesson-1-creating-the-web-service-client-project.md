@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676059"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>Lezione 1: Creazione del progetto di Client del servizio Web
   Per questa esercitazione verrà creata una semplice applicazione console che accede al servizio Web ReportServer. Nelle procedure si presuppone che l'ambiente di sviluppo utilizzato sia [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  

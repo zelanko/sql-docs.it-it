@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715208"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Creare una query di data mining usando XMLA
   È possibile creare diverse query sugli oggetti di data mining utilizzando AMO, DMX o XML/A.  
@@ -75,7 +75,7 @@ ms.locfileid: "50148086"
   
      con la riga seguente:  
   
-     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  Modificare l'elenco delle restrizioni per specificare un modello di data mining in base al nome aggiungendo una nuova condizione all'elenco di restrizioni.  
   

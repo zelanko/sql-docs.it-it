@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680415"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Connessione a un'origine dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di creare una nuova connessione a diverse origini dati, ad esempio database relazionali, feed di dati e file. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato. È necessario che sia installato anche il provider appropriato sul server di database dell'area di lavoro. Per i server a 32 bit (x86), devono essere installati provider a 32 bit. Per i server a 64 bit (x64), devono essere installati provider a 64 bit.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] sempre in esecuzione in un processo a 32 bit, indipendentemente dall'architettura. Quando si esegue [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] su un computer a 64 bit, è necessario tenere presente quanto indicato di seguito in caso di installazione di provider di dati:  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è sempre in esecuzione in un processo a 32 bit, indipendentemente dall'architettura. Quando si esegue [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] su un computer a 64 bit, è necessario tenere presente quanto indicato di seguito in caso di installazione di provider di dati:  
   
 -   Per provider che supportano l'installazione side-by-side di provider a 32 e a 64 bit, è necessario installare entrambi i provider.  
   

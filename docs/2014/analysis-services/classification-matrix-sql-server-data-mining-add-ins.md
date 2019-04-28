@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681149"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice di classificazione (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante matrice di classificazione, barra multifunzione Data Mining](media/dmc-cmatrix.gif "pulsante matrice di classificazione, barra multifunzione Data Mining")  
@@ -37,11 +37,11 @@ ms.locfileid: "52522167"
   
 ||Bronzo (valore effettivo)|Oro (valore effettivo)|Argento (valore effettivo)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronzo|**% 94.45**|% 15.18|% 1,70|  
-|Oro|% 2.72|**% 84.82**|0,00%|  
-|Argento|% 1.84|0,00%|**% 93.80**|  
-|*Corretti*|*% 95.45*|*% 84.82*|*% 98.30*|  
-|*Classificato in modo errato*|*% 4.55*|*% 15.18*|*% 1,70*|  
+|Bronzo|**94.45%**|15.18%|1.70%|  
+|Oro|2.72%|**84.82%**|0,00%|  
+|Argento|1.84%|0,00%|**93.80%**|  
+|*Corretti*|*95.45%*|*84.82%*|*98.30%*|  
+|*Classificato in modo errato*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   In ogni colonna vengono visualizzati i valori effettivi del set di dati di testing.  
   

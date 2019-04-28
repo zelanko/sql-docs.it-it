@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d556a80e018a9d3707aa03de7fdefe8c45bcb611
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704154"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52802583"
 |**table_id**|**int**|Identificatore della tabella pubblicata.|  
 |**publisher_id**|**smallint**|Identifica la pubblicazione non SQL Server da cui la tabella è pubblicata.|  
 |**name**|**sysname**|Nome della tabella pubblicata.|  
-|**Proprietario**|**sysname**|Proprietario della tabella.|  
+|**owner**|**sysname**|Proprietario della tabella.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

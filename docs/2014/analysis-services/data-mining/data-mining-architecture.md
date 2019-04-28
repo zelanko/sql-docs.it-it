@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722653"
 ---
 # <a name="data-mining-architecture"></a>Architettura di data mining
   In questa sezione viene descritta l'architettura delle soluzioni di data mining ospitate in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Negli argomenti di questa sezione viene descritta l'architettura logica e fisica di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che supporta il data mining e vengono fornite informazioni su client, provider e protocolli che è possibile usare per comunicare con i server di data mining e per usare oggetti di data mining in modalità locale o remota.  
@@ -33,16 +33,16 @@ ms.locfileid: "48121051"
   
  Per altre informazioni sulla modalità in cui è possibile implementare di data mining nella soluzione di Business Intelligence, vedere la sezione relativa alle guide alle soluzioni di MSDN Library.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Architettura logica &#40;Analysis Services - Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Architettura logica &#40;Analysis Services - Data mining&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Architettura fisica &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [Servizi di data mining e origini dati](data-mining-services-and-data-sources.md)  
   
  [Gestione degli oggetti e delle soluzioni di data mining](management-of-data-mining-solutions-and-objects.md)  
   
- [Panoramica della sicurezza &#40;Data Mining&#41;](security-overview-data-mining.md)  
+ [Panoramica della sicurezza &#40;data mining&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione del modello multidimensionale](../multidimensional-models/multidimensional-model-programming.md)   

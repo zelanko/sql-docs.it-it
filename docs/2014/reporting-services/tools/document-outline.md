@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c57b2bfad47baba01e54d7b60030ceba0351f678
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711192"
 ---
 # <a name="document-outline"></a>Struttura documento.
   Utilizzare la finestra Struttura documento per visualizzare la gerarchia degli elementi di un report. Nelle aree dati Tablix sono visualizzate tutte le caselle di testo e gli altri elementi del report contenuti nelle celle della Tablix. Quando si seleziona un elemento del report nell'area di progettazione, viene selezionato l'elemento del report corrispondente nella finestra Struttura documento. In questa visualizzazione è possibile individuare gli elementi del report nell'area di progettazione. Quando ad esempio si visualizza in anteprima un report con gli errori relativi alle espressioni, nella finestra Output viene visualizzato un messaggio per ogni errore. Nel messaggio è indicato il nome della casella di testo che contiene l'espressione con l'errore. Facendo clic sul nome della casella di testo nella finestra Struttura documento, lo si seleziona nell'area di progettazione e viene visualizzata l'espressione che contiene l'errore.  

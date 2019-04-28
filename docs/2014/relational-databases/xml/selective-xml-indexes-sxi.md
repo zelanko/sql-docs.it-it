@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679822"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Indici XML selettivi
   Gli indici XML selettivi rappresentano un altro tipo di indice XML disponibile oltre agli indici XML comuni. Di seguito sono indicati gli obiettivi della funzionalità degli indici XML selettivi.  
@@ -123,7 +123,7 @@ FOR
   
 -   Indicizzazione di nodi con tipi XS binari: ad esempio, base64Binary e hexBinary.  
   
--   Specifica dei nodi da indicizzare con espressioni XPath contenenti il carattere jolly `*` alla fine: Ad esempio, `/a/b/c/*`, `/a//b/*`, o `/a/b/*:c`.  
+-   Specifica dei nodi da indicizzare con espressioni XPath contenenti il carattere jolly `*` come elemento finale: ad esempio,  `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
   
 -   Indicizzazione di un asse diverso da figlio, attributo o discendente. Il case `//<step>` è consentito come case speciale.  
   

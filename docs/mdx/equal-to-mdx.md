@@ -1,5 +1,5 @@
 ---
-title: = (Uguale a) (MDX) | Documenti Microsoft
+title: = (Equal To) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fac06690d811c3ae3d4b00a82ad9088b2df4aae
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690912"
 ---
 # <a name="-equal-to-mdx"></a>= (uguale a) (MDX)
 
@@ -22,7 +22,7 @@ ms.locfileid: "34739830"
   Esegue un'operazione di confronto che determina se il valore di un'espressione MDX (Multidimensional Expression) è uguale a quello di un'altra espressione MDX.  
   
 > [!NOTE]  
->  Per confrontare gli oggetti, utilizzare il [IS &#40;MDX&#41; ](../mdx/is-mdx.md) operatore. Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
+>  Per confrontare gli oggetti, usare il [IS &#40;MDX&#41; ](../mdx/is-mdx.md) operatore. Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,11 +38,11 @@ MDX_Expression = MDX_Expression
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano basato sulle condizioni seguenti:  
   
--   **true** se il valore del primo parametro è uguale al valore del secondo parametro.  
+-   **true** se il valore del primo parametro è uguale a quello del secondo parametro.  
   
--   **false** se il valore del primo parametro non è uguale al valore del secondo parametro.  
+-   **false** se il valore del primo parametro non è uguale a quello del secondo parametro.  
   
--   **true** se entrambi i parametri sono null, o uno dei parametri è null e l'altro parametro è 0.  
+-   **true** se entrambi i parametri sono null, o un parametro è null e l'altro parametro è 0.  
   
 ## <a name="examples"></a>Esempi  
  Nella query seguente vengono illustrati degli esempi relativi a queste condizioni:  

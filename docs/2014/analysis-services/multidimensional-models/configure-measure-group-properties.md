@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1a87d594eb2837671a7fdc45bc48827a075440e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700519"
 ---
 # <a name="configure-measure-group-properties"></a>Configurare le proprietà dei gruppi di misure
   Le proprietà dei gruppi di misure consentono di definirne il funzionamento.  

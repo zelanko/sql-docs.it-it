@@ -1,5 +1,5 @@
 ---
-title: Istruzione UPDATE MEMBER (MDX) | Documenti Microsoft
+title: Istruzione UPDATE MEMBER (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694826"
 ---
 # <a name="mdx-data-definition---update-member"></a>Definizione dei dati MDX - UPDATE MEMBER
 
@@ -41,13 +41,13 @@ UPDATE MEMBER Cube_Name.Member_Name
  *MDX_Expression*  
  Espressione MDX (Multidimensional Expression) valida nella quale il membro deve essere aggiornato.  
   
- *Property_name*  
+ *Property_Name*  
  Stringa valida che specifica il nome per la proprietà di un membro calcolato.  
   
  *Property_Value*  
  Espressione scalare valida che specifica il valore della proprietà per il membro calcolato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'istruzione UPDATE MEMBER aggiorna un membro calcolato esistente conservando la relativa precedenza di questo membro in relazione agli altri calcoli. Pertanto, non è possibile utilizzare l'istruzione UPDATE MEMBER per modificare SOLVEORDER.  
   
  Non è possibile specificare un'istruzione UPDATE MEMBER nello script MDX per un cubo.  
@@ -61,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Identificatore proprietà|Significato|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Una stringa di formato stile Office che l'applicazione client può utilizzare per visualizzare i valori delle celle.|  
+|FORMAT_STRING|Stringa in formato stile Office che l'applicazione client può usare per visualizzare i valori delle celle.|  
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. Visible calcolati i membri possono essere aggiunti a un set con il [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (funzione). Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *Visible*.<br /><br /> I membri calcolati non visibili, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
 |NON_EMPTY_BEHAVIOR|La misura o il set che MDX utilizza per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.|  
 |CAPTION|Un valore di stringa che specifica la didascalia che può essere utilizzata dall'applicazione client per la visualizzazione del membro.|  

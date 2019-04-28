@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721783"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
   È possibile accedere alla finestra **Proprietà articolo** dalla Creazione guidata nuova pubblicazione e dalla finestra di dialogo **Proprietà pubblicazione** . Questa finestra di dialogo consente di visualizzare e impostare le proprietà per tutti i tipi di articoli. Alcune proprietà possono essere impostate solo dopo aver creato la pubblicazione, mentre altre possono essere impostate solo se la pubblicazione non dispone di sottoscrizioni attive. Le proprietà non impostabili vengono visualizzate in sola lettura.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124991"
  Questa opzione si applica solo alle stored procedure e determina se replicare la definizione della stored procedure, ovvero l'istruzione CREATE PROCEDURE, oppure la relativa esecuzione. Se si replica l'esecuzione della procedura, la definizione della procedura viene replicata nel Sottoscrittore nel momento in cui la sottoscrizione viene inizializzata. Quando la procedura viene eseguita nel server di pubblicazione, il processo di replica esegue la procedura corrispondente nel Sottoscrittore. Ciò consente di ottenere un miglioramento significativo delle prestazioni nel caso in cui vengano eseguite operazioni su batch di grandi dimensioni. Per altre informazioni, vedere [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opzioni per le pubblicazioni di tipo merge  
- Il **le proprietà degli articoli** finestra di dialogo per le pubblicazioni di tipo merge dispone di due schede: **Le proprietà** e **Resolver**.  
+ La finestra di dialogo **Proprietà articolo** per le pubblicazioni di tipo merge dispone di due schede: **Proprietà** e **Sistema di risoluzione**.  
   
 ### <a name="properties-tab"></a>Scheda Proprietà  
  **Direzione sincronizzazione**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124991"
  Tutti i sistemi di risoluzione dei conflitti basati su COM forniti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono firmati. Selezionare questa opzione per verificare la validità del sistema di risoluzione dei conflitti durante la sincronizzazione.  
   
 ## <a name="options-for-oracle-publications"></a>Opzioni per le pubblicazioni Oracle  
- Il **le proprietà degli articoli** finestra di dialogo per le pubblicazioni Oracle dispone di due schede: **Le proprietà** e **Mapping di dati**. Le pubblicazioni Oracle non supportano tutte le proprietà supportate dalle pubblicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ La finestra di dialogo **Proprietà articolo** per le pubblicazioni Oracle dispone di due schede: **Proprietà** e **Mapping dei dati**. Le pubblicazioni Oracle non supportano tutte le proprietà supportate dalle pubblicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Scheda Proprietà  
  **Copia stored procedure INSERT, UPDATE e DELETE**  

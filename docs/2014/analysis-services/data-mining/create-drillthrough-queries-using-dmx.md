@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722703"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Creare query drill-through tramite DMX
   Per tutti i modelli che supportano il drill-through, è possibile recuperare i dati del case e della struttura creando una query DMX in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o in qualsiasi altro client che supporta DMX.  
@@ -45,7 +45,7 @@ WHERE [Model Region] = 'M200 Pacific'
  In questo esempio viene utilizzato un alias per rinominare la colonna della struttura. Se non si assegna un alias alla colonna della struttura, la colonna viene restituita con il nome 'Expression'. Si tratta del comportamento predefinito per tutte le colonne senza nome.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query drill-through &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)   
+ [Query drill-through &#40;Data mining&#41;](drillthrough-queries-data-mining.md)   
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  
   
   

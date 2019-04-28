@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680435"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurare l'aggiornamento dati o l'elaborazione di sole query dedicato (PowerPivot per SharePoint)
   Nella modalità integrata SharePoint, è possibile configurare un'istanza del server Analysis Services per supportare un tipo specifico di richiesta di elaborazione, ad esempio l'aggiornamento dei dati o l'elaborazione di sole query. Per impostazione predefinita, sono abilitati entrambi i tipi di richieste di caricamento. È possibile disabilitare uno dei due tipi per creare un motore di query o un server di aggiornamento dei dati dedicato.  
@@ -60,7 +60,7 @@ ms.locfileid: "48168183"
   
  È possibile aumentare il numero di processi di aggiornamento dei dati che possono essere eseguiti contemporaneamente se il sistema dispone della capacità di supportare il carico aggiuntivo.  
   
-|Impostazione|Valori validi|Description|  
+|Impostazione|Valori validi|Descrizione|  
 |-------------|------------------|-----------------|  
 |Valore predefinito|Calcolati in base alla RAM.|Il valore predefinito si basa sulla quantità di memoria disponibile divisa per 4 gigabyte. L'impostazione predefinita viene calcolata tramite una formula in modo che le impostazioni possano essere regolate a seconda delle funzionalità del sistema.<br /><br /> Nota: La divisione per 4 gigabyte è stata selezionata in base all'utilizzo di RAM per un grande campione di origini dati PowerPivot effettive. Non si basa sull'architettura fisica o logica di PowerPivot.|  
 |Valore massimo|Calcolati in base al numero di CPU.|Il numero massimo di processi simultanei che è possibile specificare è basato sul numero di processori del computer. Ad esempio, in un computer quad-core a 4 socket, il numero massimo di processi che è possibile eseguire contemporaneamente è 16.|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681218"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Elenco di controllo per la preparazione di data mining
   Sebbene i componenti aggiuntivi Data mining forniscano un modo piuttosto semplice e divertente per creare e provare i modelli, quando è necessario ottenere risultati ripetibili e utilizzabili, è necessario concedere il tempo appropriato per la formulazione dei requisiti aziendali di base e per il recupero e la preparazione dei dati. In questa sezione viene fornito un elenco di controllo per pianificare la ricerca e vengono descritti i problemi comuni.  
@@ -71,7 +71,7 @@ ms.locfileid: "52519932"
   
 -   Se sono stati combinati set di dati, si è verificata la presenza di più colonne che rappresentano gli stessi dati?  
   
- **Si conosce la posizione in cui i dati di origine sono stati archiviati, la provenienza e la modalità di elaborazione. Il processo può essere facilmente ripetuto se necessario.**  
+ **È possibile sapere dove sono archiviati i dati di origine, ovvero la provenienza e modalità di elaborazione. Il processo può essere facilmente ripetuto se necessario.**  
  Set di dati occasionale vanno bene per esperimenti, ma se si desidera spostare il modello nell'ambiente di produzione, è opportuno considerare in anticipo come applicare il processo di pulizia ai dati operativi. Inoltre, se si dispone di dati operativi, è necessario sapere come si potrebbero essere stato modificato prima della ricezione, è necessario sapere come lo era arrotondato o riepilogato.  
   
 -   Si desidera poter ripetere il test?  

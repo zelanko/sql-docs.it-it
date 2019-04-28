@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681029"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Scheda Diagramma dei cluster (Visualizzatore modello di data mining)
   La scheda **Diagramma dei cluster** offre una visualizzazione grafica di tutti i cluster contenuti nel modello di clustering.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -64,15 +64,15 @@ ms.locfileid: "48184198"
  **Variabile ombreggiatura**  
  Consente di selezionare un attributo da rappresentare nel diagramma del cluster.  
   
- **State**  
+ **Stato**  
  Consente di selezionare un singolo stato di **Variabile ombreggiatura** da usare nel diagramma del cluster.  
   
- **Collegamenti**  
+ **Links**  
  Consente di impostare il numero di collegamenti mostrati tra i cluster, spostando il dispositivo di scorrimento in alto o in basso. Abbassando il dispositivo di scorrimento vengono mantenute solo le associazioni più forti tra i cluster.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

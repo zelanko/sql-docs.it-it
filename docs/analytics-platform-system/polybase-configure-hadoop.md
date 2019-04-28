@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678645"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -109,7 +109,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. Creare una tabella esterna che punta ai dati archiviati in Hadoop con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In questo esempio, i dati esterni contengono i dati dei sensori di automobili.
+5. Creare una tabella esterna che punta ai dati archiviati in Hadoop con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In questo esempio i dati esterni contengono dati di sensori di auto.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

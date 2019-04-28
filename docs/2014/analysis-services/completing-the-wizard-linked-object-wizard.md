@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31cd85e73a0bd85a83bb752216f870b4f394807f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680624"
 ---
 # <a name="completing-the-wizard-linked-object-wizard"></a>Completamento procedura guidata (Collegamento guidato oggetti)
   La pagina **Completamento procedura guidata** consente di esaminare le decisioni prese nelle pagine precedenti della procedura guidata.  

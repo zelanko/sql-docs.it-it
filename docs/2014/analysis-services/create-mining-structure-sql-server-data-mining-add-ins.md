@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679905"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crea struttura di data mining (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Crea struttura di Data Mining, barra multifunzione Data Mining](media/dmc-createstruct.gif "pulsante Crea struttura di Data Mining, barra multifunzione Data Mining")  
@@ -95,7 +95,7 @@ ms.locfileid: "52542973"
   
 |Valori|Descrizione|  
 |------------|-----------------|  
-|**includere**|Consente di specificare che la colonna contiene dati utilizzabili per l'analisi o per la stima.|  
+|**Include**|Consente di specificare che la colonna contiene dati utilizzabili per l'analisi o per la stima.|  
 |**Key**|Consente di specificare che nella colonna è contenuto un ID transazione, un ID serie o un'altra chiave necessaria per l'elaborazione.<br /><br /> Tutti gli algoritmi richiedono una colonna Chiave. Con alcuni algoritmi è tuttavia consentita una sola chiave, mentre con altri sono consentite più chiavi.<br /><br /> Se la colonna contiene una chiave ma non è necessaria per l'elaborazione, selezionare **non si usano**.|  
 |**Chiave temporale**|Consente di specificare che la colonna contiene una data o un altro valore numerico utilizzabile per identificare in modo univoco gli elementi di una serie temporale.|  
 |**Non usare**|Consente di specificare che la colonna deve essere ignorata. I dati contenuti nella colonna non verranno elaborati.|  

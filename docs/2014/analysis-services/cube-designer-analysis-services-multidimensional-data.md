@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679627"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Progettazione cubi (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare diverse proprietà di un cubo esistente, tra cui i gruppi di misure e le misure, le dimensioni del cubo e le relazioni tra le dimensioni, i calcoli, gli indicatori di prestazioni chiave (KPI), le azioni, le partizioni, le prospettive e le traduzioni inclusi nel cubo e visualizzare i dati contenuti nel cubo. Per visualizzare la finestra di dialogo **Progettazione cubi** è possibile:  

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679613"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversioni di valuta (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
@@ -55,7 +55,7 @@ ms.locfileid: "48190841"
  Dimensione di tipo Valuta  
  Una dimensione del database definita con le impostazioni seguenti:  
   
--   Il `Type` della dimensione è impostata su Currency.  
+-   La proprietà `Type` della dimensione è impostata su Currency.  
   
 -   La proprietà `Type` di un attributo della dimensione è impostata su CurrencyName.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190841"
   
 -   Tra una dimensione temporale e il gruppo di misure di tipo Tasso esiste una relazione tra dimensioni di tipo Regolare.  
   
--   Facoltativamente, la proprietà `Type` è impostata su ExchangeRate. Mentre nella configurazione guidata Usa le relazioni con dimensioni di ora e valuta per identificare i gruppi di misure tasso, l'impostazione di `Type` proprietà su ExchangeRate consente alle applicazioni identificare più facilmente misure frequenza client gruppi.  
+-   Facoltativamente, la proprietà `Type` è impostata su ExchangeRate. Sebbene nella Configurazione guidata funzionalità di Business Intelligence vengano usate relazioni con dimensioni di tipo Valuta e temporali per l'identificazione dei possibili gruppi di misure di tipo Tasso, l'impostazione della proprietà `Type` su ExchangeRate semplifica l'identificazione di tali gruppi nelle applicazioni client.  
   
 -   Una o più misure, che rappresentano i tassi di cambio inclusi nel gruppo di misure di tipo Tasso.  
   
  Dimensione di tipo Valuta report  
  La dimensione, specificata dalla Configurazione guidata funzionalità di Business Intelligence dopo che è stata definita una conversione di valuta, contenente le valute report per la conversione. La dimensione di tipo Valuta report è basata su una query denominata, definita nella vista origine dati su cui è basata la dimensione di tipo Valuta associata al gruppo di misure di tipo Tasso, che deriva dalla tabella della dimensione principale della dimensione di tipo Valuta. La dimensione è definita con le impostazioni seguenti:  
   
--   Il `Type` della dimensione è impostata su Currency.  
+-   La proprietà `Type` della dimensione è impostata su Currency.  
   
--   Il `Type` dell'attributo chiave della dimensione è impostata su CurrencyName.  
+-   La proprietà `Type` dell'attributo chiave della dimensione è impostata su CurrencyName.  
   
--   Il `Type` proprietà di un attributo all'interno della dimensione è impostata su CurrencyDestination e la colonna associata all'attributo contiene gli identificatori di valuta che rappresentano le valute report per la conversione di valuta.  
+-   La proprietà `Type` di un attributo della dimensione è impostata su CurrencyDestination e la colonna associata all'attributo contiene gli identificatori di valuta che rappresentano le valute report per la conversione.  
   
 ## <a name="defining-currency-conversions"></a>Definizione delle conversioni di valuta  
  La Configurazione guidata funzionalità di Business Intelligence consente di definire la funzionalità di conversione di valuta per un cubo. In alternativa, le conversioni di valuta possono essere definite in modo manuale tramite script MDX.  

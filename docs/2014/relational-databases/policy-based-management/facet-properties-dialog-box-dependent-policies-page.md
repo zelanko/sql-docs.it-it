@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704912"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Finestra di dialogo Proprietà facet, pagina Criteri dipendenti
   Utilizzare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento al facet della gestione basata su criteri.  

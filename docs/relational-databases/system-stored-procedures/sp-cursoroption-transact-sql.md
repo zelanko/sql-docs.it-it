@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724436"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|Restituisce i dati effettivi, anziché il puntatore di testo, per determinate colonne di tipo text o image in recuperi successivi, ovvero annulla l'effetto di TEXTPTR_ONLY.<br /><br /> Se per una colonna specifica è abilitato TEXTDATA, la riga viene nuovamente recuperata o aggiornata e può quindi essere nuovamente impostata su TEXTPTR_ONLY. Analogamente a quanto accade per TEXTPTR_ONLY, il parametro di valore è un intero che specifica il numero di colonna e un valore zero restituisce tutte le colonne di tipo text o image.|  
 |0x0004|SCROLLOPT|Opzione di scorrimento. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
 |0x0005|CCOPT|Opzioni del controllo della concorrenza. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
-|0x0006|ROWCOUNT|Numero di righe correntemente nel set di risultati.<br /><br /> Nota: È possibile che ROWCOUNT sia modificato rispetto al valore restituito da sp_cursoropen, se viene utilizzato il popolamento asincrono. Viene restituito il valore -1 se il numero di righe è sconosciuto.|  
+|0x0006|ROWCOUNT|Numero di righe correntemente nel set di risultati.<br /><br /> Nota: Possibile che ROWCOUNT sia modificato rispetto al valore restituito da sp_cursoropen, se viene utilizzato il popolamento asincrono. Viene restituito il valore -1 se il numero di righe è sconosciuto.|  
   
  *Valore*  
  Definisce il valore restituito da *codice*. *valore* è un parametro obbligatorio che richiede un 0x0001, 0x0002 o 0x0003 *codice* valore di input.  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680880"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Classificazione (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata classificazione sulla barra multifunzione Data Mining](media/dmc-classify.gif "procedura guidata classificazione sulla barra multifunzione Data Mining")  

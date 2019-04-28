@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a4969e3665aca4ed5aef588fa9595e96b846e98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715431"
 ---
 # <a name="column-distributions-data-mining"></a>Distribuzioni delle colonne (Data mining)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire le distribuzioni delle colonne di una struttura di data mining per determinare la modalità con cui gli algoritmi elaborano i dati di tali colonne durante la creazione dei modelli di data mining. Per alcuni algoritmi è utile definire la distribuzione dei dati nelle colonne continue prima di elaborare il modello, se è noto che tali colonne contengono valori con distribuzioni comuni. Se non si definiscono le distribuzioni, i modelli di data mining risultanti possono produrre stime meno accurate, perché gli algoritmi dispongono di meno informazioni per l'interpretazione dei dati.  
@@ -48,9 +48,9 @@ ms.locfileid: "48058633"
  Per altre informazioni sugli algoritmi forniti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Metodi di discretizzazione &#40;Data Mining&#41;](discretization-methods-data-mining.md)   
+ [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Metodi di discretizzazione &#40;Data mining&#41;](discretization-methods-data-mining.md)   
  [Distribuzioni &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  
   
