@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036200"
 ---
 # <a name="set-index-options"></a>Impostare le opzioni di indice
   In questo argomento si illustra come modificare le proprietà di un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,11 +53,11 @@ ms.locfileid: "54130191"
   
 -   Le opzioni seguenti vengono applicate immediatamente all'indice tramite la clausola SET nell'istruzione ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.  
   
--   Quando si ricompila un indice utilizzando ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING, è possono impostare le opzioni seguenti: Opzione PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (solo CREATE INDEX).  
+-   Le opzioni seguenti possono essere impostate quando si ricompila un indice tramite ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (solo CREATE INDEX).  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -106,7 +106,7 @@ ms.locfileid: "54130191"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046123"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gestire e monitorare la ricerca semantica
   Vengono illustrati il processo di indicizzazione semantica e le attività correlate alla gestione e al monitoraggio degli indici.  
   
-##  <a name="HowToMonitorStatus"></a> Come si fa: Verificare lo stato dell'indicizzazione semantica  
+##  <a name="HowToMonitorStatus"></a> Come si fa: Controllare lo stato dell'indicizzazione semantica  
  **È stata completata la prima fase dell'indicizzazione semantica?**  
  Eseguire una query sulla DMV [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) e verificare lo **stato** e le colonne **status_description**.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Come si fa: Verificare le dimensioni degli indici semantici  
+##  <a name="HowToCheckSize"></a> Come si fa: Controllare le dimensioni degli indici semantici  
  **Che cos'è la dimensione logica di un indice di frasi chiave semantico o di un indice di somiglianza dei documenti semantico?**  
  Eseguire una query sulla DMV [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   

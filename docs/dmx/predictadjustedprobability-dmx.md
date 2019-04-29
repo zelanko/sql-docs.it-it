@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9fd11ec1fcdf9a3c6ce5dc6476e877d808710b54
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046069"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
