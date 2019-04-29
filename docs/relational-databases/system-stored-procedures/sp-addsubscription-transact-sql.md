@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998305"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @article=] '*articolo*'  
  Articolo in cui viene sottoscritta la pubblicazione. *articolo* viene **sysname**, con un valore predefinito è all. Se si specifica all, viene aggiunta una sottoscrizione a tutti gli articoli della pubblicazione specificata. Per i server di pubblicazione Oracle sono supportati solo i valori all o NULL.  
   
- [ @subscriber=] '*sottoscrittore*'  
+ [ @subscriber=] '*subscriber*'  
  Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
   
  [ @destination_db=] '*destination_db*'  
@@ -93,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|none|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate.<br /><br /> Nota: Questa opzione è deprecata. In alternativa, utilizzare il valore replication support only.|  
+|none|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate.<br /><br /> Nota: Questa opzione è stata deprecata. In alternativa, utilizzare il valore replication support only.|  
 |automatic (predefinito)|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
 |replication support only|Esegue nel Sottoscrittore la generazione automatica di stored procedure e trigger personalizzati degli articoli che supportano l'aggiornamento delle sottoscrizioni, se appropriato. Presuppone che nel Sottoscrittore siano già disponibili lo schema e i dati iniziali per le tabelle pubblicate. Durante la configurazione di una topologia di replica transazionale peer-to-peer, assicurarsi che i dati in tutti i nodi della topologia siano identici. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Non è supportata per le sottoscrizioni a pubblicazioni non SQL Server.*|  
 |initialize with backup|Lo schema e i dati iniziali per le tabelle pubblicate vengono recuperati da un backup del database di pubblicazione. Si presuppone che il Sottoscrittore abbia accesso a un backup del database di pubblicazione. Il percorso del tipo di backup e il supporto per il backup vengono specificati da *backupdevicename* e *backupdevicetype*. Se si utilizza questa opzione, non sarà necessario mettere in stato di inattività la topologia di replica transazionale peer-to-peer durante la configurazione.<br /><br /> *Non è supportata per le sottoscrizioni a pubblicazioni non SQL Server.*|  
@@ -102,7 +102,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Le tabelle e i dati di sistema vengono sempre trasferiti.  
   
- [ @status=] '*stato*'  
+ [ @status=] '*status*'  
  Stato della sottoscrizione. *lo stato* viene **sysname**, con un valore predefinito NULL. Se non è impostato in modo esplicito, questo parametro viene impostato automaticamente dalla replica su uno dei valori seguenti.  
   
 |Value|Descrizione|  
@@ -199,13 +199,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  Prompt dei comandi facoltativo da eseguire. *optional_command_line* viene **nvarchar (4000)**, con un valore predefinito è NULL.  
   
- [ @reserved=] '*riservato*'  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  È se la sottoscrizione può essere sincronizzata tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se il valore è false, la sottoscrizione non viene registrata con Gestione sincronizzazione Microsoft Windows. Se il valore è true, la sottoscrizione viene registrata con Gestione sincronizzazione Microsoft Windows e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa proprietà non è supportata per server di pubblicazione Oracle.  
   
- [ @offloadagent=] '*remote_agent_activation*'  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  Specifica se è possibile o meno attivare l'agente in remoto. *remote_agent_activation* viene **bit** con valore predefinito è 0.  
   
 > [!NOTE]  
@@ -217,7 +217,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_name=] '*dts_package_name*'  
  Specifica il nome del pacchetto Data Transformation Services (DTS). *dts_package_name* è un **sysname** con valore predefinito è NULL. Ad esempio, per specificare il pacchetto DTSPub_Package, il parametro deve essere `@dts_package_name = N'DTSPub_Package'`. Questo parametro è disponibile per sottoscrizioni push. Per aggiungere informazioni sul pacchetto DTS a una sottoscrizione pull, utilizzare sp_addpullsubscription_agent.  
   
- [ @dts_package_password=] '*dts_package_password*'  
+ [ @dts_package_password= ] '*dts_package_password*'  
  Password del pacchetto, se è disponibile. *dts_package_password* viene **sysname** con valore predefinito è NULL.  
   
 > [!NOTE]  
@@ -226,16 +226,16 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_location=] '*dts_package_location*'  
  Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar (12)**, con un valore predefinito del server di distribuzione. Per la posizione del pacchetto è possibile specificare distributor o subscriber.  
   
- [ @distribution_job_name=] '*job_name*'  
+ [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*server di pubblicazione*'  
+ [ @publisher= ] '*publisher*'  
  Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [ @backupdevicetype=] '*backupdevicetype*'  
+ [ @backupdevicetype= ] '*backupdevicetype*'  
  Specifica il tipo di dispositivo di backup utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicetype* viene **nvarchar(20)**, i possibili valori sono i seguenti:  
   
 |Value|Descrizione|  
@@ -249,19 +249,19 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicename=] '*backupdevicename*'  
  Specifica il nome del dispositivo utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicename* viene **nvarchar(1000)**, con un valore predefinito è NULL.  
   
- [ @mediapassword=] '*mediapassword*'  
+ [ @mediapassword= ] '*mediapassword*'  
  Specifica una password per il set di supporti se durante la formattazione dei supporti è stata impostata una password. *MEDIAPASSWORD* viene **sysname**, con un valore predefinito NULL.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*password*'  
+ [ @password= ] '*password*'  
  Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *la password*viene **sysname**, con un valore predefinito NULL.  
   
- [ @fileidhint=] *fileidhint*  
+ [ @fileidhint= ] *fileidhint*  
  Identifica un valore ordinale del set di backup da ripristinare. *fileidhint* viene **int**, con un valore predefinito NULL.  
   
- [ @unload=] *scaricamento*  
+ [ @unload= ] *unload*  
  Specifica se è necessario scaricare un dispositivo di backup su nastro dopo il completamento dell'inizializzazione dal backup. *scaricamento* viene **bit**, con un valore predefinito 1. il valore 1 specifica che il nastro deve essere scaricato. *scaricamento* viene utilizzato solo quando *backupdevicetype* è un nastro.  
   
  [ @subscriptionlsn=] *subscriptionlsn*  
@@ -319,7 +319,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>Vedere anche  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

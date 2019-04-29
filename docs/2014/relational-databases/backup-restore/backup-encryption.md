@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922172"
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
   In questo argomento viene fornita una panoramica delle opzioni di crittografia per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono illustrati i dettagli di utilizzo, i vantaggi e le procedure consigliate per eseguire la crittografia durante il backup.  
@@ -26,20 +26,20 @@ ms.locfileid: "48055831"
   
  Per crittografare durante il backup, è necessario specificare un algoritmo di crittografia e un componente di crittografia per proteggere la chiave di crittografia. Di seguito sono riportate le opzioni di crittografia supportate:  
   
--   **Algoritmo di crittografia:** gli algoritmi di crittografia supportati sono AES 128, AES 192, AES 256 e Triple DES  
+-   **Algoritmo di crittografia:** Gli algoritmi di crittografia supportati sono: AES 128, AES 192, AES 256 e Triple DES  
   
--   **Componente di crittografia:** certificato o chiave asimmetrica  
+-   **Componente di crittografia:** Un certificato o chiave asimmetrica  
   
 > [!CAUTION]  
 >  È molto importante eseguire il backup del certificato o della chiave asimmetrica e preferibilmente in un percorso diverso dal file di backup utilizzato per la crittografia. Senza il certificato o la chiave asimmetrica, non è possibile ripristinare il backup, rendendo il file di backup inutilizzabile.  
   
- **Ripristino del backup crittografato:** durante le operazioni di ripristino di SQL Server non è necessario specificare alcun parametro di crittografia. È necessario che la chiave asimmetrica o il certificato utilizzato per crittografare il file di backup sia disponibile nell'istanza in cui viene eseguito il ripristino. L'account utente che esegue il ripristino deve disporre delle autorizzazioni `VIEW DEFINITION` per il certificato o la chiave. Se si esegue il ripristino del backup crittografato in un'istanza diversa, è necessario assicurarsi che il certificato sia disponibile in tale istanza.  
+ **Ripristino del backup crittografato:** Ripristino di SQL Server non richiede alcun parametro di crittografia per essere specificati durante le operazioni di ripristino. È necessario che la chiave asimmetrica o il certificato utilizzato per crittografare il file di backup sia disponibile nell'istanza in cui viene eseguito il ripristino. L'account utente che esegue il ripristino deve disporre delle autorizzazioni `VIEW DEFINITION` per il certificato o la chiave. Se si esegue il ripristino del backup crittografato in un'istanza diversa, è necessario assicurarsi che il certificato sia disponibile in tale istanza.  
   
  Se si esegue il ripristino di un backup da un database crittografato con TDE, è necessario che il certificato TDE sia disponibile nell'istanza in cui viene eseguito il ripristino.  
   
 ##  <a name="Benefits"></a> Vantaggi  
   
-1.  La crittografia dei backup dei database facilita la protezione dei dati: in SQL Server è possibile scegliere di crittografare i dati di backup durante la creazione di un backup.  
+1.  La crittografia dei backup dei database aiuta a proteggere i dati: SQL Server fornisce la possibilità di crittografare i dati di backup durante la creazione di un backup.  
   
 2.  La crittografia può essere utilizzata anche per i database crittografati tramite TDE.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055831"
 ##  <a name="Prerequisites"></a> Prerequisiti  
  Di seguito sono riportati i prerequisiti per crittografare un backup:  
   
-1.  **Creare una chiave master del database per il database master:** la chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Per altre informazioni, vedere [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Creare una chiave Master del Database per il database master:** La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Per altre informazioni, vedere [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Creare un certificato o una chiave asimmetrica da utilizzare per la crittografia dei backup. Per altre informazioni sulla creazione di un certificato, vedere [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Per altre informazioni sulla creazione di una chiave asimmetrica, vedere [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48055831"
 -   L'opzione Accoda al set di backup esistente non è supportata per i backup crittografati.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  **Per crittografare un backup o per eseguire il ripristino da un backup crittografato:**  
   
  Autorizzazione `VIEW DEFINITION` per la chiave asimmetrica o il certificato utilizzato per crittografare il backup del database.  
@@ -132,7 +132,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
-|Argomento/Attività|Description|  
+|Argomento/Attività|Descrizione|  
 |-----------------|-----------------|  
 |[Creare un backup crittografato](create-an-encrypted-backup.md)|Vengono descritti i passaggi di base necessari per creare un backup crittografato|  
 |[Backup gestito di SQL Server in Windows Azure - Impostazioni di archiviazione e di memorizzazione](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Vengono descritti i passaggi di base necessari per configurare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le opzioni di crittografia specificate.|  

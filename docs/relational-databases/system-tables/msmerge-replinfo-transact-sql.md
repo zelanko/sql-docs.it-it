@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903326"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52775423"
 |**validation_level**|**int**|Tipo di convalida da eseguire sulla sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = Nessuna convalida.<br /><br /> **1** = convalida solo mediante conteggio delle righe.<br /><br /> **2** = convalida mediante conteggio delle righe e checksum.<br /><br /> **3** = conteggio delle righe e convalida mediante checksum binario.|  
 |**resync_gen**|**bigint**|Numero di generazione utilizzato per la risincronizzazione della sottoscrizione. Un valore pari **-1** indica che la sottoscrizione non è contrassegnata per la risincronizzazione.|  
 |**login_name**|**sysname**|Nome dell'utente che ha creato la sottoscrizione.|  
-|**Nome host**|**sysname**|Valore utilizzato dal filtro di riga con parametri durante la generazione della partizione per la sottoscrizione.|  
+|**hostname**|**sysname**|Valore utilizzato dal filtro di riga con parametri durante la generazione della partizione per la sottoscrizione.|  
 |**merge_jobid**|**binary(16)**|ID del processo di merge della sottoscrizione.|  
 |**sync_info**|**int**|Solo per uso interno.|  
   

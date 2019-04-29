@@ -1,5 +1,5 @@
 ---
-title: Impostare tabelle writeback delle partizioni | Documenti Microsoft
+title: Impostare tabelle writeback delle partizioni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 844aad81d49f16718cb795f443c3d8101e2ff771
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020098"
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34027018"
  Per convertire i dati writeback in una partizione, usare la finestra di dialogo **Converti in partizione**, a cui è possibile accedere facendo clic con il pulsante destro del mouse sulla tabella writeback di una partizione abilitata per la scrittura in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile specificare il nome della partizione e quindi progettare la relativa aggregazione durante la creazione della partizione stessa o in un secondo momento. Per creare l'aggregazione quando si seleziona la partizione, è necessario scegliere di copiare la progettazione dell'aggregazione da una partizione esistente, che in genere, ma non necessariamente, corrisponde alla partizione writeback corrente. È inoltre possibile scegliere di elaborare la partizione durante la creazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Abilitazione del writeback su un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Abilitazione e protezione dell'immissione di dati con il writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   

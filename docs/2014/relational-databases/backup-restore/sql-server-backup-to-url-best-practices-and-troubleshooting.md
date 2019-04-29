@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877093"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
   In questo argomento sono inclusi i suggerimenti per la risoluzione dei problemi e le procedure consigliate relativi al backup e ripristino di SQL Server nel servizio BLOB di Windows Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349994"
   
 -   [Backup e ripristino di SQL Server con il servizio di Archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Esercitazione: SQL Server Backup e ripristino di Windows Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestione dei backup  
  Nell'elenco seguente sono inclusi i consigli generali sulla gestione dei backup:  
@@ -98,15 +98,15 @@ ms.locfileid: "53349994"
   
          Per risolvere il problema, eseguire nuovamente l'istruzione `BACKUP` con il valore `BLOCKSIZE = 65536` specificato.  
   
--   Errore durante il backup a causa di un BLOB con lease attivi su di essi: Attività di backup non completata correttamente può generare BLOB con lease attivi.  
+-   Errore durante il backup a causa di BLOB con lease attivi: l'attività di backup non completata può generare BLOB con lease attivi.  
   
      Se si tenta di nuovo un'istruzione di backup, quest'ultimo potrebbe non essere completato e potrebbe essere visualizzato un errore simile al seguente:  
   
-     **Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Il server remoto ha restituito un errore: Qui (412) attualmente sono attivo un lease sul blob e nessun ID lease è stato specificato nella richiesta**.  
+     **Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Errore del server remoto: Qui (412) attualmente sono attivo un lease sul blob e nessun ID lease è stato specificato nella richiesta**.  
   
      Se un'istruzione RESTORE viene tentata in un file BLOB di backup con un lease attivo, l'operazione di ripristino non viene completata e viene visualizzato un errore simile al seguente:  
   
-     **Messaggio eccezione: Il server remoto ha restituito un errore: (409) conflitto...**  
+     **Messaggio eccezione: Errore del server remoto: (409) Conflict..**  
   
      Quando si verifica un errore di questo tipo, i file BLOB devono essere eliminati. Per altre informazioni su questo scenario e su come risolvere il problema, vedere [Eliminazione dei file BLOB di backup con lease attivi](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349994"
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server.   Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   
--   Scrivere su "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" non è riuscita: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione del trasporto: La connessione è stata chiusa.  
+-   Scrivere su "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" non è riuscita: Backup su URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Impossibile leggere i dati dalla connessione del trasporto: La connessione è stata chiusa.  
   
 -   Si è verificato un errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Impossibile recuperare l'errore dall'endpoint remoto.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "53349994"
   
  **Impostazioni proxy predefinite non rilevate:**  
   
- Talvolta le impostazioni predefinite non vengono rilevate, causando errori di autenticazione del proxy come quello indicato di seguito:*Errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Il backup all'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Il server remoto ha restituito un errore: (407)*  **Richiesta autenticazione proxy**.  
+ Talvolta le impostazioni predefinite non vengono rilevate, causando errori di autenticazione del proxy come quello indicato di seguito:*Errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Il backup all'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: Errore del server remoto: (407)*  **Richiesta autenticazione proxy**.  
   
  Per risolvere il problema, creare un file di configurazione che consenta al processo di backup su URL di utilizzare le impostazioni predefinite del proxy effettuando i passaggi indicati di seguito.  
   

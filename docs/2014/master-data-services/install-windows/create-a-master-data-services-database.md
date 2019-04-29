@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af7e442c1465ac1f93a134ab00da6a9e31242da4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924234"
 ---
 # <a name="create-a-master-data-services-database"></a>Creare un database Master Data Services
   Creare un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] quando è necessario un nuovo database per supportare l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e il servizio Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  

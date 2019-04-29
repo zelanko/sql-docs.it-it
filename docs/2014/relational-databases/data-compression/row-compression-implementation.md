@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873012"
 ---
 # <a name="row-compression-implementation"></a>Implementazione della compressione di riga
   In questo argomento vengono riepilogate le modalità di implementazione della compressione di riga nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Tale riepilogo fornisce informazioni di base che consentono di pianificare lo spazio di archiviazione necessario per i dati.  
@@ -68,9 +68,9 @@ ms.locfileid: "52798513"
 |`cursor`|No|Nessun effetto.|  
 |`timestamp` / `rowversion`|Yes|Rappresenta i dati Integer utilizzando 8 byte. È disponibile un contatore timestamp gestito per ogni database, il cui valore iniziale è pari a 0. È possibile comprimere questo tipo in modo analogo a qualsiasi altro valore intero.|  
 |`sql_variant`|No|Nessun effetto.|  
-|`uniqueidentifier`|No|Nessun effetto.|  
-|`table`|No|Nessun effetto.|  
-|`xml`|No|Nessun effetto.|  
+|`uniqueidentifier`|no|Nessun effetto.|  
+|`table`|no|Nessun effetto.|  
+|`xml`|no|Nessun effetto.|  
 |Tipi definiti dall'utente|No|Rappresentati internamente come `varbinary`.|  
 |FILESTREAM|No|Rappresentati internamente come `varbinary`.|  
   

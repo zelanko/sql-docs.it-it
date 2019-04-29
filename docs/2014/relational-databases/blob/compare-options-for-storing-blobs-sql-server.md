@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877218"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
   Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,8 +50,8 @@ ms.locfileid: "53364709"
 |**Singola soluzione per le attività di gestione**|No|Yes|**Sì**|  
 |**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Yes|**Sì**|  
 |**Modello di sicurezza integrata**|No|Yes|**Sì**|  
-|**Aggiornamenti sul posto di dati FILESTREAM**|Yes|No|**Sì**|  
-|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|  
+|**Aggiornamenti sul posto di dati FILESTREAM**|Yes|no|**Sì**|  
+|**Gerarchia di file e directory gestita nel database**|No|no|**Sì**|  
 |**Compatibilità delle applicazioni di Windows**|Yes|No|**Sì**|  
 |**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
   

@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione della prospettiva (tabulare) | Documenti Microsoft
+title: Rappresentazione della prospettiva (tabulare) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee406b4a5f1f9e366457ac150f10da226551f79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019317"
 ---
 # <a name="perspective-representation-tabular"></a>Rappresentazione della prospettiva (tabulare)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Una prospettiva è un meccanismo per semplificare o concentrare il modello in una parte più piccola per l'applicazione client.  
   
- Vedere [rappresentazione della prospettiva (tabulare)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della prospettiva.  
+ Visualizzare [rappresentazione della prospettiva (tabulare)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della prospettiva.  
   
 > [!WARNING]  
 >  Le prospettive non sono un meccanismo di sicurezza. L'utente può comunque accedere agli oggetti esterni alla prospettiva tramite altre interfacce.  

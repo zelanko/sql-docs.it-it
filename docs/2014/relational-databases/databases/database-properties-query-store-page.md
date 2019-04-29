@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917212"
 ---
 # <a name="database-properties-query-store-page"></a>Proprietà database (pagina Archivio query)
   Accedere a questa pagina dal database principale e usarla per configurare e modificare le proprietà dell'archivio query del database. È anche possibile configurare queste opzioni con le [opzioni ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options). Per informazioni sull'archivio query, vedere [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  

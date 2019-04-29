@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86e2e1793693527ee96ea4057061ade98b70884d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833081"
 ---
 # <a name="control-flow-tab"></a>Scheda Flusso di controllo
   Utilizzare la scheda **Flusso di controllo** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare il flusso di controllo in un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955806"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituito da parentesi quadre (**[]**) che contiene un tipo e un parametro. Per le stringhe letterali sono indicati i quattro tipi di sezioni **connettersi**, **sql**, **elencoutenti**, oppure **log**. Il parametro è la stringa letterale, il valore predefinito, un identificatore specificato dall'utente o nulla.  

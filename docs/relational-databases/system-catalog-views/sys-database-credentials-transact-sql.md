@@ -20,27 +20,27 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936741"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>Sys. database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Restituisce una riga per ogni database scoped credential nel database.  
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) invece.    
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|ID della credenziale con ambito database. È univoco nel database.|  
 |NAME|**sysname**|Nome del database-credenziali con ambito. È univoco nel database.|  
 |credential_identity|**nvarchar(4000)**|Nome dell'identità da utilizzare, in genere corrispondente a un utente di Windows. Non è necessario che sia univoco.|  
 |create_date|**datetime**|Ora in cui è stata creata la credenziale con ambito database.|  
 |modify_date|**datetime**|Ora ultima modifica in corrispondenza del quale la credenziale con ambito database.|  
-|target_type|**Nvarchar(100)**|Tipo di database-credenziali con ambito. Le credenziali con ambito restituisce NULL per il database.|  
+|target_type|**nvarchar(100)**|Tipo di database-credenziali con ambito. Le credenziali con ambito restituisce NULL per il database.|  
 |target_id|**int**|ID dell'oggetto mappato per la credenziale con ambito database. Le credenziali con ambito restituisce 0 per il database|  
   
 ## <a name="permissions"></a>Permissions  

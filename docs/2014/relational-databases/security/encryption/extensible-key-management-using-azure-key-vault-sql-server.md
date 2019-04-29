@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011520"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consente a Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografia da usare il servizio Azure Key Vault come un [Extensible Key Management &#40;EKM&#41; ](extensible-key-management-ekm.md) provider per la protezione relativo chiavi di crittografia.  

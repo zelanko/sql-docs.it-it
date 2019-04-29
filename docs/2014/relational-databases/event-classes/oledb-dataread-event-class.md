@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960806"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead - classe di evento
   La classe di evento OLEDB DataRead viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama un provider OLE DB per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata per una richiesta di dati al provider OLE DB.  
@@ -38,8 +38,8 @@ ms.locfileid: "52776333"
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Yes|  
 |Errore|`int`|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo sys.messages.|31|Yes|  
 |EventClass|`int`|Tipo di evento = 121.|27|No|  
-|EventSequence|`int`|Sequenza della classe di evento OLE DB nel batch.|51|No|  
-|EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Avvio in corso<br /><br /> 1=Completato|21|No|  
+|EventSequence|`int`|Sequenza della classe di evento OLE DB nel batch.|51|no|  
+|EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Avvio in corso<br /><br /> 1=Completato|21|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  

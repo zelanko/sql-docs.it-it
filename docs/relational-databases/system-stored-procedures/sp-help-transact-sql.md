@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017756"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
     |**Scala**|**int**|Numero di cifre a destra del separatore decimale.|  
-    |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
+    |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se i valori NULL sono consentiti: Sì o No.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Nome_regola**|**nvarchar(** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Regole di confronto**|**sysname**|Regole di confronto per il tipo di dati. Per i tipi di dati non carattere, è NULL.|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nome colonna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo di dati della colonna.|  
-        |**Computed**|**varchar(** 35 **)**|Indica se i valori della colonna sono calcolati. I possibili valori sono Yes o No.|  
+        |**Computed**|**varchar(** 35 **)**|Indica se i valori nella colonna sono calcolati: Sì o No.|  
         |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: Se il tipo di dati di colonna è un tipo di valori di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**), il valore verrà vengono visualizzati come -1.|  
         |**Prec**|**char(** 5 **)**|Precisione della colonna.|  
         |**Scala**|**char(** 5 **)**|Scala della colonna.|  
-        |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
+        |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se sono consentiti valori NULL nella colonna: Sì o No.|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
         |**Regole di confronto**|**sysname**|Regole di confronto della colonna. NULL per i tipi di dati non carattere.|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Filegroup in cui si trovano i dati: primario, secondario o log delle transazioni.|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Filegroup in cui si trovano i dati: Database primario, secondario o Log delle transazioni.|  
   
     -   Set di risultati aggiuntivo restituito per gli indici:  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|Tipo di vincolo.|  
         |**constraint_name**|**nvarchar(** 128 **)**|Nome del vincolo.|  
-        |**delete_action**|**nvarchar(** 9 **)**|Indica se l'azione DELETE è: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
-        |**update_action**|**nvarchar(** 9 **)**|Indica se l'azione UPDATE è: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
-        |**status_enabled**|**varchar(** 8 **)**|Indica se il vincolo è abilitato. I possibili valori sono Enabled, Disabled o N/A.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
+        |**delete_action**|**nvarchar(** 9 **)**|Indica se l'azione di eliminazione è: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o n/d.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
+        |**update_action**|**nvarchar(** 9 **)**|Indica se l'azione di aggiornamento è: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o n/d.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
+        |**status_enabled**|**varchar(** 8 **)**|Indica se il vincolo è abilitato: Enabled, Disabled o n/d.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
         |**status_for_replication**|**varchar(** 19 **)**|Indica se il vincolo è relativo alla replica.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|Nomi delle colonne che formano il vincolo o, nel caso di valori predefiniti e regole, il testo che definisce il valore predefinito o la regola.|  
   

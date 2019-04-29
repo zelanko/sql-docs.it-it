@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900242"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386549"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video [Procedura: Implementare una trasformazione ricerca in modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031), sul sito msdn.microsoft.com  
+-   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031) in msdn.microsoft.com  
   
 -   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](https://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   
--   Intervento nel blog concernente [Lookup Pattern: Maiuscole e minuscole](https://go.microsoft.com/fwlink/?LinkId=157782), su blogs.msdn.com  
+-   Post di blog [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Modello di ricerca senza distinzione tra maiuscole e minuscole) in blogs.msdn.com  
   
 -   Esempio [trasformazione Ricerca](https://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
   

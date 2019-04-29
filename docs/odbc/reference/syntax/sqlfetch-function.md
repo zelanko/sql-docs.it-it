@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982301"
 ---
 # <a name="sqlfetch-function"></a>Funzione SQLFetch
 **Conformità**  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |Prima dell'inizio|1|  
-|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Dopo la fine|  
 |Dopo la fine|Dopo la fine|  
   
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|La riga è stata recuperata correttamente e non è stato modificato dopo l'ultimo recupero da questo set di risultati. Tuttavia, è stato restituito un avviso sulla riga.|  
 |SQL_ROW_ERROR|Si è verificato un errore durante il recupero della riga.|  
 |SQL_ROW_UPDATED [1], [2], [3] e|La riga è stata recuperata correttamente ed è stato modificato dopo l'ultimo recupero da questo set di risultati. Se la riga viene recuperata di nuovo da questo set di risultati o viene aggiornata dal **SQLSetPos**, lo stato viene modificato al nuovo stato della riga.|  
-|SQL_ROW_DELETED [3]|La riga è stata eliminata dopo l'ultimo recupero da questo set di risultati.|  
-|SQL_ROW_ADDED [4]|La riga inserita da **SQLBulkOperations**. Se la riga viene recuperata di nuovo da questo set di risultati o viene aggiornata dal **SQLSetPos**, il suo stato sia SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED[3]|La riga è stata eliminata dopo l'ultimo recupero da questo set di risultati.|  
+|SQL_ROW_ADDED[4]|La riga inserita da **SQLBulkOperations**. Se la riga viene recuperata di nuovo da questo set di risultati o viene aggiornata dal **SQLSetPos**, il suo stato sia SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|Il set di righe sovrapposti la fine del set di risultati, ed è stata restituita alcuna riga che corrisponde a questo elemento della matrice di stato di riga.|  
   
  [1] per keyset, misti cursori dinamici, se un valore di chiave viene aggiornato, viene considerata la riga di dati sono stati eliminati e aggiunta una nuova riga.  
@@ -232,10 +232,10 @@ SQLRETURN SQLFetch(
   
 |Campo di descrizione|DESC.|Campo in|Impostare tramite|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|Intestazione|Attributo di SQL_ATTR_ROW_ARRAY_SIZE istruzione|  
+|SQL_DESC_ARRAY_SIZE|ARD|Intestazione|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|Intestazione|Attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR|ARD|Intestazione|Attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_DESC_BIND_TYPE|ARD|Intestazione|Attributo di istruzione SQL_ATTR_ROW_BIND_TYPE|  
+|SQL_DESC_BIND_TYPE|ARD|Intestazione|SQL_ATTR_ROW_BIND_TYPE statement attribute|  
 |SQL_DESC_COUNT|ARD|Intestazione|*ColumnNumber* argomento di **SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|record|*TargetValuePtr* argomento di **SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|record|*StrLen_or_IndPtr* argomento in **SQLBindCol**|  
@@ -247,7 +247,7 @@ SQLRETURN SQLFetch(
  Tutti i campi di descrizione possono essere impostati anche attraverso **SQLSetDescField**.  
   
 #### <a name="separate-length-and-indicator-buffers"></a>Lunghezza separato e i buffer di indicatore  
- Le applicazioni possono associare un singolo buffer o due buffer distinti che può essere utilizzato per contenere i valori di lunghezza e indicatore. Quando un'applicazione chiama **SQLBindCol**, il driver imposta i campi SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR del ARD allo stesso indirizzo, che viene passato il *StrLen_or_IndPtr* argomento. Quando un'applicazione chiama **SQLSetDescField** oppure **SQLSetDescRec**, è possibile impostare questi due campi a indirizzi diversi.  
+ Le applicazioni possono associare un singolo buffer o due buffer distinti che può essere utilizzato per contenere i valori di lunghezza e indicatore. Quando un'applicazione chiama **SQLBindCol**, il driver imposta i campi SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR del ARD allo stesso indirizzo, che viene passato il *StrLen_or_IndPtr* discussione. Quando un'applicazione chiama **SQLSetDescField** oppure **SQLSetDescRec**, è possibile impostare questi due campi a indirizzi diversi.  
   
  **SQLFetch** determina se l'applicazione ha specificato i buffer di lunghezza e indicatore separati. In questo caso, quando i dati non sono NULL, **SQLFetch** imposta il buffer di indicatore su 0 e restituisce la lunghezza del buffer di lunghezza. Quando i dati sono NULL, **SQLFetch** imposta il buffer di indicatore su SQL_NULL_DATA e non modifica il buffer di lunghezza.  
   

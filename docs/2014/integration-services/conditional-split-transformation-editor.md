@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835187"
 ---
 # <a name="conditional-split-transformation-editor"></a>Editor trasformazione Suddivisione condizionale
   Utilizzare la finestra di dialogo **Editor trasformazione Suddivisione condizionale** per creare espressioni e impostare l'ordine in cui vengono valutate, nonché per assegnare un nome agli output di una suddivisione condizionale. In questa finestra di dialogo sono inclusi funzioni e operatori matematici, di data/ora e per i valori stringa che possono essere utilizzati per la compilazione di espressioni. La prima condizione che restituisce true determina l'output a cui è indirizzata una riga.  
@@ -42,7 +42,7 @@ ms.locfileid: "58392963"
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  
   
- **Argomenti correlati:**  [Integration Services &#40;SSIS&#41; espressioni](expressions/integration-services-ssis-expressions.md), [operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md), e [funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Argomenti correlati:**  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nome output predefinito**  
  Consente di immettere un nome per la trasformazione. In alternativa, utilizzare quello predefinito.  

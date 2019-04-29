@@ -21,22 +21,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 500740207ea4c020ef7845b5de9e993655d4295d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737265"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>Attributi nelle gerarchie padre-figlio
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene in genere adottato un presupposto generale riguardo al contenuto dei membri di una dimensione. I membri foglia contengono dati derivati direttamente da origini dei dati sottostanti, mentre i membri non foglia contengono dati derivati da aggregazioni eseguite su membri figlio.  
   
  In una gerarchia padre-figlio, tuttavia, alcuni membri non foglia potrebbero includere dati derivati da origini dei dati sottostanti oltre ai dati aggregati da membri figlio. Per questi membri non foglia di una gerarchia padre-figlio vengono creati membri figlio speciali generati dal sistema contenenti i dati della tabella dei fatti sottostante. Questi membri, denominati *membri dei dati*, contengono un valore direttamente associato a un membro non foglia indipendente dal valore di riepilogo calcolato dai discendenti del membro non foglia.  
   
- I membri dei dati sono disponibili solo per le dimensioni con gerarchie padre-figlio e sono visibili solo se l'attributo padre lo consente. È possibile utilizzare Progettazione dimensioni per controllare la visibilità dei membri dei dati. Per esporre i membri dati, impostare il `MembersWithData` proprietà dell'attributo padre su `NonLeafDataVisible.` per nascondere i membri di dati contenuti nell'attributo padre, impostare il `MembersWithData` proprietà nell'attributo padre su `NonLeafDataHidden`.  
+ I membri dei dati sono disponibili solo per le dimensioni con gerarchie padre-figlio e sono visibili solo se l'attributo padre lo consente. È possibile utilizzare Progettazione dimensioni per controllare la visibilità dei membri dei dati. Per esporre i membri dei dati, impostare la proprietà `MembersWithData` dell'attributo padre su `NonLeafDataVisible.` Per nascondere i membri dei dati inclusi nell'attributo padre, impostare la proprietà `MembersWithData` dell'attributo padre su `NonLeafDataHidden`.  
   
  Questa impostazione non altera la normale modalità di aggregazione dei membri non foglia in quanto il membro dei dati viene sempre incluso come membro figlio ai fini dell'aggregazione. È tuttavia possibile utilizzare una formula personalizzata di rollup per ignorare la normale modalità di aggregazione. Espressioni MDX (MDX) [DataMember](/sql/mdx/datamember-mdx) la funzione offre la possibilità di accedere al valore del membro dati associato indipendentemente dal valore della `MembersWithData` proprietà.  
   
- Il `MembersWithDataCaption` proprietà dell'attributo padre fornisce [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con il modello di denominazione utilizzato per generare i nomi dei membri per i membri dati.  
+ La proprietà `MembersWithDataCaption` dell'attributo padre indica a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] il modello di denominazione da utilizzare per generare i nomi dei membri dei dati.  
   
 ## <a name="using-data-members"></a>Utilizzo dei membri dei dati  
  I membri dei dati sono utili durante l'aggregazione di misure in base a dimensioni organizzative con gerarchie padre-figlio. Ad esempio, nella figura seguente viene illustrata una dimensione con tre livelli, rappresentante il volume delle vendite lorde dei prodotti. Il primo livello indica il volume delle vendite lorde per tutti i rappresentanti. Il secondo livello include il volume delle vendite lorde per tutto il personale addetto alle vendite raggruppato in base al responsabile delle vendite e il terzo livello include il volume delle vendite lorde per tutto il personale addetto alle vendite raggruppato in base al rappresentante.  
@@ -45,10 +45,10 @@ ms.locfileid: "48219651"
   
  In genere, il valore del membro Sales Manager 1 verrebbe derivato dall'aggregazione dei valori dei membri Salesperson 1 e Salesperson 2. Tuttavia, poiché anche Sales Manager 1 può vendere prodotti, tale membro può inoltre includere dati derivati dalla tabella dei fatti, in quanto a Sales Manager 1 potrebbero essere associate vendite lorde.  
   
- Le commissioni individuali per ogni membro del personale addetto alle vendite, inoltre, possono essere diverse. In questo caso, vengono utilizzate due scale diverse per calcolare le commissioni per le vendite lorde individuali dei responsabili delle vendite rispetto alle vendite lorde totali generate dai rappresentanti. Pertanto, è importante poter accedere ai dati della tabella dei fatti sottostante per i membri non foglia. L'espressione MDX `DataMember` funzione può essere utilizzata per recuperare il volume di vendite lorde individuali del membro Sales Manager 1, e un'espressione di rollup personalizzato utilizzabile per escludere il membro dei dati dal valore aggregato del membro Sales Manager 1, che fornisce il gross volume delle vendite i rappresentanti associati al membro.  
+ Le commissioni individuali per ogni membro del personale addetto alle vendite, inoltre, possono essere diverse. In questo caso, vengono utilizzate due scale diverse per calcolare le commissioni per le vendite lorde individuali dei responsabili delle vendite rispetto alle vendite lorde totali generate dai rappresentanti. Pertanto, è importante poter accedere ai dati della tabella dei fatti sottostante per i membri non foglia. Per recuperare il volume delle vendite lorde individuali per il membro Sales Manager 1, è possibile utilizzare la funzione MDX `DataMember`, mentre per escludere il membro dei dati dal valore aggregato del membro Sales Manager 1 in modo da ottenere il volume delle vendite lorde per i rappresentanti associati a tale membro, è possibile utilizzare un'espressione di rollup personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
+ [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)   
  [Gerarchia padre-figlio](parent-child-dimension.md)  
   
   

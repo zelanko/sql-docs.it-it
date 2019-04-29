@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011267"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codici restituiti e informazioni sugli errori di automazione OLE
-  Il sistema di automazione OLE stored procedure restituiscono un `int` restituiscono codice HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un valore HRESULT diverso da zero è un codice di errore OLE nel formato esadecimale 0x800*nnnnn*, ma se viene restituito come una `int` valore in un codice restituito della stored procedure, HRESULT è nel formato 214*nnnnnnn*.  
+  Le stored procedure del sistema di automazione OLE restituiscono un codice `int` che corrisponde al valore HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un valore HRESULT diverso da zero è un codice di errore OLE nel formato esadecimale 0x800*nnnnn*, ma se viene restituito come una `int` valore in un codice restituito della stored procedure, HRESULT è nel formato 214*nnnnnnn*.  
   
  Ad esempio, il passaggio di un nome di oggetto non valido (SQLDMO. Xyzzy) alla sp_OACreate fa sì che la procedura restituire un `int` HRESULT di 2147221005, ovvero 0x800401f3 in formato esadecimale.  
   

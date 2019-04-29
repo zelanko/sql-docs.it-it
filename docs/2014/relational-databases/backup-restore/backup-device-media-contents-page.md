@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876693"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo di backup (pagina Contenuto supporti)
   Utilizzare la finestra di dialogo **Dispositivo di backup** per visualizzare le informazioni di backup. Vengono riportate informazioni sul dispositivo, sui supporti, sul set di supporti e sul set o i set di backup.  
@@ -26,7 +26,7 @@ ms.locfileid: "48130498"
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Visualizzazione delle proprietà e del contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Opzioni  
  Visualizzare informazioni relative al supporto specifico, al set di supporti e ai set di backup.  
@@ -43,7 +43,7 @@ ms.locfileid: "48130498"
  **Set di supporti**  
  Un set di supporti consiste in una raccolta ordinata di supporti di backup su cui è stata eseguita la scrittura di una o più operazioni di backup utilizzando un numero costante di dispositivi di backup.  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome del set di supporti, se disponibile.  
   
  **Descrizione**  
@@ -57,9 +57,9 @@ ms.locfileid: "48130498"
   
 |Intestazione|Valori|  
 |------------|------------|  
-|**Nome**|Nome del set di backup.|  
-|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<vuoto>*, nel caso dei log delle transazioni.|  
-|**Componente**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
+|**Name**|Nome del set di backup.|  
+|**Tipo**|L'oggetto di backup: Database, File, oppure  *\<vuoto >* (per i log delle transazioni).|  
+|**Componente**|Il tipo di backup eseguito: Completo, differenziale o Log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  

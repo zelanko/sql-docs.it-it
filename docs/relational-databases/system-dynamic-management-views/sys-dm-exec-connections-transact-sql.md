@@ -1,5 +1,5 @@
 ---
-title: DM exec_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013489"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "47774229"
 > [!NOTE]
 > Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare [sys.dm_pdw_exec_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifica la sessione associata alla connessione Ammette i valori Null.|  
-|most_recent_session_id|**int**|Rappresenta l'ID di sessione della richiesta più recente associata alla connessione. Le connessioni SOAP possono essere riutilizzate da un'altra sessione. Ammette i valori Null.|  
+|most_recent_session_id|**int**|Rappresenta l'ID di sessione della richiesta più recente associata alla connessione. (Connessioni SOAP possono essere riutilizzate da un'altra sessione). Ammette i valori Null.|  
 |connect_time|**datetime**|Timestamp relativo al momento in cui è stata stabilita la connessione. Non ammette i valori Null.|  
-|net_transport|**nvarchar(40)**|Restituisce sempre **sessione** quando una connessione dispone di più set di risultati attivi (MARS) abilitato.<br /><br /> **Nota:** descrive il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.|  
+|net_transport|**nvarchar(40)**|Restituisce sempre **sessione** quando una connessione dispone di più set di risultati attivi (MARS) abilitato.<br /><br /> **Nota:** Descrive il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.|  
 |protocol_type|**nvarchar(40)**|Specifica il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
 |protocol_version|**int**|Versione del protocollo di accesso ai dati associato a questa connessione. Ammette i valori Null.|  
 |endpoint_id|**int**|Identificatore che descrive il tipo di connessione. Il valore di endpoint_id può essere utilizzato per eseguire query nella vista sys.endpoints. Ammette i valori Null.|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84752b7e23c5394757764bf5ade57cb54004b01a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943147"
 ---
 # <a name="duplicated-features"></a>Funzionalità duplicate
 ODBC 2 seguente. *x* le funzioni hanno state duplicate da ODBC 3. *x* funzioni. Di conseguenza, l'API ODBC 2. *x* le funzioni sono deprecate in ODBC 3. *x*. ODBC 3. *x* funzioni vengono dette funzioni di sostituzione.  
@@ -33,9 +33,9 @@ ODBC 2 seguente. *x* le funzioni hanno state duplicate da ODBC 3. *x* funzioni. 
   
 |ODBC 2. *x* (funzione)|ODBC 3. *x* (funzione)|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**Funzione SQLAllocHandle**|  
-|**SQLAllocEnv**|**Funzione SQLAllocHandle**|  
-|**SQLAllocStmt**|**Funzione SQLAllocHandle**|  
+|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAllocEnv**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLExtendedFetch**[1]|**SQLFetchScroll**|  

@@ -1,5 +1,5 @@
 ---
-title: "Passaggio 2: Esegue l'installazione guidata pacchetti | Microsoft Docs"
+title: "Passaggio 2: Esecuzione dell'Installazione guidata pacchetti | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891579"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Passaggio 2: Esecuzione dell'Installazione guidata pacchetti
+# <a name="step-2-running-the-package-installation-wizard"></a>Passaggio 2: Esegue l'installazione guidata pacchetti
   In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
   
  L'Installazione guidata pacchetti consente di eseguire in modo semplificato i passaggi necessari per installare e configurare i pacchetti. I pacchetti verranno installati in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer di destinazione, ovvero il computer in cui si copia il pacchetto di distribuzione. Verrà inoltre creata la cartella C:\DeploymentTutorialInstall nella quale verranno installati i file non di pacchetto.  

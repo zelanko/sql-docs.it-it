@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838004"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] sono disponibili tre fonti principali di informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -80,7 +80,7 @@ ms.locfileid: "53355110"
   
 |Risorsa|Destinatari|  
 |--------------|--------------|  
-|[Centro per sviluppatori di SQL Server](https://msdn.microsoft.com/sqlserver/)|Sviluppatori che compilano database, sistemi per la gestione di report e soluzioni di Business Intelligence per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che progettano applicazioni e siti Web per l'utilizzo di questi sistemi.|  
+|[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Sviluppatori che compilano database, sistemi per la gestione di report e soluzioni di Business Intelligence per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che progettano applicazioni e siti Web per l'utilizzo di questi sistemi.|  
 |[Centro per sviluppatori XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Creatori di siti Web e sviluppatori di applicazioni i cui siti e le cui applicazioni utilizzano il linguaggio XML per l'archiviazione e la manipolazione dei dati.|  
 |[Sito TechNet SQL Server](https://technet.microsoft.com/sqlserver/dn135309)|Amministratori e operatori che pianificano, distribuiscono, amministrano e supportano sistemi che utilizzano [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
