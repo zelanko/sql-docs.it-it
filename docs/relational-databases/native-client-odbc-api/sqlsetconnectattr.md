@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014169"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -98,7 +98,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **Readonly** e **ReadWrite**. Ad esempio:  
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **Readonly** e **ReadWrite**. Ad esempio:   
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  

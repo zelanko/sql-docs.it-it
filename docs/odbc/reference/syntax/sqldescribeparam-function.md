@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982297"
 ---
 # <a name="sqldescribeparam-function"></a>Funzione SQLDescribeParam
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLDescribeParam** restituisce la descrizione di un marcatore di parametro associato a un'istruzione SQL preparata. Queste informazioni sono disponibili anche i campi dell'IPD.  
@@ -55,13 +55,13 @@ SQLRETURN SQLDescribeParam(
  [Input] Numero di marcatori di parametro ordinato in sequenza in ordine crescente dei parametri, a partire da 1.  
   
  *DataTypePtr*  
- [Output] Puntatore a un buffer in cui restituire il tipo di dati SQL del parametro. Questo valore viene letto dal campo del record SQL_DESC_CONCISE_TYPE dell'IPD. Questo sarà uno dei valori di [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione dell'appendice d: i tipi di dati o un tipo di dati specifici del driver SQL.  
+ [Output] Puntatore a un buffer in cui restituire il tipo di dati SQL del parametro. Questo valore viene letto dal campo del record SQL_DESC_CONCISE_TYPE dell'IPD. Questo sarà uno dei valori di [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione dell'appendice d: Tipi di dati o un tipo di dati specifici del driver SQL.  
   
  In ODBC 3. *x*, verrà restituito SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP  *\*DataTypePtr* per data, ora o dati di tipo timestamp, rispettivamente; in ODBC 2. *x*, SQL_DATE, SQL_TIME o SQL_TIMESTAMP verranno restituiti. Gestione Driver esegue il mapping richiesto quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver o quando un'applicazione ODBC 3. *x* applicazione funziona con un'API ODBC 2. *x* driver.  
   
  Quando *ColumnNumber* è uguale a 0 (per una colonna del segnalibro), viene restituito SQL_BINARY nel  *\*DataTypePtr* per i segnalibri di lunghezza variabile. (SQL_INTEGER viene restituito se i segnalibri vengono utilizzati da un'applicazione ODBC 3. *x* funziona con un'API ODBC 2. *x* driver o da un'API ODBC 2. *x* funziona con un'applicazione ODBC 3. *x* driver.)  
   
- Per altre informazioni, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) nell'appendice d: i tipi di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.  
+ Per altre informazioni, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) nell'appendice d: Tipi di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.  
   
  *ParameterSizePtr*  
  [Output] Puntatore a un buffer in cui si desidera restituire le dimensioni, in caratteri, della colonna o espressione del marcatore di parametro corrispondente come definito dall'origine dati. Per altre informazioni sulle dimensioni di colonna, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
@@ -84,7 +84,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLDescribeParam** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLDescribeParam** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |07009|Indice del descrittore non valido|(DM) il valore specificato per l'argomento *ParameterNumber* è minore di 1.<br /><br /> Il valore specificato per l'argomento *ParameterNumber* era maggiore del numero di parametri nell'istruzione SQL associata.<br /><br /> Il marcatore di parametro faceva parte di un'istruzione DML non.<br /><br /> Il marcatore di parametro faceva parte di un **seleziona** elenco.|  

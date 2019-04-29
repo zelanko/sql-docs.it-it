@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e1cc5bfb5388cd71ca3217bd060e3dde0428f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832163"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare parametri di progetto e parametri di pacchetto. Le procedure riportate di seguito contengono istruzioni dettagliate per la creazione di parametri di pacchetto/progetto.  
@@ -40,7 +40,7 @@ ms.locfileid: "58392139"
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
-    |nome|Nome del parametro.|  
+    |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
@@ -74,7 +74,7 @@ ms.locfileid: "58392139"
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
-    |nome|Nome del parametro.|  
+    |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  

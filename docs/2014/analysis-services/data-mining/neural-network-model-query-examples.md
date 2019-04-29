@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733166"
 ---
 # <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto che consente di ottenere dettagli sui criteri individuati durante l'analisi oppure una query di stima in cui vengono utilizzati i criteri presenti nel modello per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello di rete neurale potrebbe ad esempio recuperare metadati del modello, quale il numero di livelli nascosti. In alternativa, una query di stima potrebbe suggerire classificazioni basate su un input e, facoltativamente, indicare le probabilità per ogni classificazione.  

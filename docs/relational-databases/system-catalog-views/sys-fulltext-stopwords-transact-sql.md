@@ -25,22 +25,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8395d9fe246d70843415079cdf188ac00817f51f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008502"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni parola non significativa per tutti gli elenchi di parole non significative nel database.  
  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID dell'elenco di parole non significative cui **stopword** appartiene. Tale ID è univoco all'interno del database.|  
 |**stopword**|**nvarchar(64)**|Termine da considerare per una corrispondenza della parola non significativa.|  
-|**Lingua**|**sysname**|È il valore dell'alias in [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corrispondente al valore dell'identificatore delle impostazioni locali (**LCID**), o rappresentazione stringa dell'identificatore LCID numerico.|  
+|**language**|**sysname**|È il valore dell'alias in [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corrispondente al valore dell'identificatore delle impostazioni locali (**LCID**), o rappresentazione stringa dell'identificatore LCID numerico.|  
 |**language_id**|**int**|Identificatore LCID utilizzato per il word breaking.|  
   
 ## <a name="permissions"></a>Permissions  

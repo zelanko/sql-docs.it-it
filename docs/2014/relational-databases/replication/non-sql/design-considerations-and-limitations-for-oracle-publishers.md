@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022517"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
   La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla pubblicazione da un database [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
@@ -103,7 +103,7 @@ ms.locfileid: "54136061"
   
  È inoltre consigliabile considerare quanto segue:  
   
--   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trattare NULL in modo diverso: Oracle sono supportate più righe con valori NULL per le colonne che ammettono valori NULL e sono incluse in vincoli o indici univoci. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di applicare l'univocità mediante il supporto di una sola riga con un valore NULL per la stessa colonna. Non è possibile pubblicare un vincolo o un indice univoco che consente valori NULL in quanto nel Sottoscrittore si verifica una violazione di vincolo se la tabella pubblicata contiene più righe con valori NULL per una delle colonne incluse nell'indice o nel vincolo.  
+-   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] considerano NULL in modo diverso: In Oracle sono supportate più righe con valori NULL per le colonne che consentono la specifica di valori NULL e sono incluse in vincoli o indici univoci. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di applicare l'univocità mediante il supporto di una sola riga con un valore NULL per la stessa colonna. Non è possibile pubblicare un vincolo o un indice univoco che consente valori NULL in quanto nel Sottoscrittore si verifica una violazione di vincolo se la tabella pubblicata contiene più righe con valori NULL per una delle colonne incluse nell'indice o nel vincolo.  
   
 -   Durante la verifica dell'univocità, gli spazi vuoti finali in un campo vengono ignorati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ma non in Oracle.  
   

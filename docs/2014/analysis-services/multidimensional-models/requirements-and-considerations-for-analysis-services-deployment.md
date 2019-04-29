@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736729"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
   Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  

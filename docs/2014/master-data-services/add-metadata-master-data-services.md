@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d5c5f393983f6955f94392552d62a079eac206f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877379"
 ---
 # <a name="add-metadata-master-data-services"></a>Aggiungere metadati (Master Data Services)
   Nelle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], aggiungere metadati definiti dall'utente per il **metadati** modello per descrivere gli oggetti modello.  

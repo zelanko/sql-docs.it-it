@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997104"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_password**||Password utilizzata dall'agente di merge per la connessione al server Web in cui ha luogo la sincronizzazione Web mediante l'autenticazione di base.|  
 |**internet_security_mode**|**1**|Consente di utilizzare l'autenticazione integrata di Windows per la sincronizzazione Web. È consigliabile utilizzare l'autenticazione di base per la sincronizzazione Web. Per altre informazioni, vedere [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Consente di utilizzare l'autenticazione di base per la sincronizzazione Web.<br /><br /> Nota: Per la sincronizzazione Web è necessaria una connessione SSL al server Web.|  
+||**0**|Consente di utilizzare l'autenticazione di base per la sincronizzazione Web.<br /><br /> Nota: Sincronizzazione Web richiede una connessione SSL al server Web.|  
 |**internet_timeout**||Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
 |**internet_url**||URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
 |**merge_job_login**||Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019221"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilità delle formule DAX in modalità DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -192,7 +192,7 @@ In generale, poiché gli intervalli di date accettati sono diversi per Excel e S
   
 -   Data meno recente: 1 marzo 1990  
   
--   Data più recente: 31 dicembre 9999  
+-   Data più recente: Il 31 dicembre 9999  
   
 Se alcune date utilizzate nelle formule non rientrano in questo intervallo, la formula genererà un errore oppure i risultati non corrisponderanno.  
   

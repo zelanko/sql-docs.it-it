@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835947"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Progettazione Change Data Capture per Oracle di Attunity
   Tramite CDC Designer Console è possibile sviluppare e gestire le istanze di Oracle CDC. CDC Designer Console è uno snap-in di Microsoft Management Console che contiene gli elementi seguenti:  
   
--   New Instance Wizard: Questa procedura guidata crea una nuova istanza di Oracle CDC. Per informazioni sull'utilizzo della New Instance Wizard, vedere [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   New Instance Wizard (Procedura guidata nuova istanza): questa procedura guidata crea una nuova istanza di Oracle CDC. Per informazioni sull'utilizzo della New Instance Wizard, vedere [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
--   CDC Instance Properties Viewer: Si tratta di una vista ancorata contenente lo stato e configurazione dell'istanza di CDC selezionata. Per informazioni sul visualizzatore di proprietà, vedere [Procedura di gestione di un'istanza di CDC](manage-a-cdc-instance.md).  
+-   CDC Instance Properties Viewer (Visualizzatore proprietà istanza CDC): vista ancorata contenente lo stato e la configurazione dell'istanza di CDC selezionata. Per informazioni sul visualizzatore di proprietà, vedere [Procedura di gestione di un'istanza di CDC](manage-a-cdc-instance.md).  
   
--   CDC Instance Properties Editor: Questa finestra di dialogo consente di modificare qualsiasi istanza di Oracle CDC Service esistente. Per informazioni sulla modifica delle proprietà dell'istanza di CDC, vedere [Edit Instance Properties](edit-instance-properties.md).  
+-   CDC Instance Properties Editor (Editor proprietà istanza CDC): questa finestra di dialogo consente di modificare qualsiasi istanza del servizio Oracle CDC esistente. Per informazioni sulla modifica delle proprietà dell'istanza di CDC, vedere [Edit Instance Properties](edit-instance-properties.md).  
   
 ## <a name="in-this-documentation"></a>Contenuto della documentazione  
   

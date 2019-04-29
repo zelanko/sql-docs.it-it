@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032330"
 ---
 # <a name="localdbshareinstance-function"></a>Funzione LocalDBShareInstance
   Condivide l'istanza di SQL Server Express LocalDB specificata con altri utenti del computer, utilizzando il nome condiviso specificato.  

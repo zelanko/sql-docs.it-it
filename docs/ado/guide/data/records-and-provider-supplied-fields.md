@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910465"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Record e campi specificati dal provider
 Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura dell'oggetto, l'origine può essere la riga corrente di un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), un URL assoluto o un URL relativo in combinazione con un elemento aperto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto .  
@@ -61,8 +61,8 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura
 |RESOURCE_PARSENAME|AdVarWChar|Di sola lettura. Indica l'URL della risorsa.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto del record padre.|  
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto della risorsa, che rappresenta la concatenazione di PARENTNAME e PARSENAME.|  
-|CUI RESOURCE_ISHIDDEN|adBoolean|True se la risorsa è nascosto. Verrà restituita alcuna riga, a meno che il comando che crea in modo esplicito il set di righe consente di selezionare le righe in cui RESOURCE_ISHIDDEN è True.|  
-|RESOURCE_ISREADONLY|adBoolean|True se la risorsa è di sola lettura. Tentativi per aprire questa risorsa con DBBINDFLAG_WRITE e che non riescono con DBBINDFLAG_WRITE. Questa proprietà può essere modificata anche quando la risorsa è stata aperta solo per la lettura.|  
+|RESOURCE_ISHIDDEN|AdBoolean|True se la risorsa è nascosto. Verrà restituita alcuna riga, a meno che il comando che crea in modo esplicito il set di righe consente di selezionare le righe in cui RESOURCE_ISHIDDEN è True.|  
+|RESOURCE_ISREADONLY|AdBoolean|True se la risorsa è di sola lettura. Tentativi per aprire questa risorsa con DBBINDFLAG_WRITE e che non riescono con DBBINDFLAG_WRITE. Questa proprietà può essere modificata anche quando la risorsa è stata aperta solo per la lettura.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indica l'utilizzo probabile del documento, ad esempio, un avvocato del breve. Questo valore può corrispondere al modello di Office che è stato usato per creare il documento.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica la lingua in cui è archiviato il contenuto.|  
@@ -70,13 +70,13 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura
 |RESOURCE_LASTACCESSTIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora di ultimo accesso alla risorsa. Il tempo è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro temporale.|  
 |RESOURCE_LASTWRITETIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura alla risorsa. Il tempo è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro temporale.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Di sola lettura. Indica le dimensioni della risorsa predefinita, in byte del flusso.|  
-|RESOURCE_ISCOLLECTION|adBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un semplice file.|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o un file semplice.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un semplice file.|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o un file semplice.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Di sola lettura. Indica che questa risorsa contiene un URL per il documento predefinito semplice di una cartella o un documento strutturato. Utilizzato quando viene richiesto il flusso predefinito da una risorsa. Questa proprietà è vuota per un semplice file.|  
-|CHAPTERED_CHILDREN|adChapter|Di sola lettura. Facoltativo. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. (Il *Provider OLE DB per Internet Publishing* non usare questa colonna.)|  
+|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativo. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. (Il *Provider OLE DB per Internet Publishing* non usare questa colonna.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Di sola lettura. Indica il nome visualizzato della risorsa.|  
-|RESOURCE_ISROOT|adBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o documento strutturato.|  
+|RESOURCE_ISROOT|AdBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o documento strutturato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

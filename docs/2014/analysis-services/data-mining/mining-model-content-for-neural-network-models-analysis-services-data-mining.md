@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733492"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Neural Network. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -67,13 +67,13 @@ ms.locfileid: "48218701"
  ATTRIBUTE_NAME  
  Nomi degli attributi che corrispondono a questo nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Nodo nascosto|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Nome dell'attributo di output|  
@@ -89,7 +89,7 @@ ms.locfileid: "48218701"
  NODE_TYPE  
  Un modello di rete neurale restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |1|Modello.|  
 |17|Nodo della libreria per la subnet|  
@@ -107,7 +107,7 @@ ms.locfileid: "48218701"
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Indica il conteggio di nodi figlio che include almeno 1 rete, 1 nodo marginale obbligatorio e 1 livello di input obbligatorio. Se, ad esempio, il valore è 5, sono presenti 3 subnet.|  
 |Statistiche marginali|Sempre 0.|  
@@ -126,13 +126,13 @@ ms.locfileid: "48218701"
  NODE_DESCRIPTION  
  Descrizione intuitiva del nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Nodo nascosto|Valore intero che indica la sequenza del nodo nascosto nell'elenco dei nodi nascosti.|  
 |Livello di output|Vuoto|  
 |Nodo di output|Se l'attributo di output è continuo, contiene il nome dell'attributo di output.<br /><br /> Se l'attributo di output è discreto o discretizzato, contiene il nome dell'attributo e il valore.|  
@@ -140,7 +140,7 @@ ms.locfileid: "48218701"
  NODE_RULE  
  Descrizione XML della regola incorporata nel nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -172,7 +172,7 @@ ms.locfileid: "48218701"
  Per ottenere informazioni sul supporto nei case di training per valori specifici, vedere il nodo delle statistiche marginali.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Contenuto|  
+ |Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -217,11 +217,11 @@ ms.locfileid: "48218701"
 ### <a name="input-nodes"></a>Nodi di input  
  Il livello di input contiene un nodo per ogni valore dell'attributo utilizzato nel modello.  
   
- **Attributo discreto:** nel nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo discreto:** Il nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
- **Attributo numerico discretizzato:** nel nodo di input vengono archiviati il nome dell'attributo e il valore, che può essere costituito da un intervallo o da un valore specifico. Tutti valori vengono rappresentati tramite espressioni, ad esempio '77,4 – 87,4' < 64,0' per il valore [Time Per Issue]. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo numerico discretizzato:** Il nodo di input vengono archiviati il nome dell'attributo e il valore, che può essere un intervallo o un valore specifico. Tutti valori vengono rappresentati tramite espressioni, ad esempio '77,4 – 87,4' < 64,0' per il valore [Time Per Issue]. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
- **Attributo continuo:** nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo continuo:** Nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
 ### <a name="hidden-layer-nodes"></a>Nodi del livello nascosto  
  Il livello nascosto contiene un numero variabile di nodi. In ogni nodo, la tabella NODE_DISTRIBUTION contiene mapping dal livello nascosto ai nodi nel livello di input. La colonna ATTRIBUTE_NAME contiene un ID del nodo che corrisponde a un nodo nel livello di input. La colonna ATTRIBUTE_VALUE contiene il peso associato a tale combinazione di un nodo di input e di un nodo del livello nascosto. L'ultima riga nella tabella contiene un coefficiente che rappresenta il peso di tale nodo nascosto nel livello nascosto.  
@@ -231,15 +231,15 @@ ms.locfileid: "48218701"
   
  La tabella NODE_DISTRIBUTION contiene le informazioni aggiuntive seguenti, a seconda del tipo di attributo:  
   
- **Attributo discreto:** le due righe finali della tabella NODE_DISTRIBUTION contengono un coefficiente per il nodo nel suo complesso e il valore corrente dell'attributo.  
+ **Attributo discreto:** Le due righe finali della tabella NODE_DISTRIBUTION contengono un coefficiente per il nodo come suo complesso e il valore corrente dell'attributo.  
   
- **Attributo numerico discretizzato:** identico agli attributi discreti, ad eccezione del fatto che il valore dell'attributo è un intervallo di valori.  
+ **Attributo numerico discretizzato:** Identico agli attributi discreti, ad eccezione del fatto che il valore dell'attributo è un intervallo di valori.  
   
- **Attributo continuo:** le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
+ **Attributo continuo:** Le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
- [Riferimento tecnico l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
- [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

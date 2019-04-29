@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 874d28c4a2ff53f0e9146dbf9a8af5a42f5b6519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732500"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Progettazione database (Analysis Services - Dati multidimensionali)
   Utilizzare Progettazione database in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare le proprietà e rivedere gli avvisi generati da un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -32,6 +32,6 @@ ms.locfileid: "48187791"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [I database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Database modelli multidimensionali &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

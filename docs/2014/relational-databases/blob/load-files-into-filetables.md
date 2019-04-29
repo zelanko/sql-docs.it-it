@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874744"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
   Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  Per informazioni su come disabilitare i vincoli FileTable, vedere [Gestire le tabelle FileTable](manage-filetables.md).  
   
-###  <a name="disabling"></a> Come si fa: Disabilitare vincoli FileTable per eseguire un caricamento bulk  
+###  <a name="disabling"></a> Come si fa: Disabilitare i vincoli FileTable per il caricamento Bulk  
  Per eseguire il caricamento bulk di file in una tabella FileTable senza la necessità di applicare vincoli definiti dal sistema, è possibile disabilitare temporaneamente i vincoli. Per altre informazioni, vedere [Gestire le tabelle FileTable](manage-filetables.md).  
   
 ## <a name="see-also"></a>Vedere anche  

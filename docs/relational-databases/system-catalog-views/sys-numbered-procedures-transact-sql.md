@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 926fc5a64e165360eac5e43704826ed4de816ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018728"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "47843764"
 > [!IMPORTANT]  
 >  Le stored procedure numerate sono deprecate. pertanto non è consigliabile utilizzarle. Un evento DEPRECATION_ANNOUNCEMENT viene generato quando viene compilata una query che utilizza questa vista del catalogo.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto della stored procedure.|  
 |**procedure_number**|**smallint**|Numero della procedura nell'oggetto, maggiore o uguale a 2.|  
-|**Definizione**|**nvarchar(max)**|Testo SQL Server che definisce la procedura.<br /><br /> NULL = crittografato.|  
+|**definition**|**nvarchar(max)**|Testo SQL Server che definisce la procedura.<br /><br /> NULL = crittografato.|  
   
 > [!NOTE]  
 >  I parametri XML e CLR non sono supportati per le stored procedure numerate.  

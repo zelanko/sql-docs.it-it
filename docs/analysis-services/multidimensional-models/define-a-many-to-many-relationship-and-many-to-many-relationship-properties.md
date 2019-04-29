@@ -1,5 +1,5 @@
 ---
-title: Definire una relazione molti-a-molti e le proprietà della relazione molti-a-molti | Documenti Microsoft
+title: Definire una relazione molti-a-molti e le proprietà della relazione molti-a-molti | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53b20b10aea985722f9c498079a3267a5ddb6969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825754"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definire una relazione molti-a-molti e le relative proprietà
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "34026898"
   
  A livello visivo, una relazione dimensionale molti-a-molti non è indicata in un diagramma del cubo. È invece possibile utilizzare la scheda Utilizzo dimensioni per identificare rapidamente tutte le relazioni molti-a-molti all'interno di un modello. Una relazione molti-a-molti è indicata dall'icona seguente.  
   
- ![Icona molti-a-molti nell'utilizzo della dimensione](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "molti-a-molti icona nell'utilizzo della dimensione")  
+ ![Icona molti-a-molti nell'utilizzo della dimensione](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "molti-a-molti sull'icona nell'utilizzo delle dimensioni")  
   
  Fare clic sul pulsante per aprire la finestra di dialogo Definisci relazione per verificare che il tipo di relazione sia molti-a-molti e visualizzare il gruppo di misure intermedio utilizzato nella relazione.  
   
- ![Pulsante Definisci relazione utilizzo dimensioni](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "pulsante Definisci relazione nell'utilizzo della dimensione")  
+ ![Pulsante Relationship definizione utilizzo delle dimensioni](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "pulsante Definisci relazione nell'utilizzo della dimensione")  
   
  Nelle sezioni successive è illustrato come configurare una dimensione molti-a-molti e i comportamenti del modello di test. Se si desidera prima consultare informazioni aggiuntive o provare le esercitazioni, vedere **Altre informazioni** alla fine dell'articolo.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34026898"
   
  Per illustrare i passaggi seguiti nella creazione di una relazione molti-a-molti, in questa procedura viene ricreata una delle relazioni molti-a-molti nel cubo di esempio Adventure Works. Se i dati di origine (ovvero, il data warehouse di esempio Adventure Works) sono installati in un'istanza del motore di database relazionale, è possibile attenersi alla procedura seguente.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Passaggio 1: verificare le relazioni della vista origine dati  
+#### <a name="step-1-verify-dsv-relationships"></a>Passaggio 1: Verificare le relazioni della vista origine dati  
   
 1.  In un progetto multidimensionale di SQL Server Data Tools creare un'origine dati nel data warehouse relazionale Adventure Works DW 2012 ospitato in un'istanza del motore di database di SQL Server.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34026898"
   
      ![DSV che Mostra tabelle correlate](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "DSV che Mostra tabelle correlate")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Passaggio 2: creare dimensioni e gruppi di misure  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Passaggio 2: Creare dimensioni e gruppi di misure  
   
 1.  In un progetto multidimensionale di SQL Server Data Tools, fare clic con il pulsante destro del mouse su **Dimensioni** e selezionare **Nuova dimensione**.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "34026898"
   
      Selezionare tutti gli attributi.  
   
-     ![Elenco di attributi nella nuova dimensione](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "elenco di attributi nella nuova dimensione")  
+     ![Elenco di attributi nella nuova quota](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "elenco di attributi nella nuova dimensione")  
   
 3.  Creare una seconda dimensione sulla base della tabella Fact Internet Sales esistente. Sebbene sia una tabella dei fatti, contiene informazioni sugli ordini di vendita (Sales Order). Verrà utilizzata per creare una dimensione Sales Order.  
   
 4.  In Impostazione informazioni origine viene visualizzato un messaggio che indica la necessità di specificare una colonna del nome (Name). Selezionare **SalesOrderNumber** come nome.  
   
-     ![Dimensione degli ordini vendita che mostra la colonna name](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesordersource.PNG "dimensione ordine di vendita che mostra la colonna nome")  
+     ![Dimensione degli ordini vendita che mostra la colonna name](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesordersource.PNG "dimensione Sales Order che mostra la colonna nome")  
   
 5.  Nella pagina successiva della procedura guidata, selezionare gli attributi. In questo esempio è possibile selezionare soltanto **SalesOrderNumber**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "34026898"
   
 6.  Rinominare la dimensione in **Dim Sales Orders**, in modo da avere una convenzione di denominazione coerente per le dimensioni.  
   
-     ![Pagina della procedura guidata che mostra Rinomina dimensione](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "pagina della procedura guidata che mostra Rinomina dimensione")  
+     ![Pagina della procedura guidata che mostra rename dimension](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "pagina della procedura guidata che mostra ridenominazione della dimensione")  
   
 7.  Fare clic con il pulsante destro del mouse su **Cubi** e scegliere **Nuovo cubo**.  
   
@@ -119,17 +119,17 @@ ms.locfileid: "34026898"
   
 11. Assegnare un nome al cubo e fare clic su **Fine**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Passaggio 3: definire la relazione molti-a-molti  
+#### <a name="step-3-define-many-to-many-relationship"></a>Passaggio 3: Definire molti-a-molti relazione  
   
 1.  In Progettazione cubi fare clic sulla scheda Utilizzo dimensioni. Si noti che esiste già una relazione molti-a-molti tra **Dim Sales Reason** e **Fact Internet Sales**. L'icona seguente indica una relazione molti-a-molti.  
   
-     ![Icona molti-a-molti nell'utilizzo della dimensione](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "molti-a-molti icona nell'utilizzo della dimensione")  
+     ![Icona molti-a-molti nell'utilizzo della dimensione](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "molti-a-molti sull'icona nell'utilizzo delle dimensioni")  
   
 2.  Fare clic sulla cella nel punto di intersezione tra **Dim Sales Reason** e **Fact Internet Sales**, quindi fare clic sul pulsante per aprire la finestra di dialogo Definisci relazione.  
   
      È possibile utilizzare questa finestra di dialogo per specificare una relazione molti-a-molti. Se invece erano state aggiunte dimensioni con una relazione di tipo regolare, è possibile utilizzare questa finestra di dialogo per modificare la relazione in una di tipo molti-a-molti.  
   
-     ![Pulsante Definisci relazione utilizzo dimensioni](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "pulsante Definisci relazione nell'utilizzo della dimensione")  
+     ![Pulsante Relationship definizione utilizzo delle dimensioni](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "pulsante Definisci relazione nell'utilizzo della dimensione")  
   
 3.  Distribuire il progetto in un'istanza multidimensionale di Analysis Services. Nel passaggio successivo il cubo viene esplorato in Excel per verificarne i comportamenti.  
   
@@ -179,12 +179,12 @@ ms.locfileid: "34026898"
   
  [La rivoluzione molti-a-molti 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Esercitazione: esempio di dimensione molti-a-molti per SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Esercitazione: Esempio di dimensione molti-a-molti per SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../../analysis-services/install-sample-data-and-projects.md)   
- [Distribuire progetti di Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [Prospettive nei modelli multidimensionali](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

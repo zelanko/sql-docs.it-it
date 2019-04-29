@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026564"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52817303"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**EventTime**|**datetime**|Data e ora in cui è stato generato l'evento.|  
+|**eventtime**|**datetime**|Data e ora in cui è stato generato l'evento.|  
 |**pubid**|**uniqueidentifier**|Identificatore univoco per la pubblicazione specificata.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
-|**il tipo di evento**|**tinyint**|Specifica il tipo di evento registrato. I possibili valori sono i seguenti:<br /><br /> **1** -impostazione di proprietà del livello di pubblicazione iniziale.<br /><br /> **2** -modifica di una proprietà di pubblicazione.<br /><br /> **101** -impostazione di proprietà di articolo iniziale.<br /><br /> **102** -modifica di una proprietà di articolo.|  
+|**eventtype**|**tinyint**|Specifica il tipo di evento registrato. I possibili valori sono i seguenti:<br /><br /> **1** -impostazione di proprietà del livello di pubblicazione iniziale.<br /><br /> **2** -modifica di una proprietà di pubblicazione.<br /><br /> **101** -impostazione di proprietà di articolo iniziale.<br /><br /> **102** -modifica di una proprietà di articolo.|  
 |**propertyname**|**sysname**|Nome della proprietà impostata o modificata.|  
-|**valore previousvalue**|**sysname**|Valore precedente di una proprietà modificata.|  
-|**NewValue**|**sysname**|Valore con cui viene modificata o creata la proprietà.|  
+|**previousvalue**|**sysname**|Valore precedente di una proprietà modificata.|  
+|**newvalue**|**sysname**|Valore con cui viene modificata o creata la proprietà.|  
 |**eventtext**|**nvarchar(2000)**|Stringa di caratteri che descrive l'evento.|  
   
 ## <a name="see-also"></a>Vedere anche  

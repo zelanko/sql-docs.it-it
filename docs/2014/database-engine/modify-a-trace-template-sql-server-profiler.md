@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1292037036ef32564115cf4d575929abc8b66d47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845654"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modificare un modello di traccia (SQL Profiler)
   In questo argomento viene descritto come modificare un modello di traccia utilizzando [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48227061"
 4.  Fare clic su **Salva**oppure su **Salva con nome**per salvare il modello di traccia con un altro nome.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare eventi e colonne di dati per un File di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivare un modello da un file di traccia o da una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

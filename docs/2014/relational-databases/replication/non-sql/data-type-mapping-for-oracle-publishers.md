@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022648"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
   I tipi di dati Oracle e i tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sempre corrispondono in modo preciso. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
@@ -34,7 +34,7 @@ ms.locfileid: "52786653"
 |CLOB|VARCHAR(MAX)|Yes|  
 |DATE|DATETIME|Yes|  
 |FLOAT|FLOAT|No|  
-|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT([1-53])|FLOAT([1-53])|no|  
 |FLOAT([54-126])|FLOAT|No|  
 |INT|NUMERIC(38)|Yes|  
 |INTERVAL|DATETIME|Yes|  
@@ -47,8 +47,8 @@ ms.locfileid: "52786653"
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Yes|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
 |RAW([1-2000])|VARBINARY([1-2000])|No|  
-|real|FLOAT|No|  
-|ROWID|CHAR(18)|No|  
+|real|FLOAT|no|  
+|ROWID|CHAR(18)|no|  
 |timestamp|DATETIME|Yes|  
 |TIMESTAMP(0-7)|DATETIME|Yes|  
 |TIMESTAMP(8-9)|DATETIME|Yes|  

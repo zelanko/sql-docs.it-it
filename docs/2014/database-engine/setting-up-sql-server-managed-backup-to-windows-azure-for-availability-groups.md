@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a67b2331959dbc3087f6282be05de90b42443c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843567"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>Configurazione del backup gestito di SQL Server in Windows Azure per i gruppi di disponibilità
   In questo argomento viene fornita un'esercitazione sulla configurazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per i database che partecipano ai gruppi di disponibilità AlwaysOn.  
@@ -23,9 +23,9 @@ ms.locfileid: "52416832"
 ## <a name="availability-group-configurations"></a>Configurazioni del gruppo di disponibilità  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è supportato per database del gruppo di disponibilità se le repliche sono tutte configurate in locale o interamente in Windows Azure oppure per un'implementazione ibrida tra un'istanza in locale e in una o più macchine virtuali di Windows Azure. Tuttavia potrebbe essere necessario prendere in considerazione quanto riportato di seguito per una o più implementazioni.  
   
--   Frequenza di backup del log: la frequenza di backup del log dipende sia dai tempi sia dall'aumento delle dimensioni del log. Ad esempio, il backup del log viene eseguito una volta ogni 2 ore, a meno che lo spazio del log usato entro questo periodo di tempo non sia di almeno 5 MB. Questo aspetto riguarda tutte le implementazioni, in locale, nel cloud o in una soluzione ibrida.  
+-   Frequenza Backup del log: La frequenza del backup del log è la crescita di termini di tempo e di log. Ad esempio, il backup del log viene eseguito una volta ogni 2 ore, a meno che lo spazio del log utilizzato entro questo periodo di tempo non sia di almeno 5 MB. Questo aspetto riguarda tutte le implementazioni, in locale, nel cloud o in una soluzione ibrida.  
   
--   Larghezza di banda di rete: riguarda le implementazioni in cui le repliche si trovano in posizioni fisiche diverse, come un cloud ibrido, o in aree geografiche diverse di Microsoft Azure in una configurazione solo cloud. La larghezza di banda di rete può influire sulla latenza delle repliche secondarie e l'eventuale impostazione di queste ultime sulla replica sincrona può determinare un aumento delle dimensioni del log nella replica primaria. Se le repliche secondarie sono impostate sulla replica sincrona, potrebbero non rimanere sincronizzate a causa della latenza di rete che può comportare la perdita di dati in caso di failover sulla replica secondaria.  
+-   Larghezza di banda di rete: Questo vale per le implementazioni in cui le repliche si trovano in posizioni fisiche diverse, ad esempio in un cloud ibrido o in diverse aree di Azure in una configurazione solo cloud. La larghezza di banda di rete può influire sulla latenza delle repliche secondarie e l'eventuale impostazione di queste ultime sulla replica sincrona può determinare un aumento delle dimensioni del log nella replica primaria. Se le repliche secondarie sono impostate sulla replica sincrona, potrebbero non rimanere sincronizzate a causa della latenza di rete che può comportare la perdita di dati in caso di failover sulla replica secondaria.  
   
 ### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>Configurazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per i database di disponibilità  
  **Autorizzazioni:**  
@@ -44,7 +44,7 @@ ms.locfileid: "52416832"
   
 2.  Configurare l'accesso per la connessione in sola lettura alle repliche secondarie. Per istruzioni dettagliate su come configurare accesso in sola lettura, vedere [configurare l'accesso in sola lettura in una Replica di disponibilità &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
-3.  Specificare la replica di backup. L'impostazione della replica di backup preferita viene usata dal [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per determinare il database da usare per la pianificazione dei backup.  Per determinare se la replica corrente è la replica di backup preferita, usare il [Sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41; ](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) (funzione).  
+3.  Specificare la replica di backup. L'impostazione della replica di backup preferita viene utilizzata dal [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per determinare il database da utilizzare per la pianificazione dei backup.  Per determinare se la replica corrente è la replica di backup preferita, usare il [Sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41; ](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) (funzione).  
   
 4.  In ogni replica eseguire [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurazione del database utilizzando il **smart admin.sp_set_db_backup** stored procedure.  
   
@@ -68,17 +68,17 @@ ms.locfileid: "52416832"
 #### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>Abilitare e configurare il [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di disponibilità  
  In questa esercitazione vengono descritti i passaggi per abilitare e configurare il [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database (AGTestDB) nei computer Node1 e Node2, nonché i passaggi per abilitare il monitoraggio dello stato di integrità del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-1.  **Creare un account di archiviazione di Azure:** i backup vengono archiviati nel servizio di archiviazione BLOB di Microsoft Azure. È necessario innanzitutto creare un account di archiviazione Windows Azure, nel caso non ne sia già disponibile uno. Per altre informazioni, vedere [creazione di un Account di archiviazione Windows Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Prendere nota del nome dell'account di archiviazione, delle chiavi di accesso e dell'URL dell'account di archiviazione. Le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso vengono usate per creare le credenziali SQL. Queste credenziali vengono usate dal [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] durante le operazioni di backup per l'autenticazione nell'account di archiviazione.  
+1.  **Creare un account di archiviazione di Azure:** I backup vengono archiviati nel servizio di archiviazione Blob di Windows Azure. È necessario innanzitutto creare un account di archiviazione Windows Azure, nel caso non ne sia già disponibile uno. Per altre informazioni, vedere [creazione di un Account di archiviazione Windows Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Prendere nota del nome dell'account di archiviazione, delle chiavi di accesso e dell'URL dell'account di archiviazione. Le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso vengono utilizzate per creare le credenziali SQL. Queste credenziali vengono utilizzate dal [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] durante le operazioni di backup per l'autenticazione nell'account di archiviazione.  
   
-2.  **Creare credenziali SQL:** creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso alle risorse di archiviazione come password.  
+2.  **Creare credenziali SQL:** Creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso di archiviazione come password.  
   
-3.  **Assicurarsi che il servizio SQL Server Agent sia avviato e in esecuzione:** Avviare SQL Server Agent se non è attualmente in esecuzione. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Agent.  
+3.  **Assicurarsi che il servizio SQL Server Agent sia avviato e in esecuzione:** se non è in esecuzione, avviare SQL Server Agent. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Agent.  
   
-4.  **Determinare il periodo di conservazione:** determinare il periodo di memorizzazione desiderato per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30. Il periodo di memorizzazione determina l'intervallo di tempo di recuperabilità del database.  
+4.  **Determinare il periodo di conservazione:** Determinare il periodo di memorizzazione desiderato per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30. Il periodo di memorizzazione determina l'intervallo di tempo di recuperabilità del database.  
   
-5.  **Creare una certificato o chiave asimmetrica da usare per la crittografia durante il backup:** Creare il certificato nel primo nodo, Node1 e quindi esportarlo in un file usando [certificato di BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... Nel nodo 2 creare un certificato usando il file esportato dal nodo 1. Per altre informazioni sulla creazione di un certificato da un file, vedere l'esempio nella [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
+5.  **Creare una certificato o chiave asimmetrica da usare per la crittografia durante il backup:** Creare il certificato nel primo nodo, Node1 e quindi esportarlo in un file usando [certificato di BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... Nel nodo 2 creare un certificato utilizzando il file esportato dal nodo 1. Per altre informazioni sulla creazione di un certificato da un file, vedere l'esempio nella [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
-6.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per AGTestDB in Node1:** avviare SQL Server Management Studio e connettersi all'istanza in Node1 in cui è installato il database di disponibilità. Nella finestra Query eseguire l'istruzione riportata di seguito dopo aver modificato i valori per il nome del database, l'URL di archiviazione, le credenziali SQL e il periodo di memorizzazione in base alle esigenze:  
+6.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per AGTestDB in Node1:** Avviare SQL Server Management Studio e connettersi all'istanza in Node1 in cui è installato il database di disponibilità. Nella finestra Query eseguire l'istruzione riportata di seguito dopo aver modificato i valori per il nome del database, l'URL di archiviazione, le credenziali SQL e il periodo di memorizzazione in base alle esigenze:  
   
     ```  
     Use msdb;  
@@ -97,7 +97,7 @@ ms.locfileid: "52416832"
   
      Per altre informazioni sulla creazione di un certificato per la crittografia, vedere la **creare un certificato di Backup** passaggio [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-7.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per AGTestDB in Node2:** avviare SQL Server Management Studio e connettersi all'istanza in Node2 in cui è installato il database di disponibilità. Nella finestra Query eseguire l'istruzione riportata di seguito dopo aver modificato i valori per il nome del database, l'URL di archiviazione, le credenziali SQL e il periodo di memorizzazione in base alle esigenze:  
+7.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per AGTestDB in Node2:** Avviare SQL Server Management Studio e connettersi all'istanza in Node2 in cui è installato il database di disponibilità. Nella finestra Query eseguire l'istruzione riportata di seguito dopo aver modificato i valori per il nome del database, l'URL di archiviazione, le credenziali SQL e il periodo di memorizzazione in base alle esigenze:  
   
     ```  
     Use msdb;  
@@ -130,7 +130,7 @@ ms.locfileid: "52416832"
   
     2.  Configurare la notifica di SQL Server Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Abilitare le notifiche di posta elettronica ricevere avvisi ed errori di backup:** Nella finestra di query eseguire le istruzioni Transact-SQL seguenti:  
+    3.  **Abilitare le notifiche di posta elettronica per ricevere avvisi ed errori di backup:** Nella finestra query, eseguire le istruzioni Transact-SQL seguenti:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -141,9 +141,9 @@ ms.locfileid: "52416832"
   
          Per altre informazioni e uno script di esempio completo, vedere [monitoraggio di SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
-10. **Visualizza i file di backup nell'Account di archiviazione Windows Azure:** connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di gestione di Azure. Verrà visualizzato un contenitore per l'istanza di SQL Server in cui viene ospitato il database configurato per usare il [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. È inoltre possibile visualizzare un database e un backup del log entro 15 minuti dall'abilitazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per il database.  
+10. **Visualizza i file di backup nell'Account di archiviazione Windows Azure:** Connettersi all'account di archiviazione da SQL Server Management Studio o il portale di gestione di Azure. Verrà visualizzato un contenitore per l'istanza di SQL Server in cui viene ospitato il database configurato per utilizzare il [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. È inoltre possibile visualizzare un database e un backup del log entro 15 minuti dall'abilitazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per il database.  
   
-11. **Monitorare lo stato di integrità:**  È possibile monitorare le notifiche di posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
+11. **Monitorare lo stato di integrità:**  è possibile eseguire il monitoraggio attraverso notifiche tramite posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
   
     ```  
     --  view all admin events  

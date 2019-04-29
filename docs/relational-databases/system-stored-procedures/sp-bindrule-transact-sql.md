@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62995668"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>b. Associazione di una regola a un tipo di dati alias  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Associazione di una regola a un tipo di dati alias  
  Supponendo che esistano la regola `rule_ssn` e il tipo di dati alias `ssn`, nell'esempio seguente viene associata la regola `rule_ssn` a `ssn`. In un'istruzione CREATE TABLE le colonne di tipo `ssn` ereditano la regola `rule_ssn`. Le colonne esistenti di tipo `ssn` anche ereditare le `rule_ssn` regola, a meno che non **futureonly** specificato per *futureonly_flag*, o `ssn` è associata direttamente a essa una regola. Le regole associate alle colonne sono sempre prioritarie rispetto a quelle associate ai tipi di dati.  
   
 ```  

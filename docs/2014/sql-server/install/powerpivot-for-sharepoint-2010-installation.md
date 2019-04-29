@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 42c6f97e23ea36e606047f683c7fc118b1726a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987203"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è una raccolta di componenti server che forniscono funzionalità di elaborazione di query e controllo di gestione per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da pubblicare in SharePoint. I servizi includono il motore di Analysis Services e il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

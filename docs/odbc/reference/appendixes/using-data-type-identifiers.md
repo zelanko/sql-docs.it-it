@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735130"
 ---
 # <a name="using-data-type-identifiers"></a>Uso degli identificatori dei tipi di dati
 Le applicazioni utilizzano gli identificatori di tipo di dati in due modi: per descrivere i relativi buffer sul driver e per recuperare metadati su set di risultati dal driver, in modo che sia possibile stabilire quale tipo di C memorizza nel buffer da utilizzare per archiviare i dati. Le applicazioni chiamano le funzioni seguenti per eseguire queste attività:  

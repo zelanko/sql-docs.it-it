@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877060"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Backup database** per visualizzare o modificare le impostazioni per un'operazione di backup del database.  
@@ -42,7 +42,7 @@ ms.locfileid: "48050078"
   
 ## <a name="options"></a>Opzioni  
   
-### <a name="source"></a>Origine  
+### <a name="source"></a>Source  
  Le opzioni del pannello **Origine** identificano il database e specificano il tipo di backup e il componente per l'operazione di backup.  
   
  **Database**  
@@ -54,9 +54,9 @@ ms.locfileid: "48050078"
  **Tipo di backup**  
  È possibile selezionare il tipo di backup che si desidera eseguire per il database specificato.  
   
-|Tipo di backup|Disponibile per|Restrizioni|  
+|Tipo di backup|Disponibile per|Restrictions|  
 |-----------------|-------------------|------------------|  
-|Completo|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
+|Full|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Differenziale|Database, file e filegroup|Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Log delle transazioni|Log delle transazioni|I backup dei log delle transazioni non sono disponibili per il modello di recupero con registrazione minima.|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48050078"
 |||  
 |-|-|  
 |**Disco**|Indica di eseguire il backup su disco. Può trattarsi di un file di sistema o di un dispositivo di backup logico su disco creato per il database. I dischi attualmente selezionati vengono visualizzati nell'elenco **Backup su** . È possibile selezionare fino a 64 dispositivi disco per l'operazione di backup.|  
-|**Nastro**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**Nastro**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**URL**|Indica di eseguire il backup nel servizio di archiviazione BLOB di Windows Azure.|  
   
  Il set successivo di opzioni visualizzate dipende dal tipo di destinazione selezionata. Se si seleziona Disco o Nastro, vengono visualizzate le opzioni riportate di seguito.  

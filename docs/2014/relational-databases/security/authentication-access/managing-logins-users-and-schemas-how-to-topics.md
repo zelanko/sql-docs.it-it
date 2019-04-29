@@ -13,16 +13,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011494"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Procedure per la gestione di account di accesso, utenti e schemi
   In questa pagina vengono forniti i collegamenti agli argomenti che mostrano come gestire gli schemi di database, gli utenti di database e gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , nonché come creare un join per un ruolo e concedere le autorizzazioni a un'entità.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Creare un account di accesso](create-a-login.md)  
   

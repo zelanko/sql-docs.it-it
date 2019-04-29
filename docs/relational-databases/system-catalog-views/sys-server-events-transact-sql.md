@@ -1,5 +1,5 @@
 ---
-title: server_events (Transact-SQL) | Microsoft Docs
+title: sys.server_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce3ad077a62d79518d45c53596fb4334a4498434
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013334"
 ---
 # <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47812639"
   Contiene una riga per ogni evento per cui viene attivato un trigger DDL a livello di server o viene generata una notifica di evento a livello di server. Le colonne **object_id** e **tipo** identificare in modo univoco l'evento del server.  
 
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID del trigger DDL a livello di server o della notifica di evento a livello di server da generare.|  
 |**type**|**int**|Tipo di evento che causa la generazione della notifica di evento o l'attivazione del trigger DDL.|  

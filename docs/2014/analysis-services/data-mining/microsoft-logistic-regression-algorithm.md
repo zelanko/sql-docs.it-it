@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733749"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
   La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
@@ -80,8 +80,8 @@ ms.locfileid: "48179391"
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di regressione logistica modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Riferimento tecnico l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)  
   
   

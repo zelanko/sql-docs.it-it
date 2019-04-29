@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876611"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Connettersi al servizio di archiviazione Windows Azure (Ripristino)
   La finestra di dialogo consente di specificare la connessione alle informazioni sull'account del servizio di archiviazione Windows Azure per recuperare l'archiviazione di file nell'account di archiviazione di Windows Azure. Dopo avere specificato le informazioni necessarie, fare clic su **Connetti** per stabilire la connessione al servizio di archiviazione Microsoft Azure.  

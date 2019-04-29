@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874677"
 ---
 # <a name="sqldatarecord-object"></a>Oggetto SqlDataRecord
   L'oggetto `SqlDataRecord` rappresenta una singola riga di dati, insieme ai metadati correlati.  

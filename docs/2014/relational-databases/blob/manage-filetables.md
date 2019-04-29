@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874784"
 ---
 # <a name="manage-filetables"></a>Gestione di tabelle FileTable
   Vengono descritte attività amministrative comuni per la gestione di tabelle FileTable.  
   
-##  <a name="HowToEnumerate"></a> Come si fa: Procedura: recuperare un elenco di tabelle FileTable e di oggetti correlati  
+##  <a name="HowToEnumerate"></a> Come si fa: Ottenere un elenco di oggetti correlati e tabelle Filetable  
  Per ottenere un elenco di tabelle FileTable, eseguire una query su una delle viste del catalogo riportate di seguito:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Nessuna delle directory a livello di database nell'istanza è visibile se FILESTREAM è disabilitato a livello di istanza.  
   
-###  <a name="HowToDisable"></a> Come si fa: Disabilitare e riabilitare l'accesso non transazionale a livello di database.  
+###  <a name="HowToDisable"></a> Come si fa: Disabilitare e riabilitare l'accesso Non transazionale a livello di Database  
  Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Per disabilitare l'accesso non transazionale completo**  
@@ -138,7 +138,7 @@ GO
   
 -   La directory FileTable, i file e le directory in essa contenute diventano visibili nel file system e disponibili per l'accesso I/O al file.  
   
-###  <a name="HowToEnableNS"></a> Come si fa: Disabilitare e riabilitare lo spazio dei nomi FileTable a livello di tabella  
+###  <a name="HowToEnableNS"></a> Come si fa: Disabilitare e riabilitare il Namespace FileTable a livello di tabella  
  Chiamare l'istruzione ALTER TABLE con l'opzione **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Per disabilitare lo spazio dei nomi FileTable**  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Come si fa: Terminare gli handle di file aperti associati a una tabella FileTable  
+###  <a name="HowToKill"></a> Come si fa: Terminare gli handle di File aperti associati a una tabella FileTable  
  Chiamare la stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) con gli argomenti appropriati per terminare tutti gli handle di file aperti nel database o nella tabella FileTable o per terminare un handle specifico.  
   
 ```  

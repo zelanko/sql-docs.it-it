@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734912"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network combinare ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e Usa i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
@@ -52,13 +52,13 @@ ms.locfileid: "48203481"
 -   Qualsiasi modello di stima che analizza le relazioni complesse tra molti input e un numero relativamente basso di output.  
   
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
- Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network crea una rete composta fino a tre livelli di neuroni. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network crea una rete composta da un massimo di tre livelli di neuroni. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
   
- **Livello di input:** i neuroni di Input definiscono tutti i valori di attributo di input per il modello di data mining e le relative probabilità.  
+ **Livello di input:** Neuroni di input definiscono tutti i valori di attributo di input per il modello di data mining e le relative probabilità.  
   
- **Livello nascosto:** i neuroni nascosti ricevono input dai neuroni di input e forniscono output ai neuroni di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al neurone nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
+ **Livello nascosto:** I neuroni nascosti ricevono gli input dai neuroni di input e inviano gli output ai neuroni di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al neurone nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
   
- **Livello di output:** neuroni di Output rappresentano valori dell'attributo stimabile per il modello di data mining.  
+ **Livello di output:** I neuroni di output rappresentano i valori degli attributi stimabili per il modello di data mining.  
   
  Per una spiegazione dettagliata della creazione dei livelli di output, input e nascosti e dell'assegnazione dei punteggi a tali livelli, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48203481"
 ## <a name="viewing-a-neural-network-model"></a>Visualizzazione di un modello di rete neurale  
  Per usare i dati e osservare il modo in cui il modello mette in correlazione gli input con gli output, usare il **Visualizzatore Microsoft Neural Network**. Tramite questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di valori di input e output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- Il modo più semplice per esplorare la struttura del modello consiste nell'usare il **Microsoft Generic Content Tree Viewer**. È possibile visualizzare gli input, gli output e le reti creati dal modello e fare clic su qualsiasi nodo per espanderlo e visualizzare le statistiche correlate ai nodi di input, output o dei livelli nascosti. Per altre informazioni, vedere [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ Il modo più semplice per esplorare la struttura del modello consiste nell'usare il **Microsoft Generic Content Tree Viewer**. È possibile visualizzare gli input, gli output e le reti creati dal modello e fare clic su qualsiasi nodo per espanderlo e visualizzare le statistiche correlate ai nodi di input, output o dei livelli nascosti. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  Dopo avere elaborato il modello, è possibile utilizzare la rete e i pesi archiviati in ciascun nodo per fare delle stime. Un modello di rete neurale supporta l'analisi di regressione, classificazione e associazione. Pertanto, il significato di ogni stima potrebbe essere diverso. È anche possibile eseguire una query sul modello stesso, allo scopo di esaminare le correlazioni trovate e recuperare le statistiche correlate. Per alcuni esempi di come creare query su un modello di rete neurale, vedere [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md).  
@@ -90,9 +90,9 @@ ms.locfileid: "48203481"
 -   Non supporta la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenuto dei modelli di rete neurale modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neural Network Model Query Examples](neural-network-model-query-examples.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)   
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)  
   
   

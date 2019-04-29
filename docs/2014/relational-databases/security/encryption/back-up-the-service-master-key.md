@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011536"
 ---
 # <a name="back-up-the-service-master-key"></a>Backup della chiave master del servizio
   In questo argomento viene descritto come eseguire il backup di una chiave master del servizio in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La chiave master del servizio è l'elemento radice della gerarchia di crittografia. È consigliabile crearne una copia di backup e archiviarla in una posizione esterna sicura. La creazione di questa copia di backup dovrebbe essere una delle prime operazioni amministrative eseguite nel server.  
@@ -28,7 +28,7 @@ ms.locfileid: "48180541"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per eseguire il backup della chiave master del servizio](#Procedure)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48180541"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ##  <a name="Procedure"></a> Utilizzo di Transact-SQL  
@@ -61,7 +61,7 @@ ms.locfileid: "48180541"
   
 6.  Sulla barra Standard fare clic su **Nuova query**.  
   
-7.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+7.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a backup of the "AdventureWorks2012" master key.  

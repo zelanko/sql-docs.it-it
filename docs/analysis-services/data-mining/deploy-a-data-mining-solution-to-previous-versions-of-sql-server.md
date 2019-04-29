@@ -1,5 +1,5 @@
 ---
-title: Distribuire una soluzione di Data Mining in versioni precedenti di SQL Server | Documenti Microsoft
+title: Distribuire una soluzione di Data Mining in versioni precedenti di SQL Server | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011021"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Distribuire una soluzione di data mining in versioni precedenti di SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "34015098"
   
  Quando si apre la struttura di data mining in SQL Server 2005 Analysis Services, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] viene generato un errore e la struttura viene rigenerata per rimuovere la partizione di dati di controllo.  
   
- Dopo la struttura è stata ricostruita, le dimensioni della partizione di controllo non sono più disponibile nella finestra Proprietà. Tuttavia, il valore \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) potrebbe essere ancora presente nel file di script ASSL.  
+ Dopo che la struttura è stata ricostruita, le dimensioni della partizione di controllo non sono più disponibile nella finestra Proprietà. Tuttavia, il valore \<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >) può essere ancora presente nel file di script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Distribuzione di modelli con filtri  
- Se si applica un filtro a un modello di data mining, il modello può essere distribuito a un'istanza di SQL Server 2005, ma il filtro non verrà applicato.  
+ Se si applica un filtro a un modello di data mining, è possibile distribuire il modello a un'istanza di SQL Server 2005, ma il filtro non verrà applicato.  
   
  Quando si apre il modello di data mining, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene generato un errore e il modello viene rigenerato per rimuovere il filtro.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "34015098"
  Se si tenta di sincronizzare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , il server restituisce un errore e la sincronizzazione del database non riesce.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compatibilità con le versioni precedenti di Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

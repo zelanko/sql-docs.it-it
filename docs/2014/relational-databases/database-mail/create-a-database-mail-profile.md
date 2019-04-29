@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872207"
 ---
 # <a name="create-a-database-mail-profile"></a>Creare un profilo di Posta elettronica database
   Per creare profili pubblici e privati di Posta elettronica database, è possibile utilizzare **Configurazione guidata posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -34,7 +34,7 @@ ms.locfileid: "53979137"
 ###  <a name="Security"></a> Sicurezza  
  Gli utenti in grado di accedere al database **msdb** possono usare un profilo pubblico per inviare messaggi di posta elettronica. Un profilo privato può essere utilizzato da un utente o da un ruolo. Concedendo ai ruoli l'accesso ai profili viene creata un'architettura gestita in modo più semplice. Solo un membro del ruolo **DatabaseMailUserRole** del database **msdb** con accesso ad almeno un profilo di Posta elettronica database può inviare messaggi di posta elettronica.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare gli account dei profili ed eseguire le stored procedure è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin.  
   
 
@@ -52,7 +52,7 @@ ms.locfileid: "53979137"
   
 -   Nella pagina **Gestione profili e account** selezionare l'opzione **Crea un nuovo profilo** e fare clic su **Avanti**.  
   
--   Nel **nuovo profilo** specificare il nome, descrizione del profilo e aggiungere gli account da includere nel profilo, quindi fare clic su **successivo**.  
+-   Nella pagina **Nuovo profilo** specificare il nome e la descrizione del profilo e aggiungere gli account da includere nel profilo, quindi fare clic su **Avanti**.  
   
 -   Per completare la creazione del nuovo profilo, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   

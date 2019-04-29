@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842527"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
   La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per altre informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dell'utilità, vedere [risolvere i problemi di integrità risorse di SQL Server &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "53371063"
   
  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, Errore: 10061) 15404)  
+ Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, errore: 15404)  
   
  Questo problema si verifica nello scenario di esempio seguente:  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371063"
   
  I messaggi di errore semplificati sono:  
   
- L'esecuzione del comando è stata arrestata. La variabile della shell "ErrorActionPreference" è impostata su Stop. Accesso negato.  
+ L'esecuzione del comando interrotto perché la variabile della shell "ErrorActionPreference" è impostata su Stop: Accesso negato.  
   
- ERRORE: \<Data e ora (MM/GG/AAAA hh.mm.ss) >: Eccezione rilevata durante la raccolta delle proprietà della CPU.  È probabile che una query WMI non sia riuscita.  AVVISO.  
+ ERRORE: \<Data e ora (MM/GG/AAAA hh.mm.ss) >: Eccezione rilevata durante la raccolta delle proprietà della cpu.  È probabile che una query WMI non sia riuscita.  AVVISO.  
   
  Per risolvere questo problema, verificare le impostazioni di configurazione seguenti:  
   

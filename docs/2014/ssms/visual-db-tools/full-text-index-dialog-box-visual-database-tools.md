@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028414"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
   Questa finestra di dialogo consente di creare un indice full-text per eseguire ricerche full-text nelle colonne basate su testo delle tabelle di database. Poiché un indice di questo tipo si basa su un indice normale, è necessario innanzitutto creare tale indice. L'indice normale deve essere creato utilizzando una sola colonna non Null, preferibilmente con valori non particolarmente elevati.  
@@ -63,7 +63,7 @@ ms.locfileid: "52822745"
  Indica se è possibile eseguire una ricerca full-text utilizzando l'indice full-text.  
   
  **Impostazione ricerca delle modifiche**  
- Descrive lo stato di rilevamento delle modifiche per questo indice: Manuale, automatico o disattivato.  
+ Visualizza lo stato del rilevamento modifiche per l'indice: Manuale, Automatico o Disattivato.  
   
  **Ricerca completata**  
  Indica se la ricerca più recente è stata completata. Se la proprietà è impostata su No, è in corso una ricerca.  
@@ -87,7 +87,7 @@ ms.locfileid: "52822745"
  Visualizza la data e l'ora di inizio della prossima ricerca.  
   
  **Tipo di ricerca corrente o più recente**  
- Visualizza il tipo di ricerca corrente o più recente: Completa, incrementale, aggiornamento o propagazione automatica.  
+ Visualizza il tipo della ricerca corrente o più recente: Completa, Incrementale, Aggiorna o Propagazione automatica.  
   
  **Nome indice univoco**  
  Visualizza un elenco di tutti i nomi delle colonne del database con indici di colonne singole univoci. Queste colonne possono essere utilizzate per creare un indice full-text.  

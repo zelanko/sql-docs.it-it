@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842400"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Viste di sistema, stored procedure, tipi di attesa e DMV per OLTP in memoria
   Questo argomento fornisce brevi descrizioni e collegamenti ai numerosi oggetti di database che supportano OLTP In memoria.  
@@ -27,9 +27,9 @@ ms.locfileid: "52406161"
 |[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Verifica se un filegroup contiene dati ottimizzati per la memoria.|Le colonne seguenti indicano valori aggiuntivi: **tipo** e **type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Verifica se un indice è contenuto in una tabella ottimizzata per la memoria.|Le colonne seguenti indicano valori aggiuntivi: **tipo** e **type_desc**.|  
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Verifica che un parametro non ammetta i valori Null (per un'esecuzione più efficiente di una stored procedure compilata in modo nativo).|**is_nullable** colonna.|  
-|[Sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Verifica che una stored procedure sia compilata in modo nativo.|**uses_native_compilation** colonna.|  
+|[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Verifica che una stored procedure sia compilata in modo nativo.|**uses_native_compilation** colonna.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Verifica che una stored procedure sia compilata in modo nativo.|**uses_native_compilation** colonna.|  
-|[table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Verifica che una tabella sia ottimizzata per la memoria.|**is_memory_optimized** colonna.|  
+|[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Verifica che una tabella sia ottimizzata per la memoria.|**is_memory_optimized** colonna.|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Controllare se una tabella con ottimizzazione per la memoria e controlla l'impostazione di durabilità di una tabella.|**durabilità**, **durability_desc**, e **is_memory_optimized** colonne.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Mostra gli indici hash di una tabella ottimizzata per la memoria.|Specifico di OLTP in memoria.|  
   
@@ -44,12 +44,12 @@ ms.locfileid: "52406161"
   
 |Stored procedure|Descrizione|  
 |----------------------|-----------------|  
-|[sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associare un database OLTP In memoria a un pool di risorse.|  
-|[Sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Avviare la procedura di garbage collection in un database OLTP In memoria.|  
-|[Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Abilitare della raccolta di statistiche per stored procedure compilate in modo nativo|  
-|[Sys. sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Abilitare la raccolta di statistiche di query per stored procedure compilate in modo nativo|  
-|[Sys. sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Unire file di dati e differenziali.|  
-|[Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Rimuovere l'associazione tra un database e un pool di risorse.|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associare un database OLTP In memoria a un pool di risorse.|  
+|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Avviare la procedura di garbage collection in un database OLTP In memoria.|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Abilitare della raccolta di statistiche per stored procedure compilate in modo nativo|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Abilitare la raccolta di statistiche di query per stored procedure compilate in modo nativo|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Unire file di dati e differenziali.|  
+|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Rimuovere l'associazione tra un database e un pool di risorse.|  
   
 ## <a name="dynamic-management-views-dmvs"></a>Viste a gestione dinamica (DMV)  
  Sono disponibili diverse viste a gestione dinamica per le tabelle ottimizzate per la memoria.  

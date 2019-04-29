@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990369"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>Creazione e accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo
-  La creazione e l'accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo non è supportato. Utilizzare in alternativa variabili di tabella e tipi di tabella. Esempio:  
+  La creazione e l'accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo non è supportato. Utilizzare in alternativa variabili di tabella e tipi di tabella. Ad esempio:   
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

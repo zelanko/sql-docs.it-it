@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874849"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Regole di confronto e tipi di dati di integrazione CLR
   In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] l'oggetto `CompareInfo` gestisce le regole di confronto. Le API di stringa di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizzano la proprietà `CompareInfo` associata all'oggetto `CultureInfo` del thread corrente per eseguire confronti tra stringhe. L'impostazione predefinita il `CultureInfo` oggetti si basa sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] impostazioni locali di Windows per il computer in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione. Questo determina la semantica del confronto predefinita, se non viene specificata alcuna `CultureInfo` esplicita, per confronti di valori `System.String`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non modifica in modo esplicito la proprietà `CompareInfo` sulle regole di confronto del database o del server. Se richiesto, gli utenti devono impostare la proprietà `CompareInfo` appropriata nelle routine.  

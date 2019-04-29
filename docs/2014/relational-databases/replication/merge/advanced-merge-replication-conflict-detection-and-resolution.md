@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000338"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge
   Se un server di pubblicazione e un Sottoscrittore sono connessi e viene eseguita la sincronizzazione, l'agente di merge rileva l'eventuale presenza di conflitti. Se vengono rilevati dei conflitti, l'agente utilizza un sistema di risoluzione dei conflitti, specificato al momento dell'aggiunta di un articolo a una pubblicazione, per determinare quali dati vengono accettati e propagati agli altri siti.  
@@ -94,9 +94,9 @@ ms.locfileid: "54132881"
   
  Per specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti, vedere  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specificare una sottoscrizione di tipo Merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] programmazione e la programmazione oggetti RMO (Replication Management Objects): [Creare una sottoscrizione Pull](../create-a-pull-subscription.md) e [creare una sottoscrizione Push](../create-a-push-subscription.md)  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica e programmazione di Replication Management Objects (RMO): [Creare una sottoscrizione pull](../create-a-pull-subscription.md) e [Creare una sottoscrizione push](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Sistema di risoluzione interattivo  
  La replica prevede un'interfaccia utente del sistema di risoluzione interattivo che può essere utilizzata insieme al sistema di risoluzione dei conflitti predefinito basato sulla priorità o a un sistema di risoluzione dei conflitti di articolo. Quando si esegue la sincronizzazione su richiesta tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, il sistema di risoluzione interattivo visualizza i dati del conflitto in fase di esecuzione e consente di selezionare il modo in cui risolvere i conflitti. Per ulteriori informazioni sull'attivazione della risoluzione interattiva e sull'avvio del sistema di risoluzione interattivo, vedere [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -129,7 +129,7 @@ ms.locfileid: "54132881"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] di programmazione: [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Programmazione della replica [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sincronizzare i dati](../synchronize-data.md)  

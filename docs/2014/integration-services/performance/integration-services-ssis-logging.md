@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889813"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -62,7 +62,7 @@ ms.locfileid: "58394310"
   
  Nella tabella seguente sono elencati i ProgID e i ClassID per i provider di log disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i percorsi dei log in cui scrivono i provider.  
   
-|Provider di log|ProgID|ClassID|Località|  
+|Provider di log|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |File di testo|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|La gestione connessione file utilizzata dal provider di log specifica il percorso del file di testo.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|La gestione connessione file utilizzata dal provider di log specifica il percorso del file utilizzato da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -96,7 +96,7 @@ ms.locfileid: "58394310"
 |Operatore|Identifica l'utente che ha avviato il pacchetto.|  
 |SourceName|Nome del contenitore o dell'attività in cui è stato generato l'evento.|  
 |SourceID|Identificatore univoco del pacchetto, contenitore Ciclo For, Ciclo Foreach o Sequenza oppure attività in cui è stato generato l'evento.|  
-|ExecutionID|GUID dell'istanza di esecuzione del pacchetto.<br /><br /> Nota: L'esecuzione di un singolo pacchetto potrebbe creare voci di log con valori diversi per l'elemento ExecutionID. Ad esempio, quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase di convalida potrebbe creare voci di log con un elemento ExecutionID che corrisponde a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La fase di esecuzione potrebbe invece creare voci di log con un elemento ExecutionID che corrisponde a dtshost.exe. Per fornire un altro esempio, quando si esegue un pacchetto che contiene attività Esegui pacchetto, ognuna di queste attività esegue un pacchetto figlio. Questi pacchetti figlio potrebbero creare voci di log con un elemento ExecutionID diverso rispetto alle voci di log create dal pacchetto.|  
+|ExecutionID|GUID dell'istanza di esecuzione del pacchetto.<br /><br /> Nota: Esecuzione di un singolo pacchetto potrebbe creare voci di log con valori diversi per l'elemento ExecutionID. Ad esempio, quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase di convalida potrebbe creare voci di log con un elemento ExecutionID che corrisponde a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La fase di esecuzione potrebbe invece creare voci di log con un elemento ExecutionID che corrisponde a dtshost.exe. Per fornire un altro esempio, quando si esegue un pacchetto che contiene attività Esegui pacchetto, ognuna di queste attività esegue un pacchetto figlio. Questi pacchetti figlio potrebbero creare voci di log con un elemento ExecutionID diverso rispetto alle voci di log create dal pacchetto.|  
 |MessageText|Messaggio associato alla voce di log.|  
 |DataBytes|Matrice di byte specifica della voce di log. Il significato di questo campo varia a seconda della voce di log.|  
   
@@ -147,7 +147,7 @@ ms.locfileid: "58394310"
   
 1.  Abilitare il pacchetto e le attività associate per la registrazione. La registrazione può venire eseguita a livello del pacchetto, del contenitore e dell'attività. È possibile specificare log diversi per pacchetti, contenitori e attività.  
   
-2.  Selezionare un provider di log e aggiungere un log per il pacchetto. È possibile creare log solo a livello di pacchetto. Inoltre attività o contenitori devono utilizzare uno dei log creati per il pacchetto. Ogni log è associato a uno dei seguenti provider di log: File di testo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registro eventi di Windows o file XML. Per altre informazioni, vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Selezionare un provider di log e aggiungere un log per il pacchetto. È possibile creare log solo a livello di pacchetto. Inoltre attività o contenitori devono utilizzare uno dei log creati per il pacchetto. Ogni log è associato a uno dei provider di log seguenti: File di testo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registro eventi di Windows o file XML. Per altre informazioni, vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Selezionare gli eventi e le informazioni dello schema del registro relative a ogni evento che si desidera registrare. Per altre informazioni, vedere [Configurazione della registrazione tramite un file di configurazione salvato](../configure-logging-by-using-a-saved-configuration-file.md).  
   

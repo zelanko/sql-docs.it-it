@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842885"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
   In questo argomento verrà descritto l'utilizzo dell'interfaccia utente visualizzata per vedere e analizzare i dati degli eventi estesi:  
@@ -28,7 +28,7 @@ ms.locfileid: "49120298"
 ## <a name="view-target-data"></a>Visualizza dati di destinazione  
  È possibile visualizzare i dati raccolti nella destinazione specificata in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-### <a name="view-target-data"></a>Visualizzare i dati di destinazione  
+### <a name="view-target-data"></a>Visualizza dati di destinazione  
  Per visualizzare i dati di destinazione:  
   
 1.  In Esplora oggetti espandere **Gestione**, **Eventi estesi**, **Sessioni**, quindi espandere una sessione.  

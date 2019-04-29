@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017183"
 ---
 # <a name="osql-utility"></a>Utilità osql
   L'utilità **osql** consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script. Questa utilità comunica con il server tramite ODBC.  
@@ -136,7 +136,7 @@ C:\>osql
  Specifica il carattere di terminazione del comando. Per impostazione predefinita, i comandi vengono terminati e inviati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'immissione di GO su una riga a sé stante. Se si reimposta il carattere di terminazione del comando, non utilizzare parole riservate di [!INCLUDE[tsql](../includes/tsql-md.md)] o caratteri con un significato speciale per il sistema operativo, indipendentemente dal fatto che siano preceduti da una barra rovesciata.  
   
  **-q "** _query_ **"**  
- Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Ad esempio:  
+ Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Ad esempio:   
   
 ```  
 SET table=sys.objects  
@@ -294,7 +294,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  L'utilità esegue il batch, viene chiusa e non restituisce alcun valore.  
   
--   ESCI **(*`query`*)**  
+-   EXIT **(*`query`*)**  
   
 > [!NOTE]  
 >  L'utilità esegue il batch, inclusa la query, quindi viene chiusa dopo aver restituito i risultati della query.  
@@ -302,7 +302,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR con stato 127.  
   
 > [!NOTE]  
->  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Ad esempio:  
+>  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Ad esempio:   
   
 ```  
 RAISERROR(50001, 10, 127)  

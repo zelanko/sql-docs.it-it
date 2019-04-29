@@ -1,5 +1,5 @@
 ---
-title: Unire partizioni in Analysis Services (SSAS - multidimensionale) | Documenti Microsoft
+title: Unire partizioni in Analysis Services (SSAS - multidimensionale) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988620"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Unire partizioni in Analysis Services (SSAS - Multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "34025398"
   
  Per lo stesso motivo, anche le partizioni che ottengono dati segmentati da query denominate richiedono aggiornamenti. La partizione combinata deve disporre ora di una query denominata che restituisce il set di risultati combinati precedentemente ottenuto dalle query denominate distinte.  
   
-## <a name="partition-storage-considerations-molap"></a>Considerazioni sull'archiviazione di partizioni: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considerazioni sull'archiviazione di partizione: MOLAP  
  Quando si uniscono partizioni MOLAP, vengono uniti anche i fatti archiviati nelle strutture multidimensionali delle partizioni. Internamente viene pertanto creata una partizione consistente e completa. I fatti archiviati nelle partizioni MOLAP, tuttavia, sono copie dei fatti presenti nella tabella dei fatti. Durante la successiva elaborazione della partizione, i fatti della struttura multidimensionale vengono eliminati (solo per l'elaborazione completa e di aggiornamento) e i dati vengono copiati dalla tabella dei fatti in base all'origine dei dati e al filtro per la partizione. Se la partizione di origine utilizza una tabella dei fatti diversa da quella della partizione di destinazione, le tabelle dei fatti delle due partizioni devono essere unite manualmente per garantire la disponibilità di un set di dati completo durante l'elaborazione della partizione risultante. Ciò vale anche se le due partizioni sono basate su query denominate diverse.  
   
 > [!IMPORTANT]  
 >  Una partizione MOLAP unita contenente una tabella dei fatti incompleta include una copia unita internamente dei dati delle tabelle dei fatti e funziona in modo corretto fino a quando non viene elaborata.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considerazioni sull'archiviazione di partizioni: partizioni ROLAP e HOLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considerazioni sull'archiviazione di partizione: Partizioni ROLAP e HOLAP  
  Quando si uniscono partizioni HOLAP o ROLAP a cui sono associate tabelle dei fatti diverse, le tabelle dei fatti non vengono unite automaticamente. Se queste tabelle non vengono unite in modo manuale, nella partizione risultante sarà disponibile solo la tabella dei fatti della partizione di destinazione. I fatti associati alla partizione di origine non sono disponibili per il drill-down nella partizione risultante e in fase di elaborazione della partizione le aggregazioni non riepilogheranno i dati della tabella non disponibile.  
   
 > [!IMPORTANT]  
@@ -114,9 +114,9 @@ ms.locfileid: "34025398"
   
 1.  In Esplora oggetti espandere il nodo **Gruppi di misure** del cubo contenente le partizioni che si desidera unire, quindi espandere **Partizioni**e fare clic con il pulsante destro del mouse sulla partizione di destinazione dell'operazione di unione. Se ad esempio si spostano dati delle tabelle dei fatti trimestrali in una partizione in cui sono archiviati dati delle tabelle dei fatti annuali, selezionare la partizione che contiene i dati delle tabelle dei fatti annuali.  
   
-2.  Fare clic su **Unisci partizioni** per aprire la **Unisci partizione \<nome partizione >** la finestra di dialogo.  
+2.  Fare clic su **Unisci partizioni** per aprire il **Unisci partizione \<nome partizione >** nella finestra di dialogo.  
   
-3.  In **Partizioni di origine** selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
+3.  In **Partizioni di origine**selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
   
     > [!NOTE]  
     >  Le partizioni di origine verranno immediatamente eliminate in seguito all'unione con le partizioni di destinazione. Aggiornare la cartella Partizioni per aggiornarne i contenuto in seguito all'unione.  
@@ -129,12 +129,12 @@ ms.locfileid: "34025398"
  Per informazioni, vedere l'argomento [Unione di partizioni &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti di elaborazione di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Le partizioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Creare e gestire una partizione locale & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Creare e gestire una partizione remota & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Elaborazione di oggetti di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Creare e gestire una partizione locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Creare e gestire una partizione remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Impostare tabelle writeback delle partizioni](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Partizioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Configurare l'archiviazione delle stringhe per partizioni e dimensioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Configurare l'archivio di stringhe per dimensioni e partizioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

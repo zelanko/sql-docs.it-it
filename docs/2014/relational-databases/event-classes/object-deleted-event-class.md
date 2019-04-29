@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025827"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted - classe di evento
   La classe di evento Object:Deleted indica che un oggetto è stato eliminato, ad esempio tramite le istruzioni DROP INDEX e DROP TABLE. È possibile utilizzare questa classe di evento per determinare se si sta verificando l'eliminazione di oggetti, ad esempio da parte di applicazioni ODBC che spesso creano stored procedure temporanee.  
@@ -34,7 +34,7 @@ ms.locfileid: "52780813"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Yes|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
-|EventClass|`int`|Tipo di evento = 47.|27|No|  
+|EventClass|`int`|Tipo di evento = 47.|27|no|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Inizio<br /><br /> 1=Commit<br /><br /> 2=Rollback|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  

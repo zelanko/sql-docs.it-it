@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834643"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introduzione a CDC Designer Console
   In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity.  

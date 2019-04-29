@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011980"
 ---
 # <a name="create-a-database-schema"></a>Creazione di uno schema di database
   In questo argomento si illustra come creare uno schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "52541210"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
 -   È richiesta l'autorizzazione CREATE SCHEMA per il database.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52541210"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- Il **Schema-nuovo** nella finestra di dialogo offre inoltre opzioni in due pagine aggiuntive: **Le autorizzazioni** e **delle proprietà estese**.  
+ La finestra di dialogo **Schema - Nuovo** offre anche opzioni in altre due pagine: **Autorizzazioni** e **Proprietà estese**.  
   
 -   Nella pagina **Autorizzazioni** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52541210"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

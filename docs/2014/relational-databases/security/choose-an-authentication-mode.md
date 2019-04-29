@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011338"
 ---
 # <a name="choose-an-authentication-mode"></a>Scegliere una modalità di autenticazione
-  Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono disponibili due modalità: la modalità di autenticazione di Windows e la modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
+  Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono disponibili due modalità: Modalità di autenticazione di Windows e la modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configurazione della modalità di autenticazione  
  Se si seleziona l'autenticazione in modalità mista durante l'installazione, è necessario specificare e confermare una password complessa per l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato sa. L'account sa consente di connettersi utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

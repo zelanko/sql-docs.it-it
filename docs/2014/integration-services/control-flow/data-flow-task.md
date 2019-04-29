@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832455"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -86,7 +86,7 @@ ms.locfileid: "58392105"
   
  Per molti eventi vengono scritte più voci nel log e i messaggi relativi a numerose voci di log contengono dati complessi. Per semplificare la comprensione e la comunicazione del contenuto dei messaggi complessi, è possibile analizzare il testo dei messaggi. In base alla posizione dei log, è possibile utilizzare istruzioni Transact-SQL o un componente script per separare il testo complesso in colonne o altri formati che si ritengono più utili.  
   
- Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB: 1180 : Ordinamento: 1181 : Input ordinamento: 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
+ Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", analizzato in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
 |colonna|Descrizione|Value|  
 |------------|-----------------|-----------|  

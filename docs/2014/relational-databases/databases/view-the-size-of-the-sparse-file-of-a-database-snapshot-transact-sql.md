@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870880"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Visualizzare le dimensioni del file sparse di uno snapshot del database (Transact-SQL)
   In questo argomento si descrive come utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] per verificare che un file di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia un file sparse e per conoscere le dimensioni effettive e massime. I file sparse, che sono una funzionalità del file system NTFS, vengono utilizzati dagli snapshot di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

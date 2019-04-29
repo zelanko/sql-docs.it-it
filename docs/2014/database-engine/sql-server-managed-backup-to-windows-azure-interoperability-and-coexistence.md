@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842908"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server Managed Backup in Windows Azure: Interoperabilità e coesistenza
   In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Di seguito vengono descritte alcune di queste caratteristiche: Gruppi di disponibilità AlwaysOn, mirroring del Database, piani di manutenzione di Backup, Log Shipping, backup Ad hoc, Scollega Database e Drop Database.  
@@ -35,7 +35,7 @@ ms.locfileid: "52509129"
 > [!TIP]  
 >  I piani di manutenzione con backup di sola copia sono supportati con [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurato per lo stesso database o istanza.  
   
-### <a name="log-shipping"></a>Log Shipping  
+### <a name="log-shipping"></a>Log shipping  
  Non è possibile configurare il log shipping e [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per lo stesso database contemporaneamente. Questa operazione avrà effetto sulla recuperabilità del database utilizzando entrambe le funzionalità.  
   
 ### <a name="ad-hoc-backups-using-transact-sql-and-sql-server-management-studio"></a>Backup ad hoc tramite Transact-SQL e SQL Server Management Studio  

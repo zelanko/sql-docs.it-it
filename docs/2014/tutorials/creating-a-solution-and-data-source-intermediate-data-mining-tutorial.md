@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855349"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Creazione di una soluzione e di un'origine dati (Esercitazione intermedia sul data mining)
   Per usare il data mining, è necessario prima creare un progetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] usando il modello **Progetto multidimensionale e di data mining di Analysis Services**. Quando si apre il modello, nella finestra di progettazione vengono caricati tutti gli schemi che potrebbero essere necessari per il data mining: origini dati, strutture di data mining, modelli di data mining e persino cubi nel caso in cui nella struttura di data mining vengano usati dati multidimensionali.  

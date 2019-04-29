@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853414"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provider Microsoft OLE DB per Oracle Panoramica
 > [!IMPORTANT]
@@ -68,7 +68,7 @@ MSDAORA
 |**Handle di finestra**|Indica l'handle di finestra da usare per la richiesta di informazioni aggiuntive.|
 |**Locale Identifier**|Indica un numero a 32 bit univoco (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano vengono formattati come date e ore, gli elementi vengono ordinati in ordine alfabetico, le stringhe vengono confrontate e così via.|
 |**Servizi OLE DB**|Indica una maschera di bit che specifica i servizi OLE DB per abilitare o disabilitare.|
-|**Richiesta**|Indica se richiedere all'utente mentre viene stabilita una connessione.|
+|**Prompt**|Indica se richiedere all'utente mentre viene stabilita una connessione.|
 |**Proprietà estese**|Stringa che contiene le informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifica del provider che non possono essere descritta mediante il meccanismo di proprietà.|
 
 ## <a name="see-also"></a>Vedere anche

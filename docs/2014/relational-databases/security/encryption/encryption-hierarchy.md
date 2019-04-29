@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011471"
 ---
 # <a name="encryption-hierarchy"></a>Gerarchia di crittografia
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base ad una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  

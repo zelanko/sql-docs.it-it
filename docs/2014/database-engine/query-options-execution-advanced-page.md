@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844172"
 ---
 # <a name="query-options-execution-advanced-page"></a>Esecuzione di Opzioni query (pagina Avanzate)
   L'uso dell'istruzione **SET** rende disponibili numerose opzioni. Usare questa pagina per specificare un'opzione **set** per l'esecuzione di query di Microsoft SQL Server. Per informazioni dettagliate su ogni opzione, vedere la documentazione online di SQL Server.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2580538f24fe220369f0f6ea807e6caa8dd822a6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020534"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Metodo GetReportServerUrls (MSReportServer_Instance WMI)
   Restituisce un elenco degli URL che è possibile utilizzare per accedere al server di report e alla gestione report.  

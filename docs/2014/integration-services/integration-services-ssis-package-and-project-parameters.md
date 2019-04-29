@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892246"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parametri di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
@@ -102,6 +102,6 @@ ms.locfileid: "58377979"
  [Impostare i valori dei parametri dopo la distribuzione del progetto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog concernente [Suggerimento rapido su SSIS: I parametri obbligatori](https://go.microsoft.com/fwlink/?LinkId=239781), sul sito Web mattmasson.com.  
+ Post di blog [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781) (Suggerimenti rapido per SSIS: parametri necessari) nel sito Web mattmasson.com.  
   
   

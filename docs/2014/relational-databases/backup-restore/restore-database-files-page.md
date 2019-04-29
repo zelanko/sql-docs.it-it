@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875002"
 ---
 # <a name="restore-database-files-page"></a>Ripristina database (pagina File)
   Utilizzare la pagina **File** della finestra di dialogo **Ripristina database** per gestire i file specifici che si è scelto di ripristinare all'interno del database.  
@@ -31,7 +31,7 @@ ms.locfileid: "48093611"
  **Riloca tutti i file nella cartella**  
  Consente di rilocare i file ripristinati.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Cartella file di dati**|Immettere o cercare il nome della cartella del file di dati in cui rilocare il file o i file di dati ripristinati.|  
 |**Cartella file di log**|Immettere o cercare il nome della cartella del file o dei file di log in cui rilocare il file di log ripristinato.|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998923"
 ---
 # <a name="parameter-binding-offsets"></a>Offset di associazione di parametri
 Un'applicazione può specificare che un offset venga aggiunto all'associazione parametro buffer indirizzi e lunghezza/indicatore corrispondente buffer indirizzi quando **SQLExecDirect** oppure **SQLExecute** viene chiamato. Il risultato di queste aggiunte determina gli indirizzi usati in queste operazioni.  

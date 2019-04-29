@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843113"
 ---
 # <a name="solution-explorer-source-control"></a>Controllo del codice sorgente di Esplora soluzioni
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Esplora soluzioni può essere integrato in un sistema di controllo sorgente separato. Dopo aver integrato una soluzione o un progetto in un sistema di controllo del codice sorgente, è possibile controllare l'accesso ai file e il controllo delle versioni per gli script e le query dei progetti.  
@@ -45,9 +45,9 @@ ms.locfileid: "48154981"
   
 4.  Nel **plug-in del controllo del codice sorgente corrente** , selezionare il plug-in del controllo del codice sorgente.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)|Viene definita la terminologia di base del controllo del codice sorgente e vengono spiegati i vantaggi per il progetto offerti dai servizi di controllo del codice sorgente.|  
 |[Aggiungere soluzioni e progetti al controllo del codice sorgente](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Viene spiegato come utilizzare l'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per aggiungere soluzioni e progetti al controllo del codice sorgente.|  

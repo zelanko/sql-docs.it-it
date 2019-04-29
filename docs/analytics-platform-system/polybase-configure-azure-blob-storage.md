@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027520"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per accedere a dati esterni in archiviazione Blob di Azure
 
@@ -89,7 +89,7 @@ Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario defi
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Creare una tabella esterna che punta ai dati archiviati in Archiviazione di Azure con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In questo esempio, i dati esterni contengono i dati dei sensori di automobili.
+1. Creare una tabella esterna che punta ai dati archiviati in Archiviazione di Azure con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In questo esempio i dati esterni contengono dati di sensori di auto.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -179,5 +179,5 @@ In SQL Server Data Tools, le tabelle esterne vengono visualizzate in una cartell
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su PolyBase, vedere la [What ' s PolyBase?](../relational-databases/polybase/polybase-guide.md). 
+Per altre informazioni su PolyBase, vedere [Che cos'è PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

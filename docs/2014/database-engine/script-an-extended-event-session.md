@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8b790bfcc57341e9ad13d29df9e982a524526aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843583"
 ---
 # <a name="script-an-extended-event-session"></a>Creare uno script per una sessione Eventi estesi
   In questo argomento viene descritto come creare uno script per una sessione eventi. È possibile esportare, modificare o eliminare la sessione eventi oppure eliminare e creare la sessione eventi nelle posizioni seguenti:  
@@ -25,7 +25,7 @@ ms.locfileid: "48150051"
   
 -   **File**  
   
--   **Negli Appunti**  
+-   **Clipboard**  
   
 -   **Processo dell'agente**  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012366"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats - classe di evento
   La classe di evento **Auto Stats** indica che si è verificato un evento di aggiornamento automatico delle statistiche di indice e di colonna.  
@@ -35,9 +35,9 @@ ms.locfileid: "52775763"
 |**Durata**|**bigint**|Durata dell'evento in microsecondi.|13|Yes|  
 |**EndTime**|**datetime**|Ora di fine dell'evento.|15|Yes|  
 |**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Yes|  
-|**EventClass**|**int**|Tipo di evento = 58.|27|No|  
+|**EventClass**|**int**|Tipo di evento = 58.|27|no|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
-|**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: Statistiche create/aggiornate in modo sincrono; **TextData** colonna indica le statistiche e indica se sono stati creati o aggiornati.<br /><br /> 2: Aggiornamento statistiche asincrono. Processo in coda.<br /><br /> 3: Aggiornamento statistiche asincrono. Processo in avvio.<br /><br /> 4: Aggiornamento statistiche asincrono. Processo completato.|21|Yes|  
+|**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: Statistiche create/aggiornate in modo sincrono; **TextData** colonna indica le statistiche e indica se sono stati creati o aggiornati.<br /><br /> 2: Aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: Aggiornamento statistiche asincrono; processo di avvio.<br /><br /> 4: Aggiornamento statistiche asincrono; processo completato.|21|Yes|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IndexID**|**int**|ID della voce di statistiche/indice nell'oggetto interessato dall'evento. Per determinare l'ID dell'indice per un oggetto, utilizzare la colonna **index_id** della vista del catalogo **sys.indexes** .|24|Yes|  

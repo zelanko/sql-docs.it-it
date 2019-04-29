@@ -1,5 +1,5 @@
 ---
-title: exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013226"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |attributo|**varchar(128)**|Nome dell'attributo associato al piano. Immediatamente sotto questa tabella elenca i possibili attributi, i tipi di dati e le relative descrizioni.|  
 |Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 La tabella precedente **attributo** può avere i valori seguenti:
 
-|attribute|Tipo di dati|Description|  
+|attribute|Tipo di dati|Descrizione|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica i valori delle opzioni con cui è stato compilato il piano.|  
 |objectid|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Questo è l'ID di oggetto archiviato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
@@ -92,7 +92,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
  Per convertire il valore restituito in **set_options** le opzioni con cui è stato compilato il piano, sottrarre i valori dalle **set_options** valore, che inizia con il valore massimo possibile, fino a raggiungere 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Ad esempio, se il valore in **set_options** 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) e ANSI_PADDING (1).  
   
-|Opzione|valore|  
+|Opzione|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -120,7 +120,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
  Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, a partire da il valore massimo possibile, fino a raggiungere 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|valore|  
+|Opzione|Value|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  

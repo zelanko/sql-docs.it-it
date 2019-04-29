@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011314"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le chiavi di crittografia per la protezione di dati, credenziali e informazioni di connessione archiviate in un database del server. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispone di due tipi di chiavi: *simmetrica* e *asimmetrica*. Le chiavi simmetriche utilizzano la stessa password per crittografare e decrittografare i dati. Le chiavi asimmetriche usano una password per crittografare i dati (chiave *pubblica* ) e un'altra per decrittografare i dati (chiave *privata* ).  
@@ -31,9 +31,9 @@ ms.locfileid: "48160701"
   
  La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Si può utilizzare anche per crittografare dati, ma ha limitazioni di lunghezza che la rendono meno pratica per i dati rispetto all'utilizzo di una chiave simmetrica.  
   
- Al momento della creazione, la chiave master viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente. Per attivare la decrittografia automatica della chiave master, viene crittografata una copia della chiave utilizzando la SMK. Viene archiviata in entrambi i database in cui viene usato e nel `master` database di sistema.  
+ Al momento della creazione, la chiave master viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente. Per attivare la decrittografia automatica della chiave master, viene crittografata una copia della chiave utilizzando la SMK. Viene archiviata in entrambi i database dove è utilizzata e nel database `master` di sistema.  
   
- La copia della DMK archiviata nel `master` database di sistema viene aggiornato automaticamente ogni qualvolta la DMK è modificata. Tuttavia, questa impostazione predefinita può essere modificata usando il `DROP ENCRYPTION BY SERVICE MASTER KEY` opzione del `ALTER MASTER KEY` istruzione. Per aprire una DMK non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione `OPEN MASTER KEY` e una password.  
+ La copia della DMK archiviata nel database `master` di sistema viene aggiornata automaticamente ogni qualvolta la DMK è modificata. Tuttavia, questa impostazione predefinita può essere modificata utilizzando l'opzione `DROP ENCRYPTION BY SERVICE MASTER KEY` dell'istruzione `ALTER MASTER KEY`. Per aprire una DMK non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione `OPEN MASTER KEY` e una password.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Gestione delle chiavi del SQL Server e del database  
  La gestione delle chiavi di crittografia comprende la creazione di nuove chiavi di database, la creazione di un backup delle chiavi server e del database e informazioni su quando e come ripristinare, eliminare o modificare le chiavi.  
@@ -60,7 +60,7 @@ ms.locfileid: "48160701"
 > [!CAUTION]  
 >  Se si perde ogni accesso alle chiavi descritte in precedenza, si perderà l'accesso agli oggetti, alle connessioni e ai dati protetti da quelle chiavi. È possibile ripristinare la chiave master del servizio, come viene descritto nei collegamenti qui riportati, oppure è possibile ritornare al sistema di crittografa originale per recuperare l'accesso. Non è possibile recuperare l'accesso in altro modo.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Service Master Key](service-master-key.md)  
  Viene fornita una breve spiegazione della chiave master del servizio e delle procedure consigliate.  
   

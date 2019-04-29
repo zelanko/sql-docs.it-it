@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982178"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |*Prima dell'inizio*|1|  
-|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Dopo la fine*|  
 |*Dopo la fine*|*Dopo la fine*|  
   
@@ -177,7 +177,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Prima dell'inizio*|*Prima dell'inizio*|  
 |*CurrRowsetStart = 1*|*Prima dell'inizio*|  
-|*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
+|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Dopo la fine e LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Dopo la fine LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
@@ -194,9 +194,9 @@ SQLRETURN SQLFetchScroll(
 |*(Prima di avviare e FetchOffset > 0) O (dopo la fine e FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart e FetchOffset < = 0*|*Prima dell'inizio*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*Prima dell'inizio*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Prima dell'inizio*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Prima dell'inizio*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Dopo la fine*|  
 |*Dopo la fine FetchOffset e > = 0*|*Dopo la fine*|  
   
@@ -211,11 +211,11 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 e &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Prima dell'inizio*|  
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Prima dell'inizio*|  
-|*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
+|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Dopo la fine*|  
   
  [1] **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituito il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
@@ -229,7 +229,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*Qualsiasi*|*1*|  
+|*Any*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  Le regole seguenti si applicano.  
@@ -247,7 +247,7 @@ SQLRETURN SQLFetchScroll(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Prima dell'inizio*|  
-|*1 < = BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Dopo la fine*|  
   
  Per informazioni sui segnalibri, vedere [segnalibri (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -255,7 +255,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="effect-of-deleted-added-and-error-rows-on-cursor-movement"></a>Effetto dell'aggiunta, eliminazione e le righe di errore in uno spostamento del cursore  
  I cursori statici e gestito da keyset in alcuni casi rilevano righe aggiunte al risultato, impostare e rimuovere le righe eliminate dal set di risultati. Chiamando **SQLGetInfo** specificando le SQL_STATIC_CURSOR_ATTRIBUTES2 SQL_KEYSET_CURSOR_ATTRIBUTES2 opzioni ed esaminando il SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_DELETIONS e SQL_CA2_SENSITIVITY_ Gli aggiornamenti maschere di bit, un'applicazione determina se i cursori implementati da un driver specifico scopo. Per i driver che è possano rilevare le righe eliminate e rimuoverle, nei paragrafi seguenti vengono descritti gli effetti di questo comportamento. Per i driver in grado di rilevare le righe eliminate, ma non è possibile rimuoverli, le eliminazioni non hanno effetto sui movimenti del cursore e nei paragrafi seguenti non sono applicabili.  
   
- Se il cursore rileva righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva queste modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostata su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ AGGIORNAMENTO. Nel secondo caso, vengono aggiornati i dati nei buffer di set di righe, ma non refetched ed eliminate righe non vengono rimosse dal set di risultati. Di conseguenza, quando una riga viene eliminata dal o inserita nel set di righe corrente, il cursore non modifica i buffer di righe. Al contrario, rileva la modifica quando recupera qualsiasi set di righe incluse in precedenza la riga eliminata o include ora la riga inserita.  
+ Se il cursore rileva righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva queste modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostata su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ aggiornare. Nel secondo caso, vengono aggiornati i dati nei buffer di set di righe, ma non refetched ed eliminate righe non vengono rimosse dal set di risultati. Di conseguenza, quando una riga viene eliminata dal o inserita nel set di righe corrente, il cursore non modifica i buffer di righe. Al contrario, rileva la modifica quando recupera qualsiasi set di righe incluse in precedenza la riga eliminata o include ora la riga inserita.  
   
  Ad esempio:  
   

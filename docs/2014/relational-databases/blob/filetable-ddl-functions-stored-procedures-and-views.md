@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cd9f8912ff167e70caf601d4816d2d92f1af04c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874793"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL FileTable, funzioni, stored Procedure e viste
   Vengono elencate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunti o modificati per supportare la funzionalità FileTable in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -31,8 +31,8 @@ ms.locfileid: "48154337"
 |Object|Stato|Ulteriori informazioni|  
 |------------|------------|----------------------|  
 |[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Modificato|[Abilitare i prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)<br /><br /> [Gestire tabelle FileTable](manage-filetables.md)|  
-|[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|Modificato|[Creare, modificare e rilasciare FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Gestire tabelle FileTable](manage-filetables.md)|  
-|[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)|Modificato|[Abilitare i prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)|  
+|[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|Modificato|[Creare, modificare e rilasciare FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Gestione di tabelle FileTable](manage-filetables.md)|  
+|[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)|Modificato|[Abilitazione dei prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|Modificato|[Creare, modificare ed eliminare FileTable](create-alter-and-drop-filetables.md)|  
 |[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)<br /><br /> [Argomenti RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)|Modificato||  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48154337"
   
 |Object|Stato|Ulteriori informazioni|  
 |------------|------------|----------------------|  
-|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Aggiunto**|[Usare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)|  
+|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Aggiunto**|[Utilizzare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**Aggiunto**|[Usare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)|  
 |[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**Aggiunto**|[Utilizzare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48154337"
 |Object|Stato|Ulteriori informazioni|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)|**Aggiunto**|[Abilitazione dei prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)|  
-|[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**Aggiunto**|[Creare, modificare ed eliminare FileTable](create-alter-and-drop-filetables.md)<br /><br /> [Gestire tabelle FileTable](manage-filetables.md)|  
+|[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**Aggiunto**|[Creare, modificare e rilasciare FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Gestire tabelle FileTable](manage-filetables.md)|  
 |[sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)|**Aggiunto**|[Gestire tabelle FileTable](manage-filetables.md)|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Modificato|[Gestire tabelle FileTable](manage-filetables.md)|  
   

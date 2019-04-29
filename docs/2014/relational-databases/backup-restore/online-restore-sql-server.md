@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876192"
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
   Il ripristino in linea è supportato solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. In questa edizione un ripristino di file, pagina o a fasi viene eseguito online per impostazione predefinita. Le informazioni contenute in questo argomento sono importanti per i database che includono più file o filegroup e, in base al modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
@@ -77,19 +77,19 @@ ms.locfileid: "48060275"
 > [!NOTE]  
 >  La sintassi di una sequenza di ripristino online è la stessa di una sequenza di ripristino offline.  
   
--   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione minima&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione minima&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Esempio: Ripristino a fasi di alcuni filegroup &#40;modello di recupero con registrazione minima&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di alcuni filegroup &#40;Modello di recupero con registrazione minima&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Esempio: Ripristino a fasi di un numero limitato di filegroup &#40;modello di recupero con registrazione completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di alcuni filegroup &#40;Modello di recupero con registrazione completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   [Esempio: Ripristino online di un file di lettura/scrittura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Esempio: Ripristino in linea di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48060275"
   
 -   [Ripristinare pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)  
   
--   [Gestione della tabella suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
+-   [Gestire la tabella suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
   
 -   [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   

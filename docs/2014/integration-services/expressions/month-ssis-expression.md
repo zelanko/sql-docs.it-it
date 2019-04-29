@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897528"
 ---
 # <a name="month-ssis-expression"></a>MONTH (espressione SSIS)
   Viene restituito un valore integer che rappresenta la parte corrispondente al mese di una data.  
@@ -43,7 +43,7 @@ MONTH(date)
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  L'espressione di convalida non riesce quando un valore letterale data in modo esplicito viene eseguito il cast a uno di questi tipi di dati di data: DT_DBTIMESTAMPOFFSET e DT_DBTIMESTAMP2.  
+>  La convalida dell'espressione non riesce quando viene eseguito il cast esplicito di un valore letterale di data a uno di questi tipi di dati relativi alle date: DT_DBTIMESTAMPOFFSET e DT_DBTIMESTAMP2.  
   
  La funzione MONTH costituisce una forma più breve, ma equivalente, della funzione DATEPART("Month", date).  
   

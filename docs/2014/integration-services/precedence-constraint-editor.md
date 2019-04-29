@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889453"
 ---
 # <a name="precedence-constraint-editor"></a>Editor vincoli di precedenza
   Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configurare i vincoli di precedenza.  
   
 ## <a name="options"></a>Opzioni  
  **Operazione di valutazione**  
- Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **espressione**, **espressione e vincolo**, e **espressione o vincolo**.  
+ Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
   
  **Valore**  
- Specificare il valore del vincolo: **Operazione riuscita**, **errore**, o **completamento**.  
+ Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**.  
   
 > [!NOTE]  
 >  La riga del vincolo di precedenza è di colore verde in caso di **Esito positivo**, evidenziata per **Esito negativo**e blu per **Completamento**.  

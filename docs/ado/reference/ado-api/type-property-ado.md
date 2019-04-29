@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910850"
 ---
 # <a name="type-property-ado"></a>Proprietà Type (ADO)
 Indica il tipo di dati o di tipo operativo di una [parametri](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md), o [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetto.  

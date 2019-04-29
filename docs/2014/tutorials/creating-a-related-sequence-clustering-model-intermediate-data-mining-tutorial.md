@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855874"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Creazione di un modello Sequence Clustering correlato (Esercitazione intermedia sul data mining)
   Tramite l'esplorazione del modello Sequence Clustering sono stati individuati altri attributi, quali Region e Income, in grado di influire in modo significativo sui modelli. Per comprendere meglio le sequenze, verrà pertanto creato un modello Sequence Clustering correlato e verranno rimossi gli attributi relativi ai dati demografici dei clienti.  

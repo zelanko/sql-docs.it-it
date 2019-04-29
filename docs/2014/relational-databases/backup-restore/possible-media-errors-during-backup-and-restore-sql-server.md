@@ -24,17 +24,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876114"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includono un'opzione che permette di recuperare un database anche in presenza di errori. Un importante e nuovo meccanismo di rilevazione degli errori prevede l'utilizzo facoltativo di un checksum del backup, creato durante un'operazione di backup e convalidato durante un'operazione di ripristino. È quindi possibile controllare se un'operazione verifica la presenza di errori e se ne deve essere o meno arrestata l'esecuzione quando viene rilevato un errore. Se un backup contiene un checksum, le istruzioni RESTORE e RESTORE VERIFYONLY verificano la presenza di errori.  
   
 > [!NOTE]  
->  I backup con mirroring consentono di disporre di un massimo di quattro copie (mirror) di set di supporti, offrendo copie alternative per il recupero in caso di errori che dipendono da supporti danneggiati. Per altre informazioni, vedere [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  I backup con mirroring consentono di disporre di un massimo di quattro copie (mirror) di set di supporti, offrendo copie alternative per il recupero in caso di errori che dipendono da supporti danneggiati. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
   
   

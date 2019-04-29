@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842752"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilità per utenti disabili
   [!INCLUDE[msCoName](../includes/msconame-md.md)] cerca di sviluppare prodotti e servizi che siano facili da utilizzare per chiunque. In questo argomento vengono fornite informazioni sulle caratteristiche, i prodotti e i servizi seguenti in grado di semplificare l'accesso di utenti disabili alla famiglia di server [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  

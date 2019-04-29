@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019046"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Applicare gli aggiornamenti rapidi della piattaforma di strumenti analitici
 Questo articolo illustra come applicare gli aggiornamenti rapidi per il software del sistema di piattaforma Analitica.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91e07bdf70954079e24b39bd345e33b348958ae0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834330"
 ---
 # <a name="configure-error-output"></a>Configura output errori
   Usare la finestra di dialogo **Configura output errori** per configurare le opzioni di gestione degli errori per le trasformazioni del flusso di dati che supportano l'output degli errori.  

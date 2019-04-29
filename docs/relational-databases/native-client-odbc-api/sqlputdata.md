@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014274"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51664220"
 ## <a name="diagnostics"></a>Diagnostica  
  È presente un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE specifico di Native Client per SQLPutData:  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |22026|Lunghezza dei dati non corrispondente.|Se la lunghezza dei dati in byte da inviare è stata specificata da un'applicazione, ad esempio con SQL_LEN_DATA_AT_EXEC (*n*) in cui *n* è maggiore di 0, il numero totale di byte fornito dall'applicazione mediante SQLPutData deve corrispondere alla lunghezza specificata.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51664220"
   
  Il *DataPtr* parametro viene ignorato, ma deve essere impostata su un valore diverso da NULL. Per altre informazioni, vedere la sezione sull'associazione di righe TVP variabile nelle [valori di colonna e parametri Data Transfer of Table-Valued e associazione](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Se *StrLen_Or_Ind* contenga un valore diverso da SQL_DEFAULT_PARAM o su un numero compreso tra 0 e SQL_PARAMSET_SIZE (vale a dire, il *ColumnSize* parametro di SQLBindParameter), è corretto. A causa di questo errore, SQLPutData restituisce SQL_ERROR: SQLSTATE=HY090, "Lunghezza di stringa o di buffer non valida".  
+ Se *StrLen_Or_Ind* contenga un valore diverso da SQL_DEFAULT_PARAM o su un numero compreso tra 0 e SQL_PARAMSET_SIZE (vale a dire, il *ColumnSize* parametro di SQLBindParameter), è corretto. Questo errore provoca SQLPutData restituisce SQL_ERROR: SQLSTATE SQLSTATE=hy090, "Stringa di lunghezza o non valida del buffer".  
   
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51664220"
  **SQLPutData** supporta grandi CLR tipi definiti dall'utente (UDT). Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData Function](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

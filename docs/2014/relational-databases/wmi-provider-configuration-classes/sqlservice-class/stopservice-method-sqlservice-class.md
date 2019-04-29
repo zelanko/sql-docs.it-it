@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 56356fbf40939694a46f08c1cef5edc99049835e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911672"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Metodo StopService (classe SqlService)
   Esegue un tentativo di arresto del servizio.  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877841"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Visualizzazione dei metadati dei percorsi nell'Editor percorso flusso di dati
   I percorsi connettono due componenti flusso di dati. Affinché sia possibile visualizzare i metadati di un percorso, il flusso di dati deve contenere almeno due componenti connessi. Per altre informazioni, vedere [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md).  

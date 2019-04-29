@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015709"
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Proprietà degli attributi - Membri del gruppo di attributi
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "51813714"
   
  La proprietà **DiscretizationMethod** di un attributo controlla la modalità di raggruppamento dei membri.  
   
-|Impostazione**DiscretizationMethod** |Description|  
+|Impostazione**DiscretizationMethod** |Descrizione|  
 |--------------------------------------|-----------------|  
-|**Nessuno**|Visualizza i membri.|  
+|**None**|Visualizza i membri.|  
 |**Automatico**|Seleziona il metodo che meglio rappresenta i dati: il metodo **EqualAreas** o il metodo **Clusters** .|  
 |**EqualAreas**|Tenta di suddividere i membri dell'attributo in gruppi contenenti un numero uguale di membri.|  
 |**Clusters**|Tenta di suddividere i membri dell'attributo in gruppi eseguendo il campionamento dei dati di training, l'inizializzazione su un numero di punti casuali e diverse iterazioni dell'algoritmo di clustering EM (Expectation Maximization).<br /><br /> Questo metodo è utile perché può essere applicato a qualsiasi curva di distribuzione, ma determina tempi di elaborazione più lunghi.|  
@@ -58,7 +58,7 @@ ms.locfileid: "51813714"
   
  Il parametro `<Bucket name>` è costituito da un'espressione stringa in cui può essere incorporato un set di variabili per rappresentare informazioni sui membri o sui gruppi di membri nell'ambito del nome del gruppo di membri:  
   
-|Variabile|Description|  
+|Variabile|Descrizione|  
 |--------------|-----------------|  
 |%{First bucket member}|Nome del primo membro da includere nel gruppo di membri corrente.|  
 |%{Last bucket member}|Nome dell'ultimo membro da includere nel gruppo di membri corrente.|  

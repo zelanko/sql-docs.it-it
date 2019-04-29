@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021622"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Pubblicazione (replica peer-to-peer)
   La pagina **Pubblicazione** visualizza le pubblicazioni transazionali abilitate per la replica peer-to-peer. Le pubblicazioni vengono abilitate nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** .  

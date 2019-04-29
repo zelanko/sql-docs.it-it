@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843496"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Funzionalità supportate dalle edizioni di SQL Server 2014
 
@@ -109,7 +109,7 @@ ms.locfileid: "60158007"
 |Aggiunta a caldo di CPU e memoria<sup>2</sup>|Yes|||||||  
 |Database Recovery Advisor|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Backup crittografato|Yes|Yes|Yes|||||  
-|Backup intelligente|Yes|Yes|Yes|No||||  
+|Backup intelligente|Yes|Yes|Yes|no||||  
   
  <sup>1</sup>per altre informazioni sull'installazione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] in Server Core, vedere [installare SQL Server 2014 in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   

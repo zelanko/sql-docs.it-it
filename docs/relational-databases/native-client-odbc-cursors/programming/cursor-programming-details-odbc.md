@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b165d60a23146b82d226e1031353094cb7e21d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013656"
 ---
 # <a name="cursor-programming-details-odbc"></a>Informazioni sulla programmazione dei cursori (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47729049"
 
   La scelta del tipo di cursore più appropriato può migliorare le prestazioni dell'applicazione. In determinate condizioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può convertire implicitamente un tipo di cursore quando si esegue un'istruzione SQL che non è supportata dal tipo di cursore richiesto.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Conversioni implicite dei cursori &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834376"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configura visualizzatore dati (scheda Grafico a colonne)
   Utilizzare la scheda **Istogramma** della finestra di dialogo **Configura visualizzatore dati** per specificare una colonna da visualizzare in forma di barre in un grafico. Il numero di barre indica il numero di valori di dati discreti nella colonna, mentre l'altezza della barra indica il numero di occorrenze di ogni valore. Il grafico riflette il contenuto di un solo buffer.  

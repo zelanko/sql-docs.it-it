@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032115"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
   Se si utilizza un sistema operativo server Microsoft Windows, è possibile misurare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mediante lo strumento grafico Monitoraggio di sistema. È possibile visualizzare oggetti e contatori delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nonché funzioni di altri oggetti ad esempio processori, memoria, cache, thread e processi. A ognuno di questi oggetti è associato un set di contatori che misurano l'utilizzo dei dispositivi, le lunghezze delle code, i ritardi e altri indicatori di velocità effettiva e congestione interna.  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894815"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurazione del componente script nell'editor corrispondente
   Prima di scrivere codice personalizzato nel componente script, è necessario selezionare il tipo di componente flusso di dati che si vuole creare, ovvero origine, trasformazione o destinazione, quindi configurare i relativi metadati e le relative proprietà nell'**Editor trasformazione Script**.  

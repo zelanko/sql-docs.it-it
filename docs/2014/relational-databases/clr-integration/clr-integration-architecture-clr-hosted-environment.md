@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922565"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente CLR
   CLR (Common Language Runtime) di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework è un ambiente che esegue molti linguaggi di programmazione attuali, inclusi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. CLR include memoria sottoposta a Garbage Collection, threading preemptive, Servizio metadati (riflessione dei tipi), verificabilità del codice e sicurezza dall'accesso di codice. CLR utilizza metadati per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate a metodi, generare codice nativo, implementare la sicurezza e impostare limiti di contesto per la fase di esecuzione.  
@@ -65,7 +65,7 @@ ms.locfileid: "48129156"
 ###### <a name="security"></a>Sicurezza  
  Il codice utente in esecuzione nel database deve essere conforme alle regole di autenticazione e autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in caso di accesso a oggetti di database, quali tabelle e colonne. Gli amministratori del database, inoltre, devono essere in grado di controllare l'accesso alle risorse del sistema operativo, ad esempio file e accesso di rete, dal codice utente in esecuzione nel database. Questo aspetto è importante in quanto i linguaggi di programmazione gestita, diversamente dai linguaggi non gestiti come Transact-SQL, forniscono API per accedere a tali risorse. Il sistema deve fornire un metodo protetto che consenta al codice utente di accedere alle risorse del computer al di fuori dell'elaborazione del [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Per altre informazioni, vedere [Sicurezza per l'integrazione con CLR](security/clr-integration-security.md).  
   
-###### <a name="performance"></a>restazioni  
+###### <a name="performance"></a>Prestazioni  
  Il codice utente gestito in esecuzione nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve offrire prestazioni computazionali analoghe allo stesso codice eseguito al di fuori del server. L'accesso ai database dal codice utente gestito non è rapido quanto [!INCLUDE[tsql](../../../includes/tsql-md.md)] nativo. Per altre informazioni, vedere [sulle prestazioni dell'integrazione con CLR](clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>CLR Services  
@@ -100,7 +100,7 @@ ms.locfileid: "48129156"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Funzionamento dell'integrazione tra SQL Server e CLR  
  In questa sezione viene illustrata l'integrazione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dei modelli di threading, di pianificazione, di sincronizzazione e di gestione della memoria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e CLR. In particolare, in questa sezione viene esaminata l'integrazione alla luce di obiettivi di scalabilità, affidabilità e sicurezza. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] essenzialmente è utilizzato come sistema operativo per CLR quando è ospitato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. CLR chiama routine di basso livello implementate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il threading, la pianificazione, la sincronizzazione e la gestione della memoria. Si tratta delle stesse primitive utilizzate dal resto del motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questo approccio offre diversi vantaggi correlati a scalabilità, affidabilità e sicurezza.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Scalabilità: threading, pianificazione e sincronizzazione comuni  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Scalabilità: Comuni di threading, pianificazione e la sincronizzazione  
  CLR chiama le API di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per la creazione di thread, sia per l'esecuzione del codice utente sia per uso interno. Ai fini della sincronizzazione tra più thread, CLR chiama gli oggetti di sincronizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ciò consente all'utilità di pianificazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di pianificare altre attività quando un thread è in attesa di un oggetto di sincronizzazione. Quando, ad esempio, CLR avvia la procedura di Garbage Collection, tutti i relativi thread sono in attesa del completamento di tale procedura. Poiché i thread CLR e gli oggetti di sincronizzazione di cui sono in attesa vengono rilevati dall'utilità di pianificazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può pianificare thread che eseguono altre attività del database che non interessano CLR. Ciò consente inoltre a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di rilevare deadlock che comportano blocchi acquisiti da oggetti di sincronizzazione CLR e di utilizzare tecniche tradizionali per la rimozione di tali deadlock.  
   
  Il codice gestito viene eseguito in modalità preemptive in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'utilità di pianificazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in grado di rilevare e arrestare i thread non eseguiti per una quantità di tempo significativa. La possibilità di eseguire hook di thread CLR a thread di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica che l'utilità di pianificazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sia in grado di identificare i thread sfuggiti al controllo in CLR e di gestirne la priorità. Tali thread sfuggiti al controllo vengono sospesi e reinseriti nella coda. I thread identificati ripetutamente come thread sfuggiti al controllo non possono essere eseguiti per un determinato periodo di tempo, in modo da consentire l'esecuzione di altri thread worker.  
@@ -108,24 +108,24 @@ ms.locfileid: "48129156"
 > [!NOTE]  
 >  Il codice gestito con esecuzione prolungata che accede ai dati o alloca memoria sufficiente per attivare la procedura di Garbage Collection viene restituito automaticamente. Il codice gestito con esecuzione prolungata che non accede ai dati né alloca memoria gestita sufficiente per attivare la procedura di Garbage Collection deve essere restituito in modo esplicito chiamando la funzione System.Thread.Sleep() di .NET Framework.  
   
-###### <a name="scalability-common-memory-management"></a>Scalabilità: gestione della memoria comune  
+###### <a name="scalability-common-memory-management"></a>Scalabilità: Gestione della memoria comune  
  CLR chiama primitive di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per allocare e deallocare la memoria. Poiché la memoria utilizzata da CLR viene rilevata nell'utilizzo di memoria totale del sistema, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in grado di rispettare i limiti di memoria configurati e di garantire che CLR e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stesso non creino conflitti di memoria reciproci. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può anche rifiutare le richieste di memoria CLR quando la memoria di sistema è vincolata, e può chiedere a CLR di ridurre l'utilizzo della memoria quando le altre attività hanno bisogno memoria.  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>Affidabilità: domini applicazione ed eccezioni irreversibili  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>Affidabilità: Domini dell'applicazione ed eccezioni irreversibili  
  Quando il codice gestito nelle API di .NET Framework rileva eccezioni critiche, ad esempio un errore di memoria insufficiente o di overflow dello stack, non è sempre possibile recuperare il sistema e garantire semantica coerente e corretta per l'implementazione. Le API generano un'eccezione di interruzione del thread in risposta a tali errori.  
   
  Se ospitate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tali interruzioni del thread vengono gestite nel modo seguente: CLR rileva qualsiasi stato condiviso nel dominio applicazione in cui si verifica l'interruzione del thread. A tale scopo, CLR verifica l'eventuale presenza di oggetti di sincronizzazione. Se è presente uno stato condiviso nel dominio applicazione, viene scaricato il dominio applicazione stesso. Lo scaricamento del dominio applicazione comporta l'arresto delle transazioni del database in esecuzione nel dominio applicazione. Poiché la presenza dello stato condiviso può aumentare l'impatto di tali eccezioni critiche sulle sessioni utente diverse da quella che ha attivato l'eccezione, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e CLR sono state introdotte procedure per ridurre la probabilità del verificarsi di tale stato. Per ulteriori informazioni, vedere la documentazione di .NET Framework.  
   
-###### <a name="security-permission-sets"></a>Sicurezza: set di autorizzazioni  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente agli utenti di specificare i requisiti di affidabilità e sicurezza per il codice distribuito nel database. Una volta caricati gli assembly nel database, l'autore dell'assembly può specificare uno tra i tre set di autorizzazioni per l'assembly seguenti: SAFE, EXTERNAL_ACCESS e UNSAFE.  
+###### <a name="security-permission-sets"></a>Sicurezza: Set di autorizzazioni  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente agli utenti di specificare i requisiti di affidabilità e sicurezza per il codice distribuito nel database. Quando gli assembly vengono caricati nel database, l'autore dell'assembly può specificare uno dei tre set di autorizzazioni per tale assembly: -SAFE, EXTERNAL_ACCESS e UNSAFE.  
   
 |||||  
 |-|-|-|-|  
 |Set di autorizzazioni|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni|  
-|Restrizioni del modello di programmazione|Sì|Sì|Nessuna restrizione|  
-|Requisito di verificabilità|Sì|Sì|no|  
-|Possibilità di chiamare il codice nativo|no|no|Sì|  
+|Restrizioni del modello di programmazione|Yes|Yes|Nessuna restrizione|  
+|Requisito di verificabilità|Yes|Yes|no|  
+|Possibilità di chiamare il codice nativo|No|no|Yes|  
   
  Grazie alle restrizioni associate in termini di modello di programmazione consentito, SAFE rappresenta la modalità più affidabile e protetta. Gli assembly SAFE dispongono di autorizzazioni sufficienti per l'esecuzione, l'elaborazione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere effettivamente indipendenti dai tipi e non possono chiamare codice non gestito.  
   

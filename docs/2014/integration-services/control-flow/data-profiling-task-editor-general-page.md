@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832225"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
   Usare la pagina **Generale** di **Editor attività Profiling dati** per configurare le opzioni seguenti:  
@@ -52,8 +52,8 @@ ms.locfileid: "58385353"
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**FileConnection**|Consente di salvare l'output del profilo in un file nel percorso specificato in una gestione connessione file.<br /><br /> Nota: Si specifica la gestione connessione File da usare nel **destinazione** opzione.|  
-|**Variabile**|Consente di salvare l'output del profilo in una variabile del pacchetto.<br /><br /> Nota: È possibile specificare la variabile di pacchetto da utilizzare nel **destinazione** opzione.|  
+|**FileConnection**|Consente di salvare l'output del profilo in un file nel percorso specificato in una gestione connessione file.<br /><br /> Nota: specificare la gestione connessione file da usare nell'opzione **Destination**.|  
+|**Variabile**|Consente di salvare l'output del profilo in una variabile del pacchetto.<br /><br /> Nota: specificare la variabile del pacchetto da usare nell'opzione **Destination**.|  
   
  **Destinazione**  
  Consente di specificare la gestione connessione file o la variabile del pacchetto contenente l'output del profilo dei dati:  

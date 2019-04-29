@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837498"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSISDB
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è incluso il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  

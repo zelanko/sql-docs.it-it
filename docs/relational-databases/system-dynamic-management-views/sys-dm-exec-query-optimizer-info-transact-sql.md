@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013208"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47718639"
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|nome|Tipo di dati|Description|  
+|Nome|Tipo di dati|Descrizione|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|Nome dell'evento statistiche di Query Optimizer.|  
-|**occorrenza**|**bigint**|Numero di occorrenze dell'evento di ottimizzazione per il contatore corrente.|  
+|**occurrence**|**bigint**|Numero di occorrenze dell'evento di ottimizzazione per il contatore corrente.|  
 |**Valore**|**float**|Valore medio della proprietà per occorrenza dell'evento.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
@@ -51,7 +51,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
 ## <a name="remarks"></a>Note  
  **exec_query_optimizer_info** contiene le proprietà seguenti (contatori). Tutti i valori di occorrenza sono cumulativi e vengono impostati su 0 al riavvio del sistema. Tutti i valori dei campi valori vengono impostati su NULL al riavvio del sistema. Tutti i valori delle colonne valori che specificano una media utilizzano il valore di occorrenza della stessa riga del denominatore nel calcolo della media. Tutte le ottimizzazioni di query vengono misurate quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina le modifiche apportate a **dm_exec_query_optimizer_info**, tra cui entrambe le query generati dal sistema e utente. L'esecuzione di un piano già memorizzati nella cache non modifica i valori in **dm_exec_query_optimizer_info**, solo le ottimizzazioni sono significative.  
   
-|Contatore|Occorrenza|valore|  
+|Contatore|Occorrenza|Value|  
 |-------------|----------------|-----------|  
 |optimizations|Numero totale di ottimizzazioni.|Non applicabile|  
 |elapsed time|Numero totale di ottimizzazioni.|Tempo medio trascorso per ottimizzazione in una singola istruzione (query), espresso in secondi.|  
@@ -78,7 +78,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
 |contains subquery|Numero di ottimizzazioni per una query contenente almeno una sottoquery.|Non applicabile|  
 |unnest failed|Solo per uso interno|Solo per uso interno|  
 |tables|Numero totale di ottimizzazioni.|Numero medio di tabelle a cui viene fatto riferimento per query ottimizzata.|  
-|hint|Numero di volte in cui un hint specifico è stato specificato. Gli hint conteggiati includono gli hint per la query JOIN, GROUP, UNION e FORCE ORDER, l'opzione SET FORCE PLAN e gli hint di join.|Non applicabile|  
+|hint|Numero di volte in cui un hint specifico è stato specificato. Gli hint conteggiati includono: Hint per la query JOIN, gruppo, UNION e FORCE ORDER, opzione set FORCE PLAN e gli hint di join.|Non applicabile|  
 |order hint|Numero di volte in cui un hint per la query FORCE ORDER è stato specificato.|Non applicabile|  
 |join hint|Numero di volte in cui l'algoritmo JOIN è stato applicato a un hint di join.|Non applicabile|  
 |view reference|Numero di volte in cui è stato fatto riferimento a una vista in una query.|Non applicabile|  

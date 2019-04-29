@@ -1,5 +1,5 @@
 ---
-title: Associare un attributo a una colonna nome | Documenti Microsoft
+title: Associare un attributo a una colonna nome | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020435"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Attributo di proprietà: associare un attributo a una colonna nome
+# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Proprietà degli attributi - Associare un attributo a una colonna nome
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Questa procedura descrive come associare manualmente un attributo al nome di una colonna tramite il riquadro **Attributi** di Progettazione dimensioni e tramite la finestra di dialogo **Associazione oggetto**.  
+  Questa procedura descrive come associare manualmente un attributo al nome di una colonna tramite il riquadro **Attributi** di Progettazione dimensioni e tramite la finestra di dialogo **Associazione oggetto** .  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>Per associare un attributo a una colonna del nome  
   

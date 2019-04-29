@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011543"
 ---
 # <a name="restore-the-service-master-key"></a>Ripristino della chiave master del servizio
   In questo argomento viene descritto come ripristinare una chiave master del servizio in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48229791"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per ripristinare la chiave master del servizio tramite Transact-SQL](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48229791"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER per il server.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di Transact-SQL  
@@ -64,7 +64,7 @@ ms.locfileid: "48229791"
   
 3.  Sulla barra Standard fare clic su **Nuova query**.  
   
-4.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+4.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Restores the service master key from a backup file.  

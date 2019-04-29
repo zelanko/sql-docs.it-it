@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_columns (Transact-SQL) | Microsoft Docs
+title: sp_special_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004152"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_special_columns [ @table_name = ] 'table_name'
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *owner* non viene specificato e l'utente corrente non dispone di una tabella dell'oggetto specificato *name*, viene eseguita la ricerca per una tabella dell'oggetto specificato *nome* di proprietà del database proprietario. Se la tabella esiste, vengono restituite le colonne corrispondenti.  
   
- [ @qualifier=] '*qualificatore*'  
+ [ @qualifier=] '*qualifier*'  
  Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [ @col_type=] '*col_type*'  
  Tipo di colonna. *col_type* viene **char (** 1 **)**, con un valore predefinito di R. digitare R restituisce la colonna o ottimale set di colonne, tramite il recupero dei valori di colonna o le colonne, che consente di qualsiasi riga nell'oggetto specificato tabella che deve essere identificato in modo univoco. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
   
- [ @scope=] '*ambito*'  
+ [ @scope=] '*scope*'  
  Ambito minimo richiesto per ROWID. *ambito* viene **char (** 1 **)**, valore predefinito T. l'ambito C specifica che il valore ROWID è valido solo se posizionato in tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
   
  [ @nullable=] '*nullable*'  
@@ -75,7 +75,7 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Ambito effettivo dell'ID della riga. Il Può essere 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Restituisce sempre 0. Questo campo restituisce sempre un valore.<br /><br /> 0 = SQL_SCOPE_CURROW. La validità dell'ID di riga è garantita solo mentre si è posizionati in tale riga. Una selezione successiva in base all'ID di riga potrebbe non restituire la riga se questa è stata aggiornata o eliminata da un'altra transazione.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. La validità dell'ID di riga è garantita per l'intera durata della transazione corrente.<br /><br /> 2 = SQL_SCOPE_SESSION. La validità dell'ID della riga è garantita per l'intera durata della sessione (oltre i limiti delle transazioni).|  
 |COLUMN_NAME|**sysname**|Nome della colonna per ogni colonna della *tabella*restituito. Questo campo restituisce sempre un valore.|  

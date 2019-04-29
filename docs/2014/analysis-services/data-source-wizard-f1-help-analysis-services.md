@@ -14,24 +14,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732810"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>Guida sensibile al contesto della Creazione guidata origine dati (Analysis Services - Data mining)
   Utilizzare la Creazione guidata origine dati per creare un'origine dati da utilizzare nei progetti di Business Intelligence seguenti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Project  
   
 -   Progetto modello di report  
   
  Dopo aver creato un'origine dati, è possibile utilizzare Progettazione origine dati per modificare le relative proprietà in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Selezionare la modalità di definizione connessione &#40;Creazione guidata origine dati&#41; &#40;Analysis Services&#41;](select-how-to-define-the-connection-data-source-wizard-analysis-services.md)  
   

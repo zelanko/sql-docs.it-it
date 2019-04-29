@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017282"
 ---
 # <a name="lesson-9-create-hierarchies"></a>Lezione 9: Creare gerarchie
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Per creare gerarchie, si userà Progettazione modelli in *vista diagramma*. Crea
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 8: creare prospettive](../analysis-services/lesson-8-create-perspectives.md).  
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 8: Creare prospettive](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Creare gerarchie  
   
@@ -45,7 +45,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 5.  Fare doppio clic il **ModelName** colonna > **Aggiungi a gerarchia**, quindi selezionare **categoria**. Eseguire la stessa operazione per **EnglishProductName**. Rinominare queste colonne nella gerarchia **Model** e **prodotto**.  
 
-    ![come in formato tabulare-lesson9-categoria](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Per creare gerarchie nella tabella DimDate  
   
@@ -73,6 +73,6 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 10: creare partizioni](../analysis-services/lesson-10-create-partitions.md). 
+Passare alla lezione successiva: [Lezione 10: Creare partizioni](../analysis-services/lesson-10-create-partitions.md). 
   
   

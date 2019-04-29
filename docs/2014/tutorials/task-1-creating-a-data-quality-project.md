@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735803"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Attività 1: Creazione di un progetto Data Quality
   In questa attività viene creato un progetto Data Quality per la pulizia dei dati fornitore in un file di Excel nella Knowledge Base creata precedentemente in questa esercitazione.  

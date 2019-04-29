@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41dadd067fc62de6316c5258d660c757febc0fbc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027821"
 ---
 # <a name="prepared-property-example-vb"></a>Esempio della proprietà Prepared (VB)
 Questo esempio viene illustrato il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà aprendo due [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti - una preparazione e l'altra non preparato.  

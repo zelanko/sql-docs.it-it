@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844287"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Opzioni (Editor di testo - Testo normale - pagina Tabulazioni)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di tabulazione dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Tabulazioni**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48074767"
  Le opzioni per l'editor di testo normale possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor di testo normale tramite questa finestra di dialogo.  
   
 ## <a name="indenting"></a>Stili rientri  
- **Nessuno**  
+ **None**  
  Consente di non fare rientrare la nuova riga creata premendo INVIO. Il cursore viene posizionato in corrispondenza della prima colonna della nuova riga.  
   
  **Blocco**  

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025805"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
   La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata* . La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
@@ -42,7 +42,7 @@ ms.locfileid: "48125111"
 ### <a name="using-a-certificate-in-sql-server"></a>Utilizzo di un certificato in SQL Server  
  È possibile utilizzare i certificati per proteggere connessioni, eseguire il mirroring del database, firmare pacchetti e altri oggetti o crittografare dati o connessioni. Nella tabella seguente sono elencate risorse aggiuntive per i certificati presenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Viene descritto il comando per la creazione di certificati.|  
 |[Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Vengono fornite informazioni sull'utilizzo di certificati per la firma di pacchetti software.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48125111"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Utilizzo di una chiave asimmetrica in SQL Server  
  È possibile utilizzare chiavi asimmetriche per proteggere dati o firmare testo non crittografato. Nella tabella seguente sono elencate risorse aggiuntive per chiavi asimmetriche presenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Viene descritto il comando per la creazione di chiavi asimmetriche.|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|Vengono visualizzate le opzioni per la firma di oggetti.|  

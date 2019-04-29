@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733415"
 ---
 # <a name="moving-data-mining-objects"></a>Spostamento di oggetti di data mining
   Gli scenari più comuni per lo spostamento di oggetti di data mining sono la distribuzione di un modello da un ambiente di test o analisi a un ambiente di produzione o la condivisione di modelli con altri utenti.  
@@ -47,12 +47,12 @@ ms.locfileid: "48071851"
   
  Per altre informazioni sulla distribuzione di Analysis Services, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-### <a name="scripting"></a>Generazione di script  
+### <a name="scripting"></a>Scripting  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diversi linguaggi che è possibile usare per generare script di oggetti.  
   
--   **XMLA**: è possibile generare script di oggetti usando XMLA facendo clic con il pulsante destro del mouse sugli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire lo script, aprirlo in una finestra **Query XMLA** nel server di destinazione.  
+-   **XMLA**: È possibile generare uno script di oggetti usando XMLA facendo clic con gli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire lo script, aprirlo in una finestra **Query XMLA** nel server di destinazione.  
   
--   **DMX**: è possibile creare script tramite modelli o uno dei generatori di query forniti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   **DMX**: È possibile creare script tramite modelli o uno dei generatori di query forniti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Si noti, tuttavia, che sono presenti differenze nelle attività che è possibile eseguire con ogni linguaggio di scripting:  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48071851"
 ### <a name="exporting-and-importing"></a>Esportazione e importazione  
  Le operazioni di esportazione e reimportazione di modelli e strutture di data mining mediante le istruzioni DMX costituiscono il modo più semplice per spostare o eseguire il backup di singoli oggetti di data mining relazionali. Per ulteriori informazioni sulla sintassi DMX per queste operazioni, vedere i seguenti argomenti:  
   
--   [ESPORTARE &AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)  
+-   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [IMPORTAZIONE &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
+-   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  Se si specifica l'opzione INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esporterà anche la definizione di eventuali viste origine dati obbligatorie e, durante l'importazione del modello o della struttura, verrà ricreata la vista origine dati nel server di destinazione. Al termine dell'importazione del modello, assicurarsi di impostare le autorizzazioni di data mining necessarie per l'oggetto.  
   

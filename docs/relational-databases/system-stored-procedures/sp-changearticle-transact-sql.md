@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997944"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|Replica le regole di confronto a livello di colonna.|  
 ||**0x2000**|Replica le proprietà estese associate all'oggetto di origine dell'articolo pubblicato.|  
 ||**0x4000**|Replica le eventuali chiavi univoche definite in un articolo di tabella.|  
-||**0x8000**|Replica come vincoli la chiave primaria e le chiavi univoche di un articolo di tabella tramite istruzioni ALTER TABLE.<br /><br /> Nota: Questa opzione è deprecata. Uso **0x80** e **0x4000** invece.|  
+||**0x8000**|Replica come vincoli la chiave primaria e le chiavi univoche di un articolo di tabella tramite istruzioni ALTER TABLE.<br /><br /> Nota: Questa opzione è stata deprecata. Uso **0x80** e **0x4000** invece.|  
 ||**0x10000**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 ||**0x20000**|Replica i vincoli FOREIGN KEY come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 ||**0x40000**|Replica i filegroup associati a una tabella o un indice partizionato.|  

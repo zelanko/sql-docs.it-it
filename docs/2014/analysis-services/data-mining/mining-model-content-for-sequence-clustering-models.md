@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733431"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48105677"
  NODE_TYPE  
  Un modello Sequence Clustering restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |1 (Model)|Nodo radice per il modello|  
 |5 (Cluster)|Contiene un conteggio delle transizioni nel cluster, un elenco degli attributi e statistiche che descrivono i valori nel cluster.|  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  Nella tabella seguente sono contenuti i risultati della tabella NODE_DISTRIBUTION, insieme ai valori di probabilità arrotondati visualizzati nel visualizzatore grafico.  
   
-|Product|Supporto (tabella NODE_DISTRIBUTION)|Probabilità (tabella NODE_DISTRIBUTION)|Probabilità (da grafico)|  
+|Prodotto|Supporto (tabella NODE_DISTRIBUTION)|Probabilità (tabella NODE_DISTRIBUTION)|Probabilità (da grafico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |mancanti|48.447887|0.138028169|(non mostrato)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  Per ottenere l'elenco dei percorsi osservati eseguendo una query sul contenuto del modello e per analizzare altri esempi di query su un modello Sequence Clustering, vedere [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
- [Esempi di query su modelli Sequence Clustering](clustering-model-query-examples.md)  
+ [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md)  
   
   

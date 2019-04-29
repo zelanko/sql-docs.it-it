@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851602"
 ---
 # <a name="sqlstatistics-function"></a>Funzione SQLStatistics
 **Conformità**  
@@ -62,7 +62,7 @@ SQLRETURN SQLStatistics(
  *NameLength1*  
  [Input] Lunghezza in caratteri della **CatalogName*.  
   
- *NomeSchema*  
+ *SchemaName*  
  [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri, ad esempio quando il driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le tabelle che non hanno schemi. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *SchemaName* è un normale argomento; viene considerato letteralmente e relativi case è significativa.  
@@ -148,9 +148,9 @@ SQLRETURN SQLStatistics(
 |TIPO (ODBC 1.0)|7|Smallint non NULL|Tipo di informazioni da restituire:<br /><br /> SQL_TABLE_STAT indica una statistica per la tabella (nella colonna della CARDINALITÀ o pagine).<br /><br /> SQL_INDEX_BTREE indica un indice albero B.<br /><br /> SQL_INDEX_CLUSTERED indica un indice cluster.<br /><br /> SQL_INDEX_CONTENT indica un indice di contenuto.<br /><br /> SQL_INDEX_HASHED indica un indice hash.<br /><br /> SQL_INDEX_OTHER indica un altro tipo di indice.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Numero di sequenza di colonna nell'indice (a partire da 1); Se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nome colonna. Se la colonna è basata su un'espressione, ad esempio SALARY + vantaggi, viene restituita l'espressione; Se l'espressione non può essere determinato, viene restituita una stringa vuota. Se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Sequenza di ordinamento per la colonna: "A" per ordine crescente; "D" per ordine decrescente; Se la sequenza di ordinamento colonne non è supportata dall'origine dati o se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
-|CARDINALITÀ (ODBC 1.0)|11|Integer|Cardinalità della tabella o indice. numero di righe nella tabella se il tipo è SQL_TABLE_STAT; numero di valori univoci nell'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati, viene restituito NULL.|  
-|PAGINE (ODBC 1.0)|12|Integer|Numero di pagine utilizzate per archiviare l'indice o tabella. numero di pagine per la tabella se il tipo è SQL_TABLE_STAT; numero di pagine per l'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati o se non applicabile all'origine dati, viene restituito NULL.|  
+|ASC_OR_DESC (ODBC 1.0)|10|Char(1)|Sequenza di ordinamento per la colonna: "A" per ordine crescente; "D" per ordine decrescente; Se la sequenza di ordinamento colonne non è supportata dall'origine dati o se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
+|CARDINALITÀ (ODBC 1.0)|11|Valore intero|Cardinalità della tabella o indice. numero di righe nella tabella se il tipo è SQL_TABLE_STAT; numero di valori univoci nell'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati, viene restituito NULL.|  
+|PAGINE (ODBC 1.0)|12|Valore intero|Numero di pagine utilizzate per archiviare l'indice o tabella. numero di pagine per la tabella se il tipo è SQL_TABLE_STAT; numero di pagine per l'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati o se non applicabile all'origine dati, viene restituito NULL.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Se l'indice è un indice filtrato, questa è la condizione di filtro, ad esempio SALARY > 30000; Se non è possibile determinare la condizione di filtro, questa è una stringa vuota.<br /><br /> NULL se l'indice non è un indice filtrato, non è possibile determinare se l'indice è un indice filtrato o il tipo è SQL_TABLE_STAT.|  
   
  Se la riga nel set di risultati corrisponde a una tabella, il driver Imposta tipo su SQL_TABLE_STAT e NON_UNIQUE INDEX_QUALIFIER, INDEX_NAME, ORDINAL_POSITION, COLUMN_NAME e ASC_OR_DESC su NULL. Se la CARDINALITÀ o le pagine non sono disponibili dall'origine dati, il driver imposta su NULL.  

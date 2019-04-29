@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910438"
 ---
 # <a name="type-property-example-field-vc"></a>Esempio della proprietà Type (Field) (VC++)
 Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà il **tipo** proprietà di tutti i i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  
@@ -158,19 +158,19 @@ void PrintComError(_com_error &e) {
  **Nome: emp_id**  
  **Tipo: famiglia**  
  **Nome: fname**  
- **Tipo: adVarChar**  
+ **Type: adVarChar**  
  **Nome: minit**  
  **Tipo: famiglia**  
  **Nome: lname**  
- **Tipo: adVarChar**  
+ **Type: adVarChar**  
  **Nome: valore job_id**  
  **Tipo: adSmallInt**  
  **Nome: job_lvl**  
- **Tipo: adUnsignedTinyInt**  
+ **Type: adUnsignedTinyInt**  
  **Nome: pub_id**  
  **Tipo: famiglia**  
  **Nome: hire_date**  
- **Tipo: adDBTimeStamp**   
+ **Type: adDBTimeStamp**   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007889"
 ---
 # <a name="catalog-and-schema-usage"></a>Utilizzo del catalogo e dello schema
-Origini dati non supportano necessariamente i nomi di catalogo e lo schema come identificatori di nome di oggetto in tutte le istruzioni SQL. Origini dati potrebbero supportare nomi di catalogo e lo schema in uno o più delle seguenti classi di istruzioni SQL: istruzioni Data Manipulation Language (DML), le chiamate di procedure, istruzioni di definizione di tabella, istruzioni per la definizione dell'indice e definizione dei privilegi istruzioni. Per determinare le classi di istruzioni SQL in quale catalogo e lo schema è possibile usare i nomi, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_USAGE e SQL_SCHEMA_USAGE.
+Origini dati non supportano necessariamente i nomi di catalogo e lo schema come identificatori di nome di oggetto in tutte le istruzioni SQL. Origini dati potrebbero supportare nomi di catalogo e lo schema in uno o più delle seguenti classi di istruzioni SQL: Istruzioni Data Manipulation Language (DML), le chiamate di procedure, istruzioni di definizione di tabella, istruzioni per la definizione dell'indice e le istruzioni di definizione dei privilegi. Per determinare le classi di istruzioni SQL in quale catalogo e lo schema è possibile usare i nomi, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_USAGE e SQL_SCHEMA_USAGE.

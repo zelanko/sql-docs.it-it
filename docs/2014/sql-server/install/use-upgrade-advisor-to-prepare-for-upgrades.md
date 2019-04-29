@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992377"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti
   Preparazione aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] semplifica le attività di preparazione per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Preparazione aggiornamento consente di analizzare i componenti installati dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di generare un report contenente i problemi da correggere prima o dopo l'aggiornamento.  

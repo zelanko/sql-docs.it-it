@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79c3cf157bccf99aa732b7de60fe4ce8277aa07c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010858"
 ---
 # <a name="installation-how-to-topics"></a>Procedure per l'installazione
   Utilizzare gli argomenti seguenti per installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Argomento contenente le procedure per un'installazione tipica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'Installazione guidata.|  
 |[Installazione di SQL Server 2014 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Argomento contenente le procedure, la sintassi di esempio e i parametri di installazione per l'esecuzione dell'installazione automatica.|  

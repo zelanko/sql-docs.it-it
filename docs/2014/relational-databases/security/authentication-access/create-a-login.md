@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012025"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
   In questo argomento viene descritto come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "54131591"
   
      Se si fa clic su **Cerca...**:  
   
-    1.  Sotto **selezionare il tipo di oggetto**, fare clic su **i tipi di oggetto...**  per aprire la **tipi di oggetto** finestra di dialogo e selezionare uno qualsiasi o tutte le operazioni seguenti: **Entità di sicurezza predefinite**, **gruppi**, e **utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
+    1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le opzioni seguenti o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
   
     2.  In **Da questo percorso** fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi server disponibili. Al termine, fare clic su **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54131591"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- Il **account di accesso - nuovo** nella finestra di dialogo offre inoltre opzioni in altre quattro pagine: **Ruoli server**, **Mapping di utente**, **entità a protezione diretta**, e **stato**.  
+ La finestra di dialogo **Account di accesso - Nuovo** offre inoltre opzioni in altre quattro pagine: **Ruoli del server**, **Mapping utenti**, **Entità a protezione diretta** e **Stato**.  
   
 ### <a name="server-roles"></a>Ruoli del server  
  Nella pagina **Ruoli del server** sono elencati tutti i possibili ruoli che possono essere assegnati al nuovo account accesso. Sono disponibili le opzioni seguenti:  
@@ -176,7 +176,7 @@ ms.locfileid: "54131591"
   
 1.  Fare clic su **Cerca**.  
   
-2.  Nel **Aggiungi oggetti** nella finestra di dialogo selezionare una delle opzioni seguenti: **Oggetti specifici...** , **Tutti gli oggetti dei tipi...** , oppure **server**_nome_server_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **Oggetti specifici...** , **Tutti gli oggetti dei tipi...** , oppure **server**_nome_server_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Quando si seleziona **Il server**_nome_server_, la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
@@ -185,7 +185,7 @@ ms.locfileid: "54131591"
   
     1.  Nella finestra di dialogo **Seleziona oggetti** in **Selezionare i tipi di oggetti seguenti** fare clic su **Tipi di oggetti...**.  
   
-    2.  Nel **Seleziona tipi di oggetti** finestra di dialogo, selezionare uno o tutti i tipi di oggetti seguenti: **Gli endpoint**, **gli account di accesso**, **server**, **gruppi di disponibilità**, e **ruoli Server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Nella finestra di dialogo **Seleziona tipi di oggetti** selezionare uno o tutti i tipi di oggetti seguenti: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità** e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  In **Immettere i nomi degli oggetti da selezionare (esempi)** fare clic su **Sfoglia...**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54131591"
   
     5.  Nella finestra di dialogo **Seleziona oggetti** fare clic su **OK**.  
   
-4.  Se si seleziona **tutti gli oggetti dei tipi...** , nella **Seleziona tipi di oggetti** finestra di dialogo, selezionare uno o tutti i tipi di oggetti seguenti: **Gli endpoint**, **gli account di accesso**, **server**, **gruppi di disponibilità**, e **ruoli Server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se si seleziona **Tutti gli oggetti di tipo** nella finestra di dialogo **Seleziona tipi di oggetti**, selezionare uno o tutti i tipi di oggetti seguenti: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità** e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  Nome di ogni entità o entità a sicurezza diretta aggiunto alla griglia.  
@@ -247,7 +247,7 @@ ms.locfileid: "54131591"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Create a login for SQL Server by specifying a server name and a Windows domain account name.  
@@ -263,7 +263,7 @@ ms.locfileid: "54131591"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates the user "shcooper" for SQL Server using the security credential "RestrictedFaculty"   
@@ -278,7 +278,7 @@ ms.locfileid: "54131591"
   
  Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Completamento: passaggi da effettuare dopo aver creato un account di accesso  
+##  <a name="FollowUp"></a> Completamento: Passaggi da effettuare dopo aver creato un account di accesso  
  Una volta creato, un account di accesso può connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ma potrebbe non disporre delle autorizzazioni necessarie a eseguire operazioni utili. Nell'elenco seguente vengono indicati alcuni collegamenti alle operazioni più comuni degli account di accesso.  
   
 -   Per consentire l'aggiunta di un account di accesso a un ruolo database, vedere [Aggiungere un ruolo](join-a-role.md).  

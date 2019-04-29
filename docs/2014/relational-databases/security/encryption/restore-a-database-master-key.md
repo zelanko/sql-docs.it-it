@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011554"
 ---
 # <a name="restore-a-database-master-key"></a>Ripristino di una chiave master del database
   In questo argomento viene descritto come ripristinare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48056987"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per ripristinare la chiave master del database tramite Transact-SQL](#SSMSProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056987"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio con Transact-SQL  
@@ -59,7 +59,7 @@ ms.locfileid: "48056987"
   
 3.  Sulla barra Standard fare clic su **Nuova query**.  
   
-4.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+4.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Restores the database master key of the AdventureWorks2012 database.  

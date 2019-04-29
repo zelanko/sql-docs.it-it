@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bf8cce4fec8bb0156155d5e2cb3ef6d7a9ea5a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836881"
 ---
 # <a name="add-variable"></a>Aggiungi variabile
   Usare la finestra di dialogo **Aggiungi variabile** per specificare le proprietà di una nuova variabile.  

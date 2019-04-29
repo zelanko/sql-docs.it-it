@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f216d5406a649862ff35cd64508f93b97e31b310
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982233"
 ---
 # <a name="sqlsetparam-function"></a>Funzione SQLSetParam
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: deprecato  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Deprecato  
   
  **Riepilogo**  
  In ODBC 2.0, la funzione ODBC 1.0 **SQLSetParam** è stata sostituita da **SQLBindParameter**. Per altre informazioni, vedere [funzione SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  

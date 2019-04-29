@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902673"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Uso dei file script di esempio della console (SybaseToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -125,5 +125,5 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [Creazione di file di connessione del Server &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[Generazione di report &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[Generating Reports &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

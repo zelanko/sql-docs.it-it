@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735057"
 ---
 # <a name="system-functions"></a>Funzioni di sistema
 La tabella seguente elenca le funzioni di sistema inclusi nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_SYSTEM_FUNCTIONS, un'applicazione può determinare le funzioni di sistema supportate da un driver.  
@@ -32,6 +32,6 @@ La tabella seguente elenca le funzioni di sistema inclusi nel set di funzioni sc
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|**(DATABASE)** (ODBC 1.0)|Restituisce il nome del database corrispondente all'handle di connessione. (Il nome del database è disponibile anche tramite la chiamata **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.)|  
+|**DATABASE( )**  (ODBC 1.0)|Restituisce il nome del database corrispondente all'handle di connessione. (Il nome del database è disponibile anche tramite la chiamata **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.)|  
 |**IFNULL (** _exp_,_valore_**)** (1.0 ODBC)|Se *exp* è null, *valore* viene restituito. Se *exp* non è null, *exp* viene restituito. Il tipo di dati o i tipi di *valore* deve essere compatibile con il tipo di dati *exp*.|  
-|**UTENTE ()** (ODBC 1.0)|Restituisce il nome utente nel sistema DBMS. (Il nome utente è anche disponibile tramite **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME). Ciò può essere diverso dal nome di account di accesso.|
+|**USER( )**  (ODBC 1.0)|Restituisce il nome utente nel sistema DBMS. (Il nome utente è anche disponibile tramite **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME.) Ciò può essere diverso dal nome di account di accesso.|

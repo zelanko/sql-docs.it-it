@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982170"
 ---
 # <a name="sqlsetdescrec-function"></a>Funzione SQLSetDescRec
 **Conformità**  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetDescRec(
  *Tipo*  
  [Input] Il valore su cui impostare il campo SQL_DESC_TYPE per il record del descrittore.  
   
- *Sottotipo*  
+ *SubType*  
  [Input] Per i record il cui tipo è SQL_DATETIME o SQL_INTERVAL, questo è il valore su cui impostare il campo SQL_DESC_DATETIME_INTERVAL_CODE.  
   
  *Lunghezza*  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLSetDescRec** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_DESC e un *gestiscono* dei *DescriptorHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLSetDescRec** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |07009|Indice del descrittore non valido|Il *RecNumber* argomento è stato impostato su 0 e il *DescriptorHandle* definiti a un handle IPD.<br /><br /> Il *RecNumber* argomento era minore di 0.<br /><br /> Il *RecNumber* l'argomento è maggiore del numero massimo di colonne o parametri in grado di supportare l'origine dati, e il *DescriptorHandle* argomento era un APD, IPD o ARD.<br /><br /> Il *RecNumber* l'argomento è uguale a 0 e il *DescriptorHandle* argomento definito un APD allocati in modo implicito. (Questo errore non viene eseguito con un descrittore applicazione allocati in modo esplicito perché non è possibile sapere se un descrittore applicazione allocati in modo esplicito è un APD o ARD fino alla fase di esecuzione.)|  

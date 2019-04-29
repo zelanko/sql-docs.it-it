@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81d44a01e46078599fe601d672211a9d615ce528
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014053"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "54124051"
   
 -   I valori specificati per DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parametro vengono interpretati in modo diverso rispetto a ODBC **bcp_bind**_cbData_parametro.  
   
-    |Condizione indicata|DB-Library *varlen* valore|ODBC *cbData* valore|  
+    |Condizione indicata|DB-Library *varlen* valore|ODBC *cbData* value|  
     |-------------------------|--------------------------------|-------------------------|  
     |Valori Null forniti|0|-1 (SQL_NULL_DATA)|  
     |Dati variabili forniti|-1|-10 (SQL_VARLEN_DATA)|  

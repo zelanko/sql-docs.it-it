@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6cbb4037e44e4e4c906617baf9c40e77019f7e9a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62888907"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Impostazione delle proprietà di un percorso tramite l'Editor percorso flusso di dati
   I percorsi connettono due componenti flusso di dati. Affinché sia possibile impostare le proprietà di un percorso, il flusso di dati deve contenere almeno due componenti connessi. Per altre informazioni, vedere [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md).  

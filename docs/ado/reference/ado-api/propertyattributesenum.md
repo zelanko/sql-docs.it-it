@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027676"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Specifica gli attributi di un [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetto.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indica che la proprietà non è supportata dal provider.|  
 |**adPropRequired**|1|Indica che l'utente deve specificare un valore per questa proprietà prima che l'origine dati venga inizializzata.|  

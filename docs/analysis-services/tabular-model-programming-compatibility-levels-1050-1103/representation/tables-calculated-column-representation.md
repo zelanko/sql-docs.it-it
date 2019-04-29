@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione della colonna (tabulare) calcolato | Documenti Microsoft
+title: Rappresentazione della colonna (tabulare) calcolato | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019259"
 ---
-# <a name="tables---calculated-column-representation"></a>Tabelle - rappresentazione della colonna calcolata
+# <a name="tables---calculated-column-representation"></a>Tabelle - Rappresentazione delle colonne calcolate
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Una colonna calcolata è un'espressione DAX che crea una nuova colonna in una tabella e i valori ottenuti vengono archiviati nella tabella. L'espressione della colonna calcolata viene valutata ogni volta che la tabella viene elaborata.  
   

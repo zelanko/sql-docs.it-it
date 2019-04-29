@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d9493824a6a4f34293ea56c2652b7f450ede4dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020202"
 ---
 # <a name="msreportserverinstance-properties"></a>Proprietà di MSReportServer_Instance
   La classe MSReportServer_Instance fornisce le informazioni di base necessarie a un client per la connessione a un server di report installato.  

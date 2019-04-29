@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985789"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Verificare che durante il processo di aggiornamento tutti i filegroup siano scrivibili
   È stato rilevato un database con uno o più filegroup di sola lettura. Prima dell'aggiornamento, è necessario che i filegroup di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano impostati su READ_WRITE.  

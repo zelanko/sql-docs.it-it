@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b964e1a3958ed57251b2b5cccc8ec4dfc13f9eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869211"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
     
@@ -30,7 +30,7 @@ ms.locfileid: "48118073"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_DUPLICATE_KEYS|  
-|Testo del messaggio|Errore di tabella: ID di oggetto ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO). Chiavi duplicate alla pagina ID1_P, slot SLOT1, e alla pagina ID2_P, slot SLOT2.|  
+|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE). Chiavi duplicate alla pagina ID1_P, slot SLOT1, e alla pagina ID2_P, slot SLOT2.|  
   
 ## <a name="explanation"></a>Spiegazione  
  I due slot specificati dispongono di chiavi identiche, inclusi gli `uniqueifiers`.  

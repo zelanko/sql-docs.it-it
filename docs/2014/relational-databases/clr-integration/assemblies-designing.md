@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874923"
 ---
 # <a name="designing-assemblies"></a>Progettazione di assembly
   In questo argomento vengono illustrati alcuni fattori da prendere in considerazione durante la progettazione degli assembly:  
@@ -39,7 +39,7 @@ ms.locfileid: "48196241"
 -   Se una parte di codice gestito richiede un'autorizzazione di livello superiore, è opportuno inserirla in un assembly separato.  
   
 ## <a name="managing-assembly-security"></a>Gestione della sicurezza degli assembly  
- È possibile controllare l'accesso di un assembly alle risorse protette dalla sicurezza dall'accesso di codice .NET quando esegue codice gestito. A questo scopo, quando si crea o modifica l'assembly è necessario specificare uno dei tre set di autorizzazioni disponibili: SAFE, EXTERNAL_ACCESS oppure UNSAFE.  
+ È possibile controllare l'accesso di un assembly alle risorse protette dalla sicurezza dall'accesso di codice .NET quando esegue codice gestito. Eseguire questa operazione specificando uno dei tre set di autorizzazioni quando si crea o si modifica un assembly: -SAFE, EXTERNAL_ACCESS oppure UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE è il set di autorizzazioni predefinito ed è il più restrittivo. Il codice eseguito da un assembly con autorizzazioni SAFE non può accedere a risorse di sistema esterne, ad esempio file, la rete, variabili di ambiente o il Registro di sistema. Il codice SAFE può accedere ai dati dei database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] locali o eseguire calcoli e logiche di business che non comportino l'accesso a risorse esterne ai database locali.  

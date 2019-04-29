@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013436"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
 ```  
   
-### <a name="b-returning-information-about-a-procedure"></a>b. Restituzione di informazioni su una procedura  
+### <a name="b-returning-information-about-a-procedure"></a>B. Restituzione di informazioni su una procedura  
  L'esempio seguente crea una stored procedure denominata pr_TestProc che restituisce due set di risultati. Nell'esempio viene dimostrato che **DM exec_describe_first_result_set** restituisce informazioni sul primo set nella procedura di risultati.  
   
 ```  

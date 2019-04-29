@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898359"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor trasformazione Colonna derivata
   Usare la finestra di dialogo **Editor trasformazione Colonna derivata** per creare espressioni che popolino le colonne nuove o di sostituzione.  
@@ -45,7 +45,7 @@ ms.locfileid: "58386679"
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  
   
- **Argomenti correlati**: [Integration Services &#40;SSIS&#41; espressioni](expressions/integration-services-ssis-expressions.md), [operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md), e [funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Argomenti correlati**: [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Tipo di dati**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene valutata automaticamente l'espressione e viene impostato automaticamente il tipo di dati appropriato. Il valore di questa colonna è di sola lettura. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  

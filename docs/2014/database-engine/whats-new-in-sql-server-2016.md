@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843441"
 ---
 # <a name="what39s-new-database-engine"></a>Cosa&#39;s (motore di Database)
   In quest'ultima versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sono stati apportati miglioramenti e introdotte nuove funzionalità per offrire ulteriori opportunità a progettisti, sviluppatori e amministratori che progettano, sviluppano e gestiscono sistemi di archiviazione dati e anche per migliorare la loro produttività. Di seguito sono indicate le aree del [!INCLUDE[ssDE](../includes/ssde-md.md)] in cui sono stati apportati miglioramenti.  
@@ -100,7 +100,7 @@ ms.locfileid: "53371553"
   
 -   **Compressione dell'archivio dati**  
   
-     ALTER INDEX ... REBUILD include una nuova opzione di compressione dati COLUMNSTORE_ARCHIVE che comprime ulteriormente le partizioni specificate di un indice columnstore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione dati inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+     ALTER INDEX ... REBUILD include una nuova opzione di compressione di dati COLUMNSTORE_ARCHIVE che comprime ulteriormente le partizioni specificate di un indice columnstore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione dati inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Estensione del Pool di buffer  
@@ -108,7 +108,7 @@ ms.locfileid: "53371553"
    
   
 ###  <a name="Stats"></a> Statistiche incrementali  
- CREATE STATISTICS e le istruzioni statistiche correlate permettono ora di creare statistiche per partizione utilizzando l'opzione INCREMENTAL. Le istruzioni correlate consentono o creano report di statistiche incrementali. La sintassi interessata include le opzioni UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, ALTER DATABASE SET, DATABASEPROPERTYEX, sys.databases e sys.stats. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+ CREATE STATISTICS e le istruzioni statistiche correlate permettono ora di creare statistiche per partizione utilizzando l'opzione INCREMENTAL. Le istruzioni correlate consentono o creano report di statistiche incrementali. La sintassi interessata include UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, ALTER DATABASE SET opzioni, DATABASEPROPERTYEX, sys. Databases e Sys. Stats. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
   
 ###  <a name="RG"></a> Miglioramenti di Resource Governor per il controllo dei / o fisico  
@@ -118,7 +118,7 @@ ms.locfileid: "53371553"
   
   
 ###  <a name="OnlineEvent"></a> Classe di evento online Index Operation  
- Il rapporto di stato per la classe di evento operazione sugli indici online presenta ora due nuove colonne di dati: **PartitionId** e **PartitionNumber**. Per altre informazioni, vedere [Progress Report: Classe di evento online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Il report di stato per la classe di evento operazione sugli indici online presenta ora due nuove colonne di dati: **PartitionId** e **PartitionNumber**. Per altre informazioni, vedere [Progress Report: Classe di evento online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Livello di compatibilità del database  

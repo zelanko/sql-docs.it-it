@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc11f2691613848865219f80b82a7d082803fa04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027762"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Proprietà dinamica Prompt (ADO)
 Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.  
@@ -35,7 +35,7 @@ Specifica se il provider OLE DB deve richiedere all'utente le informazioni di in
 > [!NOTE]
 >  Non si specifica che il provider deve richiedere all'utente in scenari in cui l'utente non sarà in grado di rispondere alla finestra di dialogo. Ad esempio, l'utente non sarà in grado di rispondere se l'applicazione è in esecuzione in un sistema server invece che sul client dell'utente, o se l'applicazione è in esecuzione in un sistema senza utente connesso. In questi casi, l'applicazione attende una risposta per un periodo illimitato e sembra bloccarsi.  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Uso  
   
 ```  
 Set cn = New Connection  

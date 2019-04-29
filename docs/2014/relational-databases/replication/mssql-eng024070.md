@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023908"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +35,7 @@ ms.locfileid: "54123471"
 ## <a name="explanation"></a>Spiegazione  
  Questo errore generale può essere generato indipendentemente dal fatto che la replica venga utilizzata o meno. Per un server di una topologia di replica, l'errore viene normalmente generato in seguito alla modifica dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione controllo servizi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, anziché tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si tenta di eseguire un processo di agente dopo aver modificato l'account di servizio, il processo potrebbe avere esito negativo e restituire un messaggio di errore simile al seguente:  
   
- "Eseguito come utente: \<UserAccount >. Sottosistema Snapshot repliche: agente \<AgentName > non è riuscita. Eseguito come utente: \<UserAccount >. Il client non dispone di un privilegio necessario. Passaggio non riuscito. `[SQLSTATE 42000] (Error 14151)` (Indici per tabelle con ottimizzazione per la memoria). Passaggio non riuscito."  
+ "Eseguito come utente: \<UserAccount>. Sottosistema Snapshot repliche: agente \<AgentName > non è riuscita. Eseguito come utente: \<UserAccount>. Il client non dispone di un privilegio necessario. Passaggio non riuscito. `[SQLSTATE 42000] (Error 14151)` (Indici per tabelle con ottimizzazione per la memoria). Passaggio non riuscito."  
   
  Questo problema si verifica perché Gestione controllo servizi di Windows non concede le autorizzazioni necessarie al nuovo account di servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

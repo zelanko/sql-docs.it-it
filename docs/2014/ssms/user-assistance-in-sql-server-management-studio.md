@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016181"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in una finestra esterna associata.  

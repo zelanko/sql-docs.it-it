@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919296"
 ---
 # <a name="assembly-properties-general-page"></a>Proprietà assembly (pagina Generale)
   Utilizzare questa pagina per visualizzare o modificare le proprietà per l'assembly.  
@@ -30,7 +30,7 @@ ms.locfileid: "48103271"
  Consente di digitare o selezionare nell'elenco il nome del proprietario o il nome dello schema.  
   
  **Set di autorizzazioni**  
- Consente di impostare il livello di sicurezza per l'assembly. Sono disponibili tre livelli di sicurezza: **sicura**, **External access**, e **Unsafe** accesso.  
+ Consente di impostare il livello di sicurezza per l'assembly. Sono disponibili tre livelli di sicurezza: **-Safe**, **l'accesso esterno**, e **Unsafe** accesso.  
   
  **Percorso assembly**  
  Consente di digitare il percorso del file di assembly.  
@@ -45,7 +45,7 @@ ms.locfileid: "48103271"
  **Nome sicuro**  
  Consente di visualizzare **True** se l'assembly è stato firmato digitalmente, **False** se non è stato firmato digitalmente.  
   
- **Versione**  
+ **Version**  
  Visualizza il numero di versione dell'assembly.  
   
 ## <a name="see-also"></a>Vedere anche  

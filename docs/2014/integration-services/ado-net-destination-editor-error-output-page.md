@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836782"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor destinazione ADO NET (pagina Output errori)
   Usare la pagina **Output errori** della finestra di dialogo **Editor destinazione ADO NET** per specificare le opzioni di gestione degli errori.  

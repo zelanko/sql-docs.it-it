@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842479"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>Utilizzo di try...catch in stored procedure compilate in modo nativo
   È possibile utilizzare i blocchi try...catch in una stored procedure compilate in modo nativo. Sono supportati i costrutti indicati di seguito:  

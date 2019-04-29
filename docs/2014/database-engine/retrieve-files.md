@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843667"
 ---
 # <a name="retrieve-files"></a>Recupero di file
   Dopo aver aperto un progetto incluso nel controllo del codice sorgente, è possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per recuperare le copie locali dei file di progetto dall'archivio del controllo del codice sorgente e salvarle nella directory locale in cui si trova il progetto.  

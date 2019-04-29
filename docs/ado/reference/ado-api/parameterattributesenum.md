@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c43697cad7682f23fdf9def8f961d550192aff67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027884"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Specifica gli attributi di un [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Indica che il parametro accetta i valori con segno.|  
 |**adParamNullable**|64|Indica che il parametro accetta valori null.|  

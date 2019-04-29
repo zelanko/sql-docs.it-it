@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6deba09d2804903e8353d4648a2775d18c8c392
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897689"
 ---
 # <a name="left-ssis-expression"></a>LEFT (espressione SSIS)
   Viene restituito il numero specificato di caratteri della parte più a sinistra dell'espressione di caratteri indicata.  

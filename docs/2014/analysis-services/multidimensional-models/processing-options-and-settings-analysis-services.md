@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736960"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opzioni e impostazioni di elaborazione (Analysis Services)
   Quando si elaborano oggetti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione che consente di controllare il tipo di elaborazione eseguita per ogni oggetto. I tipi di elaborazione si differenziano l'uno dall'altro e in base alle modifiche apportate all'oggetto dall'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049501"
 ## <a name="processing-options"></a>Opzioni di elaborazione  
  Nella tabella seguente vengono descritti i metodi di elaborazione disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e vengono identificati gli oggetti per i quali è supportato ciascun metodo.  
   
-|Mode|Applicabile a|Description|  
+|Modalità|Si applica a|Descrizione|  
 |----------|----------------|-----------------|  
 |**Elaborazione predefinita**|Cubi, database, dimensioni, gruppi di misure, modelli di data mining, strutture di data mining e partizioni.|Rileva lo stato di elaborazione degli oggetti di database e di eseguire l'elaborazione necessaria per restituire oggetti non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Se si modifica un'associazione dati, in base all'opzione Elaborazione predefinita verrà eseguita l'elaborazione completa dell'oggetto interessato.|  
 |**Elaborazione completa**|Cubi, database, dimensioni, gruppi di misure, modelli di data mining, strutture di data mining e partizioni.|Consente di elaborare un oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa di un oggetto che è stato già elaborato, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina tutti i dati dell'oggetto e quindi lo elabora. Questo tipo di elaborazione è necessario nel caso in cui sia stata apportata una modifica strutturale a un oggetto, ad esempio se è stata eliminata, aggiunta o rinominata una gerarchia dell'attributo.|  
@@ -55,7 +55,7 @@ ms.locfileid: "48049501"
 ## <a name="processing-settings"></a>Impostazioni di elaborazione  
  Nella tabella seguente vengono descritte le opzioni di elaborazione disponibili per la creazione di un'operazione di elaborazione.  
   
-|Opzione di elaborazione|Description|  
+|Opzione di elaborazione|Descrizione|  
 |-----------------------|-----------------|  
 |**Parallel**|Questa impostazione viene utilizzata per elaborazione batch. Causa il fork delle attività di elaborazione in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'esecuzione in parallelo all'interno di una singola transazione. Se si verifica un errore, viene eseguito il rollback di tutte le modifiche. È possibile impostare esplicitamente il numero massimo di attività parallele o lasciare che il server imposti automaticamente la distribuzione ottimale. L'opzione Parallelo è utile per velocizzare l'elaborazione.|  
 |**Sequenziale (Modalità transazione)**|Consente di controllare il comportamento di esecuzione del processo di elaborazione. Quando si esegue l'elaborazione tramite **Una sola transazione**, verrà eseguito il commit di tutte le modifiche dopo il corretto completamento del processo di elaborazione. In questo modo tutti gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interessati da un particolare processo di elaborazione rimangono disponibili per le query fino al processo di commit. Gli oggetti non saranno quindi temporaneamente disponibili. Se si usa **Transazioni separate** , tutti gli oggetti interessati da un processo nel processo di elaborazione verranno resi non disponibili per le query non appena tale processo verrà completato correttamente. Le due opzioni disponibili sono:<br /><br /> **Una sola transazione**. Il processo di elaborazione viene eseguito come una transazione. In caso di esito positivo di tutti i processi del processo di elaborazione, verrà eseguito il commit di tutte le modifiche. Se uno dei processi ha esito negativo, verrà eseguito il rollback di tutte le modifiche. **Una sola transazione** è il valore predefinito.<br /><br /> **Transazioni separate**. Ogni processo nel processo di elaborazione viene eseguito come processo autonomo. Se uno dei processi ha esito negativo, verrà eseguito il rollback di quell'unico processo e il processo di elaborazione proseguirà. Al termine di ogni processo verrà eseguito il commit di tutte le modifiche.|  

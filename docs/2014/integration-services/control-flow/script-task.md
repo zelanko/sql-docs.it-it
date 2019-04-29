@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830562"
 ---
 # <a name="script-task"></a>Attività Script
   L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  

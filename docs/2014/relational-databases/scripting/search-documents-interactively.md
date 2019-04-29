@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe26ee01517f23ba146b326c1e401496f05cc0c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022319"
 ---
 # <a name="search-documents-interactively"></a>Ricerca interattiva all'interno di documenti
   La finestra di dialogo **Trova e sostituisci** consente di eseguire una ricerca in uno o più file o finestre aperti e passare da un risultato della ricerca all'altro. Questa tecnica consente di esaminare ogni singola corrispondenza della ricerca contestualmente, ossia nel testo che la precede e la segue. È inoltre possibile eseguire operazioni di ricerca bulk ed esaminare i risultati corrispondenti in formato report usando la finestra di dialogo **Trova e sostituisci** .  
@@ -67,6 +67,6 @@ ms.locfileid: "48124571"
  [Ricerca e sostituzione](search-and-replace.md)   
  [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

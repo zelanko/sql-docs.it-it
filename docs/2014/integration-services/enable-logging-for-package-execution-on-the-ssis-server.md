@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 99321c27fa28d16260ee3b27972d83a8b61cae59
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898909"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS
   In questa procedura viene descritto come impostare o modificare il livello di registrazione per un pacchetto quando si esegue un pacchetto che è stato distribuito al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il livello di registrazione impostato quando si esegue il pacchetto sovrascrive la registrazione del pacchetto configurata mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) per altre informazioni.  

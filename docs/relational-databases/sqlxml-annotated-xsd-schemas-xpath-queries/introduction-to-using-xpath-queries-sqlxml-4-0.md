@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013356"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041632"
   
  Quando si specificano query XPath in un modello, si noti il comportamento seguente:  
   
--   XPath può contenere caratteri come < o & che presentano significati speciali in XML (e il modello è un documento XML). Evitare tali caratteri utilizzando la codifica XML oppure specificare XPath nell'URL.  
+-   XPath può contenere caratteri come < o & che presentano significati speciali in XML (e il modello è un documento XML). È necessario eseguire l'escape di tali caratteri utilizzando XML &-codifica oppure specificare XPath nell'URL.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di query XPath in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

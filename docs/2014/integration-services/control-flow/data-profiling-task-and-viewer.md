@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832577"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Attività Profiling dati e visualizzatore
   L'attività Profiling dati offre funzionalità di profiling dei dati all'interno del processo di estrazione, trasformazione e caricamento dei dati. L'attività Profiling dati offre i vantaggi seguenti:  

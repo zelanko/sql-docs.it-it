@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844192"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opzioni (Editor di testo - Tutte le lingue - pagina Schede)
   Utilizzare questa finestra di dialogo per impostare il comportamento di tabulazione in tutti e cinque gli editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per visualizzare le opzioni disponibili, scegliere **Opzioni** dal menu **Strumenti**. Selezionare la cartella **Editor di testo**, espandere la cartella **Tutti i linguaggi**, quindi fare clic su **Tabulazioni**.  
@@ -30,7 +30,7 @@ ms.locfileid: "51030141"
  Se si selezionano impostazioni diverse per editor particolari, viene visualizzato il messaggio "Le impostazioni dei rientri (o delle tabulazioni) per singoli formati di testo sono in conflitto". Ad esempio, questo promemoria viene visualizzato se è stata selezionata l'opzione **Blocco** per **Testo normale** e l'opzione **Nessuno** per **XML**.  
   
 ## <a name="indenting"></a>Stili rientri  
- **Nessuno**  
+ **None**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito alla pressione di INVIO non viene rientrata. Il cursore viene posizionato in corrispondenza della prima colonna della nuova riga.  
   
  **Blocco**  

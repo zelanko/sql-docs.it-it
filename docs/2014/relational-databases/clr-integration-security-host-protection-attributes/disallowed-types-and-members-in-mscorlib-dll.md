@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874359"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Tipi e membri non consentiti in mscorlib.dll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmazione dell'integrazione (CLR) comuni del linguaggio non consente l'utilizzo di un tipo o membro che dispone di un `HostProtectionAttribute` che specifica una `System.Security.Permissions.HostProtectionResource` con un valore di enumerazione `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, o `UI`. Nella tabella seguente sono elencati i membri e i tipi dell'assembly mscorlib.dll i cui valori degli attributi di protezione host non sono consentiti.  

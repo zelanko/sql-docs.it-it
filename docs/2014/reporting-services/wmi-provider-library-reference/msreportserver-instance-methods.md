@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9a5fbc3725a5c25e257216e74a88f0b54d471bb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020101"
 ---
 # <a name="msreportserverinstance-methods"></a>Metodi MSReportServer_Instance
   La classe MSReportServer_Instance fornisce le informazioni di base necessarie a un client per la connessione a un server di report installato.  

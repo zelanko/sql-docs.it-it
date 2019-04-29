@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b83da069beee9440703b5dc0817668559c469d26
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889341"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Seleziona posizione di origine (Aggiornamento guidato pacchetti SSIS)
   Usare la pagina **Seleziona posizione di origine** per specificare l'origine da cui eseguire l'aggiornamento dei pacchetti.  

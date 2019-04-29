@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733512"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione logistica (Analysis Services - Data mining)
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Informazioni sulla struttura di un modello di regressione logistica  
  Un modello di regressione logistica viene creato tramite l'algoritmo Microsoft Neural Network con parametri che impongono al modello l'eliminazione del nodo nascosto. La struttura globale di un modello di regressione logistica è pertanto quasi identica a quella di una rete neurale, in cui ogni modello ha un solo nodo padre che rappresenta il modello e i relativi metadati e un nodo speciale delle statistiche marginali (NODE_TYPE = 24) che fornisce statistiche descrittive sugli input utilizzati nel modello.  
@@ -41,7 +41,7 @@ ms.locfileid: "48164511"
 ## <a name="model-content-for-a-logistic-regression-model"></a>Contenuto di un modello di regressione logistica  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining particolarmente importanti per la regressione logistica. Il contenuto del modello è quasi identico a quello di un modello di rete neurale, ma è possibile che le descrizioni valide per i modelli di rete neurale siano ripetute in questa tabella per praticità.  
   
- Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome del database in cui è archiviato il modello.  
@@ -52,13 +52,13 @@ ms.locfileid: "48164511"
  ATTRIBUTE_NAME  
  Nomi degli attributi che corrispondono a questo nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Nome dell'attributo di output|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48164511"
  NODE_TYPE  
  Un modello di regressione logistica restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |1|Modello.|  
 |17|Nodo della libreria per la subnet|  
@@ -90,7 +90,7 @@ ms.locfileid: "48164511"
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Indica il conteggio di nodi figlio che include almeno 1 rete, 1 nodo marginale obbligatorio e 1 livello di input obbligatorio. Se, ad esempio, il valore è 5, sono presenti 3 subnet.|  
 |Statistiche marginali|Sempre 0.|  
@@ -108,20 +108,20 @@ ms.locfileid: "48164511"
  NODE_DESCRIPTION  
  Descrizione intuitiva del nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Se l'attributo di output è continuo, contiene il nome dell'attributo di output.<br /><br /> Se l'attributo di output è discreto o discretizzato, contiene il nome dell'attributo e il valore.|  
   
  NODE_RULE  
  Descrizione XML della regola incorporata nel nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -152,7 +152,7 @@ ms.locfileid: "48164511"
  Per ottenere informazioni sul supporto nei case di training per valori specifici, vedere il nodo delle statistiche marginali.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Contenuto|  
+ |Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -186,8 +186,8 @@ ms.locfileid: "48164511"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
- [Contenuto dei modelli di rete neurale modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Esempi di Query del modello di regressione logistica](logistic-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

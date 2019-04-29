@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733680"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Visualizzare la formula per un modello Time Series (Data Mining)
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData Visualizzatore Time Series progettazione Data Mining fornisce il modo più semplice per visualizzare i dettagli dell'equazione di regressione utilizzata in un modello time series.  
@@ -79,8 +79,8 @@ ms.locfileid: "48164001"
 5.  Se **Legenda data mining** non è disponibile, fare clic con il pulsante destro del mouse sul nodo e scegliere **Mostra legenda**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Visualizzare un modello usando il visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Esempi di query sui modelli Time Series](time-series-model-query-examples.md)  
   
   

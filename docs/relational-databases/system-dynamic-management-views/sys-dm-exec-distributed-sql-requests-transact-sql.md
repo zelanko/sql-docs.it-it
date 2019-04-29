@@ -24,20 +24,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f86941149741caee7849c579e32ad070d7a3dec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013406"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutte le distribuzioni di query SQL come parte di un passaggio SQL nella query.  In questa vista mostra i dati per le ultime 1000 richieste; richieste attive dispongano sempre dei dati presenti in questa vista.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|valore di execution_id e step_index costituiscono la chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|Vedere ID nel [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|execution_id|**nvarchar(32)**|valore di execution_id e step_index costituiscono la chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|See ID in [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|Indice del passaggio della query di di che questo tipo di distribuzione fa parte.|Vedere in step_index [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |compute_node_id|**int**|Tipo dell'operazione rappresentata da questo passaggio.|Vedere in compute_node_id [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|In cui è in esecuzione il passaggio.|Impostare su -1 per le richieste eseguite nell'ambito del nodo non nell'ambito della distribuzione.|  

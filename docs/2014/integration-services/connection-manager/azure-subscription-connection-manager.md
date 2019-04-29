@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833484"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gestione connessione della sottoscrizione di Azure
-  La gestione connessione Azure HDInsight consente a un pacchetto SSIS per connettersi a una sottoscrizione di Azure usando i valori specificati per la proprietà: ID sottoscrizione di Azure e certificato di gestione.  
+  La gestione connessione Azure HDInsight consente a un pacchetto SSIS per connettersi a una sottoscrizione di Azure usando i valori specificati per la proprietà: ID sottoscrizione di Azure e Certificato di gestione.  
   
 1.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** mostrata sopra selezionare **Sottoscrizione di Azure**, quindi fare clic su **Aggiungi**.  Viene visualizzata la finestra di dialogo **Editor gestione connessione di Sottoscrizione di Azure** .  
   

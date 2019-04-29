@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873102"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
   Un'applicazione livello dati è un'entità logica di gestione dei database che definisce tutti gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio le tabelle, le viste e gli oggetti istanza, inclusi gli account di accesso, associati a un database dell'utente. Un'applicazione livello dati è un'unità indipendente della distribuzione di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a sviluppatori di livello dati e ad amministratori di database di comprimere gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un elemento portabile chiamato pacchetto di applicazione livello dati, noto anche come DACPAC.  
@@ -108,7 +108,7 @@ ms.locfileid: "52540124"
   
 -   **IMPORT**: l'utente può importare lo schema e i dati in un nuovo database nel server host.  
   
- Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database: Server Management Studio, il portale di gestione per SQL Azure e API DACFx.  
+ Entrambe queste funzionalità sono supportate dagli strumenti di gestione database: Server Management Studio, il portale di gestione per SQL Azure e API DACFx.  
   
 ## <a name="permissions"></a>Permissions  
  L'utente deve essere membro del ruolo `dbmanager` o disporre delle autorizzazioni `CREATE DATABASE` per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. L'utente deve essere membro del ruolo `dbmanager` o disporre delle autorizzazioni `DROP DATABASE` per eliminare un database.  

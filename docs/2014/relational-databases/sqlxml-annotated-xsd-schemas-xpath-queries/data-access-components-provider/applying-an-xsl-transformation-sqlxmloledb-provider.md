@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016287"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Applicazione di una trasformazione XSL (provider SQLXMLOLEDB)
   In questa applicazione ADO di esempio viene eseguita una query SQL e viene applicata una trasformazione XSL al risultato. Impostando la proprietà ClientSideXML su True applica l'elaborazione del set di righe sul lato client. Il sottolinguaggio del comando è impostato su {5d531cb2-e6ed-11d2-b252-00c04f681b71}, in quanto la query SQL è specificata in un modello e questo sottolinguaggio deve essere specificato per l'esecuzione di un modello. La proprietà xsl specifica il file XSL da utilizzare per applicare la trasformazione. Il valore della proprietà percorso di Base viene utilizzato per cercare il file XSL. Se si specifica un percorso del valore della proprietà xsl, il percorso è relativo al percorso specificato nella proprietà percorso di Base.  

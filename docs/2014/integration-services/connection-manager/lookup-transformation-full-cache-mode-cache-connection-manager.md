@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833707"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Full Cache e una gestione connessione della cache. Nella modalità Full Cache, il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
@@ -61,7 +61,7 @@ ms.locfileid: "58384279"
   
 -   [Contenitore Sequenza](../control-flow/sequence-container.md)  
   
- Per un video che illustra come implementare una trasformazione ricerca in modalità Full Cache utilizzando la gestione connessione Cache, vedere [come: Implementare una trasformazione ricerca in modalità Full Cache (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Per un video che illustra come implementare una trasformazione Ricerca nella modalità di Full cache usando la gestione connessione della cache, vedere [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Per implementare una trasformazione Ricerca nella modalità Full Cache in un pacchetto utilizzando la gestione connessione della cache e un'origine dati nel flusso di dati  
   

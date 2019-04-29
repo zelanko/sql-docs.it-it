@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione temporale generando una tabella dei tempi | Documenti Microsoft
+title: Creare una dimensione temporale generando una tabella temporale | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867055"
 ---
-# <a name="create-a-time-dimension-by-generating-a-time-table"></a>Creare una dimensione temporale generando una tabella dei tempi
+# <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando non sono disponibili tabelle tempo nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
   
@@ -46,10 +46,10 @@ ms.locfileid: "34022048"
  Nella pagina **Completamento procedura guidata** controllare gli attributi e le gerarchie creati dalla procedura guidata e quindi assegnare un nome alla dimensione temporale. Fare clic su **Fine** per completare la procedura guidata e creare la dimensione. Dopo avere completato la dimensione, è possibile modificarla in Progettazione dimensioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Creare una dimensione di tipo Data](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
- [Proprietà delle dimensioni di database](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Creare una dimensioni di tipo Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
+ [Proprietà delle dimensioni del database](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relazioni tra dimensioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Creare una dimensione generando una tabella Non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Creare una dimensione generando una tabella non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

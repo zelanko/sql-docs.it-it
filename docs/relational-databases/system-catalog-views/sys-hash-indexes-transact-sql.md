@@ -1,5 +1,5 @@
 ---
-title: hash_indexes (Transact-SQL) | Microsoft Docs
+title: sys.hash_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004692"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47729619"
   
  La vista hash_indexes contiene le stesse colonne della vista sys. Indexes e una colonna aggiuntiva denominata **bucket_count**. Per altre informazioni sulle altre colonne nella vista hash_indexes, vedere [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**\<colonne ereditate >**||Eredita le colonne da [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
 |**bucket_count**|**int**|Conteggio dei bucket hash per gli indici hash.<br /><br /> Per altre informazioni sul valore di bucket_count, incluse le linee guida per l'impostazione del valore, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  

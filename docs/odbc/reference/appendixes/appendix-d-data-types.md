@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026766"
 ---
 # <a name="appendix-d-data-types"></a>Appendice D: Tipi di dati
 ODBC definisce due set di tipi di dati: Tipi di dati SQL e tipi di dati C. Tipi di dati SQL indicano il tipo di dati dei dati archiviati nell'origine dati. Tipi di dati C indicano il tipo di dati dei dati archiviati nel buffer dell'applicazione.  

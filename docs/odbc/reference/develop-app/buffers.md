@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008019"
 ---
 # <a name="buffers"></a>Buffer
 Un buffer è qualsiasi parte di memoria dell'applicazione utilizzata per passare dati tra l'applicazione e il driver. Ad esempio, i buffer dell'applicazione possono essere associati, oppure *associata,* con colonne del set di risultati **SQLBindCol**. Come viene recuperata ogni riga, i dati vengono restituiti per ogni colonna in questi buffer. *I buffer di input* vengono utilizzati per passare dati dall'applicazione al driver; *buffer di output* vengono utilizzate per restituire i dati dal driver per l'applicazione.  
@@ -45,7 +45,7 @@ Un buffer è qualsiasi parte di memoria dell'applicazione utilizzata per passare
   
 -   Se l'argomento della funzione che indica il valore del campo o attributo è un puntatore a una stringa di caratteri, il *lunghezza* argomento è la lunghezza della stringa o SQL_NTS.  
   
--   Se l'argomento della funzione che indica il valore del campo o attributo è un puntatore a un buffer binario, l'applicazione inserisce il risultato del SQL_LEN_BINARY_ATTR (*lunghezza*) (macro) nel *lunghezza* argomento. Un valore negativo in questo modo vengono inserite le *lunghezza* argomento.  
+-   Se l'argomento della funzione che indica il valore del campo o attributo è un puntatore a un buffer binario, l'applicazione inserisce il risultato del SQL_LEN_BINARY_ATTR (*lunghezza*) (macro) nel *lunghezza* discussione. Un valore negativo in questo modo vengono inserite le *lunghezza* argomento.  
   
 -   Se l'argomento della funzione che indica il valore del campo o attributo è un puntatore a un valore diverso da una stringa di caratteri o stringa binaria, il *lunghezza* argomento deve avere il valore SQL_IS_POINTER.  
   

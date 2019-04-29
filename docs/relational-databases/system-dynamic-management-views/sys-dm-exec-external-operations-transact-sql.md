@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_operations (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_external_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3488a7137e03d3ffdec71f068697c96a151a1301
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013248"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "52517526"
   
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificatore univoco di query associati a query di PolyBase|Vedere ID nel [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Indice del passaggio della query|Vedere in step_index [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|execution_id|**nvarchar(32)**|Identificatore univoco di query associati a query di PolyBase|See ID in [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Indice del passaggio della query|See step_index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |tipo operation_|**nvarchar(128)**|Descrive un'operazione di Hadoop o un'altra operazione esterna|'Operation Hadoop esterno'|  
 |nome operation_|**nvarchar(4000)**|Indica la modalità dello stato del processo espresso in percentuale (quantità che costituisce l'input utilizzato)|0-1 - moltiplicato per 100 (completato) fattore|  
 |stato di avanzamento map_|**float**|Indica il modo in cui lo stato di una riduzione del processo espresso in percentuale, se presente|0-1 - moltiplicato per 100 (completato) fattore|  

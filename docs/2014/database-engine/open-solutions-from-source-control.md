@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844765"
 ---
 # <a name="open-solutions-from-source-control"></a>Aprire Soluzioni dal controllo del codice sorgente
   Per aprire soluzioni direttamente dal controllo del codice sorgente, è possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Quando si esegue questa operazione, viene creata automaticamente una copia della versione più recente dei file della soluzione nel percorso specificato.  

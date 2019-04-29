@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733697"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo Microsoft Sequence Clustering
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di analisi delle sequenze fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile utilizzare questo algoritmo per esplorare i dati contenenti eventi che possono essere collegati dai percorsi seguenti, oppure *sequenze*. L'algoritmo consente di individuare le sequenze più comuni raggruppando quelle identiche o eseguendone il clustering. Di seguito sono riportati alcuni esempi di dati contenenti sequenze che potrebbero essere utilizzate per il data mining per fornire informazioni su problemi comuni o scenari aziendali:  
@@ -78,9 +78,9 @@ ms.locfileid: "48190781"
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Riferimento tecnico algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md)   
  [Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876913"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
   Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
@@ -104,31 +104,31 @@ ms.locfileid: "48082205"
   
 |Funzionalità|Supported|Commenti|  
 |----------------|---------------|--------------|  
-|**Blocchi opportunistici (oplock)**|Sì|È disponibile il supporto opportunistico per livello 1, livello 2, batch e filtri.|  
-|**Attributi estesi**|no||  
-|**Punti di analisi**|no||  
-|**ACL persistenti**|no||  
-|**Flussi denominati**|no||  
-|**File sparse**|Sì|Il tipo sparse può essere impostato solo per i file e influisce sull'archiviazione del flusso dei dati. Poiché i dati FILESTREAM vengono archiviati in volumi NTFS, la funzionalità FileTable supporta file sparse inoltrando le richieste al file system NTFS.|  
-|**Compressione**|Sì||  
-|**Crittografia**|Sì||  
-|**TxF**|no||  
-|**ID file**|no||  
-|**ID oggetto**|no||  
-|**Collegamenti simbolici**|no||  
-|**Collegamenti reali**|no||  
-|**Nomi brevi**|no||  
-|**Notifiche di modifica di directory**|no||  
-|**Blocco di intervalli di byte**|Sì|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
+|**Blocchi opportunistici (oplock)**|Yes|È disponibile il supporto opportunistico per livello 1, livello 2, batch e filtri.|  
+|**Attributi estesi**|No||  
+|**Punti di analisi**|No||  
+|**ACL persistenti**|No||  
+|**Flussi denominati**|No||  
+|**File sparse**|Yes|Il tipo sparse può essere impostato solo per i file e influisce sull'archiviazione del flusso dei dati. Poiché i dati FILESTREAM vengono archiviati in volumi NTFS, la funzionalità FileTable supporta file sparse inoltrando le richieste al file system NTFS.|  
+|**Compressione**|Yes||  
+|**Crittografia**|Yes||  
+|**TxF**|No||  
+|**ID file**|No||  
+|**ID oggetto**|No||  
+|**Collegamenti simbolici**|No||  
+|**Collegamenti reali**|No||  
+|**Nomi brevi**|No||  
+|**Notifiche di modifica di directory**|No||  
+|**Blocco di intervalli di byte**|Yes|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
 |**File di cui è stato eseguito il mapping in memoria**|no||  
-|**Annullamento I/O**|Sì||  
-|**Sicurezza**|no|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Journal USN**|no|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  
+|**Annullamento I/O**|Yes||  
+|**Sicurezza**|No|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Journal USN**|No|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricamento di file in FileTable](load-files-into-filetables.md)   
- [Utilizzare directory e percorsi in FileTable](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Accesso a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)   
- [DDL, funzioni, stored procedure e viste FileTable](../views/views.md)  
+ [DDL FileTable, funzioni, stored Procedure e viste](../views/views.md)  
   
   

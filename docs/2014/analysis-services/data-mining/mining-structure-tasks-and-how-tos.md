@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 118e4eee68f3c88bd2d09f1d0c366d1c5d9e65df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733321"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Attività e procedure relative alla struttura di data mining
   La scheda **Struttura di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene strumenti che consentono di creare, modificare ed elaborare una struttura di data mining.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Creare una nuova struttura di data mining relazionale](create-a-new-relational-mining-structure.md)  
   

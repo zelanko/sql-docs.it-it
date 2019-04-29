@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ee97841337cff96d636ed90754274623064e2f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025748"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Pagina sicurezza (Impostazioni sito. Gestione report)
   La pagina Sicurezza consente di visualizzare le assegnazioni di ruolo a livello di sistema che regolano l'accesso al sito del server di report. Le assegnazioni di ruolo a livello di sistema sono esterne all'ambito dello spazio dei nomi o della gerarchia di cartelle del server di report. Le assegnazioni di ruolo a livello di sistema sono globali e non possono variare per elementi specifici. Le operazioni supportate tramite le assegnazioni di ruolo a livello di sistema includono la creazione di pianificazioni condivise, l'utilizzo di Generatore report e l'impostazione di valori predefiniti per alcune caratteristiche del server.  

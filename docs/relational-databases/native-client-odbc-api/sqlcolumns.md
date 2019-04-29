@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014613"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +83,8 @@ ms.locfileid: "52414078"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**smallint**|SQL_TRUE se una colonna è di tipo sparse. In caso contrario, SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**smallint**|Se la colonna è il **column_set** colonna sql_true; in caso contrario, SQL_FALSE.|  
+|SS_IS_SPARSE|**Smallint**|SQL_TRUE se una colonna è di tipo sparse. In caso contrario, SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**Smallint**|Se la colonna è il **column_set** colonna sql_true; in caso contrario, SQL_FALSE.|  
   
  In conformità con la specifica ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET vengono visualizzati prima tutte le colonne specifiche del driver che sono stati aggiunti al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le versioni precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e dopo tutte le colonne richieste da ODBC stesso.  
   

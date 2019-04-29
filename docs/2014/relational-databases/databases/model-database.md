@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916947"
 ---
 # <a name="model-database"></a>Database model
   Il database **model** viene usato come modello per tutti i database creati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché il database **tempdb** viene creato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato, il database **model** deve essere sempre presente in un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'intero contenuto del database **model** , incluse le opzioni del database, viene copiato nel nuovo database. Alcune impostazioni del database **model** vengono inoltre usate per la creazione di un nuovo database **tempdb** all'avvio, pertanto in un sistema **il database** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere sempre presente.  
@@ -60,7 +60,7 @@ ms.locfileid: "52812183"
 |AUTO_SHRINK|OFF|Yes|  
 |AUTO_UPDATE_STATISTICS|ON|Yes|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|no|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
 |CURSOR_DEFAULT|GLOBAL|Yes|  

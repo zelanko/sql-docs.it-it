@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74e6deb0caba88e6bbcf2897dcfa4aaaa22f04d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028238"
 ---
 # <a name="fields-collection-ado"></a>Raccolta Fields (ADO)
 Contiene tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oppure [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  

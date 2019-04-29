@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917915"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
   È consigliabile esaminare il contenuto di un pacchetto di un'applicazione livello dati prima di distribuirlo nella produzione nonché convalidare le azioni di aggiornamento prima di aggiornare un'applicazione livello dati esistente, in particolare nel caso in cui si distribuiscano pacchetti non sviluppati dalla propria organizzazione.  
   
 1.  **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
-2.  **Per eseguire l'aggiornamento di un'applicazione livello dati, utilizzando:**  [Visualizzare il contenuto di una DAC](#ViewDACContents), [visualizzare modifiche al Database](#ViewDBChanges), [consente di visualizzare le azioni di aggiornamento](#ViewUpgradeActions), [Confronta applicazioni livello dati](#CompareDACs)  
+2.  **Per aggiornare un'applicazione livello dati:**  [Visualizzare il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizzare modifiche al database](#ViewDBChanges), [Visualizzare azioni di aggiornamento](#ViewUpgradeActions), [Confrontare le applicazioni livello dati](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  

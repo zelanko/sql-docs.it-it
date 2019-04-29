@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017173"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Esercitazione intermedia sul data mining (Analysis Services - Data mining)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce un ambiente integrato per la creazione e utilizzo di modelli di data mining. È possibile eseguire facilmente l'associazione a origini dati, creare e testare più modelli sugli stessi dati e distribuire modelli da utilizzare nelle analisi predittive.  

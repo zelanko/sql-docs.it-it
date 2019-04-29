@@ -1,5 +1,5 @@
 ---
-title: Creazione di set denominati | Documenti Microsoft
+title: Creare set denominati | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020069"
 ---
 # <a name="create-named-sets"></a>Creare set denominati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34021578"
   
  Per creare un set denominato usare il comando **Nuovo set denominato** nella scheda **Calcoli** di Progettazione cubi. Questo comando è accessibile dal menu **Cubo** sulla barra degli strumenti della scheda **Calcoli** . e visualizza un form in cui è possibile specificare le opzioni seguenti per il set denominato:  
   
- **Nome**  
+ **Name**  
  Selezionare il nome del set denominato. Questo nome appare agli utenti finali quando visualizzano il cubo.  
   
  **Espressione**  
@@ -39,7 +39,7 @@ ms.locfileid: "34021578"
  È possibile copiare o trascinare componenti del cubo dalla scheda **Metadati** del riquadro **Strumenti di calcolo** nella casella **Espressione** del riquadro **Editor Form set denominato** . È possibile copiare o trascinare funzioni dalla scheda **Funzioni** del riquadro **Strumenti di calcolo** nella casella **Espressione** del riquadro **Editor Form set denominato** .  
   
 > [!IMPORTANT]  
->  Se si crea l'espressione set denominando in modo esplicito i membri nel set, racchiudere l'elenco dei membri in una coppia di parentesi graffe ({}).  
+>  Se si crea l'espressione set denominando in modo esplicito i membri del set, racchiudere l'elenco dei membri in una coppia di parentesi graffe ({}).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli nei modelli multidimensionali](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  

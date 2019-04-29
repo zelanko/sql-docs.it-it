@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843735"
 ---
 # <a name="set-source-control-options"></a>Impostare le opzioni di controllo del codice sorgente
   Per utilizzare le caratteristiche di controllo del codice sorgente incorporate in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], è necessario configurare le relative opzioni per i diversi ambienti di lavoro.  
@@ -86,7 +86,7 @@ ms.locfileid: "53589895"
      Consente di specificare che si desidera lasciare estratti gli elementi durante l'archiviazione per aggiornare l'archivio del controllo del codice sorgente. Se si desidera modificare questa opzione per un controllo specifico, fare clic sul **opzioni** freccia nel **Archivia** nella finestra di dialogo e quindi deselezionare la **Mantieni estratte** casella di controllo.  
   
      **Elementi archiviati**  
-     Visualizza un elenco di opzioni che specificano il funzionamento di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] quando si tenta di modificare un elemento non estratto. Nella tabella seguente vengono descritte le opzioni disponibili.  
+     Visualizza un elenco di opzioni che specificano come [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] comportamento quando si tenta di modificare un elemento non estratto. Le tabelle seguenti descrivono le opzioni disponibili.  
   
      **Il salvataggio**  
   

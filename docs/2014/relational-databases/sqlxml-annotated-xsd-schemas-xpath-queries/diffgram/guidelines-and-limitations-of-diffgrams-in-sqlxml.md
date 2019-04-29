@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ca731cab8a88364b3b87dfc282c10fa14ebf283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011441"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>Linee guida e limitazioni per i Diffgram in SQLXML
   Quando si utilizzano Diffgram con SQLXML 4.0, tenere presenti le considerazioni seguenti:  

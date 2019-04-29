@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015313"
 ---
 # <a name="get-information-about-event-notifications"></a>Recupero di informazioni sulle notifiche degli eventi
   Le viste del catalogo seguenti sono disponibili per eseguire query sui metadati relative alle notifiche degli eventi.  
@@ -29,14 +29,14 @@ ms.locfileid: "48191481"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Per visualizzare i metadati relativi a notifiche degli eventi in **sys.event_notifications** creati a livello del database, è almeno necessario disporre dell'autorizzazione CONTROL, ALTER, TAKE OWNERSHIP oppure VIEW DEFINITION sul database, essere proprietario della notifica degli eventi oppure disporre dell'autorizzazione ALTER ANY DATABASE EVENT NOTIFICATION. Per le notifiche degli eventi create in una coda specifica, è almeno necessario disporre dell'autorizzazione CONTROL, ALTER, TAKE OWNERSHIP oppure VIEW DEFINITION sull'oggetto, essere proprietario della notifica degli eventi oppure disporre dell'autorizzazione ALTER ANY DATABASE EVENT NOTIFICATION.  
+>  Per visualizzare i metadati relativi a notifiche degli eventi in **Sys. event_notifications** creati nel database di livello, come minimo è necessario quanto segue: CONTROLLARE, ALTER, TAKE OWNERSHIP o definizione autorizzazione VIEW per il database, essere il proprietario della notifica degli eventi oppure disporre dell'autorizzazione ALTER ANY DATABASE EVENT NOTIFICATION. Per le notifiche degli eventi create in una coda specifica, come minimo è necessario quanto segue: CONTROLLARE, ALTER, TAKE OWNERSHIP o definizione autorizzazione VIEW per l'oggetto, essere il proprietario della notifica degli eventi oppure disporre dell'autorizzazione ALTER ANY DATABASE EVENT NOTIFICATION.  
   
  **Per ottenere informazioni relative alle notifiche degli eventi a livello di server**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  È almeno necessario disporre dell'autorizzazione CONTROL o VIEW ANY DEFINITION sul server, essere dotati di accesso o essere il proprietario della notifica degli eventi oppure disporre dell'autorizzazione ALTER ANY EVENT NOTIFICATION per visualizzare i metadati relativi a eventuali notifiche degli eventi in **sys.server_event_notifications**.  
+>  Come minimo, è necessario quanto segue: CONTROLLARE o visualizzare qualsiasi autorizzazione DEFINITION sul server, accesso o il proprietario della notifica degli eventi o disporre dell'autorizzazione ALTER ANY EVENT NOTIFICATION per visualizzare i metadati relativi a notifiche degli eventi in **server_event_notifications**.  
   
  **Per ottenere informazioni relative a tutti gli eventi che possono attivare notifiche degli eventi**  
   

@@ -1,5 +1,5 @@
 ---
-title: DM exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013229"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52413413"
 |**session_id**|**smallint**|ID (SPID) della sessione nella quale viene eseguita la query.|  
 |**request_id**|**int**|ID della richiesta. Valore univoco nel contesto della sessione.|  
 |**scheduler_id**|**int**|ID dell'utilità di pianificazione che sta pianificando la query.|  
-|**grado di parallelismo**|**smallint**|Grado di parallelismo della query.|  
+|**dop**|**smallint**|Grado di parallelismo della query.|  
 |**request_time**|**datetime**|Data e ora in cui la query ha richiesto la concessione di memoria.|  
 |**grant_time**|**datetime**|Data e ora in cui la memoria è stata concessa alla query. È NULL se la memoria non è stata ancora concessa.|  
 |**requested_memory_kb**|**bigint**|Quantità totale di memoria richiesta, espressa in kilobyte.|  
@@ -53,9 +53,9 @@ ms.locfileid: "52413413"
 |**max_used_memory_kb**|**bigint**|Memoria fisica massima utilizzata fino a questo momento, espressa in kilobyte.|  
 |**query_cost**|**float**|Costo stimato della query.|  
 |**timeout_sec**|**int**|Timeout in secondi prima che la query rinunci alla richiesta di concessione di memoria.|  
-|**resource_semaphore_id**|**smallint**|ID non univoco del semaforo di risorsa su cui la query è in attesa.<br /><br /> **Nota:** L'ID è univoco nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
+|**resource_semaphore_id**|**smallint**|ID non univoco del semaforo di risorsa su cui la query è in attesa.<br /><br /> **Nota:** Questo ID è univoco nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
 |**queue_id**|**smallint**|ID della coda nella quale la query sta attendendo la concessione di memoria. È NULL se la memoria è già stata concessa.|  
-|**wait_order**|**int**|Ordine sequenziale delle query in attesa specificata **queue_id**. Questo valore può variare in caso di timeout o di concessione di memoria ad altre query. È NULL se la memoria è già stata concessa.|  
+|**wait_order**|**int**|Ordine sequenziale delle query in attesa specificata **queue_id**. Questo valore può cambiare per una determinata query finissero concessioni di memoria o il timeout di altre query. NULL se la memoria già concessa.|  
 |**is_next_candidate**|**bit**|Candidato alla concessione di memoria successiva.<br /><br /> 1 = Sì<br /><br /> 0 = No<br /><br /> NULL = Memoria già concessa|  
 |**wait_time_ms**|**bigint**|Periodo di attesa espresso in millisecondi. È NULL se la memoria è già stata concessa.|  
 |**plan_handle**|**varbinary(64)**|Identificatore del piano di query. Uso **DM exec_query_plan** per estrarre il piano XML effettivo.|  

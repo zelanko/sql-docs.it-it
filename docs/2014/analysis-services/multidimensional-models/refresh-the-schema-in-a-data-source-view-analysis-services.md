@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737095"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aggiornare lo schema in una vista origine dati (Analysis Services)
   Dopo la definizione di una vista origine dati in un database o un progetto di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], è possibile che lo schema di un'origine dati sottostante venga modificato. Tali modifiche non vengono automaticamente rilevate o aggiornate in un progetto di sviluppo. Inoltre, se è stato distribuito il progetto in un server, verranno rilevati errori di elaborazione qualora non sia più possibile la connessione di Analysis Services all'origine dati esterna.  

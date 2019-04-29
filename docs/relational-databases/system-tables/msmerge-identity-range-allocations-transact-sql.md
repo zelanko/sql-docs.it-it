@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910196"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,17 +34,17 @@ ms.locfileid: "52809693"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**nvarchar(128)**|Nome del database di pubblicazione.|  
-|**pubblicazione**|**nvarchar(128)**|Nome della pubblicazione.|  
+|**publication**|**nvarchar(128)**|Nome della pubblicazione.|  
 |**article**|**nvarchar(128)**|Nome dell'articolo.|  
 |**subscriber**|**nvarchar(128)**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**nvarchar(128)**|Nome del database di sottoscrizione.|  
 |**is_pub_range**|**bit**|Indica se l'intervallo di valori Identity è assegnato a un server di pubblicazione.|  
 |**ranges_allocated**|**tinyint**|Numero di intervalli di valori Identity assegnati.|  
-|**range_begin**|**Numeric(38)**|Valore iniziale dell'intervallo.|  
-|**range_end**|**Numeric(38)**|Valore finale dell'intervallo.|  
-|**next_range_begin**|**Numeric(38)**|Valore iniziale dell'intervallo successivo da assegnare.|  
-|**next_range_end**|**Numeric(38)**|Valore finale dell'intervallo successivo da assegnare.|  
-|**max_used**|**Numeric(38)**|Valore Identity più alto utilizzato.|  
+|**range_begin**|**numeric(38)**|Valore iniziale dell'intervallo.|  
+|**range_end**|**numeric(38)**|Valore finale dell'intervallo.|  
+|**next_range_begin**|**numeric(38)**|Valore iniziale dell'intervallo successivo da assegnare.|  
+|**next_range_end**|**numeric(38)**|Valore finale dell'intervallo successivo da assegnare.|  
+|**max_used**|**numeric(38)**|Valore Identity più alto utilizzato.|  
 |**time_of_allocation**|**datetime**|Ora in cui è stata eseguita l'assegnazione.|  
   
 ## <a name="see-also"></a>Vedere anche  

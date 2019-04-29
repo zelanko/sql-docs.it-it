@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735047"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Trasferimento dei dati in forma binaria
 Un'applicazione in modo sicuro possibile trasferire i dati (nel formato interno usato da un sistema DBMS specificato) tra due origini dati che usano la stessa DBMS e la piattaforma hardware. Per una determinata parte dei dati, i tipi di dati SQL devono essere uguale nelle origini dei dati di origine e di destinazione. Il tipo di dati C è SQL_C_BINARY.  

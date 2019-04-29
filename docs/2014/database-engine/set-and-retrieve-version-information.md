@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843482"
 ---
 # <a name="set-and-retrieve-version-information"></a>Impostazione e recupero delle informazioni sulla versione
   Le informazioni sulla versione comprendono la cronologia e lo stato corrente di un file incluso nel controllo del codice sorgente. Per ogni file incluso nel controllo del codice sorgente, [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe conserva una cronologia completa che consente di tenere traccia dell'evoluzione di uno o più file nel tempo. È inoltre possibile utilizzare queste informazioni per recuperare una copia locale di qualsiasi versione del file oppure eseguire il confronto tra due versioni qualsiasi del file.  
@@ -51,7 +51,7 @@ ms.locfileid: "48212141"
   
 -   I percorsi dei progetti con cui il file viene condiviso.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Visualizzazione della cronologia dei file](../../2014/database-engine/view-file-history.md)  
   

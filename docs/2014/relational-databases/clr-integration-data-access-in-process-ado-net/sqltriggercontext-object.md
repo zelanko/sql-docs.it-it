@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874696"
 ---
 # <a name="sqltriggercontext-object"></a>Oggetto SqlTriggerContext
   La classe `SqlTriggerContext` fornisce informazioni sul contesto per il trigger. Tali informazioni includono il tipo di azione che ha provocato l'attivazione del trigger, le colonne modificate in un'operazione UPDATE e, nel caso di un trigger DDL, una struttura XML `EventData` che descrive l'operazione di attivazione del trigger. Per altre informazioni ed esempi di come usare il `SqlTriggerContext` classe, vedere [trigger CLR](../../database-engine/dev-guide/clr-triggers.md).  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845951"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificare la visualizzazione dei risultati della traccia
   In questo argomento viene descritto come modificare la vista dei risultati di traccia di una sessione di Eventi estesi in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] eseguendo le attività seguenti.  
@@ -149,13 +149,13 @@ ms.locfileid: "49120381"
 ##  <a name="AggregateResults"></a> Aggregare i risultati  
  Eventi estesi supporta cinque funzioni di aggregazione:  
   
--   SUM  
+-   Sum  
   
 -   Min  
   
 -   Max  
   
--   Medio  
+-   Media  
   
 -   Count  
   

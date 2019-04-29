@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013537"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>b. Restituzione dei piani di query per tutti i trigger memorizzati nella cache  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>B. Restituzione dei piani di query per tutti i trigger memorizzati nella cache  
  Nell'esempio seguente vengono restituiti i piani di query di tutti i trigger memorizzati nella cache.  
   
 ```sql  

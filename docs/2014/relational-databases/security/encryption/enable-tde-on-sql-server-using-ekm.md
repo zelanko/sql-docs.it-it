@@ -16,11 +16,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011503"
 ---
 # <a name="enable-tde-using-ekm"></a>Abilitare TDE utilizzando EKM
   In questo argomento viene descritto come abilitare Transparent Data Encryption (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per proteggere una chiave di crittografia del database tramite una chiave asimmetrica archiviata in un modulo Extensible Key Management (EKM) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48125081"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per abilitare TDE utilizzando EKM tramite Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48125081"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  In questo argomento vengono utilizzate le autorizzazioni seguenti:  
   
 -   Per modificare un'opzione di configurazione ed eseguire l'istruzione RECONFIGURE, è necessario disporre dell'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
@@ -64,7 +64,7 @@ ms.locfileid: "48125081"
   
 -   È necessaria l'autorizzazione CONTROL nel database per crittografare il database.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>Per abilitare Transparent Data Encryption tramite Extensible Key Management  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48125081"
   
 4.  Sulla barra Standard fare clic su **Nuova query**.  
   
-5.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+5.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Enable advanced options.  

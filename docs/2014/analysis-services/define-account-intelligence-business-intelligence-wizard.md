@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0afc9be649d3d9eb23a9c0e4b1b601b772cd16fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732575"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definizione funzionalità di Business Intelligence per la contabilità (Configurazione guidata funzionalità di Business Intelligence)
   La pagina **Definizione funzionalità di Business Intelligence per la contabilità** consente di eseguire il mapping dei tipi di conto definiti nell'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ai tipi di conto definiti da una tabella di origine nell'origine dei dati che fornisce i dati per la dimensione di tipo Conto.  
@@ -35,7 +35,7 @@ ms.locfileid: "48209401"
   
  Nella tabella seguente vengono elencati i tipi di conto definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Asset**|Valore degli elementi posseduti in un determinato momento.|  
 |**Balance**|Conteggio di alcuni elementi in un determinato momento.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48209401"
 |**Statistiche**|Rapporto calcolato di alcuni elementi oppure conteggio di elementi non aggregabili.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

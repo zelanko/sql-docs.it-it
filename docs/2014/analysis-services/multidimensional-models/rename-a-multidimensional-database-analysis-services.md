@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6b27b086e84f173e72a61cf01341d5d01ec7ea9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736749"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Rinominare un database multidimensionale (Analysis Services)
   Il modo in cui il nome di un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene modificato dipende dalla modalità di connessione al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per modificare il nome di un database esistente, è necessario connettersi in modalità online. Per modificare il nome del database in cui verranno create istanze degli oggetti di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario connettersi in modalità progetto.  
@@ -53,8 +53,8 @@ ms.locfileid: "48168221"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare le proprietà del Server in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Impostare le proprietà di Database multidimensionale &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
- [Configurare proprietà di progetto di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Impostare le proprietà dei database multidimensionali &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

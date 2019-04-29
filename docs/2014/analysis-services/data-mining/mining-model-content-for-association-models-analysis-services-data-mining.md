@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733569"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
-  Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>Informazioni sulla struttura di un modello di associazione  
  Un modello di associazione ha una struttura semplice. Ogni modello include un singolo nodo padre che rappresenta il modello e i relativi metadati. Ciascun nodo padre è associato a un elenco semplice di set di elementi e regole. I set di elementi e le regole non sono organizzati in alberi, ma sono ordinati come illustrato nel diagramma seguente, ossia con i set di elementi seguiti dalle regole.  
@@ -41,7 +41,7 @@ ms.locfileid: "48135061"
 ## <a name="model-content-for-an-association-model"></a>Contenuto di un modello di associazione  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining pertinenti per i modelli di associazione.  
   
- Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome del database in cui è archiviato il modello.  
@@ -96,18 +96,18 @@ ms.locfileid: "48135061"
   
  **Nodo padre** Include un elenco delimitato da virgole delle informazioni seguenti sul modello:  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Conteggio di tutti i set di elementi nel modello.|  
 |RULE_COUNT|Conteggio di tutte le regole nel modello.|  
 |MIN_SUPPORT|Supporto minimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MINIMUM_SUPPORT* .|  
 |MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MAXIMUM_SUPPORT* .|  
-|MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Un valore pari a 0 indica che il `Missing` stato veniva considerato come un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
+|MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Il valore 0 indica che lo stato `Missing` viene considerato come un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
 |MAX_ITEMSET_SIZE|Indica la dimensione del set di elementi più grande individuato.<br /><br /> **Nota** Questo valore è vincolato dal valore impostato per il parametro *MAX_ITEMSET_SIZE* durante la creazione del modello. Non può mai superare tale valore, ma può essere minore. Il valore predefinito è 3.|  
-|MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0,400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
+|MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0.400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
 |MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esistono parametri che vincolano la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|Livello minimo di accuratezza fornito dal modello per un set di elementi.<br /><br /> Esempio: 0,4309369632511<br /><br /> Nota: conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
-|MAX_LIFT|Livello massimo di accuratezza fornito dal modello per ogni set di elementi.<br /><br /> Esempio: 1,95758227647523 **Nota** Conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
+|MIN_LIFT|Livello minimo di accuratezza fornito dal modello per un set di elementi.<br /><br /> Esempio: 0.14309369632511<br /><br /> Nota: Conoscendo questo valore consente di determinare se il livello di accuratezza per un singolo set di elementi è significativa.|  
+|MAX_LIFT|Livello massimo di accuratezza fornito dal modello per ogni set di elementi.<br /><br /> Esempio: 1,95758227647523 **nota** conoscendo consente di determinare se il livello di accuratezza per un singolo set di elementi è significativa.|  
   
  **Nodo di set di elementi** I nodi di set di elementi contengono un elenco di elementi, visualizzato come stringa di testo delimitato da virgole.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48135061"
  Vuoto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Association Rules](microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)  
   

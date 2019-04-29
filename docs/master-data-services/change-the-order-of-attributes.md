@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 08df7b421795ad73090fe8edfbe6657ed7ffca11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008489"
 ---
 # <a name="change-the-order-of-attributes"></a>Modificare l'ordine degli attributi
 
@@ -24,12 +24,12 @@ ms.locfileid: "52754833"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare l'ordine degli attributi.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>Per modificare l'ordine di un attributo  
   

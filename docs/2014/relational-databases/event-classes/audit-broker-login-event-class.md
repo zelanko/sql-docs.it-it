@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912106"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Broker Login** per indicare i messaggi di controllo correlati alla sicurezza del trasporto di Service Broker.  
@@ -31,7 +31,7 @@ ms.locfileid: "52814833"
 |**ApplicationName**|**nvarchar**|Non utilizzata per questa classe di evento.|10|Yes|  
 |**ClientProcessID**|**int**|Non utilizzata per questa classe di evento.|9|Yes|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
-|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Audit Broker Login** corrisponde sempre a **159**.|27|No|  
+|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Audit Broker Login** corrisponde sempre a **159**.|27|no|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Nella tabella seguente sono elencati i valori di sottoclasse per questo evento.|21|Yes|  
 |**FileName**|**nvarchar**|Livello di autenticazione dell'istanza remota di Service Broker. Metodo di autenticazione supportato configurato nell'endpoint dell'istanza remota di Service Broker. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master** .<br /><br /> **NTLM, CERTIFICATE**. Accetta l'autenticazione NTLM o basata sul certificato SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta l'autenticazione Kerberos o basata sul certificato dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta il certificato di un endpoint, oppure il metodo di autenticazione è negoziato da Windows.|36|No|  
@@ -42,8 +42,8 @@ ms.locfileid: "52814833"
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
 |**ObjectName**|**nvarchar**|La stringa di connessione utilizzata per questa connessione.|34|No|  
 |**OwnerName**|**nvarchar**|Metodo di autenticazione supportato configurato nell'endpoint dell'istanza locale di Service Broker. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master** .<br /><br /> **NTLM, CERTIFICATE**. Accetta l'autenticazione NTLM o basata sul certificato SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta l'autenticazione Kerberos o basata sul certificato dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta il certificato di un endpoint o l'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta il certificato di un endpoint, oppure il metodo di autenticazione è negoziato da Windows.|37|No|  
-|**ProviderName**|**nvarchar**|Metodo di autenticazione utilizzato per la connessione.|46|No|  
-|**RoleName**|**nvarchar**|Ruolo della connessione. I valori possibili sono **initiator** o **target**.|38|No|  
+|**ProviderName**|**nvarchar**|Metodo di autenticazione utilizzato per la connessione.|46|no|  
+|**RoleName**|**nvarchar**|Ruolo della connessione. I valori possibili sono **initiator** o **target**.|38|no|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di SQL Server tracciata.|26|No|  
 |**SPID**|**int**|ID del processo server assegnato da SQL Server al processo associato al client.|12|Yes|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  

@@ -1,5 +1,5 @@
 ---
-title: SQLBrowseConnect | Documenti di Microsoft
+title: SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014733"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,33 +30,33 @@ ms.locfileid: "51660570"
   
 ## <a name="level-1"></a>Livello 1  
   
-|Parola chiave|Elenco restituito?|Facoltativa?|Description|  
+|Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/D|no|Nome dell'origine dati restituiti da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
-|DRIVER|N/D|no|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome del driver ODBC Native Client è {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 11 Client nativo}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
+|DSN|N/D|No|Nome dell'origine dati restituiti da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
+|DRIVER|N/D|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome del driver ODBC Native Client è {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 11 Client nativo}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
   
 ## <a name="level-2"></a>Livello 2  
   
-|Parola chiave|Elenco restituito?|Facoltativa?|Description|  
+|Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sì|no|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
-|UID|no|Sì|ID di accesso dell'utente.|  
-|PWD|no|Sì (dipende dall'utente)|Password specificata dall'utente.|  
-|APP|no|Sì|Nome della chiamata al metodo di applicazione **SQLBrowseConnect**.|  
-|WSID|no|Sì|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
+|SERVER|Yes|No|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
+|UID|No|Yes|ID di accesso dell'utente.|  
+|PWD|No|Sì (dipende dall'utente)|Password specificata dall'utente.|  
+|APP|No|Yes|Nome della chiamata al metodo di applicazione **SQLBrowseConnect**.|  
+|WSID|No|Yes|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
   
 ## <a name="level-3"></a>Livello 3  
   
-|Parola chiave|Elenco restituito?|Facoltativa?|Description|  
+|Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Sì|Sì|Nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|LANGUAGE|Sì|Sì|Lingua nazionale utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DATABASE|Yes|Yes|Nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|LANGUAGE|Yes|Yes|Lingua nazionale utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** ignora i valori delle parole chiave del DATABASE e della lingua memorizzate nelle definizioni delle origini dati ODBC. Se il database o la lingua specificata nella stringa di connessione passata a **SQLBrowseConnect** non è valido **SQLBrowseConnect** restituisce SQL_NEED_DATA e gli attributi di connessione di livello 3.  
   
  I seguenti attributi, vengono impostati tramite la chiamata [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), determinare il set di risultati restituito da **SQLBrowseConnect**.  
   
-|attribute|Description|  
+|attribute|Descrizione|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Se è impostato su SQL_MORE_INFO_YES, **SQLBrowseConnect** restituisce una stringa estesa delle proprietà del server.<br /><br /> Di seguito è riportato un esempio di una stringa estesa restituito da **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> In questa stringa i punti e virgola separano le diverse informazioni sul server. Le virgole separano le diverse istanze del server.|  
 |SQL_COPT_SS_BROWSE_SERVER|Se viene specificato un nome di server, **SQLBrowseConnect** restituirà informazioni per il server specificato. Se SQL_COPT_SS_BROWSE_SERVER è impostato su NULL, **SQLBrowseConnect** restituisce informazioni per tutti i server nel dominio.<br /><br /> <br /><br /> Si noti che a causa di problemi di rete, **SQLBrowseConnect** potrebbe non ricevere una risposta tempestiva da tutti i server. L'elenco di server restituito può pertanto variare per ogni richiesta.|  

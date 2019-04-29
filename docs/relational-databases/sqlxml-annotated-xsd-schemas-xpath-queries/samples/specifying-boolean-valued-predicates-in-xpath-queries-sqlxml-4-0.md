@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a5846f45a2919bf5d2de2e94e205bfd59b0fe94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737431"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Specifica di predicati con valori booleani nelle query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "56036272"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. Specificare predicati successivi e nidificati  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Specificare predicati successivi e nidificati  
  Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti i  **\<cliente >** gli elementi figlio del nodo di contesto che hanno entrambi un **SalesPersonID** attributo con il valore 277 e un **TerritoryID**attributo con un valore pari a 3:  
   
 ```  

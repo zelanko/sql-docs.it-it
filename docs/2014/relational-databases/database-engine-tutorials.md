@@ -11,16 +11,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872667"
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
   In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
- [Esercitazione: Guida introduttiva con il motore di Database](tutorial-getting-started-with-the-database-engine.md)  
+ [Esercitazione: Introduzione al motore di database](tutorial-getting-started-with-the-database-engine.md)  
  In questa esercitazione viene illustrato come connettersi a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  [Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
@@ -32,10 +32,10 @@ ms.locfileid: "53360703"
  [Esercitazione: Ottimizzazione guidata motore di database](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  In questa esercitazione viene illustrato l'utilizzo dello strumento di ottimizzazione per esaminare la modalità di elaborazione delle query e, successivamente, rivedere le indicazioni per migliorare le prestazioni delle query.  
   
- [Esercitazione: Utilizzo del tipo di dati hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
+ [Esercitazione: Uso del tipo di dati hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
  In questa esercitazione viene illustrato come convertire una tabella in una struttura gerarchica e, successivamente, gestire i dati nella tabella.  
   
- [Esercitazione: Firma di Stored procedure con un certificato](tutorial-signing-stored-procedures-with-a-certificate.md)  
+ [Esercitazione: Firma di stored procedure con un certificato](tutorial-signing-stored-procedures-with-a-certificate.md)  
  In questa esercitazione viene illustrata la firma di stored procedure tramite un certificato generato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Esercitazione: Catene di proprietà e cambio di contesto](tutorial-ownership-chains-and-context-switching.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "53360703"
  [Esercitazione: La valutazione di procedure consigliate tramite la gestione basata su criteri](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  In questa esercitazione viene illustrato come creare criteri utilizzabili per analizzare istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] per problemi noti.  
   
- [Esercitazione: SQL Server Backup e ripristino di Windows Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  In questa esercitazione viene illustrato come effettuare un backup di SQL Server e il ripristino nel servizio di archiviazione BLOB di Windows Azure.  
   
  [Esercitazione: File di dati di SQL Server nel servizio di archiviazione di Microsoft Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "53360703"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni di SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [WIKI di TechNet: Esempi SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [WIKI di TechNet: Esempi di SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a31b03208eba573fc6bd50f2348733ef0a07c2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013319"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52418362"
 |compute_node_id|**int**|Nodo su cui è in esecuzione il ruolo di lavoro.|Visualizzare [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
 |Tipo|**nvarcha(32)**|||  
-|status|**nvarchar(32)**|Stato di questo passaggio|'Sospeso', 'Running', 'Complete', 'Non riuscito', 'UndoFailed', 'PendingCancel', 'annullato', 'Annullate', 'Interrotta'|  
+|status|**nvarchar(32)**|Stato di questo passaggio|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  

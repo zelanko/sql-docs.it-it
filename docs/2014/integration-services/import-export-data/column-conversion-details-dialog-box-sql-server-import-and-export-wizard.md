@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893170"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Dettagli conversione colonna (Importazione/Esportazione guidata SQL Server)
   Usare la **Dettagli conversione colonna** finestra di dialogo per esaminare le informazioni di conversione dettagliate su una singola colonna. Queste informazioni sulla conversione contengono il tipo di dati della colonna nell'origine e nella destinazione e la conversione che verrà eseguita tramite la procedura guidata. In questa pagina sono inoltre elencati i file di mapping dei tipi di dati utilizzati dalla procedura guidata per determinare le conversioni dei tipi di dati necessarie. Tali file di mapping dei tipi di dati vengono installati durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

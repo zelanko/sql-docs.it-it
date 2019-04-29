@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023452"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape - classe di evento
   La classe di evento Mount Tape viene generata quando viene ricevuta una richiesta di montaggio nastro. Utilizzare questa classe di evento per monitorare le richieste di montaggio nastro e il relativo esito positivo o negativo.  
@@ -34,7 +34,7 @@ ms.locfileid: "52782663"
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |Duration|`bigint`|Durata dell'evento in microsecondi.|13|Yes|  
 |EndTime|`datetime`|Per gli eventi Mount Request, eventuale timeout di montaggio; altrimenti, durata dell'evento stesso. In questo caso, StartTime indica la durata della richiesta di montaggio corrispondente.|15|Yes|  
-|EventClass|`int`|Tipo di evento = 195.|27|No|  
+|EventClass|`int`|Tipo di evento = 195.|27|no|  
 |EventSequence|`int`|Sequenza di un evento specificato nella richiesta.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 1 = Richiesta di montaggio nastro<br /><br /> 2 = Montaggio nastro completato<br /><br /> 3 = Montaggio nastro annullato|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
