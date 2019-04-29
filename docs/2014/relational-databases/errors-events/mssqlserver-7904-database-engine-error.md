@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913738"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
     
@@ -30,7 +30,7 @@ ms.locfileid: "48115051"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_MISSING_FILE|  
-|Testo del messaggio|Errore di tabella: impossibile trovare il file FileStream per l'ID di colonna C_ID, ROWGUID RG_ID, nell'oggetto con ID O_ID, ID di indice I_ID, ID di partizione PN_ID.|  
+|Testo del messaggio|Errore di tabella: Il file filestream per l'ID di colonna C_ID, ROWGUID RG_ID nell'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID non è stato trovato.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Un valore di colonna in una partizione è privo di un file FILESTREAM corrispondente nella relativa directory di colonne FILESTREAM.  

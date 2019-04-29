@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cb4eb52fe100dfe44f4008e22818880fe61b246
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892284"
 ---
 # <a name="integration-services-features-and-tasks"></a>Funzionalità e attività di Integration Services
   Trovare le informazioni che chiunque-finestra di progettazione, sviluppatore, analista o amministratore-richiedere per creare e sviluppare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacchetti. Quindi, imparare come incorporare i pacchetti nelle applicazioni e nei siti Web.  

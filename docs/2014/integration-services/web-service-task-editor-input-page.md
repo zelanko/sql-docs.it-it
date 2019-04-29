@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29ca581697231a3aa70aa6f4342fcea3408d6c99
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926253"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor attività Servizio Web (pagina Input)
   Utilizzare la pagina **Input** della finestra di dialogo **Editor attività Servizio Web** per specificare il servizio Web, il metodo Web e i valori da fornire come input al metodo Web. I valori possono essere immessi digitando direttamente le stringhe nella colonna Valore o selezionando le variabili nella colonna Valore.  

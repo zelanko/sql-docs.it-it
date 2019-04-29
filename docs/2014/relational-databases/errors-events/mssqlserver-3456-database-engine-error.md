@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914289"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141191"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|REC_REDOLSNMISMATCH|  
-|Testo del messaggio|Impossibile eseguire il rollforward del record di log %S_LSN per l'ID di transazione %S_XID, pagina %S_PGID, database '%.*ls' (ID di database %d). Pagina: LSN = %S_LSN, tipo = %ld. Informazioni sul log: OpCode = %ld, contesto=%d, PrevPageLSN: %S_LSN. Correggere il database oppure ripristinarlo da un backup.|  
+|Testo del messaggio|Impossibile eseguire il rollforward del record di log %S_LSN per l'ID di transazione %S_XID, pagina %S_PGID, database '%.*ls' (ID di database %d). Pagina: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contesto=%d, PrevPageLSN: %S_LSN. Correggere il database oppure ripristinarlo da un backup.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Durante l'operazione di ripristino non è stato possibile eseguire il rollforward del log delle transazioni. Tale errore ha determinato l'impostazione del database sullo stato SUSPECT. Il filegroup primario, e probabilmente altri filegroup, sono sospetti e possono essere danneggiati. Non è possibile recuperare il database durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pertanto non è disponibile. Per risolvere il problema, è necessario l'intervento dell'utente.  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20783b06559eab97cec56b527c5c8ab0f13518e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923882"
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
   L'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] viene usata principalmente dagli amministratori per eseguire attività amministrative. Ad esempio, solo gli amministratori possono creare modelli, regole business o versioni di dati. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  

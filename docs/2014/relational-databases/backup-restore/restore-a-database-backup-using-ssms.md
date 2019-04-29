@@ -20,17 +20,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921235"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Ripristino di un backup del database (SQL Server Management Studio)
   In questo argomento viene descritto come ripristinare un backup completo del database.  
   
 > [!IMPORTANT]  
->  Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md). Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+>  Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md). Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Si noti che se si ripristina un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Tuttavia, se in un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono inclusi indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48112028"
         >  Questo elenco è disponibile solo quando l'opzione **Dispositivo** è selezionata. Saranno disponibili solo i database che dispongono di backup sul dispositivo selezionato.  
   
          **Supporti di backup**  
-         Selezionare il supporto per l'operazione di ripristino: **File**, **nastro**, **URL**oppure **dispositivo di Backup**. Il **nastro** opzione viene visualizzata solo se nel computer è montata un'unità nastro e la **dispositivo di Backup** opzione viene visualizzata solo se è disponibile almeno un dispositivo di backup.  
+         Selezionare il supporto per l'operazione di ripristino: **File**, **nastro**, **URL**oppure **dispositivo di Backup**. L'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.  
   
          **Percorso di backup**  
          Consente di visualizzare, aggiungere o rimuovere supporti per l'operazione di ripristino. L'elenco può contenere fino a 64 file, nastri o dispositivi di backup.  
@@ -71,7 +71,7 @@ ms.locfileid: "48112028"
          **Aggiungi**  
          Aggiunge il percorso di un dispositivo di backup per il **percorso di Backup** elenco. In base al tipo di supporto selezionato nel **supporti di Backup** campo, facendo clic su **Add** si apre una delle finestre di dialogo seguenti.  
   
-        |Tipo di supporto|Finestra di dialogo|Description|  
+        |Tipo di supporto|Finestra di dialogo|Descrizione|  
         |----------------|----------------|-----------------|  
         |**File**|**Individua file di backup**|In questa finestra di dialogo è possibile selezionare un file locale nell'albero o specificare un file remoto utilizzandone il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Dispositivo**|**Seleziona dispositivo di backup**|In questa finestra di dialogo è possibile eseguire una selezione da un elenco di dispositivi di backup logici definiti sull'istanza del server.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48112028"
   
 9. Per visualizzare o selezionare le opzioni avanzate, nella pagina **Opzioni** del pannello **Opzioni di ripristino** è possibile selezionare una delle opzioni seguenti, in base alla situazione:  
   
-    1.  `WITH` Opzioni (non obbligatorio):  
+    1.  Opzioni `WITH` (non richieste):  
   
         -   **Sovrascrivi il database esistente (WITH REPLACE)**  
   

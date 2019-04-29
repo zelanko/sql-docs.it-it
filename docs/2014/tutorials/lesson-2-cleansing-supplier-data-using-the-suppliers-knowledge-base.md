@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931427"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lezione 2: Pulizia dei dati fornitore mediante la Knowledge Base Suppliers
   In questa lezione si puliscono i dati fornitore in un file di Excel utilizzando la **Suppliers** della knowledge base creata nella prima lezione. Pulizia dei dati in DQS include un' **processo computerizzato** che consente di analizzare la conformità dei dati alle informazioni in una knowledge base e un **processo interattivo** che consente di esaminare e modificare risultati dal processo computerizzato. Tramite la funzionalità di pulizia dei dati vengono identificati i dati errati nell'origine dati e, successivamente, vengono corretti o vengono forniti suggerimenti di correzione. Vengono inoltre standardizzati e arricchiti i dati dei clienti utilizzando i valori di dominio, i valori iniziali per sinonimi, le regole di dominio, le relazioni basate su termini e i dati di riferimento. È possibile approvare o rifiutare in modo interattivo le modifiche proposte dal processo computerizzato. Visualizzare [pulizia dei dati](https://msdn.microsoft.com/library/gg524800.aspx) per altri dettagli.  
   
  Nel processo computerizzato vengono utilizzati i seguenti valori soglia che è possibile configurare utilizzando l'apposita opzione nella pagina principale del client DQS.  
   
--   **Punteggio minimo per suggerimenti:** punteggio minimo o livello di probabilità utilizzato da DQS per suggerire sostituzioni per un valore.  
+-   **Punteggio minimo per suggerimenti:** Punteggio minimo o livello di probabilità utilizzato da DQS per suggerire sostituzioni per un valore.  
   
--   **Punteggio minimo per correzioni automatiche:** punteggio minimo o livello di probabilità utilizzato da DQS per correggere automaticamente un valore.  
+-   **Punteggio minimo per correzioni automatiche:** Punteggio minimo o livello di probabilità utilizzato da DQS per correggere automaticamente un valore.  
   
  Visualizzare [configurare valori soglia per le attività di pulizia e corrispondenza](https://msdn.microsoft.com/library/hh510415.aspx) per informazioni dettagliate su come configurare queste impostazioni.  
   

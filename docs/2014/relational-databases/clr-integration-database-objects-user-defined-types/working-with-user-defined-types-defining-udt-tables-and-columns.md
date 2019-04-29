@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874453"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Definizione di tabelle e colonne con tipi definiti dall'utente
   Una volta che l'assembly contenente il tipo definito dall'utente (UDT) è stata registrata definizione una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, può essere utilizzato in una definizione di colonna.  

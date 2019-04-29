@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa906aaf6d9ae2033b6d029f4844c5d388bb44ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851499"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Eseguire l'aggiornamento a SQL Server 2014
   È possibile aggiornare a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]le istanze di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Prima di avviare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere la [guida tecnica per l'aggiornamento a SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF da scaricare), esaminare gli argomenti sul processo di aggiornamento presenti in questa sezione e leggere le [Note sulla versione di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
@@ -58,7 +58,7 @@ ms.locfileid: "53358383"
  [Aggiornare Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Aggiornare database replicati](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Aggiornare Master Data Services](upgrade-master-data-services.md)   
- [Best Practices Analyzer SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=197134)   
+ [SQL Server 2005 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197134)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
  [Compatibilità con le versioni precedenti](../../../2014/getting-started/backward-compatibility.md)  
   

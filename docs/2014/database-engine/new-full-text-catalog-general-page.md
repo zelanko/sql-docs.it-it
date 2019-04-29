@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844099"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuovo catalogo full-text (pagina Generale)
   Utilizzare questa finestra di dialogo per creare un nuovo catalogo full-text.  

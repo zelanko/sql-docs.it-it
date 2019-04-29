@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959752"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente un controllo accurato della configurazione della sicurezza per la sincronizzazione Web. In questo articolo viene riportato un elenco completo dei componenti che possono essere inclusi in una configurazione di sincronizzazione tramite il Web e vengono fornite informazioni sulle connessioni tra i componenti. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -37,7 +37,7 @@ ms.locfileid: "52804383"
 |Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Applicazione autonoma|L'agente di merge viene eseguito nel contesto dell'utente di Windows che esegue l'applicazione.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Connessione al Sottoscrittore  
+## <a name="b-connection-to-the-subscriber"></a>B. Connessione al Sottoscrittore  
  L'agente di merge si connette al Sottoscrittore utilizzando l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utente di Windows o l'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificato deve essere associato a un utente di database che sia membro del ruolo predefinito del database **dbowner** nel database di sottoscrizione.  
   
 > [!NOTE]  

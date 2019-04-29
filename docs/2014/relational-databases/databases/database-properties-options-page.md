@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917087"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
   Utilizzare questa pagina per visualizzare o modificare le opzioni per il database selezionato. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -27,7 +27,7 @@ ms.locfileid: "52774423"
  È possibile specificare le regole di confronto del database selezionandole nell'elenco. Per altre informazioni, vedere [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md).  
   
  **Modello di recupero**  
- Specificare uno dei seguenti modelli di recupero del database: **Completa**, **minima delle operazioni Bulk**, o **semplice**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
+ È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk** o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Livello di compatibilità**  
  È possibile specificare la versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportata dal database. I valori possibili sono  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** e **SQL Server 2008 (100)**. Quando un database di SQL Server 2005 viene aggiornato a SQL Server 2014, il livello di compatibilità del database viene modificato da 90 a 100.  Il livello di compatibilità 90 non è supportato in SQL Server 2014. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -93,7 +93,7 @@ ms.locfileid: "52774423"
  Specifica il nome di directory per i dati FILESTREAM associati al database selezionato.  
   
  **Accesso FILESTREAM non in transazioni**  
- Specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle Filetable: **DISATTIVARE**, **READ_ONLY**, o **completo**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
+ È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY** o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varie  
  **NULL ANSI predefinito**  

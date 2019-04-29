@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956135"
 ---
 # <a name="change-the-default-location-for-projects"></a>Modifica del percorso predefinito per i progetti
   Il percorso predefinito per file e progetti è costituito dalla cartella Projects di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nella cartella Documenti.  

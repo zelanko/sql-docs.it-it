@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921942"
 ---
 # <a name="file-restores-full-recovery-model"></a>Ripristini di file (modello di recupero con registrazione completa)
   Le informazioni in questo argomento sono rilevanti solo per i database che contengono più file o filegroup e che utilizzano il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -50,7 +50,7 @@ ms.locfileid: "48141251"
      Per informazioni sul supporto per il ripristino di pagine e file online, vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Per altre informazioni sui ripristini online, vedere [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Se si desidera attivare la modalità offline per il database al fine di eseguire un ripristino di file, attivare la modalità offline per il database prima di avviare la sequenza di ripristino eseguendo la seguente istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *nome_database* SET OFFLINE.  
+    >  Se si desidera attivare la modalità offline per il database per eseguire un ripristino di file, eseguire l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) seguente prima di avviare la sequenza di ripristino: ALTER DATABASE *database_name* SET OFFLINE.  
   
   
   
@@ -118,7 +118,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
--   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;Modello di recupero con registrazione completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare file e filegroup**  

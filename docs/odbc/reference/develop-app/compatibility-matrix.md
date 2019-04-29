@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026571"
 ---
 # <a name="compatibility-matrix"></a>Matrice di compatibilità
 Nella tabella seguente viene descritta la compatibilità dei tipi di applicazioni e driver definiti precedentemente in questa sezione.  
   
-|Tipo di applicazione<br /><br /> e versione|ODBC 32-bit<br /><br /> 2.*x* driver|ODBC 3. *x*<br /><br /> Driver|Driver ODBC 3.8|ISO e aprire compatibile con gruppo di driver|  
+|Tipo di applicazione<br /><br /> e versione|ODBC 32-bit<br /><br /> 2.*x* driver|ODBC 3.*x*<br /><br /> Driver|Driver ODBC 3.8|ISO e aprire compatibile con gruppo di driver|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |applicazione a 16 bit, qualsiasi versione|Compatibilità|Compatibilità|Compatibilità|Compatibilità|  
 |2 pure. *x* applicazione|Compatibilità|Compatibilità|Compatibilità|Non compatibile con [3]|  

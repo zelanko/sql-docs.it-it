@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62888874"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Impostazione delle proprietà di un vincolo di precedenza
   Per impostare le proprietà dei vincoli di precedenza, è possibile utilizzare uno dei seguenti strumenti:  
@@ -73,7 +73,7 @@ ms.locfileid: "58388119"
     |EvalOp|Selezionare un'operazione di valutazione. Se il `Expression`, **ExpressionAndConstant**, o **ExpressionOrConstant** operazione è selezionata, è possibile specificare un'espressione.|  
     |Espressione|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Impostare `LogicalAnd` per specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al|  
-    |nome|Aggiornare il nome del vincolo di precedenza.|  
+    |Nome|Aggiornare il nome del vincolo di precedenza.|  
     |ShowAnnotation|Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per attivare le annotazioni su richiesta, **ConstraintName** per aggiungere automaticamente annotazioni usando il valore della proprietà Name, **ConstraintDescription** per aggiungere automaticamente annotazioni usando il valore della proprietà Description e **ConstraintOptions** per aggiungere automaticamente annotazioni usando i valori delle proprietà Value ed Expression.|  
     |Value|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
   

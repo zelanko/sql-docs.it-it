@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 761d42ba234dceda7cd6689af89e6a3038b901eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898951"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>Funzionalità deprecate di Integration Services in SQL Server 2014
   Questo argomento viene descritto come deprecate [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le funzionalità che sono ancora disponibili nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  

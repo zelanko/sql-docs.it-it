@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844089"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Monitoraggio e risoluzione di problemi relativi all'unione di coppie di file di dati e differenziali
   OLTP in memoria utilizza i criteri di unione per unire automaticamente coppie di file di dati e differenziali adiacenti. Non è possibile disabilitare l'attività di unione.  

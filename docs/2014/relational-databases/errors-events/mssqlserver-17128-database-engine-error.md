@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869709"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,7 +30,7 @@ ms.locfileid: "52507038"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|INIT_NOBUFSPACE|  
-|Testo del messaggio|initdata: Memoria non disponibile per i buffer del kernel.|  
+|Testo del messaggio|initdata: memoria non disponibile per i buffer del kernel.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Non è stato possibile eseguire le allocazioni o le prenotazioni iniziali di memoria per il pool di buffer. SQL Server viene chiuso.  

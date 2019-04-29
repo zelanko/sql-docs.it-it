@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931500"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lezione 2: Compilazione di una struttura di Mailing diretto (esercitazione di base di Data Mining)
   Il reparto Marketing di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] intende aumentare le vendite inviando messaggi promozionali a specifici clienti. Il database dell'azienda contiene un elenco dei clienti acquisiti e un elenco di potenziali nuovi clienti. Per l'esame delle tipologie dei clienti precedenti, la società spera di individuare modelli che siano applicabili alla clientela potenziale. Ad esempio, potrebbe utilizzare le passate tendenze per eseguire una stima dei potenziali clienti con maggiore probabili acquisteranno una bicicletta da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], oppure creare segmenti di clienti per le campagne di marketing future.  

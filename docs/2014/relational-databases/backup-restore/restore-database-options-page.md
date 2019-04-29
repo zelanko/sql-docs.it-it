@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875640"
 ---
 # <a name="restore-database-options-page"></a>Ripristina database (pagina Opzioni)
   Usare la pagina **Opzioni** della finestra di dialogo **Ripristina database** per modificare il comportamento e il risultato dell'operazione di ripristino.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149361"
   
 -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
--   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
 >  Quando si specifica un'attività di ripristino mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente in cui siano contenute le istruzioni RESTORE relative a tale operazione di ripristino. Per generare lo script, fare clic sul pulsante **Script** , quindi selezionare una destinazione. Per informazioni sulla sintassi di RESTORE, vedere [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  

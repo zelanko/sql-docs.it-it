@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12891d7ee674167157bcb02300d2e4181ef51734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012118"
 ---
 # <a name="concurrency-types"></a>Tipi di concorrenza
 Per risolvere il problema di riduzione della concorrenza nei cursori, ODBC espone quattro diversi tipi di concorrenza dei cursori:  
@@ -31,6 +31,6 @@ Per risolvere il problema di riduzione della concorrenza nei cursori, ODBC espon
   
 -   **Blocco** il cursore utilizza il livello più basso di blocco necessario per assicurarsi che può aggiornare o eliminare righe nel set di risultati. Ciò comporta in genere i livelli di concorrenza molto bassa, soprattutto ai livelli di isolamento delle transazioni Repeatable Read e Serializable.  
   
--   **La concorrenza ottimistica con le versioni di riga e la concorrenza ottimistica con valori** il cursore utilizza la concorrenza ottimistica: si aggiorna o Elimina le righe solo se non sono cambiati dall'ultima lettura. Per rilevare le modifiche, confronta le versioni delle righe o valori. Non c'è garanzia che il cursore sarà in grado di aggiornare o eliminare una riga, ma la concorrenza è molto maggiore rispetto a quando il blocco viene utilizzato. Per altre informazioni, vedere la sezione seguente [la concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **La concorrenza ottimistica con le versioni di riga e la concorrenza ottimistica con valori** il cursore utilizza la concorrenza ottimistica: Aggiorna o Elimina le righe solo se non sono cambiati dall'ultima lettura. Per rilevare le modifiche, confronta le versioni delle righe o valori. Non c'è garanzia che il cursore sarà in grado di aggiornare o eliminare una riga, ma la concorrenza è molto maggiore rispetto a quando il blocco viene utilizzato. Per altre informazioni, vedere la sezione seguente [la concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Un'applicazione specifica quale tipo di concorrenza vuole che il cursore da utilizzare con l'attributo di istruzione SQL_ATTR_CONCURRENCY. Per determinare quali tipi sono supportati, chiama **SQLGetInfo** con l'opzione SQL_SCROLL_CONCURRENCY.

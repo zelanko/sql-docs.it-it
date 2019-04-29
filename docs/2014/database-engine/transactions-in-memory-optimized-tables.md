@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843102"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
   Il controllo delle versioni delle righe nelle tabelle basate su disco (tramite l'isolamento SNAPSHOT o READ_COMMITTED_SNAPSHOT) fornisce una forma di controllo della concorrenza ottimistica. Lettori e writer non si bloccano reciprocamente. Con le tabelle ottimizzate per la memoria i writer non bloccano writer. Nel caso di controllo delle versioni delle righe in tabelle basate su disco, una transazione blocca la riga e il tentativo di aggiornare la riga da parte di transazioni simultanee viene impedito. Per le tabelle ottimizzate per la memoria non vengono attivati blocchi. Al contrario, se due transazioni tentano di aggiornare la stessa riga, si verificherà un conflitto di scrittura/scrittura (errore 41302).  

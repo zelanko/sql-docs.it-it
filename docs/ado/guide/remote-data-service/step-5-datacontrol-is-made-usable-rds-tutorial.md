@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 5: DataControl viene reso utilizzabile (esercitazione su RDS) | Microsoft Docs'
+title: "Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b7a1b7829ace46cac7be21d33d9837845db9a7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955771"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)
 L'oggetto restituito **Recordset** l'oggetto è disponibile per l'uso. È possibile esaminare, esplorare o modificarlo come qualsiasi altra **Recordset**. Operazioni eseguibili con il **Recordset** dipende dall'ambiente. Visual Basic e Visual C++ sono controlli visivi che è possono usare una **Recordset** direttamente o indirettamente con l'ausilio di un controllo dei dati di attivazione.  

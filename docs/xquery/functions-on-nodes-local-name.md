@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936501"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni su nodi - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilizzo della funzione local-name senza argomento in un predicato  
- La query seguente viene specificata sulla colonna Instructions, tipizzata **xml** colonna della tabella ProductModel. L'espressione restituisce tutti gli elementi figlio dell'elemento <`root`>, per il quale la parte di nome locale del nome completo (QName) è "Location". Il **Local** funzione è specificata nel predicato e non include argomenti nodo di contesto viene utilizzato dalla funzione.  
+ La query seguente viene specificata sulla colonna Instructions, tipizzata **xml** colonna della tabella ProductModel. L'espressione restituisce tutti gli elementi figli del <`root`> elemento la cui parte del nome locale dell'elemento QName è "Location". Il **Local** funzione è specificata nel predicato e non include argomenti nodo di contesto viene utilizzato dalla funzione.  
   
 ```  
 SELECT Instructions.query('  
@@ -82,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La query restituisce tutti gli elementi figlio <`Location`> dell'elemento <`root`>.  
+ La query restituisce tutti i <`Location`> figlio dell'elemento di <`root`> elemento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni sui nodi](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

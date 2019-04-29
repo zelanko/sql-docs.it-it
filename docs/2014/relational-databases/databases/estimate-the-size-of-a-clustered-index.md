@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916821"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Stima delle dimensioni di un indice cluster
   Per stimare la quantità di spazio necessaria per l'archiviazione dati in un indice cluster, è possibile utilizzare la procedura seguente:  
@@ -84,7 +84,7 @@ ms.locfileid: "48140791"
      I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare `varchar`, `nvarchar`, `varbinary`, o `sql_variant` colonne che determinano la larghezza totale definita della tabella superano gli 8.060 byte. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna `varchar`, `varbinary` o `sql_variant` e di 4.000 byte per le colonne `nvarchar`. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare colonne `varchar`, `nvarchar`, `varbinary` o `sql_variant` che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna `varchar`, `varbinary` o `sql_variant` e di 4.000 byte per le colonne `nvarchar`. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
      Se non sono disponibili colonne di lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48140791"
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio verrà utilizzata per archiviare i tipi di dati LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, e `image` è complesso. È sufficiente aggiungere le dimensioni medie dei valori LOB previste, moltiplicare per ***Num_Rows***e quindi aggiungere il valore ottenuto alle dimensioni totali dell'indice cluster.  
+     L'algoritmo per determinare con esattezza la quantità di spazio utilizzata per archiviare i tipi di dati LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` e `image` è complesso. È sufficiente aggiungere le dimensioni medie dei valori LOB previste, moltiplicare per ***Num_Rows***e quindi aggiungere il valore ottenuto alle dimensioni totali dell'indice cluster.  
   
 -   Compressione  
   

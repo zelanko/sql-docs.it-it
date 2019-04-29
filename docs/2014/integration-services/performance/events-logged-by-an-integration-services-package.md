@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889840"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
   Un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra diversi messaggi di eventi nel registro eventi applicazioni di Windows. nel registro eventi applicazioni di Windows.  

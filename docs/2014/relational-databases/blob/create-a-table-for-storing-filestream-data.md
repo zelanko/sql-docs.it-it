@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a72480cf2bc6dbc394d10a1c0c068332e67417f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920761"
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>Creazione di una tabella per archiviare dati FILESTREAM
   In questo argomento viene illustrato come creare una tabella per archiviare dati FILESTREAM.  

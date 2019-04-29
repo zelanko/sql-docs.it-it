@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011423"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurare Gestione report (modalità nativa)
   Gestione report è un'applicazione front-end Web utilizzata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa. Gestione report viene installato con il servizio Web ReportServer all'interno della stessa istanza del server di report e facoltativamente configurato se si seleziona l'opzione **Installa la configurazione predefinita della modalità nativa** del programma di installazione. Può essere configurato anche come attività di post-installazione. In questo argomento vengono fornite informazioni sui seguenti scenari di configurazione di Gestione report:  

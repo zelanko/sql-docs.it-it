@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923180"
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
   Per tutte le applicazioni Web e tutti i servizi Web associati a un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile configurare impostazioni di sistema.  
@@ -94,7 +94,7 @@ ms.locfileid: "53370203"
   
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
-|**Numero di cui incrementare nuove regole business**|**BusinessRuleDefaultPriorityIncrement**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Il valore predefinito è **10**.|  
+|**Numero di cui incrementare nuove regole business**|**BusinessRuleDefaultPriorityIncrement**|Nell'area funzionale **Amministrazione sistema** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], numero in base a cui viene incrementata la priorità di ogni nuova regola business. Il valore predefinito è **10**.|  
 |**Numero di membri a cui applicare regole business**|**BusinessRuleRealtimeMemberCount**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. Nel [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], numero massimo di membri nel foglio di lavoro attivo a cui applicare le regole di business. Il valore predefinito è **10000**.|  
   
  Per altre informazioni, vedere [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md).  
@@ -106,7 +106,7 @@ ms.locfileid: "53370203"
 |**URL di Gestione dati master per le notifiche**|**MDMRootURL**|URL per l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], usato nel collegamento presente nelle notifiche tramite posta elettronica, ad esempio http://constoso/mds.|  
 |**Intervallo posta elettronica di notifica**|**NotificationInterval**|Frequenza, in secondi, con cui vengono inviate le notifiche tramite posta elettronica. Il valore predefinito è **120** secondi (2 minuti).|  
 |**Numero di notifiche in un singolo messaggio di posta elettronica**|**NotificationsPerEmail**|Numero massimo di problemi di convalida che saranno elencati in un singolo messaggio di posta elettronica di notifica. Eventuali ulteriori problemi non vengono inclusi nel messaggio di posta elettronica, ma sono disponibili in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato predefinito per la posta elettronica**|**EmailFormat**|Formato per tutte le notifiche tramite posta elettronica. Il valore predefinito è **HTML** o **1**. L'impostazione del database **2** indica **Testo**.<br /><br /> Nota: È possibile eseguire l'override per un singolo utente nel [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], modificando e salvando il **formato di posta elettronica** per l'utente **generale** scheda.|  
+|**Formato predefinito per la posta elettronica**|**EmailFormat**|Formato per tutte le notifiche tramite posta elettronica. Il valore predefinito è **HTML** o **1**. L'impostazione del database **2** indica **Testo**.<br /><br /> Nota: è possibile eseguire l'override di questa impostazione per un singolo utente in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] modificando e salvando il valore di **Formato posta elettronica** nella scheda **Generale** dell'utente.|  
 |**Espressione regolare per indirizzo di posta elettronica**|**EmailRegExPattern**|Nell'area funzionale **Autorizzazioni utenti e gruppi** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], espressione regolare utilizzata per convalidare l'indirizzo di posta elettronica immesso nella scheda **Generale** di un utente. Per altre informazioni sulle espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
 |**Account di posta del database**|**EmailProfilePrincipalAccount**|Visualizza l'account di posta del database da utilizzare per l'invio delle notifiche tramite posta elettronica. Il profilo predefinito è **mds_email_user**.|  
 |**Profilo di Posta elettronica database**|**DatabaseMailProfile**|Profilo di posta del database da utilizzare per l'invio delle notifiche tramite posta elettronica. Il valore predefinito è vuoto.|  
@@ -121,7 +121,7 @@ ms.locfileid: "53370203"
   
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Il valore predefinito è **3600** secondi (60 minuti).|  
+||**SecurityMemberProcessInterval**|Nell'area funzionale **Autorizzazioni utenti e gruppi** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], frequenza in secondi con cui vengono applicate le autorizzazioni di utenti e gruppi impostate in **Membri gerarchia**. Il valore predefinito è **3600** secondi (60 minuti).|  
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

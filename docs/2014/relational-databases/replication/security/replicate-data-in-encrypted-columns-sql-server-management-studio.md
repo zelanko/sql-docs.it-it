@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955844"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicare dati in colonne crittografate (SQL Server Management Studio)
   La replica consente di pubblicare dati di colonna crittografati. Per decrittografare e utilizzare tali dati nel Sottoscrittore, la chiave utilizzata per crittografare i dati nel server di pubblicazione deve essere presente anche nel Sottoscrittore. La replica non rappresenta un meccanismo protetto per il trasporto di chiavi di crittografia. La chiave di crittografia deve essere ricreata manualmente nel Sottoscrittore. In questo argomento verrà illustrato come crittografare una colonna nel server di pubblicazione e garantire che la chiave di crittografia sia disponibile nel Sottoscrittore.  

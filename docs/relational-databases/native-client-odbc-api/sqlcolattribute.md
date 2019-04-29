@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bb59a18dfd0a2952f3c5f23be9d0c12d9c35fd3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014623"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51657441"
 > [!NOTE]  
 >  Gli attributi di identificazione di colonna ODBC non sono disponibili in tutti i set di risultati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Identificatore del campo|Description|  
+|Identificatore del campo|Descrizione|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
@@ -80,7 +80,7 @@ ms.locfileid: "51657441"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ha introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME del descrittore delle righe di implementazione, che è un campo di lettura/scrittura.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME del descrittore delle righe di implementazione, che è un campo di lettura/scrittura.|  
@@ -88,7 +88,7 @@ ms.locfileid: "51657441"
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati inoltre introdotti nuovi campi di descrizione specifici del driver per fornire informazioni aggiuntive per una colonna con tipo definito dall'utente di un set di risultati o un parametro con tipo definito dall'utente di una stored procedure o di una query con parametri. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nome del catalogo contenente il tipo definito dall'utente.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nome dello schema contenente il tipo definito dall'utente.|  

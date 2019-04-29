@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020883"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Aggiunta di punti vuoti al grafico (Generatore report e SSRS)
   Nel grafico i valori Null vengono visualizzati come spazi o intervalli vuoti tra punti dati in una serie. I punti vuoti sono punti dati che possono essere inseriti nello spazio vuoto creato dai valori Null.  

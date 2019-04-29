@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733379"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Attività e procedure relative al modello di data mining
   La scheda **Modelli di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di gestire ed elaborare i modelli di data mining in una struttura di data mining.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Aggiungere un modello di data mining a una struttura di data mining esistente](add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48196062"
   
 -   [Modificare la discretizzazione di una colonna in un modello di data mining](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Visualizzare o modificare flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
+-   [Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md)  
   
 -   [Specificare una colonna da usare come regressore in un modello](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -57,8 +57,8 @@ ms.locfileid: "48196062"
 -   [Creare una dimensione di data mining](create-a-data-mining-dimension.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data mining struttura attività e procedure](mining-structure-tasks-and-how-tos.md)   
- [Modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)   
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)   
  [Concetti di data mining](data-mining-concepts.md)  
   
   

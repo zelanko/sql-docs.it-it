@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920013"
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
   Se una transazione è attiva quando viene immesso il codice CLT (Common Language Runtime) in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la transazione viene esposta mediante la classe `System.Transactions.Transaction`. Per accedere alla transazione corrente viene utilizzata la proprietà `Transaction.Current`. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni al database, ADO.NET controlla `Transaction.Current` automaticamente quando viene chiamato il metodo `Connection.Open` e integra in modo trasparente la connessione in tale transazione, a meno che la parola chiave `Enlist` non venga impostata su false nella stringa di connessione.  

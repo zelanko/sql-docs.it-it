@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733341"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Strutture di data mining (Analysis Services – Data mining)
   La struttura di data mining definisce i dati in base ai quali vengono compilati i modelli di data mining: specifica la vista dell'origine dati, il numero e il tipo di colonne e una partizione facoltativa in set di training e di testing. Una singola struttura di data mining può supportare più modelli di data mining che condividono lo stesso dominio. Nel diagramma seguente viene illustrata la relazione della struttura di data mining con l'origine dati e con i modelli di data mining che la compongono.  
@@ -94,7 +94,7 @@ ms.locfileid: "48172521"
 ### <a name="processing-mining-structures"></a>Elaborazione di strutture di data mining  
  Fino a quando non viene elaborata, una struttura di data mining è soltanto un contenitore di metadati. Quando si elabora una struttura di data mining, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene creata una cache locale per l'archiviazione delle statistiche relative ai dati, delle informazioni sul modo in cui vengono discretizzati gli eventuali attributi continui e di altre informazioni che verranno utilizzate successivamente dai modelli di data mining. Il modello di data mining non consente di archiviare queste informazioni di riepilogo, tuttavia permette di fare riferimento alle informazioni memorizzate nella cache quando è stata elaborata la struttura di data mining. Pertanto, non è necessario rielaborare la struttura ogni volta che si aggiunge un nuovo modello a una struttura esistente, bensì è sufficiente elaborare solo il modello.  
   
- È possibile scegliere di rimuovere questa cache dopo l'elaborazione, se la cache è molto grande o se si desidera rimuovere i dati dettagliati. Se non si desidera memorizzare i dati nella cache, è possibile modificare la proprietà `CacheMode` della struttura di data mining in `ClearAfterProcessing`. In questo modo, la cache verrà distrutta dopo l'elaborazione dei modelli. Impostando il `CacheMode` proprietà `ClearAfterProcessing` verrà disabilitato il drill-through dal modello di data mining.  
+ È possibile scegliere di rimuovere questa cache dopo l'elaborazione, se la cache è molto grande o se si desidera rimuovere i dati dettagliati. Se non si desidera memorizzare i dati nella cache, è possibile modificare la proprietà `CacheMode` della struttura di data mining in `ClearAfterProcessing`. In questo modo, la cache verrà distrutta dopo l'elaborazione dei modelli. Impostando la proprietà `CacheMode` su `ClearAfterProcessing` verrà disabilitato il drill-through dal modello di data mining.  
   
  Tuttavia, dopo aver eliminato la cache, non sarà possibile aggiungere nuovi modelli alla struttura di data mining. Se si aggiunge un nuovo modello di data mining alla struttura o si modificano le proprietà dei modelli esistenti, sarebbe necessario innanzitutto rielaborare la struttura di data mining. Per altre informazioni, vedere [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48172521"
 |Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati usata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli oggetti di database &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
+ [Oggetti di database &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

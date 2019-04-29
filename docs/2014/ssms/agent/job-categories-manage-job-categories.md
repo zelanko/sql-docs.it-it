@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62937018"
 ---
 # <a name="job-categories-manage-job-categories"></a>Categorie di processi: Gestisci categorie di processi
   Utilizzare la finestra di dialogo **Categorie di processi** per aggiungere o eliminare categorie di processi. Le categorie di processi predefinite non possono essere eliminate.  

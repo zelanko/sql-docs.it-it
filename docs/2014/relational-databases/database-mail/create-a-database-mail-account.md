@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917728"
 ---
 # <a name="create-a-database-mail-account"></a>Creare un account di Posta elettronica database.
   Per creare un account di Posta elettronica database, utilizzare la **Configurazione guidata Posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
--   **Per creare Account di posta elettronica Database, utilizzando:**  [Configurazione guidata posta elettronica del database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per creare Account di posta elettronica Database, utilizzando:**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **Completamento:**  [Passaggi successivi per configurare la posta elettronica Database](#FollowUp)  
   

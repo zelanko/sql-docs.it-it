@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939689"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "57334708"
 |**object_name**|**nchar(128)**|Categoria di appartenenza del contatore.|  
 |**counter_name**|**nchar(128)**|Nome del contatore. Per ottenere ulteriori informazioni su un contatore, si tratta del nome dell'argomento da selezionare dall'elenco dei contatori [usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Nome dell'istanza specifica del contatore. Spesso include il nome del database.|  
-|**cntr_value**|**bigint**|Valore corrente del contatore.<br /><br /> **Nota:** Per contatori con conteggio al secondo questo valore è cumulativo. Il valore relativo alla frequenza deve essere calcolato tramite il campionamento del valore a intervalli di tempo discreti. La differenza tra due valori di campionamento successivi è uguale alla frequenza dell'intervallo di tempo utilizzato.|  
+|**cntr_value**|**bigint**|Valore corrente del contatore.<br /><br /> **Nota:** Per i contatori al secondo, questo valore è cumulativo. Il valore relativo alla frequenza deve essere calcolato tramite il campionamento del valore a intervalli di tempo discreti. La differenza tra due valori di campionamento successivi è uguale alla frequenza dell'intervallo di tempo utilizzato.|  
 |**cntr_type**|**int**|Tipo di contatore definito dall'architettura di controllo delle prestazioni di Windows. Visualizzare [tipi di contatore delle prestazioni WMI](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) su documentazione o la documentazione di Windows Server per altre informazioni sui tipi di contatore delle prestazioni.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   

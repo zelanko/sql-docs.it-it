@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c04d010a690d99d90ea3a18ae7f70d33ed39f24b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915498"
 ---
 # <a name="mssqlserver17083"></a>MSSQLSERVER_17083
     
@@ -36,7 +36,7 @@ ms.locfileid: "52416742"
  Il corpo di una stored procedure compilata in modo nativo non disponeva di un blocco ATOMIC.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Una stored procedure compilata in modo nativo deve essere un blocco ATOMIC. Ad esempio:  
+ Una stored procedure compilata in modo nativo deve essere un blocco ATOMIC. Ad esempio:   
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

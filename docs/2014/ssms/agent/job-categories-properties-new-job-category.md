@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936991"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>Proprietà Categorie di processi e Nuova categoria di processi
   Consente di visualizzare l'elenco dei processi presenti in una o tutte le categorie di processi e di aggiungere una nuova categoria.  

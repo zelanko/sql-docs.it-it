@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736789"
 ---
 # <a name="processing-analysis-services-objects"></a>Elaborazione di oggetti di Analysis Services
   L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -94,7 +94,7 @@ ms.locfileid: "48050971"
  Per altre informazioni sull'elaborazione di strutture e modelli di data mining, vedere [Requisiti e considerazioni sull'elaborazione &#40;Data mining&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Elaborazione degli oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
   

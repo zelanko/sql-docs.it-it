@@ -1,5 +1,5 @@
 ---
-title: 'Backup e ripristino: interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
+title: 'Backup e ripristino: Interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922436"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: Interoperabilità e coesistenza (SQL Server)
   In questo argomento vengono fornite alcune considerazioni sul backup e il ripristino di alcune funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tra cui ripristino dei file e avvio del database, ripristino online e indici disabilitati, mirroring del database, ripristino a fasi e indici full-text.  
   
  **Contenuto dell'argomento:**  
@@ -132,6 +132,6 @@ ms.locfileid: "48155571"
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

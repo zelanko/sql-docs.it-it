@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988646"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurare e visualizzare la registrazione diagnostica e SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

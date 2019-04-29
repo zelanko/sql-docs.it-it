@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936446"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Finestra di dialogo Elenco colonne (Visual Database Tools)
   Quando si scrive una query, può essere utile visualizzare un elenco delle colonne disponibili negli oggetti valutati a livello di tabella selezionati.  

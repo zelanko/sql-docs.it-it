@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7eade67861f20e744dc2ea706f4bc96304f30ae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936410"
 ---
 # <a name="object-already-exists"></a>Oggetto già esistente
   L'oggetto che si cerca di salvare ha lo stesso nome di un oggetto già presente nel database. Scegliere un altro nome e continuare.  

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di membri, tuple e set (MDX) | Documenti Microsoft
+title: Uso di membri, tuple e set (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 295a094505fdc2b532f337aaa87dc93ae0923dd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988619"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Utilizzo di membri, tuple e set (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -59,10 +59,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- Per altre informazioni sulle funzioni di tupla, vedere [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Per altre informazioni sulle funzioni di tupla, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="set-functions"></a>Funzioni di set  
- MDX offre diverse funzioni che restituiscono set. La digitazione esplicita di tuple racchiuse tra parentesi graffe non è l'unico metodo disponibile per il recupero di un set. Per altre informazioni sulle funzioni relative ai membri che restituiscono un set, vedere [Key Concepts in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Sono disponibili numerose funzioni aggiuntive di questo tipo.  
+ MDX offre diverse funzioni che restituiscono set. La digitazione esplicita di tuple racchiuse tra parentesi graffe non è l'unico metodo disponibile per il recupero di un set. Per altre informazioni sulle funzioni relative ai membri che restituiscono un set, vedere [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Sono disponibili numerose funzioni aggiuntive di questo tipo.  
   
  L'operatore Range (:) consente di utilizzare l'ordine naturale dei membri per la creazione di un set. Il set illustrato nell'esempio seguente contiene le tuple per i primi quattro trimestri dell'anno di calendario 2002.  
   
@@ -88,16 +88,16 @@ FROM [Adventure Works]
   
  L'operatore Range (:) è una funzione inclusiva. I membri ai due lati dell'operatore vengono infatti inclusi nel set risultante.  
   
- Per altre informazioni sulle funzioni di set, vedere [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Per altre informazioni sulle funzioni di set, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="array-functions"></a>Funzioni di matrice  
- Con una funzione per matrici vengono eseguite operazioni su un set e viene restituita una matrice. Per altre informazioni sulle funzioni del di matrice, vedere [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Con una funzione per matrici vengono eseguite operazioni su un set e viene restituita una matrice. Per altre informazioni sulle funzioni del di matrice, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="hierarchy-functions"></a>Funzioni di gerarchia  
- Una funzione di gerarchia restituisce una gerarchia eseguendo operazioni su un membro, un livello, una gerarchia o una stringa. Per altre informazioni sulle funzioni di gerarchia, vedere [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Una funzione di gerarchia restituisce una gerarchia eseguendo operazioni su un membro, un livello, una gerarchia o una stringa. Per altre informazioni sulle funzioni di gerarchia, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="level-functions"></a>Funzioni di livello  
- Una funzione di livello restituisce un livello eseguendo operazioni su un membro, un livello o una stringa. Per altre informazioni sulle funzioni di livello, vedere [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Una funzione di livello restituisce un livello eseguendo operazioni su un membro, un livello o una stringa. Per altre informazioni sulle funzioni di livello, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="logical-functions"></a>Funzioni logiche  
  Con una funzione logica vengono eseguite operazioni su un'espressione MDX per la restituzione di informazioni sulle tuple, sui membri o sui set nell'espressione. La funzione [IsEmpty &#40;MDX&#41;](../../../mdx/isempty-mdx.md), ad esempio, valuta se un'espressione ha restituito un valore di cella vuota. Per altre informazioni sulle funzioni logiche, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
@@ -109,8 +109,8 @@ FROM [Adventure Works]
  Con una funzione per i valori stringa vengono eseguite operazioni su un'espressione MDX per la restituzione di una stringa. La funzione [UniqueName &#40;MDX&#41;](../../../mdx/uniquename-mdx.md), ad esempio, restituisce un valore stringa contenente il nome univoco di una dimensione, una gerarchia, un livello o un membro. Per altre informazioni sulle funzioni per i valori stringa, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave di MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Nozioni fondamentali sulle Query MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Riferimento alla funzione MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

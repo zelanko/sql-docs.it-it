@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918935"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitoraggio e risoluzione dei problemi relativi agli oggetti di database gestiti
   In questo argomento vengono fornite informazioni sugli strumenti che è possibile utilizzare per monitorare e risolvere i problemi relativi agli oggetti di database e agli assembly gestiti in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48090651"
 ## <a name="profiler-trace-events"></a>Eventi di traccia del profiler  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre Traccia SQL e notifiche di eventi per monitorare gli eventi che si verificano nel Motore di database. Tramite la registrazione di eventi specificati, Traccia SQL consente di risolvere problemi relativi alle prestazioni, controllare l'attività dei database, raccogliere dati esempio per un ambiente di prova, eseguire il debug delle istruzioni e delle stored procedure di [!INCLUDE[tsql](../../../includes/tsql-md.md)], nonché raccogliere dati per gli strumenti di analisi delle prestazioni. Per altre informazioni, vedere [traccia SQL](../sql-trace/sql-trace.md) e [eventi estesi](../extended-events/extended-events.md).  
   
-|Evento|Description|  
+|Evento|Descrizione|  
 |-----------|-----------------|  
 |[Classe di evento Assembly Load](../../database-engine/assembly-load-event-class.md)|Utilizzato per monitorare le richieste di caricamento degli assembly (esito positivo ed errori).|  
 |[Classe di evento SQL: BatchStarting](../event-classes/sql-batchstarting-event-class.md), [classe di evento SQL: BatchCompleted](../event-classes/sql-batchcompleted-event-class.md)|Fornisce informazioni sui batch [!INCLUDE[tsql](../../../includes/tsql-md.md)] avviati o completati.|  
@@ -37,14 +37,14 @@ ms.locfileid: "48090651"
 ## <a name="performance-counters"></a>Contatori delle prestazioni  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include oggetti e contatori utilizzabili da Monitor di sistema per il monitoraggio dell'attività in computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per oggetto si intende qualsiasi risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ad esempio un blocco di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un processo di Windows. Ogni oggetto contiene uno o più contatori che determinano diversi aspetti degli oggetti da monitorare. Per altre informazioni, vedere [Usare oggetti di SQL Server](../performance-monitor/use-sql-server-objects.md).  
   
-|Object|Description|  
+|Object|Descrizione|  
 |------------|-----------------|  
 |[Oggetto CLR di SQL Server](../performance-monitor/sql-server-clr-object.md)|Tempo totale di esecuzione in CLR.|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Contatori di Monitor di sistema di Windows (PERFMON.EXE)  
  Lo strumento Monitor di sistema di Windows (PERFMON.EXE) include diversi contatori delle prestazioni che è possibile utilizzare per monitorare le applicazioni di integrazione CLR. I contatori delle prestazioni CLR .NET possono essere filtrati tramite il nome di processo "sqlservr" per tenere traccia delle applicazioni di integrazione CLR attualmente in esecuzione.  
   
-|Oggetto prestazione|Description|  
+|Oggetto prestazione|Descrizione|  
 |------------------------|-----------------|  
 |SqlServer:CLR|Fornisce statistiche sulla CPU per il server.|  
 |Eccezioni CLR .NET|Tiene traccia del numero di eccezioni generate al secondo.|  
@@ -55,7 +55,7 @@ ms.locfileid: "48090651"
 ## <a name="catalog-views"></a>Viste del catalogo  
  Le viste del catalogo restituiscono informazioni utilizzate dal Motore di database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È consigliabile utilizzare tali viste perché rappresentano l'interfaccia più immediata per l'accesso ai metadati del catalogo e sono inoltre lo strumento più efficiente per ottenere, trasformare e presentare tali informazioni in forme personalizzate. Tutti i metadati del catalogo disponibili per gli utenti vengono esposti tramite le viste del catalogo. Per altre informazioni, vedere [Viste del catalogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql).  
   
-|Vista del catalogo|Description|  
+|Vista del catalogo|Descrizione|  
 |------------------|-----------------|  
 |[sys.assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)|Restituisce informazioni sugli assembly registrati in un database.|  
 |[sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)|Identifica gli assembly che fanno riferimento ad altri assembly.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48090651"
 ## <a name="dynamic-management-views"></a>DMV  
  Le funzioni e le viste a gestione dinamica restituiscono informazioni sullo stato del server che possono essere utilizzate per monitorare l'integrità di un'istanza del server, diagnosticare i problemi e ottimizzare le prestazioni. Per altre informazioni, vedere [funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../views/views.md).  
   
-|Vista a gestione dinamica|Description|  
+|Vista a gestione dinamica|Descrizione|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql)|Fornisce informazioni su ogni dominio applicazione nel server.|  
 |[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql)|Identifica ogni assembly gestito registrato nel server.|  

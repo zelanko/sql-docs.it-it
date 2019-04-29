@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917044"
 ---
 # <a name="master-database"></a>Database master
   Nel database **master** vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . inclusi i metadati a livello globale dell'istanza quali gli account di accesso, gli endpoint, i server collegati e le impostazioni di configurazione di sistema. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli oggetti di sistema non sono più archiviati nel database **master** , ma sono archiviati nel [database Resource](resource-database.md). Nel database **master** vengono inoltre registrate l'esistenza di tutti gli altri database e la posizione dei relativi file di database, nonché le informazioni di inizializzazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è pertanto possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se il database **master** non è disponibile.  
@@ -38,7 +38,7 @@ ms.locfileid: "52784543"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
 |ANSI_NULL_DEFAULT|OFF|Yes|  
 |ANSI_NULLS|OFF|Yes|  
 |ANSI_PADDING|OFF|Yes|  
@@ -56,7 +56,7 @@ ms.locfileid: "52784543"
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|No|  
-|ENCRYPTION|OFF|No|  
+|ENCRYPTION|OFF|no|  
 |NUMERIC_ROUNDABORT|OFF|Yes|  
 |PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|Yes|  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871712"
 ---
 # <a name="msdb-database"></a>Database msdb
   Il database **msdb** viene usato dall'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la pianificazione di avvisi e processi e da altre funzionalità, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] e Posta elettronica database.  
@@ -65,12 +65,12 @@ ms.locfileid: "52811893"
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Yes<br /><br /> Yes|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|Yes|  
-|ENCRYPTION|OFF|No|  
+|ENCRYPTION|OFF|no|  
 |NUMERIC_ROUNDABORT|OFF|Yes|  
 |PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|READ_COMMITTED_SNAPSHOT|OFF|no|  
 |RECOVERY|SIMPLE|Yes|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  

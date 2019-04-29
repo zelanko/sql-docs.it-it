@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025733"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Pagina delle proprietà sicurezza, Elementi (Gestione report)
   Utilizzare la pagina delle proprietà sicurezza per visualizzare o modificare le impostazioni di sicurezza che regolano l'accesso a cartelle, report, modelli, risorse e origini dei dati condivise. Questa pagina è disponibile per gli elementi per i quali l'utente è autorizzato a definire le impostazioni di sicurezza.  

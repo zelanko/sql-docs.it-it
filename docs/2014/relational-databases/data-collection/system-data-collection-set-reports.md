@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873409"
 ---
 # <a name="system-data-collection-set-reports"></a>Report per i set di raccolta dati di sistema
   L'agente di raccolta dati fornisce un report cronologico per ognuno dei set di raccolta dati di sistema. Ognuno dei report seguenti utilizza i dati archiviati nel data warehouse di gestione:  
@@ -81,21 +81,21 @@ ms.locfileid: "54100496"
   
  **Pulsanti di controllo e navigazione della sequenza temporale**  
   
- Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Usando i pulsanti di lente di ingrandimento, è possibile espandere o incremento del tempo a uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
+ Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Usando i pulsanti di ingrandimento e riduzione è possibile espandere o ridurre l'incremento del tempo impostando uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
   
  **Pulsante calendario**  
   
  Utilizzare il pulsante calendario per specificare la data e l'ora di inizio nonché la durata dei dati per cui si desidera creare il report.  
   
 #### <a name="query-statistics-history-report"></a>Report Cronologia statistiche query  
- Nel grafico Prime query per tempo CPU totale viene indicato il costo relativo di ciascuna query per l'intervallo di tempo selezionato in base all'utilizzo totale della CPU. Per visualizzare una vista diversa del costo della query relativa, fare clic su uno dei collegamenti ipertestuali disponibili sotto il grafico: **Durata**, **totale i/o**, **letture fisiche**, oppure **scritture logiche**.  
+ Nel grafico Prime query per tempo CPU totale viene indicato il costo relativo di ciascuna query per l'intervallo di tempo selezionato in base all'utilizzo totale della CPU. Per visualizzare una vista diversa del costo relativo della query, fare clic su uno dei collegamenti ipertestuali disponibili sotto il grafico: **Durata**, **Totale I/O**, **Letture fisiche** o **Scritture logiche**.  
   
  Nella tabella al di sotto del grafico vengono forniti ulteriori dati sulle query. Viene riportato il testo per ogni query per cui è stato creato un grafico, insieme alle informazioni statistiche dettagliate. Si noti che le barre del grafico sono collegamenti attivi, come ciascuna delle query incluse nella tabella. Facendo clic su un collegamento attivo si apre il sottoreport Dettagli query per la query.  
   
 #### <a name="query-details-subreport"></a>Sottoreport Dettagli query  
  Nel sottoreport Dettagli query viene fornito il testo completo della query. Accanto alla query è disponibile un collegamento ipertestuale **Modifica testo query** . È possibile fare clic su questo collegamento per aprire la query nell'editor di query. Nella tabella al di sotto della query sono incluse le statistiche di esecuzione della query, ad esempio la durata media per ogni esecuzione della query.  
   
- Vengono visualizzati un grafico dei piani di query e la durata media per ogni esecuzione. Per visualizzare una vista diversa del costo relativo query piano, fare clic su uno dei collegamenti ipertestuali vengono visualizzati sotto il grafico: **Durata**, **letture fisiche**, o **scritture logiche**. La linea del grafico è attiva ed è possibile fare clic su un punto qualsiasi per aprire il sottoreport Dettagli piano query.  
+ Vengono visualizzati un grafico dei piani di query e la durata media per ogni esecuzione. Per visualizzare una vista diversa del costo relativo del piano di query, fare clic su uno dei collegamenti ipertestuali disponibili sotto il grafico: **Durata**, **Letture fisiche** o **Scritture logiche**. La linea del grafico è attiva ed è possibile fare clic su un punto qualsiasi per aprire il sottoreport Dettagli piano query.  
   
  Nella tabella al di sotto del grafico vengono visualizzati i primi 10 piani di query in base all'utilizzo della CPU per esecuzione. Ogni numero nella colonna **N. piano** è un collegamento attivo su cui è possibile fare clic per aprire il sottoreport Dettagli piano query.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54100496"
   
  **Pulsanti di controllo e navigazione della sequenza temporale**  
   
- Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Usando i pulsanti di lente di ingrandimento, è possibile espandere o incremento del tempo a uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
+ Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Usando i pulsanti di ingrandimento e riduzione è possibile espandere o ridurre l'incremento del tempo impostando uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
   
  **Pulsante calendario**  
   

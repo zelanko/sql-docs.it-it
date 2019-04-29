@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921848"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Pianificare ed eseguire sequenze di ripristino (Modello di recupero con registrazione completa)
   In questo argomento si spiega come pianificare ed eseguire una sequenza di ripristino per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene utilizzato in genere il modello di recupero con registrazione completa. Una *sequenza di ripristino* è una sequenza contenente una o più istruzioni [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) . In genere, consente di inizializzare il contenuto del database, dei file e/o delle pagine in fase di ripristino (fase di copia dei dati), di eseguire il roll forward delle transazioni registrate (fase di rollforward) e quindi di eseguire il rollback delle transazioni di cui non è stato eseguito il commit (fase di rollback).  
@@ -65,7 +65,7 @@ ms.locfileid: "48064121"
  [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](complete-database-restores-full-recovery-model.md)   
- [Ripristino online &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
  [Ripristinare pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  

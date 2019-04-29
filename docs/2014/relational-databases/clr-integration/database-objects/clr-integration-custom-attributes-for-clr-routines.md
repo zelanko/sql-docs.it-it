@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873801"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Attributi personalizzati per routine CLR
   Gli attributi elencati è applicabile per le routine di common language runtime (CLR), tipi definiti dall'utente e aggregazioni definite dall'utente registrati nel [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Se l'attributo non viene applicato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assume il valore predefinito. Gli attributi elencati vengono definiti nello spazio dei nomi `Microsoft.SqlServer.Server`.  

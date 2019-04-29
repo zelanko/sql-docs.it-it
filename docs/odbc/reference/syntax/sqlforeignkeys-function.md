@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982375"
 ---
 # <a name="sqlforeignkeys-function"></a>Funzione SQLForeignKeys
 **Conformità**  
@@ -184,7 +184,7 @@ SQLRETURN SQLForeignKeys(
 |DELETE_RULE (ODBC 1.0)|11|Smallint|Azione da applicare alla chiave esterna durante l'operazione SQL è **Elimina**. Può avere uno dei valori seguenti. (La tabella con riferimenti è la tabella che contiene la chiave primaria; la tabella di riferimento è la tabella che contiene il vincolo foreign key).<br /><br /> SQL_CASCADE: Quando viene eliminata una riga nella tabella di riferimento, vengono eliminate anche tutte le righe corrispondente nelle tabelle di riferimento.<br /><br /> SQL_NO_ACTION: Se un'operazione di eliminazione di una riga nella tabella di riferimento causerebbe un "riferimento inesatti" nella tabella di riferimento (vale a dire, le righe nella tabella di riferimento potrebbero non hanno controparti nelle tabella di riferimento), l'aggiornamento viene rifiutato. (Questa azione è lo stesso come azione in ODBC 2 SQL_RESTRICT*x*.)<br /><br /> SQL_SET_NULL: Quando una o più righe nella tabella di riferimento vengono eliminate, ogni componente della chiave esterna della tabella di riferimento viene impostato su NULL in tutte le righe corrispondenti della tabella di riferimento.<br /><br /> SQL_SET_DEFAULT: Quando una o più righe nella tabella di riferimento vengono eliminate, ogni componente della chiave esterna della tabella di riferimento è impostata sul valore predefinito applicabile in tutte le righe corrispondenti della tabella di riferimento.<br /><br /> NULL se non applicabile all'origine dati.|  
 |FK_NAME (ODBC 2.0)|12|Varchar|Nome della chiave esterna. NULL se non applicabile all'origine dati.|  
 |PK_NAME (ODBC 2.0)|13|Varchar|Nome della chiave primaria. NULL se non applicabile all'origine dati.|  
-|DEFERRABILITY (ODBC 3.0)|14|Smallint|SQL_NOT_DEFERRABLE SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE.|  
+|DEFERRABILITY (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  
   
 ## <a name="code-example"></a>Esempio di codice  
  Come illustrato nella tabella seguente, questo esempio Usa tre tabelle, denominate ordini, righe e i clienti.  

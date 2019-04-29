@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903696"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52817323"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID dell'agente di distribuzione.|  
-|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvio.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
+|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = Start.<br /><br /> **2** = Succeed.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**time**|**datetime**|Ora di registrazione del messaggio.|  
 |**duration**|**int**|Durata espressa in secondi della sessione del messaggio.|  
-|**Commenti**|**nvarchar(4000)**|Testo del messaggio.|  
+|**comments**|**nvarchar(4000)**|Testo del messaggio.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza dell'ultima transazione elaborata.|  
 |**current_delivery_rate**|**float**|Numero medio di comandi recapitati al secondo dopo l'ultima voce di cronologia.|  
 |**current_delivery_latency**|**int**|Latenza tra l'immissione del comando nel database di distribuzione e l'applicazione del comando al Sottoscrittore dopo l'ultima voce di sottoscrizione. In millisecondi.|  

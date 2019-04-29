@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918189"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
   È possibile distribuire un'applicazione livello dati (DAC) da un pacchetto di applicazione livello dati all'istanza esistente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando una procedura guidata o uno script di PowerShell. Il processo di distribuzione registra un'istanza di applicazione livello dati archiviando la definizione dell'applicazione livello dati nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea un database e quindi lo popola con tutti gli oggetti di database definiti nell'applicazione livello dati.  
@@ -60,7 +60,7 @@ ms.locfileid: "52529541"
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un pacchetto di applicazione livello dati senza password. Quando il pacchetto viene distribuito o aggiornato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere distribuita unicamente dai membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure tramite gli account di accesso disponibili nel ruolo predefinito del server **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile distribuire un'applicazione livello dati usando l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . La distribuzione di un'applicazione livello dati con accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli loginmanager o serveradmin. Per la distribuzione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'appartenenza ai ruoli dbmanager o serveradmin.  
   
 ##  <a name="UsingDeployDACWizard"></a> Tramite la distribuzione guidata di applicazione livello dati  

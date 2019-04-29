@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959611"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@publisher** =] **'***publisher***'**  
+ [**@publisher** = ] **'***publisher***'**  
  È il nome del non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione a cui appartiene il processo. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -49,11 +49,11 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|Data dell'ultima esecuzione del processo.|  
 |**thisdate**|**varchar(22)**|Ora della modifica|  
 |**nextdate**|**varchar(22)**|Data della successiva esecuzione del processo.|  
-|**interrotto**|**varchar (1)**|Flag che indica se il processo è interrotto.|  
-|**Intervallo**|**varchar(200)**|Intervallo del processo.|  
-|**errori**|**int**|Numero di errori per il processo.|  
+|**broken**|**varchar(1)**|Flag che indica se il processo è interrotto.|  
+|**interval**|**varchar(200)**|Intervallo del processo.|  
+|**failures**|**int**|Numero di errori per il processo.|  
 |**xactsetjobwhat**|**varchar(200)**|Nome della procedura eseguita dal processo.|  
-|**xactsetjob**|**varchar (1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** -il processo sia disabilitato.|  
+|**xactsetjob**|**varchar(1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** -il processo sia disabilitato.|  
 |**xactsetlonginterval**|**int**|Intervallo lungo per il processo.|  
 |**xactsetlongthreshold**|**int**|valore soglia lungo per il processo.|  
 |**xactsetshortinterval**|**int**|Intervallo breve per il processo.|  

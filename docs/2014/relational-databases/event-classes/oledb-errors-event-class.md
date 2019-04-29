@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961068"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors - classe di evento
   La classe di evento OLEDB Errors viene generata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando una chiamata a un provider OLE DB restituisce un errore. Includere questa classe di evento nelle tracce per visualizzare un HRESULT negativo da un provider OLE DB.  
@@ -51,7 +51,7 @@ ms.locfileid: "52803653"
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  
-|TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|No|  
+|TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|no|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Yes|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919617"
 ---
 # <a name="creating-a-user-defined-type"></a>Creazione di un tipo definito dall'utente
   Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
@@ -32,7 +32,7 @@ sp_configure 'clr enabled', 1
 Reconfigure  
 ```  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Requisiti per i tipi definiti dall'utente](creating-user-defined-types-requirements.md)  
  Vengono descritti i requisiti per la codifica dei tipi definiti dall'utente.  
   

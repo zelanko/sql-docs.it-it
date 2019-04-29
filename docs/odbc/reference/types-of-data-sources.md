@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851391"
 ---
 # <a name="types-of-data-sources"></a>Tipi di origini dati
 Esistono due tipi di origini dati: origini dati e origini dati dei file del computer. Sebbene entrambi contengono informazioni analoghe relative all'origine dei dati, si differenziano nel modo che queste informazioni vengono archiviate. A causa di queste differenze, vengono utilizzati in modi leggermente diversi.  

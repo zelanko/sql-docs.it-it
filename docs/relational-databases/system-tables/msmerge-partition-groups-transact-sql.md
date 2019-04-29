@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911250"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSmerge_partition_groups** tabella archivia una riga per ogni partizione in un determinato database pre-calcolata. Oltre alle colonne elencate, a questa tabella viene aggiunta una colonna per ogni funzione utilizzata in un filtro di riga con parametri. Ad esempio, una colonna denominata **HOST_NAME_FN** viene aggiunto alla tabella se viene utilizzato un filtro di [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (funzione). Viene archiviata una riga per ogni set univoco di valori di funzione sincronizzati con il server di pubblicazione corrente. Due o più Sottoscrittori che eseguono la sincronizzazione in base allo stesso valore per tutte le funzioni dovranno condividere la stessa riga della tabella e pertanto lo stesso ID di partizione. Questa tabella è archiviata nel database di pubblicazione.  
+  Il **MSmerge_partition_groups** tabella archivia una riga per ogni partizione in un determinato database pre-calcolata. Oltre alle colonne elencate, a questa tabella viene aggiunta una colonna per ogni funzione utilizzata in un filtro di riga con parametri. Ad esempio, una colonna denominata **HOST_NAME_FN** viene aggiunto alla tabella se viene utilizzato un filtro di [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (funzione). Viene archiviata una riga per ogni set univoco di valori di funzione sincronizzati con il server di pubblicazione corrente. Due o più sottoscrittori che la sincronizzazione con esattamente lo stesso valore per tutte queste funzioni dovranno condividere la stessa riga in questa tabella e pertanto tutti condivideranno lo stesso id di partizione. Questa tabella è archiviata nel database di pubblicazione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

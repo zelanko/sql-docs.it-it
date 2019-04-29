@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 272362f4483dfd167063242b2920fc2153f9b9e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021009"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
   Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.  

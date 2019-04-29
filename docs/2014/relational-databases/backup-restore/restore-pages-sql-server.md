@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921020"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
   In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) del database **msdb** .  
@@ -62,7 +62,7 @@ ms.locfileid: "58536393"
   
     -   Log delle transazioni  
   
-    -   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
+    -   Pagine di allocazione: Le pagine di allocazione GAM (mappa) globale, le pagine condivise di mappa allocazione globale (SGAM) e pagine spazio libero pagina (PFS).  
   
     -   Pagina 0 di tutti i file di dati (pagina di avvio del file)  
   
@@ -133,8 +133,8 @@ ms.locfileid: "58536393"
     |Intestazione|Valori|  
     |------------|------------|  
     |**Name**|Nome del set di backup.|  
-    |**Componente**|Componente di cui è stato eseguito il backup: **Database**, **File** o **\<vuoto>** (per i log delle transazioni).|  
-    |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
+    |**Componente**|Il componente di backup: **Database**, **File** o **\<vuoto>** (per i log delle transazioni).|  
+    |**Tipo**|Il tipo di backup eseguito: **Completo**, **Differenziale** o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  
     |**Posizione**|Posizione del set di backup nel volume.|  

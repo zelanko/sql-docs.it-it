@@ -15,18 +15,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843123"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informazioni sulle condizioni di licenza di SQL Server
   Le condizioni di licenza software [!INCLUDE[msCoName](../includes/msconame-md.md)] vengono copiate nel computer locale durante l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. I file vengono scritti a: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ o % % ProgramFiles(x86) \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Termini \120\License\\.  
   
  Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza.  
   
- Nel nome di file delle condizioni di licenza sono indicate l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e l'edizione localizzata installata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il nome del file delle condizioni di licenza è in formato: SQLServer2014_License_Edition_\<tipo > _\<LCID >. RTF. Ad esempio:  
+ Nel nome di file delle condizioni di licenza sono indicate l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e l'edizione localizzata installata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il nome di file condizioni di licenza è nel formato: SQLServer2014_License_Edition_\<TYPE>_\<LCID>.rtf. Ad esempio:   
   
 -   SQLServer2014_License_DEV_1033.rtf per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, edizione in lingua inglese.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "53354603"
   
  TYPE indica l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Di seguito vengono indicati i segmenti dei nomi di file utilizzati per identificare le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   ENT - Enterprise Edition: Licenza server/CAL (Client Access License)  
+-   ENT - Enterprise Edition: Licenza (CAL) di gestione delle licenze di accesso server/Client  
   
--   ENTCORE - Enterprise Edition: Core-based Licensing  
+-   ENTCORE - Enterprise Edition: Gestione delle licenze basate su core  
   
 -   BI - Business Intelligence  
   

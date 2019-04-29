@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899815"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor attività Query di data mining (scheda Query)
   Usare la scheda **Query** della finestra di dialogo **Attività Query di data mining** per creare query di stima basate su un modello di data mining. In questa finestra di dialogo è inoltre possibile associare parametri e set di risultati a variabili.  
@@ -46,7 +46,7 @@ ms.locfileid: "58377229"
  **Compila nuova query**  
  Consente di creare una query di data mining utilizzando uno strumento grafico.  
   
- **Argomenti correlati:** [Query di Data Mining](control-flow/data-mining-query.md)  
+ **Argomenti correlati:** [Query di data mining](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opzioni della scheda Mapping parametri  
  **Nome parametro**  

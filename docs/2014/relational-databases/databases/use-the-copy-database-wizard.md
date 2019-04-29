@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871138"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
   Tramite Copia guidata database è possibile spostare o copiare con semplicità i database e i relativi oggetti da un server a un altro, senza alcun tempo di inattività del server. È inoltre possibile aggiornare i database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mediante questa procedura guidata è possibile effettuare le operazioni seguenti:  
@@ -102,7 +102,7 @@ ms.locfileid: "52759113"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario essere membri del ruolo predefinito del server **sysadmin** sia nel server di origine sia in quello di destinazione.  
   
 ##  <a name="Copy_Move"></a> Copiare, spostare o aggiornare i database  
@@ -228,7 +228,7 @@ ms.locfileid: "52759113"
      **Percorso cartella**  
      Consente di specificare il percorso dei file di database di origine nel file system.  
   
-     Ad esempio: C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
+     Ad esempio:  C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
   
      **Condivisione file nel server di origine**  
      Consente di specificare il percorso dei file del database di origine come percorso di una condivisione file.  

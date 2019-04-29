@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896698"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (espressione SSIS)
   Restituisce il numero di token in una stringa che contiene token separati dai delimitatori specificati.  
@@ -50,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   È possibile utilizzare variabili e colonne come argomenti di questa espressione.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
- Nell'esempio seguente, la funzione TOKENCOUNT restituisce 3 perché la stringa contiene tre token: "01", "12", "2011".  
+ Nell'esempio seguente la funzione TOKENCOUNT restituisce 3 perché la stringa contiene tre token: "01", "12", "2011".  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

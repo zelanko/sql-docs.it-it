@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026945"
 ---
 # <a name="bookmark-c-data-type"></a>Tipo di dati C Bookmark
 Il tipo di dati C bookmark consente a un'applicazione recuperare un segnalibro. I tipi di segnalibro C vengono utilizzati solo per recuperare i valori di segnalibro che possono variare in lunghezza; essi non devono essere convertiti in altri tipi di dati. Un'applicazione recupera dalla colonna 0 il risultato impostata con un segnalibro **SQLBulkOperations** (con un'operazione di SQL_ADD), **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**. Per altre informazioni, vedere [segnalibri](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

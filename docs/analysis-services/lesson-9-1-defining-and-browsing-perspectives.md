@@ -1,5 +1,5 @@
 ---
-title: Definizione ed esplorazione delle prospettive | Documenti Microsoft
+title: Definizione ed esplorazione delle prospettive | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017350"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lezione 9-1-definizione ed esplorazione delle prospettive
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lezione 9-1: definizione ed esplorazione delle prospettive
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Una prospettiva può semplificare la visualizzazione di un cubo a scopi specifici. Per impostazione predefinita, gli utenti possono vedere tutti gli elementi di un cubo per i quali dispongono di autorizzazioni. Quando si visualizza un intero cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , viene visualizzata la prospettiva predefinita del cubo. La navigazione all'interno di una visualizzazione dell'intero cubo può essere molto complessa per gli utenti, soprattutto per coloro che devono solo interagire con una piccola parte del cubo per soddisfare i requisiti di Business Intelligence e di report.  
@@ -69,7 +69,7 @@ Nelle procedure descritte in questo argomento vengono definite diverse prospetti
   
     -   Dimensione del cubo**Promotion**   
   
-    -   di**Reseller Revenue**   
+    -    di**Reseller Revenue**   
   
     -   Set denominato**Large Resellers**   
   
@@ -171,7 +171,7 @@ Nelle procedure descritte in questo argomento vengono definite diverse prospetti
   
 4.  Analizza in Excel richiede di scegliere quale prospettiva utilizzare per la visualizzazione del modello in Excel, come illustrato nell'immagine seguente.  
   
-    ![Gli oggetti per la prospettiva Internet Sales](../analysis-services/media/l9-perspectives-3.gif "oggetti per la prospettiva Internet Sales")  
+    ![Gli oggetti per la prospettiva Internet Sales](../analysis-services/media/l9-perspectives-3.gif "gli oggetti per la prospettiva Internet Sales")  
   
 5.  In alternativa, è possibile avviare Excel dal menu Start di Windows, definire una connessione al database Analysis Services Tutorial su localhost e scegliere una prospettiva nella procedura guidata Connessione dati, come illustrato nell'immagine seguente.  
   

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922575"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Utilizzare PowerShell per il backup di più database nel servizio di archiviazione BLOB di Windows Azure
   In questo argomento vengono forniti alcuni script di esempio che possono essere utilizzati per automatizzare i backup nel servizio di archiviazione BLOB di Windows Azure mediante i cmdlet di PowerShell.  
@@ -49,7 +49,7 @@ ms.locfileid: "52519537"
   
  Di seguito sono riportate alcune considerazioni per gli script di esempio:  
   
-1.  **Esplorazione dei percorsi di SQL Server PowerShell:** Windows PowerShell implementa cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
+1.  **Spostamenti all'interno dei percorsi di SQL Server PowerShell:** Windows PowerShell implementa cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
   
 2.  `Get-ChildItem` cmdlet: Le informazioni restituite dal `Get-ChildItem` dipende da un percorso di PowerShell per SQL Server. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Sempre a titolo di esempio, se il percorso è a livello di oggetto come i database, questo cmdlet restituisce un elenco di oggetti di database.  Per impostazione predefinita il cmdlet `Get-ChildItem` non restituisce oggetti di sistema.  Se si usa il parametro -Force, è possibile visualizzare gli oggetti di sistema.  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835154"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurazione di un output degli errori in un componente del flusso di dati
   Molti componenti del flusso di dati supportano l'output degli errori. A seconda del componente, in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili strumenti diversi per la configurazione di un output degli errori. Oltre a configurare un output degli errori, è possibile configurare le relative colonne, tra cui le colonne **ErrorCode** e **ErrorColumn** aggiunte dal componente.  

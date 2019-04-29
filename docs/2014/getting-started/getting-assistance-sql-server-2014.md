@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837691"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Richiesta di assistenza (SQL Server 2014)
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] sono disponibili tre fonti principali di informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -29,7 +29,7 @@ ms.locfileid: "48134891"
   
  Se non si trovano le informazioni desiderate, è possibile inserire domande nei forum e nei newsgroup della community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Assistenza su SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
  Sono contenuti collegamenti alle fonti principali di informazioni su [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Nell'argomento sono presenti anche collegamenti a siti di supporto.  
   

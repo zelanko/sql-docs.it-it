@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918004"
 ---
 # <a name="unpack-a-dac-package"></a>Decompressione di un pacchetto di applicazione livello dati
   Utilizzare la finestra di dialogo per la decompressione dell'applicazione livello dati per decomprimere gli script e i file da un pacchetto di applicazioni livello dati (DAC). Gli script e i file vengono copiati in una cartella dove è possibile controllarli prima che il pacchetto venga utilizzato per distribuire l'applicazione del livello dati in un sistema di produzione. È inoltre possibile confrontare il contenuto di un pacchetto di applicazione livello dati con il contenuto di un altro pacchetto decompresso in un'altra cartella.  
   
 1.  **Prima di iniziare:**  [Sicurezza](#Security)  
   
-2.  **Per decomprimere un'applicazione livello dati, utilizzando:**  [Finestra di dialogo dell'applicazione livello dati decomprimere](#UnpackDACDial), [esaminarne il contenuto di un pacchetto di applicazione livello dati](#ExamDACPack)  
+2.  **Per decomprimere un'applicazione livello dati tramite la**  [Finestra di dialogo per la decompressione dell'applicazione livello dati](#UnpackDACDial), [Verifica del contenuto di un pacchetto di applicazione livello dati](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sicurezza  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di utilizzare un pacchetto di applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirlo in un'istanza di prova isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], decomprimere il pacchetto di applicazione livello dati ed esaminare il codice, ad esempio stored procedure o altro codice definito dall'utente.  

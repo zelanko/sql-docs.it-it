@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957136"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +44,15 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nome del server collegato.|  
-|**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Nome descrittivo del provider OLE DB che gestisce l'accesso al server collegato specificato.|  
-|**SRV_PRODUCT**|**nvarchar (** 128 **)**|Nome del prodotto del server collegato.|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Proprietà dell'origine dei dati OLE DB corrispondente al server collegato specificato.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Proprietà della stringa del provider OLE DB corrispondente al server collegato.|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Proprietà della posizione OLE DB corrispondente al server collegato specificato.|  
-|**SRV_CAT NON**|**sysname**|Proprietà del catalogo OLE DB corrispondente al server collegato specificato.|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nome descrittivo del provider OLE DB che gestisce l'accesso al server collegato specificato.|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nome del prodotto del server collegato.|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|Proprietà dell'origine dei dati OLE DB corrispondente al server collegato specificato.|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|Proprietà della stringa del provider OLE DB corrispondente al server collegato.|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|Proprietà della posizione OLE DB corrispondente al server collegato specificato.|  
+|**SRV_CAT**|**sysname**|Proprietà del catalogo OLE DB corrispondente al server collegato specificato.|  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  

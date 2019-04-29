@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874987"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
   Poiché i dati FILESTREAM sono nel file system, in questo argomento vengono fornite alcune considerazioni, linee guida e limitazioni per l'utilizzo di FILESTREAM con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]indicate di seguito.  

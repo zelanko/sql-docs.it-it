@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913278"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130500"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Testo del messaggio|Controlli preliminari su tabella di sistema: per l'ID di oggetto O_ID è definito un collegamento a catena non corrispondente. P_ID1->next = P_ID2, ma P_ID2->prev = P_ID3. Istruzione di controllo interrotta a causa di un errore irreversibile.|  
+|Testo del messaggio|Controlli preliminari su tabella di sistema: ID di oggetto O_ID è una mancata corrispondenza del collegamento a catena. P_ID1->next = P_ID2, ma P_ID2->prev = P_ID3. Istruzione di controllo interrotta a causa di un errore irreversibile.|  
   
 ## <a name="explanation"></a>Spiegazione  
  La prima fase dell'esecuzione di un comando DBCC CHECKDB consiste nell'eseguire controlli primitivi nelle pagine dei dati delle tabelle di sistema critiche. Non è possibile correggere eventuali errori rilevati. DBCC CHECKDB verrà pertanto terminato immediatamente.  

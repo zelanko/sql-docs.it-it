@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926823"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor trasformazione Estrazione termini (Scheda Avanzate)
   Usare la scheda**Avanzate** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare le proprietà per l'estrazione, ad esempio la frequenza, la lunghezza e le eventuali parole o frasi da estrarre.  
@@ -41,7 +41,7 @@ ms.locfileid: "58385039"
  Consente di specificare che il punteggio è rappresentato dalla frequenza del termine.  
   
  **TFIDF**  
- Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto della frequenza dei termini e frequenza inversa dei documenti, definito come: TFIDF di un termine T = (frequenza di T) * log ((#rows nell'Input) / (#rows con T))  
+ Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto tra la frequenza del termine (TF) e l'inverso della frequenza nei documenti (IDF) espresso dalla ponderazione seguente: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
   
  **Soglia di frequenza**  
  Consente di specificare il numero di volte in cui una parola o una frase deve ricorrere prima che venga estratta. Il valore predefinito è 2.  

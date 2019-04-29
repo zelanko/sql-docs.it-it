@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914657"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141111"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|Testo del messaggio|Errore di tabella: la pagina P_ID, la cui intestazione indica che è allocata all'ID di oggetto ID O_ID, con ID di indice I_ID, ID di partizione PN_ID e ID di unità di allocazione ID A_ID (tipo TYPE), è allocata da un altro oggetto.|  
+|Testo del messaggio|Errore di tabella: P_ID Page, cui intestazione indica che è allocata all'ID di oggetto O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE), viene allocata da un altro oggetto.|  
   
 ## <a name="explanation"></a>Spiegazione  
  L'intestazione della pagina contiene l'ID di unità di allocazione *A_ID*, ma nessuna delle pagine della mappa di allocazione degli indici (IAM, Index Allocation Map) relativa a tale unità di allocazione alloca la pagina. L'intestazione della pagina contiene pertanto l'ID di unità di allocazione errato e la pagina restituirà un corrispondente errore MSSQLServer_2533 in cui viene indicato l'ID di unità di allocazione a cui la pagina è effettivamente allocata.  

@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032833"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni
 Un'applicazione ODBC 3 *. x* applicazione funziona tramite ODBC 3 *. x* gestione Driver funzionerà con un'API ODBC 2. *x* driver fino a quando non nuove funzionalità vengono usati. Entrambi duplicati funzionalità e modifiche del comportamento, tuttavia, hanno effetto che ODBC 3. *x* funzionamento dell'applicazione in un'API ODBC 2. *x* driver. Quando si lavora con un'API ODBC 2. *x* driver, Driver Manager viene eseguito il mapping di esempio di ODBC 3. *x* funzioni, che sono sostituiti uno o più API ODBC 2. *x* le funzioni, in corrispondente ODBC 2. *x* funzioni.  
   
 |ODBC 3. *x* (funzione)|ODBC 2. *x* (funzione)|  
 |-------------------------|-------------------------|  
-|**Funzione SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
@@ -46,7 +46,7 @@ Un'applicazione ODBC 3 *. x* applicazione funziona tramite ODBC 3 *. x* gestione
   
  [1] altre azioni potrebbero anche essere eseguite, a seconda dell'attributo richiesto.  
   
-## <a name="sqlallochandle"></a>Funzione SQLAllocHandle  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
  Gestione Driver esegue il mapping a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, nel modo appropriato. La chiamata seguente a **SQLAllocHandle**:  
   
 ```  
@@ -98,7 +98,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
 1.  Se *FieldIdentifier* è uno dei seguenti:  
   
-     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX o SQL_DESC_LOCAL_TYPE_NAME  
+     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX, or SQL_DESC_LOCAL_TYPE_NAME  
   
      Gestione Driver restituisce SQL_ERROR con SQLSTATE HY091 (identificatore del campo del descrittore non valido). Si applica alcuna regola ulteriormente in questa sezione.  
   
@@ -417,7 +417,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Quando un'applicazione ODBC 3. *x* funziona con un'API ODBC 2. *x* driver chiama **SQLColAttribute** con il *ColumnNumber* argomento impostato su 0, la gestione di Driver restituisce il *FieldIdentifier* valori elencati nella tabella seguente.  
   
-|*FieldIdentifier*|valore|  
+|*FieldIdentifier*|Value|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -449,14 +449,14 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Quando un'applicazione ODBC 3. *x* funziona con un'API ODBC 2. *x* driver chiama **SQLDescribeCol** con il *ColumnNumber* argomento impostato su 0, la gestione di Driver restituisce i valori elencati nella tabella seguente.  
   
-|Buffer|valore|  
+|Buffer|Value|  
 |------------|-----------|  
 |ColumnName|"" (stringa vuota)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
 |* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Quando un'applicazione ODBC 3. *x* funziona con un'API ODBC 2. *x* driver effettua la chiamata seguente al **SQLGetData** per recuperare un segnalibro:  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899944"
 ---
 # <a name="xml-source"></a>Origine XML
   L'origine XML legge un file di dati XML e popola con tali dati le colonne nell'output dell'origine.  

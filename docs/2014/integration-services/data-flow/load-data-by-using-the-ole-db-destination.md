@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902433"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Caricamento dei dati tramite la destinazione OLE DB
   È possibile aggiungere e configurare una destinazione OLE DB solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
@@ -42,7 +42,7 @@ ms.locfileid: "58376719"
   
     -   **Tabella o vista** Selezionare una tabella o una vista nel database che contiene i dati.  
   
-    -   **Tabella o vista - caricamento rapido** selezionare una tabella o vista nel database che contiene i dati e quindi impostare le opzioni di caricamento rapido: **Mantieni valori identity**, **Mantieni valori null**, **Table lock**, **vincolo Check**, **righe per batch**, o **massimo dimensioni massime dei commit di inserimento**.  
+    -   **Tabella o vista - Caricamento rapido** Selezionare una tabella o vista nel database che contiene i dati e quindi impostare le opzioni di caricamento rapido: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Vincolo Check**, **Righe per batch** o **Dimensioni massime commit inserimento**.  
   
     -   **Variabile nome vista o nome tabella** Selezionare una variabile definita dall'utente contenente il nome di una tabella o vista del database.  
   

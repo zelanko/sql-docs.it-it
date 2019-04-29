@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933690"
 ---
 # <a name="functions-on-sequences---id"></a>Funzioni su sequenze - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recupero di elementi basati sul valore dell'attributo IDREF  
- Nell'esempio seguente viene utilizzato fn:id per recuperare gli elementi <`employee`>, basati sull'attributo IDREF manager. In questo esempio, l'attributo manager è un attributo di tipo IDREF, mentre l'attributo eid è un attributo di tipo ID.  
+ L'esempio seguente usa utilizzato fn: ID per recuperare il <`employee`> elementi, basati sull'attributo IDREF manager. In questo esempio, l'attributo manager è un attributo di tipo IDREF, mentre l'attributo eid è un attributo di tipo ID.  
   
  Per un valore di attributo responsabile specifico, il **ID ()** funzione Trova i <`employee`> elemento il cui valore di attributo di tipo ID corrisponde al valore IDREF di input. In altre parole, per un dipendente specifico, il **ID ()** funzione restituisce il relativo responsabile.  
   
@@ -98,8 +98,8 @@ Go
   
  La query restituisce il valore "Dave", che indica che Dave è il responsabile di Joe.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>b. Recupero di elementi basati sul valore dell'attributo IDREFS OrderList  
- Nell'esempio seguente, l'attributo OrderList dell'elemento <`Customer`> è un attributo di tipo IDREFS. che elenca gli ID degli ordini del cliente specifico. Per ogni ID di un ordine, è disponibile un elemento figlio <`Order`> di <`Customer`> che indica il valore dell'ordine.  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recupero di elementi basati sul valore dell'attributo IDREFS OrderList  
+ Nell'esempio seguente, l'attributo OrderList del <`Customer`> elemento è un attributo di tipo IDREFS. che elenca gli ID degli ordini del cliente specifico. Per ogni id ordine, è disponibile un <`Order`> elemento figlio di <`Customer`> fornendo il valore dell'ordine.  
   
  L'espressione di query, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera il primo valore dall'elenco IDRES relativo al primo cliente. Questo valore viene quindi passato per il **ID ()** (funzione). La funzione trova quindi la <`Order`> elemento il cui valore dell'attributo OrderID corrispondente all'input per il **ID ()** (funzione).  
   

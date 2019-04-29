@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733927"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, in cui il parametro *HIDDEN_NODE_RATIO* è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
@@ -61,7 +61,7 @@ ms.locfileid: "52518047"
   
  Μg = p - (probabilità precedente di uno stato)  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  Valore è presente:     (1-μ)/σ / / (1 meno mu) diviso sigma)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  Per ogni valore di output, questa query restituisce i coefficienti e un ID che punta nuovamente al nodo di input correlato. Restituisce anche una riga che contiene il valore dell'output e l'intercetta. Ogni input X dispone di un proprio coefficiente (Ci), ma la tabella nidificata contiene anche un "gratuito" coefficiente (Co), calcolato in base alla formula seguente:  
   
- F (x) = X1 * C1 + X2\*C2 + + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Attivazione: esp(F(X)) / (1 + esp(F(X)) )  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890579"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor gestione connessione per più file flat (pagina Anteprima)
   Usare la pagina **Anteprima** della finestra di dialogo **Editor gestione connessione per più file flat** per visualizzare il contenuto del primo file di origine selezionato suddiviso in colonne in base alle impostazioni definite in precedenza.  

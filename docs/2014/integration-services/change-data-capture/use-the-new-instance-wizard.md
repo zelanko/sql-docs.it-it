@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834577"
 ---
 # <a name="use-the-new-instance-wizard"></a>Utilizzare la New Instance Wizard
   Tramite la New Instance Wizard è possibile creare una nuova istanza per un servizio CDC. Viene visualizzata la procedura guidata Create an Oracle CDC Instance da CDC Designer Console. Nella New Instance Wizard è possibile eseguire le operazioni seguenti.  

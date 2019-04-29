@@ -1,5 +1,5 @@
 ---
-title: Impostazioni globali (Editor) (MySQLToSQL) | Microsoft Docs
+title: Global Settings (Editor) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7cfe49aaade3a2854a62c8927102859a7f37ca9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926994"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>Impostazioni globali (editor) (MySQLToSQL)
 Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  

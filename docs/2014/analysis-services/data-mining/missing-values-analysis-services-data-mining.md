@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733351"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
   Una gestione corretta dei *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
@@ -43,13 +43,13 @@ ms.locfileid: "48164341"
 ## <a name="calculation-of-the-missing-state"></a>Calcolo dello stato mancante  
  Per l'algoritmo di data mining, i valori mancanti sono informativi. Nelle tabelle del case, `Missing` è uno stato valido come qualsiasi altro. Inoltre, in un modello di data mining possono essere utilizzati altri valori per stimare se un valore è mancante. In altri termini, il fatto che un valore sia mancante non è un errore.  
   
- Quando si crea un modello di data mining un `Missing` lo stato viene automaticamente aggiunto al modello per tutte le colonne discrete. Ad esempio, se la colonna di input [Gender] contiene due valori possibili, Male e Female, un terzo valore viene aggiunto automaticamente per rappresentare il `Missing` valore e nell'istogramma indicante la distribuzione di tutti i valori per la colonna include sempre un conteggio di i case con `Missing` valori. Se nella colonna Gender non manca alcun valore, nell'istogramma viene mostrato che lo stato Missing è stato rilevato in 0 case.  
+ Quando si crea un modello di data mining, viene automaticamente aggiunto uno stato `Missing` per tutte le colonne discrete. Se ad esempio nella colonna di input [Gender] sono contenuti due valori possibili, Male e Female, viene automaticamente aggiunto un terzo valore per rappresentare il valore `Missing` e nell'istogramma indicante la distribuzione di tutti i valori per la colonna è sempre incluso un conteggio dei case con valori `Missing`. Se nella colonna Gender non manca alcun valore, nell'istogramma viene mostrato che lo stato Missing è stato rilevato in 0 case.  
   
  La logica alla base dell'inclusione dello stato `Missing` per impostazione predefinita diventa chiara se si considera che nei dati potrebbero non essere contenuti esempi di tutti i valori possibili ed è preferibile evitare che la possibilità venga esclusa nel modello solo perché non sono presenti esempi nei dati. Se ad esempio dai dati delle vendite di un negozio risulta che tutti i clienti che hanno acquistato un determinato prodotto sono di sesso femminile, non è consigliabile creare un modello che stima che solo le donne possono acquistare tale prodotto. Al contrario, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene aggiunto un segnaposto per il valore sconosciuto aggiuntivo, denominato `Missing`, in modo da tenere conto di altri stati possibili.  
   
  Ad esempio, nella tabella seguente è illustrata la distribuzione di valori per il nodo (Tutto) nel modello di albero delle decisioni creato per l'esercitazione Bike Buyer. Nello scenario di esempio la colonna [Bike Buyer] rappresenta l'attributo stimabile, dove 1 indica "Sì" e 0 indica "No".  
   
-|valore|Case|  
+|Value|Case|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -57,21 +57,21 @@ ms.locfileid: "48164341"
   
  Tramite questa distribuzione viene indicato che circa la metà dei clienti ha acquistato una bicicletta, mentre l'altra metà no. Questo specifico set di dati è molto pulito; pertanto, ogni case ha un valore nella colonna [Bike Buyer] e il conteggio dei valori `Missing` è 0. Tuttavia, se nel campo [Bike Buyer] di un case è presente un valore Null, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tale riga viene conteggiata come un case con un valore `Missing`.  
   
- Se l'input è una colonna continua, il modello tabula due possibili stati per l'attributo: `Existing` e `Missing`. In altri termini, la colonna contiene un valore di un tipo di dati numerico oppure non contiene alcun valore. Per i case che contengono un valore, il modello calcola la media, la deviazione standard e altre statistiche significative. Per i casi che non hanno alcun valore, il modello fornisce un conteggio del `Missing` valori e adatta le stime di conseguenza. Il metodo per adattare la stima varia a seconda dell'algoritmo e viene descritto nella sezione seguente.  
+ Se l'input è una colonna continua, il modello tabula due possibili stati per l'attributo: `Existing` e `Missing`. In altri termini, la colonna contiene un valore di un tipo di dati numerico oppure non contiene alcun valore. Per i case che contengono un valore, il modello calcola la media, la deviazione standard e altre statistiche significative. Per i case che non includono valori, il modello fornisce un conteggio dei valori `Missing` e adatta le stime di conseguenza. Il metodo per adattare la stima varia a seconda dell'algoritmo e viene descritto nella sezione seguente.  
   
 > [!NOTE]  
 >  Per gli attributi di una tabella nidificata, i valori mancanti non sono informativi. Se ad esempio un cliente non ha acquistato un prodotto, la tabella nidificata **Prodotti** non include una riga corrispondente a tale prodotto e il modello di data mining non crea un attributo per il prodotto mancante. Se tuttavia si è interessati ai clienti che non hanno acquistato determinati prodotti, è possibile creare un modello filtrato in base alla non esistenza dei prodotti nella tabella nidificata, utilizzando un'istruzione NOT EXISTS nel filtro del modello. Per altre informazioni, vedere [Applicare un filtro a un modello di data mining](apply-a-filter-to-a-mining-model.md).  
   
 ## <a name="adjusting-probability-for-missing-states"></a>Adattamento della probabilità per gli stati mancanti  
- Oltre al conteggio dei valori, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito il calcolo della probabilità di qualsiasi valore nel set di dati. Lo stesso vale per il `Missing` valore. Nella tabella seguente sono, ad esempio, illustrate le probabilità per i case dell'esempio precedente:  
+ Oltre al conteggio dei valori, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito il calcolo della probabilità di qualsiasi valore nel set di dati. Lo stesso vale per il valore `Missing`. Nella tabella seguente sono, ad esempio, illustrate le probabilità per i case dell'esempio precedente:  
   
-|valore|Case|Probabilità|  
+|Value|Case|Probabilità|  
 |-----------|-----------|-----------------|  
 |0|9296|50,55%|  
 |1|9098|49,42%|  
 |Missing|0|0,03%|  
   
- Può sembrare strano che la probabilità che il `Missing` valore venga calcolato come 0,03%, quando il numero di case è 0. In realtà, si tratta di un comportamento previsto che consente al modello di gestire correttamente i valori non noti.  
+ Può sembrare strano che la probabilità del valore `Missing` venga calcolata come 0,03%, quando il numero di case è 0. In realtà, si tratta di un comportamento previsto che consente al modello di gestire correttamente i valori non noti.  
   
  In generale, la probabilità viene calcolata dividendo i case utili per tutti quelli possibili. In questo esempio l'algoritmo calcola la somma dei case che soddisfano una determinata condizione ([Bike Buyer] = 1 o [Bike Buyer] = 0) e divide tale numero per il conteggio totale delle righe. Tuttavia, per tenere conto dei case `Missing`, al numero di tutti i case possibili viene aggiunto 1. Di conseguenza, la probabilità per il case sconosciuto non è più uguale a zero, ma corrisponde a un numero molto basso, a indicare che lo stato è semplicemente improbabile, non impossibile.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48164341"
 >  Ogni algoritmo, inclusi quelli personalizzati che è possibile ottenere da un plug-in di terze parti, può consentire di gestire i valori mancanti in modo diverso.  
   
 ### <a name="special-handling-of-missing-values-in-decision-tree-models"></a>Gestione speciale di valori mancanti nei modelli di albero delle decisioni  
- L'algoritmo Microsoft Decision Trees calcola le probabilità per i valori mancanti in modo diverso rispetto ad altri algoritmi. Anziché aggiungere solo 1 al numero totale di case, l'algoritmo decision trees viene modificata per il `Missing` stato utilizzando una formula leggermente diversa.  
+ L'algoritmo Microsoft Decision Trees calcola le probabilità per i valori mancanti in modo diverso rispetto ad altri algoritmi. Anziché aggiungere solo 1 al numero complessivo di case, l'algoritmo degli alberi delle decisioni consente di eseguire un adattamento per lo stato `Missing` utilizzando una formula leggermente diversa.  
   
  In un modello di albero delle decisioni, la probabilità dello stato `Missing` viene calcolata come segue:  
   
@@ -109,13 +109,13 @@ ms.locfileid: "48164341"
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md)|  
 |Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)|  
 |Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
   
   

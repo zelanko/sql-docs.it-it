@@ -1,5 +1,5 @@
 ---
-title: 'Opzioni (Editor di testo: pagina scheda Editor e barra di stato) | Microsoft Docs'
+title: 'Opzioni (Editor di testo: Scheda Editor e barra di stato pagina) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844271"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (Editor di testo: pagina Scheda editor e barra di stato)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (Editor di testo: Scheda Editor e barra di stato pagina)
   Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
   
 ## <a name="option-settings-by-editor"></a>Impostazioni delle opzioni in base all'editor  
@@ -35,13 +35,13 @@ ms.locfileid: "48055451"
  **Visualizza tempo di esecuzione**  
  Consente di indicare il tempo di esecuzione degli script. Sono disponibili le impostazioni seguenti:  
   
- **Nessuno**  
+ **None**  
  Sulla barra di stato non viene visualizzata alcuna informazione relativa alla durata dell'esecuzione.  
   
- **Fine**  
+ **End**  
  Sulla barra di stato viene visualizzata l'ora corrente del giorno in cui è in corso l'esecuzione dello script. Quando lo script viene completato, viene visualizzata l'ora corrente del giorno del completamento dello script.  
   
- **Tempo trascorso**  
+ **Elapsed**  
  Sulla barra di stato viene visualizzata la quantità di tempo trascorso da quando lo script è stato eseguito. Quando lo script viene completato, viene visualizzata la quantità di tempo utilizzata per l'esecuzione dello script.  
   
  **Includi nome database**  
@@ -93,7 +93,7 @@ ms.locfileid: "48055451"
  Consente di includere il nome del server. Per le connessioni locali, si tratta del nome dell'istanza. Per le connessioni remote, si tratta del nome del computer remoto e del nome dell'istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le opzioni &#40;ambiente: tipi di carattere e colori&#41&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Le opzioni &#40;ambiente: Tipi di carattere e colori&#41&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codifica con colori negli editor di query](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: http_endpoints (Transact-SQL) | Microsoft Docs
+title: sys.http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,26 +21,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004702"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni endpoint creato nel server, che utilizza il protocollo HTTP.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**< colonne ereditate >**||Eredita le colonne da [Sys. Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**Sito**|**nvarchar(128)**|Nome del computer host per il sito, come specificato nell'opzione SITE =.|  
+|**site**|**nvarchar(128)**|Nome del computer host per il sito, come specificato nell'opzione SITE =.|  
 |**url_path**|**nvarchar(4000)**|Parte del percorso dell'URL per l'endpoint HTTP, come specificato nell'opzione PATH=.|  
 |**is_clear_port_enabled**|**bit**|1 = Porta non protetta abilitata con l'opzione PORT = CLEAR.|  
-|**CLEAR_PORT**|**int**|Numero di porta specificato nell'opzione CLEAR PORT =.<br /><br /> NULL = Non specificata.|  
+|**clear_port**|**int**|Numero di porta specificato nell'opzione CLEAR PORT =.<br /><br /> NULL = Non specificata.|  
 |**is_ssl_port_enabled**|**bit**|1 = Porta SSL abilitata con l'opzione PORT = SSL.|  
-|**SSL_PORT**|**int**|Valore del numero di porta specificato nell'opzione SSL PORT =.<br /><br /> NULL = Non specificata.|  
+|**ssl_port**|**int**|Valore del numero di porta specificato nell'opzione SSL PORT =.<br /><br /> NULL = Non specificata.|  
 |**is_anonymous_enabled**|**bit**|1 = Accesso anonimo abilitato con l'opzione AUTHENTICATION = ANONYMOUS.|  
 |**is_basic_auth_enabled**|**bit**|1 = Autenticazione di base abilitata con l'opzione AUTHENTICATION = BASIC.|  
 |**is_digest_auth_enabled**|**bit**|1 = Autenticazione digest abilitata con l'opzione AUTHENTICATION = DIGEST.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47735779"
 |**is_ntlm_auth_enabled**|**bit**|1 = Autenticazione integrata abilitata con l'opzione AUTHENTICATION = NTLM.|  
 |**is_integrated_auth_enabled**|**bit**|1 = Autenticazione integrata abilitata con l'opzione AUTHENTICATION = INTEGRATED.|  
 |**authorization_realm**|**nvarchar(128)**|Hint restituito al client nell'ambito della richiesta di autenticazione HTTP DIGEST. Valore dell'opzione AUTH REALM.<br /><br /> NULL se non specificato o se l'autenticazione DIGEST non è abilitata.|  
-|**DEFAULT_LOGON_DOMAIN**|**nvarchar(128)**|Dominio di accesso predefinito se si abilita l'autenticazione BASIC. Valore dell'opzione DEFAULT LOGON DOMAIN.<br /><br /> NULL se non specificato o se l'autenticazione BASIC non è abilitata.|  
+|**default_logon_domain**|**nvarchar(128)**|Dominio di accesso predefinito se si abilita l'autenticazione BASIC. Valore dell'opzione DEFAULT LOGON DOMAIN.<br /><br /> NULL se non specificato o se l'autenticazione BASIC non è abilitata.|  
 |**is_compression_enabled**|**bit**|1 = Opzione COMPRESSION = ENABLED impostata.|  
   
 ## <a name="permissions"></a>Permissions  

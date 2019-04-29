@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919664"
 ---
 # <a name="user-defined-type-requirements"></a>Requisiti per i tipi definiti dall'utente
   È necessario apportare alcune decisioni di progettazione importante durante la creazione di un tipo definito dall'utente (UDT) per l'installazione nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
@@ -112,7 +112,7 @@ ms.locfileid: "49120098"
  Indica se tutte le istanze del tipo definito dall'utente sono della stessa lunghezza.  
   
  `MaxByteSize`  
- Dimensioni massime, in byte, dell'istanza. È necessario specificare `MaxByteSize` con il formato di serializzazione `UserDefined`. Per un tipo definito dall'utente per cui è specificata una serializzazione definita dall'utente, `MaxByteSize` si riferisce alle dimensioni totali del tipo definito dall'utente nel formato serializzato definito dall'utente. Il valore di `MaxByteSize` deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 a indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (`System.Char`). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono pari a 22 byte per ciascun carattere Unicode UTF-16, moltiplicati per il numero massimo di caratteri, più 2 byte di controllo per l'overhead generato dalla serializzazione di un flusso binario. Di conseguenza, nel determinare il valore di `MaxByteSize`, è necessario considerare le dimensioni totali del tipo definito dall'utente serializzato, ovvero le dimensioni dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
+ Dimensioni massime, in byte, dell'istanza. È necessario specificare `MaxByteSize` con il formato di serializzazione `UserDefined`. Per un tipo definito dall'utente per cui è specificata una serializzazione definita dall'utente, `MaxByteSize` si riferisce alle dimensioni totali del tipo definito dall'utente nel formato serializzato definito dall'utente. Il valore di `MaxByteSize` deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 a indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (`System.Char`). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono 22 byte: 2 byte per carattere UTF-16 Unicode, moltiplicato per il numero massimo di caratteri più 2, il controllo byte di overhead generato dalla serializzazione di un flusso binario. Di conseguenza, nel determinare il valore di `MaxByteSize`, è necessario considerare le dimensioni totali del tipo definito dall'utente serializzato, ovvero le dimensioni dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
   
  `ValidationMethodName`  
  Nome del metodo utilizzato per convalidare le istanze del tipo definito dall'utente.  
@@ -140,9 +140,9 @@ ms.locfileid: "49120098"
   
 -   Minore di (\<)  
   
--   Maggiore o uguale a (>=)  
+-   Maggiore o uguale a (> =)  
   
--   Minore o uguale a (<=)  
+-   Minore o uguale a (< =)  
   
 ### <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
  Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Benché i tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportino i valori Null, perché un tipo definito dall'utente possa riconoscere un valore Null è necessario che la classe implementi l'interfaccia `INullable`. Per altre informazioni e un esempio di come implementare l'ammissione di valori null in un tipo definito dall'utente, vedere [codifica di tipi](creating-user-defined-types-coding.md).  

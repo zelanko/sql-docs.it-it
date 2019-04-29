@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6713a6b8b7b0b91fda24298a88f92b5cbd86bb09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834043"
 ---
 # <a name="confirm-delete-page"></a>Pagina Conferma eliminazione
   Utilizzare la pagina **Conferma eliminazione** per indicare se in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dovrà essere visualizzato un messaggio di conferma quando si eliminano determinati componenti.  

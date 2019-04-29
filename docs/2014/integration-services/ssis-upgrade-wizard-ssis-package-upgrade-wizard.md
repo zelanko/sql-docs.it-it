@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927158"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Aggiornamento guidato SSIS (Aggiornamento guidato pacchetti SSIS)
   Utilizzare l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] per eseguire la migrazione di pacchetti sviluppati in [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] nel formato utilizzato dalla versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929834"
 ---
 # <a name="rds-usage-and-security"></a>Utilizzo e sicurezza per RDS
 Usare le informazioni in questa sezione per configurare il server e usare rapidamente servizi desktop remoto. In questa sezione include i passaggi di configurazione specifici che potrebbe essere necessario intraprendere quando l'implementazione di servizi desktop remoto, vengono descritte alcune delle principali relazioni tra servizi desktop remoto e altre tecnologie e consente di individuare le soluzioni ai problemi che possono verificarsi quando si configura un Soluzione di servizi desktop remoto.  
@@ -39,7 +39,7 @@ Usare le informazioni in questa sezione per configurare il server e usare rapida
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
 
 

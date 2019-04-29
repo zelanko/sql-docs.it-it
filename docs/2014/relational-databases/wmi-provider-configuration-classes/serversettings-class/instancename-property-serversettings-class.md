@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 650e4a8efac5ce39e3fdfb476099ea648ca8ae62
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736950"
 ---
 # <a name="instancename-property-serversettings-class"></a>Proprietà InstanceName (classe ServerSettings)
   Ottiene il nome dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al quale vengono applicate le impostazioni del server.  

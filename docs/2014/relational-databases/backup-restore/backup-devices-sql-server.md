@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922198"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
   Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i dati sottoposti a *backup* vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
@@ -88,7 +88,7 @@ ms.locfileid: "52520145"
   
  TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
- Ad esempio:  
+ Ad esempio:   
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -138,7 +138,7 @@ GO
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Specifica di un nome UNC (Universal Naming Convention)  
  Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario utilizzare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato di un nome UNC è **\\\\**_NomeSistema_**\\**_NomeCondivisione_**\\**_Percorso_**\\**_NomeFile_.  
   
- Ad esempio:  
+ Ad esempio:   
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -176,7 +176,7 @@ GO
   
  TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
- Ad esempio:  
+ Ad esempio:   
   
 ```  
 BACKUP LOG AdventureWorks2012   

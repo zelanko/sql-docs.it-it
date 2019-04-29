@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0eda0980b3b8ffbc748f15933ea397ae3d0b71e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913415"
 ---
 # <a name="mssqlserver7916"></a>MSSQLSERVER_7916
     
@@ -30,7 +30,7 @@ ms.locfileid: "48134709"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_REPAIR_RECORD_DELETED|  
-|Testo del messaggio|Correzione: record eliminato per l'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE), a pagina P_ID, slot S_ID. Gli indici verranno ricompilati.|  
+|Testo del messaggio|Correzione: Record eliminato per l'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE), nella pagina P_ID, slot S_ID. Gli indici verranno ricompilati.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Messaggio informativo inviato da REPAIR che indica che il record specificato è stato eliminato dalla pagina.  

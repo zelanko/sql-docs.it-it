@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e77be71458eb10e97a82c925d34141a7bcaf1dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943004"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>Attributi relativi ad ambiente, connessione e istruzioni
 ODBC definisce una serie di attributi relative agli ambienti, le connessioni o istruzioni.  

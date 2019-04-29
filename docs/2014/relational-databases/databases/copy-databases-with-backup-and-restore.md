@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917468"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "52787833"
  Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino, è possibile usare la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabella di cronologia per trovare i file di database e log nel backup si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
- Se per i motivi elencati in precedenza non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostare i file in un nuovo percorso mano a mano che vengono ripristinati, Ad esempio:  
+ Se per i motivi elencati in precedenza non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostare i file in un nuovo percorso mano a mano che vengono ripristinati, Ad esempio:   
   
 -   Si supponga di voler ripristinare un database da backup creati nella posizione predefinita di versioni precedenti.  
   

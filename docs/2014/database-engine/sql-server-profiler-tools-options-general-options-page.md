@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844928"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Strumenti-Opzioni (pagina Opzioni generali)
   Usare la finestra di dialogo **Opzioni generali** per visualizzare o specificare le opzioni seguenti.  
@@ -61,7 +61,7 @@ ms.locfileid: "48113061"
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] chiede conferma prima di aggiungere un file di rollover quando è aperto un file di traccia.  
   
  **Non caricare mai file di rollover successivi**  
- Il caricamento di file di rollover consecutivi da parte di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] non viene mai eseguito quando è aperto un file di traccia.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] non esegue mai il caricamento di file di rollover consecutivi quando è aperto un file di traccia.  
   
 ### <a name="replay-options"></a>Opzioni di riproduzione  
  **Numero predefinito di thread di riproduzione**  
@@ -74,8 +74,8 @@ ms.locfileid: "48113061"
  Consente di specificare l'intervallo di polling in secondi di Health Monitor durante la riproduzione. Il valore predefinito è 60 secondi. Questo valore consente di configurare la frequenza con cui Health Monitor esegue il polling di candidati per la terminazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avviare una traccia automaticamente dopo la connessione a un Server &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Impostare i valori predefiniti di visualizzazione traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Avviare una traccia automaticamente dopo la connessione a un server &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Impostare i valori predefiniti per la visualizzazione delle tracce &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Riprodurre una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Riprodurre un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Riprodurre le tracce](../tools/sql-server-profiler/replay-traces.md)   

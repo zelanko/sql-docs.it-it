@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872217"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
   In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
@@ -90,7 +90,7 @@ ms.locfileid: "54131491"
  Usare la pagina **Selezione attività di configurazione** per indicare quali attività verranno eseguite ogni volta che si usa la procedura guidata. Se si vuole cambiare tali attività prima del completamento della procedura guidata, fare clic sul pulsante **Indietro** per tornare in questa pagina e selezionare un'attività diversa.  
   
 > [!NOTE]  
->  Se posta elettronica Database non è stato abilitato, si riceverà il messaggio: **La funzionalità di posta elettronica Database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
+>  Se la caratteristica Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio: **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
   
  **Installa Posta elettronica database eseguendo le attività seguenti**  
  Consente di eseguire tutte le attività necessarie per installare Posta elettronica database per la prima volta. Questa opzione include tutte le altre tre.  

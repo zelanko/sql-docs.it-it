@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920828"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
   La distribuzione rappresenta il processo tramite il quale si mette a disposizione un'applicazione o un modulo pronto per l'utilizzo perché venga installato ed eseguito in altri computer. L'uso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
@@ -96,7 +96,7 @@ ms.locfileid: "48122781"
   
 6.  Per ogni tipo di oggetto selezionato nel **selezione tipi di oggetti** riquadro, un **Scegli \<tipo >** riquadro viene visualizzato. In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti e fare clic su **successivo**.  
   
-7.  Il **opzioni di Output** riquadro verrà visualizzato dopo tutti i database desiderato dell'oggetto sono stati selezionati tipi. Selezionare **genera Script nel file** e specificare un percorso di file per lo script. Fare clic su **Avanti**. Rivedere le selezioni effettuate e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
+7.  Il **opzioni di Output** riquadro verrà visualizzato dopo tutti i database desiderato dell'oggetto sono stati selezionati tipi. Selezionare **genera Script nel file** e specificare un percorso di file per lo script. Selezionare **Avanti**. Rivedere le selezioni effettuate e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
   
 ## <a name="post-deployment-scripts"></a>Script post-distribuzione  
  È possibile eseguire uno script post-distribuzione.  

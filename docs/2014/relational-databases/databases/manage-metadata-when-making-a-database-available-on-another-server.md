@@ -35,11 +35,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917357"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server)
   Le informazioni contenute in questo argomento sono relative alle situazioni seguenti:  
@@ -134,7 +134,7 @@ ms.locfileid: "52785993"
   
  Per abilitare la decrittografia automatica della chiave master del database in un'istanza del server, viene crittografata una copia di questa chiave utilizzando la chiave master del servizio. Questa copia crittografata viene archiviata sia nel database che nel database **master**. La copia archiviata nel database **master** viene generalmente aggiornata in modo automatico in seguito a ogni modifica della chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di decrittografare la chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è richiesta la chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password.  
   
- Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master, eseguire l'istruzione seguente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. È consigliabile quindi abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY CHIAVE MASTER DEL SERVIZIO. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master, eseguire l'istruzione seguente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Per informazioni sull'abilitazione della decrittografia automatica della chiave master del database di un database mirror, vedere [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -280,7 +280,7 @@ ms.locfileid: "52785993"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a> Autorizzazioni  
  I tipi seguenti di autorizzazioni possono essere influenzati quando un database viene reso disponibile in un'altra istanza del server.  
   
 -   Autorizzazioni GRANT, REVOKE o DENY per gli oggetti di sistema  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925301"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
   Nelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], creare un membro foglia quando si desidera aggiungere dati master al sistema e non usa le tabelle di staging o il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  

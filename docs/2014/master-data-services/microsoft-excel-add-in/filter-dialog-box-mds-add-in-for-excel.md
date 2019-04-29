@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923822"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]usare la finestra di dialogo **Filtro** per limitare l'elenco di dati gestiti da MDS prima di caricarlo in Excel.  
@@ -54,7 +54,7 @@ ms.locfileid: "52784593"
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |Modello|Il nome del modello.|  
-|Versione|Il nome della versione.|  
+|Version|Il nome della versione.|  
 |Entità|Il nome dell'entità.|  
 |Righe|Il numero di righe che verrà caricato in Excel, in base ai filtri applicati nella sezione **Righe** .|  
 |Colonne|Il numero di colonne che verrà caricato in Excel, in base agli attributi selezionati nella sezione **Colonne** .|  

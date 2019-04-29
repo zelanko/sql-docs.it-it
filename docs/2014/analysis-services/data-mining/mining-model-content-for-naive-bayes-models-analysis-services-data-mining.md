@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733609"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Naive Bayes (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48197331"
  NODE_TYPE  
  Un modello Naive Bayes restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|Contiene statistiche che descrivono il set intero di case di training per il modello.|  
 |9 (Attributo stimabile)|Contiene il nome dell'attributo stimabile.|  
@@ -264,7 +264,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0,472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0,527065883|4|  
   
- In questi risultati il valore della colonna SUPPORT suggerisce il conteggio di clienti con lo stato civile specificato che hanno acquistato una bicicletta. La colonna PROBABILITY contiene la probabilità di ogni valore dell'attributo, calcolato solo per questo nodo. Per definizioni generali dei termini usati nella tabella NODE_DISTRIBUTION, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ In questi risultati il valore della colonna SUPPORT suggerisce il conteggio di clienti con lo stato civile specificato che hanno acquistato una bicicletta. La colonna PROBABILITY contiene la probabilità di ogni valore dell'attributo, calcolato solo per questo nodo. Per definizioni generali dei termini usati nella tabella NODE_DISTRIBUTION, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Informazioni nel nodo delle statistiche marginali  
  In un modello Naive Bayes la tabella nidificata per il nodo delle statistiche marginali contiene la distribuzione di valori per l'intero set di dati di training. Ad esempio, la tabella seguente contiene un elenco parziale delle statistiche della tabella NODE_DISTRIBUTION nidificata per il modello, `TM_NaiveBayes`:  
@@ -286,12 +286,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  In un modello Naive Bayes non possono essere presenti attributi continui, pertanto tutti i dati numerici vengono rappresentati come discreti (VALUE_TYPE = 4) o discretizzati (VALUE_TYPE = 5).  
   
- Oggetto `Missing` valore (VALUE_TYPE = 1) viene aggiunto a ogni attributo di input e output per rappresentare i valori potenziali che non erano presenti nei dati di training. È necessario prestare attenzione distinguere tra "mancante" riferito a una stringa e il valore predefinito `Missing` valore. Per altre informazioni, vedere [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Un valore `Missing` (VALUE_TYPE = 1) viene aggiunto a ogni attributo di input e di output per rappresentare i valori potenziali che non erano presenti nei dati di training. È necessario prestare attenzione alla distinzione tra "mancante" riferito a una stringa e il valore `Missing` predefinito. Per altre informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Visualizzatori modello di Data Mining](data-mining-model-viewers.md)   
- [Query di Data Mining](data-mining-queries.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
+ [Query di data mining](data-mining-queries.md)   
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)  
   
   

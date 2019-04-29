@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877417"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor origine XML (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** di **Editor origine XML** per specificare un file XML e il file XSD che trasforma i dati XML.  
@@ -34,7 +34,7 @@ ms.locfileid: "58393889"
 |Value|Descrizione|  
 |-----------|-----------------|  
 |Percorso file XML|Consente di recuperare i dati da un file XML.|  
-|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Le informazioni correlate**: [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
+|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
 |Dati XML da variabile|Consente di recuperare i dati XML da una variabile.|  
   
  **Usa schema inline**  

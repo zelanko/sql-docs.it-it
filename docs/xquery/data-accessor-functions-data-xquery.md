@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ac37c6d3a55be4f11a4ad925a950724d5d791d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934836"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funzioni di accesso dati - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Root ProductID="19" Feature="parts and labor"/>  
@@ -142,7 +142,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Root>  

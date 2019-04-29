@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926327"
 ---
 # <a name="use-variables-in-packages"></a>Utilizzo di variabili nei pacchetti
   Le variabili rappresentano un elemento aggiuntivo utile e flessibile dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Consentono infatti la comunicazione tra i vari oggetti di un pacchetto e tra pacchetti padre e figlio. Le variabili possono essere utilizzate anche in espressioni e script.  

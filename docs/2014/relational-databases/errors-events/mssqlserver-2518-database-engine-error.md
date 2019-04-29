@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df810e28070c797cb24aa3faa308b5419c877139
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914700"
 ---
 # <a name="mssqlserver2518"></a>MSSQLSERVER_2518
     
@@ -30,7 +30,7 @@ ms.locfileid: "48213161"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
-|Testo del messaggio|ID oggetto O_ID (oggetto "O_NAME"): impossibile verificare colonne calcolate e tipi definiti dall'utente per questo oggetto perché Common Language Runtime (CLR) è disabilitato.|  
+|Testo del messaggio|ID oggetto O_ID (oggetto "Nome_o"): Le colonne calcolate e tipi definiti dall'utente non possono essere estratto per questo oggetto perché common language runtime (CLR) è disabilitato.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo messaggio informativo indica che Query Processor non è riuscito a fornire a DBCC un oggetto interno per consentire la restituzione delle colonne calcolate e dei tipi CLR (Common Language Runtime) definiti dall'utente. Il problema si verifica perché CLR è incluso in una delle colonne, ma non è attivato. L'oggetto interno è incluso in tutte le colonne. Pertanto, l'impossibilità di restituire una singola colonna impedisce la creazione dell'oggetto interno. Ciò significa che non verrà controllata la correttezza delle colonne calcolate o che quest'ultime non verranno utilizzate durante il controllo DBCC della consistenza tra indici e tabelle di base.  

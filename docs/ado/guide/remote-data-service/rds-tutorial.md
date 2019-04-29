@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929881"
 ---
 # <a name="rds-tutorial"></a>Esercitazione su RDS
 Questa esercitazione viene illustrato l'utilizzo del modello di programmazione di servizi desktop remoto per eseguire query e aggiornare un'origine dati. In primo luogo, la descrive i passaggi necessari per completare questa attività. Quindi l'esercitazione viene ripetuta in Microsoft® Visual Basic Scripting Edition (con ADO per Windows Foundation Classes (ADO/WFC)).  
@@ -55,17 +55,17 @@ Questa esercitazione viene illustrato l'utilizzo del modello di programmazione d
   
  Questa esercitazione contiene gli argomenti seguenti.  
   
--   [Passaggio 1: Specificare un programma del server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Passaggio 1: Specificare un'applicazione Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Passaggio 2: Richiamare il programma del server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Passaggio 2: Richiamare il programma di Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Passaggio 3: Il server ottiene un recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Passaggio 3: Server otterrà un Recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Passaggio 4: Il server restituisce il recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Passaggio 4: Server restituisce il Recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
 -   [Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Passaggio 6: Le modifiche vengono inviate al Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922936"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti solo per il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk.  
@@ -75,13 +75,13 @@ ms.locfileid: "48169391"
   
  Per ripristinare lo stato del database corrispondente alle ore 21.45 (punto di errore), è possibile utilizzare una delle procedure alternative seguenti:  
   
- **Alternativa 1: ripristino del database dal backup completo più recente**  
+ **Alternativa 1: ripristinare il database da un backup completo più recente**  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
 2.  Non ripristinare del backup completo del database delle 18.00. Ripristinare invece il backup completo del database più recente effettuato alle 18.00, quindi applicare il backup del log effettuato alle 20.00 e il backup della parte finale del log.  
   
- **Alternativa 2: ripristino del database da un backup completo precedente**  
+ **Alternativa 2: ripristinare il database da un backup completo precedente**  
   
 > [!NOTE]  
 >  Questa procedura alternativa è utile nel caso non sia possibile utilizzare il backup completo del database effettuato alle 18.00 del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916883"
 ---
 # <a name="tempdb-database"></a>Database tempdb
   Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
@@ -72,7 +72,7 @@ ms.locfileid: "59240709"
 |ARITHABORT|OFF|Yes|  
 |AUTO_CLOSE|OFF|No|  
 |AUTO_CREATE_STATISTICS|ON|Yes|  
-|AUTO_SHRINK|OFF|no|  
+|AUTO_SHRINK|OFF|No|  
 |AUTO_UPDATE_STATISTICS|ON|Yes|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
 |CHANGE_TRACKING|OFF|No|  
@@ -82,13 +82,13 @@ ms.locfileid: "59240709"
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|No|  
+|ENCRYPTION|OFF|no|  
 |NUMERIC_ROUNDABORT|OFF|Yes|  
 |PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|  
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
 |READ_COMMITTED_SNAPSHOT|OFF|No|  
-|RECOVERY|SIMPLE|no|  
+|RECOVERY|SIMPLE|No|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  
 |TRUSTWORTHY|OFF|No|  

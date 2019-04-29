@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856317"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di rete neurale (Esercitazione intermedia sul data mining)
   Per creare un modello di data mining, è innanzitutto necessario utilizzare la Creazione guidata modello di data mining per creare una nuova struttura di data mining basata sulla nuova vista origine dati. In questa attività verrà utilizzata la procedura guidata per creare una struttura di data mining e, contemporaneamente, il modello di data mining associato basato sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  

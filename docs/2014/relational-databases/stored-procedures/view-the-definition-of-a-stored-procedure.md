@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856507"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Visualizzare la definizione di una stored procedure
     
@@ -34,12 +34,12 @@ ms.locfileid: "48063851"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Stored procedure di sistema: `sp_helptext`  
- È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
+ È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario dell'oggetto o agli utenti autorizzati che dispongono di una delle seguenti autorizzazioni: ALTER, controllo, TAKE OWNERSHIP o VIEW DEFINITION.  
   
  Funzione di sistema: `OBJECT_DEFINITION`  
- Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario dell'oggetto o agli utenti autorizzati che dispongono di una delle seguenti autorizzazioni: ALTER, controllo, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  Vista del catalogo dell'oggetto: `sys.sql_modules`  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
@@ -54,15 +54,15 @@ ms.locfileid: "48063851"
 ###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare la definizione di una stored procedure in Esplora oggetti**  
   
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e quindi espanderla.  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
   
-3.  Espandere **Stored procedure**, fare clic con il pulsante destro del mouse sulla stored procedure, quindi scegliere **Crea script per stored procedure**, quindi fare clic su una delle opzioni seguenti: **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in**o **Genera codice per istruzioni DROP e CREATE in**.  
+3.  Espandere **Stored procedure**, fare doppio clic la procedura e quindi fare clic su **lo Script per Stored Procedure**, quindi fare clic su uno dei seguenti: **Per creare**, **Alter in**, o **Drop e Create in**.  
   
 4.  Selezionare **Nuova finestra editor di query**. Verrà visualizzata la definizione della stored procedure.  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per visualizzare la definizione di una stored procedure nell'editor di query**  
   
  Stored procedure di sistema: `sp_helptext`  
@@ -70,7 +70,7 @@ ms.locfileid: "48063851"
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra di query, immettere l'istruzione seguente che usa il `sp_helptext` stored procedure di sistema. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
+3.  Nella finestra Query immettere l'istruzione seguente che usano la stored procedure di sistema `sp_helptext`. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063851"
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra query immettere le istruzioni seguenti che usano il `sys.sql_modules` vista del catalogo. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
+3.  Nella finestra Query immettere le istruzioni seguenti che usano la vista del catalogo `sys.sql_modules`. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
   
     ```  
     USE AdventureWorks2012;  

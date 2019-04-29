@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cbf36108db7eed47f9ef3a63bece8b03a727956
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894079"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor ciclo Foreach (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** per assegnare un nome e una descrizione al contenitore Ciclo Foreach che utilizza un enumeratore specificato per ripetere un flusso di lavoro per ogni membro di una raccolta.  

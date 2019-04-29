@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890294"
 ---
 # <a name="package-and-project-password"></a>Password pacchetto e Password progetto
   Utilizzare la finestra di dialogo **Password pacchetto** per specificare la password del pacchetto per un pacchetto crittografato con una password. È necessario specificare una password se il pacchetto utilizza il livello di protezione **Crittografa tutti i dati riservati con una password**oppure **Crittografa tutti i dati con una password** .  

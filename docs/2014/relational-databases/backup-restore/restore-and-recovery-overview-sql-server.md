@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921016"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
   Per recuperare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in seguito a un errore, il relativo amministratore deve ripristinare un set di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una sequenza di ripristino significativa e logicamente corretta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano il ripristino di dati da backup di un intero database, di un file di dati o di una pagina di dati nelle modalità descritte di seguito:  
@@ -143,15 +143,15 @@ ms.locfileid: "53370193"
 ##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
  Tramite Database Recovery Advisor viene semplificata la costruzione di piani di ripristino mediante i quali vengono implementate ottime sequenze di ripristino corrette. Molti problemi noti di ripristino del database sono stati risolti e sono stati apportati molti miglioramenti richiesti dai clienti. Di seguito sono riportati i miglioramenti principali introdotti da Database Recovery Advisor:  
   
--   **Algoritmo del piano di ripristino:**  L'algoritmo utilizzato per costruire i piani di ripristino è migliorate in modo significativo, in particolare per scenari di ripristino complessi. Molti casi limite, inclusi gli scenari di fork nei ripristini temporizzati, vengono gestititi in modo più efficiente rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algoritmo del piano di ripristino:**  l'algoritmo utilizzato per costruire i piani di ripristino è stato migliorato in modo significativo, in particolare per gli scenari di ripristino complessi. Molti casi limite, inclusi gli scenari di fork nei ripristini temporizzati, vengono gestititi in modo più efficiente rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Ripristini di Point-in-time:**  Tramite Database Recovery Advisor semplifica notevolmente il ripristino di un database a un determinato punto nel tempo. Tramite una cronologia di backup visiva viene migliorato in modo significativo il supporto per i ripristini temporizzati. Tramite questa cronologia visiva è possibile identificare un momento appropriato come punto di recupero di destinazione per il ripristino di un database. Tramite la cronologia viene semplificato l'attraversamento di un percorso di recupero con fork, cioè un percorso che si estende su più fork di recupero. In un piano di ripristino temporizzato specificato sono inclusi automaticamente i backup rilevanti per il ripristino al punto nel tempo previsto (data e ora). Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Ripristini temporizzati:**  tramite Database Recovery Advisor viene notevolmente semplificato il ripristino di un database in un determinato momento. Tramite una cronologia di backup visiva viene migliorato in modo significativo il supporto per i ripristini temporizzati. Tramite questa cronologia visiva è possibile identificare un momento appropriato come punto di recupero di destinazione per il ripristino di un database. Tramite la cronologia viene semplificato l'attraversamento di un percorso di recupero con fork, cioè un percorso che si estende su più fork di recupero. In un piano di ripristino temporizzato specificato sono inclusi automaticamente i backup rilevanti per il ripristino al punto nel tempo previsto (data e ora). Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Per ulteriori informazioni su Database Recovery Advisor, vedere i seguenti blog relativi alla facilità di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Recovery Advisor: Introduzione](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: pagina di introduzione](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor: Pagina relativa all'utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  Nessuna.  

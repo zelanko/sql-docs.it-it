@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844162"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opzioni (Editor di testo - pagina Estensione file)
   Usare la finestra di dialogo **Opzioni** per specificare la modalità in cui i file con determinate estensioni vengono gestiti da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per ogni estensione immessa è possibile selezionare un editor. È pertanto possibile scegliere l'editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in cui sarà possibile aprire determinati tipi di documento. Per aprire le opzioni relative all'estensione di file scegliere **Opzioni** dal menu **Strumenti**, espandere **Editor di testo** e quindi fare clic su **Estensione file**.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892643"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
   Usare la **impostazione copia tabella o Query** pagina per specificare la modalità copiare i dati. È possibile selezionare gli oggetti di database esistenti che si desidera copiare mediante l'interfaccia grafica oppure utilizzare Transact-SQL per creare una query più complessa.  

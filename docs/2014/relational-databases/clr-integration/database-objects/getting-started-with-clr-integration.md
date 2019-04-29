@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874124"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introduzione all'integrazione con CLR
   In questo argomento viene fornita una panoramica delle librerie necessarie per compilare oggetti di database utilizzando gli spazi dei nomi e il [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integrazione con common language runtime (CLR) di .NET Framework. In questo argomento viene inoltre illustrato come scrivere, compilare ed eseguire una stored procedure CLR semplice scritta in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
@@ -96,7 +96,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version contiene il numero di versione del file di ridistribuzione di .NET Framework installato. Esempio:  
+ version contiene il numero di versione del file di ridistribuzione di .NET Framework installato. Ad esempio:   
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v2.0.31113  
@@ -142,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Una volta creata, la stored procedure può essere eseguita come una normale stored procedure scritta in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Eseguire il comando seguente:  
+ Una volta creata, la stored procedure può essere eseguita come una normale stored procedure scritta in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Eseguire il seguente comando:  
   
 ```  
 DECLARE @J nchar(25)  

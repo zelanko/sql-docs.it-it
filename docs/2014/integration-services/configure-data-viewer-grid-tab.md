@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 293624979236d8507d53d86668554041eed76c37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834429"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configura visualizzatore dati (scheda Griglia)
   Utilizzare la scheda **Griglia** della finestra di dialogo **Configura visualizzatore dati** per indicare le colonne da visualizzare. In un grafico griglia vengono visualizzati record di dati sotto forma di righe in una griglia. Il grafico riflette il contenuto di un solo buffer.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023397"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection - classe di evento
   La classe di evento ExistingConnection indica le proprietà delle connessioni utente esistenti dopo l'avvio della traccia. Il server genera un evento ExistingConnection per ogni connessione utente esistente.  
@@ -34,7 +34,7 @@ ms.locfileid: "52822175"
 |DatabaseID|`int`|ID del database della connessione utente. ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |EventClass|`int`|Tipo di evento = 17.|27|No|  
-|EventSequence|`int`|Sequenza dell'evento all'interno della traccia.|51|No|  
+|EventSequence|`int`|Sequenza dell'evento all'interno della traccia.|51|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IntegerData|`int`|Dimensioni del pacchetto di rete in uso per la connessione.|25|Yes|  
@@ -44,7 +44,7 @@ ms.locfileid: "52822175"
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Yes|  
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Yes|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Yes|  
-|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |StartTime|`datetime`|Ora in cui l'utente ha aperto la connessione (ora di accesso).|14|Yes|  

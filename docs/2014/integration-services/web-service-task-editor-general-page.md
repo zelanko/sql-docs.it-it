@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877691"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Servizio Web** per specificare una gestione connessione HTTP e il percorso del file WSDL (Web Services Description Language) usato dall'attività Servizio Web, descrivere l'attività Servizio Web e scaricare il file WSDL.  
@@ -34,7 +34,7 @@ ms.locfileid: "58374749"
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati:**  [Gestione connessione HTTP](connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina del Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Argomenti correlati:**  [Gestione connessione HTTP](connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Digitare il percorso completo di un file WSDL presente in locale nel computer oppure fare clic sul pulsante sfoglia **(...)** e individuare il file.  

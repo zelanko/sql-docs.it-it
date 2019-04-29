@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5a7e0907732b1d944ce0425b55133ba915d3575
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926182"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Compatibilità con le versioni precedenti (Master Data Services)
   In questa sezione vengono descritte le differenze tra le versioni di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Vengono illustrate caratteristiche che non sono più disponibili o che verranno rimosse a partire da una delle prossime versioni. Vengono inoltre descritte le modifiche apportate al prodotto che interromperanno il funzionamento o influiranno sul comportamento di un'applicazione esistente che include la funzionalità di Integration Services.  

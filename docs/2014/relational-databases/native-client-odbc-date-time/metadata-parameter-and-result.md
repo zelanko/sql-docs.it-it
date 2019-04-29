@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032334"
 ---
 # <a name="parameter-and-result-metadata"></a>Metadati per parametri e risultati
   In questo argomento viene descritto ciò che viene restituito nel campo di descrizione del parametro di implementazione (IPD, Implementation Parameter Descriptor) e in quello di descrizione della riga di implementazione (IRD, Implementation Row Descriptor) per i tipi di dati date e time.  
@@ -25,7 +25,7 @@ ms.locfileid: "52410038"
 ## <a name="information-returned-in-ipd-fields"></a>Informazioni restituite nei campi IPD  
  Di seguito sono riportate le informazioni restituite nei campi IPD:  
   
-|Tipo di parametro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo di parametro|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -71,7 +71,7 @@ ms.locfileid: "52410038"
 ## <a name="information-returned-in-ird-fields"></a>Informazioni restituite nei campi IRD  
  Di seguito sono riportate le informazioni restituite nei campi IRD:  
   
-|Tipo di colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo di colonna|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

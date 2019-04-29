@@ -1,5 +1,5 @@
 ---
-title: Power Pivot connessione BI Semantic Model (bism) | Documenti Microsoft
+title: Power Pivot connessione BI Semantic Model (bism) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8841a67a13db4321618c82f3b1e830988dce9a35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960245"
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Connessione BI Semantic Model (con estensione bism) di PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,12 +22,12 @@ ms.locfileid: "34024428"
   
  La creazione e l'accesso a una connessione BISM avvengono tramite SharePoint. La creazione di connessioni BISM abilita i comandi di avvio veloce su una connessione BISM in una raccolta. I comandi di avvio veloce consentono di aprire una nuova cartella di lavoro di Excel o opzioni per la modifica del file della connessione. Se Reporting Services è installato sarà inoltre presente un comando per creare un report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
- ![Il comando di avvio rapido di schermata di BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "il comando di avvio rapido di schermata di BISM")  
+ ![Comando di avvio rapido di screenshot di BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "comando di avvio rapido di Screenshot di BISM")  
   
 ##  <a name="bkmk_prereq"></a> Database supportati  
  Una connessione BISM punta a dati del modello tabulare. Per questi dati sono disponibili tre origini:  
   
--   Un database modello tabulare in esecuzione su un'istanza di Analysis Services autonoma in modalità server tabulare. Una distribuzione di un'istanza di Analysis Services autonoma è esterna alla farm. Per l'accesso a origini dati esterne alla farm sono necessarie autorizzazioni aggiuntive; informazioni in merito vengono fornite in questo argomento: [Creare una connessione BISM a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Un database modello tabulare in esecuzione su un'istanza di Analysis Services autonoma in modalità server tabulare. Una distribuzione di un'istanza di Analysis Services autonoma è esterna alla farm. L'accesso alle origini dati esterne alla farm è necessarie autorizzazioni aggiuntive, quale sono disponibili in questo argomento: [Creare una connessione BI Semantic Model a un Database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] salvate in SharePoint. I database [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporati nelle cartelle di lavoro di Excel sono considerati equivalenti ai database modello tabulare eseguiti in un server in modalità tabulare di Analysis Services autonomo. Se si usano già [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, è possibile definire una connessione BI Semantic Model che punta alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una raccolta di SharePoint e compilare report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] che usano i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esistenti.  È possibile usare cartelle di lavoro create in SQL Server 2008 R2 o in versioni di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34024428"
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Informazioni sulla sequenza di connessione per connessioni BISM  
  In questa sezione viene illustrato il comportamento della connessione tra le varie applicazioni client, quale l'applicazione desktop di Excel o lo strumento client di creazione report di Power View su SharePoint e un database modello tabulare all'interno o all'esterno della farm di SharePoint.  
   
- Tutte le connessioni a un database modello tabulare vengono eseguite tramite le credenziali dell'utente che sta richiedendo i dati. Tuttavia, i meccanismi di connessione variano a seconda se si tratta di una connessione interna alla farm, una connessione a hop singolo o doppio e se l'autenticazione Kerberos è abilitata. Per altre informazioni sulle connessioni autenticate tra origini dati SharePoint e back-end, vedere [Autenticazione hop doppio: perché NTLM non riesce e Kerberos funziona](http://go.microsoft.com/fwlink/?LinkId=237137).  
+ Tutte le connessioni a un database modello tabulare vengono eseguite tramite le credenziali dell'utente che sta richiedendo i dati. Tuttavia, i meccanismi di connessione variano a seconda se si tratta di una connessione interna alla farm, una connessione a hop singolo o doppio e se l'autenticazione Kerberos è abilitata. Per altre informazioni sulle connessioni autenticate tra origini dati SharePoint e back-end, vedere [autenticazione hop doppio: Perché NTLM ha esito negativo e Kerberos funziona](http://go.microsoft.com/fwlink/?LinkId=237137).  
   
  **Connessione da Excel ai dati tabulari su una rete**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34024428"
   
  Nella figura seguente è illustrata tale sequenza di connessione. Inizia con una richiesta per la connessione con estensione bism, seguita dal download di informazioni di connessione al client e infine dalla connessione a hop singolo al database. La connessione viene eseguita utilizzando le credenziali di Windows dell'utente di Excel che ha le autorizzazioni di lettura sul database di Analysis Services. È una comunicazione a hop singolo, pertanto anche se è abilitata, l'autenticazione Kerberos non è richiesta per questo scenario.  
   
- ![Le connessioni da Excel al database modello tabulare](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "connessioni da Excel a database modello tabulare")  
+ ![Le connessioni da Excel al database modello tabulare](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "le connessioni da Excel al database modello tabulare")  
   
  **Connessione da Power View ai dati tabulari su una rete**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34024428"
   
  Nell'illustrazione seguente viene mostrata una sequenza di connessione che utilizza la stessa identità utente di Windows per ogni connessione. Nell'ultima connessione a Analysis Services, la connessione viene eseguita dall'identità dell'applicazione del servizio Reporting Services, passando l'identità utente di Windows tramite **effectiveusername**.  
   
- ![Connessione rappresentata a un database tabulare](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "connessione rappresentata a un database tabulare")  
+ ![Connessione rappresentata a database tabulare](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "connessione rappresentata a database tabulare")  
   
  **Connessione da Power View ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34024428"
   
  [Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Creare una connessione BISM a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Creare una connessione BISM (BI Semantic Model) a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

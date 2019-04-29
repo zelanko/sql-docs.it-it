@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918811"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurazione del data warehouse di gestione (SQL Server Management Studio)
   In questo argomento viene descritto come configurare il data warehouse di gestione per supportare l'archiviazione dei dati per una singola istanza o per più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano l'agente di raccolta dati. Queste istanze possono essere installate nello stesso server o in server diversi. In questo argomento vengono fornite anche le descrizioni dell'interfaccia utente per la finestra di dialogo [Configurazione guidata data warehouse di gestione](#Wizard) . Per ulteriori informazioni sulla configurazione di un agente di raccolta dati, vedere [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  

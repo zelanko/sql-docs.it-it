@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834439"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configura visualizzatore dati (scheda Istogramma)
   Utilizzare la scheda **Istogramma** della finestra di dialogo **Configura visualizzatore dati** per indicare le colonne da visualizzare. In un istogramma i valori dei dati di una colonna numerica vengono visualizzati come distribuzione dei valori. Il grafico riflette il contenuto di un solo buffer.  

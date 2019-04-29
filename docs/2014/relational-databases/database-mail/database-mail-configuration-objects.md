@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872435"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
   Posta elettronica database ha due oggetti di configurazione: Gli oggetti di configurazione database forniscono una modalità per configurare le impostazioni di tale Database di posta elettronica deve utilizzare quando si invia un messaggio di posta elettronica dall'applicazione di database o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente.  
@@ -127,14 +127,14 @@ ms.locfileid: "52772635"
   
 ### <a name="database-mail-settings"></a>Impostazioni di Posta elettronica database  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|Modifica le impostazioni di configurazione per Posta elettronica database.|  
 |[sysmail_help_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql)|Visualizza le impostazioni di configurazione per Posta elettronica database.|  
   
 ### <a name="accounts-and-profiles"></a>Account e profili  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)|Aggiunge un account di posta a un profilo di Posta elettronica database.|  
 |[sysmail_delete_account_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql)|Elimina un account di Posta elettronica database.|  
@@ -149,7 +149,7 @@ ms.locfileid: "52772635"
   
 ### <a name="security"></a>Sicurezza  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)|Concede le autorizzazioni necessarie a una entità database per utilizzare un profilo di Posta elettronica database.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql)|Rimuove le autorizzazioni che consentono a un utente di database di utilizzare un profilo pubblico o privato di Posta elettronica database.|  
@@ -158,7 +158,7 @@ ms.locfileid: "52772635"
   
 ### <a name="system-state"></a>Stato del sistema  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|Avvia il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|Arresta il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  

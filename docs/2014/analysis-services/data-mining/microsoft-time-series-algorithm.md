@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734062"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series fornisce algoritmi di regressione ottimizzati per prevedere valori continui, ad esempio vendite di prodotti, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
@@ -99,7 +99,7 @@ ms.locfileid: "48134261"
   
  In entrambi gli esempi, è possibile stimare le nuove vendite future e il volume di ogni prodotto. Non è possibile stimare valori nuovi relativi al prodotto o all'ora.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Esempio 1: Set di dati della serie temporale con serie rappresentate come valori di colonna  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Esempio 1: Set di dati di serie temporale con serie rappresentate come valori di colonna  
  In questo esempio viene utilizzata la tabella seguente di casi di input:  
   
 |TimeID|Prodotto|Sales|Volume|  
@@ -115,7 +115,7 @@ ms.locfileid: "48134261"
   
  La colonna Sales descrive i profitti lordi del prodotto specificato per un giorno e la colonna Volume descrive la quantità del prodotto specificato che rimane nel warehouse. In queste due colonne sono contenuti i dati utilizzati per il training del modello. Sia Sales che Volume possono essere attributi stimabili per ogni serie nella colonna Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Esempio 2: Set di dati della serie temporale con ogni serie in una colonna separata  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Esempio 2: Set di dati di serie temporale con ogni serie nella colonna separata  
  Anche se in questo esempio vengono utilizzati fondamentalmente gli stessi dati di input del primo esempio, i dati di input vengono strutturati in modo diverso, come illustrato nella tabella seguente:  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -123,7 +123,7 @@ ms.locfileid: "48134261"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- In questa tabella, la colonna TimeID contiene ancora la serie di casi per il modello Time Series che viene definito come colonna chiave temporale. Tuttavia, le colonne precedenti relative alle vendite e al volume sono suddivise in due colonne, ognuna preceduta dal nome del prodotto. Di conseguenza, la colonna TimeID include una singola voce per ogni giorno. In questo modo viene creato un modello Time Series contenente quattro colonne stimabili: A_Sales, A_Volume, B_Sales e B_Volume.  
+ In questa tabella, la colonna TimeID contiene ancora la serie di casi per il modello Time Series che viene definito come colonna chiave temporale. Tuttavia, le colonne precedenti relative alle vendite e al volume sono suddivise in due colonne, ognuna preceduta dal nome del prodotto. Di conseguenza, la colonna TimeID include una singola voce per ogni giorno. Ciò consente di creare un modello time series contenente quattro colonne stimabili: A_Sales, A_Volume, B_Sales e B_Volume.  
   
  Inoltre, poiché i prodotti sono stati separati in colonne diverse, non è necessario specificare una colonna chiave della serie aggiuntiva. Tutte le colonne del modello sono colonne della serie di casi o colonne stimabili.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48134261"
 -   Supporta il drill-through.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzare un modello usando il visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Riferimento tecnico per algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   
- [Time Series Model Query Examples](time-series-model-query-examples.md)   
- [Contenuto dei modelli per i modelli Time Series di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   
+ [Esempi di query sul modello di serie temporale](time-series-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

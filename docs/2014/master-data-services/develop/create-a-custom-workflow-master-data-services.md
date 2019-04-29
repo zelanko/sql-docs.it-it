@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924723"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate le regole business per creare soluzioni di base per il flusso di lavoro, come l'aggiornamento e la convalida automatici dei dati e l'invio di notifiche mediante posta elettronica in base alle condizioni specificate. Quando è necessaria un'elaborazione più complessa di quella fornita dalle azioni predefinite del flusso di lavoro, utilizzare un flusso di lavoro personalizzato. Un flusso di lavoro personalizzato è un assembly .NET che viene creato. Quando viene chiamato l'assembly del flusso di lavoro, il codice può eseguire qualsiasi azione richiesta dalla situazione. Se ad esempio il flusso di lavoro richiede l'elaborazione di eventi complessi, come le approvazioni multilivello o gli alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da avviare un flusso di lavoro personalizzato che analizza i dati e determina dove inviarli per l'approvazione.  
@@ -141,7 +141,7 @@ ms.locfileid: "52750943"
   
 1.  Utilizzare lo snap-in Servizi per arrestare il servizio.  
   
-2.  Aprire un prompt dei comandi, passare al percorso del servizio ed eseguire il servizio in modalità console immettendo: Microsoft.MasterDataServices.Workflow.exe-console.  
+2.  Aprire un prompt dei comandi, passare al percorso del servizio ed eseguire il servizio in modalità console immettendo: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiornare il membro e applicare di nuovo le regole business. I log dettagliati vengono visualizzati nella finestra della console.  
   

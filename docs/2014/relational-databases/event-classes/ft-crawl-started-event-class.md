@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023895"
 ---
 # <a name="ftcrawl-started-event-class"></a>Classe di evento FT:Crawl Started
   La classe di evento **FT:Crawl Started** indica l'avvio di una ricerca per indicizzazione (popolamento) full-text. Utilizzare questa classe di evento per verificare che una richiesta di ricerca per indicizzazione venga effettivamente accolta dalle attività di lavoro.  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FULL-TEXT: Colonne di dati di classe di evento di avvio di ricerca per indicizzazione  
+## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Colonne di dati di classe di evento di avvio di ricerca per indicizzazione  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

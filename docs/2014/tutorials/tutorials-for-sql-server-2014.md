@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956305"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Esercitazioni di SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono introdotte numerose nuove tecnologie e funzionalità.  

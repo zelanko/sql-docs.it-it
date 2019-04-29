@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911360"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparazione ed esecuzione di comandi
 I comandi sono istruzioni emesso a un provider di eseguire alcune operazioni per l'origine dati sottostante. Un'istruzione SQL, ad esempio, è un comando per il Provider di dati di Microsoft SQL. In ADO, i comandi sono in genere rappresentati dal **comandi** oggetti, anche se semplici comandi possono essere generati anche tramite **connessione** oppure **Recordset** oggetti.  

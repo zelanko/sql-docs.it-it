@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012546"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management - classe di evento
   La classe di evento **Audit Schema Object Management** viene generata quando vengono creati, modificati o eliminati oggetti del server.  
@@ -45,7 +45,7 @@ ms.locfileid: "52784643"
 |**OwnerName**|**nvarchar**|Nome utente del database per il proprietario dell'oggetto.|37|Yes|  
 |**ParentName**|**nvarchar**|Nome dello schema in cui è incluso l'oggetto.|59|Yes|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Yes|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  

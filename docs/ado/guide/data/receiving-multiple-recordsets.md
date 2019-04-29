@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910820"
 ---
 # <a name="receiving-multiple-recordsets"></a>Ricezione di più recordset
 Il [Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) supporta la restituzione dei più **Recordset** oggetti per un unico comando che contiene più istruzioni SQL, uno **Recordset**per ogni istruzione SQL. L'ordine in cui il **Recordset**verranno restituiti segue l'ordine in cui le istruzioni SQL vengono inserite nel testo del comando.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960171"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione con l'account di accesso specificato in questa stored procedure come *login* e *password*.<br /><br /> Nota: Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa opzione viene utilizzata per specificare una chiamata di procedura remota (RPC) dinamica.|  
-|**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: È inoltre necessario che tale account esista nel server di pubblicazione e disponga di privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
+|**0**|Viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione con l'account di accesso specificato in questa stored procedure come *login* e *password*.<br /><br /> Nota: Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa opzione è stata usata per specificare una chiamata dinamica di procedura remota (RPC).|  
+|**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: Questo account deve esistere anche nel server di pubblicazione disponga di privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
 |**2**|Usa un accesso server collegato esistente definito dall'utente creato usando **sp_link_publication**.|  
   
 `[ @login = ] 'login'` È l'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro deve essere specificato quando si specifica *security_mode* viene **0**.  

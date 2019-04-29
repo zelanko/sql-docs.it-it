@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843805"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Opzioni (Editor di testo - XML - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere la sottocartella **XML** e quindi fare clic su **Generale**.  

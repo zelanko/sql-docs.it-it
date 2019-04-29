@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915051"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
     
@@ -115,7 +115,7 @@ ms.locfileid: "48050162"
     GROUP BY Year;  
     ```  
   
--   La clausola WHEN NOT MATCHED BY SOURCE nell'istruzione MERGE fa riferimento a un valore cui è possibile accedere. Modificare l'istruzione MERGE in modo che venga restituita almeno una riga dalla tabella di origine nella clausola WHEN NOT MATCHED BY SOURCE. Può ad esempio essere necessario aggiungere o modificare la condizione di ricerca specificata per la clausola. In alternativa, è possibile modificare la clausola per specificare un valore che non fa riferimento alla tabella di origine, Ad esempio, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
+-   La clausola WHEN NOT MATCHED BY SOURCE nell'istruzione MERGE fa riferimento a un valore cui è possibile accedere. Modificare l'istruzione MERGE in modo che venga restituita almeno una riga dalla tabella di origine nella clausola WHEN NOT MATCHED BY SOURCE. Può ad esempio essere necessario aggiungere o modificare la condizione di ricerca specificata per la clausola. In alternativa, è possibile modificare la clausola per specificare un valore che non fa riferimento alla tabella di origine, Ad esempio `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   

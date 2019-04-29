@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020003"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizzare database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145916"
  Disattivare l'elaborazione lenta delle aggregazioni se viene utilizzate nel server di origine. Le aggregazioni che vengono elaborate in background possono interferire con la sincronizzazione del database. Per altre informazioni sull'impostazione di questa proprietà server, vedere [Proprietà OLAP](../../analysis-services/server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  La dimensione del database rappresentano un fattore determinante nello stabilire se la sincronizzazione è un approccio appropriato. Non esistono requisiti hardware, ma se la sincronizzazione è troppo lenta, provare a sincronizzare più server in parallelo, come descritto nella documentazione tecnica seguente: [Analysis Services Synchronization Best Practices](http://go.microsoft.com/fwlink/?LinkID=253136)(Procedure consigliate per la sincronizzazione di Analysis Services).  
+>  La dimensione del database rappresentano un fattore determinante nello stabilire se la sincronizzazione è un approccio appropriato. Non sono previsti requisiti hardware, ma se la sincronizzazione è troppo lenta, provare a sincronizzare più server in parallelo, come descritto in questo white paper tecnico: [Le procedure consigliate di sincronizzazione di Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Sincronizzazione guidata database  
  Utilizzare la Sincronizzazione guidata database per eseguire la sincronizzazione unidirezionale da un database di origine a un database di destinazione o per generare uno script che specifica un'operazione di sincronizzazione del database. Durante il processo di sincronizzazione è possibile sincronizzare sia le partizioni remote che quelle locali nonché scegliere se includere i ruoli.  

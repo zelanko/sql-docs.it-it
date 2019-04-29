@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62948943"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **«** *capture_instance_name* **»**  
+ **'** *capture_instance_name* **'**  
  Nome dell'istanza di acquisizione. *capture_instance_name* viene **sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  

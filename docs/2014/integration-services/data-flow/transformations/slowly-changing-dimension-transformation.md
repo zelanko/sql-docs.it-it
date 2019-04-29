@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900203"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  
@@ -46,7 +46,7 @@ ms.locfileid: "58388244"
   
 -   Le modifiche di tipo Attributo modificabile sovrascrivono i record esistenti. Questo tipo di modifica è equivalente a una modifica di tipo 1. La trasformazione Dimensione a modifica lenta invia queste righe a un output denominato **Output aggiornamenti attributi modificabili**.  
   
--   Le modifiche di tipo Attributo cronologico creano nuovi record anziché aggiornare quelli esistenti. L'unica modifica consentita in un record esistente è l'aggiornamento di una colonna che indica se il record è aggiornato o scaduto. Questo tipo di modifica è equivalente a una modifica di tipo 2. La trasformazione dimensione a modifica lenta invia queste righe a due output: **Output inserimenti attributo cronologico** e **nuovo Output**.  
+-   Le modifiche di tipo Attributo cronologico creano nuovi record anziché aggiornare quelli esistenti. L'unica modifica consentita in un record esistente è l'aggiornamento di una colonna che indica se il record è aggiornato o scaduto. Questo tipo di modifica è equivalente a una modifica di tipo 2. La trasformazione Dimensione a modifica lenta invia queste righe a due output: **Output inserimenti attributo cronologico** e **Nuovo output**.  
   
 -   Le modifiche di tipo Attributo fisso indicano che il valore della colonna non deve essere modificato. La trasformazione Dimensione a modifica lenta rileva le modifiche e può inviare le righe modificate a un output denominato **Output attributo fisso**.  
   

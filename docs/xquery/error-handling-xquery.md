@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 78a89ddcb27111396ec279af0b418e8490780e6a
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934595"
 ---
 # <a name="error-handling-xquery"></a>Gestione degli errori (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "51291337"
  Gli errori statici vengono restituiti utilizzando il meccanismo di gestione degli errori [!INCLUDE[tsql](../includes/tsql-md.md)]. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], gli errori di tipo XQuery vengono restituiti in modo statico. Per altre informazioni, vedere [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md).  
   
 ## <a name="dynamic-errors"></a>Errori dinamici  
- In XQuery, nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"), con due eccezioni: condizioni di overflow nelle funzioni di aggregazione XQuery ed errori di convalida XML DML. Si noti che nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"). In caso contrario, l'esecuzione della query che utilizza gli indici XML può generare errori imprevisti. Pertanto, per garantire un'esecuzione efficiente senza la generazione di errori imprevisti, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] esegue il mapping degli errori dinamici a ().  
+ In XQuery, nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"), Tuttavia, queste sono le due eccezioni: Condizioni di overflow nelle funzioni di aggregazione XQuery ed errori di convalida XML DML. Si noti che nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"). In caso contrario, l'esecuzione della query che utilizza gli indici XML può generare errori imprevisti. Pertanto, per garantire un'esecuzione efficiente senza la generazione di errori imprevisti, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] esegue il mapping degli errori dinamici a ().  
   
  Nei casi in cui l'errore dinamico verrebbe generato all'interno di un predicato, spesso non generare l'errore non modifica la semantica, poiché () viene eseguito il mapping a False. In alcuni casi tuttavia, la restituzione di () invece di un errore dinamico può causare risultati imprevisti, come illustrato negli esempi seguenti.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>Esempio: utilizzo della funzione avg () con una stringa  
+### <a name="example-using-the-avg-function-with-a-string"></a>Esempio: Utilizzo della funzione AVG () con una stringa  
  Nell'esempio seguente, il [AVG-funzione](../xquery/aggregate-functions-avg.md) viene chiamato per calcolare la media dei tre valori. Uno dei valori è una stringa. Poiché l'istanza XML in questo caso è non tipizzata, tutti i dati al suo interno sono di tipo atomico non tipizzato. Il **AVG ()** funzione prima di tutto viene eseguito il cast questi valori per **xs: double** prima di calcolare la Media. Tuttavia, il valore `"Hello"`, non è possibile eseguire il cast **xs: double** e crea un errore dinamico. In questo caso, invece di restituire un errore dinamico, il cast di `"Hello"` al **xs: double** genera una sequenza vuota. Il **AVG ()** funzione ignora questo valore, calcola la media degli altri due valori e restituisce 150.  
   
 ```  
@@ -58,10 +58,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>Esempio: utilizzo della funzione not  
+### <a name="example-using-the-not-function"></a>Esempio: Utilizzando not (funzione)  
  Quando si usa la [non funzionerà](../xquery/functions-on-boolean-values-not-function.md) in un predicato, ad esempio, `/SomeNode[not(Expression)]`, e l'espressione genera un errore dinamico, è verrà restituita una sequenza vuota anziché un errore. Applicando **NOT ()** alla sequenza vuota restituisce True, anziché un errore.  
   
-### <a name="example-casting-a-string"></a>Esempio: esecuzione del cast di una stringa  
+### <a name="example-casting-a-string"></a>Esempio: Cast di una stringa  
  Nell'esempio seguente viene eseguito il cast della stringa letterale "NaN" a xs:string, quindi a xs:double. Il risultato è un set di righe vuoto. Anche se non è possibile eseguire correttamente il cast della stringa "NaN" a xs:double, questo fatto non può essere determinato fino al momento dell'esecuzione, perché prima viene eseguito il cast della stringa a xs:string.  
   
 ```  

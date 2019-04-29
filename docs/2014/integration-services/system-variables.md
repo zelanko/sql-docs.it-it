@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927230"
 ---
 # <a name="system-variables"></a>Variabili di sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
@@ -34,7 +34,7 @@ ms.locfileid: "58391259"
 |Variabile di sistema|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Handle di un oggetto Eventi di Windows che l'attività può segnalare per indicare che l'attività deve essere arrestata.|  
-|`ContainerStartTime`|DateTime|Ora di inizio del contenitore.|  
+|`ContainerStartTime`|Datetime|Ora di inizio del contenitore.|  
 |**CreationDate**|DateTime|Data di creazione del pacchetto.|  
 |`CreatorComputerName`|String|Computer in cui è stato creato il pacchetto.|  
 |**CreatorName**|String|Nome dell'utente che ha compilato il pacchetto.|  
@@ -47,7 +47,7 @@ ms.locfileid: "58391259"
 |**OfflineMode**|Boolean|Indica se il pacchetto è in modalità offline. La modalità offline non acquisisce connessioni a origini dei dati.|  
 |**PackageID**|String|Identificatore univoco del pacchetto.|  
 |**PackageName**|String|Nome del pacchetto.|  
-|**StartTime**|DateTime|Data e ora di inizio dell'esecuzione del pacchetto.|  
+|**StartTime**|Datetime|Data e ora di inizio dell'esecuzione del pacchetto.|  
 |`ServerExecutionID`|Int64|ID dell'esecuzione per il pacchetto eseguito nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> Il valore predefinito è zero. Il valore viene modificato solo se il pacchetto viene eseguito da ISServerExec sul server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Quando è presente un pacchetto figlio, il valore viene passato dal pacchetto padre a quello figlio.|  
 |**UserName**|String|Nome dell'account dell'utente che ha avviato il pacchetto. Il nome utente è qualificato dal nome del dominio.|  
 |**VersionBuild**|Int32|Versione del pacchetto.|  
@@ -89,7 +89,7 @@ ms.locfileid: "58391259"
 |**ProgressCountHigh**|Int32|Parte più significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |`ProgressCountLow`|Int32|Parte meno significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |**ProgressDescription**|String|Descrizione dell'avanzamento.|Gestore dell'evento OnProgress|  
-|`Propagate`|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: Il valore della variabile `Propagate` viene ignorato durante la convalida del pacchetto.<br /><br /> Se si imposta `Propagate` su `False` in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
+|`Propagate`|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: Il valore della `Propagate` variabile viene ignorata durante la convalida del pacchetto.<br /><br /> Se si imposta `Propagate` su `False` in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
 |`SourceDescription`|String|Descrizione dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
 |`SourceID`|String|Identificatore univoco dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
 |**SourceName**|String|Nome dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b64e568e9d087069654e4e8dca37fc281f599a8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020182"
 ---
 # <a name="editionid-property-wmi-msreportserverinstance"></a>Proprietà EditionID (MSReportServer_Instance WMI)
   Restituisce l'edizione del server di report. Di sola lettura.  

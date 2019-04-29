@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022491"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
   Le informazioni contenute negli indici full-text vengono utilizzate dal motore di ricerca full-text per compilare query full-text che consentono di cercare rapidamente parole o combinazioni di parole specifiche in una tabella. In un indice full-text vengono archiviate informazioni su parole significative e sulla relativa posizione all'interno di una o più colonne di una tabella di database. Un indice full-text è un tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il processo di compilazione di un indice full-text è diverso da quello di altri tipi di indici. Anziché creare un albero B basato su un valore archiviato in una riga specifica, il motore di ricerca full-text compila una struttura con indice invertito, compresso e in pila dai singoli token dal testo indicizzato.  Le dimensioni di un indice full-text sono limitate solo dalle risorse di memoria disponibili del computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -27,9 +27,9 @@ ms.locfileid: "48054736"
 > [!NOTE]  
 >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, il motore di ricerca full-text si trova nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anziché in un servizio distinto. L'integrazione del motore di ricerca full-text nel Motore di database consente di ottimizzare la gestibilità della ricerca full-text, l'esecuzione delle query miste e le prestazioni generali.  
   
- È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, e `varbinary(max)` può essere indicizzato per ricerca full-text. Creazione di un indice full-text in una colonna contenente i dati che è di tipo `varbinary`, `varbinary(max)`, `image`, o `xml` richiede di specificare una colonna di tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
+ È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` e `varbinary(max)` che possono essere indicizzate per la ricerca full-text. La creazione di un indice full-text in colonne con tipo di dati `varbinary`, `varbinary(max)`o `image` o `xml` richiede la specifica di una colonna del tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
   
- Il processo di creazione e gestione di un indice full-text è definito *popolamento* (noto anche come *ricerca per indicizzazione*). Sono disponibili tre tipi di popolamento dell'indice full-text: popolamento completo, popolamento basato sul rilevamento delle modifiche e popolamento incrementale basato su timestamp. Per altre informazioni, vedere [Popolamento degli indici full-text](populate-full-text-indexes.md).  
+ Il processo di creazione e gestione di un indice full-text è definito *popolamento* (noto anche come *ricerca per indicizzazione*). Sono disponibili tre tipi di popolamento dell'indice full-text: popolamento completo, popolamento basato sul rilevamento delle modifiche e popolamento incrementale basato su timestamp. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](populate-full-text-indexes.md).  
   
 ##  <a name="tasks"></a> Attività comuni  
  **Per creare un indice full-text**  
@@ -51,7 +51,7 @@ ms.locfileid: "48054736"
   
  In questo esempio si suppone che nella colonna **Title** sia stato creato un indice full-text.  
   
-|DocumentID|Title|  
+|DocumentID|Titolo|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -95,7 +95,7 @@ ms.locfileid: "48054736"
 ##  <a name="fragments"></a> Frammenti di indice full-Text  
  L'indice full-text logico viene in genere suddiviso tra più tabelle interne. Ogni tabella interna viene definita un frammento di indice full-text. Alcuni di questi frammenti potrebbero contenere dati più recenti di altri. Ad esempio, se un utente aggiorna la riga seguente il cui DocId è 3 e per la tabella è impostato il rilevamento automatico delle modifiche, viene creato un nuovo frammento.  
   
-|DocumentID|Title|  
+|DocumentID|Titolo|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834353"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configura visualizzatore dati (scheda Generale)
   In un visualizzatore dati vengono visualizzati i dati mentre vengono spostati nel percorso tra due componenti del flusso di dati durante l'esecuzione di un pacchetto.  

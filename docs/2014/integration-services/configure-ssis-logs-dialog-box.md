@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834567"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configura log SSIS - finestra di dialogo
   Utilizzare la finestra di dialogo **Configura log SSIS** per definire le opzioni di registrazione per un pacchetto.  
@@ -76,7 +76,7 @@ ms.locfileid: "58375214"
  **Configurazione**  
  Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../includes/msconame-md.md)] non necessita di connessioni.  
   
- Argomenti correlati: [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md) manager [gestione connessione File](connection-manager/file-connection-manager.md)  
+ Argomenti correlati: [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [Gestione connessione file](connection-manager/file-connection-manager.md)  
   
  **Elimina**  
  Selezionare un provider di log e fare clic su **Elimina**.  

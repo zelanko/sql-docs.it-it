@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911370"
 ---
 # <a name="provider-errors"></a>Errori del provider
 Quando si verifica un errore del provider, viene restituito un errore di run-time di -2147467259. Quando si riceve questo errore, verificare i **errori** raccolta dell'oggetto attivo **connessione** oggetto, che contiene uno o più errori che descrive quanto accaduto.  
@@ -65,7 +65,7 @@ End Function
 ## <a name="the-error-object"></a>L'oggetto Error  
  Esaminando un **errore** dell'oggetto è possibile determinare l'errore si è verificato e più importante, individuare l'applicazione o l'oggetto che ha causato l'errore. Il **errore** oggetto presenta le proprietà seguenti:  
   
-|Nome proprietà|Description|  
+|Nome proprietà|Descrizione|  
 |-------------------|-----------------|  
 |**Descrizione**|Una descrizione di testo dell'errore che si è verificato.|  
 |**HelpContext, HelpFile**|Fa riferimento al file di argomento della Guida e supporto che contiene una descrizione dell'errore che si è verificato.|  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 07c54d34b3fa7c874142395e5113b90799dcbe6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911494"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumericalValue (classe SqlServiceAdvancedProperty)
   Imposta il valore numerico di una proprietà.  

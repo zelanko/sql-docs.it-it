@@ -33,11 +33,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874442"
 ---
 # <a name="clr-user-defined-types"></a>Tipi CLR definiti dall'utente
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare oggetti di database programmati in un assembly creato in Common Language Runtime (CLR) di .NET Framework. Tra gli oggetti di database che consentono l'utilizzo del ricco modello di programmazione offerto da CLR vi sono trigger, stored procedure, funzioni, funzioni di aggregazione e tipi.  
@@ -68,7 +68,7 @@ ms.locfileid: "48107371"
   
 4.  **Creare tabelle, variabili o parametri mediante il tipo definito dall'utente** a partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un tipo definito dall'utente può essere utilizzato come definizione di colonna di una tabella, come una variabile in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, o come argomento di un [!INCLUDE[tsql](../../includes/tsql-md.md)] funzionare o archiviati procedura.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creazione di un tipo definito dall'utente](creating-user-defined-types.md)  
  Viene illustrato come creare tipi definiti dall'utente.  
   

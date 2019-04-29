@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733810"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato* , chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
@@ -105,13 +105,13 @@ ms.locfileid: "52521124"
   
  Μg = p: probabilità precedente di uno stato  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  **Valori continui**  
   
- Valore attuale = 1 - μg/σ  
+ Value present= 1 - μ/σ  
   
- Nessun valore esistente = - μg/σ  
+ No existing value= -μ/σ  
   
  Dopo che i valori sono stati codificati, gli input vengono sottoposti alla somma ponderata, in cui i pesi sono rappresentati dai bordi delle reti.  
   
