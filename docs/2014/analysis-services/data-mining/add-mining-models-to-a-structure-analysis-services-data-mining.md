@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689603"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
   Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  

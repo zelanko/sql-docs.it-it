@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 063e78a15a4bd365c4eb061cc54454fb6e6637c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731611"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>Editor di query DMX (Analysis Services - Data mining)
   Utilizzare l'Editor di query DMX per progettare ed eseguire istruzioni scritte nel linguaggio DMX.  
@@ -41,8 +41,8 @@ ms.locfileid: "48153241"
 |Nome|Definizione|  
 |----------|----------------|  
 |**Connect**|Consente di aprire la finestra di dialogo **Connetti al server** per attivare una connessione a un'istanza di Analysis Services.|  
-|**Disconnetti**|Consente di disconnettere l'Editor di query DMX da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|**Cambia connessione**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Disconnetti**|Consente di disconnettere l'Editor di query DMX da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Cambia connessione**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Nuova query con connessione corrente**|Consente di aprire una nuova finestra dell'Editor di query DMX utilizzando le informazioni di connessione contenute nella finestra dell'Editor di query DMX corrente.|  
 |**Database disponibili**|Consente di cambiare la connessione a un diverso database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella stessa istanza.|  
 |**Eseguire**|Consente di eseguire il codice selezionato oppure, nel caso in cui non sia stato selezionato alcun codice, di eseguire tutto il codice contenuto nell'Editor di query DMX.|  
@@ -54,9 +54,9 @@ ms.locfileid: "48153241"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Finestra dell'editor di query**|Consente di digitare le istruzioni e gli script MDX da eseguire tramite l'Editor di query MDX.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: copia la selezione corrente negli Appunti e rimuove la selezione dalla finestra dell'editor di query.<br /><br /> **Copy**: copia la selezione corrente negli Appunti.<br /><br /> **Incolla**: Incolla il contenuto degli Appunti nella selezione corrente.<br /><br /> **Connetti**: apre la finestra di dialogo **Connetti al server**, per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> **Disconnettere**: disconnette l'editor di query corrente da un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza.<br /><br /> **Disconnetti tutte le query**: disconnette tutti gli editor di query aperta.<br /><br /> **Cambia connessione**: consente di aprire la **Connetti al Server** della finestra di dialogo per stabilire una connessione a un altro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza.<br /><br /> **Apri Server in Esplora oggetti**: consente di aprire la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza a cui è connesso l'editor di query corrente in **Esplora oggetti**.<br /><br /> **Eseguire**: esegue il codice selezionato oppure se è selezionato alcun codice, esegue tutto il codice nell'editor di query corrente.<br /><br /> **Finestra delle proprietà**: consente di visualizzare il **delle proprietà** finestra in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per la finestra di query corrente.<br /><br /> **Opzioni query**: consente di visualizzare il **le opzioni di Query** nella finestra di dialogo.|  
+|**Finestra dell'editor di query**|Consente di digitare le istruzioni e gli script MDX da eseguire tramite l'Editor di query MDX.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: Consente di copiare la selezione corrente negli Appunti e di rimuovere la selezione dalla finestra dell'editor di query.<br /><br /> **Copia**: Consente di copiare la selezione corrente negli Appunti.<br /><br /> **Incolla**: Consente di incollare il contenuto degli Appunti nella selezione corrente.<br /><br /> **Connetti**: Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Disconnetti**: Consente di disconnettere l'editor di query corrente da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Disconnetti tutte le query**: Consente di disconnettere tutti gli editor di query aperti.<br /><br /> **Cambia connessione**: Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> **Apri server in Esplora oggetti**: Consente di aprire l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui è connesso l'editor di query corrente in **Esplora oggetti**.<br /><br /> **Esegui**: Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte specifica del codice, di eseguire tutto il codice contenuto nell'editor di query corrente.<br /><br /> **Finestra Proprietà**: Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per la finestra della query corrente.<br /><br /> **Opzioni query**: Consente di visualizzare la finestra di dialogo **Opzioni query** .|  
 |**Finestra metadati**|Consente di visualizzare i metadati per il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso.|  
-|**Cube**|Consente di selezionare un cubo nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso per visualizzare i metadati associati al cubo nella scheda **Metadati**.|  
+|**Cube**|Consente di selezionare un cubo nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso per visualizzare i metadati associati al cubo nella scheda **Metadati** .|  
 |**Metadati**|Consente di visualizzare i metadati per il cubo selezionato in **Cubo**, inclusi i gruppi di misure e le misure, gli indicatori di prestazioni chiave, le dimensioni, le gerarchie, i livelli, i membri e le proprietà membro. Per recuperare la chiave completa di un oggetto eseguire una delle operazioni seguenti:<br /><br /> Trascinare l'oggetto dalla scheda **Metadati** nel riquadro Query.<br /><br /> Oppure:<br /><br /> Fare clic con il pulsante destro del mouse sull'oggetto e scegliere **Copia**, quindi fare clic con il pulsante destro del mouse nel riquadro Query e scegliere **Incolla**.|  
 |**Funzioni**|Consente di visualizzare i metadati per le funzioni DMX disponibili per il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] come metadati recuperati dal set di righe dello schema DMSCHEMA_MINING_FUNCTIONS.<br /><br /> Per recuperare la sintassi di una funzione eseguire una delle operazioni seguenti:<br /><br /> Trascinare l'oggetto dalla scheda **Funzioni** nel riquadro Query.<br /><br /> Oppure:<br /><br /> Fare clic con il pulsante destro del mouse sulla funzione e scegliere **Copia**, quindi fare clic con il pulsante destro del mouse nel riquadro Query e scegliere **Incolla**.|  
 |**Finestra dei risultati**|Consente di visualizzare i risultati di un'istruzione DMX in una griglia.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48153241"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Editor di Query MDX &#40;Analysis Services - dati multidimensionali&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [Editor di Query XMLA &#40;Analysis Services - dati multidimensionali&#41;](xmla-query-editor-analysis-services-multidimensional-data.md)   
  [Progettazione query e gli editor di testo &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

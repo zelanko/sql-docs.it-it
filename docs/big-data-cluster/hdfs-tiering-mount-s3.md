@@ -10,12 +10,12 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317120"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330611"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare S3 per HDFS la suddivisione in livelli in un cluster di big data
 
@@ -42,7 +42,7 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
    ```
 
    > [!TIP]
-   > Per altre informazioni su come creare S3 chiavi di accesso (`<s3-access-key>`), vedere [chiavi di accesso S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Per altre informazioni su come creare le chiavi di accesso di S3, vedere [chiavi di accesso S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
 ## <a id="mount"></a> Montare l'archiviazione HDFS remoto
 

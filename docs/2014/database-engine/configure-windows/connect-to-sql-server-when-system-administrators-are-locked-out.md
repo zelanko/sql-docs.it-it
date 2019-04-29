@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782384"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Connettersi a SQL Server se gli amministratori di sistema sono bloccati
   In questo argomento viene descritto come ottenere nuovamente l'accesso al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] come amministratore di sistema. Un amministratore di sistema può perdere l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per uno dei motivi seguenti:  
@@ -58,10 +58,10 @@ ms.locfileid: "52641562"
   
 4.  Nel riquadro a sinistra di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionare **Servizi di SQL Server**. Nel riquadro a destra individuare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è incluso **(MSSQLSERVER)** dopo il nome del computer. Le istanze denominate vengono visualizzate in maiuscolo con lo stesso nome presente in Server registrati. Fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi scegliere **Proprietà**.  
   
-5.  Nel **parametri di avvio** nella scheda il **specificare un parametro di avvio** , digitare `-m` e quindi fare clic su `Add`. .  
+5.  Nel **parametri di avvio** nella scheda il **specificare un parametro di avvio** , digitare `-m` e quindi fare clic su `Add`. (Quello è un trattino quindi la lettera minuscola m.)  
   
     > [!NOTE]  
-    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Fare attenzione a non modificare nessuno dei parametri esistenti. Al termine, aggiungere un nuovo parametro `;-m` (cioè un punto e virgola seguito da un trattino e una lettera m minuscola), quindi fare clic su `OK` .  
+    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Fare attenzione a non modificare nessuno dei parametri esistenti. Al termine, aggiungere un nuovo parametro `;-m` (cioè un punto e virgola seguito da un trattino e una lettera m minuscola), quindi fare clic su `OK` .  
   
 6.  Fare clic su `OK`, dopo il messaggio di riavvio, fare clic sul nome del server e quindi fare clic su **riavviare**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52641562"
 11. Nel **parametri di avvio** nella scheda il **parametri esistenti** , quindi selezionare `-m` e quindi fare clic su `Remove`.  
   
     > [!NOTE]  
-    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere il `;-m` aggiunti in precedenza, e quindi fare clic su `OK`.  
+    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere il `;-m` aggiunti in precedenza, e quindi fare clic su `OK`.  
   
 12. Fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
   

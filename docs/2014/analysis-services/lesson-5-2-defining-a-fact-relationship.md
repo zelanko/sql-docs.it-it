@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b66614a40176a0c6ee0ac4b0b9283fc0415ecc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728678"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
   Talvolta può essere necessario dimensionare le misure in base ai dati contenuti nella tabella dei fatti o eseguire query per trovare informazioni correlate specifiche aggiuntive, come ad esempio i numeri delle fatture o degli ordini di acquisto collegati a operazioni di vendita specifiche. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.  
@@ -66,7 +66,7 @@ ms.locfileid: "52530674"
   
 14. Nel **attributi** riquadro della finestra di progettazione dimensioni per il **Internet Sales Order Details** dimensione, selezionare **Sales Order Number**e quindi modificare il  **Nome** proprietà nella finestra proprietà in `Item Description.`  
   
-15. Nel **NameColumn** proprietà di cella, fare clic sul pulsante **(...)** . Nella finestra di dialogo Colonna nome selezionare Product dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
+15. Nel **NameColumn** proprietà di cella, fare clic sul pulsante **(...)** . Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
   
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .  
   

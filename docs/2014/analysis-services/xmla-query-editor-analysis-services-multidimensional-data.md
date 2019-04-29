@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d324657c6a405d090913909a7e5aaa756970734
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755914"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Editor di query XMLA (Analysis Services - Dati multidimensionali)
   Utilizzare l'Editor di query XMLA per progettare ed eseguire istruzioni e script scritti nel linguaggio MDX (XMLA).  
@@ -43,9 +43,9 @@ ms.locfileid: "48101541"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Connect**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|**Disconnetti**|Consente di disconnettere l'editor di query XMLA da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|**Cambia connessione**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Connect**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Disconnetti**|Consente di disconnettere l'editor di query XMLA da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Cambia connessione**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Nuova query con connessione corrente**|Consente di aprire una nuova finestra dell'editor di query XMLA utilizzando le stesse informazioni di connessione della finestra dell'editor di query XMLA corrente.|  
 |**Database disponibili**|Consente di cambiare la connessione a un diverso database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella stessa istanza.|  
 |**Eseguire**|Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte specifica del codice, di eseguire tutto il codice contenuto nell'editor di query XMLA.|  
@@ -57,7 +57,7 @@ ms.locfileid: "48101541"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Finestra dell'editor di query**|Consente di digitare istruzioni e script XMLA da eseguire mediante l'editor di query XMLA.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: copia la selezione corrente negli Appunti e rimuove la selezione dalla finestra dell'editor di query.<br />**Copy**: copia la selezione corrente negli Appunti.<br />**Incolla**: Incolla il contenuto degli Appunti nella selezione corrente.<br />**Connetti**: apre la finestra di dialogo **Connetti al server**, per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br />**Disconnettere**: disconnette l'editor di query corrente da un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza.<br />**Disconnetti tutte le query**: disconnette tutti gli editor di query aperta.<br />**Cambia connessione**: consente di aprire la **Connetti al Server** della finestra di dialogo per stabilire una connessione a un altro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza.<br />**Apri Server in Esplora oggetti**: consente di aprire la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza a cui è connesso l'editor di query corrente in **Esplora oggetti**.<br />**Eseguire**: esegue il codice selezionato oppure se è selezionato alcun codice, esegue tutto il codice nell'editor di query corrente.<br />**Finestra delle proprietà**: consente di visualizzare il **delle proprietà** finestra in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per la finestra di query corrente.<br />**Opzioni query**: consente di visualizzare il **le opzioni di Query** nella finestra di dialogo.|  
+|**Finestra dell'editor di query**|Consente di digitare istruzioni e script XMLA da eseguire mediante l'editor di query XMLA.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: Consente di copiare la selezione corrente negli Appunti e di rimuovere la selezione dalla finestra dell'editor di query.<br />**Copia**: Consente di copiare la selezione corrente negli Appunti.<br />**Incolla**: Consente di incollare il contenuto degli Appunti nella selezione corrente.<br />**Connetti**: Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Disconnetti**: Consente di disconnettere l'editor di query corrente da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Disconnetti tutte le query**: Consente di disconnettere tutti gli editor di query aperti.<br />**Cambia connessione**: Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br />**Apri server in Esplora oggetti**: Consente di aprire l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui è connesso l'editor di query corrente in **Esplora oggetti**.<br />**Esegui**: Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte specifica del codice, di eseguire tutto il codice contenuto nell'editor di query corrente.<br />**Finestra Proprietà**: Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per la finestra della query corrente.<br />**Opzioni query**: Consente di visualizzare la finestra di dialogo **Opzioni query** .|  
 |**Finestra dei risultati**|Consente di visualizzare i risultati di un'istruzione o di uno script XMLA in formato testo.|  
 |**Finestra dei messaggi**|Consente di visualizzare informazioni sull'esecuzione di un'istruzione o di uno script XMLA. Ad esempio, in questa finestra vengono visualizzati gli eventuali errori rilevati durante l'esecuzione o il numero di celle recuperate dopo l'esecuzione.|  
   
