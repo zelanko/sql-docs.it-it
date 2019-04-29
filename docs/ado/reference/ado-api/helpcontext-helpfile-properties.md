@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 059bb0e945875d36582d08f8018bad485475639d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027980"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
 Indica il file della Guida e l'argomento associato a un [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  

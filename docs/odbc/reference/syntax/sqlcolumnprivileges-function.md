@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018398"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges Function
 **Conformità**  
@@ -62,7 +62,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength1*  
  [Input] Lunghezza in caratteri della **CatalogName*.  
   
- *NomeSchema*  
+ *SchemaName*  
  [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri, ad esempio quando il driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le tabelle che non hanno schemi. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore. Se si tratta, SQL_FALSE *SchemaName* è un normale argomento; viene considerato letteralmente e relativi case è significativa.  
@@ -137,7 +137,7 @@ SQLRETURN SQLColumnPrivileges(
   
 |Nome colonna|Numero colonna|Tipo di dati|Commenti|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|Identificatore del catalogo. NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
+|TABLE_CAT  (ODBC 1.0)|1|Varchar|Identificatore del catalogo. NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Identificatore dello schema. NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non hanno schemi.|  
 |TABLE_NAME (ODBC 1.0)|3|Non NULL varchar|Identificatore di tabella.|  
 |COLUMN_NAME (ODBC 1.0)|4|Non NULL varchar|Nome colonna. Il driver restituisce una stringa vuota per una colonna che non dispone di un nome.|  

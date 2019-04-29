@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875605"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Ripristino di un database fino a una transazione contrassegnata (SQL Server Management Studio)
   Quando un database è in stato di ripristino, è possibile usare la finestra di dialogo **Ripristina log delle transazioni** per ripristinare il database a una transazione contrassegnata nei backup del log disponibili.  
@@ -45,7 +45,7 @@ ms.locfileid: "48050431"
   
      Nella tabella seguente vengono elencate le intestazioni delle colonne della griglia con una descrizione dei rispettivi valori.  
   
-    |Intestazione|valore|  
+    |Intestazione|Value|  
     |------------|-----------|  
     |\<vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
     |**Contrassegno transazione**|Nome della transazione contrassegnata specificato dall'utente durante l'esecuzione del commit della transazione.|  

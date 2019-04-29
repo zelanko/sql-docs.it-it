@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028137"
 ---
 # <a name="find-method-ado"></a>Metodo Find (ADO)
 Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, può essere specificata la direzione della ricerca, la riga iniziale e offset della riga iniziale. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata sul record trovato. in caso contrario, la posizione è impostata su finale (o avvio) del **Recordset**.  
@@ -38,13 +38,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Criteri*  
  Oggetto **stringa** valore contenente un'istruzione che specifica il nome della colonna, l'operatore di confronto e valore da utilizzare nella ricerca.  
   
- *Skiprows al*  
+ *SkipRows*  
  Facoltativo *.* Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga rispetto alla riga corrente oppure *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
   
  *SearchDirection*  
  Facoltativo *.* Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca inizierà nella riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca in fondo il **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
- *Inizio*  
+ *Start*  
  Facoltativo. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  
   
 ## <a name="remarks"></a>Note  

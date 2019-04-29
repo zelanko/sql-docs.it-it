@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79652d50bb4df2bf80ec9f072e8828db9935368f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766803"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Salvataggio di un pacchetto come modello di pacchetto
   In questo argomento viene descritta la procedura per designare e utilizzare pacchetti personalizzati come modelli per la creazione di nuovi pacchetti di Integration Services in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per impostazione predefinita in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene utilizzato un modello di pacchetto che crea un pacchetto vuoto quando si aggiunge un nuovo pacchetto a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Non è possibile sostituire tale modello predefinito, ma è possibile aggiungere nuovi modelli.  

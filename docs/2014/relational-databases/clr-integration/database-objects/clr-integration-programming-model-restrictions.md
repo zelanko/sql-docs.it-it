@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873811"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrizioni relative al modello di programmazione dell'integrazione con CLR
   Quando si compila una stored procedure gestita o un altro oggetto di database gestito, in alcuni controlli di codice eseguiti dalle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue i controlli sull'assembly del codice gestito durante la registrazione prima di tutto nel database, usando il `CREATE ASSEMBLY` istruzione e anche in fase di esecuzione. Il controllo del codice gestito viene effettuato anche in fase di esecuzione in quanto è possibile che in un assembly siano presenti percorsi di codice mai raggiunti in questa fase.  Tale controllo offre quindi la flessibilità necessaria per registrare soprattutto assembly di terze parti, in modo da evitare che un assembly venga bloccato in presenza di codice considerato poco sicuro, progettato per essere eseguito in un ambiente client, ma mai nel CLR hosted. Il codice gestito deve soddisfare i requisiti dipendono dal fatto che l'assembly viene registrato come `SAFE`, `EXTERNAL_ACCESS`, o `UNSAFE`, `SAFE` il più rigoroso e sono elencate di seguito.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f46c31e3590098e3b58bb02e802991f686f2d568
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735824"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint
   In questo argomento viene descritto come aggiornare origini dati incorporate in report e origini dati condivise salvate in una raccolta documenti di SharePoint.  

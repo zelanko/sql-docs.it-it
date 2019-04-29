@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2835396a7b8266d812ca5a1049679c7d82549389
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024352"
 ---
 # <a name="order-by-clause-limitations"></a>Limitazioni della clausola ORDER BY
 Se un'istruzione SELECT contiene una clausola GROUP BY e una clausola ORDER BY, la clausola ORDER BY può contenere solo una colonna nel set di risultati o un'espressione nella clausola GROUP BY.

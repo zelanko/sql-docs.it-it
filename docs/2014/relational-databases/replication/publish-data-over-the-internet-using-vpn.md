@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021069"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Pubblicazione dei dati su Internet utilizzando VPN
   La reti private virtuali (VPN) consentono a utenti domestici, succursali, client remoti e altre società di connettersi a una rete aziendale tramite Internet senza alcun rischio di protezione per le comunicazioni. Gli utenti possono utilizzare l'autenticazione di Windows come se fossero connessi a una rete locale (LAN). Tutti i tipi di replica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di replicare i dati su una rete VPN, ma, se si utilizza una replica di tipo merge, è consigliabile valutare l'opportunità di optare per la sincronizzazione tramite il Web, soluzione che elimina la necessità di una rete VPN. Per altre informazioni, vedere [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  

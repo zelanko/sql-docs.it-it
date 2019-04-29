@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027912"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Esempio IsolationLevel e modalità proprietà (VC + +)
 Questo esempio Usa il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) per aprire una connessione esclusiva e il [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) proprietà per aprire una transazione di cui viene eseguita in isolamento di altre transazioni.  
@@ -227,7 +227,7 @@ void PrintComError(_com_error &e) {
  **Modalità di connessione è esclusiva**  
 **Transazione è isolata**  
 **Guida per dell'occupato Executive Database - business**  
-**Cucina con i computer: patrimoniale clandestina - business**  
+**Cucina con i computer: Clandestina patrimoniale - business**  
 **È possibile contrastare Stress Computer! -business**  
 **Parlare direttamente sui computer - business**  
 **Considera Gastronomic Silicon Valley - libro mod_cook non includono**  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **Ma è facile? -popular_comp**  
 **Segreti di Silicon Valley - popular_comp**  
 **Sul Galateo NET - popular_comp**  
-**Un computer e utenti singoli Non spaventati: Variazioni di comportamento - self_help**  
+**Utenti singoli Non spaventati e un computer: Variazioni di comportamento - self_help**  
 **È il vostro nemico rabbia? -self_help**  
 **Ciclo di vita senza timore - self_help**  
-**Prolungato dati privative: Quattro casi di Studio - self_help**  
+**Privative interruzioni prolungate nel Data: Quattro casi di Studio - self_help**  
 **Sicurezza emotivo: Un nuovo algoritmo - self_help**  
-**Cipolle Leeks e aglio: cucina segreti di Mar - trad_cook**  
+**Cipolle Leeks e aglio: Cucina segreti di Mar - trad_cook**  
 **Cinquanta gli anni in Buckingham Palace cucine - trad_cook**  
 **Sushi tutti gli utenti? -trad_cook**   
 ## <a name="see-also"></a>Vedere anche  

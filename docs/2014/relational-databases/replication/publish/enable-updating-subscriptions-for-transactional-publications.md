@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
 ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54135951"
@@ -37,7 +37,7 @@ ms.locfileid: "54135951"
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali nella pagina **Tipo di pubblicazione** della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Creare una pubblicazione](create-a-publication.md). Dopo aver creato la pubblicazione, non è più possibile attivare le sottoscrizioni aggiornabili.  
   
- Per utilizzare le sottoscrizioni aggiornabili, è inoltre necessario configurare le opzioni della Creazione guidata nuova sottoscrizione. Per altre informazioni, vedere [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+ Per utilizzare le sottoscrizioni aggiornabili, è inoltre necessario configurare le opzioni della Creazione guidata nuova sottoscrizione. Per altre informazioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-enable-updating-subscriptions"></a>Per attivare le sottoscrizioni aggiornabili  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54135951"
  [Tipi di pubblicazioni per la replica transazionale](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Utilizzo di sqlcmd con variabili di scripting](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

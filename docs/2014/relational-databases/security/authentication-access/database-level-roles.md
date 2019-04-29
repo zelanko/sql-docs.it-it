@@ -38,11 +38,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011728"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
   Per una facile gestione delle autorizzazioni dei database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce diversi *ruoli* rappresentanti entità di sicurezza all'interno delle quali sono raggruppate altre entità. I ruoli sono analoghi ai ***gruppi*** nel sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. L'ambito delle autorizzazioni dei ruoli a livello di database è l'intero database.  
@@ -58,7 +58,7 @@ ms.locfileid: "48104121"
   
  Nella tabella seguente sono mostrati i ruoli a livello di database predefinito e le relative funzionalità. Questi ruoli esistono in tutti i database.  
   
-|Nome del ruolo a livello di database|Description|  
+|Nome del ruolo a livello di database|Descrizione|  
 |-------------------------------|-----------------|  
 |**db_owner**|I membri del ruolo predefinito del database **db_owner** possono eseguire tutte le attività di configurazione e di manutenzione sul database e anche eliminare il database.|  
 |**db_securityadmin**|I membri del ruolo predefinito del database **db_securityadmin** possono modificare le appartenenze al ruolo e gestire le autorizzazioni. L'aggiunta di entità a questo ruolo potrebbe provocare un'imprevista intensificazione dei privilegi.|  
@@ -73,7 +73,7 @@ ms.locfileid: "48104121"
 ## <a name="msdb-roles"></a>Ruoli msdb  
  Il database msdb contiene ruoli specifici per uno scopo illustrati nella tabella seguente.  
   
-|Nome del ruolo in msdb|Description|  
+|Nome del ruolo in msdb|Descrizione|  
 |--------------------|-----------------|  
 |`db_ssisadmin`<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|I membri di tali ruoli del database possono amministrare e utilizzare [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiornate da una versione precedente potrebbero contenere una versione precedente del ruolo che era stata denominata usando Data Transformation Services (DTS) anziché [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|I membri di tali ruoli del database possono amministrare e utilizzare l'agente di raccolta dati. Per altre informazioni, vedere [Data Collection](../../data-collection/data-collection.md).|  
@@ -87,7 +87,7 @@ ms.locfileid: "48104121"
 ## <a name="working-with-database-level-roles"></a>Utilizzo di ruoli a livello di database  
  Nella tabella seguente vengono spiegati i comandi, le viste e le funzioni necessari per l'utilizzo dei ruoli a livello di database.  
   
-|Funzionalità|Tipo|Description|  
+|Funzionalità|Tipo|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadati|Restituisce un elenco dei ruoli predefiniti del database.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadati|Visualizza le autorizzazioni di un ruolo predefinito del database.|  

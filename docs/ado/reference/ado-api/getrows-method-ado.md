@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027946"
 ---
 # <a name="getrows-method-ado"></a>Metodo GetRows (ADO)
 Recupera i record più di una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto in una matrice.  
@@ -41,7 +41,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Righe*  
  Facoltativo. Oggetto [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valore che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
   
- *Inizio*  
+ *Start*  
  Facoltativo. Oggetto **stringa** valore oppure **Variant** che restituisca il segnalibro per il record da cui il **GetRows** deve iniziare l'operazione. È anche possibile usare una [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valore.  
   
  *Fields*  

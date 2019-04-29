@@ -23,11 +23,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025540"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "56015553"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>b. Inserimento di un record tramite la relazione padre-figlio specificata nello schema di mapping  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserimento di un record tramite la relazione padre-figlio specificata nello schema di mapping  
  Gli elementi dello schema possono essere correlati. Il  **\<SQL: Relationship >** elemento specifica la relazione padre-figlio tra gli elementi dello schema. Queste informazioni vengono utilizzate per aggiornare le tabelle corrispondenti che presentano una relazione chiave primaria/chiave esterna.  
   
  Lo schema di mapping seguente (SampleSchema. XML) è costituito da due elementi  **\<ordine >** e  **\<OD >**:  

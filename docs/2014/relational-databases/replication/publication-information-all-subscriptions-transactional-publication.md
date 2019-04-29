@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cc3ae7c4c39517f40b49d2ddd98ccdc397ee345
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021816"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione transazionale)
   La scheda **Tutte le sottoscrizioni** visualizza informazioni su tutte le sottoscrizioni della pubblicazione transazionale selezionata.  
@@ -25,13 +25,13 @@ ms.locfileid: "54134221"
 ## <a name="options"></a>Opzioni  
  Per ulteriori informazioni su una sottoscrizione e sulle attività correlate, fare clic con il pulsante destro del mouse sulla riga della sottoscrizione e quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
--   **Ordinamento**: Ordinare una o più colonne nella **Ordina colonne** nella finestra di dialogo.  
+-   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne**.  
   
--   **Seleziona colonne da visualizzare**: Selezionare le colonne da visualizzare e l'ordine in cui si desidera visualizzarli nel **Scegli colonne** nella finestra di dialogo.  
+-   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne**.  
   
--   **Filtro**: Filtrare le righe nella griglia in base ai valori di colonna il **impostazioni filtro** nella finestra di dialogo.  
+-   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro**.  
   
--   **Cancella filtro**: Cancellare qualsiasi impostazione di filtro per la griglia.  
+-   **Cancella filtro**: consente di cancellare qualsiasi impostazione di filtro per la griglia.  
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54134221"
  I valori di stato **Prestazioni critiche** e **Scadenza imminente/Scaduta** vengono visualizzati sono se sono stati impostati valori soglia. Per informazioni sulle misurazioni delle prestazioni e sull'impostazione dei valori soglia, vedere [Monitorare le prestazioni con Monitoraggio replica](monitor/monitor-performance-with-replication-monitor.md) e [Impostare valori di soglia e avvisi in Monitoraggio replica](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Sottoscrizione**  
- Il nome di ogni sottoscrizione, nel formato: *SubscriberName: SubscriptionDatabaseName*.  
+ Nome della sottoscrizione nel formato: *SubscriberName: SubscriptionDatabaseName*.  
   
  **Prestazioni**  
  Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. La valutazione delle prestazioni per ogni sottoscrizione è basata sulle misure più recenti rilevate da Monitoraggio replica e non riflette le prestazioni cronologiche. Le prestazioni vengono misurate per le sottoscrizioni delle pubblicazioni per le quali sono state definite soglie di prestazione. Se le soglie di prestazione non sono state definite per una pubblicazione, in questa colonna viene visualizzato **Non attivato**. La valutazione delle prestazioni può corrispondere a uno dei valori seguenti:  
@@ -86,7 +86,7 @@ ms.locfileid: "54134221"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   
   

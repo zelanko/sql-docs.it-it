@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702066"
 ---
 # <a name="performing-batch-operations-xmla"></a>Esecuzione di operazioni batch (XMLA)
   È possibile usare la [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando in XML for Analysis (XMLA) per eseguire più comandi XMLA utilizzando un singolo XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (metodo). È possibile eseguire più comandi contenuti nel comando `Batch` come una transazione singola o in transazioni separate per ogni comando, in serie o in parallelo. È inoltre possibile specificare associazioni out-of-line e altre proprietà di `Batch` comando per l'elaborazione di più [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti.  

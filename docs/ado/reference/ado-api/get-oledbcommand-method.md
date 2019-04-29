@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 636b2f541ebd5d3624e205a3442cf1618cdf78a6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028168"
 ---
 # <a name="getoledbcommand-method"></a>Metodo get_OLEDBCommand
 Restituisce il sottostante comando OLE DB, prima di tutto la propagazione di eventuali informazioni di parametro impostato sul comando ADO per comando OLE DB.  

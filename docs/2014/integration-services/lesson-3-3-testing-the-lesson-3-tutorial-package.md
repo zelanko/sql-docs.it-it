@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891589"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Passaggio 3: Il pacchetto della lezione 3 dell'esercitazione di test
   In questa attività verrà eseguito il pacchetto Lesson 3.dtsx. Durante l'esecuzione del pacchetto, nella finestra Registra eventi verranno elencate le voci di log scritte nel file di log. Al termine dell'esecuzione del pacchetto sarà possibile verificare il contenuto del file di log generato dal provider di log.  
   
 ## <a name="checking-the-package-layout"></a>Verifica del layout del pacchetto  

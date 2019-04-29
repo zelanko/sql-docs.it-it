@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2ce43ffb5d2c5be0afb39931f231d2f0d24e14
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025292"
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programmazione di modelli tabulari per i livelli di compatibilità da 1050 a 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

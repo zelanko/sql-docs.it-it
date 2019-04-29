@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15710b867c5d766787480b1830de3257f54da6be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024322"
 ---
 # <a name="other-excel-driver-programming-details"></a>Altre informazioni sulla programmazione dei driver Excel
 > [!NOTE]  
@@ -34,7 +34,7 @@ ms.locfileid: "47847109"
   
 -   [SQLColumns (driver Excel)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [SQLConfigDataSource (Driver Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (Excel Driver)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (driver Excel)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

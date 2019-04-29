@@ -1,5 +1,5 @@
 ---
-title: 'Elenco di controllo per la distribuzione: Scalabilità orizzontale aggiungendo server PowerPivot a una farm di SharePoint 2010 | Microsoft Docs'
+title: 'Elenco di controllo di distribuzione: Scalabilità orizzontale aggiungendo server PowerPivot a una farm di SharePoint 2010 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025697"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Elenco di controllo per la distribuzione: Scalabilità orizzontale mediante l'aggiunta di server PowerPivot a una farm di SharePoint 2010
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Elenco di controllo di distribuzione: Scalabilità orizzontale aggiungendo server PowerPivot a una farm di SharePoint 2010
   Se si prevede un volume elevato di richieste per l'elaborazione di query PowerPivot in una farm di SharePoint, è possibile aggiungere un'ulteriore istanza di PowerPivot per SharePoint per supportare in modo facile l'elaborazione di query e dati.  
   
  Dopo aver installato una nuova istanza, si dispone di capacità aggiuntive per l'esecuzione di query sui dati PowerPivot o l'elaborazione di processi di aggiornamento dati PowerPivot. Facoltativamente, è possibile configurare ogni server per gestire un solo tipo di richiesta: query o aggiornamento dati.  

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 290d4c43767ba7e1c6f784c84473e9a05503af54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920063"
 ---
 # <a name="transaction-lifetimes"></a>Durata delle transazioni
   Vi è un'importante differenza tra le transazioni avviate nelle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] e quelle avviate in codice gestito: il codice CLR (Common Language Runtime) non può sbilanciare lo stato della transazione all'immissione o all'uscita di una chiamata CLR. Tenere presenti le implicazioni seguenti correlate a questa differenza:  

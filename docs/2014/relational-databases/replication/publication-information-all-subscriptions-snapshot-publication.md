@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021829"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione snapshot)
   Nella scheda **Tutte le sottoscrizioni** vengono visualizzate le informazioni su tutte le sottoscrizioni della pubblicazione snapshot selezionata.  
@@ -25,13 +25,13 @@ ms.locfileid: "54135731"
 ## <a name="options"></a>Opzioni  
  Per ulteriori informazioni su una sottoscrizione e sulle attività correlate, fare clic con il pulsante destro del mouse sulla riga della sottoscrizione e quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
--   **Ordinamento**: Ordinare una o più colonne nella **Ordina colonne** nella finestra di dialogo.  
+-   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne**.  
   
--   **Seleziona colonne da visualizzare**: Selezionare le colonne da visualizzare e l'ordine in cui si desidera visualizzarli nel **Scegli colonne** nella finestra di dialogo.  
+-   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne**.  
   
--   **Filtro**: Filtrare le righe nella griglia in base ai valori di colonna il **impostazioni filtro** nella finestra di dialogo.  
+-   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro**.  
   
--   **Cancella filtro**: Cancellare qualsiasi impostazione di filtro per la griglia.  
+-   **Cancella filtro**: consente di cancellare qualsiasi impostazione di filtro per la griglia.  
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "54135731"
  Il valore di stato **Scadenza imminente/Scaduta** viene visualizzato solo se è stato impostato un valore soglia. Per altre informazioni sull'impostazione di valori soglia, vedere [Impostare valori di soglia e avvisi in Monitoraggio replica](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Sottoscrizione**  
- Il nome di ogni sottoscrizione, nel formato: *SubscriberName: SubscriptionDatabaseName*.  
+ Nome della sottoscrizione nel formato: *SubscriberName: SubscriptionDatabaseName*.  
   
  **Ultima sincronizzazione**  
  Data e ora dell'ultima esecuzione dell'agente di distribuzione. Se il processo di sincronizzazione è in corso, viene visualizzato **In corso** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   
   

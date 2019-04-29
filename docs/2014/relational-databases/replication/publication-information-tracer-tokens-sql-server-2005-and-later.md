@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021692"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Token di traccia (Pubblicazione transazionale, SQL Server 2005 e versioni successive)
   La scheda **Token di traccia** consente di convalidare le connessioni e di misurare la latenza di un sistema che utilizza la replica transazionale. Un token, ovvero una piccola quantità di dati, viene scritto nel log delle transazioni del database di pubblicazione, contrassegnato come se fosse una comune transazione replicata e inviato tramite il sistema in modo da consentire:  
@@ -35,13 +35,13 @@ ms.locfileid: "52792091"
 ## <a name="options"></a>Opzioni  
  Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
--   **Ordinamento**: Ordinare una o più colonne nella **Ordina colonne** nella finestra di dialogo.  
+-   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne**.  
   
--   **Seleziona colonne da visualizzare**: Selezionare le colonne da visualizzare e l'ordine in cui si desidera visualizzarli nel **Scegli colonne** nella finestra di dialogo.  
+-   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne**.  
   
--   **Filtro**: Filtrare le righe nella griglia in base ai valori di colonna il **impostazioni filtro** nella finestra di dialogo.  
+-   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro**.  
   
--   **Cancella filtro**: Cancellare qualsiasi impostazione di filtro per la griglia.  
+-   **Cancella filtro**: consente di cancellare qualsiasi impostazione di filtro per la griglia.  
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   

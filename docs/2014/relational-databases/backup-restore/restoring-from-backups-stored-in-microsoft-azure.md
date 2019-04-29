@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920640"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Ripristino da backup archiviati in Windows Azure
   In questo argomento vengono illustrate le considerazioni relative al ripristino di un database tramite un backup archiviato nel servizio di archiviazione BLOB di Windows Azure. Ciò si applica ai backup creati tramite il backup di SQL Server nell'URL o tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "53354411"
   
  Per ridurre i tempi di ripristino è consigliabile usare backup compressi.  Per i backup con dimensioni superiori ai 25 GB, usare l' [utilità AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) per eseguire il download nell'unità locale e quindi eseguire il ripristino. Per altri suggerimenti e procedure consigliate sui backup, vedere [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- È inoltre possibile abilitare il flag di traccia 3051 quando si esegue il ripristino per generare un log dettagliato. Questo file di log viene inserito nella directory del log e viene denominato usando il formato BackupToUrl -\<instancename >-\<nomedb > - azione -\<PID >. log. Nel file di log sono incluse informazioni su ogni round trip al Servizio di archiviazione Windows Azure, incluso l'intervallo che può essere utile per individuare il problema.  
+ È inoltre possibile abilitare il flag di traccia 3051 quando si esegue il ripristino per generare un log dettagliato. Questo file di log viene inserito nella directory dei log e viene denominato utilizzando il formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. Nel file di log sono incluse informazioni su ogni round trip al Servizio di archiviazione Windows Azure, incluso l'intervallo che può essere utile per individuare il problema.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Argomenti sull'esecuzione delle operazioni di ripristino  
   

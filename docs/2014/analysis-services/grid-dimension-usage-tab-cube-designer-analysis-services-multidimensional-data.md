@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730778"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Griglia (scheda Utilizzo dimensioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Griglia** nella scheda **Utilizzo dimensioni** di Progettazione cubi consente di visualizzare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure. Ogni relazione tra dimensioni viene rappresentata come cella in una griglia, nella quale i gruppi di misure vengono visualizzati come colonne e le dimensioni come righe.  
@@ -27,7 +27,7 @@ ms.locfileid: "48180021"
 |------------|----------------|  
 |**Gruppi di misure**|Consente di selezionare i gruppi di misure da visualizzare come colonne nel riquadro **Griglia** . Se si seleziona **(Mostra tutto)** vengono visualizzati tutti i gruppi di misure disponibili.<br /><br /> Per rinominare un gruppo di misure, fare clic sull'intestazione di una colonna selezionata per tale gruppo.|  
 |**Dimensions**|Consente di selezionare le dimensioni del cubo da visualizzare come righe nel riquadro **Griglia** . Se si seleziona **(Mostra tutto)** vengono visualizzate tutte le dimensioni del cubo disponibili.<br /><br /> Per rinominare una dimensione di cubo, fare clic sull'intestazione di una riga selezionata per tale dimensione.|  
-|**(Cella)**|Consente di selezionare una cella e fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Definisci relazione** e definire una relazione tra una dimensione di cubo e un gruppo di misure. Per altre informazioni sulla finestra di dialogo **Definisci relazione**, vedere [Finestra di dialogo Definisci relazione &#40;Analysis Services - Dati multidimensionali&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Consente di selezionare una cella e fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Definisci relazione** e definire una relazione tra una dimensione di cubo e un gruppo di misure. Per altre informazioni sulla finestra di dialogo **Definisci relazione**, vedere [Finestra di dialogo Definisci relazione &#40;Analysis Services - Dati multidimensionali&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="context-menu"></a>Menu di scelta rapida  
  Nel menu di scelta rapida, visualizzato facendo clic con il pulsante destro del mouse sul riquadro **Griglia** , sono disponibili le opzioni seguenti:  

@@ -1,5 +1,5 @@
 ---
-title: Sys. key_encryptions (Transact-SQL) | Microsoft Docs
+title: sys.key_encryptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a8fb9b2103316219bcdac74c1b861ac0a2668cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003549"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "47853689"
   Restituisce una riga per ogni crittografia di chiave simmetrica specificata tramite la clausola ENCRYPTION BY dell'istruzione CREATE SYMMETRIC KEY.  
 
   
-|Nomi colonna|Tipi di dati|Description|  
+|Nome colonna|Tipi di dati|Descrizione|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|ID della chiave crittografata.|  
-|**Identificazione personale**|**varbinary(32)**|Hash SHA-1 del certificato con il quale è crittografata la chiave, o GUID della chiave simmetrica con il quale è crittografata la chiave.|  
-|**crypt_type**|**Char(4)**|Tipo di crittografia:<br /><br /> ESKS = Crittografato tramite chiave simmetrica<br /><br /> ESP3, ESP2 o ESKP = crittografato tramite password<br /><br /> EPUC = Crittografato tramite certificato<br /><br /> EPUA = Crittografato tramite chiave asimmetrica<br /><br /> ESKM = Crittografato tramite chiave master|  
-|**crypt_type_desc**|**nvarchar(60)**|Descrizione del tipo di crittografia:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(A partire da [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], include un numero di versione per l'uso da CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Nota: Windows DPAPI viene usato per proteggere la chiave master del servizio.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato con il quale è crittografata la chiave, o GUID della chiave simmetrica con il quale è crittografata la chiave.|  
+|**crypt_type**|**char(4)**|Tipo di crittografia:<br /><br /> ESKS = Crittografato tramite chiave simmetrica<br /><br /> ESP3, ESP2 o ESKP = crittografato tramite password<br /><br /> EPUC = Crittografato tramite certificato<br /><br /> EPUA = Crittografato tramite chiave asimmetrica<br /><br /> ESKM = Crittografato tramite chiave master|  
+|**crypt_type_desc**|**nvarchar(60)**|Descrizione del tipo di crittografia:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(A partire da [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], include un numero di versione per l'uso da CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Nota: DPAPI di Windows viene utilizzato per proteggere la chiave master del servizio.|  
 |**crypt_property**|**varbinary(max)**|Bit firmati o crittografati.|  
   
 ## <a name="permissions"></a>Permissions  

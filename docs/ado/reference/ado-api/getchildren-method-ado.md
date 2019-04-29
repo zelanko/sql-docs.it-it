@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 910977912a23ee48f740afccdb58c6f82801f2a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028113"
 ---
 # <a name="getchildren-method-ado"></a>Metodo GetChildren (ADO)
 Restituisce un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente le righe rappresentano gli elementi figlio di una raccolta [Record](../../../ado/reference/ado-api/record-object-ado.md).  

@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871538"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
   In questo argomento viene descritta la procedura per lo spostamento dei database di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo spostamento dei database di sistema può risultare utile nelle situazioni seguenti:  
@@ -196,7 +196,7 @@ ms.locfileid: "52756273"
 ##  <a name="Resource"></a> Spostamento del database delle risorse  
  Il percorso del database delle risorse è \<*unità*>: \Programmi\Microsoft SQL Server\MSSQL\<versione>.\<*nome_istanza*>\MSSQL\Binn\\. Il database non può essere spostato.  
   
-##  <a name="Follow"></a> Completamento: Dopo lo spostamento di tutti i database di sistema  
+##  <a name="Follow"></a> Completamento: Dopo aver spostato tutti i database di sistema  
  Se tutti i database di sistema sono stati spostati in un nuovo volume o unità oppure in un altro server con una lettera di unità diversa, effettuare gli aggiornamenti riportati di seguito.  
   
 -   Modificare il percorso del log di SQL Server Agent Se non si aggiorna questo percorso, non sarà possibile avviare SQL Server Agent.  

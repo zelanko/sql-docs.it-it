@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871680"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
   Usare la procedura guidata **Distribuzione del database alla macchina virtuale Microsoft Azure** per distribuire un database da un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Microsoft Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
@@ -89,9 +89,9 @@ ms.locfileid: "53357895"
   
  Nei computer che eseguono sistemi operativi Windows Server, è necessario usare le seguenti impostazioni di configurazione per eseguire questa procedura guidata:  
   
--   Disattivare la configurazione di Sicurezza avanzata  Utilizzare Server Manager > Server locale per impostare Internet Explorer Enhanced Security Configuration (ESC) su **OFF**.  
+-   Disabilitare configurazione sicurezza avanzata:  Utilizzare Server Manager > Server locale per impostare Internet Explorer Enhanced Security Configuration (ESC) su **OFF**.  
   
--   Abilitare JavaScript:  Internet Explorer > Opzioni Internet > Sicurezza > Livello personalizzato > Esecuzione script > Esecuzione script attivo: **Abilitare**.  
+-   Abilitare JavaScript:  Internet Explorer > Opzioni Internet > sicurezza > livello cliente > script > esecuzione script attivo: **Abilitare**.  
   
 ###  <a name="limitations"></a> Limitazioni e restrizioni  
  Il limite per le dimensioni del database per questa operazione è di 1 TB.  

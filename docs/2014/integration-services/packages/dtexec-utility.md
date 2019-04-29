@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890212"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
   Il `dtexec` utilità della riga di comando viene usato per configurare ed eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti. Con l'utilità `dtexec` è possibile accedere a tutte le funzionalità di configurazione ed esecuzione dei pacchetti quali parametri, connessioni, proprietà, variabili, registrazione e indicatori di stato. Il `dtexec` utilità consente di caricare i pacchetti da queste origini: il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, file di progetto con estensione ispac, un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, il [!INCLUDE[ssIS](../../includes/ssis-md.md)] Store pacchetto e il file system.  

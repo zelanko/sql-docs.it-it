@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705725"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrazione dei dati di Sybase ASE in SQL Server - Azure SQL database (SybaseToSQL)
 Dopo che sono stati caricati correttamente gli oggetti di database di Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure, è possibile migrare i dati dall'ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  

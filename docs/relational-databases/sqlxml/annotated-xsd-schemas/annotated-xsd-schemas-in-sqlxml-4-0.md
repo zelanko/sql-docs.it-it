@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03dcab928e63cb94cd8b2ea704a56e83eeff701e
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025444"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Schemi XSD con annotazioni in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "56662905"
   
 -   XML Schema Part 0: Nozioni di base, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   Nella Parte 1 dello schema XML: Strutture, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Strutture, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML Schema Part 2: Datatypes W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   

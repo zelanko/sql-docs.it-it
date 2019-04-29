@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021806"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Informazioni sulla pubblicazione, Agenti (pubblicazione transazionale)
   La scheda **Agenti** visualizza informazioni di riepilogo sugli agenti per la pubblicazione selezionata. Le informazioni sull'agente snapshot e sull'agente di lettura log vengono visualizzate per tutte le pubblicazioni transazionali. Le informazioni sull'agente di lettura coda vengono visualizzate per le pubblicazioni transazionali abilitate per le sottoscrizioni ad aggiornamento in coda.  
@@ -25,13 +25,13 @@ ms.locfileid: "54125821"
 ## <a name="options"></a>Opzioni  
  Per ulteriori informazioni su un agente e per le attività correlate, fare clic con il pulsante destro del mouse sulla riga dell'agente e quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
--   **Ordinamento**: Ordinare una o più colonne nella **Ordina colonne** nella finestra di dialogo.  
+-   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne**.  
   
--   **Seleziona colonne da visualizzare**: Selezionare le colonne da visualizzare e l'ordine in cui si desidera visualizzarli nel **Scegli colonne** nella finestra di dialogo.  
+-   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne**.  
   
--   **Filtro**: Filtrare le righe nella griglia in base ai valori di colonna il **impostazioni filtro** nella finestra di dialogo.  
+-   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro**.  
   
--   **Cancella filtro**: Cancellare qualsiasi impostazione di filtro per la griglia.  
+-   **Cancella filtro**: consente di cancellare qualsiasi impostazione di filtro per la griglia.  
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54125821"
 -   Operazione completata  
   
  **Agente**  
- Nome di ogni agente di replica associato alla pubblicazione. L'agente di distribuzione è associato alle sottoscrizioni della pubblicazione. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Nome di ogni agente di replica associato alla pubblicazione. L'agente di distribuzione è associato alle sottoscrizioni della pubblicazione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
@@ -62,7 +62,7 @@ ms.locfileid: "54125821"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992263"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello di previsione (Esercitazione intermedia sul data mining)
   Dopo aver creato il modello di data mining previsione, è possibile esplorare i risultati usando il **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Time Series contiene due schede: **I grafici** e **modello**.  

@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField | Documenti di Microsoft
+title: SQLGetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657785"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client espone campi di descrizione specifici del driver per il descrittore riga di implementazione (IRD) solo. Nell'IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i campi di descrizione vengono fatto riferimento tramite attributi di colonna specifici del driver. Per informazioni su un elenco completo dei campi di descrizione specifici del driver disponibili, vedere [SQLColAttribute](sqlcolattribute.md).  

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745921"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile usare **bcp** per importare dati in formato nativo e carattere da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usando l'opzione **-V** . Se si usa l'opzione **-V** , in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono usati tipi di dati della versione precedente specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e il formato del file di dati corrisponderà al formato della versione precedente in questione.  
@@ -45,7 +45,7 @@ ms.locfileid: "52531589"
 |`nvarchar(max)`|`ntext`|`ntext`|`ntext`|  
 |`varbinary(max)`|`image`|`image`|`image`|  
 |XML|`ntext`|`ntext`|`ntext`|  
-|TIPO DEFINITO DALL'UTENTE<sup>1</sup>|`image`|`image`|`image`|  
+|UDT<sup>1</sup>|`image`|`image`|`image`|  
   
  \* Questo tipo in modo nativo è supportato.  
   

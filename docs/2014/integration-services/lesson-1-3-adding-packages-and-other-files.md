@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892132"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Passaggio 3: Aggiunta di pacchetti e altri file
   In questa attività verranno aggiunti i pacchetti esistenti, i file ausiliari di supporto a singoli pacchetti e un file Leggimi relativo al progetto Deployment Tutorial creato nell'attività precedente. Verrò aggiunto ad esempio un file di dati XML contenente i dati relativi a un pacchetto e un file di testo che include informazioni su tutti i pacchetti del progetto.  
@@ -68,7 +68,7 @@ ms.locfileid: "58384229"
 4.  Scegliere **Salva tutto**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 4: Aggiunta delle configurazioni dei pacchetti](../integration-services/lesson-1-4-adding-package-configurations.md)  
+ [Passaggio 4: Aggiunta di configurazioni pacchetto](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 ![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   

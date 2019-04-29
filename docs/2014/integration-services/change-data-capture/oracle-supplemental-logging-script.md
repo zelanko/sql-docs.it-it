@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835348"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script di registrazione supplementare Oracle
   Questa finestra di dialogo contiene lo script della registrazione supplementare Oracle.  

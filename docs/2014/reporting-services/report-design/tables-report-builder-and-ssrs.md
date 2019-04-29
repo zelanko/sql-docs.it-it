@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720778"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelle (Generatore report e SSRS)
   Usare una tabella per visualizzare dati dettaglio, dati raggruppati o una combinazione di entrambi. È possibile raggruppare i dati per un solo campo, per più campi o scrivendo un'espressione personalizzata. È inoltre possibile creare gruppi nidificati, indipendenti o adiacenti. Per visualizzare valori aggregati per dati raggruppati, aggiungere i totali ai gruppi. Formattare le righe e le colonne in modo da evidenziare i dati sui quali concentrarsi. È possibile nascondere inizialmente i dati di dettaglio o raggruppati e includere elementi Toggle di drill-down per consentire agli utenti di scegliere in modo interattivo la quantità di dati da visualizzare.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bd954af100273e3a8a8d91a72daae71b995ddab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028188"
 ---
 # <a name="find-method-example-jscript"></a>Esempio del metodo Find (JScript)
 Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo per individuare e visualizzare le società il ***Northwind*** database il cui nome inizia con la lettera G. le operazioni Taglia e Incolla i seguente codice nel blocco note o un altro editor di testo e salvarlo come **FindJS**.  

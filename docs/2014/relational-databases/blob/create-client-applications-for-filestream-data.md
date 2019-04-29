@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 017762b9897af951020793fdd02fc34d3209da2d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920536"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Creazione di applicazioni client per dati FILESTREAM
   Per leggere e scrivere dati in un oggetto BLOB FILESTREAM, è possibile utilizzare Win32. È necessario effettuare le operazioni seguenti:  

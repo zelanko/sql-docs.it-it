@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a31fb2b1b4e158773e2f286ed5a3530d90c201c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766414"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor gestione connessione SQL Server Compact Edition (pagina Connessione)
   Utilizzare la finestra di dialogo **Editor gestione connessione SQL Server Compact Edition** per specificare le proprietà di connessione a un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

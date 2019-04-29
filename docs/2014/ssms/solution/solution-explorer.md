@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025716"
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
   Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  

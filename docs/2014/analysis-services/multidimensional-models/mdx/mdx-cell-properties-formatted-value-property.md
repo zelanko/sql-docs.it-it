@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725435"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING in FORMATED_VALUE
   La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
@@ -34,7 +34,7 @@ ms.locfileid: "48052354"
  Specifica delle impostazioni locali da applicare insieme a FORMAT_STRING per generare una versione localizzata di FORMATTED_VALUE  
   
 ## <a name="formattedvalue-constructed"></a>Proprietà FORMATTED_VALUE costruita  
- La proprietà FORMATTED_VALUE viene costruita utilizzando il valore della proprietà VALUE e applicando a tale valore il modello di formato specificato nella proprietà FORMAT_STRING. Inoltre, ogni volta che il valore di formattazione è un `named formatting literal` la specifica della proprietà LANGUAGE modifica l'output di FORMAT_STRING per seguire l'utilizzo della lingua per la formattazione denominata. I valori letterali di formattazione denominati sono tutti definiti in modo da poter essere localizzati. Contrariamente al modello `"General Date"` che indica che la data deve essere presentata come definita dal modello indipendentemente dalla specifica della lingua, la specifica `"YYYY-MM-DD hh:nn:ss",` può essere localizzata.  
+ La proprietà FORMATTED_VALUE viene costruita utilizzando il valore della proprietà VALUE e applicando a tale valore il modello di formato specificato nella proprietà FORMAT_STRING. Inoltre, ogni volta che il valore di formattazione è dato da un `named formatting literal`, la specifica della proprietà LANGUAGE modifica l'output di FORMAT_STRING per seguire l'utilizzo della lingua per la formattazione denominata. I valori letterali di formattazione denominati sono tutti definiti in modo da poter essere localizzati. Contrariamente al modello `"General Date"` che indica che la data deve essere presentata come definita dal modello indipendentemente dalla specifica della lingua, la specifica `"YYYY-MM-DD hh:nn:ss",` può essere localizzata.  
   
  Se si verifica un conflitto tra il modello FORMAT_STRING e la specifica LANGUAGE, il modello FORMAT_STRING esegue l'override della specifica LANGUAGE. Se, ad esempio, FORMAT_STRING="$ #0", LANGUAGE=1034 (Spagna) e VALUE=123.456, allora FORMATTED_VALUE="$ 123" anziché FORMATTED_VALUE="€ 123". Il formato previsto è in euro perché il valore del modello di formato esegue l'override della lingua specificata.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48052354"
 |E|5,04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE è impostata in modo esplicito su `1034,` da qui la virgola ( `,` ) come separatore decimale.|  
 |F|50.40%|La proprietà FORMAT_STRING è impostata su `Percent` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata modificata da 5040 a 0.5040|  
 |G|50,40%|La proprietà FORMAT_STRING è impostata su `Percent`, valore ereditato da F, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` , da qui la virgola ( `,` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata ereditata da F.|  
-|H|no|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Poiché non vi è differenza tra il NO inglese e quello spagnolo, l'utente non nota alcuna differenza nella proprietà FORMATTED_VALUE.|  
+|H|No|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Poiché non vi è differenza tra il NO inglese e quello spagnolo, l'utente non nota alcuna differenza nella proprietà FORMATTED_VALUE.|  
 |I|SI|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 59 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione YES/NO, qualsiasi valore diverso da zero (0) è un YES e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è SI.|  
 |J|Desactivado|La proprietà FORMAT_STRING è impostata su `ON/OFF`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione ON/OFF, qualsiasi valore uguale a zero (0) è un OFF e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è Desactivado.|  
 |K|Activado|La proprietà FORMAT_STRING è impostata su `ON/OFF`, la proprietà VALUE su -312 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione ON/OFF, qualsiasi valore diverso da zero (0) è un ON e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è Activado.|  
@@ -144,8 +144,8 @@ ms.locfileid: "48052354"
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto di FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [Utilizzo delle proprietà di cella &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Creazione e utilizzo di valori della proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Utilizzo delle proprietà delle celle &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   
