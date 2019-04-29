@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836453"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor attività Elaborazione Analysis Services (pagina Analysis Services)
   Usare la pagina **Analysis Services** della finestra di dialogo **Editor attività Elaborazione Analysis Services** per specificare una gestione connessione Analysis Services, selezionare gli oggetti analitici da elaborare e impostare le opzioni di elaborazione e di gestione degli errori.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380899"
  **Nuova**  
  Consente di creare una nuova gestione connessione Analysis Services.  
   
- **Argomenti correlati:** [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md), [Aggiungi riferimento all'interfaccia utente di finestra di dialogo Gestione connessione di Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Argomenti correlati:** [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
  |Proprietà|Descrizione|  
@@ -63,7 +63,7 @@ ms.locfileid: "58380899"
  **Analisi di impatto**  
  Consente di eseguire un'analisi di impatto sull'oggetto selezionato.  
   
- **Argomenti correlati:** [Finestra di dialogo analisi di impatto &#40;Analysis Services - dati multidimensionali&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Riepilogo impostazioni batch**  
  |Proprietà|Descrizione|  
@@ -77,7 +77,7 @@ ms.locfileid: "58380899"
  **Cambia impostazioni**  
  Consente di modificare le opzioni di elaborazione e la gestione degli errori nelle chiavi della dimensione.  
   
- **Argomenti correlati:** [Modificare le impostazioni di dialogo &#40;Analysis Services - dati multidimensionali&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Argomenti correlati:** [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

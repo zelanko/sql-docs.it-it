@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011660"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
   In questo argomento viene illustrato come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48066508"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per crittografare una colonna di dati tramite Transact-SQL](#TsqlProcedure)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48066508"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni seguenti sono necessarie per eseguire i passaggi riportati di seguito:  
   
 -   Autorizzazione CONTROL per il database.  
@@ -46,7 +46,7 @@ ms.locfileid: "48066508"
   
 -   È necessario disporre di un'autorizzazione per la chiave e che non venga negata l'autorizzazione VIEW DEFINITION.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Per crittografare una colonna di dati utilizzando una crittografia simmetrica semplice  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48066508"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ ms.locfileid: "48066508"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961913"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @table_server=] '*table_server*'  
+ [ @table_server= ] '*table_server*'  
  Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui vengono richieste informazioni di tabella. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @table_name=] '*table_name*'  
@@ -54,16 +54,16 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @table_schema=] '*table_schema*'  
  Specifica lo schema di tabella. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
- [ @table_catalog=] '*table_db*'  
+ [ @table_catalog= ] '*table_db*'  
  È il nome del database in cui *table_name* risiede. *table_db* viene **sysname**, con un valore predefinito è NULL. Se NULL, *table_db* per impostazione predefinita **master**.  
   
  [ @index_name=] '*index_name*'  
  Nome dell'indice per cui si desidera ottenere informazioni. *indice* viene **sysname**, con un valore predefinito è NULL.  
   
- [ @is_unique=] '*is_unique*'  
+ [ @is_unique= ] '*is_unique*'  
  Tipo di indice per cui si desidera ottenere informazioni. *is_unique* viene **bit**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce informazioni sugli indici univoci.|  
 |0|Restituisce informazioni sugli indici non univoci.|  
@@ -71,7 +71,7 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |TABLE_CAT|**sysname**|Nome del database contenente la tabella specificata.|  
 |TABLE_SCHEM|**sysname**|Schema della tabella.|  
@@ -85,7 +85,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|Ordine adottato nelle regole di confronto:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre A.|  
 |CARDINALITY|**int**|Numero di righe della tabella o valori univoci dell'indice.|  
 |PAGES|**int**|Numero di pagine necessarie per l'archiviazione dell'indice o della tabella.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  

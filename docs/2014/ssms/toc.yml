@@ -257,7 +257,7 @@
   href: menu-help/sql-server-management-studio-menu-help.md
 - name: SQL Server Agent +
   href: agent/sql-server-agent.md
-- name: Esercitazione su SQL Server Management Studio
+- name: 'Esercitazione: SQL Server Management Studio'
   href: tutorials/tutorial-sql-server-management-studio.md
   items:
     - name: 'Lezione 1: Navigazione di base in SQL Server Management Studio'
@@ -296,7 +296,7 @@
           href: tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md
         - name: Generare lo script per una tabella
           href: tutorials/lesson-2-6-script-a-table.md
-    - name: 'Lezione 3: Utilizzo di modelli, soluzioni e progetti script'
+    - name: 'Lezione 3: Uso di modelli, soluzioni e progetti script'
       href: tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md
       items:
         - name: Creare script utilizzando i modelli

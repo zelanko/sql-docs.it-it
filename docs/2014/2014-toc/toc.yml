@@ -54,5 +54,5 @@
   href: sql-server-transaction-locking-and-row-versioning-guide.md
 - name: Architettura e gestione del log delle transazioni
   href: sql-server-transaction-log-architecture-and-management.md
-- name: 'Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance (Case study: creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per ottenere scalabilità e prestazioni)'
+- name: 'Case study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per ottenere scalabilità e prestazioni'
   href: case-study-building-an-enterprise-ecosystem.md

@@ -18,7 +18,7 @@
   items:
     - name: Configurazione del backup gestito di SQL Server in Windows Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Backup gestito di SQL Server in Windows Azure: interoperabilità e coesistenza'
+    - name: 'Backup gestito di SQL Server in Microsoft Azure: Interoperabilità e coesistenza'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: Backup gestito di SQL Server in Windows Azure - Impostazioni di archiviazione e di memorizzazione
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -233,5 +233,5 @@
   items:
     - name: Ripristinare il database master (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: 'Backup e ripristino: interoperabilità e coesistenza'
+- name: 'Backup e ripristino: Interoperabilità e coesistenza'
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

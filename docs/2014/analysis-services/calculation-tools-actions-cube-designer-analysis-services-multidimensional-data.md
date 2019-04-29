@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677075"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Strumenti di calcolo** della scheda **Azioni** in Progettazione cubi per esplorare i metadati, le funzioni e i modelli disponibili per le azioni, le azioni drill-through e le azioni report.  
@@ -49,10 +49,10 @@ ms.locfileid: "48133511"
 |------------|----------------|  
 |**Copia**|Selezionare questa opzione per copiare negli Appunti l'elemento specificato in **Metadati** o **Funzioni** .<br /><br /> Si noti che questa opzione non viene visualizzata se **modelli** sia selezionata. Si noti inoltre che questa opzione è disabilitata se il membro selezionato non è possibile copiare, ad esempio la **set** di una dimensione visualizzata nella cartella **metadati** o la cartella del gruppo di funzioni per la funzione visualizzata in  **Funzioni**.|  
 |**Filtra membri**|Selezionare questa opzione per visualizzare la finestra di dialogo **Filtra membri** e filtrare i membri visualizzati per l'elemento selezionato in **Metadati**. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si noti che questa opzione viene visualizzata solo se **metadati** sia selezionata. Si noti inoltre che questa opzione è abilitata solo se si seleziona un livello per un attributo in **metadati**.|  
-|**Aggiungi modello**|Scegliere questa opzione per aggiungere al cubo una nuova azione, una nuova azione drill-through o una nuova azione report basata sul modello selezionato e visualizzare rispettivamente l'**editor dei form delle azioni**, l'**editor dei form delle azioni drill-through**oppure l'**editor dei form delle azioni report**.<br /><br /> Nota: Questa opzione viene visualizzata solo se **metadati** sia selezionata.|  
+|**Aggiungi modello**|Scegliere questa opzione per aggiungere al cubo una nuova azione, una nuova azione drill-through o una nuova azione report basata sul modello selezionato e visualizzare rispettivamente l'**editor dei form delle azioni**, l'**editor dei form delle azioni drill-through**oppure l'**editor dei form delle azioni report**.<br /><br /> Nota: Questa opzione viene visualizzata solo se si seleziona **Metadati** .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Sulla barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

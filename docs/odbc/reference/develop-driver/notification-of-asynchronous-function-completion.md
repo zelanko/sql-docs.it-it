@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690531"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notifica del completamento di funzioni asincrone
 In Windows 8 SDK, ODBC aggiunto un meccanismo per notificare alle applicazioni quando viene completata un'operazione asincrona, che si farà riferimento a come "notifica di completamento". (Vedere [esecuzione asincrona (metodo di notifica)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) per altre informazioni.) In questo argomento vengono descritti alcuni dei problemi per gli sviluppatori di driver.  

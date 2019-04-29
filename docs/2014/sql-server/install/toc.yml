@@ -1,43 +1,43 @@
 - name: SQL Server 2014 Upgrade Advisor
   href: sql-server-2014-upgrade-advisor.md
-- name: Installazione di Preparazione aggiornamento
+- name: Installazione di Gestione spazio aggiornamenti
   href: installing-upgrade-advisor.md
   items:
-    - name: Prerequisiti di Preparazione aggiornamento
+    - name: Prerequisiti di Gestione spazio aggiornamenti
       href: upgrade-advisor-prerequisites.md
-    - name: Installazione di Preparazione aggiornamento dal prompt dei comandi
+    - name: Installazione di Gestione spazio aggiornamenti dal prompt dei comandi
       href: installing-upgrade-advisor-from-the-command-prompt.md
-- name: Utilizzo di Preparazione aggiornamento
+- name: Uso di Gestione spazio aggiornamenti
   href: working-with-upgrade-advisor.md
-- name: Panoramica di Preparazione aggiornamento
+- name: Panoramica di Gestione spazio aggiornamenti
   href: overview-of-upgrade-advisor.md
   items:
     - name: Panoramica del processo di aggiornamento
       href: upgrade-process-overview.md
-    - name: Panoramica di Preparazione aggiornamento
+    - name: Panoramica di Gestione spazio aggiornamenti
       href: upgrade-advisor-overview.md
-    - name: Esecuzione di Preparazione aggiornamento (interfaccia utente)
+    - name: Esecuzione di Gestione spazio aggiornamenti (interfaccia utente)
       href: running-upgrade-advisor-user-interface.md
-    - name: Esecuzione di Preparazione aggiornamento (prompt dei comandi)
+    - name: Esecuzione di Gestione spazio aggiornamenti (prompt dei comandi)
       href: running-upgrade-advisor-command-prompt.md
-    - name: Utilizzo dei report
+    - name: Uso dei report
       href: using-reports.md
-    - name: Errori di Preparazione aggiornamento
+    - name: Errori di Gestione spazio aggiornamenti
       href: upgrade-advisor-errors.md
-- name: Procedure per Preparazione aggiornamento
+- name: Procedure per Gestione spazio aggiornamenti
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 'Procedura: Installazione di Preparazione aggiornamento'
+    - name: 'Procedura: Installare Gestione spazio aggiornamenti'
       href: how-to-install-upgrade-advisor.md
-    - name: 'Procedura: Avvio di Preparazione aggiornamento'
+    - name: 'Procedura: Avviare Gestione spazio aggiornamenti'
       href: how-to-launch-upgrade-advisor.md
-    - name: 'Procedura: Esecuzione dell''Analisi guidata di Preparazione aggiornamento'
+    - name: 'Procedura: Eseguire l''analisi guidata di Gestione spazio aggiornamenti'
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 'Procedura: Visualizzazione di un report di Preparazione aggiornamento'
+    - name: 'Procedura: Visualizzare un report di Gestione spazio aggiornamenti'
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 'Procedura: Filtraggio di report'
+    - name: 'Procedura: Filtrare i report'
       href: how-to-filter-reports.md
-    - name: 'Procedura: Esportazione di report'
+    - name: 'Procedura: Export Reports'
       href: how-to-export-reports.md
 - name: Guida di riferimento all'interfaccia utente
   href: upgrade-advisor-user-interface-reference.md
@@ -424,7 +424,7 @@
   items:
     - name: Installazione degli aggiornamenti dal prompt dei comandi
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 'Procedura: Convalida della corretta installazione di un aggiornamento di SQL Server'
+    - name: 'Procedura: Verificare la corretta installazione di un aggiornamento di SQL Server'
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Panoramica sull'installazione dei servizi SQL Server
       href: overview-of-sql-server-servicing-installation.md

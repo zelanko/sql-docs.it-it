@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843795"
 ---
 # <a name="sql-server-database-engine"></a>Motore di database di SQL Server
   [!INCLUDE[ssDE](../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. [!INCLUDE[ssDE](../includes/ssde-md.md)] assicura l'accesso controllato e l'elaborazione rapida delle transazioni per soddisfare i requisiti delle più complesse applicazioni aziendali di gestione dei dati.  

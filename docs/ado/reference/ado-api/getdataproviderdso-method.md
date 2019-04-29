@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c7d864d61d2782955a52ce6e20a7025379cc946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028069"
 ---
 # <a name="getdataproviderdso-method"></a>Metodo GetDataProviderDSO
 Recupera l'oggetto origine dati OLE DB sottostante dal provider di forma.  
@@ -39,5 +39,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>Note  
  Questo metodo non non addref il puntatore di interfaccia. Se il chiamante prevede di spostare il puntatore, il chiamante deve effettuare la necessaria addref e release.  
   
-## <a name="applies-to"></a>Applicabile a  
+## <a name="applies-to"></a>Si applica a  
  [Interfaccia IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

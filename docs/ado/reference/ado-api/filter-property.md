@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028148"
 ---
 # <a name="filter-property"></a>Proprietà Filter
 Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -30,9 +30,9 @@ Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/rec
 
 Imposta o restituisce un **Variant** valore, che può contenere uno dei seguenti elementi:  
   
--   **Stringa di criteri:** una stringa costituita da uno o più clausole singoli concatenate **AND** oppure **OR** operatori.  
+-   **Stringa di criteri:** Una stringa costituita da uno o più clausole singoli concatenate **AND** oppure **OR** operatori.  
   
--   **Matrice di segnalibri:** una matrice di segnalibro univoco valori che puntano ai record nel **Recordset** oggetto.  
+-   **Matrice di segnalibri:** Matrice di segnalibro univoco che puntano ai record in più valori di **Recordset** oggetto.  
   
 -   Oggetto [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valore.  
   
@@ -46,7 +46,7 @@ La stringa di criteri è costituita da clausole nel formato *valore dell'operato
   
 -   Operatore deve essere uno dei seguenti: \<, >, \<=, > =, <>, =, o **, ad esempio**.  
   
--   Valore è quello con cui si confronteranno i valori di campo (ad esempio, 'Smith', #, #8/24/95 12,345 o $50,00). Usare le virgolette singole con segni di cancelletto (#) con date e stringhe. Per i numeri, è possibile utilizzare la notazione scientifica i separatori decimali e simboli del dollaro. Se l'operatore **, ad esempio**, valore possa usare caratteri jolly. Sono consentiti solo l'asterisco (*) e i caratteri jolly il simbolo di percentuale (%) e devono essere l'ultimo carattere nella stringa. Valore non può essere null.  
+-   Valore è quello con cui si confronteranno i valori di campo (ad esempio, 'Smith', #, #8/24/95 12,345 o $50,00). Usare le virgolette singole con segni di cancelletto (#) con date e stringhe. Per i numeri, è possibile utilizzare la notazione scientifica i separatori decimali e simboli del dollaro. Se l'operatore **, ad esempio**, valore possa usare caratteri jolly. Solo l'asterisco (*) e segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere nella stringa. Valore non può essere null.  
   
 > [!NOTE]
 >  Per includere le virgolette singole (') nel valore del filtro, usare due virgolette singole per rappresentare uno. Ad esempio, per filtrare in base, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa con segni di cancelletto (#). Ad esempio, per filtrare '1', la stringa di criteri deve essere `"col1 = #'1'#"`.  
@@ -57,7 +57,7 @@ La stringa di criteri è costituita da clausole nel formato *valore dell'operato
 -   In alternativa, è possibile creare il filtro seguente:  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In un **, ad esempio** clausola, è possibile usare un carattere jolly all'inizio e alla fine del modello. Ad esempio, è possibile usare `LastName Like '*mit*'`. O con **, ad esempio** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio, `LastName Like 'Smit*'`.  
+-   In un **, ad esempio** clausola, è possibile usare un carattere jolly all'inizio e alla fine del modello. Ad esempio, è possibile usare `LastName Like '*mit*'`. O con **, ad esempio** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio `LastName Like 'Smit*'`.  
   
  Le costanti del filtro rendono più semplice risolvere singoli record conflitti durante la modalità di aggiornamento batch in quanto consente di visualizzare, ad esempio, solo i record che sono stati interessati durante l'ultima [metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) chiamata al metodo.  
   

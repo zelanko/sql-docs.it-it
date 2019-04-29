@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004148"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int**.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  GUID che identifica il tipo di agente di raccolta dati da utilizzare per questo elemento *collector_type_uid* viene **uniqueidentifier** non prevede alcun valore predefinito... Per un elenco di tipi di agenti di raccolta, eseguire una query sulla vista di sistema syscollector_collector_types.  
   
  [ @name =] '*nome*'  
@@ -66,7 +66,7 @@ sp_syscollector_create_collection_item
  [ @parameters =] '*parametri*'  
  Parametri di input per il tipo agente di raccolta. *i parametri* viene **xml** con valore predefinito è NULL. Il *parametri* dello schema deve corrispondere allo schema di parametri del tipo di agente di raccolta.  
   
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  Identificatore univoco che identifica l'elemento del set di raccolta. *collection_item_id* viene **int** e ha OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

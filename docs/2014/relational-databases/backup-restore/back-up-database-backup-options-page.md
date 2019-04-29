@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876864"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup database (pagina Opzioni di backup)
   Utilizzare la pagina  **Opzioni di backup** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni di backup del database.  
@@ -40,7 +40,7 @@ ms.locfileid: "48060351"
 ### <a name="backup-set"></a>Set di backup  
  Le opzioni del pannello **Set di backup** consentono di specificare informazioni facoltative sul set di backup creato dall'operazione di backup.  
   
- **Nome**  
+ **Name**  
  Consente di specificare il nome del set di backup. Il sistema suggerisce automaticamente un nome predefinito in base al nome del database e al tipo di backup.  
   
  Per informazioni sui set di backup, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  

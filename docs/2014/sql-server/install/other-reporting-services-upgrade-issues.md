@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: af30ed5d0e275353691e506dd49eeaebcea10d3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011621"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>Altri problemi di aggiornamento di Reporting Services
   In questo argomento vengono descritti problemi noti che potrebbero presentarsi durante la funzionalità di aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. **Questi problemi non vengono rilevati da Preparazione aggiornamento.** Per altre informazioni, vedere [note sulla versione di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445)  

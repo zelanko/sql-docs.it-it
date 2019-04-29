@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754833"
 ---
 # <a name="database-mirroring-history"></a>Cronologia di mirroring del database
   Utilizzare questa finestra di dialogo per visualizzare la cronologia dello stato del mirroring per un database con mirroring in un'istanza del server specificata.  
@@ -65,7 +65,7 @@ ms.locfileid: "48086191"
  **Cronologia**  
  Consente di visualizzare l'elenco di cronologia. Fare clic su un'intestazione di colonna per ordinare la griglia in base a tale colonna. L'elenco contiene le colonne seguenti:  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**Data e ora registrazione**|Timestamp della riga della cronologia.|  
 |**Ruolo**|Ruolo del mirroring corrente dell'istanza del server per il database, Principale o Mirror.|  
@@ -84,6 +84,6 @@ ms.locfileid: "48086191"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

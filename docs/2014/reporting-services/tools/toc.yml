@@ -1,6 +1,6 @@
 - name: Strumenti
   href: reporting-services-tools.md
-- name: 'Esercitazione: Individuazione e avvio degli strumenti di Reporting Services'
+- name: 'Esercitazione: Come individuare e avviare gli strumenti di Reporting Services'
   href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Reporting Services in SQL Server Data Tools
   href: reporting-services-in-sql-server-data-tools-ssdt.md
@@ -111,7 +111,7 @@
           href: server-properties-execution-page.md
         - name: Proprietà server (pagina Cronologia)
           href: server-properties-history-page.md
-        - name: "Proprietà\_ server (pagina Registrazione)"
+        - name: Proprietà  server (pagina Registrazione)
           href: server-properties-logging-page.md
         - name: Proprietà server (pagina sicurezza)
           href: server-properties-security-page-reporting-services.md
@@ -183,13 +183,13 @@
           href: ../new-linked-report-page-report-manager.md
         - name: Pagina Nuovo modello
           href: ../new-model-page-report-manager.md
-        - name: Pagina Nuova assegnazione ruolo/Modifica assegnazione ruolo
+        - name: 'Pagina Nuova assegnazione di ruolo: Modifica assegnazione di ruolo'
           href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
-        - name: Pagina Nuova pianificazione/Modifica pianificazione
+        - name: 'Pagina Nuova pianificazione: Modifica pianificazione'
           href: ../new-schedule-edit-schedule-page-report-manager.md
         - name: Pagina Nuova sottoscrizione o Modifica sottoscrizione
           href: ../new-subscription-or-edit-subscription-page-report-manager.md
-        - name: 'Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema'
+        - name: 'Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazione ruolo a livello di sistema'
           href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
         - name: Pagina delle proprietà Parametri
           href: ../parameters-properties-page-report-manager.md

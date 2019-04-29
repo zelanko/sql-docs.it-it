@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b95db663ea56f8dd43ed1091169f8117292033c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012337"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error - classe di evento
   La classe di evento **Background Job Error** si verifica quando un processo in background viene terminato in maniera anomala. Questa condizione potrebbe richiedere l'attenzione dell'amministratore di sistema.  

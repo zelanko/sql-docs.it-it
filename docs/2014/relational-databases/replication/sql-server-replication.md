@@ -70,7 +70,7 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 -   [Definire e modificare un filtro colonne](publish/define-and-modify-a-column-filter.md)    
 -   [Definire e modificare un filtro di riga statico](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Definire e modificare un filtro di riga con parametri per un articolo di merge](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Ottimizzare i filtri di riga con parametri](publish/optimize-parameterized-row-filters.md)    
 -   [Definire e modificare un filtro di join tra articoli di merge](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
