@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259272"
 ---
 # <a name="escape-sequences"></a>Sequenza di escape
 ODBC definisce sequenze di escape contenente grammatica standard per data, ora, timestamp e i valori letterali intervallo datetime, chiamate di funzioni scalari, **, ad esempio** predicato caratteri di escape outer join e le chiamate di procedura. Applicazioni interoperative utilizzino queste sequenze laddove possibile.  

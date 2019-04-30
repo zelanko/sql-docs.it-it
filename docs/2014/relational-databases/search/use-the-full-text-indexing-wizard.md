@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 767c83b5eb6483ca4804e8602886932ff8e40793
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237821"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
   L'Indicizzazione guidata full-text ha lo scopo di semplificare la procedura di creazione di un indice full-text.  
@@ -79,7 +79,7 @@ ms.locfileid: "48054301"
     |-|-|  
     |**Crea un nuovo catalogo**|Selezionare questa casella di controllo per creare un nuovo catalogo full-text.|  
   
-     **Nome**  
+     **Name**  
      Immettere un nome per il nuovo catalogo full-text.  
   
      **Imposta come catalogo predefinito**  
@@ -93,9 +93,9 @@ ms.locfileid: "48054301"
   
      Selezionare uno dei valori seguenti:  
   
-    |valore|Description|  
+    |Value|Descrizione|  
     |-----------|-----------------|  
-    |**\<impostazione predefinita >**|Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o vista è partizionata, viene utilizzato il filegroup primario.|  
+    |**\<default>**|Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o vista è partizionata, viene utilizzato il filegroup primario.|  
     |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|  
     |*user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per utilizzare tale filegroup per il nuovo indice full-text.|  
   
@@ -106,10 +106,10 @@ ms.locfileid: "48054301"
   
      Selezionare uno dei valori seguenti:  
   
-    |valore|Description|  
+    |Value|Descrizione|  
     |-----------|-----------------|  
-    |**\<sistema >**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
-    |**\<Off >**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
+    |**\<system>**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
+    |**\<off>**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
     |*user-defined-stoplist-name*|Nell'elenco viene visualizzato il nome di ogni elenco di parole non significative definito dall'utente, se presente, creato nel database. Selezionare qualsiasi elenco di parole non significative definito dall'utente da utilizzare per il nuovo indice full-text.|  
   
 4.  Facoltativamente, definire la pianificazione di popolamento. Le operazioni di indicizzazione avranno inizio immediatamente, a meno che non siano state pianificate per un'esecuzione futura. Le pianificazioni verranno create immediatamente, anche se l'esecuzione avverrà solo all'ora pianificata.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262224"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello 1 (driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829419"
 |**SQLGetTypeInfo**|Restituisce informazioni sui tipi di dati supportati da un'origine dati. Il driver restituisce le informazioni in un set di risultati SQL.|  
 |**SQLParamData**|Usato in combinazione con **SQLPutData** per specificare i dati dei parametri in fase di esecuzione di istruzione.|  
 |**SQLPutData**|Consente a un'applicazione inviare i dati per un parametro o della colonna per il driver in fase di esecuzione di istruzione.|  
-|**SQLSetConnectOption**|Fornisce l'accesso alle opzioni che determinano gli aspetti della connessione. Questa funzione è supportata parzialmente: il driver supporta tutti i valori per il *fOption* argomento, ma non supporta alcuni *vParam* valori per il *fOption* argomento [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Per altre informazioni, vedere [opzioni di connessione](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetConnectOption**|Fornisce l'accesso alle opzioni che determinano gli aspetti della connessione. Questa funzione è supportata parzialmente: Il driver supporta tutti i valori per il *fOption* argomento, ma non supporta alcuni *vParam* valori per il *fOption* argomento [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Per altre informazioni, vedere [opzioni di connessione](../../odbc/microsoft/connect-options.md).|  
 |**SQLSetStmtOption**|Imposta le opzioni relative a un handle di istruzione *hstmt*. Per altre informazioni, vedere [le opzioni dell'istruzione](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Recupera il set di colonne ottimale che identifica in modo univoco una riga nella tabella.|  
 |**SQLStatistics**|Recupera un elenco delle statistiche su una singola tabella e indici o i nomi dei tag, associati alla tabella. Il driver restituisce le informazioni come set di risultati.|  

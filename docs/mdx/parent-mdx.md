@@ -1,5 +1,5 @@
 ---
-title: Elemento padre (MDX) | Documenti Microsoft
+title: Elemento padre (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16de50e05bf139d590f90630e338fdb7cbb428e5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278431"
 ---
 # <a name="parent-mdx"></a>Parent (MDX)
 
@@ -32,7 +32,7 @@ Member_Expression.Parent
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **padre** funzione restituisce il membro padre del membro specificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -51,6 +51,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

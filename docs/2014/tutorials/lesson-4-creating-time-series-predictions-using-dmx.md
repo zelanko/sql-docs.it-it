@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312084"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lezione 4: Creazione di stime basate su serie temporali con DMX
   In questa lezione e nella lezione seguente, si utilizzerà Data Mining Extensions (DMX) per creare tipi diversi di stime basate su modelli time series creato nel [lezione 1: Creazione di una serie temporale, modello di Data Mining e struttura di Data Mining](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) e [lezione 2: Aggiunta di modelli di Data Mining per la struttura di Data Mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Con un modello Time Series si dispone di numerose opzioni per l'esecuzione di stime:  

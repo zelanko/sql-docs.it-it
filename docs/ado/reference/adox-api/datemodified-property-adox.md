@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02731da2b023b7230b3407e0eb386fe8e5aaaf87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281559"
 ---
 # <a name="datemodified-property-adox"></a>Proprietà DateModified (ADOX)
 Indica la data che dell'ultima modifica dell'oggetto.  

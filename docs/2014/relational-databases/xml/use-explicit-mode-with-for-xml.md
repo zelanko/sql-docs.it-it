@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231283"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
   Come illustrato nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](../xml/for-xml-sql-server.md), le modalità RAW e AUTO forniscono scarso controllo sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
@@ -147,13 +147,13 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>In questa sezione  
  Negli esempi seguenti viene illustrato l'utilizzo della modalità EXPLICIT.  
   
--   [Esempio: Durante il recupero delle informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
+-   [Esempio: Recupero di informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
   
 -   [Esempio: Specifica della direttiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
 -   [Esempio: Specifica della direttiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Esempio: Costruzione di elementi di pari livello con la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Esempio: Creazione di elementi di pari livello con la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
 -   [Esempio: Specifica delle direttive ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
@@ -161,7 +161,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Esempio: Specifica della direttiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Esempio: Specifica la direttiva ELEMENT e della codifica di entità](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Esempio: Specifica della direttiva ELEMENT e della codifica di entità](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
 -   [Esempio: Specifica della direttiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   

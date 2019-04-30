@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313886"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Creazione di stime basate su serie temporali (Esercitazione intermedia sul data mining)
   Nelle attività precedenti di questa lezione è stato creato un modello Time Series e sono stati esplorati i risultati. Per impostazione predefinita, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene sempre creato un set di cinque (5) stime per un modello Time Series e i valori stimati vengono visualizzati come parte del grafico di previsione. È tuttavia possibile creare previsioni compilando query di stima DMX (Data Mining Extensions).  

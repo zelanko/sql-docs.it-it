@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248372"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Esempio dei metodi Append e CreateParameter (VB)
 Questo esempio Usa la [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input.  
@@ -124,5 +124,5 @@ End Sub
  [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)

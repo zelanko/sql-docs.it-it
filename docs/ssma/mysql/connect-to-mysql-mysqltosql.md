@@ -1,5 +1,5 @@
 ---
-title: Connettersi a MySQL (MySQLToSQL) | Microsoft Docs
+title: Connect to MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252713"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Connettersi a MySQL (MySQLToSQL)
 Usare la **connettersi a MySQL** finestra di dialogo per la connessione al database MySQL che si desidera eseguire la migrazione.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313395"
 ---
 # <a name="sql-92-compliance"></a>Conformità SQL-92
 I driver di Database Desktop ODBC e di gestione di Microsoft Jet sottostante non sono compatibili con SQL-92. Supportano molte funzionalità che sono state definite in SQL-92. Alcune funzionalità è supportata nel driver non sono supportati in SQL-92. Per altre informazioni, vedere la *Guida per programmatori di Microsoft Jet Database Engine*. Di seguito è le differenze principali tra i due:  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 832372ee3f8e80a9da4a758c759d9b5399a20a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309716"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Specifica la posizione del servizio di cursore.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|Utilizza i cursori sul lato client forniti da una libreria di cursori locali. Il cursore locale services spesso consentirà molte funzionalità che i cursori fornito dal driver, non possono pertanto usare questa impostazione può offrire un vantaggio rispetto alla funzionalità che verranno abilitati. Per la compatibilità con le versioni precedenti, il sinonimo **adUseClientBatch** è anche supportato.|  
 |**adUseNone**|1|Non utilizzare servizi di cursore. (Questa costante è obsoleta e viene visualizzato unicamente per compatibilità con le versioni precedenti).|  

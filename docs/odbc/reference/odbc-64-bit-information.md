@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273420"
 ---
 # <a name="odbc-64-bit-information"></a>Informazioni su ODBC a 64 bit
 A partire da Windows Server 2003, sistemi operativi Microsoft sono supportate le librerie ODBC a 64 bit. Le intestazioni ODBC e librerie rilasciate inizialmente con SDK di MDAC 2.7 contengono modifiche per consentire ai programmatori di scrivere facilmente codice per nuove piattaforme a 64 bit. Assicurandosi che il codice utilizza i tipi ODBC definita elencati di seguito, è possibile compilare il codice sorgente stesso entrambe le piattaforme a 64 bit e 32 bit in base il **Win64** oppure **WIN32** macro.  
@@ -357,7 +357,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_OPERATION_PTR  
   
- VENGONO IMPOSTATI SQL_ATTR_ROW_STATUS_PTR  
+ SQL_ATTR_ROW_STATUS_PTR  
   
  SQL_ATTR_SIMULATE_CURSOR  
   
@@ -477,7 +477,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_OPERATION_PTR  
   
- VENGONO IMPOSTATI SQL_ATTR_ROW_STATUS_PTR  
+ SQL_ATTR_ROW_STATUS_PTR  
   
  SQL_ATTR_ROWS_FETCHED_PTR  
   

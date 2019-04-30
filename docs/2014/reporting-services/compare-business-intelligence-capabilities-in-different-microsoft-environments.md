@@ -11,11 +11,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267264"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Confrontare le funzionalità di Business Intelligence in diversi ambienti Microsoft
 
@@ -27,16 +27,16 @@ Per altre informazioni sul confronto tra SharePoint Server e SharePoint Online, 
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Siti di Business Intelligence|Raccolta [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|No|Sito di Power BI|  
+|Siti di Business Intelligence|Raccolta [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|no|Sito di Power BI|  
 |Amministrazione dei dati e gestione e condivisione delle query|No|No|Sì **<sup>1</sup>**|  
-|Integrazione con Master Data Services (MDS) e Data Quality Services (DQS)|Yes|no|No|  
+|Integrazione con Master Data Services (MDS) e Data Quality Services (DQS)|Yes|No|No|  
 |Pianificazione dell'aggiornamento dati|Sì, ma non sono supportate le cartelle di lavoro che contengono dati di Power Query|No|Yes|  
-|Query in linguaggio naturale (domande e risposte)|No|No|Sì **<sup>2</sup>**|  
+|Query in linguaggio naturale (domande e risposte)|no|No|Sì **<sup>2</sup>**|  
 |Previsione predittiva|No|No|Sì **<sup>3</sup>**|  
-|Integrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Yes|No|No|  
+|Integrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Yes|No|no|  
 |Integrazione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionale e tabulare)|Yes|No|No|  
 |Esportazione di dashboard interattivi di Power View nelle presentazioni di PowerPoint|Yes|No|No|  
-|Creazione di dashboard basati su browser|Yes|No|No|  
+|Creazione di dashboard basati su browser|Yes|No|no|  
 |Monitoraggio dell'utilizzo|Yes|No|Yes|  
 |Utilizzo della sicurezza a livello di riga dei cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Yes|No|No|  
   
@@ -51,9 +51,9 @@ Per altre informazioni sul confronto tra SharePoint Server e SharePoint Online, 
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Visualizzazione delle cartelle di lavoro di Microsoft Excel in un browser|Sì, se le dimensioni della cartella di lavoro sono inferiori a 2 GB|Sì, se le dimensioni della cartella di lavoro sono inferiori a 10 MB|Sì, se le dimensioni della cartella di lavoro sono inferiori a 250 MB|  
-|Esplorazione dei dati basati su browser in HTML5|No|No|Yes|  
+|Esplorazione dei dati basati su browser in HTML5|No|no|Yes|  
 |App di Business Intelligence per dispositivi mobili per accedere a report e dashboard in remoto|No|No|Sì **<sup>1</sup>**|  
-|Cartella di lavoro di Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] come origine dati **<sup>2</sup>**|Yes|No|no|  
+|Cartella di lavoro di Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] come origine dati **<sup>2</sup>**|Yes|No|No|  
 |Possibilità di usare le funzionalità in versioni e browser diversi|Sì, per le visualizzazioni non relative a Power View **<sup>3</sup>**|Sì, per cartelle di lavoro di dimensioni inferiori a 10 MB **<sup>3</sup>**|Sì **<sup>3</sup>**|  
   
  **<sup>1</sup>**  [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240965"
 ---
 # <a name="default-c-data-types"></a>Tipi di dati C predefiniti
 Se un'applicazione specifica SQL_C_DEFAULT nelle **SQLBindCol**, **SQLGetData**, o **SQLBindParameter**, il driver presuppone che tipo di dati C del buffer di input o output corrisponde al tipo di dati SQL della colonna o del parametro a cui è associato il buffer.  

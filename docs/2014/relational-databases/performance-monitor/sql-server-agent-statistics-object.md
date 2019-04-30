@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250844"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Oggetto Statistiche di SQL Server Agent
   L'oggetto prestazione **Statistiche** di SQL Server Agent include contatori delle prestazioni che contengono informazioni su questo servizio.  
   
  Nella tabella seguente sono elencati i contatori **SQLAgent:Statistiche** .  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**SQL Server riavviato**|Numero di tentativi di riavvio di Microsoft SQL Server riusciti, eseguiti da SQL Server Agent dopo l'ultimo avvio di questo servizio.|  
   

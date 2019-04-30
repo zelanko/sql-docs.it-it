@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315074"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Call Center (Esercitazione intermedia sul data mining)
   Dopo aver compilato il modello esplorativo, è possibile utilizzarlo per ottenere ulteriori informazioni sui dati tramite gli strumenti seguenti disponibili in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "56037762"
     > [!NOTE]  
     >  I valori esatti di questo intervallo possono variare a seconda di come è stato configurato il modello.  
   
-2.  Per la **valore 2**, selezionare l'intervallo con i valori più alti. Ad esempio, l'intervallo con il valore >= 0,12 rappresenta la frequenza di abbandono più elevata e pertanto il livello di servizio peggiore. In altre parole, il 12% dei clienti che ha telefonato durante questo turno ha riagganciato prima di parlare con un rappresentante.  
+2.  Per la **valore 2**, selezionare l'intervallo con i valori più alti. Ad esempio, l'intervallo con il valore > = 0,12 rappresenta la frequenza di abbandono più elevata e pertanto il livello di servizio peggiore. In altre parole, il 12% dei clienti che ha telefonato durante questo turno ha riagganciato prima di parlare con un rappresentante.  
   
      Il contenuto del **variabili** riquadro viene aggiornato per confrontare gli attributi che contribuiscono ai valori risultanti. Nella colonna sinistra vengono pertanto elencati gli attributi associati al migliore livello di servizio, mentre nella colonna destra vengono elencati gli attributi associati al peggiore livello di servizio.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56037762"
   
  Tuttavia, analizzando l'elenco dei fattori di influenza, è possibile notare altri fattori con effetti più complessi e più difficili da interpretare. Ad esempio, il turno sembra influire sul servizio, ma i punteggi di accuratezza e le probabilità relative indicano che il turno non è un fattore principale.  
   
-|attribute|Value|Predilige \< 0,07|Predilige >= 0,12|  
+|attribute|Value|Predilige \< 0,07|Predilige > = 0,12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087 - 120.000||Punteggio:  100<br /><br /> Probabilità di Value1: 4.45 %<br /><br /> Probabilità di Value2: 51.94 %<br /><br /> Livello di accuratezza per Value1: 0.19<br /><br /> Livello di accuratezza per Value2: 1.94|  
 |Average Time Per Issue|44.000 - 70.597|Punteggio: 92.35<br /><br /> Probabilità di Value1: 60.06 %<br /><br /> Probabilità di Value2: 8.30 %<br /><br /> Livello di accuratezza per Value1: 2.61<br /><br /> Livello di accuratezza per Value2: 0.31||  

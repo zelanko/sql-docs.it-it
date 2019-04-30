@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254174"
 ---
 # <a name="mixed-cursors"></a>Cursori misti
 Un cursore misto è una combinazione di un cursore gestito da keyset e un cursore dinamico. Viene usato quando il set di risultati è troppo grande per essere ragionevolmente salvato chiavi per l'intero set di risultati. Cursori misti vengono implementati mediante la creazione di un set di chiavi che è maggiore di set di righe, ma minore l'intero set di risultati.  
   
- Fino a quando l'applicazione scorre all'interno del keyset, il comportamento è gestito da keyset. Quando l'applicazione scorre fuori il keyset, il comportamento è dinamico: il cursore recupera le righe richieste e crea un nuovo set di chiavi. Dopo aver creato il nuovo set di chiavi, viene ripristinato il comportamento gestito da keyset all'interno di tale set di chiavi.  
+ Fino a quando l'applicazione scorre all'interno del keyset, il comportamento è gestito da keyset. Quando l'applicazione scorre fuori il keyset, il comportamento è dinamico: Il cursore recupera le righe richieste e crea un nuovo set di chiavi. Dopo aver creato il nuovo set di chiavi, viene ripristinato il comportamento gestito da keyset all'interno di tale set di chiavi.  
   
  Si supponga, ad esempio, un set di risultati include 1.000 righe e Usa un cursore misto con una dimensione del keyset pari a 100 e una dimensione di set di righe pari a 10. Quando il primo set di righe viene recuperato, il cursore viene creato un keyset costituito dalle chiavi per le prime 100 righe. Restituisce quindi le prime 10 righe, come richiesto.  
   

@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316274"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Specifica come deve essere interpretato un argomento di comando.  
   
  È importante convalidare fornito dall'utente *CommandString* i valori per evitare che gli utenti dell'applicazione la possibilità di inserire comandi potenzialmente pericolosi per ADO per l'esecuzione.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Non specifica l'argomento di tipo di comando.|  
 |**adCmdText**|1|Viene valutata [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) come una definizione testuale di un comando o stored procedure chiamata.|  

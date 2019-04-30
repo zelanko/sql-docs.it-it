@@ -1,5 +1,5 @@
 ---
-title: Dimensione (MDX) | Documenti Microsoft
+title: Dimensione (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248215"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
 
@@ -47,7 +47,7 @@ Member_Expression.Dimension
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
 ### <a name="examples"></a>Esempi  
- L'esempio seguente usa il **dimensione** funzione, in combinazione con il **nome** funzione per restituire il nome della gerarchia del membro specificato.  
+ L'esempio seguente usa il **dimensione** funzione, in combinazione con la **nome** funzione per restituire il nome della gerarchia del membro specificato.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -63,7 +63,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- L'esempio seguente usa il **dimensione** funzione, in combinazione con il **membri** e **conteggio** funzioni, per restituire il numero di membri nella gerarchia che contiene il membro specificato.  
+ L'esempio seguente usa il **dimensione** funzione, in combinazione con la **membri** e il **conteggio** funzioni, per restituire il numero di membri nella gerarchia che contiene il membro specificato.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -73,9 +73,9 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [Conteggio &#40;livelli di gerarchia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Conteggio &#40;impostare&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [I livelli di &#40;MDX&#41;](../mdx/levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Levels &#40;MDX&#41;](../mdx/levels-mdx.md)   
  [I membri &#40;impostare&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

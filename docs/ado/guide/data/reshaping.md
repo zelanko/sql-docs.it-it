@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280400"
 ---
 # <a name="reshaping"></a>Modifica della forma
 Oggetto **Recordset** creato da una clausola di una forma comando può essere assegnato un *alias* nome (in genere con la parola chiave AS). L'alias di una data shaping **Recordset** possibile farvi riferimento in un comando di completamente diverso. Vale a dire, è possibile riutilizzare, oppure *reshape*, una forma precedentemente **Recordset** in un nuovo comando di forma. Per supportare questa funzionalità, ADO fornisce una proprietà, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

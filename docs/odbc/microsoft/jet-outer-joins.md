@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f72e782a80ae92a9f0ca920c06e3576146bf597e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262302"
 ---
-# <a name="jet-outer-joins"></a>Jet: outer join
+# <a name="jet-outer-joins"></a>Jet: Outer join
 Un'istruzione SELECT può contenere un elenco di clausole OUTER JOIN. OUTER join annidati sono supportati. Per altre informazioni sulle OUTER join, vedere la *Guida per programmatori di Microsoft Jet Database Engine*.

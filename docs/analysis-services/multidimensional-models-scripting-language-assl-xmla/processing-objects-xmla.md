@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59a581f7e70f3fc1afd7eb7c1eaf4751d32719d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261655"
 ---
 # <a name="processing-objects-xmla"></a>Elaborazione di oggetti (XMLA)
   Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'elaborazione è il passaggio o serie di passaggi necessari per trasformare i dati in informazioni per l'analisi di business. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
@@ -100,10 +100,10 @@ ms.locfileid: "50145386"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente viene elaborato completamente il database di esempio [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -115,10 +115,10 @@ ms.locfileid: "50145386"
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Elabora in modo incrementale nell'esempio seguente il **Internet_Sales_2004** partizionare nel **Internet Sales** gruppo di misure del **Adventure Works DW** cubo nel [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Il **processo** comando aggiunge le aggregazioni per l'ordine date successive al 31 dicembre 2006 nella partizione usando un'associazione di query out-of-line nel **associazioni** proprietà del **processo**  comando per recuperare le righe della tabella dei fatti da cui generare le aggregazioni da aggiungere alla partizione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

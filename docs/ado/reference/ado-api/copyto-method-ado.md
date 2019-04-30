@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308912"
 ---
 # <a name="copyto-method-ado"></a>Metodo CopyTo (ADO)
 Copia il numero specificato di caratteri o byte (a seconda [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) nella [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a un altro **Stream** oggetto.  
@@ -41,7 +41,7 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  Il *DestStream* parametro non può essere un proxy di **Stream** dell'oggetto perché questo richiede l'accesso a un'interfaccia privata nel **Stream** oggetto che non può essere eseguita in modalità remota per il client.  
   
- *numChars*  
+ *NumChars*  
  Facoltativo. Un' **Integer** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **Stream** alla destinazione **Stream**. Il valore predefinito è -1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente per [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Note  

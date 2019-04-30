@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 25dc3a8eb075f212728796465fe2d95c460cbebf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260698"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Pagina delle proprietà Generale, Parti di report (Gestione report)
   La pagina delle proprietà consente di visualizzare e gestire le proprietà generali per una parte di report.  

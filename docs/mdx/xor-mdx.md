@@ -1,5 +1,5 @@
 ---
-title: XOR (MDX) | Documenti Microsoft
+title: XOR (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251493"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -37,10 +37,10 @@ Expression1 XOR Expression2
  Espressione MDX valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un valore booleano che restituisce **true** se restituisce un solo argomento **true**; in caso contrario, **false**.  
+ Valore booleano che restituisce **true** se un unico argomento restituisce **true**; in caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
- Il **XOR** gestisce entrambi i parametri come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima di eseguire l'esclusione logica. Nella tabella seguente viene illustrato come la **XOR** operatore consente di eseguire l'esclusione logica.  
+## <a name="remarks"></a>Note  
+ Il **XOR** gestisce entrambi i parametri come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima di eseguire l'esclusione logica. La tabella seguente illustra come la **XOR** operatore esegue l'esclusione logica.  
   
 |*Expression1*|*Expression2*|Valore restituito|  
 |-------------------|-------------------|------------------|  

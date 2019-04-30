@@ -1,5 +1,5 @@
 ---
-title: (Divisione) (MDX) | Documenti Microsoft
+title: (Divisione) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248184"
 ---
-# <a name="divide---mdx-operator-reference"></a>Divisione - riferimento agli operatori MDX
+# <a name="divide---mdx-operator-reference"></a>Dividere - riferimento agli operatori MDX
 
 
   Esegue un'operazione aritmetica di divisione di un numero per un altro.  
@@ -29,19 +29,19 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *dividendo*  
+ *Dividend*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un valore numerico.  
   
- *divisore*  
+ *Divisore*  
  Espressione MDX valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore con il tipo di dati del parametro con precedenza maggiore.  
   
-## <a name="remarks"></a>Remarks  
- Il valore effettivo restituito dal **/ (divisione)** operatore rappresenta il quoziente della prima espressione divisa per la seconda espressione.  
+## <a name="remarks"></a>Note  
+ Il valore effettivo restituito per il **/ (divisione)** operatore rappresenta il quoziente della prima espressione divisa per la seconda espressione.  
   
- È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se *divisore* restituisce un valore null, verrà generato un errore. Se entrambi *divisore* e *dividendo* restituiscono un valore null, l'operatore restituisce un valore null.  
+ È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se *divisore* restituisce un valore null, verrà generato un errore. Se entrambe *Divisor* e *dividendo* valutare su un valore null, l'operatore restituisce un valore null.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore.  

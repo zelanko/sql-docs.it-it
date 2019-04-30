@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276122"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configurazione di rete Appliance per il sistema di piattaforma Analitica
 L'appliance di Analitica piattaforma di strumenti analitici creata e configurata con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili dal produttore del fornitore IHV. Dopo la consegna dell'appliance, è necessario riconfigurare l'indirizzo IP esterno (Ethernet) indirizzato in base ai requisiti di centro dati del cliente specifico.  
@@ -24,7 +24,7 @@ L'appliance di Analitica piattaforma di strumenti analitici creata e configurata
   
 Il **configurazione di rete** pagina consente di visualizzare le impostazioni di rete accessibile pubblicamente per i nodi nel dispositivo di sistema di piattaforma Analitica. Questa pagina è di sola lettura.  
   
-![Rete dello strumento DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Per aggiornare la configurazione di rete del dispositivo  
 Modificare gli indirizzi IP del dominio dell'infrastruttura e il dominio del carico di lavoro modificando la **AplianceInfo.xml** file e quindi eseguendo il programma di installazione. Si tratta di un'operazione offline. Le aree PDW verranno automaticamente arrestate durante la modifica dell'indirizzo IP.  

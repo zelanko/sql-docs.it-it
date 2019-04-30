@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240042"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Proprietà dinamica Optimize (ADO)
 Specifica se è necessario creare un indice in una [campo](../../../ado/reference/ado-api/field-object.md).  
@@ -34,7 +34,7 @@ Specifica se è necessario creare un indice in una [campo](../../../ado/referenc
   
  **Ottimizzare** viene aggiunta una proprietà dinamica per il [campo](../../../ado/reference/ado-api/field-object.md) oggetto [delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**.  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Uso  
   
 ```  
 Dim rs As New Recordset  

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313073"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
  Conformità di API ODBC: Livello 1  
   
@@ -36,20 +36,20 @@ ms.locfileid: "47628609"
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|no|  
 |SQL_API_SQLCOLUMNPRIVELEGES|no|  
-|SQL_API_SQLDATASOURCES|Sì|  
+|SQL_API_SQLDATASOURCES|Yes|  
 |SQL_API_SQLDESCRIBEPARAM|no|  
-|SQL_API_SQLDRIVERS|Sì|  
-|SQL_API_SQLEXTENDEDFETCH|Sì|  
-|SQL_API_SQLFOREIGNKEYS|no|  
-|SQL_API_SQLMORERESULTS|Sì|  
-|SQL_API_SQLNATIVESQL|no|  
-|SQL_API_SQLNUMPARAMS|Sì|  
-|SQL_API_SQLPARAMOPTIONS|Sì|  
-|SQL_API_SQLPRIMARYKEYS|Sì|  
-|SQL_API_SQLPROCEDURECOLUMNS|no|  
-|SQL_API_SQLPROCEDURES|no|  
-|SQL_API_SQLSETPOS|Sì|  
-|SQL_API_SQLSETSCROLLOPTIONS|Sì|  
-|SQL_API_SQLTABLEPRIVILEGES|no|  
+|SQL_API_SQLDRIVERS|Yes|  
+|SQL_API_SQLEXTENDEDFETCH|Yes|  
+|SQL_API_SQLFOREIGNKEYS|No|  
+|SQL_API_SQLMORERESULTS|Yes|  
+|SQL_API_SQLNATIVESQL|No|  
+|SQL_API_SQLNUMPARAMS|Yes|  
+|SQL_API_SQLPARAMOPTIONS|Yes|  
+|SQL_API_SQLPRIMARYKEYS|Yes|  
+|SQL_API_SQLPROCEDURECOLUMNS|No|  
+|SQL_API_SQLPROCEDURES|No|  
+|SQL_API_SQLSETPOS|Yes|  
+|SQL_API_SQLSETSCROLLOPTIONS|Yes|  
+|SQL_API_SQLTABLEPRIVILEGES|No|  
   
  Per altre informazioni, vedere [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) nel *riferimento per programmatori ODBC*.
