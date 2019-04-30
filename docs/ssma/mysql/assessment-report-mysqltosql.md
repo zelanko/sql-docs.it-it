@@ -1,5 +1,5 @@
 ---
-title: Report di valutazione (MySQLToSQL) | Microsoft Docs
+title: Assessment Report (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253284"
 ---
 # <a name="assessment-report-mysqltosql"></a>Report di valutazione (MySQLToSQL)
 La finestra di Report di valutazione Mostra i risultati della conversione di oggetti di database da [!INCLUDE[tsql](../../includes/tsql-md.md)] informazioni sulla sintassi, e può inoltre la Guida è stimare la complessità e i costi dei progetti di migrazione.  

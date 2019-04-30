@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86f9dd843171c02654302694c669f40b6b51ab78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232085"
 ---
 # <a name="structured-query-language-sql"></a>Structured Query Language (SQL)
 Un tipico DBMS consente agli utenti di archiviare, accedere e modificare i dati in modo efficiente e organizzato. Gli utenti del DBMS erano originariamente, i programmatori. L'accesso ai dati archiviati, è necessario scrivere un programma in un linguaggio di programmazione, ad esempio COBOL. Mentre questi programmi sono stati spesso scritti per presentare un'interfaccia utente semplice a un utente non tecniche, i servizi di un programmatore esperto necessario l'accesso ai dati stessi. Accesso casuale ai dati non è pratico.  
   
- Gli utenti non erano del tutto soddisfatti questa situazione. Mentre si è stato possibile accedere ai dati, spesso necessario convincere un programmatore DBMS per scrivere un software speciale. Ad esempio, se un reparto vendite desidera visualizzare le vendite totali del mese precedente da ognuno dei relativi agenti e volevo queste informazioni classificate in ordine in base alla lunghezza di ogni venditore del servizio all'interno della società, avevano due opzioni: entrambi un programma che esiste già le informazioni a cui accedere esattamente in questo modo è consentito, o il reparto era necessario chiedere a un programmatore di scrivere un programma di questo tipo. In molti casi, questo era più lavoro era la pena, ed era sempre una soluzione costosa per le richieste una tantum o ad hoc. Poiché più utenti voleva un facile accesso, questo problema sono aumentate sempre maggiori.  
+ Gli utenti non erano del tutto soddisfatti questa situazione. Mentre si è stato possibile accedere ai dati, spesso necessario convincere un programmatore DBMS per scrivere un software speciale. Ad esempio, se un reparto vendite desidera visualizzare le vendite totali del mese precedente da ognuno dei relativi agenti e volevo queste informazioni classificate in ordine in base alla lunghezza di ogni venditore del servizio all'interno della società, avevano due opzioni: Si è già esistente che le informazioni a cui accedere esattamente in questo modo è consentito un programma o il reparto era necessario chiedere a un programmatore di scrivere un programma di questo tipo. In molti casi, questo era più lavoro era la pena, ed era sempre una soluzione costosa per le richieste una tantum o ad hoc. Poiché più utenti voleva un facile accesso, questo problema sono aumentate sempre maggiori.  
   
  Consentendo agli utenti di accedere ai dati in base ad hoc, è necessario concedere loro un linguaggio per esprimere le proprie richieste. Una singola richiesta a un database viene definita come una query. un linguaggio di questo tipo viene chiamato un linguaggio di query. Molti linguaggi di query sono stati sviluppati per questo scopo, ma uno di questi è diventato più diffusi: Structured Query Language, ha inventato IBM nel 1970s. È più comunemente noto agli relativo acronimo, SQL e si pronuncia sia come "ess-cue-ell" come "aggiungere". SQL è diventato un ANSI standard in 1986 e un'immagine ISO standard nel 1987; viene utilizzato oggi in un ottimo molti sistemi di gestione di database.  
   

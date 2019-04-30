@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242301"
 ---
 # <a name="diagnostics"></a>Diagnostica
 Funzioni ODBC restituiscono le informazioni di diagnostica in due modi. Il codice restituito indica l'esito positivo o negativo della funzione, complessivo, mentre i record di diagnostica forniscono informazioni dettagliate sulla funzione. Almeno un record di diagnostica - record di intestazione, viene restituito anche se la funzione ha esito positivo.  

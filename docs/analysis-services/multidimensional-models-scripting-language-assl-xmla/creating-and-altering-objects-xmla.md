@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86f52c2ea61b8b62ea9bfe5ffe6b3c7b06977740
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231965"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Creazione e modifica di oggetti (XMLA)
   Gli oggetti principali possono essere creati, modificati ed eliminati in modo indipendente. Di seguito vengono elencati gli oggetti principali:  
@@ -85,10 +85,10 @@ ms.locfileid: "50145146"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  L'esempio seguente crea un'origine dati relazionale che fa riferimento il [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] campione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -110,10 +110,10 @@ ms.locfileid: "50145146"
 </Create>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente viene modificata l'origine dati relazionale creata nell'esempio precedente per impostare il timeout per la query per l'origine dati su 30 secondi.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

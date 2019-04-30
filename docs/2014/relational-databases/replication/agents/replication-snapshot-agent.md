@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250592"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
   Agente snapshot repliche è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
@@ -87,7 +87,7 @@ ms.locfileid: "54132281"
  **-70Subscribers**  
  Deve essere utilizzato se qualsiasi Sottoscrittore esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versione 7.0.  
   
- **-BcpBatchSize** _bcp_ \_ *batch* \_ *dimensioni*  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
  Numero di righe da inviare in un'operazione di copia bulk. Quando si esegue un'operazione **bcp in** , la dimensione del batch indica il numero di righe da inviare al server come unica transazione, nonché il numero di righe che devono essere inviate prima che l'agente di distribuzione registri un messaggio di stato **bcp** . Quando si esegue un'operazione **bcp out** , viene utilizzata una dimensione batch fissa di 1000. Il valore 0 indica che non vengono registrati messaggi.  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -196,7 +196,7 @@ ms.locfileid: "54132281"
 |**2**|Vengono stampati tutti i messaggi di errore e i messaggi di report di stato. Questa opzione è utile per l'esecuzione del debug.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Parametro facoltativo che specifica se per gli oggetti tabella verranno eseguite la prelettura e la memorizzazione nella cache.  Il comportamento predefinito prevede la prelettura di determinate proprietà delle tabelle usando il componente SMO in base a un calcolo interno.  Questo parametro può essere utile negli scenari in cui SMO prelettura operazione accetta una notevole più per l'esecuzione. Se questo parametro non viene usato, questa decisione viene presa in fase di esecuzione in base alla percentuale di tabelle che vengono aggiunte come articoli alla pubblicazione.  
+ Parametro facoltativo che specifica se per gli oggetti tabella verranno eseguite la prelettura e la memorizzazione nella cache.  Il comportamento predefinito prevede la prelettura di determinate proprietà delle tabelle usando il componente SMO in base a un calcolo interno.  Questo parametro può essere utile in scenari in cui l'esecuzione dell'operazione di prelettura SMO richiede molto più tempo. Se questo parametro non viene usato, questa decisione viene presa in fase di esecuzione in base alla percentuale di tabelle che vengono aggiunte come articoli alla pubblicazione.  
   
 |Valore di OutputVerboseLevel|Descrizione|  
 |------------------------------|-----------------|  

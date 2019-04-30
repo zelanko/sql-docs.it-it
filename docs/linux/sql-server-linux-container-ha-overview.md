@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231358"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Disponibilità elevata per i contenitori di SQL Server
 
@@ -73,14 +73,14 @@ La tabella seguente confronta le funzionalità a disponibilità elevata SQL Serv
 
 | |Con un gruppo di disponibilità | Istanza di contenitore autonoma<br/> Nessun gruppo di disponibilità
 |:------|:------|:------
-|Recupero automatico dagli errori di nodo | Sì | Sì
-|Recuperare automaticamente da un errore di pod | Sì | Sì
-|Accelerare il failover |Sì |
-|Ripristinare automaticamente dall'errore dell'istanza SQL Server | Sì | 
-|Recupero automatico dagli errori di controllo integrità database | Sì | 
-|Fornire le repliche di sola lettura | Sì |
-|Replica secondaria di backup | Sì | 
-|Viene eseguito come un oggetto StatefulSet | Sì | 
+|Recupero automatico dagli errori di nodo | Yes | Yes
+|Recuperare automaticamente da un errore di pod | Yes | Yes
+|Accelerare il failover |Yes |
+|Ripristinare automaticamente dall'errore dell'istanza SQL Server | Yes | 
+|Recupero automatico dagli errori di controllo integrità database | Yes | 
+|Fornire le repliche di sola lettura | Yes |
+|Replica secondaria di backup | Yes | 
+|Viene eseguito come un oggetto StatefulSet | Yes | 
 
 Una differenza fondamentale è che il tempo di ripristino (o failover) è più velocemente con un gruppo di disponibilità rispetto a una singola istanza di SQL Server in un contenitore. Questo miglioramento è perché il gruppo di disponibilità SQL Server mantiene le repliche secondarie in altri nodi del cluster. In caso di failover, una replica secondaria è selezionata e alzare al livello primario. Le applicazioni connesse al servizio vengono reindirizzate alla nuova replica primaria.
 

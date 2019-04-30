@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251027"
 ---
 # <a name="sql-server-agent-jobs-object"></a>Oggetto Processi di SQL Server Agent
   L'oggetto prestazioni **Processi** di SQL Server Agent include contatori delle prestazioni che forniscono informazioni relative ai processi di SQL Server Agent. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
  Nella tabella seguente sono illustrati i contatori di **SQLAgent:Processi** .  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**Processi attivi**|Questo contatore indica il numero di processi attualmente in esecuzione.|  
 |**Processi non riusciti**|Questo contatore indica il numero di processi chiusi con un errore.|  

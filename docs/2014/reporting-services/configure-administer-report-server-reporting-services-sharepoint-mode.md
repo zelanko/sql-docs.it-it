@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266281"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configurazione e amministrazione di un server di report (modalità SharePoint di Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Microsoft SQL Server 2016 Reporting Services è una piattaforma di creazione di report basata su server che fornisce una gamma completa di strumenti e servizi pronti per l'uso che consentono di creare, distribuire e gestire report per l'organizzazione nonché di programmare caratteristiche che consentono di estendere e personalizzare la funzionalità di report. È possibile integrare l'ambiente di gestione dei report con un prodotto SharePoint per sfruttare i vantaggi dell'utilizzo dell'ambiente di collaborazione fornito dai siti di SharePoint.  

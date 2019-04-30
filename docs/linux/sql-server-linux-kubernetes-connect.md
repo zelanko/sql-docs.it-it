@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231178"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Connettersi a SQL Server Always On Availability Group nel Kubernetes
 
@@ -52,7 +52,7 @@ Identificare l'indirizzo IP del servizio che si desidera connettersi.
 
 Per connettersi alla replica primaria con l'autenticazione di SQL, usare il `sa` account, il valore per `sapassword` dal segreto creato e questo indirizzo IP.
 
-Esempio:
+Ad esempio:
 
 ```cmd
 sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"

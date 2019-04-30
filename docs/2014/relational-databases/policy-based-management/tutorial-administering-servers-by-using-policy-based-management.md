@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63256062"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Esercitazione: Amministrazione di server tramite la gestione basata su criteri
   Questa esercitazione sull'amministrazione di server tramite criteri della gestione basata su criteri è destinata agli utenti che hanno familiarità con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma che non conoscono i concetti relativi alla gestione basata su criteri.  
@@ -31,7 +31,7 @@ ms.locfileid: "52754203"
  [Lezione 1: Creare e applicare un disattivata per impostazione predefinita criteri](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  In questa lezione vengono creati i criteri che consentono di specificare la disabilitazione di Posta elettronica database nel server. Viene quindi verificato se il server è conforme ai criteri e viene configurato il server disabilitando Posta elettronica database.  
   
- [Lezione 2: Creare e applicare criteri di denominazione standard](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lezione 2: Creare e applicare criteri per gli standard di denominazione](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  Questa lezione consente di creare criteri che definiscono e applicano uno standard di denominazione per le tabelle.  
   
 ## <a name="requirements"></a>Requisiti  

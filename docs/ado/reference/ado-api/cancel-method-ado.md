@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239812"
 ---
 # <a name="cancel-method-ado"></a>Metodo Cancel (ADO)
 Annulla l'esecuzione di una chiamata al metodo asincrono in sospeso.  
@@ -48,7 +48,7 @@ object.Cancel
 |[Connessione](../../../ado/reference/ado-api/connection-object-ado.md)|[Eseguire](../../../ado/reference/ado-api/execute-method-ado-connection.md) o [Open](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), o [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[flusso](../../../ado/reference/ado-api/stream-object-ado.md)|[Aprire](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[Aprire](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Si applica a  
   

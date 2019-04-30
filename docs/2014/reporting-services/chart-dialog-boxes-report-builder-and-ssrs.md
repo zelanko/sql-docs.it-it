@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7adf0b27a30b938904b73a75669a7fb2e7923ffb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266252"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Finestre di dialogo relative ai grafici (Generatore report e SSRS)
   In questa sezione sono contenuti argomenti della Guida relativi ad alcune finestre di dialogo dei grafici. In alternativa, è possibile accedere alla Guida premendo F1 o facendo clic sul pulsante ? visualizzato nella finestra di dialogo.  

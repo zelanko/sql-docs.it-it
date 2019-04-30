@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242358"
 ---
 # <a name="direct-execution-odbc"></a>Esecuzione diretta ODBC
 Esecuzione diretta è il modo più semplice per eseguire un'istruzione. Quando l'istruzione viene inviata per l'esecuzione, l'origine dati lo compila in un piano di accesso e quindi esegue il piano di accesso.  

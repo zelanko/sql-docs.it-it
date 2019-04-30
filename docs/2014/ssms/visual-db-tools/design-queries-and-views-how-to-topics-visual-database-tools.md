@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316072"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Procedure per la progettazione di query e viste (Visual Database Tools)
   Progettazione query e Progettazione viste può essere utile per la creazione e manutenzione dei componenti per il recupero e la manipolazione dei dati di un'applicazione.  

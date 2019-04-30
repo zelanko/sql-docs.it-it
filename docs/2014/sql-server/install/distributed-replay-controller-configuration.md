@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 186ae568a21c39f35389100d55d5395687f20755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253522"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Configurazione del controller di Riesecuzione distribuita
   Utilizzare la pagina di configurazione del controller di Riesecuzione distribuita dell'Installazione guidata di **per specificare gli utenti a cui si desidera concedere autorizzazioni amministrative per il servizio controller di Riesecuzione distribuita.**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

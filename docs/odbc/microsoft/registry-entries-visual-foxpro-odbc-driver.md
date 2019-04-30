@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316830"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Voci del Registro di sistema (driver ODBC Visual FoxPro)
 Quando si installa il Driver ODBC Visual FoxPro, il programma di installazione aggiorna il Registro di sistema nella chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, aggiungere una nuova chiave denominata driver per Microsoft Visual FoxPro. Con la chiave, vengono aggiunti valori descritti nella tabella seguente.  
   
-|Nome del valore|Tipo valore|valore|  
+|Nome del valore|Tipo valore|Value|  
 |----------------|----------------|-----------|  
 |APILevel|REG_SZ|"1"|  
 |ConnectFunctions|REG_SZ|"YYN"|  
@@ -34,21 +34,21 @@ Quando si installa il Driver ODBC Visual FoxPro, il programma di installazione a
 |DriverODBCVer|REG_SZ|"02.50"|  
 |FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
 |FileUsage|REG_SZ|"1"|  
-|Installazione|REG_SZ|Percorso di sistema per il file vfpodbc|  
+|Configurazione|REG_SZ|Percorso di sistema per il file vfpodbc|  
 |SQLLevel|REG_SZ|"0"|  
   
  Il programma di installazione aggiunge anche la chiave "Visual FoxPro Files", che rappresenta il driver di Visual FoxPro predefinite, alla chiave HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini del sistema. In questa chiave, il programma di installazione aggiunge i valori descritti nella tabella seguente.  
   
-|Nome del valore|Tipo valore|valore|  
+|Nome del valore|Tipo valore|Value|  
 |----------------|----------------|-----------|  
 |Driver|REG_SZ|Percorso di sistema per il file vfpodbc|  
   
  Ogni volta che si aggiunge un'origine dati ODBC Visual FoxPro alla configurazione ODBC, viene aggiunta una nuova chiave per tale nome dell'origine dati. I valori per l'origine dati corrispondono ai valori impostati nel **programma di installazione di ODBC Visual FoxPro** finestra di dialogo, come indicato nella tabella seguente.  
   
-|Nome del valore (parola chiave)|Tipo valore|valore|  
+|Nome del valore (parola chiave)|Tipo valore|Value|  
 |----------------------------|----------------|-----------|  
 |Fascicola|REG_SQ|Qualsiasi sequenza di confronto è supportata|  
-|Description|REG_SZ|Descrizione dell'origine dati utente|  
+|Descrizione|REG_SZ|Descrizione dell'origine dati utente|  
 |Driver||Percorso di sistema per il file vfpodbc|  
 |Exclusive||Sì o No|  
 |BackgroundFetch||Sì o No|  

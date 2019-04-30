@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupMeasures (MDX) | Documenti Microsoft
+title: Measuregroupmeasures=1=«String (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55e00420ad3f941d50d9179dcd4a87d678cc28a0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267934"
 ---
 # <a name="measuregroupmeasures-mdx"></a>MeasureGroupMeasures (MDX)
 
@@ -32,7 +32,7 @@ MEASUREGROUPMEASURES(MeasureGroupName)
  *MeasureGroupName*  
  Espressione stringa valida contenente il nome del gruppo di misure da cui recuperare il set di misure.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La stringa specificata deve corrispondere esattamente al nome del gruppo di misure. Non è necessario racchiudere tra parentesi quadre i nomi di gruppi di misure contenenti spazi.  
   
 ## <a name="example"></a>Esempio  
@@ -44,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

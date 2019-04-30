@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306690"
 ---
 # <a name="report-f1-help"></a>Guida sensibile al contesto del report
   Negli argomenti di questa sezione vengono fornite informazioni sulle opzioni che è possibile impostare nel report nella finestra di dialogo **Proprietà report** . Per aprire la finestra di dialogo **Proprietà report** , fare clic con il pulsante destro del mouse sullo sfondo in Progettazione report, quindi fare clic su **Proprietà report**.  

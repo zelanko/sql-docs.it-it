@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254169"
 ---
 # <a name="multiple-results"></a>Risultati multipli
 Oggetto *risultato* è un elemento restituito dall'origine dati dopo che viene eseguita un'istruzione. ODBC include due tipi di risultati: set di risultati e conteggio delle righe. *Conteggio delle righe* sono il numero di righe interessate da un aggiornamento, eliminazione o istruzione insert. Batch, descritto nella [batch di istruzioni SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), è possibile generare più risultati.  
@@ -31,8 +31,8 @@ Oggetto *risultato* è un elemento restituito dall'origine dati dopo che viene e
   
 |Tipo batch|Conteggio delle righe|Set di risultati|  
 |----------------|----------------|-----------------|  
-|Batch esplicita|SQL_BATCH_ROW_COUNT [a]|-[b].|  
-|Routine|SQL_BATCH_ROW_COUNT [a]|-[b].|  
+|Batch esplicita|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|Routine|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |Matrici di parametri|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] riga numero di generazione di istruzioni in un batch potrebbero essere più supportate, ma la restituzione dei conteggi delle righe non è supportato. L'opzione SQL_BATCH_SUPPORT **SQLGetInfo** indica se sono consentite istruzioni di generazione di conteggio delle righe in batch, l'opzione SQL_BATCH_ROW_COUNTS indica se i conteggi delle righe vengono restituite all'applicazione.  

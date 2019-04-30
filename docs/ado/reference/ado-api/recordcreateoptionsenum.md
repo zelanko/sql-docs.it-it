@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239978"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Specifica se un oggetto esistente **Record** deve essere aperto o una nuova **Record** creato per il [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (metodo). I valori possono essere combinati con l'operatore AND.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Crea un nuovo **Record** in corrispondenza del nodo specificato da *origine* parametro, invece di aprire un oggetto esistente **Record**. Se l'origine fa riferimento a un nodo esistente, si verifica un errore di run-time, a meno che **adCreateCollection** viene combinato con **adOpenIfExists** oppure **adCreateOverwrite**.|  
 |**adCreateNonCollection**|0|Crea un nuovo **Record** typu [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  

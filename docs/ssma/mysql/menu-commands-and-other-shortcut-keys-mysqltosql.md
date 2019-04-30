@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311834"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandi di menu e altri tasti di scelta rapida (MySQLToSQL)
 Le sezioni seguenti descrivono i tasti di scelta rapida per accedere ai comandi di menu e tasti di scelta rapida usati in varie finestre di dialogo di SSMA per MySQL applicazione.  

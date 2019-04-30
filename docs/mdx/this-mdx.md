@@ -1,5 +1,5 @@
 ---
-title: (MDX) | Documenti Microsoft
+title: This (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259026"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -28,8 +28,8 @@ ms.locfileid: "34743250"
 This   
 ```  
   
-## <a name="remarks"></a>Remarks  
- Il **questo** funzione può essere utilizzata al posto di un'espressione di sottocubo per ottenere il sottocubo corrente all'interno dell'ambito corrente all'interno dello script di calcolo MDX. Il **questo** necessario utilizzare la funzione sul lato sinistro di un'assegnazione.  
+## <a name="remarks"></a>Note  
+ Il **ciò** funzione può essere utilizzata al posto di un'espressione di sottocubo per ottenere il sottocubo corrente all'interno dell'ambito corrente all'interno di script di calcolo MDX. Il **ciò** necessario utilizzare la funzione sul lato sinistro di un'assegnazione.  
   
 ## <a name="examples"></a>Esempi  
  Nel frammento di Script MDX seguente viene illustrato come utilizzare la parola chiave This con istruzioni SCOPE per fare assegnazioni ai sottocubi:  
@@ -75,7 +75,7 @@ This
  `End Scope;`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

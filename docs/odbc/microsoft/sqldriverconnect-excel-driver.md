@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Driver Excel) | Microsoft Docs
+title: SQLDriverConnect (Excel Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238092"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (driver Excel)
 > [!NOTE]  
@@ -36,6 +36,6 @@ ms.locfileid: "47775349"
   
 |Driver|Parole chiave necessarie|Esempi|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel versione 3.0 o 4.0|Driver, DriverID|Driver = {Driver di Microsoft Excel (xls)}; DBQ = c:\temp; DriverID = 278|  
+|Microsoft Excel versione 3.0 o 4.0|Driver, DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
 |Microsoft Excel 5.0/7.0|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
 |Microsoft Excel 97 e versioni successive|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|

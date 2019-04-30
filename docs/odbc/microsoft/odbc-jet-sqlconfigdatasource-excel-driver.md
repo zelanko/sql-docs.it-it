@@ -1,5 +1,5 @@
 ---
-title: ODBC Jet SQLConfigDataSource (Driver Excel) | Microsoft Docs
+title: ODBC Jet SQLConfigDataSource (Excel Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233591"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (driver Excel)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47715389"
   
  Il **SQLConfigDataSource** funzione che consente di aggiungere, modificare o eliminare un'origine dati utilizza in modo dinamico le parole chiave seguenti.  
   
-|Parola chiave|Description|  
+|Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |DBQ|Per il driver Microsoft Excel quando si accede a Microsoft Excel 5.0 o versioni successive file, il nome del file della cartella di lavoro.<br /><br /> Consente di impostare la stessa opzione come **Database** nella finestra di dialogo programma di installazione.|  
 |DEFAULTDIR|La specifica del percorso della directory.<br /><br /> Consente di impostare la stessa opzione come **selezione Directory** oppure **Seleziona cartella di lavoro** nella finestra di dialogo programma di installazione.|  

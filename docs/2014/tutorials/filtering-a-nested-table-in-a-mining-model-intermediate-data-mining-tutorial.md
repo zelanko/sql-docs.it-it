@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267475"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Applicazione di filtri a una tabella nidificata in un modello di data mining (Esercitazione intermedia sul data mining)
   Dopo avere creato ed esplorato il modello, si decide che si desidera concentrarsi su un subset dei dati sui clienti. Potrebbe ad esempio essere necessario analizzare solo gli acquisti relativi a uno specifico articolo o analizzare i dati demografici dei clienti che non hanno effettuato acquisti in un determinato periodo.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di filtrare i dati utilizzati in un modello di data mining. Questa funzionalità è utile perché non è necessaria configurare una nuova vista origine dati per utilizzare dati differenti. Nell'esercitazione di base sul data mining è stato descritto come filtrare i dati da una tabella flat applicando condizioni alla tabella del case. In questa attività verrà creato un filtro che si applica a una tabella nidificata.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>Filtra su Nidificato rispetto a tabelle dei case  
+## <a name="filters-on-nested-vs-case-tables"></a>Filtra su nidificato rispetto. Tabelle del case  
  Se la vista origine dati contiene una tabella del case e una tabella nidificata, come la vista origine dati utilizzata nel modello di associazione, è possibile applicare filtri in base ai valori nella tabella del case, alla presenza o assenza di un valore nella tabella nidificata o a una combinazione di entrambi.  
   
  In questa attività verrà innanzitutto creata una copia del modello di associazione, quindi si aggiungeranno gli attributi IncomeGroup e Region al nuovo modello correlato, in modo da applicare filtri in base a tali attributi nella tabella del case.  

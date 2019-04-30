@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240076"
 ---
 # <a name="optimize-property-example-vc"></a>Esempio della proprietà Optimize (VC++)
 Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) oggetti dinamici **Optimize** proprietà. Il **zip** campo del **autori** nella tabella di **Pubs** database non è indicizzato. Impostando il [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul **zip** campo autorizza ADO per compilare un indice che consente di migliorare le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  
@@ -133,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto CT Silver 3 Autorità di certificazione Walnut Creek**   
+ **Akiko Yokomoto    3 Silver Ct. Autorità di certificazione Walnut Creek**   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà dinamica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

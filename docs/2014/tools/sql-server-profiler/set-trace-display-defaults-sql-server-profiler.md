@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267376"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler)
   In questo argomento viene descritta la procedura per l'impostazione delle opzioni relative al tipo, alla dimensione e allo stile del carattere utilizzato da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la visualizzazione delle tracce nella finestra di traccia. È inoltre possibile specificare che in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tutti i valori di data e ora vengano visualizzati in base alle impostazioni internazionali configurate per il sistema operativo in uso.  

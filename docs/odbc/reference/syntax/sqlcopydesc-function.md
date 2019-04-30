@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259275"
 ---
 # <a name="sqlcopydesc-function"></a>Funzione SQLCopyDesc
 **Conformità**  
@@ -66,7 +66,7 @@ SQLRETURN SQLCopyDesc(
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY007 L'|L'istruzione associata non è pronto|*SourceDescHandle* era associato un IRD e l'handle di istruzione associata non è stato nello stato preparato o eseguito.|  
+|HY007|L'istruzione associata non è pronto|*SourceDescHandle* era associato un IRD e l'handle di istruzione associata non è stato nello stato preparato o eseguito.|  
 |HY010|Errore nella sequenza della funzione|(DM) il descrittore di gestire in *SourceDescHandle* oppure *TargetDescHandle* è stato associato un *StatementHandle* per il quale un'esecuzione asincrona (not (funzione) Questo file) è stato chiamato ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) il descrittore di handle in *SourceDescHandle* oppure *TargetDescHandle* è stato associato un *StatementHandle* per il quale **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *SourceDescHandle* oppure *TargetDescHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLCopyDesc** funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati il *SourceDescHandle* oppure *TargetDescHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima per tutti i parametri trasmessi sono stati recuperati i dati.|  
 |HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY016|Non è possibile modificare un descrittore delle righe di implementazione|*TargetDescHandle* era associato a un'implementazione.|  

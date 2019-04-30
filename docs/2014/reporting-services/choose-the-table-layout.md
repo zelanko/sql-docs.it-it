@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1fedf055524fa963203f1d0c2b0a64e0fafb6de
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266476"
 ---
 # <a name="choose-the-table-layout"></a>Scelta layout tabella
   Utilizzare questa pagina della Creazione guidata report per selezionare il layout della tabella nel report.  

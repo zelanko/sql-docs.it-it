@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267751"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Lunghezza dei dati, lunghezza del buffer e troncamento
 Il *lunghezza dei dati* è la lunghezza in byte dei dati come verranno archiviati nel buffer di dati dell'applicazione, non quando vengono archiviato nell'origine dati. Questa distinzione è importante perché i dati vengono spesso archiviati in tipi diversi nel buffer di dati più nell'origine dati. Pertanto, per i dati inviati all'origine dati, questa è la lunghezza in byte dei dati prima della conversione al tipo dell'origine dati. Per i dati recuperati dall'origine dati, questa è la lunghezza in byte dei dati dopo la conversione al tipo di buffer di dati e prima che venga eseguita qualsiasi troncamento.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266472"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opzioni di aggiornamento Cache (Gestione report)
   La pagina Opzioni di aggiornamento cache consente di creare pianificazioni per precaricare nella cache copie temporanee di dati per un report o per un set di dati condiviso. Un piano di aggiornamento include una pianificazione e l'opzione per specificare o eseguire l'override di valori per i parametri. Per un set di dati condiviso, non è possibile eseguire l'override di valori per i parametri contrassegnati di sola lettura. È possibile creare e utilizzare più piani di aggiornamento come parte delle opzioni di aggiornamento.  

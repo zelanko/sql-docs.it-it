@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266227"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
   La pagina Scegli percorso elemento consente di selezionare una cartella per un nuovo report collegato o per un nuovo modello. Se si crea un modello o un report collegato per un gruppo di utenti specifico, potrebbe essere utile inserire l'elemento in una cartella contenente altri report e modelli utilizzati dallo stesso gruppo. È necessario selezionare una cartella esistente e per la quale si dispone delle autorizzazioni per l'aggiunta di contenuto.  

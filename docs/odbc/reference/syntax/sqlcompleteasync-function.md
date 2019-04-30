@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259361"
 ---
 # <a name="sqlcompleteasync-function"></a>Funzione SQLCompleteAsync
 **Conformità**  
  Versione introdotta: ODBC 3.8  
   
- Conformità agli standard: nessuno  
+ Conformità agli standard: None  
   
  **Riepilogo**  
  **SQLCompleteAsync** può essere utilizzato per determinare quando una funzione asincrona è stata completata usando entrambi l'elaborazione o polling dal basato sulla notifica. Per altre informazioni sulle operazioni asincrone, vedere [esecuzione asincrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -69,7 +69,7 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_INVALID_HANDLE: L'handle indicato dal *HandleType* e *gestire* non è un handle valido.  
   
--   : SQL_ERROR *AsyncRetCodePtr* è NULL o l'elaborazione asincrona non è abilitata sull'handle.  
+-   SQL_ERROR: *AsyncRetCodePtr* è NULL o l'elaborazione asincrona non è abilitata sull'handle.  
   
 -   SQL_NO_DATA: In modalità di notifica, un'operazione asincrona non è in corso o gestione Driver non ha alcuna notifica all'applicazione. In modalità di polling, un'operazione asincrona non è in corso.  
   

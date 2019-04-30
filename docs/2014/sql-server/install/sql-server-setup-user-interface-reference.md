@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf1e05808de1735b8a263387143a00044d4a6ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267882"
 ---
 # <a name="sql-server-setup-user-interface-reference"></a>Guida di riferimento all'interfaccia utente del programma di installazione di SQL Server
   In questa sezione vengono descritte le opzioni di installazione disponibili nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260650"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Dimensioni (Generatore report e SSRS)
   Selezionare **Dimensioni** nella finestra di dialogo **Proprietà immagine** per formattare le dimensioni delle immagini visualizzate in un campo o nell'area di progettazione o per modificare la quantità di spazio aggiuntivo tra il bordo di una cella o di una casella di testo e l'immagine o il valore che questa contiene.  

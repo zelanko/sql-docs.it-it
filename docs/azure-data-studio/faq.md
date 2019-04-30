@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238292"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>Domande frequenti su [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
 
@@ -123,7 +123,7 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|WINDOWS|Yes|Yes|
+|Windows|Yes|Yes|
 |macOS|Yes||
 |Linux|Yes||
 
@@ -150,7 +150,7 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 |Diagrammi di database||Yes|
 |Visualizzatore Log di errore||Yes|
 |Piani di manutenzione||Yes|
-|Query multiserver||Yes|
+|Multi-Server Query||Yes|
 |Gestione basata su criteri||Yes|
 |PolyBase||Yes|
 |Archivio query||Yes|

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255405"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Esercitazione: Replica di dati con client mobili
   La replica è una buona soluzione al problema legato al trasferimento dei dati tra un server centrale e client mobili connessi solo occasionalmente. Le procedure guidate relative alla replica consentono di eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica. In questa esercitazione viene illustrato come configurare una topologia di replica per client mobili.  
@@ -26,7 +26,7 @@ ms.locfileid: "52750973"
  In questa esercitazione verrà utilizzata la replica di tipo merge per pubblicare i dati da un database centrale in uno o più client mobili in modo che ogni utente disponga di un subset di dati filtrato in modo univoco. Nella prima lezione verranno descritte le procedure per la creazione di una pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Nelle lezioni successive verranno descritte le procedure per creare e sincronizzare una sottoscrizione.  
   
 ## <a name="requirements"></a>Requisiti  
- Questa esercitazione è destinata agli utenti esperti nelle operazioni di database fondamentali ma con una limitata conoscenza della replica. Prima di iniziare questa esercitazione, è necessario completare [esercitazione: Preparazione del Server per la replica](tutorial-preparing-the-server-for-replication.md).  
+ Questa esercitazione è destinata agli utenti esperti nelle operazioni di database fondamentali ma con una limitata conoscenza della replica. Prima di iniziare questa esercitazione è necessario completare l'[Esercitazione: Preparazione del Server per la replica](tutorial-preparing-the-server-for-replication.md).  
   
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52750973"
 > [!NOTE]  
 >  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è necessario connettersi al server di pubblicazione e al Sottoscrittore mediante un account di accesso che sia membro del ruolo predefinito del server sysadmin.  
   
- **Tempo stimato per completare questa esercitazione: 30 minuti.**  
+ **Tempo stimato per il completamento dell'esercitazione: 30 minuti.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
   

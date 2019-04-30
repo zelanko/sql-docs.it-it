@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266060"
 ---
 # <a name="choose-link-page-report-manager"></a>Pagina Scegli collegamento (Gestione report)
   La pagina Scegli collegamento consente di selezionare un report diverso su cui basare il report collegato selezionato. I report collegati sono basati su altri report già pubblicati in un server di report. Un report collegato utilizza il layout e i dati del report di base, ma dispone di pagine delle proprietà separate, in modo che sia possibile personalizzare le proprietà dei parametri, le impostazioni di sicurezza, il nome, la descrizione e il percorso.  

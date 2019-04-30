@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255784"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Cancella i risultati di una query (Visual Database Tools)
   Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  

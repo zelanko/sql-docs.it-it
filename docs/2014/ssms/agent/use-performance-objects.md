@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245847"
 ---
 # <a name="use-performance-objects"></a>Utilizzo degli oggetti prestazioni
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent include oggetti e contatori delle prestazioni che consentono di monitorare lo stato del servizio. Tramite gli oggetti prestazione è possibile utilizzare Performance Monitor, uno strumento Windows che consente di identificare le attività eseguite in background dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile ad esempio identificare il numero dei processi attivi attualmente in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e individuare quelli bloccati.  
@@ -36,7 +36,7 @@ ms.locfileid: "52787083"
   
 |Tipo di istanza|Nome oggetto|  
 |-------------------|-----------------|  
-|Impostazione predefinita|**SQLAgent:** *oggetto*:*contatore*|  
+|Impostazione predefinita|**SQLAgent:** *object*:*counter*|  
 |Denominato|**SQLAgent$**<br /> ***instance_name* :** *oggetto*:*contatore*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include gli oggetti prestazione seguenti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

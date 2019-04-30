@@ -1,5 +1,5 @@
 ---
-title: Estensioni di PostgreSQL (anteprima)
+title: Estensione di PostgreSQL (anteprima)
 titleSuffix: Azure Data Studio
 description: Estensioni di PostgreSQL (anteprima) per Azure Data Studio
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252826"
 ---
-# <a name="postgresql-extension-preview"></a>Estensioni di PostgreSQL (anteprima)
+# <a name="postgresql-extension-preview"></a>Estensione di PostgreSQL (anteprima)
 
 L'estensione di PostgreSQL (anteprima) consente di connettersi a, eseguire una query e lo sviluppo per Postgres usando le funzionalità di Studio di Azure Data. 
 

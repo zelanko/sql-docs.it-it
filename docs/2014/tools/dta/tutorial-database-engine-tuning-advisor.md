@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268367"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Esercitazione: Database Engine Tuning Advisor
   In questa esercitazione verrà illustrata Ottimizzazione guidata motore di database che esamina il modo in cui vengono elaborate le query nei database specificati e offre indicazioni su come migliorare le prestazioni di elaborazione attraverso la modifica delle strutture di database, ad esempio indici, viste indicizzate e partizionamento.  
@@ -31,7 +31,7 @@ ms.locfileid: "52767613"
  [Lezione 1: Navigazione di base in Ottimizzazione guidata motore di Database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  In questa lezione sarà possibile acquisire familiarità con la GUI dello strumento Ottimizzazione guidata motore di database e ottenere informazioni su come impostare il layout e le opzioni di visualizzazione.  
   
- [Lezione 2: Tramite Ottimizzazione guidata motore di Database](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lezione 2: Uso di Ottimizzazione guidata motore di database](lesson-2-using-database-engine-tuning-advisor.md)  
  In questa lezione verranno descritte le procedure per eseguire alcune semplici attività di ottimizzazione utilizzando la GUI dello strumento Ottimizzazione guidata motore di database.  
   
  [Lezione 3: Uso dell'utilità del prompt dei comandi dta](lesson-3-using-the-dta-command-prompt-utility.md)  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa841b0fc86fd7c6525187d08b1fbe143b8e3ee4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260724"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>Immagine, casella di testo, rettangolo, Guida sensibile al contesto
   Negli argomenti di questa sezione vengono fornite informazioni sulle opzioni che è possibile impostare per immagini, caselle di testo, rettangoli e righe dalle finestre di dialogo di Progettazione report.  

@@ -1,5 +1,5 @@
 ---
-title: CoalesceEmpty (MDX) | Documenti Microsoft
+title: CoalesceEmpty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306702"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -45,8 +45,8 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  Espressione stringa valida che in genere è un valore stringa specificato con cui viene sostituito un valore NULL restituito dalla prima espressione stringa.  
   
-## <a name="remarks"></a>Remarks  
- Se vengono specificate uno o più espressioni numeriche, di **CoalesceEmpty** funzione restituisce il valore numerico della prima espressione numerica, da sinistra a destra, che può essere risolta in un valore non vuoto. Se nessuna delle espressioni numeriche specificate può essere risolta in un valore non vuoto, la funzione restituisce il valore di cella vuota. Il valore della seconda espressione numerica è in genere il valore numerico con cui viene sostituito un valore NULL restituito dalla prima espressione numerica.  
+## <a name="remarks"></a>Note  
+ Se vengono specificate uno o più espressioni numeriche, il **CoalesceEmpty** funzione restituisce il valore numerico della prima espressione numerica, da sinistra a destra, che può essere risolta in un valore non vuoto. Se nessuna delle espressioni numeriche specificate può essere risolta in un valore non vuoto, la funzione restituisce il valore di cella vuota. Il valore della seconda espressione numerica è in genere il valore numerico con cui viene sostituito un valore NULL restituito dalla prima espressione numerica.  
   
  Se vengono specificate una o più espressioni stringa, la funzione restituisce il valore stringa della prima espressione stringa, da sinistra a destra, che può essere risolta in un valore non vuoto. Se nessuna delle espressioni stringa specificate può essere risolta in un valore non vuoto, la funzione restituisce il valore di cella vuota. Il valore della seconda espressione stringa è in genere il valore stringa con cui viene sostituito un valore NULL restituito dalla prima espressione stringa.  
   
@@ -55,7 +55,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  Per ulteriori informazioni sulle celle vuote, vedere la documentazione relativa a OLE DB.  
   
 ## <a name="example"></a>Esempio  
- Le query di esempio seguente il **Adventure Works** cubo. Nell'esempio viene restituito il quantitativo ordinato di ogni prodotto e la percentuale di quantitativi ordinati per categoria. Il **CoalesceEmpty** funzione assicura che i valori null vengono rappresentati come zero (0) durante la formattazione dei membri calcolati.  
+ Query di esempio seguente il **Adventure Works** cubo. Nell'esempio viene restituito il quantitativo ordinato di ogni prodotto e la percentuale di quantitativi ordinati per categoria. Il **CoalesceEmpty** funzione assicura che i valori null vengono rappresentati come zero (0) quando si formatta i membri calcolati.  
   
 ```  
 WITH   
@@ -79,6 +79,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

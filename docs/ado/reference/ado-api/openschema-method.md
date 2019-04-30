@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239999"
 ---
 # <a name="openschema-method"></a>Metodo OpenSchema
 Ottiene le informazioni sullo schema di database dal provider.  
@@ -62,10 +62,10 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Utilizzo del servizio dati remoto** il **OpenSchema** metodo non è disponibile sul lato client [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
   
 > [!NOTE]
->  In Visual Basic, le colonne che dispongono di un intero senza segno a quattro byte (UI4 DBTYPE) nel **Recordset** restituiti dal **OpenSchema** metodo sul **connessione** oggetto non è possibile da confrontare con le altre variabili. Per altre informazioni sui tipi di dati OLE DB, vedere [tipi di dati in OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) e [appendice a: tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) nel riferimento di Microsoft per programmatori OLE DB.  
+>  In Visual Basic, le colonne che dispongono di un intero senza segno a quattro byte (UI4 DBTYPE) nel **Recordset** restituiti dal **OpenSchema** metodo sul **connessione** oggetto non è possibile da confrontare con le altre variabili. Per altre informazioni sui tipi di dati OLE DB, vedere [tipi di dati in OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) e [appendice a: Tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) nel riferimento per programmatori OLE DB Microsoft.  
   
 > [!NOTE]
->  **Gli utenti di Visual C/C++** quando non si utilizzano cursori sul lato client, il recupero "ORDINAL_POSITION" di uno schema di colonna in ADO restituisce una variante di tipo VT_R8 in MDAC 2.7, MDAC 2.8 e Windows Data Access Components (Windows DAC) 6.0, mentre il tipo usato in MDAC 2.6 è VT_I4. I programmi scritti per MDAC 2.6 che rappresentano solo per una variabile variant restituito di tipo che VT_I4 otterrebbe pari a zero per ogni numero ordinale se vengono eseguiti con MDAC 2.7, MDAC 2.8 e 6.0 di Windows dell'applicazione livello dati senza alcuna modifica. Questa modifica è stata apportata perché il tipo di dati OLE DB restituisce DBTYPE_UI4 e il tipo VT_I4 firmato non c'è spazio sufficiente per contenere tutti i valori possibili senza troncamenti eventualmente in corso e causando una perdita di dati.  
+>  **Visual C# /C++ gli utenti** quando non si utilizzano cursori sul lato client, il recupero "ORDINAL_POSITION" di uno schema di colonna in ADO restituisce una variante di tipo VT_R8 in MDAC 2.7, MDAC 2.8 e Windows Data Access Components (Windows DAC) 6.0, mentre il tipo utilizzato in MDAC 2.6 è VT_I4. I programmi scritti per MDAC 2.6 che rappresentano solo per una variabile variant restituito di tipo che VT_I4 otterrebbe pari a zero per ogni numero ordinale se vengono eseguiti con MDAC 2.7, MDAC 2.8 e 6.0 di Windows dell'applicazione livello dati senza alcuna modifica. Questa modifica è stata apportata perché il tipo di dati OLE DB restituisce DBTYPE_UI4 e il tipo VT_I4 firmato non c'è spazio sufficiente per contenere tutti i valori possibili senza troncamenti eventualmente in corso e causando una perdita di dati.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Metodo Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

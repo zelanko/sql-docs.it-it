@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d6d7467da572d5d0552d400e2c05505c1bc0aaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267554"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Modificare le stored procedure che utilizzano proprietà della ricerca full-text obsolete
   Per garantire la corretta esecuzione delle stored procedure, modificare le procedure esistenti e rimuovere le proprietà e le impostazioni relative alla ricerca full-text che sono state rimosse o deprecate.  
@@ -27,7 +27,7 @@ ms.locfileid: "48091534"
 ## <a name="component"></a>Componente  
  Ricerca full-text  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Le seguenti proprietà e impostazioni relative alla ricerca full-text sono state rimosse.  
   
 -   **DataTimeout**  

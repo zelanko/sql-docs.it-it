@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232997"
 ---
 # <a name="create-index-statement"></a>Istruzione CREATE INDEX
 La sintassi dell'istruzione CREATE INDEX è:  
   
  Crea indice [UNIQUE] *-nome dell'indice* via *nome-tabella* (*identificatore di colonna* [Centro sicurezza di AZURE] [DESC] [, *colonna identificatore* [ASC][DESC]...]) CON \< *elenco di opzioni di indice*>  
   
- in cui \< *elenco di opzioni di indice*> può essere: primario &#124; non consentire NULL &#124; Ignora NULL  
+ in cui \< *elenco di opzioni di indice*> può essere: PRIMARIO &AMP;#124; NULL NON CONSENTIRE &AMP;#124; IGNORA NULL  
   
  Solo il driver Microsoft Access usa le opzioni di indice impedisce NULL e Ignora NULL. Il file dBASE e i driver Paradox accetta la sintassi, ma ignoreranno la presenza di entrambe le opzioni.  
   

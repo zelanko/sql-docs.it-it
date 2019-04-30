@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269903"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copia dei risultati di una query (Visual Database Tools)
   È possibile copiare il set di risultati come testo delimitato da tabulazioni dal riquadro **Risultati** . È possibile copiare l'intero set di risultati oppure un numero qualsiasi di righe o celle contigue o non contigue.  

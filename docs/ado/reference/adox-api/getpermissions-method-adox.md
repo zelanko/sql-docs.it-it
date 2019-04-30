@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313265"
 ---
 # <a name="getpermissions-method-adox"></a>Metodo GetPermissions (ADOX)
 Restituisce le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) oppure [utente](../../../ado/reference/adox-api/user-object-adox.md) su un oggetto o un contenitore di oggetti.  
@@ -33,14 +33,14 @@ Restituisce le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/gr
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **lungo** valore che specifica una maschera di bit che contiene le autorizzazioni che il gruppo o l'utente dispone sull'oggetto. Questo valore può essere uno o più i [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) costanti.  
   
 #### <a name="parameters"></a>Parametri  
- *Nome*  
+ *Name*  
  Oggetto **Variant** valore che specifica il nome dell'oggetto per cui impostare le autorizzazioni. Impostare *nome* su un valore null se si desidera ottenere le autorizzazioni per il contenitore di oggetti.  
   
  *ObjectType*  

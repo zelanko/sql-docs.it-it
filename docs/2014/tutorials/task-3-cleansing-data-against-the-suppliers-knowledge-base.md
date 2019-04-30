@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250161"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Attività 3: Pulizia dei dati fornitore rispetto alla Knowledge Base Suppliers
   In questa attività viene eseguito il processo di pulizia computerizzato. In DQS vengono utilizzati algoritmi e livelli di probabilità avanzati basati sui valori soglia specificati per analizzare i dati rispetto alla Knowledge Base selezionata e procedere quindi alla relativa pulizia. Visualizzare [pulizia dei dati mediante DQS (interna) Knowledge](https://msdn.microsoft.com/library/hh213061.aspx) per altri dettagli.  
@@ -24,7 +24,7 @@ ms.locfileid: "56035912"
   
      ![Pagina del processo di pulizia Pulisci](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "pulire pagina del processo di pulizia")  
   
-2.  Quando viene completato il processo di pulizia, esaminare **statistiche** nel **Profiler** scheda. Nelle statistiche origine è disponibile il numero di record elaborati, nonché di quelli rilevati corretti, che vengono corretti da DQS, per cui vengono suggerite modifiche da DQS e non validi. Nella casella di riepilogo a destra è possibile visualizzare i valori corretti, quelli suggeriti, nonché la completezza (l'entità della presenza dei dati) e l'accuratezza (la misura entro cui i dati possono essere utilizzati per gli scopi previsti) dei valori per ogni dominio interessato dal processo di pulizia.  
+2.  Quando viene completato il processo di pulizia, esaminare **statistiche** nel **Profiler** scheda. Le statistiche di origine specificare il numero di record elaborati, numero di record che risultano corrette, il numero di record che DQS consente di correggere, numero di record che hanno suggerite modifiche da DQS e il numero di record che non sono validi. Nella casella di riepilogo a destra è possibile visualizzare i valori corretti, quelli suggeriti, nonché la completezza (l'entità della presenza dei dati) e l'accuratezza (la misura entro cui i dati possono essere utilizzati per gli scopi previsti) dei valori per ogni dominio interessato dal processo di pulizia.  
   
      ![Risultati della pulizia](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "dei risultati della pulizia")  
   

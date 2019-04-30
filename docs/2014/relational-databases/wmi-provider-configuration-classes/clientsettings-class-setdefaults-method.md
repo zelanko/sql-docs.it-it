@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242948"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>Metodo SetDefaults (classe ClientSettings)
   Imposta tutti i valori predefiniti per l'istanza del client di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere i dati esistenti.  

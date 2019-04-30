@@ -1,5 +1,5 @@
 ---
-title: 'Attività 4 (facoltativo): La combinazione, corrispondenza e pubblicazione di un nuovo Set di dati | Microsoft Docs'
+title: 'Attività 4 (facoltativa): La combinazione, corrispondenza e pubblicazione di un nuovo Set di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250046"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Attività 4 (facoltativo): Combinazione, corrispondenza e pubblicazione di un nuovo set di dati
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Attività 4 (facoltativa): Combinazione, corrispondenza e pubblicazione di un nuovo set di dati
   Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere dati, può essere utile confrontare i nuovi dati ai dati già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati. Nel componente aggiuntivo Master Data Services per Excel è possibile combinare i dati di due fogli di lavoro e confrontarli per identificare e rimuovere i duplicati prima di pubblicare i dati in MDS. Per identificare le corrispondenze nei dati viene utilizzata la funzionalità di corrispondenza di DQS dalla relativa caratteristica del componente aggiuntivo MDS per Excel. In questa attività verranno combinati i dati di due fogli di lavoro in uno e, successivamente, verrà eseguita l'attività di individuazione delle corrispondenze per identificare e rimuovere i duplicati prima della pubblicazione in MDS. Visualizzare [corrispondenza Data Quality nel componente aggiuntivo MDS per Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combina dati](https://msdn.microsoft.com/library/hh548680.aspx) argomenti per altri dettagli.  
   
 1.  Avvia nuova istanza della **Excel**. Fare clic su **avviare**, scegliere **eseguire**, digitare **Excel**, fare clic su **OK**.  
@@ -90,7 +90,7 @@ ms.locfileid: "56014281"
   
 25. Fare clic su **OK**.  
   
-26. Tramite il processo di corrispondenza deve essere identificato un duplicato per il fornitore con **Code: S1**.  
+26. Il processo di corrispondenza deve essere identificato un duplicato per il fornitore con **codice: S1**.  
   
      ![Excel - risultati corrispondenza](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - risultati corrispondenza")  
   

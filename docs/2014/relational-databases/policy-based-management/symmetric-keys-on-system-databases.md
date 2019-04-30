@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac7d41bc693813f471caff7e746a44184146962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252663"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>Chiavi simmetriche nei database di sistema
   Questa regola consente di controllare le chiavi simmetriche create dall'utente nei database master, msdb, model e tempdb.  

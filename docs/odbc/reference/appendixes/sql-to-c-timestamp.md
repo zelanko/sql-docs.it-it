@@ -1,5 +1,5 @@
 ---
-title: 'SQL a c: Timestamp | Microsoft Docs'
+title: 'Da SQL a C: Timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259262"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL a c: Timestamp
+# <a name="sql-to-c-timestamp"></a>Da SQL a C: Timestamp
 
 L'identificatore per il tipo di dati SQL ODBC timestamp è il seguente:
 

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258970"
 ---
 # <a name="fetchprogress-event-ado"></a>Evento FetchProgress (ADO)
 Il **FetchProgress**eventi viene chiamato periodicamente durante un'operazione asincrona lunga per segnalare il numero di righe attualmente recuperato nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

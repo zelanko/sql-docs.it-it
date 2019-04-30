@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264859"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce stile CSS predefiniti file sheets (CSS) che definiscono stili per il **report** sulla barra degli strumenti Visualizzatore HTML e per gestione Report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  

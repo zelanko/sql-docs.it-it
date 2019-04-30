@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245988"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Ruoli di database predefiniti di SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli amministratori hanno a disposizione i seguenti ruoli predefiniti del database **msdb** , che consentono di controllare in modo più capillare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Sono previsti i seguenti ruoli, elencati a partire da quello che ha meno privilegi:  
@@ -52,11 +52,11 @@ ms.locfileid: "52773773"
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
 |Creazione/modifica/eliminazione|No|Sì <sup>1</sup>|Yes|No|  
 |Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Yes|Yes|Sì <sup>3</sup>|  
-|Abilitazione/disabilitazione|No|Yes|Yes|Non applicabile|  
+|Abilitazione/disabilitazione|no|Yes|Yes|Non applicabile|  
 |Visualizzazione di proprietà|No|Yes|Yes|No|  
 |Esecuzione/arresto/avvio|Non applicabile|Yes|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Yes|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|Non <sup>4</sup>|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|No <sup>4</sup>|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Yes|Non applicabile|  
   
  <sup>1</sup> non è possibile modificare la proprietà dei processi.  
@@ -77,14 +77,14 @@ ms.locfileid: "52773773"
   
 |Azione|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Creazione/modifica/eliminazione|No|Sì <sup>1</sup> (solo per i processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Creazione/modifica/eliminazione|No|Sì <sup>1</sup> (solo per i processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|No|  
 |Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Yes|Yes|Yes|Sì <sup>3</sup>|  
 |Abilitazione/disabilitazione|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|Non applicabile|  
 |Visualizzazione di proprietà|No|Yes|Yes|Yes|No|  
 |Modifica di proprietà|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
 |Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|No|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Yes|Yes|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|Non <sup>4</sup>|No|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|No <sup>4</sup>|No|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Non applicabile|Sì (solo pianificazioni di proprietà)|Non applicabile|  
   
  <sup>1</sup> non è possibile modificare la proprietà dei processi.  

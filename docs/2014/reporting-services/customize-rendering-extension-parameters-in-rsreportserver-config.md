@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f8bfc14257fcab8dd6c140f823ca34831c541c9f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264693"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
   È possibile specificare i parametri di estensione per il rendering nel file di configurazione RSReportServer per sostituire il comportamento di rendering predefinito per i report in esecuzione in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È possibile modificare i parametri di estensione per il rendering per ottenere gli obiettivi seguenti:  

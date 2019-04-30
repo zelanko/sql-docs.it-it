@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261701"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestione di errori e avvisi (XMLA)
   Gestione degli errori è obbligatorio quando un file di XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) oppure [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) chiamata al metodo non viene eseguito, viene eseguito correttamente, ma genera errori o avvisi, o viene eseguito correttamente ma restituisce risultati che contengono errori.  
@@ -39,13 +39,13 @@ ms.locfileid: "50144926"
 ### <a name="fault-code-information"></a>Informazioni sul codice di errore  
  Nella tabella seguente vengono elencate le informazioni sul codice di errore XMLA contenute nella sezione dei dettagli della risposta SOAP. Le colonne rappresentano gli attributi di un errore nella sezione dei dettagli di un errore SOAP.  
   
-|Nome colonna|Tipo|Description|Valore null consentito<sup>1</sup>|  
+|Nome colonna|Tipo|Descrizione|Valore null consentito<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|no|  
-|**WarningCode**|**UnsignedInt**|Codice restituito che indica una condizione di avviso. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|Sì|  
-|**Descrizione**|**String**|Testo o descrizione dell'errore o dell'avviso restituiti dal componente che ha generato l'errore.|Sì|  
-|**Origine**|**String**|Nome del componente che ha generato l'errore o l'avviso.|Sì|  
-|**HelpFile**|**String**|Percorso o URL del file o dell'argomento della Guida in cui è descritto l'errore o l'avviso.|Sì|  
+|**ErrorCode**|**UnsignedInt**|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|No|  
+|**WarningCode**|**UnsignedInt**|Codice restituito che indica una condizione di avviso. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|Yes|  
+|**Descrizione**|**String**|Testo o descrizione dell'errore o dell'avviso restituiti dal componente che ha generato l'errore.|Yes|  
+|**Origine**|**String**|Nome del componente che ha generato l'errore o l'avviso.|Yes|  
+|**HelpFile**|**String**|Percorso o URL del file o dell'argomento della Guida in cui è descritto l'errore o l'avviso.|Yes|  
   
  <sup>1</sup> indica se i dati sono obbligatorio e devono essere restituiti, o se i dati sono facoltativi e una stringa null è consentita se la colonna non è applicabile.  
   

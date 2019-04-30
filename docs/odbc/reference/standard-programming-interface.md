@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232068"
 ---
 # <a name="standard-programming-interface"></a>Interfaccia di programmazione standard
 L'interfaccia di programmazione è probabilmente il più ovvio candidato per la standardizzazione. Infatti, quando viene sviluppata ODBC, ANSI e ISO già fornito standard per embedded SQL e SQL moduli. Anche se nessun standard esistente per un database della riga di comando, il gruppo di accesso di SQL - un consorzio di settore di fornitori di database - è stato valuta l'opportunità di creare una volta; parti di ODBC in un secondo momento è diventato la base per il proprio lavoro.  

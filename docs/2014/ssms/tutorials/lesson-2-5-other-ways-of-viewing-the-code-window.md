@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252682"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>Altri modi per visualizzare la finestra del codice
   Sono disponibili vari modi per configurare la finestra del codice in modo da visualizzare più finestre del codice.  

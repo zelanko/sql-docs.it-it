@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259316"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt Function
 **Conformità**  
@@ -50,7 +50,7 @@ SQLRETURN SQLFreeStmt(
  *Opzione*  
  [Input] Una delle opzioni seguenti:  
   
- SQL _ CLOSE: Chiude il cursore associato *StatementHandle* (se è stato definito uno) ed Elimina tutti i risultati in sospeso. L'applicazione può riaprire questo cursore in un secondo momento tramite l'esecuzione di un **seleziona** istruzione nuovamente con i valori dei parametri uguali o diversi. Se nessun cursore è aperto, questa opzione ha effetto per l'applicazione. **SQLCloseCursor** può anche essere chiamato per chiudere un cursore. Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL_ CLOSE: Chiude il cursore associato *StatementHandle* (se è stato definito uno) ed Elimina tutti i risultati in sospeso. L'applicazione può riaprire questo cursore in un secondo momento tramite l'esecuzione di un **seleziona** istruzione nuovamente con i valori dei parametri uguali o diversi. Se nessun cursore è aperto, questa opzione ha effetto per l'applicazione. **SQLCloseCursor** può anche essere chiamato per chiudere un cursore. Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
  SQL_DROP: Questa opzione è deprecata. Una chiamata a **SQLFreeStmt** con un *opzione* di SQL_DROP viene eseguito il mapping a in Gestione Driver [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   

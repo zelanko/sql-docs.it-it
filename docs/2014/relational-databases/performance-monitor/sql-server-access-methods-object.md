@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251104"
 ---
 # <a name="sql-server-access-methods-object"></a>Oggetto Metodi di accesso di SQL Server
   L'oggetto **Metodi di accesso** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare l'accesso ai dati logici all'interno del database. L'accesso fisico alle pagine del database su disco viene monitorato tramite i contatori di **Gestione buffer** . Il monitoraggio dei metodi utilizzati per accedere ai dati archiviati nel database consente di determinare se è possibile migliorare le prestazioni delle query aggiungendo o modificando gli indici, aggiungendo o spostando partizioni, aggiungendo file o gruppi di file, deframmentando gli indici o riscrivendo le query. I contatori dell'oggetto **Metodi di accesso** possono essere utilizzati anche per monitorare la quantità di dati, gli indici e lo spazio libero all'interno del database e determinare in tal modo il volume e la frammentazione dei dati per ogni istanza del server. Un'eccessiva frammentazione dell'indice può ridurre le prestazioni.  

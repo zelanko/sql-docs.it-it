@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315983"
 ---
 # <a name="comparebookmarks-method-ado"></a>Metodo CompareBookmarks (ADO)
 Confronta due segnalibri e restituisce un'indicazione dei relativi valori.  
@@ -39,7 +39,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Restituisce un [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valore che indica la posizione della riga relativo di due record rappresentati dai relativi segnalibri.  
   
 #### <a name="parameters"></a>Parametri  
- *Segnalibro1*  
+ *Bookmark1*  
  Il segnalibro della prima riga.  
   
  *Bookmark2*  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Poiché il tipo di dati di un segnalibro è specifico per ogni provider, ADO lo espone come un **Variant**. Ad esempio, i segnalibri di SQL Server sono di tipo DBTYPE_R8 (**doppie**). ADO esporrà questo tipo come un **Variant** con un sottotipo **doppie**.  
   
- Quando si confrontano i segnalibri, ADO non tenta di coercizione qualsiasi tipo. I valori vengono semplicemente passati al provider in cui si verifica il confronto. Se i segnalibri passato per il **CompareBookmarks** metodo sono archiviate in variabili di tipi diversi, è possibile generare il seguente errore di mancata corrispondenza di tipo: "gli argomenti sono di tipo errato, è compreso nell'intervallo accettabile o sono in conflitto tra loro."  
+ Quando si confrontano i segnalibri, ADO non tenta di coercizione qualsiasi tipo. I valori vengono semplicemente passati al provider in cui si verifica il confronto. Se i segnalibri passato per il **CompareBookmarks** metodo vengono archiviati in variabili di tipi diversi, può generare l'errore di mancata corrispondenza di tipo seguente: "Gli argomenti sono di tipo errato, sono compreso nell'intervallo accettabile o sono in conflitto".  
   
  Segnalibro che non è valida o formato non corretto verrà generato un errore.  
   

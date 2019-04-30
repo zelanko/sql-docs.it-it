@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241245"
 ---
 # <a name="display-size"></a>Dimensioni di visualizzazione
 Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratteri necessari per visualizzare i dati in formato carattere. Nella tabella seguente definisce le dimensioni di visualizzazione per ogni tipo di dati SQL ODBC.  
@@ -30,7 +30,7 @@ Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratt
 |-------------------------|------------------|  
 |Tutti i tipi di carattere [a]|Il definita (per tipi predefiniti) o massimo (tipi di variabile) numero di caratteri necessari per visualizzare i dati in formato carattere.|  
 |SQL_DECIMAL SQL_NUMERIC|La precisione della colonna più 2 (un segno *precisione* cifre e un separatore decimale). Ad esempio, le dimensioni di visualizzazione di una colonna definita come NUMERIC(10,3) sono 12.|  
-|SQL_BIT|1 (1 cifre).|  
+|SQL_BIT|1 (1 digit).|  
 |SQL_TINYINT|4 se firmato (un segno e 3 cifre) o 3 se senza segno (3 cifre).|  
 |SQL_SMALLINT|6 se è firmato (un segno e 5 cifre) o 5 se senza segno (5 cifre).|  
 |SQL_INTEGER|11 se firmato (un segno e 10 cifre) o 10 se senza segno (10 cifre).|  

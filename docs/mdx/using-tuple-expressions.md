@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di espressioni di tupla | Documenti Microsoft
+title: Utilizzo delle espressioni di tupla | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251494"
 ---
 # <a name="using-tuple-expressions"></a>Utilizzo delle espressioni di tupla
 
@@ -26,7 +26,7 @@ ms.locfileid: "34743690"
   
  L'espressione completa di un identificatore di tupla è costituita da uno o più membri specificati in modo esplicito e racchiusi tra parentesi:  
   
- (*Member_expression* [,*Member_expression* ...])  
+ (*Member_expression* [ ,*Member_expression* ... ] )  
   
  Una tupla può essere completa, può contenere membri impliciti oppure un solo membro.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "34743690"
   
 ## <a name="see-also"></a>Vedere anche  
  [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

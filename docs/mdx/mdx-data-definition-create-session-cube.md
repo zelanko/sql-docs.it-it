@@ -1,5 +1,5 @@
 ---
-title: Istruzione CREATE SESSION CUBE (MDX) | Documenti Microsoft
+title: Istruzione CREATE SESSION CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248188"
 ---
-# <a name="mdx-data-definition---create-session-cube"></a>Definizione dei dati MDX - crea il cubo di sessione
+# <a name="mdx-data-definition---create-session-cube"></a>Definizione dei dati MDX - CREATE SESSION CUBE
 
 
   Crea e popola un cubo di sessione da un cubo esistente presente sul server. Il cubo di sessione è visibile solo all'interno della sessione corrente. Non può essere visualizzato, né possono essere eseguite query su di esso da altre sessioni. Viene eliminato in modo implicito alla chiusura della sessione.  
@@ -108,10 +108,10 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  NOT_RELATED_TO_FACTS  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
- \<tipo di livello >  
+ \<il livello di tipo >  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  A differenza dei cubi locali e presenti sul server, un cubo di sessione non viene mantenuto oltre la sessione che l'ha creato. Viene definito in termini di misure e definizioni che lo definiscono. Sono presenti due tipi di dimensioni:  
   
 -   Dimensioni di origine: si tratta delle dimensioni che fanno parti di uno o più cubi di origine.  

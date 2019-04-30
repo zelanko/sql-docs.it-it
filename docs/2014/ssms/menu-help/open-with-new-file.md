@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240147"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
   È possibile aprire un documento in uno o più editor scegliendo **Apri** dal menu **File** e quindi facendo clic su **File**. Nella finestra di dialogo **Apri file** selezionare il file, fare clic sulla freccia accanto al pulsante **Apri** e quindi fare clic su **Apri con**. Nella finestra di dialogo **Apri con** selezionare il programma preferito nell'elenco **Selezionare un programma dall'elenco** e quindi fare clic su **Apri**.  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 33fe6bd04e59f91588f651877295ea265d523635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238336"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Risoluzione dei problemi nell'indicizzazione full-text
      
@@ -55,7 +55,7 @@ ms.locfileid: "48200371"
 
   
 ##  <a name="state"></a> Stato incoerente di un indice full-text dopo il ripristino del log delle transazioni  
- Durante il ripristino del log delle transazioni di un database, è possibile che venga visualizzato un avviso che indica che lo stato dell'indice full-text non è coerente. Questo accade perché l'indice full-text di una tabella è stato modificato dopo il backup del database. Per riportare l'indice full-text a uno stato coerente, è necessario eseguire un popolamento completo (ricerca per indicizzazione) della tabella. Per altre informazioni, vedere [Popolamento degli indici full-text](../indexes/indexes.md).  
+ Durante il ripristino del log delle transazioni di un database, è possibile che venga visualizzato un avviso che indica che lo stato dell'indice full-text non è coerente. Questo accade perché l'indice full-text di una tabella è stato modificato dopo il backup del database. Per riportare l'indice full-text a uno stato coerente, è necessario eseguire un popolamento completo (ricerca per indicizzazione) della tabella. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](../indexes/indexes.md).  
   
 
   

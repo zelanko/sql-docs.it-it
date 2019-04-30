@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241211"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
   In questo argomento vengono descritte le opzioni query che è necessario specificare per eseguire query sui dati XML. Vengono inoltre descritte le parti di istanze XML che non vengono mantenute quando vengono archiviate nei database.  
@@ -27,7 +27,7 @@ ms.locfileid: "58526574"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il contenuto dell'istanza XML, ma non mantiene gli aspetti dell'istanza XML che non sono considerati significativi nel modello di dati XML. Ciò significa che un'istanza XML recuperata potrebbe non essere identica all'istanza archiviata nel server, ma conterrà le stesse informazioni.  
   
 ### <a name="xml-declaration"></a>Dichiarazione XML  
- La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Esempio:  
+ La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Ad esempio:   
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -79,7 +79,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- È possibile che il prefisso dello spazio dei nomi nel risultato sia diverso. Esempio:  
+ È possibile che il prefisso dello spazio dei nomi nel risultato sia diverso. Ad esempio:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

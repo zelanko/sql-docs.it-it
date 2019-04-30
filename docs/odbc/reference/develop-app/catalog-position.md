@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237938"
 ---
 # <a name="catalog-position"></a>Posizione del catalogo
 La posizione di un nome di catalogo in un identificatore e modo in cui è separato dal resto dell'identificatore varia da origine dati all'origine dati. Ad esempio, in un'origine dati Xbase, il nome del catalogo è una directory e, in Microsoft® Windows®, sono separato dal nome della tabella (che è un nome di file) da una barra rovesciata (\\). La figura seguente illustra questa condizione.  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313845"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Esercitazioni sulla gestione di informazioni aziendali
   In questa sezione sono contenute esercitazioni per gestire le informazioni in un'organizzazione utilizzando le tecnologie di gestione di informazioni aziendali (EIM, Enterprise Information Management) disponibili in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. La tecnologia EIM offre soluzioni che consentono alle organizzazioni di considerare attendibili la credibilità e la coerenza dei dati in modo che possano prendere decisioni aziendali critiche. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sono disponibili le seguenti tecnologie che consentono l'implementazione di soluzioni EIM nell'organizzazione.  

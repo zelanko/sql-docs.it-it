@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248926"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaccia ADORecordsetConstruction
 Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un oggetto ADO **Recordset** oggetto da OLE DB **set di righe** oggetto in un'applicazione C/C++.  
@@ -37,10 +37,10 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **Rowset** oggetto da/in questa ADO **Recordset** oggetto.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="events"></a>Eventi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="remarks"></a>Note  
  Dato un OLE DB **Rowset** oggetto (`pRowset`), la costruzione di un oggetto ADO **Recordset** oggetto (`adoRs`) gli importi per le tre operazioni fondamentali seguenti:  

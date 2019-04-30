@@ -1,5 +1,5 @@
 ---
-title: NON (MDX) | Documenti Microsoft
+title: NOT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278499"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 
@@ -33,10 +33,10 @@ NOT Expression1
  Espressione MDX (Multidimensional Expression) valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un valore booleano che restituisce **false** se l'argomento restituisce **true**; in caso contrario, **true**.  
+ Valore booleano che restituisce **false** se l'argomento restituisce **true**; in caso contrario, **true**.  
   
-## <a name="remarks"></a>Remarks  
- Il **non** gestisce l'espressione come un valore booleano (zero, 0, come **false**; in caso contrario, **true**) prima di eseguire la negazione logica. Nella tabella seguente viene illustrato come la **non** operatore esegue la negazione logica.  
+## <a name="remarks"></a>Note  
+ Il **non** gestisce l'espressione come un valore booleano (zero, 0, come **false**; in caso contrario, **true**) prima che l'operatore esegue la negazione logica. La tabella seguente illustra come la **non** operatore esegue la negazione logica.  
   
 |*Expression1*|Valore restituito|  
 |-------------------|------------------|  

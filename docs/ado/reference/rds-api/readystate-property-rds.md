@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255727"
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (Servizi Desktop remoto)
 Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto come il recupero di dati nel relativo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -30,7 +30,7 @@ Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-o
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La query corrente è ancora in esecuzione e non di righe recuperate. Il **DataControl** dell'oggetto **Recordset** non è disponibile per l'uso.|  
 |**adcReadyStateInteractive**|Un set iniziale di righe recuperate alla query corrente è stato archiviato nel **DataControl** dell'oggetto **Recordset** e sono disponibili per l'uso. Le righe rimanenti sono ancora recuperate.|  

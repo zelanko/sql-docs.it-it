@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222486"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
 Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un' *asse* è una raccolta di membri di uno o più dimensioni, che consente di individuare o filtrare i valori specifici in un cubo.  

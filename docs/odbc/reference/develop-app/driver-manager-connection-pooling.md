@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280422"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool di connessioni di Gestione driver
 Pool di connessioni consente a un'applicazione usare una connessione da un pool di connessioni che non è necessario stabilire nuovamente per ogni uso. Una volta una connessione sia stata creata e inserita in un pool, un'applicazione può riutilizzare la connessione senza eseguire il processo di connessione completa.  

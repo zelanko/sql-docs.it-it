@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258931"
 ---
 # <a name="sqlgetdescfield-function"></a>Funzione SQLGetDescField
 **Conformità**  
@@ -98,7 +98,7 @@ SQLRETURN SQLGetDescField(
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY007 L'|L'istruzione associata non è pronto|*DescriptorHandle* è stato associato un *StatementHandle* come un IRD e l'istruzione associata handle aveva non è stato preparato o eseguito.|  
+|HY007|L'istruzione associata non è pronto|*DescriptorHandle* è stato associato un *StatementHandle* come un IRD e l'istruzione associata handle aveva non è stato preparato o eseguito.|  
 |HY010|Errore nella sequenza della funzione|(DM) *DescriptorHandle* è stato associato un *StatementHandle* per i quali è stata chiamata una funzione di esecuzione asincrona (non presente uno) ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) *DescriptorHandle* è stato associato un *StatementHandle* per il quale **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLGetDescField** funzione è stata chiamata.|  
 |HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY021|Informazioni descrittore incoerenti.|I campi SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE non formano un tipo SQL ODBC valido, un tipo SQL specifiche del driver valido (per gli IDP) o un tipo di dati ODBC C valido (ad o ARDs Apd).|  

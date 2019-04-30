@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255231"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione
   Utilizzare questa finestra di dialogo per aggiungere una descrizione e informazioni aggiuntive ai criteri della gestione basata su criteri.  

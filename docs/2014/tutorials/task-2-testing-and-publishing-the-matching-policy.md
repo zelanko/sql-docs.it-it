@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250288"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Attività 2: Test e pubblicazione dei criteri di corrispondenza
   In questa attività viene testato e pubblicato le **Rimuovi fornitori duplicati** criteri di corrispondenza.  
@@ -24,7 +24,7 @@ ms.locfileid: "56040762"
   
 2.  Controllare tutti i record corrispondenti e il punteggio di corrispondenza nella casella di riepilogo. Un record con un **verde** icona associato è un duplicato del record pivot che la precede. Di seguito sono riportati un paio di esempi:  
   
-    1.  Il record con **ID record: 1000005** è una corrispondenza del record con **Id Record: 1000004** con **punteggio: 100%** perché entrambi i record hanno gli stessi valori per **SupplierID (prerequisito)**, **Supplier Name**, e **ContactEmailAddress columns**. In DQS la selezione di un record come record pivot per un cluster viene eseguita in modo casuale.  
+    1.  Il record con **ID Record: 1000005** è una corrispondenza del record con **Id Record: 1000004** con **punteggio: 100%** perché entrambi i record hanno gli stessi valori per **SupplierID (prerequisito)**, **Supplier Name**, e **ContactEmailAddress columns**. In DQS la selezione di un record come record pivot per un cluster viene eseguita in modo casuale.  
   
     2.  Il record **1000023** è una corrispondenza del record **1000022** con il punteggio di corrispondenza: 93% perché i due record hanno gli stessi valori per **SupplierID (prerequisito)** e **Supplier Name** colonne, ma valori diversi per il **ContactEmailAddress** colonna.  
   

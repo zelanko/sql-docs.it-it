@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 49758d367f5ec22ffe3893896ab607917f28bf31
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274087"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Visualizzare i report di analisi nel Database sperimentazione Assistant
 

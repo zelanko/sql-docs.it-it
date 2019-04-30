@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240234"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions Function
 **Conformità**  
@@ -56,7 +56,7 @@ SQLRETURN SQLGetFunctions(
  *SupportedPtr*  
  [Output]  Se *FunctionId* identifica una funzione ODBC singola *SupportedPtr* punta a un singolo SQLUSMALLINT valore SQL_TRUE se la funzione specificata è supportata dal driver e SQL_FALSE se non è è supportato.  
   
- Se *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS, viene *SupportedPtr* punta a una matrice SQLSMALLINT con un numero di elementi uguali a SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Questa matrice viene considerata da Gestione Driver come bitmap che può essere utilizzata per determinare se un'applicazione ODBC 3 bit 4.000*x* o funzione earlier è supportato. La macro SQL_FUNC_EXISTS viene chiamata per determinare il supporto di funzione. (Vedere "Commenti".) Un'applicazione ODBC 3 *. x* applicazione può chiamare **SQLGetFunctions** con SQL_API_ODBC3_ALL_FUNCTIONS su entrambi un'applicazione ODBC 3*x* o ODBC 2*x* driver.  
+ Se *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS, viene *SupportedPtr* punta a una matrice SQLSMALLINT con un numero di elementi uguali a SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Questa matrice viene considerata da Gestione Driver come bitmap che può essere utilizzata per determinare se un'applicazione ODBC 3 bit 4.000*x* o funzione earlier è supportato. La macro SQL_FUNC_EXISTS viene chiamata per determinare il supporto di funzione. (Vedere "Commenti".) Un'applicazione ODBC 3 *. x* applicazione può chiamare **SQLGetFunctions** con SQL_API_ODBC3_ALL_FUNCTIONS su entrambi un'applicazione ODBC 3*x* o ODBC 2*x* autista.  
   
  Se *FunctionId* SQL_API_ALL_FUNCTIONS, viene *SupportedPtr* punta a una matrice SQLUSMALLINT di 100 elementi. La matrice è indicizzata dai **#define** i valori utilizzati dalla *FunctionId* per identificare ogni funzione ODBC; alcuni elementi della matrice sono riservate per usi futuri e inutilizzate. Un elemento è SQL_TRUE se identifica un'ODBC 2*x* o funzione earlier supportate dal driver. Se identifica una funzione ODBC non supportata dal driver o non identifica una funzione ODBC è SQL_FALSE.  
   
@@ -122,7 +122,7 @@ SQLRETURN SQLGetFunctions(
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
-|SQL_API_SQLBULKOPERATIONS [1]|SQL_API_SQLPRIMARYKEYS|  
+|SQL_API_SQLBULKOPERATIONS[1]|SQL_API_SQLPRIMARYKEYS|  
 |SQL_API_SQLCOLUMNPRIVILEGES|SQL_API_SQLPROCEDURECOLUMNS|  
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
@@ -139,7 +139,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle** verranno restituiti come supportato solo se il driver supporta entrambi **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** è supportata ma **SQLCancelHandle** non lo è, l'applicazione potrà ancora chiamare **SQLCancelHandle** su un handle di istruzione, perché ne verrà eseguito il mapping a  **SQLCancel**.  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS (macro)  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  Il SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro viene usata per determinare il supporto di ODBC 3*x* o le funzioni precedenti dopo **SQLGetFunctions**  è stato chiamato con un *FunctionId* argomento di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con il *SupportedPtr* argomento impostato sulle *SupportedPtr* passato *SQLGetFunctions*e con il  *FunctionID* argomento impostato il **#define** per la funzione. SQL_FUNC_EXISTS restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
   
 > [!NOTE]

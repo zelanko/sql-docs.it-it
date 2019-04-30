@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255114"
 ---
 # <a name="report-wizard-help"></a>Guida della Creazione guidata report
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Creazione guidata report. La Creazione guidata report consente di automatizzare il processo di creazione di report tabella e di report matrice. Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  

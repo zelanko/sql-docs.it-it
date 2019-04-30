@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238385"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
   La caratteristica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
@@ -45,7 +45,7 @@ ms.locfileid: "53364303"
 |**database_principal_name**|Utente corrente.|`sysname`|No|  
 |**target_server_principal_name**|Account di accesso di destinazione dell'azione.|`sysname`|No|  
 |**target_server_principal_sid**|SID dell'account di accesso di destinazione.|`varbinary`|No|  
-|**target_database_principal_name**|Utente di destinazione dell'azione.|`sysname`|No|  
+|**target_database_principal_name**|Utente di destinazione dell'azione.|`sysname`|no|  
 |**server_instance_name**|Nome dell'istanza del server in cui si è verificato il controllo. Viene utilizzato il formato standard computer\istanza.|`nvarchar(120)`|Yes|  
 |**database_name**|Contesto del database in cui si è verificata l'azione.|`sysname`|No|  
 |**schema_name**|Contesto dello schema in cui si è verificata l'azione.|`sysname`|No|  

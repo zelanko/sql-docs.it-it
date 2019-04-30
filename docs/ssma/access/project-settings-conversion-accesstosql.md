@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299148"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Impostazioni progetto (conversione) (AccessToSQL)
 Le impostazioni del progetto di conversione consentono di configurare come gli oggetti vengono convertiti da oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oggetti di database di SQL Azure.  
@@ -42,11 +42,11 @@ Crea una nuova chiave primaria nel [!INCLUDE[ssNoVersion](../../includes/ssnover
 Quando si è connessi a SQL Azure, è per impostazione predefinita True. **Aggiungere colonne timestamp**  
 Specifica se SSMA deve creare un valore di timestamp, se necessario.  
   
--   **Modalità predefinita**: decide di consentire SSMA  
+-   **Modalità predefinita**: Dipendente SSMA  
   
--   **La modalità ottimistico**: mai  
+-   **La modalità ottimistico**: Never  
   
--   **Modalità intero**: decide di consentire SSMA  
+-   **Modalità intero**: Dipendente SSMA  
   
 **Includere un report di valutazione dei dati con report di valutazione di conversione**  
 Include una valutazione dei dati del report di valutazione.  
@@ -60,29 +60,29 @@ Include una valutazione dei dati del report di valutazione.
 **Tipo di messaggio quando una chiave primaria include le colonne nullable**  
 Specifica il tipo di messaggio (avviso, errore o nulla) che mostra SSMA nel riquadro di Output quando rileva le chiavi primarie con le colonne nullable.  
   
--   **Modalità predefinita**: avviso  
+-   **Modalità predefinita**: Avviso  
   
--   **La modalità ottimistico**: nessun messaggio  
+-   **La modalità ottimistico**: Nessun messaggio  
   
--   **Modalità intero**: errore  
+-   **Modalità intero**: Errore  
   
 **Tipo di messaggio quando le colonne chiave esterna sono di dimensioni diverse**  
 Specifica il tipo di messaggio (avviso, errore o nulla) che mostra SSMA nel riquadro di Output quando viene trovata una chiave esterna di testo non corretta.  
   
--   **Modalità predefinita**: avviso  
+-   **Modalità predefinita**: Avviso  
   
--   **La modalità ottimistico**: nessun messaggio  
+-   **La modalità ottimistico**: Nessun messaggio  
   
--   **Modalità intero**: errore  
+-   **Modalità intero**: Errore  
   
 **Tipo di messaggio quando le colonne di tipo memo siano indicizzate**  
 Specifica il tipo di messaggio (avviso, errore o nulla) che mostra SSMA nel riquadro di Output quando rileva un indice che contiene un **memo** colonna.  
   
--   **Modalità predefinita**: avviso  
+-   **Modalità predefinita**: Avviso  
   
--   **La modalità ottimistico**: nessun messaggio  
+-   **La modalità ottimistico**: Nessun messaggio  
   
--   **Modalità intero**: errore  
+-   **Modalità intero**: Errore  
   
 **Avvisa quando una query complessa viene usato un carattere jolly (\&#42;)**  
 Quando viene visualizzato un avviso nel riquadro di Output ed elenco errori un nome di colonna in un'istruzione SELECT è un carattere jolly (*).  

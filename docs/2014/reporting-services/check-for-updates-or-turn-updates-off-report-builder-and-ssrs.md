@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266066"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)
   Ogni volta che si apre un report, Generatore report consente di verificare se le istanze pubblicate delle parti del report in tale report sono state aggiornate nel server di report o nel sito di SharePoint integrato con un server di report. Consente di verificare inoltre le modifiche negli elementi dipendenti delle parti di report, ad esempio nel set di dati e nei parametri. Se qualsiasi parte di report o le relative dipendenze sono state aggiornate sul sito o sul server, in una barra informazioni del report in uso viene visualizzato il numero di parti aggiornate. È possibile scegliere di visualizzare e accettare, o rifiutare, gli aggiornamenti oppure di ignorare la barra informazioni.  

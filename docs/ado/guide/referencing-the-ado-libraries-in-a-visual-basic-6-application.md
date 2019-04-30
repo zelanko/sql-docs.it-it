@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e8e37459c5e48fe817a3bdbb6a824550cf977f66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222038"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Riferimenti alle librerie ADO in un'applicazione Visual Basic 6
 Per importare le librerie ADO in un'applicazione di Microsoft Visual Basic 6, è necessario impostare un riferimento nel progetto di Visual Basic.  
@@ -44,14 +44,14 @@ Per importare le librerie ADO in un'applicazione di Microsoft Visual Basic 6, è
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  Installazione di ADO copia anche librerie dei tipi seguenti di versioni precedenti:  
   
--   *msado27.tlb*, libreria dei tipi 2.7 ADO  
+-   *msado27.tlb*, ADO 2.7 Type Library  
   
--   *msado26.tlb*, ADO 2.6 libreria di tipi  
+-   *msado26.tlb*, ADO 2.6 Type Library  
   
--   *msado25.tlb*, libreria dei tipi 2,5 ADO  
+-   *msado25.tlb*, ADO 2.5 Type Library  
   
--   *Msado21*, libreria dei tipi 2.1 ADO  
+-   *msado21.tlb*, ADO 2.1 Type Library  
   
--   *msado20.tlb*, libreria dei tipi 2.0 ADO  
+-   *msado20.tlb*, ADO 2.0 Type Library  
   
  Se l'applicazione deve usare uno qualsiasi di queste librerie ADO per motivi di compatibilità con le versioni precedenti, è necessario importare la versione appropriata della libreria dei tipi. A tale scopo, seguire le procedure descritte nella sezione precedente, sostituendo *msado15.dll* dal *msadoXX.tlb*, dove *XX* rappresenta il numero di versione da importare.
