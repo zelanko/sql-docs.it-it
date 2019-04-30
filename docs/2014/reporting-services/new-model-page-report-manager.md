@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188422"
 ---
 # <a name="new-model-page-report-manager"></a>Pagina Nuovo modello (Gestione report)
   Questa pagina consente di generare un modello di report predefinito da un'origine dati condivisa. È possibile generare modelli di report solo da origini dati multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , origini dati relazionali di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e origini dati relazionali di Oracle.  

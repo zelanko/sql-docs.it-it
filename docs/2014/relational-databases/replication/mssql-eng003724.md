@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191454"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
     
@@ -36,7 +36,7 @@ ms.locfileid: "52776803"
  Quando gli oggetti di un database vengono replicati, vengono contrassegnati come replicati nella tabella di sistema **sysarticles** (per le pubblicazioni snapshot e transazionali) o **sysmergearticles** (per le pubblicazioni di tipo merge). Se si tenta di eliminare un oggetto replicato, viene generato questo errore.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Verificare che l'oggetto di database non sia replicato prima di tentare di eliminarlo. Ad esempio:  
+ Verificare che l'oggetto di database non sia replicato prima di tentare di eliminarlo. Ad esempio:   
   
 -   Se l'errore si verifica nel database di pubblicazione, eliminare l'articolo dalla pubblicazione prima di eliminare l'oggetto. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   

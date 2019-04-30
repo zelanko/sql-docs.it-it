@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191773"
 ---
 # <a name="securing-rds-applications"></a>Sicurezza delle applicazioni RDS
 Questo argomento vengono fornite informazioni sulla sicurezza per Servizi Desktop remoto.  
@@ -42,6 +42,6 @@ Questo argomento vengono fornite informazioni sulla sicurezza per Servizi Deskto
  Di conseguenza, la modalità di autenticazione IIS Windows NT Challenge/Response consente pagine HTML da creare senza che venga richiesta in modo esplicito per le informazioni di ID e la password utente necessarie per accedere al database utente. Se fosse utilizzata l'autenticazione di base di IIS, quindi questa anche potrebbe essere necessaria.  
   
 ## <a name="password-authentication"></a>Autenticazione della password  
- Servizi Desktop remoto può comunicare con un server Web IIS in esecuzione in una delle tre modalità di autenticazione della Password: anonima, base, o l'autenticazione di NT Challenge/Response (nota come l'autenticazione Windows integrata in Windows 2000). Queste impostazioni definiscono come un server Web controlla l'accesso attraverso di esso, ad esempio richiedere che un computer client dispone di privilegi di accesso esplicite nel server Web NT.
+ Servizi Desktop remoto può comunicare con un server Web IIS in esecuzione in una delle tre modalità di autenticazione della Password: NT Challenge/Response, Basic o Anonymous authentication (nota come autenticazione di Windows integrata in Windows 2000). Queste impostazioni definiscono come un server Web controlla l'accesso attraverso di esso, ad esempio richiedere che un computer client dispone di privilegi di accesso esplicite nel server Web NT.
 
 

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062409"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
@@ -145,15 +145,15 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Commenti  
  Una stringa di connessione presenta la sintassi seguente:  
   
- *stringa di connessione* :: = *stringa vuota*[;] &#124; *attributo*[;] &#124; *attributo*; *della stringa di connessione*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *stringa vuota* :: =*attributo* :: = *attributo-parola chiave*=*attributo-valore* &#124; DRIVER = [{] *valore dell'attributo*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *attributi-keyword* :: = DSN &#124; UID &#124; PWD &#124; *-definito dall'attributo-parola chiave driver*  
+ *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
- *valore dell'attributo* :: = *stringhe di caratteri*  
+ *attribute-value* ::= *character-string*  
   
- *definito dall'attributo-parola chiave driver* :: = *identificatore*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  in cui *stringhe di caratteri* contiene zero o più caratteri; *identificatore* ha uno o più caratteri; *parola chiave di attributo* non distinzione maiuscole/minuscole; *-valore dell'attributo* potrebbe essere distinzione maiuscole/minuscole; e il valore della **DSN** parola chiave composto unicamente da spazi vuoti.  
   

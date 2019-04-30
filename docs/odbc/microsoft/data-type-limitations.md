@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187439"
 ---
 # <a name="data-type-limitations"></a>Limitazioni dei tipi di dati
 I driver di Database Desktop ODBC Microsoft impone le limitazioni seguenti sui tipi di dati:  
   
-|Tipo di dati|Description|  
+|Tipo di dati|Descrizione|  
 |---------------|-----------------|  
 |Tutti i tipi di dati|Gli errori di conversione di tipo potrebbero comportare la colonna interessata viene impostata su NULL.|  
 |BINARY|Creazione di una colonna BINARIA di lunghezza zero restituisce effettivamente una colonna BINARIA a 255 byte.|  

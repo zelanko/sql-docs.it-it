@@ -1,5 +1,5 @@
 ---
-title: 'C a SQL: numerico | Microsoft Docs'
+title: 'Da C a SQL: Numerico | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191741"
 ---
-# <a name="c-to-sql-numeric"></a>Da C a SQL: dati numerici
+# <a name="c-to-sql-numeric"></a>Da C a SQL: Numeric
 Gli identificatori per i tipi di dati C ODBC numerici sono:  
   
  SQL_C_STINYINT  
@@ -59,10 +59,10 @@ Gli identificatori per i tipi di dati C ODBC numerici sono:
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Numero di cifre < = lunghezza di colonna in byte<br /><br /> Numero di cifre > lunghezza di colonna in byte|n/d<br /><br /> 22001|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Numero di caratteri < = lunghezza in caratteri colonna<br /><br /> Numero di caratteri > lunghezza in caratteri colonna|n/d<br /><br /> 22001|  
-|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|Conversione senza troncamento o con troncamento delle cifre frazionarie dei dati<br /><br /> I dati convertiti con troncamento di cifre intere|n/d<br /><br /> 22003|  
+|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|Conversione senza troncamento o con troncamento delle cifre frazionarie dei dati<br /><br /> I dati convertiti con troncamento di cifre intere|n/d<br /><br /> 22003|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Data è compreso nell'intervallo del tipo di dati a cui il numero viene convertito<br /><br /> I dati non rientra nell'intervallo del tipo di dati a cui il numero viene convertito|n/d<br /><br /> 22003|  
 |SQL_BIT|I dati sono 0 o 1<br /><br /> I dati sono maggiori di 0, inferiore a 2 e non è uguale a 1<br /><br /> I dati sono minore di 0 oppure maggiore o uguale a 2|n/d<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|Dati non è stati troncati.<br /><br /> Dati troncati.|n/d<br /><br /> 22015|  
+|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|Dati non è stati troncati.<br /><br /> Dati troncati.|n/d<br /><br /> 22015|  
   
  [a] queste conversioni sono supportate solo per i tipi di dati numerici esatti (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG o SQL_C_NUMERIC). Non sono supportati per i tipi di dati numerico approssimato (SQL_C_FLOAT o SQL_C_DOUBLE). Tipi di dati C numerici esatti Impossibile convertire in un intervallo di tipo SQL il cui intervallo di precisione non è un singolo campo.  
   

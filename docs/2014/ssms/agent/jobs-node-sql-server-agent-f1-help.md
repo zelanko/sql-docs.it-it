@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f4f835876eef8f0740b1a90dc48e33e0518cfd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183629"
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>Nodo Processi (Guida sensibile al contesto di SQL Server Agent)
   Questa sezione illustra gli argomenti della Guida relativi al nodo **Jobs** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

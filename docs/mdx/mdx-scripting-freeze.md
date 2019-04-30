@@ -1,5 +1,5 @@
 ---
-title: Istruzione FREEZE (MDX) | Documenti Microsoft
+title: Istruzione FREEZE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cd652a9f308bd7a564a61d165f9c47875a900737
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187573"
 ---
-# <a name="mdx-scripting---freeze"></a>Creazione di script MDX - blocca
+# <a name="mdx-scripting---freeze"></a>Scripting MDX - FREEZE
 
 
   Blocca sui valori correnti i valori delle celle del sottocubo specificato. Se vengono bloccati, i valori delle celle non subiscono gli effetti delle modifiche apportate ad altre celle.  
@@ -32,8 +32,8 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un sottocubo.  
   
-## <a name="remarks"></a>Remarks  
- Il **bloccare** istruzione blocca i valori delle celle del sottocubo specificato, impedendo le successive istruzioni MDX passa script di modificare i valori nel calcolo successivo.  
+## <a name="remarks"></a>Note  
+ Il **FREEZE** istruzione blocca i valori delle celle del sottocubo specificato, impedendo le successive istruzioni MDX passa script dalla modifica dei valori nel calcolo successivo.  
   
  Nell'esempio seguente A e B rappresentano sottocubi in uno script di calcolo MDX:  
   
@@ -45,7 +45,7 @@ B = 3
   
  A questo punto, sia A che B sono uguali a 3.  
   
- Viene ora inserita la **bloccare** funzione per bloccare le celle nel sottocubo A:  
+ Viene ora inserita la **Freeze** funzione per bloccare le celle nel sottocubo A:  
   
 ```  
 B = 2;  
@@ -57,6 +57,6 @@ B = 3
  Ora A è uguale a 2 e B è uguale a 3.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181237"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Codici di errore della libreria di cursori ODBC
 > [!IMPORTANT]  
@@ -31,7 +31,7 @@ ms.locfileid: "47691129"
 > [!NOTE]  
 >  La libreria di cursori non sono ordinati; record di stato Gestione Driver e ODBC 3. *x* i driver sono responsabili per l'ordinamento dei record di stato.  
   
-|SQLSTATE|Description|Può essere restituito da|  
+|SQLSTATE|Descrizione|Può essere restituito da|  
 |--------------|-----------------|--------------------------|  
 |01000|Cursore non è aggiornabile.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|Libreria di cursori non utilizzata. Caricamento non riuscito.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
@@ -41,7 +41,7 @@ ms.locfileid: "47691129"
 |S1000|Errore generale: Impossibile creare il buffer di file.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
 |S1000|Errore generale: Impossibile leggere dal buffer di file.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
 |S1000|Errore generale: Impossibile scrivere nel buffer di file.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Errore generale: non è possibile chiudere o rimuovere i buffer di file.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|Errore generale: Non è possibile chiudere o rimuovere i buffer di file.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|Impossibile eseguire richieste posizionate perché nessuna colonna ricercabile associata.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|Richiesta posizionato potrebbe non essere eseguita perché set di risultati è stato creato da una condizione di join.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|Il buffer associato supera la dimensione massima del segmento.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

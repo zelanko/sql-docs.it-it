@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185735"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta ReportItems (Generatore report e SSRS)
   La raccolta predefinita `ReportItems` è il set di caselle di testo di elementi del report, ad esempio righe di un'area dati o caselle di testo nell'area di progettazione del report. La raccolta `ReportItems` include caselle di testo che si trovano nell'ambito corrente di un'intestazione di pagina, un piè di pagina o il corpo di un report. Questa raccolta viene determinata in fase di esecuzione dal componente Elaborazione report e dal renderer di report. L'ambito corrente cambia quando il componente Elaborazione report combina in successione i dati del report e gli elementi di layout dei relativi elementi mentre l'utente visualizza le pagine di un report. È possibile utilizzare la raccolta predefinita `ReportItems` per produrre intestazioni di pagina in formato dizionario in cui vengono visualizzati il primo e l'ultimo elemento in ogni pagina.  
@@ -27,7 +27,7 @@ ms.locfileid: "59962157"
 ## <a name="using-the-reportitems-value-property"></a>Utilizzo della proprietà Valute di ReportItems  
  Gli elementi all'interno di `ReportItems` raccolta hanno una sola proprietà: Valore. È possibile utilizzare il valore per un elemento di `ReportItems` per visualizzare o calcolare i dati di un altro campo del report. Per accedere al valore della casella di testo corrente, è possibile usare la proprietà globale predefinita Me.Value di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o semplicemente Value. Nelle funzioni per i report come First e nelle funzioni di aggregazione utilizzare la sintassi completa.  
   
- Ad esempio:  
+ Ad esempio:   
   
 -   Questa espressione, se inserita in una casella di testo, visualizza il valore di una casella di testo `ReportItem` denominata `Textbox1`:  
   

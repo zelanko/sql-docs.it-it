@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee3d8a80598e3f41bd6bfaf9a493639ee36cd3ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161381"
 ---
 # <a name="forward-only-cursors"></a>Cursori forward-only
-Il tipo di cursore predefinito tipico, chiamato un cursore forward-only (o non scorrevole), possa spostarsi solo in avanti il set di risultati. Con cursori forward-only non supporta lo scorrimento (la possibilità di spostarsi avanti e indietro nel set di risultati); supporta solo il recupero di righe dall'inizio alla fine del set di risultati. Con alcuni cursori forward-only (ad esempio con la libreria di cursori SQL Server), tutte le istruzioni delete, update e insert eseguite dall'utente corrente (o da altri utenti) che coinvolgono le righe nel set di risultati sono visibili come le righe vengono recuperate. Poiché il cursore non è possibile scorrere all'indietro, tuttavia, le modifiche apportate alle righe nel database dopo l'operazione di recupero non sono visibili nel cursore.  
+Il tipo di cursore predefinito tipico, chiamato un cursore forward-only (o non scorrevole), possa spostarsi solo in avanti il set di risultati. Con cursori forward-only non supporta lo scorrimento (la possibilità di spostarsi avanti e indietro nel set di risultati); supporta solo il recupero di righe dall'inizio alla fine del set di risultati. Con alcuni cursori forward-only (ad esempio con la libreria di cursori SQL Server), tutte le istruzioni delete, update e insert eseguite dall'utente corrente (o da altri utenti) che coinvolgono le righe nel set di risultati sono visibili come le righe vengono recuperate. Poiché lo scorrimento all'indietro del cursore non è consentito, tuttavia, le modifiche apportate alle righe nel database dopo il recupero delle righe stesse non sono visibili tramite il cursore.  
   
- Dopo l'elaborazione dati per la riga corrente, il cursore forward-only rilascia le risorse che sono state usate per contenere i dati. I cursori forward-only sono dinamici per impostazione predefinita, vale a dire che tutte le modifiche vengono rilevate durante l'elaborazione della riga corrente. Questo consente l'apertura di cursore più veloce e abilita il set di risultati per visualizzare gli aggiornamenti apportati alle tabelle sottostanti.  
+ Dopo l'elaborazione dati per la riga corrente, il cursore forward-only rilascia le risorse che sono state usate per contenere i dati. I cursori forward-only sono dinamici per impostazione predefinita, vale a dire che tutte le modifiche vengono rilevate durante l'elaborazione della riga corrente. Questo consente maggiore rapidità di apertura del cursore e la visualizzazione nel set di risultati degli aggiornamenti apportati alle tabelle sottostanti.  
   
  Mentre i cursori forward-only non supportano lo scorrimento all'indietro, l'applicazione può tornare all'inizio del set di risultati tramite la chiusura e riapertura del cursore. Si tratta di un metodo efficace per lavorare con piccole quantità di dati. In alternativa, l'applicazione è stato possibile leggere il set di risultati una volta, memorizzare nella cache i dati in locale e quindi selezionare la cache locale dei dati.  
   

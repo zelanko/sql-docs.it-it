@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187141"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire gli schemi di database MySQL in schemi di SQL Server o database SQL di Azure, caricare gli schemi risultanti in SQL Server o database SQL di Azure e la migrazione dei dati da MySQL a SQL Server o database SQL di Azure.  
@@ -76,7 +76,7 @@ SQL Server o Azure SQL DB metadati Explorer mostra le informazioni relative a un
 Per altre informazioni, vedere [sincronizzazione (MySQL a SQL Server / database SQL di Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati MySQL, verranno visualizzate nove schede: **tabella**, **SQL**, **Mapping di tipo**, **dati**,  **Le impostazioni**, **Mapping di set di caratteri**, **modalità SQL**, **proprietà**, e **Report**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in Esplora i metadati di SQL Server, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
+A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati MySQL, verranno visualizzate nove schede: **Nella tabella**, **SQL**, **Mapping dei tipi**, **dati**, **impostazioni**, **Mapping di set di caratteri**, **Modalità SQL**, **delle proprietà**, e **Report**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in Esplora i metadati di SQL Server, verranno visualizzate tre schede: **Nella tabella**, **SQL** e **dati**.  
   
 La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -108,7 +108,7 @@ La tabella seguente mostra i menu SSMA.
   
 |||  
 |-|-|  
-|**Menu di scelta**|**Descrizione**|  
+|**Menu**|**Descrizione**|  
 |**File**|Contiene i comandi per l'utilizzo con i progetti, la connessione a MySQL e ci si connette a SQL Server o database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli. Per aprire **gestire i segnalibri** finestra di dialogo, dal menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo verrà visualizzato un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
 |**Visualizza**|Contiene il **strumenti di esplorazione di sincronizzare i metadati** comando. Che consente di sincronizzare gli oggetti tra Visualizzatore metadati MySQL e SQL Server o Azure SQL DB metadati Explorer. Contiene anche i comandi per mostrare e nascondere il **Output** e **elenco errori** riquadri e un'opzione **layout** per gestire il layout.|  

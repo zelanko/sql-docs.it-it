@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184957"
 ---
 # <a name="using-a-connection-object"></a>Uso di un oggetto Connection
-Prima di aprire una **connessione** dell'oggetto, è necessario definire alcune informazioni sull'origine dati e tipo di connessione. Viene assegnata la maggior parte di queste informazioni il *ConnectionString* parametro del [metodo Open](../../../ado/reference/ado-api/open-method-ado-connection.md) sul **connessione** oggetto, o tramite il [ConnectionString proprietà](../../../ado/reference/ado-api/connectionstring-property-ado.md) nella **connessione** oggetto. Una stringa di connessione è costituita da un elenco di coppie di argomento/valore separate da punti e virgola, con i valori racchiusi tra virgolette singole. Esempio:  
+Prima di aprire una **connessione** dell'oggetto, è necessario definire alcune informazioni sull'origine dati e tipo di connessione. Viene assegnata la maggior parte di queste informazioni il *ConnectionString* parametro del [metodo Open](../../../ado/reference/ado-api/open-method-ado-connection.md) sul **connessione** oggetto, o tramite il [ConnectionString proprietà](../../../ado/reference/ado-api/connectionstring-property-ado.md) nella **connessione** oggetto. Una stringa di connessione è costituita da un elenco di coppie di argomento/valore separate da punti e virgola, con i valori racchiusi tra virgolette singole. Ad esempio:   
   
 ```  
 Dim sConn As String  

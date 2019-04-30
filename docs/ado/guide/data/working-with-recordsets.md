@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184821"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottimizzare l'ordine dei dati nel set di risultati, per cercare un record specifico in base ai criteri che viene fornito e anche per ottimizzare le operazioni di ricerca tramite indici. Se queste funzionalità sono disponibili per l'utilizzo dipende dal provider e in alcuni casi, ad esempio quella del [indice](../../../ado/reference/ado-api/index-property.md) proprietà - la struttura dell'origine dati stessa.  
@@ -90,7 +90,7 @@ Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottim
   
 -   *Operatore* deve essere uno dei seguenti: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oppure **come**.  
   
--   *Valore* è il valore con cui si confronteranno i valori di campo (ad esempio `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilizzare le virgolette singole (') con le stringhe e caratteri cancelletto (`#`) con le date. Per i numeri, è possibile utilizzare la notazione scientifica i separatori decimali e simboli del dollaro. Se *Operator* viene **quali**, *valore* possono usare caratteri jolly. Solo l'asterisco (\*) e segno di percentuale (%) con caratteri jolly sono consentiti i caratteri e devono essere l'ultimo carattere nella stringa. *Valore* non può essere null.  
+-   *Valore* è il valore con cui si confronteranno i valori di campo (ad esempio `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilizzare le virgolette singole (') con le stringhe e caratteri cancelletto (`#`) con le date. Per i numeri, è possibile utilizzare la notazione scientifica i separatori decimali e simboli del dollaro. Se *Operator* viene **quali**, *valore* possono usare caratteri jolly. Solo l'asterisco (\*) e segno di percentuale (%) sono consentiti i caratteri jolly e devono essere l'ultimo carattere nella stringa. *Valore* non può essere null.  
   
     > [!NOTE]
     >  Per includere le virgolette singole (') nel filtro *valore*, usare due virgolette singole per rappresentare uno. Ad esempio, per filtrare in base *o ' Malley*, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa di segni di cancelletto (#). Ad esempio, per filtrare in base *'1'*, la stringa di criteri deve essere `"col1 = #'1'#"`.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206364"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
@@ -30,7 +30,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Controllo ActiveX  
  Registrazione automatica, in-process componente COM che spesso ha un elemento visivo in fase di progettazione o di esecuzione. Controlli ActiveX sono inoltre in grado di comunicare con un contenitore di documenti attivi, ad esempio Microsoft Internet Explorer.  
   
- ADISAPI (avanzate dei dati Internet Server Application Programming Interface)  
+ ADISAPI (Advanced Data Internet Server Application Programming Interface)  
  Una DLL ISAPI che fornisce l'analisi, controllo di automazione, il marshalling di Recordset e creazione del pacchetto MIME. Il componente ADISAPI funziona tramite l'API fornita da Internet Information Services (IIS). Vedere anche *ISAPI*.  
   
  funzione di aggregazione  
@@ -247,7 +247,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Identificatore programmatico (ProgID)  
  Un nome univoco mappato nel Registro di sistema di Windows da un'applicazione COM. Il ProgID di una connessione ADO è "ADODB. Connessione". Vedere anche CLSID e COM.  
   
- Proxy  
+ proxy  
  Un oggetto specifico dell'interfaccia che fornisce il marshalling dei parametri e la comunicazione necessaria per un client chiamare un oggetto applicazione che è in esecuzione in un ambiente di esecuzione diversi, ad esempio in un thread diverso o in un altro processo. Il proxy con il client si trova e comunica con uno stub corrispondente che si trova con l'oggetto applicazione che viene chiamato. Vedere anche dello stub.  
   
 ## <a name="r"></a>R  
@@ -264,7 +264,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Un set di righe da un'origine dati, tutti con lo stesso schema del campo. Un set di righe può rappresentare alcuni o tutti i campi da una tabella. Un set di righe può anche rappresentare una tabella virtuale, creata da una query o un join di due o più tabelle. In ADO, i set di righe sono rappresentati dal **Recordset** oggetti.  
   
 ## <a name="s"></a>S  
- Ambito  
+ `Scope`  
  L'intervallo di riferimento per un oggetto o variabile o un intervallo di record in una tabella o una vista. Ad esempio, variabili locali possono fare riferimento solo all'interno della routine in cui sono stati definiti. Variabili pubbliche sono accessibili da un punto qualsiasi nell'applicazione. Gli oggetti, ad esempio il database corrente, sono nell'ambito se sono nel percorso di ricerca definita. Con una clausola di ambito in molti comandi, è possibile specificare gli intervalli dei record.  
   
  provider di servizi  

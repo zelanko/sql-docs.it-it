@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161866"
 ---
 # <a name="indexes"></a>Indici
   Nella tabella seguente sono inclusi i tipi di indici disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i collegamenti a ulteriori informazioni.  
   
-|Tipo di indice|Description|Informazioni aggiuntive|  
+|Tipo di indice|Descrizione|Informazioni aggiuntive|  
 |----------------|-----------------|----------------------------|  
 |Hash|Con un indice hash l'accesso ai dati viene eseguito tramite una tabella hash in memoria. Gli indici hash utilizzano una quantità di memoria fissa (una funzione del numero di bucket).|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](../in-memory-oltp/memory-optimized-tables.md)|  
 |Indici non cluster ottimizzati per la memoria|Per gli indici non cluster ottimizzati per la memoria, l'utilizzo della memoria è una funzione del conteggio delle righe e della dimensione delle colonne chiave di indice|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](../in-memory-oltp/memory-optimized-tables.md)|  
@@ -34,7 +34,7 @@ ms.locfileid: "48101161"
 |Indice per le colonne calcolate|Indice in una colonna derivato dal valore di una o più altre colonne, o da input deterministici specifici.|[Indici per le colonne calcolate](indexes-on-computed-columns.md)|  
 |Filtrato|Indice non cluster ottimizzato, particolarmente indicato per coprire query che selezionano dati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di manutenzione e di archiviazione dell'indice stesso.|[Creare indici filtrati](create-filtered-indexes.md)|  
 |Spaziale|Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni su oggetti spaziali (*dati spaziali*) in una colonna con tipo di dati **geometry** . nonché di ridurre il numero di oggetti sui quali è necessario applicare operazioni spaziali relativamente costose.|[Panoramica degli indici spaziali](../spatial/spatial-indexes-overview.md)|  
-|XML|Una rappresentazione suddivisa e persistente, il XML binari oggetti di grandi dimensioni (BLOB) nel `xml` colonna tipo di dati.|[Indici XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|Rappresentazione suddivisa e persistente degli oggetti binari di grandi dimensioni (BLOB) XML nella colonna con tipo di dati `xml`.|[Indici XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |Full-text|Tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text Microsoft per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo indice offre supporto efficace per le ricerche di testo complesse nelle stringhe di caratteri.|[Popolare gli indici full-text](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
@@ -50,7 +50,7 @@ ms.locfileid: "48101161"
   
  [Impostare le opzioni di indice](set-index-options.md)  
   
- [Requisiti di spazio su disco per operazioni DLL sugli indici](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [Riorganizzare e ricompilare gli indici](reorganize-and-rebuild-indexes.md)  
   

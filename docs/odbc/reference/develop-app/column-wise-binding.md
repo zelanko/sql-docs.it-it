@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126330"
 ---
 # <a name="column-wise-binding"></a>Associazione per colonna
 Quando si usa l'associazione per colonna, un'applicazione associa una o due o in alcuni casi tre, matrici e ogni colonna per cui sono necessario restituire i dati. La prima matrice contiene i valori dei dati e la seconda matrice contiene i buffer di lunghezza/indicatore. I valori di lunghezza e gli indicatori possono essere archiviati nei buffer separato impostando i campi di descrizione SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR su valori diversi; Se questa operazione viene eseguita, viene associata una terza matrice. Ogni matrice contiene tutti gli elementi poiché sono presenti righe nel set di righe.  

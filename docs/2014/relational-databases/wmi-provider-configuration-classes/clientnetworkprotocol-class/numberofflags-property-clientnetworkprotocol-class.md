@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192040"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Proprietà NumberOfFlags (classe ClientNetworkProtocol)
   Ottiene il numero di opzioni del flag richieste dal protocollo di rete client specificato per il [metodo SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  

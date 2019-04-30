@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144461"
 ---
 # <a name="replace-in-files"></a>Sostituisci nei file
   La scheda **Sostituisci nei file** della finestra di dialogo Trova e sostituisci consente di cercare una stringa o un'espressione nel codice di un dato set di file e di modificare alcune o tutte le corrispondenze trovate. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  

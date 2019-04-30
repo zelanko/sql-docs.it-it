@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144665"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.  
   
-1.  **Scegliere un metodo:**  [Procedura guidata Genera e pubblica script](#GenPubScriptWiz), [Menu Crea script per in Esplora oggetti](#OEScriptAsMenu)  
+1.  **Scegliere un metodo:**  [Genera e pubblica script](#GenPubScriptWiz), [Menu Crea Script per Esplora oggetti](#OEScriptAsMenu)  
   
-2.  **Per usare il menu Crea script per:**  [Creare uno script per un solo oggetto](#ScriptSingleObject), [Creare uno script per due oggetti con Esplora oggetti](#ScriptTwoObjectsOE), [Creare uno script per due oggetti usando Dettagli esplora oggetti](#ScriptTwoObjectsOED)  
+2.  **Per usare il menu Crea Script:**  [Creare uno script un oggetto singolo](#ScriptSingleObject), [Script di due oggetti tramite Esplora oggetti](#ScriptTwoObjectsOE), [due oggetti tramite dettagli Esplora oggetti di Script](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Scegliere il meccanismo che soddisfa maggiormente i requisiti.  

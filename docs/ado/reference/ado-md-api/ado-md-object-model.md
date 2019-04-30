@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062695"
 ---
 # <a name="ado-md-object-model"></a>Modello a oggetti ADO MD
 Questo argomento viene descritto come gli oggetti vengono rappresentati e correlati in ADO MD.  
   
- ![Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
+ ![ADO MD Object Model](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
   
  Il [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) e [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) ogni gli oggetti hanno una [posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) raccolta.  
   

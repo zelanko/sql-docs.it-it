@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 33113482d021b1f0aa105ccb039f8076cf6a6549
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191146"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Proprietà ProtocolDisplayName (classe ClientNetLibInfo)
   Ottiene o imposta il nome utilizzato per visualizzare il protocollo.  

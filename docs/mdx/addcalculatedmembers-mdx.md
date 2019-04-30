@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) | Documenti Microsoft
+title: AddCalculatedMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201621"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -32,8 +32,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- Per impostazione predefinita, durante la risoluzione delle funzioni sui set MDX esclude i membri calcolati. Il **AddCalculatedMembers** funzione esamina l'espressione set specificata *Set_Expression,* e include i membri calcolati di pari livello dei membri contenuti all'interno dell'ambito di tale espressione set.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, durante la risoluzione delle funzioni sui set MDX esclude i membri calcolati. Il **AddCalculatedMembers** funzione esamina l'espressione set specificata *Set_Expression,* e include i membri calcolati di pari livello dei membri contenuti all'interno dell'ambito di tale set espressione.  
   
 > [!NOTE]  
 >  Questa funzione può essere utilizzata solo con espressioni set unidimensionali.  
@@ -51,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- Nell'esempio seguente viene restituito il `Measures.[Unit Price]` membro, oltre a tutti i membri calcolati nel **misure** dimensione, dal **Adventure Works** cubo.  
+ L'esempio seguente restituisce il `Measures.[Unit Price]` membro, oltre a tutti i membri calcolati nel **misure** dimensione, dal **Adventure Works** cubo.  
   
 ```  
 SELECT  
@@ -61,6 +61,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

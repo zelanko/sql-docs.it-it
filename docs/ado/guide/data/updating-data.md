@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d593bd3ad745f316b833b375ceaae8b764d21ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184989"
 ---
-# <a name="updating-data"></a>Aggiornamento dei dati
+# <a name="updating-data"></a>Aggiornamento di dati
 Comportamento di aggiornamento e le funzionalità non dipende in larga misura aggiornamento modalità (tipo di blocco), il tipo di cursore e posizione del cursore.  
   
  Usare la **Update** metodo per salvare le modifiche apportate al record corrente di un **Recordset** oggetto dal momento della chiamata il **AddNew** (metodo) oppure dopo aver modificato i valori di campo in un record esistente. Il **Recordset** oggetto deve supportare gli aggiornamenti.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0229e95b6d4bdc4fec8950a5e8e5e155300bfd19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136232"
 ---
 # <a name="search-documents-using-results-lists"></a>Ricerca nei documenti utilizzando gli elenchi dei risultati
   Nella finestra di dialogo **Trova e sostituisci** è possibile eseguire ricerche e sostituzioni di testo in tutti i file di un progetto o di una soluzione o in una cartella di file system, anche se i file non sono aperti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le corrispondenze delle ricerche eseguite con la finestra di dialogo **Trova e sostituisci** vengono visualizzate nelle finestre Risultati ricerca 1 e Risultati ricerca 2, in cui è possibile vedere il testo esatto dalla riga contenente la corrispondenza.  
@@ -67,6 +67,6 @@ ms.locfileid: "48190152"
  [Ricerca e sostituzione](search-and-replace.md)   
  [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Commento (MDX) | Documenti Microsoft
+title: Comment (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181576"
 ---
 # <a name="comment-mdx"></a>Commento (MDX)
 
@@ -32,8 +32,8 @@ ms.locfileid: "34740720"
  *Comment_Text*  
  Stringa contenente il testo del commento.  
   
-## <a name="remarks"></a>Remarks  
- Il server non valuta il testo tra i caratteri di commento / * e \*/. I commenti possono essere inseriti in una riga distinta o sulla stessa riga di un'istruzione MDX (Multidimensional Expressions). Commenti su più righe devono essere contrassegnati da /\* e \*/.  
+## <a name="remarks"></a>Note  
+ Il server non valuta il testo tra i caratteri di commento / * e \*/. I commenti possono essere inseriti in una riga distinta o sulla stessa riga di un'istruzione MDX (Multidimensional Expressions). I commenti su più righe devono essere contrassegnati da /\* e \*/.  
   
  I commenti possono essere di qualsiasi lunghezza. e nidificati, ad esempio `/* Test /*Comment*/ Text*/`.  
   
@@ -54,7 +54,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;Commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

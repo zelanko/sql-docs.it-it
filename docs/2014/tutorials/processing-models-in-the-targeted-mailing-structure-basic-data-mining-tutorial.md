@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188232"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Elaborazione di modelli nella struttura di mailing diretto (Esercitazione di base sul data mining)
   Per poter esplorare o utilizzare i modelli di data mining creati, è necessario distribuire il progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ed elaborare la struttura e i modelli di data mining.  

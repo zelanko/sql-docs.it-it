@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042572"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Tipo di dati per dwloader - Parallel Data Warehouse, le regole di conversione
 In questo argomento descrive i formati di dati di input e conversioni di tipi di dati implicite che [caricatore della riga di comando dwloader](dwloader.md) supporta al momento del caricamento dei dati in PDW. Le conversioni implicite dei dati si verificano quando i dati di input non corrisponde al tipo di dati nella tabella di destinazione di SQL Server PDW. Usare queste informazioni quando si progetta il processo di caricamento per verificare che i dati sarà caricati correttamente in SQL Server PDW.  
@@ -25,7 +25,7 @@ Nella tabella seguente definisce i tipi letterali accettati, formato e le regole
   
 |Tipo di dati di input|Esempi di dati di input|Conversione in binary o varbinary tipo di dati|  
 |-------------------|-----------------------|-----------------------------------------------|  
-|Valore letterale binario|[0x] *hexidecimal_string*<br /><br />Esempio: 12Ef o 0x12Ef|Il prefisso 0x è facoltativo.<br /><br />La lunghezza di origine dei dati non può superare il numero di byte specificati per il tipo di dati.<br /><br />Se la lunghezza di origine dati è inferiore alle dimensioni dei **binario** tipo di dati, i dati vengano applicato un riempimento a destra con zeri per raggiungere le dimensioni di tipo di dati.|  
+|Valore letterale binario|[0x]*hexidecimal_string*<br /><br />Esempio: 12Ef o 0x12Ef|Il prefisso 0x è facoltativo.<br /><br />La lunghezza di origine dei dati non può superare il numero di byte specificati per il tipo di dati.<br /><br />Se la lunghezza di origine dati è inferiore alle dimensioni dei **binario** tipo di dati, i dati vengano applicato un riempimento a destra con zeri per raggiungere le dimensioni di tipo di dati.|  
   
 ## <a name="InsertDateTimeTypes"></a>Inserimento di valori letterali in tipi data e ora  
 Valori letterali di data e ora vengono rappresentati tramite valori letterali stringa in formati specifici, racchiusi tra virgolette singole. Nelle tabelle seguenti definiscono i tipi letterali consentiti, formato e le regole di conversione per il caricamento di una data o ora letterale in una colonna di tipo **data/ora**, **smalldatetime**, **data**, **tempo**, **datetimeoffset**, o **datetime2**. Le tabelle di definiscono il formato predefinito per il tipo di dati specificato. Altri formati che è possibile specificare sono definiti nella sezione [formati Datetime](#DateFormats). Valori letterali di data e ora non possono includere spazi iniziali o finali. **Data**, **smalldatetime**, e i valori null non possono essere caricati in modalità di larghezza fissa.  
@@ -35,10 +35,10 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
   
 |Tipo di dati di input|Esempi di dati di input|Conversione al tipo di dati datetime|  
 |-------------------|-----------------------|------------------------------------|  
-|Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante vengono impostate su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35 ' viene inserito come ' 2007-05-08 12:35:00.000'.|  
-|Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm'<br /><br />Esempio: ' 2007-05-08 12:35 '|Cifra frazionaria rimanente e secondi viene impostati su 0 quando viene inserito il valore.|  
-|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: ' 2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) sono impostati 12:00:00.000 quando viene inserito il valore.|  
-|Valore letterale stringa nel **datetime2** formato|'aaaa-MM-GG: 'ss. fffffff<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare tre cifre frazionarie. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' verrà inserito, tranne il valore ' 12:35:29.1234567 2007-05-8' viene generato un errore.|  
+|Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: '2007-05-08 12:35:29.123'|Cifre frazionarie mancante vengono impostate su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35 ' viene inserito come ' 2007-05-08 12:35:00.000'.|  
+|Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm'<br /><br />Esempio: '2007-05-08 12:35'|Cifra frazionaria rimanente e secondi viene impostati su 0 quando viene inserito il valore.|  
+|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: '2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) sono impostati 12:00:00.000 quando viene inserito il valore.|  
+|Valore letterale stringa nel **datetime2** formato|'aaaa-MM-GG: 'ss. fffffff<br /><br />Esempio: '2007-05-08 12:35:29.1234567'|I dati di origine non possono superare tre cifre frazionarie. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' verrà inserito, tranne il valore ' 12:35:29.1234567 2007-05-8' viene generato un errore.|  
   
 ### <a name="smalldatetime-data-type"></a>Tipo di dati smalldatetime  
 Nella tabella seguente definisce il formato predefinito e le regole per il caricamento di valori letterali in una colonna di tipo **smalldatetime**. Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01 GMT+12.00 '. Le stringhe che contengono solo spazi vuoti (' ') generano un errore.  
@@ -46,14 +46,14 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 |Tipo di dati di input|Esempi di dati di input|Conversione al tipo di dati smalldatetime|  
 |-------------------|-----------------------|-----------------------------------------|  
 |Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm' o 'aaaa-MM-gg hh.mm.ss'<br /><br />Esempio: ' 2007-05-08 GMT+12.00 ' o ' 2007-05-08 12:00:15 '|I dati di origine devono avere i valori per anno, mese, data, ora e minuto. Secondi sono facoltativi e, se presente, devono essere impostati su 00 il valore. Qualsiasi altro valore genera un errore.<br /><br />I secondi sono facoltativi. Quando si caricano in una colonna di tipo smalldatetime, dwloader verranno arrotondate per eccesso secondi e frazioni di secondo. Ad esempio, si caricherà 1999 01 05 20:10:35.123 come 01 05 20:11.|  
-|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: ' 2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore.|  
+|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: '2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore.|  
   
 ### <a name="date-data-type"></a>Tipo di dati date  
 Nella tabella seguente definisce il formato predefinito e le regole per il caricamento di valori letterali in una colonna di tipo **data**. Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01'. Le stringhe che contengono solo spazi vuoti (' ') generano un errore.  
   
 |Tipo di dati di input|Esempi di dati di input|Conversione a tipo di dati date|  
 |-------------------|-----------------------|--------------------------------|  
-|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: ' 2007-05-08'||  
+|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: '2007-05-08'||  
   
 ### <a name="time-data-type"></a>Tipo di dati temporali  
 Nella tabella seguente definisce il formato predefinito e le regole per il caricamento di valori letterali in una colonna di tipo **ora**. Una stringa vuota (") viene convertita il valore predefinito '00:00:00.0000'. Le stringhe che contengono solo spazi vuoti (' ') generano un errore.  
@@ -67,26 +67,26 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
   
 |Tipo di dati di input|Esempi di dati di input|Conversione in tipo di dati datetimeoffset|  
 |-------------------|-----------------------|------------------------------------------|  
-|Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante e valori di offset sono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' viene inserito come ' 12:35:29.1230000 2007-05-08 + 00:00 '.|  
-|Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm'<br /><br />Esempio: ' 2007-05-08 12:35 '|Valori di offset, cifra frazionaria rimanente e secondi vengono impostati su 0 quando viene inserito il valore.|  
-|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: ' 2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 00.00.00.0000000 2007-05-08 + 00:00 '.|  
-|Valore letterale stringa nel **datetime2** formato|'aaaa-MM-GG: 'ss. fffffff<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale di frazioni di secondo, i dati vengono anteposti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
-|Valore letterale stringa nel **datetimeoffset** formato|' aaaa-MM-GG: ss. fffffff {+&#124;-} hh: mm '<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567 + 12:15 '|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale di frazioni di secondo, i dati vengono anteposti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
+|Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: '2007-05-08 12:35:29.123'|Cifre frazionarie mancante e valori di offset sono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' viene inserito come ' 12:35:29.1230000 2007-05-08 + 00:00 '.|  
+|Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm'<br /><br />Esempio: '2007-05-08 12:35'|Valori di offset, cifra frazionaria rimanente e secondi vengono impostati su 0 quando viene inserito il valore.|  
+|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: '2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 00.00.00.0000000 2007-05-08 + 00:00 '.|  
+|Valore letterale stringa nel **datetime2** formato|'aaaa-MM-GG: 'ss. fffffff<br /><br />Esempio: '2007-05-08 12:35:29.1234567'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale di frazioni di secondo, i dati vengono anteposti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
+|Valore letterale stringa nel **datetimeoffset** formato|' aaaa-MM-GG: ss. fffffff {+&#124;-} hh: mm '<br /><br />Esempio: '2007-05-08 12:35:29.1234567 +12:15'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale di frazioni di secondo, i dati vengono anteposti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>Tipi di dati datetime2  
 Nella tabella seguente definisce il formato predefinito e le regole per il caricamento di valori letterali in una colonna di tipo **datetime2** (*n*). Il formato predefinito è 'aaaa-MM-GG: ' ss. fffffff. Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01-12:00:00". Le stringhe che contengono solo spazi vuoti (' ') generano un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Ad esempio, una colonna definita come **datetime2** (2) avranno due cifre frazionarie.  
   
 |Tipo di dati di input|Esempi di dati di input|Conversione al tipo di dati datetime2|  
 |-------------------|-----------------------|-------------------------------------|  
-|Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|I secondi frazionari sono facoltativi e vengono impostati su 0 quando viene inserito il valore.|  
-|Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm'<br /><br />Esempio: ' 12 2007-05-08'|Secondi facoltativi e cifra frazionaria rimanente viene impostati su 0 quando viene inserito il valore.|  
-|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: ' 2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 2007-05-08 12:00:00.0000000'.|  
-|Valore letterale stringa nel **datetime2** formato|'aaaa-MM-gg hh:mm:ss:fffffff'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|Se l'origine dati contiene i componenti di data e ora che sono minore o uguale al valore specificato **datetime2**(*n*), vengono inseriti i dati; in caso contrario, viene generato un errore.|  
+|Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: '2007-05-08 12:35:29.123'|I secondi frazionari sono facoltativi e vengono impostati su 0 quando viene inserito il valore.|  
+|Valore letterale stringa nel **smalldatetime** formato|'aaaa-MM-gg hh: mm'<br /><br />Esempio: '2007-05-08 12'|Secondi facoltativi e cifra frazionaria rimanente viene impostati su 0 quando viene inserito il valore.|  
+|Valore letterale stringa nel **data** formato|'aaaa-MM-GG'<br /><br />Esempio: '2007-05-08'|I valori di tempo (ore, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 2007-05-08 12:00:00.0000000'.|  
+|Valore letterale stringa nel **datetime2** formato|'aaaa-MM-gg hh:mm:ss:fffffff'<br /><br />Esempio: '2007-05-08 12:35:29.1234567'|Se l'origine dati contiene i componenti di data e ora che sono minore o uguale al valore specificato **datetime2**(*n*), vengono inseriti i dati; in caso contrario, viene generato un errore.|  
   
 ### <a name="DateFormats"></a>Formati di data/ora  
 Dwloader supporta i seguenti formati di dati per i dati di input che il caricamento in SQL Server PDW. Altri dettagli sono elencati sotto la tabella.  
   
-|DATETIME|smalldatetime|Data|datetime2|datetimeoffset|  
+|datetime|smalldatetime|Data|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
@@ -143,7 +143,7 @@ Nella tabella seguente definisce le regole per il caricamento di valori letteral
 |-------------------|-----------------------|  
 |Valore letterale integer|321312313123|  
 |Valore letterale decimale|123344.34455|  
-|Valore letterale mobile punto|3.12323E + 14|  
+|Valore letterale mobile punto|3.12323E+14|  
   
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>int, bigint, tinyint, smallint i tipi di dati  
 Nella tabella seguente definisce le regole per il caricamento di valori letterali in una colonna di tipo **int**, **bigint**, **tinyint**, oppure **smallint**. L'origine dati non può superare l'intervallo consentito per il tipo di dati specificato. Ad esempio, l'intervallo per **tinyint** è compreso tra 0 e 255 e l'intervallo per **int** è compreso tra -2.147.483.648 e 2.147.483.647.  
@@ -174,7 +174,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 |Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc'| ND |  
 |Valore letterale integer|Formato: ffffffffffn<br /><br />Esempio: 321312313123| ND |  
 |Valore letterale decimale|Formato: ffffff.fffffff<br /><br />Esempio: 12344.34455| ND |  
-|Valore letterale Money|Formato: $ffffff.fffnn<br /><br />Esempio: $123456.99|Il simbolo di valuta facoltativo non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Ciò corrisponderà il formato del caricatore, che considera ogni valore letterale come valore letterale stringa.<br /><br />Le virgole non sono consentite.<br /><br />Se il numero di cifre dopo il separatore decimale è superiore a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si usa la funzione CONVERT per inserire valori letterali di denaro, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  
+|Valore letterale Money|Format: $ffffff.fffnn<br /><br />Esempio: $123456.99|Il simbolo di valuta facoltativo non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Ciò corrisponderà il formato del caricatore, che considera ogni valore letterale come valore letterale stringa.<br /><br />Le virgole non sono consentite.<br /><br />Se il numero di cifre dopo il separatore decimale è superiore a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si usa la funzione CONVERT per inserire valori letterali di denaro, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  
   
 ### <a name="general-remarks"></a>Osservazioni generali  
 **dwloader** esegue le stesse conversioni implicite che esegue SQL Server SMP, ma non supporta tutte le conversioni implicite supportati da SQL Server SMP.  

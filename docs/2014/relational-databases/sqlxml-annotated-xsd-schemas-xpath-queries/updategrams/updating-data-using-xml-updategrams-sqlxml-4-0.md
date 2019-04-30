@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131508"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aggiornamento di dati tramite updategram XML (SQLXML 4.0)
   Quando si aggiornano i dati esistenti, è necessario specificare sia il  **\<prima di >** e  **\<dopo >** blocchi. Gli elementi specificati nel  **\<prima di >** e  **\<dopo >** blocchi descrivono la modifica desiderata. L'updategram utilizza gli elementi specificati nel  **\<prima di >** blocco per identificare i record esistenti nel database. Gli elementi corrispondenti nel  **\<dopo >** blocco indicare come i record devono apparire dopo l'esecuzione dell'operazione di aggiornamento. Da queste informazioni, l'updategram crea un'istruzione SQL che corrisponde alla  **\<dopo >** blocco. L'updategram utilizza quindi questa istruzione per aggiornare il database.  
@@ -119,7 +119,7 @@ ms.locfileid: "52808173"
   
      Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Aggiornamento di più record tramite l'attributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Aggiornamento di più record tramite l'attributo updg:id  
  In questo esempio l'updategram esegue due aggiornamenti nella tabella HumanResources.Shift del database AdventureWorks:  
   
 -   L'updategram modifica il nome del turno diurno originale che inizia alle 7.00 da "Day" a "Early Morning".  

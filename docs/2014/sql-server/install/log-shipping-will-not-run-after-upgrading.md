@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e56eff5064cf797e4acdfff10f346a43ee4210de
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195075"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>Il log shipping non verrà eseguito dopo l'aggiornamento
   È in uso il log shipping. Il log shipping di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] non è compatibile con quello di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non può essere direttamente aggiornato. Dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], riconfigurare il log shipping utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o le stored procedure.  

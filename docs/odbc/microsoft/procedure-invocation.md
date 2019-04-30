@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b33bc399646a6d274c875abd36d53219a2814e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200512"
 ---
 # <a name="procedure-invocation"></a>Chiamata di procedura
 Quando viene usato il driver Microsoft Access, le procedure possono essere richiamate dal driver tramite il **SQLExecDirect** oppure **SQLPrepare** funzione con la sintassi seguente: {CHIAMARE *nome procedura*  [(*parametro*[,*parametro*]...)]}. Si noti che le espressioni non sono supportate come parametri per una routine chiamata.  

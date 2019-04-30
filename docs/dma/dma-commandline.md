@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154673"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
 La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, viene installato anche in dmacmd.exe *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usare dmacmd.exe per valutare i database in modalità automatica e restituire il risultato al file JSON o CSV. Questo metodo è particolarmente utile quando si valuta più database o database di grandi dimensioni. 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Come usare il testo della Guida dmacmd.exe        | N
 |`/AssessmentName`     |   Nome del progetto di valutazione   | Y
 |`/AssessmentDatabases`     | Elenco delimitato da spazi delle stringhe di connessione. Nome del database (catalogo iniziale) è tra maiuscole e minuscole. | Y
-|`/AssessmentSourcePlatform`     | Piattaforma di origine per la valutazione, i valori supportati: SqlOnPrem, RdsSqlServer. Valutazione della conformità di destinazione supporta anche Cassandra come piattaforma di origine. Il valore predefinito è SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione, i valori supportati: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017. Valutazione della conformità di destinazione supportati anche COSMOS DB come piattaforma di destinazione. Il valore predefinito è SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | Piattaforma di origine per la valutazione: <br>Valori supportati per la valutazione: SqlOnPrem, RdsSqlServer (impostazione predefinita) <br>Valori supportati per la valutazione della conformità di destinazione: SqlOnPrem, RdsSqlServer (impostazione predefinita), Cassandra (anteprima)   | N
+|`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione:  <br> Valori supportati per la valutazione: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (impostazione predefinita)  <br> Valori supportati per la valutazione della conformità di destinazione: ManagedSqlServer (impostazione predefinita), COSMOS DB (anteprima)   | N
 |`/AssessmentEvaluateFeatureParity`  | Eseguire le regole di parità di funzionalità. Se la piattaforma di origine è RdsSqlServer, valutazione parità delle funzionalità non è supportata per la piattaforma di destinazione AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | Y <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations è obbligatorio.)
 |`/AssessmentEvaluateRecommendations`     | Eseguire funzionalità consigliate        | Y <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis obbligati)

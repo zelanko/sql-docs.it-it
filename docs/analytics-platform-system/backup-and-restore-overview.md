@@ -10,11 +10,11 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200968"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 
@@ -120,7 +120,7 @@ Quando si ripristinano i dati, l'appliance rileva il numero di nodi di calcolo d
   
 5.  Ogni nodo di calcolo consente di ripristinare la parte del database utente. Se uno qualsiasi dei ripristini non completata correttamente, tutti i database rimossi e il ripristino non viene completato correttamente.  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Il ripristino in un'Appliance con un numero maggiore di nodi di calcolo  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Ripristino in un'appliance con un numero maggiore di nodi di calcolo  
   
 Il ripristino di un backup in un'appliance con un numero maggiore di nodi di calcolo aumenta la dimensione allocata al database proporzionalmente al numero di nodi di calcolo.  
   

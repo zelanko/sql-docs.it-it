@@ -1,5 +1,5 @@
 ---
-title: Funzione di aggregazione (MDX) | Documenti Microsoft
+title: Funzione di aggregazione (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200622"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -32,17 +32,17 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se è specificato un set di tuple vuote o un set vuoto, la funzione restituisce un valore vuoto.  
   
- La tabella seguente descrive come **aggregazione** il comportamento della funzione con le funzioni di aggregazione diversa.  
+ La tabella seguente descrive come la **aggregazione** comportamento della funzione con funzioni di aggregazione diversa.  
   
 |Operatore di aggregazione|Risultato|  
 |--------------------------|------------|  
-|SUM|Restituisce la somma dei valori all'interno del set.|  
+|Sum|Restituisce la somma dei valori all'interno del set.|  
 |Count|Restituisce il conteggio dei valori all'interno del set.|  
 |Max|Restituisce il valore massimo all'interno del set.|  
 |Min|Restituisce il valore minimo all'interno del set.|  
@@ -56,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Assegnazioni|L'aggregazione delle assegnazioni viene eseguita in base alla funzione di aggregazione delle misure. Se la funzione di aggregazione delle misure è Distinct Count, l'assegnazione viene sommata.|  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi otto mesi dell'anno di calendario 2003 contenuti nel `Date` dimensione, dal **Adventure Works** cubo.  
+ Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dalle **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -94,7 +94,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Nell'esempio seguente viene restituito il numero dei rivenditori le cui vendite sono diminuite nel periodo di tempo precedente, in base ai valori del membro State-Province selezionati dall'utente valutati tramite la funzione di aggregazione. Il **Hierarchize** e **DrillDownLevel** vengono utilizzate per restituire i valori relativi alla diminuzione delle vendite per le categorie di prodotti nella dimensione Product.  
+ Nell'esempio seguente viene restituito il numero dei rivenditori le cui vendite sono diminuite nel periodo di tempo precedente, in base ai valori del membro State-Province selezionati dall'utente valutati tramite la funzione di aggregazione. Il **Hierarchize** e **DrillDownLevel** funzioni vengono usate per restituire i valori relativi alla diminuzione delle vendite per categorie di prodotti nella dimensione Product.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -124,14 +124,14 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>Vedere anche  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Gli elementi figlio &#40;MDX&#41;](../mdx/children-mdx.md)   
- [HIERARCHIZE- &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Conteggio &#40;impostare&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filtro &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Proprietà &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ecf2064576a9124a34d8ab70873f8848e9bfd6d
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033373"
 ---
 # <a name="refresh-method-example-vb"></a>Esempio del metodo Refresh (VB)
 In questo esempio viene illustrato come utilizzare il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo per aggiornare il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta per una stored procedure [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
@@ -123,5 +123,5 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
