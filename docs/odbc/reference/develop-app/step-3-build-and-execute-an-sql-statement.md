@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148958"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Passaggio 3: Compilare ed eseguire un'istruzione SQL
 Il terzo passaggio è compilare ed eseguire un'istruzione SQL, come illustrato nella figura seguente. I metodi utilizzati per eseguire questo passaggio sono probabile che variare notevolmente. L'applicazione potrebbe richiedere all'utente di immettere un'istruzione SQL, un'istruzione SQL in base all'input di compilazione o usare un'istruzione SQL a livello di codice. Per altre informazioni, vedere [costruzione di istruzioni SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -36,6 +36,6 @@ Il terzo passaggio è compilare ed eseguire un'istruzione SQL, come illustrato n
   
 |Tipo di istruzione SQL|Passare a|  
 |---------------------------|----------------|  
-|**Selezionare** o del catalogo (funzione)|[Passaggio 4a: recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**UPDATE**, **eliminare**, o **INSERT**|[Passaggio 4b: recuperare il conteggio delle righe](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|Tutte le altre istruzioni SQL|Passaggio 3: Compilare ed eseguire un'istruzione SQL (questo argomento) o [passaggio 5: eseguire il Commit della transazione](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|**Selezionare** o del catalogo (funzione)|[Passaggio 4a: Recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**UPDATE**, **eliminare**, o **INSERT**|[Passaggio 4b: Recuperare il conteggio delle righe](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|Tutte le altre istruzioni SQL|Passaggio 3: Compilare ed eseguire un'istruzione SQL (questo argomento) o [passaggio 5: Eseguire il commit della transazione](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

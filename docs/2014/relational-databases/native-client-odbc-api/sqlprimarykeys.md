@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys | Documenti di Microsoft
+title: SQLPrimaryKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046687"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Una tabella può includere una o più colonne possono essere usato come identificatori di riga univoci e le tabelle create senza un vincolo PRIMARY KEY restituiscono un set a SQLPrimaryKeys di risultati vuoto. La funzione ODBC [SQLSpecialColumns](sqlspecialcolumns.md) report possibili di identificatori per le tabelle senza chiavi primarie di riga.  
@@ -36,7 +36,7 @@ ms.locfileid: "53352917"
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLPrimaryKeys-funzione](https://go.microsoft.com/fwlink/?LinkId=59361)   
+ [SQLPrimaryKeys Function](https://go.microsoft.com/fwlink/?LinkId=59361)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

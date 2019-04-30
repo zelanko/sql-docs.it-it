@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164004"
 ---
 # <a name="export-a-report-using-url-access"></a>Esportare un report tramite l'accesso con URL
   È facoltativamente possibile specificare il formato in cui eseguire il rendering di un report utilizzando il *rs: Format* parametro. Ad esempio per ottenere una copia PDF di un report direttamente da un server di report in modalità nativa:  

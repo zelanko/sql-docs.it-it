@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6b68071c379d61af64c71f5507281c127d9158a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191745"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Configurazione del formato di marshalling del flusso DCOM
 Un computer client mediante i componenti di servizi desktop remoto 1.5 o versioni precedenti non è compatibile con un server mediante i componenti dalla versione 2.0 di servizi desktop remoto o in un secondo momento. Quando si usa DCOM come protocollo sottostante, il supporto per Servizi Desktop remoto 2.0 o versione successiva è più efficiente nel trasporto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. Se il client è in esecuzione i componenti di servizi desktop remoto 1.5 o versioni precedenti, è possibile impostare il server per lavorare con il precedente supporto di servizi desktop remoto (denominato Servizi Desktop remoto 1.0) o il supporto di servizi desktop remoto più recente (denominato Servizi Desktop remoto 2.0 o versione successiva). Impostare una delle voci del Registro di sistema seguenti:  

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126304"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Esecuzione della console SSMA (SybaseToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -35,7 +35,7 @@ L'applicazione console utilizza alcuni comandi di file di script standard come e
 ## <a name="project-commands"></a>Comandi di progetto  
 I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio e chiusura di progetti.  
   
-### <a name="create-new-project"></a>Create-new-project  
+### <a name="create-new-project"></a>create-new-project  
 Questo comando crea un nuovo progetto SSMA.  
   
 -   `project-folder` indica la cartella del progetto di creazione.  
@@ -182,7 +182,7 @@ Se (ri) connessione alla destinazione non viene stabilita, viene generato un err
 ## <a name="report-commands"></a>Comandi del report  
 I comandi di Report generano i report sulle prestazioni di varie attività di Console SSMA.  
   
-### <a name="generate-assessment-report"></a>generare report di valutazione  
+### <a name="generate-assessment-report"></a>generate-assessment-report  
   
 Questo comando genera i report di valutazione nel database di origine.  
   
@@ -372,7 +372,7 @@ Mapping dello schema tra i database di origine e di destinazione viene iniziata 
 > [!NOTE]  
 > L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
-### <a name="map-schema"></a>schema di mapping  
+### <a name="map-schema"></a>map-schema  
 Questo comando fornisce il mapping dello schema del database di origine allo schema di destinazione.  
   
 -   `source-schema` Specifica lo schema di origine per eseguire la migrazione.  
@@ -406,11 +406,11 @@ Se la connessione di database di destinazione non viene eseguita prima di esegui
   
 -   `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   -Totale report come avviso  
+    -   report-total-as-warning  
   
-    -   report-each-come-avviso  
+    -   report-each-as-warning  
   
-    -   Errore-script  
+    -   fail-script  
   
 -   `report-errors-to:` Specifica percorso del report di errore per l'operazione di sincronizzazione (attributo facoltativo). Se viene fornito percorso della cartella, solo file in base al nome **TargetSynchronizationReport.XML** viene creato.  
   
@@ -467,11 +467,11 @@ Questo comando richiede uno o più nodi di metabase come parametro della riga di
   
 -   `on-error:` Specifica se chiamare l'aggiornamento degli errori come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   -Totale report come avviso  
+    -   report-total-as-warning  
   
-    -   report-each-come-avviso  
+    -   report-each-as-warning  
   
-    -   Errore-script  
+    -   fail-script  
   
 -   `report-errors-to:` Specifica percorso del report di errore per l'operazione di aggiornamento (attributo facoltativo). Se viene fornito percorso della cartella, solo file in base al nome **SourceDBRefreshReport.XML** viene creato.  
   
@@ -514,7 +514,7 @@ o Gestione configurazione
 ## <a name="script-generation-commands"></a>Comandi di generazione script  
 I comandi di generazione dello Script eseguono due attività: consentono di salvare l'output in un file di script della console e registrano l'output di T-SQL per la console o un file basato sul parametro specificato.  
   
-### <a name="save-as-script"></a>come Save-script  
+### <a name="save-as-script"></a>save-as-script  
 Questo comando viene utilizzato per salvare gli script degli oggetti in un file indicato quando metabase target. Si tratta di un'alternativa al comando di sincronizzazione in quanto è ottenere gli script ed eseguire lo stesso nel database di destinazione.  
   
 Questo comando richiede uno o più nodi di metabase come parametro della riga di comando.  
@@ -562,7 +562,7 @@ o Gestione configurazione
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>Convert-sql-istruzione
+### <a name="convert-sql-statement"></a>convert-sql-statement
 Questo comando Converte l'istruzione SQL.  
   
 -   `context` Specifica il nome dello schema.  

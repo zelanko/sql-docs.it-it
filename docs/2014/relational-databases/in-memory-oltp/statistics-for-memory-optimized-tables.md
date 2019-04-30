@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155799"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
   In Query Optimizer vengono utilizzate le statistiche sulle colonne per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Le statistiche vengono raccolte dalle tabelle del database e archiviate nei metadati del database.  

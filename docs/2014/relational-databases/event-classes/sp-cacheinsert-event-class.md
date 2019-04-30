@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055691"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert - classe di evento
   La classe di evento SP:CacheInsert indica che la stored procedure è stata inserita nella cache delle procedure.  
@@ -33,7 +33,7 @@ ms.locfileid: "52782513"
 |DatabaseID|`int`|ID del database nel quale viene eseguita la stored procedure. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita la stored procedure.|35|Yes|  
 |EventClass|`int`|Tipo di evento = 35.|27|No|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050949"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit - classe di evento
   La classe di evento SP:CacheHit indica la presenza di una stored procedure nella cache dei piani.  
@@ -33,8 +33,8 @@ ms.locfileid: "52816553"
 |DatabaseID|`int`|ID del database nel quale viene eseguita la stored procedure. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita la stored procedure.|35|Yes|  
 |EventClass|`int`|Tipo di evento = 38.|27|No|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
-|EventSubClass|`int`|Tipi di sottoclasse di evento.<br /><br /> 1 = accesso contesto di esecuzione: Piano di esecuzione non compilato trovato nella cache dei piani.<br /><br /> 2 = accesso piano di compilazione: Piano compilato trovato nella cache dei piani.|21|Yes|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSubClass|`int`|Tipi di sottoclasse di evento.<br /><br /> 1 = accesso contesto di esecuzione: Piano di esecuzione è stato trovato nella cache dei piani.<br /><br /> 2 = accesso piano di compilazione: Un piano compilato trovato nella cache dei piani.|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
@@ -46,7 +46,7 @@ ms.locfileid: "52816553"
 |ObjectName|`nvarchar`|Nome dell'oggetto trovato nella cache. Se la colonna ObjectName viene popolata, la colonna TextData non viene popolata.|34|Yes|  
 |ObjectType|`int`|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Questo valore corrisponde alla colonna type nella vista del catalogo sys.objects. Per i valori, vedere [Colonna ObjectType per gli eventi di traccia](objecttype-trace-event-column.md).|28|Yes|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Yes|  
-|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  

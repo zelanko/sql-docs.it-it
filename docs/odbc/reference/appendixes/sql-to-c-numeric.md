@@ -1,5 +1,5 @@
 ---
-title: 'SQL a c: Numerico | Microsoft Docs'
+title: 'Da SQL a C: Numerico | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9abd536110222f8e30a781b6d648402335837f61
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151284"
 ---
-# <a name="sql-to-c-numeric"></a>SQL a c: Numeric
+# <a name="sql-to-c-numeric"></a>Da SQL a C: Numeric
 
 Gli identificatori per i tipi di dati SQL ODBC numerici sono i seguenti:
 

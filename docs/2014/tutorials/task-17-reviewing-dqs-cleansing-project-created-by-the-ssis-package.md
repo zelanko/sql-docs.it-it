@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057848"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Attività 17: Verifica del progetto DQS Cleansing creato dal pacchetto SSIS
   In questa attività viene aperto il progetto DQS creato dal pacchetto SSIS nel client DQS, vengono esaminati i risultati del processo di pulizia e, facoltativamente, viene effettuata la pulizia interattiva e l'esportazione dei risultati.  
@@ -26,7 +26,7 @@ ms.locfileid: "56024442"
   
 3.  Ordinare l'elenco in base alle **ora di inizio attività** per visualizzare il record più recente.  
   
-4.  Si noti che il formato di un nome del progetto è il seguente: **Cleanseandcurate. CLEANSE Supplier Data. GUID**.  
+4.  Si noti che un nome del progetto nel formato seguente: **Cleanseandcurate. CLEANSE Supplier Data. GUID**.  
   
      ![Progetto DQS Cleansing creato dal pacchetto SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "progetto DQS Cleansing creato dal pacchetto SSIS")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56024442"
   
 8.  Nella pagina principale del **Client DQS**, fare clic su **Apri progetto Data Quality** nel **progetti Data Quality** riquadro.  
   
-9. Nell'elenco di progetti selezionare il progetto creato dal componente SSIS DQS Cleansing. Il formato del nome del progetto deve essere il seguente:  **Cleanseandcurate. CLEANSE Supplier Data. GUID (in rosso)**. Potrebbe essere necessario ordinare l'elenco in base alle **data di creazione** colonna e individuare il record più recente.  
+9. Nell'elenco di progetti selezionare il progetto creato dal componente SSIS DQS Cleansing. Il nome del progetto deve essere nel formato:  **Cleanseandcurate. CLEANSE Supplier Data. GUID (in rosso)**. Potrebbe essere necessario ordinare l'elenco in base alle **data di creazione** colonna e individuare il record più recente.  
   
 10. Scegliere **Avanti**.  
   

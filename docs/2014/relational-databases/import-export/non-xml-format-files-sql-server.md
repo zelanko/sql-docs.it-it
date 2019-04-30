@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064052"
 ---
 # <a name="non-xml-format-files-sql-server"></a>File in formato non XML (SQL Server)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]sono supportati due tipi di file di formato per l'esportazione e l'importazione bulk: *file di formato non XML* e *file di formato XML*.  
@@ -56,14 +56,14 @@ ms.locfileid: "48080481"
   
  I campi **Versione** e **Numero di colonne** sono presenti una sola volta. I significati di questi campi sono descritti nella tabella seguente.  
   
-|Campo del file di formato|Description|  
+|Campo del file di formato|Descrizione|  
 |------------------------|-----------------|  
-|Versione|Il numero di versione viene riconosciuto solo dall'utilità **bcp**, non da [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numero di versione dell'utilità **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Nota: la versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** non riesce a leggere un file di formato versione 12.0 generato dall'utilità [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Version|Il numero di versione viene riconosciuto solo dall'utilità **bcp**, non da [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numero di versione dell'utilità **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Nota: La versione del **bcp** utilità (Bcp.exe) usato per leggere un file di formato deve essere uguale o versione successiva da quella utilizzata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** non riesce a leggere un file di formato versione 12.0 generato dall'utilità [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Numero di colonne|Numero di campi del file di dati. Tutte le righe devono contenere lo stesso numero di campi.|  
   
  Gli altri campi del file di formato descrivono i campi dati di cui viene eseguita l'importazione o l'esportazione bulk. Per ogni campo dati è necessaria una riga separata nel file di formato. Ogni riga del file di formato contiene i valori dei campi del file di formato descritti nella tabella seguente.  
   
-|Campo del file di formato|Description|  
+|Campo del file di formato|Descrizione|  
 |------------------------|-----------------|  
 |**Ordine dei campi nel file host**|Numero che indica la posizione di ogni campo nel file di dati. Il primo campo della riga è 1 e così via.|  
 |**Tipo di dati del file host**|Indica il tipo di dati archiviati in un determinato campo del file di dati. Per i file di dati ASCII, utilizzare SQLCHAR. Per i file di dati in formato nativo, utilizzare i tipi di dati predefiniti. Per altre informazioni, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -102,7 +102,7 @@ ms.locfileid: "48080481"
   
 -   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
 -   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   

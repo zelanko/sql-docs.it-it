@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199217"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipi di dati C in ODBC
-ODBC definisce i tipi di dati C utilizzate da variabili di applicazione e i relativi identificatori di tipo corrispondente. Questi vengono usati dai buffer che sono associate a colonne del set di risultati e parametri dell'istruzione. Si supponga, ad esempio, che un'applicazione deve recuperare i dati da una colonna del set di risultati in formato carattere. Dichiara una variabile con i dati SQLCHAR * tipo di dati e si associa questa variabile per la colonna del set di risultati con un identificatore del tipo di SQL_C_CHAR. Per un elenco completo dei tipi di dati C e gli identificatori di tipo, vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ODBC definisce i tipi di dati C utilizzate da variabili di applicazione e i relativi identificatori di tipo corrispondente. Questi vengono usati dai buffer che sono associate a colonne del set di risultati e parametri dell'istruzione. Si supponga, ad esempio, che un'applicazione deve recuperare i dati da una colonna del set di risultati in formato carattere. Dichiara una variabile con i dati SQLCHAR * tipo di dati e si associa questa variabile per la colonna del set di risultati con un identificatore del tipo di SQL_C_CHAR. Per un elenco completo dei tipi di dati C e gli identificatori di tipo, vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  Anche ODBC definisce già un mapping predefinito da ogni tipo di dati SQL a un tipo di dati C. Ad esempio, un integer a 2 byte nell'origine dati viene eseguito il mapping a un integer a 2 byte nell'applicazione. Per usare il mapping predefinito, un'applicazione specifica l'identificatore di tipo SQL_C_DEFAULT. Tuttavia, l'uso di questo identificatore è sconsigliato per motivi di interoperabilità.  
   

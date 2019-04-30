@@ -1,5 +1,5 @@
 ---
-title: Funzioni definite dall'utente e Stored procedure | Documenti Microsoft
+title: Funzioni definite dall'utente e Stored procedure | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,14 +10,14 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0a91e1e45be22ade9e7eeb7358bb83c4875f6b0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63059464"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Funzioni definite dall'utente e stored procedure
-  Gli oggetti server ADOMD.NET, è possibile creare la funzione definita dall'utente (UDF) o stored procedure per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che interagiscono con i metadati e dati dal server. Questi metodi in-process vengono chiamati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) per fornire funzionalità aggiunte senza le latenze associate alle comunicazioni di rete.  
+  Gli oggetti server ADOMD.NET, è possibile creare la funzione definita dall'utente (UDF) o stored procedure per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che interagiscono con i metadati e i dati del server. Questi metodi in-process vengono chiamati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) per fornire funzionalità aggiunte senza le latenze associate alle comunicazioni di rete.  
   
 ## <a name="udf-examples"></a>Esempi di funzioni definite dall'utente  
  Una funzione definita dall'utente è un metodo che può essere chiamato nel contesto di un'istruzione MDX o DMX, accettare un numero qualsiasi di parametri e restituire qualsiasi tipo di dati.  
@@ -74,7 +74,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- L'esempio precedente viene chiamato nell'esempio MDX seguente, In questo esempio MDX cinque casuale stati o province vengono recuperate dal **Adventure Works** database.  
+ L'esempio precedente viene chiamato nell'esempio MDX seguente, In questo esempio MDX cinque casuale stati o province vengono recuperati dal **Adventure Works** database.  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb472e106438aee781bf54fd6216d2ed32f7f190
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190716"
 ---
 # <a name="cluster-node-configuration-complete"></a>Configurazione nodi cluster (completa)
   Utilizzare la pagina Configurazione nodi cluster (completa) per specificare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è stato preparato per clustering. Per installare o aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire il programma di installazione su ogni nodo del cluster di failover. Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente, è necessario eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo che deve essere aggiunto all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

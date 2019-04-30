@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 34fe42a645965f141a7250ea5f272cfdbabc6bac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127808"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Impostazioni del progetto (interfaccia utente grafica) (SybaseToSQL)
 Le impostazioni del progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se visualizzare il report di valutazione dopo la conversione o No.  

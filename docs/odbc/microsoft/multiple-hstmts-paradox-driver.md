@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dc086f25ca4da2a64a5edde2422f1fe33fcc444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045466"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>hstmt multipli (driver Paradox)
 Quando viene utilizzato il driver ODBC Paradox, se si desidera utilizzare più di uno *hstmt* per eseguire query su una tabella, la tabella deve avere un indice univoco (chiave primaria Paradox).

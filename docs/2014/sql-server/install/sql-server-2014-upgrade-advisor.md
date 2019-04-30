@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137617"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
   Preparazione aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analizza la configurazione dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati, quindi genera un report dei problemi che è necessario risolvere per garantire la corretta esecuzione dell'aggiornamento.  

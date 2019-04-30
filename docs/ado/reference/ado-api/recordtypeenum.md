@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 195f76043cf65801289d081e497e28a41aff3209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033413"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 Specifica il tipo della [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|Indica un *semplice* record (non contiene nodi figlio).|  
 |**adCollectionRecord**|1|Indica un *raccolta* record (contiene nodi figlio).|  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154866"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Definizione della lunghezza di campo tramite bcp (SQL Server)
   La lunghezza del campo indica il numero massimo di caratteri necessari per rappresentare i dati in formato carattere. Se i dati sono archiviati in formato nativo, la lunghezza di campo è già nota. Ad esempio, il tipo di dati `int` accetta 4 byte. Se si è indicato 0 come lunghezza del prefisso, il **bcp** prompt dei comandi è per la lunghezza del campo, le lunghezze di campo predefinite e l'impatto della lunghezza del campo sull'archiviazione dei dati nei file di dati che contengono `char` dei dati.  

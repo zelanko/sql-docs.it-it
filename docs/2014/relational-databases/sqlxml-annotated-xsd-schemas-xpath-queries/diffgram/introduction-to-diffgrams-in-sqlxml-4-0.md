@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127717"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introduzione ai DiffGram in SQLXML 4.0
   In questo argomento viene fornita una breve introduzione ai DiffGram.  
@@ -47,13 +47,13 @@ ms.locfileid: "52777091"
   
  Il formato DiffGram è costituito dai blocchi seguenti:  
   
- **\<DataInstance >**  
+ **\<DataInstance>**  
  Il nome di questo elemento **DataInstance**, viene usato a scopo esplicativo nella presente documentazione. Se, ad esempio, il DiffGram è stato generato da un set di dati .NET Framework, il valore della **nome** proprietà del set di dati viene utilizzata come nome di questo elemento. Questo blocco contiene tutti i dati rilevanti dopo la modifica, inclusi eventualmente i dati che non sono stati modificati. La logica di elaborazione DiffGram ignora gli elementi in questo blocco per il quale il **diffgr: HasChanges** attributo non è specificato.  
   
  **\<diffgr:before>**  
  Questo blocco facoltativo contiene le istanze dei record originali (elementi) che devono essere aggiornate o eliminate. Tutte le tabelle di database modificate (aggiornate o eliminate) dal DiffGram devono essere visualizzate come elementi di livello superiore nel  **\<prima di >** blocco.  
   
- **\<diffgr: Errors >**  
+ **\<diffgr:errors>**  
  Questo blocco facoltativo viene ignorato dalla logica di elaborazione DiffGram.  
   
 ## <a name="diffgram-annotations"></a>Annotazioni DiffGram  

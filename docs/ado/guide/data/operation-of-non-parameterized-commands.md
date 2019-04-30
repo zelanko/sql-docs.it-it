@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884ef4e72b975de0eb9dd92e80ec3ce0d513546b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187787"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funzionamento dei comandi senza parametri
 Per i comandi senza parametri, vengono eseguiti tutti i comandi di provider e il **recordset** vengono creati durante l'esecuzione del comando. Se il comando viene eseguito in modo sincrono, tutti i **recordset** verrà popolato completamente. Se è stata selezionata una modalità di popolamento asincrono, lo stato di popolamento del **recordset** variano in base alla modalità di popolamento e la dimensione delle **recordset**.  

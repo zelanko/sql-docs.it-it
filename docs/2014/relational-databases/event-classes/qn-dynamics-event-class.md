@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035723"
 ---
 # <a name="qndynamics-event-class"></a>Classe di evento QN:Dynamics
   La classe di evento QN:Dynamics fornisce informazioni sull'attività in background eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per supportare le notifiche delle query. All'interno di [!INCLUDE[ssDE](../../includes/ssde-md.md)], un thread in background esegue il monitoraggio dei timeout di sottoscrizione, delle sottoscrizioni in attesa di attivazione e dell'eliminazione delle tabelle di parametri.  
@@ -34,7 +34,7 @@ ms.locfileid: "53365873"
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Yes|  
 |EventClass|`int`|Tipo di evento = 202.|27|No|  
 |EventSequence|`int`|Numero di sequenza dell'evento.|51|No|  
-|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Clock esecuzione avviata: Indica che è stato avviato il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia.<br /><br /> Clock esecuzione completata: Indica che è terminato il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia.<br /><br /> Attività pulizia file master avviata: Indica quando viene avviata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query.<br /><br /> Attività pulizia file master completato: Indica quando viene terminata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query.<br /><br /> Attività pulizia file master ignorato: Indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query.|21|Yes|  
+|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Clock esecuzione avviata: Indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che le pianificazioni scadute tabelle di parametri per la pulizia è stata avviata.<br /><br /> Clock esecuzione completata: Indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che le pianificazioni tabelle di parametri scadute per la pulizia è terminato.<br /><br /> Attività pulizia file master avviata: Indica quando viene avviata la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.<br /><br /> Attività pulizia file master completato: Indica quando termina la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.<br /><br /> Attività pulizia file master ignorato: Indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  

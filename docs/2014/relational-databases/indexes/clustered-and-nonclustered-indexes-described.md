@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156372"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
   Un indice è una struttura su disco associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Tali chiavi vengono archiviate in una struttura (albero B) che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  

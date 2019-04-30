@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125477"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -34,10 +34,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  Una condizione che restituisce **true** (1) o **false** (0). Deve essere un'espressione logica MDX (Multidimensional Expression) valida.  
   
- *Expression1 Hint [Eager | Strict | Lazy]]*  
+ *Expression1 Hint [Eager|Strict|Lazy]]*  
  Utilizzato quando l'espressione logica restituisce **true**. Expression1 deve essere un'espressione MDX (Multidimensional Expression) valida.  
   
- *Expression2 Hint [Eager | Strict | Lazy]]*  
+ *Expression2 Hint [Eager|Strict|Lazy]]*  
  Utilizzato quando l'espressione logica restituisce **false**. Expression2 deve essere un'espressione MDX (Multidimensional Expression) valida.  
   
 ## <a name="remarks"></a>Note  

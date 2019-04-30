@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155569"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Filegroup con ottimizzazione per la memoria
   Per creare tabelle ottimizzate per la memoria, è necessario creare prima un filegroup ottimizzato per la memoria. Nel filegroup ottimizzato per la memoria è presente uno o più contenitori. Ogni contenitore include file di dati o file differenziali o entrambi.  
@@ -30,7 +30,7 @@ ms.locfileid: "51947565"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   È necessario aggiungere uno o più contenitori al filegroup MEMORY_OPTIMIZED_DATA. Ad esempio:  
+-   È necessario aggiungere uno o più contenitori al filegroup MEMORY_OPTIMIZED_DATA. Ad esempio:   
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  

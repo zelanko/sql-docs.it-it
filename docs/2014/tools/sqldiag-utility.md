@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035420"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
   **SQLdiag** è un'utilità di raccolta di dati diagnostici generica che può essere eseguita come applicazione console o come servizio. È possibile usare **SQLdiag** per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. L'utilità**SQLdiag** è stata creata per velocizzare e semplificare la raccolta delle informazioni diagnostiche necessarie per il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -111,7 +111,7 @@ ms.locfileid: "53590255"
 > [!NOTE]  
 >  Con**SQLdiag** l'output non viene accodato alla cartella di output corrente al momento dell'avvio. È possibile soltanto sovrascrivere la cartella di output predefinita (opzione 1) o rinominare la cartella (opzione 2), quindi l'output viene scritto nella nuova cartella di output predefinita denominata SQLDIAG.  
   
- **/M** _Computer1_ [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  Esegue l'override del computer specificato nel file di configurazione. Per impostazione predefinita il file di configurazione è SQLDiag.Xml o è impostato con il parametro **/I** . Quando si specifica più di un computer, separare ogni nome di computer con uno spazio.  
   
  L'utilizzo di *@machinelistfile* consente di specificare un nome di file di un elenco di computer da archiviare nel file di configurazione.  
@@ -158,11 +158,11 @@ ms.locfileid: "53590255"
   
  È possibile usare*SQLdiag_application_name* per avviare o arrestare un'istanza specifica del servizio **SQLdiag** .  
   
- Ad esempio:  
+ Ad esempio:   
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
- È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio:  
+ È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio:   
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   

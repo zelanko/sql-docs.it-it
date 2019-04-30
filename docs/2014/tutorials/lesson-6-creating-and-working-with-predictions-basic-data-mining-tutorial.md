@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185391"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lezione 6: Creazione e utilizzo di stime (esercitazione di base di Data Mining)
   Finora si è eseguito il training, il testing e l'esplorazione dei modelli di data mining creati. Ora è possibile iniziare a utilizzare i modelli per identificare le persone con la più alta probabilità di rispondere alla nuova campagna di mailing diretto.  

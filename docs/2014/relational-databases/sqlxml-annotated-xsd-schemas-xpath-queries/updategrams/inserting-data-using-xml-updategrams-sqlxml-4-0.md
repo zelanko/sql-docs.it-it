@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060314"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
   Un updategram indica un'operazione di inserimento quando un'istanza di record è presente il  **\<dopo >** blocco ma non nel corrispondente  **\<prima >** blocco. In questo caso, l'updategram inserisce il record nel  **\<dopo >** blocco nel database.  
@@ -156,7 +156,7 @@ ms.locfileid: "53365853"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Inserimento di più record mediante un updategram  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Inserimento di più record mediante un updategram  
  Questo updategram aggiunge due nuovi record di spostamento alla tabella HumanResources.Shift. L'updategram non specifica l'opzione facoltativa  **\<prima di >** blocco.  
   
 ```  

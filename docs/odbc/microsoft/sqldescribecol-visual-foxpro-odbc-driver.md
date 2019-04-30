@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45d823defd67d4b9cb95d01e3ffdf0cad7c2c6b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125487"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
- Della conformità API ODBC: A livello centrale  
+ Conformità di API ODBC: A livello centrale  
   
  Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato.  
   

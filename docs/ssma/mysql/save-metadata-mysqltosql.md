@@ -1,5 +1,5 @@
 ---
-title: Salvare i metadati (MySQLToSQL) | Microsoft Docs
+title: Save Metadata  (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154578"
 ---
 # <a name="save-metadata--mysqltosql"></a>Salvare i metadati (MySQLToSQL)
 Il **salvare i metadati** nella finestra di dialogo viene richiesto di caricare i metadati nel progetto SSMA prima di salvarlo. In questo modo si dispone di un file di progetto completo che è possibile usare in modalità offline e inviare ad altri utenti, ad esempio il personale di supporto tecnico.  
@@ -23,7 +23,7 @@ Il **salvare i metadati** nella finestra di dialogo viene richiesto di caricare 
 Per l'accesso di **salvare i metadati** nella finestra di dialogo Salva il progetto. Se tutti i metadati mancanti, SSMA verrà visualizzato il **salvare i metadati** nella finestra di dialogo.  
   
 ## <a name="options"></a>Opzioni  
-**Nome**  
+**Name**  
 Il nome di ogni database nel progetto.  
   
 **Stato**  

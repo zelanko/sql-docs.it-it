@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155155"
 ---
 # <a name="supported-data-types"></a>Tipi di dati supportati
   I seguenti tipi di dati sono **supportato** nelle tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo:  
@@ -40,9 +40,9 @@ ms.locfileid: "48075301"
 |Tipo di dati|Per ulteriori informazioni|  
 |---------------|--------------------------|  
 |char(n)|[char e varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar (n) <sup>1</sup>|[char e varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar(n) <sup>1</sup>|[char e varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar (n) <sup>1</sup>|[nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar(n) <sup>1</sup>|[nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup> limitazione è 8060 byte per totale di riga, conteggiando (n) in tipi a lunghezza variabile.  
@@ -53,9 +53,9 @@ ms.locfileid: "48075301"
   
 |Tipo di dati|Per ulteriori informazioni|  
 |---------------|--------------------------|  
-|Data|[Data &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|Data|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
-|DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
+|datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48075301"
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary (n) <sup>1</sup>|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary(n) <sup>1</sup>|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
  <sup>1</sup> limitazione è 8060 byte per totale di riga, conteggiando (n) in tipi a lunghezza variabile.  
   

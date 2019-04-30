@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126013"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
   Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fa parte di un cluster di failover, il processo di ridenominazione del server virtuale è diverso da quello previsto per un'istanza autonoma. Per altre informazioni, vedere [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  

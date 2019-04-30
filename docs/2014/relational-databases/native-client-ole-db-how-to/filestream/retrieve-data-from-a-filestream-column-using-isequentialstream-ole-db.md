@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070828"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream (OLE DB)
   In questo esempio viene illustrato come utilizzare un'interfaccia ISequentialStream in un'interfaccia ICommandText per recuperare un record singolo da una colonna FILESTREAM.  

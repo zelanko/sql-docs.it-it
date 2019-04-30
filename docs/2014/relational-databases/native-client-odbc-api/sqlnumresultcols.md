@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046756"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Per le istruzioni eseguite, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client controlla il server per segnalare il numero di colonne in un set di risultati. In questo caso, `SQLNumResultCols` genera un round trip del server. Ad esempio [SQLDescribeCol](sqldescribecol.md) e [SQLColAttribute](sqlcolattribute.md), la chiamata `SQLNumResultCols` via preparate, ma le istruzioni non eseguite genera un round trip del server.  

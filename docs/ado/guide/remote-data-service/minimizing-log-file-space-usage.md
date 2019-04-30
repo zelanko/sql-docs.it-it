@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134401"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Riduzione al minimo dell'utilizzo dello spazio per il file di log
 Un file di log può riempirsi rapidamente (sospendendo il server) se è presente un volume elevato di attività in un database di SQL Server. È possibile impostare il file di log **Truncate sul Checkpoint** estendere in modo significativo la durata del file di log per un database.  

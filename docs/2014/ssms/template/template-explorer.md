@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074066"
 ---
 # <a name="template-explorer"></a>Esplora modelli
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un'ampia gamma di modelli. I modelli sono file preimpostati contenenti script SQL che agevolano la creazione degli oggetti di database. Alla prima apertura di Esplora modelli, una copia dei modelli viene inserita nella cartella dell'utente in C:\Users in AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  

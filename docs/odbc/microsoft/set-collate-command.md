@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127836"
 ---
 # <a name="set-collate-command"></a>SET COLLATE (comando)
 Specifica una sequenza di confronto per i campi di caratteri nelle operazioni di ordinamento e indicizzazione successive.  
@@ -38,7 +38,7 @@ SET COLLATE TO cSequenceName
 |-------------|--------------|  
 |OLANDESE|Olandese|  
 |GENERAL|Inglese, francese, tedesco, spagnolo moderno, portoghese e altre lingue dell'Europa occidentale|  
-|TEDESCO|Ordine della Rubrica telefonica tedesco (DIN)|  
+|GERMAN|Ordine della Rubrica telefonica tedesco (DIN)|  
 |ISLANDA|Islandese|  
 |COMPUTER|Computer (la sequenza di confronto predefinite per le versioni precedenti di FoxPro)|  
 |NORDAN|Norvegese, danese|  

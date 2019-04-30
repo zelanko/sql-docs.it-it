@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042527"
 ---
 # <a name="custom-applications"></a>Applicazioni personalizzate
 Le applicazioni personalizzate in genere eseguono un'attività specifica per i pochi DBMS. Ad esempio, un'applicazione può recuperare i dati da un singolo DBMS e generare un report o può trasferire i dati tra diversi DBMS. Ciò che queste applicazioni hanno in comune è che queste DBMS sono noti prima che l'applicazione viene scritta e poco probabile che cambino durante il ciclo di vita dell'applicazione.  

@@ -1,5 +1,5 @@
 ---
-title: 'Aggiornamento dei risultati join: Unique Table | Microsoft Docs'
+title: 'Aggiornamento dei risultati uniti in join: Tabella univoca | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a01c9dd672193a91c494ccdf098375e9a64d5b3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184980"
 ---
 # <a name="updating-joined-results-unique-table"></a>Aggiornamento dei risultati uniti in join: tabella univoca
 ADO consente di controllare rigorosamente le modifiche a una tabella di base in un Recordset formato da un'operazione di JOIN più tabelle di base usando la proprietà dinamica della tabella univoca. Per informazioni dettagliate sull'uso di tabelle univoche, vedere gli argomenti di riferimento per programmatori ADO alle proprietà dinamiche tabella univoca e aggiornamento eseguire una nuova.  

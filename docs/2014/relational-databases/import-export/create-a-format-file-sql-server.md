@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140607"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
   Quando si esegue l'importazione bulk in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei dati da una tabella, è possibile utilizzare un file di formato per un sistema flessibile per la scrittura di file di dati che non richiede alcuna modifica o richiede modifiche minime per la conformità con altri formati di dati o la lettura di file di dati da un altro programma software.  
@@ -46,7 +46,7 @@ ms.locfileid: "54126701"
   
 -   A. Creazione di un file di formato non XML per dati nativi  
   
--   b. Creazione di un file di formato non XML per dati di tipo carattere  
+-   B. Creazione di un file di formato non XML per dati di tipo carattere  
   
 -   C. Creazione di un file di formato non XML per dati nativi Unicode  
   
@@ -84,7 +84,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Per altre informazioni, vedere [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>b. Creazione di un file di formato non XML per dati di tipo carattere  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. Creazione di un file di formato non XML per dati di tipo carattere  
  Nell'esempio seguente viene creato un file di formato XML, `Department.fmt`, per la tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Nel file di formato vengono utilizzati formati di dati di tipo carattere e un carattere di terminazione del campo non predefinito (`,`). Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
@@ -147,7 +147,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 -   A. Creazione di un file di formato XML per dati di tipo carattere  
   
--   b. Creazione di un file di formato XML per dati nativi  
+-   B. Creazione di un file di formato XML per dati nativi  
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Specifica il file di formato XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
-|**-t** `,`|Specifica la virgola (**,**) come carattere di terminazione del campo.<br /><br /> Nota: Se il file di dati Usa il carattere di terminazione del campo predefinito (`\t`), il **-t** commutatore è necessario.|  
+|**-t** `,`|Specifica la virgola (**,**) come carattere di terminazione del campo.<br /><br /> Nota: se il file di dati usa il carattere di terminazione del campo predefinito (`\t`), l'opzione **-t** non è necessaria.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
@@ -194,7 +194,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Per informazioni sulla sintassi di questo file di formato, vedere [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md). Per informazioni sui dati di tipo carattere, vedere [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md).  
   
-#### <a name="b-creating-an-xml-format-file-for-native-data"></a>b. Creazione di un file di formato XML per dati nativi  
+#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. Creazione di un file di formato XML per dati nativi  
  Nell'esempio seguente viene creato un file di formato XML, `Department-n.xml`, per la tabella `HumanResources.Department` . Nel file di formato vengono utilizzati tipi di dati nativi. Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  

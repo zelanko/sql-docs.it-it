@@ -1,5 +1,5 @@
 ---
-title: 'Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni (Analysis Services - Data Mining) | Microsoft Docs'
+title: 'Creazione ed esecuzione di query sui modelli di data mining con DMX: Esercitazioni (Analysis Services - Data Mining) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180542"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni (Analysis Services - Data Mining)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Creazione ed esecuzione di query sui modelli di data mining con DMX: Esercitazioni (Analysis Services - Data Mining)
   Dopo aver creato una soluzione di data mining utilizzando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è possibile creare query sui modelli di data mining per stimare le tendenze, recuperare modelli nei dati e misurare l'accuratezza dei modelli di data mining.  
   
  Le esercitazioni pratiche riportate nell'elenco seguente consentono di imparare a compilare ed eseguire query di data mining utilizzando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che sia possibile ottenere il massimo dai tuoi dati.  

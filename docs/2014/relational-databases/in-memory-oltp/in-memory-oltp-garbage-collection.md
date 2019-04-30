@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158253"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Garbage Collection per OLTP in memoria
   Una riga di dati viene considerata non aggiornata se è stata eliminata da una transazione non più attiva. Una riga obsoleta è qualificata per il processo di Garbage Collection. Di seguito sono riportate le caratteristiche del processo di Garbage Collection in [!INCLUDE[hek_2](../../includes/hek-2-md.md)]:  

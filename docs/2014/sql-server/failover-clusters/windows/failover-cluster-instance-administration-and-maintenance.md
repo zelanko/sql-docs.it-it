@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049441"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Gestione e manutenzione dell'istanza del cluster di failover
-  Attività di manutenzione quali l'aggiunta o rimozione di nodi da un'esistente AlwaysOn Cluster istanza Failover (FCI), vengono eseguite mediante il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programma di installazione. Le altre attività dell'amministrazione, quali la modifica delle risorse indirizzo IP, il recupero da determinati scenari di FCI, vengono eseguite mediante lo snap-in Gestione cluster di failover che è lo snap-in di gestione per il servizio Windows Server Failover Clustering (WSFC).  
+  Le attività di manutenzione quali l'aggiunta o la rimozione di nodi dall'istanza del cluster di failover (FCI) AlwaysOn esistente vengono portate a termine utilizzando il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le altre attività dell'amministrazione, quali la modifica delle risorse indirizzo IP, il recupero da determinati scenari di FCI, vengono eseguite mediante lo snap-in Gestione cluster di failover che è lo snap-in di gestione per il servizio Windows Server Failover Clustering (WSFC).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Gestione un'istanza del cluster di failover  
  Dopo avere installato un'istanza FCI, è possibile modificarlo o ripristinarlo tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile, ad esempio, aggiungere ulteriori nodi a un'istanza FCI, eseguire un'istanza FCI come istanza autonoma o rimuovere un nodo da una configurazione di un'istanza FCI.  
@@ -57,7 +57,7 @@ ms.locfileid: "48110541"
 |Descrizione dell'attività|Collegamento all'argomento|  
 |----------------------|----------------|  
 |Viene descritto come aggiungere dipendenze a una risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Aggiunta di dipendenze a una risorsa di SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos è un protocollo di autenticazione di rete progettato per fornire un'autenticazione avanzata alle applicazioni client/server. Oltre a offrire un'infrastruttura di interoperabilità, il protocollo Kerberos contribuisce ad aumentare la sicurezza dell'autenticazione estesa all'intera azienda. È possibile usare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le istanze autonome o con le istanze FCI AlwaysOn.|[Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos è un protocollo di autenticazione di rete progettato per fornire un'autenticazione avanzata alle applicazioni client/server. Oltre a offrire un'infrastruttura di interoperabilità, il protocollo Kerberos contribuisce ad aumentare la sicurezza dell'autenticazione estesa all'intera azienda. È possibile utilizzare l'autenticazione Kerberos con le istanze autonome di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o con le istanze FCI AlwaysOn.|[Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Vengono forniti i collegamenti a contenuti che descrivono come abilitare l'autenticazione Kerberos||  
 |Viene descritta la procedura utilizzata per recuperare da un errore di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperare da un errore dell'istanza del cluster di failover](recover-from-failover-cluster-instance-failure.md)|  
 |Descrivere la procedura utilizzata per modificare la risorsa indirizzo IP per un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifica dell'indirizzo IP di un'istanza del cluster di failover](change-the-ip-address-of-a-failover-cluster-instance.md)|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155273"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
   Se due o più tabelle sono unite tramite join, in [Progettazione query e Progettazione viste](visual-database-tools.md) il join verrà rappresentato in forma grafica all'interno del [riquadro Diagramma](diagram-pane-visual-database-tools.md) e mediante la sintassi SQL all'interno del [riquadro SQL](sql-pane-visual-database-tools.md).  

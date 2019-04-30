@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224473"
 ---
 # <a name="column-size"></a>Dimensioni della colonna
 Le dimensioni di colonna (o parametro) di tipi di dati numerici sono definite come il numero massimo di cifre utilizzate dal tipo di dati della colonna o parametro, o la precisione dei dati. Per i tipi di carattere, si tratta della lunghezza in caratteri dei dati. per i tipi di dati binari, le dimensioni di colonna sono definita come la lunghezza in byte dei dati. Per il tempo, timestamp e tutti i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri di questi dati. La dimensione della colonna definita per ogni tipo di dati SQL concisa è illustrata nella tabella seguente.  
@@ -30,17 +30,17 @@ Le dimensioni di colonna (o parametro) di tipi di dati numerici sono definite co
 |-------------------------|-----------------|  
 |Tutti i tipi di carattere [a], [b].|Le dimensioni di colonna massima o definita in caratteri della colonna o del parametro (come contenuto nel campo di descrizione SQL_DESC_LENGTH). Ad esempio, la dimensione della colonna di una colonna di tipo carattere a byte singolo definita come char (10) è 10.|  
 |SQL_DECIMAL SQL_NUMERIC|Il numero definito di cifre. Ad esempio, la precisione di una colonna definita come NUMERIC(10,3) è 10.|  
-|SQL_BIT [c]|1|  
-|SQL_TINYINT [c]|3|  
-|SQL_SMALLINT [c]|5|  
-|SQL_INTEGER [c]|10|  
-|SQL_BIGINT [c]|19 (con segno) o 20 (se senza segno)|  
-|SQL_REAL [c]|7|  
-|SQL_FLOAT [c]|15|  
-|SQL_DOUBLE [c]|15|  
+|SQL_BIT[c]|1|  
+|SQL_TINYINT[c]|3|  
+|SQL_SMALLINT[c]|5|  
+|SQL_INTEGER[c]|10|  
+|SQL_BIGINT[c]|19 (con segno) o 20 (se senza segno)|  
+|SQL_REAL[c]|7|  
+|SQL_FLOAT[c]|15|  
+|SQL_DOUBLE[c]|15|  
 |Tutti i tipi binari [a], [b].|La lunghezza massima o definita in byte della colonna o del parametro. Ad esempio, la lunghezza di una colonna definita come BINARY(10) è 10.|  
-|SQL_TYPE_DATE [c]|10 (il numero di caratteri nel *aaaa-mm-gg* formato).|  
-|SQL_TYPE_TIME [c]|8 (il numero di caratteri nel *hh-mm-ss* formato), o 9 + *s* (il numero di caratteri nel *hh: mm:* formato [. fff], dove *s*è la precisione dei secondi).|  
+|SQL_TYPE_DATE[c]|10 (il numero di caratteri nel *aaaa-mm-gg* formato).|  
+|SQL_TYPE_TIME[c]|8 (il numero di caratteri nel *hh-mm-ss* formato), o 9 + *s* (il numero di caratteri nel *hh: mm:* formato [. fff], dove *s*è la precisione dei secondi).|  
 |SQL_TYPE_TIMESTAMP|16 (il numero di caratteri nel *aaaa-mm-gg hh: mm* formato)<br /><br /> 19 (il numero di caratteri nel *aaaa-mm-gg* *hh: mm:* formato)<br /><br /> o Gestione configurazione<br /><br /> 20 + *s* (il numero di caratteri nel *aaaa-mm-gg hh.mm.ss*formato [. fff], dove *s* è la precisione dei secondi).|  
 |SQL_INTERVAL_SECOND|In cui *p* è l'intervallo di precisione iniziale e *s* è la precisione in secondi, *p* (se *s*= 0) o *p* + *s*+ 1 (se *s*> 0). [ 1!d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|In cui *p* è l'intervallo di precisione iniziale e *s* è la precisione in secondi, 9 +*p* (se *s*= 0) o 10 +*p* + *s* (se *s*> 0). [ 1!d]|  

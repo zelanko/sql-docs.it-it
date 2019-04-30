@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204991"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generazione di XML da set di righe con FOR XML
   È possibile generare una `xml` istanza del tipo di dati da un set di righe utilizzando FOR XML con il nuovo **tipo** direttiva.  
@@ -26,7 +26,7 @@ ms.locfileid: "58529063"
   
  La nuova direttiva **FOR XML TYPE** consente di definire visualizzazioni XML in sola lettura su dati relazionali con la sintassi SQL. Su tale vista è possibile eseguire query utilizzando istruzioni SQL e istruzioni XQuery incorporate, come illustrato nell'esempio seguente. È possibile fare riferimento a tali viste SQL anche nelle stored procedure.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Esempio: Tipo di dati xml SQL consente di visualizzare la restituzione generate  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Esempio: Visualizzazione SQL che restituisce un tipo di dati xml generato  
  La definizione di vista SQL seguente crea una visualizzazione XML su una colonna relazionale, utilizzando la chiave primaria e gli autori dei libri recuperati da una colonna XML:  
   
 ```  

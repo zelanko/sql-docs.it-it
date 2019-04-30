@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140437"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
   Sono disponibili due modalità di restituzione di set di risultati o di dati da una procedura a un programma chiamante, cioè i parametri di output e i codici restituiti. In questo argomento vengono fornite informazioni su entrambi gli approcci.  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] possono usare le procedure di `cursor` tipo di dati solo per i parametri di OUTPUT. Se il `cursor` tipo di dati specificato per un parametro, le parole chiave VARYING e OUTPUT devono essere specificate per il parametro nella definizione della procedura. Un parametro può essere specificato solo come OUTPUT, ma se nella dichiarazione del parametro viene specificata la parola chiave VARYING, il tipo di dati deve essere `cursor` e necessario specificare anche la parola chiave OUTPUT.  
   
 > [!NOTE]  
->  Il `cursor` tipo di dati non può essere associato a variabili di applicazione tramite API di database come OLE DB, ODBC, ADO e DB-Library. Poiché i parametri di OUTPUT devono essere associati un'applicazione può eseguire una stored procedure con procedure `cursor` i parametri di OUTPUT non possono essere chiamati dall'API di database. Queste procedure possono essere chiamate da [!INCLUDE[tsql](../../../includes/tsql-md.md)] procedure, trigger, o batch solo quando il `cursor` variabile di OUTPUT viene assegnata a un [!INCLUDE[tsql](../../../includes/tsql-md.md)] locale `cursor` variabile.  
+>  Il tipo di dati `cursor` non può essere associato a variabili di applicazione tramite le API di database, quali OLE DB, ODBC, ADO e DB-Library. Poiché in un'applicazione è possibile eseguire una procedura solo in seguito all'associazione dei parametri OUTPUT, le procedure con parametri OUTPUT di tipo `cursor` non possono essere chiamate dalle API di database. È possibile chiamare queste procedure da trigger, procedure o batch [!INCLUDE[tsql](../../../includes/tsql-md.md)] solo quando la variabile OUTPUT di tipo `cursor` è assegnata a una variabile locale [!INCLUDE[tsql](../../../includes/tsql-md.md)] di tipo `cursor`.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Regole per parametri di output di tipo cursor  
- Le regole seguenti si riferiscono a `cursor` i parametri di output quando viene eseguita la procedura:  
+ Quando si esegue la procedura, per i parametri di output di tipo `cursor` vengono applicate le regole seguenti:  
   
 -   Con cursori forward-only, nel set di risultati del cursore sono incluse solo le righe che al completamento della procedura si trovano oltre la posizione del cursore, ad esempio:  
   

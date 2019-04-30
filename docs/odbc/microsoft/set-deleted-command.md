@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127827"
 ---
 # <a name="set-deleted-command"></a>SET DELETED (comando)
 Specifica se vengono elaborati i record contrassegnati per l'eliminazione e se sono disponibili per l'uso in altri comandi.  

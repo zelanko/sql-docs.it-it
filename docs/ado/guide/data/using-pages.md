@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184918"
 ---
 # <a name="using-pages"></a>Uso delle pagine
 Usare la **PageCount** proprietà per determinare il numero di pagine di dati presenti nel **Recordset** oggetto. *Le pagine* sono gruppi di record con dimensioni uguali i **PageSize** l'impostazione della proprietà. Anche se l'ultima pagina incompleta perché sono presenti record minore del **PageSize** valore, viene conteggiata come una pagina aggiuntiva nel **PageCount** valore. Se il **Recordset** oggetto non supporta questa proprietà, **PageCount** sarà -1 per indicare che il **PageCount** non è possibile determinare.  

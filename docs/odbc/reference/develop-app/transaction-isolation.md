@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46e063a5458bec095148c8bcda2783bb03dd622a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149055"
 ---
 # <a name="transaction-isolation"></a>Isolamento della transazione
 *Isolamento delle transazioni* indica il livello di interazione tra più transazioni simultanee. Per visualizzare il motivo per cui questo aspetto è importante, è necessario esaminare prima di tutto l'idea di Serializable.  

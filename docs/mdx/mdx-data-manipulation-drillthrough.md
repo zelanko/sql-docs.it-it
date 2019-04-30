@@ -1,5 +1,5 @@
 ---
-title: Istruzione DRILLTHROUGH (MDX) | Documenti Microsoft
+title: Istruzione DRILLTHROUGH (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187663"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>Manipolazione dei dati MDX - drill-through
+# <a name="mdx-data-manipulation---drillthrough"></a>Manipolazione dei dati MDX - DRILLTHROUGH
 
 
   Recupera le righe di tabella sottostanti utilizzate per creare una cella specificata in un cubo.  
@@ -42,7 +42,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  Elenco delimitato da virgole di misure e attributi della dimensione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il drill-through è un'operazione con cui un utente finale seleziona una singola cella di un cubo e recupera un set di risultati dai dati di origine di tale cella allo scopo di ottenere informazioni più dettagliate. Per impostazione predefinita, il set di risultati di un drill-through è derivato dalle righe di tabella che sono state valutate per calcolare il valore della cella del cubo selezionata. Per il drill-through da parte degli utenti finali, è necessario che le relative applicazioni client supportino tale funzionalità. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], i risultati vengono recuperati direttamente dall'archivio MOLAP, a meno che non vengono eseguite su partizioni o dimensioni ROLAP.  
   
 > [!IMPORTANT]  
@@ -50,9 +50,9 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  La cella interessata è specificata da un'istruzione MDX. Il valore specificato per il **MAXROWS** argomento indica il numero massimo di righe che devono essere restituiti dal set di righe risultante.  
   
- Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MAXROWS** non viene specificato, si otterranno le righe di 10.000 o meno. Se questo valore è troppo basso per lo scenario, è possibile impostare **MAXROWS** su un numero più alto, ad esempio `MAXROWS 20000`. Se è troppo basso generale, è possibile aumentare il valore predefinito modificando il **OLAP\Query\DefaultDrillthroughMaxRows** proprietà del server. Per ulteriori informazioni sulla modifica di questa proprietà, vedere [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MAXROWS** non viene specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per il proprio scenario, è possibile impostare **MAXROWS** un numero maggiore, ad esempio `MAXROWS 20000`. Se è troppo basso complessiva, è possibile aumentare il valore predefinito modificando il **OLAP\Query\DefaultDrillthroughMaxRows** proprietà del server. Per altre informazioni sulla modifica di questa proprietà, vedere [proprietà del Server in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- Se non diversamente specificato, le colonne restituite includono tutti gli attributi di granularità per tutte le dimensioni correlate al gruppo di misure della misura specificata, tranne le dimensioni molti-a-molti. Le dimensioni del cubo sono precedute da $ per consentire la distinzione tra dimensioni e gruppi di misure. Il **restituire** clausola viene utilizzata per specificare le colonne restituite dalla query drill-through. Le funzioni seguenti possono essere applicate a un singolo attributo o misura mediante la **restituire** clausola.  
+ Se non diversamente specificato, le colonne restituite includono tutti gli attributi di granularità per tutte le dimensioni correlate al gruppo di misure della misura specificata, tranne le dimensioni molti-a-molti. Le dimensioni del cubo sono precedute da $ per consentire la distinzione tra dimensioni e gruppi di misure. Il **restituire** clausola consente di specificare le colonne restituite dalla query drill-through. Le funzioni seguenti possono essere applicate a un singolo attributo o misura mediante la **restituire** clausola.  
   
  Name(attribute_name)  
  Restituisce il nome del membro dell'attributo specificato.  

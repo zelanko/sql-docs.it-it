@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96ee3363a5077f6ab8324b7bfb4ca81fa8b781d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070925"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Eseguire, rieseguire una query ed eliminare (JScript) di esempio di metodi
 Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. (Il **errori** raccolta è accessibile tramite il **connessione** oggetto del [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Denominare il file **ExecuteJS**.  

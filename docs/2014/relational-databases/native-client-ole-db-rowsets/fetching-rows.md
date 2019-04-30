@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140477"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
   **IRowset** è l'interfaccia di base dei set di righe. L'interfaccia **IRowset** comprende metodi che consentono di recuperare le righe in modo sequenziale, ottenere dati dalle righe e gestire le righe. I consumer utilizzano i metodi disponibili in **IRowset** per tutte le operazioni di base relative ai set di righe, incluse quelle che consentono di recuperare e rilasciare le righe nonché ottenere i valori delle colonne.  
@@ -59,7 +59,7 @@ ms.locfileid: "48057831"
   
  Al termine delle operazioni relative al set di righe, il consumer chiama il metodo **IAccessor::ReleaseAccessor** per rilasciare le funzioni di accesso e il metodo **IUnknown::Release** su tutte le interfacce esposte dal set di righe per rilasciare il set di righe. Quando il set di righe viene rilasciato, forza il rilascio delle eventuali righe o funzioni di accesso rimanenti ancora in gestione da parte del consumer.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [posizione del recupero successivo](fetching-rows-next-fetch-position.md)  
   

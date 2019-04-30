@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE | Microsoft Docs
+title: SQLSTATEs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149044"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATE forniscono informazioni dettagliate sulla causa di un avviso o errore. SQLSTATE in questo manuale sono basate su quelle disponibili nella specifica ISO/IEF dell'interfaccia della riga, anche se tali SQLSTATEs che iniziano con messaggio immediato sono specifici per ODBC.  

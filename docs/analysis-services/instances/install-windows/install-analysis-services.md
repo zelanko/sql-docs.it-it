@@ -1,5 +1,5 @@
 ---
-title: Installare Analysis Services | Documenti Microsoft
+title: Installare Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054534"
 ---
 # <a name="install-sql-server-analysis-services"></a>Installare SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   SQL Server Analysis Services è un server di database analitico che ospita modelli tabulari, cubi multidimensionali e modelli di data mining che è possibile accedere da report, fogli di calcolo e dashboard.  
   
- Analysis Services è a istanza multipla, il che significa che è possibile installare più di una copia in un singolo computer o eseguire nuovi e precedenti versioni side-by-side. Qualsiasi istanza installata viene eseguita in una delle tre modalità, in base a quanto stabilito durante l'installazione: multidimensionale, data mining e tabulare o SharePoint. Per usare più modalità, è necessario installare un'istanza distinta per ciascuna modalità.  
+ Analysis Services è a istanza multipla, il che significa che è possibile installare più di una copia in un singolo computer o eseguire le versioni nuove e obsolete side-by-side. Qualsiasi istanza installata viene eseguito in una delle tre modalità, come stabilito durante l'installazione: Multidimensionale e Data Mining, tabulare o SharePoint. Per usare più modalità, è necessario installare un'istanza distinta per ciascuna modalità.  
   
  Dopo aver installato il server in una specifica modalità, è possibile usare le soluzioni host conformi a tale modalità. Ad esempio, un server in modalità tabulare è necessario se si desidera l'accesso ai dati dei modelli tabulari sulla rete.  
   
@@ -31,22 +31,22 @@ ms.locfileid: "34708079"
   
 -   [Scaricare SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
- È necessario SQL Server Management Studio e SSDT per lavorare con i dati e le istanze di Analysis Services. Gli strumenti possono essere installati in un punto qualsiasi, ma assicurarsi di configurare le porte nel server prima di tentare una connessione. Per informazioni dettagliate, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+ È necessario SQL Server Management Studio e SSDT per lavorare con i dati e istanze di Analysis Services. Gli strumenti possono essere installati in un punto qualsiasi, ma assicurarsi di configurare le porte nel server prima di tentare una connessione. Per informazioni dettagliate, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="install-using-a-wizard"></a>Eseguire l'installazione guidata  
  Nel seguente elenco sono riportate le pagine dell'installazione guidata di SQL Server che vengono usate per installare Analysis Services.  
   
 1.  Selezionare **Analysis Services** dall'albero delle funzionalità nell'installazione.  
   
-     ![Albero delle funzionalità di installazione che mostra Analsyis Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "albero delle funzionalità di installazione che mostra Analsyis Services")  
+     ![Albero delle funzionalità di installazione che mostra i servizi Analsyis](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "albero delle funzionalità di installazione che mostra Analsyis Services")  
   
-2.  Nella pagina Configurazione di Analysis Services, selezionare una modalità. Modalità tabulare è l'impostazione predefinita...  
+2.  Nella pagina Configurazione di Analysis Services, selezionare una modalità. Modalità tabulare è il valore predefinito...  
   
      ![Pagina di installazione con le opzioni di configurazione di Analysis Services](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "pagina di installazione con le opzioni di configurazione di Analysis Services")  
   
-  Questa modalità viene utilizzato il motore di analitica in memoria xVelocity (VertiPaq), che costituisce l'archivio predefinito per i modelli tabulari. Dopo aver distribuito i modelli tabulari al server, è possibile configurare selettivamente le soluzioni tabulari per utilizzare l'archiviazione su disco DirectQuery in alternativa all'archiviazione associata alla memoria.  
+  Modalità tabulare utilizza il motore di analitica in memoria xVelocity (VertiPaq), che costituisce l'archivio predefinito per i modelli tabulari. Dopo aver distribuito i modelli tabulari nel server, è possibile configurare selettivamente le soluzioni tabulari per l'uso di archiviazione su disco DirectQuery in alternativa all'archiviazione associata alla memoria.  
  
- Multidimensionale e Data Mining modalità Usa MOLAP come risorsa di archiviazione predefinita per i modelli distribuiti in Analysis Services. Dopo la distribuzione nel server, è possibile configurare una soluzione per l'uso di ROLAP per eseguire query direttamente sul database relazionale piuttosto che archiviare dati di query in un database multidimensionale di Analysis Services.  
+ Multidimensionale e Data Mining in modalità Usa MOLAP come risorsa di archiviazione predefinita per i modelli distribuiti in Analysis Services. Dopo la distribuzione nel server, è possibile configurare una soluzione per l'uso di ROLAP per eseguire query direttamente sul database relazionale piuttosto che archiviare dati di query in un database multidimensionale di Analysis Services.  
   
 
   
@@ -66,9 +66,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** rispetta la distinzione tra maiuscole e minuscole.  È necessario esprimere tutti i valori in lettere maiuscole. Nella tabella seguente vengono descritti i valori validi per **ASSERVERMODE**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|TABULAR|Si tratta del valore predefinito. Se non si imposta **ASSERVERMODE**, il server viene installato in modalità tabulare.|
+|TABULAR|Rappresenta il valore predefinito. Se non si imposta **ASSERVERMODE**, il server viene installato in modalità tabulare.|
 |MULTIDIMENSIONAL|Questo valore è facoltativo.|  
 |POWERPIVOT|Questo valore è facoltativo. In pratica, se si imposta il parametro **ROLE** , la modalità server è automaticamente impostata su 1, rendendo **ASSERVERMODE** facoltativo per un'installazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint. Per altre informazioni, vedere [Installazione di PowerPivot dal prompt dei comandi](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   

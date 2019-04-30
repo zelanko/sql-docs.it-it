@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5399ff5fa98b98665cea3e7fa67eb94eee693a63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127353"
 ---
 # <a name="from-clause-limitations"></a>Limitazioni della clausola FROM
 Il numero massimo di tabelle in una clausola FROM è 16.

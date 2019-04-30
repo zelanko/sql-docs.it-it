@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161892"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
   Le sezioni in questo argomento fanno riferimento a varie proprietà di indice disponibili tramite le finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "48084702"
  Consente di visualizzare il nome dell'indice. Per un indice esistente questo campo è di sola lettura. Quando si crea un nuovo indice, digitare il nome dell'indice.  
   
  **Tipo di indice**  
- Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **AML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster**o **Columnstore non cluster**.  
+ Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Clustered**, **Nonclustered**, **XML primario**, **XML secondario**, **spaziali**, **in cluster ColumnStore**, oppure **Columnstore non cluster**.  
   
  **Nota** È consentito un solo indice cluster per ogni tabella. È consentito un solo indice columnstore con ottimizzazione per la memoria xVelocity per ogni tabella.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48084702"
   
  È possibile definire un indice spaziale solo in una colonna che contiene un tipo di dati spaziali ( *colonna spaziale*).  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome della colonna che partecipa alla chiave dell'indice.  
   
  **Ordinamento**  
@@ -116,7 +116,7 @@ ms.locfileid: "48084702"
  **Casella di controllo**  
  È possibile selezionare le caselle di controllo per aggiungere le colonne desiderate.  
   
- **Nome**  
+ **Name**  
  Nome della colonna.  
   
  **Tipo di dati**  
@@ -141,7 +141,7 @@ ms.locfileid: "48084702"
  Specifica il filegroup per i dati FILESTREAM. Questo elenco visualizza solo i filegroup FILESTREAM. La selezione predefinita nell'elenco è il filegroup PRIMARY FILESTREAM del database. Per altre informazioni, vedere [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Schema di partizione**  
- Archivia l'indice in uno schema di partizione. Facendo clic su **Schema partizione** si abilita la griglia sottostante. La selezione predefinita nell'elenco è lo schema di partizione usato per archiviare i dati di tabella. Selezionando uno schema di partizione diverso nell'elenco si aggiornano le informazioni visualizzate nella griglia. Per altre informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+ Archivia l'indice in uno schema di partizione. Facendo clic su **Schema partizione** si abilita la griglia sottostante. La selezione predefinita nell'elenco è lo schema di partizione usato per archiviare i dati di tabella. Selezionando uno schema di partizione diverso nell'elenco si aggiornano le informazioni visualizzate nella griglia. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  L'opzione relativa allo schema di partizione non è disponibile se il database non contiene schemi di partizione.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "48084702"
  Indica lo schema a mosaico dell'indice. Sono supportati gli schemi a mosaico seguenti.  
   
  **Griglia geometrica**  
- Specifica di schema a mosaico per griglia geometrica che viene applicato a una colonna del `geometry` tipo di dati.  
+ Specifica lo schema a mosaico per griglia geometrica che viene applicato a una colonna del tipo di dati `geometry`.  
   
  **Griglia geometrica automatica**  
  Questa opzione è abilitata per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando il livello di compatibilità del database è impostato su 110 o su un valore maggiore.  

@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128691"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Informazioni sulla versione e intestazione del database locale di SQL Server Express
   Non esiste alcun file di intestazione separato per l'API dell'istanza del database locale di SQL Server Express. Le firme e i codici di errore della funzione del database locale sono definiti nel file di intestazione (sqlncli.h) di SQL Server Native Client. Per utilizzare l'API dell'istanza del database locale, è necessario includere il file di intestazione sqlncli.h nel progetto.  
@@ -25,9 +25,9 @@ ms.locfileid: "52795353"
 ## <a name="localdb-versioning"></a>Controllo delle versioni del database locale  
  Per l'installazione del database locale viene utilizzato un solo set di file binari per la versione di SQL Server principale. Queste versioni del database locale sono gestite e installate con patch in modo indipendente. Pertanto, l'utente deve specificare quale versione di base (ovvero, versione di SQL Server principale) del database locale utilizzerà. La versione specificata nel formato della versione standard definito da .NET Framework **Version** classe:  
   
- *Revision]]*  
+ *major.minor[.build[.revision]]*  
   
- I primi due numeri nella stringa di versione (*principali* e *secondaria*) sono obbligatori. Gli ultimi due numeri nella stringa di versione (*compilare* e *revisione*) sono facoltativi e predefinito su zero se l'utente li esclude. Pertanto, se l'utente specifica solo "12.2" come numero di versione del database locale, tale numero verrà considerato come se l'utente avesse specificato "12.2.0.0".  
+ I primi due numeri nella stringa di versione (*principali* e *secondaria*) sono obbligatori. Gli ultimi due numeri nella stringa di versione (*compilare* e *revisione*) sono facoltativi e predefinito su zero se l'utente li esclude. Ciò significa che se l'utente specifica solo "12.2" come il numero di versione di Local DB, verrà considerato come se l'utente avesse specificato "12.2.0.0".  
   
  La versione per l'installazione del database locale è definita nella chiave del Registro di sistema MSSQLServer\CurrentVersion sotto la chiave del Registro di sistema dell'istanza di SQL Server, ad esempio:  
   

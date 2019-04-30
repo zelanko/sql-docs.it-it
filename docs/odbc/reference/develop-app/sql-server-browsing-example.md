@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149307"
 ---
 # <a name="sql-server-browsing-example"></a>Esempio di esplorazione di SQL Server
 L'esempio seguente illustra la modalità **SQLBrowseConnect** potrebbe essere utilizzato per esplorare le connessioni disponibili con un driver per SQL Server. In primo luogo, l'applicazione richiede un handle di connessione:  
@@ -77,7 +77,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- La stringa di connessione finale restituita dal driver non contiene i nomi descrittivi dopo ogni parola chiave, né contiene parole chiave facoltative non specificate dall'applicazione. L'applicazione può usare questa stringa con **SQLDriverConnect** per ristabilire la connessione all'origine dati nell'handle di connessione corrente (dopo la disconnessione) o per connettersi all'origine dati su un handle di connessione diversa. Esempio:  
+ La stringa di connessione finale restituita dal driver non contiene i nomi descrittivi dopo ogni parola chiave, né contiene parole chiave facoltative non specificate dall'applicazione. L'applicazione può usare questa stringa con **SQLDriverConnect** per ristabilire la connessione all'origine dati nell'handle di connessione corrente (dopo la disconnessione) o per connettersi all'origine dati su un handle di connessione diversa. Ad esempio:   
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

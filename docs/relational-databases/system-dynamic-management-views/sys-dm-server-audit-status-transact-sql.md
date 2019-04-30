@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63041154"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni controllo del server che indica lo stato corrente del controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID del controllo. Esegue il mapping per il **audit_id** campo il **sys.audits** vista del catalogo.|  
 |**name**|**sysname**|Nome del controllo. Stesso come il **name** campo il **Sys. server_audits** vista del catalogo.|  

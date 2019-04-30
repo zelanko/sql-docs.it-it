@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157998"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
   Lo strumento di report sulle prestazioni delle transazioni (vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali tabelle del database trarranno vantaggio se trasferite per utilizzare OLTP in memoria. Una volta identificata la tabella da trasferire per l'utilizzo di OLTP in memoria, è possibile utilizzare Ottimizzazione guidata per la memoria per eseguire facilmente la migrazione della tabella di database basata su disco in OLTP in memoria.  

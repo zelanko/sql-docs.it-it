@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193282"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Direttiva TYPE in query FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto per la [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) consente di richiedere facoltativamente che il risultato di una query FOR XML venga restituito come `xml` tipo di dati, specificando la direttiva TYPE. In questo modo è possibile elaborare il risultato di una query FOR XML sul server. Ad esempio, è possibile specificare un'espressione XQuery, assegnare il risultato a un `xml` variabile di tipo oppure scrivere [query FOR XML annidate](use-nested-for-xml-queries.md).  

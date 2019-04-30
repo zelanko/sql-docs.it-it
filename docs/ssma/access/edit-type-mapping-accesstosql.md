@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138872"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Modificare il mapping dei tipi (AccessToSQL)
 Il **modifica del mapping dei tipi** nella finestra di dialogo consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e destinazione.  

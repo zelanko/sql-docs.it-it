@@ -1,5 +1,5 @@
 ---
-title: IsSibling (MDX) | Documenti Microsoft
+title: IsSibling (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d86c96686357533aa1217571f3c199ec8ddff508
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125507"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
 
@@ -29,14 +29,14 @@ IsSibling(Member_Expression1, Member_Expression2)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Member_expression1*  
+ *Member_Expression1*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
  *Member_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
- Il **IsSibling** risultato della funzione **true** se il primo membro specificato è un elemento di pari livello del secondo membro specificato. In caso contrario, la funzione restituisce **false**.  
+## <a name="remarks"></a>Note  
+ Il **IsSibling** funzione restituisce **true** se il primo membro specificato è un elemento di pari livello del secondo membro specificato. In caso contrario, la funzione restituisce **false**.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito TRUE se il membro corrente della gerarchia Fiscal nella dimensione Date è un elemento di pari livello di luglio 2002:  
@@ -52,6 +52,6 @@ IsSibling(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

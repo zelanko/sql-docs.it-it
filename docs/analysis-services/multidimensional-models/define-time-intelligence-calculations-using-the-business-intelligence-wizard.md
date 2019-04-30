@@ -1,5 +1,5 @@
 ---
-title: Definire i calcoli di Intelligence temporali mediante la procedura guidata di Business Intelligence | Documenti Microsoft
+title: Definire calcoli di Intelligence temporali mediante la configurazione guidata di Business Intelligence | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043186"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34026918"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Visualizzazione dei miglioramenti della funzionalità di Business Intelligence per le gerarchie temporali  
  Nell'ultima pagina di Configurazione guidata funzionalità di Business Intelligence è possibile visualizzare le modifiche che verranno apportate al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Nel caso di funzionalità avanzate di Business Intelligence per le gerarchie temporali, la procedura guidata modificherà la dimensione temporale selezionata, la vista origine dati associata e il cubo associato come illustrato nella tabella seguente.  
   
-|Oggetto|Cambia|  
+|Object|Cambia|  
 |------------|------------|  
 |Dimensione temporale|Aggiunta di un attributo per ogni calcolo o vista.|  
 |Vista origine dati|Aggiunta di una colonna calcolata nella tabella dei tempi per ogni nuovo attributo nella dimensione temporale.|  

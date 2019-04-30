@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046766"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed - classe di evento
   La classe di evento RPC:Completed indica il completamento di una chiamata di procedura remota.  
@@ -37,7 +37,7 @@ ms.locfileid: "52775783"
 |Duration|`bigint`|Quantità di tempo richiesta dall'evento. In microsecondi a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. In millisecondi nelle versioni precedenti.|13|Yes|  
 |EndTime|`datetime`|Ora di fine della chiamata di procedura remota.|15|Yes|  
 |Errore|`int`|Numero di errore di un evento specifico.<br /><br /> 0=OK<br /><br /> 1=Errore<br /><br /> 2=Interrompi<br /><br /> 3 = Ignorato|31|Yes|  
-|EventClass|`int`|Tipo di evento = 10.|27|No|  
+|EventClass|`int`|Tipo di evento = 10.|27|no|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

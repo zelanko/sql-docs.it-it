@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164781"
 ---
 # <a name="data-alert-messages"></a>Messaggi di avviso dati
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gli avvisi dati di recapitare due tipi di messaggi di avviso dati tramite posta elettronica: Messaggi con risultati degli avvisi dati e i messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.  

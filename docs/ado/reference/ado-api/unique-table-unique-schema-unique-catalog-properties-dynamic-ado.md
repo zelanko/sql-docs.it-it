@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca3701807ebb591a0c083c4f4762b7597b9856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043836"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, Schema univoco, univoco del catalogo delle proprietà-dinamica (ADO)
 Consente di controllare rigorosamente le modifiche a una tabella di base in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che è stata formata da un'operazione di JOIN più tabelle di base.  

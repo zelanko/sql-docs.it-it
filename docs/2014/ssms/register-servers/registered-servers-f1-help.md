@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc15477759c7039533250cf98323729334cf5b80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049307"
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
   In questa sezione vengono forniti gli argomenti della Guida sensibile al contesto relativi al componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

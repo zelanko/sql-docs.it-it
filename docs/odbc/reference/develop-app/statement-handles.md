@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148997"
 ---
 # <a name="statement-handles"></a>Handle di istruzione
 Oggetto *istruzione* è più facilmente considerato come un'istruzione SQL, ad esempio **seleziona \* dipendente da**. Tuttavia, un'istruzione è solo un'istruzione SQL: è costituito da tutte le informazioni associate a tale istruzione SQL, ad esempio qualsiasi set di risultati creati tramite l'istruzione e i parametri usati nell'esecuzione dell'istruzione. Un'istruzione non è neanche necessario disporre di un'istruzione SQL definito dall'applicazione. Ad esempio, quando una funzione di catalogo, ad esempio **SQLTables** viene eseguita in un'istruzione, viene eseguita un'istruzione SQL predefinita che restituisce un elenco di nomi di tabella.  

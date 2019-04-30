@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d2fd1ab1363cc56d2029a0d6ecb4218c518dac4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155231"
 ---
 # <a name="synchronize21-method-rds"></a>Metodo Synchronize21 (Servizi Desktop remoto)
 Sincronizzare i set di record specificato con il database specificato dalla stringa di connessione per l'uso con ADO 2.1.  
@@ -56,7 +56,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  Un puntatore a un puntatore al set di record da sincronizzare.  
   
  *pStatusArray*  
- Una variante usata per restituire una matrice protetta di stati di riga per le righe interessate da sincronizzare. Non impostare se nessuna delle opzioni di sincronizzazione seguenti sono impostata: *RefreshWithUpdate*, *aggiornare* e *RefreshConflicts*.  
+ Una variante usata per restituire una matrice protetta di stati di riga per le righe interessate da sincronizzare. Non impostare se nessuna delle opzioni di sincronizzazione seguenti sono impostata: *RefreshWithUpdate*, *Refresh* e *RefreshConflicts*.  
   
 ## <a name="remarks"></a>Note  
  Il *HandlerString* parametro può essere null. Cosa accade in questo caso dipende dal modo in cui il server di servizi desktop remoto è configurato. Nome di un gestore di "MSDFMAP. Handler" indica che il gestore di Microsoft fornito (Msdfmap.dll) deve essere utilizzato. Nome di un gestore di "MASDFMAP.handler,sample.ini" indica che il gestore Msdfmap.dll deve essere utilizzato e che l'argomento "il file" deve essere passato al gestore. MSDFMAP.dll interpreterà quindi l'argomento come una direzione da utilizzare il file per controllare le stringhe di connessione e la query.  

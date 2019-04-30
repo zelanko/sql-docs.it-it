@@ -1,5 +1,5 @@
 ---
-title: 'C a SQL: GUID | Microsoft Docs'
+title: 'Da C a SQL: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159359"
 ---
 # <a name="c-to-sql-guid"></a>Da C a SQL: GUID
 L'identificatore per il tipo di dati C ODBC GUID è:  
@@ -37,7 +37,7 @@ L'identificatore per il tipo di dati C ODBC GUID è:
 |SQL_WCHAR|Lunghezza in caratteri colonna > = 36|n/d|  
 |SQL_WVARCHAR|Colonna carattere a lunghezza < 36|22001|  
 |SQL_WLONGVARCHAR|Valore di dati non è un GUID valido|22018|  
-|SQL_GUID|Nessuno [a]|n/d|  
+|SQL_GUID|None[a]|n/d|  
   
  [a] tutti i valori esadecimali sono validi come GUID.  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165368"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Pagina delle proprietà Origini dati (Gestione report)
   La pagina delle proprietà Origini dati consente di definire la modalità di connessione del report corrente a un'origine dati esterna. In questa pagina è possibile sostituire le informazioni di connessione all'origine dati pubblicate originalmente con il report. Se per un report vengono utilizzate più origini dati, nella pagina delle proprietà è disponibile una sezione specifica per ogni origine dati. Le origini dati vengono elencate nell'ordine in cui sono definite nel report.  

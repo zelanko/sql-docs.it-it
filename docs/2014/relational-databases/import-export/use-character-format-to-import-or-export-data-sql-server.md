@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065764"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
   È consigliabile adottare il formato carattere per l'esportazione bulk in file di testo utilizzati in altri programmi o per l'importazione bulk da file di testo creati in altri programmi.  
@@ -42,7 +42,7 @@ ms.locfileid: "48078441"
   
 -   Per impedire eventuali perdite di caratteri estesi durante la conversione, utilizzare il formato di carattere Unicode o specificare una tabella codici.  
   
--   I dati `sql_variant` archiviati in un file in formato carattere risultano privi di metadati. Ogni valore viene convertito in `char` formato, in base alle regole di conversione implicita dei dati. I dati importati in colonne `sql_variant` risultano di tipo `char`. Durante l'importazione in una colonna con tipo di dati diverso da `sql_variant`, i dati vengono convertiti da `char` tramite una conversione implicita. Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
+-   I dati `sql_variant` archiviati in un file in formato carattere risultano privi di metadati. Ogni valore viene convertito nel formato `char` in base alle regole di conversione dei dati implicita. I dati importati in colonne `sql_variant` risultano di tipo `char`. I dati importati in colonne con tipo di dati diverso da `sql_variant` vengono convertiti dal tipo di dati `char` tramite una conversione implicita. Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 -   Il **bcp** esportazioni utilità `money` valori come file di dati in formato carattere con quattro cifre dopo il separatore decimale e senza alcun simbolo di raggruppamento cifre, quali i separatori. Ad esempio, una colonna `money` contenente il valore 1,234,567.123456 viene copiata in un file di dati come stringa di caratteri 1234567.1235 tramite l'esportazione bulk.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48078441"
   
  Il formato carattere è supportato dalle opzioni della riga di comando seguenti:  
   
-|Comando|Opzione|Description|  
+|Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|Fa sì che il **bcp** utilità usare dati di tipo carattere.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48078441"
  Gli esempi seguenti illustrano come eseguire l'esportazione bulk dei dati di tipo carattere con l'utilità **bcp** e l'importazione bulk degli stessi dati con l'istruzione BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabella di esempio  
- Negli esempi si presuppone la presenza della tabella **myTestCharData** all'interno dello schema **dbo** del database di esempio **AdventureWorks**. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per creare questa tabella, in SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Editor di Query eseguire:  
+ Negli esempi si presuppone la presenza della tabella **myTestCharData** all'interno dello schema **dbo** del database di esempio **AdventureWorks**. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. A tale scopo, nell'editor di query di SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
 ```  
 USE AdventureWorks;  
@@ -94,10 +94,10 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 ### <a name="using-bcp-to-bulk-export-character-data"></a>Esportazione bulk di dati di tipo carattere tramite bcp  
  Per esportare i dati dalla tabella al file di dati, usare **bcp** con l'opzione **out** e i qualificatori seguenti:  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-c**|Specifica il formato carattere.|  
-|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: il carattere di terminazione del campo predefinito è il carattere di tabulazione (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: Il valore predefinito è il carattere di tabulazione (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T**, è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Nell'esempio seguente viene eseguita l'esportazione bulk di dati in formato carattere dalla tabella `myTestCharData` a un nuovo file di dati denominato `myTestCharData-c.Dat` in cui il carattere di terminazione dei campi è la virgola (,). Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  

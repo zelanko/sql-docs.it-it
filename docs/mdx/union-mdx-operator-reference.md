@@ -1,5 +1,5 @@
 ---
-title: + (Unione) (MDX) | Documenti Microsoft
+title: + (Union) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129827"
 ---
 # <a name="union---mdx-operator-reference"></a>Union - riferimento agli operatori MDX
 
@@ -35,8 +35,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>Valore restituito  
  Set che include i membri di entrambi i set specificati.  
   
-## <a name="remarks"></a>Remarks  
- Il **+ (Union)** è funzionalmente equivalente all'operatore il [unione &#40;MDX&#41; ](../mdx/union-mdx.md) (funzione).  
+## <a name="remarks"></a>Note  
+ Il **+ (Union)** è funzionalmente equivalente all'operatore le [Union &#40;MDX&#41; ](../mdx/union-mdx.md) (funzione).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore.  

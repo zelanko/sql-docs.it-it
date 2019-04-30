@@ -30,14 +30,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135145"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
-  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. L'opzione **Trova e sostituisci** del menu **Modifica** offre quattro scelte: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file**e **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
+  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. Nel **Edit** dal menu **Trova e sostituisci** offre quattro scelte: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file**, oppure **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
   
  Al momento della ricerca e sostituzione di un testo, è consigliabile tenere presente quanto segue:  
   
@@ -54,6 +54,6 @@ ms.locfileid: "48191502"
  [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
  [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

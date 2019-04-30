@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di espressioni di dimensione | Documenti Microsoft
+title: Utilizzo delle espressioni di dimensione | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125534"
 ---
 # <a name="using-dimension-expressions"></a>Utilizzo delle espressioni di dimensione
 
 
   In genere le espressioni di dimensione e di gerarchia vengono utilizzate per passare parametri a funzioni nelle espressioni MDX al fine di ottenere membri, set o tuple da una gerarchia.  
   
- Le espressioni di dimensione possono essere solo espressioni semplici perché rappresentano identificatori di oggetto. Vedere [espressioni &#40;MDX&#41; ](../mdx/expressions-mdx.md) per una spiegazione delle espressioni semplici e complesse.  
+ Le espressioni di dimensione possono essere solo espressioni semplici perché rappresentano identificatori di oggetto. Visualizzare [espressioni &#40;MDX&#41; ](../mdx/expressions-mdx.md) per una spiegazione delle espressioni semplici e complesse.  
   
 ## <a name="dimension-expressions"></a>Espressioni di dimensione  
  Un'espressione di dimensione contiene un identificatore di dimensione o una funzione per le dimensioni.  
@@ -38,7 +38,7 @@ ms.locfileid: "34743910"
   
  `FROM [Adventure Works]`  
   
- Identificatore della dimensione viene visualizzata come *Dimension_Name* nella notazione BNF utilizzata per descrivere le istruzioni MDX.  
+ Identificatore della dimensione viene visualizzato come *Dimension_Name* nella notazione BNF utilizzata per descrivere istruzioni MDX.  
   
 ## <a name="hierarchy-expressions"></a>Espressioni di gerarchia  
  Analogamente alle espressioni di dimensione, anche le espressioni di gerarchia contengono un identificatore di gerarchia o una funzione per le gerarchie. Nell'esempio seguente viene illustrato l'utilizzo dell'espressione di gerarchia [Date].[Calendar], insieme alle funzioni .Levels e .Count, per restituire il numero di livelli nella gerarchia Calendar della dimensione Date:  
@@ -59,7 +59,7 @@ ms.locfileid: "34743910"
   
  `FROM [Adventure Works]`  
   
- Un identificatore di gerarchia viene visualizzato come *Dimension_Name **.** Hierarchy_Name* nella notazione BNF utilizzata per descrivere le istruzioni MDX.  
+ Un identificatore di gerarchia viene visualizzato come *Dimension_Name **.** Hierarchy_Name* nella notazione BNF utilizzata per descrivere istruzioni MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157621"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader caricatore della riga di comando per Parallel Data Warehouse
 **dwloader** è uno strumento da riga di comando di Parallel Data Warehouse (PDW) che esegue il caricamento bulk delle righe nella tabella in una tabella esistente. Durante il caricamento di righe, è possibile aggiungere tutte le righe alla fine della tabella (*modalità append* oppure *modalità fastappend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità upsert*), o eliminare tutte le esistente righe prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*ricaricare modalità*).  
@@ -196,7 +196,7 @@ Esempi:
   
 -   -i \\\loadserver\loads\daily\\*.gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\\loadserver\loads\daily\\*.txt  
   
 -   -i \\\loadserver\loads\daily\monday.*  
   
@@ -221,12 +221,12 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Il delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo può essere uno o più di questi caratteri di escape ASCII o i valori esadecimali ASCII...  
   
-|nome|Carattere escape|Caratteri esadecimali|  
+|Nome|Carattere escape|Caratteri esadecimali|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
 |Avanzamento riga (LF)|\n|0x0a|  
-|CRLF|\r\n.|0x0d0x0a|  
+|CRLF|\r\n|0x0d0x0a|  
 |Virgola|','|0x2c|  
 |le virgolette doppie|\\"|0x22|  
 |virgoletta singola|\\'|0x27|  
@@ -279,7 +279,7 @@ Esempi:
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 Le opzioni per un file di dati di origine che contiene colonne a lunghezza fissa. Per impostazione predefinita *source_data_file_name* contiene caratteri ASCII in colonne a lunghezza variabile.  
   
 Le colonne a larghezza fissa non sono supportate quando -e è UTF8.  
@@ -339,10 +339,10 @@ Esempi di LF:
   
 È necessario per Unix LF. Un CR è necessario per Windows.  
   
-**-D** { **ymd** | ydm | mdy | myd |  DMY | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 Specifica l'ordine del mese (m), (d) giorno e anno (y) per tutti i campi di data/ora nel file di input. L'ordine predefinito è AMG. Per specificare più formati di ordine per lo stesso file di origine, utilizzare l'opzione -dt.  
   
-ymd | DMY  
+ymd | dmy  
 ydm e dmy consentono gli stessi formati di input. Entrambi consentono l'anno sia all'inizio o alla fine della data. Ad esempio, per entrambi **ydm** e **dmy** data formati, si potrebbe comportare 2013-02-03 o 02-03-2013 nel file di input.  
   
 ydm  
@@ -362,10 +362,10 @@ Esempi di dati di input mdy per 1 gennaio 1975:
 -   01011975  
   
 myd  
-Esempi di file di input per marzo 04,2010: 2010-03-04, 3 e 2010/4  
+Esempi di file di input per marzo 04,2010: 03-2010-04, 3/2010/4  
   
 dym  
-Esempi di file di input per 04 marzo 2010: 2010-04-03, 4/2010/3  
+Esempi di file di input per 04 marzo 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* è un formato data personalizzato (ad esempio, MM/GG/AAAA) e incluso per motivi di compatibilità. dwloader non non enfoce il formato di data personalizzato. Al contrario, quando si specifica un formato data personalizzato **dwloader** lo convertirà nell'impostazione corrispondente di ymd, ydm, mdy, ydm, dym o dmy.  
@@ -397,7 +397,7 @@ Il caricatore vengono inserite righe alla fine delle righe esistenti nella tabel
 fastappend  
 Il caricatore vengono inserite righe direttamente, senza usare una tabella temporanea, alla fine delle righe esistenti nella tabella di destinazione. fastappend richiede la multi-transazione (-m) opzione. Quando si utilizza fastappend è non è possibile specificare un database di gestione temporanea. Viene eseguito alcun rollback con fastappend, il che significa che il ripristino da un carico interrotto o non deve essere gestito dal proprio processo di caricamento.  
   
-Upsert **-K***merge_column* [,... *n* ]    
+upsert **-K**  *merge_column* [ ,...*n* ]  
 Il caricatore Usa l'istruzione Merge SQL Server per aggiornare le righe esistenti e inserire nuove righe.  
   
 L'opzione -K specifica le colonne su cui basare il merge. Queste colonne costituiscono una chiave di tipo merge, che deve rappresentare una riga univoca. Se la chiave di tipo merge esiste nella tabella di destinazione, la riga viene aggiornata. Se la chiave di tipo merge non esiste nella tabella di destinazione, la riga viene aggiunto.  
@@ -486,7 +486,7 @@ Ignorare il caricamento di file vuoti. Anche questo ignora la decompressione di 
 ## <a name="return-code-values"></a>Valori restituiti  
 0 (esito positivo) o un altro valore intero (errore)  
   
-In un file batch o finestra di comando, usare `errorlevel` per visualizzare il codice restituito. Ad esempio:  
+In un file batch o finestra di comando, usare `errorlevel` per visualizzare il codice restituito. Ad esempio:   
   
 ```  
 dwloader  
@@ -557,7 +557,7 @@ La modalità append carica i dati in due fasi. La fase uno carica i dati dal fil
 |Cl|Yes|Yes|No|Minimo|  
 |Cl|Yes|No|Yes|Full|  
 |Cl|No|Yes|No|Minimo|  
-|Cl|No|No|Yes|Full|  
+|Cl|no|No|Yes|Full|  
   
 Mostrato nella tabella precedente **dwloader** usando la modalità append, il caricamento in un heap o di una tabella dell'indice cluster (CI), con o senza il flag transazionale tra più e il caricamento in una tabella vuota o una tabella non vuota. Il blocco e registrazione di comportamento di ogni combinazione questo tipo di carico viene visualizzato nella tabella. Ad esempio, il caricamento di fase (2) con la modalità append in un indice cluster senza la modalità multi-transazionale e in un oggetto vuoto tabella avranno PDW creare un blocco esclusivo sulla tabella e la registrazione è minima. Ciò significa che un cliente non sarà in grado di caricare simultaneamente (2) fase ed eseguire una query in una tabella vuota. Tuttavia, quando si caricano con la stessa configurazione in una tabella non vuota, PDW non emetterà un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, si verifica la registrazione completa, rallenta il processo.  
   
@@ -593,7 +593,7 @@ Esempio di utilizzo di argomenti per un file di origine e file degli errori.
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>b. Caricare dati in una tabella AdventureWorks  
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. Caricare dati in una tabella AdventureWorks  
 Nell'esempio seguente fa parte di uno script di batch che carica i dati in **AdventureWorksPDW2012**.  Per visualizzare l'intero script, aprire il file aw_create fornito con il **AdventureWorksPDW2012** pacchetto di installazione. 
 
 <!-- Missing link

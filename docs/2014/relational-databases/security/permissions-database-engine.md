@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128754"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
   Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Questo argomento contiene informazioni sui seguenti aspetti:  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>b. B. Restituzione delle autorizzazioni per una classe di oggetti specifica  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. B. Restituzione delle autorizzazioni per una classe di oggetti specifica  
  Nell'esempio seguente viene usata la funzione `fn_builtin_permissions` per visualizzare tutte le autorizzazioni disponibili per una categoria di entità a protezione diretta. Nell'esempio vengono restituite le autorizzazioni per gli assembly.  
   
 ```  

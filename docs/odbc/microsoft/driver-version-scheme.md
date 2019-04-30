@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128048"
 ---
 # <a name="driver-version-scheme"></a>Schema delle versioni del driver
 > [!IMPORTANT]  
@@ -29,10 +29,10 @@ ms.locfileid: "47806529"
 |Versione del driver|Numero di build|Cronologia disponibilità|  
 |--------------------|------------------|--------------------------|  
 |1,0|2.00.6235|Visual C++ 4.2 e Visual Basic 5.0, Enterprise Edition|  
-|2.0|2.73.7269|Visual Studio 97 e MDAC 1,5 a|  
+|2.0|2.73.7269|Visual Studio 97 and MDAC 1.5a|  
 |2.0 aggiornata|2.73.7283.01|IIS 4.0|  
 |2.0 aggiornata|2.73.7283.03|MDAC 1.5b e 1.5 c|  
-|2.0 aggiornata|2.73.7356|SDK DI ODBC 3.5|  
+|2.0 aggiornata|2.73.7356|ODBC 3.5 SDK|  
 |2.5|2.573.2927|Visual Studio 6.0 e MDAC 2.0|  
 |2.5 aggiornato|2.573.3513|SQL Server 7.0<br /><br /> SQL Server 6.5 SP5|  
   

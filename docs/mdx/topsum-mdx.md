@@ -1,5 +1,5 @@
 ---
-title: TopSum (MDX) | Documenti Microsoft
+title: TopSum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 853390f99f02352fd7814fcec208bba1508c03a7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208830"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 
@@ -35,14 +35,14 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Valore*  
  Espressione numerica valida che specifica il valore in base a cui ogni tupla viene valutata.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) che restituisce una misura.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **TopSum** funzione calcola la somma di una misura specificata valutata su un set specificato, disponendo il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti il cui totale per l'espressione numerica specificata corrisponde almeno al valore specificato. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno al valore specificato. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
   
 > [!IMPORTANT]  
->  Ad esempio il [BottomSum](../mdx/bottomsum-mdx.md) funzione, il **TopSum** funzione rispetta mai la gerarchia.  
+>  Ad esempio la [BottomSum](../mdx/bottomsum-mdx.md) funzione, il **TopSum** funzione rispetta mai la gerarchia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito per la categoria Bike il set più piccolo di membri del livello City nella gerarchia Geography della dimensione Geography il cui totale cumulativo calcolato utilizzando la misura Reseller Sales Amount corrisponde almeno alla somma di 6.000.000 (a partire dai membri di questo set con il numero di vendite più elevato).  
@@ -59,6 +59,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

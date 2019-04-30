@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156958"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, per uno scenario in cui si appropria i supporti fisici (ad esempio le unità o nastri di backup), un utente malintenzionato può semplicemente ripristinare o collegare il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -279,7 +279,7 @@ I collegamenti seguenti contengono informazioni generali sul modo in cui SQL Ser
   
 ## <a name="see-also"></a>Vedere anche  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREARE LA CHIAVE MASTER](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREARE UNA CHIAVE DI CRITTOGRAFIA DEL DATABASE](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198220"
 ---
 # <a name="configuring-data-sources"></a>Configurazione delle origini dati
 Informazioni sulle origini dati vengono archiviate nel Registro di sistema. Gli utenti di modificare le informazioni sull'origine dati tramite un programma di amministrazione. Ciò può essere l'amministratore ODBC, il dispositivo del Pannello di controllo ODBC o un programma di amministrazione scritte da uno sviluppatore di applicazioni o driver.  

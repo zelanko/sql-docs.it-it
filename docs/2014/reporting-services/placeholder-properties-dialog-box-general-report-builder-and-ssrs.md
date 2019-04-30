@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188203"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà segnaposto, Generale (Generatore report e SSRS)
   Utilizzare la finestra di dialogo **Proprietà segnaposto** per modificare il valore, la descrizione comando e le opzioni di markup di un segnaposto in una casella di testo.  

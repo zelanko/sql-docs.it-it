@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fccbc9b258cbff1e14ccc76e10af9d26efc4b70b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159268"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE (comando)
 Specifica se i file di tabella vengono aperti per l'uso esclusivo o condiviso in una rete.  

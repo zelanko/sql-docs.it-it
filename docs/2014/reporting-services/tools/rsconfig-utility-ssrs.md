@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9a22983a23e9bd1801de849774836a0a0acd2927
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201046"
 ---
 # <a name="rsconfig-utility-ssrs"></a>utilità rsconfig (SSRS)
   L'utilità **rsconfig** consente di crittografare e archiviare i valori relativi alle connessioni e agli account nel file RSReportServer.config. I valori crittografati includono le informazioni sulla connessione al database del server di report e i valori relativi agli account utilizzati per l'elaborazione automatica dei report.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138833"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
 Un File con valori di variabile è un file XML che includono i valori dei parametri dei comandi (ad esempio il nome di server di origine o destinazione) che cambiano di frequente tra le migrazioni di server. Quando si verifica un numero elevato di migrazioni del database, più file variabili per archiviare il valore di ogni server di origine vengono creati e fa riferimento a un file di script master con il **- v** passare alla riga di comando. Questo comportamento consente di mantenere valori statici in alcuni file di script con i valori delle variabili in più file di variabili.  

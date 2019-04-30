@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162408"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
   In questo argomento si descrive come disabilitare un indice o i vincoli in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La disabilitazione di un indice impedisce all'utente di accedere all'indice e, per gli indici cluster, ai dati della tabella sottostante. La definizione dell'indice viene mantenuta nei metadati e le statistiche relative all'indice vengono preservate negli indici non cluster. La disabilitazione di un indice non cluster o cluster di una vista consente di eliminare fisicamente i dati dell'indice. La disabilitazione di un indice cluster in una tabella impedisce l'accesso ai dati. Questi ultimi vengono comunque mantenuti nella tabella, ma non sono disponibili per le operazioni DML (Data Manipulation Language) finché l'indice non viene eliminato o ricompilato.  
@@ -39,7 +39,7 @@ ms.locfileid: "48050563"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per disabilitare un indice tramite:**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48050563"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -127,7 +127,7 @@ ms.locfileid: "48050563"
  Visualizza il nome della tabella o della vista in cui l'indice è stato creato.  
   
  **Tipo di indice**  
- Visualizza il tipo di indice: **Cluster**, **Non cluster**, **Spaziale**o **XML**.  
+ Visualizza il tipo di indice: **Clustered**, **Nonclustered**, **spaziale**, oppure **XML**.  
   
  **Stato**  
  Visualizza lo stato dell'operazione di disabilitazione. I valori possibili al termine dell'esecuzione sono:  
@@ -159,7 +159,7 @@ ms.locfileid: "48050563"
   
 -   Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente l'errore completo.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
@@ -167,7 +167,7 @@ ms.locfileid: "48050563"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -184,7 +184,7 @@ ms.locfileid: "48050563"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

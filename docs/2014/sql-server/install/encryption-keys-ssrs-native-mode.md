@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223249"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chiavi di crittografia (modalità nativa SSRS)
   Utilizzare la pagina Chiave di crittografia per gestire la chiave simmetrica utilizzata per crittografare e decrittografare i dati in un server di report. La gestione delle chiavi di crittografia rappresenta una parte fondamentale della configurazione del server di report. La chiave simmetrica viene creata e applicata automaticamente quando si crea il database del server di report. Creare una copia di backup della chiave simmetrica in modo da poter eseguire le operazioni di manutenzione periodiche. Per le attività di manutenzione indicate di seguito, è necessario disporre di una copia valida della chiave simmetrica:  
@@ -43,10 +43,10 @@ ms.locfileid: "48144231"
 > [!IMPORTANT]  
 >  L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.  
   
- Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selezionare il collegamento nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare il collegamento nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Copia di backup**  
+ **Backup**  
  Consente di copiare la chiave simmetrica in un file specificato. La chiave simmetrica non viene mai archiviata in testo non crittografato. Per la protezione del file, è necessario digitare una password.  
   
  **Restore**  

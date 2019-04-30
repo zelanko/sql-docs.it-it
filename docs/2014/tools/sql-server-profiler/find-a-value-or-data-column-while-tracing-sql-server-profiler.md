@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035032"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Trovare un valore o una colonna di dati durante l'esecuzione di una traccia (SQL Server Profiler)
   In questo argomento viene descritta la procedura per la ricerca di un valore o di una colonna di dati specifici nell'output della traccia in esecuzione tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

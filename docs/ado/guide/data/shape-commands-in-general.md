@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062847"
 ---
 # <a name="shape-commands-in-general"></a>Comandi Shape in generale
 Il data shaping definisce le colonne di una data shaping **Recordset**, le relazioni tra le entità rappresentate dalle colonne e il modo in cui le **Recordset** viene popolato con i dati.  
   
  Una data shaping **Recordset** può contenere i seguenti tipi di colonne.  
   
-|Tipo di colonna|Description|  
+|Tipo di colonna|Descrizione|  
 |-----------------|-----------------|  
 |data|I campi da un **Recordset** restituita da un comando di query per un provider di dati, di tabella o la forma precedentemente **Recordset**.|  
 |Capitolo|Un riferimento a un'altra **Recordset**, definita come una *capitolo*. Le colonne a capitoli consentono di definire un *padre-figlio* relazione in cui le *padre* è la **Recordset** che contiene la colonna a capitoli e il *figlio* è il **Recordset** rappresentato dal capitolo.|  

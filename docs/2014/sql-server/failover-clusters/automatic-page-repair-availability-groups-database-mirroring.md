@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137508"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Correzione di pagina automatica (per Gruppi di disponibilità e Mirroring del database)
   La correzione automatica della pagina è supportata dal mirroring del database e da [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Se una pagina viene danneggiata e resa illeggibile a causa di determinati tipi di errori, viene tentato il relativo recupero automatico tramite un partner di mirroring di database (principale o mirror) o una replica di disponibilità (primaria o secondaria). Dal partner o dalla replica che non è grado di leggere la pagina viene richiesta una copia aggiornata di quest'ultima dal relativo partner o da un'altra replica. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia leggibile. In questo modo, l'errore viene in genere risolto.  
@@ -35,7 +35,7 @@ ms.locfileid: "48070586"
 ##  <a name="ErrorTypes"></a> Tipi di errore che provocano un tentativo di correzione automatica delle pagine  
  Durante la correzione automatica delle pagine tramite mirroring del database, viene eseguito il tentativo di ripristinare solo le pagine in un file di dati in cui non è stato possibile completare un'operazione, a causa di uno degli errori elencati nella tabella seguente.  
   
-|Numero di errore|Description|Istanze che provocano un tentativo di correzione automatica della pagina|  
+|Numero di errore|Descrizione|Istanze che provocano un tentativo di correzione automatica della pagina|  
 |------------------|-----------------|---------------------------------------------------------|  
 |[823](../../relational-databases/errors-events/mssqlserver-823-database-engine-error.md)|Viene eseguita un'azione solo se il sistema operativo ha eseguito un controllo di ridondanza ciclico (CRC, Cyclic Redundancy Check) che ha generato un errore sui dati.|ERROR_CRC. Il valore del sistema operativo per questo errore è 23.|  
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|Errori logici.|Errori logici dei dati, come ad esempio un errore di checksum relativo a una pagina danneggiata o di scrittura incompleta.|  
@@ -52,7 +52,7 @@ ms.locfileid: "48070586"
   
 -   Pagina 9 (pagina di avvio del database).  
   
--   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
+-   Pagine di allocazione: Le pagine di allocazione GAM (mappa) globale, le pagine condivise di mappa allocazione globale (SGAM) e pagine spazio libero pagina (PFS).  
   
 
   
@@ -88,7 +88,7 @@ ms.locfileid: "48070586"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> Come si fa: Visualizza i tentativi di correzione automatica della pagina  
  Tramite le DMV seguenti vengono restituite righe degli ultimi tentativi di correzione automatica delle pagine in un database di disponibilità o database con mirroring specificato, con un massimo di 100 righe per database.  
   
 -   **Gruppi di disponibilità AlwaysOn:**  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067477"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia bulk di dati di tipo text e image
   Grandi **testo**, **ntext**, e **immagine** valori vengono copiati tramite i [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) (funzione). Codice [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per il **testo**, **ntext**, oppure **immagine** colonna con un *pData* puntatore impostato su NULL che indica i dati vengano forniti insieme **bcp_moretext**. È importante specificare la lunghezza esatta dei dati fornita per ogni **testo**, **ntext**, o **immagine** colonna in ogni riga la copia bulk. Se la lunghezza dei dati per una colonna è diversa dalla lunghezza della colonna specificata nella [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), usare [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) per impostare la lunghezza sul valore appropriato. Oggetto [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) invia tutto il non -**testo**, non-**ntext**e non-**immagine** dati; è quindi chiamare **bcp_moretext** per inviare il **testo**, **ntext**, oppure **immagine** dati in unità distinte. Funzioni di copia bulk determinano che tutti i dati è stato inviato per l'oggetto corrente **testo**, **ntext**, o **immagine** colonna quando la somma delle lunghezze dei dati inviati tramite **bcp_moretext** è uguale alla lunghezza specificata nell'ultimo **bcp_collen** oppure **bcp_bind**.  

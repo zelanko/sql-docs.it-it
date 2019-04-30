@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191870"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report
   In SharePoint sono disponibili funzionalità di sicurezza predefinite che è possibile utilizzare per accedere agli elementi del server di report da siti e raccolte di SharePoint. Se sono già state assegnate autorizzazioni per siti ed elenchi agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra SharePoint e un server di report.  

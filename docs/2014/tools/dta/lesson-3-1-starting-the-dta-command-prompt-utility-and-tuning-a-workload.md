@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048968"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Avvio dell'utilità del prompt dei comandi dta e ottimizzazione di un carico di lavoro
   In questa attività vengono illustrate le procedure per avviare l'utilità **dta**, visualizzarne la Guida e quindi usare l'utilità dal prompt dei comandi per ottimizzare un carico di lavoro. Viene usato il carico di lavoro MyScript.sql creato per l'esercitazione sull'interfaccia utente grafica di Ottimizzazione guidata motore di database [Ottimizzazione di un carico di lavoro](lesson-1-1-tuning-a-workload.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "48171111"
   
 -   [Utilità dta](dta-utility.md) per materiale di riferimento sull'utilità del prompt dei comandi e sul file XML facoltativo disponibile per usare l'utilità.  
   
- Per tornare all'inizio dell'esercitazione, vedere [Esercitazione: Strumento Ottimizzazione guidata motore di database](tutorial-database-engine-tuning-advisor.md).  
+ Per tornare all'inizio dell'esercitazione, vedere [esercitazione: Ottimizzazione guidata motore di database](tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni del motore di database](../../relational-databases/database-engine-tutorials.md)  

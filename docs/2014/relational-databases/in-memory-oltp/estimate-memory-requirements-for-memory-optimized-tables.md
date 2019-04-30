@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157957"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
   Se si sta creando un nuovo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ottimizzata per la memoria o la migrazione di una tabella basata su disco esistente a una tabella con ottimizzazione per la memoria, è importante disporre di un numero ragionevole di requisiti di memoria di ogni tabella in modo che è possibile effettuare il provisioning di server con sufficiente memoria. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Per informazioni sul funzionamento degli indici hash in tabelle ottimizzate per la memoria [!INCLUDE[hek_2](../../includes/hek-2-md.md)], vedere [Indici hash](../../database-engine/hash-indexes.md).  
   
- **Nota:** non è possibile modificare le dimensioni della matrice dell'indice hash immediatamente. Per modificare queste dimensioni è necessario eliminare la tabella, modificare il valore di bucket_count e ricreare la tabella.  
+ **Nota:** È possibile modificare le dimensioni della matrice dell'indice hash in tempo reale. Per modificare queste dimensioni è necessario eliminare la tabella, modificare il valore di bucket_count e ricreare la tabella.  
   
  **Impostare la dimensione della matrice dell'indice hash**  
   

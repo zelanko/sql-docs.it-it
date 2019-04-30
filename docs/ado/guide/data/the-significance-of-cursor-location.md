@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228385"
 ---
 # <a name="the-significance-of-cursor-location"></a>Significato della posizione del cursore
 Ogni cursore utilizza risorse temporanee per conservare i relativi dati. Queste risorse possono essere memoria, un file di paging su disco, i file del disco temporaneo o un archivio temporaneo nel database. Il cursore viene chiamato un *lato client* cursore quando queste risorse si trovano nel computer client. Il cursore viene chiamato un *sul lato server* cursore quando queste risorse si trovano nel server.  

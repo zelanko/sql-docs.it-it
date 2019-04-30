@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156644"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Finestra di dialogo Accesso a Reporting Services (Generatore report)
   Utilizzare la finestra di dialogo **Accesso a Reporting Services** per specificare le credenziali per la pubblicazione di report nel server di report. Per supporto con queste credenziali, rivolgersi all'amministratore del server di report.  

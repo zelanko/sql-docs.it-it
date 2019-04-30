@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 885e8ffb9eaa02aae02db590c8d042dadb1f2ab0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224924"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
   In questo argomento vengono descritte le parti della stringa URL per il servizio Web ReportServer e per Gestione report. La stringa URL archiviata internamente ha una struttura diversa da un URL digitato nella barra degli indirizzi di una finestra del browser. La stringa della prenotazione URL viene visualizzata nella finestra Risultati dello strumento di configurazione di Reporting Services quando si configura un URL e nel file RSReportServer.config. Conoscere il modo in cui è definita la stringa URL può risultare utile ai fini della risoluzione dei problemi relativi alle prenotazioni URL o per eseguire una query su HTTP.SYS per visualizzare le prenotazioni URL interne definite nel server.  

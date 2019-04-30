@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226196"
 ---
 # <a name="managing-service-broker"></a>Gestione di Service Broker
   In SMO gli oggetti [!INCLUDE[ssSB](../../../includes/sssb-md.md)] sono inclusi nello spazio dei nomi `Microsoft.SqlServer.Management.Smo.Broker`, che richiede un riferimento a Microsoft.SqlServer.Smo.dll. Un riferimento a Microsoft.SqlServer.ServiceBrokerEnum.dll è richiesto anche per supportare informazioni sulle classi.  

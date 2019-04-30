@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131466"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Reinizializza sottoscrizioni - Una sottoscrizione
   La finestra di dialogo **Reinizializza sottoscrizioni** consente di contrassegnare una sottoscrizione per la reinizializzazione. La reinizializzazione implica l'applicazione di uno snapshot al Sottoscrittore e viene eseguita dall'agente di distribuzione per le sottoscrizioni di pubblicazioni transazionali e dall'agente di merge per le sottoscrizioni di pubblicazioni di tipo merge.  

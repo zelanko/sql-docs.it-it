@@ -11,18 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035320"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informazioni sulle condizioni di licenza di SQL Server (SSCM)
   Le condizioni di licenza software [!INCLUDE[msCoName](../../includes/msconame-md.md)] vengono copiate nel computer locale durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. I file vengono scritti a: %ProgramFiles%\Microsoft SQL Server\110\License licenza \ o % ProgramFiles (x86) %\Microsoft condizioni Server\110\License SQL\\.  
   
  Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza.  
   
- Nel nome di file delle condizioni di licenza sono indicate l'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e la lingua di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Ad esempio:  
+ Nel nome di file delle condizioni di licenza sono indicate l'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e la lingua di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Ad esempio:   
   
 -   License_DEV_ENU.txt per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer, edizione in lingua inglese.  
   

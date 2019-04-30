@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7d28e597d36305b9c4df7c8b4a499dc507b1ed31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191199"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contatori delle prestazioni per gli oggetti prestazioni MSRS 2014 Web Service e MSRS 2014 Windows Service (modalità nativa)
   In questo argomento sono descritti i contatori delle prestazioni per gli oggetti prestazioni `MSRS 2014 Web Service` e `MSRS 2014 Windows Service`.  

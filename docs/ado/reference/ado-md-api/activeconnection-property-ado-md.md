@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a9ece5a7774ca2b718af90fe041c070fcc99bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155905"
 ---
 # <a name="activeconnection-property-ado-md"></a>Proprietà ActiveConnection (ADO MD)
 Indica a quale ADO [connessione](../../../ado/reference/ado-api/connection-object-ado.md) set di celle corrente dell'oggetto o attualmente catalogo a cui appartiene.  

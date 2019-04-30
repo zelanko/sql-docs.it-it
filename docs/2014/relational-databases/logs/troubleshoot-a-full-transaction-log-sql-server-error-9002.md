@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144713"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
   In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. Quando il log delle transazioni è pieno, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generato un errore 9002. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, quest'ultimo rimane online anche se potrà soltanto essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 34c3551fca12694b25a731bf1e18c913e4591299
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044205"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo di connessione OLE DB (SSRS)
   Per includere dati da un provider di dati OLE DB, è necessario disporre di un set di dati basato su un'origine dati del report di tipo OLE DB. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +61,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Remarks"></a> Osservazioni  
  OLE DB è una tecnologia nativa per la compilazione di provider di dati per le origini dati specifiche. OLE DB si basa su interfacce COM (Component Object Model). OLE DB è una tecnologia più recente rispetto a ODBC e precedente ai provider di dati ADO.NET. I provider di dati OLE DB sono registrati con il sistema operativo come qualsiasi altro componente COM. I provider di dati OLE DB sono disponibili da Microsoft e fornitori di terze parti. Microsoft fornisce anche MSDASQL, un provider di dati OLE DB che funge da ponte per la comunicazione ai driver ODBC. Per altre informazioni, vedere [Tipo di connessione ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md).  
   
- Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal provider di dati. Il supporto dei parametri varia in base al provider di dati. Per ulteriori informazioni, vedere gli argomenti specifici del provider di dati selezionato. Ad esempio:  
+ Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal provider di dati. Il supporto dei parametri varia in base al provider di dati. Per ulteriori informazioni, vedere gli argomenti specifici del provider di dati selezionato. Ad esempio:   
   
 -   [Provider OLE DB per Analysis Services &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   

@@ -11,20 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049337"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
   Tutti gli errori critici e gli eventi di avviso relativi alla DLL risorse SQL Server vengono scritti nel registro eventi di Windows. Un log in esecuzione relativo a informazioni di diagnostica specifiche di SQL Server viene acquisito dalla stored procedure di sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) e viene scritto nei file di log di diagnostica del cluster di failover di SQL Server, noti anche come log *SQLDIAG*.  
   
--   **Prima di iniziare:**  [Indicazioni](#Recommendations), [Sicurezza](#Security)  
+-   **Prima di iniziare:**  [Le raccomandazioni](#Recommendations), [sicurezza](#Security)  
   
--   **Per visualizzare il log di diagnostica usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per visualizzare il Log di diagnostica usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Per configurare le impostazioni del log di diagnostica usando:** [Transact-SQL](#TsqlConfigure)  
+-   **Alle impostazioni di configurazione Log di diagnostica, utilizzando:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48098781"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'autorizzazione VIEW SERVER STATE è necessaria per eseguire **fn_xe_file_target_read_file**.  
   
  Aprire SQL Server Management Studio come amministratore.  
@@ -55,7 +55,7 @@ ms.locfileid: "48098781"
   
 4.  È possibile filtrare e ordinare i dati degli eventi utilizzando il menu **ExtendedEvents** e selezionando l'opzione **Filtro** .  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per visualizzare i file di log di diagnostica:**  
   
  Per visualizzare tutte le voci di log nel file di log SQLDIAG, utilizzare la query seguente:  

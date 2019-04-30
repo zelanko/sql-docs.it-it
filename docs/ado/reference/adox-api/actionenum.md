@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54c051e50c1973a711782a8e355629e9c7b05c3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065074"
 ---
 # <a name="actionenum"></a>ActionEnum
 Specifica il tipo di azione da eseguire quando [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) viene chiamato.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|Il gruppo o utente verrà negata le autorizzazioni specificate.|  
 |**adAccessGrant**|1|Il gruppo o l'utente avrà almeno le autorizzazioni richieste.|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199442"
 ---
 # <a name="calling-sqlsetpos"></a>Chiamata di SQLSetPos
 In ODBC 2. *x*, il puntatore alla matrice di stato di riga è un argomento per **SQLExtendedFetch**. La matrice di stato di riga in un secondo momento è stata aggiornata da una chiamata a **SQLSetPos**. Alcuni driver sul fatto che questa matrice non viene modificato tra si basavano **SQLExtendedFetch** e **SQLSetPos**. In ODBC 3. *x*, il puntatore alla matrice di stato è un campo di descrizione e pertanto l'applicazione può modificare facilmente in modo che punti a un'altra matrice. Può trattarsi di un problema quando un'applicazione ODBC 3. *x* applicazione funziona con un'API ODBC 2. *x* driver, ma viene eseguita la chiamata **SQLSetStmtAttr** per impostare il puntatore dello stato della matrice e chiama **SQLFetchScroll** per recuperare i dati. Gestione Driver ne esegue il mapping come una sequenza di chiamate a **SQLExtendedFetch**. Nel codice seguente, generato un errore verrebbe normalmente quando viene eseguito il mapping del secondo gestione Driver **SQLSetStmtAttr** chiamare quando si lavora con un'API ODBC 2*x* driver:  

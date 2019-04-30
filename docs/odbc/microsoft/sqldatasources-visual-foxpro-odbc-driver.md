@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cfda465f8d9b4e04e60985b9fbd0b9aa9f2aeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048505"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
  Conformità di API ODBC: Livello 2  
   

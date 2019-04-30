@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 702e1fe58080cc370ab9a858c985a7744df85050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181337"
 ---
 # <a name="loading-by-ordinal"></a>Caricamento per ordinale
 In ODBC 2. *x*, è possibile eseguire il caricamento per ordinale per migliorare le prestazioni del processo di connessione. Un database ODBC 2. *x* driver Esporta una funzione fittizia con l'ordinale 199; quando Gestione Driver lo rileva, risolve gli indirizzi delle funzioni ODBC dall'ordinale, non dal nome. Questa funzionalità è ancora supportata per l'API ODBC 2. *x* i driver, ma non è supportata per ODBC 3*x* driver.

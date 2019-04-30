@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184870"
 ---
 # <a name="what-is-a-lock"></a>Informazioni sui blocchi
 Il blocco è il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Quando una riga o colonna viene bloccato in modo esclusivo, altri utenti non sono consentiti per accedere ai dati bloccati fino a quando il blocco viene rilasciato. Ciò garantisce che due utenti non è possibile aggiornare contemporaneamente la stessa colonna in una riga.  

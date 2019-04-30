@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298627"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
   Nelle tabelle che utilizzano colonne di tipo sparse è possibile definire un set di colonne per restituire tutte le colonne di tipo sparse della tabella. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Un set di colonne è analogo a una colonna calcolata poiché non è archiviato fisicamente nella tabella, ma differisce da una colonna calcolata poiché è direttamente aggiornabile.  
@@ -160,7 +160,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>b. Inserimento di dati in una tabella utilizzando i nomi delle colonne di tipo sparse  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserimento di dati in una tabella utilizzando i nomi delle colonne di tipo sparse  
  Negli esempi seguenti vengono inserite due righe nella tabella creata nell'esempio A. Negli esempi vengono utilizzati i nomi delle colonne di tipo sparse e non si fa riferimento al set di colonne.  
   
 ```  

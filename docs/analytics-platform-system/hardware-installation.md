@@ -1,6 +1,6 @@
 ---
-title: L'installazione hardware - Analitica Platform System | Documenti Microsoft
-description: In questo articolo viene descritto come spostare, decomprimere e installare i componenti hardware per il dispositivo di SQL Server PDW. In questo articolo è esclusivamente informativo e consentono di comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che all'utente è attivata. La partecipazione cliente è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.
+title: Installazione hardware - sistema di piattaforma Analitica | Microsoft Docs
+description: Questo articolo descrive come spostare, decomprimere e installare i componenti hardware per l'appliance di SQL Server PDW. Questo articolo è solo informativo e può aiutare a comprendere il processo. L'appliance deve essere disimballato, installato e verificato prima viene girato all'utente. La partecipazione dei clienti è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,56 +10,56 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157320"
 ---
-# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Installazione dell'hardware per il dispositivo di sistema della piattaforma Analitica
-In questo articolo viene descritto come spostare, decomprimere e installare i componenti hardware per il dispositivo di SQL Server PDW. In questo articolo è esclusivamente informativo e consentono di comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che all'utente è attivata. La partecipazione cliente è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Installazione di hardware per il dispositivo di sistema di piattaforma Analitica
+Questo articolo descrive come spostare, decomprimere e installare i componenti hardware per l'appliance di SQL Server PDW. Questo articolo è solo informativo e può aiutare a comprendere il processo. L'appliance deve essere disimballato, installato e verificato prima viene girato all'utente. La partecipazione dei clienti è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.  
   
-## <a name="BeforeMoving"></a>Prima di spostare tutti i componenti dal carico  
-Le seguenti operazioni prima di spostare, decomprimere o rack i componenti del dispositivo.  
+## <a name="BeforeMoving"></a>Prima di spostare tutti i componenti di carico  
+Eseguire le operazioni seguenti prima di spostare, decomprimere o uno qualsiasi dei componenti di appliance in rack.  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |--------|---------------|  
-|Verificare che tutti i componenti sono arrivati|Utilizzare la distinta base (BOM) per verificare che tutti i componenti sono arrivati e sul loro palette all'ancoraggio ricevente per il data center.|  
-|Verificare che il data center soddisfi tutti i requisiti per l'applicazione|Questa attività di avvio esaminando le specifiche hardware e cablaggio diagrammi fornendo per il fornitore. I passaggi successivi forniscono i dettagli su rack requisiti di spazio e la connettività.|  
-|Verificare che il data center disponga di spazio appropriata nel rack|Verificare che il data center dispone di spazio sufficiente per tutti i rack del dispositivo.<br /><br />Verificare che lo spazio rack sia vuoto e pronto a ricevere il rack del dispositivo.|  
-|Verificare che il data center soddisfi i requisiti di connettività|Verificare che il data center soddisfi i requisiti di cablaggi nei diagrammi di cablaggio.<br /><br />Verificare che non vi saranno spazio per tutti i cavi di alimentazione dopo che sono centralizzato in remoto i nodi dello strumento.|  
-|Verificare che i piani tra ancoraggio e il rack soddisfino i requisiti di peso|Verificare che tutti impermeabili tra le palette e il rack possono supportare il peso dei nodi del dispositivo, in particolare nei data center con piani generati.<br /><br />Per informazioni sul peso di ogni componente, contattare il fornitore.|  
-|Proteggere il data center rack|Proteggere il data center rack sul posto utilizzando apparecchiature aggiuntive necessarie per la posizione del data center, ad esempio rimovibili terremoto in aree geografiche soggette a terremoti.|  
-|Preparazione per l'assistenza per il trasporto dei componenti|Determinare in anticipo quali assistenza, attrezzature e gli strumenti che necessari per gestire ogni componente in modo sicuro e senza causare danni.|  
+|Verificare che tutti i componenti sono stati ricevuti|Utilizzare la distinta base (BOM) per verificare che tutti i componenti sono finalmente disponibili e sul loro palette al dock ricevente per il data center.|  
+|Verificare che il data center soddisfi tutti i requisiti per l'appliance|Questa attività di avvio esaminando le specifiche hardware e cablaggio diagrammi fornendo dal fornitore IHV. I passaggi successivi forniscono i dettagli su rack i requisiti di spazio e connettività.|  
+|Verificare che il data center disponga di spazio appropriata nel rack|Verificare che il data center abbia spazio sufficiente per tutti i rack appliance.<br /><br />Verificare che lo spazio di rack sia vuoto e pronto per ricevere i rack appliance.|  
+|Verificare che il data center soddisfi i requisiti di connettività|Verificare che il data center soddisfi i requisiti di cablaggi nei diagrammi di cablaggio.<br /><br />Verificare che sia spazio per tutti i cavi e i cavi di alimentazione dopo che sono sia i nodi dell'appliance.|  
+|Verificare che i piani tra ancoraggio e i rack soddisfino i requisiti di peso|Verificare che tutti i pavimenti tra le palette e i rack possono supportare il peso dei nodi di appliance, soprattutto nei data center con piani generati.<br /><br />Per informazioni sul peso di ogni componente, contattare il fornitore.|  
+|Proteggere il data center rack|Proteggere il data center rack posto utilizzando richiedere apparecchiature aggiuntive come richiesto per la posizione del data center, ad esempio rimovibili terremoto in aree geografiche soggette a terremoti.|  
+|Preparazione per ottenere assistenza con il trasporto dei componenti|Determinare in anticipo quale assistenza apparecchiature e strumenti che necessari per gestire ogni componente in modo sicuro e senza causare danni.|  
   
-## <a name="Moving"></a>Spostare il rack da ancoraggio durante il caricamento nel Data Center  
-Ogni tavolozza contiene tutti i componenti per rack di un dispositivo, inclusi i nodi, cavi, cavi e così via.  
+## <a name="Moving"></a>Spostare il rack da Dock durante il caricamento nel Data Center  
+Ogni gruppo contiene tutti i componenti per rack un'appliance, inclusi i nodi, i cavi, cavi e così via.  
   
-Utilizzare il seguente elenco per spostare ogni rack del dispositivo dalla tavolozza a carico posizione rack del centro dati. Spostare prima il rack di controllo e quindi spostare altri rack di dati di dispositivo.  
+Usare l'elenco di controllo seguente per spostare ogni rack di appliance dal gruppo al dock durante il caricamento nel percorso rack nel data center. Spostare prima di tutto il rack di controllo e quindi spostare il rack di dati altre appliance.  
   
 > [!WARNING]  
-> Eseguire questi passaggi, esattamente come descritto può verificarsi lesioni personali, danni al dispositivo di SQL Server PDW o altri problemi.  
+> Tentativo di eseguire questi passaggi esattamente come descritto può comportare danni fisiologiche, danni per l'appliance di SQL Server PDW o altri problemi.  
 >   
-> Non tentare mai di accuratezza o spostare un nodo di dispositivo o un altro componente elevato senza l'assistenza o ad apparecchiature appropriata. Per informazioni sul peso di ogni componente, in modo che è possibile determinare in anticipo quali assistenza, attrezzature e gli strumenti che necessari per gestire ogni componente in modo sicuro e senza causare danni, contattare il fornitore.  
+> Non tentare mai di accuratezza o spostare un nodo di dispositivo o un altro componente pesante senza assistenza o ad apparecchiature appropriata. Contattare il fornitore IHV per informazioni sul peso di ogni componente in modo da poter determinare in anticipo quale assistenza apparecchiature e strumenti che necessari per gestire ogni componente in modo sicuro e senza causare danni.  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |--------|---------------|  
-|Verificare che la tavolozza livello|Prima di iniziare a spostare o decomprimere la tavolozza, assicurarsi che sia su livello zero.|  
-|Un nodo dalla tavolozza unbolt|A partire dalla parte superiore della tavolozza, unbolt il nodo principale dalla tavolozza.|  
-|Spostare il nodo in un carrello in grado di supportare il peso o un carrello|Utilizzare sfumature e tecniche appropriate alla rimozione o spostamento per spostare il nodo in un carrello in grado di supportare il peso o un carrello.|  
-|Il nodo di trasporto nel data center|Per spostare il nodo nella posizione desiderata in rack del centro dati, utilizzare tecniche appropriate alla rimozione o spostamento.|  
-|Proteggere il nodo nel data center rack|Proteggere il nodo sul posto nel data center rack.|  
-|Ripetere questi passaggi per il nodo o il componente|Ripetere questi passaggi per spostare il nodo successivo o un altro componente di dispositivo nel data center.|  
+|Verificare che il gruppo sia a livello di|Prima di iniziare a spostare o decomprimere il gruppo, assicurarsi che si trova in a livello zero.|  
+|Unbolt un nodo di diversi|A partire dalla parte superiore del gruppo, unbolt il nodo principale dal gruppo.|  
+|Spostare il nodo in un carrello della spesa in grado di supportare il peso o un carrello|Usare le rampe e tecniche di sollevare/spostamento corrette per spostare il nodo in un carrello della spesa in grado di supportare il peso o un carrello.|  
+|Trasporto del nodo nel centro dati|Usare tecniche di sollevare/spostamento corrette per spostare il nodo nella posizione desiderata nel data center rack.|  
+|Proteggere il nodo nel data center rack|Proteggere il nodo posto nel data center rack.|  
+|Ripetere questi passaggi per il nodo o il componente successivo|Ripetere questi passaggi per spostare il nodo successivo o un altro componente appliance nel data center.|  
   
 ## <a name="AfterMoving"></a>Installare i componenti aggiuntivi  
-Utilizzare l'elenco di controllo seguente per installare i componenti aggiuntivi.  
+Usare l'elenco di controllo seguente per installare i componenti aggiuntivi.  
   
-|Attività|Description||  
+|Attività|Descrizione||  
 |--------|---------------|-|  
-|Decomprimere e rack PDU e switch di rete|Utilizzare i diagrammi di rack per posizionare i commutatori di rete e una PDU nella posizione corretta nel rack.||  
-|Collegare i cavi Infiniband ed Ethernet in base alle etichette di cavo|Vedere il diagramma di cablaggio. Ogni cavo dispone di un'etichetta a ogni estremità che specifica in cui è necessario essere connessi.||  
-|Collegare tutti i cavi di alimentazione|Vedere il diagramma di cablaggio.||  
-|Attivare l'alimentatore rack e i PDU|Connettere l'alimentatore rack e dal rack, per il PDU. **Non accendere tutti gli altri componenti di dispositivo in questo momento.**||  
+|Decomprimere e installare in rack PDU e switch di rete|Usare i diagrammi di rack per posizionare i commutatori di rete e PDU nella posizione appropriata nel rack.||  
+|Collegare i cavi Ethernet e Infiniband, in base alle etichette di cavo|Vedere la seguente figura del cablaggio. Ogni cavo ha un'etichetta a ogni estremità che specifica dove deve essere connesso.||  
+|Connettere tutti i cavi di alimentazione|Vedere la seguente figura del cablaggio.||  
+|Attivare l'alimentatore per i rack e i PDU|Collegare l'alimentatore per i rack e dai rack per il PDU. **Non accendere uno qualsiasi degli altri componenti appliance in questo momento.**||  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

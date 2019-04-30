@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064100"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Definizione delle informazioni di connessione (Reporting Services)
   Dopo aver aggiunto un report al progetto Tutorial, è necessario definire un' *origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, da un database multidimensionale o da un'altra risorsa.  

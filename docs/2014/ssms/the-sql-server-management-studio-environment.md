@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8d448e0af854cab5944062368f2f13e1d81efc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156407"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Ambiente di SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre un ambiente completo per la gestione e lo sviluppo di query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

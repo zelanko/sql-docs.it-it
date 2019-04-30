@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061579"
 ---
 # <a name="function-conformance"></a>Conformità della funzione
 Nella tabella seguente indica il livello di conformità di ogni funzione ODBC, in cui si è ben definito.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
-|**Funzione SQLAllocHandle**|Core|  
+|**SQLAllocHandle**|Core|  
 |**SQLBindCol**|Core|  
-|**SQLBindParameter**|Core [1]|  
+|**SQLBindParameter**|Core[1]|  
 |**SQLBrowseConnect**|Livello 1|  
 |**SQLBulkOperations**|Livello 1|  
-|**SQLCancel**|Core [1]|  
+|**SQLCancel**|Core[1]|  
 |**SQLCloseCursor**|Core|  
-|**SQLColAttribute**|Core [1]|  
+|**SQLColAttribute**|Core[1]|  
 |**SQLColumnPrivileges**|Livello 2|  
 |**SQLColumns**|Core|  
 |**SQLConnect**|Core|  
 |**SQLCopyDesc**|Core|  
 |**SQLDataSources**|Core|  
-|**SQLDescribeCol**|Core [1]|  
+|**SQLDescribeCol**|Core[1]|  
 |**SQLDescribeParam**|Livello 2|  
 |**SQLDisconnect**|Core|  
 |**SQLDriverConnect**|Core|  
 |**SQLDrivers**|Core|  
-|**SQLEndTran**|Core [1]|  
+|**SQLEndTran**|Core[1]|  
 |**SQLExecDirect**|Core|  
 |**SQLExecute**|Core|  
 |**SQLFetch**|Core|  
-|**SQLFetchScroll**|Core [1]|  
+|**SQLFetchScroll**|Core[1]|  
 |**SQLForeignKeys**|Livello 2|  
 |**SQLFreeHandle**|Core|  
 |**SQLFreeStmt**|Core|  
@@ -77,14 +77,14 @@ Nella tabella seguente indica il livello di conformità di ogni funzione ODBC, i
 |**SQLProcedures**|Livello 1|  
 |**SQLPutData**|Core|  
 |**SQLRowCount**|Core|  
-|**SQLSetConnectAttr**|Core [2]|  
+|**SQLSetConnectAttr**|Core[2]|  
 |**SQLSetCursorName**|Core|  
-|**SQLSetDescField**|Core [1]|  
+|**SQLSetDescField**|Core[1]|  
 |**SQLSetDescRec**|Core|  
-|**SQLSetEnvAttr**|Core [2]|  
+|**SQLSetEnvAttr**|Core[2]|  
 |**SQLSetPos**|Livello 1 [1]|  
-|**SQLSetStmtAttr**|Core [2]|  
-|**SQLSpecialColumns**|Core [1]|  
+|**SQLSetStmtAttr**|Core[2]|  
+|**SQLSpecialColumns**|Core[1]|  
 |**SQLStatistics**|Core|  
 |**SQLTablePrivileges**|Livello 2|  
 |**SQLTables**|Core|  

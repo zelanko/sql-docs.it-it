@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186287"
 ---
 # <a name="data-sources"></a>Origini dati
 Oggetto *zdroj dat* è semplicemente l'origine dei dati. Può essere un file, un database specifico in un sistema DBMS o persino un feed di dati in tempo reale. I dati potrebbero trovarsi nello stesso computer del programma, o in un altro computer in una posizione in una rete. Ad esempio, un'origine dati potrebbe essere un DBMS Oracle in esecuzione in un sistema operativo OS/2®, accessibile da Novell Netware®; un DBMS di IBM DB2 si accede tramite un gateway. una raccolta di file Xbase in una directory di server. o un file di database locale di Microsoft® Access.  

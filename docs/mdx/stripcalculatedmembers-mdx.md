@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (MDX) | Documenti Microsoft
+title: StripCalculatedMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ef9eb558c2f73c51c78f1464ed7951c743bc4ef0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150195"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
 
@@ -32,8 +32,8 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- Il **StripCalculatedMembers** funzione rimuove i membri calcolati da un set. I membri calcolati possono essere aggiunti a un set tramite la [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) funzione, che restituisce i membri calcolati definiti nel server o i membri calcolati che sono stati aggiunti all'interno della query stessa tramite la sintassi WITH MEMBER.  
+## <a name="remarks"></a>Note  
+ Il **StripCalculatedMembers** funzione rimuove i membri calcolati da un set. Calcolati i membri possono essere aggiunti a un set tramite il [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (funzione), che restituisce i membri calcolati definiti nel server oppure membri calcolati che sono stati aggiunti all'interno della query stessa tramite WITH Sintassi dei membri.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono rimossi tutti i membri calcolati dalla query.  
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

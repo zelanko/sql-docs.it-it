@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049873"
 ---
 # <a name="deferred-fields"></a>Campi posticipati
 I valori della *posticipata campi* non vengono usati quando sono impostati, ma il driver vengono salvati gli indirizzi delle variabili per un effetto posticipata. Per un descrittore di parametri dell'applicazione, il driver utilizza il contenuto delle variabili al momento della chiamata a **SQLExecDirect** oppure **SQLExecute**. Per un descrittore riga dell'applicazione, il driver utilizza il contenuto delle variabili al momento dell'operazione di recupero.  

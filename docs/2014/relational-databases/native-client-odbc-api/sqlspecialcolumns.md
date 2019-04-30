@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188737"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   Quando richiede gli identificatori di riga (*IdentifierType* SQL_BEST_ROWID), **SQLSpecialColumns** restituisce un set di risultati vuoto (nessuna riga di dati) per tutti gli ambiti diversi da SQL_SCOPE_CURROW richiesti. Il set di risultati generato indica che le colonne sono valide solo all'interno di questo ambito.  

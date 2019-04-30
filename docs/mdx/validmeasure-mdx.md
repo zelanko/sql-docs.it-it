@@ -1,5 +1,5 @@
 ---
-title: ValidMeasure (MDX) | Documenti Microsoft
+title: ValidMeasure (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140239"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -32,14 +32,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una tupla.  
   
-## <a name="remarks"></a>Remarks  
- Il **ValidMeasure** funzione restituisce il valore di una tupla, ignorando attributi alcuna relazione con il gruppo di misure della misura il cui valore restituisce la tupla. Un attributo può non essere correlato a una misura per i due motivi riportati di seguito:  
+## <a name="remarks"></a>Note  
+ Il **ValidMeasure** funzione restituisce il valore di una tupla, ignorando gli attributi che non hanno alcuna relazione con il gruppo di misure della misura il cui valore restituisce la tupla. Un attributo può non essere correlato a una misura per i due motivi riportati di seguito:  
   
 -   La dimensione dell'attributo non ha alcuna relazione con il gruppo di misure della misura nella tupla.  
   
 -   La dimensione dell'attributo non ha alcuna relazione con il gruppo di misure della misura, ma l'attributo di granularità non è l'attributo chiave e l'attributo di granularità non ha alcuna relazione diretta con l'attributo nella tupla.  
   
- Il comportamento specificato da questa funzione sul lato server per impostazione predefinita ed è controllato dal **IgnoreUnrelatedDimensions** proprietà sull'oggetto gruppo di misure.  
+ Il comportamento specificato da questa funzione è il comportamento lato server predefinito ed è controllato dal **IgnoreUnrelatedDimensions** proprietà sull'oggetto gruppo di misure.  
   
  Per ogni attributo nella tupla specificata con granularità, ovvero in una tupla in cui il membro non corrisponde a quello Totale), la coordinata corrente viene spostata nel modo seguente:  
   
@@ -70,6 +70,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

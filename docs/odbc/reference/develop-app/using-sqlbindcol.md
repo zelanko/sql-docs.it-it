@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di SQLBindCol | Microsoft Docs
+title: Using SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208473"
 ---
 # <a name="using-sqlbindcol"></a>Uso di SQLBindCol
 L'applicazione associa le colonne chiamando **SQLBindCol**. Questa funzione si associa una colonna alla volta. In tal modo l'applicazione specifica quanto segue:  
   
 -   Numero di colonna. Colonna 0 è la colonna del segnalibro; Questa colonna non è incluso in un set di risultati. Tutte le altre colonne vengono numerate a partire dal numero 1. È possibile associare una colonna di valori più alti rispetto alle colonne in set di risultati. Questo errore non può essere rilevato fino a quando non è stato creato il set di risultati, quindi viene restituito da **SQLFetch**, non **SQLBindCol**.  
   
--   La C lunghezza dei dati byte, l'indirizzo e tipo della variabile associata alla colonna. È possibile specificare un tipo di dati C a cui il tipo di dati SQL della colonna non può essere convertito; Questo errore potrebbe non essere rilevato fino a quando non è stato creato il set di risultati, quindi viene restituito da **SQLFetch**, non **SQLBindCol**. Per un elenco delle conversioni supportate, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: i tipi di dati. Per informazioni sulla lunghezza in byte, vedere [lunghezza del Buffer dei dati](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   La C lunghezza dei dati byte, l'indirizzo e tipo della variabile associata alla colonna. È possibile specificare un tipo di dati C a cui il tipo di dati SQL della colonna non può essere convertito; Questo errore potrebbe non essere rilevato fino a quando non è stato creato il set di risultati, quindi viene restituito da **SQLFetch**, non **SQLBindCol**. Per un elenco delle conversioni supportate, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: Tipi di dati. Per informazioni sulla lunghezza in byte, vedere [lunghezza del Buffer dei dati](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
 -   L'indirizzo di un buffer di lunghezza/indicatore. Il buffer di lunghezza/indicatore è facoltativo. Viene utilizzato per restituire la lunghezza in byte del file binario o dati di tipo carattere o SQL_NULL_DATA restituito se i dati sono NULL. Per altre informazioni, vedere [usando i valori di lunghezza/indicatore](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   

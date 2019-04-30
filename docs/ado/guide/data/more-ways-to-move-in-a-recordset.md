@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161529"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Altri metodi per lo spostamento in un recordset
 I quattro metodi seguenti consentono di spostarsi all'interno o di scorrimento, nelle **Recordset**: [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Alcuni di questi metodi sono disponibili sui cursori forward-only).  

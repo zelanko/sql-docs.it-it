@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 737ace72f201f3abe192393b1a1cc3747f5774e2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067757"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
   **SQLColumnPrivileges** restituisce SQL_SUCCESS se esistono o meno valori per il*CatalogName*, *SchemaName*, *TableName*, o  *ColumnName* parametri. **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  

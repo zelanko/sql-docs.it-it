@@ -33,11 +33,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187964"
 ---
 # <a name="password-policy"></a>Criteri password
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare i meccanismi di criteri password di Windows. I criteri password si applicano a un account di accesso che utilizza l'autenticazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a un utente del database indipendente con password.  

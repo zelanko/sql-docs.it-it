@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ef2127e3f554ac4d7bbd92e9d823ecd1e025fe9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131447"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architettura della formattazione XML sul lato client e sul lato server (SQLXML 4.0)
   Nell'illustrazione seguente viene mostrata l'architettura della formattazione XML sul lato server.  
@@ -40,7 +40,7 @@ ms.locfileid: "52750353"
   
  ![Architettura della formattazione XML sul lato client. ](../../../database-engine/dev-guide/media/clientsidexml.gif "Formattazione architettura di XML sul lato client.")  
   
- In questo esempio il client utilizza il provider SQLXMLOLEDB. Nella stringa di connessione, la proprietà Provider di dati deve essere impostata su SQLOLEDB. ovvero l'unico valore accettato in SQLXML 4.0. Il comando eseguito sul client viene inviato al server. Il set di righe generato nel server viene inviato al client. Sul client viene eseguita la formattazione del documento XML dal set di righe.  
+ In questo esempio il client utilizza il provider SQLXMLOLEDB. Nella stringa di connessione, la proprietà Provider di dati deve essere impostata su SQLOLEDB. (Questo è l'unico valore accettato in SQLXML 4.0). Il comando che viene eseguito sul client viene inviato al server. Il set di righe generato nel server viene inviato al client. Sul client viene eseguita la formattazione del documento XML dal set di righe.  
   
  In SQLXML 4.0 è possibile utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) o il provider SQLOLEDB come provider di dati. È possibile accedere a qualsiasi origine dati. La trasformazione XML può essere applicata al client purché la query restituisca un singolo set di righe.  
   

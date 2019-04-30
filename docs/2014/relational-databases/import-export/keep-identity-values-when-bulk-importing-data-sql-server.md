@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064584"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)
   È possibile eseguire l'importazione bulk di file di dati contenenti valori Identity in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, i valori per la colonna Identity del file di dati importato vengono ignorati e sostituiti automaticamente da valori univoci assegnati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori univoci si basano sui valori di inizializzazione e incremento specificati durante la creazione della tabella.  
@@ -74,9 +74,9 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Per altre informazioni sulla creazione di un file di formato, vedere [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Utilizzo di bcp mantenendo i valori Identity  
- Nell'esempio seguente viene illustrato come mantenere i valori Identity quando si utilizza `bcp` per l'importazione bulk dei dati. Il `bcp` comando Usa il file di formato `myDepartment-f-n-x.Xml`e sono disponibili le opzioni seguenti:  
+ Nell'esempio seguente viene illustrato come mantenere i valori Identity quando si utilizza `bcp` per l'importazione bulk dei dati. Il comando `bcp` utilizza il file di formato `myDepartment-f-n-x.Xml` e include le opzioni seguenti:  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-E**|Specifica che il valore o i valori Identity inclusi nel file di dati devono essere utilizzati per la colonna Identity.|  
 |**-T**|Specifica che il `bcp` utilità si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted.|  
@@ -142,17 +142,17 @@ GO
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 -   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

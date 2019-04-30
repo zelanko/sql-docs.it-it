@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216018"
 ---
 # <a name="enable-resource-governor"></a>Abilitare Resource Governor
   Resource Governor è disabilitato per impostazione predefinita. È possibile abilitare Resource Governor tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **Per abilitare Resource Governor usando:**  [Esplora oggetti](#RGOnObjEx), [proprietà di Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Per attivare Resource Governor usando:**  [Esplora oggetti](#RGOnObjEx), [le proprietà di Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  L'abilitazione di Resource Governor determina i risultati riportati di seguito:  
@@ -38,7 +38,7 @@ ms.locfileid: "52806183"
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Non è possibile utilizzare l'istruzione `ALTER RESOURCE GOVERNOR` per abilitare Resource Governor quando in una transazione utente.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per abilitare Resource Governor è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="RGOnObjEx"></a> Abilitare Resource Governor utilizzando Esplora oggetti  

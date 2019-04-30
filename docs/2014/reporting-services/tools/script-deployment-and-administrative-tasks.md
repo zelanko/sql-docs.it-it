@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158312"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta l'uso di script per automatizzare installazioni di routine, distribuzioni e attività amministrative. La distribuzione di un server di report è un processo costituito da più passaggi. Per configurare una distribuzione è necessario utilizzare diversi strumenti e processi, in quanto non è disponibile un unico programma o approccio che consenta di automatizzare tutte le attività.  

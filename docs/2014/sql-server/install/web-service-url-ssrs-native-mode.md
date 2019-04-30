@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131183"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL servizio Web (modalità nativa SSRS)
   Utilizzare la pagina URL servizio Web per configurare o modificare l'URL utilizzato per accedere al server di report. In base all'URL specificato, verrà creata una *prenotazione URL* . La prenotazione URL definisce la sintassi e le regole per tutti gli URL che sarà possibile utilizzare in seguito per accedere al servizio Web ReportServer e specifica il prefisso, l'host, la porta e la directory virtuale per il servizio Web ReportServer. A seconda di come si specifica l'host, per una singola prenotazione sono possibili più URL. Il valore predefinito per l'host specifica un carattere jolly complesso. Un carattere jolly complesso consente di specificare in un URL qualsiasi nome host che possa essere risolto nel computer che ospita il server di report. Per altre informazioni sulla configurazione di URL e le prenotazioni, vedere [configurare un URL &#40;Gestione configurazione SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) e [configurare gli URL del Server di Report &#40;Gestione configurazione SSRS&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "53203358"
  Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato reinstallato e vengono restituiti errori quando si tenta di utilizzare la porta 80 e il valore predefinito Tutti assegnati per l'indirizzo IP, è in genere possibile risolvere l'errore ricreando l'URL dopo il riavvio del servizio.  
   
 ## <a name="options"></a>Opzioni  
- **Directory virtuale**  
+ **Virtual Directory**  
  Viene specificato il nome della directory virtuale per il servizio Web ReportServer. È possibile specificare un solo nome di directory virtuale per ogni istanza del servizio Web ReportServer presente nello stesso computer.  
   
  **Indirizzo IP**  

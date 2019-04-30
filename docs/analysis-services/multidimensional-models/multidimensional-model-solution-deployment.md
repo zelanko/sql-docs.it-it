@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3aba02dfe34f91b12a98f4d557bdb2dc516b1b1f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042467"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Distribuzione di soluzioni di modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  
+  Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi sono elencati di seguito in ordine convenienza: Automazione AMO, XMLA, distribuzione guidata, utilità di distribuzione, eseguire la sincronizzazione guidata, Backup e ripristino.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "50144826"
   
 ##  <a name="bkmk_meth"></a> Metodi di distribuzione  
   
-|Metodo|Description|Collegamento|  
+|Metodo|Descrizione|Collegamento|  
 |------------|-----------------|----------|  
 |**Automazione AMO (Analysis Management Objects)**|AMO (Analysis Management Objects) offre un'interfaccia di programmazione per il set di comandi completo per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusi comandi che possono essere utilizzati per la distribuzione della soluzione. Come approccio per la distribuzione della soluzione, l'automazione AMO (Analysis Management Objects) è la più flessibile, ma richiede anche un lavoro di programmazione.  Il vantaggio principale offerto da AMO è che consente di utilizzare SQL Server Agent insieme all'applicazione AMO per eseguire la distribuzione in base a una pianificazione predefinita.|[Sviluppo con Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
 |**XMLA**|Utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per generare uno script XMLA dei metadati di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente, quindi eseguire tale script in un altro server per ricreare il database iniziale. Per creare script XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , è sufficiente definire il processo di distribuzione e quindi codificarlo e memorizzarlo in uno script XMLA. Dopo aver salvato lo script XMLA in un file, è possibile eseguire lo script in base a una pianificazione oppure incorporarlo nello script di un'applicazione che si connette direttamente a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> È inoltre possibile eseguire script XMLA a intervalli predefiniti tramite SQL Server Agent, ma questo metodo non è caratterizzato dalla stessa flessibilità del metodo basato sull'automazione AMO. Nella libreria AMO è disponibile un'ampia gamma di funzionalità che supportano l'insieme completo di comandi amministrativi.|[Distribuire soluzioni di modelli usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  

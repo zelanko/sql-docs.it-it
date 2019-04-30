@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046253"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
   Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la gestione della scadenza della password a livello di codice sia tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client e attraverso modifiche al **Account di accesso di SQL Server** finestre di dialogo.  
@@ -40,12 +40,12 @@ ms.locfileid: "53370493"
 |Codice di errore di SQL Server|Messaggio di errore|  
 |---------------------------|-------------------|  
 |15113|Accesso non riuscito per l'utente ' %. * motivo ls': Impossibile convalidare la password. L'account è bloccato.|  
-|18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. Impossibile utilizzare la password in questo momento.|  
-|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
-|18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
-|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
-|18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
-|18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. Si è verificato un errore imprevisto durante la convalida della password.|  
+|18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non è riuscita. Impossibile utilizzare la password in questo momento.|  
+|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non è riuscita. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
+|18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non è riuscita. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
+|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non è riuscita. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
+|18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non è riuscita. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
+|18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non è riuscita. Si è verificato un errore imprevisto durante la convalida della password.|  
 |18487|Accesso non riuscito per l'utente '%.*ls'. Motivo: La password dell'account è scaduta.|  
 |18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: La password dell'account deve essere modificata.|  
   

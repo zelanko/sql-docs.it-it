@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042877"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lezione 3: La serie temporale di elaborazione struttura e modelli
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lezione 3: Elaborazione di strutture e modelli Time Series
   In questa lezione si userà il [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) istruzione per l'elaborazione della serie temporale, strutture e modelli creati di data mining.  
   
  Quando si elabora una struttura di data mining, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] legge i dati di origine e compila le strutture che supportano i modelli di data mining. È sempre necessario elaborare i modelli e le strutture di data mining al momento della creazione. Se si specifica una struttura di data mining utilizzando INSERT INTO, l'istruzione elabora la struttura e tutti i modelli di data mining associati.  

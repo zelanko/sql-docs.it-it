@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dd63f490ed1c635abfb6bef6972363cfba3c96bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 8fe968185f05c7a48415e5e158a20f4dc61b28c1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142193"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance per Studio dei dati di Azure (anteprima)
 Azure Data Studio offre ora un modo per creare visualizzazioni rapide per i file con estensione csv e tsv che si siano lavorando. Sono incluse in file locali o i file in HDFS in Big Data Cluster di SQL Server 2019. Questa estensione è utile quando si tenta di avere una rapida esaminare i dati e comprendere cosa sta succedendo. Usiamo una tecnologia denominata SandDance da Microsoft Research, che può generare visualizzazioni sul posto dei dati.
@@ -30,7 +30,7 @@ Le transizioni animate uniforme tra le visualizzazioni consentono di mantenere c
 
 ## <a name="usage"></a>Uso
 
-Fare clic su un file con estensione csv o TSV locale e scegliere *visualizzazione SandDance*.
+A partire dal menu File, usare aprire cartelle o [Ctrl + K, Ctrl + O] per aprire la directory contenente il. File CSV.  Successivamente, all'interno del Pannello di Esplora, pulsante destro del mouse sul file con estensione csv o TSV e scegliere *visualizzazione SandDance*.
 
 Pulsante destro del mouse su un file con estensione csv o tsv in HDFS, se si è connessi a SQL Server 2019 Big Data Cluster e si sceglie *visualizzazione SandDance*.
 

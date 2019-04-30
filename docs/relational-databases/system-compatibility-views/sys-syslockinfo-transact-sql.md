@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033016"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47780879"
 > [!IMPORTANT]  
 >  Questa funzionalità è stata modificata rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
 |**rsc_bin**|**binary(16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna è inclusa per gli strumenti disponibili sul formato del blocco di risorse per la generazione di propri formattato risorsa di blocco e per l'esecuzione di self join su **syslockinfo**.|  

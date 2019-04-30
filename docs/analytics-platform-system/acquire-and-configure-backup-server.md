@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040827"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di backup per Parallel Data Warehouse
 Questo articolo descrive come configurare un sistema di Windows non appliance come un server di backup per l'uso con le funzionalità di backup e ripristino di sistema di piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).  
@@ -89,7 +89,7 @@ PDW potranno accedere il server di backup tramite una condivisione file UNC. Per
   
 5.  Aggiungere le credenziali dell'account di dominio di backup in PDW.  
   
-    Esempio:  
+    Ad esempio:  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -109,7 +109,7 @@ Eseguire il backup dei dati, utilizzare un client di query per connettersi a SQL
 > [!IMPORTANT]  
 > Ricordarsi di usare l'indirizzo IP InfiniBand del server di backup. In caso contrario, verranno copiati i dati su Ethernet anziché InfiniBand.  
   
-Esempio:  
+Ad esempio:   
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  
@@ -122,7 +122,7 @@ Per altre informazioni, vedere:
   
 -   [BACKUP DEL DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RIPRISTINO DI DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Avvisi di sicurezza  
 Il server di backup non è aggiunto al dominio privato dell'Appliance. È nella propria rete e senza alcuna relazione di trust tra il proprio dominio e private appliance.  
@@ -147,7 +147,7 @@ Per elencare tutte le credenziali di rete archiviate in SQL Server PDW, utilizza
 Operazioni nel server durante il caricamento è possono usare un percorso UNC per estrarre i dati dall'esterno della rete interna attendibile. Un utente malintenzionato sulla rete o con grado di influenzare la risoluzione dei nomi può intercettare o modificare i dati inviati a di PDW. Ciò comporta un rischio di divulgazione manomissioni e informazioni. Per aiutare a ridurre il rischio di manomissione:
 
 - Richiedere la firma per la connessione. 
-- Nel server durante il caricamento, impostare l'opzione di criteri di gruppo seguente in protezione\Criteri Locali\opzioni di sicurezza: il client di rete Microsoft: firma digitale alle comunicazioni (sempre): abilitata.  
+- Nel server durante il caricamento, impostare l'opzione di criteri di gruppo seguente in protezione\Criteri Locali\opzioni di sicurezza:  Client di rete Microsoft: Firma digitale alle comunicazioni (sempre): Abilitata.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Backup e ripristino](backup-and-restore-overview.md)  

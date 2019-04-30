@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061243"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile - classe di evento
   La classe di evento SQL:StmtRecompile indica ricompilazioni a livello di istruzione causate da tutti i tipi di batch: stored procedure, trigger, batch ad hoc e query. Le query possono essere inviate utilizzando sp_executesql, linguaggio SQL dinamico, metodi Prepare, metodi Execute o interfacce simili. È consigliabile usare la classe di evento SQL:StmtRecompile anziché SP:Recompile.  
@@ -32,7 +32,7 @@ ms.locfileid: "52804053"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se il client fornisce l'ID del processo.|9|Yes|  
 |DatabaseID|`int`|ID del database nel quale viene eseguita la stored procedure. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita la stored procedure.|35|Yes|  
-|EventSequence|`int`|Sequenza di un evento nella richiesta.|51|No|  
+|EventSequence|`int`|Sequenza di un evento nella richiesta.|51|no|  
 |EventSubClass|`int`|Indica il motivo della ricompilazione:<br /><br /> 1 = Schema modificato<br /><br /> 2 = Statistiche modificate<br /><br /> 3 = Compilazione posticipata<br /><br /> 4 = Opzione impostata modificata<br /><br /> 5 = Tabella temporanea modificata<br /><br /> 6 = Set di righe remoto modificato<br /><br /> 7 = Autorizzazioni FOR BROWSE modificate<br /><br /> 8 = Ambiente di notifica query modificato<br /><br /> 9 = Vista partizionata modificata<br /><br /> 10 = Opzioni cursore modificate<br /><br /> 11 = Opzione (RECOMPILE) richiesta|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client che ha inviato l'istruzione. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

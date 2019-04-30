@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2435a3e28fa4b217159ee84582dc1c10c6cc0324
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060060"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Stampare un report (Reporting Services in modalità SharePoint)
   In un server di report in esecuzione in SharePoint è possibile stampare un report da un'applicazione Web di SharePoint nei tre modi seguenti:  

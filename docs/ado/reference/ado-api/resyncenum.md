@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aaf396e8969d490933e26652e18c0c070e030785
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060969"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Specifica se i valori sottostanti vengono sovrascritti da una chiamata a [Risincronizza](../../../ado/reference/ado-api/resync-method.md).  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|Valore predefinito. Sovrascrive i dati e gli aggiornamenti in sospeso vengono annullate.|  
 |**adResyncUnderlyingValues**|1|Non implica la sovrascrittura dei dati e gli aggiornamenti in sospeso non vengono annullate.|  

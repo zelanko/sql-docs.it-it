@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156777"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Procedure consigliate per chiamare stored procedure compilate in modo nativo
   Le stored procedure compilate in modo nativo:  
@@ -48,7 +48,7 @@ ms.locfileid: "48048531"
   
  L'utilizzo di parametri denominati (inefficiente) con stored procedure compilate in modo nativo può essere rilevato tramite l'XEvent `hekaton_slow_parameter_passing` con `reason=named_parameters`.  
   
- Analogamente, è possibile rilevare l'utilizzo di tipi non corrispondenti tramite lo stesso XEvent `hekaton_slow_parameter_passing`, con `reason=parameter_conversion`.  
+ In modo analogo è possibile rilevare l'utilizzo di tipi non corrispondenti tramite lo stesso XEvent `hekaton_slow_parameter_passing` con `reason=parameter_conversion`.  
   
  Poiché è necessario implementare la logica per eseguire nuovi tentativi quando si utilizzano le tabelle ottimizzate per la memoria (in molti scenari) e poiché è necessario aggirare le limitazioni di alcune funzionalità, è possibile creare una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretata dal wrapper. Per un esempio, vedere [linee guida per la logica di tentativi per le transazioni nelle tabelle ottimizzate per la memoria](memory-optimized-tables.md).  
   

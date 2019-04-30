@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050957"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted - classe di evento
   La classe di evento SP:StmtCompleted indica che è stata completata un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno di una stored procedure.  
@@ -36,7 +36,7 @@ ms.locfileid: "52818066"
 |Duration|`bigint`|Durata dell'evento in microsecondi.|13|Yes|  
 |EndTime|`datetime`|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting.|15|Yes|  
 |EventClass|`int`|Tipo di evento = 45.|27|No|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IntegerData|`int`|Valore integer che dipende dalla classe di evento acquisita nella traccia.|25|Yes|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0db2028840491a448cb0bf3bd07cbb6dfe10fe8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140289"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Esempio di DeleteRecord e MoveRecord (esempio di metodi (VB)
 In questo esempio viene illustrato come copiare, spostare, modificare ed eliminare il contenuto di un file di testo pubblicati in una cartella Web. Includono altre proprietà e metodi usati [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origine](../../../ado/reference/ado-api/source-property-ado-record.md), e [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -154,5 +154,5 @@ End Sub
  [Metodo Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Metodo GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
- [Proprietà ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
+ [ParentURL Property (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
  [Proprietà Source (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

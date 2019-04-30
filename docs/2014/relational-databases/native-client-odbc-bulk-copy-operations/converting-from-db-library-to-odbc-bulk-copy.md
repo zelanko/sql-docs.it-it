@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067627"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
   Conversione di un programma di copia bulk DB-Library a ODBC è facile quanto supportate da funzioni di copia di massa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client sono simili per le funzioni di copia bulk DB-Library, con le eccezioni seguenti:  
@@ -39,7 +39,7 @@ ms.locfileid: "49169379"
   
 -   I valori specificati per DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parametro vengono interpretati in modo diverso rispetto a ODBC **bcp_bind**_cbData_parametro.  
   
-    |Condizione indicata|DB-Library *varlen* valore|ODBC *cbData* valore|  
+    |Condizione indicata|DB-Library *varlen* valore|ODBC *cbData* value|  
     |-------------------------|--------------------------------|-------------------------|  
     |Valori Null forniti|0|-1 (SQL_NULL_DATA)|  
     |Dati variabili forniti|-1|-10 (SQL_VARLEN_DATA)|  

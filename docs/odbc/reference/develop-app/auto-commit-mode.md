@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 491fb8db9e37cfb3bfa07881958fe7828e6bb911
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048426"
 ---
 # <a name="auto-commit-mode"></a>Modalità autocommit
 *In modalità autocommit,* ogni operazione di database è una transazione che verrà eseguito il commit eseguito. Questa modalità è adatta per numero di transazioni reali costituiti da una singola istruzione SQL. Non è necessario delimitare oppure specificare il completamento di queste transazioni. Nel database senza supporto delle transazioni, la modalità autocommit è l'unica modalità supportata. In tali database, le istruzioni vengono eseguite quando vengono eseguite e non è possibile eseguire il rollback li; sono pertanto sempre in modalità autocommit.  

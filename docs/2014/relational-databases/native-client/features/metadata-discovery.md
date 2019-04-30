@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162016"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
   I miglioramenti apportati all'individuazione dei metadati nelle [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le applicazioni Client Native per assicurare che i metadati alla colonna o parametro restituito dall'esecuzione di una query compatibile con i metadati o identico al formato specificato prima di è stata eseguita la query. Se i metadati restituiti dopo l'esecuzione di una query non sono compatibili con il formato dei metadati specificato prima dell'esecuzione della query, viene generato un errore.  

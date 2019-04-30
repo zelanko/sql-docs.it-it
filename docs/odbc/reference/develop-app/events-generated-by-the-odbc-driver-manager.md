@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061639"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Eventi generati da Gestione driver ODBC
 > [!IMPORTANT]  
@@ -27,9 +27,9 @@ ms.locfileid: "47639839"
   
  Quando si fa clic sul pulsante Avvia Visual Studio Analyzer, vengono registrati gli eventi generati da Gestione Driver ODBC. Solo lo strumento offre la possibilità di creare eventi personalizzati e gli eventi definiti dal sistema. Per altre informazioni sugli eventi, vedere la *Guida di riferimento di Visual Studio Analyzer* all'interno della suite di Visual Studio della documentazione.  
   
-|Eventi in Visual Studio Analyzer|Description|  
+|Eventi in Visual Studio Analyzer|Descrizione|  
 |----------------------------------|-----------------|  
-|**Chiamata**|Generato su ogni API ODBC in ingresso.|  
+|**Call**|Generato su ogni API ODBC in ingresso.|  
 |**ReturnException**|Se il codice restituito SQL_ERROR, generato in tutte le API ODBC.|  
 |**ReturnNormal**|Se il codice restituito non SQL_ERROR, generato in ogni API ODBC.|  
 |**Inizio connessione**|Indica l'avvio di una connessione; generato quando Gestione Driver ODBC chiama l'API di connessione del driver.|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144308"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
@@ -34,7 +34,7 @@ ms.locfileid: "49072285"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   

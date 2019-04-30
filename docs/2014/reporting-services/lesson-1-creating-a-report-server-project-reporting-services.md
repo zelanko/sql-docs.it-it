@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143276"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server di report (Reporting Services)
   Per creare un report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è innanzitutto necessario creare un progetto server di report in cui verranno salvati il file della definizione del report (con estensione rdl) e altri file di risorse necessari per il report. Verrà quindi creato il file della definizione del report, verranno definiti un'origine dei dati per il report, un set di dati e il layout del report. Quando si esegue il report, i dati effettivi vengono recuperati e combinati con il layout, e quindi visualizzati sullo schermo. Sarà quindi possibile esportarli, stamparli o salvarli.  

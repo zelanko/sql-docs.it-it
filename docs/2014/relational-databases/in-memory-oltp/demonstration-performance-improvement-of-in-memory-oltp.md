@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071786"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: miglioramento delle prestazioni di OLTP in memoria
   Questo esempio mostra i miglioramenti delle prestazioni che si ottengono quando si utilizza OLTP in memoria, mettendo a confronto le differenze nei tempi di risposta per l'esecuzione di una query Transact-SQL identica su tabelle ottimizzate per la memoria e su tabelle basate su disco tradizionali. Viene anche creata una stored procedure compilata in modo nativo (basata sulla stessa query), che viene quindi eseguita per dimostrare che in genere si ottengono i tempi di risposta migliori eseguendo query su una tabella ottimizzata per la memoria con una stored procedure compilata in modo nativo. Questo esempio illustra solo un aspetto dei miglioramenti delle prestazioni in caso di accesso ai dati in tabelle ottimizzate per la memoria, ovvero l'efficienza dell'accesso ai dati durante l'esecuzione di inserimenti. Questo esempio è a thread singolo e non sfrutta i vantaggi della concorrenza di OLTP in memoria. Un carico di lavoro che utilizza la concorrenza avrà un miglioramento più significativo delle prestazioni.  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047116"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "48906351"
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_memory_brokers**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID del pool di risorse se associato a un pool di Resource Governor.|  
-|**memory_broker_type**|**nvarchar(60)**|Tipo di broker di memoria. Esistono attualmente tre tipi di Broker di memoria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indicata di seguito, insieme alle relative descrizioni.<br /><br /> **MEMORYBROKER_FOR_CACHE** : memoria allocata per l'uso da oggetti (cache di Pool di Buffer non) memorizzati nella cache.<br /><br /> **MEMORYBROKER_FOR_STEAL** : memoria prelevata dal pool di buffer. Tale memoria non è disponibile per il riutilizzo da parte di altri componenti fino a che non viene liberata dal proprietario corrente.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : memoria riservata per utilizzi futuri usando richieste attualmente in esecuzione.|  
+|**memory_broker_type**|**nvarchar(60)**|Tipo di broker di memoria. Esistono attualmente tre tipi di Broker di memoria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indicata di seguito, insieme alle relative descrizioni.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Memoria allocata per l'uso da oggetti memorizzati nella cache (cache di Pool di Buffer non).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Memoria prelevata dal pool di buffer. Tale memoria non è disponibile per il riutilizzo da parte di altri componenti fino a che non viene liberata dal proprietario corrente.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Memoria riservata per utilizzi futuri usando richieste attualmente in esecuzione.|  
 |**allocations_kb**|**bigint**|Quantità di memoria, in kilobyte (KB), allocata a questo tipo di broker.|  
 |**allocations_kb_per_sec**|**bigint**|Velocità delle allocazioni di memoria in kilobyte (KB) al secondo. Il valore può essere negativo per le deallocazioni di memoria.|  
 |**predicted_allocations_kb**|**bigint**|Quantità stimata di memoria allocata dal broker. Si basa sul modello di utilizzo della memoria.|  

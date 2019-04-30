@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060994"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Connettersi al database SQL di Azure (SybaseToSQL)
 Usare la connessione alla finestra di dialogo di database SQL di Azure per la connessione al database che si desidera eseguire la migrazione di database SQL di Azure.  
@@ -61,7 +61,7 @@ Per creare un nuovo database per la prima volta, seguire la procedura seguente
   
 3.  Al momento della creazione del database, i due parametri seguenti vengono forniti come input:  
   
-    1.  **Nome del database:** immettere il nome del Database.  
+    1.  **Nome del database:** Immettere il nome del Database.  
   
-    2.  **Dimensioni del database:** selezionare le dimensioni del Database che è necessario creare account di database SQL di Azure.  
+    2.  **Dimensioni del database:** Selezionare le dimensioni del Database che è necessario creare account di database SQL di Azure.  
   

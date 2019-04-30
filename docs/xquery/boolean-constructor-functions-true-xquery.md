@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047615"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Funzioni costruttore booleane - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- Nell'esempio seguente, la query viene eseguita su un oggetto tipizzato **xml** colonna. L'espressione `if` verifica il valore booleano tipizzato dell'elemento <`ROOT`> e restituisce il relativo codice XML creato. Nell'esempio vengono eseguite le operazioni seguenti:  
+ Nell'esempio seguente, la query viene eseguita su un oggetto tipizzato **xml** colonna. Il `if` espressione controlla il valore booleano tipizzato del <`ROOT`> elemento e restituisce il codice XML costruito, di conseguenza. Nell'esempio vengono eseguite le operazioni seguenti:  
   
--   Viene creata una raccolta di XML Schema che definisce l'elemento <`ROOT`> di tipo xs:boolean.  
+-   Crea una raccolta di XML schema che definisce il <`ROOT`> elemento del tipo xs: Boolean.  
   
 -   Crea una tabella con un oggetto tipizzato **xml** colonna usando la raccolta di XML schema.  
   

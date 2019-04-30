@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127706"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
   Una query XPath (XML Path Language) può essere specificata come parte di un URL o all'interno di un modello. La struttura del frammento risultante viene determinata dallo schema di mapping mentre i valori vengono recuperati dal database. Questo processo è concettualmente simile alla creazione di viste mediante l'istruzione CREATE VIEW e alla scrittura di query SQL relative a tali viste.  
@@ -116,7 +116,7 @@ ms.locfileid: "52753373"
   
  Quando si specificano query XPath in un modello, si noti il comportamento seguente:  
   
--   XPath può contenere caratteri come < o & che presentano significati speciali in XML (e il modello è un documento XML). Evitare tali caratteri utilizzando la codifica XML oppure specificare XPath nell'URL.  
+-   XPath può contenere caratteri come < o & che presentano significati speciali in XML (e il modello è un documento XML). È necessario eseguire l'escape di tali caratteri utilizzando XML &-codifica oppure specificare XPath nell'URL.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di query XPath in SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  

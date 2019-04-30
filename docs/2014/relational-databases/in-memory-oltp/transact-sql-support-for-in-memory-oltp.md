@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156223"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Supporto di Transact-SQL per OLTP in memoria
   È possibile accedere alle tabelle ottimizzate per la memoria usando qualsiasi query Transact-SQL o istruzione DML sta(SELECT, INSERT, UPDATE o DELETE), query ad hoc e modulo SQL, ad esempio stored procedure, funzioni con valori di tabella, funzioni scalari, trigger e visualizzazioni. Per altre informazioni, vedere [accesso tabelle utilizzando Transact-SQL interpretato](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -34,13 +34,13 @@ ms.locfileid: "48218491"
   
 -   [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (vedere `MEMORY_OPTIMIZED`, `BUCKET_COUNT`, `INDEX`, e `HASH`)  
   
--   [DICHIARARE @local_variable &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (vedere `NULL`  |  `NOT NULL`)  
+-   [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (see `NULL` | `NOT NULL`)  
   
  Le tabelle con ottimizzazione per la memoria supportano vincoli `PRIMARY KEY` e `NOT NULL`. Per informazioni sull'implementazione di vincoli non supportati, vedere [eseguire la migrazione verificare e Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   
  Per informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Tipi di dati supportati](supported-data-types-for-in-memory-oltp.md)  
   

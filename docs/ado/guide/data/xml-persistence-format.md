@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184841"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
 ADO utilizza la codifica UTF-8 per il flusso XML che viene mantenuto.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128086"
 ---
 # <a name="driver-architecture-overview"></a>Panoramica dell'architettura del driver
 Il Driver ODBC Microsoft Visual FoxPro è un driver a 32 bit che consente di aprire ed eseguire query su un database di Microsoft Visual FoxPro o FoxPro tabelle tramite l'interfaccia aprire Database Connectivity (ODBC). È possibile accedere ai dati di FoxPro utilizzando i tipi di applicazioni seguenti:  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc317474384c59d396d5a0f1d5ee4f71883509d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061195"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close - classe di evento
   La classe di evento **Trace File Close** indica che un file di traccia è stato chiuso durante un rollover del file di traccia.  
@@ -28,8 +28,8 @@ ms.locfileid: "52765373"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**EventClass**|**int**|Tipo di evento = 150.|27|No|  
-|**EventSequence**|**int**|Timestamp univoco di questo evento generato nella traccia. Si tratta di un valore a incremento progressivo costante per ogni evento generato.|51|No|  
+|**EventClass**|**int**|Tipo di evento = 150.|27|no|  
+|**EventSequence**|**int**|Timestamp univoco di questo evento generato nella traccia. Si tratta di un valore a incremento progressivo costante per ogni evento generato.|51|no|  
 |**FileName**|**nvarchar**|Nome logico del file di traccia chiuso.|36|Yes|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, NULL = utente. Il valore è sempre 1 per questa classe di evento.|60|Yes|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente). Il valore è sempre "sa" per questa classe di evento.|11|Yes|  

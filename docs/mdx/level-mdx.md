@@ -1,5 +1,5 @@
 ---
-title: Livello (MDX) | Documenti Microsoft
+title: Livello (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8406d02e167258901c3a6ce9ed3a1d7de935df54
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048515"
 ---
 # <a name="level-mdx"></a>Level (MDX)
 
@@ -41,7 +41,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- L'esempio seguente usa il **livello** funzione per restituire il nome del livello per il supporto All-Purpose Bike nella gerarchia dell'attributo nome del modello nel cubo Adventure Works.  
+ L'esempio seguente usa il **livello** funzione per restituire il nome del livello per la bicicletta All-Purpose Stand nella gerarchia dell'attributo Model Name del cubo Adventure Works.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

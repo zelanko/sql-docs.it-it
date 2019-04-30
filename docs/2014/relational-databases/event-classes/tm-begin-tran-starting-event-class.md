@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061353"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting-classe di evento
+# <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting - classe di evento
   TM: Begin Tran Starting-classe di evento indica che una richiesta BEGIN TRANSACTION è stata avviata. inviata dal client tramite l'interfaccia di gestione delle transazioni.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Begin Tran Starting colonne di dati di classe di evento  
@@ -33,7 +33,7 @@ ms.locfileid: "52817373"
 |DatabaseID|`int`|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |EventClass|`int`|Tipo di evento = 181.|27|No|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  

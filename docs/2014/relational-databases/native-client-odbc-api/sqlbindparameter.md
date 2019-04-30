@@ -1,5 +1,5 @@
 ---
-title: La funzione SQLBindParameter | Documenti di Microsoft
+title: SQLBindParameter | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067817"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` Consente di eliminare le attività di conversione dei dati quando viene utilizzata per fornire dati per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client, conseguente notevole miglioramento delle prestazioni per i componenti client e server delle applicazioni. Un altro vantaggio è costituito da un'inferiore perdita di precisione durante l'inserimento o l'aggiornamento di tipi di dati numerici approssimativi.  

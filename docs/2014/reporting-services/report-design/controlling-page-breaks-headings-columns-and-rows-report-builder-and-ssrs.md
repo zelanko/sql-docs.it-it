@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186518"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report e SSRS)
   Un'interruzione di pagina consente di suddividere un report in più pagine per la visualizzazione e la stampa. Consentono inoltre di adattare il contenuto alle pagine dei report in modo da ottenere una visualizzazione ottimale quando si visualizza l'anteprima di un report o si esporta il report in un altro formato.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd6afc441b66225bdf1696020916f701b6041db6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044166"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started - classe di evento
   La classe di evento Scan:Started si verifica all'avvio dell'analisi di una tabella o di un indice.  

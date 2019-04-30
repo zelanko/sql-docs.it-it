@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066259"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigazione all'interno di Progettazione viste e Progettazione query (Visual Database Tools)
   È possibile utilizzare Progettazione query e Progettazione viste con la tastiera o con il mouse. Fare riferimento alle seguenti tabelle per gli specifici metodi.  

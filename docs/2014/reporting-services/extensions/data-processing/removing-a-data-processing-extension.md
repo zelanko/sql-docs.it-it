@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f5dfd3a6a7615fa3fd91c917bba6dbf0808f0f9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163978"
 ---
 # <a name="removing-a-data-processing-extension"></a>Rimozione di un'estensione per l'elaborazione dati
   Per rimuovere un'estensione per l'elaborazione dati, rimuovere semplicemente l'elemento **Extension** per l'estensione dal file di configurazione. Se sono state create voci per un server di report e per Progettazione report, rimuovere l'elemento**Extension** sia dal file RSReportServer.config che dal file RSReportDesigner.config. Dopo la rimozione delle informazioni di configurazione, l'estensione per l'elaborazione dati non è più disponibile per il componente.  

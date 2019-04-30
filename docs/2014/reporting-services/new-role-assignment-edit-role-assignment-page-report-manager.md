@@ -1,5 +1,5 @@
 ---
-title: 'Nuova assegnazione ruolo: Modifica assegnazione ruolo (gestione Report) | Microsoft Docs'
+title: 'Pagina Nuova assegnazione di ruolo: Modifica assegnazione ruolo (gestione Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188402"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nuova assegnazione ruolo: Modifica assegnazione ruolo (gestione Report)
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Pagina Nuova assegnazione di ruolo: Modifica assegnazione ruolo (gestione Report)
   La pagina Nuova assegnazione ruolo o Modifica assegnazione ruolo consente di concedere le autorizzazioni per operazioni ed elementi del server di report. Per ogni utente che deve accedere a un server di report è necessario definire almeno un'assegnazione di ruolo per definire il livello di accesso. È possibile creare assegnazioni di ruolo nel nodo radice o in uno specifico report, modello, cartella, risorsa o origine dati condivisa. Il sistema di sicurezza di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] si basa su assegnazioni di ruolo che vengono applicate agli elementi. Tramite un'assegnazione di ruolo, un gruppo o un utente viene assegnato a una definizione di ruolo e ogni definizione di ruolo identifica le attività che i gruppi o gli utenti sono autorizzati a eseguire in relazione a un elemento specifico.  
   
  Le assegnazioni di ruolo a livello di elemento possono avere effetti estesi. Sebbene possano essere associate a un singolo report o a una singola cartella, è inoltre possibile definire le assegnazioni a un livello alto della gerarchia di cartelle in modo che vengano ereditate dalle cartelle e dagli elementi ai livelli inferiori dell'albero. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md).  

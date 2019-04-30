@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162210"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configurazione del Motore di database – Istanze utente
   Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per gli utenti che non dispongono di autorizzazioni di amministratore, nonché per aggiungere utenti al ruolo di amministratore.  

@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060240"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Gestione dei problemi di concorrenza di database negli updategram (SQLXML 4.0)
   Analogamente ad altri meccanismi di aggiornamento del database, gli updategram devono gestire aggiornamenti simultanei ai dati in un ambiente multiutente. Gli updategram utilizzano il controllo della concorrenza ottimistica, che esegue il confronto dei dati di campo come snapshot per garantire che i dati da aggiornare non siano già stati modificati da un'altra applicazione utente dal momento in cui sono stati letti dal database. Gli updategram includono questi valori di snapshot nel  **\<prima di >** blocco degli Updategram. Prima di aggiornare il database, l'updategram controlla i valori specificati nel  **\<prima di >** blocco rispetto ai valori presenti nel database per garantire che l'aggiornamento è valido.  

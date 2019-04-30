@@ -1,5 +1,5 @@
 ---
-title: Estrarre (MDX) | Documenti Microsoft
+title: Estrarre (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155217"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -38,13 +38,13 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **estrarre** funzione restituisce un set costituito da tuple dagli elementi della gerarchia estratti. Per ogni tupla nel set specificato, i membri delle gerarchie specificate vengono estratti in nuove tuple nel set dei risultati. Questa funzione rimuove sempre le tuple duplicate.  
   
- Il **estrarre** funzione esegue l'operazione opposta rispetto di [Crossjoin](../mdx/crossjoin-mdx.md) (funzione).  
+ Il **estrarre** funzione esegue l'operazione opposta rispetto il [Crossjoin](../mdx/crossjoin-mdx.md) (funzione).  
   
 ## <a name="examples"></a>Esempi  
- La query seguente viene illustrato come utilizzare il **estrarre** funzione su un set di tuple restituite dal **NonEmpty** funzione:  
+ La query seguente viene illustrato come utilizzare il **estrarre** in un set di tuple restituito dalla funzione il **NonEmpty** funzione:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -79,6 +79,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

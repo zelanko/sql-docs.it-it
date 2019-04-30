@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2b162dca8b51a21be0d7757c5cd2b952bb3ff70
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217838"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
   Nel provider WMI per Reporting Services sono esposte due classi WMI per l'amministrazione di istanze del server di report in modalità nativa tramite scripting:  

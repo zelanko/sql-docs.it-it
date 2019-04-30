@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065751"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
   L'utilizzo del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati in cui non sono inclusi caratteri estesi o DBCS (Double Byte Character Set).  
@@ -60,13 +60,13 @@ ms.locfileid: "48124301"
      All'inizio della ognuno `char` oppure `varchar` campo **bcp** aggiunge la lunghezza del prefisso.  
   
     > [!IMPORTANT]  
-    >  Quando si usa la modalità nativa, per impostazione predefinita, il **bcp** utilità converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. Il **bcp** utilità converte i caratteri di un file di dati in caratteri ANSI prima di importazione bulk in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.  
+    >  Per impostazione predefinita, quando si utilizza la modalità nativa, l'utilità **bcp** converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. L'utilità **bcp** converte i caratteri di un file di dati in caratteri ANSI prima dell'importazione bulk in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.  
   
--   `sql_variant` Dati  
+-   Dati `sql_variant`  
   
-     Se `sql_variant` dati vengono archiviati come SQLVARIANT in un file di dati in formato nativo, i dati verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengano utilizzato per ricreare il valore dei dati con lo stesso tipo di dati in una destinazione `sql_variant` colonna.  
+     Se i dati `sql_variant` vengono archiviati come SQLVARIANT in un file di dati in formato nativo, verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengono utilizzati per creare di nuovo il valore con lo stesso tipo di dati in una colonna di destinazione `sql_variant`.  
   
-     Se il tipo di dati della colonna di destinazione non `sql_variant`, ogni valore viene convertito nel tipo di dati della colonna di destinazione, in base alle normali regole di conversione implicita dei dati. Se si verifica un errore durante la conversione dei dati, viene eseguito il rollback del batch corrente. Per i valori `char` e `varchar` trasferiti tra colonne `sql_variant` possono verificarsi problemi relativi alla conversione di tabelle codici.  
+     Se il tipo di dati della colonna di destinazione è diverso da `sql_variant`, ogni valore viene convertito nel tipo di dati della colonna di destinazione, in base alle regole standard di conversione implicita dei dati. Se si verifica un errore durante la conversione dei dati, viene eseguito il rollback del batch corrente. Per i valori `char` e `varchar` trasferiti tra colonne `sql_variant` possono verificarsi problemi relativi alla conversione di tabelle codici.  
   
      Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48124301"
   
  Il formato nativo viene supportato dalle opzioni della riga di comando seguenti:  
   
-|Comando|Opzione|Description|  
+|Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|Fa sì che il **bcp** usare i tipi di dati nativi dei dati dell'utilità.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|Utilizza i tipi di dati nativi o nativi estesi. Si noti che DATAFILETYPE non è necessario se i tipi di dati vengono specificati in un file di formato.|  
@@ -118,7 +118,7 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 ### <a name="using-bcp-to-bulk-export-native-data"></a>Utilizzo del comando bcp per l'esportazione bulk di dati nativi  
  Per esportare i dati dalla tabella al file di dati, usare **bcp** con l'opzione **out** e i qualificatori seguenti:  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-n**|Specifica i tipi di dati nativi.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
@@ -150,7 +150,7 @@ GO
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   

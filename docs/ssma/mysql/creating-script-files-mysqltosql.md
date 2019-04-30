@@ -16,11 +16,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132322"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Creazione di file di script (MySQLToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -31,7 +31,7 @@ Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei.
   
 2.  **Server:** Consente all'utente di impostare le definizioni del server di origine/destinazione. Può essere anche in un file di connessione server separato.  
   
-3.  **comandi script:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
+3.  **script-commands:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
   
 Ogni sezione viene descritto in dettaglio di seguito:  
   
@@ -91,7 +91,7 @@ Le opzioni configurabili dall'utente includono:
   
     - origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
   
-    - destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
+    - target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Esempio:**  
   
@@ -205,7 +205,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Skip: La console ignora gli oggetti che esistono già nel database  
   
-    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
+    -   ask-user: Richiede l'input dell'utente ('Sì' / 'no')  
   
     **Esempio:**  
   
@@ -297,7 +297,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
-    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
+    -   debug: Tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
     > Obbligatori vengono registrati a qualsiasi livello.  

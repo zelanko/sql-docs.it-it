@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057814"
 ---
 # <a name="what-is-polybase"></a>Che cos'è PolyBase?
 PolyBase consente il sistema di piattaforma Analitica (AP) per elaborare query Transact-SQL che può leggere i dati da e scrivere dati in origini dati esterne. Le stesse query che accedono ai dati esterni possono anche includere tabelle relazioni in punti di accesso. In questo modo è possibile combinare dati provenienti da origini esterne con dati relazionali di alto valore nei database di punti di accesso.
@@ -34,6 +34,6 @@ Visualizzare [le funzionalità e limitazioni di](https://docs.microsoft.com/sql/
 
 ## <a name="see-also"></a>Vedere anche
 - [Hadoop](polybase-configure-hadoop.md)
-- [Archivio Blob di Azure](polybase-configure-azure-blob-storage.md)
+- [Archiviazione BLOB di Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

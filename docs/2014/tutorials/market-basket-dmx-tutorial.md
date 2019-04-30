@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185648"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Esercitazione su DMX per Market Basket
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione dei modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime che indicano quali prodotti tendono a essere acquistati contemporaneamente.  

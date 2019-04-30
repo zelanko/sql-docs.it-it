@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061499"
 ---
 # <a name="generic-applications"></a>Applicazioni generiche
 Applicazioni generiche, talvolta, eseguire un'attività a livello di codice, ad esempio un foglio di calcolo il recupero dei dati da un database. Utente che potrebbe eseguire anche un'ampia gamma di attività definite dall'utente, ad esempio un'applicazione di query standard che consente all'utente di immettere ed eseguire un'istruzione SQL. Quali applicazioni generiche hanno in comune è che devono interagire con un'ampia gamma di DBMS diverso e che lo sviluppatore non conosce in anticipo quali saranno questi DBMS.  

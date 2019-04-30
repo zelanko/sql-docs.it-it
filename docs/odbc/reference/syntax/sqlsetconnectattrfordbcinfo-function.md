@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125531"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Funzione SQLSetConnectAttrForDbcInfo
 **Conformità**  
- Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 3,81 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLSetConnectAttrForDbcInfo** equivale a **SQLSetConnectAttr**, ma l'attributo viene impostato sul token di informazioni di connessione invece che nell'handle di connessione.  

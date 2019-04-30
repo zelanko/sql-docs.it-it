@@ -1,5 +1,5 @@
 ---
-title: Istruzione CREATE KPI (MDX) | Documenti Microsoft
+title: Istruzione CREATE KPI (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181549"
 ---
-# <a name="mdx-data-definition---create-kpi"></a>Definizione dei dati MDX - creare l'indicatore KPI
+# <a name="mdx-data-definition---create-kpi"></a>Definizione dei dati MDX - CREATE KPI
 
 
   Crea un indicatore di prestazioni chiave (KPI). Un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e utilizzati per valutare il successo aziendale o dello scenario.  
@@ -30,19 +30,19 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Nome_kpi*  
+ *KPI_Name*  
  Stringa valida che specifica un nome di indicatore KPI.  
   
  *KPI_Value*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un valore numerico.  
   
- *Property_name*  
+ *Property_Name*  
  Stringa valida che fornisce il nome di una proprietà di indicatore KPI.  
   
  *Property_Value*  
  Espressione scalare valida che definisce il valore della proprietà dell'indicatore KPI.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Specificando un cubo diverso dal cubo connesso viene generato un errore. Pertanto, per identificare il cubo corrente è consigliabile usare CURRENTCUBE anziché il nome di un cubo.  
   
 ## <a name="kpi-properties"></a>Proprietà indicatore KPI  
@@ -62,7 +62,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |DISPLAY_FOLDER|Stringa che specifica il percorso della cartella di visualizzazione in cui l'indicatore KPI deve essere mostrato dall'applicazione client. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barra rovesciata (\\) è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle|  
 |ASSOCIATED_MEASURE_GROUP|Stringa che specifica il nome del gruppo di misure al quale tutti i calcoli di MDX devono fare riferimento.|  
   
- I valori per le proprietà GOAL, STATUS e TREND sono espressioni MDX che devono rientrare tra -1 e 1. Tuttavia, è l'applicazione client che definisce l'intervallo dei valori effettivo per queste proprietà. Quando si utilizza gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per esaminare gli indicatori KPI, i valori minori di -1 vengono considerati come -1 e i valori maggiori di 1 vengono considerati come 1.  
+ I valori per le proprietà GOAL, STATUS e TREND sono espressioni MDX che devono rientrare tra -1 e 1. Tuttavia, è l'applicazione client che definisce l'intervallo dei valori effettivo per queste proprietà. Quando si usa gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per esaminare gli indicatori KPI, i valori minori di -1 vengono considerati come -1 e valori superiori a 1 vengono considerati come 1.  
   
  STATUS_GRAPHIC e TREND_GRAPHIC sono valori stringa utilizzati dall'applicazione client per identificare il set corretto di immagini da visualizzare. Queste stringhe definiscono anche il comportamento della funzione di visualizzazione. Questo comportamento include il numero di stati da visualizzare (in genere, si tratta di un numero dispari) e le immagini da utilizzare per ognuno di questi stati.  
   
@@ -72,12 +72,12 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Numero di stati per simbolo di indicatore di prestazioni (KPI)|Valore di questi stati|  
 |--------------------------------------|---------------------------|  
 |3|Errato = da 1 a 0,5<br /><br /> OK = da 0,4999 a 0,4999<br /><br /> Buono = da 0,50 a 1|  
-|5|Negativo = da -1 a -0,75<br /><br /> A rischio = da -0,7499 a -0,25<br /><br /> OK = da -0,2499 a 0,2499<br /><br /> In aumento = da 0,25 a 0,7499<br /><br /> Buono = da 0,75 a 1|  
+|5|Negativo = da -1 a -0,75<br /><br /> A rischio = da -0,7499 a -0,25<br /><br /> OK = da 0,2499 a 0,2499<br /><br /> In aumento = da 0,25 a 0,7499<br /><br /> Buono = da 0,75 a 1|  
   
 > [!NOTE]  
 >  Per alcuni simboli, ad esempio il misuratore capovolto o la freccia di stato capovolta, l'intervallo è invertito. Cioè, -1 è buono e 1 è errato.  
   
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il nome del simbolo dell'indicatore KPI determina se il simbolo ha tre o cinque stati. Nella tabella seguente sono elencati l'utilizzo, nome e il numero di stati che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] associa dell'indicatore KPI.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il nome del simbolo dell'indicatore KPI determina se il simbolo ha tre o cinque stati. La tabella seguente elenca l'utilizzo, nome e il numero di stati che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] associa dell'indicatore KPI.  
   
 |Utilizzo del simbolo|Nome del simbolo dell'indicatore KPI|Numero di stati|  
 |--------------------|-------------------------|----------------------|  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154729"
 ---
 # <a name="working-with-upgrade-advisor"></a>Utilizzo di Preparazione aggiornamento
   Per assicurare il corretto completamento dell'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Preparazione aggiornamento rende disponibile una console centrale per identificare i problemi da risolvere nelle installazioni e prima di eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -38,9 +38,9 @@ ms.locfileid: "48076251"
   
  Negli argomenti di questa sezione vengono fornite informazioni generali sulle funzionalità di Preparazione aggiornamento e informazioni sull'utilizzo di Preparazione aggiornamento e dei relativi report.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Panoramica di Preparazione aggiornamento](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Vengono fornite informazioni generali sul processo di aggiornamento, sull'Analisi guidata di Preparazione aggiornamento e sul Visualizzatore report di Preparazione aggiornamento.|  
 |[Procedure per Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Vengono fornite le istruzioni per eseguire le comuni procedure di Preparazione aggiornamento.|  

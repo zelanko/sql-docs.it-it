@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191823"
 ---
 # <a name="manage-bookmarks"></a>Gestione di segnalibri
   Quando si lavora in un editor di codice, la finestra **Segnalibri** consente di creare collegamenti a righe di codice specifiche all'interno del documento. Per visualizzare questa finestra, usare il menu **Visualizza** .  

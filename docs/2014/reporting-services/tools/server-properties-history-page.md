@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157603"
 ---
 # <a name="server-properties-history-page"></a>Proprietà server (pagina Cronologia)
   Utilizzare questa pagina per impostare un valore predefinito relativo al numero di copie di cronologia dei report da mantenere. Il valore predefinito rappresenta un'impostazione iniziale che definisce i limiti della cronologia di tutti i report. È possibile modificare queste impostazioni per singoli report.  

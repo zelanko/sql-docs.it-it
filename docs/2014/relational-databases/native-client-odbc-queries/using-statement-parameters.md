@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200242"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
   Un parametro è una variabile in un'istruzione SQL che consente a un'applicazione ODBC di:  
@@ -50,7 +50,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  A ogni marcatore di parametro è associato il numero ordinale assegnato ai parametri, da sinistra verso destra. Il marcatore di parametro all'estrema sinistra in un'istruzione SQL presenta un valore ordinale pari a 1, il successivo è l'ordinale 2 e così via.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Associazione di parametri](using-statement-parameters-binding-parameters.md)  
   

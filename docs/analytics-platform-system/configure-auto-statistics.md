@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057064"
 ---
 # <a name="configure-auto-statistics"></a>Configurare automaticamente le statistiche
 
@@ -32,7 +32,7 @@ Statistiche automatiche sono statistiche che query optimizer vengono create e ag
 Statistiche automatico includono le tre impostazioni seguenti: 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-Quando l'oggetto automatico crea opzione delle statistiche, AUTO_CREATE_STATISTICS, è impostata su ON, Query Optimizer Crea statistiche per colonne singole nel predicato di query, se necessario, per migliorare le stime della cardinalità per il piano di query. Queste statistiche di colonna singola vengono create in colonne che ancora non dispongono di un istogramma in un oggetto statistiche esistente.
+Quando l'opzione per la creazione automatica delle statistiche, AUTO_CREATE_STATISTICS, è impostata su ON, Query Optimizer crea le statistiche necessarie per colonne singole nel predicato di query, per migliorare le stime della cardinalità per il piano di query. Queste statistiche di colonna singola vengono create in colonne che ancora non dispongono di un istogramma in un oggetto statistiche esistente.
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 Quando l'opzione per l'aggiornamento automatico delle statistiche, AUTO_UPDATE_STATISTICS, è impostata su ON, Query Optimizer determina se le statistiche potrebbero non essere aggiornate, quindi ne esegue l'aggiornamento qualora vengano utilizzate tramite una query. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.

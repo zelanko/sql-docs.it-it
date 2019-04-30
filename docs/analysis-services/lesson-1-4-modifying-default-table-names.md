@@ -1,5 +1,5 @@
 ---
-title: Modifica di nomi di tabella predefinito | Documenti Microsoft
+title: Modifica di nomi di tabella predefinito | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053128"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>Lezione 1-4 - modifica i nomi di tabella predefinito
+# <a name="lesson-1-4---modifying-default-table-names"></a>Lezione 1-4 - modifica i nomi di tabella predefinite
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 È possibile modificare il valore della proprietà **FriendlyName** per gli oggetti nella vista origine dati per renderli più semplici da individuare e usare.  
@@ -50,7 +50,7 @@ Nell'attività seguente si modificherà il nome descrittivo di ogni tabella nell
 [Lezione 2: Definizione e distribuzione di un cubo](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Viste origine dati nei modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Modificare le proprietà in una vista origine dati &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

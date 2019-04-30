@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062857"
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND di Shape
 Clausola APPEND forma comando aggiunge una o più colonne a un **Recordset**. Spesso, queste colonne sono le colonne a capitoli, che fanno riferimento a un elemento figlio **Recordset**.  

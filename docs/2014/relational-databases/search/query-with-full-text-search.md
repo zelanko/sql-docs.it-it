@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046163"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
   Per definire ricerche full-text, le query full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano i predicati full-text (CONTAINS e FREETEXT) e le funzioni full-text (CONTAINSTABLE e FREETEXTTABLE). Tali predicati e funzioni supportano la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] avanzata che a sua volta supporta vari formati di termini di query. Per scrivere query full-text, è necessario sapere come e quando utilizzare questi predicati e queste funzioni.  
@@ -66,7 +66,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>b. Utilizzo di FREETEXT per la ricerca di parole contenenti valori di carattere specificati  
+#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>B. Utilizzo di FREETEXT per la ricerca di parole contenenti valori di carattere specificati  
  Nell'esempio seguente viene eseguita la ricerca di tutti i documenti contenenti le parole associate a "vital", "safety" e "components".  
   
 ```  
@@ -129,7 +129,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-#### <a name="b-using-freetexttable"></a>b. Utilizzo di FREETEXTTABLE  
+#### <a name="b-using-freetexttable"></a>B. Utilizzo di FREETEXTTABLE  
  Nell'esempio seguente viene estesa una query FREETEXTTABLE in modo che vengano restituite per prime le righe con valore di pertinenza maggiore e che la classificazione di ogni riga venga aggiunta all'elenco di selezione. Per specificare la query, è necessario sapere che **ProductDescriptionID** è la colonna chiave univoca per il `ProductDescription` tabella.  
   
 ```  

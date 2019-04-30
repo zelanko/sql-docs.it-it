@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83964bf1e76eef5c7c4ba4121b0c581e8d8a406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288321"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Allocazione di un handle di connessione ODBC
 Prima che l'applicazione possa connettersi a un'origine dati o driver, è necessario allocare un handle di connessione, come indicato di seguito:  
   
-1.  L'applicazione dichiara una variabile di tipo SQLHDBC. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle dell'ambiente in cui si desidera allocare la connessione e l'opzione SQL_HANDLE_DBC. Esempio:  
+1.  L'applicazione dichiara una variabile di tipo SQLHDBC. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle dell'ambiente in cui si desidera allocare la connessione e l'opzione SQL_HANDLE_DBC. Ad esempio:   
   
     ```  
     SQLHDBC hdbc1;  
@@ -41,6 +41,6 @@ Prima che l'applicazione possa connettersi a un'origine dati o driver, è necess
   
  Gestione Driver non chiama **SQLAllocHandle** nel driver di questo tempo, poiché non conosce il driver da chiamare. Ritardare la chiamata **SQLAllocHandle** nel driver fino a quando l'applicazione chiama una funzione per la connessione a un'origine dati. Per altre informazioni, vedere [ruolo di gestione Driver nel processo di connessione](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md), più avanti in questa sezione.  
   
- È importante allocare un handle di connessione non è quello utilizzato per il caricamento di un driver. Il driver non viene caricato finché non viene chiamata una funzione di connessione. Dopo avere allocato un handle di connessione e prima della connessione del driver o origine dati, le funzioni sole l'applicazione può chiamare con l'handle di connessione sono pertanto **SQLSetConnectAttr**, **SQLGetConnectAttr**, oppure **SQLGetInfo** con l'opzione SQL_ODBC_VER. Chiamare altre funzioni con l'handle di connessione, quali **SQLEndTran**, restituisce SQLSTATE 08003 (connessione non aperta). Per informazioni dettagliate, vedere [tabelle della transizione di stato appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ È importante allocare un handle di connessione non è quello utilizzato per il caricamento di un driver. Il driver non viene caricato finché non viene chiamata una funzione di connessione. Dopo avere allocato un handle di connessione e prima della connessione del driver o origine dati, le funzioni sole l'applicazione può chiamare con l'handle di connessione sono pertanto **SQLSetConnectAttr**, **SQLGetConnectAttr**, oppure **SQLGetInfo** con l'opzione SQL_ODBC_VER. Chiamare altre funzioni con l'handle di connessione, quali **SQLEndTran**, restituisce SQLSTATE 08003 (connessione non aperta). Per informazioni dettagliate, vedere [appendice b: Tabelle della transizione di stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Per altre informazioni sugli handle di connessione, vedere [handle di connessione](../../../odbc/reference/develop-app/connection-handles.md).

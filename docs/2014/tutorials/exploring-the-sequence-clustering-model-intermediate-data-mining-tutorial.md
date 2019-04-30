@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164051"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Sequence Clustering (Esercitazione intermedia sul data mining)
   Ora che è stata compilata la **Sequence Clustering with Region** modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering include cinque schede: **Diagramma dei cluster**, **profili Cluster**, **caratteristiche del Cluster**, **ClusterDiscrimination**, e **transizionidistato**. Per altre informazioni su come utilizzare questo visualizzatore, vedere [esplorare un modello usando il visualizzatore Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -149,7 +149,7 @@ ms.locfileid: "56024998"
   
 4.  Una riga di transizione contiene il testo transizione nella **variabili** colonna e una combinazione di valori degli attributi sequenziali nella **valore** colonna. La sequenza può inoltre contenere punti iniziali e valori mancanti.  
   
-     Si supponga ad esempio che la transizione includa il valore [Avvio] -> Road Tire Tube. Ciò significa che i clienti contenuti in questo cluster includono frequentemente l'articolo Road Tire Tube per primo tra gli acquisti. Questo comportamento potrebbe indicare che il prodotto è un articolo popolare molto ricercato dai clienti oppure semplicemente che il prodotto è facile da reperire sul sito riservato agli acquisti.  
+     Ad esempio, si supponga che la transizione includa il valore [avvio] -> Road Tire Tube. Ciò significa che i clienti contenuti in questo cluster includono frequentemente l'articolo Road Tire Tube per primo tra gli acquisti. Questo comportamento potrebbe indicare che il prodotto è un articolo popolare molto ricercato dai clienti oppure semplicemente che il prodotto è facile da reperire sul sito riservato agli acquisti.  
   
 5.  Scorrere l'elenco fino a individuare la prima transizione che non dispone **[avvio]** oppure **mancante** in esso.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56024998"
   
 8.  Fare clic sul nodo relativo a Touring Tire e riposizionare il dispositivo di scorrimento al centro.  
   
-     In un primo momento sono presenti numerose linee di transizione che collegano Touring Tire agli altri prodotti, ma alzando la soglia di probabilità le transizioni meno probabili vengono eliminate dal grafico, lasciando solo la transizione Touring Tire > Touring Tire Tube. Questa transizione indica che se un cliente include un articolo Touring Tire tra gli acquisti, esiste una forte probabilità che il cliente inserisca successivamente un articolo Touring Tire Tube.  
+     Inizialmente, sono presenti numerose linee di transizione che collegano Touring Tire agli altri prodotti, ma quando si aumenta la soglia di probabilità, le transizioni meno probabili vengono eliminate dal grafico, lasciando solo la transizione Touring Tire > Touring Tire Tube. Questa transizione indica che se un cliente include un articolo Touring Tire tra gli acquisti, esiste una forte probabilità che il cliente inserisca successivamente un articolo Touring Tire Tube.  
   
  [Torna all'inizio](#bkmk_CDiagram)  
   

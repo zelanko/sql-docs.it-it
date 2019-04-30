@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161492"
 ---
 # <a name="internet-publishing-scenario"></a>Scenario di Internet Publishing
 Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Microsoft OLE DB per Internet Publishing. In questo scenario si creerà un'applicazione Visual Basic che utilizza **Recordset**, **Record**, e **Stream** pubblicati con gli oggetti per visualizzare il contenuto delle risorse Internet del Provider di pubblicazione.  
@@ -29,11 +29,11 @@ Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Mi
   
 -   [Passaggio 1: Configurare il progetto di Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
--   [Passaggio 2: Inizializzare la casella di riepilogo Main](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
+-   [Passaggio 2: Inizializzare la casella di riepilogo principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   
--   [Passaggio 3: Popolare la casella di riepilogo Fields](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
+-   [Passaggio 3: Popolare la casella di riepilogo di campi](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [Passaggio 4: Popolare la casella di riepilogo Details](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [Passaggio 4: Popolare la casella di testo dei dettagli](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

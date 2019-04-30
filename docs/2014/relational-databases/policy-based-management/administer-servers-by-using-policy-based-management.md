@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157095"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
   La gestione basata su criteri è un sistema per la gestione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando gli amministratori dei criteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano la gestione basata su criteri, utilizzano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare criteri per la gestione di entità nel server, quali l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], database o altri oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

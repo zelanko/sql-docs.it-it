@@ -1,5 +1,5 @@
 ---
-title: UnknownMember (MDX) | Documenti Microsoft
+title: UnknownMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065044"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -39,8 +39,8 @@ Hierarchy_Expression.UnknownMember
  *Hierarchy_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
-## <a name="remarks"></a>Remarks  
- Analysis Services vengono creati un membro sconosciuto per associare i dati della tabella dei fatti a una gerarchia quando la gerarchia non è noto. Il membro sconosciuto può trovarsi a uno dei livelli seguenti:  
+## <a name="remarks"></a>Note  
+ Analysis Services consente di creare un membro sconosciuto per associare i dati della tabella dei fatti a una gerarchia quando la gerarchia non è noto. Il membro sconosciuto può trovarsi a uno dei livelli seguenti:  
   
 -   Al livello principale per le gerarchie di attributi non aggregate.  
   
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

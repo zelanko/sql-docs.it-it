@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044096"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Test di un modello filtrato (Esercitazione di base sul data mining)
   Ora che è stato possibile determinare che il `TM_Decision_Tree` modello è il più accurato, sarà necessario personalizzare il modello per meglio soddisfare le esigenze del [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campagna di mailing. In particolare, il reparto marketing desidera sapere se esistono differenze tra i clienti di sesso maschile e femminile. Le informazioni possono aiutarli a decidere quali riviste utilizzare per la pubblicità e quali prodotti includere nei mailing.  

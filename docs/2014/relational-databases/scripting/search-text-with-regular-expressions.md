@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136190"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Per eseguire la ricerca utilizzando espressioni regolari  
   
-1.  Per consentire l'uso delle espressioni regolari nel **Find what** campo durante **ricerca veloce**, **FindinFiles**, **Sostituzione veloce**, o  **Sostituisci nei file** operazioni, selezionare il **uso** opzione sotto **opzioni di ricerca** e scegliere **espressioni regolari**.  
+1.  Per consentire l'uso di espressioni regolari nel campo **Trova** durante le operazioni **Ricerca rapida**, **FindinFiles** (Cerca nei file), **Sostituzione veloce** o **Replace in Files** (Sostituisci nei file), selezionare l'opzione **Usa** in **Opzioni di ricerca** e scegliere **Espressioni regolari**.  
   
 2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per **l'elenco dei riferimenti**. Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53328315"
 |Identificatore C/C++|:i|Corrisponde all'espressione ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Stringa tra virgolette|:q|Cerca l'espressione (("[^"]*")&#124;('[^']\*')).|  
 |Spazio o tabulazione|:b|Consente di ricercare il carattere spazio o tabulazione.|  
-|Integer|:z|Corrisponde all'espressione ([0-9]+).|  
+|Valore intero|:z|Corrisponde all'espressione ([0-9]+).|  
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53328315"
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
-|n ripetizioni|^n|Consente di ricercare n occorrenze dell'espressione precedente. Ad esempio, [0-9] ^ 4 consente di ricercare qualsiasi sequenza a quattro cifre.|  
+|n ripetizioni|^n|Consente di ricercare n occorrenze dell'espressione precedente. Ad esempio, [0-9]^4 consente di ricercare qualsiasi sequenza di quattro cifre.|  
 |Raggruppamento|()|Consente di raggruppare una sottoespressione.|  
 |ennesimo testo con tag|\n|In un'espressione **Trova o Sostituisci** indica il testo corrispondente all'ennesima espressione con tag, dove n è un numero da 1 a 9.<br /><br /> In un'espressione di **sostituzione** \0 inserisce l'intero testo corrispondente.|  
 |Campo giustificato a destra|\\(w,n)|In un'espressione di **sostituzione** giustifica a destra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  

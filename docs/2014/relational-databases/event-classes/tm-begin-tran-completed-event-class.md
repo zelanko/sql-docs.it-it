@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061229"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed-classe di evento
+# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed - classe di evento
   TM: Begin Tran Completed-classe di evento indica che una richiesta BEGIN TRANSACTION è stata completata. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
   
 ## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran completato colonne di dati di classe di evento  
@@ -43,7 +43,7 @@ ms.locfileid: "52803974"
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Yes|  
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Yes|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Yes|  
-|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  

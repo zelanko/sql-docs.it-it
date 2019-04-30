@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058135"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opzioni di configurazione di Reporting Services (SSRS)
   Usare la pagina **Configurazione di Reporting Services** dell'Installazione guidata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare le modalità di installazione e di configurazione di un'istanza del server di report. La disponibilità di un'opzione di installazione dipende dalle opzioni scelte in precedenza nella pagina **Selezione funzionalità** e dall'installazione o meno di un'istanza locale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] contemporaneamente all'installazione del server di report.  
@@ -49,7 +49,7 @@ ms.locfileid: "53375683"
 #### <a name="install-only"></a>Solo installazione  
  Consente di installare i file di programma del server di report, di creare l'account del servizio del server di report e di registrare il provider di Strumentazione gestione Windows (WMI) per il server di report. Questa opzione di installazione viene definita installazione di tipo "solo file". Selezionare questa opzione se non si desidera utilizzare la configurazione predefinita. Se la configurazione predefinita non può essere installata o se si esegue l'installazione di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che include [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], questa è l'unica opzione disponibile. Per altre informazioni su un'installazione "solo file", vedere [modalità installazione (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Al termine dell'installazione, è necessario creare il database del server di report e configurare quest'ultimo prima di utilizzarlo. Per configurare un server di report e creare il database, utilizzare Gestione configurazione Reporting Services. Per altre informazioni, vedere [come: Creare un database del Server di Report (configurazione di Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [configura una connessione di Database Server di Report](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
+ Al termine dell'installazione, è necessario creare il database del server di report e configurare quest'ultimo prima di utilizzarlo. Per configurare un server di report e creare il database, utilizzare Gestione configurazione Reporting Services. Per altre informazioni, vedere [Procedura: Creare un database del Server di Report (configurazione di Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [configura una connessione di Database Server di Report](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Modalità SharePoint di Reporting Services  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53375683"
   
 -   [Installare Reporting Services in modalità SharePoint come singola Server Farm](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544).  
   
--   [Server di Report (SSRS) Reporting](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244).  
+-   [Reporting Services Report Server (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244).  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>Installazione del componente aggiuntivo Reporting Services per le tecnologie SharePoint  
  A partire dalla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , è possibile installare il componente aggiuntivo come parte dell'installazione di SQL Server, nella pagina Selezione funzionalità dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

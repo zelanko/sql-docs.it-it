@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 319d63b5faead9a01588ef50482e20f5fb179ca4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033363"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Proprietà Ordinal (Position - ADO MD)
 Identifica in modo univoco un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) lungo un asse.  

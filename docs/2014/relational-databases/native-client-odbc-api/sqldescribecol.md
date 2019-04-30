@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067768"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Per le istruzioni eseguite, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client non è necessario eseguire una query sul server per descrivere le colonne in un set di risultati. In questo caso, `SQLDescribeCol` genera un round trip del server. Ad esempio [SQLColAttribute](sqlnumresultcols.md), la chiamata `SQLDescribeCol` via preparate, ma le istruzioni non eseguite genera un round trip del server.  
@@ -37,7 +37,7 @@ ms.locfileid: "53369843"
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |Data|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
@@ -50,7 +50,7 @@ ms.locfileid: "53369843"
  `SQLDescribeCol` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLDescribeCol](https://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol Function](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

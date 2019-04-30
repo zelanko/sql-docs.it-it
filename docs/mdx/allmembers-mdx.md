@@ -1,5 +1,5 @@
 ---
-title: AllMembers (MDX) | Documenti Microsoft
+title: AllMembers=2==restituisce (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 92cde0acf07f62d0678da6dd96efa707dedc1a1f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066249"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 
@@ -39,8 +39,8 @@ Level_Expression.AllMembers
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
-## <a name="remarks"></a>Remarks  
- Il **AllMembers** funzione restituisce un set contenente tutti i membri, che include i membri calcolati, la gerarchia o livello specificato. Il **AllMembers** funzione restituisce i membri calcolati, anche se la gerarchia o livello specificato non contiene membri visibili.  
+## <a name="remarks"></a>Note  
+ Il **AllMembers** funzione restituisce un set contenente tutti i membri, che include i membri calcolati, nella gerarchia specificata o del livello. Il **AllMembers** funzione restituisce i membri calcolati anche se il livello o la gerarchia specificata non contiene membri visibili.  
   
 > [!IMPORTANT]  
 >  Quando una dimensione contiene una sola gerarchia visibile, è possibile fare riferimento alla gerarchia con il nome della dimensione o della gerarchia poiché in questo caso il nome della dimensione viene risolto in base all'unica gerarchia visibile che contiene. `Measures.AllMembers` è ad esempio un'espressione MDX valida perché esegue la risoluzione nell'unica gerarchia nella dimensione Measures.  
@@ -49,7 +49,7 @@ Level_Expression.AllMembers
 >  Il **AllMembers** funzione è semanticamente simile al [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) (funzione).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce tutti i membri di [`Date].[Calendar Year]` gerarchia dell'attributo sull'asse delle colonne, inclusi i membri calcolati e il set di tutti gli elementi figlio del `[Product].[Model Name]` attributo gerarchia sull'asse delle righe dal **Adventure Works** cubo.  
+ L'esempio seguente restituisce tutti i membri nel [`Date].[Calendar Year]` gerarchia dell'attributo sull'asse delle colonne, inclusi i membri calcolati e il set di tutti gli elementi figlio del `[Product].[Model Name]` gerarchia sull'asse delle righe dell'attributo di **Adventure Works** cubo.  
   
 ```  
 SELECT  
@@ -59,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
- L'esempio seguente restituisce tutti i membri il **misure** dimensione sull'asse delle colonne, inclusi tutti i membri calcolati e il set di tutti gli elementi figlio del `[Product].[Model Name]` gerarchia sull'asse delle righe dell'attributo di **Adventure Works** cubo.  
+ L'esempio seguente restituisce tutti i membri il **misure** dimensione sull'asse delle colonne, inclusi tutti i membri calcolati e il set di tutti gli elementi figlio del `[Product].[Model Name]` gerarchia sull'asse delle righe dell'attributo dal **Adventure Works** cubo.  
   
 ```  
 SELECT  
@@ -71,7 +71,7 @@ FROM
   
 ## <a name="see-also"></a>Vedere anche  
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Gli elementi figlio &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

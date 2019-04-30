@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067672"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   È possibile usare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata `SQLColAttribute` su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi la chiamata `SQLColAttribute` dopo il completamento della **SQLExecute** oppure **SQLExecDirect** viene non comporta un round trip del server.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ee9263ee0bb1ece0a1b690d3a15687d87ff3d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062459"
 ---
 # <a name="refresh-method-example-vc"></a>Esempio del metodo Refresh (VC++)
 In questo esempio viene illustrato come utilizzare il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo per aggiornare il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta per una stored procedure [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
@@ -236,5 +236,5 @@ Authors with 25 percent royalty
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

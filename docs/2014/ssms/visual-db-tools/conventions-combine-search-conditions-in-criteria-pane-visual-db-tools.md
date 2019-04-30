@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140369"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri (Visual Database Tools)
   È possibile creare query con qualsiasi numero di condizioni di ricerca, collegate con qualsiasi numero di operatori AND e OR. Poiché una query con una combinazione di clausole AND e OR può diventare complessa, è utile capire come viene interpretata durante la sua esecuzione e come viene rappresentata nel [riquadro Criteri](visual-database-tools.md) e nel [riquadro SQL](sql-pane-visual-database-tools.md).  

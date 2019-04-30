@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126703"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Raccolte (sintassi ADO per Visual C++)
 ## <a name="parameters"></a>Parametri  
@@ -142,7 +142,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
 -   [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161802"
 ---
 # <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
   Ogni volta che viene creato, ricompilato o eliminato un indice, nei file e nei filegroup appropriati è necessario spazio su disco per le strutture di origine (vecchie) e di destinazione (nuove). La struttura di origine non viene deallocata finché non viene eseguito il commit della transazione di creazione dell'indice. Potrebbe essere necessario spazio su disco temporaneo aggiuntivo per le operazioni di ordinamento. Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -109,10 +109,10 @@ ms.locfileid: "52542712"
   
 |Operazione sull'indice|Requisiti di spazio su disco per i percorsi delle strutture seguenti|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operazione sull'indice offline con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1018 MB:<br /><br /> -Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB *<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
-|Operazione sull'indice offline con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 816 MB:<br /><br /> -Tabella e indici esistenti: 363 MB *<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
-|Operazione sull'indice online con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1.058 MB:<br /><br /> -Tabella e indici esistenti: 363 MB\*<br /><br /> -**tempdb** (include l'indice di mapping): 242 MB *<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
-|Operazione sull'indice online con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 856 MB:<br /><br /> -Tabella e indici esistenti: 363 MB *<br /><br /> -Indice di mapping temporaneo: 40 MB\*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
+|Operazione sull'indice offline con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1018 MB:<br /><br /> -Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
+|Operazione sull'indice offline con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 816 MB:<br /><br /> -Tabella e indici esistenti: 363 MB*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
+|Operazione sull'indice online con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1058 MB:<br /><br /> -Tabella e indici esistenti: 363 MB\*<br /><br /> -**tempdb** (include l'indice di mapping): 242 MB*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
+|Operazione sull'indice online con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 856 MB:<br /><br /> -Tabella e indici esistenti: 363 MB*<br /><br /> -Indice di mapping temporaneo: 40 MB\*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
   
  *Questo spazio viene deallocato dopo il commit dell'operazione sull'indice.  
   

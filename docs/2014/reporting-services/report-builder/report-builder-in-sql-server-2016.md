@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156595"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generatore report in SQL Server 2014
   Generatore report è un ambiente per la creazione di report destinato a utenti aziendali che preferiscono lavorare nell'ambiente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in Generatore report oppure pubblicare un report in un server di report o in un server di report in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  

@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: 0bb91177a204f93bd141d57b90420678dcd0b722
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63152329"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
 L'aggiornamento a una piattaforma dati moderna individuando i problemi di compatibilità che possono influire sulla funzionalità del database nella nuova versione di SQL Server o Database SQL di Azure aiuta a Data Migration Assistant (DMA). DMA consiglia miglioramenti di prestazioni e affidabilità per l'ambiente di destinazione e consente di spostare lo schema, dati e gli oggetti non contenuti dal server di origine al server di destinazione.

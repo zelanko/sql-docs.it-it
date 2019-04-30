@@ -1,5 +1,5 @@
 ---
-title: Parole chiave (sintassi MDX) riservate | Documenti Microsoft
+title: Parole chiave (sintassi MDX) riservate | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149861"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Parole chiave riservate (sintassi MDX)
 
 
-  Analysis Services vengano riservate le determinate parole chiave per un uso esclusivo. Per un elenco di parole chiave riservate, vedere [parole riservate MDX](../mdx/mdx-reserved-words.md).  
+  Analysis Services vengano riservate determinate parole chiave per un uso esclusivo. Per un elenco di parole chiave riservate, vedere [parole riservate MDX](../mdx/mdx-reserved-words.md).  
   
  Di seguito sono riportate le linee guida per l'utilizzo delle parole chiave riservate:  
   
@@ -30,6 +30,6 @@ ms.locfileid: "34742630"
 -   Adottare una convenzione di denominazione che evita l'utilizzo di parole chiave riservate. Se è necessario attribuire a un oggetto un nome simile a una parola chiave riservata, eliminare le consonanti o le vocali da tale parola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

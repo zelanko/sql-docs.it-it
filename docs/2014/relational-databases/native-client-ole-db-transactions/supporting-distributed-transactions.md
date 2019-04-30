@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213501"
 ---
 # <a name="supporting-distributed-transactions"></a>Supporto di transazioni distribuite
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer del provider OLE DB di Client nativo è possibile usare la **ITransactionJoin:: Jointransaction** metodo per partecipare a una transazione distribuita coordinata da Microsoft Distributed Transaction Coordinator (MS DTC).  
@@ -34,7 +34,7 @@ ms.locfileid: "48061097"
   
  Per le transazioni distribuite, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client provider implementa **ITransactionJoin:: Jointransaction** parametri come indicato di seguito.  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Puntatore a un oggetto transazione MS DTC.|  
 |*IsoLevel*|Ignorato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client. Il livello di isolamento per le transazioni coordinate da MS DTC viene determinato quando il consumer acquisisce un oggetto transazione da MS DTC.|  

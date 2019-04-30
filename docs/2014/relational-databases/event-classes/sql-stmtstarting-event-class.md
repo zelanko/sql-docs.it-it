@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061300"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting - classe di evento
   La classe di evento SQL:StmtStarting indica l'avvio di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

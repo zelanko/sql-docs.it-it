@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151513"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lezione 1: Navigazione di base in SQL Server Management Studio
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è uno strumento potente e flessibile. Tuttavia, gli utenti che non hanno familiarità con Microsoft Visual Studio talvolta incontrano difficoltà nell'individuare il modo più rapido per accedere alle caratteristiche desiderate. Questa lezione illustra in che modo le finestre interagiscono per offrire una superficie di progettazione di semplice utilizzo. Al termine di questa lezione si sarà in grado di eliminare finestre indesiderate, visualizzare finestre contenenti le informazioni necessarie e configurare la superficie predefinita per supportare le operazioni che vengono eseguite più spesso.  

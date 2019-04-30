@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184274"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Creazione di relazioni tra tabelle in un diagramma (Visual Database Tools)
   È possibile creare relazioni tra le colonne in diverse tabelle in Progettazione diagrammi di database trascinando le colonne all'interno delle tabelle.  
@@ -28,7 +28,7 @@ ms.locfileid: "52781623"
   
 2.  Trascinare la colonna o le colonne selezionate nella tabella correlata.  
   
-3.  Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** e **tabelle e colonne**, quest'ultima visualizzata in primo piano.  
+3.  Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** e **Tabelle e colonne**, quest'ultima visualizzata in primo piano.  
   
 4.  Il**Nome relazione** è assegnato dal sistema nel formato FK_*localtable*_*foreigntable*. È possibile modificare questo valore.  
   

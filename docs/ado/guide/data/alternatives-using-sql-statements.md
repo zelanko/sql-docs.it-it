@@ -1,5 +1,5 @@
 ---
-title: 'Alternative: Uso di istruzioni SQL | Microsoft Docs'
+title: 'Alternative: Utilizzo di istruzioni SQL | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063116"
 ---
 # <a name="alternatives-using-sql-statements"></a>Alternative: uso di istruzioni SQL
 ADO consente anche usando i comandi come alternative alle relative proprietà e metodi predefiniti per la modifica dei dati. A seconda del provider, tutte le operazioni descritte in questa sezione possono essere eseguite anche passando comandi sull'origine dati. Ad esempio, le istruzioni UPDATE SQL utilizzabile per modificare i dati senza usare la **valore** proprietà di un **campo**. Le istruzioni SQL INSERT consente di aggiungere nuovi record a un'origine dati, anziché il metodo ADO **AddNew**. Per altre informazioni su SQL o il linguaggio di manipolazione dei dati del provider, vedere la documentazione dell'origine dati.  

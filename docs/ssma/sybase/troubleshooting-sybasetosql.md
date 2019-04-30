@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069648"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Risoluzione dei problemi (SybaseToSQL)
 Non è insolito per l'esecuzione in circa metà problemi di migrazione l'esecuzione di script di console o comandi.  
@@ -28,7 +28,7 @@ Errori risolvibili possono essere correlati a:
   
 2.  Routine  
   
-3.  Vista  
+3.  visualizzazione  
   
 4.  Trigger  
   

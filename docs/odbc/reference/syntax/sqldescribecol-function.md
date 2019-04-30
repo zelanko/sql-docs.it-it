@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061863"
 ---
 # <a name="sqldescribecol-function"></a>Funzione SQLDescribeCol 
 **Conformità**  

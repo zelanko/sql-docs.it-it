@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072757"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornisce durabilità completa per le tabelle ottimizzate per la memoria. Quando viene eseguito il commit di una transazione che ha modificato una tabella ottimizzata per la memoria, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come avviene per le tabelle basate su disco, garantisce che le modifiche vengano rese permanenti, ovvero che saranno mantenute in seguito a un riavvio del database, a condizione che lo spazio di archiviazione sottostante sia disponibile. I componenti chiave della durabilità sono due: registrazione delle transazioni e salvataggio in modo permanente delle modifiche ai dati nell'archiviazione su disco.  
@@ -111,7 +111,7 @@ ms.locfileid: "52392025"
  Se necessario, un'unione manuale può essere eseguita in modo esplicito chiamando [Sys. sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo di vita di una coppia di file di checkpoint  
- Le coppie di file di checkpoint attraversano sette stati prima di poter essere deallocate. In qualsiasi momento, le coppie di file di checkpoint si trovano in una delle fasi seguenti: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Le coppie di file di checkpoint attraversano sette stati prima di poter essere deallocate. In qualsiasi momento, i checkpoint sono in una delle fasi seguenti: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  Dopo aver tenuto conto dello spazio di archiviazione utilizzato dalle coppie di file di checkpoint nei vari stati, lo spazio di archiviazione complessivo utilizzato dalle tabelle ottimizzate per la memoria durevoli può essere di oltre due volte maggiore delle dimensioni delle tabelle in memoria. La vista DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) è possibile eseguire query per elencare tutti i checkpoint nel filegroup ottimizzato per la memoria, incluse le relative fasi. La transizione delle coppie di file di checkpoint dallo stato MERGE SOURCE a TOMBSTONE e infine a Garbage Collection può richiedere fino a cinque checkpoint, con ogni checkpoint seguito da un backup del log delle transazioni, se il database è configurato per il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
   

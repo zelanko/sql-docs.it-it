@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148879"
 ---
 # <a name="sqlstate-mappings"></a>Mapping di SQLSTATE
-In questo argomento vengono descritti i valori SQLSTATE per ODBC 2. *x* e ODBC 3. *x*. Per altre informazioni su ODBC 3. *x* valori SQLSTATE, vedere [appendice a: codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+In questo argomento vengono descritti i valori SQLSTATE per ODBC 2. *x* e ODBC 3. *x*. Per altre informazioni su ODBC 3. *x* valori SQLSTATE, vedere [appendice a: Codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  In ODBC 3. *x*HYxxx SQLSTATE restituiti anziché S1xxx e 42Sxx SQLSTATE restituiti anziché S00XX. Questa operazione è stata eseguita per conformità con gli standard Open Group e ISO. In molti casi, il mapping non è uno a uno standard hanno ridefinito l'interpretazione di SQLSTATE diversi.  
   
@@ -31,7 +31,7 @@ In questo argomento vengono descritti i valori SQLSTATE per ODBC 2. *x* e ODBC 3
   
  Quando l'attributo di ambiente SQL_ATTR_ODBC_VERSION è impostato su SQL_OV_ODBC2, il driver invia ODBC 2. *x* SQLSTATE anziché ODBC 3. *x* SQLSTATEs quando **SQLGetDiagField** oppure **SQLGetDiagRec** viene chiamato. Un mapping specifico può essere determinato dal annotando l'API ODBC 2 *. x* SQLSTATE nella colonna 1 della tabella seguente che corrisponde a ODBC 3. *x* SQLSTATE nella colonna 2.  
   
-|ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Commenti|  
+|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|Commenti|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -57,7 +57,7 @@ In questo argomento vengono descritti i valori SQLSTATE per ODBC 2. *x* e ODBC 3
 |S1009|HY009|Restituito per un uso non valido di un puntatore null.|  
 |S1009|HY024|Restituito per un valore di attributo non valido.|  
 |S1009|HY092|Per l'aggiornamento o eliminazione dei dati restituiti da una chiamata a **SQLSetPos**, o l'aggiunta, aggiornamento o eliminazione dei dati da una chiamata a **SQLBulkOperations**, quando la concorrenza è di sola lettura.|  
-|S1010|HY010 HY007 L'|Viene eseguito il mapping di SQLSTATE S1010 a hy007 l'errore SQLSTATE quando **SQLDescribeCol** viene chiamato prima di chiamare **SQLPrepare**, **SQLExecDirect**, o una funzione di catalogo per il *StatementHandle*. SQLSTATE S1010 in caso contrario, viene eseguito il mapping di SQLSTATE HY010.|  
+|S1010|HY007 HY010|Viene eseguito il mapping di SQLSTATE S1010 a hy007 l'errore SQLSTATE quando **SQLDescribeCol** viene chiamato prima di chiamare **SQLPrepare**, **SQLExecDirect**, o una funzione di catalogo per il *StatementHandle*. SQLSTATE S1010 in caso contrario, viene eseguito il mapping di SQLSTATE HY010.|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  

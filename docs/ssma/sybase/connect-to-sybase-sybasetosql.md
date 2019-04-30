@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061004"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
 Usare la **connettersi a Sybase** finestra di dialogo per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) che si desidera eseguire la migrazione.  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159361"
 ---
 # <a name="setting-extendedansisql"></a>Impostazione di ExtendedAnsiSQL
 L'attributo può essere controllato nella stringa di connessione, aggiungere l'attributo ExtendedAnsiSQL:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |ExtendedAnsiSQL = 0 (impostazione predefinita)|Questa impostazione non abilita le nuove funzionalità.|  
-|ExtendedAnsiSQL = 1|Questa impostazione abilita le nuove funzionalità.|  
+|ExtendedAnsiSQL=1|Questa impostazione abilita le nuove funzionalità.|  
   
  L'attributo può essere impostato anche in un DSN tramite il **opzioni avanzate** finestra di dialogo quando si configura un DSN tramite Pannello di controllo.  
   

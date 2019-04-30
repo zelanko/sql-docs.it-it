@@ -11,24 +11,24 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6eea9f96939f61da77262b549e2ec966ae9a957b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137444"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lezione 4: Archiviazione dei dati fornitore in MDS
   Master Data Services (MDS) è una soluzione SQL Server per la gestione dei dati master. Nella gestione dei dati master vengono descritti gli sforzi fatti da un'organizzazione per individuare e definire elenchi non transazionali di dati.  
   
  I modelli rappresentano il livello più elevato di organizzazione in Master Data Services e consentono di organizzare la struttura dei dati master. Per l'implementazione di MDS si può disporre di uno o più modelli in ognuno dei quali vengono raggruppati dati simili. I dati master rientrano in genere in una delle quattro categorie seguenti: persone, luoghi, cose o concetti. È ad esempio possibile creare un modello Product per contenere dati relativi al prodotto oppure un modello Customer per contenere dati relativi al cliente. Visualizzare [modelli (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx) per altri dettagli.  
   
- In un modello possono essere incluse una o più entità. Ogni entità dispone di attributi (colonne) e membri (righe). In ogni riga sono contenuti i dati master. In questa lezione viene creato un modello Suppliers con due entità denominate Supplier e State. All'entità Supplier verranno associati gli attributi seguenti: Code, Name, Contact First Name, Contact Last Name, Contact Email Address, Address Line, City, State, Zip e Country. Visualizzare [attributi (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) per ulteriori informazioni sugli attributi in generale. Gli attributi Name e Code corrispondono alle colonne SupplierID e Supplier Name nel file di Excel relativo ai fornitori con dati puliti e corrispondenti.  
+ In un modello possono essere incluse una o più entità. Ogni entità dispone di attributi (colonne) e membri (righe). In ogni riga sono contenuti i dati master. In questa lezione viene creato un modello Suppliers con due entità denominate Supplier e State. L'entità Supplier avrà i seguenti attributi: Code, Name, Contact First Name, Contact Last Name, contattare l'indirizzo di posta elettronica, la riga indirizzo, città, stato, Zip e Country. Visualizzare [attributi (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) per ulteriori informazioni sugli attributi in generale. Gli attributi Name e Code corrispondono alle colonne SupplierID e Supplier Name nel file di Excel relativo ai fornitori con dati puliti e corrispondenti.  
   
  Un attributo basato su dominio è un attributo i cui valori sono popolati da membri di un'altra entità. Gli attributi basati su dominio non consentono l'immissione di valori di attributo non validi da parte di utenti. È possibile selezionare un valore di attributo solo nell'elenco a discesa popolato da un'altra entità. In questa esercitazione, l'attributo State dell'entità Supplier è un attributo basato su dominio con valori dell'entità State. Il valore dell'attributo State dell'entità Supplier può essere impostato solo su uno dei valori nell'entità State. Visualizzare [attributi basati su dominio](../master-data-services/domain-based-attributes-master-data-services.md) per altri dettagli.  
   
  Una gerarchia derivata in MDS deriva dalla relazione tra attributi basati su dominio nel modello. In questa esercitazione viene creata una gerarchia derivata tra l'entità Supplier e l'entità State. Dopo aver creato la gerarchia derivata, verrà visualizzato un elenco di stati nel visualizzatore di Gestione dati master. Quando si fa clic su uno stato nell'elenco, vengono visualizzati i fornitori nello stato in questione nel riquadro destro. Successivamente, verrà creata una gerarchia derivata basata su questa relazione. Visualizzare [gerarchie derivate](../master-data-services/derived-hierarchies-master-data-services.md) per altri dettagli.  
   
- È stata compilata una Knowledge Base in DQS che è stata utilizzata per la pulizia e la corrispondenza dei dati fornitore e i risultati sono stati archiviati nel file Cleansed and Matched Supplier Data.xls. In questa lezione i dati puliti e corrispondenti vengono caricati in MDS. In DQS sono contenute solo le informazioni sui dati (metadati), mentre i dati stessi (set master) vengono archiviati da MDS. Ad esempio: è possibile che in DQS siano disponibili informazioni su diversi fornitori, ma la relativa gestione da parte di una società può essere effettuata solo tramite MDS.  
+ È stata compilata una Knowledge Base in DQS che è stata utilizzata per la pulizia e la corrispondenza dei dati fornitore e i risultati sono stati archiviati nel file Cleansed and Matched Supplier Data.xls. In questa lezione i dati puliti e corrispondenti vengono caricati in MDS. In DQS sono contenute solo le informazioni sui dati (metadati), mentre i dati stessi (set master) vengono archiviati da MDS. Ad esempio:  In DQS siano disponibili informazioni su diversi fornitori, ma solo tramite MDS i fornitori utilizzati da una società.  
   
  In questa lezione vengono effettuate le attività seguenti:  
   

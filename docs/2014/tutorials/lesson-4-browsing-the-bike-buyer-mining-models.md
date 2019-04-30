@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070891"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lezione 4: Esplorazione di modelli di Data Mining Bike Buyer
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lezione 4: Esplorazione dei modelli di data mining Bike Buyer
   In questa lezione si userà il [SELECT (DMX)](/sql/dmx/select-dmx) istruzione per esplorare il contenuto dell'albero delle decisioni e di data mining di clustering di modelli creati nella [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining predittiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Le colonne contenute in un modello di data mining non sono quelle definite dalla struttura di data mining ma sono un set specifico di colonne che descrivono le tendenze e gli schemi individuati dall'algoritmo. Queste colonne del modello di data mining sono descritte nel [set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) set di righe dello schema. La colonna MODEL_NAME nel set di righe dello schema del contenuto, ad esempio, contiene il nome del modello di data mining. Per un modello di data mining di clustering, la colonna NODE_CAPTION contiene il nome di ogni cluster e la colonna NODE_DESCRIPTION contiene una descrizione delle caratteristiche di ogni cluster. È possibile esplorare queste colonne tramite SELECT FROM \<modello >. CONTENUTO istruzione DMX. Questa istruzione consente anche di esplorare i dati utilizzati per creare il modello di data mining. Per utilizzare questa istruzione è necessario che sia abilitato il drill-through nella struttura di data mining. Per altre informazioni sull'istruzione, vedere [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  

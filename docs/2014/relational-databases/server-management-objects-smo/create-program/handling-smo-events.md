@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191930"
 ---
 # <a name="handling-smo-events"></a>Gestione degli eventi SMO
   Vi sono tipi di eventi del server che possono essere sottoscritti tramite un gestore di eventi e l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  

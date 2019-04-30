@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149519"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
   I dettagli relativi alla configurazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay sono specificati in file XML in Distributed Replay Controller, nei client e nelle posizioni in cui è installato lo strumento di amministrazione. ovvero i file seguenti:  
@@ -28,7 +28,7 @@ ms.locfileid: "54124571"
   
 -   [File di configurazione della riproduzione](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> File di configurazione di controller: Dreplaycontroller. config  
+##  <a name="DReplayController"></a> File di configurazione del controller: DReplayController.config  
  All'avvio del servizio Distributed Replay Controller di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene caricato il livello di registrazione dal file di configurazione del controller, ovvero `DReplayController.config`. Questo file si trova nella cartella in cui è stato installato il servizio Distributed Replay Controller:  
   
  **\<percorso installazione controller>\DReplayController.config**  
@@ -49,7 +49,7 @@ ms.locfileid: "54124571"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> File di configurazione client: Dreplayclient. config  
+##  <a name="DReplayClient"></a> File di configurazione del client: DReplayClient.config  
  All'avvio del servizio client Distributed Replay di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono caricate le impostazioni di configurazione dal file di configurazione del client, ovvero `DReplayClient.config`. Questo file si trova in ogni client, nella cartella in cui è stato installato il servizio client Distributed Replay:  
   
  **\<percorso installazione client>\DReplayClient.config**  
@@ -76,7 +76,7 @@ ms.locfileid: "54124571"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> Pre-elaborare File di configurazione: DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> File di configurazione della pre-elaborazione: DReplay.exe.preprocess.config  
  Quando si utilizza lo strumento di amministrazione per avviare la fase di pre-elaborazione, lo strumento di amministrazione carica le impostazioni di pre-elaborazione dal file di configurazione della pre-elaborazione, ovvero `DReplay.exe.preprocess.config`.  
   
  Usare il file di configurazione predefinito o il parametro **-c** dello strumento di amministrazione per specificare il percorso di un file di configurazione di pre-elaborazione modificato. Per altre informazioni sull'uso dell'opzione preprocess dello strumento di amministrazione, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](preprocess-option-distributed-replay-administration-tool.md).  

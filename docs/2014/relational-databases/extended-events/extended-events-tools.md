@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137064"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
   È possibile utilizzare gli strumenti seguenti per creare e gestire sessioni Eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -38,7 +38,7 @@ ms.locfileid: "52789984"
 ## <a name="ddl-statements"></a>Istruzioni DDL  
  Le istruzioni DDL seguenti consentono di creare, modificare ed eliminare una sessione Eventi estesi.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|Consente di creare un oggetto sessione Eventi estesi che identifica l'origine degli eventi, nonché le destinazioni e i parametri delle sessioni eventi.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|Consente di avviare o arrestare una sessione eventi oppure di modificare la configurazione di una sessione eventi.|  
@@ -47,7 +47,7 @@ ms.locfileid: "52789984"
 ## <a name="catalog-views"></a>Viste del catalogo  
  Le viste del catalogo seguenti consentono di ottenere i metadati creati al momento della creazione della sessione eventi.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|Elenca tutte le definizioni di sessione di evento.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|Restituisce una riga per ogni azione su ogni evento di una sessione dell'evento.|  
@@ -61,7 +61,7 @@ ms.locfileid: "52789984"
 > [!NOTE]  
 >  Queste viste non contengono dati della sessione fino a che non viene avviata una sessione.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|Restituisce le informazioni sui pool di dispatcher di sessione.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|Restituisce una riga per ogni oggetto esposto da un pacchetto dell'evento.|  

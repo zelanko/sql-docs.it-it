@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216182"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Funzione Previous (Generatore report e SSRS)
   Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135612"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificare una traccia esistente (Transact-SQL)
   In questo argomento viene descritto come utilizzare stored procedure per modificare una traccia esistente.  
@@ -47,7 +47,7 @@ ms.locfileid: "53591845"
     ||NOT NULL|La colonna viene disabilitata per l'evento specificato.|  
   
 > [!IMPORTANT]
->  A differenza delle normali stored procedure, parametri di tutte le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedure (<strong>sp_trace _*xx*</strong>) sono rigidamente tipizzati e non supportano la conversione di tipo automatica dei dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
+>  A differenza di quanto avviene con le normali stored procedure, i parametri di tutte le stored procedure di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) sono fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
 
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

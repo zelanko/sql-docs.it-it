@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157465"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema di piattaforma Analitica
 
@@ -140,7 +140,7 @@ Le istruzioni SQL e operazioni regolate dalle classi di risorse:
 ## <a name="Limits"></a>Limitazioni e restrizioni  
 Le classi di risorse determinano le allocazioni di memoria e concorrenza.  Non controllano le operazioni di input/output.  
   
-## <a name="Metadata"></a>Metadati  
+## <a name="Metadata"></a>Metadata  
 Viste a gestione dinamica che contengono informazioni sulle classi di risorse e i membri di classe di risorse.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  

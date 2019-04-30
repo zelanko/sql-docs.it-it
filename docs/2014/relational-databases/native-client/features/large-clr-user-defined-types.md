@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033534"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipi CLR definiti dall'utente di grandi dimensioni
   In SQL Server 2005 i tipi definiti dall'utente in CLR (Common Language Runtime) sono limitati a dimensioni di 8.000 byte. Questa restrizione è stata eliminata in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive. In questa versione i tipi CLR definiti dall'utente vengono considerati simili ai tipi LOB. Tipi definiti dall'utente minori o uguali a 8.000 byte, pertanto, hanno lo stesso comportamento che in SQL Server 2005, ma sono supportati dati definiti dall'utente di dimensioni maggiori, che vengono indicate come illimitate ("unlimited").  
   
  Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;OLE DB&#41; ](../ole-db/large-clr-user-defined-types-ole-db.md) e [Large CLR User-Defined tipi &#40;ODBC&#41;](../odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="use-cases"></a>Modalità di utilizzo comuni  
+## <a name="use-cases"></a>Casi d'uso  
  Per ODBC, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di inviare i valori di tali tipi in parti come parametri data-at-execution. Questa operazione viene eseguita dall'uso di SQLPutData.  
   
  Per OLE DB, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di eseguire il flusso dei valori di tali tipi al e dal server usando l'associazione ISequentialStream.  

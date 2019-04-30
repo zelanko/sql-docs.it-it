@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96416c673d3dae6497d56c114ff24df70a8e6872
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125984"
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>Nodo Operatori (Guida sensibile al contesto di SQL Server Agent)
   Questa sezione contiene gli argomenti della Guida sensibile al contesto per il nodo **Operatori** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

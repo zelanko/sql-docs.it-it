@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069820"
 ---
 # <a name="odbc-data-sources-subkey"></a>Sottochiave ODBC Data Sources
 I valori nella sottochiave origini dati ODBC elencare le origini dati. Il formato di questi valori è come illustrato nella tabella seguente.  
   
-|nome|Tipo di dati|data|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
-|*nome dell'origine dati*|REG_SZ|*Descrizione del driver*|  
+|*data-source-name*|REG_SZ|*driver-description*|  
   
  Il *nome dell'origine dati* valore viene definito dal programma di amministrazione (che in genere richiesto all'utente per tale), e *driver-description* è definito dallo sviluppatore del driver (in genere è il nome del DBMS associato con il driver).  
   
- Si supponga ad esempio tre origini dati sono state definite: inventario, che Usa SQL Server. Libro paga, che usa dBASE; e personale, che usa i file di testo in formato. I valori nella sottochiave origini dati ODBC potrebbero essere come segue:  
+ Ad esempio, si supponga che i dati di tre origini sono state definite: Inventario, che Usa SQL Server. Libro paga, che usa dBASE; e personale, che usa i file di testo in formato. I valori nella sottochiave origini dati ODBC potrebbero essere come segue:  
   
 ```  
 Inventory : REG_SZ : SQL Server  

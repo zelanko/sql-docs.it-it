@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151191"
 ---
 # <a name="create-a-new-plan-guide"></a>Creare una nuova guida di piano
   È possibile creare una guida di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint o di un piano di query fisso. Nel piano di guida si specifica l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] da ottimizzare e la clausola OPTION che contiene gli hint che si desidera utilizzare per l'ottimizzazione della query o un piano di query specifico che si desidera utilizzare per ottimizzare la query. Quando viene eseguita la query, in Query Optimizer è possibile far corrispondere l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano e associare la clausola OPTION alla query in fase di esecuzione oppure utilizzare il piano di query specificato.  
@@ -53,7 +53,7 @@ ms.locfileid: "52519866"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare una guida di piano di tipo OBJECT, è necessario disporre dell'autorizzazione ALTER per l'oggetto a cui si fa riferimento. Per creare una guida di piano di tipo SQL o TEMPLATE, è necessario disporre dell'autorizzazione ALTER per il database corrente.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -96,7 +96,7 @@ ms.locfileid: "52519866"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- creates a plan guide named Guide1 based on a SQL statement  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127905"
 ---
 # <a name="schemaini-file-text-file-driver"></a>File Schema.ini (driver file di testo)
 Quando viene usato il driver di testo, il formato del file di testo viene determinato usando un file di informazioni dello schema. Il file di informazioni dello schema è sempre denominato schema. ini e mantenuto sempre nella stessa directory dell'origine dati di testo. Il file di informazioni dello schema fornisce le IISAM con informazioni sul formato generale del file, il nome della colonna e le informazioni sul tipo di dati e diverse altre caratteristiche di dati. File schema ini è sempre obbligatorio per l'accesso ai dati a lunghezza fissa. Quando la tabella di testo contiene DateTime, Currency, o dati Decimal o ogni volta che si desidera maggiore controllo sulla gestione dei dati nella tabella, è consigliabile utilizzare un file ini.  
@@ -54,10 +54,10 @@ Quando viene usato il driver di testo, il formato del file di testo viene determ
   
 |Identificatore di formato|Formato di tabella|Istruzione di formato di schema. ini|  
 |----------------------|------------------|---------------------------------|  
-|**Valori delimitati da tabulazioni**|Campi nel file sono delimitati da tabulazioni.|Formato = TabDelimited|  
-|**Delimitato da virgola**|Campi nel file sono delimitati da virgole (con valori delimitati da virgole).|Formato = CSVDelimited|  
+|**Valori delimitati da tabulazioni**|Campi nel file sono delimitati da tabulazioni.|Format=TabDelimited|  
+|**Delimitato da virgola**|Campi nel file sono delimitati da virgole (con valori delimitati da virgole).|Format=CSVDelimited|  
 |**Personalizzato**|I campi nel file sono delimitati da qualsiasi carattere che si sceglie di input nella finestra di dialogo. Tutto eccetto le virgolette doppie (") sono consentiti, tra cui vuoto.|Formato = delimitato (*caratteri personalizzato*)<br /><br /> oppure<br /><br /> Con alcun delimitatore specificato:<br /><br /> Formato = delimitato)|  
-|**Lunghezza fissa**|I campi nel file sono di lunghezza fissa.|Formato = FixedLength|  
+|**Lunghezza fissa**|I campi nel file sono di lunghezza fissa.|Format=FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Che specifica i campi  
  È possibile specificare i nomi dei campi in un file di testo delimitati da caratteri in due modi:  
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parametro|Descrizione|  
 |---------------|-----------------|  
 |*ColumnName*|Il nome della colonna di testo. Se il nome della colonna contiene spazi incorporati, è necessario racchiuderlo tra virgolette.|  
-|*type*|Come indicato di seguito sono riportati i tipi di dati:<br /><br /> **Tipi di dati di Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Testo<br /><br /> Memo<br /><br /> **Tipi di dati ODBC** Char (lo stesso testo)<br /><br /> Float (uguale a Double)<br /><br /> Integer (uguale a breve)<br /><br /> LongChar (uguale al credito)<br /><br /> Data *formato data*|  
+|*type*|Come indicato di seguito sono riportati i tipi di dati:<br /><br /> **Tipi di dati di Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Testo<br /><br /> Memo<br /><br /> **Tipi di dati ODBC** Char (lo stesso testo)<br /><br /> Float (uguale a Double)<br /><br /> Integer (uguale a breve)<br /><br /> LongChar (uguale al credito)<br /><br /> Data *formato data*|  
 |**Width**|Il valore di stringa letterale `Width`. Indica che il numero seguente definisce la larghezza della colonna (facoltativo per i file delimitati da caratteri; richiesto per i file di lunghezza fissa).|  
 |*#*|Il valore intero che definisce la larghezza della colonna (obbligatorio se **larghezza** è specificato).|  
   
@@ -123,7 +123,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|Indica il simbolo di valuta che può essere usato per i valori di valuta nel file di testo. Ad esempio il segno di dollaro ($) e gestione dei dispositivi.|  
 |**CurrencyPosFormat**|Può essere impostata su uno dei valori seguenti:<br /><br /> -Il simbolo di valuta prefisso senza separazione ($1)<br />-Il simbolo di valuta suffisso con nessuna separazione tra (1$)<br />-Il simbolo di valuta prefisso con un carattere di separazione ($ 1)<br />-Il simbolo di valuta suffisso con un carattere di separazione (1 $)|  
 |**CurrencyDigits**|Specifica il numero di cifre utilizzate per la parte frazionaria di un importo di valuta.|  
-|**CurrencyNegFormat**|Il valore può essere uno dei seguenti:<br /><br /> -   ($1)<br />--$1<br />-$-1<br />-$1:<br />-   (1$)<br />--1$<br />--1$<br />-$- 1<br />--1 $<br />--$ 1<br />-$- 1<br />-$ 1:<br />-$ -1<br />--1$<br />-   ($ 1)<br />-   (1 $)<br /><br /> Questo esempio viene illustrato il segno di dollaro, ma è necessario sostituirlo con l'appropriato **CurrencySymbol** valore al programma effettivo.|  
+|**CurrencyNegFormat**|Il valore può essere uno dei seguenti:<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Questo esempio viene illustrato il segno di dollaro, ma è necessario sostituirlo con l'appropriato **CurrencySymbol** valore al programma effettivo.|  
 |**CurrencyThousandSymbol**|Indica il simbolo di caratteri che può essere utilizzato per separare i valori di valuta nel file di testo da migliaia.|  
 |**CurrencyDecimalSymbol**|Può essere impostato su qualsiasi carattere singolo che viene usato per separare l'intero dalla parte frazionaria di un importo di valuta.|  
   

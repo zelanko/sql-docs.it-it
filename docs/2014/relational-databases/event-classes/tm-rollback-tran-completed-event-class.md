@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061333"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed-classe di evento
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed - classe di evento
   TM: Tran Completed-classe di evento di ripristino dello stato precedente indica che una richiesta ROLLBACK TRANSACTION è stata completata. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Eseguire il rollback Tran Completed-colonne di dati di classe di evento  
@@ -33,7 +33,7 @@ ms.locfileid: "52786923"
 |DatabaseID|`int`|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |Errore|`int`|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella tabella sys.messages.|31|Yes|  
-|EventClass|`int`|Tipo di evento = 188.|27|No|  
+|EventClass|`int`|Tipo di evento = 188.|27|no|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 1=Rollback<br /><br /> 2=Rollback e inizio|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  

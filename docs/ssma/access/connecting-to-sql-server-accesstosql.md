@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139023"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>La connessione a SQL Server (AccessToSQL)
 Per migrare i database di Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario connettersi all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando ci si connette, SSMA Ottiene i metadati relativi ai database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizza i metadati di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati. SSMA archivia le informazioni su quale istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si è connessi a, ma non archivia le password.  
@@ -63,9 +63,9 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
   
     -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   
-    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio: MyServer\MyInstance.  
+    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio:  MyServer\MyInstance.  
   
-    -   Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connettersi tramite named pipe protocollo e specificando il nome della pipe, ad esempio \\ \\.\pipe\sql\query. Per altre informazioni, vedere la documentazione di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connettersi tramite named pipe protocollo e specificando il nome della pipe, ad esempio \\ \\.\pipe\sql\query. Per altre informazioni, vedere il [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentazione.  
   
 3.  Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare le connessioni su una porta non predefinito, immettere il numero di porta usato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessioni nel **porta Server** casella. Per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il numero di porta predefinito è 1433. Per le istanze denominate, SSMA tenterà di ottenere il numero di porta dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Browser.  
   
@@ -98,12 +98,12 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
 ||||||||
 |-|-|-|-|-|-|-|
 |**VERSIONE SERVER di destinazione e tipo di progetto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (versione: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (versione: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Sì|Sì|Sì|Sì|Sì||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Sì|Sì|Sì|Sì||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Sì|Sì|Sì||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Sì|Sì||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Sì||
-|SQL Azure||||||Sì|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Yes|Yes|Yes|Yes||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Yes|Yes|Yes||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Yes|Yes||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Yes||
+|SQL Azure||||||Yes|
   
 > [!IMPORTANT]  
 > Conversione degli oggetti di database viene eseguita in base al tipo di progetto, ma non in base alla versione di SQL Server connesso a. In caso di progetto di SQL Server 2005, la conversione viene eseguita in base a SQL Server 2005 anche se si è connessi a una versione successiva di SQL Server (SQL Server 2008 o SQL Server 2012 o SQL Server 2014/SQL Server 2016).  

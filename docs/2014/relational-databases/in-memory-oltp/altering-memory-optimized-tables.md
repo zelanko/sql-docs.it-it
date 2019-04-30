@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065619"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
   L'esecuzione di operazioni ALTER nelle tabelle ottimizzate per la memoria non è supportata. Sono incluse le operazioni come la modifica di bucket_count oppure l'aggiunta e la rimozione di un indice o di una colonna. In questo argomento vengono fornite le linee guida su come aggiornare le tabelle ottimizzate per la memoria.  

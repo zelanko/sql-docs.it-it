@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043090"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Informazioni sui requisiti per un modello Time Series (Esercitazione intermedia sul data mining)
   Quando si preparano i dati per l'utilizzo in un modello di previsione, è necessario assicurarsi che i dati contengano una colonna che possa essere utilizzata per identificare i passaggi nella serie temporale. Tale colonna sarà designata come colonna `Key Time`. Essendo una chiave, nella colonna devono essere contenuti valori univoci.  

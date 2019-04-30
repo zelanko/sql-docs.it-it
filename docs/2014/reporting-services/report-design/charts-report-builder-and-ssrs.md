@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185772"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
   Se si desidera riepilogare i dati in formato visivo, usare l'area dati del grafico. I grafici consentono di presentare volumi elevati di informazioni aggregate in modo immediato. Prima di creare un grafico, è importante preparare e identificare con attenzione i dati, in modo da procedere rapidamente e con maggiore efficienza. Per altre informazioni, vedere [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Per iniziare a usare un grafico immediatamente, vedere la barra, colonne, grafici sparkline ed esercitazioni relative ai grafici a torta in [esercitazioni &#40;Generatore Report&#41; ](../report-builder-tutorials.md) o la barra e le esercitazioni di grafico a torta in [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

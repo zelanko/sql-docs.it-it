@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151233"
 ---
 # <a name="record-count"></a>Conteggio record
 Il campo dell'intestazione di un descrittore SQL_DESC_COUNT è l'indice in base 1 del record con numero più alto che contiene i dati. Questo campo non è un conteggio di tutte le colonne o parametri associati. Quando si alloca un descrittore, il valore iniziale di SQL_DESC_COUNT è 0.  

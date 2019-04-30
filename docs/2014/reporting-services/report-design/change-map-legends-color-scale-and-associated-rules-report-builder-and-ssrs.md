@@ -35,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135503"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
   In una mappa possono essere incluse legende, una scala dei colori e una scala distanza. Questi parti di una mappa consentono agli utenti di interpretare la visualizzazione dei dati sulla mappa.  

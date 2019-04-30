@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065466"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Esempio di ActualSize e l'esempio di proprietà DefinedSize (VC + +)
 Questo esempio Usa la [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) proprietà da visualizzare la dimensione definita e dalla dimensione effettiva di un campo.  
@@ -129,23 +129,23 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Store Name: Eric la documentazione di lettura**  
-**Definisce dimensioni: 40**  
+ **Nome Store: Eric i libri di lettura**  
+**Dimensione definita: 40**  
 **Dimensioni effettive: 19**  
 **Nome Store: Di Barnum**  
-**Definisce dimensioni: 40**  
+**Dimensione definita: 40**  
 **Dimensioni effettive: 8**  
 **Nome Store: Novità e Brews**  
-**Definisce dimensioni: 40**  
+**Dimensione definita: 40**  
 **Dimensioni effettive: 12**  
-**Nome Store: Doc-U-Mat: bucato qualità e documentazione**  
-**Definisce dimensioni: 40**  
+**Nome Store: Doc-U-Mat: Libri e qualità bucato**  
+**Dimensione definita: 40**  
 **Dimensioni effettive: 36**  
-**Nome Store: Bookshop Fricative**  
-**Definisce dimensioni: 40**  
+**Nome Store: Bookshop fricative**  
+**Dimensione definita: 40**  
 **Dimensioni effettive: 18**  
-**Store Name: Bookbeat**  
-**Definisce dimensioni: 40**  
+**Nome Store: Bookbeat**  
+**Dimensione definita: 40**  
 **Dimensioni effettive: 8**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95a71e977f56932d28b9ca0382829d6a30c7b212
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042497"
 ---
 # <a name="rds-objects"></a>Oggetti di Servizi Desktop remoto
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "51600261"
   
 |||  
 |-|-|  
-|[DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Associa una query di data **Recordset** a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare i **Recordset** dati in una pagina Web.<br /><br /> Il **DataControl** oggetto è sicuro per lo scripting.|  
-|[Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementa metodi che forniscono accesso ai dati di lettura/scrittura a specificate origini di dati per le applicazioni lato client.<br /><br /> Il **DataFactory** oggetto non sicuro per lo script.|  
-|[DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crea proxy lato client di oggetti business personalizzata che si trova nel livello intermedio.<br /><br /> Il **DataSpace** oggetto è sicuro per lo scripting.|  
+|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Associa una query di data **Recordset** a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare i **Recordset** dati in una pagina Web.<br /><br /> Il **DataControl** oggetto è sicuro per lo scripting.|  
+|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementa metodi che forniscono accesso ai dati di lettura/scrittura a specificate origini di dati per le applicazioni lato client.<br /><br /> Il **DataFactory** oggetto non sicuro per lo script.|  
+|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crea proxy lato client di oggetti business personalizzata che si trova nel livello intermedio.<br /><br /> Il **DataSpace** oggetto è sicuro per lo scripting.|  
 |[Interfaccia IRDSService (Servizi Desktop remoto)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Espone le [InvokeService (Servizi Desktop remoto)](../../../ado/reference/rds-api/invokeservice-rds.md) metodo, che viene utilizzato per restituire un puntatore all'interfaccia richiesta in una versione più con supporta dell'oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  

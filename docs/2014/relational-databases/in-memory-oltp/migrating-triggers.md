@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071469"
 ---
 # <a name="migrating-triggers"></a>Migrazione di trigger
   In questo argomento vengono illustrati i trigger DDL e DML e le tabelle ottimizzate per la memoria.  

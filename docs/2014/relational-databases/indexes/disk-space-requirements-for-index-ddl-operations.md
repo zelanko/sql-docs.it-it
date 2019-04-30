@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161796"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisiti di spazio su disco per operazioni DLL sugli indici
   Lo spazio su disco è un fattore che richiede particolare considerazione in fase di creazione, ricompilazione o eliminazione di indici. Uno spazio su disco non adeguato può comportare una riduzione delle prestazioni o provocare un errore dell'operazione sull'indice. In questo argomento vengono fornite informazioni generali utili per determinare la quantità di spazio su disco necessaria per operazioni DLL (Data Definition Language) sugli indici.  

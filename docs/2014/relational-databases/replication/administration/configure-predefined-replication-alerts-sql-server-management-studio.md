@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187256"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurazione degli avvisi di replica predefiniti (SQL Server Management Studio)
   La replica offre gli avvisi predefiniti seguenti, configurabili in risposta a eventi di replica:  
@@ -27,9 +27,9 @@ ms.locfileid: "54130311"
 -   **Replica: errore dell'agente**    
 -   **Replica: nuovo tentativo dell'agente**    
 -   **Replica: eliminata sottoscrizione scaduta**    
--   **Replica: Sottoscrizione è stata reinizializzata dopo un errore di convalida**    
--   **Replica: Sottoscrittore non supera la convalida dei dati**    
--   **Replica: Convalida dei dati nel Sottoscrittore è riuscita**    
+-   **Replica: la sottoscrizione è stata reinizializzata dopo l'errore di convalida**    
+-   **Replica: la convalida dei dati nel Sottoscrittore non è riuscita**    
+-   **Replica: la convalida dei dati nel Sottoscrittore è riuscita**    
 -   **Replica: arresto dell'agente personalizzato**  
   
  Configurare questi avvisi nella cartella **Avvisi** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o nella scheda **Avvisi** in Monitoraggio replica. Per altre informazioni sull'accesso a questa scheda, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "54130311"
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.    
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
-         Se l'avviso è **replica: Sottoscrittore non supera la convalida dei dati**, è possibile specificare il processo di risposta disponibile nella replica per questo avviso: Selezionare **Esegui processo**, quindi fare clic sul pulsante Sfoglia (**...** ). Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.   
+         Se l'avviso è **Replica: la convalida dei dati nel Sottoscrittore non è riuscita**, è possibile specificare il processo di risposta della replica per questo avviso: Selezionare **Esegui processo**, quindi fare clic sul pulsante Sfoglia (**...** ). Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54130311"
 3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:    
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.    
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.    
-         Se l'avviso è **replica: Sottoscrittore non supera la convalida dei dati**, è possibile specificare il processo di risposta disponibile nella replica per questo avviso: Selezionare **Esegui processo**, quindi fare clic sul pulsante Sfoglia (**...** ). Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.   
+         Se l'avviso è **Replica: la convalida dei dati nel Sottoscrittore non è riuscita**, è possibile specificare il processo di risposta della replica per questo avviso: Selezionare **Esegui processo**, quindi fare clic sul pulsante Sfoglia (**...** ). Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
 5.  Scegliere **Chiudi**.  

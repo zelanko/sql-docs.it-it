@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cefdb81aa9e9a1a5f7ad7ba1f6db86d1ae95e2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161738"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Disconnessione e riconnessione del recordset
 Una delle funzionalità più potenti disponibili in ADO è la possibilità di aprire un set di record del lato client da un'origine dati e quindi disconnettere il Recordset dall'origine dati. Una volta il Recordset è stato disconnesso, la connessione all'origine dati è chiuso, per rilasciare le risorse del server utilizzato per la manutenzione. È possibile continuare a visualizzare e modificare i dati nel set di record, mentre è disconnessa e riconnettersi in seguito all'origine dati e inviare gli aggiornamenti in modalità batch.  

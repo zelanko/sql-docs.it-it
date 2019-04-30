@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140219"
 ---
 # <a name="connection-object-ado"></a>Oggetto Connection (ADO)
 Rappresenta una connessione aperta a un'origine dati.  
@@ -64,7 +64,7 @@ Rappresenta una connessione aperta a un'origine dati.
 >  Non utilizzare questa funzionalità (chiamare una stored procedure o un comando denominato come se fosse un metodo nativo sul **connessione** oggetto) in un'applicazione di Microsoft® .NET Framework, perché l'implementazione sottostante dei conflitti di funzionalità la modalità di .NET Framework interopera con COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Eseguire un comando come un metodo nativo di un oggetto di connessione  
- Per eseguire un comando, assegnargli un nome usando il **comandi** oggetto [nome](../../../ado/reference/ado-api/name-property-ado.md) proprietà. Impostare il **ActiveConnection** proprietà delle **comando** oggetto per la connessione. Quindi eseguire un'istruzione in cui il nome del comando viene usato come se fosse un metodo sul **connessione** oggetto, seguito da eventuali parametri e una **Recordset** se vengono restituite tutte le righe dell'oggetto. Impostare il **Recordset** delle proprietà per personalizzare l'oggetto risultante **Recordset**. Esempio:  
+ Per eseguire un comando, assegnargli un nome usando il **comandi** oggetto [nome](../../../ado/reference/ado-api/name-property-ado.md) proprietà. Impostare il **ActiveConnection** proprietà delle **comando** oggetto per la connessione. Quindi eseguire un'istruzione in cui il nome del comando viene usato come se fosse un metodo sul **connessione** oggetto, seguito da eventuali parametri e una **Recordset** se vengono restituite tutte le righe dell'oggetto. Impostare il **Recordset** delle proprietà per personalizzare l'oggetto risultante **Recordset**. Ad esempio:   
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -80,7 +80,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Eseguire una stored procedure come metodo nativo di un oggetto di connessione  
- Per eseguire una stored procedure, eseguire un'istruzione in cui viene usato il nome della stored procedure come se fosse un metodo sul **connessione** oggetto, seguito da eventuali parametri. ADO farà una "stima" dei tipi di parametro. Esempio:  
+ Per eseguire una stored procedure, eseguire un'istruzione in cui viene usato il nome della stored procedure come se fosse un metodo sul **connessione** oggetto, seguito da eventuali parametri. ADO farà una "stima" dei tipi di parametro. Ad esempio:   
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -97,7 +97,7 @@ cnn. "parameter"
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

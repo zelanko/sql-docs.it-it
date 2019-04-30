@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144617"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
   Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un log delle transazioni in cui vengono archiviate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Per evitarne il riempimento, il log delle transazioni deve essere troncato regolarmente. Tuttavia, alcuni fattori possono posticipare il troncamento del log, pertanto è importante monitorare le dimensioni del log. Ad alcune operazioni può essere applicata la registrazione minima per ridurre l'impatto sulle dimensioni del log delle transazioni.  
@@ -41,7 +41,7 @@ ms.locfileid: "52807013"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vantaggi: Operazioni supportate dal log delle transazioni  
+##  <a name="Benefits"></a> Vantaggi: Operazioni supportate dal Log delle transazioni  
  Il log delle transazioni supporta le operazioni seguenti:  
   
 -   Recupero di singole transazioni.  
@@ -93,7 +93,7 @@ ms.locfileid: "52807013"
 |12|-|Solo per uso interno|  
 |13|OLDEST_PAGE|Se un database è configurato per l'utilizzo dei checkpoint indiretti, la pagina meno recente del database potrebbe essere meno recente dell'LSN checkpoint. In questo caso, la pagina meno recente può causare il posticipo del troncamento del log. (Tutti i modelli di recupero)<br /><br /> Per informazioni sui checkpoint indiretti, vedere [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Questo valore non è attualmente utilizzato.|  
-|16|XTP_CHECKPOINT|Quando un database ha un filegroup ottimizzato per la memoria, il log delle transazioni potrebbe non essere troncato finché non viene attivato il checkpoint automatico [!INCLUDE[hek_2](../../includes/hek-2-md.md)], che si verifica a ogni 512 MB di aumento della dimensioni del log.<br /><br /> Nota: Per troncare il log delle transazioni prima che raggiunga 512 MB, attivare manualmente il comando Checkpoint nel database in uso.|  
+|16|XTP_CHECKPOINT|Quando un database ha un filegroup ottimizzato per la memoria, il log delle transazioni potrebbe non essere troncato finché non viene attivato il checkpoint automatico [!INCLUDE[hek_2](../../includes/hek-2-md.md)], che si verifica a ogni 512 MB di aumento della dimensioni del log.<br /><br /> Nota: Per troncare log delle transazioni prima che raggiunga 512 MB, attivare il comando Checkpoint manualmente con il database in questione.|  
   
 ##  <a name="MinimallyLogged"></a> Operazioni che è possano eseguire la registrazione minima  
  La*registrazione minima* implica la registrazione nel log delle transazioni delle sole informazioni necessarie per il recupero della transazione stesse senza il supporto del recupero temporizzato. In questo argomento vengono identificate le operazioni con registrazione minima nel modello di recupero con registrazione minima delle operazioni bulk nonché nel modello di recupero con registrazione minima, ad eccezione dei momenti in cui è in esecuzione un backup.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126314"
 ---
 # <a name="dbase-data-types"></a>Tipi di dati dBASE
 Nella tabella seguente viene illustrato come i tipi di dati dBASE vengono mappati ai tipi di dati SQL ODBC. Si noti che non tutti i tipi di dati SQL ODBC sono supportati.  
@@ -32,10 +32,10 @@ Nella tabella seguente viene illustrato come i tipi di dati dBASE vengono mappat
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT [1]|SQL_DOUBLE|  
+|FLOAT[1]|SQL_DOUBLE|  
 |LOGICA|SQL_BIT|  
 |MEMO|SQL_LONGVARCHAR|  
-|NUMERICO (BCD)|SQL_DOUBLE|  
+|NUMERIC (BCD)|SQL_DOUBLE|  
 |CLASSI OLEOBJECT [1]|SQL_LONGBINARY|  
   
  [1] valido solo per dBASE versione 5. *x*  
@@ -51,7 +51,7 @@ Nella tabella seguente viene illustrato come i tipi di dati dBASE vengono mappat
   
  La tabella seguente illustra le limitazioni in file dBASE i tipi di dati.  
   
-|Tipo di dati|Description|  
+|Tipo di dati|Descrizione|  
 |---------------|-----------------|  
 |CHAR|Creazione di una colonna CHAR pari a zero o lunghezza non specificata restituisce effettivamente una colonna di 254 byte.|  
 |Dati crittografati|Il driver dBASE non supporta le tabelle crittografate dBASE.|  

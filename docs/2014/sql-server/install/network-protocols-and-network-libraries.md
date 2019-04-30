@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067697"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolli e librerie di rete
   Un server può consentire di restare in attesa su più protocolli di rete contemporaneamente o di monitorarli. È tuttavia necessario configurare ogni protocollo. Se un particolare protocollo non è configurato, il server non può restare in attesa su tale protocollo. Le configurazioni dei protocolli possono essere modificate dopo l'installazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

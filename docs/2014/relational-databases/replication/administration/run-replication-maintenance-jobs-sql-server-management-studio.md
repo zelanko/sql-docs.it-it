@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127056"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Esecuzione di processi di manutenzione della replica (SQL Server Management Studio)
   Nella replica vengono utilizzati i seguenti processi di manutenzione:  
@@ -69,7 +69,7 @@ ms.locfileid: "54128391"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Amministrazione dell'agente di replica](../agents/replication-agent-administration.md)  
   
   

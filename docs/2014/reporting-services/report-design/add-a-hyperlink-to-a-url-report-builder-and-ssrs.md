@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206939"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
   È possibile aggiungere un collegamento ipertestuale a un elemento di report quando si desidera che gli utenti siano in grado di fare clic su un collegamento in un report e aprire una finestra del browser relativa all'URL specificato. Un collegamento ipertestuale può essere un URL statico o un'espressione che restituisce un URL. Se in un database è disponibile un campo contenente URL, sarà possibile usare tale campo nell'espressione per ottenere un elenco dinamico di collegamenti ipertestuali nel report. È possibile aggiungere collegamenti ipertestuali a caselle di testo, immagini, grafici e misuratori. È necessario garantire che l'utente acceda all'URL specificato.  

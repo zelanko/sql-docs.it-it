@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061519"
 ---
 # <a name="fetching-a-row-of-data"></a>Recupero di una riga di dati
 Per recuperare una riga di dati, un'applicazione chiama **SQLFetch**. **SQLFetch** possono essere chiamati con qualsiasi tipo di cursore, ma viene solo spostato nel set di righe in una direzione di tipo forward-only. **SQLFetch** sposta il cursore alla riga successiva e restituisce i dati per tutte le colonne che sono state associate con chiamate a **SQLBindCol**. Quando il cursore raggiunge la fine del risultato impostato, **SQLFetch** restituisce SQL_NO_DATA. Per esempi di chiamata **SQLFetch**, vedere [SQLBindCol usando](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

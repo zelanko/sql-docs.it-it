@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4490edc175b14beb51b26edb205a0ace57f4ff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140077"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout ed esempio di proprietà State (VB)
 Questo esempio illustra diversi modi per usare la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) per aprire una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Viene inoltre utilizzata la [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) proprietà per impostare un periodo di timeout della connessione e il [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà per controllare lo stato delle connessioni. La funzione GetState è necessaria per eseguire questa procedura.  

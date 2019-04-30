@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042656"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Lezione 2: Valutare i criteri per procedure consigliate migliori in base a una pianificazione
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione
   È possibile configurare valutazioni pianificate di criteri per procedure consigliate in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per configurare i criteri per procedure consigliate da eseguire in base a una pianificazione prestabilita, è necessario importare i criteri nell'istanza di destinazione.  
   
  Per distribuire criteri pianificati in più server, è possibile importare i criteri in un'istanza, configurare le pianificazioni per tutti i criteri, esportare i criteri pianificati in una cartella, quindi distribuire i criteri pianificati nelle istanze di destinazione tramite Server registrati.  

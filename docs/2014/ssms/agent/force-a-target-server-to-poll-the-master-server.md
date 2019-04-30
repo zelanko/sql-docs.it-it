@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044056"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forzare un server di destinazione a eseguire il polling del server master
   In questo argomento viene descritta la procedura per il polling forzato del server di destinazione al server master. Il server di destinazione deve essere registrato nel server master.  
@@ -30,7 +30,7 @@ ms.locfileid: "52764213"
 > [!NOTE]  
 >  Se il server master non è accessibile quando il server di destinazione tenta di caricare lo stato del processo, per tale stato viene eseguito lo spooling fino a quando non è possibile accedere al server master.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [sicurezza](#Security)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
 -   **Per forzare un server di destinazione per eseguire il polling del server master tramite:**  [SQL Server Management Studio](#SSMS)  
   

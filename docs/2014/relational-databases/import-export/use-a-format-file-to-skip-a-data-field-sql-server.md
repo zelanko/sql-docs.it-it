@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bad791f1eab5fbb31976236e6d79c08e8b9adc97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155821"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utilizzo di un file di formato per escludere un campo di dati (SQL Server)
   È possibile che un file di dati contenga un numero di campi maggiore del numero di colonne presenti nella tabella. In questo argomento viene descritta la modifica dei file di formato XML e non XML per consentire l'utilizzo di un file di dati con un numero maggiore di campi tramite il mapping delle colonne della tabella ai campi dati corrispondenti e l'esclusione dei campi aggiuntivi.  

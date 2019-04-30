@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035386"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd
   Il `sqlcmd` utilità consente di immettere [!INCLUDE[tsql](../includes/tsql-md.md)] istruzioni, le procedure di sistema e file script al prompt dei comandi, in **Editor di Query** in modalità SQLCMD, in un file di script Windows o in un passaggio di processo del sistema operativo (Cmd.exe) di un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Processo dell'agente. e utilizza ODBC per eseguire batch [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "53591925"
  Nome di una workstation. Questa opzione imposta la variabile di scripting SQLCMDWORKSTATION di `sqlcmd`. Il nome della workstation è riportato nella colonna **hostname** della vista del catalogo **sys.processes** oppure è possibile ottenerlo tramite la stored procedure **sp_who**. Se questa opzione viene omessa, il valore predefinito è costituito dal nome del computer corrente. È possibile utilizzare questo nome per identificare sessioni di `sqlcmd` diverse.  
   
  **-K** _application_intent_  
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [repliche secondarie attive: Repliche secondarie leggibili](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: repliche secondarie leggibili](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
  Specificare sempre `-M` in caso di connessione al listener del gruppo di disponibilità di un gruppo di disponibilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tramite `-M` viene fornito un rilevamento più veloce di una connessione al server attualmente attivo. Se `-M` non è specificato, significa che `-M` è disabilitato. Per altre informazioni sulle [!INCLUDE[ssHADR](../includes/sshadr-md.md)], vedere [listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di Failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [repliche secondarie attive: Repliche secondarie leggibili](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
@@ -190,7 +190,7 @@ ms.locfileid: "53591925"
   
  **-i** c:\\< nome file\>  
   
- **-i** \\ \\< Server\>\\< condivisione$ >\\< nome file\>  
+ **-i** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-i** "C:\Cartella\\<nomefile\>"  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53591925"
   
  **-o** C:\\<nomefile>  
   
- **-o** \\ \\< Server\>\\< condivisione$ >\\< nome file\>  
+ **-o** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-o "** C:\Cartella\\<nomefile\>"  
   
@@ -260,12 +260,12 @@ ms.locfileid: "53591925"
  Se insieme a questa opzione si specifica `-b`, l'utilità `sqlcmd` viene chiusa in caso di errore. L'opzione `-b` è descritta di seguito in questo argomento.  
   
  **-t** _query_timeout_  
- Specifica il numero di secondi prima del timeout del comando o dell'istruzione SQL. Questa opzione imposta la variabile di scripting SQLCMDSTATTIMEOUT di `sqlcmd`. Se per *time_out* non viene specificato un valore, non si verifica il timeout del comando. Il valore di *query**time_out* deve essere un numero compreso tra 1 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `sqlcmd` genera un messaggio di errore.  
+ Specifica il numero di secondi prima del timeout del comando o dell'istruzione SQL. Questa opzione imposta la `sqlcmd` variabile di scripting SQLCMDSTATTIMEOUT. Se per *time_out* non viene specificato un valore, non si verifica il timeout del comando. Il valore di *query**time_out* deve essere un numero compreso tra 1 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `sqlcmd` genera un messaggio di errore.  
   
 > [!NOTE]  
 >  Il valore di timeout effettivo può variare di diversi secondi rispetto al valore specificato per *time_out* .  
   
- **-vvar =** _valore_[ **var =** _valore_...]  
+ **-vvar =** _value_[ **var =** _value_...]  
  Crea una `sqlcmd`variabile di scripting che può essere usato in un `sqlcmd` script. Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più  **_var_**=**"*`values`*"** valori. Se in uno dei valori specificati è incluso un errore, l'utilità `sqlcmd` genera un messaggio di errore e viene chiusa.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -499,7 +499,7 @@ ms.locfileid: "53591925"
  Stampa il contenuto della cache dell'istruzione.  
   
  **Variabili**  
-  **: Setvar** \< **var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **"*`value`*"** ]  
  Definisce le variabili di scripting `sqlcmd`. Il formato delle variabili di scripting è il seguente: `$(VARNAME)`.  
   
  I nomi delle variabili non fanno distinzione tra maiuscole e minuscole.  
@@ -531,7 +531,7 @@ ms.locfileid: "53591925"
   
  **Comandi di output**  
   **:Error**   
- **_\<_** _nome file_ **_>|_ STDERR | STDOUT**  
+ **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
  Reindirizza tutti gli output degli errori nel file specificato da *filename*, in **stderr** oppure in **stdout**. Il comando **Error** può essere utilizzato più volte in uno script. Per impostazione predefinita, l'output degli errori viene inviato in **stderr**.  
   
  *file name*  
@@ -560,12 +560,12 @@ ms.locfileid: "53591925"
  [**:**] **QUIT**  
  Provoca la chiusura di `sqlcmd`.  
   
- [**:**] **USCITA**[ **(*`statement`*)** ]  
+ [**:**] **EXIT**[ **(*`statement`*)** ]  
  Consente di utilizzare il risultato di un'istruzione SELECT come valore restituito da `sqlcmd`. Se numerica, la prima colonna dell'ultima riga di risultati viene convertita in un valore integer di 4 byte (long). MS-DOS passa il byte di ordine inferiore al processo padre o al livello di errore del sistema operativo. Windows 200x passa l'intero valore intero di 4 byte. La sintassi è:  
   
  `:EXIT(query)`  
   
- Ad esempio:  
+ Ad esempio:   
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -591,7 +591,7 @@ ms.locfileid: "53591925"
   
  L'utilità esegue il batch in cui è inclusa la query e quindi viene chiusa dopo aver restituito i risultati della query.  
   
- Se in uno script `sqlcmd` si utilizza RAISERROR e si verifica una condizione con stato 127, l'utilità `sqlcmd` viene chiusa e restituisce al client l'ID di messaggio. Ad esempio:  
+ Se in uno script `sqlcmd` si utilizza RAISERROR e si verifica una condizione con stato 127, l'utilità `sqlcmd` viene chiusa e restituisce al client l'ID di messaggio. Ad esempio:   
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -625,7 +625,7 @@ ms.locfileid: "53591925"
  **:Serverlist**  
  Elenca i server configurati localmente e i nomi dei server che trasmettono in rete tramite broadcast.  
   
- **: Connect** _server_name_[**\\**_nome_istanza_] [-l *timeout*] [-U *Retrieval nome* [-P *password*]]  
+ **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Stabilisce la connessione a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. e inoltre chiude la connessione corrente.  
   
  Opzioni di timeout:  
@@ -651,7 +651,7 @@ ms.locfileid: "53591925"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**  \< *comando*>  
+ [**:**] **!!**\< *command*>  
  Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga (**!!**) seguiti dal comando del sistema operativo. Ad esempio:  
   
  `:!! Dir`  
@@ -672,7 +672,7 @@ ms.locfileid: "53591925"
   
 -   Se un file di input che risiede in un server remoto viene chiamato da `sqlcmd` in un computer locale e contiene un percorso di file con unità come :out c:\OutputFile.txt, il file di output verrà creato nel computer locale e non nel server remoto.  
   
--   Percorsi di file validi includono: C:\\**<*`filename`*>**, \\ \\< Server\>\\< condivisione$ >\\ **< *`filename`* >** e "cartella C:\Some\\  **< *`file name`*>**". Se il percorso contiene uno spazio, utilizzare le virgolette.  
+-   Percorsi di file validi includono: C:\\**<*`filename`*>**, \\\\<Server\>\\<Share$>\\**<*`filename`*>** and "C:\Some Folder\\**<*`file name`*>**". Se il percorso contiene uno spazio, utilizzare le virgolette.  
   
 -   Ogni nuova sessione di `sqlcmd` sovrascriverà i file esistenti con gli stessi nomi.  
   

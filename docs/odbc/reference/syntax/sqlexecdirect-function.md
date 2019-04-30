@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061509"
 ---
 # <a name="sqlexecdirect-function"></a>Funzione SQLExecDirect
 **Conformità**  
@@ -51,11 +51,11 @@ SQLRETURN SQLExecDirect(
  *StatementText*  
  [Input] Istruzione SQL da eseguire.  
   
- *SetFocus per effettuare*  
+ *TextLength*  
  [Input] Lunghezza di **StatementText* in caratteri.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE o SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE, or SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLExecDirect** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLExecDirect** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecDirect(
 |01004|Stringa troncati di dati a destra|Dati binari o di stringa restituito per un input/output o parametro di output ha comportato il troncamento del carattere non vuote o dati binari non NULL. Se si tratta di un valore stringa, era troncati a destra. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01006|Privilegio non revocato.|\**StatementText* contenuti un **revocare** istruzione e l'utente non dispone del privilegio specificato. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01007|Privilegio non concesso|*\*StatementText* era un **concessione** istruzione e l'utente non è stato possibile concedere il privilegio specificato.|  
-|01S02|Valore di opzione modificato|Un attributo di istruzione specificato non è valido a causa di condizioni di lavoro di implementazione, pertanto è stata temporaneamente sostituito con un valore simile. (**SQLGetStmtAttr** può essere chiamato per determinare quale sia il valore di sostituzione temporaneamente.) Il valore di sostituzione è valido per il *StatementHandle* fino a quando il cursore è chiuso, a quel punto l'attributo dell'istruzione viene ripristinato il valore precedente. Gli attributi di istruzione che è possibile modificare sono:<br /><br /> SQL _ ATTR_CONCURRENCY SQL _ ATTR_CURSOR_TYPE SQL _ ATTR_KEYSET_SIZE SQL _ ATTR_MAX_LENGTH SQL _ ATTR_MAX_ROWS SQL _ ATTR_QUERY_TIMEOUT SQL _ ATTR_SIMULATE_CURSOR<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
+|01S02|Valore di opzione modificato|Un attributo di istruzione specificato non è valido a causa di condizioni di lavoro di implementazione, pertanto è stata temporaneamente sostituito con un valore simile. (**SQLGetStmtAttr** può essere chiamato per determinare quale sia il valore di sostituzione temporaneamente.) Il valore di sostituzione è valido per il *StatementHandle* fino a quando il cursore è chiuso, a quel punto l'attributo dell'istruzione viene ripristinato il valore precedente. Gli attributi di istruzione che è possibile modificare sono:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT  SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01S07|Troncamento frazionario.|I dati restituiti per un input/output o parametro di output è stato troncato in modo che la parte frazionaria di un tipo di dati numerici sono stata troncata o la parte frazionaria del componente di un tipo di dati di ora, timestamp o intervallo di tempo è stata troncata.<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |07002|Campo COUNT non corretto|Il numero di parametri specificati in **SQLBindParameter** era minore rispetto al numero di parametri nell'istruzione SQL racchiusa \* *StatementText*.<br /><br /> **SQLBindParameter** è stato chiamato con *ParameterValuePtr* impostata su un puntatore null *StrLen_or_IndPtr* non è impostata su SQL_NULL_DATA o SQL_DATA_AT_EXEC, e *InputOutputType*  non impostata su SQL_PARAM_OUTPUT, in modo che il numero di parametri specificato nel **SQLBindParameter** è maggiore del numero di parametri nell'istruzione SQL contenuti in **StatementText* .|  
 |07006|Violazione dell'attributo del tipo di dati|Il valore di dati identificato dal *ValueType* argomento nella **SQLBindParameter** per non è stato possibile convertire il parametro associato al tipo di dati identificato dal *ParameterType*nell'argomento **SQLBindParameter**.<br /><br /> Il valore di dati restituito per un parametro di associazione come SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT non è stato possibile convertire il tipo di dati identificato dal *ValueType* nell'argomento **SQLBindParameter**.<br /><br /> (Se non è stato possibile convertire i valori dei dati per una o più righe, ma una o più righe sono state restituite correttamente, questa funzione restituisce SQL_SUCCESS_WITH_INFO).|  

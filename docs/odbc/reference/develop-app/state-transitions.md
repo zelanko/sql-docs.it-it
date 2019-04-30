@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148988"
 ---
 # <a name="state-transitions"></a>Transizioni di stato
-ODBC definisce discreti *stati* per ogni ambiente, ogni connessione e ogni istruzione. Ad esempio, l'ambiente può avere tre stati possibili: non allocato (in cui non è allocato alcun ambiente), allocato (in cui viene allocato un ambiente ma non le connessioni vengono allocate) e connessione (in cui un ambiente e una o più connessioni sono allocato). Le connessioni sono sette possibili stati; istruzioni hanno 13 stati possibili.  
+ODBC definisce discreti *stati* per ogni ambiente, ogni connessione e ogni istruzione. Ad esempio, l'ambiente ha tre stati possibili: Non allocato (in cui non è allocato alcun ambiente), allocato (in cui viene allocato un ambiente ma non le connessioni vengono allocate) e connessione (in cui un ambiente e una o più connessioni sono allocate). Le connessioni sono sette possibili stati; istruzioni hanno 13 stati possibili.  
   
  Un particolare elemento, come identificato dal relativo handle, viene spostato da uno stato a altro quando l'applicazione chiama una determinata funzione o funzioni e passa l'handle a quell'elemento. Viene chiamato tale spostamento una *transizione dello stato*. Ad esempio, allocare un handle di ambiente con **SQLAllocHandle** Sposta l'ambiente da non allocata allocato e rilascio con tale handle **SQLFreeHandle** restituirlo da allocato a Non allocato. ODBC definisce un numero limitato di transizioni di stato validi, ovvero un altro modo per dire che le funzioni devono essere chiamate in un determinato ordine.  
   
@@ -35,6 +35,6 @@ ODBC definisce discreti *stati* per ogni ambiente, ogni connessione e ogni istru
   
  Alcune transizioni di stato sono inerenti la progettazione di ODBC. Non è ad esempio, possibile allocare un handle di connessione senza prima di allocare un handle di ambiente, in quanto la funzione che consente di allocare un handle di connessione richiede un handle di ambiente. Altre transizioni di stato vengono applicate da Gestione Driver e i driver. Ad esempio, **SQLExecute** esegue un'istruzione preparata. Se viene passato l'handle di istruzione a non è in uno stato preparato **SQLExecute** restituisce SQLSTATE HY010 (funzione di errore nella sequenza).  
   
- Dal punto di vista dell'applicazione, le transizioni di stato sono in genere semplici: le transizioni di stato validi tendono a passare in stretta associazione con il flusso di un'applicazione ben scritta. Transizioni di stato sono più complesse per la gestione di Driver e i driver perché è necessario tenere traccia dello stato dell'ambiente, ogni connessione e ogni istruzione. La maggior parte di questa attività viene eseguita da Gestione Driver; la maggior parte delle operazioni che devono essere eseguite dai driver si verifica con istruzioni e i risultati in sospeso.  
+ Dal punto di vista dell'applicazione, le transizioni di stato sono in genere semplici: Transizioni di stato validi tendono a passare in stretta associazione con il flusso di un'applicazione ben scritta. Transizioni di stato sono più complesse per la gestione di Driver e i driver perché è necessario tenere traccia dello stato dell'ambiente, ogni connessione e ogni istruzione. La maggior parte di questa attività viene eseguita da Gestione Driver; la maggior parte delle operazioni che devono essere eseguite dai driver si verifica con istruzioni e i risultati in sospeso.  
   
- Part 1 e 2 del presente manuale ("Introduzione a ODBC" e "Sviluppo di applicazioni e i driver") tendono a non menzioni esplicitamente le transizioni di stato. Al contrario, vengono descritti l'ordine in cui devono essere chiamate le funzioni. Ad esempio, "L'esecuzione di istruzioni" indica che un'istruzione deve essere preparata con **SQLPrepare** prima di poter essere eseguito con **SQLExecute**. Per una descrizione completa degli Stati e transizioni di stato, tra cui quali transizioni sono controllate da Gestione Driver e che devono essere controllate dal driver, vedere [tabelle della transizione di stato appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ Part 1 e 2 del presente manuale ("Introduzione a ODBC" e "Sviluppo di applicazioni e i driver") tendono a non menzioni esplicitamente le transizioni di stato. Al contrario, vengono descritti l'ordine in cui devono essere chiamate le funzioni. Ad esempio, "L'esecuzione di istruzioni" indica che un'istruzione deve essere preparata con **SQLPrepare** prima di poter essere eseguito con **SQLExecute**. Per una descrizione completa degli Stati e transizioni di stato, tra cui quali transizioni sono controllate da Gestione Driver e che devono essere controllate dal driver, vedere [appendice b: Tabelle della transizione di stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062359"
 ---
 # <a name="sqlconfigdriver-function"></a>Funzione SQLConfigDriver
 **Conformità**  
@@ -54,7 +54,7 @@ BOOL SQLConfigDriver(
  *hwndParent*  
  [Input] Handle della finestra padre. Se l'handle è null, la funzione non verrà visualizzata alcuna finestra di dialogo.  
   
- *trattano*  
+ *fRequest*  
  [Input] Tipo di richiesta. *trattano* deve contenere uno dei valori seguenti:  
   
  ODBC_CONFIG_DRIVER: Modifica il timeout utilizzato dal driver del pool.  

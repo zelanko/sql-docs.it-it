@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067515"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Salvataggio di tabelle selezionate di un diagramma (Visual Database Tools)
   Se non si desidera salvare tutte le modifiche apportate in un diagramma di database, è possibile salvare una specifica tabella o un set di tabelle.  

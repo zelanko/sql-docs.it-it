@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192031"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Proprietà NumberOfProps (classe ClientNetworkProtocol)
   Ottiene il numero di proprietà del client di protocollo di rete specificato per il [metodo SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  

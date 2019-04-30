@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065108"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messaggi di errore nativi del driver ODBC Visual FoxPro
 Le tabelle seguenti elencano i messaggi di errore nativi per il Driver ODBC Visual FoxPro.  
@@ -297,7 +297,7 @@ Le tabelle seguenti elencano i messaggi di errore nativi per il Driver ODBC Visu
 |902|Analizzatore di espressioni non è riuscita.|  
 |903|Stringa è troppo in eccesso.|  
 |904|* * o ^ errore di dominio.|  
-|905|Log (): Zero o negativo usato come argomento.|  
+|905|LOG(): Zero o negativo usato come argomento.|  
 |906|Argomento Sqrt () non può essere negativo.|  
 |912|Operazione non è valida per un campo di tipo generale.|  
 |914|Numero della tabella codici non è valido.|  

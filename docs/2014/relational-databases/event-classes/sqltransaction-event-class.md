@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061315"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction - classe di evento
   La classe di evento SQLTransaction consente di monitorare il momento di inizio e di fine delle transazioni, in particolare durante la verifica di applicazioni, trigger o stored procedure.  
@@ -34,7 +34,7 @@ ms.locfileid: "52774393"
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |Duration|`bigint`|Durata dell'evento in microsecondi.|13|Yes|  
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Yes|  
-|EventClass|`int`|Tipo di evento = 50.|27|No|  
+|EventClass|`int`|Tipo di evento = 50.|27|no|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Inizio<br /><br /> 1=Commit<br /><br /> 2=Rollback<br /><br /> 3 = Punto di salvataggio|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
@@ -47,7 +47,7 @@ ms.locfileid: "52774393"
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Yes|  
 |ObjectName|`nvarchar`|Nome dell'oggetto a cui si fa riferimento.|34|Yes|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Yes|  
-|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8532661c57901cd720e10b5d42047aa8f1071414
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165467"
 ---
 # <a name="delete-group-dialog-box"></a>Finestra di dialogo Elimina gruppo
   Utilizzare la finestra di dialogo **Elimina gruppo** per eliminare un gruppo da un'area dati tabella, matrice o elenco. Se al gruppo sono associate righe o colonne, è anche possibile eliminare queste strutture.  

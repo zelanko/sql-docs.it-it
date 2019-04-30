@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d9a3984e956cd9e742bcc8a29accb7fe012b9e8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043386"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Esempio dell'oggetto DataFactory e dei metodi Query e CreateObject (VBScript)
 > [!IMPORTANT]
@@ -140,7 +140,7 @@ to bring back a Recordset. </H4>
 ## <a name="see-also"></a>Vedere anche  
  [Metodo CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Metodo Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b53076a7528d0e9eaff1244c206dee4127150e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063137"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>Esempio di file di input XML con carico di lavoro inline (DTA)
   Copiare e incollare questo esempio di file di input XML che specifica un carico di lavoro con l'elemento **EventString** nell'editor XML o nell'editor di testo preferito. È possibile utilizzare l'elemento **EventString** per specificare il carico di lavoro di uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] nel file XML invece di utilizzare un file del carico di lavoro separato. Dopo aver copiato questo esempio nello strumento di modifica desiderato, sostituire i valori specificati per gli elementi **Server**, **Database**, **Schema**, **Table**, **Workload**, **EventString**e **TuningOptions** con i valori per la sessione di ottimizzazione specifica. Per altre informazioni su tutti gli attributi e gli elementi figlio che è possibile usare con questi elementi, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). Nell'esempio seguente viene utilizzato solo un subset delle opzioni relative agli attributi e agli elementi figlio disponibili.  
