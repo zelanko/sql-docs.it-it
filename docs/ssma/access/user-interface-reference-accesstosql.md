@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299432"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Riferimento all'interfaccia utente (AccessToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso.  
@@ -28,7 +28,7 @@ In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../..
 |Argomento|Descrizione|  
 |---------|---------------|  
 |[Selezione avanzata di oggetti &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Usare la **avanzate Seleziona oggetto** finestra di dialogo per trovare gli oggetti di database usando i criteri di filtro, quindi selezionare o deselezionare gli oggetti.|  
-|[Report di valutazione &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Usare la **Report di valutazione** finestra di dialogo per analizzare la conversione di oggetti di database di Access e per stimare il tempo richiesto la migrazione.|  
+|[Assessment Report &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Usare la **Report di valutazione** finestra di dialogo per analizzare la conversione di oggetti di database di Access e per stimare il tempo richiesto la migrazione.|  
 |[Connettersi a SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Usare la **Connetti al Server SQL** finestra di dialogo per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera eseguire la migrazione.|  
 |[Connettersi a SQL Azure](connect-to-azure-sql-db-accesstosql.md)|Usare la **Connetti a SQL Azure** finestra di dialogo per connettersi all'istanza di SQL Azure a cui si desidera eseguire la migrazione.|  
 |[Convertire, caricare ed eseguire la migrazione](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|Il **convertire, caricare ed eseguire la migrazione** finestra di dialogo fa parte della migrazione guidata e viene visualizzata anche quando si usa la **Converti, carica ed eseguire la migrazione** comando.|  
@@ -37,7 +37,7 @@ In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../..
 |[Procedura guidata trova database (Seleziona file)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)|Utilizzare la pagina di selezione file della procedura guidata trova database per selezionare i database di Access da aggiungere al progetto SSMA.|  
 |[Procedura guidata trova database (Seleziona percorsi)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)|Utilizzare la pagina di selezione percorsi della procedura guidata trova database per specificare i percorsi per cercare i file di database di Access in una rete, in un computer o in una cartella che corrispondono ai criteri di ricerca.|  
 |[Procedura guidata Trova database (verifica selezione)](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)|Utilizzare la pagina Verifica selezione della procedura guidata trova database per verificare i database che verranno aggiunti al progetto SSMA.|  
-|[Impostazioni globali &#40;Editor&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-editor-accesstosql.md)|Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per configurare le opzioni dell'editor di codice.|  
+|[Global Settings &#40;Editor&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-editor-accesstosql.md)|Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per configurare le opzioni dell'editor di codice.|  
 |[Impostazioni globali &#40;finestre di dialogo&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-dialogs-accesstosql.md)|Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per configurare le impostazioni di avviso e finestra di dialogo predefinita.|  
 |[Impostazioni globali &#40;registrazione&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-logging-accesstosql.md)|Utilizzare la pagina di registrazione dei **Global Settings** finestra di dialogo per configurare la registrazione.|  
 |[Impostazioni globali &#40;finestra di Output&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-output-window-accesstosql.md)|Utilizzare la pagina della finestra di Output del **Global Settings** finestra di dialogo per configurare la visualizzazione del riquadro di Output e riquadro della finestra di errore.|  
