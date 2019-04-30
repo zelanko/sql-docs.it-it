@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b5bbc04c94d491c096db047d574cc3b5fd8ee38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156636"
 ---
 # <a name="read-method"></a>Metodo Read
 Legge un numero specificato di byte da un file binario [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  

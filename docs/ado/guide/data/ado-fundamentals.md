@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062927"
 ---
 # <a name="ado-fundamentals"></a>Nozioni fondamentali su ADO
 ADO offre agli sviluppatori un modello a oggetti potenti e logica per l'accesso a livello di codice, la modifica e aggiornamento dei dati da una vasta gamma di origini dati tramite le interfacce OLE DB di sistema. L'uso più comune di ADO è eseguire la query una o più tabelle in un database relazionale, recuperare e visualizzare i risultati in un'applicazione e forse consentire agli utenti di creare e salvare le modifiche ai dati. Altre attività includono quanto segue:  
@@ -59,7 +59,7 @@ ADO offre agli sviluppatori un modello a oggetti potenti e logica per l'accesso 
   
 -   [Oggetti e raccolte di ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData: applicazione semplice ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: Un'applicazione semplice ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [Provider OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   

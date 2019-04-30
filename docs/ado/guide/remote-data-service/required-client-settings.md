@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191805"
 ---
 # <a name="required-client-settings"></a>Impostazioni obbligatorie dei client
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ rs.CursorLocation = adUseClient
   
  Specificare il [proprietà del gestore (Servizi Desktop remoto)](../../../ado/reference/rds-api/handler-property-rds.md) proprietà o una parola chiave; il [Provider di proprietà (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o una parola chiave; e il *CustomerById* e  *CustomerDatabase* gli identificatori. Quindi aprire il **Recordset** oggetto  
   
- RS. Aprire "CustomerByID (4)", "gestore = MSDFMAP. Gestore;"& _  
+ rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

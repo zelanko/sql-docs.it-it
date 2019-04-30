@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184179"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Esempio della proprietà ActiveConnection di Catalog (VC++)
 Impostando il [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà a una connessione valida, aprire "aperta" nel catalogo. Da un catalogo aperto, è possibile accedere gli oggetti dello schema contenuti all'interno di tale catalogo.  

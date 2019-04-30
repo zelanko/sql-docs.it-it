@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205711"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aggiornamento di diagrammi di database delle precedenti edizioni (Visual Database Tools)
   I diagrammi database creati nelle edizioni precedenti dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornati automaticamente quando il diagramma di database viene impostato su [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni sull'impostazione dei diagrammi, vedere [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  

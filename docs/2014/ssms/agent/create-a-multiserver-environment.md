@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192966"
 ---
 # <a name="create-a-multiserver-environment"></a>Creazione di un ambiente multiserver
   L'amministrazione multiserver richiede l'impostazione di un server master (MSX) e di uno o più server di destinazione (TSX). I processi che verranno eseguiti in tutti i server di destinazione vengono innanzitutto definiti nel server master e quindi scaricati nei server di destinazione.  
@@ -35,14 +35,14 @@ ms.locfileid: "52795616"
 ## <a name="considerations-for-multiserver-environments"></a>Considerazioni relative agli ambienti multiserver  
  Vedere la tabella seguente per le configurazioni MSX/TSX supportate.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 o versione successiva**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 o versione successiva**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|Yes|Yes|No|No|No|No|No|  
-|**MSX = 8.0 &LT; SP3**|Yes|Yes|No|No|No|No|No|  
+|**MSX = 8.0 < SP3**|Yes|Yes|No|No|No|No|no|  
 |**MSX = 8.0 SP3 o versione successiva**|No|No|Yes|Yes|Yes|Yes|Yes|  
-|**MSX = 9.0**|No|No|No|Yes|Yes|Yes|Yes|  
-|**MSX = 10.0**|No|No|No|No|Yes|Yes|Yes|  
-|**MSX = 10.5**|No|No|No|No|No|Yes|Yes|  
+|**MSX = 9.0**|no|No|No|Yes|Yes|Yes|Yes|  
+|**MSX = 10.0**|No|no|No|no|Yes|Yes|Yes|  
+|**MSX = 10.5**|no|No|No|No|no|Yes|Yes|  
 |**MSX = 11.0**|No|No|No|No|No|No|Yes|  
   
  Al momento della creazione di un ambiente multiserver, è opportuno considerare i problemi seguenti:  

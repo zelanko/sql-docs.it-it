@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150632"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
   In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  Vengono incluse solo le indicazioni per l'aggiunta di viste indicizzate. Non verranno generate indicazioni per gli indici cluster e non cluster.  
   
  **Includi indici filtrati**  
- Vengono incluse le indicazioni per l'aggiunta di indici filtrati. Questa opzione è disponibile se si seleziona una di queste strutture di progettazione fisica: **Indici e viste indicizzate**, **indici**, o **indici non cluster**.  
+ Vengono incluse le indicazioni per l'aggiunta di indici filtrati. Questa opzione è disponibile se si seleziona una di queste strutture di progettazione fisica: **Indici e viste indicizzate**, **Indici** o  **Indici non cluster**.  
   
  **Indici**  
  Vengono incluse solo le indicazioni per l'aggiunta di indici cluster e non cluster. Non verranno generate indicazioni per le viste indicizzate.  

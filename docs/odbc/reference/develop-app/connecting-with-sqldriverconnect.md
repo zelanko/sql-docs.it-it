@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042217"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Connessione con SQLDriverConnect
 **SQLDriverConnect** utilizzato per la connessione a un'origine dati tramite una stringa di connessione. **SQLDriverConnect** viene usato al posto di **SQLConnect** per i motivi seguenti:  

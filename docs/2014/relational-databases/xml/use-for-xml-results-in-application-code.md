@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193335"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
   L'utilizzo delle clausole FOR XML nelle query SQL consente di recuperare e inoltre di eseguire il cast dei risultati delle query come dati XML. Se i risultati di una query FOR XML possono essere utilizzati nel codice XML dell'applicazione, è possibile eseguire le operazioni seguenti:  
@@ -157,17 +157,17 @@ ms.locfileid: "58532834"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** International primario  
+-   **BankName:** Primary International  
   
 -   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
--   **Specializzazione:** Road  
+-   **Specialty:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Marchi:** 3  
+-   **Brands:** 3  
   
 -   **Internet:** DSL  
   

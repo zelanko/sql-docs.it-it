@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64262ae52b802398fc2060092a03e7469146f063
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161719"
 ---
 # <a name="editing-existing-records"></a>Modifica di record esistenti
 Per modificare i record esistenti, spostarsi sulla riga in cui si desidera modificare e cambiare il **valore** proprietà dei campi che si desidera modificare. Per altre informazioni sul **campo** dell'oggetto **valore** proprietà, vedere [analisi dei dati](../../../ado/guide/data/examining-data.md). A seconda del tipo di cursore, si userà **Update** oppure **UpdateBatch** per inviare le modifiche all'origine dati. Per altre informazioni, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  

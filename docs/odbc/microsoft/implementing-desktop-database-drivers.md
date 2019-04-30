@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127251"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementazione dei driver di database desktop
 Istruzioni e note tecniche su come implementare e configurare i driver di Database Desktop ODBC Microsoft reperibili nella Guida in linea Amministrazione origine dati ODBC. Questo file è accessibile durante la routine di installazione di driver dal [Amministrazione origine dati ODBC di Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  

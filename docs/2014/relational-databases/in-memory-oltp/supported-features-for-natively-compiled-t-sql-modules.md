@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155723"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Costrutti supportati in stored procedure compilate in modo nativo
   In questo argomento contiene un elenco delle funzionalità supportate per le stored procedure compilate in modo nativo ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,15 +81,15 @@ ms.locfileid: "58527143"
 ##  <a name="bfncsp"></a> Funzioni predefinite nelle Stored procedure compilate in modo nativo  
  Le seguenti funzioni sono supportate nei vincoli predefiniti nelle tabelle ottimizzate per la memoria e nelle stored procedure compilate in modo nativo.  
   
--   Funzioni matematiche: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE e TAN  
+-   Funzioni matematiche: ACOS, ASIN, ATAN, ATN2, COS, COT, gradi, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE e TAN  
   
 -   Funzioni di data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
   
--   Funzioni per i valori stringa: LEN, LTRIM, RTRIM e SUBSTRING  
+-   Funzioni stringa: LEN, LTRIM, RTRIM e SUBSTRING  
   
 -   Funzione di identità: SCOPE_IDENTITY  
   
--   Funzione NULL: ISNULL  
+-   Funzioni NULL: ISNULL  
   
 -   Funzioni di identificazione univoca: NEWID e NEWSEQUENTIALID  
   
@@ -178,7 +178,7 @@ ms.locfileid: "58527143"
   
  Se non si utilizza una clausola ORDER BY, è possibile utilizzare qualsiasi valore intero con l'operatore TOP.  
   
- Esempio con TOP N = 8192: compila  
+ Esempio con TOP N = 8192: Compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Esempio con TOP N > 8192: non riesce a compilare.  
+ Esempio con TOP N > 8192: Non viene compilato.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  Il limite di 8192 righe si applica solo a `TOP N``N` dove  è una costante, come negli esempi precedenti.  Se è necessario un valore `N` maggiore di 8192 è possibile assegnare il valore a una variabile e utilizzare tale variabile con `TOP`.  
   
- Esempio di utilizzo di una variabile: compila  
+ Esempio di utilizzo di una variabile: Compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitazioni per le righe restituite:** In due casi è possibile che il numero di righe che possono essere restituite dall'operatore TOP venga ridotto:  
+ **Limitazioni per le righe restituite:** Esistono due casi è possano ridurre il numero di righe che possono essere restituite dall'operatore TOP:  
   
 -   Utilizzando JOIN nella query.  L'influenza di JOIN sulla limitazione dipende dal piano di query.  
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181326"
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
 Valori letterali numerici vengono usati quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri. Per la conversione dei dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati C numerici su una stringa SQL_CHAR o SQL_VARCHAR, sintassi dei valori letterali numerica viene usata per specificare che viene archiviato nel database di destinazione. Per una conversione di un valore numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o un valore numerico archiviato come stringa SQL_CHAR a dati C numerici, questa sintassi viene utilizzata per convalidare ciò che viene archiviato nell'origine.  
   
- Valori letterali numerici devono essere conformi alla sintassi definita nella sezione [sintassi dei valori letterali numerici](../../../odbc/reference/appendixes/numeric-literal-syntax.md) nell'appendice c: SQL grammatica.  
+ Valori letterali numerici devono essere conformi alla sintassi definita nella sezione [sintassi dei valori letterali numerici](../../../odbc/reference/appendixes/numeric-literal-syntax.md) nell'appendice c: Grammatica SQL.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

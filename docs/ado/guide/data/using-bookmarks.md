@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184925"
 ---
 # <a name="using-bookmarks"></a>Uso dei segnalibri
 È spesso utile restituire direttamente a un record specifico dopo aver visto spostamenti all'interno di **Recordset** senza dover scorrere tutti i record e confrontare i valori. Ad esempio, se si prova a cercare un record usando il **trovare** metodo, ma la ricerca non restituisce alcun record, viene automaticamente indirizzato alle due estremità della **Recordset**. Se il provider supporta questa funzionalità, i segnalibri possono essere usati per contrassegnare la stessa posizione prima di usare la **trovare** metodo in modo che è possibile tornare alla località. Un segnalibro è un **Variant** tipo di valore che identifica in modo univoco un record in un **Recordset** oggetto.  

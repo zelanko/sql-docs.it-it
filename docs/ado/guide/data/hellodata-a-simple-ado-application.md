@@ -1,5 +1,5 @@
 ---
-title: 'HelloData: Applicazione semplice ADO | Microsoft Docs'
+title: "HelloData: Un'applicazione semplice ADO | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162107"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 I passaggi di questa semplice applicazione grazie a ognuna delle operazioni principali ADO: introduzione, l'analisi, la modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrare l'attenzione sui fondamenti di ADO e per evitare confusioni a livello di codice, gestione degli errori nell'esempio è minimo.  
@@ -43,19 +43,19 @@ I passaggi di questa semplice applicazione grazie a ognuna delle operazioni prin
   
  ![Mostra Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|valore|  
+|Tipo di controllo|Proprietà|Value|  
 |------------------|--------------|-----------|  
-|Form|nome|Form1|  
+|Form|Nome|Form1|  
 ||Altezza|6500|  
 ||Larghezza|6500|  
-|DataGrid MS|nome|grdDisplay1|  
-|TextBox|nome|txtDisplay1|  
+|DataGrid MS|Nome|grdDisplay1|  
+|TextBox|Nome|txtDisplay1|  
 ||Proprietà Multiline|true|  
 |Pulsante di comando|nome|cmdGetData|  
 ||Didascalia|Get Data|  
-|Pulsante di comando|nome|cmdExamineData|  
+|Pulsante di comando|Nome|cmdExamineData|  
 ||Didascalia|Esaminare i dati|  
-|Pulsante di comando|nome|cmdEditData|  
+|Pulsante di comando|Nome|cmdEditData|  
 ||Didascalia|Modificare i dati|  
-|Pulsante di comando|nome|cmdUpdateData|  
+|Pulsante di comando|Nome|cmdUpdateData|  
 ||Didascalia|Dati di aggiornamento|

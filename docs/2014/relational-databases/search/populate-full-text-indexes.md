@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046153"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
   La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>b. Esecuzione di un popolamento completo nella tabella  
+### <a name="b-running-a-full-population-on-table"></a>B. Esecuzione di un popolamento completo nella tabella  
  Nell'esempio seguente viene eseguito un popolamento completo nella tabella `Production.Document` del database di esempio `AdventureWorks`.  
   
 ```  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> Risoluzione degli errori in un popolamento Full-Text (ricerca per indicizzazione)  
  Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per i log di ricerca per indicizzazione predefinita per una determinata istanza, in questo caso, la prima istanza, si trovano in %ProgramFiles%\Microsoft SQL Server\MSSQL12. Cartella MSSQLSERVER\MSSQL\LOG. Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >. LOG [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  ID di un database. <`dbid`> è una cifra cinque numeri con zeri iniziali.  

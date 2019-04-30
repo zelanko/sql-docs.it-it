@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b3c7d20d92b56de299f25665701a295e54fce89
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164588"
 ---
 # <a name="delete-rows-dialog-box"></a>Finestra di dialogo Elimina righe
   Utilizzare la finestra di dialogo **Elimina righe** per eliminare righe da un'area dati tabella, matrice o elenco. Per le righe associate a gruppi, è inoltre possibile le definizioni di gruppo.  

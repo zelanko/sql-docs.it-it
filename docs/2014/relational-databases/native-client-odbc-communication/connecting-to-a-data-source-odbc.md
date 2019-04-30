@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075183"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connessione a un'origine dati (ODBC)
   Dopo avere allocato handle di ambiente e di connessione e avere impostato tutti gli attributi di connessione, l'applicazione si connette all'origine dati o al driver. È possibile utilizzare tre funzioni per connettersi:  
@@ -65,7 +65,7 @@ ms.locfileid: "48185721"
   
 -   Finestra di dialogo del driver  
   
-     È possibile codificare l'applicazione da passare a un handle di finestra valido **SQLDriverConnect** e impostare le *DriverCompletion* parametro SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT o SQL_DRIVER_COMPLETE_ Obbligatorio. Il driver genera quindi una finestra di dialogo per richiedere all'utente le informazioni di connessione. Questo metodo semplifica il codice dell'applicazione.  
+     È possibile codificare l'applicazione da passare a un handle di finestra valido **SQLDriverConnect** e impostare le *DriverCompletion* parametro SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT o SQL_DRIVER_COMPLETE_ richiesto. Il driver genera quindi una finestra di dialogo per richiedere all'utente le informazioni di connessione. Questo metodo semplifica il codice dell'applicazione.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
  **SQLBrowseConnect**, ad esempio **SQLDriverConnect**, Usa una stringa di connessione. Tuttavia, utilizzando **SQLBrowseConnect**, un'applicazione può costruire una stringa di connessione completa in maniera iterativa con l'origine dati in fase di esecuzione. In questo modo, l'applicazione può eseguire due operazioni:  

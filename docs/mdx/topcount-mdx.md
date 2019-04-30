@@ -1,5 +1,5 @@
 ---
-title: TopCount (MDX) | Documenti Microsoft
+title: TopCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa8edcf8af510a41affdcbcc9924edf69cf4c220
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228053"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 
@@ -32,19 +32,19 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Conteggio*  
+ *Count*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
- Se viene specificata un'espressione numerica, la **TopCount** funzione dispone in ordine decrescente, le tuple nel set specificato per il set specificato in base al valore specificato dall'espressione numerica, valutato sul set specificato. Dopo l'ordinamento, il set di **TopCount** funzione restituisce quindi il numero specificato di tuple con valore più alto.  
+## <a name="remarks"></a>Note  
+ Se viene specificata un'espressione numerica, la **TopCount** funzione dispone in ordine decrescente, le tuple nel set specificato per il set specificato in base al valore specificato dall'espressione numerica, valutato sul specificato set. Dopo l'ordinamento con il set, la **TopCount** funzione restituisce quindi il numero specificato di tuple con il valore più alto.  
   
 > [!IMPORTANT]  
->  Ad esempio il [BottomCount](../mdx/bottomcount-mdx.md) funzione, il **TopCount** funzione rispetta mai la gerarchia.  
+>  Ad esempio la [BottomCount](../mdx/bottomcount-mdx.md) funzione, il **TopCount** funzione rispetta mai la gerarchia.  
   
- Se un'espressione numerica non è specificata, la funzione restituisce il set di membri in ordine naturale, senza alcun ordinamento, analogamente il [Head (MDX)](../mdx/head-mdx.md) (funzione).  
+ Se non viene specificata un'espressione numerica, la funzione restituisce il set di membri in ordine naturale, senza alcun ordinamento, analogamente i [Head (MDX)](../mdx/head-mdx.md) (funzione).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite le prime 10 date da Internet Sales Amount:  
@@ -72,6 +72,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

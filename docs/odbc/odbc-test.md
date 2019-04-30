@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 797f572a6a9d847422981483c4bfe7938cd47e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057832"
 ---
 # <a name="odbc-test"></a>Test ODBC
 Test di Microsoft® ODBC è un'applicazione ODBC compatibile che è possibile usare per testare gestione Driver ODBC e driver ODBC. ODBC 3.51 include ANSI sia abilitata per Unicode le versioni di Test ODBC. I file corrispondenti sono i seguenti:  

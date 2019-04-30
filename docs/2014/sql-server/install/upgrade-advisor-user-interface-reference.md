@@ -21,16 +21,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57259e3608dfe58df5ce88ca5a4009c8c3ec0241
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032041"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Guida di riferimento all'interfaccia utente di Preparazione aggiornamento
   In questa sezione include argomenti della Guida [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Preparazione aggiornamento. Questi argomenti sono disponibili da guidata di preparazione aggiornamento premendo il tasto F1 o facendo clic **aiutare** in pagine della procedura guidata e nelle finestre di dialogo.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Componenti di SQL Server](../../../2014/sql-server/install/sql-server-components.md)|Identificare il server e il set appropriato di tipi di server e componenti da sottoporre a un'analisi dell'aggiornamento.|  
 |[Parametri di connessione](../../../2014/sql-server/install/connection-parameters.md)|Per l'analisi dell'aggiornamento di determinati tipi di server, ad esempio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], è necessario selezionare un'istanza server specifica per l'analisi. In questa pagina immettere le informazioni per consentire la connessione di Preparazione aggiornamento all'istanza del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera analizzare.|  

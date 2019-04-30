@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188982"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Funzione di conversione esplicita del tipo di dati
 Conversione tipo di dati esplicito è specificata in termini di definizioni dei tipi di dati SQL.  
@@ -29,7 +29,7 @@ Conversione tipo di dati esplicito è specificata in termini di definizioni dei 
   
  Il formato del **CONVERTIRE** funzione è:  
   
- **CONVERTIRE (** _value_exp_, _data_type_**)**  
+ **CONVERT(** _value_exp_, _data_type_**)**  
   
  La funzione restituisce il valore specificato da *value_exp* convertito all'entità specificata *data_type*, dove *data_type* è una delle parole chiave seguenti:  
   

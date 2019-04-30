@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155566"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Finestra di dialogo Sezione del report (Generatore report)
   Quando si apre un report, Generatore report consente di verificare che nel report sia contenuto solo un elemento **\<sezione>** RDL (Report Definition Language). L'apertura di un report con più elementi **\<sezione>** non è supportata.  

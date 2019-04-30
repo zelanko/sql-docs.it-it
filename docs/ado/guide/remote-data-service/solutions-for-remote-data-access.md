@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204602"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluzioni per RDA (Remote Data Access)
 ## <a name="the-issue"></a>Il problema  
@@ -45,7 +45,7 @@ ms.locfileid: "52535803"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di programmazione RDS di base](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

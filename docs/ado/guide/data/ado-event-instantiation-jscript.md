@@ -1,5 +1,5 @@
 ---
-title: 'Creazione di istanze evento ADO: JScript | Microsoft Docs'
+title: 'Creazione di istanze di eventi ADO: JScript | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebe7f770664f4cf90adc3296985c786d9089b4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062987"
 ---
 # <a name="ado-event-instantiation-jscript"></a>Creazione di istanze di eventi ADO: JScript
 Microsoft® JScript® non supporta gli eventi ADO.

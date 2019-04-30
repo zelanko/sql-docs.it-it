@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060326"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introduzione sugli updategram (SQLXML 4.0)
   È possibile modificare (insert, update e delete) in un database di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da esistenti documento XML utilizzando un updategram o l'istruzione OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] funzione.  
@@ -60,7 +60,7 @@ ms.locfileid: "52782933"
   
  Nelle definizioni seguenti viene descritto il ruolo di ogni blocco:  
   
- **\<prima di >**  
+ **\<before>**  
  Identifica lo stato esistente, denominato anche "stato before", dell'istanza del record.  
   
  **\<after>**  

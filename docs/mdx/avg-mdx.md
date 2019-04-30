@@ -1,5 +1,5 @@
 ---
-title: AVG (MDX) | Documenti Microsoft
+title: Avg (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181693"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -32,23 +32,23 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se viene specificato un set di tuple vuote o un set vuoto, il **Avg** funzione restituisce un valore vuoto.  
   
- Il **Avg** funzione calcola la media dei valori non vuoti delle celle nel set specificato calcolando innanzitutto la somma dei valori nelle celle nel set specificato e quindi dividendo la somma calcolata per il conteggio delle celle non vuote nel set specificato.  
+ Il **Avg** funzione calcola la media dei valori non vuoti delle celle nel set specificato calcolando innanzitutto la somma dei valori nelle celle nel set specificato, e quindi dividendo la somma calcolata per il numero delle celle non vuote il set specificato.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora i valori Null durante il calcolo del valore medio di un set di numeri.  
   
- Se un'espressione numerica specifica (in genere una misura) non è specificata, il **Avg** funzione calcola la media di ogni misura all'interno del contesto di query corrente. Se viene fornita una misura specifica, il **Avg** funzione valuta innanzitutto la misura sul set e quindi la funzione calcola la media in base alla misura specificata.  
+ Se un'espressione numerica specifica (in genere una misura) non è specificata, il **Avg** funzione calcola la media di ogni misura nel contesto di query corrente. Se viene fornita una misura specifica, il **Avg** funzione valuta innanzitutto la misura all'interno del set e quindi calcola la media in base alla misura specificata.  
   
 > [!NOTE]  
->  Quando si utilizza il **CurrentMember** funzione in un'istruzione di membro calcolato, è necessario specificare un'espressione numerica, perché è presente alcuna misura predefinita per la coordinata corrente in un contesto di query.  
+>  Quando si usa la **CurrentMember** funzione in un'istruzione di membro calcolato, è necessario specificare un'espressione numerica, poiché non esiste alcuna misura predefinita per la coordinata corrente in tale contesto di query.  
   
- Per forzare l'inclusione delle celle vuote, l'applicazione deve utilizzare il [CoalesceEmpty](../mdx/coalesceempty-mdx.md) di funzione o specificare un valore valido *Numeric_Expression* che fornisce un valore pari a zero (0) per i valori vuoti. Per ulteriori informazioni sulle celle vuote, vedere la documentazione relativa a OLE DB.  
+ Per forzare l'inclusione delle celle vuote, l'applicazione deve usare la [CoalesceEmpty](../mdx/coalesceempty-mdx.md) funzionare o specificare un valore valido *Numeric_Expression* che fornisce un valore pari a zero (0) per i valori vuoti. Per ulteriori informazioni sulle celle vuote, vedere la documentazione relativa a OLE DB.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita la media di una misura su un set specificato. Si noti che la misura specificata può essere la misura predefinita per i membri del set specificato o una misura specificata.  
@@ -81,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni mese dell'anno fiscale 2003, dal **Adventure Works** cubo. Il **Avg** funzione calcola la Media dal set di giorni in cui sono contenuti in ogni mese del `[Ship Date].[Fiscal Time]` gerarchia. La prima e la seconda versione del calcolo sono esemplificative del comportamento predefinito della funzione Avg relativo rispettivamente all'esclusione e all'inclusione nella media dei giorni in cui non sono state registrate vendite.  
+ L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni mese dell'anno fiscale 2003, dai **Adventure Works** cubo. Il **Avg** calcola la Media dal set di giorni in cui sono contenuti in ciascun mese del `[Ship Date].[Fiscal Time]` gerarchia. La prima e la seconda versione del calcolo sono esemplificative del comportamento predefinito della funzione Avg relativo rispettivamente all'esclusione e all'inclusione nella media dei giorni in cui non sono state registrate vendite.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -127,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni semestre dell'anno fiscale 2003, dal **Adventure Works** cubo.  
+ L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni semestre dell'anno fiscale 2003, dai **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  
@@ -146,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

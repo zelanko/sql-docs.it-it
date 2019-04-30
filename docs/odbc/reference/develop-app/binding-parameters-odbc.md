@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199601"
 ---
 # <a name="binding-parameters-odbc"></a>Associazione di parametri ODBC
 Ogni parametro in un'istruzione SQL deve essere associato, oppure *associata,* a una variabile nell'applicazione prima che venga eseguita l'istruzione. Quando l'applicazione associa una variabile a un parametro, descrive la variabile indirizzo, tipo di dati C e così via - il driver. Descrive anche il parametro - tipo di dati SQL, precisione e così via. Il driver di queste informazioni vengono memorizzate nella struttura mantiene per l'istruzione e utilizza le informazioni per recuperare il valore dalla variabile quando viene eseguita l'istruzione.  

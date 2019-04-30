@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213467"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 32 bit con driver a 32 bit
 È possibile eseguire applicazioni a 32 bit con driver a 32 bit. Le applicazioni a 32 bit e il driver a 32 bit è possibile usare l'API Win32®.  
@@ -35,13 +35,13 @@ ms.locfileid: "47696339"
 ## <a name="administration"></a>Amministrazione  
  È possibile gestire le origini dati per i driver a 32 bit con l'amministratore dell'origine dati ODBC. Per aprire l'amministratore ODBC in computer che eseguono Windows 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)**. Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componenti  
  Il componente ODBC include i file seguenti per l'esecuzione di applicazioni a 32 bit con driver a 32 bit. Questi componenti si trovano nella directory \Redist.  
   
-|Nome file|Description|  
+|Nome file|Descrizione|  
 |---------------|-----------------|  
-|File ODBC32.dll|Gestione Driver a 32 bit|  
-|Odbccp32|DLL di installazione a 32 bit|  
+|Odbc32.dll|Gestione Driver a 32 bit|  
+|Odbccp32.dll|DLL di installazione a 32 bit|  
 |Odbcad32.exe|programma di amministrazione di ODBC 32-bit|  
-|Odbcinst|File di programma di installazione della Guida|  
+|Odbcinst.hlp|File di programma di installazione della Guida|  
 |Msvcrt40.dll|Libreria di runtime C|

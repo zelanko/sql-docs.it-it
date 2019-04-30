@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054801"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installazione di Analisi Services in modalità Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52527746"
   
 -   **Servizi back-end:** Se si usa [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel per creare cartelle di lavoro contenenti dati analitici, è necessario disporre [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint per accedere ai dati in un ambiente server. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può essere eseguito su un computer in cui è installato SharePoint Server oppure su un computer diverso in cui non è disponibile il software SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] non è presente alcuna dipendenza da SharePoint.  
   
-     **Nota:** in questo argomento vengono descritti l'installazione del server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e i servizi back-end.  
+     **Nota:** In questo argomento vengono descritti l'installazione del [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server e i servizi back-end.  
   
 -   **Livello intermedio:** Miglioramenti per la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] esperienze disponibili in SharePoint, tra cui [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Gallery, pianificazione dell'aggiornamento dati, dashboard di gestione e i provider di dati. Per ulteriori informazioni sull'installazione e sulla configurazione del livello intermedio, vedere gli argomenti seguenti:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52527746"
   
 9. Se viene nuovamente visualizzato **Regole di supporto per l'installazione**, verificare tutti gli avvisi e fare clic su **Avanti**.  
   
-     **Nota:** poiché Windows Firewall è abilitato, viene visualizzato un avviso in cui è richiesto di aprire le porte per abilitare l'accesso remoto.  
+     **Nota:** Poiché Windows Firewall è abilitato, viene visualizzato un avviso per aprire le porte per abilitare l'accesso remoto.  
   
 10. Nella pagina **Impostazione ruolo** selezionare **Installazione funzionalità SQL Server**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527746"
   
 3.  Connettersi all'istanza di Analysis Services, ad esempio **[nome server]\POWERPIVOT**. Se è possibile connettersi all'istanza, significa che il servizio è in esecuzione.  
   
-##  <a name="bkmk_config"></a> Passaggio 2: Configurare l'integrazione SharePoint per Analysis Services di base  
+##  <a name="bkmk_config"></a> Passaggio 2: Configurare l'integrazione di SharePoint i servizi di analisi di base  
  Nei passaggi seguenti vengono descritte le modifiche di configurazione necessarie per interagire con i modelli di dati avanzati di Excel all'interno di una raccolta documenti di SharePoint. Completare questi passaggi dopo l'installazione di SharePoint e SQL Server Analysis Services.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -218,7 +218,7 @@ ms.locfileid: "52527746"
 ##  <a name="bkmk_verify"></a> Passaggio 3: Verificare l'integrazione  
  Nei passaggi seguenti vengono illustrati la creazione e il caricamento di una nuova cartella di lavoro per verificare l'integrazione di Analysis Services. È necessario disporre di un database di SQL Server per completare i passaggi.  
   
-1.  **Nota:** se è già disponibile una cartella di lavoro avanzata con filtri dei dati o filtri, è possibile caricarla nella raccolta documenti di SharePoint e verificare l'eventuale possibilità di interagire con questi elementi dalla visualizzazione raccolta documenti.  
+1.  **Nota:** Se si dispone già di una cartella di lavoro avanzata con filtri dei dati o filtri, è possibile caricarlo in una raccolta documenti di SharePoint e verificare che siano in grado di interagire con i filtri e filtri dei dati dalla visualizzazione raccolta documenti.  
   
 2.  Avviare una nuova cartella di lavoro in Excel  
   

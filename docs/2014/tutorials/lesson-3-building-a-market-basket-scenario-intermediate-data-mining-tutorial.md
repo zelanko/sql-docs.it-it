@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042787"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Lezione 3: Compilazione di uno Scenario Market Basket (esercitazione intermedia di Data Mining)
   Il reparto marketing di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] intende migliorare il sito Web aziendale per promuovere le vendite. Durante l'aggiornamento del sito, si desidera essere in grado di prevedere quali siano i prodotti che i clienti potrebbero essere interessati ad acquistare sulla base dei prodotti già inclusi tra i rispettivi acquisti. Il reparto marketing desidera inoltre capire meglio il comportamento di acquisto del cliente, in modo da poter progettare il sito Web in modo da visualizzare nella stessa area gli elementi che tendono a essere acquistati insieme. Il team sa che il data mining è particolarmente utile per questo tipo di *Market basket analysis* e chiede di sviluppare un modello di data mining.  

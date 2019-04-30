@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190822"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello Market Basket (Esercitazione intermedia sul data mining)
   Dopo aver creato una vista origine dati, verrà utilizzata la Creazione guidata modello di data mining per creare una nuova struttura di data mining. In questa attività verranno creati una struttura di data mining e un modello di data mining basati sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  

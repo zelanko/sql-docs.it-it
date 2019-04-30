@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161413"
 ---
 # <a name="formal-shape-grammar"></a>Grammatica formale per Shape
 Questa è la grammatica formale per la creazione di qualsiasi comando shape:  
@@ -42,27 +42,27 @@ Questa è la grammatica formale per la creazione di qualsiasi comando shape:
   
 |Nome|Definizione|  
 |----------|----------------|  
-|\<shape-command>|FORMA [\<exp-tabella > [[AS] \<alias >]] [\<forma Azione >]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<comando shape >)&#124;<br /><br /> TABELLA \<racchiusi tra virgolette-name >&#124;<br /><br /> \<racchiuso tra virgolette-name >|  
-|\<shape-action>|APPEND \<elenco di campi con alias >&#124;<br /><br /> CALCOLARE \<elenco di campi con alias > [BY \<-elenco dei campi >]|  
-|\<aliased-field-list>|\<alias-field > [, \<con alias-campo... >]|  
-|\<aliased-field>|\<campo exp > [[AS] \<alias >]|  
-|\<field-exp>|(\<relazione exp >)&#124;<br /><br /> \<exp calcolato >&#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<exp-tabella > [[AS] \<alias >]<br /><br /> RELATE \<relazione-cond-list >|  
-|\<relation-cond-list>|\<relazione cond > [, \<relazione cond >...]|  
-|\<relazione cond >|\<campo-name > a \<figlio-ref >|  
-|\<child-ref>|\<nome del campo >&#124;<br /><br /> PARAMETRO \<-ref param >|  
-|\<param-ref>|\<numero >|  
-|\<field-list>|\<nome del campo > [, \<campo-name >]|  
-|\<aggregate-exp>|SUM (\<qualified-campo-name >)&#124;<br /><br /> AVG (\<qualified-campo-name >)&#124;<br /><br /> MIN (\<qualified-campo-name >)&#124;<br /><br /> MAX (\<qualified-campo-name >)&#124;<br /><br /> CONTEGGIO (\<qualificato-alias > &#124; \<qualified-name >)&#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> QUALSIASI (\<qualified-campo-name >)|  
-|\<calculated-exp>|CALC (\<espressione >)|  
-|\<Nome campo completo >|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<racchiuso tra virgolette-name >|  
-|\<field-name>|\<racchiuso tra virgolette-name > [[AS] \<alias >]|  
-|\<racchiuso tra virgolette-name >|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<Nome >|  
-|\<nome qualificato >|alias[.alias...]|  
-|\<Nome >|alfa [alpha &#124; digit &#124; _ &#124; n &#124; : &#124; ...]|  
-|\<numero >|cifra [numero]|  
+|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABELLA \<racchiusi tra virgolette-name >&#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|APPEND \<elenco di campi con alias >&#124;<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list>]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relazione-cond-list >|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<campo-name > a \<figlio-ref >|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> PARAMETRO \<-ref param >|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> QUALSIASI (\<qualified-campo-name >)|  
+|\<calculated-exp>|CALC(\<expression>)|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
+|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<Nome >|  
+|\<qualified-name>|alias[.alias...]|  
+|\<Nome >|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
+|\<number>|cifra [numero]|  
 |\<new-exp>|NUOVE \<-tipo di campo > [(\<numero > [, \<numero >])]|  
 |\<field-type>|Un tipo di dati OLE DB o ADO.|  
 |\<string>|Unicode-char [-char unicode...]|  

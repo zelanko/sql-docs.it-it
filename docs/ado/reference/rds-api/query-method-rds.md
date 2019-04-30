@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64a4f1a51d678e70516f277c08071f5884492c1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225839"
 ---
 # <a name="query-method-rds"></a>Metodo Query (Servizi Desktop remoto)
 Viene utilizzata una stringa di query SQL valida per restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -38,7 +38,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Recordset*  
  Una variabile oggetto che rappresenta un **Recordset** oggetto.  
   
- *Data factory*  
+ *DataFactory*  
  Una variabile oggetto che rappresenta un' [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto.  
   
  *Connessione*  

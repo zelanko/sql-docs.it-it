@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206998"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora ODBC
   In questo argomento vengono fornite informazioni sui tipi ODBC che supportano i tipi di dati di data e ora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -32,9 +32,9 @@ ms.locfileid: "48052701"
   
  Nella tabella seguente viene illustrato il mapping completo per il tipo di server. Si noti che alcune celle della tabella contengono due voci; in questi casi, la prima è il valore per ODBC 3.0 mentre la seconda è il valore per ODBC 2.0.  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
 |--------------------------|-------------------|-----------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (Sqlext. h)|  
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
@@ -52,12 +52,12 @@ ms.locfileid: "48052701"
   
  Quando viene specificata l'associazione SQL_C_BINARY, viene eseguito il controllo dell'allineamento e viene segnalato un errore in caso di allineamento non corretto. L'identificativo SQLSTATE per questo errore è IM016, con un messaggio indicante che l'allineamento della struttura non è corretto.  
   
-## <a name="data-formats-strings-and-literals"></a>Formati di dati: stringhe e valori letterali  
+## <a name="data-formats-strings-and-literals"></a>Formati di dati: Le stringhe e valori letterali  
  Nella tabella seguente vengono illustrati i mapping tra tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tipi di dati ODBC e valori letterali stringa ODBC.  
   
 |Tipo di dati di SQL Server|Tipo di dati ODBC|Formato stringa per le conversioni client|  
 |--------------------------|--------------------|------------------------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a tre cifre per i secondi frazionari per datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a tre cifre per i secondi frazionari per datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Questo tipo di dati ha un'accuratezza di un minuto. Il componente dei secondi sarà zero nell'output mentre verrà arrotondato dal server nell'input.|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48052701"
   
  Il driver consente attualmente uno spazio vuoto aggiuntivo prima e dopo i caratteri di punteggiatura mentre lo spazio tra l'ora e la differenza di fuso orario è facoltativo. Nelle versioni future tuttavia queste regole potrebbero essere modificate, per cui le applicazioni non devono basarsi sul comportamento corrente.  
   
-## <a name="data-formats-data-structures"></a>Formati di dati: strutture di dati  
+## <a name="data-formats-data-structures"></a>Formati di dati: Strutture di dati  
  Nelle strutture descritte di seguito, ODBC specifica i vincoli seguenti, secondo il calendario gregoriano:  
   
 -   L'intervallo per i mesi è compreso tra 1 e 12.  

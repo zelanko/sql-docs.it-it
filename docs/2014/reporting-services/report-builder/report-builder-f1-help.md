@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2ee42f145440c553422c2fac7f90a441ea00d9cc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155199"
 ---
 # <a name="report-builder-f1-help"></a>Guida sensibile al contesto di Generatore report
   In questa sezione contiene informazioni della Guida relative procedure guidate, viste, riquadri e le finestre di dialogo di Generatore Report. È anche possibile aprire la Guida premendo F1 o facendo clic sul pulsante della Guida in una finestra di dialogo.  

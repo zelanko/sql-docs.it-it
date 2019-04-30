@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198312"
 ---
 # <a name="default-driver-subkey"></a>Sottochiave Default del driver
 La sottochiave predefinito contiene un singolo valore che descrive il driver utilizzato dall'origine dati predefinito. Nella tabella seguente viene illustrato il formato di questo valore.  
   
-|nome|Tipo di dati|data|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
-|**Driver**|REG_SZ|*predefinita-driver-descrizione*|  
+|**Driver**|REG_SZ|*default-driver-description*|  
   
  Il *predefinito-driver-description* nome è identico al nome del valore della sottochiave ODBC driver che descrive il driver.  
   

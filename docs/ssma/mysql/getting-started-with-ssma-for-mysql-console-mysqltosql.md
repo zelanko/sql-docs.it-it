@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 07c1c226d33a213dd9bd071c59d9771a0e0ca736
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183039"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione alla console di SSMA per MySQL (MySQLToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console MySQL. Anche nell'elenco, nel presente documento, vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
@@ -56,11 +56,11 @@ Dopo l'esecuzione di comandi di script SSMA e le opzioni, il programma di consol
   
 Colore dall'interpretazione dell'output della console nella tabella seguente:  
   
-|Colore|Description|  
+|Colore|Descrizione|  
 |---------|---------------|  
 |Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Data e un timestamp, messaggio all'utente|  
-|bianco|Comandi di file di script, il tipo di messaggio|  
+|Bianco|Comandi di file di script, il tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e il risultato di un'operazione|  

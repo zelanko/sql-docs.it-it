@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0c0f7f2cad7eaecc212e2283fab7fc7d69f2ee7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207121"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Scorrimento e recupero di righe
   Per utilizzare un cursore scorrevole, un'applicazione ODBC deve effettuare le operazioni seguenti:  
@@ -54,7 +54,7 @@ ms.locfileid: "48228741"
 |Casella di scorrimento alla fine|SQL_FETCH_LAST|  
 |Posizione casuale della casella di scorrimento|SQL_FETCH_ABSOLUTE|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Applicazione di segnalibri alle righe in ODBC](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   

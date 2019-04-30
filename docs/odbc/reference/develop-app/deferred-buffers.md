@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049887"
 ---
 # <a name="deferred-buffers"></a>Buffer posticipati
 Oggetto *buffer posticipati* è quello il cui valore viene utilizzato in un momento *dopo* è specificato in una chiamata di funzione. Ad esempio, **SQLBindParameter** viene usato per associare, o *associare,* un buffer di dati con un parametro in un'istruzione SQL. L'applicazione specifica il numero del parametro e passa l'indirizzo, lunghezza in byte e il tipo di buffer. Il driver di queste informazioni vengono salvate ma non esamina il contenuto del buffer. In un secondo momento, quando l'applicazione viene eseguita l'istruzione, il driver recupera le informazioni e lo usa per recuperare i dati del parametro e inviarlo all'origine dati. Pertanto, l'input di dati nel buffer viene rinviata. Poiché buffer posticipati sono specificati in una funzione e usato in un altro, è un'applicazione di un errore di programmazione per liberare un buffer posticipato mentre il driver ancora prevede che altri utenti. per altre informazioni, vedere [allocazione e liberazione di buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), più avanti in questa sezione.  

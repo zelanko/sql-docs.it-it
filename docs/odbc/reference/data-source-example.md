@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186309"
 ---
 # <a name="data-source-example"></a>Esempio di origine dati
 Nei computer che eseguono Microsoft® Windows NT® Server o Windows 2000 Server, Microsoft Windows NT Workstation o Windows 2000 Professional o Microsoft Windows® 95 o 98, dati del computer informazioni di origine vengono archiviate nel Registro di sistema. A seconda di quale registro di sistema chiave vengono archiviate le informazioni sotto, l'origine dati è noto come un *origine dati utente* o una *origine dati di sistema*. Le origini dati utente vengono archiviate nella chiave HKEY_CURRENT_USER e sono disponibili solo per l'utente corrente. Origini dati di sistema vengono archiviate nella chiave HKEY_LOCAL_MACHINE e possono essere utilizzate da più di un utente in un computer. Possono inoltre essere utilizzati dai servizi a livello di sistema, che possono quindi ottenere l'accesso all'origine dati anche se nessun utente è connesso al computer. Per altre informazioni sulle origini dati di sistema e utente, vedere [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

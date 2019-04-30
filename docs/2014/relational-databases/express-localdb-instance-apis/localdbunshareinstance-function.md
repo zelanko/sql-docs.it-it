@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128677"
 ---
 # <a name="localdbunshareinstance-function"></a>Funzione LocalDBUnshareInstance
   Viene arrestata la condivisione dell'istanza del database locale di SQL Server Express specificata.  

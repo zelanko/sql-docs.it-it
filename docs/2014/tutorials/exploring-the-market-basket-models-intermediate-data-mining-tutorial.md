@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224604"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Esplorazione dei modelli Market Basket (Esercitazione intermedia sul data mining)
   Ora che è stata compilata la `Association` modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizzatore Microsoft Association nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. In questa esercitazione viene descritto l'utilizzo del visualizzatore per esplorare le relazioni tra elementi. Il visualizzatore consente di visualizzare immediatamente i prodotti che tendono a comparire insieme e di ottenere un'idea generale degli schemi risultanti.  
@@ -37,7 +37,7 @@ ms.locfileid: "56035302"
   
  Una linea che collega due elementi indica che è probabile che questi elementi compaiano insieme in una transazione. In altre parole, è probabile che i clienti acquistino insieme questi elementi. Il dispositivo di scorrimento è associato alla probabilità della regola. Spostare il dispositivo di scorrimento verso l'alto o verso il basso per escludere le associazioni deboli, ovvero le regole con una bassa probabilità.  
   
- Il grafico della rete di dipendenza mostra coppie di regole che possono essere rappresentate logicamente come A->B, nel senso che se viene acquistato il prodotto A, il prodotto B è probabile. Il grafico non può mostrare regole del tipo AB->C. Se si sposta il dispositivo di scorrimento per mostrare tutte le regole ma non è comunque visibile alcuna linea nel grafico, ciò significa che non vi sono coppie di regole che soddisfano i criteri dei parametri dell'algoritmo.  
+ Il grafico della rete di dipendenza Mostra coppie di regole che possono essere rappresentate logicamente come A -> B, vale a dire se viene acquistato il prodotto, quindi prodotto B è probabile. Il grafico non può mostrare regole del tipo AB -> C. Se si sposta il dispositivo di scorrimento per mostrare tutte le regole ma non è comunque visibile alcuna linea nel grafico, ciò significa che non vi sono coppie di regole che soddisfano i criteri dei parametri dell'algoritmo.  
   
  È anche possibile trovare i nodi in base al nome, digitando le prime lettere del nome di attributo. Per altre informazioni, vedere [Finestra di dialogo Trova nodo &#40;Visualizzatore modello di data mining&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md).  
   

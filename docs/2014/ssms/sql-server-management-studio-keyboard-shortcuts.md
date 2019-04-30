@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127038"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tasti di scelta rapida di SQL Server Management Studio
   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono disponibili due schemi di tastiera. Per impostazione predefinita, viene utilizzato lo schema di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , in cui i tasti di scelta rapida sono basati su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] è inoltre disponibile uno schema di tastiera simile allo schema standard di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Per cambiare lo schema di tastiera o aggiungere tasti di scelta rapida, scegliere **Opzioni** dal menu **Strumenti**. Selezionare lo schema della tastiera desiderato nella pagina **Ambiente**, **Tastiera** .  

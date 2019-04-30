@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134953"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema di piattaforma Analitica
 Queste istruzioni illustrano i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica. È necessario configurare WSUS prima di poter applicare aggiornamenti software per l'appliance. Windows Server Update Services è già installato nella macchina virtuale VMM dell'appliance.  
@@ -67,15 +67,15 @@ Per configurare WSUS, è necessario:
   
     5.  Rivedere le **prima di iniziare** elenco di elementi da completare prima di completare la procedura guidata.  
   
-        ![WSUS prima di iniziare](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
+        ![WSUS Before You Begin](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
   
     6.  Nel **partecipa al programma Analisi utilizzo software di Microsoft Update** pagina, selezionare **Sì, desidero partecipare al programma Analisi utilizzo software di Microsoft Update**, quindi fare clic su **successivo**.  
   
-        ![Programma Analisi utilizzo software Windows Server Update Services](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
+        ![WSUS Improvement Program](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
     Si noterà ora il **scelta Server Upstream** pagina. Lo screenshot seguente è il punto iniziale della procedura guidata configurazione.  
   
-    ![WSUS-sincronizzazione Server a monte](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  Scegliere il server upstream.  
   
@@ -85,7 +85,7 @@ Per configurare WSUS, è necessario:
   
     1.  Se si sceglie di eseguire la sincronizzazione con Microsoft Update, non occorre apportare modifiche per il **scelta Server Upstream** pagina. Scegliere **Avanti**.  
   
-        ![WSUS-sincronizzazione Server a monte](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>Aggiornare da un altro server WSUS  
   
@@ -99,7 +99,7 @@ Per configurare WSUS, è necessario:
   
     3.  Se si tratta di un server di replica, selezionare la **si tratta di una replica del server upstream** casella di controllo. È possibile selezionare sia **Usa SSL per la sincronizzazione delle informazioni di aggiornamento** e **si tratta di una replica del server upstream**.  
   
-        ![La Replica del Server Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
+        ![WSUS Upstream Server Replica](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
     4.  A questo punto, si è finito con configurazione del server upstream. Fare clic su **successivo**, o selezionare **server proxy specificare** nel riquadro di spostamento a sinistra.  
   
@@ -115,7 +115,7 @@ Per configurare WSUS, è necessario:
   
     2.  Se si desidera connettersi al server proxy usando le credenziali utente specifico, selezionare la **usare le credenziali dell'utente per connettersi al server proxy** casella di controllo e quindi digitare il nome utente, dominio e password dell'utente nel corrispondente finestre. Se si desidera abilitare l'autenticazione di base per l'utente si connette al server proxy, selezionare la **Consenti autenticazione di base (password inviata in testo non crittografato)** casella di controllo.  
   
-        ![WSUS-credenziali Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
+        ![WSUS Proxy Credentials](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
     3.  A questo punto, si è finito con configurazione del server proxy. Fare clic su **successivo** per passare alla pagina successiva, in cui è possibile iniziare a configurare il processo di sincronizzazione.  
   
@@ -179,7 +179,7 @@ Dopo la configurazione di WSUS per il sistema di piattaforma Analitica, il passa
   
 1.  Aprire la console WSUS, fare doppio clic su **tutti i computer** e quindi fare clic su **Aggiungi gruppo di Computer**.  
   
-    ![Aggiungere un gruppo di computer. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
+    ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
 2.  Immettere il nome "Punti di accesso" per il gruppo di computer e quindi fare clic su **Add**.  
   

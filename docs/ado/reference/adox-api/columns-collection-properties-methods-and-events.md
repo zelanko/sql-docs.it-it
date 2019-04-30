@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70e0fc63ac67b9e475e1e9fb65a81fadd3293c59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184096"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Columns
 ## <a name="properties"></a>Proprietà  

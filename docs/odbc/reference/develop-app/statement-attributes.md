@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e669f02eeb76ba529c75851ce8bf6ff9a7831a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149092"
 ---
 # <a name="statement-attributes"></a>Attributi di istruzione
 Gli attributi di istruzione sono caratteristiche dell'istruzione. Ad esempio, se usare i segnalibri e ciò che tipo di cursore da utilizzare con il risultato dell'istruzione set sono gli attributi di istruzione.  
@@ -29,7 +29,7 @@ Gli attributi di istruzione sono caratteristiche dell'istruzione. Ad esempio, se
  Quando un attributo di istruzione può essere impostato dipende l'attributo stesso. Gli attributi di istruzione SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR e SQL_ATTR_USE_BOOKMARKS devono essere impostati prima che venga eseguita l'istruzione. Gli attributi di istruzione SQL_ATTR_ASYNC_ENABLE e SQL_ATTR_NOSCAN possono essere impostati in qualsiasi momento, ma non vengono applicati fino a quando non viene utilizzata nuovamente l'istruzione. Gli attributi di istruzione SQL_ATTR_MAX_LENGTH e SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT possono essere impostati in qualsiasi momento, ma è specifico del driver che vengono applicati prima che venga utilizzato nuovamente l'istruzione. In qualsiasi momento, è possono impostare gli attributi di istruzione rimanenti.  
   
 > [!NOTE]  
->  La possibilità di impostare gli attributi di istruzione a livello di connessione chiamando **SQLSetConnectAttr** è stata deprecata in ODBC 3. *x*. ODBC 3. *x* applicazioni non devono mai impostato gli attributi di istruzione a livello di connessione. ODBC 3. *x* i driver necessitano supportano questa funzionalità solo se funzionano con l'API ODBC 2. *x* applicazioni. Per altre informazioni, vedere [Mapping di SQLSetConnectOption](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+>  La possibilità di impostare gli attributi di istruzione a livello di connessione chiamando **SQLSetConnectAttr** è stata deprecata in ODBC 3. *x*. ODBC 3. *x* applicazioni non devono mai impostato gli attributi di istruzione a livello di connessione. ODBC 3. *x* i driver necessitano supportano questa funzionalità solo se funzionano con l'API ODBC 2. *x* applicazioni. Per altre informazioni, vedere [Mapping di SQLSetConnectOption](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
 >   
 >  Un'eccezione è gli attributi SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, che sono entrambi gli attributi di connessione e gli attributi di istruzione e possono essere impostati a livello di connessione o il livello di istruzione.  
 >   

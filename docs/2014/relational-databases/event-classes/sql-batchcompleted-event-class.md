@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94127112d214ba976e3b517bdf91a7d6b26b2d1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050690"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted - classe di evento
   La classe di evento SQL:BatchCompleted indica il completamento del batch [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

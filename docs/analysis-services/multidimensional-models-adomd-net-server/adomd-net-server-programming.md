@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3e191d71741f59aab749099d45dd2c197a8c86f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63059457"
 ---
 # <a name="adomdnet-server-programming"></a>Programmazione di server ADOMD.NET
   I componenti server ADOMD.NET di ADOMD.NET si trovano all'interno di **AdomdServer** dello spazio dei nomi (in msmgdsrv). Utilizzare questi componenti server per creare funzioni MDX (Multidimensional Expressions) personalizzate e stored procedure che vengono eseguite in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Gli oggetti server forniscono le funzionalità per l'esecuzione di query su cubi e modelli di data mining e per la valutazione di espressioni in un contesto specifico. I vantaggi relativi alla creazione di funzioni e stored procedure personalizzate includono un'esecuzione rapida, una distribuzione centralizzata e una gestibilità migliorata.  
   
  Gli argomenti indicati nella tabella seguente consentiranno di sviluppare applicazioni server ADOMD.NET.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Funzionalità server di ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Descrive gli utilizzi relativi agli oggetti del server ADOMD.NET.|  
 |[Architettura degli oggetti server in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Descrive l'architettura relativa agli oggetti server ADOMD.NET.|  

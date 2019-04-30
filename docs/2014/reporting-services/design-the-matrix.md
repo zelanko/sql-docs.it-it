@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2046dc87627aded9415d537c37c6cf21880c8e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164699"
 ---
 # <a name="design-the-matrix"></a>Progettazione matrice
   Utilizzare questa pagina della Creazione guidata report per selezionare i campi per il report.  

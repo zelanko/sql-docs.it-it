@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb10b3f4fb563275a8f27a92e41c265336c3cb55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065399"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 Specifica quando il [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provider nuovamente Calcola aggregazione e le colonne calcolate in un Recordset gerarchico.  
   
  Queste costanti vengono utilizzate solo con il **MSDataShape** provider e il **Recordset** "**ricalcolo automatico**" proprietà dinamiche, che fa riferimento il [ADO Indice delle proprietà dinamiche](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentato nel [Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) o [Microsoft Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) documentazione.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRecalcAlways**|1|Valore predefinito. Vengono ricalcolati ogni volta che il **MSDataShape** provider determina i valori che le colonne calcolate dipendono sono stati modificati.|  
 |**adRecalcUpFront**|0|Calcola solo quando viene creato inizialmente il gerarchica **Recordset**.|  

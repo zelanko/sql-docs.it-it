@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200423"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Procedure di utilizzo dei cursori (ODBC)
   Per utilizzare i cursori ODBC, è necessario prima impostare gli attributi delle istruzioni e di connessione che ne controllano il comportamento. I cursori consentono a un'applicazione di recuperare più righe per volta e di eseguire le istruzioni UPDATE, INSERT o DELETE nella posizione corrente del cursore.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Utilizzare i cursori &#40;ODBC&#41;](use-cursors-odbc.md)  
   

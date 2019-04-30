@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035286"
 ---
 # <a name="choosing-a-network-protocol"></a>Scelta di un protocollo di rete
   Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  
@@ -45,7 +45,7 @@ ms.locfileid: "56407551"
 ## <a name="named-pipes"></a>Named Pipe  
  Il protocollo Named Pipes è stato sviluppato per le reti locali. Un parte della memoria viene utilizzata da un processo per il passaggio di informazioni a un altro processo, in modo che l'output dell'uno corrisponda all'input dell'altro. Il secondo processo può essere locale (in esecuzione nello stesso computer del primo) o remoto (in un computer in rete).  
   
-## <a name="named-pipes-vs-tcpip-sockets"></a>Named Pipes e socket TCP/IP  
+## <a name="named-pipes-vs-tcpip-sockets"></a>Named Pipes e Socket TCP/IP  
  In un ambiente di rete locale (LAN) veloce, i client Named Pipes e i socket TCP/IP sono paragonabili in termini di prestazioni. La differenza di prestazioni tra i client diventa evidente con reti più lente, ad esempio nelle reti WAN (Wide Area Network) o nelle reti remote. Ciò dipende dalle diverse modalità di comunicazione impostate tra i peer dal meccanismo di comunicazione interprocesso (IPC).  
   
  Nel caso di Named Pipes, le comunicazioni di rete sono in genere caratterizzate da un maggior livello di interattività. Un peer invia i dati soltanto quando un altro peer li richiede tramite un comando di lettura. Un'operazione di lettura in rete genera solitamente una serie di messaggi di peek sulle named pipe prima dell'inizio della lettura dei dati. Tali messaggi possono risultare particolarmente onerosi in una rete lenta e provocare un traffico eccessivo, con conseguenze sulle prestazioni degli altri client di rete.  

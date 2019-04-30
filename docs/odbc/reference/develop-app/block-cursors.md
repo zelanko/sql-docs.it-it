@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199298"
 ---
 # <a name="block-cursors"></a>Cursori rettangolari
 Molte applicazioni impiegano una quantità significativa di tempo che i dati attraverso la rete. Parte di questo tempo viene impiegato effettivamente portando i dati attraverso la rete e una parte viene impiegata per la diminuzione del sovraccarico, rete, ad esempio la chiamata eseguita dal driver per richiedere una riga di dati. Il tempo di quest'ultimo può essere ridotto se l'applicazione effettua un uso efficiente delle *blocco* o *fat* *cursori,* che può restituire più di una riga alla volta.  

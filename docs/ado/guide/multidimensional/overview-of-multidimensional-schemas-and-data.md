@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194911"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Panoramica di schemi e dati multidimensionali
 ## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionale  
@@ -32,12 +32,12 @@ ms.locfileid: "51350415"
   
  Oggetto *membro* è un elemento di dati in una dimensione. In genere, si crea una didascalia o descritta una misura del database utilizzando i membri.  
   
- I cubi sono rappresentati da [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) gli oggetti ADO MD. Le dimensioni, gerarchie, livelli e membri sono rappresentati anche agli oggetti ADO MD corrispondenti: [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md), e [ Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ I cubi sono rappresentati da [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) gli oggetti ADO MD. Le dimensioni, gerarchie, livelli e membri sono rappresentati anche per i relativi oggetti ADO MD corrispondenti: [Dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md), e [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Dimensioni  
  Le dimensioni di un cubo dipendono dalle entità aziendali e i tipi di dati da modellare nel database. In genere, ogni dimensione è un punto di ingresso indipendente o un meccanismo per la selezione dei dati.  
   
- Ad esempio, un cubo contenente i dati di vendita ha le cinque dimensioni seguenti: venditore, Geography, ora, i prodotti e le misure. La dimensione delle misure contiene valori di dati di vendita effettivi, mentre le altre dimensioni rappresentano modi per classificare e raggruppare i valori di dati di vendita.  
+ Ad esempio, un cubo contenente i dati di vendita ha le cinque dimensioni seguenti: Venditore, Geography, ora, i prodotti e le misure. La dimensione delle misure contiene valori di dati di vendita effettivi, mentre le altre dimensioni rappresentano modi per classificare e raggruppare i valori di dati di vendita.  
   
  La dimensione Geography è il seguente set di membri:  
   
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  I membri possono essere consolidati uno o più gerarchie per ogni dimensione. Prendere in considerazione una dimensione temporale in cui sono presenti due modi che esegue il rollup a livello di anno dal livello di giorni:  
   
- In questo esempio illustra anche un'altra caratteristica: alcuni membri del livello settimana della gerarchia dell'anno settimana non sono presenti in qualsiasi livello della gerarchia di un trimestre dell'anno. Di conseguenza, una gerarchia non deve includere tutti i membri di una dimensione.  
+ Questo esempio illustra anche un'altra caratteristica: Alcuni membri del livello settimana della gerarchia dell'anno settimana non vengono visualizzati in qualsiasi livello della gerarchia di un trimestre dell'anno. Di conseguenza, una gerarchia non deve includere tutti i membri di una dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

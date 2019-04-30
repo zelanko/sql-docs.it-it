@@ -1,5 +1,5 @@
 ---
-title: Le istruzioni di manipolazione dei dati MDX (MDX) | Documenti Microsoft
+title: Istruzioni di manipolazione dei dati MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187651"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Istruzioni di manipolazione dei dati MDX (MDX)
 
 
   In MDX (Multidimensional Expressions) le istruzioni di manipolazione dei dati consentono di recuperare e manipolare i dati di oggetti multidimensionali. Queste istruzioni sono elencate nella tabella seguente.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Istruzione di chiamata di &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|Esegue una stored procedure che restituisce un valore void nell'ambito corrente o facoltativamente in un cubo specificato.|  
 |[Istruzione CLEAR CALCULATIONS &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Rimuove tutti i calcoli dal cubo e ripristina la sessione di calcolo 0 del cubo.|  
@@ -32,8 +32,8 @@ ms.locfileid: "34742490"
 |[Istruzione UPDATE CUBE &#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|Aggiorna il valore della cella foglia o non foglia specificata di un cubo. Facoltativamente il valore della cella non foglia specificata viene allocato alle celle foglia dipendenti.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento istruzione MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Riferimento alle istruzioni MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Istruzioni di Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

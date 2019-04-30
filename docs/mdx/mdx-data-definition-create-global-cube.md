@@ -1,5 +1,5 @@
 ---
-title: Istruzione CREATE GLOBAL CUBE (MDX) | Documenti Microsoft
+title: Istruzione CREATE GLOBAL CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181445"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definizione dei dati MDX - CREATE GLOBAL CUBE
 
 
-  Crea e popola un cubo persistente in locale in base a un sottocubo da un cubo nel server. Non è necessaria una connessione al server per connettersi al cubo locale persistente. Per ulteriori informazioni sui cubi locali, vedere [cubi locali &#40;Analysis Services - dati multidimensionali&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Crea e popola un cubo persistente in locale in base a un sottocubo da un cubo nel server. Non è necessaria una connessione al server per connettersi al cubo locale persistente. Per altre informazioni sui cubi locali, vedere [cubi locali &#40;Analysis Services - dati multidimensionali&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -111,11 +111,11 @@ FROM source_cube_name (<param list>)
  NOT_RELATED_TO_FACTS  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
- \<tipo di livello >  
+ \<il livello di tipo >  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
-## <a name="remarks"></a>Remarks  
- Un cubo locale è definedin termini di misure e definizioni che lo definiscono. Sono presenti due tipi di dimensioni:  
+## <a name="remarks"></a>Note  
+ Un cubo locale è definedin termini delle misure e definizioni che lo definiscono. Sono presenti due tipi di dimensioni:  
   
 -   Dimensioni di origine: si tratta delle dimensioni che fanno parti di uno o più cubi di origine.  
   
@@ -134,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  Per l'istruzione CREATE GLOBAL CUBE sono valide le regole seguenti:  
   
--   L'istruzione CREATE GLOBAL CUBE copia automaticamente tutti i comandi, ad esempio misure calcolate o azioni, nel cubo locale. Se un comando contiene un'espressione MDX che fa riferimento in modo esplicito al cubo padre, tale comando non potrà essere eseguito dal cubo locale. Per evitare questo problema, utilizzare il **CURRENTCUBE** parola chiave quando si definiscono le espressioni MDX per i comandi. Il **CURRENTCUBE** (parola chiave) utilizza il contesto di cubo corrente quando si fa riferimento un cubo all'interno di un'espressione MDX.  
+-   L'istruzione CREATE GLOBAL CUBE copia automaticamente tutti i comandi, ad esempio misure calcolate o azioni, nel cubo locale. Se un comando contiene un'espressione MDX che fa riferimento in modo esplicito al cubo padre, tale comando non potrà essere eseguito dal cubo locale. Per evitare questo problema, usare il **CURRENTCUBE** (parola chiave) durante la definizione di espressioni MDX per i comandi. Il **CURRENTCUBE** (parola chiave) utilizza il contesto di cubo corrente quando si fa riferimento un cubo all'interno di un'espressione MDX.  
   
 -   Un cubo globale creato da un cubo globale esistente in un file di cubo locale non può essere salvato nello stesso file di cubo locale. A titolo di esempio, si supponga di creare un cubo globale denominato SalesLocal1 e di salvare tale cubo nel file C:\SalesLocal.cub. Si supponga poi di connettersi al file C:\SalesLocal.cub file e di creare un secondo cubo globale denominato SalesLocal2. Se a questo punto si tenta di salvare il cubo globale SalesLocal2 nel file C:\SalesLocal.cub, verrà generato un errore. È invece possibile salvare il cubo globale SalesLocal2 in un diverso file di cubo locale.  
   

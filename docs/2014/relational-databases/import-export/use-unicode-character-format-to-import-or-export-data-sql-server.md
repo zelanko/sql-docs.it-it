@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85df40b07542e1af144796d4e8b5f9fb33cdc7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065765"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
   È consigliabile utilizzare il formato carattere Unicode per il trasferimento bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente caratteri estesi o DBCS. Questo formato di dati consente di trasferire i dati da un server utilizzando una tabella codici diversa da quella del client che esegue l'operazione. In questi casi, l'utilizzo del formato di dati carattere Unicode offre i vantaggi seguenti:  
@@ -32,7 +32,7 @@ ms.locfileid: "48191771"
 > [!IMPORTANT]  
 >  Affinché un file di formato sia funzionante con un file di dati di formato carattere Unicode, è necessario che tutti i campi di input siano stringhe di testo Unicode, ovvero stringhe Unicode di dimensioni fisse o che terminano con un carattere.  
   
- Il `sql_variant` i dati archiviati in un file di dati in formato carattere Unicode funziona nello stesso modo funziona in un file di dati in formato carattere, ad eccezione del fatto che i dati vengono archiviati come `nchar` invece di `char` dati. Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
+ I dati `sql_variant` archiviati in un file in formato carattere Unicode funzionano allo stesso modo di quelli archiviati in un file in formato carattere, con la differenza che vengono archiviati come dati `nchar` anziché `char`. Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
   
  Per usare un carattere di terminazione del campo o della riga diverso da quello predefinito del formato carattere Unicode, vedere [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48191771"
   
  Il formato carattere Unicode è supportato dalle opzioni della riga di comando riportate di seguito:  
   
-|Comando|Opzione|Description|  
+|Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Utilizza il formato carattere Unicode.|  
 |BULK INSERT|DATAFILETYPE **='** widechar **'**|Utilizza il formato carattere Unicode durante l'importazione bulk di dati.|  
@@ -81,10 +81,10 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 ### <a name="using-bcp-to-bulk-export-unicode-character-data"></a>Utilizzo di bcp per l'esportazione bulk di dati in formato carattere Unicode  
  Per esportare i dati dalla tabella al file di dati, usare **bcp** con l'opzione **out** e i qualificatori seguenti:  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-w**|Specifica il formato carattere Unicode.|  
-|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: Il carattere di terminazione del campo predefinito è il carattere di tabulazione Unicode (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: Il valore predefinito è il carattere di tabulazione Unicode (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T**, è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Nell'esempio seguente viene eseguita l'esportazione bulk di dati in formato carattere Unicode dalla tabella `myTestUniCharData` in un nuovo file di dati denominato `myTestUniCharData-w.Dat` che utilizza la virgola (`,`) come carattere di terminazione del campo. Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
@@ -117,7 +117,7 @@ GO
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

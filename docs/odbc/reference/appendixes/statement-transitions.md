@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297412"
 ---
 # <a name="statement-transitions"></a>Transizioni di istruzione
 Istruzioni ODBC presentano gli stati seguenti.  
@@ -45,13 +45,13 @@ Istruzioni ODBC presentano gli stati seguenti.
   
  Le tabelle seguenti mostrano come ogni funzione ODBC influisce sullo stato istruzione.  
   
-## <a name="sqlallochandle"></a>Funzione SQLAllocHandle  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|S1 [3]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|S1[3]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[4], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
   
  [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV.  
@@ -66,25 +66,25 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbindparameter"></a>SQLBindParameter  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect SQLConnect e SQLDriverConnect  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |08002|08002|08002|08002|08002|08002|08002|  
   
 ## <a name="sqlbulkoperations"></a>SQLBulkOperations  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|O HY010 NS [c]|  
   
@@ -96,7 +96,7 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 [1] S2 [nr] e [2] [r] S3 e S5 [2] [3] e [5] S6 ([3] o [4]) e S7 [6] [4] e [7]|Vedere la tabella seguente|  
   
@@ -118,7 +118,7 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 |S11<br /><br /> Ancora in esecuzione|S12<br /><br /> Asynch annullata|  
 |-----------------------------|-----------------------------|  
-|S12 NS [1] [2]|S12|  
+|NS[1] S12[2]|S12|  
   
  [1] l'istruzione è stata temporaneamente nello stato S11 mentre eseguiva una funzione. **SQLCancel** è stato chiamato da un thread diverso.  
   
@@ -126,13 +126,13 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|24000|24000|24000|S1 [np] S3 [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|Vedere la tabella seguente|24000|-[s] S11 [x]|HY010|O HY010 NS [c]|  
   
@@ -142,13 +142,13 @@ Istruzioni ODBC presentano gli stati seguenti.
 |-----------------------|--------------------|  
 |--[1] 07005[2]|-[s] S11 x|  
   
- [1] *FieldIdentifier* era SQL_DESC_COUNT.  
+ [1]   *FieldIdentifier* was SQL_DESC_COUNT.  
   
- [2] *FieldIdentifier* SQL_DESC_COUNT non è stato.  
+ [2]   *FieldIdentifier* was not SQL_DESC_COUNT.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges e SQLTables  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S5 [s] S11 [x]|S1 [e] S5 [s] S11 [x]|S1 [e] e [1] S5 [s] e [1] S11 [x] e [1] 24000 [2]|Vedere la tabella seguente|HY010|O HY010 NS [c]|  
   
@@ -166,10 +166,10 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH [1]|--|--|--|--|HY010|NS [c] e HY010 [3] [o] o [4]|  
-|IH [2]|HY010|Vedere la tabella seguente|24000|-[s] S11 x|HY010|NS [c] e HY010 [3] [o] o [4]|  
+|IH[1]|--|--|--|--|HY010|NS [c] e HY010 [3] [o] o [4]|  
+|IH[2]|HY010|Vedere la tabella seguente|24000|-- [s]  S11 x|HY010|NS [c] e HY010 [3] [o] o [4]|  
   
  [1] questa riga Mostra le transizioni quando la *SourceDescHandle* argomento era un ARD, APD o IPD.  
   
@@ -189,13 +189,13 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources e SQLDrivers  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqldescribecol"></a>SQLDescribeCol  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|Vedere la tabella seguente|24000|-[s] S11 [x]|HY010|O HY010 NS [c]|  
   
@@ -207,21 +207,21 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-[s] S11 [x]|HY010|HY010|HY010|HY010 NS [c] [o]|  
+|IH|HY010|-[s] S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|--[1]|S0 [1]|S0 [1]|S0 [1]|S0 [1]|(HY010)|(HY010)|  
+|--[1]|S0[1]|S0[1]|S0[1]|S0[1]|(HY010)|(HY010)|  
   
  [1] chiamante **SQLDisconnect** libera tutte le istruzioni associate alla connessione. Inoltre, viene restituito lo stato di connessione a C2; lo stato di connessione deve essere C4 prima che lo stato di istruzione è S0.  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|: [2] o [3] S1 [1]|: [3] [np] S1 e ([1] o [2]) S1 [p] e [1] S2 [p] e [2]|: [3] [np] S1 e ([1] o [2]) S1 [p] e [1] S3 [p] e [2]|(HY010)|(HY010)|  
   
@@ -233,9 +233,9 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e] e [1] S1 [e] e [2] S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e], [1], [3] S1 e [e], [2] ed S4 [3] [s], [nr, norefs], [3] S5 e [s], [r], S8 [3] e [d] e S11 [3] [x] e [3] 24000 [4]|Vedere la tabella seguente|HY010|HY010 NS [c] [o]|  
+|(IH)|S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e] e [1] S1 [e] e [2] S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e], [1], [3] S1 e [e], [2] ed S4 [3] [s], [nr, norefs], [3] S5 e [s], [r], S8 [3] e [d] e S11 [3] [x] e [3] 24000 [4]|Vedere la tabella seguente|HY010|NS [c] HY010 [o]|  
   
  [1] l'errore è stato restituito da Gestione Driver.  
   
@@ -255,9 +255,9 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|(HY010)|Vedere la tabella seguente|S2 [e], p e [1] S4 [s], [p], [nr, norefs], S5 [1] e [s], [p], [r] e S8 [d] [p], [1] e [1] S11 [x], [p] e [1] 24000 [p] e [2] HY010 [np]|Vedere la tabella degli stati di cursore|HY010|HY010 NS [c] [o]|  
+|(IH)|(HY010)|Vedere la tabella seguente|S2 [e], p e [1] S4 [s], [p], [nr, norefs], S5 [1] e [s], [p], [r] e S8 [d] [p], [1] e [1] S11 [x], [p] e [1] 24000 [p] e [2] HY010 [np]|Vedere la tabella degli stati di cursore|HY010|NS [c] HY010 [o]|  
   
  [1] il risultato corrente è più recente o solo risultato o non sono presenti risultati correnti. Per altre informazioni sui risultati di più, vedere [più risultati](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -267,21 +267,21 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 |S2<br /><br /> Nessun risultato|S3<br /><br /> Risultati|  
 |-----------------------|--------------------|  
-|S4 [s] S11 S8 [d] [x]|S5 [s] S11 S8 [d] [x]|  
+|S4 [s]  S8 [d]  S11 [x]|S5 [s]  S8 [d]  S11 [x]|  
   
 ## <a name="sqlexecute-cursor-states"></a>SQLExecute (cursore stati)  
   
 |S5<br /><br /> Aperto|S6<br /><br /> SQLFetch o SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000 HY010 [p] [np]|24000 [p], [1] HY010 [np]|24000 HY010 [p] [np]|  
+|24000 [p]  HY010 [np]|24000 [p], [1] HY010 [np]|24000 [p]  HY010 [np]|  
   
  [1] questo errore viene restituito da Gestione Driver, se **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** è stato restituito SQL_NO_DATA.  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|S1010|S1010|24000|Vedere la tabella seguente|S1010|S1010 NS [c] [o]|  
+|IH|S1010|S1010|24000|Vedere la tabella seguente|S1010|NS [c] S1010 [o]|  
   
 ## <a name="sqlextendedfetch-cursor-states"></a>SQLExtendedFetch (cursore stati)  
   
@@ -291,9 +291,9 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlfetch-and-sqlfetchscroll"></a>SQLFetch e SQLFetchScroll  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|HY010 NS [c] [o]|  
+|IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlfetch-and-sqlfetchscroll-cursor-states"></a>SQLFetch e SQLFetchScroll (Stati cursore)  
   
@@ -303,7 +303,7 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |-- [1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |IH [2]|S0|S0|S0|S0|HY010|HY010|  
@@ -317,9 +317,9 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH [1]|--|--|S1 [np] S2 [p]|S1 [np] S3 [p]|HY010|HY010|  
+|IH [1]|--|--|S1 [np]  S2 [p]|S1 [np]  S3 [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
   
  [1] questa riga Mostra le transizioni quando *opzione* era SQL_CLOSE.  
@@ -328,21 +328,21 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetcursorname"></a>SQLGetCursorName  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|HY010 NS [c] [o]|  
+|IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlgetdata-cursor-states"></a>SQLGetData (cursore stati)  
   
@@ -352,7 +352,7 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField e SQLGetDescRec  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|: [1] o [2] HY010 [3]|Vedere la tabella seguente|: [1] o [2] 24000 [3]|: [1], [2], o S11 [3] [3] e [x]|HY010|NS [c] o [4] HY010 [o] e [5]|  
   
@@ -380,10 +380,10 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagRec e SQLGetDiagField  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
-|IH [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
+|IH[2]|--[3]|--[3]|--|--|--[3]|--[3]|  
   
  [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV, SQL_HANDLE_DBC o SQL_HANDLE_DESC.  
   
@@ -393,25 +393,25 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] 24000[2]|--[1] 24000[2]|--[1] 24000[2]|Vedere la tabella seguente|HY010|HY010|  
   
@@ -431,9 +431,9 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|--[1]|--[1]|-[s] e [2] S1 [nf], [np], [4] S2 e [nf], [p], [4] S5 e [s] e [3] S11 [x]|S1 [nf], [np], [4] S3 e [nf], [p] e [4] S4 [s] e [2] S5 [s] e [3] S11 [x]|HY010|HY010 NS [c] [o]|  
+|(IH)|--[1]|--[1]|-[s] e [2] S1 [nf], [np], [4] S2 e [nf], [p], [4] S5 e [s] e [3] S11 [x]|S1 [nf], [np], [4] S3 e [nf], [p] e [4] S4 [s] e [2] S5 [s] e [3] S11 [x]|HY010|NS [c] HY010 [o]|  
   
  [1] la funzione restituisce sempre SQL_NO_DATA in questo stato.  
   
@@ -445,29 +445,29 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlnumparams"></a>SQLNumParams  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|HY010 NS [c] [o]|  
+|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|HY010 NS [c] [o]|  
+|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|HY010|HY010|Vedere la tabella seguente|HY010 NS [c] [o]|  
+|IH|HY010|HY010|HY010|HY010|Vedere la tabella seguente|NS [c] HY010 [o]|  
   
-## <a name="sqlparamdata-need-data-states"></a>SQLParamData (necessario Data stati)  
+## <a name="sqlparamdata-need-data-states"></a>SQLParamData (Need Data States)  
   
 |S8<br /><br /> Dati necessari|S9<br /><br /> Deve essere inserito|S10<br /><br /> Possibile inserire|  
 |----------------------|---------------------|---------------------|  
@@ -485,9 +485,9 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S2 [s] e [nr] S3 [s] e [r] S11 [x]|-[s] o ([e] e [1]) S1 [e] e [2] S11 [x]|S1 [e] e [3] S2 [s], [nr, norefs], [3] S3 e [s], [r], [3] S11 e [x] e [3] 24000 [4]|Vedere la tabella seguente|HY010|HY010 NS [c] [o]|  
+|(IH)|S2 [s] e [nr] S3 [s] e [r] S11 [x]|-[s] o ([e] e [1]) S1 [e] e [2] S11 [x]|S1 [e] e [3] S2 [s], [nr, norefs], [3] S3 e [s], [r], [3] S11 e [x] e [3] 24000 [4]|Vedere la tabella seguente|HY010|NS [c] HY010 [o]|  
   
  [1] la preparazione per un motivo diverso da convalidare l'istruzione ha esito negativo (il valore SQLSTATE era HY009 [valore di argomento non valido] o HY090 [stringa di lunghezza o non valida buffer]).  
   
@@ -505,11 +505,11 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlputdata"></a>SQLPutData  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|HY010|HY010|Vedere la tabella seguente|HY010 NS [c] [o]|  
+|IH|HY010|HY010|HY010|HY010|Vedere la tabella seguente|NS [c] HY010 [o]|  
   
-## <a name="sqlputdata-need-data-states"></a>SQLPutData (necessario Data stati)  
+## <a name="sqlputdata-need-data-states"></a>SQLPutData (Need Data States)  
   
 |S8<br /><br /> Dati necessari|S9<br /><br /> Deve essere inserito|S10<br /><br /> Possibile inserire|  
 |----------------------|---------------------|---------------------|  
@@ -529,13 +529,13 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlrowcount"></a>SQLRowCount  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--[2] 24000[3]|HY010|HY010|  
   
@@ -547,41 +547,41 @@ Istruzioni ODBC presentano gli stati seguenti.
   
 ## <a name="sqlsetcursorname"></a>SQLSetCursorName  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|24000|24000|HY010|HY010|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField and SQLSetDescRec  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH [1]|--|--|--|--|HY010|HY010|  
+|IH[1]|--|--|--|--|HY010|HY010|  
   
  [1] questa riga Mostra le transizioni in cui il *DescriptorHandle* argomento è un ARD, APD, IPD, o (per **SQLSetDescField**) un IRD quando il *FieldIdentifier* argomento è SQL _ DESC_ARRAY_STATUS_PTR o SQL_DESC_ROWS_PROCESSED_PTR. Si tratta di un errore chiamare **SQLSetDescField** per un IRD quando *FieldIdentifier* presenta qualsiasi altro valore.  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |HY011|HY011|HY011|HY011|Y011|HY01|HY011|  
   
 ## <a name="sqlsetpos"></a>SQLSetPos  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|HY010 NS [c] [o]|  
+|IH|HY010|HY010|24000|Vedere la tabella seguente|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlsetpos-cursor-states"></a>SQLSetPos (cursore stati)  
   
 |S5<br /><br /> Aperto|S6<br /><br /> SQLFetch o SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000|-[s] S8 [d] S11 [24000 [b] HY109 x] [i]|-[s] S8 [d] S11 [24000 [b] HY109 x] [i]|  
+|24000|-- [s]  S8 [d]  S11 [x]  24000 [b]  HY109 [i]|-- [s]  S8 [d]  S11 [x]  24000 [b]  HY109 [i]|  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   
-|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2 A S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5 S7<br /><br /> Cursore|S8 S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Non allocato|S1<br /><br /> allocato|S2-S3<br /><br /> Prepared|S4<br /><br /> eseguito|S5-S7<br /><br /> Cursore|S8-S10<br /><br /> Dati necessari|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|--|: [1] HY011 [2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] o [1] HY011 [p] e [2]|HY010 [np] o [1] HY011 [p] e [2]|  
+|IH|--|--[1] HY011[2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] o [1] HY011 [p] e [2]|HY010 [np] o [1] HY011 [p] e [2]|  
   
  [1] il *attributo* argomento non era SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR, SQL_ATTR_USE_BOOKMARKS, SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY.  
   

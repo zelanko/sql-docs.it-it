@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9f0c59324542793301965c7d3555cf35ad40f5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194394"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Aggiornamento delle righe tramite segnalibro con SQLBulkOperations
 Quando si aggiorna una riga dal segnalibro **SQLBulkOperations** consente all'origine dati di aggiornare una o più righe della tabella. Le righe sono identificate mediante il segnalibro in una colonna del segnalibro associato. La riga viene aggiornata con i dati nei buffer dell'applicazione per ogni colonna associata (tranne quando il valore nel buffer di lunghezza/indicatore per una colonna è SQL_COLUMN_IGNORE). Le colonne non associate non verranno aggiornate.  

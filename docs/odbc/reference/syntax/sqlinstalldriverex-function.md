@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132721"
 ---
 # <a name="sqlinstalldriverex-function"></a>Funzione SQLInstallDriverEx
 **Conformità**  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [Output] Numero totale di byte (escluso il carattere di terminazione null) disponibili per restituire *lpszPathOut*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbPathOutMax*, il percorso di output in *lpszPathOut* verrà troncato *cbPathOutMax* meno di carattere di terminazione null. Il *pcbPathOut* argomento può essere un puntatore null.  
   
- *trattano*  
+ *fRequest*  
  [Input] Tipo di richiesta. Il *trattano* argomento deve essere uno dei valori seguenti:  
   
  ODBC_INSTALL_INQUIRY: Richiedere informazioni su dove può essere installato un driver.  
@@ -102,7 +102,7 @@ BOOL SQLInstallDriverEx(
   
  _driver desc_ **\\**0Driver**=**_driver-DLL-filename_ **\\**0 [programma di installazione**=**_programma di installazione-DLL-filename_<b>\\</b>0]  
   
- [_driver-attr-parolachiave1_**=**_valore1_<b>\\</b>0] [_driver-attr-keyword2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  dove \0 è un byte null e *driver-attr-keywordn* è qualsiasi parola chiave degli attributi del driver. Le parole chiave devono essere visualizzato nell'ordine specificato. Ad esempio, si supponga che un driver per i file di testo formattato dispone di driver separato e file DLL di installazione e possono usare i file con le estensioni di file con estensione txt e. csv. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
   

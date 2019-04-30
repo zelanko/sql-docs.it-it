@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204584"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Verifica delle query (Visual Database Tools)
   Per evitare problemi, è possibile verificare la correttezza della sintassi utilizzata nella query compilata. Questa opzione si rivela particolarmente utile per l'inserimento delle istruzioni nel [riquadro SQL](visual-database-tools.md).  

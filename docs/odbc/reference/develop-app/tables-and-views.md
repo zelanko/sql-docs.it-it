@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9949332d33f2d2a07e485bc0ff06c5c489df6440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148893"
 ---
 # <a name="tables-and-views"></a>Tabelle e viste
 In funzioni ODBC, tabelle e viste sono intercambiabili. Il termine *tabella* viene usato sia per tabelle e viste, tranne nel caso nel termine *visualizzazione* viene usato in modo esplicito.

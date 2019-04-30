@@ -1,5 +1,5 @@
 ---
-title: Predecessore (MDX) | Documenti Microsoft
+title: Predecessore (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298494"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -42,18 +42,18 @@ Ancestor(Member_Expression, Distance)
  *distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
-## <a name="remarks"></a>Remarks  
- Con il **predecessore** funzione, si specifica la funzione con un'espressione di membro MDX e quindi un'espressione MDX di un livello è un predecessore del membro oppure un'espressione numerica che rappresenta il numero di livelli di sopra di tale membro. Con queste informazioni, il **predecessori** funzione restituisce il membro predecessore a tale livello.  
+## <a name="remarks"></a>Note  
+ Con il **predecessore** (funzione), specifica la funzione con un'espressione di membro MDX e quindi specificare un'espressione MDX di un livello predecessore del membro oppure un'espressione numerica che rappresenta il numero di livelli sopra tale membro. Con queste informazioni, il **predecessori** funzione restituisce il membro predecessore a tale livello.  
   
 > [!NOTE]  
 >  Per restituire un set contenente il membro predecessore, anziché il solo membro predecessore, utilizzare il [predecessori &#40;MDX&#41; ](../mdx/ancestors-mdx.md) (funzione).  
   
- Se si specifica un'espressione di livello il **predecessore** funzione restituisce il predecessore del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
+ Se viene specificata un'espressione di livello, il **predecessore** funzione restituisce il predecessore del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
   
- Se viene specificata una distanza, la **predecessore** funzione restituisce il predecessore del membro specificato che rappresenta il numero di passaggi specificato nella gerarchia specificata dall'espressione di membro. Un membro può essere specificato come membro di una gerarchia dell'attributo, una gerarchia definita dall'utente o, in alcuni casi, una gerarchia padre-figlio. Con il numero 1 viene restituito l'elemento padre di un membro, mentre con il numero 2 viene restituito l'elemento padre del padre di un membro, se esistente. Il numero 0 restituisce il membro stesso.  
+ Se viene specificata una distanza, la **predecessore** funzione restituisce il predecessore del membro specificato che corrisponde al numero di passaggi specificato nella gerarchia specificata dall'espressione di membro. Un membro può essere specificato come membro di una gerarchia dell'attributo, una gerarchia definita dall'utente o, in alcuni casi, una gerarchia padre-figlio. Con il numero 1 viene restituito l'elemento padre di un membro, mentre con il numero 2 viene restituito l'elemento padre del padre di un membro, se esistente. Il numero 0 restituisce il membro stesso.  
   
 > [!NOTE]  
->  Utilizzare questo modulo del **predecessore** funzione per i casi in cui il livello dell'elemento padre è sconosciuto o non può essere rinominato.  
+>  Utilizzare questa forma del **predecessore** funzione nei casi in cui il livello dell'elemento padre è sconosciuto o non può essere rinominato.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata un'espressione di livello e vengono restituiti l'importo delle vendite su Internet per ogni State-Province in Australia e la relativa percentuale sul totale delle vendite su Internet per l'Australia.  
@@ -100,6 +100,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

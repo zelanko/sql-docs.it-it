@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67dc3f6bb82799382fa2b65754b3645dd735acab
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214811"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantire spazio sufficiente per TempDB
 Se si verificano durante la gestione degli errori [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gli oggetti che richiedono spazio su Microsoft SQL Server 6.5 di elaborazione, potrebbe essere necessario aumentare le dimensioni di TempDB. (Alcune query richiedono lo spazio di elaborazione temporaneo, ad esempio, una query con una clausola ORDER BY richiede una sorta del **Recordset**, che richiede spazio temporaneo.)  

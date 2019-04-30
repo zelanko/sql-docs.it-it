@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180296"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS e LineSeparator proprietà e metodo SkipLine esempio (VB)
 In questo esempio viene illustrato come modificare testo flussi una riga alla volta. L'effetto della modifica il separatore di riga dall'impostazione predefinita ritorno a capo/avanzamento riga (**adCRLF**) a semplicemente avanzamento riga (**adLF**) o ritorno a capo (**adCR**) viene visualizzato.  

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214801"
 ---
 # <a name="basic-rds-programming-model"></a>Modello di programmazione RDS di base
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Servizi Desktop remoto consente di risolvere applicazioni esistenti nel seguente ambiente: un'applicazione client specifica un programma che verrà eseguito su un server e i parametri necessari per restituire le informazioni desiderate. Il programma richiamato sul server ottiene accesso all'origine dati specificata, recupera le informazioni facoltativamente elabora i dati e quindi restituisce le informazioni risultanti per l'applicazione client in un formato che può facilmente utilizzare. Servizi Desktop remoto fornisce i mezzi per eseguire la sequenza di azioni seguente:  
+ Servizi Desktop remoto consente di risolvere applicazioni esistenti nel seguente ambiente: Un'applicazione client specifica un programma che verrà eseguito su un server e i parametri necessari per restituire le informazioni desiderate. Il programma richiamato sul server ottiene accesso all'origine dati specificata, recupera le informazioni facoltativamente elabora i dati e quindi restituisce le informazioni risultanti per l'applicazione client in un formato che può facilmente utilizzare. Servizi Desktop remoto fornisce i mezzi per eseguire la sequenza di azioni seguente:  
   
 -   Specificare il programma da richiamare sul server e ottenere un modo per farvi riferimento dal client. (Questo riferimento viene chiamato talvolta un *proxy*. Rappresenta il programma del server remoto. L'applicazione client "chiamerà" proxy come se fosse un programma locale, ma richiama effettivamente il programma del server remoto.)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "51558498"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di programmazione RDS in dettaglio](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

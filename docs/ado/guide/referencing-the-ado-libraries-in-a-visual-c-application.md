@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 772dbc55fdeb3b038399a3740be472497666e4da
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222020"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Riferimenti alle librerie ADO in un'applicazione Visual C++
 Per usare la versione più recente di ADO in un'applicazione Visual C++, usare il comando seguente `#import` direttiva:  
@@ -37,12 +37,12 @@ Per usare la versione più recente di ADO in un'applicazione Visual C++, usare i
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  Per usare qualsiasi versione precedente di ADO, sostituire *msado15.dll* sopra con una delle librerie dei tipi seguenti.  
   
--   *msado27.tlb*, libreria dei tipi 2.7 ADO  
+-   *msado27.tlb*, ADO 2.7 Type Library  
   
--   *msado26.tlb*, ADO 2.6 libreria di tipi  
+-   *msado26.tlb*, ADO 2.6 Type Library  
   
--   *msado25.tlb*, libreria dei tipi 2,5 ADO  
+-   *msado25.tlb*, ADO 2.5 Type Library  
   
--   *Msado21*, libreria dei tipi 2.1 ADO  
+-   *msado21.tlb*, ADO 2.1 Type Library  
   
--   *msado20.tlb*, libreria dei tipi 2.0 ADO
+-   *msado20.tlb*, ADO 2.0 Type Library

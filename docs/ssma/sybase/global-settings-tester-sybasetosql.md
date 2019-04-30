@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126354"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Impostazioni globali (tester) (SybaseToSQL)
 Utilizzare la pagina di Tester della **Global Settings** finestra di dialogo per specificare le impostazioni per Tester SSMA.  
@@ -28,7 +28,7 @@ Questa impostazione specifica se eseguire l'analisi degli oggetti da testare. Se
   
 Le opzioni seguenti sono disponibili per questa impostazione:  
   
-1.  Sì  
+1.  Yes  
   
 2.  no  
   
@@ -43,25 +43,25 @@ Questa impostazione specifica come salvare le tabelle ausiliarie interne create 
   
 4.  Chiedere a utente se il confronto di tabella non è riuscita  
   
-Impostata l'opzione predefinita è: **sempre eliminare**.  
+Impostata l'opzione predefinita è: **Elimina sempre**.  
   
 **Eseguire il rollback di dati**  
 Questa impostazione specifica se eseguire un'operazione di rollback dopo l'esecuzione di ogni test case. Set di opzioni predefinito è **No**.  
   
 Le opzioni seguenti sono disponibili per questa impostazione:  
   
-1.  Sì  
+1.  Yes  
   
-2.  no  
+2.  No  
   
 **Arrestare l'esecuzione di test dopo il primo errore**  
 Questa impostazione specifica se interrompere l'esecuzione test case corrente, se si è verificato un errore durante l'esecuzione. Set di opzioni predefinito è **Sì**.  
   
 Le opzioni seguenti sono disponibili per questa impostazione:  
   
-1.  Sì  
+1.  Yes  
   
-2.  no  
+2.  No  
   
 ## <a name="see-also"></a>Vedere anche  
 [Completamento della preparazione del Test Case &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Invio di aggiornamenti: metodo UpdateBatch | Microsoft Docs'
+title: 'Invio di aggiornamenti: Metodo UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062877"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Invio di aggiornamenti: metodo UpdateBatch
+# <a name="sending-the-updates-updatebatch-method"></a>Invio di aggiornamenti: Metodo UpdateBatch
 Il codice seguente viene aperto un Recordset in modalità batch impostando la proprietà LockType adLockBatchOptimistic e CursorLocation a adUseClient. Aggiunge due nuovi record e modifica il valore di un campo in un record esistente, salvando i valori originali e quindi chiama il metodo UpdateBatch per restituire le modifiche all'origine dati.  
   
 ## <a name="remarks"></a>Note  

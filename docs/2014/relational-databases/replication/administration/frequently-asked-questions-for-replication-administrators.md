@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207052"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
   Le domande e risposte seguenti offrono indicazioni su una vasta gamma di attività svolte dagli amministratori dei database replicati.  
@@ -42,7 +42,7 @@ ms.locfileid: "54125856"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quando è disponibile una sottoscrizione? Quando è possibile utilizzare il database di sottoscrizione?  
  Una sottoscrizione è disponibile dopo che al database di sottoscrizione è stato applicato lo snapshot. Anche se il database di sottoscrizione è accessibile prima di questo momento, non dovrebbe essere utilizzato prima che sia stato applicato lo snapshot. Utilizzare Monitoraggio replica per verificare lo stato della generazione e dell'applicazione dello snapshot.  
   
--   Lo snapshot viene generato dall'agente snapshot. Visualizzare lo stato della generazione dello snapshot nella scheda **Agenti** per una pubblicazione in Monitoraggio replica. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   Lo snapshot viene generato dall'agente snapshot. Visualizzare lo stato della generazione dello snapshot nella scheda **Agenti** per una pubblicazione in Monitoraggio replica. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Lo snapshot viene applicato dall'agente di distribuzione o dall'agente di merge. Visualizzare lo stato dell'applicazione dello snapshot nella pagina **Agente di distribuzione** o **Agente di merge** di Monitoraggio replica. 
   
@@ -121,7 +121,7 @@ ms.locfileid: "54125856"
   
 -   La definizione di un oggetto, come un'istruzione CREATE TABLE. Per impostazione predefinita, la replica copia le definizioni di tutti gli oggetti replicati nel Sottoscrittore.  
   
--   Lo spazio dei nomi all'interno del quale viene creato un oggetto: \<Database >. \<Schema >. \<Oggetto >. Gli schemi vengono definiti utilizzando l'istruzione CREATE SCHEMA.  
+-   Lo spazio dei nomi in cui viene creato un oggetto: \<Database>.\<Schema>.\<Oggetto>. Gli schemi vengono definiti utilizzando l'istruzione CREATE SCHEMA.  
   
 -   In relazione agli schemi e alla proprietà degli oggetti, la replica ha il seguente comportamento predefinito nella Creazione guidata nuova pubblicazione:  
   

@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213441"
 ---
 # <a name="keyset-driven-cursors"></a>Cursori gestiti da keyset
-Un cursore gestito da keyset è compresa tra un valore statico e un cursore dinamico nella sua capacità di rilevare le modifiche. Un cursore statico, non sempre rileva le modifiche per l'appartenenza e l'ordine del set di risultati. Un cursore dinamico, è di rilevare le modifiche ai valori delle righe nel set (soggetto a livello di isolamento della transazione, come impostato dall'attributo di connessione SQL_ATTR_TXN_ISOLATION) di risultati.  
+Un cursore gestito da keyset è compresa tra un valore statico e un cursore dinamico nella sua capacità di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Un cursore dinamico, è di rilevare le modifiche ai valori delle righe nel set (soggetto a livello di isolamento della transazione, come impostato dall'attributo di connessione SQL_ATTR_TXN_ISOLATION) di risultati.  
   
  Quando viene aperto un cursore gestito da keyset, Salva le chiavi per l'intero set di risultati; Questa correzione risolve l'apparente appartenenza e l'ordine del set di risultati. Quando il cursore scorre il set di risultati, Usa le chiavi in questo *keyset* per recuperare i valori di dati corrente per ogni riga. Si supponga, ad esempio, un cursore gestito da keyset e recupera una riga e un'altra applicazione, quindi aggiorna tale riga. Se il cursore recupera nuovamente la riga, i valori che rileva sono quelli nuovi poiché refetched la riga tramite la relativa chiave. Per questo motivo, i cursori gestito da keyset sempre rilevano le modifiche apportate da se stessi e ad altri utenti.  
   
- Quando il cursore tenta di recuperare una riga che è stata eliminata, questa riga viene visualizzato come "area libera" nel set di risultati: la chiave per la riga è presente il set di chiavi, ma la riga non esiste più nel set di risultati. Se vengono aggiornati i valori di chiave in una riga, la riga viene considerata di eliminazione e quindi inserita, tali righe vengono visualizzati anche come buchi del set di risultati. Mentre un cursore gestito da keyset possa sempre rilevare le righe eliminate da altri utenti, facoltativamente possibile rimuovere le chiavi per le righe elimini se stesso dalla keyset. Gestito da keyset dei cursori che eseguono questa operazione non è in grado di rilevare le righe eliminate. Indica se un cursore gestito da keyset particolare rileva la propria eliminazioni viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY **SQLGetInfo**.  
+ Quando il cursore tenta di recuperare una riga che è stata eliminata, questa riga viene visualizzato come "area libera" nel set di risultati: La chiave per la riga è presente nel keyset, ma la riga non esiste più nel set di risultati. Se vengono aggiornati i valori di chiave in una riga, la riga viene considerata di eliminazione e quindi inserita, tali righe vengono visualizzati anche come buchi del set di risultati. Mentre un cursore gestito da keyset possa sempre rilevare le righe eliminate da altri utenti, facoltativamente possibile rimuovere le chiavi per le righe elimini se stesso dalla keyset. Gestito da keyset dei cursori che eseguono questa operazione non è in grado di rilevare le righe eliminate. Indica se un cursore gestito da keyset particolare rileva la propria eliminazioni viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY **SQLGetInfo**.  
   
  Le righe inserite da altri utenti sono visibili a un cursore gestito da keyset mai perché il set di chiavi è disponibile alcuna chiave delle righe. Tuttavia, un cursore gestito da keyset possa facoltativamente aggiungere le chiavi per le righe viene inserito per il set di chiavi. Gestito da keyset dei cursori che eseguono questa operazione consente di rilevare le proprie istruzioni INSERT. Indica se un cursore gestito da keyset particolare rileva il propria inserimenti viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY **SQLGetInfo**.  
   

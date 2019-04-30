@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158012"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], una novità di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , può migliorare significativamente le prestazioni delle applicazioni di database OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è un motore di database ottimizzato per la memoria integrato nel motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ottimizzato per OLTP.  
@@ -84,7 +84,7 @@ ms.locfileid: "53359533"
   
  Altre informazioni su [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] sono disponibili in:  
   
--   [Microsoft? SQL Server? Guida al prodotto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft?? SQL Server?? Guida al prodotto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
 -   [Blog di OLTP in memoria](https://go.microsoft.com/fwlink/?LinkId=311696)  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181309"
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
 Questa sezione vengono descritte le funzioni come deprecate per ODBC 3 vengono mappati *. x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC 3 *. x* driver che vengono usati con l'API ODBC 2. *x* applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ciascuno di ODBC 2. *x* funzioni nell'elenco seguente viene eseguito il mapping per il corrispondente di ODBC 3 *. x* funzione quando viene chiamato in un'applicazione ODBC 3*x* driver ODBC 3 *. x*driver non deve implementare l'API ODBC 2. *x* funzioni.  
@@ -34,9 +34,9 @@ Questa sezione vengono descritte le funzioni come deprecate per ODBC 3 vengono m
   
 |ODBC 2. *x* (funzione)|ODBC 3*x* (funzione)|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**Funzione SQLAllocHandle**|  
-|**SQLAllocEnv**|**Funzione SQLAllocHandle**|  
-|**SQLAllocStmt**|**Funzione SQLAllocHandle**|  
+|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAllocEnv**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  

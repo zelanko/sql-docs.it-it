@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db7dc5482347ad9b7f194b3c9c8c6cd7fc3f9f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199591"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (libreria di cursori)
 > [!IMPORTANT]  
@@ -62,9 +62,9 @@ ms.locfileid: "47677429"
 |Tipo di cursore|Tipi di operazione di recupero|  
 |-----------------|-----------------|  
 |Forward-only|SQL_FETCH_NEXT|  
-|Statico|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
+|Static|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
   
-## <a name="errors"></a>errori  
+## <a name="errors"></a>Errori  
  Quando **SQLFetchScroll** viene chiamato e l'altra delle chiamate a **SQLFetch** restituisce SQL_ERROR, procede di libreria di cursore come indicato di seguito. Una volta completata questa procedura, la libreria di cursori continua l'elaborazione.  
   
 1.  Le chiamate **SQLGetDiagRec** per ottenere informazioni sull'errore dal driver e registra ciò come un record di diagnostica in Gestione Driver.  

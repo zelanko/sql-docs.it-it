@@ -1,5 +1,5 @@
 ---
-title: Lead (MDX) | Documenti Microsoft
+title: Lead (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d72af1bf0b671eeb2bd4b84c194f129ed1ce6bfe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205440"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 
@@ -35,16 +35,16 @@ Member_Expression.Lead( Index )
  *Index*  
  Espressione numerica valida che specifica il numero di posizioni dei membri.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Le posizioni dei membri all'interno di un livello vengono determinate dall'ordine naturale della gerarchia dell'attributo. La numerazione delle posizioni è in base zero.  
   
- Se il valore specificato è zero (0), il **causare** funzione restituisce il membro specificato.  
+ Se il valore specificato è pari a zero (0), il **Lead** funzione restituisce il membro specificato.  
   
- Se il valore specificato è negativo, il **causare** funzione restituisce un membro precedente.  
+ Se il valore specificato è negativo, il **Lead** funzione restituisce un membro precedente.  
   
- `Lead(1)` equivale ai [NextMember](../mdx/nextmember-mdx.md) (funzione). `Lead(-1)` equivale ai [PrevMember](../mdx/prevmember-mdx.md) (funzione).  
+ `Lead(1)` equivale al [NextMember](../mdx/nextmember-mdx.md) (funzione). `Lead(-1)` equivale al [PrevMember](../mdx/prevmember-mdx.md) (funzione).  
   
- Il **causare** funzione è simile al [Lag](../mdx/lag-mdx.md) funzione, con la differenza che il **Lag** funzione Cerca nella direzione opposta al **causare** (funzione). In altre parole, `Lead(n)` equivale a `Lag(-n)`.  
+ Il **Lead** funzione è simile al [Lag](../mdx/lag-mdx.md) funzionare, tranne il fatto che il **Lag** funzione esegue la ricerca nella direzione opposta al **Lead** funzione. In altre parole, `Lead(n)` equivale a `Lag(-n)`.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il valore per dicembre 2001:  
@@ -64,6 +64,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

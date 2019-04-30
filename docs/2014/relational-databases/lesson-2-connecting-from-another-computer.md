@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: La connessione da un altro Computer | Microsoft Docs'
+title: 'Lezione 2: Connessione da un altro computer | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144794"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: connessione da un altro computer
+# <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
   Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
   
  In questa lezione sono incluse le attività seguenti:  
@@ -127,6 +127,6 @@ ms.locfileid: "54127211"
  Si conclude così questa breve esercitazione sulla connettività di base.  
   
 ## <a name="return-to-tutorials-portal"></a>Ritornare al portale delle esercitazioni  
- [Esercitazione: Guida introduttiva con il motore di Database](tutorial-getting-started-with-the-database-engine.md)  
+ [Esercitazione: Introduzione al motore di database](tutorial-getting-started-with-the-database-engine.md)  
   
   

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057559"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Argomenti della Guida F1 di Gestione configurazione Reporting Services (modalità nativa SSRS)
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Gestione configurazione Reporting Services.  

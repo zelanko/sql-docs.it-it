@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155832"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
-  Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. Dati possono essere esportati in un file di dati come tipo di tabella di database (formato nativo), nella relativa rappresentazione di caratteri (formato carattere) o come qualsiasi tipo di dati in cui è supportata la conversione implicita; ad esempio, la copia una `smallint` come un `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
+  Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file utilizzando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) o utilizzando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo `smallint` come `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Richiesta del tipo di archiviazione di dati con bcp  
  Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato (**-f**) o al formato dei dati (**-n**, **-c**, **-w**o **-N**), viene richiesto il tipo di archiviazione di file di ogni campo di dati, come illustrato di seguito:  
@@ -35,9 +35,9 @@ ms.locfileid: "48048441"
   
 -   Per eseguire l'esportazione bulk dei dati da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati nel formato di archiviazione più compatto (formato nativo), accettare i tipi di archiviazione di file predefiniti visualizzati dall'utilità **bcp**. Per un elenco dei tipi di archiviazione di file nativi, vedere "Tipi di archiviazione di file nativi" più avanti in questo argomento.  
   
--   Per l'esportazione bulk dei dati da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati in formato carattere, specificare `char` come il tipo di archiviazione per tutte le colonne nella tabella.  
+-   Per eseguire l'esportazione bulk dei dati da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati in formato carattere, specificare il tipo di archiviazione `char` per tutte le colonne della tabella.  
   
--   Per l'importazione bulk dei dati a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file di dati, specificare il tipo di archiviazione file `char` per i tipi archiviati nel carattere di formato e, per i dati archiviati in formato nativo, specificare uno dei tipi di archiviazione di file, come appropriato:  
+-   Per eseguire l'importazione bulk di dati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file di dati, specificare il tipo di archiviazione di file `char` per i tipi archiviati nel formato carattere e, a seconda dei casi, uno dei tipi elencati di seguito per i dati archiviati nel formato nativo:  
   
     |tipo di archiviazione di file|Parametro da specificare nel prompt dei comandi|  
     |-----------------------|-----------------------------|  
@@ -75,7 +75,7 @@ ms.locfileid: "48048441"
   
      <sup>1</sup> l'interazione tra lunghezza del campo, lunghezza del prefisso e i caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati per dati non carattere esportati come il `char` tipo archiviazione di file.  
   
-     <sup>2</sup> il `ntext`, `text`, e `image` tipi di dati verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. Uso `nvarchar(max)`, `varchar(max)`, e `varbinary(max)` invece.  
+     <sup>2</sup> il `ntext`, `text`, e `image` tipi di dati verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
   
 ## <a name="native-file-storage-types"></a>Tipi di archiviazione di file nativi  
  I tipi di archiviazione di file nativi vengono registrati nel file di formato come tipo di dati del file host corrispondente.  
@@ -120,7 +120,7 @@ ms.locfileid: "48048441"
   
 -   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo; ad esempio, tuttavia è possibile specificare `int` per `smallint` dati, se si specifica `smallint` per `int` dati, risultato di errori di overflow.  
   
--   Quando i tipi di dati non carattere, ad esempio `float`, `money`, `datetime`, o `int` vengono archiviati come tipi di database, i dati vengono scritti nel file di dati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato nativo.  
+-   Se i tipi di dati non carattere, quali `float`, `money`, `datetime` o `int`, vengono archiviati in base al tipo dei relativi database, i dati verranno scritti nel file di dati nel formato nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
@@ -129,7 +129,7 @@ ms.locfileid: "48048441"
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
  [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

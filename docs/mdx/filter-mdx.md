@@ -1,5 +1,5 @@
 ---
-title: Filtro (MDX) | Documenti Microsoft
+title: Filter (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154635"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -35,10 +35,10 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Espressione logica MDX (Multidimensional Expression) valida che restituisce true o false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **filtro** funzione valuta l'espressione logica specificata rispetto a ogni tupla nel set specificato. La funzione restituisce un set costituito da ogni tupla nel set specificato in cui l'espressione logica restituisce **true**. Se nessuna tupla restituisce **true**, viene restituito un set vuoto.  
   
- Il **filtro** funzione funziona in modo simile a quello del [IIf](../mdx/iif-mdx.md) (funzione). Il **IIf** funzione restituisce solo una delle due opzioni in base alla valutazione di un'espressione logica MDX, mentre il **filtro** funzione restituisce un set di tuple che soddisfano la condizione di ricerca specificati. In effetti, il **filtro** funzione esegue `IIf(Logical_Expression, Set_Expression.Current, NULL)` su ogni tupla del set e restituisce il set risultante.  
+ Il **filtro** funzionamento della funzione in modo analogo a quello delle [IIf](../mdx/iif-mdx.md) (funzione). Il **IIf** funzione restituisce solo una delle due opzioni in base alla valutazione di un'espressione logica MDX, mentre le **filtro** funzione restituisce un set di tuple che soddisfano la condizione di ricerca specificati. In effetti, il **filtro** funzione esegue `IIf(Logical_Expression, Set_Expression.Current, NULL)` su ogni tupla del set e restituisce il set risultante.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo della funzione Filter sull'asse Rows di una query, per restituire solo le date in cui Internet Sales Amount è maggiore di $10.000:  
@@ -57,7 +57,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- La funzione Filter può essere utilizzata anche nelle definizioni di membri calcolati. Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi nove mesi del 2003 contenuti nella `Date` dimensione, dal **Adventure Works** cubo. Il **PeriodsToDate** funzione definisce le tuple del set su cui il **aggregazione** funzione viene eseguita. Il **filtro** funzione limita le tuple da restituire a quelli con i valori più bassi per la misura Reseller Sales Amount per il periodo di tempo precedente.  
+ La funzione Filter può essere utilizzata anche nelle definizioni di membri calcolati. Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi nove mesi del 2003 contenuti nella `Date` dimensione, dalle **Adventure Works** cubo. Il **PeriodsToDate** funzione definisce le tuple nel set su cui il **aggregazione** funzione viene eseguita. Il **filtro** funzione limita le tuple da restituire per gli utenti con i valori più bassi per la misura Reseller Sales Amount per il periodo di tempo precedente.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,6 +85,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

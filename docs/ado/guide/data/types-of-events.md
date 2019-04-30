@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142940"
 ---
 # <a name="types-of-events"></a>Tipi di eventi
 Esistono due tipi di base degli eventi. "Verrà eventi," che vengono chiamati prima dell'avvio di un'operazione, in genere includono, ad esempio, "Sarà" nei relativi nomi - **WillChangeRecordset** oppure **WillConnect**. Gli eventi che vengono chiamati dopo che un evento è stato completato in genere includono, ad esempio, "Completa" nei relativi nomi - **RecordChangeComplete** oppure **ConnectComplete**. Esistono eccezioni - ad esempio **InfoMessage** - ma queste si verificano dopo l'operazione associata è stata completata.  

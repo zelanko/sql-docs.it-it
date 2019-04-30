@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5743e04b402302cc53b7694d8160edfb11769e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062917"
 ---
 # <a name="ado-objects-and-collections"></a>Oggetti e raccolte di ADO
 ADO è costituito da quattro raccolte e gli oggetti seguenti nove.  
   
-|Oggetto o una raccolta|Description|  
+|Oggetto o una raccolta|Descrizione|  
 |--------------------------|-----------------|  
 |**Connessione** oggetto|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, potrebbe essere equivalente a una connessione di rete effettivo al server. A seconda delle funzionalità supportate dal provider, alcune raccolte, metodi o proprietà di un **connessione** oggetto potrebbe non essere disponibile.|  
 |**Command**|Utilizzato per definire un comando specifico, ad esempio una query SQL, deve essere eseguita su un'origine dati.|  

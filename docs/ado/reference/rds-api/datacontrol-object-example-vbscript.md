@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 351f04af84419d8ee10a967a61c8b11dc179592a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297687"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Esempio di oggetto DataControl (VBScript)
 > [!IMPORTANT]

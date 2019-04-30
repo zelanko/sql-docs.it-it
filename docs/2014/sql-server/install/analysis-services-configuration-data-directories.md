@@ -12,18 +12,18 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215128"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configurazione di Analysis Services - Directory dati
   Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del gruppo di sicurezza SQLServerMSASUser$\<istanza> creato e di cui viene effettuato il provisioning durante l'installazione.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
-|Description|Directory predefinita|Indicazioni|  
+|Descrizione|Directory predefinita|Indicazioni|  
 |-----------------|-----------------------|---------------------|  
 |Directory radice dati|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Data\|accertarsi che nella cartella \Programmi\Microsoft SQL Server \ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
 |Directory file di log|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceID > \olap\log.\|si tratta della directory per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i file di log che include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  

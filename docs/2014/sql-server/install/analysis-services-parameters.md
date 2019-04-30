@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2bfcd8f6cd5f4bf6dcfab196978f43fbb53536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215056"
 ---
 # <a name="analysis-services-parameters"></a>Parametri di Analysis Services
   Per analizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e forniscono informazioni su come connettersi a tale istanza.  

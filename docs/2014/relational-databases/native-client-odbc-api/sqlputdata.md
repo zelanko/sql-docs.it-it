@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046626"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Le restrizioni seguenti si applicano quando l'uso di SQLPutData per inviare oltre 65.535 byte di dati (per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 4.21a) o 400 KB di dati (per SQL Server versione 6.0 e versioni successive) per un SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) o SQL_LONGVARBINARY (`image`) colonna:  
@@ -64,7 +64,7 @@ ms.locfileid: "53358553"
  `SQLPutData` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData Function](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

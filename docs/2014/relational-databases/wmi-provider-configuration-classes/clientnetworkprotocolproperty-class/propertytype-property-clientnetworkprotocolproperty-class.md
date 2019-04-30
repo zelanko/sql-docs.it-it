@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 244775d3b2a5fe301bd1d5d56803873aae21eaa8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135934"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyType (classe ClientNetworkProtocolProperty)
   Ottiene il tipo della proprietà a cui fanno riferimento le [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valore.  

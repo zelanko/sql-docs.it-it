@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5c5a126ea220f055349ad00dc950281606ed4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199248"
 ---
 # <a name="bookmark-types"></a>Tipi di segnalibro
 Tutti i segnalibri in ODBC 3*x* sono a lunghezza variabile segnalibri. In questo modo una chiave primaria o un indice univoco associato a una tabella da usare come segnalibro. Il segnalibro inoltre può essere un valore a 32 bit, come è stato usato in ODBC 2. *x*. Per specificare che un segnalibro viene utilizzato con un cursore, un'applicazione ODBC 3*x* applicazione imposta l'attributo di istruzione SQL_ATTR_USE_BOOKMARK SQL_UB_VARIABLE. Viene utilizzato automaticamente un segnalibro a lunghezza variabile.  
