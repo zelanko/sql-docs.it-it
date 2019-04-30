@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752690"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lezione 5-2: definizione di una relazione di tipo fatti
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ Nelle attività di questo argomento verrà aggiunta una nuova dimensione del cub
   
 14. Nel riquadro **Attributi** di Progettazione dimensioni per la dimensione **Internet Sales Order Details** , selezionare **Sales Order Number**e impostare la proprietà **Name** nella finestra Proprietà su **Item Description.**  
   
-15. Nel **NameColumn** proprietà di cella, fare clic sul pulsante **(...)** . Nella finestra di dialogo Colonna nome selezionare Product dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
+15. Nel **NameColumn** proprietà di cella, fare clic sul pulsante **(...)** . Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
   
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724034"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Come per gli *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono eseguire l'override di richiesta *ccopt* valori.  
   
- *conteggio delle righe*  
+ *rowcount*  
  Numero di righe del buffer di recupero da utilizzare con AUTO_FETCH. Il valore predefinito è 20 righe. *conteggio delle righe* si comporta in modo diverso quando assegnato come valore di input rispetto a un valore restituito.  
   
 |Come valore di input|Come valore restituito|  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Un cursore di avanzamento rapido è stato chiuso automaticamente.  
   
 > [!NOTE]  
->  Se la routine sp_cursoropen viene eseguita correttamente, vengono inviati i parametri restituiti RPC e un set di risultati con informazioni sul formato di colonna TDS (messaggi 0xa0 e 0xa1). Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verranno restituiti dati di riga e il conteggio del messaggio done* sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
+>  Se la routine sp_cursoropen viene eseguita correttamente, i parametri restituiti RPC e un set di risultati con informazioni sul formato di colonna TDS (0xa0 e 0xa1 messaggi) vengono inviati. Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verranno restituiti dati di riga e il conteggio del messaggio *done* sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
   
 ## <a name="remarks"></a>Note  
   
@@ -207,7 +207,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>Parametro bound_param  
  I parametri dopo il quinto vengono passati insieme sul piano dell'istruzione come parametri di input. Il primo parametro di questo tipo deve essere una stringa nel formato:  
   
- *{nome della variabile locale data type} [,... n].*  
+ *{nome della variabile locale data type} [,... n]*  
   
  I parametri successivi vengono utilizzati per passare i valori con cui sostituire il *nome della variabile locale* nell'istruzione.  
   

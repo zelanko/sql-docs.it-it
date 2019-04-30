@@ -1,5 +1,5 @@
 ---
-title: 'Guida introduttiva: Connettersi ed eseguire query su Azure SQL Data Warehouse'
+title: 'Avvio rapido: Connettersi ed eseguire query su Azure SQL Data Warehouse'
 titleSuffix: Azure Data Studio
 description: Questa Guida introduttiva illustra come usare Azure Data Studio per connettersi a un Azure SQL Data Warehouse ed eseguire una query
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143896"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Guida introduttiva: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati in Azure SQL Data Warehouse
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Avvio rapido: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati in Azure SQL Data Warehouse
 
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a un Azure SQL Data Warehouse e quindi utilizzare istruzioni Transact-SQL per creare, inserire e selezionare i dati. 
 
@@ -52,7 +52,7 @@ Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una conn
    | **Nome database** | *Lasciare vuoto* | Il nome del database a cui si effettua la connessione. |
    | **Gruppo di server** | Selezionare <Default> | Se è stato creato un gruppo di server, è possibile impostare per un gruppo di server specifico. | 
 
-   ![Nuova connessione](media/quickstart-sql-dw/new-connection-screen.png) 
+   ![Icona "Nuova connessione"](media/quickstart-sql-dw/new-connection-screen.png) 
 
 3. Se il server non dispone di una regola firewall che consenta di Studio dei dati di Azure per la connessione, il **Crea nuova regola del firewall** viene aperto. Completare il modulo per creare una nuova regola firewall. Per informazioni dettagliate, vedere [Regole del firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
