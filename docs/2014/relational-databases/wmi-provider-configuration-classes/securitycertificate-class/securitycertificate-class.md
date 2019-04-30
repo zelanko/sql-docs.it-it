@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270765"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
   Il securitycertificate [classe SecurityCertificate]-class.md) rappresenta un certificato di sicurezza. Un certificato è un'istruzione firmata digitalmente che associa il valore di una chiave pubblica all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], che detiene la corrispondente chiave privata. Il certificato viene emesso da un'autorità di certificazione.  

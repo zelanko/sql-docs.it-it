@@ -1,5 +1,5 @@
 ---
-title: Lascia (MDX) | Documenti Microsoft
+title: Lascia (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270445"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
 
-  Restituisce un set composto da tutti gli attributi (facoltativamente limitato a quelli appartenenti a una dimensione specifica). Per ogni attributo x nel set restituito, se x è l'attributo di granularità o è correlato direttamente o indirettamente all'attributo di granularità, la granularità viene impostata sull'attributo x senza influire sulla sezione. Il **lascia** funzione è progettata per l'utilizzo all'interno di un'istruzione SCOPE o sul lato sinistro di un'assegnazione.  
+  Restituisce un set composto da tutti gli attributi (facoltativamente limitato a quelli appartenenti a una dimensione specifica). Per ogni attributo x nel set restituito, se x è l'attributo di granularità o è correlato direttamente o indirettamente all'attributo di granularità, la granularità viene impostata sull'attributo x senza influire sulla sezione. Il **lascia** funzione è progettata per l'uso all'interno di un'istruzione SCOPE o sul lato sinistro di un'assegnazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una dimensione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I membri foglia sono tuple ottenute eseguendo il cross join del livello più basso di tutte le gerarchie dell'attributo. I membri calcolati vengono esclusi.  
   
 -   Se viene specificato un nome di dimensione, il **lascia** funzione restituisce un set che contiene i membri foglia dell'attributo chiave della dimensione specificata.  
@@ -48,6 +48,6 @@ Leaves( [ Dimension_expression ] )
     >  Se la granularità nei gruppi di misure nell'ambito corrente non è la stessa per tutti gli attributi, viene generato un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

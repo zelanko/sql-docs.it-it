@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313480"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Driver ODBC forniti da Microsoft
 *I driver* sono librerie che implementano le funzioni dell'API ODBC. Ogni driver è specifico di un sistema di gestione di specifica del database (DBMS). Nella maggior parte dei casi, i driver di espongono le funzionalità del sistema DBMS sottostante; non sono necessarie per implementare funzionalità non supportate dal sistema DBMS. I driver di eseguire attività specifiche e possono essere classificati in due categorie: basato su file e basati su DBMS. Per altre informazioni sull'architettura di driver e i driver, vedere [driver](../../odbc/reference/drivers.md).  

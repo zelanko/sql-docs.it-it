@@ -1,5 +1,5 @@
 ---
-title: I predecessori (MDX) | Documenti Microsoft
+title: Predecessori (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c108ea102e03000481d18bfc69f657e6bd8a0ce
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313728"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Funzione che restituisce il set di tutti i predecessori di un membro specificato al livello specificato oppure alla distanza specificata dal membro. Con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il set restituito sarà sempre costituito da un singolo membro - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non supporta più elementi padre per un singolo membro.  
+  Funzione che restituisce il set di tutti i predecessori di un membro specificato al livello specificato oppure alla distanza specificata dal membro. Con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il set restituito sarà sempre costituito da un singolo membro, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non supporta più elementi padre per un singolo membro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,18 +42,18 @@ Ancestors(Member_Expression, Distance)
  *distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
-## <a name="remarks"></a>Remarks  
- Con il **predecessori** funzione, si specifica la funzione con un'espressione di membro MDX e quindi un'espressione MDX di un livello è un predecessore di tale membro oppure un'espressione numerica che rappresenta il numero di livelli di sopra di tale membro. Con queste informazioni, il **predecessori** funzione restituisce il set di membri (che sarà un set costituito da un membro) a tale livello.  
+## <a name="remarks"></a>Note  
+ Con il **predecessori** (funzione), specifica la funzione con un'espressione di membro MDX e quindi specificare un'espressione MDX di un livello predecessore di tale membro oppure un'espressione numerica che rappresenta il numero di livelli di sopra di tale membro. Con queste informazioni, il **predecessori** funzione restituisce il set di membri (che sarà un set costituito da un membro) a tale livello.  
   
 > [!NOTE]  
 >  Per restituire un membro predecessore, anziché un set di predecessori, utilizza il [predecessore](../mdx/ancestor-mdx.md) (funzione).  
   
- Se si specifica un'espressione di livello il **predecessori** funzione restituisce il set di tutti i predecessori del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
+ Se viene specificata un'espressione di livello, il **predecessori** funzione restituisce il set di tutti i predecessori del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
   
  Se viene specificata una distanza, la **predecessori** funzione restituisce il set di tutti i membri che sono il numero di passaggi specificato nella gerarchia specificata dall'espressione di membro. Un membro può essere specificato come membro di una gerarchia dell'attributo, una gerarchia definita dall'utente o, in alcuni casi, una gerarchia padre-figlio. Con il numero 1 viene restituito il set di membri al livello padre, mentre con il numero 2 viene restituito il set di membri al livello dell'elemento padre del padre, se esistente. Il numero 0 restituisce il set contenente soltanto il membro stesso.  
   
 > [!NOTE]  
->  Utilizzare questo modulo del **predecessori** funzione per i casi in cui il livello dell'elemento padre è sconosciuto o non può essere rinominato.  
+>  Utilizzare questa forma del **predecessori** funzione nei casi in cui il livello dell'elemento padre è sconosciuto o non può essere rinominato.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente usa il **predecessori** funzione per restituire la misura Internet Sales Amount per un membro padre e il relativo elemento padre del padre. Nell'esempio vengono utilizzate espressioni di livello per specificare i livelli da restituire. I livelli sono contenuti nella stessa gerarchia del membro specificato nell'espressione di membro.  
@@ -99,6 +99,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301983"
 ---
 # <a name="alter-table-statement-limitations"></a>Limitazioni dell'istruzione ALTER TABLE
 Quando il file dBASE o driver Paradox viene utilizzato, una volta che un indice è stato creato e aggiunto un nuovo record, la struttura della tabella non venga modificata dall'istruzione ALTER TABLE, a meno che l'indice viene eliminato e il contenuto della tabella viene eliminato.  

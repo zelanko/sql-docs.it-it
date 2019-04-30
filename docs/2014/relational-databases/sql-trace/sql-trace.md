@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286540"
 ---
 # <a name="sql-trace"></a>Traccia SQL
   In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze delle classi di evento elencate nella definizione di traccia. Tali eventi possono essere esclusi dalla traccia tramite un filtro oppure essere inseriti in coda per la relativa destinazione. La destinazione può essere un file o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), che è in grado di utilizzare le informazioni della traccia nelle applicazioni che gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "52823485"
 |**ClientProcessID** <sup>1</sup>|9|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|  
 |**ColumnPermissions**|44|Indica se è stata impostata un'autorizzazione a livello di colonna. È possibile analizzare il testo dell'istruzione per determinare con esattezza quali autorizzazioni sono state impostate per quali colonne.|  
 |**CPU**|18|Tempo della CPU in millisecondi utilizzato dall'evento.|  
-|**ID database** <sup>1</sup>|3|ID del database specificato nell'istruzione USE *nome_database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *nome_database*. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|  
+|**Database ID** <sup>1</sup>|3|ID del database specificato nell'istruzione USE *nome_database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *nome_database*. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|  
 |**DatabaseName**|35|Nome del database in cui viene eseguita l'istruzione dell'utente.|  
 |**DBUserName** <sup>1</sup>|40|Nome utente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del client.|  
 |**Durata**|13|Durata dell'evento in microsecondi.<br /><br /> Il server indica la durata di un evento in microsecondi (un milionesimo o 10<sup>-6</sup>di secondo) e la quantità di tempo della CPU usato dall'evento in millisecondi (un millesimo o 10<sup>-3</sup>di secondo). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.|  
@@ -91,7 +91,7 @@ ms.locfileid: "52823485"
 |**GUID**|54|Valore GUID che dipende dalla classe di evento specificata nella traccia.|  
 |**FileName**|36|Nome logico del file modificato.|  
 |**Handle**|33|Valore intero utilizzato da ODBC, OLE DB o DB-Library per il coordinamento dell'esecuzione con il server.|  
-|**Nome host** <sup>1</sup>|8|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|  
+|**HostName** <sup>1</sup>|8|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|  
 |**IndexID**|24|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|  
 |**IntegerData**|25|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |**IntegerData2**|55|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  

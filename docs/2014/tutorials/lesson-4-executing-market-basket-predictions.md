@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312107"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Lezione 4: L'esecuzione di stime di mercato sugli acquisti
+# <a name="lesson-4-executing-market-basket-predictions"></a>Lezione 4: Esecuzione delle stime relative a Market Basket
   In questa lezione si utilizzerà la DMX `SELECT` istruzione per creare stime in base all'associazione di modelli creati nella [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Una query della stima viene creata utilizzando l'istruzione DMX `SELECT` e aggiungendo una clausola `PREDICTION JOIN` Per altre informazioni sulla sintassi di un prediction join, vedere [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  Il **SELECT FROM \<model > PREDICTION JOIN** modulo del `SELECT` istruzione contiene tre parti:  

@@ -1,8 +1,9 @@
 ---
 title: Esecuzione di un Updategram mediante OLE DB (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/16/2017
+ms.prod: sql
+ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -12,17 +13,19 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7597df95cecaaab72eb4f23255a4607fa02f2e93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268485"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Esecuzione di un updategram mediante OLE DB (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento fornisce un esempio reale di usingOLE DB per eseguire un updategram.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Utilizzo di ICommandStream per l'impostazione di un comando XML  

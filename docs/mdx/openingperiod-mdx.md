@@ -1,5 +1,5 @@
 ---
-title: OpeningPeriod (MDX) | Documenti Microsoft
+title: OpeningPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 01144d6a82319b7853ae60f901a5fc0ad3c78d6c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277954"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 
@@ -35,17 +35,17 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione è principalmente finalizzata all'utilizzo con una dimensione temporale, ma può essere utilizzata con qualsiasi dimensione.  
   
--   Se si specifica un'espressione di livello il **OpeningPeriod** funzione Usa la gerarchia che contiene il livello specificato e restituisce il primo elemento di pari livello tra i discendenti del membro predefinito al livello specificato.  
+-   Se viene specificata un'espressione di livello, il **OpeningPeriod** funzione utilizza la gerarchia che contiene il livello specificato e restituisce il primo elemento di pari livello tra i discendenti del membro predefinito al livello specificato.  
   
--   Se vengono specificate sia un'espressione di livello e un'espressione di membro, il **OpeningPeriod** funzione restituisce il primo elemento di pari livello tra i discendenti del membro specificato al livello specificato all'interno della gerarchia che contiene il livello specificato.  
+-   Se vengono specificate sia un'espressione di livello che un'espressione di membro, il **OpeningPeriod** funzione restituisce il primo elemento di pari livello tra i discendenti del membro specificato al livello specificato all'interno della gerarchia che contiene l'oggetto specificato livello.  
   
--   Se viene specificata né un'espressione di livello né un'espressione di membro, il **OpeningPeriod** funzione utilizza il livello predefinito e un membro della dimensione con un tipo di tempo.  
+-   Se viene specificata né un'espressione di livello né un'espressione di membro, il **OpeningPeriod** funzione Usa il livello predefinito e un membro della dimensione con un tipo temporale.  
   
 > [!NOTE]  
->  Il [ClosingPeriod](../mdx/closingperiod-mdx.md) è simile alla funzione di **OpeningPeriod** funzione, con la differenza che il **ClosingPeriod** funzione restituisce l'ultimo elemento di pari livello anziché il primo.  
+>  Il [ClosingPeriod](../mdx/closingperiod-mdx.md) funzione è simile al **OpeningPeriod** funzionare, tranne il fatto che il **ClosingPeriod** funzione restituisce l'ultimo elemento di pari livello invece del primo elemento di pari livello.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il valore predefinito della misura relativa al membro FY2002 della dimensione Date (il cui tipo semantico è temporale). Viene restituito questo membro poiché il livello Fiscal Year è il primo discendente del livello [Totale], la gerarchia Fiscal è la gerarchia predefinita poiché costituisce la prima gerarchia definita dall'utente nella raccolta di gerarchie e il membro FY2002 è il primo elemento di pari livello nella gerarchia a questo livello.  
@@ -82,7 +82,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: UniqueName (MDX) | Documenti Microsoft
+title: UniqueName (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41642dc8bcaed03faaffdf9a16d8fc465aa2d360
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306477"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 
@@ -51,8 +51,8 @@ Member_Expression.UniqueName
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
- Il **UniqueName** il nome univoco dell'oggetto, non il nome restituito dalla funzione di [nome](../mdx/name-mdx.md) (funzione). Il nome restituito non include il nome del cubo. I risultati restituiti dipendono dalle impostazioni sul lato server oppure dalla proprietà della stringa di connessione MDX Unique Name Style.  
+## <a name="remarks"></a>Note  
+ Il **UniqueName** funzione restituisce il nome univoco dell'oggetto, non il nome restituito dalle [nome](../mdx/name-mdx.md) (funzione). Il nome restituito non include il nome del cubo. I risultati restituiti dipendono dalle impostazioni sul lato server oppure dalla proprietà della stringa di connessione MDX Unique Name Style.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il valore del nome univoco per la dimensione Product, la gerarchia Product Categories, il livello Subcategory e il membro Bike Racks del cubo Adventure Works.  
@@ -76,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

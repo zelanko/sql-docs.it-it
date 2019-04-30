@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1d0e23019f3e5b68ad38711c1f041b160ceb31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305738"
 ---
 # <a name="translation-dlls"></a>DDL di traslazione
 L'applicazione e l'origine dati spesso archiviano i dati in set di caratteri diversi. ODBC fornisce un meccanismo generico che consente al driver di convertire i dati da un set di caratteri da un altro. È costituito da una DLL che implementa le funzioni di conversione **SQLDriverToDataSource** e **SQLDataSourceToDriver**, che vengono chiamati dal driver per convertire tutti i dati trasmessi tra l'origine dati e il driver. Questa DLL può essere scritto dallo sviluppatore dell'applicazione, lo sviluppatore, driver o di terze parti.  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8c555d853fd791bed29a06f561021b138526ea1
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255095"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Per gli sviluppatori&#39;Guida (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre diverse interfacce di programmazione che è possibile usare nelle proprie applicazioni. È possibile utilizzare le caratteristiche e le funzionalità esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows oppure per estendere la piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

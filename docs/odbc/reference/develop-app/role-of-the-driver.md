@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254184"
 ---
 # <a name="role-of-the-driver"></a>Ruolo del driver
 Il driver controlla tutti gli errori e avvisi non controllati da Gestione Driver e ordina i record di stato che genera. (Un ODBC 2. *x* driver non ordina i record di stato.) Quali errori e avvisi di troncamento dei dati, la conversione dei dati, sintassi e alcuni transizioni di stato. Il driver potrebbe anche controllare errori e avvisi controllo parzialmente selezionati da Gestione Driver. Ad esempio, anche se Gestione Driver controlla se il valore di *operazione* nel **SQLSetPos** è consentito, il driver deve controllare se è supportato.  

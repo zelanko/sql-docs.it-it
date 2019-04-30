@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250645"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
   L'oggetto **SQLServer:Database** in SQL Server include contatori per il monitoraggio delle operazioni di copia bulk, della velocità effettiva dei backup e del ripristino e delle attività del log delle transazioni. Eseguire il monitoraggio delle transazioni e del log delle transazioni per determinare la quantità di attività degli utenti eseguita nel database e lo spazio disponibile nel log delle transazioni. La quantità di attività degli utenti ha effetto sulle prestazioni del database e sulle dimensioni del log, sul blocco e sulla replica. Il monitoraggio dell'attività del log di basso livello per misurare l'attività degli utenti e l'utilizzo delle risorse può essere utile per identificare eventuali colli di bottiglia.  

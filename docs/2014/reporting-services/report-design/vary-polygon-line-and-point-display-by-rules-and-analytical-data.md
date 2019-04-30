@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302832"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici (Generatore report e SSRS)
   Le opzioni di visualizzazione per poligoni, linee e punti su un livello mappa vengono controllate impostando le opzioni del livello, le regole per gli elementi della mappa sul livello o sostituendo le opzioni per specifici elementi incorporati della mappa su un livello.  

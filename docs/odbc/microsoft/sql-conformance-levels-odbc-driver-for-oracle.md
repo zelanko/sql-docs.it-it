@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313393"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Livello di conformità SQL (driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -39,14 +39,14 @@ ms.locfileid: "47669369"
     |Abs|File di log|round|Tan|  
     |funzione CEILING|LOG10|second|truncate|  
     |Cos|Mod|accesso||  
-    |Exp|PI|sin||  
+    |Exp|Pi|sin||  
     |floor|Power|sqrt||  
   
 -   Funzioni di data:  
   
     |||||  
     |-|-|-|-|  
-    |CURDATE|DayOfWeek|NomeMese|second|  
+    |CURDATE|Dayofweek|NomeMese|second|  
     |Funzione Curtime|Dayofyear|minute|week|  
     |Funzione Dayname|Ora|a questo punto|year|  
     |DayOfMonth|Month|Trimestre||  
@@ -55,8 +55,8 @@ ms.locfileid: "47669369"
   
     |||||  
     |-|-|-|-|  
-    |ASCII|Left|Ok|UCase|  
-    |Char|Length|RTrim||  
+    |Ascii|Left|Ok|UCase|  
+    |Char|Length|rtrim||  
     |Concat|Ltrim|SOUNDEX||  
     |Lcase|Sostituisci|substring||  
   

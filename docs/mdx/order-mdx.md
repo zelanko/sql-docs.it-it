@@ -1,5 +1,5 @@
 ---
-title: Order (MDX) | Documenti Microsoft
+title: Order (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277851"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -39,19 +39,19 @@ Order(Set_Expression, String_Expression
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
  *String_Expression*  
  Espressione stringa valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero espresso come stringa.  
   
-## <a name="remarks"></a>Remarks  
- Il **ordine** funzione può essere di tipo gerarchica (utilizzando il **ASC** o **DESC** flag) o gerarchico (come specificato utilizzando il **BASC** o **BDESC** flag; il **B** è l'acronimo di "interruzione della gerarchia"). Se **ASC** o **DESC** è specificato, il **ordine** funzione prima organizza i membri in base alla loro posizione nella gerarchia e quindi ogni livello. Se **BASC** o **BDESC** è specificato, il **ordine** funzione Organizza i membri del set indipendentemente dalla gerarchia. Viene specificato alcun flag, **ASC** è l'impostazione predefinita.  
+## <a name="remarks"></a>Note  
+ Il **ordine** funzione possa essere di tipo gerarchica (come specificato dal **ASC** o **DESC** flag) o gerarchico (come specificato dal **BASC**  oppure **BDESC** flag; il **B** è l'acronimo di "rispettare la gerarchia"). Se **ASC** o **DESC** viene specificato, il **ordine** funzione ordina prima i membri in base alla loro posizione nella gerarchia e quindi gli ordini ogni livello. Se **BASC** oppure **BDESC** viene specificato, il **ordine** funzione Organizza i membri del set indipendentemente dalla gerarchia. Viene specificato alcun flag, **ASC** è il valore predefinito.  
   
- Se il **ordine** funzione viene utilizzata con un set in cui due o più gerarchie sono Crossjoin e **DESC** flag viene utilizzato, vengono ordinati solo i membri dell'ultima gerarchia del set. Questa situazione rappresenta una modifica rispetto ad Analysis Services 2000 in cui tutte le gerarchie del set sono ordinate.  
+ Se il **ordine** funzione viene usata con un set in cui sono presenti due o più gerarchie e i **DESC** flag viene utilizzato, vengono ordinati solo i membri dell'ultima gerarchia del set. Questa situazione rappresenta una modifica rispetto ad Analysis Services 2000 in cui tutte le gerarchie del set sono ordinate.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce, dal **Adventure Works** del cubo, il numero di ordini dei rivenditori per tutti elementi Calendar Quarters dalla gerarchia Calendar nella dimensione Date. Il **ordine** funzione Riordina il set per l'asse ROWS. Il **ordine** funzione ordina il set da `[Reseller Order Count]` in ordine gerarchico discendente come base il `[Calendar]` gerarchia.  
+ L'esempio seguente restituisce, dal **Adventure Works** del cubo, il numero di ordini dei rivenditori per tutti elementi Calendar Quarters dalla gerarchia Calendar nella dimensione Date. Il **ordine** funzione Riordina il set per l'asse ROWS. Il **ordine** funzione ordina il set da `[Reseller Order Count]` in ordine gerarchico discendente come stabilito dal `[Calendar]` gerarchia.  
   
  `SELECT`  
   
@@ -69,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Si noti che in questo esempio, quando il **DESC** flag viene modificato in **BDESC**, la gerarchia viene interrotta e viene restituito l'elenco di elementi Calendar Quarters senza considerare per la gerarchia:  
+ Si noti che in questo esempio, quando la **DESC** flag viene impostato su **BDESC**, la gerarchia viene interrotta e l'elenco di elementi Calendar Quarters viene restituito senza considerare la gerarchia:  
   
  `SELECT`  
   
@@ -87,7 +87,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Nell'esempio seguente viene restituita la misura Reseller Sales per le cinque sottocategorie di prodotti più vendute, indipendentemente dalla gerarchia, in base a Reseller Gross Profit. Il **Subset** funzione viene utilizzata per restituire solo le prime 5 tuple nel set di dopo l'ordinamento del risultato mediante la **ordine** (funzione).  
+ Nell'esempio seguente viene restituita la misura Reseller Sales per le cinque sottocategorie di prodotti più vendute, indipendentemente dalla gerarchia, in base a Reseller Gross Profit. Il **sottoinsieme** funzione viene utilizzata per restituire solo i primi 5 tuple nel set di dopo l'ordinamento del risultato utilizzando il **ordine** (funzione).  
   
  `SELECT Subset`  
   
@@ -109,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- L'esempio seguente usa il **Rank** funzione per classificare i membri della gerarchia City, in base alla misura Reseller Sales Amount e visualizzarli in ordine di rango. Tramite il **ordine** funzione per ordinare il set di membri della gerarchia City, l'ordinamento viene eseguito una sola volta e quindi seguito da un'analisi lineare prima di essere visualizzato in un criterio di ordinamento.  
+ L'esempio seguente usa il **Rank** funzione per classificare i membri della gerarchia City in base alla misura Reseller Sales Amount e visualizzarli in ordine di rango. Tramite il **ordine** funzione per ordinare il set di membri della gerarchia City, l'ordinamento viene eseguito una sola volta ed è seguito da un'analisi lineare prima di essere visualizzato in modo ordinato.  
   
 ```  
 WITH   
@@ -127,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- L'esempio seguente restituisce il numero di prodotti nel set che sono univoci, utilizzando il **ordine** funzione per ordinare le tuple non vuote prima di applicare il **filtro** (funzione). Il **CurrentOrdinal** funzione viene utilizzata per confrontare ed eliminare i valori equivalenti.  
+ L'esempio seguente restituisce il numero di prodotti nel set che sono univoche, tramite il **ordine** funzione per ordinare le tuple non vuote prima di applicare le **filtro** (funzione). Il **CurrentOrdinal** funzione viene utilizzata per confrontare ed eliminare i valori equivalenti.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -161,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- Per comprendere come **DESC** flag i set di tuple, considerare innanzitutto i risultati della query seguente:  
+ Per comprendere come il **DESC** flag funziona con i set di tuple, considerare innanzitutto i risultati della query seguente:  
   
 ```  
   
@@ -175,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- Sull'asse delle righe è possibile vedere che i Sales Territory Groups sono stati ordinati in ordine decrescente per Quantità della tassa nel modo seguente: North America, Europe, Pacific, NA. Osservare cosa accade se si crossjoin il set di Sales Territory Groups con il set di Product Subcategories e applicare il **ordine** funziona nello stesso modo, come segue:  
+ Sull'asse delle righe è possibile vedere che i Sales Territory Groups sono stati ordinati in ordine decrescente per quantità della tassa nel modo seguente: Nord America, Europe, Pacific, NA. Osservare cosa accade se è crossjoin il set di Sales Territory Groups con il set di Product Subcategories e si applicano i **ordine** funzionano nello stesso modo, come indicato di seguito:  
   
 ```  
   
@@ -191,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- Mentre il set Product Subcategories è stato ordinato in modo gerarchico decrescente, gli elementi Sales Territory Groups attualmente non sono ordinati e vengono visualizzati nello stesso ordine in cui sono presenti nella gerarchia, ovvero Europe, NA, North America e Pacific. Questa situazione si verifica perché solo l'ultima gerarchia del set di tuple, ovvero Product Subcategories, è ordinata. Per riprodurre il comportamento di Analysis Services 2000, utilizzare una serie di annidati **genera** funzioni per ordinare ogni set prima che venga eseguito il cross join, ad esempio:  
+ Mentre il set di Product Subcategories è stato ordinato in ordine gerarchico decrescente gli elementi Sales Territory Groups attualmente non sono ordinati e vengono visualizzati in ordine che vengono visualizzati nella gerarchia: Europe, NA, North America e Pacific. Questa situazione si verifica perché solo l'ultima gerarchia del set di tuple, ovvero Product Subcategories, è ordinata. Per riprodurre il comportamento di Analysis Services 2000, utilizzare una serie di annidati **genera** funzioni per ordinare ogni set prima che venga eseguito il cross join, ad esempio:  
   
 ```  
   
@@ -212,6 +212,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

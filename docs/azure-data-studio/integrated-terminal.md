@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239371"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
 
@@ -96,8 +96,8 @@ Di seguito sono elencati i tasti di scelta rapida per spostarsi rapidamente nel 
 
 Key|Comando
 ---|---
-**CTRL+`**|Mostra terminale integrato
-**CTRL+MAIUSC+`**|Crea un nuovo terminale
+**CTRL +'**| Terminale integrato Show
+**CTRL + MAIUSC +'**| Creare nuovo terminale
 **CTRL+freccia su**|Scorre verso l'alto
 **CTRL+freccia giù**|Scorre verso il basso
 **CTRL+PGSU**|Scorre di una pagina verso l'alto

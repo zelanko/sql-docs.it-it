@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di valori vuoti | Documenti Microsoft
+title: Uso di valori vuoti | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251440"
 ---
 # <a name="working-with-empty-values"></a>Utilizzo di valori vuoti
 
@@ -46,16 +46,16 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Per i valori vuoti vale quanto segue:  
   
--   Il [IsEmpty](../mdx/isempty-mdx.md) risultato della funzione **TRUE** se e solo se la cella identificata dalla tupla specificata nella funzione è vuota. In caso contrario, la funzione restituisce **FALSE**.  
+-   Il [IsEmpty](../mdx/isempty-mdx.md) funzione restituisce **TRUE** se e solo se la cella identificata dalla tupla specificata nella funzione è vuota. In caso contrario, la funzione restituisce **FALSE**.  
   
     > [!NOTE]  
-    >  Il **IsEmpty** funzione non è possibile determinare se un'espressione di membro restituisce un valore null. Per determinare se un membro null viene restituito da un'espressione, utilizzare il [IS](../mdx/is-mdx.md)operatore.  
+    >  Il **IsEmpty** funzione non è possibile determinare se un'espressione di membro restituisce un valore null. Per determinare se un membro null viene restituito da un'espressione, usare il [IS](../mdx/is-mdx.md)operatore.  
   
 -   Quando il valore di cella vuota è un operando per un operatore numerico (+, -, *, /), verrà trattato come zero se l'altro operando è un valore non vuoto. Se entrambi gli operandi sono vuoti, l'operatore numerico restituirà il valore di cella vuota.  
   
 -   Quando il valore di cella vuota è un operando per l'operatore di concatenazione delle stringhe (+), verrà trattato come una stringa vuota se l'altro operando è un valore non vuoto. Se entrambi gli operandi sono vuoti, l'operatore di concatenazione delle stringhe restituirà il valore di cella vuota.  
   
--   Quando il valore di cella vuota è un operando per gli operatori di confronto (=. <>, > =, \<=, >, <), il valore di cella vuota viene trattato come zero o una stringa vuota, a seconda se il tipo di dati di altro operando sia numeric o string, rispettivamente. Se entrambi gli operandi sono vuoti, verranno trattati come zero.  
+-   Quando il valore di cella vuota è un operando per gli operatori di confronto (=. <>, > =, \<=, >, <), il valore di cella vuota viene trattato come zero o una stringa vuota, a seconda del fatto che il tipo di dati di altro operando sia numeric o string, rispettivamente. Se entrambi gli operandi sono vuoti, verranno trattati come zero.  
   
 -   Quando si confrontano valori numerici, il valore di cella vuota occupa la stessa posizione dello zero. Nel confronto tra il valore di cella vuota e lo zero, il valore di cella vuota precede lo zero.  
   
@@ -64,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>Gestione di valori vuoti in cubi e istruzioni MDX  
  Nelle istruzioni MDX (Multidimensional Expressions) è possibile cercare valori vuoti e quindi eseguire determinati calcoli su celle contenenti dati validi, ovvero non vuote. L'eliminazione dei valori vuoti prima dell'esecuzione dei calcoli può essere molto importante, perché se vengono incluse celle vuote alcuni calcoli, ad esempio il calcolo della media, non vengono eseguiti correttamente.  
   
- Se nei dati della tabella dei fatti sottostante sono archiviati dei valori vuoti, per impostazione predefinita tali valori saranno convertiti in zeri durante l'elaborazione del cubo. È possibile utilizzare il **elaborazione valori Null** opzione in una misura per controllare se i fatti null vengono convertiti in 0, convertito in un valore vuoto o se viene generato un errore durante l'elaborazione. Se non si desidera che nei risultati di una query appaiano valori di cella vuoti, è necessario creare query, membri calcolati o istruzioni di script MDX che eliminano i valori vuoti o li sostituiscono con altri valori.  
+ Se nei dati della tabella dei fatti sottostante sono archiviati dei valori vuoti, per impostazione predefinita tali valori saranno convertiti in zeri durante l'elaborazione del cubo. È possibile usare la **elaborazione valori Null** opzione in una misura per controllare se fatti null vengono convertiti in valori 0, convertita in un valore vuoto o se viene generato un errore durante l'elaborazione. Se non si desidera che nei risultati di una query appaiano valori di cella vuoti, è necessario creare query, membri calcolati o istruzioni di script MDX che eliminano i valori vuoti o li sostituiscono con altri valori.  
   
  Per rimuovere righe o colonne vuote da una query, è possibile utilizzare l'istruzione NON EMPTY prima della definizione del set di assi. Ad esempio, nella query seguente viene restituita solo la categoria di prodotti Bikes perché è l'unica categoria che ha avuto vendite nell'anno 2001:  
   
@@ -124,7 +124,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**VUOTO**|FALSE|EMPTY|FALSE|  
+|**VUOTA**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  Nella tabella seguente vengono indicati i risultati ottenuti quando si applica l'operatore OR a due operandi booleani.  
@@ -132,7 +132,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |o|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**VUOTO**|TRUE|TRUE|  
+|**VUOTA**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  Nella tabella seguente viene illustrato come l'operatore NOT esegue la negazione, ovvero inverte, il risultato di un operatore booleano.  
@@ -144,7 +144,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   

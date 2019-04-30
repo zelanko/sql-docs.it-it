@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: badfb3afaeba92f366e62fce8dfcb3ec7dae9f29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311955"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migrazione di database MySQL a SQL Server - Azure SQL database (MySQLToSql)
 SQL Server Migration Assistant (SSMA) per MySQL è un ambiente completo che consente di rapidamente la migrazione di database MySQL a SQL Server o SQL Azure. Tramite SSMA per MySQL, è possibile esaminare i dati e oggetti di database, valutare i database per la migrazione, eseguire la migrazione di oggetti di database a SQL Server o SQL Azure e quindi eseguire la migrazione dei dati in SQL Server o SQL Azure.  

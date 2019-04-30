@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db00ac11e2e3ec8cc0119dfa7f34452409689d6d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270926"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>Esempi di conversione di dati da SQL a C
 

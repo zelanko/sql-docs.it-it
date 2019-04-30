@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75fc5d3ac1aecebca938e55c29a80bf5270bbd4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249127"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO per indice sintassi di Visual C++ con #import
 Questo indice è un riferimento incrociato a riferimenti al linguaggio ADO basato su Microsoft Visual C++ e il **#import** direttiva.  

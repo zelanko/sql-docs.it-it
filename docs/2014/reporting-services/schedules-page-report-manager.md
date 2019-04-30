@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237839"
 ---
 # <a name="schedules-page-report-manager"></a>Pagina Pianificazioni (Gestione report)
   La pagina Pianificazioni consente di creare, modificare, eliminare, sospendere o riprendere pianificazioni condivise. Una pianificazione condivisa è una pianificazione denominata che è possibile creare e gestire separatamente dai report, dalle sottoscrizioni o dagli altri processi che utilizzano le pianificazioni. Gli utenti possono selezionare le pianificazioni condivise rese disponibili.  

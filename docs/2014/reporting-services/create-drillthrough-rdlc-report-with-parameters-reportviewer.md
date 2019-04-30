@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79e43f273183d531a8fbc61fd71315a971213773
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265384"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
   Un report [drill-through](https://technet.microsoft.com/library/ff519554.aspx) è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa esercitazione verranno illustrati le seguenti lezioni sulla creazione di un report drill-through con parametri e una query, in [report in modalità locale](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  

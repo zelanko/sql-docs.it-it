@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a66c28295b4b2678903d0fe7115b724db419edd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301939"
 ---
 # <a name="aggregate-function-limitations"></a>Limitazioni delle funzioni di aggregazione
 Una funzione di aggregazione e un riferimento a colonna non di aggregazione non può essere utilizzati come argomenti a una singola istruzione SQL.

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261102"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Pagina delle proprietà Generale, Origini dati condivise (Gestione report)
   La pagina delle proprietà Generale consente di visualizzare o modificare le proprietà di un elemento origine dati condivisa. Quando si fa clic su **Applica**, tutte le modifiche apportate alle proprietà vengono applicate a tutti i report che fanno riferimento all'origine dei dati condivisa.  

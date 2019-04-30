@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0272c7598e34d7ba920484b3d2b9c504587212cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261335"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installazione, disinstallazione e supporto di Generatore report
   Generatore report è uno strumento di creazione di report che consente di creare, aggiornare e condividere report, parti del report e set di dati condivisi. Generatore report è disponibile in due versioni: autonoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La versione autonoma viene installata nel computer in uso dall'utente o da un amministratore. La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] viene installata automaticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e viene scaricata nel computer da Gestione report o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

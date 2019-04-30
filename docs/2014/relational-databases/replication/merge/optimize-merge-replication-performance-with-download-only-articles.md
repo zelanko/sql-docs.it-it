@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250372"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Ottimizzazione delle prestazioni della replica di tipo merge con gli articoli di solo download
   La replica di tipo merge offre due tipi di articoli differenti per soddisfare le diverse esigenze applicative. Le pubblicazioni possono contenere uno o più di questi tipi di articoli in base al tipo di applicazione:  

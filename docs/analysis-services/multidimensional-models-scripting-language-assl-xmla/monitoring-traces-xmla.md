@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261624"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitoraggio di tracce (XMLA)
   È possibile usare la [Sottoscrivi](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) comando in XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il **"Subscribe"** comando restituisce i risultati di una traccia come set di righe.  
@@ -27,13 +27,13 @@ ms.locfileid: "50145747"
   
  Nel set di righe sono contenute le colonne elencate nella tabella seguente.  
   
-|colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |EventClass|Valore intero|Classe di evento dell'evento ricevuto dalla traccia.|  
 |EventSubclass|Long integer|Sottoclasse di evento dell'evento ricevuto dalla traccia.|  
-|CurrentTime|DATETIME|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|StartTime|DATETIME|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|EndTime|DATETIME|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
+|CurrentTime|Datetime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|StartTime|Datetime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|EndTime|Datetime|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
 |Duration|Long integer|Durata dell'evento (in millisecondi).|  
 |CPUTime|Long integer|Tempo processore utilizzato per l'evento (in millisecondi).|  
 |JobID|Long integer|Identificatore di processo.|  
@@ -48,8 +48,8 @@ ms.locfileid: "50145747"
 |ObjectReference|String|Rappresentazione XML del riferimento all'oggetto per l'oggetto specificato in ObjectName.|  
 |NestLevel|Valore intero|Livello della transazione per cui si è verificato l'evento.|  
 |NumSegments|Long integer|Numero di segmenti di dati interessati o utilizzati dal comando per cui si è verificato l'evento.|  
-|Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> <br /><br /> 0: operazione riuscita<br /><br /> <br /><br /> 1: informazioni<br /><br /> <br /><br /> 2: avviso<br /><br /> <br /><br /> 3: errore|  
-|Esito positivo|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
+|Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> <br /><br /> 0: Riuscito<br /><br /> <br /><br /> 1: Informazioni<br /><br /> <br /><br /> 2: Avviso<br /><br /> <br /><br /> 3: Errore|  
+|Riuscito|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
 |Errore|Long integer|Numero di errore di un evento, se applicabile.|  
 |ConnectionID|String|Identificatore della connessione per cui si è verificato l'evento.|  
 |DatabaseName|String|Nome del database per cui si è verificato l'evento.|  

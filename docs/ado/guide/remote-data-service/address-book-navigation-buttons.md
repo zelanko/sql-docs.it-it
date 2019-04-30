@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d3b2660f3a20883e9b9f2d3b4202526c15a943
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242790"
 ---
 # <a name="address-book-navigation-buttons"></a>Pulsanti di spostamento di Address Book
 L'applicazione Address Book Visualizza i pulsanti di navigazione nella parte inferiore della pagina Web. È possibile utilizzare i pulsanti di navigazione per spostarsi tra i dati nella visualizzazione della griglia HTML selezionando prima o ultima riga di dati o righe adiacenti per la selezione corrente.  

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cbadcd0f42f8d5ae81ea2a97625be96214df4ce2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270264"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>Non sono state specificate directory virtuali (Upgrade Advisor)
   Non sono state rilevate impostazioni di directory virtuali per il servizio Web ReportServer o Gestione report. Dopo che l'aggiornamento è stato completato, è necessario configurare le prenotazioni URL per il server di report tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48227151"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  L'aggiornamento di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede di riservare nuovi URL per il servizio Web ReportServer e Gestione report. Per l'istanza da aggiornare, non sono state rilevate directory virtuali per il server di report o Gestione report. Pertanto, le informazioni disponibili non sono sufficienti per creare prenotazioni URL per il server di report aggiornato. L'aggiornamento può continuare, ma la directory virtuale del server di report o di Gestione report non sarà definita dopo che l'installazione è stata aggiornata.  
   
 ## <a name="corrective-action"></a>Azione correttiva  

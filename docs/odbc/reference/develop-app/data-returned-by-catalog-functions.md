@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267725"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Dati restituiti dalle funzioni catalogo
 Ogni funzione di catalogo restituisce dati come set di risultati. Questo set di risultati non è diverso da qualsiasi altro set di risultati. Viene in genere generato da un oggetto predefinito, con parametri **seleziona** istruzione che è hardcoded nel driver o archiviarlo in una routine nell'origine dati. Per informazioni su come recuperare i dati da un set di risultati, vedere [è stato creato di impostare un risultato?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

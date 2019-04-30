@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280785"
 ---
 # <a name="odbc-translators-subkey"></a>Sottochiave ODBC Translators
 I valori nella sottochiave ODBC Translators elencare i traduttori installati. Nella tabella seguente viene illustrato il formato di questi valori.  
   
-|nome|Tipo di dati|data|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
-|*Microsoft Translator desc*|REG_SZ|**installato**|  
+|*translator-desc*|REG_SZ|**installato**|  
   
  Il *traduttore desc* nome è definito dallo sviluppatore di Microsoft translator.  
   

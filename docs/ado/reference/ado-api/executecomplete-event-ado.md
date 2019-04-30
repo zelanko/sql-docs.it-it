@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec656a49963eb02cb204d5be96d403726bba8c56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301327"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
 Il **ExecuteComplete** eventi viene chiamato dopo che un comando ha terminato l'esecuzione.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275899"
 ---
 # <a name="error-object"></a>Oggetto Error
 Contiene informazioni dettagliate sugli errori di accesso dati che si riferiscono a una singola operazione che interessa il provider.  
@@ -61,5 +61,5 @@ Contiene informazioni dettagliate sugli errori di accesso dati che si riferiscon
  [Description, HelpContext, HelpFile, NativeError, numero, origine e SQLState proprietà esempio (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, numero, origine e SQLState esempio di proprietà (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

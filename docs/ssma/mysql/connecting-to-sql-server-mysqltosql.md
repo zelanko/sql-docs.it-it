@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273505"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Connessione a SQL Server (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server, è necessario connettersi all'istanza di destinazione di SQL Server. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di SQL Server e visualizza i metadati del database in Esplora i metadati di SQL Server. SSMA archivia le informazioni dell'istanza di SQL Server si è connessi a, ma non archiviano le password.  

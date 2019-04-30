@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250536"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
   L'oggetto prestazione **SQLServer:HTTP_STORAGE_OBJECT** è costituito dai contatori delle prestazioni per il monitoraggio dell'account di archiviazione Windows Azure. Usando [file di dati di SQL Server in Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) funzionalità, è possibile archiviare i file di database nei blob di archiviazione Windows Azure. Questo oggetto prestazione considera ogni account di archiviazione Windows Azure come unità diversa.  

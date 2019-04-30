@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248903"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfacce e oggetti ADO
 Le relazioni tra tali oggetti sono rappresentate nel [modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -41,14 +41,14 @@ Le relazioni tra tali oggetti sono rappresentate nel [modello a oggetti ADO](../
 |[Proprietà](../../../ado/reference/ado-api/property-object-ado.md)|Rappresenta una caratteristica dinamica di un oggetto ADO che viene definito dal provider.|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|Rappresenta una riga di una **Recordset**, o una directory o file in un file system. Il **Record** oggetto è sicuro per lo scripting.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Rappresenta il set di record da una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, il **Recordset** oggetto fa riferimento a un singolo record all'interno del set come record corrente.<br /><br /> Il **Recordset** oggetto è sicuro per lo scripting.|  
-|[flusso](../../../ado/reference/ado-api/stream-object-ado.md)|Rappresenta un flusso binario dei dati.<br /><br /> Il **Stream** oggetto è sicuro per lo scripting.|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Rappresenta un flusso binario dei dati.<br /><br /> Il **Stream** oggetto è sicuro per lo scripting.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   

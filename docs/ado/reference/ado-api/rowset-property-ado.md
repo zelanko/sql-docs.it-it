@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315793"
 ---
 # <a name="rowset-property-ado"></a>Proprietà Rowset (ADO)
 Ottiene o imposta un DB OLE **Rowset** oggetto da/in un **ADORecordsetConstruction** oggetto. Quando si usa put_Rowset, il set di righe viene trasformato in un oggetto ADO **Recordset** oggetto.  
@@ -43,7 +43,7 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  *ppRowset*  
  Puntatore a OLE DB **set di righe** oggetto.  
   
- *pRowset*  
+ *PRowset*  
  OLE DB **set di righe** oggetto.  
   
 ## <a name="return-values"></a>Valori restituiti  

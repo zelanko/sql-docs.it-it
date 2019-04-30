@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265070"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procedura: Distribuire un elemento del report personalizzato
   Per distribuire un elemento del report personalizzato in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario modificare i file di configurazione del server di report e copiare gli assembly del componente runtime e della fase di progettazione nelle cartelle appropriate dell'applicazione sia per Progettazione report sia per il server di report.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Per distribuire un elemento del report personalizzato  
   
-1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che la voce `ReportItemName` deve corrispondere all'attributo `CustomReportItemAttribute` utilizzato nella classe `CustomReportItemDesigner`. Ad esempio:  
+1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che la voce `ReportItemName` deve corrispondere all'attributo `CustomReportItemAttribute` utilizzato nella classe `CustomReportItemDesigner`. Ad esempio:   
   
     ```  
     <ReportItems>  
@@ -38,7 +38,7 @@ ms.locfileid: "60158517"
     </ReportItemConverter>  
     ```  
   
-2.  Modificare il file Rsreportserver.config per registrare il componente runtime dell'elemento del report personalizzato. Ad esempio:   
+2.  Modificare il file Rsreportserver.config per registrare il componente runtime dell'elemento del report personalizzato. Ad esempio:  
   
     ```  
     <ReportItems>  
@@ -46,7 +46,7 @@ ms.locfileid: "60158517"
     </ReportItems>  
     ```  
   
-3.  Modificare il file Rsssrvpolicy.config per aggiungere una parola chiave `CodeGroup` che conceda le autorizzazioni appropriate all'elemento del report personalizzato. Ad esempio:  
+3.  Modificare il file Rsssrvpolicy.config per aggiungere una parola chiave `CodeGroup` che conceda le autorizzazioni appropriate all'elemento del report personalizzato. Ad esempio:   
   
     ```  
     <CodeGroup   

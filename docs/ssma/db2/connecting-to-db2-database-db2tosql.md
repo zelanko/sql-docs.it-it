@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299352"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>La connessione al Database di DB2 (DB2ToSQL)
 Per eseguire la migrazione di database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario connettersi al database DB2 che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi DB2 e successivamente visualizzata nel riquadro di esplorazione di metadati di DB2. SSMA archivia le informazioni sui server di database, ma non archivia le password.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;= (Minore o uguale a) (MDX) | Documenti Microsoft'
+title: '&lt;= (Minore o uguale a) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02f6990698603efdf813e244d11e57c3bd6bb7eb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311896"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (Minore o uguale a) (MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression <= MDX_Expression
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano basato sulle condizioni seguenti:  
   
--   t**rue** se entrambi i parametri sono non null e il primo parametro è un valore che può essere minore o uguale al valore del secondo parametro.  
+-   t**rue** se entrambi i parametri sono non null e il primo parametro ha un valore che può essere minore o uguale al valore del secondo parametro.  
   
--   f**alse** se entrambi i parametri sono non null e il primo parametro è un valore che maggiore del valore del secondo parametro.  
+-   f**alse** se entrambi i parametri sono non null e il primo parametro presenta un valore che maggiore del valore del secondo parametro.  
   
 -   Null se uno o entrambi i parametri restituiscono un valore Null.  
   

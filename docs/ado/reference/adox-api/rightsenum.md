@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1904a77ae104576f2a9f82fc09d8728e2ec88c11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281881"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Specifica i diritti o le autorizzazioni per un gruppo o utente in un oggetto.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|L'utente o il gruppo dispone dell'autorizzazione per creare nuovi oggetti di questo tipo.|  
-|**adRightDelete**|65536 (&AMP; H10000)|L'utente o il gruppo dispone dell'autorizzazione per eliminare i dati da un oggetto. Per gli oggetti, ad esempio **tabelle**, l'utente dispone dell'autorizzazione per eliminare i valori dei dati dai record.|  
-|**adRightDrop**|256 (&AMP; H100)|L'utente o il gruppo dispone dell'autorizzazione per rimuovere gli oggetti dal catalogo. Ad esempio, **tabelle** può essere eliminato da un comando SQL DROP TABLE.|  
+|**adRightDelete**|65536 (&H10000)|L'utente o il gruppo dispone dell'autorizzazione per eliminare i dati da un oggetto. Per gli oggetti, ad esempio **tabelle**, l'utente dispone dell'autorizzazione per eliminare i valori dei dati dai record.|  
+|**adRightDrop**|256 (&H100)|L'utente o il gruppo dispone dell'autorizzazione per rimuovere gli oggetti dal catalogo. Ad esempio, **tabelle** può essere eliminato da un comando SQL DROP TABLE.|  
 |**adRightExclusive**|512 (&H200)|L'utente o il gruppo dispone dell'autorizzazione per accedere all'oggetto in modo esclusivo.|  
 |**adRightExecute**|536870912 (&H20000000)|L'utente o il gruppo dispone dell'autorizzazione per eseguire l'oggetto.|  
 |**adRightFull**|268435456 (&H10000000)|L'utente o il gruppo ha tutte le autorizzazioni sull'oggetto.|  
-|**adRightInsert**|32768 (&AMP; H8000)|L'utente o il gruppo dispone dell'autorizzazione per inserire l'oggetto. Per gli oggetti, ad esempio **tabelle**, l'utente dispone dell'autorizzazione per inserire dati nella tabella.|  
+|**adRightInsert**|32768 (&H8000)|L'utente o il gruppo dispone dell'autorizzazione per inserire l'oggetto. Per gli oggetti, ad esempio **tabelle**, l'utente dispone dell'autorizzazione per inserire dati nella tabella.|  
 |**adRightMaximumAllowed**|33554432 (&H2000000)|L'utente o il gruppo è il numero massimo di autorizzazioni consentite dal provider. Autorizzazioni specifiche dipendono dal provider.|  
 |**adRightNone**|0|L'utente o il gruppo non dispone di autorizzazioni per l'oggetto.|  
 |**adRightRead**|-2147483648 (&H80000000)|L'utente o il gruppo dispone dell'autorizzazione per leggere l'oggetto. Per gli oggetti, ad esempio [tabelle](../../../ado/reference/adox-api/table-object-adox.md), l'utente dispone dell'autorizzazione per leggere i dati nella tabella.|  
@@ -44,7 +44,7 @@ Specifica i diritti o le autorizzazioni per un gruppo o utente in un oggetto.
 |**adRightUpdate**|1073741824 (&H40000000)|L'utente o il gruppo dispone dell'autorizzazione per aggiornare l'oggetto. Per gli oggetti, ad esempio **tabelle**, l'utente dispone dell'autorizzazione per aggiornare i dati nella tabella.|  
 |**adRightWithGrant**|4096 (&H1000)|L'utente o il gruppo dispone dell'autorizzazione per concedere le autorizzazioni per l'oggetto.|  
 |**adRightWriteDesign**|2048 (&H800)|L'utente o il gruppo dispone dell'autorizzazione per modificare la progettazione per l'oggetto.|  
-|**adRightWriteOwner**|524288 (&AMP; H80000)|L'utente o il gruppo dispone dell'autorizzazione per modificare il proprietario dell'oggetto.|  
+|**adRightWriteOwner**|524288 (&H80000)|L'utente o il gruppo dispone dell'autorizzazione per modificare il proprietario dell'oggetto.|  
 |**adRightWritePermissions**|262144 (&H40000)|L'utente o gruppo possa modificare le autorizzazioni specifiche per un oggetto nel catalogo.|  
   
 ## <a name="applies-to"></a>Si applica a  

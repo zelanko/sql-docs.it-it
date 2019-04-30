@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281942"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
 Il comportamento predefinito del gestore consiste nel rifiutare tutte le connessioni. Il **connettere** sezione specifica le eccezioni a tale comportamento. Ad esempio, se tutti i **connettere** sezioni sono assenti o vuota, quindi per impostazione predefinita è stato possibile stabilire alcuna connessione.  
@@ -57,7 +57,7 @@ connectionString
 |Parte|Descrizione|  
 |----------|-----------------|  
 |**Connect**|Una valore letterale stringa che indica che si è una voce della stringa di connessione.|  
-|**_ConnectionString_**|Stringa che sostituisce la stringa di connessione client intero.|  
+|**_connectionString_**|Stringa che sostituisce la stringa di connessione client intero.|  
 |**Accesso**|Una valore letterale stringa che indica che si è una voce di accesso.|  
 |**_accessRight_**|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** -utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** -l'utente può leggere l'origine dati.<br />-   **Lettura/scrittura** -utente può leggere o scrivere nell'origine dati.|  
   

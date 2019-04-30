@@ -1,5 +1,5 @@
 ---
-title: '- (Negativo) (MDX) | Documenti Microsoft'
+title: '- (Negativo) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1406eee16ed2ec0349aa4405a4f59b478048dcdf
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277526"
 ---
 # <a name="--negative-mdx"></a>- (negativo) (MDX)
 
@@ -29,7 +29,7 @@ ms.locfileid: "34742350"
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  

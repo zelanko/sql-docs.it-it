@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312914"
 ---
 # <a name="like-predicate-escape-character"></a>Carattere di escape nel predicato LIKE
 In un **, ad esempio** predicato, il segno di percentuale (%) corrisponde a zero o più di qualsiasi carattere e il carattere di sottolineatura (_) corrisponde a qualsiasi carattere. In base a un segno di percentuale effettivo o un carattere di sottolineatura un **, ad esempio** predicato, un carattere di escape deve precedere il segno di percentuale o un carattere di sottolineatura. La sequenza di escape che definisce il **, ad esempio** carattere di escape nel predicato è:  
@@ -28,7 +28,7 @@ In un **, ad esempio** predicato, il segno di percentuale (%) corrisponde a zero
   
  in cui *carattere di escape* è qualsiasi carattere supportati dall'origine dati.  
   
- Per altre informazioni su questo tipo di sequenza di escape, vedere [come sequenza di Escape](../../../odbc/reference/appendixes/like-escape-sequence.md) nell'appendice c: SQL grammatica.  
+ Per altre informazioni su questo tipo di sequenza di escape, vedere [come sequenza di Escape](../../../odbc/reference/appendixes/like-escape-sequence.md) nell'appendice c: Grammatica SQL.  
   
  Le istruzioni SQL seguenti, ad esempio, creano lo stesso set di risultati del cliente nomi che iniziano con i caratteri "% AAA". La prima istruzione Usa la sintassi di escape-sequence. La seconda istruzione viene utilizzata la sintassi nativa per Microsoft® Access e non è interoperativa. Si noti che la percentuale secondo carattere in ognuno **, ad esempio** predicato è un carattere jolly che corrisponde a zero o più di qualsiasi carattere.  
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233559"
 ---
 # <a name="sqltableprivileges-function"></a>Funzione SQLTablePrivileges
 **Conformità**  
@@ -60,7 +60,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength1*  
  [Input] Lunghezza in caratteri della **CatalogName*.  
   
- *NomeSchema*  
+ *SchemaName*  
  [Input] Criterio di ricerca di stringa per i nomi degli schemi. Se un driver supporta gli schemi per alcune tabelle ma non per altri, ad esempio quando il driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le tabelle che non hanno schemi.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *SchemaName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa.  
@@ -126,7 +126,7 @@ SQLRETURN SQLTablePrivileges(
 |Nome colonna|Numero colonna|Tipo di dati|Commenti|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nome del catalogo; NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
-|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome dello schema; NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non hanno schemi.|  
+|TABLE_SCHEM  (ODBC 1.0)|2|Varchar|Nome dello schema; NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non hanno schemi.|  
 |TABLE_NAME (ODBC 1.0)|3|Non NULL varchar|Nome della tabella.|  
 |GRANTOR (ODBC 1.0)|4|Varchar|Nome dell'utente che ha concesso il privilegio; NULL se non applicabile all'origine dati.<br /><br /> Per tutte le righe in cui il valore nella colonna all'utente autorizzato è il proprietario dell'oggetto, la colonna GRANTOR sarà sistema".|  
 |ALL'UTENTE AUTORIZZATO (ODBC 1.0)|5|Non NULL varchar|Nome dell'utente a cui è stato concesso il privilegio.|  

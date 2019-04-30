@@ -1,5 +1,5 @@
 ---
-title: Funzioni VBA in MDX e DAX | Documenti Microsoft
+title: Funzioni VBA in MDX e DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251552"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funzioni VBA in MDX e DAX
 
 
-  Questo documento contiene un riferimento incrociato di tutte le funzioni VBA disponibili in [le funzioni di Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) che sono supportate in MDX; inoltre, l'elenco include una nota quando si verifica l'equivalenza funzionale con il linguaggio DAX .  
+  Questo documento contiene un riferimento incrociato di tutte le funzioni VBA disponibili nella [funzioni di applicazioni Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) che sono supportati in MDX; inoltre, l'elenco include una nota quando si verifica l'equivalenza funzionale con il linguaggio DAX .  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Riferimenti a funzioni di Visual Basic, Applications Edition  
   
@@ -51,12 +51,12 @@ ms.locfileid: "34743890"
 |CurDir|Non supportato||  
 |CVar|Solo MDX||  
 |CVErr|Non supportato||  
-|date|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione DATE (Year, Month, Day), utilizzato per generare un valore di tipo date dagli argomenti specificati|  
-|DateAdd|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, la funzione DATEADD (\<date >, < number_of_intervals >,\<intervallo >) funzione, utilizzata per scorrere le date specificate da un numero di intervalli specificati|  
+|date|Solo MDX|**Avviso** con DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione DATE (Year, Month, Day), usato per generare un valore di tipo date dagli argomenti specificati|  
+|DateAdd|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, il DATEADD (\<date >, < number_of_intervals >,\<interval >) funzione, utilizzato per scorrere le date specificate da un numero di intervalli specificati|  
 |DateDiff]|Solo MDX||  
 |DatePart|Solo MDX||  
 |DateSerial|Solo MDX||  
-|Funzione DateValue]|DAX, MDX||  
+|DateValue]|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|Solo MDX||  
 |Dir|Non supportato||  
@@ -83,7 +83,7 @@ ms.locfileid: "34743890"
 |GetSetting|Non supportato||  
 |Hex|Solo MDX||  
 |Ora|DAX, MDX||  
-|Iif|Solo MDX|**Avviso** DAX viene implementata una funzione simile con il nome: IF (logical_test, value_if_true, value_if_false) (funzione).|  
+|Iif|Solo MDX|**Avviso** con DAX viene implementata una funzione simile con il nome: IF (logical_test, value_if_true, value_if_false) (funzione).|  
 |IMEStatus|Non supportato||  
 |Input|Non supportato||  
 |InputBox|Non supportato||  
@@ -93,7 +93,7 @@ ms.locfileid: "34743890"
 |IPmt|Solo MDX||  
 |IRR|Solo MDX||  
 |IsArray|Solo MDX||  
-|Solo IsDateMDX||  
+|IsDateMDX solo||  
 |IsEmpty|Solo MDX||  
 |IsError|DAX, MDX||  
 |IsMissing|Solo MDX||  
@@ -107,7 +107,7 @@ ms.locfileid: "34743890"
 |Len|DAX, MDX||  
 |Loc|Non supportato||  
 |LOF|Non supportato||  
-|File di log|Solo MDX|**Importante** DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione LOG (number, base). Viene restituito il logaritmo di un numero nella base specificata dagli argomenti specificati.|  
+|File di log|Solo MDX|**Importante** con DAX viene implementata una funzione diversa con lo stesso nome, la funzione LOG (number, base). Viene restituito il logaritmo di un numero nella base specificata dagli argomenti specificati.|  
 |LTrim|Solo MDX||  
 |MacID|Non supportato||  
 |MacScript|Non supportato||  

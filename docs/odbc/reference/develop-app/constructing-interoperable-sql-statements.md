@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281084"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Creazione di istruzioni SQL interoperative
 Come indicato nelle sezioni precedenti, le applicazioni interoperative devono usare la grammatica SQL ODBC. Oltre usando i tohoto odkazu, tuttavia, un numero di altri problemi riscontrato dalle applicazioni interoperative. Ad esempio, che cosa fa un'applicazione? se desidera utilizzare una funzionalità, ad esempio gli outer join, che non è supportata da tutte le origini dati  

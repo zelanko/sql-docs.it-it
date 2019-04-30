@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266175"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Creare un'origine dati incorporata o condivisa (SSRS)
   Un'origine dati del report consente di specificare un nome e le informazioni di connessione. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita in una definizione del report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita come elemento separato e può essere utilizzata da più report. Per altre informazioni, vedere [incorporate e condivise le connessioni dati o origini dati &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

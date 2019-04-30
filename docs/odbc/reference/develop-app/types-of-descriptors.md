@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305622"
 ---
 # <a name="types-of-descriptors"></a>Tipi di descrittori
 Un descrittore viene usato per descrivere uno dei seguenti:  
@@ -46,7 +46,7 @@ Un descrittore viene usato per descrivere uno dei seguenti:
 |**Buffer dell'applicazione**|descrittore della riga di applicazione (ARD)|descrittore del parametro dell'applicazione (APD)|  
 |**Buffer di implementazione**|descrittore della riga di implementazione (IRD)|Descrizione del parametro di implementazione (IPD)|  
   
- Per il parametro o il buffer di riga, se l'applicazione specifica tipi di dati diversi in record corrispondente dei descrittori di implementazione e dell'applicazione, il driver esegue la conversione dei dati quando si usa i descrittori. Ad esempio, può convertire valori numerici e data/ora in formato stringa di caratteri. (Per le conversioni valide, vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Per il parametro o il buffer di riga, se l'applicazione specifica tipi di dati diversi in record corrispondente dei descrittori di implementazione e dell'applicazione, il driver esegue la conversione dei dati quando si usa i descrittori. Ad esempio, può convertire valori numerici e data/ora in formato stringa di caratteri. (Per le conversioni valide, vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
  Un descrittore di è possibile eseguire diversi ruoli. Istruzioni diversi possono condividere qualsiasi descrittore allocate in modo esplicito dall'applicazione. Un descrittore delle righe in un'unica istruzione può essere utilizzato come un descrittore del parametro in un'altra istruzione.  
   

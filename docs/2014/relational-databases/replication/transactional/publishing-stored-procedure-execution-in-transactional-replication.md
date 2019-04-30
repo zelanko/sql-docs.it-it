@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272823"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale
   Se una o più stored procedure vengono eseguite nel server di pubblicazione e influiscono su tabelle pubblicate, è possibile includerle nella pubblicazione sotto forma di articoli di esecuzione delle stored procedure. La definizione della procedura, ovvero l'istruzione CREATE PROCEDURE, viene replicata nel Sottoscrittore durante l'inizializzazione della sottoscrizione. Quando la procedura viene eseguita nel server di pubblicazione, la replica esegue la procedura corrispondente nel Sottoscrittore. Ciò può migliorare sensibilmente le prestazioni, ad esempio nel caso di operazioni batch di grandi dimensioni, poiché viene replicata solo l'esecuzione della procedura senza necessità di replicare le singole modifiche di ogni riga. Si supponga, ad esempio, di creare la stored procedure seguente nel database di pubblicazione:  

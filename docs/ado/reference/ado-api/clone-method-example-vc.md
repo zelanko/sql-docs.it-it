@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfb5c03a9de4a5864984fb10d92d7069d8f38fbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302460"
 ---
 # <a name="clone-method-example-vc"></a>Esempio del metodo Clone (VC++)
 Questo esempio Usa la [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e quindi consente all'utente di posizionare il puntatore al record di ogni copia in modo indipendente.  

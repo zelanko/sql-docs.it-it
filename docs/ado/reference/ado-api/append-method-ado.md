@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249027"
 ---
 # <a name="append-method-ado"></a>Metodo Append (ADO)
 Aggiunge un oggetto a una raccolta. Se la raccolta è [i campi](../../../ado/reference/ado-api/fields-collection-ado.md), un nuovo [campo](../../../ado/reference/ado-api/field-object.md) oggetto può essere creato prima di essere aggiunta alla raccolta.  
@@ -35,28 +35,28 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Raccolta*  
+ *collection*  
  Oggetto raccolta.  
   
- *Campi*  
+ *fields*  
  Oggetto **campi** raccolta.  
   
  *object*  
  Una variabile oggetto che rappresenta l'oggetto da aggiungere.  
   
- *Nome*  
+ *Name*  
  Oggetto **stringa** valore contenente il nome del nuovo **campo** dell'oggetto e non deve essere lo stesso nome come qualsiasi altro oggetto nel *campi*.  
   
  *Tipo*  
  Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore, il cui valore predefinito è **adEmpty**, che specifica il tipo di dati del nuovo campo. Tipi di dati seguenti non sono supportati da ADO e dovrebbe non essere utilizzato quando Accodamento di nuovi campi a un [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
- *Proprietà DefinedSize*  
+ *DefinedSize*  
  Facoltativo. Oggetto **lungo** valore che rappresenta la dimensione definita, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro viene derivato dalla *tipo*. Campi che dispongono di un *DefinedSize* maggiori di 255 byte vengono gestite come colonne a lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
   
  *Attrib*  
  Facoltativo. Oggetto [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valore, il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore viene omesso, il campo conterrà gli attributi derivati da *tipo*.  
   
- *Valore FieldValue*  
+ *FieldValue*  
  Facoltativo. Oggetto **Variant** che rappresenta il valore per il nuovo campo. Se non specificato, il campo viene aggiunto con un valore null.  
   
 ## <a name="remarks"></a>Note  

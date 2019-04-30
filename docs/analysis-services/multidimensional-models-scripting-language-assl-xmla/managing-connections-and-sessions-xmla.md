@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261584"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestione di connessioni e sessioni (XMLA)
   *Le informazioni sullo stato* è una condizione durante il quale il server mantiene le identità e il contesto di un client tra le chiamate di metodo. *Concetto* è una condizione durante il quale il server non ricorda l'identità e il contesto di un client dopo il completamento di una chiamata al metodo.  
@@ -33,7 +33,7 @@ ms.locfileid: "50144886"
   
  La specifica SOAP (Simple Object Access Protocol ) definita dal World Wide Web Consortium (W3C) consiglia l'utilizzo di intestazioni SOAP per la compilazione di nuovi protocolli nella parte superiore dei messaggi SOAP. Nella tabella seguente vengono elencati gli elementi dell'intestazione SOAP e gli attributi che XMLA definisce per avviare, gestire e chiudere una sessione.  
   
-|Intestazione SOAP|Description|  
+|Intestazione SOAP|Descrizione|  
 |-----------------|-----------------|  
 |BeginSession|Questa intestazione richiede al provider di creare una nuova sessione. Il provider deve rispondere costruendo una nuova sessione e restituendo l'ID di sessione come parte dell'intestazione Session nella risposta SOAP.|  
 |SessionId|Area del valore che contiene l'ID di sessione da utilizzare in ogni chiamata al metodo per il resto della sessione. Nella risposta SOAP il provider invia questo tag, che deve essere inviato inoltre anche dal client con ogni elemento dell'intestazione Session.|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238022"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Gestione driver&#39;s ruolo nel processo di connessione
 Tenere presente che le applicazioni non chiamano direttamente le funzioni di driver. Invece che chiamano le funzioni di gestione Driver con lo stesso nome e la gestione di Driver chiama le funzioni di driver. In genere, ciò accade quasi immediatamente. Ad esempio, l'applicazione chiama **SQLExecute** in Gestione Driver e dopo alcuni controlli degli errori, gestione Driver chiama **SQLExecute** nel driver.  

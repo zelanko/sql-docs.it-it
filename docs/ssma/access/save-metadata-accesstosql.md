@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299236"
 ---
-# <a name="save-metadata-accesstosql"></a>Salvare i metadati (AccessToSQL)
+# <a name="save-metadata-accesstosql"></a>Save Metadata (AccessToSQL)
 Il **salvare i metadati** nella finestra di dialogo viene richiesto di caricare i metadati nel progetto SSMA prima di salvarlo. In questo modo si dispone di un file di progetto completo che è possibile usare in modalità offline e inviare ad altri utenti, ad esempio il personale di supporto tecnico.  
   
 Per l'accesso di **salvare i metadati** nella finestra di dialogo Salva il progetto. Se tutti i metadati mancanti, SSMA verrà visualizzato il **salvare i metadati** nella finestra di dialogo.  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc05f1f669597229a3a07d6ce8487eb19a77201
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261160"
 ---
 # <a name="high-availability-reporting-services"></a>Disponibilità elevata (Reporting Services)
   Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è un server senza stato (stateless) in cui vengono archiviati dati dell'applicazione, contenuto, proprietà e informazioni sulla sessione in due database relazionali di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In questa situazione, il modo più efficiente per garantire la disponibilità delle funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] consiste nell'esecuzione delle operazioni seguenti:  

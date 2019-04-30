@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238083"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
  Conformità di API ODBC: Livello 1  
   
@@ -41,11 +41,11 @@ ms.locfileid: "47792719"
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"Sì" o "No"|  
 |Fascicola|"Macchina" o altre sequenze di collazione. Per un elenco di sequenze di collazione supportati, vedere [SET COLLATE](../../odbc/microsoft/set-collate-command.md).|  
-|Description||  
+|Descrizione||  
 |Exclusive|"Sì" o "No"|  
 |SourceDB|Il percorso completo alla directory contenente zero o più [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md), o il nome di file e percorso assoluto per un [database](../../odbc/microsoft/visual-foxpro-terminology.md).|  
 |SourceType|"DBC" o "DBF"|  
-|Versione||  
+|Version||  
   
  Se non viene specificato il nome dell'origine dati, gestione Driver richiede all'utente le informazioni (a seconda dell'impostazione delle *fDriverCompletion* argomento) e quindi prosegue. Se sono necessarie ulteriori informazioni, il Driver ODBC Visual FoxPro consente di visualizzare la finestra di dialogo dei messaggi di richiesta.  
   

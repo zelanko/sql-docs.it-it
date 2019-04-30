@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315290"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definizione dei dati MDX - ALTER CUBE
 
 
-  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per altre informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di blog: [compilazione di un'applicazione di Writeback con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per altre informazioni sull'utilizzo del writeback in un'applicazione, vedere questo blog post: [Creazione di un'applicazione di Writeback con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Si tenga presente che i writeback delle dimensioni concorrenti possono provocare un deadlock, dove il primo writeback viene bloccato da un commit a causa del blocco condiviso tenuto dal secondo writeback. In tale situazione non viene generato alcun errore ma non potrà essere eseguita alcuna operazione. Infine, viene eseguito il rollback sia del timeout che delle modifiche.  
   
@@ -92,13 +92,13 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Espressione stringa valida che specifica il nome del padre del nuovo membro della dimensione, a meno che questo non venga creato nella radice.  
   
- *Nome membro*  
+ *MemberName*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  *Key_Value*  
  Espressione scalare valida che definisce il valore chiave del nuovo membro della dimensione.  
   
- *Property_name*  
+ *Property_Name*  
  Identificatore MDX (Multidimensional Expression) valido che rappresenta la proprietà di un membro.  
   
  *Property_Value*  
@@ -140,7 +140,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Espressione stringa valida che specifica il nome del nuovo padre per il membro della dimensione da spostare.  
   
- *Nome membro*  
+ *MemberName*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  Unsigned_*Integer*  
@@ -152,7 +152,7 @@ CELL CALCULATION Calculation_Name
  La clausola UPDATE DIMENSION MEMBER consente di modificare le proprietà di un membro oltre alla formula personalizzata membro associata a un membro.  
   
 ### <a name="arguments"></a>Argomenti  
- *Nome membro*  
+ *MemberName*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  *MDX_Expression*  

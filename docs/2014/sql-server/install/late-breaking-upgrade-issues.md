@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38192933b84b5ba904952239b11abb2b6a8a74cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301405"
 ---
 # <a name="late-breaking-upgrade-issues"></a>Problemi di aggiornamento più recenti
   Dopo il completamento della documentazione, è possibile che sia stata aggiunta o modificata logica di rilevamento. Se questo argomento è stato raggiunto dal Visualizzatore report di Preparazione aggiornamento o si desidera visualizzare elementi più recenti, consultare il file Leggimi installato con Preparazione aggiornamento per ulteriori informazioni.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301295"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modifica della struttura di previsione (Esercitazione intermedia sul data mining)
   La struttura di data mining creata nell'attività precedente contiene un singolo modello di previsione. Prima di elaborare ed esaminare il modello, è necessario alterarne leggermente la struttura e modificarne una proprietà.  

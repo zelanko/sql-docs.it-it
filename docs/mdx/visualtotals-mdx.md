@@ -1,5 +1,5 @@
 ---
-title: VisualTotals (MDX) | Documenti Microsoft
+title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e4732425d0e400ef7247ae133b5713949664e0f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251419"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -32,14 +32,14 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *modello*  
+ *Pattern*  
  Espressione stringa valida per il membro padre del set, contenente un asterisco (*) come carattere di sostituzione per il nome del padre.  
   
-## <a name="remarks"></a>Remarks  
- L'espressione set specificata può indicare un set contenente membri a qualsiasi livello in una singola dimensione, in genere membri con una relazione predecessore-discendente. Il **VisualTotals** funzione sommati i valori dei membri figlio nel set specificato e ignora i membri figlio non inclusi nel set nel calcolo dei totali del risultato. Vengono calcolati i totali visualizzati per i set ordinati nella gerarchia. Se l'ordine dei membri nei set viola la gerarchia, i risultati non costituiscono totali visualizzati. VisualTotals (USA, WA, CA, Seattle), ad esempio, non restituisce WA come Seattle, bensì restituisce i valori di WA, CA e Seattle e quindi calcola il totale di tali valori come totale visualizzato per USA, conteggiando due volte le vendite di Seattle.  
+## <a name="remarks"></a>Note  
+ L'espressione set specificata può indicare un set contenente membri a qualsiasi livello in una singola dimensione, in genere membri con una relazione predecessore-discendente. Il **VisualTotals** funzione somma i valori dei membri figlio nel set specificato e ignora i membri figlio non inclusi nel set nel calcolo dei totali del risultato. Vengono calcolati i totali visualizzati per i set ordinati nella gerarchia. Se l'ordine dei membri nei set viola la gerarchia, i risultati non costituiscono totali visualizzati. VisualTotals (USA, WA, CA, Seattle), ad esempio, non restituisce WA come Seattle, bensì restituisce i valori di WA, CA e Seattle e quindi calcola il totale di tali valori come totale visualizzato per USA, conteggiando due volte le vendite di Seattle.  
   
 > [!NOTE]  
->  L'applicazione di **VisualTotals** funzione per i membri della dimensione che non sono correlati a una misura o sotto la granularità del gruppo di misure determinerà i valori verranno sostituiti con null.  
+>  Applicando la **VisualTotals** funzione per i membri della dimensione che non sono correlati a una misura o di sotto della granularità del gruppo misure causerà valori da sostituire con un valore null.  
   
  *Modello*, che è facoltativo, specifica il formato per l'etichetta dei totali. *Modello* richiede un asterisco (*) come carattere di sostituzione per il membro padre e il resto del testo nella stringa viene visualizzato nel risultato come concatenato al nome del padre. Per visualizzare un asterisco letterale, utilizzare due asterischi (\*\*).  
   
@@ -68,6 +68,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

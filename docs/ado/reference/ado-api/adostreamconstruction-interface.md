@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248826"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
 Il **ADOStreamConstruction** interfaccia viene utilizzata per costruire un oggetto ADO **Stream** oggetto da OLE DB **IStream** oggetto in un'applicazione C/C++.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 419ebd0d67b65213fde7393430aedec14249b2ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261635"
 ---
 # <a name="merging-partitions-xmla"></a>Unione di partizioni (XMLA)
   Se le partizioni hanno la stessa progettazione delle aggregazioni e struttura, è possibile unire la partizione tramite il [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
@@ -39,10 +39,10 @@ ms.locfileid: "50147906"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  L'esempio seguente unisce tutte le partizioni del **Customer Counts** gruppo di misure del **Adventure Works** cubo la **Adventure Works DW** esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di database nel **Customers_2004** partizione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

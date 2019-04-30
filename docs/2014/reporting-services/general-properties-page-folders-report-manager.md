@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb6f4a62eb9b6228f8aeb3715ea35dec2eec026
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260888"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Pagina delle proprietà Generale, Cartelle (Gestione report)
   La pagina delle proprietà Generale per le cartelle consente di visualizzare e impostare le proprietà per le cartelle create. Nella pagina delle proprietà Generale vengono visualizzati il nome dell'utente che ha creato o modificato la cartella e la data e ora di creazione o modifica.  

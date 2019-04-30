@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308743"
 ---
 # <a name="datamember-property"></a>Proprietà DataMember
 Indica il nome del membro dati che verrà recuperato dal [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) fa riferimento il [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) proprietà.  
@@ -36,7 +36,7 @@ Indica il nome del membro dati che verrà recuperato dal [Recordset](../../../ad
   
  Il **DataMember** proprietà determina quale oggetto specificato dalle **DataSource** proprietà sarà rappresentata come una **Recordset** oggetto. Il **Recordset** oggetto deve essere chiuso prima di questa proprietà è impostata. Viene generato un errore se il **DataMember** proprietà non viene impostata prima il **DataSource** proprietà, oppure se la **DataMember** nome non è riconosciuto per l'oggetto specificato nel **DataSource** proprietà.  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Uso  
   
 ```  
 Dim rs as New ADODB.Recordset  

@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266819"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Pianificazione per il supporto browser per Reporting Services e Power View (Reporting Services 2014)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] viene usato un Web browser per visualizzare i report ed eseguire Gestione report. Solo alcuni browser supportano tutte le funzionalità report. In questo argomento viene descritto il supporto e i requisiti per le funzionalità di gestione di Gestione report, per la visualizzazione dei report e i comandi del visualizzatore di report in Visual Studio. Viene inoltre riepilogata la disponibilità delle funzionalità per i browser supportati, i requisiti di autenticazione e i requisiti di script.  

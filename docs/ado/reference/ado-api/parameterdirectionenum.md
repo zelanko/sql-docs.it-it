@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314829"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) rappresenta un parametro di input, un parametro di output, sia un tipo di input e un parametro di output o il valore restituito da una stored procedure.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Valore predefinito. Indica che il parametro rappresenta un parametro di input.|  
 |**adParamInputOutput**|3|Indica che il parametro rappresenta sia un parametro di input e output.|  

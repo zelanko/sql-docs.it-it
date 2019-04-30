@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8dc465261748c1efd340e78ddc2f3e12d601e931
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281609"
 ---
 # <a name="users-collection-adox"></a>Raccolta Users (ADOX)
 Contiene tutti archiviati [utente](../../../ado/reference/adox-api/user-object-adox.md) gli oggetti di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) oppure [gruppo](../../../ado/reference/adox-api/group-object-adox.md).  

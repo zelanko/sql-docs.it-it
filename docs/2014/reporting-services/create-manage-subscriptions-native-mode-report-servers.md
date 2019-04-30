@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265434"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   In questa sezione sono disponibili argomenti sull'elaborazione, l'amministrazione e il controllo delle sottoscrizioni. La modalità di gestione delle sottoscrizioni varia in base al tipo di sottoscrizione da gestire che può essere standard o guidata dai dati. Le sottoscrizioni standard sono in genere di proprietà degli utenti e gestite da questi, mentre le sottoscrizioni guidate dai dati sono in genere create e gestite da un amministratore del server di report.  

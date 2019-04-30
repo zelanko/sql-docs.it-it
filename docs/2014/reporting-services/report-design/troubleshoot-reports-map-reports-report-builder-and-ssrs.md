@@ -1,5 +1,5 @@
 ---
-title: 'Risolvere i problemi di report: Report mappa (Generatore report e SSRS) | Microsoft Docs'
+title: 'Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 87904dc6e53bdf25739bd49267ddb1dc402186f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63303005"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risolvere i problemi di report: Report Mappa (Generatore Report e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi dei report: Report Mappa (Generatore Report e SSRS)
   È possibile che si verifichino problemi con le mappe di un report quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  
   
 > [!NOTE]  

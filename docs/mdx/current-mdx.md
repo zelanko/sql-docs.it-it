@@ -1,5 +1,5 @@
 ---
-title: Corrente (MDX) | Documenti Microsoft
+title: Corrente (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249670"
 ---
 # <a name="current-mdx"></a>Current (MDX)
 
@@ -32,16 +32,16 @@ Set_Expression.Current
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- La tupla su cui si opera ad ogni passaggio di un'iterazione corrisponde alla tupla corrente. Il **corrente** funzione restituisce tale tupla. È valida solo durante un'iterazione su un set.  
+## <a name="remarks"></a>Note  
+ La tupla su cui si opera ad ogni passaggio di un'iterazione corrisponde alla tupla corrente. Il **correnti** funzione restituisce tale tupla. È valida solo durante un'iterazione su un set.  
   
- Includono funzioni MDX in un set di scorrere il [genera](../mdx/generate-mdx.md) (funzione).  
+ Includono funzioni MDX che eseguono iterazioni in un set di [genera](../mdx/generate-mdx.md) (funzione).  
   
 > [!NOTE]  
 >  La funzione viene eseguita correttamente solo con set denominati, utilizzando un alias del set o definendo un set denominato.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come utilizzare il **corrente** funzione all'interno di **genera**:  
+ Nell'esempio seguente viene illustrato come utilizzare il **correnti** funzione all'interno **genera**:  
   
  `WITH`  
   
@@ -68,6 +68,6 @@ Set_Expression.Current
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

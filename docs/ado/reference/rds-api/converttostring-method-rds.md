@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 426fd1fdcd3931981037b346b048de816e8596d0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280883"
 ---
 # <a name="converttostring-method-rds"></a>Metodo ConvertToString (Servizi Desktop remoto)
 Converte un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a una stringa MIME che rappresenta i dati del recordset.  
@@ -35,7 +35,7 @@ DataFactory.ConvertToString(Recordset)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Data factory*  
+ *DataFactory*  
  Una variabile oggetto che rappresenta un' [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto.  
   
  *Recordset*  

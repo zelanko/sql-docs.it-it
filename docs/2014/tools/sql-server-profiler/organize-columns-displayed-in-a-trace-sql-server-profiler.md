@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240539"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizzare le colonne visualizzate in una traccia (SQL Server Profiler)
   È possibile raggruppare le colonne di dati di una traccia selezionando **Organizza colonne** nella tabella di traccia o nella finestra di dialogo **Proprietà file di traccia** oppure durante la definizione della traccia. Il raggruppamento delle colonne di dati semplifica l'analisi dell'output della traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Per altre informazioni, vedere [Visualizzare e analizzare le tracce con SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md).  

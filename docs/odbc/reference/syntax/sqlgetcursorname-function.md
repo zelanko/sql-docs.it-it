@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258828"
 ---
 # <a name="sqlgetcursorname-function"></a>Funzione SQLGetCursorName
 **Conformità**  

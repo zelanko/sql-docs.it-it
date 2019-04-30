@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313513"
 ---
 # <a name="using-block-cursors"></a>Uso di cursori rettangolari
-Supporto per cursori a blocchi è incorporato in ODBC 3. *x*. **SQLFetch** può essere usato solo per operazioni di recupero con più righe quando viene chiamato in ODBC 3. *x*; se un database ODBC 2. *x* applicazione chiama **SQLFetch**, verrà aperta solo un singola riga-cursore forward only. Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLFetch** in un'API ODBC 2. *x* driver, restituisce una singola riga, a meno che il driver supporta **SQLExtendedFetch**. Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+Supporto per cursori a blocchi è incorporato in ODBC 3. *x*. **SQLFetch** può essere usato solo per operazioni di recupero con più righe quando viene chiamato in ODBC 3. *x*; se un database ODBC 2. *x* applicazione chiama **SQLFetch**, verrà aperta solo un singola riga-cursore forward only. Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLFetch** in un'API ODBC 2. *x* driver, restituisce una singola riga, a meno che il driver supporta **SQLExtendedFetch**. Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
   
  Per utilizzare cursori a blocchi, l'applicazione imposta le dimensioni del set di righe, associa il buffer di righe (come descritto nella sezione precedente), facoltativamente, imposta gli attributi di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR e chiamate **SQLFetch**  oppure **SQLFetchScroll** per recuperare un blocco di righe. L'applicazione può modificare le dimensioni del set di righe e associare nuovi buffer di set di righe (chiamando **SQLBindCol** o specificando un offset di bind) anche dopo le righe recuperate.  
   

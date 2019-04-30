@@ -1,5 +1,5 @@
 ---
-title: Interfaccia IRDSService (Servizi Desktop remoto) | Microsoft Docs
+title: IRDSService Interface (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7341f69d500274367c5c0a853d3fadf1261b9ee4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315856"
 ---
 # <a name="irdsservice-interface-rds"></a>Interfaccia IRDSService (Servizi Desktop remoto)
 Espone le [InvokeService (Servizi Desktop remoto)](../../../ado/reference/rds-api/invokeservice-rds.md) metodo, che viene utilizzato per restituire un puntatore all'interfaccia richiesta in una versione più con supporta dell'oggetto.  

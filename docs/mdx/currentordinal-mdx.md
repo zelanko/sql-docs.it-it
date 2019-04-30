@@ -1,5 +1,5 @@
 ---
-title: CurrentOrdinal (MDX) | Documenti Microsoft
+title: CurrentOrdinal (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248177"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -32,8 +32,8 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- Quando si scorre un set, ad esempio con il [Filter (MDX)](../mdx/filter-mdx.md) o [Generate (MDX)](../mdx/generate-mdx.md) funzioni, il **CurrentOrdinal** funzione restituisce il numero di iterazioni.  
+## <a name="remarks"></a>Note  
+ Quando si scorre un set, ad esempio con il [Filter (MDX)](../mdx/filter-mdx.md) oppure [Generate (MDX)](../mdx/generate-mdx.md) funzioni, il **CurrentOrdinal** funzione restituisce il numero di iterazione.  
   
 ## <a name="examples"></a>Esempi  
  Il semplice esempio seguente viene illustrato come **CurrentOrdinal** può essere utilizzato con **genera** per restituire una stringa contenente il nome di ogni elemento in un set e la relativa posizione nel set:  
@@ -48,7 +48,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- L'utilizzo pratico di CurrentOrdinal è limitato ai calcoli molto complessi. L'esempio seguente restituisce il numero di prodotti nel set che sono univoci, utilizzando il **ordine** funzione per ordinare le tuple non vuote prima di applicare il **filtro** (funzione). Il **CurrentOrdinal** funzione viene utilizzata per confrontare ed eliminare i valori equivalenti.  
+ L'utilizzo pratico di CurrentOrdinal è limitato ai calcoli molto complessi. L'esempio seguente restituisce il numero di prodotti nel set che sono univoche, tramite il **ordine** funzione per ordinare le tuple non vuote prima di applicare le **filtro** (funzione). Il **CurrentOrdinal** funzione viene utilizzata per confrontare ed eliminare i valori equivalenti.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -83,6 +83,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 382aca19452d5cf21a4b1112d872b12afe38782d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305994"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Ambienti multiutente (Visual Database Tools)
   Un ambiente multiutente è un ambiente in cui altri utenti possono connettersi e apportare modifiche allo stesso database sul quale si sta lavorando. È quindi possibile che numerosi utenti modifichino contemporaneamente gli stessi oggetti di database. In un ambiente multiutente è pertanto possibile che sul database in cui si stanno apportando le proprie modifiche incidano le modifiche apportate contemporaneamente da altri utenti e viceversa.  

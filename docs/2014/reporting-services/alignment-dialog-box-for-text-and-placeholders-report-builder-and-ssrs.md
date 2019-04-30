@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233457"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Finestra di dialogo Allineamento per testo e segnaposto (Generatore report e SSRS)
   Selezionare la scheda **Allineamento** per definire la posizione dei valori all'interno della cella o dell'area dati selezionata. È possibile formattare solo l'allineamento orizzontale del testo singolo all'interno di una casella di testo. Se si desidera impostare valori del riempimento nella casella di testo o l'allineamento verticale del testo, utilizzare le proprietà della casella di testo corrispondenti. Per altre informazioni, vedere [finestra di dialogo Proprietà casella di testo, allineamento &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

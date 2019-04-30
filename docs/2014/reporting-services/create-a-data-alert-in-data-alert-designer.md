@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266403"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create nella finestra di progettazione Avviso dati. Dopo aver salvato le definizioni di avviso, è possibile riaprirle, modificarle, quindi salvare di nuovo nella finestra di progettazione Avviso dati. Per informazioni sulla modifica delle definizioni di avviso, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  

@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 84a8c5aa7fa12ea0763dc47635c4c6fbbf772a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272765"
 ---
-# <a name="project-settings-gui-db2tosql"></a>Impostazioni progetto (GUI) (DB2ToSQL)
+# <a name="project-settings-gui-db2tosql"></a>Project Settings (GUI) (DB2ToSQL)
 Le impostazioni del progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se visualizzare il report di valutazione dopo la conversione o No.  
   
 Nel riquadro interfaccia utente grafica è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  

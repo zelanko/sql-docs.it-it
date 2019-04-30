@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222960"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Finestra di dialogo Proprietà origine dati condivisa, Generale
   Utilizzare la finestra di dialogo **Proprietà origine dati condivisa** per visualizzare e modificare le informazioni di connessione relative a un'origine dati condivisa nel report.  

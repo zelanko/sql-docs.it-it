@@ -1,5 +1,5 @@
 ---
-title: 'Guida introduttiva: Connettersi ed eseguire query su un database SQL di Azure'
+title: 'Avvio rapido: Connettersi ed eseguire query su un database SQL di Azure'
 titleSuffix: Azure Data Studio
 description: Questa Guida introduttiva illustra come usare Azure Data Studio per connettersi a un database SQL ed eseguire una query
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255957"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Guida introduttiva: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] connettersi ed eseguire query di database SQL di Azure
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Avvio rapido: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] connettersi ed eseguire query di database SQL di Azure
 
 In questa Guida introduttiva si userà [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a un server di Database SQL di Azure. Sarà quindi possibile eseguire istruzioni Transact-SQL (T-SQL) per creare ed eseguire query sul database TutorialDB, che viene usato in altri [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
 
@@ -41,7 +41,7 @@ Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una conn
 
 1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] verrà mostrata la pagina **Connessione**. Se non viene visualizzato il **connessione** pagina, selezionare **Aggiungi connessione**, o la **nuova connessione** icona nel **server** sidebar:
    
-   ![Nuova connessione](media/quickstart-sql-database/new-connection-icon.png)
+   ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-icon.png)
 
 2. Questo articolo Usa Accedi SQL, ma supporta anche l'autenticazione di Windows. Compilare i campi seguenti con il nome del server, nome utente e password per il server SQL di Azure:
 
@@ -55,7 +55,7 @@ Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una conn
    | **Nome database** | *Lasciare vuoto* | Ci si connette solo al server di seguito. |
    | **Gruppo di server** | Selezionare <Default> | È possibile impostare questo campo a un gruppo di server specifico che è stato creato. | 
 
-   ![Nuova connessione](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. Selezionare **Connetti**.
 

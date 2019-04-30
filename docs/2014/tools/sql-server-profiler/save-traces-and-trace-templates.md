@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267426"
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvare tracce e modelli di traccia
   È importante distinguere il salvataggio di file di traccia dal salvataggio di modelli di traccia. Il salvataggio di un file di traccia comporta il salvataggio dei dati di evento acquisiti in una posizione specificata. Il salvataggio di un modello di traccia comporta invece il salvataggio della definizione di una traccia, ad esempio le colonne di dati, le classi di evento o i filtri specificati.  

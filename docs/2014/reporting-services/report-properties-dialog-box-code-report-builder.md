@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40e3bdb096f6e755d65c64d99774cbc0bc606c94
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302401"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>Finestra di dialogo Proprietà report, Codice (Generatore report)
   Selezionare **Codice** nella finestra di dialogo **Proprietà report** per definire il codice personalizzato da utilizzare nelle espressioni all'interno del report.  

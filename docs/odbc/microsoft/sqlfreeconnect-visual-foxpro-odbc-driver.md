@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e8f20f8acb407d9dcba266d932891ca7025465c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313184"
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
- Della conformità API ODBC: A livello centrale  
+ Conformità di API ODBC: A livello centrale  
   
  Rilascia un handle di connessione e libera tutta la memoria allocata per l'handle.  
   

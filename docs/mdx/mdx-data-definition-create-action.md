@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233614"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definizione dei dati MDX - CREATE ACTION
 
@@ -81,30 +81,30 @@ FOR
 ## <a name="action-types"></a>Tipi di azioni  
  La tabella seguente descrive i diversi tipi di azioni disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Tipo di azione|Description|  
+|Tipo di azione|Descrizione|  
 |-----------------|-----------------|  
-|**URL**|Viene restituita una stringa costituita da un URL a cui accedere tramite browser Internet.<br /><br /> Nota: Se questa azione non inizia con `https://` oppure `https://`, l'azione sarà disponibile al browser, a meno che **SafetyOptions** è impostato su **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|Viene restituita una stringa costituita da un URL a cui accedere tramite browser Internet.<br /><br /> Nota: Se questa azione non inizia con `https://` oppure `https://`, l'azione sarà disponibile al browser, a meno che **SafetyOptions** è impostata su **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|Viene restituita una stringa costituita da uno script HTML. Tale stringa deve essere salvata in un file che sarà possibile visualizzare utilizzando un browser Internet. In questo caso è possibile che nell'ambito del codice HTML generato venga eseguito un intero script.|  
 |**ISTRUZIONE**|La stringa restituita è un'istruzione che deve essere eseguito impostando il **SetText** metodo di un oggetto comando per la stringa e la chiamata il **ICommand:: Execute**(metodo). Se il comando non riesce, verrà restituito un errore.|  
-|**SET DI DATI**|La stringa restituita è un'istruzione MDX che deve essere eseguita impostando il **SetText** metodo di un oggetto comando per la stringa e la chiamata il **ICommand:: Execute** (metodo). L'interfaccia richiesta ID (IID) deve essere **IDataset**. Il comando riesce se viene creato un set di dati. L'applicazione client deve consentire all'utente di visualizzare il set di dati restituito.|  
+|**DATASET**|La stringa restituita è un'istruzione MDX che deve essere eseguita impostando il **SetText** metodo di un oggetto comando per la stringa e la chiamata il **ICommand:: Execute** (metodo). L'interfaccia richiesta ID (IID) deve essere **IDataset**. Il comando riesce se viene creato un set di dati. L'applicazione client deve consentire all'utente di visualizzare il set di dati restituito.|  
 |**SET DI RIGHE**|Simile a **set di dati**, ma anziché richiedere un IID di **IDataset**, l'applicazione client deve richiedere un IID di **IRowset**. Il comando riesce se viene creato un set di righe. L'applicazione client deve consentire all'utente di visualizzare il set di righe restituito.|  
 |**RIGA DI COMANDO**|L'applicazione client deve eseguire la stringa dell'azione, che è costituita da una riga di comando.|  
-|**PROPRIETARIO**|L'applicazione client può visualizzare o eseguire l'azione esclusivamente se dispone di informazioni personalizzate, non generiche, sull'azione specifica. Le azioni proprietarie non vengono restituite all'applicazione client, a meno che l'applicazione client richiede in modo esplicito, impostando la restrizione appropriata sul **APPLICATION_NAME**.|  
+|**PROPRIETARY**|L'applicazione client può visualizzare o eseguire l'azione esclusivamente se dispone di informazioni personalizzate, non generiche, sull'azione specifica. Le azioni proprietarie non vengono restituite all'applicazione client, a meno che l'applicazione client richiede in modo esplicito, impostando la restrizione appropriata sul **APPLICATION_NAME**.|  
   
 ## <a name="invocation-types"></a>Tipi di chiamate  
  Nella tabella seguente vengono descritti i diversi tipi di chiamate disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il tipo di chiamata viene utilizzato dall'applicazione client solo per determinare quando richiamare l'azione, ma non determina effettivamente il comportamento di chiamata dell'azione.  
   
-|Tipo di chiamata|Description|  
+|Tipo di chiamata|Descrizione|  
 |---------------------|-----------------|  
-|**INTERATTIVO**|L'azione deve essere richiamata dall'applicazione client tramite l'interazione dell'utente.|  
+|**INTERACTIVE**|L'azione deve essere richiamata dall'applicazione client tramite l'interazione dell'utente.|  
 |**ON_OPEN**|L'azione deve essere richiamata dall'applicazione client quando viene aperto l'oggetto di destinazione. Questo tipo di chiamata non è attualmente implementato.|  
 |**BATCH**|L'azione deve essere richiamata dall'applicazione client quando l'oggetto di destinazione è coinvolto in un'operazione batch, secondo quanto determinato dall'applicazione client. Questo tipo di chiamata non è attualmente implementato.|  
   
-### <a name="scope"></a>Ambito  
+### <a name="scope"></a>`Scope`  
  Ogni azione è definita per un cubo specifico e ha un nome univoco in tale cubo. Un'azione può avere uno degli ambiti elencati nella tabella seguente.  
   
  Ambito cubo  
- Per azioni indipendenti da una dimensione, una cella o un membro specifico, ad esempio l'avvio di un'emulazione di terminale per un sistema di produzione AS/400.  
+ Per azioni indipendenti da dimensioni specifiche, i membri o le celle; Per esempio: "Emulazione di terminale per avviare AS/400 sistema di produzione".  
   
  Ambito dimensione  
  L'azione viene applicata a una dimensione specifica. Le azioni di questo tipo non dipendono dagli specifici livelli o membri selezionati.  

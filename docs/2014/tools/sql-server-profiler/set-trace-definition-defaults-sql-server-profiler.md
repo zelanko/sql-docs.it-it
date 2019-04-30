@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267435"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per una definizione di traccia (SQL Server Profiler)
   Il valore predefinito della definizione di traccia è il modello di traccia predefinito utilizzato per ogni provider o server. È possibile impostare i modelli di traccia predefiniti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

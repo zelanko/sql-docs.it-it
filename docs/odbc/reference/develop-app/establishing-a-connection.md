@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248351"
 ---
 # <a name="establishing-a-connection"></a>Istituzione di una connessione
-Dopo l'allocazione di handle di ambiente e di connessione e impostando gli attributi di connessione, l'applicazione è pronta per la connessione all'origine dati o driver. Esistono tre funzioni differenti l'applicazione può usare per eseguire questa operazione: **SQLConnect** (livello di conformità di interfaccia di base), **SQLDriverConnect** (Core), e **SQLBrowseConnect**(Livello 1). Ognuno dei tre è progettato per essere usato in uno scenario diverso. Prima della connessione, l'applicazione può determinare quali di queste funzioni è supportata con il **ConnectFunctions** restituito dalla parola chiave **SQLDrivers**.  
+Dopo l'allocazione di handle di ambiente e di connessione e impostando gli attributi di connessione, l'applicazione è pronta per la connessione all'origine dati o driver. Esistono tre funzioni differenti che l'applicazione può usare per eseguire questa operazione: **SQLConnect** (livello di conformità di interfaccia di base), **SQLDriverConnect** (Core), e **SQLBrowseConnect** (livello 1). Ognuno dei tre è progettato per essere usato in uno scenario diverso. Prima della connessione, l'applicazione può determinare quali di queste funzioni è supportata con il **ConnectFunctions** restituito dalla parola chiave **SQLDrivers**.  
   
 > [!NOTE]  
 >  Alcuni driver limitare il numero di connessioni attive che supportano. Un'applicazione chiama **SQLGetInfo** con l'opzione SQL_MAX_DRIVER_CONNECTIONS per determinare il numero di connessioni attivo supporta un driver specifico.  

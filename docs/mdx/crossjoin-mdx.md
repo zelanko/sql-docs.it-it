@@ -1,5 +1,5 @@
 ---
-title: Crossjoin (MDX) | Documenti Microsoft
+title: Crossjoin (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b68dafa89f8285f532fc6e92e80f9741be239f65
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248264"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,10 +39,10 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
- Il **Crossjoin** funzione restituisce il prodotto incrociato di due o più set specificati. L'ordine delle tuple nel set di risultati dipende dall'ordine dei set da unire e dall'ordine dei membri corrispondenti. Ad esempio, quando il primo set è costituito {x1, x2,..., x*n*}, e il secondo da {y1, y2,..., y*n*}, il prodotto incrociato di tali set è:  
+## <a name="remarks"></a>Note  
+ Il **Crossjoin** funzione restituisce il prodotto incrociato di due o più set specificati. L'ordine delle tuple nel set di risultati dipende dall'ordine dei set da unire e dall'ordine dei membri corrispondenti. Ad esempio, quando il primo set è costituito {x1, x2,...,x..., x*n*}, e il secondo da {y1, y2,..., y*n*}, il prodotto incrociato di tali set è:  
   
- {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
   
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
@@ -129,6 +129,6 @@ WHERE (Measures.[Internet Sales Amount],
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

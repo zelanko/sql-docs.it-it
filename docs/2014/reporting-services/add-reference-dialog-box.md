@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231298"
 ---
 # <a name="add-reference-dialog-box"></a>Finestra di dialogo Aggiungi riferimento
   Utilizzare la finestra di dialogo **Aggiungi riferimento** per aggiungere riferimenti a un assembly personalizzato o a un componente [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] al report. Dopo avere aggiunto un riferimento all'assembly, è possibile scrivere espressioni o codice personalizzato incorporato che include riferimenti completi a classi o metodi nell'assembly o nel componente. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) o [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

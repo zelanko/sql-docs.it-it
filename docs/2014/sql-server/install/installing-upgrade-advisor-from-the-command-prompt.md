@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301341"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installazione di Preparazione aggiornamento dal prompt dei comandi
   È possibile installare Preparazione aggiornamento utilizzando l'Installazione guidata o dal prompt dei comandi. Il prompt dei comandi consente di eseguire installazioni automatiche e automatizzate.  
@@ -35,9 +35,9 @@ ms.locfileid: "53589865"
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|/q [n&#124;b&#124;r&#124;f]|Imposta il livello dell'interfaccia utente:<br /><br /> n = nessuna interfaccia utente<br /><br /> b = interfaccia utente di base (solo stato di avanzamento, nessun prompt)<br /><br /> r = interfaccia utente ridotta (finestra di dialogo alla fine dell'installazione)<br /><br /> f = interfaccia utente completa|  
+|/q[n&#124;b&#124;r&#124;f]|Imposta il livello dell'interfaccia utente:<br /><br /> n = nessuna interfaccia utente<br /><br /> b = interfaccia utente di base (solo stato di avanzamento, nessun prompt)<br /><br /> r = interfaccia utente ridotta (finestra di dialogo alla fine dell'installazione)<br /><br /> f = interfaccia utente completa|  
 |/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi *log_file_name*, usare **-L\*v**_log_file_name_. Per registrare solo i messaggi di errore, utilizzare `-Le` *log_file_name*.|  
-|ADDLOCAL = ALL&AMP;#124; RIMUOVERE = ALL&AMP;#124;REINSTALL = ALL|Specifica se installare (ADDLOCAL), rimuovere (REMOVE) o reinstallare (REINSTALL) Preparazione aggiornamento.|  
+|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Specifica se installare (ADDLOCAL), rimuovere (REMOVE) o reinstallare (REINSTALL) Preparazione aggiornamento.|  
 |UAINSTALLDIR=path|Installa Preparazione aggiornamento nel percorso specificato da path.|  
   
 ## <a name="installation-examples"></a>Esempi dell'installazione  

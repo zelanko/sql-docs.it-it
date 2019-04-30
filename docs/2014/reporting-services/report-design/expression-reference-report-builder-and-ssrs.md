@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240751"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Riferimento dell'espressione (Generatore report e SSRS)
   Le espressioni del report supportano vari riferimenti a funzioni e raccolte predefinite. Le espressioni devono disporre di sintassi [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] valida prima che un report possa essere pubblicato o elaborato.  

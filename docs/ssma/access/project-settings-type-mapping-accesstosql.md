@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299125"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (Mapping di tipo) (AccessToSQL)
 Le impostazioni di progetto del mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È anche possibile specificare i mapping dei tipi per singoli oggetti di database. Per altre informazioni, vedere [Mapping tipi di origine e destinazione dati](mapping-source-and-target-data-types-accesstosql.md).  
@@ -44,22 +44,22 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
   
 |Tipo di dati di accesso|Tipo di dati di SQL Server|  
 |--------------------|------------------------|  
-|**binario [\*.. \*]**|**varbinary [\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
-|**Valuta**|**money**|  
+|**currency**|**money**|  
 |**data**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**Long**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**Memo** - per Access 97|**ntext**|  
-|**singolo**|**real**|  
-|**testo [\*.. \*]**|**nvarchar [\*]**|  
-|**testo [\*.. \*]** - per Access 97|**varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
+|**testo [\*.. \*]** - per Access 97|**varchar[\*]**|  
   
 **Aggiungi**  
 Fare clic per aggiungere un tipo di dati all'elenco di mapping.  

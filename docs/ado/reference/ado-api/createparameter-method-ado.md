@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308622"
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
 Crea un nuovo [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto con le proprietà specificate.  
@@ -38,20 +38,20 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Restituisce un **parametro** oggetto.  
   
 #### <a name="parameters"></a>Parametri  
- *Nome*  
- Facoltativa. Un **stringa** che contiene il nome del valore il **parametro** oggetto.  
+ *Name*  
+ Facoltativo. Un **stringa** che contiene il nome del valore il **parametro** oggetto.  
   
  *Tipo*  
- Facoltativa. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
+ Facoltativo. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
   
  *Direzione*  
- Facoltativa. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) che specifica il tipo di valore **parametro** oggetto.  
+ Facoltativo. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) che specifica il tipo di valore **parametro** oggetto.  
   
  *Dimensione*  
- Facoltativa. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
+ Facoltativo. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
   
  *Valore*  
- Facoltativa. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
+ Facoltativo. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
   
 ## <a name="remarks"></a>Note  
  Usare la **CreateParameter** per creare un nuovo metodo **parametro** oggetto con un nome specificato, tipo, direzione, dimensione e valore. Per il corrispondente vengono scritti i valori passati negli argomenti **parametro** proprietà.  

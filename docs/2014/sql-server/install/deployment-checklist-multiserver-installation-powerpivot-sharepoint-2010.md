@@ -1,5 +1,5 @@
 ---
-title: 'Elenco di controllo per la distribuzione: Installazione MultiServer di PowerPivot per SharePoint 2010 | Microsoft Docs'
+title: 'Elenco di controllo di distribuzione: Installazione MultiServer di PowerPivot per SharePoint 2010 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237911"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Elenco di controllo per la distribuzione: Installazione MultiServer di PowerPivot per SharePoint 2010
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Elenco di controllo di distribuzione: Installazione multiserver di PowerPivot per SharePoint 2010
   Questo elenco di controllo in modo semplificato i passaggi per l'aggiunta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint a una farm di SharePoint 2010 a tre livelli che crea da zero. In una farm a tre livelli sono inclusi i livelli database, applicazione e Web. Aggiunta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per questa topologia richiede l'esecuzione del programma di installazione di SQL Server per installare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nel livello applicazione. File di programma PowerPivot vengono aggiunti al livello web, ma solo come un'attività di post-installazione quando si deploy soluzione dell'applicazione web. Anche se sono disponibili passaggi relativi alla distribuzione, non è necessario eseguire alcun passaggio di installazione separato nel livello Web o nel livello dati. È l'unico passaggio che è necessario eseguire l'installazione [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nei server dell'applicazione.  
   
 ||  
@@ -227,7 +227,7 @@ ms.locfileid: "53350540"
  È possibile impostare un limite massimo sulla quantità di spazio su disco che è possibile utilizzare per i file di dati PowerPivot memorizzati nella cache su disco. Per impostazione predefinita, viene utilizzato tutto lo spazio su disco disponibile. Per istruzioni su come limitare l'utilizzo dello spazio su disco, vedere [configurare l'uso di spazio su disco &#40;PowerPivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
 ####  <a name="Upload"></a> Aumentare di dimensioni massime di caricamento File per le applicazioni Web di SharePoint  
- Poiché le cartelle di lavoro di PowerPivot possono essere di grandi dimensioni, è possibile aumentare le dimensioni massime di caricamento dei file. Possono essere configurate due impostazioni relative alle dimensioni dei file: Dimensioni massime caricamento per l'applicazione Web e Dimensioni massime cartella di lavoro in Excel Services. Le dimensioni massime dei file devono essere impostate sullo stesso valore in entrambe le applicazioni. Per istruzioni, vedere [configurare dimensioni di caricamento File massime &#40;PowerPivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+ Poiché le cartelle di lavoro di PowerPivot possono essere di grandi dimensioni, è possibile aumentare le dimensioni massime di caricamento dei file. Sono disponibili due impostazioni di dimensioni di file di configurazione: Dimensioni massime caricamento per l'applicazione web e dimensioni massime cartella di lavoro in Excel Services. Le dimensioni massime dei file devono essere impostate sullo stesso valore in entrambe le applicazioni. Per istruzioni, vedere [configurare dimensioni di caricamento File massime &#40;PowerPivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Concedere autorizzazioni di SharePoint agli utenti delle cartelle di lavoro  
  Gli utenti devono disporre delle autorizzazioni di SharePoint per pubblicare o visualizzare cartelle di lavoro. Assicurarsi di concedere **View** le autorizzazioni per gli utenti che devono visualizzare cartelle di lavoro pubblicate e **collaborazione** delle autorizzazioni per gli utenti che pubblicano o gestiscono le cartelle di lavoro. Per concedere le autorizzazioni, è necessario disporre dei privilegi di amministratore della raccolta siti.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258794"
 ---
 # <a name="sqlgetdescrec-function"></a>Funzione SQLGetDescRec
 **Conformità**  
@@ -59,7 +59,7 @@ SQLRETURN SQLGetDescRec(
  *RecNumber*  
  [Input] Indica se il record del descrittore da cui l'applicazione cerca le informazioni. Record del descrittore sono numerati da 1, con il numero di record 0 come il record di segnalibro. Il *RecNumber* argomento deve essere minore o uguale al valore di SQL_DESC_COUNT. Se *RecNumber* è minore o uguale a SQL_DESC_COUNT ma la riga non contiene dati per una colonna o parametro, una chiamata a **SQLGetDescRec** restituirà i valori predefiniti dei campi. (Per altre informazioni, vedere "Inizializzazione di campi di descrizione" nella [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- *Nome*  
+ *Name*  
  [Output] Un puntatore a un buffer in cui restituire il campo SQL_DESC_NAME per il record del descrittore.  
   
  Se *Name* sia impostato su NULL *StringLengthPtr* continuerà a restituire il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui punta  *Nome*.  
@@ -98,7 +98,7 @@ SQLRETURN SQLGetDescRec(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetDescRec** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_DESC e un *gestiscono* dei *DescriptorHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLGetDescRec** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *nome* non era sufficientemente grande per restituire il campo di descrizione intero. Pertanto, il campo è stato troncato. Viene restituita la lunghezza del campo del descrittore non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -106,7 +106,7 @@ SQLRETURN SQLGetDescRec(
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare la memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
-|HY007 L'|L'istruzione associata non è pronto|*DescriptorHandle* era associato un IRD e l'handle di istruzione associata non è stato nello stato preparato o eseguito.|  
+|HY007|L'istruzione associata non è pronto|*DescriptorHandle* era associato un IRD e l'handle di istruzione associata non è stato nello stato preparato o eseguito.|  
 |HY010|Errore nella sequenza della funzione|(DM) *DescriptorHandle* è stato associato un *StatementHandle* per i quali è stata chiamata una funzione di esecuzione asincrona (non presente uno) ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) *DescriptorHandle* è stato associato un *StatementHandle* per il quale **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando **SQLGetDescRec** è stato chiamato.|  
 |HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  

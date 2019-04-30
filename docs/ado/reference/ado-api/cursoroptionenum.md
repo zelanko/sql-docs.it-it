@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308733"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Specifica il tipo di funzionalità di [supporta](../../../ado/reference/ado-api/supports-method.md) metodo deve verificare la presenza.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Supporta il [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per aggiungere nuovi record.|  
 |**adApproxPosition**|0x4000|Supporta il [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) proprietà.|  

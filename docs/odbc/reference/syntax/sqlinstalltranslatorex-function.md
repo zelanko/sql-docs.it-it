@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242320"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Funzione SQLInstallTranslatorEx
 **Conformità**  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [Output] Numero totale di byte disponibili per restituire *lpszPathOut*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbPathOutMax*, il percorso di output in *lpszPathOut* verrà troncato *pcbPathOutMax* meno di carattere di terminazione null. Il *pcbPathOut* argomento può essere un puntatore null.  
   
- *trattano*  
+ *fRequest*  
  [Input] Tipo di richiesta. *trattano* deve contenere uno dei valori seguenti:  
   
  ODBC_INSTALL_INQUIRY: Richiedere informazioni su dove può essere installato uno strumento di conversione.  

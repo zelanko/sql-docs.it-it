@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261000"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
   In questo argomento viene fornita una panoramica dei passaggi necessari per eseguire la migrazione di una distribuzione in modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da un ambiente SharePoint a un altro. I passaggi specifici possono variare a seconda della versione dalla quale si esegue la migrazione. Per altre informazioni sugli scenari di aggiornamento e di migrazione per la modalità SharePoint, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). Se si vuole solo copiare gli elementi del report da un server a un altro, vedere [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298942"
 ---
 # <a name="data-migration-report-db2tosql"></a>Report di migrazione dati (DB2ToSQL)
 Il **Report di migrazione dati** verrà visualizzata la finestra di dialogo dopo la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

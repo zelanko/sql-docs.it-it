@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306358"
 ---
 # <a name="report-sections-dialog-box"></a>Finestra di dialogo Sezione del report
   Quando si apre un report, progettazione Report consente di verificare che il report contiene solo una definizione del linguaggio RDL (Report)  **\<sezione >** elemento. L'apertura di un report con più elementi **\<sezione>** non è supportata.  

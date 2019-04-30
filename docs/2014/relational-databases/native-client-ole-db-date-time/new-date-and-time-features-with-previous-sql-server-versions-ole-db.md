@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233071"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuove funzionalità di data e ora con le versioni precedenti di SQL Server (OLE DB)
   In questo argomento viene descritto il comportamento previsto quando un'applicazione client che utilizza caratteristiche avanzate di data e ora comunica con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriore [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e quando un client compilato con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] invia comandi a un server che supporta le avanzate funzionalità di data e ora.  
@@ -31,7 +31,7 @@ ms.locfileid: "52774683"
   
 |Tipo di client OLE DB|Tipo di SQL Server 2005|Tipo di SQL Server 2008 (o versioni successive)|Conversione risultati (da server a client)|Conversione parametri (da client a server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|date|OK|OK|  
+|DBTYPE_DBDATE|Datetime|date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi dell'ora impostati su zero.|IRowsetChange avrà esito negativo a causa di un troncamento della stringa se il campo dell'ora è diverso da zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi della data impostati sulla data corrente.|Se i secondi frazionari sono diverse da zero, IRowsetChange avrà esito negativo a causa di un troncamento della stringa.<br /><br /> La data viene ignorata.|  
@@ -68,7 +68,7 @@ ms.locfileid: "52774683"
 |Data|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52774683"
 |Data|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52774683"
 |Data|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52774683"
 |Data|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
@@ -121,16 +121,16 @@ ms.locfileid: "52774683"
 |Data|DBTYPE_WSTR|10|20|Data|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="providertypes-rowset"></a>Set di righe PROVIDER_TYPES  
  Per i tipi di data/ora vengono restituite le righe seguenti:  
   
-|Type -><br /><br /> colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> colonna|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -142,7 +142,7 @@ ms.locfileid: "52774683"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

@@ -11,18 +11,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316006"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lezione 2: Aggiunge un riferimento Web
+# <a name="lesson-2-adding-a-web-reference"></a>Lezione 2: Aggiunta di un riferimento Web
   L'individuazione di un servizio Web è il processo che consente a un client di individuare un servizio Web e ottenerne la descrizione. Il processo di individuazione di un servizio Web in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] implica l'interrogazione di un sito Web in base a un algoritmo predeterminato. Scopo di questo processo è quello di individuare la descrizione del servizio, ovvero un documento XML scritto nel linguaggio WSDL (Web Services Description Language).  
   
  Nella descrizione del servizio vengono indicati i servizi disponibili e le modalità di interazione con tali servizi. Senza una descrizione del servizio non è possibile interagire con un servizio Web a livello di programmazione.  
   
- L'applicazione deve disporre di un mezzo per comunicare con il servizio Web e per individuarlo in fase di esecuzione. Questo risultato si ottiene tramite l'aggiunta di un riferimento Web al progetto del servizio Web, operazione che consente di generare una classe proxy che si interfaccia con il servizio Web e ne fornisce una rappresentazione locale. Per altre informazioni, vedere "Procedura: Generare un Proxy del servizio Web XML"nel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentazione.  
+ L'applicazione deve disporre di un mezzo per comunicare con il servizio Web e per individuarlo in fase di esecuzione. Questo risultato si ottiene tramite l'aggiunta di un riferimento Web al progetto del servizio Web, operazione che consente di generare una classe proxy che si interfaccia con il servizio Web e ne fornisce una rappresentazione locale. Per altre informazioni, vedere "procedura: Generare un Proxy del servizio Web XML"nel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentazione.  
   
 ### <a name="to-add-a-web-reference"></a>Per aggiungere un riferimento Web  
   

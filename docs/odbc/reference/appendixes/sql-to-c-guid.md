@@ -1,5 +1,5 @@
 ---
-title: 'SQL a c: GUID | Microsoft Docs'
+title: 'Da SQL a C: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258820"
 ---
 # <a name="sql-to-c-guid"></a>Da SQL a C: GUID
 L'identificatore per il tipo di dati SQL ODBC GUID è:  
@@ -31,13 +31,13 @@ L'identificatore per il tipo di dati SQL ODBC GUID è:
   
 |Identificatore di tipo C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > lunghezza in byte di caratteri|data|36|n/d|  
+|SQL_C_CHAR|*BufferLength* > lunghezza in byte di caratteri|Dati|36|n/d|  
 ||*BufferLength* < 37|Non definito|Non definito|22003|  
-|SQL_C_WCHAR|*BufferLength* > lunghezza in caratteri|data|36|n/d|  
+|SQL_C_WCHAR|*BufferLength* > lunghezza in caratteri|Dati|36|n/d|  
 ||*BufferLength* < 37|Non definito|Non definito|22003|  
-|SQL_C_BINARY|Lunghezza in byte dei dati \< =  *BufferLength*|data|Lunghezza in byte dei dati|n/d|  
+|SQL_C_BINARY|Lunghezza in byte dei dati \< =  *BufferLength*|Dati|Lunghezza in byte dei dati|n/d|  
 ||Lunghezza in byte di dati > *BufferLength*|Non definito|Non definito|22003|  
-|SQL_C_GUID|Nessuno [a]|data|16 [b]|n/d|  
+|SQL_C_GUID|None[a]|Dati|16[b]|n/d|  
   
  [a] hodnotou *BufferLength* viene ignorata per questa conversione. Il driver presuppone che le dimensioni di **TargetValuePtr* è la dimensione del tipo di dati C.  
   

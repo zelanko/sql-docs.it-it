@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ee4f695a68bc8838e7c594fd250fc37fd85da80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280520"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Visualizzazione di dati spaziali in Esplora oggetti
   La finestra **Risultati spaziali** dell'editor di query fornisce strumenti di mapping visivo per la visualizzazione di risultati di dati spaziali in aggiunta alla visualizzazione dei dati in formato griglia nella finestra **Risultati** . Per visualizzare i dati spaziali nella finestra **Risultati spaziali** , i risultati delle query devono contenere almeno una colonna di dati spaziali con dati geometrici e geografici.  
@@ -41,7 +41,7 @@ ms.locfileid: "48135331"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra Risultati spaziali](spatial-results-window.md)   
- [Editor di query del motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

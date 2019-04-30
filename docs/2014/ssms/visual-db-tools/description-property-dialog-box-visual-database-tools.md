@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88134b2bcad38bda180b7a6102df04a9766f392a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316075"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Finestra di dialogo Proprietà Descrizione (Visual Database Tools)
   Nella finestra di dialogo **Proprietà Descrizione** è presente un'area modificabile in cui è possibile scrivere una descrizione dettagliata di oggetti di database quali tabelle, colonne e vincoli di chiave esterna. L'accesso a questa finestra di dialogo è possibile dalla finestra Proprietà per oggetti quali tabelle e viste selezionate in una finestra di progettazione, dalle finestre di dialogo relative a oggetti quali indici e vincoli CHECK e dalla scheda **Proprietà colonne** di Progettazione tabelle per le colonne delle tabelle. La descrizione viene archiviata come proprietà estesa dell'oggetto.  

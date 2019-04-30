@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 566ae0a91dd36d71ab6690e8910f1dd1cfe50043
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306377"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere la web part Visualizzatore report a una pagina Web (Reporting Services in modalità integrata SharePoint)
   È possibile utilizzare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'esecuzione in modalità integrata SharePoint. Questa web part può essere utilizzata per visualizzare i file di definizione dei report (con estensione rdl) creati in Generatore report o Progettazione report e caricati in una raccolta.  

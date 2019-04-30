@@ -1,5 +1,5 @@
 ---
-title: '&lt; (Minore di) (MDX) | Documenti Microsoft'
+title: '&lt; (Minore di) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 111c3aae92839ff9f1574da6420d096d31517c80
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241044"
 ---
 # <a name="lt-less-than-mdx"></a>&lt; (Minore di) (MDX)
 
@@ -37,7 +37,7 @@ MDX_Expression < MDX_Expression
   
 -   **true** se entrambi i parametri sono non null e il primo parametro è un valore che è inferiore al valore del secondo parametro.  
   
--   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale o maggiore del valore del secondo parametro.  
+-   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale a o maggiore del valore del secondo parametro.  
   
 -   Null se uno o entrambi i parametri restituiscono un valore Null.  
   

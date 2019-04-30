@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281902"
 ---
 # <a name="setpermissions-method-adox"></a>Metodo SetPermissions (ADOX)
 Specifica le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) oppure [utente](../../../ado/reference/adox-api/user-object-adox.md) su un oggetto.  
@@ -37,7 +37,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Nome*  
+ *Name*  
  Oggetto **stringa** valore che specifica il nome dell'oggetto per cui impostare le autorizzazioni.  
   
  *ObjectType*  
@@ -49,7 +49,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Diritti*  
  Oggetto **lungo** valore che può essere una maschera di bit di uno o più delle [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) costanti, che indica i diritti per impostare.  
   
- *Ereditare*  
+ *Inherit*  
  Facoltativo. Oggetto **lungo** valore che può essere uno del [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) costanti, che specifica il modo in cui gli oggetti ereditano tali autorizzazioni. Il valore predefinito è **adInheritNone**.  
   
  *ObjectTypeId*  

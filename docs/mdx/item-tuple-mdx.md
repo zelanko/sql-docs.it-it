@@ -1,5 +1,5 @@
 ---
-title: Elemento (tupla) (MDX) | Documenti Microsoft
+title: Elemento (Tuple) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273074"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
 
@@ -45,21 +45,21 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  Espressione numerica valida che specifica la tupla in base alla posizione all'interno del set da restituire.  
   
-## <a name="remarks"></a>Remarks  
- Il **elemento** funzione restituisce una tupla dal set specificato. Esistono tre modi per chiamare il **elemento** funzione:  
+## <a name="remarks"></a>Note  
+ Il **elemento** funzione restituisce una tupla dal set specificato. Esistono tre possibili modi per chiamare il **elemento** funzione:  
   
--   Se si specifica una singola espressione stringa, il **elemento** funzione restituisce la tupla specificata. ad esempio "([2005].Q3, [Store05])".  
+-   Se viene specificata un'espressione singola stringa, il **elemento** funzione restituisce la tupla specificata. ad esempio "([2005].Q3, [Store05])".  
   
 -   Se è specificata più di un'espressione stringa, il **elemento** funzione restituisce la tupla definita dalle coordinate specificate. Il numero di stringhe deve corrispondere al numero di assi e ogni stringa deve identificare una gerarchia univoca, ad esempio "[2005].Q3", "[Store05]".  
   
--   Se viene specificato un numero intero, il **elemento** funzione restituisce la tupla che si trova nella posizione in base zero specificata da *indice*.  
+-   Se viene specificato un numero intero, il **articoli** funzione restituisce la tupla che si trova nella posizione in base zero specificata da *indice*.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito ([1996],Sales):  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- Nell'esempio seguente viene utilizzata un'espressione di livello e vengono restituiti l'importo delle vendite su Internet per ogni State-Province in Australia e la relativa percentuale sul totale delle vendite su Internet per l'Australia. In questo esempio la funzione Item viene utilizzata per estrarre il primo e unica tupla, il set restituito dal **predecessori** (funzione).  
+ Nell'esempio seguente viene utilizzata un'espressione di livello e vengono restituiti l'importo delle vendite su Internet per ogni State-Province in Australia e la relativa percentuale sul totale delle vendite su Internet per l'Australia. In questo esempio la funzione Item viene utilizzata per estrarre il primo (e unica tupla) dal set restituito dal **predecessori** (funzione).  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

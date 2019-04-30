@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239147"
 ---
 # <a name="monitor-memory-usage"></a>Monitoraggio dell'utilizzo della memoria
   Monitorare periodicamente un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.  
@@ -41,9 +41,9 @@ ms.locfileid: "52801563"
   
  Il contatore **Byte disponibili** indica il numero di byte di memoria disponibili per i processi. Il contatore **Pagine/sec** indica il numero di pagine richiamate dal disco o scritte su disco per liberare spazio nel set di lavoro in seguito a errori di pagina.  
   
- Valori bassi del contatore **Byte disponibili** possono indicare una quantità di memoria insufficiente nel computer o la presenza di un'applicazione che non rilascia la memoria. Un valore elevato del contatore **Pagine/sec** può indicare un paging eccessivo. Monitorare il contatore **Memoria: Errori pagina/sec** contatore per assicurarsi che l'attività del disco non sia dovuta al paging.  
+ Valori bassi del contatore **Byte disponibili** possono indicare una quantità di memoria insufficiente nel computer o la presenza di un'applicazione che non rilascia la memoria. Un valore elevato del contatore **Pagine/sec** può indicare un paging eccessivo. Monitoraggio di **memoria: Errori di pagina/sec** per assicurarsi che l'attività del disco non sia dovuta al paging.  
   
- Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori pagina/sec** contatore per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza del processo.  
+ Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo è la causa del paging eccessivo, monitorare il **processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per altre informazioni su come evitare il paging eccessivo, vedere la documentazione del sistema operativo Windows.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "52801563"
   
  Per monitorare la quantità di memoria usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esaminare i contatori delle prestazioni seguenti:  
   
--   **Processo: Working Set**  
+-   **Processo: Working set**  
   
--   **SQL Server: Gestione buffer: Percentuale riscontri Cache buffer**  
+-   **SQL Server: Gestione buffer: Percentuale riscontri cache del buffer**  
   
--   **SQL Server: Gestione buffer: Pagine del database**  
+-   **SQL Server: Gestione buffer: Pagine di database**  
   
--   **SQL Server: Gestione memoria: Memoria totale Server (KB)**  
+-   **SQL Server: Gestore della memoria: Memoria totale server (KB)**  
   
  Il contatore **Working set** indica la quantità di memoria usata da un processo. Se questo valore è costantemente inferiore alla quantità di memoria impostata dalle opzioni server **min server memory** e **max server memory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato configurato per usare una quantità eccessiva di memoria.  
   

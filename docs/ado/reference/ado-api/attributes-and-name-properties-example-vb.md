@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb69a3f9da2ed86411c2a6506cf2ea7a8defcc7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248332"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Esempio delle proprietà Attributes e Name (VB)
 In questo esempio viene visualizzato il valore della [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà per [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), e [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetti. Usa il [Name](../../../ado/reference/ado-api/name-property-ado.md) proprietà per visualizzare il nome della ognuno **campo** e **proprietà** oggetto.  

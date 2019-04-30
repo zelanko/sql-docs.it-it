@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244610"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Codici errore ODBC (driver ODBC Visual FoxPro)
 La tabella seguente elenca i codici di errore di Visual FoxPro con mappati ai valori SQLSTATE codice di errore ODBC. I valori SQLSTATE mappati provengono [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) e [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Non vengono eseguito il mapping perché nessun altro valore da un'altra API ODBC SQLSTATE **SQLExecDirect** e **SQLPrepare** sono le uniche funzioni che accedere al motore di Visual FoxPro.  
   
- Per altre informazioni sui codici di errore ODBC, vedere [appendice a: codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md), nella *riferimento per programmatori ODBC*.  
+ Per altre informazioni sui codici di errore ODBC, vedere [appendice a: Codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md), nella *riferimento per programmatori ODBC*.  
   
 |SQLSTATE|Codice di errore in Visual FoxPro|  
 |--------------|------------------------------|  

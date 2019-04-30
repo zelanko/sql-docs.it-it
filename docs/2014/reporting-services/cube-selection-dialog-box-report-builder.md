@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266284"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Finestra di dialogo Seleziona cubo (Generatore report)
   Utilizzare la finestra di dialogo **Seleziona cubo** per selezionare un cubo diverso come origine dati del report. Se si seleziona un cubo diverso, è possibile che la query non sia più valida.  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280664"
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
   Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riutilizzare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  

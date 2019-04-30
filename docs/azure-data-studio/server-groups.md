@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e12ab9cba41361ad3692e31d0a39de65770403ac
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314719"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Gruppi di server in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

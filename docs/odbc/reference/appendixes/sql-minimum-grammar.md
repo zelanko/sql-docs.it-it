@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270502"
 ---
 # <a name="sql-minimum-grammar"></a>Grammatica SQL di base
 Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODBC. La sintassi descritta in questa sezione è un subset della sintassi voce a livello di SQL-92.  
@@ -29,11 +29,11 @@ Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODB
  I driver che funzionano solo con le origini dati di sola lettura potrebbero non supportare le parti della grammatica di cui è incluso in questa sezione che gestiscono la modifica dei dati. Un'applicazione può determinare se un'origine dati è di sola lettura chiamando **SQLGetInfo** con il tipo di informazioni SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>.  
- *istruzione create table* :: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE *nome-tabella di base*  
   
- (*-tipo di dati colonna-identifier* [*, tipo di dati colonna identificatore*]...)  
+ (*column-identifier data-type* [*,column-identifier data-type*]...)  
   
 > [!IMPORTANT]  
 >  Come un *tipo di dati* in un *-istruzione create table*, le applicazioni devono utilizzare un tipo di dati dalla colonna TYPE_NAME del set di risultati restituito da **SQLGetTypeInfo**.  
@@ -46,7 +46,7 @@ Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODB
   
  DROP TABLE *nome-tabella di base*  
   
- *istruzione INSERT* :: =  
+ *insert-statement* ::=  
   
  INSERT INTO *-nome della tabella* [( *colonna identificatore* [, *colonna identificatore*]...)]      I valori (*insert-value*[, *insert-valore*]...)  
   
@@ -54,31 +54,31 @@ Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODB
   
  Selezionare [tutti i &#124; DISTINCT] *elenco select*  
   
- DA *elenco di riferimento di tabella*  
+ FROM *table-reference-list*  
   
  [In cui *condizione di ricerca*]  
   
- [*clausola order by*]  
+ [*order-by-clause*]  
   
  *informativa* :: = *dall'istruzione create table*  
   
- &#124;*cercare delete-istruzione*  
+ &#124; *delete-statement-searched*  
   
- &#124;*drop-tabella-istruzione*  
+ &#124; *drop-table-statement*  
   
- &#124;*insert-istruzione*  
+ &#124; *insert-statement*  
   
- &#124;*select-istruzione*  
+ &#124; *select-statement*  
   
- &#124;*cercare update-istruzione*  
+ &#124; *update-statement-searched*  
   
- *la ricerca Update-istruzione*  
+ *update-statement-searched*  
   
  AGGIORNAMENTO *-nome della tabella*  
   
- IMPOSTARE *identificatore di colonna* = {*expression* &#124; NULL}  
+ SET *column-identifier* = {*expression* &#124; NULL }  
   
- [, *identificatore di colonna* = {*expression* &#124; NULL}]...  
+ [, *column-identifier* = {*expression* &#124; NULL}]...  
   
  [In cui *condizione di ricerca*]  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dc74811bf6cead91850ebd3fcaa8cf64025c80d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270862"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>Limitazioni dei parametri delle stored procedure
 > [!IMPORTANT]  

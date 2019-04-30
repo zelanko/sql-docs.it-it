@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273022"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni progetto (conversione) (DB2ToSQL)
 La pagina di conversione del **impostazioni del progetto** finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA Converte la sintassi di DB2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi.  
@@ -112,7 +112,7 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 **Modalità predefinita/Full:** Yes  
   
-**Ottimistica modalità:** No  
+**Ottimistica modalità:** no  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>Convertire FORALL istruzione WHILE istruzione  
 Definisce il modo SSMA tratterà cicli FORALL sugli elementi della raccolta PL/SQL.  
@@ -378,7 +378,7 @@ Istruzione ISNULL viene usato nelle chiamate di funzione REPLACE per emulare il 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistico:** No  
+**Modalità predefinita/ottimistico:** no  
   
 **Modalità completa:** Yes  
   
@@ -416,7 +416,7 @@ Specifica se generare un XML set di risultati quando si seleziona in una variabi
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** No  
+**Modalità predefinita/ottimistica/Full:** no  
   
 ## <a name="returning-clause-conversion"></a>RESTITUZIONE di conversione clausola  
   

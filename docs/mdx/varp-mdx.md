@@ -1,5 +1,5 @@
 ---
-title: VarP (MDX) | Documenti Microsoft
+title: VarP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc1e6276de9a03af9800b9e242d54130c4241732
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251457"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 
@@ -32,15 +32,15 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
- Il **VarP** funzione restituisce la varianza distorta di un'espressione numerica specificata, valutata su un set specificato.  
+## <a name="remarks"></a>Note  
+ Il **VarP** funzione restituisce la varianza distorta di un'espressione numerica specificata, valutata sul set specificato.  
   
- Il **VarP** funzione utilizza la formula della popolazione distorta formula, durante il [Var](../mdx/var-mdx.md) funzione utilizza la formula della popolazione non distorta.  
+ Il **VarP** funzione Usa la formula della popolazione distorta formula, mentre le [Var](../mdx/var-mdx.md) funzione utilizza la formula della popolazione non distorta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Attività di Gestione accessorio - Analitica Platform System | Documenti Microsoft
-description: Questa guida viene descritto come eseguire attività di amministrazione del dispositivo per Analitica Platform System (AP).
+title: Attività di gestione di Appliance - sistema di piattaforma Analitica | Microsoft Docs
+description: Questa guida descrive come eseguire attività di amministrazione di appliance per Analitica piattaforma di strumenti analitici.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,30 +10,30 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276406"
 ---
-# <a name="appliance-management-tasks-for-analytics-platform-system"></a>Attività di gestione dispositivo per Analitica Platform System
-Questa guida viene descritto come eseguire attività di amministrazione del dispositivo per Analitica Platform System (AP).  
+# <a name="appliance-management-tasks-for-analytics-platform-system"></a>Attività di gestione di Appliance per il sistema di piattaforma Analitica
+Questa guida descrive come eseguire attività di amministrazione di appliance per Analitica piattaforma di strumenti analitici.  
   
-## <a name="guide-sections"></a>Nelle sezioni Guida  
+## <a name="guide-sections"></a>Sezioni di Guida  
   
--   [Cenni preliminari sulla configurazione e installazione dello strumento &#40;Analitica Platform System&#41;](appliance-installation-and-configuration-overview.md)  
+-   [Cenni preliminari su configurazione e installazione di Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-installation-and-configuration-overview.md)  
   
--   [Connessione a Appliance nodi &#40;Analitica Platform System&#41;](connect-to-appliance-nodes.md)  
+-   [Connettersi ai nodi di Appliance &#40;sistema di piattaforma Analitica&#41;](connect-to-appliance-nodes.md)  
   
--   [Il Software antivirus &#40;Analitica Platform System&#41;](antivirus-software.md)  
+-   [Il Software antivirus &#40;sistema di piattaforma Analitica&#41;](antivirus-software.md)  
   
--   [Configurazione dello strumento &#40;Analitica Platform System&#41;](appliance-configuration.md)  
+-   [La configurazione dell'Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-configuration.md)  
   
--   [Manutenzione del software &#40;Analitica Platform System&#41;](software-servicing.md)  
+-   [Manutenzione software &#40;sistema di piattaforma Analitica&#41;](software-servicing.md)  
   
--   [Lo stato dei servizi PDW &#40;Analitica Platform System&#41;](pdw-services-status.md)  
+-   [Stato dei servizi PDW &#40;sistema di piattaforma Analitica&#41;](pdw-services-status.md)  
   
--   [Risparmio energia accessorio APS o disattivare &#40;Analitica Platform System&#41;](power-the-aps-appliance-on-or-off.md)  
+-   [Accendere l'Appliance APS o spegnere &#40;sistema di piattaforma Analitica&#41;](power-the-aps-appliance-on-or-off.md)  
   
--   [Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
+-   [Monitoraggio dell'Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-monitoring.md)  
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232074"
 ---
 # <a name="configdriver-function"></a>Funzione ConfigDriver
 **Conformità**  
@@ -52,7 +52,7 @@ BOOL ConfigDriver(
  *hwndParent*  
  [Input] Handle della finestra padre. Se l'handle è null, la funzione non verrà visualizzata alcuna finestra di dialogo.  
   
- *trattano*  
+ *fRequest*  
  [Input] Tipo di richiesta. Il *trattano* argomento deve essere uno dei valori seguenti:  
   
  ODBC_INSTALL_DRIVER: Installare un nuovo driver.  
@@ -84,7 +84,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **ConfigDriver** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore viene inserito nel buffer di errore di programma di installazione da una chiamata al **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Handle della finestra valida|Il *hwndParent* argomento non è valido.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|Il *trattano* argomento non è uno dei seguenti:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> L'opzione di specifica del driver era minore o uguale a ODBC_CONFIG_DRIVER_MAX.|  

@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238306"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  
@@ -99,7 +99,7 @@ ms.locfileid: "59933620"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|Process|Area|Category|Level|Correlation|Message|  
+|date|Process|Area|Category|Level|Correlation|`Message`|  
 |5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Eccezione: System.Net.Mail.SmtpException: Cassetta postale non disponibile. È stata la risposta del server: 5.7.1 client non dispone di autorizzazioni per l'invio come questo mittente a System.Net.Mail.DataStopCommand.CheckResponse (SmtpStatusCode statusCode, stringa serverResponse) a System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) in System.Net.Mail.SmtpClient.Send (messaggio MailMessage) a Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (notifica)|  
   
 ##  <a name="bkmk_use_powershell"></a> Usare PowerShell per monitorare le sottoscrizioni  

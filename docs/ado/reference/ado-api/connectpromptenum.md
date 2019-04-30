@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309133"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Specifica se una finestra di dialogo deve essere visualizzata per la richiesta di parametri mancanti quando si apre una connessione a un'origine dati.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Richiede sempre.|  
 |**adPromptComplete**|2|Viene richiesto se sono necessarie ulteriori informazioni.|  

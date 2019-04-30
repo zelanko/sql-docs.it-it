@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312364"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping dei set di caratteri MySQL e SQL Server (MySQLToSQL)
 Set di caratteri (set di caratteri) può essere specificato per tipi di dati character, espressioni e valori letterali di MySQL.  
@@ -56,11 +56,11 @@ Mapping di set di caratteri varia in base a diversi livelli di nodo, vale a dire
 >   
 > Sono:  
 >   
-> 1.  **Si applicano:** applica le modifiche apportate dall'utente, abilitato solo quando il mapping di set di caratteri viene modificato e non ancora salvato.  
+> 1.  **Applicare:** Applica le modifiche apportate dall'utente, abilitato solo quando il mapping di set di caratteri viene modificato e non ancora salvato.  
 > 2.  **Annulla:** Annulla le modifiche apportate dall'utente. Ottiene abilitato il pulsante quando il mapping di set di caratteri viene modificato ma non salvato.  
 > 3.  **Ripristina predefiniti:** Reimposta tutti i mapping di valori predefiniti.  
   
-1.  **Livello del nodo di metadati principale in:** griglia di mapping di set di caratteri contiene griglia set di caratteri con una colonna separata per ogni set di caratteri. Le colonne della griglia sono:  
+1.  **Nel livello del nodo di metadati principale:**  Griglia di mapping di set di caratteri contiene griglia set di caratteri con una colonna separata per ogni set di caratteri. Le colonne della griglia sono:  
   
     1.  La prima colonna della griglia di denominata **nome del set di caratteri** contiene il nome di set di caratteri.  
   
@@ -80,12 +80,12 @@ Mapping di set di caratteri varia in base a diversi livelli di nodo, vale a dire
     ||||  
     |-|-|-|  
     |**Nome del set di caratteri**|**Descrizione set di caratteri**|**Tipo di set di caratteri di destinazione (impostazione predefinita)**|  
-    |BIG5|Cinese tradizionale Big5|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |big5|Cinese tradizionale Big5|NCHAR/NVARCHAR (impostazione predefinita)|  
     |dec8|Europa occidentale dic|CHAR/VARCHAR (impostazione predefinita)|  
     |cp850|Europa occidentale DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |hp8|Europa occidentale HP|CHAR/VARCHAR (impostazione predefinita)|  
     |koi8r|Russo Relcom KOI8-R|CHAR/VARCHAR (impostazione predefinita)|  
-    |alfabeto latino 1|Europa occidentale CP1252|CHAR/VARCHAR (impostazione predefinita)|  
+    |latin 1|Europa occidentale CP1252|CHAR/VARCHAR (impostazione predefinita)|  
     |Latin2|ISO 8859-2 Europa centrale|CHAR/VARCHAR (impostazione predefinita)|  
     |swe7|a 7 bit svedese|CHAR/VARCHAR (impostazione predefinita)|  
     |ascii|US ASCII|CHAR/VARCHAR (impostazione predefinita)|  
@@ -98,26 +98,26 @@ Mapping di set di caratteri varia in base a diversi livelli di nodo, vale a dire
     |gb2312|GB2312 Cinese semplificato|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Greco|ISO 8859-7 Greco|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1250|Europa centrale di Windows|CHAR/VARCHAR (impostazione predefinita)|  
-    |GBK|Cinese semplificato GBK|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |gbk|Cinese semplificato GBK|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Latin5|ISO 8859-9 Turco|CHAR/VARCHAR (impostazione predefinita)|  
     |armscii8|Armeno ARMSCII-8|CHAR/VARCHAR (impostazione predefinita)|  
-    |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |utf8|Unicode UTF-8|NCHAR/NVARCHAR (impostazione predefinita)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (impostazione predefinita)|  
     |cp866|Russo DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |keybcs2|Ceco-Slovak Kamenicky di DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |macce|Europa centrale Mac|CHAR/VARCHAR (impostazione predefinita)|  
     |MacRoman|Europa occidentale Mac|CHAR/VARCHAR (impostazione predefinita)|  
     |cp852|Europa centrale DOS|CHAR/VARCHAR (impostazione predefinita)|  
-    |Latin7|Pobaltské Jazyky ISO 8859-13|CHAR/VARCHAR (impostazione predefinita)|  
-    |cp 1251|Cyrillic Windows|CHAR/VARCHAR (impostazione predefinita)|  
+    |Latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (impostazione predefinita)|  
+    |cp 1251|Windows Cyrillic|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1256|Arabo di Windows|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1257|Pobaltské Jazyky Windows|CHAR/VARCHAR (impostazione predefinita)|  
-    |BINARY|Set di caratteri binari pseudo|CHAR/VARCHAR (impostazione predefinita)|  
-    |geostd8|Georgian GEOSTD8|CHAR/VARCHAR (impostazione predefinita)|  
+    |BINARY|Binary pseudo charset|CHAR/VARCHAR (impostazione predefinita)|  
+    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR (impostazione predefinita)|  
     |cp932|SJIS per il giapponese di Windows|NCHAR/NVARCHAR (impostazione predefinita)|  
     |eucjpms|UJIS per il giapponese di Windows|NCHAR/NVARCHAR (impostazione predefinita)|  
   
-2.  **Nel Database di, categoria o i livelli dei nodi oggetto:** a livello di Database, categoria o nodi oggetto, griglia di mapping di set di caratteri contiene le stesse righe come quella nel livello del nodo radice dei metadati, una visualizzazione dei.:  
+2.  **Nel Database di, categoria o i livelli dei nodi oggetto:** A livello di Database, categoria o nodi oggetto, griglia di mapping di set di caratteri contiene le stesse righe come quella nel livello del nodo radice dei metadati, una visualizzazione dei.:  
   
     1.  La prima colonna della griglia, intitolata **imposta il nome del carattere** contiene il nome di set di caratteri.  
   

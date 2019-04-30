@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 780368a3b3c4b61c404f18289a7085a5f70c3d89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268614"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Definizione di variabili XPath in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato il modo in cui passare variabili XPath in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

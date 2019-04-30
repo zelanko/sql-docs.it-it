@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231099"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di caricamento per Parallel Data Warehouse
 Questo articolo descrive come acquisire e configurare un server di caricamento come un sistema di Windows non appliance per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).  
@@ -92,7 +92,7 @@ A questo punto si è pronti avviare il caricamento dei dati. Per altre informazi
   
 2.  [Panoramica di carico](load-overview.md)  
   
-## <a name="performance"></a>restazioni  
+## <a name="performance"></a>Prestazioni  
 Per ottenere migliori prestazioni in Windows Server 2012 e versioni successive di caricamento, attivare l'inizializzazione immediata dei File in modo che quando i dati vengono sovrascritti, il sistema operativo non sovrascriverà i dati esistenti con zeri. Se si tratta di un rischio per la sicurezza perché sono ancora presenti dati precedenti sui dischi, quindi assicurarsi di disattivare l'inizializzazione immediata dei File.  
   
 ## <a name="Security"></a>Avvisi di sicurezza  
@@ -107,7 +107,7 @@ Per ridurre i rischi di sicurezza con i dati, si consiglia quanto segue:
   
 -   Designare un utente PDW che dispone delle autorizzazioni per caricare i dati. A seconda dei requisiti di sicurezza, è possibile che un utente specifico per ogni database.  
   
--   Operazioni nel server durante il caricamento possono accettare un percorso UNC da cui per estrarre i dati dall'esterno della rete interna attendibile. E un utente malintenzionato sulla rete o con grado di influenzare la risoluzione dei nomi può intercettare o modificare i dati inviati a SQL Server PDW. Ciò comporta un rischio di divulgazione manomissioni e informazioni. Tramite la richiesta di firma per la connessione deve essere attenuato manomissioni. Per ridurre questo rischio, impostare l'opzione dei criteri di gruppo seguenti **protezione\Criteri Locali\opzioni di sicurezza** nel server di caricamento: **client di rete Microsoft: firma digitale alle comunicazioni (sempre): Abilitato**  
+-   Operazioni nel server durante il caricamento possono accettare un percorso UNC da cui per estrarre i dati dall'esterno della rete interna attendibile. E un utente malintenzionato sulla rete o con grado di influenzare la risoluzione dei nomi può intercettare o modificare i dati inviati a SQL Server PDW. Ciò comporta un rischio di divulgazione manomissioni e informazioni. Tramite la richiesta di firma per la connessione deve essere attenuato manomissioni. Per ridurre questo rischio, impostare l'opzione dei criteri di gruppo seguenti **protezione\Criteri Locali\opzioni di sicurezza** nel server di caricamento:  **Client di rete Microsoft: Firma digitale alle comunicazioni (sempre): Abilitato**  
   
 -   Disattivare l'inizializzazione immediata dei File in Windows Server 2012 e versioni successive. Questo è un compromesso tra prestazioni e sicurezza, come indicato nella sezione prestazioni. È necessario effettuare la scelta migliore in base ai requisiti di sicurezza.  
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313854"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gestione di informazioni aziendali tramite l'utilizzo combinato di SSIS, MDS e DQS [Esercitazione]
   La gestione di informazioni in un'organizzazione comporta in genere l'integrazione dei dati nell'organizzazione e oltre, la pulizia dei dati, la corrispondenza dei dati per rimuovere tutti i duplicati, la standardizzazione e l'arricchimento dei dati, la conformità dei dati anche in termini legali e infine l'archiviazione dei dati in una posizione centralizzata con tutte le impostazioni di sicurezza necessarie.  
@@ -83,6 +83,6 @@ ms.locfileid: "56035402"
 |[Lezione 5: Automatizzazione della pulizia e corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|In questa lezione viene creata una soluzione SSIS mediante la quale vengono puliti i dati di input tramite DQS, viene eseguita la corrispondenza dei dati puliti per rimuovere i duplicati e vengono archiviati i dati puliti e corrispondenti in MDS in modo automatico.|75|  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Per iniziare questa esercitazione, passare alla prima lezione: [Lezione 1: Creazione della Knowledge Base DQS Suppliers](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
+ Per iniziare l'esercitazione, passare alla prima lezione: [Lezione 1: Creazione della Knowledge Base DQS Suppliers](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
   
   

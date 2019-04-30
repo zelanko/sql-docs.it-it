@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299098"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Impostando le opzioni di migrazione (AccessToSQL) e conversione
 Per ogni progetto SSMA, è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano come gli oggetti vengono convertiti, migrazione dei dati e come eseguire il mapping tipi di dati di origine ai tipi di dati di destinazione. Prima di convertire gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure o eseguire la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
   
 ## <a name="configuration-options-and-modes"></a>Le modalità e le opzioni di configurazione  
-SSMA è quattro set di impostazioni di configurazione e quattro modalità per la configurazione di queste impostazioni: Default, Optimistic, Full e personalizzato. La modalità predefinita è consigliata per la maggior parte degli utenti. Utilizzare la modalità ottimistica per le conversioni semplici. Se si desidera vedere tutti i messaggi, usare la modalità completa. Nella modalità personalizzata, impostare le opzioni.  
+SSMA è quattro set di impostazioni di configurazione e quattro modalità per la configurazione di queste impostazioni: Per impostazione predefinita, ottimistica, backup completi e personalizzato. La modalità predefinita è consigliata per la maggior parte degli utenti. Utilizzare la modalità ottimistica per le conversioni semplici. Se si desidera vedere tutti i messaggi, usare la modalità completa. Nella modalità personalizzata, impostare le opzioni.  
   
 Le impostazioni sono descritte nella sezione "Riferimenti dell'interfaccia utente" di questa documentazione. Per altre informazioni sulle impostazioni e come vengono applicate le impostazioni in ciascuna modalità, vedere gli argomenti seguenti:  
   

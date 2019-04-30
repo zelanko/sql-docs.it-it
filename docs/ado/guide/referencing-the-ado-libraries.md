@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239852"
 ---
 # <a name="referencing-the-ado-libraries"></a>Riferimenti alle librerie ADO
 La versione più recente di ADO presenta la forma *msado15.dll*. Come vengono compresse le versioni più recenti di ADO MD e ADOX *msadom.dll* e *Msadox*, rispettivamente. Queste librerie vengono installate per impostazione predefinita in *$installDir*, dove *$installDir* è l'acronimo per il percorso della directory in cui la libreria ADO è stata installata nel computer. Per usare le librerie ADO in un'applicazione, è necessario farvi riferimento in modo esplicito nel progetto di applicazione.  

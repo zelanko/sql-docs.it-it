@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312864"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursori dinamici ODBC
-Un cursore dinamico è da considerarsi semplicemente: dinamico. È possibile rilevare eventuali modifiche apportate all'ordine, di appartenenza e i valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, un cursore dinamico recupera due righe e un'altra applicazione, quindi aggiorna una di queste righe ed elimina l'altro. Se il cursore dinamico tenta quindi di recupero di tali righe, non troverà la riga eliminata ma restituirà i nuovi valori per la riga aggiornata.  
+Un cursore dinamico è da considerarsi semplicemente: dinamico. È possibile rilevare eventuali modifiche apportate all'ordine, di appartenenza e i valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, che un cursore dinamico recuperi due righe e un'altra applicazione aggiorni in seguito una di queste righe ed elimini l'altra. Se il cursore dinamico tenta quindi di recupero di tali righe, non troverà la riga eliminata ma restituirà i nuovi valori per la riga aggiornata.  
   
  I cursori dinamici rilevano tutti gli aggiornamenti, eliminazione e inserimento, entrambi i propri e quelle apportate da altri utenti. (Questo è soggetta all'isolamento a livello della transazione, come impostato dall'attributo di connessione SQL_ATTR_TXN_ISOLATION). La matrice di stato di riga specificata dall'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR queste variazioni si rifletta e può contenere SQL_ROW_SUCCESS SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED e SQL_ROW_ADDED. Non può restituire SQL_ROW_DELETED perché un cursore dinamico non restituisce le righe eliminate all'esterno del set di righe e pertanto non li riconosce più l'esistenza dell'elemento corrispondente nella matrice di stato di riga o la riga eliminata nel set di risultati. SQL_ROW_ADDED viene restituita solo quando viene aggiornata una riga da una chiamata a **SQLSetPos**, non quando viene aggiornata da un altro cursore.  
   

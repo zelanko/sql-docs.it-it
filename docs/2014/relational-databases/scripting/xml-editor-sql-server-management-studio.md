@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281736"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
   Offre una serie di strumenti visivi per utilizzare gli XML Schema, i set di dati ADO.NET e i documenti XML. Progettazione XML supporta il linguaggio XML Schema Definition (XSD) definito dal World Wide Web Consortium (WC3). Lo strumento di progettazione non supporta le definizioni DTD (Document Type Definitions) o altri linguaggi XML Schema, ad esempio XDR (XML-Data Reduced).  
@@ -35,7 +35,7 @@ ms.locfileid: "48166291"
   
  Per consentire di lavorare sui file XML, sugli XML Schema e sui set di dati, Progettazione XML dispone delle tre visualizzazioni (o modalità) seguenti:  
   
-|Vista|Description|Tipi di file supportati|  
+|visualizzazione|Descrizione|Tipi di file supportati|  
 |----------|-----------------|--------------------------|  
 |**Schema**|Per la creazione e la modifica in modo visivo degli XML Schema e dei set di dati ADO.NET.|xsd|  
 |**Dati**|Per la modifica in modo visivo dei file di dati XML in una griglia dati strutturata.|xml|  
@@ -82,10 +82,10 @@ ms.locfileid: "48166291"
 ## <a name="data-view"></a>Vista dati  
  La visualizzazione dati dispone di una griglia dati che può essere utilizzata per modificare i file xml. Nella visualizzazione dati è possibile modificare solo il contenuto di un file XML, ma non i tag e la struttura.  
   
- La visualizzazione dati contiene due aree separate: **Tabelle dati** e **Dati**. L'area **Tabelle dati** è un elenco di relazioni definite nel file XML nello stesso ordine di annidamento (dalla più esterna alla più interna). L'area **Dati** è una griglia dati che visualizza i dati sulla base della selezione eseguita nell'area Tabelle dati.  
+ In vista dati sono disponibili due aree separate: **Le tabelle di dati** e **dati**. L'area **Tabelle dati** è un elenco di relazioni definite nel file XML nello stesso ordine di annidamento (dalla più esterna alla più interna). L'area **Dati** è una griglia dati che visualizza i dati sulla base della selezione eseguita nell'area Tabelle dati.  
   
 > [!NOTE]  
->  I file XML appena creati non contengono alcun dato e quindi non possono essere visualizzati nella visualizzazione dati. Esistono inoltre alcuni casi di documenti XML la cui visualizzazione dati non può essere attivata. Benché il codice XML possa essere considerato valido, se non è strutturato i dati che cercano di passare alla visualizzazione dati genereranno il messaggio seguente: "Anche se il documento XML ha un formato corretto, contiene una struttura non visualizzabile in Visualizzazione dati".  
+>  I file XML appena creati non contengono alcun dato e quindi non possono essere visualizzati nella visualizzazione dati. Esistono inoltre alcuni casi di documenti XML la cui visualizzazione dati non può essere attivata. Anche se il codice XML viene considerato valido, in caso contrario i dati strutturati cercano di passare ai dati di visualizzazione genera il messaggio seguente: "Anche se in questo documento sia ben formato, contiene una struttura non visualizzabile in visualizzazione di dati."  
   
  Nella visualizzazione dati è possibile:  
   

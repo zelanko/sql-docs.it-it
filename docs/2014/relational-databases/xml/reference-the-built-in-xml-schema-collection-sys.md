@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240773"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Riferimento alla raccolta di XML Schema predefinita (sys)
   Per ogni database creato è disponibile una raccolta di XML Schema **sys** predefinita nello schema relazionale **sys** . Tale raccolta riserva questi schemi predefiniti, ai quali è possibile accedere da qualsiasi altra raccolta XML Schema creata dall'utente. I prefissi utilizzati negli schemi predefiniti sono significativi in XQuery. L'unico prefisso riservato è **xml** .  

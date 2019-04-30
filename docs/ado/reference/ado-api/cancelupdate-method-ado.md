@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241164"
 ---
 # <a name="cancelupdate-method-ado"></a>Metodo CancelUpdate (ADO)
 Annulla tutte le modifiche apportate alla riga corrente o nuova di un' [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, prima di chiamare il [Update ](../../../ado/reference/ado-api/update-method.md) (metodo).  

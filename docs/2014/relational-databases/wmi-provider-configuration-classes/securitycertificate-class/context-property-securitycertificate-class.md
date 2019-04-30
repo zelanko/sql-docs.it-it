@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dc183a6bde5dc56454804472ee2e74042ed415ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242899"
 ---
 # <a name="context-property-securitycertificate-class"></a>Proprietà Context (classe SecurityCertificate)
   Ottiene il contesto del certificato di sicurezza.  

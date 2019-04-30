@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241226"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pre-elaborazione di uno schema per unire schemi inclusi
   L'elemento **include** XSD W3C rende disponibile il supporto per la modularità di schema, che consente di partizionare XML Schema in più file fisici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente non supporta questo elemento. Gli XML Schema che includono tale elemento verranno rifiutati dal server.  

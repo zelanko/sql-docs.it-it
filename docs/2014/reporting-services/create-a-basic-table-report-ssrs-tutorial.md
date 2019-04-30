@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266256"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
   Questa esercitazione è progettata per la creazione di un report tabella semplice basato sul [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database tramite Progettazione Report. Per creare report è inoltre possibile utilizzare Generatore report o la Creazione guidata report. In questa esercitazione verranno illustrate le procedure per creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare alcuni campi e aggiungere totali, nonché visualizzare il report in anteprima.  

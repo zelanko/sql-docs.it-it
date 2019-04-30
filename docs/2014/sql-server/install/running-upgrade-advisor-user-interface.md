@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245956"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Esecuzione di Preparazione aggiornamento (interfaccia utente)
   È possibile eseguire Preparazione aggiornamento per analizzare componenti locali o remoti durante la pianificazione dell'aggiornamento. Per ogni istanza e componente analizzato, viene prodotto un report.  
@@ -48,7 +48,7 @@ ms.locfileid: "48176107"
   
 6.  Generazione del report dei problemi di aggiornamento.  
   
- Per altre informazioni su Advisor analisi guidata di aggiornamento, vedere [procedura: eseguire l'analisi guidata Preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Per altre informazioni su Advisor analisi guidata di aggiornamento, vedere [come: Eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
  Per informazioni specifiche che sono necessarie per ogni passaggio, vedere [esegue l'aggiornamento dell'interfaccia utente di Advisor](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
@@ -69,14 +69,14 @@ ms.locfileid: "48176107"
   
  Per le istruzioni dettagliate per l'utilizzo del visualizzatore di report, vedere gli argomenti seguenti:  
   
--   [Procedura: Visualizzare un report di Preparazione aggiornamento](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Procedura: Visualizzare un Report di preparazione aggiornamento](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
 -   [Procedura: Filtrare i report](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Procedura: Esportare i report](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Procedura: Esportare report](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Procedura: Eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Riferimento all'interfaccia utente di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

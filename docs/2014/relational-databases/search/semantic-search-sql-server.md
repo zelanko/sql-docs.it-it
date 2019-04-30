@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238641"
 ---
 # <a name="semantic-search-sql-server"></a>Ricerca semantica (SQL Server)
   La ricerca semantica statistica offre una visione approfondita dei documenti non strutturati archiviati in database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'estrazione e l'indicizzazione di *frasi chiave* statisticamente pertinenti. Le frasi chiave vengono inoltre usate per identificare e indicizzare *documenti simili o correlati*.  

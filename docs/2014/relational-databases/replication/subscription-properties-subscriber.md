@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250265"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Proprietà di sottoscrizione della replica di SQL Server 
 In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione** nella finestra di dialogo. 
@@ -43,7 +43,7 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>Opzioni di pubblicazione per sottoscrizioni transazionali  
+### <a name="publisher-options-for-transactional-subscriptions"></a>Opzioni del server di pubblicazione per le sottoscrizioni transazionali  
  **Impedisci il loop delle transazioni**  
  Consente di stabilire se l'agente di distribuzione reinvia le transazioni originate nel Sottoscrittore al Sottoscrittore. Questa opzione viene utilizzata per la replica transazionale bidirezionale. Per altre informazioni, vedere [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
   
@@ -52,7 +52,7 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Per una pubblicazione che utilizza filtri con parametri, replica di tipo merge valuta una delle due sistema funzioni (o entrambe se il filtro fa riferimento a entrambe le funzioni) durante la sincronizzazione per determinare i dati che deve ricevere un sottoscrittore: **SUSER_SNAME ()** oppure **HOST_NAME ()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
@@ -110,7 +110,7 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Per una pubblicazione che utilizza filtri con parametri, replica di tipo merge valuta una delle due sistema funzioni (o entrambe se il filtro fa riferimento a entrambe le funzioni) durante la sincronizzazione per determinare i dati che deve ricevere un sottoscrittore: **SUSER_SNAME ()** oppure **HOST_NAME ()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  

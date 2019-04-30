@@ -1,5 +1,5 @@
 ---
-title: /MTd (MDX) | Documenti Microsoft
+title: Mtd (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 74c8748ae02df8747be5670f09ec11c7dfa8e882
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278091"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
 
@@ -32,10 +32,10 @@ Mtd( [ Member_Expression ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
- Se un'espressione di membro non è specificata, il valore predefinito è il membro corrente della prima gerarchia con un livello di tipo *mesi* nella prima dimensione di tipo *ora* nel gruppo di misure.  
+## <a name="remarks"></a>Note  
+ Se non viene specificata un'espressione di membro, il valore predefinito è il membro corrente della prima gerarchia con un livello di tipo *mesi* nella prima dimensione di tipo *ora* nel gruppo di misure.  
   
- Il **/MTd** è una funzione di scelta rapida per il [PeriodsToDate](../mdx/periodstodate-mdx.md) funziona quando la proprietà Type della gerarchia dell'attributo in cui si basa il livello è impostata su *mesi*. In altre parole, `Mtd(Member_Expression)` equivale a `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
+ Il **Mtd** è una funzione di scelta rapida per il [PeriodsToDate](../mdx/periodstodate-mdx.md) corretto quando la proprietà Type della gerarchia dell'attributo in cui si basa il livello è impostata su *mesi*. In altre parole, `Mtd(Member_Expression)` equivale a `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita la somma dei costi di spedizione nell'ultimo mese per le vendite Internet effettuate fino al 20 luglio 2002.  
@@ -51,7 +51,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Somma &#40;MDX&#41;](../mdx/sum-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [SUM &#40;MDX&#41;](../mdx/sum-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

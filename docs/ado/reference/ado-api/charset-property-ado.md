@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239747"
 ---
 # <a name="charset-property-ado"></a>Proprietà Charset (ADO)
 Indica il set di caratteri in cui il contenuto del testo di una [Stream](../../../ado/reference/ado-api/stream-object-ado.md) deve essere tradotto per la memorizzazione nel buffer interno delle **Stream** oggetto.  
@@ -36,7 +36,7 @@ Indica il set di caratteri in cui il contenuto del testo di una [Stream](../../.
   
  **Set di caratteri** viene usato solo con il testo **Stream** oggetti ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) viene **adTypeText**). Questa proprietà viene ignorata se **tipo** viene **adTypeBinary**.  
   
- Per un esempio di codice, vedere [passaggio 4: popolare la casella di testo dettagli](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Per un esempio di codice, vedere [passaggio 4: Popolare la casella di testo dettagli](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

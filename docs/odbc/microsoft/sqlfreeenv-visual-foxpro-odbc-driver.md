@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b908c66a11287b134c10935bfef9519b6d9a0425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313226"
 ---
 # <a name="sqlfreeenv-visual-foxpro-odbc-driver"></a>SQLFreeEnv (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
- Della conformità API ODBC: A livello centrale  
+ Conformità di API ODBC: A livello centrale  
   
  Chiude il Driver ODBC Visual FoxPro e libera tutta la memoria associata al driver.  
   

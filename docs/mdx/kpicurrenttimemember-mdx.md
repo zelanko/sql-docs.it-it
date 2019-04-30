@@ -1,5 +1,5 @@
 ---
-title: KPICurrentTimeMember (MDX) | Documenti Microsoft
+title: KPICurrentTimeMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 34fb8bbfbda3f6fcab865697749aca3f76ae2603
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273125"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (MDX)
 
@@ -32,10 +32,10 @@ KPICurrentTimeMember(KPI_Name)
  *KPI_Nam*e  
  Espressione stringa valida che specifica il nome dell'indicatore di prestazioni chiave (KPI).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il membro temporale di un indicatore KPI può essere diverso dal membro predefinito della dimensione temporale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

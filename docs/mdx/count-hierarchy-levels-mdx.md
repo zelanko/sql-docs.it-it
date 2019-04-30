@@ -1,5 +1,5 @@
 ---
-title: Conteggio (livelli di gerarchia) (MDX) | Documenti Microsoft
+title: Conteggio (livelli di gerarchia) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 657ce658704b519c31dfaa2186429a7df4110308
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306812"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (Hierarchy Levels) (MDX)
 
@@ -32,7 +32,7 @@ Hierarchy_Expression.Levels.Count
  *Hierarchy_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Restituisce il numero di livelli in una gerarchia, incluso il livello `[All]` se pertinente.  
   
 > [!IMPORTANT]  
@@ -50,8 +50,8 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [Conteggio &#40;dimensione&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Conteggio &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Conteggio &#40;impostare&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

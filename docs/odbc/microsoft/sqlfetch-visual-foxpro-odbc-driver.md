@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b68b6def32b50a7a03560015e21d23f51145085c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313234"
 ---
 # <a name="sqlfetch-visual-foxpro-odbc-driver"></a>SQLFetch (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Full  
   
- Della conformità API ODBC: A livello centrale  
+ Conformità di API ODBC: A livello centrale  
   
  Recupera una riga da un set di risultati in posizioni specificate dalle chiamate precedenti a [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md). Prepara il driver per una chiamata a [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) per le colonne non associate.  
   

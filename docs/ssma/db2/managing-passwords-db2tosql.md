@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299021"
 ---
 # <a name="managing-passwords-db2tosql"></a>La gestione delle password (DB2ToSQL)
 Questa sezione riguarda la protezione delle password di database e la procedura per importare o esportare tali tra server:  

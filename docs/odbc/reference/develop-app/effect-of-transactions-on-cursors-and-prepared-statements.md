@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41c2c6b06744965144ca9d5feb27e9ea16d9903c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305721"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Effetto delle transazioni sui cursori e sulle istruzioni preparate
 Il commit o il rollback di una transazione ha l'effetto seguente sulle cursori e piani di accesso:  

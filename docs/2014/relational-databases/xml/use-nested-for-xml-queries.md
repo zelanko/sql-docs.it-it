@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232409"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
   Il `xml` tipo di dati e la [direttiva TYPE nelle query FOR XML](type-directive-in-for-xml-queries.md) Abilita l'elaborazione del XML restituito dalle query FOR XML sul server che sul client.  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Restituzione di risultati della query FOR XML interna a query esterne come istanze di tipo XML  
- È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati `xml`. Ad esempio:  
+ È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati `xml`. Ad esempio:   
   
 ```  
 SELECT Col1,   

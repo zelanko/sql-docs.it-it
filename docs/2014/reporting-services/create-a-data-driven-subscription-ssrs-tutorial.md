@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265920"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sottoscrizioni guidate dai dati che consentono di personalizzare la distribuzione di un report in base ai dati dinamici del Sottoscrittore. Le sottoscrizioni guidate dai dati sono progettate per i tipi di scenari seguenti:  

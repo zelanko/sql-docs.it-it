@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249059"
 ---
 # <a name="ado-enumerated-constants"></a>Costanti enumerate ADO
 Per semplificare il debug, le enumerazioni ADO elenca un valore per ciascuna costante. Tuttavia, questo valore è puramente consulenza e può variare da una versione di ADO a un altro. Il codice deve dipendere esclusivamente il nome, non il valore effettivo di ogni costante enumerata.  
@@ -82,7 +82,7 @@ Per semplificare il debug, le enumerazioni ADO elenca un valore per ciascuna cos
  [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   

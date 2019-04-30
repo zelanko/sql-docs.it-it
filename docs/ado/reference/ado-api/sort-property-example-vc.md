@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315162"
 ---
 # <a name="sort-property-example-vc"></a>Esempio della proprietà Sort (VC++)
 Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di una **Recordset** derivato dal ***autori*** tabella di il **Pubs** database. Una routine di utilità secondario consente di stampare ogni riga.  

@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238138"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
   La funzionalità [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi singoli a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "48222991"
   
  Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di server e, dove applicabile, viene specificata la classe di evento di SQL Server equivalente.  
   
-|Nome del gruppo di azioni|Description|  
+|Nome del gruppo di azioni|Descrizione|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che una password viene modificata per un ruolo applicazione. Equivale a [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Questo evento viene generato ogni volta che un controllo viene creato, modificato o eliminato, nonché ogni volta che la specifica di un controllo viene creata, modificata o eliminata. Qualsiasi modifica al controllo viene verificata nel controllo stesso. Equivale a [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -80,8 +80,8 @@ ms.locfileid: "48222991"
 |DATABASE_CHANGE_GROUP|Questo evento viene generato quando un database viene creato, modificato o eliminato. viene creato, modificato o eliminato. Equivale a [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database. Equivale alla classe di evento Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Questo evento viene generato per segnalare i messaggi di controllo correlati alla sicurezza del trasporto del mirroring del database. Equivale a [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti.<br /><br /> Questo evento viene generato per qualsiasi accesso a qualsiasi database. **Nota:** questa situazione potrebbe provocare ai record di controllo di dimensioni elevate. <br /><br /> Equivale a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. **Nota:** può portare a quantità molto elevate di record di controllo. <br /><br /> Equivale a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti.<br /><br /> Questo evento viene generato per qualsiasi accesso a qualsiasi database. **Nota:**  Questa situazione potrebbe provocare ai record di controllo di dimensioni elevate. <br /><br /> Equivale a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. **Nota:**  Questo potrebbe causare una quantità molto elevate di record di controllo. <br /><br /> Equivale a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Questo evento viene generato in caso di modifica del proprietario di oggetti nell'ambito del database. Questo evento viene generato in caso di qualsiasi modifica del proprietario di oggetti per qualsiasi database del server. Equivale a [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Questo evento viene generato quando è stata eseguita un'istruzione GRANT, REVOKE o DENY per oggetti di database, ad esempio assembly o schemi. Questo evento viene generato per qualsiasi modifica alle autorizzazioni per gli oggetti per qualsiasi database del server. Equivale a [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Questo evento viene generato quando vengono effettuate operazioni in un database, ad esempio il checkpoint o la sottoscrizione di notifiche di query. nonché in caso di qualsiasi operazione effettuata su qualsiasi database. Equivale a [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md).|  
@@ -125,7 +125,7 @@ ms.locfileid: "48222991"
   
  Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di database e, dove applicabile, viene specificata la classe di evento di SQL Server equivalente.  
   
-|Nome del gruppo di azioni|Description|  
+|Nome del gruppo di azioni|Descrizione|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che una password viene modificata per un ruolo applicazione. Equivale a [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Questo evento viene generato ogni volta che un controllo viene creato, modificato o eliminato, nonché ogni volta che la specifica di un controllo viene creata, modificata o eliminata. Qualsiasi modifica al controllo viene verificata nel controllo stesso. Equivale a [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -155,12 +155,12 @@ ms.locfileid: "48222991"
 ## <a name="database-level-audit-actions"></a>Azioni di controllo a livello di database  
  Le azioni a livello di database supportano il controllo di azioni specifiche direttamente nello schema del database e negli oggetti dello schema, ad esempio tabelle, viste, stored procedure, funzioni, stored procedure estese, code e sinonimi. Tipi, raccolte di XML Schema, database e schemi non sono controllati. Il controllo di oggetti dello schema può essere configurato nello schema o nel database, ovvero tutti gli eventi sugli oggetti dello schema contenuti nello schema o nel database specificato verranno controllati. Nella tabella seguente vengono descritte le azioni di controllo a livello di database.  
   
-|Azione|Description|  
+|Azione|Descrizione|  
 |------------|-----------------|  
 |SELECT|Questo evento viene generato ogni volta che viene eseguita un'istruzione SELECT.|  
 |UPDATE|Questo evento viene generato ogni volta che viene eseguita un'istruzione UPDATE.|  
 |INSERT|Questo evento viene generato ogni volta che viene eseguita un'istruzione INSERT.|  
-|Elimina|Questo evento viene generato ogni volta che viene eseguita un'istruzione DELETE.|  
+|DELETE|Questo evento viene generato ogni volta che viene eseguita un'istruzione DELETE.|  
 |EXECUTE|Questo evento viene generato ogni volta che viene eseguita un'istruzione EXECUTE.|  
 |RECEIVE|Questo evento viene generato ogni volta che viene eseguita un'istruzione RECEIVE.|  
 |REFERENCES|Questo evento viene generato ogni volta che viene controllata un'autorizzazione REFERENCES.|  
@@ -175,7 +175,7 @@ ms.locfileid: "48222991"
 ## <a name="audit-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di controllo  
  È possibile controllare le azioni anche durante il processo di controllo stesso. Questa operazione può essere eseguita sia nell'ambito del server che in quello del database. In quest'ultimo caso l'operazione può essere eseguita solo per le specifiche del controllo del database. Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di controllo.  
   
-|Nome del gruppo di azioni|Description|  
+|Nome del gruppo di azioni|Descrizione|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Questo evento viene generato ogni volta che viene eseguito uno dei comandi seguenti:<br /><br /> -CREATE SERVER AUDIT<br />-ALTER SERVER AUDIT<br />-DROP SERVER AUDIT<br />-CREA SPECIFICA CONTROLLO SERVER<br />-ALTER SERVER AUDIT SPECIFICATION<br />-DROP SERVER AUDIT SPECIFICATION<br />-CREA SPECIFICA CONTROLLO DATABASE<br />-ALTER DATABASE AUDIT SPECIFICATION<br />-DROP DATABASE AUDIT SPECIFICATION|  
   

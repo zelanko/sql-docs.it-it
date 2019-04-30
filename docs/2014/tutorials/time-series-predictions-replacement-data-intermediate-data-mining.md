@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312876"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Stime basate su serie temporali utilizzando dati di sostituzione (Esercitazione intermedia sul data mining)
   In questa attività verrà compilato un nuovo modello basato sui dati di vendita mondiali. Verrà quindi creata una query di stima che applica il modello delle vendite mondiali a una delle singole aree.  

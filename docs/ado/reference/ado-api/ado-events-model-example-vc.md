@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248975"
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
 La sezione di Visual C++ di [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) viene fornita una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico su un'istanza del modello di evento all'interno dell'ambiente creato dal **#import** direttiva.  

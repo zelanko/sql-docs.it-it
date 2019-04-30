@@ -1,5 +1,5 @@
 ---
-title: VarianceP (MDX) | Documenti Microsoft
+title: VarianceP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58987cc301b3ee329be841d9c97d9a7e8e42d88d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251516"
 ---
 # <a name="variancep-mdx"></a>VarianceP (MDX)
 
@@ -22,6 +22,6 @@ ms.locfileid: "34743720"
   Alias per il [VarP](../mdx/varp-mdx.md) (funzione).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

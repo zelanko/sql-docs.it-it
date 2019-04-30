@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b859c3b9841945241ac0ec9c5238a479a5ba3343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302823"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Installazione di SSMA per SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per SAP Adaptive Server Enterprise (ASE) è costituito da un'applicazione client che consente di eseguire una migrazione da SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Database SQL di Azure. Contiene anche un pacchetto di estensione che supporta la migrazione dei dati e l'utilizzo di ambiente del servizio app di funzioni di sistema nei database migrati.  
@@ -29,7 +29,7 @@ Se si apre un progetto da una versione precedente di SSMA per ASE SAP, SSMA chie
   
 ## <a name="contents"></a>Sommario  
   
-|Articolo|Description|  
+|Articolo|Descrizione|  
 |---------|---------------|  
 |[Installazione di SSMA per SAP ASE Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Include informazioni e istruzioni sull'installazione di SSMA per il client di SAP ASE.|  
 |[Installazione di componenti SSMA in SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Include informazioni e istruzioni per installare il pacchetto di estensione nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

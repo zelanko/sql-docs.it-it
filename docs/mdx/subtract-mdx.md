@@ -1,5 +1,5 @@
 ---
-title: '- (Sottrazione) (MDX) | Documenti Microsoft'
+title: '- (Sottrazione) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd0bb64169f6474874405cfd88476d426a9a6ee0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266544"
 ---
 # <a name="--subtract-mdx"></a>- (sottrazione) (MDX)
 
@@ -29,13 +29,13 @@ Numeric_Expression - Numeric_Expression
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore con il tipo di dati del parametro con precedenza maggiore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se una delle due espressioni restituisce un valore Null, l'operatore restituirà il risultato dell'altra espressione.  
   
 ## <a name="examples"></a>Esempi  

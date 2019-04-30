@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273220"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
   Per impostazione predefinita, nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata la funzionalità full-text. Per utilizzare un indice full-text in una tabella, è tuttavia necessario impostare la funzionalità di indicizzazione full-text nelle colonne delle tabelle a cui si desidera accedere mediante il motore di ricerca full-text.  

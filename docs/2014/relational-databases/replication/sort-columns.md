@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270724"
 ---
 # <a name="sort-columns"></a>Ordina colonne
   La finestra di dialogo **Ordina colonne** consente di ordinare le griglie in Monitoraggio replica in base a una o più colonne. È anche possibile eseguire l'ordinamento in base a una singola colonna facendo clic sull'intestazione di colonna nella griglia di Monitoraggio replica. Per ordinare, ad esempio, le sottoscrizioni nella scheda **Tutte le sottoscrizioni** in base allo stato e quindi al tipo di connessione, eseguire la procedura seguente:  

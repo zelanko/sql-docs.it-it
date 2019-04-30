@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276444"
 ---
 # <a name="handler-property-rds"></a>Proprietà Handler (Servizi Desktop remoto)
 Indica il nome di un programma di personalizzazione lato server (gestore) che estende le funzionalità dei [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ed eventuali parametri utilizzati per il *gestore*.  

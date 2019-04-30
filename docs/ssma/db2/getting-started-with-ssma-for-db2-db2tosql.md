@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298858"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introduzione a SSMA per DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2 consente rapidamente gli schemi di database DB2 per convertire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,13 +54,13 @@ Visualizzatore metadati DB2 Mostra informazioni sugli schemi DB2. Tramite Visual
   
 -   Selezionare le tabelle per la migrazione dei dati e quindi migrare i dati da tali tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>Esplora i metadati SQL Server  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati Mostra le informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA recupera i metadati relativi a tale istanza e lo archivia nel file di progetto.  
   
 È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati per selezionare gli oggetti di database DB2 convertiti e quindi sincronizzare gli oggetti con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in DB2 metadati Esplora, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping tra i tipi, Report**, **proprietà**, e **dati**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, verranno visualizzate tre schede: **tabella**, **SQL**, e **dati**.  
+A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in DB2 metadati Esplora, verranno visualizzate sei schede: **Nella tabella**, **SQL**, **digitare Mapping, Report**, **proprietà**, e **dati**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, verranno visualizzate tre schede: **Nella tabella**, **SQL**, e **dati**.  
   
 La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -89,7 +89,7 @@ La tabella seguente illustra la migrazione i comandi della barra degli strumenti
 ### <a name="menus"></a>Menu  
 La tabella seguente mostra i menu SSMA.  
   
-|Menu|Description|  
+|Menu|Descrizione|  
 |----|-----------|  
 |**File**|Comandi per l'uso dei progetti, la connessione a DB2 e la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli, ad esempio la copia [!INCLUDE[tsql](../../includes/tsql-md.md)] dal riquadro dei dettagli SQL. Contiene anche il **gestire i segnalibri** opzione, in cui sarà in grado di visualizzare un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276310"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Ottenere un modello da una traccia in esecuzione (SQL Server Profiler)
   In questo argomento viene illustrato come creare un modello di traccia basato su una traccia esistente in esecuzione utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

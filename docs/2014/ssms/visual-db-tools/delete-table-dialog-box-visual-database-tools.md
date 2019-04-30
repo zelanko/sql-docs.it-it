@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316106"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Finestra di dialogo Elimina tabella (Visual Database Tools)
   Questa finestra di dialogo consente di specificare la tabella da cui eliminare record. Viene visualizzata quando nel riquadro Diagramma sono aperte più tabelle e si cambia il tipo di query in modo da disporre di una query di eliminazione.  

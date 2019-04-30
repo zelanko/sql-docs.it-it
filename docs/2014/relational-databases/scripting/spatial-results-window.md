@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278705"
 ---
 # <a name="spatial-results-window"></a>Finestra Risultati spaziali
   La finestra **Risultati spaziali** fornisce strumenti di mapping visivo per la visualizzazione di dati spaziali. Per visualizzare i risultati spaziali, è necessario che i risultati delle query contengano una colonna spaziale con dati geometrici o geografici.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092871"
  Questa opzione non è disponibile quando in una query vengono restituite solo istanze di punti.  
   
  **Selezionare la proiezione**  
- Consente di visualizzare i dati geografici in quattro tipi di proiezione, ovvero Equirectangular, Mercator, Robinson e Bonne.  
+ Visualizzare i dati geografici in quattro: Equirectangular, Mercator, Robinson e Bonne.  
   
  Questa opzione non è disponibile per i dati geometrici.  
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259007"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Lavorare con i file di Script di esempio Console (DB2ToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -80,5 +80,5 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
 [Creazione di file di connessione del Server &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
-[Generazione di report &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)  
+[Generating Reports &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   

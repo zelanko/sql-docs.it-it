@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280702"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
   Quando si crea un indice full-text, è necessario specificare una lingua a livello di colonna per la colonna indicizzata. Il [word breaker e gli stemmer](configure-and-manage-word-breakers-and-stemmers-for-search.md) della lingua specificata verranno usati dalle query full-text sulla colonna. Quando si crea un indice full-text, è necessario considerare alcuni aspetti relativi alla scelta della lingua delle colonne. Tali considerazioni riguardano il modo in cui il testo viene suddiviso in token e quindi indicizzato dal motore di ricerca full-text.  

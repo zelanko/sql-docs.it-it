@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4ff23adeb5d5a73e309bc3cd64e95fa820fa2404
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306504"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteggere gli elementi del set di dati condiviso
   In un server di report gli elementi del set di dati condiviso possono essere utilizzati da più report. È possibile proteggere set di dati condivisi per controllare il livello di accesso degli utenti. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono visualizzare set di dati condivisi, modificare proprietà, abilitare la memorizzazione nella cache, creare piani di aggiornamento della cache ed eliminare elementi, mentre per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un set di dati condiviso.  

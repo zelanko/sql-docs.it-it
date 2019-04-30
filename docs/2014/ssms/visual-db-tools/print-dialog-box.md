@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313015"
 ---
 # <a name="print-dialog-box"></a>Finestra di dialogo Stampa
   Mediante le opzioni disponibili nella finestra di dialogo **Stampa** è possibile specificare la modalità di stampa di un documento.  

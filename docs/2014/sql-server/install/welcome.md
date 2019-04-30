@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbe9acf44e86b2b01cebb7de898fed827c6c412a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297565"
 ---
 # <a name="welcome"></a>Procedura guidata
   Le regole di installazione consentono di eseguire l'analisi del computer in cui verrà installato l'aggiornamento.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19b266474c348af50db26fddafeea79d4cf33ade
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308197"
 ---
 # <a name="fetchoptions-property-rds"></a>Proprietà FetchOptions (Servizi Desktop remoto)
 Indica il tipo di recupero asincrono.  
@@ -30,7 +30,7 @@ Indica il tipo di recupero asincrono.
 ## <a name="setting-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
-|Costante|Description|  
+|Costante|Descrizione|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Tutti i record della [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo venga restituito all'applicazione. L'intero **Recordset** viene recuperato prima che l'applicazione può eseguire alcuna operazione con esso.|  
 |**adcFetchBackground**|Controllo può restituire all'applicazione, non appena il primo batch di record è stato recuperato. Una lettura successiva del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà ritardata fino al recupero record ricercato è in realtà, a ogni controllo viene restituito all'applicazione.|  

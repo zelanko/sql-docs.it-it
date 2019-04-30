@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260665"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Pagina delle proprietà Generale, Risorse (Gestione report)
   La pagina delle proprietà Generale per le risorse consente di rinominare, eliminare, spostare o sostituire una risorsa. Nella parte superiore della pagina viene visualizzato il nome dell'utente che ha aggiunto la risorsa o ne ha modificato le proprietà.  

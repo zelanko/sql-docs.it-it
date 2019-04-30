@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264825"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
   È possibile utilizzare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'integrazione con SharePoint. I report che è possibile visualizzare includo file di definizione dei report, con estensione rdl, e report di Generatore report. I report vengono automaticamente aperti nella web part Visualizzatore report in una nuova pagina, tuttavia è possibile aggiungere la web part Visualizzatore report a una pagina Web o a un sito esistente se si desidera che il report risulti sempre visibile all'interno della pagina.  

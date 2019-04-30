@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312515"
 ---
 # <a name="using-arrays-of-parameters"></a>Uso delle matrici di parametri
 Usare matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMSET_SIZE per specificare il numero di set di parametri. Viene chiamato **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMS_PROCESSED_PTR per specificare l'indirizzo di una variabile in cui il driver può restituire il numero di set di parametri elaborati, inclusi i set di errore. Viene chiamato **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAM_STATUS_PTR in modo che punti a una matrice in cui si desidera ottenere informazioni sullo stato per ogni riga di valori di parametro. Il driver archivia questi indirizzi nella struttura che viene mantenuta per l'istruzione.  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d0f42561d7b324a13068c14d0fc7971d3d46d83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311778"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Specifica se un separatore di riga viene aggiunto alla stringa di cui è scritto in un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|Valore predefinito. Scrive la stringa di testo specificato (specificato dal *Data* parametro) per il **Stream** oggetto.|  
 |**adWriteLine**|1|Scrive una stringa di testo e un carattere separatore di riga a un **Stream** oggetto. Se il [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) proprietà non è definita, quindi viene restituito un errore di run-time.|  

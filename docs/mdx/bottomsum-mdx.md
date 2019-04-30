@@ -1,5 +1,5 @@
 ---
-title: BottomSum (MDX) | Documenti Microsoft
+title: BottomSum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306723"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
 
@@ -35,14 +35,14 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Valore*  
  Espressione numerica valida che specifica il valore in base a cui ogni tupla viene valutata.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **BottomSum** funzione calcola la somma di una misura specificata valutata su un set specificato, disponendo il set in ordine crescente. La funzione restituisce quindi gli elementi con i valori più bassi il cui totale per l'espressione numerica specificata corrisponde almeno al valore specificato (somma). La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno al valore specificato. Gli elementi restituiti sono ordinati dal più piccolo al più grande.  
   
 > [!IMPORTANT]  
->  Il **BottomSum** funzione, come il [TopSum](../mdx/topsum-mdx.md) funzione, non rispetta mai la gerarchia.  
+>  Il **BottomSum** funzione, come le [TopSum](../mdx/topsum-mdx.md) function, rispetta mai la gerarchia.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito per la categoria Bike il set più piccolo di membri del livello City nella gerarchia Geography della dimensione Geography per l'anno fiscale 2003 il cui totale cumulativo, utilizzando la misura Reseller Sales Amount, corrisponde almeno alla somma di 50.000 (a partire dai membri di questo set con il numero di vendite più basso):  
@@ -66,6 +66,6 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  `WHERE([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003])`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

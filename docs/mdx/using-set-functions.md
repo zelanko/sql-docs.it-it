@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di Set di funzioni | Documenti Microsoft
+title: Usando le funzioni sui Set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251593"
 ---
 # <a name="using-set-functions"></a>Utilizzo delle funzioni sui set
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743670"
   
  Le funzioni sui set, come le funzioni membro e le funzioni di tupla, sono essenziali per la negoziazione delle strutture multidimensionali utilizzate in Analysis Services. Le funzioni sui set sono essenziali anche per ottenere risultati dalle query MDX, perché le espressioni set definiscono gli assi di una query MDX.  
   
- Una delle funzioni set più comune è il [i membri &#40;impostare&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) (funzione), che recupera un set contenente tutti i membri da una dimensione, gerarchia o livello. Nell'esempio seguente viene illustrato l'utilizzo di questa funzione all'interno di una query:  
+ Una delle funzioni set più comune è il [i membri &#40;impostare&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) funzione, che recupera un set contenente tutti i membri di una dimensione, gerarchia o livello. Nell'esempio seguente viene illustrato l'utilizzo di questa funzione all'interno di una query:  
   
  `SELECT`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "34743670"
   
  DESCENDANTS(  
   
- [Date].[Calendar].[Calendar Year].&[2004]  
+ [Date]. [Calendar]. [Calendar Year]. & [2004]  
   
  , [Date].[Calendar].[Date])  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34743670"
   
  FROM [Adventure Works]  
   
- Il [ordine &#40;MDX&#41; ](../mdx/order-mdx.md) funzione consente di ordinare il contenuto di un set in ordine crescente o decrescente in base a una particolare espressione numerica. La query seguente restituisce gli stessi membri nelle righe della query precedente, ma in questo caso i membri vengono ordinati in base alla misura Internet Sales Amount:  
+ Il [ordini &#40;MDX&#41; ](../mdx/order-mdx.md) funzione consente di ordinare il contenuto di un set in ordine crescente o decrescente in base a una particolare espressione numerica. La query seguente restituisce gli stessi membri nelle righe della query precedente, ma in questo caso i membri vengono ordinati in base alla misura Internet Sales Amount:  
   
  `SELECT`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34743670"
   
  Questa query illustra anche come passare come parametro il set restituito da una funzione sui set (Descendants) a un'altra funzione sui set (Order).  
   
- Filtraggio di un set in base a determinati criteri si rivela utile quando la scrittura di query e per questo scopo è possibile usare il [filtro &#40;MDX&#41; ](../mdx/filter-mdx.md) funzione, come illustrato nell'esempio seguente:  
+ Filtraggio di un set in base a determinati criteri si rivela utile quando la scrittura di query e per questo scopo è possibile usare la [filtro &#40;MDX&#41; ](../mdx/filter-mdx.md) funzionare, come illustrato nell'esempio seguente:  
   
  `SELECT`  
   
@@ -177,7 +177,7 @@ ms.locfileid: "34743670"
   
  `FROM [Adventure Works]`  
   
- Infine è possibile eseguire una serie di operazioni logiche sui set utilizzando funzioni quali [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [unione &#40;MDX&#41; ](../mdx/union-mdx.md) e [tranne &#40;MDX&#41; ](../mdx/except-mdx-function.md) funzioni. La query seguente illustra l’utilizzo delle ultime due funzioni:  
+ Infine è possibile eseguire una serie di operazioni logiche sui set utilizzando funzioni quali [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41; ](../mdx/union-mdx.md) e [tranne &#40;MDX&#41; ](../mdx/except-mdx-function.md) le funzioni. La query seguente illustra l’utilizzo delle ultime due funzioni:  
   
  `SELECT`  
   
@@ -217,7 +217,7 @@ ms.locfileid: "34743670"
   
 ## <a name="see-also"></a>Vedere anche  
  [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Utilizzo delle funzioni membro](../mdx/using-member-functions.md)   
+ [Uso delle funzioni membro](../mdx/using-member-functions.md)   
  [Uso delle funzioni di tupla](../mdx/using-tuple-functions.md)  
   
   

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273152"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
   Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
@@ -105,7 +105,7 @@ ms.locfileid: "54128616"
   
  È possibile stimare approssimativamente la quantità di memoria (in byte) utilizzata dall'host del daemon di filtri tramite la formula seguente:  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
   
  I valori predefiniti delle variabili nella formula precedente sono i seguenti:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54128616"
   
 |Piattaforma|Stima dei requisiti di memoria fdhost.exe in MB*F*<sup>1</sup>|Formula per il calcolo della memoria massima del server -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _numero di intervalli di ricerca per indicizzazione_ **&#42;** 50|_M_ **= minimo (** _T_ **,** 2000 **)-*`F`* -**  500|  
+|x86|_F_ **=** _numero di intervalli di ricerca per indicizzazione_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
 |x64|_F_ **=** _numero di intervalli di ricerca per indicizzazione_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
  <sup>1</sup> se è in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe della ognuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come _T_**-** sigma **(**_F_i **)**.  

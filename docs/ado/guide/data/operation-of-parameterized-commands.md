@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302345"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alle dimensioni dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, può risultare più efficiente usare un' comando con parametri.  
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Utilizzo di una gerarchia senza parametri, non è possibile correlare le tabelle di giochi e i team in modo che l'elemento figlio **Recordset** per ogni team contiene la pianificazione completa. È possibile creare capitoli che contengono la pianificazione iniziale o la pianificazione di viaggio, ma non entrambi. Infatti, la clausola RELATE è limitato a relazioni padre-figlio del form (pc1 = cc1) AND (pc2 = pc2). Pertanto, se il comando include "Sono correlati team_id a home_team, team_id TO visiting_team", si otterrebbe solo giochi in cui un team ricopriva stesso. È invece preferibile "(team_id=home_team) o (team_id = visiting_team)", ma il provider Shape non supporta la clausola OR.  
   
- Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:  
+ Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:   
   
 ```  
 SHAPE {SELECT * FROM teams}   

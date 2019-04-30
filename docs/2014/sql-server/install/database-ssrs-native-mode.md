@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278554"
 ---
 # <a name="database-ssrs-native-mode"></a>Database (modalità nativa SSRS)
-  Utilizzare la pagina Database per creare e configurare i database del server di report che forniscono spazio di archiviazione interno per una o più istanze del server di report. Se si configura un server di report per l'uso di un database del server di report remoto, è necessario usare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per creare il database.  
+  Utilizzare la pagina Database per creare e configurare i database del server di report che forniscono spazio di archiviazione interno per una o più istanze del server di report. Se si configura un server di report per l'utilizzo di un database del server di report remoto, è necessario utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare il database.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -29,11 +29,11 @@ ms.locfileid: "48102491"
   
  Il database del server di report deve supportare una modalità server specifica. La modalità predefinita è la modalità nativa, ma è anche possibile creare un database del server di report per la modalità integrata SharePoint, se si esegue il server di report in una distribuzione più ampia che include un prodotto o una tecnologia SharePoint. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e fare clic su **Database** nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fare clic su **Database** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome del Server SQL**  
- Nel Database di Server di Report corrente **SQL Server nome in** specifica il nome del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che esegue il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto.  
+ **SQL Server Name**  
+ In Database server di report corrente l'opzione **Nome SQL Server** specifica il nome dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è in esecuzione il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto.  
   
  **Database Name**  
  Consente di specificare il nome del database del server di report in cui sono archiviati i dati del server.  
@@ -45,10 +45,10 @@ ms.locfileid: "48102491"
  Consente di avviare una procedura guidata per l'esecuzione semplificata di tutti i passaggi necessari per la creazione o la selezione di un database del server di report.  
   
  **Tipo di credenziale**  
- Consente di specificare le credenziali utilizzate dal server di report per eseguire la connessione al database. È possibile specificare i tipi di credenziale includono l'account del servizio, un utente di dominio di Windows, l'utente locale di Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso al database. Per altre informazioni sulla selezione delle credenziali, vedere [configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Consente di specificare le credenziali utilizzate dal server di report per eseguire la connessione al database. Tra i tipi di credenziali che è possibile specificare sono inclusi l'account del servizio, un utente di dominio di Windows o un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla selezione delle credenziali, vedere [configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome utente**  
- Specifica un account utente di dominio se si usa le credenziali di Windows oppure un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credenziali. Se si usa le credenziali di Windows, specificarle nel formato seguente:  *\<dominio >\\< account\>*.  
+ Consente di specificare un account utente di dominio se si utilizzano le credenziali di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se si utilizzano le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si usa le credenziali di Windows, specificarle nel formato seguente:  *\<dominio >\\< account\>*.  
   
  **Password**  
  Consente di specificare la password per l'account.  
@@ -60,6 +60,6 @@ ms.locfileid: "48102491"
  [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Gli argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

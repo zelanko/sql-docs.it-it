@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 983e01046fd90fbaf8d9ff680492f1b385435f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253581"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Account di dominio richiesti per la farm di SharePoint (Upgrade Advisor)
   I prodotti SharePoint configurati per un ambiente della farm richiedono l'utilizzo di account di dominio.  
@@ -28,7 +28,7 @@ ms.locfileid: "48222271"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  I prodotti SharePoint configurati per un ambiente della farm richiedono l'utilizzo di account di dominio per i servizi e le connessioni ai database. È incluso l'account specificato per l'account del servizio Reporting Services.  
   
  Le pagine Amministrazione centrale SharePoint 2010, ad esempio, restituiscono problemi se non si utilizza un account utente di dominio per Reporting Services. Quando si tenta di configurare l'integrazione di Reporting Services, verrà visualizzato un messaggio di errore simile al seguente:  

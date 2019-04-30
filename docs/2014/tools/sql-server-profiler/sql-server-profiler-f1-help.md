@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea0abd8387b638ce7d51f0fb2f40424adce10187
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267450"
 ---
 # <a name="sql-server-profiler-f1-help"></a>Guida sensibile al contesto di SQL Server Profiler
   Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento in grado di acquisire gli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema.  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276124"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoraggio dell'Appliance per il sistema di piattaforma Analitica
 Questa Guida al monitoraggio appliance descrive gli strumenti e le attività per monitorare l'appliance del sistema di piattaforma Analitica.  
@@ -63,7 +63,7 @@ Se la soluzione di monitoraggio non supporta direct Transact\-query SQL, oppure 
    
 ## <a name="Tasks"></a>Relative attività di monitoraggio  
   
-|Monitoraggio attività|Description|  
+|Monitoraggio attività|Descrizione|  
 |-------------------|---------------|  
 |Monitorare l'appliance usando la Console di amministrazione.|[Monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Monitorare l'appliance usando le viste di sistema.|[Monitorare l'Appliance usando le viste di sistema &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-system-views.md)|  

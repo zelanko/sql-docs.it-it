@@ -1,5 +1,5 @@
 ---
-title: (Commento) (MDX) | Documenti Microsoft
+title: (Commento) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306336"
 ---
-# <a name="comment-mdx-double-slash"></a>Doppia barra di commento MDX
+# <a name="comment-mdx-double-slash"></a>Barra doppia MDX commento
 
 
   Evidenzia il testo inserito dall'utente.  
@@ -32,7 +32,7 @@ ms.locfileid: "34739520"
  *Comment_Text*  
  Stringa contenente il testo del commento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I commenti possono essere inseriti su una riga distinta oppure nidificati alla fine di una riga di script MDX (Multidimensional Expressions) o in un'istruzione MDX. Nel server il commento non viene valutato.  
   
  Per commenti su una sola riga, utilizzare //. I commenti inseriti con // sono delimitati dal carattere di nuova riga.  

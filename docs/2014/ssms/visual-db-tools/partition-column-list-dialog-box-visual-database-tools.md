@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280380"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Finestra di dialogo Elenco colonne partizione (Visual Database Tools)
   Se una tabella è associata a uno schema di partizione, è possibile utilizzare questa finestra di dialogo per scegliere una o più colonne a cui applicare la funzione Partition. Perché la funzione sia valida, è necessario che il tipo di dati della colonna su cui ci si posiziona sia lo stesso della colonna definita nella funzione Partition.  

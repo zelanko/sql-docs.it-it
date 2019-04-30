@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) | Documenti Microsoft
+title: NonEmpty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278522"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -35,7 +35,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione restituisce le tuple del primo set specificato che risultano non vuote quando vengono valutate sulle tuple del secondo set. Il **NonEmpty** funzione tiene conto dei calcoli e mantiene le tuple duplicate. Se non viene specificato un secondo set, l'espressione viene valutata nel contesto delle coordinate correnti dei membri delle gerarchie degli attributi e delle misure del cubo.  
   
 > [!NOTE]  
@@ -45,7 +45,7 @@ NONEMPTY(set_expression1 [,set_expression2])
 >  Non sono le tuple a essere non vuote, bensì le celle a cui fanno riferimento le tuple.  
   
 ## <a name="examples"></a>Esempi  
- La query seguente viene illustrato un esempio semplice di **NonEmpty**, restituisce tutti i clienti che hanno un valore non null per Internet Sales Amount in data 1 luglio 2001:  
+ La query seguente viene illustrato un esempio semplice di **NonEmpty**, restituendo tutti i clienti che hanno un valore non null per Internet Sales Amount in data 1 luglio 2001:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- L'esempio seguente restituisce il set di tuple contenente i clienti e le date di acquisto, utilizzando il **filtro** funzione e **NonEmpty** funzioni per consentirti di individuare l'ultima data di ogni cliente che ha eseguito un acquisto:  
+ L'esempio seguente restituisce il set di tuple contenente i clienti e le date di acquisto, utilizzando il **filtro** (funzione) e il **NonEmpty** funzioni per individuare l'ultima data in cui ogni cliente ha eseguito un acquisto:  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -89,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>Vedere anche  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filtro &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

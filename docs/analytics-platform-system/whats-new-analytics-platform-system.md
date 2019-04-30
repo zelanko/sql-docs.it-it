@@ -10,11 +10,11 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243776"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 

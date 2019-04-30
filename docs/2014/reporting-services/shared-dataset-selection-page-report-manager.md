@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbb2e4e671bf00016071bfe53a7b3e5f53acac2f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223235"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Pagina di selezione del set di dati condiviso (Gestione report)
   La pagina di selezione del set di dati condiviso consente di controllare e modificare i set di dati condivisi attualmente associati a un report.  

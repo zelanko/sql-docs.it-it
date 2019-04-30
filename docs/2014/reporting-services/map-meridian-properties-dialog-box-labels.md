@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278614"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Finestra di dialogo Proprietà meridiani mappa, Etichette
   Usare la **MapMeridian proprietà** finestra di dialogo per modificare le opzioni di etichetta per la griglia verticale nel viewport della mappa. Un meridiano rappresenta il valore seguente a seconda del sistema di coordinate specificato per il viewport:  

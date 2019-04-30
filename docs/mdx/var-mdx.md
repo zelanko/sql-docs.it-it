@@ -1,5 +1,5 @@
 ---
-title: Var (MDX) | Documenti Microsoft
+title: Var (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14caf6e96b41fdf2e7f8b4d20f16852e890bd166
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251505"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 
@@ -32,15 +32,15 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **Var** funzione restituisce la varianza non distorta di un'espressione numerica specificata valutata su un set specificato.  
   
- Il **Var** funzione utilizza la formula della popolazione non distorta e [VarP](../mdx/varp-mdx.md) funzione utilizza la formula della popolazione distorta.  
+ Il **Var** funzione utilizza la formula della popolazione non distorta e il [VarP](../mdx/varp-mdx.md) funzione utilizza la formula della popolazione distorta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

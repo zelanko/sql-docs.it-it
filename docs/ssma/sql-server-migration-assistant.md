@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240231"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) è uno strumento progettato per automatizzare la migrazione del database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -82,7 +82,7 @@ Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di d
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   
-© Microsoft Corporation. 2019. Tutti i diritti sono riservati.  
+© 2019 Microsoft Corporation. Tutti i diritti sono riservati.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX sono marchi o marchi registrati di Microsoft Corporation negli Stati Uniti e/o in altri paesi/aree geografiche.  
   

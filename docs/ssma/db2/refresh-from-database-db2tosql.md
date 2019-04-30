@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270003"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Aggiornare dal Database (DB2ToSQL)
 Il **aggiornare dal Database** nella finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di DB2. Le righe nella finestra di dialogo sono contraddistinte dal colore basato sullo stato dei metadati:  
@@ -36,7 +36,7 @@ Per l'accesso di **aggiornare dal Database** della finestra di dialogo scelta di
 **Comprimi (-)**  
 Comprimi tutti i gruppi di oggetti per nascondere i singoli oggetti.  
   
-**Espansione (+)**  
+**Expand (+)**  
 Espandere tutti i gruppi di oggetti per mostrare i singoli oggetti.  
   
 **Mostra/Nascondi oggetti uguali**  
