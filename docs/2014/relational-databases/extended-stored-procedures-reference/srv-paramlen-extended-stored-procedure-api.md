@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127198"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (API delle stored procedure estese)
     
@@ -62,14 +62,14 @@ n
   
 |Nuovi tipi di dati|Lunghezza dei dati di input|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **> = 255:** N/D<br /><br /> **< 255:** N/D|  
-|`BIGVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** valore *len* effettivo|  
-|`BIGCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`BIGBINARY`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`BIGVARBINARY`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** valore *len* effettivo|  
-|`NCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`NVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** valore *len* effettivo|  
-|`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **< 255:** -1|  
+|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/D|  
+|`BIGVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** valore *len* effettivo|  
+|`BIGCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BIGBINARY`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BIGVARBINARY`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** valore *len* effettivo|  
+|`NCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`NVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** valore *len* effettivo|  
+|`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **<255:** -1|  
   
  \*   Valore *len* effettivo = Lunghezza della stringa di carattere multibyte (cch)  
   
@@ -79,7 +79,7 @@ n
  Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene comunque chiamato, ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_paraminfo &#40;API delle stored procedure estese&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
