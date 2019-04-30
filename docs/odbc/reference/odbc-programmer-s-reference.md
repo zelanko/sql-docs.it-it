@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273035"
 ---
 # <a name="odbc-programmer39s-reference"></a>I programmatori ODBC&#39;riferimento
 Il *riferimento per programmatori ODBC* contiene le sezioni seguenti.  
@@ -50,7 +50,7 @@ Il *riferimento per programmatori ODBC* contiene le sezioni seguenti.
   
 |Formato|Utilizzo|  
 |------------|--------------|  
-|SELEZIONARE * DA|Lettere maiuscole indicano le istruzioni SQL, i nomi delle macro e termini utilizzati a livello di comando del sistema operativo.|  
+|SELECT * FROM|Lettere maiuscole indicano le istruzioni SQL, i nomi delle macro e termini utilizzati a livello di comando del sistema operativo.|  
 |`RETCODE SQLFetch(hdbc)`|Il tipo di carattere a spaziatura fissa viene usato per righe di comando di esempio e il codice del programma.|  
 |*argument*|Le parole in corsivo indicano argomenti a livello di codice, informazioni che l'utente o l'applicazione deve fornire o enfasi di word.|  
 |**SQLEndTran**|In grassetto di sintassi deve essere digitata esattamente come indicato, inclusi i nomi delle funzioni.|  
@@ -68,7 +68,7 @@ Il *riferimento per programmatori ODBC* contiene le sezioni seguenti.
   
 -   Database SQL con l'integrità miglioramento, ANSI, ANSI 1989 X3.135-1989 - Language.  
   
--   Linguaggio di database - SQL: X3H2 ANSI e ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   Linguaggio di database - SQL: ANSI X3H2 and ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
 -   Open Group, la gestione dei dati: Structured Query Language (SQL), versione 2 (The Open Group, 1996).  
   
@@ -78,13 +78,13 @@ Il *riferimento per programmatori ODBC* contiene le sezioni seguenti.
   
 -   Emerson, Sandra l, Darnovsky, Maria e Bowman, S. Judith: *Il manuale di SQL pratico* (Addison-Wesley, 1989).  
   
--   Groff, R. James e Weinberg, Paul N.: *Usando SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, James R. and Weinberg, Paul N.: *Using SQL* (Osborne McGraw-Hill, 1990).  
   
 -   Gruber, Martin: *La comprensione di SQL* (Sybex, 1990).  
   
 -   Hursch, Jack "l". e J. Carolyn: *SQL, linguaggio di Query strutturate* (scheda documentazione, 1988).  
   
--   Melton, Jim e Simon, Alan R.: *Informazioni sulle nuove SQL: Una guida completa* (Morgan Kaufmann editori, 1993).  
+-   Melton, Jim, and Simon, Alan R.: *Informazioni sulle nuove SQL: A Complete Guide* (Morgan Kaufmann Publishers, 1993).  
   
 -   Convenzione Pascal, Fabian: *SQL e relazionali nozioni di base* (M & T libri, 1990).  
   
@@ -98,7 +98,7 @@ Il *riferimento per programmatori ODBC* contiene le sezioni seguenti.
   
  Per ulteriori informazioni sull'elaborazione delle transazioni, vedere:  
   
--   Grigio, N. di J. e Reuter, Andreas: *Elaborazione delle transazioni: Concetti e tecniche* (Morgan Kaufmann editori, 1993).  
+-   Gray, J. N. e Reuter, Andreas: *Elaborazione delle transazioni: Concetti e tecniche* (Morgan Kaufmann editori, 1993).  
   
 -   Hackathorn, Richard D.: *Connettività al Database Enterprise* (Wiley & Sons, 1993).  
   

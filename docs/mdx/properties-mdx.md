@@ -1,5 +1,5 @@
 ---
-title: Proprietà (MDX) | Documenti Microsoft
+title: Proprietà (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278446"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -32,20 +32,20 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
- *Property_name*  
+ *Property_Name*  
  Espressione stringa valida del nome della proprietà di un membro.  
   
-## <a name="remarks"></a>Remarks  
- Il **proprietà** funzione restituisce il valore del membro specificato per la proprietà di membro specificato. La proprietà del membro può essere ad esempio le proprietà intrinseche dei membri, **nome**, **ID**, **chiave**, o **DIDASCALIA**, oppure può essere una proprietà del membro definita dall'utente. Per altre informazioni, vedere [proprietà intrinseche dei membri &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [proprietà dei membri definite dall'utente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>Note  
+ Il **proprietà** funzione restituisce il valore del membro specificato per la proprietà di membro specificato. La proprietà del membro può essere ad esempio le proprietà intrinseche dei membri, **NAME**, **ID**, **chiave**, oppure **DIDASCALIA**, oppure può essere un proprietà membro definite dall'utente. Per altre informazioni, vedere [proprietà intrinseche dei membri &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [le proprietà dei membri definite dall'utente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
- Per impostazione predefinita, il valore è impostato forzatamente su una stringa. Se **TIPIZZATO** viene specificato, il valore restituito deve essere fortemente tipizzato.  
+ Per impostazione predefinita, il valore è impostato forzatamente su una stringa. Se **TYPED** viene specificato, il valore restituito è fortemente tipizzato.  
   
 -   Se la proprietà è di tipo intrinseco, la funzione restituirà il tipo originale del membro.  
   
--   Se il tipo della proprietà è di tipo definito dall'utente, il tipo del valore restituito è identico al tipo del valore restituito del **MemberValue** (funzione).  
+-   Se il tipo della proprietà è definita dall'utente, il tipo del valore restituito è uguale al tipo del valore restituito del **MemberValue** (funzione).  
   
 > [!NOTE]  
->  Properties ('Key') restituisce lo stesso risultato di Key0 ad eccezione delle chiavi composte. Per le chiavi composte Properties ('Key') restituirà Null. Usare la chiave*x* sintassi per le chiavi composte, come illustrato nell'esempio. Properties ('Key0'), Properties('Key1'), Properties('Key2') ecc formano la chiave composta.  
+>  Properties ('Key') restituisce lo stesso risultato di Key0 ad eccezione delle chiavi composte. Per le chiavi composte Properties ('Key') restituirà Null. Utilizzare il tasto*x* sintassi per le chiavi composte, come illustrato nell'esempio. Properties ('Key0'), Properties('Key1'), Properties('Key2') ecc formano la chiave composta.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono restituite le proprietà del membro intrinseche e definite dall'utente, utilizzando l'argomento TYPED per restituire il valore fortemente tipizzato per la proprietà del membro Day Name.  
@@ -86,7 +86,7 @@ SELECT {Measures.MemberName
 FROM [Adventure Works]  
 ```  
   
- Nell'esempio seguente viene illustrato come utilizzare la chiave*x* proprietà.  
+ L'esempio seguente illustra l'uso della chiave*x* proprietà.  
   
 ```  
 WITH   
@@ -106,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzando le proprietà del membro &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Utilizzo delle proprietà dei membri &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

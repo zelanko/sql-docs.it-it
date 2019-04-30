@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2612fdc52bde6b199080bcdd7b67a8e8401e6805
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281026"
 ---
 # <a name="connect-property-rds"></a>Proprietà Connect (Servizi Desktop remoto)
 Indica il nome del database da cui vengono eseguite le operazioni di query e aggiornamento.  

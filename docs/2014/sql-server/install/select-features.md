@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 808588f20a4d94fa3be885ee79853362071f7768
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270088"
 ---
 # <a name="select-features"></a>Seleziona caratteristiche
   Utilizzare la pagina Selezione caratteristica per selezionare i componenti e le caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare.  

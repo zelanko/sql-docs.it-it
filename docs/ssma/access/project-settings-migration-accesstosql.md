@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299285"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Impostazioni progetto (migrazione) (AccessToSQL)
 Le impostazioni del progetto di migrazione consentono di configurare la modalità di migrazione dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
