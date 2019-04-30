@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209981"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 16 bit con driver a 32 bit
 > [!IMPORTANT]  
@@ -44,23 +44,23 @@ ms.locfileid: "47752929"
   
  In Windows in Windows (thunk di 16 bit a 32 bit), una DLL thunk aggiuntiva denominata Ds32gt converte i valori di argomento a 16 bit passati tramite un programma di installazione a 32 bit DLL eseguire il backup a 16 bit.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componenti  
  Il componente ODBC del SDK di MDAC 2.8 SP1 include i file seguenti per l'esecuzione di applicazioni a 16 bit con driver a 32 bit. Questi componenti si trovano nella directory \Redist.  
   
-|Nome file|Description|  
+|Nome file|Descrizione|  
 |---------------|-----------------|  
-|Odbc16gt|DLL thunk di 16 bit ODBC generico|  
-|Odbc32gt|ODBC generico thunk DLL a 32 bit|  
-|Odbccp32|DLL di installazione a 32 bit|  
+|Odbc16gt.dll|DLL thunk di 16 bit ODBC generico|  
+|Odbc32gt.dll|ODBC generico thunk DLL a 32 bit|  
+|Odbccp32.dll|DLL di installazione a 32 bit|  
 |Odbcad32.exe|programma di amministrazione di 32 bit|  
-|Odbcinst|File di programma di installazione della Guida|  
-|Ds16gt. dll|installazione di driver a 16 bit generico thunk delle DLL|  
-|CTL3D32|raccolta di stili di finestra tridimensionale a 32 bit|  
+|Odbcinst.hlp|File di programma di installazione della Guida|  
+|Ds16gt.dll|installazione di driver a 16 bit generico thunk delle DLL|  
+|Ctl3d32.dll|raccolta di stili di finestra tridimensionale a 32 bit|  
   
  Inoltre, i file seguenti con la gestione dei Driver di ODBC 2.10 16 bit, che non fanno parte di ODBC 3.51, richiesti dal e devono essere installati con l'applicazione a 16 bit.  
   
-|Nome file|Description|  
+|Nome file|Descrizione|  
 |---------------|-----------------|  
-|Mentre|Gestione Driver a 16 bit|  
-|Odbccp32.dll|DLL di installazione a 16 bit|  
+|Odbc.dll|Gestione Driver a 16 bit|  
+|Odbcinst.dll|DLL di installazione a 16 bit|  
 |Odbcadm.exe|programma di amministrazione di ODBC 16 bit|

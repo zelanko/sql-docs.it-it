@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c2c139a914b511ab7ee80a0fdd180bab5654205a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047143"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "47721505"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|Numero di identificazione del file, univoco per ogni database.|  
-|**ID del gruppo**|**smallint**|Numero di identificazione del filegroup.|  
+|**groupid**|**smallint**|Numero di identificazione del filegroup.|  
 |**size**|**int**|Dimensioni del file in pagine da 8 KB.|  
 |**maxsize**|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Nessun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Nota: I database che vengono aggiornati con una dimensione del file di log senza limiti segnalerà -1 per le dimensioni massime del file di log.|  
-|**aumento delle dimensioni**|**int**|Aumento delle dimensioni del database. Può essere il numero di pagine o la percentuale delle dimensioni del file, a seconda del valore della **stato**.<br /><br /> 0 = Nessun aumento.|  
+|**growth**|**int**|Aumento delle dimensioni del database. Può essere il numero di pagine o la percentuale delle dimensioni del file, a seconda del valore della **stato**.<br /><br /> 0 = Nessun aumento.|  
 |**status**|**int**|Bit di stato per il **crescita** valore in megabyte (MB) o kilobyte (KB).<br /><br /> 0x2 = File del disco.<br /><br /> 0x40 = File di log.<br /><br /> 0x100000 = Aumento. Questo valore indica una percentuale e non il numero di pagine.|  
 |**perf**|**int**|Riservato.|  
 |**name**|**sysname**|Nome logico del file.|  
-|**Nome del file**|**nvarchar(260)**|Nome del dispositivo fisico, incluso il percorso completo del file.|  
+|**filename**|**nvarchar(260)**|Nome del dispositivo fisico, incluso il percorso completo del file.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

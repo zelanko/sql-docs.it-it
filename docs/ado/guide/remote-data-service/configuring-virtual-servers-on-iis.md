@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c248afac72fac013759ad80f69dea199756a4010
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214893"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configurazione dei server virtuali su IIS
 Durante la creazione di server virtuali in Internet Information Services 4.0, i due passaggi aggiuntivi seguenti sono necessarie per configurare il server virtuale per lavorare con Servizi Desktop remoto:  

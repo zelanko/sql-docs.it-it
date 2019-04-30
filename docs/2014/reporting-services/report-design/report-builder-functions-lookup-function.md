@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215322"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Funzione Lookup (Generatore report e SSRS)
   Viene restituito il primo valore corrispondente per il nome specificato da un set di dati contenente coppie nome/valore.  

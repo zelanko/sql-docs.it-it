@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215196"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Visualizzazione di descrizioni comandi in una serie (Generatore report e SSRS)
   È possibile aggiungere una descrizione comando a ogni punto dati nella serie di un grafico per visualizzare informazioni relative al punto dati, ad esempio il nome del gruppo, il valore del punto dati o la relativa percentuale rispetto al totale della serie, al passaggio del mouse sul punto dati in un report sottoposto a rendering.  

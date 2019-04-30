@@ -1,5 +1,5 @@
 ---
-title: -(Commento) (MDX) | Documenti Microsoft
+title: -(Commento) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208759"
 ---
-# <a name="comment---mdx-operator-reference"></a>Commento - riferimento agli operatori MDX
+# <a name="comment---mdx-operator-reference"></a>Comment - riferimento agli operatori MDX
 
 
   Indica un testo di commento specificato dall'utente.  
@@ -32,7 +32,7 @@ ms.locfileid: "34739910"
  *Comment_Text*  
  Stringa contenente il testo del commento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I commenti possono essere inseriti su una riga distinta oppure nidificati alla fine di una riga di script MDX (Multidimensional Expressions) o in un'istruzione MDX. Nel server il commento non viene valutato.  
   
  Utilizzare questo operatore per commenti su una sola riga o nidificati. I commenti inseriti con -- sono delimitati dal carattere di nuova riga.  
@@ -57,7 +57,7 @@ WHERE
   
 ## <a name="see-also"></a>Vedere anche  
  [Commento &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [&#40;Commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

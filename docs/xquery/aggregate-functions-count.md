@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046922"
 ---
 # <a name="aggregate-functions---count"></a>Funzioni di aggregazione - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   Il **dello spazio dei nomi** parola chiave nella [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi. Il prefisso viene quindi utilizzato nel corpo della query XQuery.  
   
--   La query costruisce codice XML che include l'elemento <`NoOfWorkStations`>.  
+-   La query costruisce codice XML che include il <`NoOfWorkStations`> elemento.  
   
 -   Il **Count ()** funzionare nei conteggi di corpo della query XQuery il numero di <`Location`> elementi.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -92,7 +92,7 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

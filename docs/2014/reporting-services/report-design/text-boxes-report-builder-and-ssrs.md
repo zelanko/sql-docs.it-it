@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215076"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   In genere si pensa a una casella di testo come a una casella autonoma contenente testo in un'area quale [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In Generatore report, alcune caselle di testo sono di questo tipo e consentono di visualizzare un testo letterale per titoli, descrizioni ed etichette o un testo dinamico basato sulle espressioni. Tuttavia anche in tutte le celle di una tabella o di una matrice (area dati Tablix) è contenuta una casella di testo che può essere formattata esattamente come le caselle di testo autonome di un report.  

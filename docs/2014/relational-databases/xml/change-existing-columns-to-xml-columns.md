@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288342"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Conversione di colonne esistenti a colonne XML
   L'istruzione ALTER TABLE supporta il tipo di dati `xml`. Ad esempio, è possibile modificare qualsiasi colonna di tipo string nel tipo di dati `xml`. Si noti che in questi casi è necessaria la correttezza del formato dei documenti contenuti nella colonna. Se inoltre si sta modificando il tipo della colonna da stringa a XML tipizzato, i documenti nella colonna vengono convalidati rispetto agli schemi XSD specificati.  
@@ -33,7 +33,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- È possibile modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato. Ad esempio:  
+ È possibile modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato. Ad esempio:   
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

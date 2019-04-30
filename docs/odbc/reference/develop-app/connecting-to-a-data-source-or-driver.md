@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043336"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Connessione a un'origine dati o driver
 Un'applicazione può essere connesse a qualsiasi numero di driver e origini dati. Può trattarsi di un'ampia gamma di driver e origini dati, lo stesso driver e un'ampia gamma di origini dati o anche più connessioni allo stesso driver e origine dati.  

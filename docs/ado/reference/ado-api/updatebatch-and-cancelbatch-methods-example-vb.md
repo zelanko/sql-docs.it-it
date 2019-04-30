@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f5649d879a46605e7c5cf8326111100ab46e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042227"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>Esempio di UpdateBatch e CancelBatch (esempio di metodi (VB)
 Questo esempio viene illustrato il [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) metodo in combinazione con la [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) (metodo).  

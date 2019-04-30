@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d13b0b0c9fd55a6de3dfca7a07b913711828887e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215229"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Impostare un valore minimo o massimo su un misuratore (Generatore report e SSRS)
   A differenza del grafico in cui sono definiti più gruppi, il misuratore mostra un solo valore. Poiché Generatore report e Progettazione report possono determinare il significato contestuale o relativo del valore che si sta tentando di visualizzare sul misuratore, è necessario definire il valore minimo e massimo per la scala. Se, ad esempio, i valori dei dati sono ranghi compresi tra 0 e 10, è possibile impostare il valore minimo su 0 e quello massimo su 10. I numeri dell'intervallo vengono calcolati automaticamente in base ai valori specificati per l'impostazione minima e massima. Per impostazione predefinita, i valori minimo e massimo vengono impostati su 0 e 100, ovvero due valori arbitrari che è necessario modificare. L'applicazione non calcola il valore come percentuale.  

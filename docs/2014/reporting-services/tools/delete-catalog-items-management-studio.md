@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c951e24c2d16de2fb3d5fbb6ba63fee8f143bcfd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217829"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Elimina elementi catalogo (Management Studio)
   Questa pagina consente di eliminare pianificazioni condivise e definizioni di ruolo.  

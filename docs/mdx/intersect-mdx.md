@@ -1,5 +1,5 @@
 ---
-title: Intersect (MDX) | Documenti Microsoft
+title: Intersect (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b24049cb81982075fa9234c6fa792db273d404db
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224868"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 
@@ -35,10 +35,10 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **Intersect** funzione restituisce l'intersezione di due set. Per impostazione predefinita la funzione rimuove i duplicati da entrambi i set prima di eseguire l'intersezione. I due set specificati devono disporre della stessa dimensionalità.  
   
- Facoltativo **tutti** flag consente di mantenere i duplicati. Se **tutti** è specificato, il **Intersect** funzione come di consueto l'intersezione degli elementi e ogni elemento duplicato nel primo set che corrisponde a un elemento duplicato nel secondo set. I due set specificati devono disporre della stessa dimensionalità.  
+ L'opzione facoltativa **tutti** flag consente di mantenere i duplicati. Se **tutti i** è specificato, il **Intersect** interseca gli elementi come di consueto (funzione) e ogni elemento duplicato del primo set che contiene un elemento duplicato nel secondo set. I due set specificati devono disporre della stessa dimensionalità.  
   
 ## <a name="example"></a>Esempio  
  Per la seguente query vengono restituiti gli anni 2003 e 2004, ovvero i due membri visualizzati in entrambi i set specificati:  
@@ -74,6 +74,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

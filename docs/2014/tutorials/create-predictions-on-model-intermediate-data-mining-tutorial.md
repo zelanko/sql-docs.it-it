@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217746"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Creazione di stime su un modello Sequence Clustering (Esercitazione intermedia sul data mining)
   Dopo aver compreso il modello sequence clustering esplorandolo nel visualizzatore, è possibile creare query di stima utilizzando Generatore Query di stima nel **stima modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Per creare una stima, occorre selezionare innanzitutto il modello Sequence Clustering, quindi i dati di input. Per gli input, è possibile utilizzare un'origine dati esterna o compilare una query singleton e fornire valori in una finestra di dialogo.  

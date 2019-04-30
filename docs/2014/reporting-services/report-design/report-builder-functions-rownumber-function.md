@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 181670ab62d31fbb7b6815518129dd5b4e8a1b1d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216189"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Funzione RowNumber (Generatore report e SSRS)
   Restituisce il conteggio parziale del numero di righe per l'ambito specificato.  

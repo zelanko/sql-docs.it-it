@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di attributi alle dimensioni | Documenti Microsoft
+title: Aggiunta di attributi alle dimensioni | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046013"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lezione 2-3-aggiunta di attributi alle dimensioni
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lezione 2-3: aggiunta di attributi alle dimensioni
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Dopo avere definito le dimensioni, è possibile popolarle con gli attributi che rappresentano ogni elemento dati nella dimensione. Gli attributi si basano in genere sui campi di una vista origine dati. Quando si aggiungono gli attributi a una dimensione, è possibile includere campi di qualsiasi tabella nella vista origine dati.  
@@ -73,7 +73,7 @@ In questa attività verrà utilizzato Progettazione dimensioni per aggiungere at
   
     -   **PostalCode**  
   
-6.  Scegliere **Salva tutti**dal menu File.  
+6.  Scegliere **Salva tutto**dal menu File.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Aggiunta di attributi alla dimensione Product  
   
@@ -121,13 +121,13 @@ In questa attività verrà utilizzato Progettazione dimensioni per aggiungere at
   
     -   **Stato**  
   
-5.  Scegliere **Salva tutti**dal menu File.  
+5.  Scegliere **Salva tutto**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Esame delle proprietà di dimensione e del cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Esame delle proprietà del cubo e delle dimensioni](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Dimension Attribute Properties Reference](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Riferimento alle proprietà degli attributi delle dimensioni](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

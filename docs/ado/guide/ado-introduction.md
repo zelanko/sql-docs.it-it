@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214865"
 ---
 # <a name="ado-overview-and-benefits"></a>Cenni preliminari su ADO e vantaggi
 Gli oggetti ADO (ActiveX Data) è un'interfaccia di alto livello, facile da usare per OLE DB. OLE DB è un'interfaccia di basso livello, ad alte prestazioni per un'ampia gamma di archivi dati. ADO e OLE DB può funzionare con relazionale (tabulare) e non relazionali (gerarchiche o nel flusso) dei dati.

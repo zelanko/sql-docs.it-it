@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298137"
 ---
 # <a name="ado-glossary-terms"></a>Termini del Glossario ADO
 In questo argomento definisce termini rilevanti per ADO.

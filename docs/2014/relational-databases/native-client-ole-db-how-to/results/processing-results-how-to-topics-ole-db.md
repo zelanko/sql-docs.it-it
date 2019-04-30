@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225472"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Procedure relative all'elaborazione dei risultati (OLE DB)
   L'elaborazione dei risultati in un'applicazione OLE DB comporta innanzitutto la determinazione delle caratteristiche del set di risultati e il successivo recupero dei dati in variabili del programma. Se il comando esegue una stored procedure, è necessario anche sapere come elaborare i codici restituiti e i parametri di output ottenuti dalle stored procedure.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Eseguire una stored procedure &#40;con la sintassi ODBC CALL&#41; ed elaborare i codici restituiti e i parametri di output &#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
   

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63221993"
 ---
 # <a name="determine-polling-frequency"></a>Determinare la frequenza di Polling
 Questo articolo illustra come determinare la frequenza di polling per gli avvisi di sistema di piattaforma Analitica appliance.  

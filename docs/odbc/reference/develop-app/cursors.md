@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042127"
 ---
 # <a name="cursors"></a>Cursori
-Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: un set di risultati è il set di righe che corrisponde ai criteri di ricerca specifico, mentre un cursore è il software che restituisce le righe per l'applicazione. Il nome *cursore,* applicato ai database, probabilmente provenienti dal cursore intermittente in un computer terminal. Come tale cursore indica la posizione corrente nella schermata e in cui le parole digitate apparirà successive, un cursore su un set di risultati indica la posizione corrente nel set di risultati e quali righe verrà restituiti successivamente.  
+Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: Un set di risultati è il set di righe che corrisponde ai criteri di ricerca specifico, mentre un cursore è il software che restituisce le righe per l'applicazione. Il nome *cursore,* applicato ai database, probabilmente provenienti dal cursore intermittente in un computer terminal. Come tale cursore indica la posizione corrente nella schermata e in cui le parole digitate apparirà successive, un cursore su un set di risultati indica la posizione corrente nel set di risultati e quali righe verrà restituiti successivamente.  
   
  Il modello di cursore in ODBC si basa sul modello di cursore in embedded SQL. Una differenza fondamentale tra questi modelli è che il modo di cursori viene aperti. In embedded SQL, un cursore debba essere esplicitamente dichiarato e aperti prima che possa essere utilizzato. In ODBC un cursore è aperto in modo implicito quando viene eseguita un'istruzione che crea un set di risultati. Quando il cursore è aperto, viene posizionato prima la prima riga del set di risultati. In entrambi embedded SQL e ODBC, è necessario chiudere un cursore dopo l'applicazione ha finito di usarlo.  
   

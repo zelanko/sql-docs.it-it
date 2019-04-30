@@ -11,13 +11,13 @@ author: douglaslms
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217789"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Attività 8: Creazione di una regola dominio composito
+# <a name="task-8-creating-a-composite-domain-rule"></a>Attività 8: Creazione di una regola per un dominio composito
   In questa attività viene creata una regola per il **Address Validation** dominio composito. Definire una regola tra domini: se **Città** viene **Los Angeles**, **stato** deve essere **autorità di certificazione** dove **Città** e **stato** sono due domini.  
   
 1.  Nel riquadro destro passare al **regole CD** scheda.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 814f5349e8afc9deb3e7c364f99d796f5c2665d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215398"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Funzione Sum (Generatore report e SSRS)
   Restituisce la somma di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214910"
 ---
 # <a name="customization-file-logs-section"></a>Sezione Logs del file di personalizzazione
 Il **registri** sezione contiene una voce di file di log, che specifica il nome di un file che registra gli errori durante l'operazione del **DataFactory**.  
@@ -39,9 +39,9 @@ FileName
   
 ## <a name="remarks"></a>Note  
   
-|Parte|Description|  
+|Parte|Descrizione|  
 |----------|-----------------|  
-|**Err**|Una valore letterale stringa che indica che si è una voce di file di log.|  
+|**err**|Una valore letterale stringa che indica che si è una voce di file di log.|  
 |*FileName*|Un nome file e percorso completo. Il nome di file è **c:\msdfmap.log**.|  
   
  Il file di log conterrà il nome utente, HRESULT, data e ora di ogni errore.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043760"
 ---
 # <a name="core-interface-conformance"></a>Conformità di interfaccia Core
 Tutti i driver ODBC devono includere almeno a livello di base della conformità di interfaccia. Poiché le funzionalità di livello principale sono quelle richieste dalle applicazioni interoperative più generiche, il driver può lavorare con tali applicazioni. Le funzionalità di livello principale corrispondono anche alle funzionalità definite nella specifica ISO CLI e con le funzionalità necessari definite nella specifica Open dell'interfaccia della riga di gruppo. Un driver ODBC di interfaccia conformi a livello di base consente all'applicazione di eseguire tutte le operazioni seguenti:  

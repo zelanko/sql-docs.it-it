@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224837"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Lezione 1: Creare un nuovo sito Web
   In questa lezione viene illustrato come creare un nuovo progetto di sito Web usando il modello di sito Web ASP.NET per Visual C#.  

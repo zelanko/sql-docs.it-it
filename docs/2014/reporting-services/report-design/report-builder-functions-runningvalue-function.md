@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5176ddc4f06531dcbfea383362bdd195a215fe84
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216173"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Funzione RunningValue (Generatore report e SSRS)
   Restituisce un'aggregazione parziale di tutti i valori numerici non Null specificati dall'espressione, valutata per l'ambito specificato.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217748"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Uso di ADO con i linguaggi di scripting
 All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite gli script lato server. In questo scenario, ADO, il provider OLE DB sottostante che viene utilizzato e vengono installati altri componenti necessari per fare riferimento a un archivio dati specificato in un server che esegue Internet Information Services (IIS). Usando le pagine ASP (Active Server), ADO è un componente di cui viene fatto riferimento in uno script che può generare codice HTML, ad esempio. Il contenuto HTML può essere passato tramite HTTP in un Web browser client. Tramite la creazione di script, la pagina Web può inviare azioni torna allo script sul lato server, in modo da aggiornare, attraversare o visualizzare i dati specifici.  
@@ -28,28 +28,28 @@ All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite 
   
 |Object|È sicuro per lo Scripting?|  
 |------------|-------------------------|  
-|Connessione di ADO|Sì|  
-|Comando ADO|no|  
-|Parametro ADO|no|  
-|Recordset ADO|Sì|  
-|Record ADO|Sì|  
-|Stream ADO|Sì|  
-|Errore ADO|no|  
-|Catalogo ADOX|no|  
-|Set di celle ADOX|no|  
-|Servizi Desktop remoto DataControl|Sì|  
-|DataSpace Servizi Desktop remoto|Sì|  
-|Data factory di servizi desktop remoto|no|  
+|Connessione di ADO|Yes|  
+|Comando ADO|No|  
+|Parametro ADO|No|  
+|ADO Recordset|Yes|  
+|ADO Record|Yes|  
+|Stream ADO|Yes|  
+|Errore ADO|No|  
+|Catalogo ADOX|No|  
+|ADOX CellSet|no|  
+|Servizi Desktop remoto DataControl|Yes|  
+|DataSpace Servizi Desktop remoto|Yes|  
+|Data factory di servizi desktop remoto|No|  
   
  Nella tabella seguente sono elencati i provider inclusi con Windows DAC o MDAC e indica se sono sicuri per lo script.  
   
 |Provider|È sicuro per lo Scripting?|  
 |--------------|-------------------------|  
-|Con forme|Sì|  
-|Salvare in modo permanente|Sì|  
-|Remote|Sì|  
-|Provider OLE DB per SQL Server (SQLOLEDB)|no|  
-|Provider OLE DB per ODBC (MSDASQL)|no|  
+|Con forme|Yes|  
+|Salvare in modo permanente|Yes|  
+|Remote|Yes|  
+|Provider OLE DB per SQL Server (SQLOLEDB)|No|  
+|Provider OLE DB per ODBC (MSDASQL)|No|  
   
 ## <a name="odbc-data-sources"></a>Origini dei dati ODBC  
  Una differenza rilevante tra il codice ADO di scripting e non di script è l'origine dati ODBC, se utilizzato. Per le applicazioni non di script, è possibile creare un DSN utente in Amministrazione origine dati ODBC. Per gli script in esecuzione in IIS, è necessario creare un DSN di sistema. in caso contrario, gli script non riconoscerà l'origine dati creata. Questo vale per qualsiasi applicazione di scripting di ADO con il Provider Microsoft OLE DB per ODBC tramite Microsoft IIS.  

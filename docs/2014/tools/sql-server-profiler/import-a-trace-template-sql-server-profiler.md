@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228402"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importare un modello di traccia (SQL Server Profiler)
   In questo argomento viene descritto come importare un file modello di traccia, con estensione tdf, utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

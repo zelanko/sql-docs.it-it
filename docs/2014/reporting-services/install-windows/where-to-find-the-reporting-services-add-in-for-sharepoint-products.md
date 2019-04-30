@@ -13,11 +13,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: d566f711c177cb62b79099c71c716d66eb214203
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225216"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint
 

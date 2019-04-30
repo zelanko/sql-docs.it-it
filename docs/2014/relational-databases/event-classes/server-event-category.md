@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044222"
 ---
 # <a name="server-event-category"></a>Categoria di eventi Server
   La categoria di eventi **Server** contiene eventi generali relativi al server.  

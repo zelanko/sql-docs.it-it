@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226238"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
   Il **bcp_setcolfmt** funzione sostituisce le [bcp_colfmt](bcp-colfmt.md). Nello specificare le regole di confronto di colonna, il **bcp_setcolfmt** necessario utilizzare la funzione. [bcp_setbulkmode](bcp-setbulkmode.md) può essere utilizzato per specificare più di un formato di colonna.  
@@ -56,7 +56,7 @@ cbValue
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HDBC*  
+ *hdbc*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *field*  
@@ -65,7 +65,7 @@ cbValue
  *property*  
  Una delle costanti di proprietà. Le costanti della proprietà sono definite nella tabella seguente.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Tipo di dati della colonna nel file utente. Se differisce dal tipo di dati della colonna corrispondente nella tabella del database, la copia bulk converte i dati, se possibile.<br /><br /> Il parametro BCP_FMT_TYPE viene enumerato in base ai token dei tipi di dati in sqlncli.h e non in base agli enumeratori dei tipi di dati C ODBC. È possibile, ad esempio, specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per specificare la rappresentazione predefinita dei dati per il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare questo parametro su 0.<br /><br /> Per una copia bulk esterna a SQL Server in un file, quando BCP_FMT_TYPE è SQLDECIMAL o SQLNUMERIC:<br /><br /> -Se la colonna di origine non è **decimale** oppure **numerico**, vengono utilizzate la precisione predefinita e la scala.<br />-Se la colonna di origine è **decimale** oppure **numerico**, vengono utilizzate la precisione e scala della colonna di origine.|  
 |BCP_FMT_INDICATOR_LEN|INT|Lunghezza in byte dell'indicatore (prefisso).<br /><br /> Lunghezza, espressa in byte, di un indicatore di lunghezza o Null nei dati della colonna. I valori validi per la lunghezza dell'indicatore sono 0 (quando non si utilizza alcun indicatore), 1, 2 o 4.<br /><br /> Per specificare l'utilizzo di un indicatore di copia bulk predefinito, impostare questo parametro su SQL_VARLEN_DATA.<br /><br /> Gli indicatori vengono visualizzati in memoria direttamente prima dei dati e nel file di dati immediatamente prima dei dati a cui si riferiscono.<br /><br /> Se si utilizzano più modalità per specificare la lunghezza delle colonne del file di dati, ad esempio un indicatore e una lunghezza di colonna massima o un indicatore e una sequenza di caratteri di terminazione, la copia bulk sceglie quella che comporta la copia del minor numero di dati.<br /><br /> I file di dati generati dalla copia bulk quando il formato dei dati non viene modificato dall'utente contengono indicatori se la lunghezza dei dati di colonna può variare o se la colonna può accettare NULL come valore.|  

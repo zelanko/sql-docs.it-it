@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecba74cbaa5a03ddca94b7bc3a9fdd6dd52be43f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209775"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifica dello stile, delle dimensioni e del colore del carattere
   È possibile personalizzare la visualizzazione del testo nell'editor e in altre posizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

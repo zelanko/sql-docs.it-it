@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224667"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversione di dati da C ai tipi di dati SQL
 Quando un'applicazione chiama **SQLExecute** oppure **SQLExecDirect**, il driver può recuperare i dati per i parametri associati con **SQLBindParameter** nei percorsi di archiviazione in l'applicazione. Quando un'applicazione chiama **SQLSetPos**, il driver recupera i dati per un aggiornamento o l'aggiunta di operazione da colonne associate **SQLBindCol**. Per i parametri data-at-execution, l'applicazione invia i dati del parametro con **SQLPutData**. Se necessario, il driver converte i dati dal tipo di dati specificato dal *ValueType* argomento nella **SQLBindParameter** al tipo di dati specificato da di *ParameterType*nell'argomento **SQLBindParameter**e quindi invia i dati all'origine dati.  
@@ -60,7 +60,7 @@ Quando un'applicazione chiama **SQLExecute** oppure **SQLExecDirect**, il driver
   
 -   [C a SQL: Carattere](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C a SQL: Numerico](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C a SQL: Numeric](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
 -   [C a SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
@@ -72,7 +72,7 @@ Quando un'applicazione chiama **SQLExecute** oppure **SQLExecDirect**, il driver
   
 -   [C a SQL: Ora](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C a SQL: timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C a SQL: Timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
 -   [C a SQL: Intervalli anno-mese](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   

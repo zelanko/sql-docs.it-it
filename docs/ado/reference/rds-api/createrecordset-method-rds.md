@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298921"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -49,7 +49,7 @@ object.CreateRecordset(ColumnInfos)
   
 |attribute|Descrizione|  
 |---------------|-----------------|  
-|nome|Nome dell'intestazione di colonna.|  
+|Nome|Nome dell'intestazione di colonna.|  
 |Tipo|Valore intero del tipo di dati.|  
 |Dimensione|Valore intero della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|Valore booleano.|  

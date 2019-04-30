@@ -1,5 +1,5 @@
 ---
-title: Identificatori (MDX) | Documenti Microsoft
+title: Identificatori (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224950"
 ---
 # <a name="identifiers-mdx"></a>Identificatori (MDX)
 
@@ -24,7 +24,7 @@ ms.locfileid: "34740810"
  A seconda del nome attribuito all'oggetto, l'identificatore può essere regolare o delimitato.  
   
 > [!NOTE]  
->  Gli identificatori sia regolari che quelli delimitati devono includere da 1 a 100 caratteri.  
+>  Gli identificatori regolari sia delimitatori devono contenere da 1 a 100 caratteri.  
   
 ## <a name="using-regular-identifiers"></a>Utilizzo di identificatori regolari  
  Un identificatore regolare è un nome di oggetto che rispetta le seguenti regole di formattazione per gli identificatori regolari. Gli identificatori regolari possono essere utilizzati con e senza delimitatori.  
@@ -45,7 +45,7 @@ ms.locfileid: "34740810"
   
     -   Il carattere di sottolineatura (_).  
   
-3.  L'identificatore non deve coincidere con una parola chiave riservata di MDX. In MDX per le parole chiave riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [le parole chiave riservate &#40;sintassi MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  L'identificatore non deve coincidere con una parola chiave riservata di MDX. In MDX per le parole chiave riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [parole chiave riservate &#40;sintassi MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Non sono consentiti spazi incorporati o caratteri speciali.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34740810"
   
 -   Quando il nome di un oggetto o parte di esso include parole riservate.  
   
-     È consigliabile non utilizzare parole chiave riservate come nomi di oggetto. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole non riservate nella versione precedente, ma ora sono riservati. Finché non sarà possibile modificare gli identificatori per tali oggetti, sarà necessario farvi riferimento tramite identificatori delimitati.  
+     È consigliabile non utilizzare parole chiave riservate come nomi di oggetto. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole riservate non nelle versioni precedenti, ma ora sono riservati. Finché non sarà possibile modificare gli identificatori per tali oggetti, sarà necessario farvi riferimento tramite identificatori delimitati.  
   
 -   Quando il nome di un oggetto include caratteri non elencati come identificatori qualificati.  
   
@@ -124,8 +124,8 @@ ms.locfileid: "34740810"
  Nell'esempio precedente è stato delimitato anche l'identificatore Measures per illustrare la delimitazione di più di un identificatore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Gli elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

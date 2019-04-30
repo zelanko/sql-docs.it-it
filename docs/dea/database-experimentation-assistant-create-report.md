@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294508"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Creare report di analisi nel Database sperimentazione Assistant
 
@@ -37,7 +37,7 @@ Sotto **report di analisi**, selezionare **nuovo report di analisi**.
 Immettere o selezionare le informazioni seguenti:
 
 - **Nome del report**: Immettere un nome per il report. Il nome del report viene usato sia per il database B e. Esempio: *(A o B)* + *nome del report* + *identificatore univoco*. 
-- **Nome del server**: Immettere il nome del computer del server che si desidera includere in A, B e i database di analisi.
+- **Nome server**: Immettere il nome del computer del server che si desidera includere in A, B e i database di analisi.
 - **Nome dell'istanza SQL Server**: Immettere il nome dell'istanza di SQL Server da utilizzare per il report.
 - **Traccia per il server di origine**: Immettere il file di traccia (trc) prima di SQL Server (2008 R2).
 - **Traccia per il server di destinazione**: Immettere la destinazione SQL Server (2014) primo file trc.

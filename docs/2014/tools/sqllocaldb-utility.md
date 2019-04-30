@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035400"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
   Usare la `SqlLocalDB` utilità per creare un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. Il `SqlLocalDB` utilità (SqlLocalDB.exe) è uno strumento semplice riga di comando per abilitare gli utenti e sviluppatori di creare e gestire un'istanza di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Per informazioni su come usare **LocalDB**, vedere [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -88,7 +88,7 @@ SqlLocalDB.exe
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### <a name="b-working-with-a-shared-instance-of-localdb"></a>b. Utilizzo di un'istanza condivisa di LocalDB  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>B. Utilizzo di un'istanza condivisa di LocalDB  
  Aprire un prompt dei comandi con privilegi di amministratore.  
   
 ```  

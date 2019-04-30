@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218223"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Funzionalità deprecate della ricerca full-text in SQL Server 2014
   In questo argomento vengono descritte le funzionalità deprecate della ricerca full-text ancora disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -31,7 +31,7 @@ ms.locfileid: "52799771"
   
 |Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |------------------------|-----------------|------------------|----------------|  
-|Proprietà FULLTEXTCATALOGPROPERTY: LogSize|Nessuna.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
+|Proprietà di FULLTEXTCATALOGPROPERTY: LogSize|Nessuna.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
 |Proprietà di FULLTEXTSERVICEPROPERTY:<br /><br /> ConnectTimeout<br /><br /> DataTimeout|Nessuna.|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'**)|210<br /><br /> 209|  
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85|  
@@ -48,7 +48,7 @@ ms.locfileid: "52799771"
   
 |Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |------------------------|-----------------|------------------|----------------|  
-|Operatore NEAR generico CONTAINS e CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Operatore NEAR personalizzato:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distanza > [,\<ordine >]]<br /><br /> }<br /><br /> )<br /><br /> \<distanza >:: = {*integer* &#124; **MAX**}<br /><br /> \<ordine >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Operatore NEAR generico CONTAINS e CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Operatore NEAR personalizzato:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distanza > [,\<ordine >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Opzione CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Nessuna.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Nessuno.*|237<br /><br /> nessuna.<sup>*</sup>|  
 |Proprietà di DATABASEPROPERTYEX: IsFullTextEnabled|Nessuna.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Opzione di sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Nessuna.|sp_detach_db @keepfulltextindexfile|226|  

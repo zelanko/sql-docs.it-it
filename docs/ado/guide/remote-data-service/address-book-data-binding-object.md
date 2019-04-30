@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214836"
 ---
 # <a name="address-book-data-binding-object"></a>Oggetto di data binding di Address Book
 L'applicazione Address Book utilizza il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto a cui associare i dati dal database di SQL Server a un oggetto visivo (in questo caso, una tabella DHTML) nella pagina dell'applicazione client HTML. La logica di programma VBScript guidato dagli eventi Usa le [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) per:  
@@ -51,7 +51,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>Parametri del Tag OBJECT generica  
  Nella tabella seguente vengono descritti i parametri associati con il tag OBJECT.  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |***CLASSID***|Numero univoco a 128 bit che identifica il tipo di oggetto incorporato nel sistema. Questo identificatore viene mantenuto nel Registro di sistema del computer locale. (Per gli ID di classe del **Servizi Desktop remoto. DataControl** oggetti, vedere [Servizi Desktop remoto. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Definisce un identificatore a livello di documento per l'oggetto incorporato che consente di identificare l'oggetto nel codice.|  
@@ -59,7 +59,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>SERVIZI DESKTOP REMOTO. Parametri DataControl Tag  
  Nella tabella seguente vengono descritti i parametri specifici per il **Servizi Desktop remoto. DataControl** oggetto. (Per un elenco completo del **Servizi Desktop remoto. DataControl** dell'oggetto parametri e quando relativa implementazione, vedere [Servizi Desktop remoto. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Se si Usa HTTP, il valore è il nome del computer del server preceduto da `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornisce le informazioni di connessione necessarie per il **Servizi Desktop remoto. DataControl** per connettersi a SQL Server.|  

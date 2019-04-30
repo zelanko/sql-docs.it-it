@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: visualizzare un Report di preparazione aggiornamento | Microsoft Docs'
+title: 'Procedura: Visualizzare un Report di preparazione aggiornamento | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294546"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Procedura: Visualizzazione di un report di Preparazione aggiornamento
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Procedura: Visualizzare un report di Gestione spazio aggiornamenti
   Preparazione aggiornamento crea report per ogni componente selezionato da analizzare. In questo argomento viene descritto come visualizzare un report di Preparazione aggiornamento dalla pagina iniziale di Preparazione aggiornamento.  
   
 > [!IMPORTANT]  
@@ -74,8 +74,8 @@ ms.locfileid: "48201931"
 >  Il report può contenere un elemento relativo a problemi non rilevabili, ovvero problemi che non è possibile rilevare o che genererebbero un numero eccessivo di risultati falsi positivi. Scegliere il **ulteriori informazioni su questo problema e su come risolvere il problema** collegamento per visualizzare un elenco di problemi non rilevabili per il componente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: esportare i report](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Procedura: eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Procedura: Esportare report](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Procedura: Eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Procedure per Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

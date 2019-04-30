@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208392"
 ---
 # <a name="was-a-result-set-created"></a>Verifica della creazione di un set di risultati
-Nella maggior parte dei casi, i programmatori di applicazioni sapere se le istruzioni in cui che viene eseguita l'applicazione creerà un set di risultati. Questo è il caso se l'applicazione Usa istruzioni SQL hard-coded scritte dal programmatore. In genere si verifica quando l'applicazione crea istruzioni SQL in fase di esecuzione: il programmatore può facilmente includere codice che consente di contrassegnare se un **seleziona** istruzione o un' **inserire** istruzione è in corso costruito. In alcune situazioni, il programmatore non è possibile conoscere se un'istruzione creerà un set di risultati. Questo è vero se l'applicazione consente all'utente di immettere ed eseguire un'istruzione SQL. È anche true quando l'applicazione crea un'istruzione in fase di esecuzione per eseguire una procedura.  
+Nella maggior parte dei casi, i programmatori di applicazioni sapere se le istruzioni in cui che viene eseguita l'applicazione creerà un set di risultati. Questo è il caso se l'applicazione Usa istruzioni SQL hard-coded scritte dal programmatore. Di solito avviene quando l'applicazione crea istruzioni SQL in fase di esecuzione: Il programmatore può facilmente includere codice che consente di contrassegnare se un **seleziona** istruzione o un' **Inserisci** istruzione in fase di costruzione. In alcune situazioni, il programmatore non è possibile conoscere se un'istruzione creerà un set di risultati. Questo è vero se l'applicazione consente all'utente di immettere ed eseguire un'istruzione SQL. È anche true quando l'applicazione crea un'istruzione in fase di esecuzione per eseguire una procedura.  
   
  In questi casi, l'applicazione chiama **SQLNumResultCols** per determinare il numero di colonne nel set di risultati. Se è 0, l'istruzione non è stato creato un set di risultati. in caso di qualsiasi altro numero, l'istruzione è stato creato un set di risultati.  
   

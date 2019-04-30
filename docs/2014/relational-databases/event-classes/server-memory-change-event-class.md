@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044156"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change - classe di evento
   La classe di evento **Server Memory Change** viene generata quando l'utilizzo di memoria di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è aumentato o diminuito di 1 MB o del 5% della quantità di memoria massima del server, a seconda del valore maggiore.  
@@ -28,7 +28,7 @@ ms.locfileid: "52793438"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Yes|  
 |----------------------|---------------|-----------------|---------------|---------|  
-|**EventClass**|**int**|Tipo di evento = 81.|27|No|  
+|**EventClass**|**int**|Tipo di evento = 81.|27|no|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Aumento della memoria<br /><br /> 2=Riduzione della memoria|21|Yes|  
 |**IntegerData**|**int**|Nuova quantità di memoria, in megabyte (MB).|25|Yes|  

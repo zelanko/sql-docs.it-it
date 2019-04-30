@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042323"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Scaricare e applicare gli aggiornamenti Microsoft per il sistema di piattaforma Analitica
 In questo argomento illustra come scaricare gli aggiornamenti dal catalogo Microsoft Update per Windows Server Update Services (WSUS) e applicare gli aggiornamenti nei server appliance del sistema di piattaforma Analitica. Microsoft Update installerà tutti gli aggiornamenti per Windows e SQL Server. Windows Server Update Services è installato nella macchina virtuale VMM dell'appliance.  

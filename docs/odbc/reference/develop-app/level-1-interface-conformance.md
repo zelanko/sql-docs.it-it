@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213482"
 ---
 # <a name="level-1-interface-conformance"></a>Conformità di interfaccia di livello 1
 Il livello di conformità di interfaccia di livello 1 include le funzionalità a livello di base dell'interfaccia della conformità oltre a funzionalità aggiuntive, ad esempio le transazioni, in genere disponibili in un DBMS relazionale OLTP. Un driver conforme allo standard dell'interfaccia di livello 1 consente all'applicazione di eseguire le operazioni seguenti, oltre alle funzionalità del livello di conformità di interfaccia Core:  

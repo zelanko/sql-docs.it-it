@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217720"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Specifica se un oggetto è aperto o chiuso, ci si connette a un'origine dati, l'esecuzione di un comando o il recupero dei dati.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|Indica che l'oggetto è chiuso.|  
 |**adStateOpen**|1|Indica che l'oggetto è aperto.|  

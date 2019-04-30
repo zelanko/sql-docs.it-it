@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff83bb2f41415d876b89d46bfe8ba1399b940523
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213428"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Esempi di codice di Servizi Desktop remoto in Visual C++
 Usare gli esempi di codice seguenti per informazioni su come usare le proprietà di servizi desktop remoto durante la scrittura in Microsoft Visual C++.  

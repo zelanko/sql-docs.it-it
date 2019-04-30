@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217879"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Creazione di stime per i modelli Call Center (Esercitazione intermedia sul data mining)
   Dopo aver appreso i concetti di base sulle interazioni tra turni, numero di operatori, chiamate e livello del servizio, è possibile creare alcune query di stima che possono essere utilizzate per l'analisi e la pianificazione aziendali. Verranno innanzitutto create alcune stime del modello esplorativo per testare alcune ipotesi. Verranno quindi create stime bulk utilizzando il modello di regressione logistica.  
@@ -183,9 +183,9 @@ ms.locfileid: "56025412"
 ## <a name="remarks"></a>Note  
  I componenti aggiuntivi Data mining per Excel 2007 forniscono procedure guidate di regressione logistica che semplificano la risoluzione di problemi complessi, ad esempio il numero di operatori di livello 2 necessari per migliorare il livello del servizio e raggiungere un livello desiderato per un turno specifico. I componenti aggiuntivi per il data mining sono disponibili gratuitamente per il download e includono procedure guidate basate su algoritmi di regressione logistica o rete neurale. Per ulteriori informazioni, vedere i seguenti collegamenti:  
   
--   [SQL Server 2005 Data Mining componente aggiuntivo per Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): ricerca obiettivo e analisi dello scenario di simulazione  
+-   [SQL Server 2005 Data Mining componente aggiuntivo per Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Ricerca obiettivo e cosa accade se analisi di Scenario  
   
--   [SQL Server 2008 Data Mining componente aggiuntivo per Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): ricerca obiettivo, analisi dello scenario di simulazione e calcolo delle stime  
+-   [SQL Server 2008 Data Mining componente aggiuntivo per Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Ricerca obiettivo, cosa accade se analisi di Scenario e calcolo delle stime  
   
 ## <a name="conclusion"></a>Conclusione  
  In questa esercitazione si è imparato a creare, personalizzare e interpretare modelli di data mining basati sugli algoritmi Microsoft Neural Network e Microsoft Logistic Regression. Si tratta di tipi di modello sofisticati che consentono una varietà quasi infinita di analisi e pertanto possono essere complessi e difficili da gestire.  

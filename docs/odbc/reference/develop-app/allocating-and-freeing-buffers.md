@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288079"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Allocazione e rilascio di buffer
 Tutti i buffer vengano allocati e liberati dall'applicazione. Se un buffer non viene rinviato, devono esistere solo per la durata della chiamata a una funzione. Ad esempio, **SQLGetInfo** restituisce il valore associato a una particolare opzione nel buffer a cui punta il *InfoValuePtr* argomento. Questo buffer può essere liberato immediatamente dopo la chiamata a **SQLGetInfo**, come illustrato nell'esempio di codice seguente:  

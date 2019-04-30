@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032997"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,24 +34,24 @@ ms.locfileid: "52779773"
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**publication**|**sysname**|Nome della pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale.<br /><br /> **2** = unione nell'indice.|  
 |**publisher_login**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_password**|**nvarchar(524**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**publisher_password**|**nvarchar(524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di SQL Server.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire una chiamata di procedura remota (RPC), e *server di pubblicazione* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
-|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**distributor**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|L'ID di accesso utilizzato nel server di distribuzione per l'autenticazione di SQL Server.|  
-|**distributor_password**|**nvarchar(524**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**distributor_password**|**nvarchar(524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.<br /><br /> **1** = autenticazione di Windows.|  
 |**ftp_address**|**sysname**|Indirizzo di rete del servizio File Transfer Protocol (FTP) per il server di distribuzione.|  
 |**ftp_port**|**int**|Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_login**|**sysname**|Nome utente utilizzato per la connessione al servizio FTP.|  
-|**ftp_password**|**nvarchar(524**|Password per l'utente utilizzata per la connessione al servizio FTP.|  
+|**ftp_password**|**nvarchar(524)**|Password per l'utente utilizzata per la connessione al servizio FTP.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Specifica la posizione della cartella alternativa per lo snapshot.|  
 |**working_directory**|**nvarchar(255)**|Nome della directory di lavoro utilizzata per archiviare i file di dati e di schema.|  
 |**use_ftp**|**bit**|Specifica l'utilizzo di FTP anziché del protocollo normale per il recupero di snapshot. Se **1**, viene utilizzato il protocollo FTP.|  
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
-|**dts_package_password**|**nvarchar(524**|Specifica la password per il pacchetto.|  
+|**dts_package_password**|**nvarchar(524)**|Specifica la password per il pacchetto.|  
 |**dts_package_location**|**int**|Percorso di archiviazione del pacchetto DTS.|  
 |**enabled_for_syncmgr**|**bit**|Specifica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> **0** = sottoscrizione non è registrata con Gestione sincronizzazione Microsoft.<br /><br /> **1** = sottoscrizione viene registrata con Gestione sincronizzazione Microsoft e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |**offload_agent**|**bit**|Specifica se è possibile attivare l'agente in remoto. Se **0**, l'agente non può essere attivato in remoto.|  
@@ -60,10 +60,10 @@ ms.locfileid: "52779773"
 |**use_web_sync**|**bit**|Specifica se è possibile sincronizzare la sottoscrizione mediante HTTP. Un valore pari **1** indica che questa funzionalità è attivata.|  
 |**internet_url**|**nvarchar(260)**|URL che rappresenta il percorso del listener per la replica per la sincronizzazione tramite il Web.|  
 |**internet_login**|**sysname**|L'account di accesso utilizzato dall'agente di Merge durante la connessione al server Web che ospita la sincronizzazione Web tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
-|**internet_password**|**nvarchar(524**|La password per l'account di accesso utilizzato dall'agente di Merge durante la connessione al server Web che ospita la sincronizzazione Web tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
+|**internet_password**|**nvarchar(524)**|La password per l'account di accesso utilizzato dall'agente di Merge durante la connessione al server Web che ospita la sincronizzazione Web tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
 |**internet_security_mode**|**int**|La modalità di autenticazione utilizzata durante la connessione al server Web che ospita la sincronizzazione Web, dove il valore **1** significa che l'autenticazione di Windows e il valore **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione.|  
 |**internet_timeout**|**int**|Intervallo di tempo, in secondi, prima della scadenza di una richiesta di sincronizzazione tramite il Web.|  
-|**Nome host**|**sysname**|Specifica il valore per **HOST_NAME** quando questa funzione viene usata nel **in cui** clausola di un filtro join o di una relazione tra record logici.|  
+|**hostname**|**sysname**|Specifica il valore per **HOST_NAME** quando questa funzione viene usata nel **in cui** clausola di un filtro join o di una relazione tra record logici.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

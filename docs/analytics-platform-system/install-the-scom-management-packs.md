@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215587"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installare SQL Server Operations Manager (SCOM) management pack per sistema di piattaforma Analitica
 Seguire questi passaggi per scaricare e installare i Management Pack di System Center Operations Manager (SCOM) per SQL Server PDW. I Management Pack sono necessari per monitorare SQL Server PDW da SCOM.  
@@ -76,7 +76,7 @@ Per le versioni precedenti di PDW senza punti di accesso, scaricare il[System Ce
     ![Installazione completata](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Dopo aver creato il Management Pack installati, continuare al passaggio successivo: [importare il Management Pack SCOM per PDW &#40;sistema di piattaforma Analitica&#41;](import-the-scom-management-pack-for-pdw.md).  
+Dopo aver creato il Management Pack installati, continuare al passaggio successivo: [Importare il Management Pack SCOM per PDW &#40;sistema di piattaforma Analitica&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

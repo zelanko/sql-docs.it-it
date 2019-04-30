@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c74a80bb38c406acb50e5e275f658a5f1d2b30d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208377"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Jet 4.0 usa l'elenco di parole riservate SQL-92 con ExtendedAnsiSQL_Set
 Quando viene attivato il flag ExtendedAnsiSQL, Jet 4.0 usa l'elenco di parole riservate SQL-92. Parola tentando di utilizzare un SQL-92 riservata come nome di un oggetto senza virgolette comporterà un errore di sintassi. Quando il flag ExtendedAnsiSQL è disattivato, le nuove parole riservate è utilizzabile come i nomi degli oggetti come prima.

@@ -1,5 +1,5 @@
 ---
-title: 'Riepilogo: Gestione di dati in una tabella gerarchica | Microsoft Docs'
+title: 'Riepilogo: La gestione dei dati in una tabella gerarchica | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223316"
 ---
-# <a name="summary-managing-data-in-a-hierarchical-table"></a>Riepilogo: Gestione di dati in una tabella gerarchica
+# <a name="summary-managing-data-in-a-hierarchical-table"></a>Riepilogo: Gestione dei dati in una tabella gerarchica
   Il tipo di dati `hierarchyid` consente di facilitare la creazione delle tabelle che riflettono i dati gerarchici e quindi di creare indici depth-first e breadth-first per accedere in modo efficiente alla tabella. Utilizzare i metodi gerarchici per eseguire query e modificare i dati.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>Tornare all'inizio dell'esercitazione  
