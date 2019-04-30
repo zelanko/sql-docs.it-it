@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135354"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Avvio dell'utilità sqlcmd
   Per iniziare a utilizzare `sqlcmd`, è innanzitutto necessario avviare l'utilità e connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile connettersi a un'istanza predefinita oppure a un'istanza denominata. Il primo passaggio consiste nell'avvio dell'utilità `sqlcmd`.  
@@ -33,7 +33,7 @@ ms.locfileid: "48228351"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**. Nella casella **Apri** digitare **cmd**e quindi fare clic su **OK** per aprire una finestra del prompt dei comandi.  
   
-2.  Al prompt dei comandi, digitare `sqlcmd`.  
+2.  Al prompt dei comandi digitare `sqlcmd`.  
   
 3.  Premere INVIO.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48228351"
   
 2.  Premere INVIO.  
   
-     Il prompt di `sqlcmd` (1>) indica che si è connessi all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Il `sqlcmd` prompt dei comandi (1 >) indica che si è connessi all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] immesse vengono archiviate in un buffer. Vengono eseguite in batch quando viene rilevato il comando GO.  

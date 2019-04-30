@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161637"
 ---
 # <a name="event-parameters"></a>Parametri evento
 Ogni gestore di evento include un parametro di stato che controlla il gestore dell'evento. Per gli eventi completati, questo parametro viene utilizzato anche per indicare l'esito positivo o negativo dell'operazione che ha generato l'evento. Gli eventi più completi hanno anche un parametro di errore per fornire informazioni su eventuali errori che potrebbero essersi verificati e uno o più parametri di oggetti che fanno riferimento a oggetti ADO usati per eseguire l'operazione. Ad esempio, il [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento include i parametri di oggetto per il **comando**, **Recordset**, e **connessione** oggetti associato all'evento. Nell'esempio seguente di Microsoft® Visual Basic®, è possibile visualizzare il pCommand, pCommand e pConnection gli oggetti che rappresentano il **comandi**, **Recordset**, e **connessione** gli oggetti utilizzati per il **Execute** (metodo).  
@@ -44,7 +44,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Parametro di stato  
  Quando viene chiamata la routine del gestore eventi, il *stato* parametro è impostato su uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**adStatusOK**|Passato verrà sia eventi completati. Questo valore indica che l'operazione che ha causato l'evento completata.|  
 |**adStatusErrorsOccurred**|Passato completati solo agli eventi. Questo valore indica che l'operazione che ha causato l'evento ha avuto esito negativo o un evento verrà annullato l'operazione. Verificare i *errore* parametro per altri dettagli.|  
@@ -54,7 +54,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se non si desidera elaborare un evento, è possibile impostare *lo stato* al **adStatusUnwantedEvent** e l'applicazione non riceverà più notifiche di quell ' evento. Tuttavia, tenere presente che alcuni eventi possono essere generati per più di uno dei motivi. In tal caso, è necessario specificare **adStatusUnwantedEvent** per ciascun motivo possibili. Ad esempio, per interrompere la ricezione di notifiche in sospeso **RecordChange** eventi, è necessario impostare la *stato* parametro **adStatusUnwantedEvent** per  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** appena si verificano.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Richiesta che questo gestore eventi non riceverà alcun altre notifiche.|  
 |**adStatusCancel**|Richiedere l'annullamento dell'operazione che sta per verificarsi.|  

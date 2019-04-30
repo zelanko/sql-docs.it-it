@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204547"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Proprietà di oggetti con valori di tabella (Visual Database Tools)
   Queste proprietà vengono visualizzate nella finestra Proprietà quando si seleziona un oggetto con valori di tabella in **Progettazione query e Progettazione viste**. Un oggetto con valori di tabella può essere una vista, un sinonimo, una tabella derivata o una funzione con valori di tabella. Se non specificato diversamente, tali proprietà sono di sola lettura nella finestra **Proprietà** .  

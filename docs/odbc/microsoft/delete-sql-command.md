@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198582"
 ---
 # <a name="delete---sql-command"></a>DELETE (comando SQL)
 Contrassegna i record per l'eliminazione.  
@@ -39,7 +39,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *DatabaseName!* Specifica il nome di un database contenente la tabella se il database che lo contiene non è il database specificato con l'origine dati. È necessario includere il nome di un database contenente la tabella se il database non è il database specificato con l'origine dati. Includere il delimitatore punto esclamativo (!) dopo il nome del database e prima del nome di tabella.  
   
- In cui *FilterCondition1*[AND &#124; oppure *FilterCondition2*...]  
+ WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
  Specifica che Visual FoxPro contrassegnare determinati record per l'eliminazione.  
   
  *FilterCondition* specifica i criteri che i record devono soddisfare per essere contrassegnato per l'eliminazione. È possibile includere le condizioni di filtro desiderati, connetterle con l'operatore AND o l'operatore OR. È anche possibile usare l'operatore NOT per invertire il valore di un'espressione logica oppure è possibile usare **vuoto**() per verificare la presenza di un campo vuoto.  

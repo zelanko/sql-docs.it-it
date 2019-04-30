@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199390"
 ---
 # <a name="binding-parameter-markers"></a>Associazione di marcatori di parametro
 L'applicazione associa parametri chiamando **SQLBindParameter**. **SQLBindParameter** associa un parametro alla volta. In tal modo l'applicazione specifica quanto segue:  
@@ -28,7 +28,7 @@ L'applicazione associa parametri chiamando **SQLBindParameter**. **SQLBindParame
   
 -   Il tipo di parametro (input, input/output o di output). Tranne che per i parametri nelle chiamate a procedure, tutti i parametri sono parametri di input. Per altre informazioni, vedere [parametri delle Procedure](../../../odbc/reference/develop-app/procedure-parameters.md), più avanti in questa sezione.  
   
--   La C lunghezza dei dati byte, l'indirizzo e tipo della variabile associato al parametro. Il driver deve essere in grado di convertire i dati dal tipo di dati C per il tipo di dati SQL o viene restituito un errore. Per un elenco delle conversioni supportate, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) nell'appendice d: i tipi di dati.  
+-   La C lunghezza dei dati byte, l'indirizzo e tipo della variabile associato al parametro. Il driver deve essere in grado di convertire i dati dal tipo di dati C per il tipo di dati SQL o viene restituito un errore. Per un elenco delle conversioni supportate, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) nell'appendice d: Tipi di dati.  
   
 -   Il tipo di dati SQL, precisione e scala del parametro stesso.  
   

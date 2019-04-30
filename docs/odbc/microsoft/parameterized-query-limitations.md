@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d394dea5af4f2602918dc4b85b21e0cc4704eaba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200652"
 ---
 # <a name="parameterized-query-limitations"></a>Limitazioni delle query con parametri
 Quando viene usato il driver Microsoft Access, è possibile chiamare una query con parametri usando la sintassi seguente: CHIAMARE *-nome della query* [(*parametro*[,*parametro*]...)].

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192329"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>Limitazioni dell'uso dei cursori gestiti da keyset
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668109"
  Inoltre, se l'applicazione usa gli alias di tabella, gestito da keyset dei cursori non è attivo. tipi di cursore forward-only o statici sono necessari. Il keyset utilizzando il tipo di cursore con gli alias di tabella causerà l'errore seguente: "[Microsoft] [driver ODBC per Oracle] non è possibile utilizzare cursore gestito da Keyset in join, tramite l'operatore union, intersect o meno o in sola lettura di set di risultati."  
   
 > [!NOTE]  
->  Il modo in cui il driver gestisce l'istruzione SQL che viene inviato al server Oracle, Oracle restituisce internamente il messaggio di errore seguente: "ORA 00964: tabella nome non in elenco."
+>  Il modo in cui che il driver gestisce l'istruzione SQL che viene inviato al server Oracle, Oracle restituisce internamente il messaggio di errore seguente: "ORA 00964: tabella nome non in elenco."

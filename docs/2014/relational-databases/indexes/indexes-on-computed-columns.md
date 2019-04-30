@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162442"
 ---
 # <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
   È possibile definire gli indici per le colonne calcolate purché siano soddisfatti i requisiti seguenti:  
@@ -70,7 +70,7 @@ ms.locfileid: "48049571"
   
 -   Non è un'espressione dei tipi di dati `float` o `real`.  
   
--   Non usa un' `float` o `real` tipo di dati nella relativa definizione. Ad esempio, nell'istruzione seguente, colonna `y` è `int` e deterministica ma non precisa.  
+-   Nella definizione dell'espressione non viene utilizzato il tipo di dati `float` o `real`. Ad esempio, nell'istruzione seguente la colonna `y` è di tipo `int` ed è deterministica, ma non precisa:  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049571"
     ```  
   
 > [!NOTE]  
->  Qualsiasi `float` oppure `real` espressione sono considerata non precisa e non può essere una chiave di un indice, un `float` o `real` espressione può essere utilizzata in una vista indicizzata, ma non come una chiave. Questa considerazione è valida anche per le colonne calcolate. Funzioni, espressioni oppure funzioni definite dall'utente sono considerate non precise se includono `float` o `real` espressioni. Sono comprese le espressioni logiche (confronti).  
+>  Le espressioni di tipo `float` o `real` sono considerate non precise e non possono essere utilizzate come chiavi di un indice. Le espressioni `float` o `real` sono quindi utilizzabili in una vista indicizzata ma non come chiavi. Questa considerazione è valida anche per le colonne calcolate. Funzioni, espressioni oppure funzioni definite dall'utente sono considerate non precise se includono espressioni `float` oppure `real`. Sono comprese le espressioni logiche (confronti).  
   
  La proprietà **IsPrecise** della funzione COLUMNPROPERTY indica se una *computed_column_expression* è precisa.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48049571"
   
 -   Il *computed_column_expression* definita per la colonna calcolata non può restituire il `text`, `ntext`, o `image` i tipi di dati.  
   
--   Le colonne calcolate derivate da `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e `xml` i tipi di dati possono essere indicizzati, purché il tipo di dati della colonna calcolata sia consentito come colonna chiave di indice.  
+-   Le colonne calcolate derivate dai tipi di dati `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` e `xml` possono essere indicizzate purché il tipo di dati della colonna calcolata sia consentito come colonna chiave indice.  
   
--   Le colonne calcolate derivate da `image`, `ntext`, e `text` tipi di dati possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
+-   Le colonne calcolate derivate dai tipi di dati `image`, `ntext` e `text` possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
   
  **SET Option Requirements**  
   

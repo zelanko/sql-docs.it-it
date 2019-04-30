@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042659"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Test dell'accuratezza con i grafici di accuratezza (Esercitazione di base sul data mining)
   Nel **Mining grafico di accuratezza** scheda Progettazione modelli di Data Mining, è possibile calcolare come ognuno dei modelli di esegue le stime e confrontare i risultati di ogni modello direttamente con i risultati degli altri modelli. Questo metodo di confronto è noto come un *grafico di accuratezza*. In genere, l'accuratezza predittiva di un modello di data mining è misurata dall'accuratezza stessa del modello o dall'accuratezza della classificazione. Per questa esercitazione si utilizzerà solo il grafico di accuratezza.  

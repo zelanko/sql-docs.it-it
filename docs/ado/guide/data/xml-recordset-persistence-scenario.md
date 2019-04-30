@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184834"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Scenario di persistenza di recordset XML
 In questo scenario si creerà un'applicazione Active Server Pages (ASP) che consente di salvare il contenuto di un oggetto Recordset direttamente per l'oggetto risposta ASP.  

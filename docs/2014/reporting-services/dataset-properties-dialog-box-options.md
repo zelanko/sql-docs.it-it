@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165008"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Finestra di dialogo Proprietà set di dati, Opzioni
   Selezionare **le opzioni** nel **proprietà set di dati** finestra di dialogo per modificare le opzioni di dati, ad esempio le regole di confronto e i subtotali, per la query. Per altre informazioni, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  

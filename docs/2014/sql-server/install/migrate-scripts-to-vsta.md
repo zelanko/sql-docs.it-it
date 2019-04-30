@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad248407922506e999c21480f8ce277f20d32b6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201328"
 ---
 # <a name="migrate-scripts-to-vsta"></a>Migrare script a VSTA
   Quando esegue l'aggiornamento [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pacchetti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene eseguita la migrazione gli script in qualsiasi attività Script o componenti Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA è l'ambiente di scripting utilizzato da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nelle [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], per l'ambiente di scripting [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA).  

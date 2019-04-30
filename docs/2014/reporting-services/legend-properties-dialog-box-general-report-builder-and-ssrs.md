@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143010"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà legenda, Generale (Generatore report e SSRS)
   La finestra di dialogo **Legenda** consente di definire l'aspetto e il layout della legenda nel grafico. Per altre informazioni, vedere [formattazione della legenda in un grafico &#40;Generatore Report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

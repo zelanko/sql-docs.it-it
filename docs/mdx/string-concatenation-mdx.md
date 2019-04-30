@@ -1,5 +1,5 @@
 ---
-title: + (Concatenazione di stringhe) (MDX) | Documenti Microsoft
+title: + (Concatenazione di stringhe) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 292d671fb3b971c30b6e261e3b851aba1ead9b36
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150009"
 ---
 # <a name="-string-concatenation-mdx"></a>+ (concatenazione di stringhe) (MDX)
 
@@ -35,7 +35,7 @@ String_Expression + String_Expression
 ## <a name="return-value"></a>Valore restituito  
  Valore con il tipo di dati del parametro con precedenza maggiore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se una delle due espressioni restituisce un valore Null, l'operatore restituirà il risultato dell'altra espressione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6268c1eb31565a781929b235fd72f4c27091476
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184130"
 ---
 # <a name="clustered-property-example-vb"></a>Esempio della proprietà Clustered (VB)
 Questo esempio viene illustrato il [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) proprietà di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Si noti che i database Microsoft Jet non supportano gli indici cluster, in modo che in questo esempio restituirà **False** per il **Clustered** proprietà di tutti gli indici di **Northwind** database.  

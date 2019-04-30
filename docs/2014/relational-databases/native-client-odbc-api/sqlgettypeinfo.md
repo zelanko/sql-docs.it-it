@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046694"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report driver ODBC di Native Client imposta la colonna aggiuntiva USERTYPE nel risultato di `SQLGetTypeInfo`. USERTYPE riporta la definizione del tipo di dati DB-Library e risulta utile agli sviluppatori che trasferiscono applicazioni DB-Library esistenti a ODBC.  

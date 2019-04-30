@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125964"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Annullare le modifiche apportate ai diagrammi (Visual Database Tools)
   È possibile eliminare le modifiche al diagramma di database che non si desidera salvare nel database.  

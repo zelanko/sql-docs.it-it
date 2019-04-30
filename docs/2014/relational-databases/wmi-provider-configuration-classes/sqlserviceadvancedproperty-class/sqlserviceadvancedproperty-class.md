@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188592"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
   Il [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) rappresenta una proprietà avanzata del servizio a cui fa riferimento il [classe SqlService](../sqlservice-class/sqlservice-class.md) oggetto.  

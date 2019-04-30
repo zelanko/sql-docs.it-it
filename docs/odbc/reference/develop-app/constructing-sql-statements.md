@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38ff4066f7ff693d96f3ef239ef25948b2caf3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042510"
 ---
 # <a name="constructing-sql-statements"></a>Costruzione di istruzioni SQL
 È possono costruire istruzioni SQL in uno dei tre modi: a livello di codice durante lo sviluppo, costruito in fase di esecuzione, o immesse direttamente dall'utente.  

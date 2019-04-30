@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199203"
 ---
 # <a name="bookmarks-odbc"></a>Segnalibri (ODBC)
 Un segnalibro è un valore utilizzato per identificare una riga di dati. Il significato del valore del segnalibro è noto solo al driver o all'origine dati. Un segnalibro, ad esempio, può essere tanto semplice quanto un numero di riga o tanto complesso quanto un indirizzo del disco. I segnalibri in ODBC sono leggermente diversi dai segnalibri nella documentazione reali. In un vero libro, il lettore inserisce un segnalibro a una pagina specifica e quindi cerca il segnalibro tornare alla pagina. In ODBC l'applicazione richiede un segnalibro per una determinata riga, lo archivia e lo passa nuovamente al cursore per tornare alla riga. Di conseguenza, i segnalibri in ODBC sono simili a un lettore annotare un numero di pagina, ricordare e quindi cercare nuovamente la pagina.  

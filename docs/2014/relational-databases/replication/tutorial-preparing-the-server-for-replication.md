@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199076"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Esercitazione: Preparazione del server per la replica
   È importante pianificare la sicurezza prima di configurare la topologia di replica. In questa esercitazione viene illustrato come proteggere la topologia di replica e come configurare la distribuzione, ovvero il primo passaggio nella replica dei dati. È necessario completare questa esercitazione prima delle altre esercitazioni sulla replica.  
@@ -35,7 +35,7 @@ ms.locfileid: "54125381"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita.  
   
- **Tempo stimato per completare questa esercitazione: 30 minuti.**  
+ **Tempo stimato per il completamento dell'esercitazione: 30 minuti.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
   

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157121"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utilizzo dei profili agenti di replica
   In questo argomento viene descritto come utilizzare i profili degli agenti di replica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). Il comportamento di ogni agente di replica è controllato da un set di parametri che è possibile impostare tramite i profili agenti. Ogni agente dispone di un profilo predefinito e alcuni anche di profili predefiniti aggiuntivi. In un momento specifico, per un agente è attivo un solo profilo.  
@@ -61,7 +61,7 @@ ms.locfileid: "52772203"
   
     -   Eliminare un profilo  
   
--   **Completamento:**  [Dopo aver modificato i parametri dell'agente](#FollowUp)  
+-   **Completamento:**  [dopo avere modificato i parametri degli agenti](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -284,7 +284,7 @@ ms.locfileid: "52772203"
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> per rimuovere dal server il profilo definito dall'utente rappresentato da questo oggetto.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver modificato i parametri dell'agente  
+##  <a name="FollowUp"></a> Completamento: dopo avere modificato i parametri degli agenti  
  Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo.  
   
 ## <a name="see-also"></a>Vedere anche  

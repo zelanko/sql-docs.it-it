@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7185dca3db146e7c17f41cb0f0c5376274fe3634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161484"
 ---
 # <a name="jumping-to-a-record"></a>Passaggio a un record
 Il [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo consente di spostarsi avanti o indietro nel **Recordset** un numero specificato di record usando la sintassi seguente:  

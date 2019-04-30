@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182925"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Finestra di dialogo Apri condizione, pagina Criteri dipendenti
   Utilizzare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento alla condizione della gestione basata su criteri corrente. Per altre informazioni sulla correlazione delle condizioni con facet e criteri, vedere [Amministrazione di server con la gestione basata su criteri](administer-servers-by-using-policy-based-management.md).  

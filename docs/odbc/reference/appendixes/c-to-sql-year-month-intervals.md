@@ -1,5 +1,5 @@
 ---
-title: 'C a SQL: intervalli anno-mese | Microsoft Docs'
+title: 'Da C a SQL: Intervalli anno-mese | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159283"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>Da C a SQL: intervalli anno-mese
 Gli identificatori per i tipi di dati ODBC C intervallo anno-mese sono:  
@@ -32,9 +32,9 @@ Gli identificatori per i tipi di dati ODBC C intervallo anno-mese sono:
   
 |Identificatore di tipo SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR, [a]<br /><br /> SQL_VARCHAR, [a]<br /><br /> SQL_LONGVARCHAR [a]|Lunghezza in byte di colonna > = lunghezza in byte di caratteri<br /><br /> Lunghezza in byte colonna < [a] lunghezza in byte di caratteri<br /><br /> Valore di dati non è un intervallo valido di valore letterale|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Lunghezza in caratteri colonna > = lunghezza in caratteri di dati<br /><br /> Lunghezza in caratteri colonna < lunghezza dei dati [a] in caratteri<br /><br /> Valore di dati non è un intervallo valido di valore letterale|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Conversione di un intervallo di un solo campo non ha restituito il troncamento di cifre intere<br /><br /> Conversione comportato il troncamento di cifre intere|n/d<br /><br /> 22003|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Lunghezza in byte di colonna > = lunghezza in byte di caratteri<br /><br /> Lunghezza in byte colonna < [a] lunghezza in byte di caratteri<br /><br /> Valore di dati non è un intervallo valido di valore letterale|n/d<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Lunghezza in caratteri colonna > = lunghezza in caratteri di dati<br /><br /> Lunghezza in caratteri colonna < lunghezza dei dati [a] in caratteri<br /><br /> Valore di dati non è un intervallo valido di valore letterale|n/d<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Conversione di un intervallo di un solo campo non ha restituito il troncamento di cifre intere<br /><br /> Conversione comportato il troncamento di cifre intere|n/d<br /><br /> 22003|  
 |SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|Valore dei dati è stato convertito senza troncamento di tutti i campi<br /><br /> Uno o più campi del valore dei dati sono stati troncati durante la conversione|n/d<br /><br /> 22015|  
   
  [a] tipi di dati di intervallo C tutto possono essere convertito in un tipo di dati carattere.  

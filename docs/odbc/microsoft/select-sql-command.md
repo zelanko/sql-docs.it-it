@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127871"
 ---
 # <a name="select---sql-command"></a>SELECT (comando SQL)
 Recupera i dati da una o più tabelle.  
@@ -104,7 +104,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* specifica un nome temporaneo per la tabella denominata nella *tabella*. Se si specifica un alias locale, è necessario usare l'alias locale anziché il nome della tabella in tutto l'istruzione SELECT. L'alias locale non influenza l'ambiente di Visual FoxPro.  
   
- In cui *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; oppure *FilterCondition* [AND &#124; oppure *FilterCondition* ...]]  
+ WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
  Indica a Visual FoxPro da includere solo alcuni record nei risultati della query. Quando viene richiesto per recuperare i dati da più tabelle.  
   
  *JoinCondition* specifica i campi che si collegano tabelle nella clausola FROM. Se si include più di una tabella in una query, è necessario specificare una condizione di join per ogni tabella dopo il primo.  
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- Questa condizione di filtro ricerca di ogni campo corrispondente *cExpression*. È possibile usare il segno di percentuale (%) e caratteri jolly di sottolineatura (_) come parte della *cExpression*. Il carattere di sottolineatura rappresenta un singolo carattere sconosciuto nella stringa.  
+ Questa condizione di filtro ricerca di ogni campo corrispondente *cExpression*. È possibile utilizzare il segno di percentuale (%) e caratteri jolly di sottolineatura (_) come parte della *cExpression*. Il carattere di sottolineatura rappresenta un singolo carattere sconosciuto nella stringa.  
   
  Clausola GROUP BY *GroupColumn* [, *GroupColumn* ...]  
  Raggruppa le righe nella query in base ai valori in una o più colonne. *GroupColumn* può essere uno dei seguenti:  
@@ -254,12 +254,12 @@ WHERE customer.cust_id NOT IN ;
   
 -   La clausola WHERE consente di trovare tutti i numeri di cliente nella tabella customer che non sono presenti nella tabella orders. Poiché la prima sezione del comando fornito tutte le società che ha un numero cliente nella tabella orders, tutte le società nella tabella customer sono ora inclusi nei risultati della query.  
   
--   Poiché le strutture delle tabelle incluse in un'unione devono essere identiche, esistono due segnaposto nella seconda istruzione SELECT per rappresentare *orders.order_id* e *orders.emp_id* dalla prima istruzione SELECT istruzione.  
+-   Poiché le strutture delle tabelle incluse in un'unione devono essere identiche, esistono due segnaposto nella seconda istruzione SELECT per rappresentare *orders.order_id* e *orders.emp_id* dalla prima istruzione SELECT affermazione.  
   
     > [!NOTE]  
     >  I segnaposto devono essere dello stesso tipo di campi che rappresentano. Se il campo è un tipo date, deve essere il segnaposto {/ /}. Se il campo è un carattere, il segnaposto deve essere una stringa vuota ("").  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [Centro sicurezza di AZURE &#124; DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
  Ordina i risultati della query in base ai dati in una o più colonne. Ciascuna *Order_Item* deve corrispondere a una colonna nei risultati della query e può essere uno dei seguenti:  
   
 -   Campo in una tabella da cui è anche un elemento selezionato nella clausola SELECT principale (non in una sottoquery).  

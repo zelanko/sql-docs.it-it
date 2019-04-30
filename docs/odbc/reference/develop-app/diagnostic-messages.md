@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034918"
 ---
 # <a name="diagnostic-messages"></a>Messaggi di diagnostica
 Viene restituito un messaggio di diagnostica con SQLSTATE ogni. Il valore SQLSTATE stesso spesso viene restituito con un numero di messaggi diversi. SQLSTATE 42000 (sintassi o violazione di accesso), ad esempio, viene restituito per la maggior parte degli errori nella sintassi SQL. Tuttavia, ogni errore di sintassi è probabile che essere descritti da un messaggio diverso.  
@@ -33,21 +33,21 @@ Viene restituito un messaggio di diagnostica con SQLSTATE ogni. Il valore SQLSTA
   
  Se l'origine dell'errore o avviso, è un componente stesso, il messaggio di diagnostica deve spiegare questo. Pertanto, il testo dei messaggi presenta due formati diversi. Per errori e avvisi che non sono presenti in un'origine dati, il messaggio di diagnostica debba usare questo formato:  
   
- **[** *identificatore fornitore* **] [** *ODBC-component-identifier* **]** *componente-specificato-text*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
   
  Per errori e avvisi che si verificano in un'origine dati, il messaggio di diagnostica debba usare questo formato:  
   
- **[** *identificatore fornitore* **] [** *ODBC-component-identifier* **] [** *identificatore dell'origine dati*  **]** *data-source-specificato-text*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
   
  La tabella seguente illustra il significato di ogni elemento.  
   
 |Elemento|Significato|  
 |-------------|-------------|  
-|*Identificatore fornitore*|Identifica il fornitore del componente in cui si è verificato l'errore o avviso o che hanno ricevuto l'errore o avviso direttamente dall'origine dati.|  
-|*Identificatore di componenti ODBC*|Identifica il componente in cui si è verificato l'errore o avviso o che hanno ricevuto l'errore o avviso direttamente dall'origine dati.|  
-|*Identificatore dell'origine dati*|Identifica l'origine dati. Per i driver basati su file, si tratta in genere un formato di file, ad esempio i driver basati su DBMS per Xbase [1], questo è il prodotto DBMS.|  
-|*componente-specificato-text*|Generato dal componente di ODBC.|  
-|*Data-source-specificato-text*|Generato dall'origine dati.|  
+|*vendor-identifier*|Identifica il fornitore del componente in cui si è verificato l'errore o avviso o che hanno ricevuto l'errore o avviso direttamente dall'origine dati.|  
+|*ODBC-component-identifier*|Identifica il componente in cui si è verificato l'errore o avviso o che hanno ricevuto l'errore o avviso direttamente dall'origine dati.|  
+|*data-source-identifier*|Identifica l'origine dati. Per i driver basati su file, si tratta in genere un formato di file, ad esempio i driver basati su DBMS per Xbase [1], questo è il prodotto DBMS.|  
+|*component-supplied-text*|Generato dal componente di ODBC.|  
+|*data-source-supplied-text*|Generato dall'origine dati.|  
   
  [1] In questo caso, il driver viene utilizzato come il driver e l'origine dati.  
   

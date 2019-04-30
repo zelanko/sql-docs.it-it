@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164988"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Finestra di dialogo Proprietà set di dati, Parametri (Generatore report)
   Selezionare **parametri** nel **proprietà set di dati** finestra di dialogo per aggiungere, modificare ed eliminare parametri di query.  

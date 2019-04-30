@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042187"
 ---
 # <a name="considering-database-features-to-use"></a>Considerazione delle funzionalità di database da usare
-Una volta noto il livello di base dell'interoperabilità, è necessario considerare le funzionalità di database usate dall'applicazione. Ad esempio, quali istruzioni SQL hanno l'applicazione eseguirà? L'applicazione userà i cursori scorrevoli? Transazioni? Procedure? Dati di tipo Long? Per idee sulle funzionalità potrebbero non essere supportate da tutti i DBMS, vedere la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) le descrizioni delle funzioni e [ Appendice c: la grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Le funzionalità richieste da un'applicazione potrebbero eliminare alcuni DBMS dall'elenco di DBMS di destinazione. Si potrebbe anche essere indicato che l'applicazione può fare facilmente riferimento maggior parte dei DBMS.  
+Una volta noto il livello di base dell'interoperabilità, è necessario considerare le funzionalità di database usate dall'applicazione. Ad esempio, quali istruzioni SQL hanno l'applicazione eseguirà? L'applicazione userà i cursori scorrevoli? Transazioni? Procedure? Dati di tipo Long? Per idee sulle funzionalità potrebbero non essere supportate da tutti i DBMS, vedere la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) le descrizioni delle funzioni e [ Appendice c: Grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Le funzionalità richieste da un'applicazione potrebbero eliminare alcuni DBMS dall'elenco di DBMS di destinazione. Si potrebbe anche essere indicato che l'applicazione può fare facilmente riferimento maggior parte dei DBMS.  
   
- Ad esempio, se le funzionalità necessarie sono semplici, ma essere implementati in genere con un elevato livello di interoperabilità. Un'applicazione che esegue una semplice **seleziona** istruzione e recupera i risultati con cursori forward-only è probabile che sia altamente interoperabile, grazie alla relativa semplicità: quasi tutti i driver e DBMS supportano la funzionalità, è necessario.  
+ Ad esempio, se le funzionalità necessarie sono semplici, ma essere implementati in genere con un elevato livello di interoperabilità. Un'applicazione che esegue una semplice **seleziona** istruzione e recupera i risultati con cursori forward-only è probabile che sia altamente interoperabile, grazie alla relativa semplicità: Quasi tutti i driver e DBMS supportano le funzionalità che necessarie.  
   
  Tuttavia, se le funzionalità necessarie sono più complesse, ad esempio cursori scorrevoli, per gli aggiornamenti posizionati e istruzioni delete e procedure, i compromessi spesso dovuti. Esistono diverse possibilità:  
   

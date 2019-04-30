@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127261"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Cronologia dei driver di database desktop
 Nella tabella seguente mostra la cronologia delle versioni di driver di Database Desktop.  
   
-|Versione|Data di rilascio|Description|  
+|Version|Data di rilascio|Descrizione|  
 |-------------|------------------|-----------------|  
 |1,0|1993 agosto|Hanno usato il processore di query SIMBA prodotto da PageAhead Software. Amministratore o SIMBA ricevuto chiamate ODBC e istruzioni SQL, li elaborati in chiamate ISAM installabile Microsoft Jet e quindi chiamata il livello di invio Microsoft Jet ISAM per caricare e chiamare il driver ISAM installabile appropriato.|  
 |2.0|1994 dicembre|Usata con ODBC 2.0, che esteso in modo significativo la funzionalità ODBC. La modifica principale nella versione 2.0 è che il motore di database Microsoft Jet sostituiti in query processor SIMBA. Con il motore di database Microsoft Jet, i driver di Database Desktop molto più strettamente integrato con la tecnologia di Microsoft Access e i driver ISAM installabili Microsoft Jet. Miglioramenti significativi sono stati:<br /><br /> -Supporto nativo per i cursori scorrevoli.<br />-Supporto nativo per gli outer join, join aggiornabile ed eterogenei e transazioni.<br />-le versioni a 32 bit dei driver per Microsoft Windows NT.|  

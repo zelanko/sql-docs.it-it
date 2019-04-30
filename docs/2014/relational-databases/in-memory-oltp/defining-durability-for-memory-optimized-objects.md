@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161997"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Definizione di durabilità per gli oggetti con ottimizzazione per la memoria
   Con OLTP in memoria viene garantita la disponibilità completa di tutte le proprietà di atomicità, coerenza, isolamento e durabilità (ACID, Atomicity, Consistency, Isolation, Durability). La durabilità, nel contesto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e delle tabelle ottimizzate per la memoria, offre le seguenti garanzie:  

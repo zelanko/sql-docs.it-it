@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144342"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
   In questo argomento viene descritto come creare un piano di manutenzione multiserver o di un singolo server utilizzando l'area di progettazione del piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mentre la **Creazione guidata piano di manutenzione** è ideale per la creazione di piani di manutenzione di base, la creazione di un piano tramite l'area di progettazione consente di utilizzare un flusso di lavoro avanzato.  
@@ -42,7 +42,7 @@ ms.locfileid: "54132786"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membro del ruolo predefinito del server **sysadmin** . In Esplora oggetti il nodo **Piani di manutenzione** viene visualizzato solo per gli utenti membri del ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo dell'area di progettazione del piano di manutenzione  
@@ -160,10 +160,10 @@ ms.locfileid: "54132786"
          Consente di definire il funzionamento di un vincolo tra due attività.  
   
          Elenco**Operazione valutazione**    
-         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **espressione**, **espressione e vincolo**, e **espressione o vincolo**.  
+         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
   
          Elenco**Valore**   
-         Specificare il valore del vincolo: **Operazione riuscita**, **errore**, o **completamento**. Il valore predefinito è**Esito positivo** .  
+         Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**. Il valore predefinito è**Esito positivo** .  
   
         > [!NOTE]  
         >  La riga del vincolo di precedenza è verde in caso di **Esito positivo**, rossa in caso di **Esito negativo**e blu in caso di **Completamento**.  

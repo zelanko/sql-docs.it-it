@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200383"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Procedure per l'esecuzione di query (ODBC)
   L'esecuzione di un'istruzione SQL in un'applicazione ODBC richiede l'allocazione di un handle di istruzione, l'impostazione degli attributi dell'istruzione, nonché la preparazione e l'esecuzione di quest'ultima.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Usare un'istruzione &#40;ODBC&#41;](use-a-statement-odbc.md)  
   

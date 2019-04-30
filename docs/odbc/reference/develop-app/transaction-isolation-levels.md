@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63e08aa2e75d560ce73c549d307418432ffe16af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149113"
 ---
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
 *Livelli di isolamento delle transazioni* sono una misura dell'estensione per la transazione ha esito positivo isolamento. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza di fenomeni di seguenti:  
@@ -42,9 +42,9 @@ ms.locfileid: "47631746"
   
 |Livello di isolamento delle transazioni|Letture dirty|Letture non ripetibili|Righe fantasma|  
 |---------------------------------|-----------------|-------------------------|--------------|  
-|Read Uncommitted|X|X|X|  
-|Read Committed|--|X|X|  
-|Repeatable Read|--|--|X|  
+|Read Uncommitted|x|X|x|  
+|Read Committed|--|x|x|  
+|Repeatable Read|--|--|x|  
 |Serializable|--|--|--|  
   
  La tabella seguente descrive modi semplici che un sistema DBMS potrebbe implementare livelli di isolamento delle transazioni.  

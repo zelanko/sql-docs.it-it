@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047595"
 ---
 # <a name="atomization-xquery"></a>Atomizzazione (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <WC OriginalLaborHours="2.5"   
@@ -78,7 +78,7 @@ where ProductModelID=7
  Atomizzazione viene inoltre eseguita in passato alle funzioni, valori restituiti dalle funzioni, parametri dell'espressione di confronto **cast ()** espressioni ed espressioni di ordinamento passate nell'ordine dalla clausola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   
+ [XQuery Basics](../xquery/xquery-basics.md)   
  [Espressioni di confronto &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

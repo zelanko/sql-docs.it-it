@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294447"
 ---
 # <a name="about-drivers-and-data-sources"></a>Informazioni su driver e origini dati
 *I driver* sono elencati i componenti che elaborano le richieste ODBC e restituiscono dati all'applicazione. Se necessario, i driver di modificare la richiesta di un'applicazione in un formato riconosciuto dall'origine dati. Per aggiungere o eliminare un driver dal computer, è necessario utilizzare il programma di installazione del driver.  
   
  *Zdroje dat* sono i database o i file aperti da un driver e sono identificati da un nome di origine dati (DSN). Utilizzare Amministrazione origine dati ODBC per aggiungere, configurare ed eliminare origini dati dal sistema. Nella tabella seguente sono descritti i tipi di origini dati che possono essere utilizzate.  
   
-|Origine dati|Description|  
+|Origine dati|Descrizione|  
 |-----------------|-----------------|  
 |Utente|I DSN utente sono locali rispetto a un computer e possono essere usati solo dall'utente corrente. Vengono registrati nel sottoalbero del Registro di sistema HKEY_CURRENT_USER.|  
 |Sistema|DSN di sistema sono locali rispetto a un computer anziché dedicato a un utente. Il sistema o qualsiasi utente con privilegi possa utilizzare un'origine dati impostato con un DSN di sistema. DSN di sistema vengono registrati nel sottoalbero HKEY_LOCAL_MACHINE del Registro di sistema.|  

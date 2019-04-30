@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161642"
 ---
 # <a name="keyset-cursors"></a>Cursori keyset
-Il cursore keyset fornisce funzionalità tra un valore statico e un cursore dinamico nella sua capacità di rilevare le modifiche. Un cursore statico, non sempre rileva le modifiche per l'appartenenza e l'ordine del set di risultati. Ad esempio un cursore dinamico, è di rilevare le modifiche ai valori delle righe nel set di risultati.  
+Il cursore keyset fornisce funzionalità tra un valore statico e un cursore dinamico nella sua capacità di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Come un cursore dinamico, rileva le modifiche ai valori delle righe nel set di risultati.  
   
- Gestito da keyset dei cursori vengono controllati da un set di identificatori univoci (chiavi) noti come keyset. Le chiavi sono costituite da un set di colonne che identificano in modo univoco le righe del set di risultati. Il keyset corrisponde al set di valori di chiave da tutte le righe restituite dall'istruzione della query.  
+ I cursori gestiti da keyset vengono controllati da un set di identificatori univoci (chiavi), noti come keyset. Le chiavi sono costituite da un set di colonne che identificano in modo univoco le righe del set di risultati. Il keyset corrisponde al set di valori di chiave di tutte le righe restituite dall'istruzione della query.  
   
- Con cursori gestito da keyset, una chiave è compilata e salvata per ogni riga del cursore e memorizzata nella workstation client o sul server. Quando si accede a ogni riga, la chiave archiviata viene usata per recuperare i valori correnti dei dati dall'origine dati. In un cursore gestito da keyset, l'appartenenza al set di risultati è bloccato quando il set di chiavi è completamente popolato. Successivamente, aggiunte o aggiornamenti che interessano l'appartenenza non fanno parte del gruppo di risultati fino a quando non viene riaperta.  
+ Con i cursori gestiti da keyset viene generata e salvata una chiave per ogni riga nel cursore e tale chiave viene archiviata nella workstation client o nel server. Quando si accede a ogni riga, la chiave archiviata viene usata per recuperare i valori correnti dei dati dall'origine dati. In un cursore gestito da keyset, quando il set di chiavi è completamente popolato, l'appartenenza del set di risultati è bloccata. Le aggiunte o gli aggiornamenti successivi che interessano l'appartenenza faranno parte del set di risultati solo quando verrà riaperto.  
   
- Le modifiche ai valori di dati (apportate da altri processi o il proprietario del set di chiavi) sono visibili quando l'utente scorre il set di risultati. Gli inserimenti eseguiti all'esterno del cursore (da altri processi) sono visibili solo se il cursore viene chiuso e riaperto. Gli inserimenti eseguiti dall'interno del cursore sono visibili alla fine del set di risultati.  
+ Le modifiche ai valori di dati (apportate da altri processi o il proprietario del set di chiavi) sono visibili quando l'utente scorre il set di risultati. Gli inserimenti eseguiti all'esterno del cursore da altri processi sono visibili solo se il cursore viene chiuso e riaperto. Gli inserimenti eseguiti dall'interno del cursore sono visibili alla fine del set di risultati.  
   
- Quando un cursore gestito da keyset tenta di recuperare una riga che è stata eliminata, la riga viene visualizzato come "area libera" nel set di risultati. La chiave per la riga è presente il set di chiavi, ma la riga non esiste più nel set di risultati. Se vengono aggiornati i valori di chiave in una riga, la riga viene considerata di eliminazione e quindi inserita, tali righe vengono visualizzati anche come buchi del set di risultati. Mentre un cursore gestito da keyset possa sempre rilevare le righe eliminate da altri processi, facoltativamente possibile rimuovere le chiavi per le righe che vengono eliminate se stesso. Gestito da keyset dei cursori che eseguono questa operazione non è in grado di rilevare le righe eliminate perché è stato rimosso l'evidenza.  
+ Quando un cursore gestito da keyset tenta di recuperare una riga che è stata eliminata, la riga viene visualizzato come "area libera" nel set di risultati. La chiave per la riga è presente nel keyset, ma la riga non esiste più nel set di risultati. Se vengono aggiornati i valori di chiave in una riga, la riga viene considerata di eliminazione e quindi inserita, tali righe vengono visualizzati anche come buchi del set di risultati. Mentre un cursore gestito da keyset possa sempre rilevare le righe eliminate da altri processi, facoltativamente possibile rimuovere le chiavi per le righe che vengono eliminate se stesso. Gestito da keyset dei cursori che eseguono questa operazione non è in grado di rilevare le righe eliminate perché è stato rimosso l'evidenza.  
   
  Un aggiornamento a una colonna chiave equivale all'eliminazione della chiave precedente seguita da un inserimento della nuova chiave. Il nuovo valore della chiave non è visibile se l'aggiornamento non è stato eseguito tramite il cursore. Se tramite il cursore è stato eseguito l'aggiornamento, il nuovo valore della chiave è visibile alla fine del set di risultati.  
   

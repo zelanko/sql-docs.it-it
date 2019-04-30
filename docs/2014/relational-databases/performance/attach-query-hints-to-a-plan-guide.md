@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89af21c2c591db2dff678be7aaf8c064e728b9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151068"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Associazione degli hint per le query a una guida di piano
   In una guida di piano è possibile utilizzare qualsiasi combinazione di hint per la query validi. Quando una guida di piano corrisponde a una query, la clausola OPTION specificata nella clausola dell'hint di una guida di piano viene aggiunta alla query prima che questa venga compilata e ottimizzata. Se una query che corrisponde a una guida di piano contiene già una clausola OPTION, gli hint per la query specificati nella guida di piano sostituiscono quelli della query. Perché una guida di piano possa corrispondere a una query che già contiene una clausola OPTION è tuttavia necessario includere la clausola OPTION della query quando si specifica il testo della query da far corrispondere nell'istruzione sp_create_plan_guide. Se si desidera che gli hint specificati nella guida di piano vengano aggiunti agli hint già esistenti nella query, invece di sostituirli è necessario specificare sia gli hint originali che gli hint aggiuntivi nella clausola OPTION della guida di piano.  

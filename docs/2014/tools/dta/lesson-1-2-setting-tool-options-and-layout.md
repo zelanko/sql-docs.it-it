@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 023a38a1d3b5c09fc7e1447ecd026d133abca1db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63227019"
 ---
 # <a name="setting-tool-options-and-layout"></a>Impostazione del layout e delle opzioni dello strumento
   All'avvio è possibile impostare nella maniera più appropriata alla modalità di utilizzo le opzioni che configurano l'interfaccia utente grafica (GUI) dello strumento Ottimizzazione guidata motore di database, il carattere utilizzato e altre funzionalità. Le procedure contenute in questa pagina illustrano le opzioni che è possibile impostare e in che modo impostarle.  
@@ -44,6 +44,6 @@ ms.locfileid: "48166500"
     -   Per impostazione predefinita, l'opzione **Chiedi conferma prima di arrestare l'analisi della sessione** è selezionata, per evitare l'arresto accidentale di una sessione di ottimizzazione prima che Ottimizzazione guidata motore di database abbia concluso l'analisi di un carico di lavoro.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lezione 2: Uso di Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

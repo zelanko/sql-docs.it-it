@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161412"
 ---
 # <a name="filtering-for-updated-records"></a>Filtro per i record aggiornati
 Prima di chiamare UpdateBatch, è possibile usare la proprietà Recordset filtro per visualizzare solo i record che sono stati modificati dopo l'apertura del Recordset o l'ultima chiamata al metodo UpdateBatch. A tale scopo, impostare filtri su adFilterPendingRecords per determinare il numero di record verrà aggiornato, come illustrato nell'esempio di codice nella sezione successiva.  

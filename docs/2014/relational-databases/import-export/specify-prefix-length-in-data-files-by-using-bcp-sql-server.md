@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156690"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
   Per fornire il tipo di archiviazione file con la massima compressione durante l'esportazione in blocco dei dati in formato nativo in un file di dati, il comando **bcp** inserisce davanti a ogni campo uno o più caratteri che ne indicano la lunghezza. Tali caratteri sono denominati *caratteri per il prefisso di lunghezza*.  
@@ -36,7 +36,7 @@ ms.locfileid: "48058761"
 >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="overview-of-prefix-length"></a>Panoramica della lunghezza del prefisso  
- Per archiviare la lunghezza del prefisso di un campo, è necessario un numero di byte sufficiente per rappresentare la lunghezza massima del campo. Il numero di byte necessari dipende inoltre dal tipo di archiviazione di file, dall'impostazione relativa al supporto di valori Null della colonna e dal formato utilizzato per l'archiviazione nel file di dati: nativo o carattere. Ad esempio, un `text` oppure `image` tipo di dati richiede quattro caratteri di prefisso per archiviare la lunghezza del campo, ma un `varchar` tipo di dati richiede due caratteri. I caratteri per il prefisso di lunghezza vengono archiviati nel file di dati utilizzando il formato binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per archiviare la lunghezza del prefisso di un campo, è necessario un numero di byte sufficiente per rappresentare la lunghezza massima del campo. Il numero di byte necessari dipende inoltre dal tipo di archiviazione di file, dall'impostazione relativa al supporto di valori Null della colonna e dal formato utilizzato per l'archiviazione nel file di dati: nativo o carattere. Ad esempio, il tipo di dati `text` o `image` richiede quattro caratteri di prefisso per archiviare la lunghezza del campo, mentre il tipo di dati `varchar` richiede due caratteri. I caratteri per il prefisso di lunghezza vengono archiviati nel file di dati utilizzando il formato binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Per i dati in formato nativo, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. È possibile che si verifichino conflitti tra i caratteri di terminazione e i dati in formato nativo, in quanto per i file di dati in formato nativo viene utilizzato il formato binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -81,7 +81,7 @@ ms.locfileid: "48058761"
 |UDT (tipo di dati definito dall'utente)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> il `ntext`, `text`, e `image` tipi di dati verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Uso `nvarchar(max)`, `varchar(max)`, e `varbinary(max)` invece.  
+ <sup>1</sup> il `ntext`, `text`, e `image` tipi di dati verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
   
 ##  <a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  

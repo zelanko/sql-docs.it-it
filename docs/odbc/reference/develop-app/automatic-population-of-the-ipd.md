@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198342"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Popolamento automatico dell'IPD
 Alcuni driver sono in grado di impostazione dei campi dell'IPD dopo aver preparata una query con parametri. I campi di descrizione vengono popolati automaticamente con informazioni sul parametro, inclusi il tipo di dati, precisione, scala e altre caratteristiche. Ciò equivale a supportare **SQLDescribeParam**. Queste informazioni possono essere particolarmente utile per un'applicazione quando non dispone di alcun altro modo per individuarlo, ad esempio quando viene eseguita una query ad hoc con parametri che l'applicazione non conosce.  

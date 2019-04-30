@@ -1,6 +1,6 @@
 ---
-title: Ottenere informazioni da IHV - Analitica Platform System | Documenti Microsoft
-description: Informazioni di ottenere il IHV sull'accessorio Analitica Platform System.
+title: Ottenere le informazioni dal fornitore IHV - sistema di piattaforma Analitica | Microsoft Docs
+description: Informazioni da ottenere dal fornitore IHV sull'appliance del sistema di piattaforma Analitica.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 57b61ed7741bc6d36b7531a62416893e7cc10fb7
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150223"
 ---
-# <a name="information-to-obtain-from-your-ihv"></a>Informazioni di ottenere il IHV
-Quando il fornitore di hardware indipendenti (IHV) recapita i nuovi accessori di SQL Server PDW all'utente, fornirà anche informazioni sull'hardware del dispositivo e la configurazione eseguono del dispositivo. È necessario che queste informazioni per l'amministrazione del dispositivo.  
+# <a name="information-to-obtain-from-your-ihv"></a>Informazioni da ottenere dal fornitore IHV
+Quando il fornitore di hardware indipendenti (IHV) offre le nuove appliance di SQL Server PDW per l'utente, fornirà anche informazioni su hardware di appliance e la configurazione che hanno eseguito nell'appliance. È necessario che queste informazioni per amministrare il dispositivo.  
   
-Nell'elenco seguente mostra le informazioni necessarie in genere dal fornitore. In alcuni casi, sono necessario aggiuntive o altre informazioni. Verificare con il fornitore per verificare che tutte le informazioni pertinenti sono state trasferite all'utente con la distribuzione del dispositivo.  
+L'elenco seguente mostra le informazioni necessarie in genere dal fornitore IHV. In alcuni casi, sono necessarie informazioni aggiuntive o altri. Contattare il fornitore per assicurarsi che tutte le informazioni pertinenti sono state trasferite all'utente con il recapito di appliance.  
   
 |||  
 |-|-|  
-|**Le informazioni o del documento**|**Description**|  
-|Distinta base (BOM)|La distinta base sono elencati i componenti presenti nel dispositivo. Queste informazioni sono necessarie per confermare che tutti i componenti sono stati recapitati.<br /><br />**Importante:** distinta di base deve includere i pesi per ognuno dei nodi del dispositivo e per ogni rack completo. Queste informazioni sono importanti quando si pianifica di gestire e spostare i componenti di dispositivo e di garantire che il data center in grado di gestire il dispositivo. Se il BOM non include i pesi dei nodi, assicurarsi di ottenere queste informazioni con il fornitore per tutti i nodi.|  
-|Diagrammi di cablaggi|Cablaggi diagrammi mostrano come collegare la rete, power, altri cavi e per ogni dispositivo rack. Questi diagrammi sono necessari quando si installa il dispositivo nel data center e ogni volta che è necessario rimuovere o sostituire un componente.|  
-|Requisiti scaffali Appliance|Prima di poter installare il dispositivo nel data center, è necessario sapere se il data center soddisfa il flusso d'aria e requisiti di lunghezza dei cavi per il dispositivo, nonché le dimensioni e power per i componenti. Vedere anche della distinta base (BOM) sopra per informazioni sui pesi componente accessorio, che è anche necessario.|  
+|**Informazioni o documenti**|**Descrizione**|  
+|Distinta base (BOM)|La distinta base sono elencati i componenti inclusi nell'appliance. Queste informazioni sono necessarie per verificare che tutti i componenti sono stati recapitati.<br /><br />**Importante:** Distinta dei materiali deve includere i pesi per ciascuno dei nodi di appliance e per ogni rack completo. Queste informazioni sono importanti quando si pianifica come gestire e spostare i componenti di appliance e per essere certi che il data center può gestire l'appliance. Se il carattere BOM non include i pesi dei nodi, assicurarsi di ottenere queste informazioni dal fornitore IHV per tutti i nodi.|  
+|Cablaggio di diagrammi|Cablaggi diagrammi illustrano come connettersi la rete, alimentazione e altri cavi per ogni appliance rack. Questi diagrammi sono necessari quando si installa l'appliance nel data center e ogni volta che è necessario rimuovere o sostituire un componente.|  
+|Requisiti scaffali Appliance|Prima di poter installare il dispositivo nel data center, è necessario sapere se il data center soddisfi i requisiti di power per i componenti e i requisiti di lunghezza dei cavi per l'appliance, nonché le dimensioni e il flusso d'aria. Vedere anche distinta base (BOM) sopra per informazioni sui valori di ponderazione componente appliance, anch ' esso necessari.|  
   

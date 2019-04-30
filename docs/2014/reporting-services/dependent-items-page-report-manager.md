@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165118"
 ---
 # <a name="dependent-items-page-report-manager"></a>Pagina Elementi dipendenti (Gestione report)
   La pagina Elementi dipendenti consente di visualizzare un elenco di report e modelli che fanno riferimento a un'origine dati condivisa. L'icona disponibile per ogni tipo di elemento indica se si tratta di un report o un modello. Questa pagina può essere visualizzata nella visualizzazione Elenco o Dettagli. Se per ogni elemento si desidera visualizzare un numero maggiore di informazioni, è consigliabile utilizzare la visualizzazione Dettagli. In tale visualizzazione sono infatti disponibili opzioni aggiuntive per la pagina. Per semplificare la gestione dell'origine dati condivisa, questa pagina fornisce collegamenti ai report e ai modelli che utilizzano l'origine dati, metriche relative all'ultima esecuzione del report o del modello, nonché i pulsanti Elimina e Sposta, che consentono di rimuovere in modo semplice report e modelli non più utilizzati o di spostarli in una posizione diversa mentre si stabilisce se sono ancora necessari.  

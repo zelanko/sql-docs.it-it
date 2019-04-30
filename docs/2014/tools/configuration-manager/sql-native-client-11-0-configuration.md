@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137550"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configurazione SQL Native Client 11.0
   In questa sezione sono disponibili gli argomenti della Guida per le finestre di dialogo di **Configurazione SQL Server Native Client** in Gestione configurazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è la libreria di rete utilizzata dai computer client per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188582"
 ---
-# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Utilizzo di Ottimizzazione guidata motore di database
+# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Uso di Ottimizzazione guidata motore di database
   Lo strumento Ottimizzazione guidata motore di database consente di ottimizzare i database, gestire le sessioni di ottimizzazione e visualizzare le indicazioni di ottimizzazione. Gli utenti esperti di strutture di progettazione fisica possono utilizzare questo strumento per analisi esplorative di ottimizzazione dei database. Gli utenti inesperti di ottimizzazione di database possono utilizzare lo strumento per individuare la migliore configurazione delle strutture di progettazione fisica per i carichi di lavoro che desiderano ottimizzare. Questa lezione illustra le tecniche di base per gli amministratori di database che non conoscono l'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database e per gli amministratori di sistema con una conoscenza limitata delle strutture di progettazione fisica.  
   
  Questa lezione contiene i seguenti argomenti:  

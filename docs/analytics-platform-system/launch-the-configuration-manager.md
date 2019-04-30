@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183423"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Avviare Gestione configurazione nel sistema di piattaforma Analitica
 Questo argomento fornisce istruzioni per l'avvio di **Configuration Manager** per l'appliance del sistema di piattaforma Analitica.  

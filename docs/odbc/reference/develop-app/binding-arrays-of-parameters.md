@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76f756b96a62a174e329614f9ab1baf634937522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199661"
 ---
 # <a name="binding-arrays-of-parameters"></a>Associazione delle matrici di parametri
 Le applicazioni che utilizzano le matrici di parametri di associare le matrici ai parametri nell'istruzione SQL. Esistono due stili di binding:  

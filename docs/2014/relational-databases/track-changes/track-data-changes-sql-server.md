@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073943"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano change data capture e rilevamento delle modifiche, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "53351706"
 |Tipo di colonna|Modifiche acquisite nelle tabelle delle modifiche|Limitazioni|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonne di tipo sparse|Yes|Non supporta l'acquisizione delle modifiche quando si utilizza un set di colonne.|  
-|Colonne calcolate|No|Le modifiche alle colonne calcolate non vengono rilevate. La colonna verrà visualizzata nella tabella delle modifiche con il tipo appropriato, ma avrà valore NULL.|  
+|Colonne calcolate|no|Le modifiche alle colonne calcolate non vengono rilevate. La colonna verrà visualizzata nella tabella delle modifiche con il tipo appropriato, ma avrà valore NULL.|  
 |XML|Yes|Le modifiche a singoli elementi XML non vengono rilevate.|  
 |timestamp|Yes|Il tipo di dati nella tabella delle modifiche viene convertito in binario.|  
 |Tipi di dati BLOB|Yes|L'immagine precedente della colonna BLOB viene archiviata solo se viene modificata la colonna stessa.|  
@@ -168,7 +168,7 @@ ms.locfileid: "53351706"
   
 -   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Viene fornita la documentazione completa per [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] e [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Nella documentazione relativa a [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], l'argomento "procedura: Usare SQL Server Change Tracking"contiene esempi di codice e informazioni dettagliati.  
+     Viene fornita la documentazione completa per [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] e [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Nella documentazione per [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] l'argomento relativo alla procedura per usare il rilevamento modifiche di SQL Server contiene informazioni dettagliate ed esempi di codice.  
   
   
 ## <a name="related-tasks-required"></a>Altre correlate (richieste)  

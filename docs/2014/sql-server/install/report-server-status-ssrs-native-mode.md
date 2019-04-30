@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057953"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Stato del server di report (modalità nativa SSRS)
   Utilizzare questa pagina per visualizzare le informazioni sull'istanza del server di report a cui si è attualmente connessi. Questa rappresenta la pagina iniziale per la configurazione del server di report. Ulteriori pagine sono disponibili per configurare gli URL, l'account del servizio, il database del server di report, il recapito tramite posta elettronica del server di report, la distribuzione con scalabilità orizzontale e le chiavi di crittografia.  

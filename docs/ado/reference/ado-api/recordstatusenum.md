@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033403"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Specifica la [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) di un record per quanto riguarda gli aggiornamenti in batch e altre operazioni bulk.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indica che il record non è stato salvato perché è stata annullata l'operazione.|  
 |**adRecCantRelease**|0x400|Indica che il nuovo record non è stato salvato il record esistente è stato bloccato.|  

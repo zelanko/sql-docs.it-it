@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188894"
 ---
 # <a name="interval-data-types"></a>Tipi di dati intervallo
 Un intervallo viene definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un *mese anno* intervallo che esprime intervalli in termini di un numero integrale di mesi e anni. L'altro è un *diurno* intervallo che esprime intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono diversi e non possono essere combinati, poiché mesi possono avere un numero variabile di giorni.  
@@ -42,7 +42,7 @@ Un intervallo viene definito come la differenza tra due date e ore. Gli interval
   
  Sono disponibili tipi di dati SQL intervallo 13 e tipi di dati C intervallo 13. Ognuno dei tipi di dati di intervallo C Usa la stessa struttura, SQL_INTERVAL_STRUCT, per contenere i dati di intervallo. (Per altre informazioni, vedere la sezione successiva [struttura C Interval](../../../odbc/reference/appendixes/c-interval-structure.md).) Per altre informazioni sui tipi di dati SQL, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md); per ulteriori informazioni sui tipi di dati C, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificatore del tipo|Classe|Description|  
+|Identificatore del tipo|Classe|Descrizione|  
 |---------------------|-----------|-----------------|  
 |MONTH|Anno-mese|Numero di mesi tra due date.|  
 |YEAR|Anno-mese|Numero di anni tra due date.|  

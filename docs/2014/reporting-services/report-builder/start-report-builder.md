@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157462"
 ---
 # <a name="start-report-builder-report-builder"></a>Avviare Generatore report (Generatore report).
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] include autonomo e [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versioni di Generatore Report. È possibile utilizzare la versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o in modalità integrata SharePoint.  

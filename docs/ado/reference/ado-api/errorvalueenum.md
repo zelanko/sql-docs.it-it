@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070928"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Specifica il tipo di errore di run-time di ADO.  
@@ -32,7 +32,7 @@ Specifica il tipo di errore di run-time di ADO.
   
 -   Valore negativo, il separatore decimale conversione decimale del numero di errore completo.  
   
--   Esadecimale la rappresentazione esadecimale del numero di errore completo. Il codice di funzionalità di Windows è la quarta cifra. Il codice della funzionalità per i numeri di errore ADO *oggetto*. Ad esempio: 0x800***oggetto***0E7B.  
+-   Esadecimale la rappresentazione esadecimale del numero di errore completo. Il codice di funzionalità di Windows è la quarta cifra. Il codice della funzionalità per i numeri di errore ADO *oggetto*. Ad esempio:  0x800***A***0E7B.  
   
 > [!NOTE]
 >  Errori OLE DB possono essere passati all'applicazione ADO. In genere, che può essere identificate da un codice della funzionalità di Windows *4*. Ad esempio, 0x800***4***.  

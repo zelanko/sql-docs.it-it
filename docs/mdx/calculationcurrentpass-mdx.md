@@ -1,5 +1,5 @@
 ---
-title: CalculationCurrentPass (MDX) | Documenti Microsoft
+title: CalculationCurrentPass (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ef0a07cde73b74ee459e7391f8f99c25e4dc11b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181614"
 ---
 # <a name="calculationcurrentpass-mdx"></a>CalculationCurrentPass (MDX)
 
@@ -28,12 +28,12 @@ ms.locfileid: "34739351"
 CalculationCurrentPass()  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Il **CalculationCurrentPass** funzione restituisce l'indice in base zero della sessione di calcolo per il contesto di query corrente. Risoluzione automatica delle ricorsioni, questa funzione con molte applicazioni pratiche.  
+## <a name="remarks"></a>Note  
+ Il **CalculationCurrentPass** funzione restituisce l'indice in base zero della sessione di calcolo per il contesto di query corrente. Con la risoluzione automatica delle ricorsioni, questa funzione ha molte applicazioni pratiche.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

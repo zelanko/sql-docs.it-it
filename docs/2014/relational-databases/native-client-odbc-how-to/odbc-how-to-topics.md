@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200371"
 ---
 # <a name="odbc-how-to-topics"></a>Procedure per l'utilizzo di ODBC
-  Usare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, è necessario essere in grado di creare origini dati ODBC e assicurarsi che il server abbia la versione corretta di stored procedure di catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
+  Per utilizzare il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario essere in grado di creare origini dati ODBC e assicurarsi che nel server sia presente la versione corretta delle stored procedure di catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Configurazione delle procedure del driver ODBC di SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   

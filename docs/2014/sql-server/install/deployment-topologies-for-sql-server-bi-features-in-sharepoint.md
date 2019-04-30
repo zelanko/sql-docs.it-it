@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192204"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint
   In questo argomento vengono descritte le topologie comuni per l'installazione delle funzionalità [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] di SQL Server Business Intelligence negli ambienti SharePoint 2010 e SharePoint 2013. Ad esempio installazioni a server singolo e a tre livelli.  
@@ -169,7 +169,7 @@ ms.locfileid: "53365763"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> Distribuzione con scalabilità orizzontale a tre livelli  
  Questa topologia illustra una distribuzione con scalabilità orizzontale che esegue lo stesso servizio condiviso su più server, in grado di soddisfare un volume più grande di richieste e di fornire una maggiore potenza di elaborazione per dati PowerPivot o report di Reporting Services. Nel diagramma sottostante, sono presenti tre cluster di server applicazioni, ognuno dei quali esegue una combinazione diversa di servizi condivisi. In un ambiente SharePoint, l'individuazione e la disponibilità del servizio sono incorporate nella farm. Il bilanciamento del carico tra più server fisici che eseguono la stessa applicazione di servizio condivisa è parte dell'architettura di servizi condivisi.  
   
- Quando si distribuisce una farm multiserver, assicurarsi di seguire le istruzioni riportate in questo articolo relativo a SharePoint: [Più server per una farm a tre livelli (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
+ Quando si distribuisce una farm multiserver, assicurarsi di seguire le istruzioni in questo articolo SharePoint: [Più server per una farm a tre livelli (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
  ![5 server topologia](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "topologia 5 server")  
   

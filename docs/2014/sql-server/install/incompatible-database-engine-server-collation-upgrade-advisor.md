@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294622"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Regole di confronto del server del motore di database incompatibili (Upgrade Advisor)
   Preparazione aggiornamento ha rilevato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che è configurato per utilizzare una regola di confronto server incompatibili.  
@@ -37,7 +37,7 @@ ms.locfileid: "53356760"
   
 -   **Distinzione maiuscole/minuscole**  
   
--   **Binary-punti di codice**  
+-   **Binary-codepoint**  
   
  Poiché le regole di confronto del server [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] correnti sono incompatibili, l'aggiornamento è bloccato.  
   

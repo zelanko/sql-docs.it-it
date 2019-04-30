@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156993"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Tenere traccia degli avvisi dell'appliance nel sistema di piattaforma Analitica
 Questo argomento illustra come usare la Console di amministrazione e le viste di sistema per tenere traccia degli avvisi in un'appliance di SQL Server PDW.  

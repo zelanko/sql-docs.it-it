@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: La connessione al motore di Database | Microsoft Docs'
+title: 'Lezione 1: Connessione al motore di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145478"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
   Gli strumenti che vengono installati con [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dipendono dall'edizione in uso e dalle opzioni di installazione selezionate. In questa lezione vengono illustrati gli strumenti principali e vengono descritte le procedure per la connessione e l'esecuzione di una funzione di base, ovvero la concessione di autorizzazione ad altri utenti.  
@@ -101,6 +101,6 @@ ms.locfileid: "53375303"
 >  Si tratta delle informazioni di base necessarie per iniziare. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un ambiente di sicurezza avanzato e la sicurezza rappresenta un aspetto certamente importante nell'uso dei database.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: La connessione da un altro Computer](lesson-2-connecting-from-another-computer.md)  
+ [Lezione 2: Connessione da un altro computer](lesson-2-connecting-from-another-computer.md)  
   
   

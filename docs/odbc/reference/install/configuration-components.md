@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcf7d34f8faf70f57373ad1a5dae55261799145b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198415"
 ---
 # <a name="configuration-components"></a>Componenti di configurazione
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Origini dati sono configurate dal programma di installazione DLL, che a turni chiamate driver installazione DLL e file DLL di installazione di Microsoft translator, se necessario. Il programma di installazione DLL è sia richiamata direttamente dal Pannello di controllo o caricata e chiamata da un altro programma, noto come il *programma di amministrazione*. Nella figura seguente mostra la relazione tra i componenti di configurazione.  
   

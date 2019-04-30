@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188428"
 ---
 # <a name="model-item-security-page-report-manager"></a>Pagina sicurezza elemento modello (Gestione report)
   Questa pagina consente di proteggere parti di un modello concedendo o revocando autorizzazioni di sola lettura per elementi specifici. La sicurezza degli elementi dei modelli influisce sull'esplorazione ad hoc dei dati in fase di esecuzione e sulla possibilità di utilizzare parti di un modello pubblicato per la creazione di report in Generatore report. Per utilizzare questa caratteristica, è necessario disporre delle autorizzazioni Gestione contenuto.  

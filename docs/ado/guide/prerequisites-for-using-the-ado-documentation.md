@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d778f2e005003a0ab3cb50b6a25823c2d711441f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222003"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Prerequisiti per l'uso della documentazione di ADO
 Per usare questa documentazione, è necessario, come minimo, alcuni esperienza nello sviluppo di applicazioni con Microsoft Visual Basic, perché la maggior parte degli esempi nella Guida vengono scritti in tale lingua. Esistono anche alcuni esempi scritti in Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) e Microsoft JScript.  

@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188812"
 ---
 # <a name="interval-literals"></a>Valori letterali intervallo
 ODBC è necessario che tutti i driver supportano la conversione del tipo di dati SQL_CHAR o SQL_VARCHAR a tutti i tipi di dati di intervallo C. Se l'origine dati sottostante non supporta tipi di dati di intervallo, tuttavia, il driver deve conoscere il formato corretto del valore nel campo SQL_CHAR per supportare queste conversioni. Analogamente, ODBC richiede che deve disporre di qualsiasi tipo di essere convertibile in SQL_CHAR o SQL_VARCHAR, in modo che un driver deve sapere quale formato di un intervallo archiviato nel campo carattere dati ODBC C. In questa sezione viene descritta la sintassi dei valori letterali di intervallo, che scrive il driver deve utilizzare per convalidare i campi SQL_CHAR durante la conversione da o verso tipi di dati di intervallo C.  
   
 > [!NOTE]  
->  La sintassi BNF completa per i valori letterali intervallo viene visualizzata nella sezione [sintassi dei valori letterali intervallo](../../../odbc/reference/appendixes/interval-literal-syntax.md) nell'appendice c: SQL grammatica.  
+>  La sintassi BNF completa per i valori letterali intervallo viene visualizzata nella sezione [sintassi dei valori letterali intervallo](../../../odbc/reference/appendixes/interval-literal-syntax.md) nell'appendice c: Grammatica SQL.  
   
  Per passare valori letterali di intervallo come parte di un'istruzione SQL, una sintassi della clausola di escape è definita per i valori letterali intervallo. Per altre informazioni, vedere [Date, Time e Timestamp valori letterali](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   

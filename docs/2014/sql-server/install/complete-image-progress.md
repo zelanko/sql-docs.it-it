@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc000d9e3ded940e00d249743a9b84cd1ae2bcf5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190642"
 ---
 # <a name="complete-image-progress"></a>Avanzamento completamento immagine
   Utilizzare la pagina **Avanzamento completamento immagine** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per monitorare lo stato dell'installazione del completamento immagine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al completamento di questo passaggio, questa pagina elenca lo stato per ogni caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurata e completata.  

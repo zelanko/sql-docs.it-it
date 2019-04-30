@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d1ec9b650592be41c8ae2f7043649c91ea78442
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164572"
 ---
 # <a name="excel-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo Excel
   La tabella seguente elenca le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  

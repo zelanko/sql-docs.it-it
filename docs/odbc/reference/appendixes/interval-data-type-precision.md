@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188913"
 ---
 # <a name="interval-data-type-precision"></a>Precisione del tipo di dati intervallo
 Precisione per un tipo di dati di intervallo include intervallo iniziali precisione, intervallo di precisione e la precisione in secondi.  

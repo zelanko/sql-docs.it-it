@@ -1,5 +1,5 @@
 ---
-title: 'Nuova assegnazione di ruolo di sistema: Modificare la pagina Assegnazioni ruolo di sistema (gestione Report) | Microsoft Docs'
+title: 'Pagina Nuova assegnazione ruolo a livello di sistema: Modificare la pagina Assegnazioni ruolo di sistema (gestione Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188411"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nuova assegnazione di ruolo di sistema: Modificare la pagina Assegnazioni ruolo di sistema (gestione Report)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Pagina Nuova assegnazione ruolo a livello di sistema: Modificare la pagina Assegnazioni ruolo di sistema (gestione Report)
   La pagina Nuova assegnazione ruolo a livello di sistema o Modifica assegnazioni ruolo a livello di sistema consente di impostare la sicurezza per il server di report. Il sistema di sicurezza è interamente basato sulle assegnazioni di ruolo, tramite le quali utenti o gruppi specifici vengono mappati alle attività che possono eseguire. L'elenco di attività è rappresentato in forma di definizione di ruolo selezionabile per la creazione dell'assegnazione di ruolo.  
   
  A livello di sistema, le assegnazioni di ruolo create o modificate vengono applicate al server di report nel suo complesso. Ad esempio, la possibilità di creare pianificazioni condivise viene impostata a livello di sistema perché le pianificazioni condivise vengono utilizzate in tutto il sistema.  

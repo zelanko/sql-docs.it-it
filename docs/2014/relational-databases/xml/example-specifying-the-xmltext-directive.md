@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205096"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Esempio: Specifica della direttiva XMLTEXT
   Nell'esempio seguente viene illustrata la gestione dei dati nella colonna di overflow utilizzando la direttiva `XMLTEXT` in un'istruzione `SELECT` in modalità EXPLICIT.  
@@ -167,7 +167,7 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Se i dati della colonna `XMLTEXT` includono attributi per l'elemento radice, tali attributi non compaiono nello schema dei dati XML e il parser MSXML non convalida il frammento di documento XML risultante. Esempio:  
+ Se i dati della colonna `XMLTEXT` includono attributi per l'elemento radice, tali attributi non compaiono nello schema dei dati XML e il parser MSXML non convalida il frammento di documento XML risultante. Ad esempio:   
   
 ```  
 SELECT 1 AS Tag,  

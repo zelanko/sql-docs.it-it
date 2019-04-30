@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201646"
 ---
 # <a name="basic-odbc-application-steps"></a>Passaggi di base dell'applicazione ODBC
 In questa sezione viene descritto il flusso generale delle applicazioni ODBC. È improbabile che tutte le applicazioni chiama tutte le funzioni in esattamente questo ordine. Tuttavia, la maggior parte delle applicazioni usano alcune variazioni di questi passaggi. Nella figura seguente vengono illustrati i passaggi base dell'applicazione.  
@@ -28,15 +28,15 @@ In questa sezione viene descritto il flusso generale delle applicazioni ODBC. È
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Passaggio 1: Connessione all'origine dati](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
+-   [Passaggio 1: Connettersi all'origine dati](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
   
--   [Passaggio 2: Inizializzazione dell'applicazione](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
+-   [Passaggio 2: Inizializzare l'applicazione](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
   
 -   [Passaggio 3: Compilare ed eseguire un'istruzione SQL](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
   
--   [Passaggio 4a: recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
+-   [Passaggio 4a: Recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
   
--   [Passaggio 4b: recuperare il conteggio delle righe](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
+-   [Passaggio 4b: Recuperare il conteggio delle righe](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
   
 -   [Passaggio 5: Eseguire il commit della transazione](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   

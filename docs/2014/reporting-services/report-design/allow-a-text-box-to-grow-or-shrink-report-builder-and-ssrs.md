@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206331"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Espansione o riduzione di una casella di testo (Generatore report e SSRS)
   Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile impostare opzioni che consentono di espandere o ridurre la casella di testo in base al contenuto. Queste opzioni corrispondono alle proprietà `CanGrow` o `CanShrink` del riquadro Proprietà.  

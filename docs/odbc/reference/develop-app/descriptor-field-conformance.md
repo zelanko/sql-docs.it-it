@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049852"
 ---
 # <a name="descriptor-field-conformance"></a>Conformità del campo descrittore
 Nella tabella seguente indica il livello di conformità di ogni campo di intestazione ODBC descrittore, in cui si è ben definito.  
@@ -47,8 +47,8 @@ Nella tabella seguente indica il livello di conformità di ogni campo di intesta
 |SQL_DESC_CATALOG_NAME|Livello 2|  
 |SQL_DESC_CONCISE_TYPE|Core|  
 |SQL_DESC_DATA_PTR|Core|  
-|CODICE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
-|PRECISIONE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Core[1]|  
+|SQL_DESC_DATETIME_INTERVAL_ PRECISION|Core[1]|  
 |SQL_DESC_DISPLAY_SIZE|Core|  
 |SQL_DESC_FIXED_PREC_SCALE|Core|  
 |SQL_DESC_INDICATOR_PTR|Core|  

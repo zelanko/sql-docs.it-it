@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193238"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utilizzare i metodi value() e nodes() con OPENXML
   È possibile usare più **Value ()** metodi sul `xml` tipo di dati un **selezionare** clausola per generare un set di righe di valori estratti. Il metodo **nodes()** crea un riferimento interno per ogni nodo selezionato, che può essere usato per altre query. Se sono presenti numerose colonne e quando per la creazione del set di righe vengono usate espressioni di percorso complesse, si può usare una combinazione dei metodi **nodes()** e **value()** per generare il set di righe in modo più efficiente.  
   
  Il **Nodes ()** metodo produce istanze di uno speciale `xml` tipo di dati, ognuno dei quali ha contesto impostato su un nodo selezionato diverso. Questo tipo di istanza XML supporta i metodi **query()**, **value()**, **nodes()** e **exist()** e può essere usato nelle aggregazioni **count(\*)**. Tutti gli altri utilizzi generano un errore.  
   
-## <a name="example-using-nodes"></a>Esempio: Usando Nodes)  
+## <a name="example-using-nodes"></a>Esempio: Utilizzo del metodo nodes()  
  Si supponga di voler estrarre il nome e il cognome degli autori il cui nome è diverso da "David". Si supponga inoltre di voler estrarre tali informazioni sotto forma di un set di righe contenente due colonne, FirstName e LastName. A questo scopo si possono usare i metodi **nodes()** e **value()** , come mostrato nell'esempio seguente:  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 consente di generare un set di righe da un'istanza XML usando **OpenXml()**. È possibile specificare lo schema relazionale del set di righe e il mapping tra i valori presenti nell'istanza XML e le colonne nel set di righe.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Esempio: Utilizzo di OPENXML () nel tipo di dati xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Esempio: Utilizzo di OpenXml() sul tipo di dati XML  
  È possibile riscrivere la query dell'esempio precedente usando **OpenXml()** come mostrato nell'esempio seguente. A tale scopo viene creato un cursore che legge ogni istanza XML in una variabile XML e quindi applica OpenXML alla variabile:  
   
 ```  

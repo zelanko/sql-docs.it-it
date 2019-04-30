@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151204"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   Ottimizzazione guidata motore di database (DTA) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] analizza i database e fornisce consigli da utilizzare per ottimizzare le prestazioni di query. È possibile utilizzare Ottimizzazione guidata motore di database per selezionare e creare un set ottimale di indici, viste indicizzate e partizioni di tabella senza che sia necessario conoscere in modo approfondito la struttura del database o le caratteristiche interne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, è possibile eseguire le attività seguenti.  

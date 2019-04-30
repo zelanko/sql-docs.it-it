@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51017988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191946"
 ---
 # <a name="point"></a>Punto
   Nei dati spaziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un `Point` è un oggetto senza dimensioni che rappresenta una sola posizione e può contenere valori Z (innalzamento) e M (misura).  

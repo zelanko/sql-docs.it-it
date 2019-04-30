@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199278"
 ---
 # <a name="binding-result-set-columns"></a>Associazione di colonne di set di risultati
 Le applicazioni possono associare come colonne di tipo numero indefinito del set di risultati a propria scelta, tra cui non associazione colonne affatto. Quando viene recuperata una riga di dati, il driver restituisce i dati per le colonne associate all'applicazione. Indica se l'applicazione associa tutte le colonne nel set di risultati dipende dall'applicazione. Ad esempio, le applicazioni che generano report in genere hanno un formato fisso; tali applicazioni creare un set di risultati contenente tutte le colonne utilizzate nel rapporto e quindi eseguire l'associazione e recuperano i dati per tutte queste colonne. Applicazioni che consentono di visualizzare le schermate completa dei dati in alcuni casi consentono all'utente di decidere le colonne da visualizzare. tali applicazioni creano un set di risultati contenente tutte le colonne utente valuti, ma eseguire l'associazione e recuperare i dati solo per le colonne scelte dall'utente.  

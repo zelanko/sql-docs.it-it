@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182026"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lezione 4: creare un database in Archiviazione di Windows Azure
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lezione 4: Creare un database in Archiviazione di Microsoft Azure
   In questa lezione verrà illustrato come creare un database tramite la funzionalità relativa ai file di dati di SQL Server in Windows Azure. Si noti che prima di questa lezione, è necessario aver completato le lezioni 1, 2 e 3. La lezione 3 è un passaggio molto importante perché si archiviano le informazioni sul contenitore del servizio di archiviazione Windows Azure e il nome dei criteri e la chiave SAS associati nell'archivio delle credenziali di SQL Server, operazioni necessarie prima della lezione 4.  
   
  Per ogni contenitore di archiviazione utilizzato da un file di dati o di log, è necessario creare una credenziale di SQL Server il cui nome corrisponda al percorso del contenitore. Quindi, è possibile creare un nuovo database in Archiviazione di Windows Azure  
@@ -86,7 +86,7 @@ ms.locfileid: "48063011"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Nota:** Se sono presenti riferimenti attivi ai file di dati in un contenitore, qualsiasi tentativo di eliminare la credenziale associata di SQL Server non riesce. Analogamente, se esiste già un lease in un file di database specifico in un BLOB e si desidera eliminarlo, è necessario innanzitutto arrestare il lease nel BLOB. Per interrompere il lease, è possibile usare [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Nota:** Se sono presenti riferimenti attivi ai file di dati in un contenitore, qualsiasi tentativo di eliminare la credenziale associata di SQL Server ha esito negativo. Analogamente, se esiste già un lease in un file di database specifico in un BLOB e si desidera eliminarlo, è necessario innanzitutto arrestare il lease nel BLOB. Per interrompere il lease, è possibile usare [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Con questa nuova funzionalità, è possibile configurare SQL Server in modo che qualsiasi istruzione CREATE DATABASE imposta come valore predefinito un database abilitato al cloud. È ovvero possibile impostare i percorsi predefiniti di log e dati nelle proprietà dell'istanza di SQL Server Management Studio e quando si crea un database, tutti i file di database (con estensione mdf e ldf) vengono creati come BLOB di pagine in Archiviazione di Windows Azure.  
   

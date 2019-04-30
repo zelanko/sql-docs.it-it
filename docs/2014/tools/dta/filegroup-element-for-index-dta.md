@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154603"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento Filegroup per Index (DTA)
   Specifica il filegroup in cui creare l'indice per una configurazione specificata dall'utente.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ede93e1552451f7db8e286ac28284fed79ddef0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067857"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   Come regola generale, considerare le implicazioni dell'utilizzo di **SQLBindCol** per provocare la conversione dei dati. Le conversioni per associazione sono processi client. Se ad esempio viene recuperato un valore a virgola mobile associato a una colonna di tipo character, nel driver viene eseguita in locale la conversione da float a character quando viene recuperata una riga. La funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT può essere utilizzata per riportare il costo della conversione dei dati nel server.  
@@ -41,7 +41,7 @@ ms.locfileid: "53355534"
  **SQLBindCol** supporta grandi CLR a tipi definiti dall'utente (UDT). Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLBindCol](https://go.microsoft.com/fwlink/?LinkId=59327)   
+ [SQLBindCol Function](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

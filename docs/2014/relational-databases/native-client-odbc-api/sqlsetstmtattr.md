@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188692"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non supporta il modello di cursore misto (keyset/dinamico). I tentativi di impostare la dimensione del keyset utilizzando SQL_ATTR_KEYSET_SIZE non riescono se il set di valori non è uguale a 0.  
@@ -110,7 +110,7 @@ ms.locfileid: "53361286"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Ad esempio:  
+ Ad esempio:   
   
  `service=mySSBService;local database=mydb`  
   

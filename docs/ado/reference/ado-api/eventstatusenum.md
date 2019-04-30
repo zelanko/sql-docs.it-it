@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070865"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Specifica lo stato corrente dell'esecuzione di un evento.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Richiede l'annullamento dell'operazione che ha causato la generazione dell'evento.|  
 |**adStatusCantDeny**|3|Indica che l'operazione non è possibile richiedere l'annullamento dell'operazione in sospeso.|  

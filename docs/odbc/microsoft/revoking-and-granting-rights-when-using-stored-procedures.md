@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127956"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>Revoca e concessione dei diritti durante l'uso delle stored procedure
 > [!IMPORTANT]  
@@ -27,7 +27,7 @@ ms.locfileid: "47792229"
   
  Il Driver ODBC di Microsoft per Oracle restituisce il messaggio di errore seguente quando diritti utente vengono concesse e infine revocati in una tabella a cui accede una stored procedure:  
   
- SQL_ERROR =-1  
+ SQL_ERROR=-1  
   
  szErrorMsg = "[Microsoft] [driver ODBC per Oracle] numero errato di parametri"  
   

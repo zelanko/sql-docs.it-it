@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6188ddab466ccbb27e121e5500a9af68ecbd71fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067610"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>Sono state rilevate estensioni obsolete nel computer del server di report (Upgrade Advisor)
   Sono state rilevate una o più estensioni per il rendering non più disponibili nella versione corrente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48184761"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Il server di report è configurato per l'utilizzo di una o più estensioni che non sono più disponibili in questa versione. Di seguito vengono riportate le estensioni non più utilizzate:  
   
 -   Estensione per il rendering HTML OWC  

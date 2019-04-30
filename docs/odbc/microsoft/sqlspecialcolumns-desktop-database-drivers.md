@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200501"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (driver di database desktop)
 Un indice univoco viene restituito (se presente) per il flag di SQL_BEST_ROWID *fColType*. Non verrà restituito alcun set di risultati per il flag SQL_ROWVER.  

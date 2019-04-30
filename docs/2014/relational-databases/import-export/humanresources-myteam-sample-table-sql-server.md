@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5628df909bc5d28706ab6c9032f6dc62a13489c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151078"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabella di esempio HumanResources.myTeam (SQL Server)
   Molti degli esempi di codice inclusi nell'argomento relativo all' [importazione ed esportazione di dati bulk](bulk-import-and-export-of-data-sql-server.md) richiedono una tabella di prova speciale denominata **myTeam**. Prima che sia possibile eseguire gli esempi, è necessario creare la tabella **myTeam** nello schema **HumanResources** del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -29,10 +29,10 @@ ms.locfileid: "48109432"
   
  Nella tabella **myTeam** sono incluse le colonne seguenti.  
   
-|colonna|Tipo di dati|Supporto di valori Null|Description|  
+|colonna|Tipo di dati|Supporto di valori Null|Descrizione|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Non Null|Chiave primaria per le righe. ID dipendente di un membro del team.|  
-|**Nome**|`nvarchar(50)`|Non Null|Nome di un membro del team.|  
+|**Name**|`nvarchar(50)`|Non Null|Nome di un membro del team.|  
 |**Title**|`nvarchar(50)`|Ammette valori Null|Titolo professionale del dipendente nel team.|  
 |**Background**|`nvarchar(50)`|Non Null|Data e ora dell'ultimo aggiornamento della riga. Valore predefinito.|  
   

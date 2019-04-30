@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a8848bad9d27dfd9318b725b77203706d3dfd5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149087"
 ---
 # <a name="supported-data-types"></a>Tipi di dati supportati
 Tipi di dati supportati dai sistemi DBMS variano notevolmente. Un'applicazione può determinare i nomi e caratteristiche dei tipi di dati supportati chiamando **SQLGetTypeInfo**. A causa di ampia variazione nei nomi dei tipi di dati, l'applicazione deve utilizzare i nomi dei tipi di dati restituiti da **SQLGetTypeInfo** nelle **CREATE TABLE** istruzioni. Per altre informazioni, vedere [tipi di dati in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md).

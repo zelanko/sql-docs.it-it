@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065795"
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene fornito un XML Schema che definisce la sintassi per la scrittura di *file di formato XML* da utilizzare per l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file di formato XML devono essere conformi a questo schema, definito in XML Schema Definition Language (XSDL). I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -153,19 +153,19 @@ ms.locfileid: "53373873"
   
  Valori xsi:type di <FIELD  
   
- ID **= "*`fieldID`*"**  
+ ID **="*`fieldID`*"**  
   
- xsi **:** tipo **= "*`fieldType`*"**  
+ xsi **:** type **="*`fieldType`*"**  
   
  [ LENGTH **="*`n`*"** ]  
   
- [PREFIX_LENGTH **= "*`p`*"** ]  
+ [ PREFIX_LENGTH **="*`p`*"** ]  
   
- [MAX_LENGTH **= "*`m`*"** ]  
+ [ MAX_LENGTH **="*`m`*"** ]  
   
- [REGOLE DI CONFRONTO **= "*`collationName`*"** ]  
+ [ COLLATION **="*`collationName`*"** ]  
   
- [CARATTERE DI TERMINAZIONE **= "*`terminator`*"** ]  
+ [ TERMINATOR **="*`terminator`*"** ]  
   
  />  
   
@@ -173,13 +173,13 @@ ms.locfileid: "53373873"
   
 |Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Obbligatorio|  
 |---------------------|-----------------|------------------------------|  
-|ID **= "*`fieldID`*"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> < FIELD ID **= "*`fieldID`*"**/ > esegue il mapping a < COLUMN SOURCE **= "*`fieldID`*"**/>|Obbligatorio|  
-|xsi: Type **= "*`fieldType`*"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
+|ID **="*`fieldID`*"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> < FIELD ID **= "*`fieldID`*"**/ > esegue il mapping a < COLUMN SOURCE **= "*`fieldID`*"**/>|Obbligatorio|  
+|xsi:type **="*`fieldType`*"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
 |LENGTH **="*`n`*"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
-|PREFIX_LENGTH **= "*`p`*"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*, deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
-|MAX_LENGTH **= "*`m`*"**|Corrisponde al numero massimo di byte archiviabile in un campo specifico. In assenza di una tabella di destinazione, la lunghezza massima della colonna non è nota. L'attributo MAX_LENGTH limita la lunghezza massima di una colonna di testo di output e di conseguenza anche lo spazio di archiviazione allocato al valore della colonna. Tale limitazione risulta particolarmente comoda quando si utilizza l'opzione BULK della funzione OPENROWSET in una clausola SELECT FROM.<br /><br /> Il valore di *m* deve essere un numero intero positivo. Per impostazione predefinita, la lunghezza massima è pari a 8000 caratteri per una colonna **char** e a 4000 caratteri per una colonna **nchar** .|Facoltativo|  
-|LE REGOLE DI CONFRONTO **= "*`collationName`*"**|Questo attributo è consentito solo per i campi di tipo carattere. Per un elenco dei nomi delle regole di confronto SQL, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Facoltativo|  
-|CARATTERE DI TERMINAZIONE **= "*`terminator`*"**|Specifica il carattere di terminazione di un campo di dati. Il carattere di terminazione può essere costituito da un carattere qualsiasi, univoco e non facente parte dei dati.<br /><br /> Per impostazione predefinita, il carattere di terminazione corrisponde al carattere di tabulazione, rappresentato come \t. Per rappresentare un segno di paragrafo, utilizzare \r\n.|Viene utilizzato solo con un valore xsi:type di dati di tipo carattere, per il quale è necessario specificare questo attributo.|  
+|PREFIX_LENGTH **="*`p`*"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
+|MAX_LENGTH **="*`m`*"**|Corrisponde al numero massimo di byte archiviabile in un campo specifico. In assenza di una tabella di destinazione, la lunghezza massima della colonna non è nota. L'attributo MAX_LENGTH limita la lunghezza massima di una colonna di testo di output e di conseguenza anche lo spazio di archiviazione allocato al valore della colonna. Tale limitazione risulta particolarmente comoda quando si utilizza l'opzione BULK della funzione OPENROWSET in una clausola SELECT FROM.<br /><br /> Il valore di *m* deve essere un numero intero positivo. Per impostazione predefinita, la lunghezza massima è pari a 8000 caratteri per una colonna **char** e a 4000 caratteri per una colonna **nchar** .|Facoltativo|  
+|COLLATION **="*`collationName`*"**|Questo attributo è consentito solo per i campi di tipo carattere. Per un elenco dei nomi delle regole di confronto SQL, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Facoltativo|  
+|TERMINATOR **= "*`terminator`*"**|Specifica il carattere di terminazione di un campo di dati. Il carattere di terminazione può essere costituito da un carattere qualsiasi, univoco e non facente parte dei dati.<br /><br /> Per impostazione predefinita, il carattere di terminazione corrisponde al carattere di tabulazione, rappresentato come \t. Per rappresentare un segno di paragrafo, utilizzare \r\n.|Viene utilizzato solo con un valore xsi:type di dati di tipo carattere, per il quale è necessario specificare questo attributo.|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valori Xsi:type dell'elemento \<FIELD>  
  Il valore xsi:type è un costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati di un'istanza di un elemento. Per informazioni sull'utilizzo di questo valore, vedere "Inserimento del valore xsi:type in un set di dati", più avanti in questa sezione.  
@@ -226,12 +226,12 @@ ms.locfileid: "53373873"
   
 |Attributo COLUMN|Descrizione|Facoltativo /<br /><br /> Obbligatorio|  
 |----------------------|-----------------|------------------------------|  
-|ORIGINE **= "*`fieldID`*"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> < COLUMN SOURCE **= "*`fieldID`*"**/ > esegue il mapping a < FIELD ID **= "*`fieldID`*"**/>|Obbligatorio|  
+|SOURCE **="*`fieldID`*"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> < COLUMN SOURCE **= "*`fieldID`*"**/ > esegue il mapping a < FIELD ID **= "*`fieldID`*"**/>|Obbligatorio|  
 |NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Obbligatorio|  
-|xsi **:** tipo **= "*`ColumnType`*"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati dell'istanza dell'elemento. Il valore di *ColumnType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.<br /><br /> Nota: I possibili valori della *ColumnType* e i relativi attributi associati sono elencati nella tabella seguente.|Facoltativo|  
+|xsi **:** type **="*`ColumnType`*"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati dell'istanza dell'elemento. Il valore di *ColumnType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.<br /><br /> Nota: I possibili valori della *ColumnType* e i relativi attributi associati sono elencati nella tabella seguente.|Facoltativo|  
 |LENGTH **="*`n`*"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa. Viene utilizzato solo quanto il valore xsi:type corrisponde a un tipo di dati string.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati string)|  
 |PRECISION **="*`n`*"**|Indica il numero di cifre in un numero. Il numero 123,45, ad esempio, ha una precisione di 5.<br /><br /> Il valore deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
-|SCALA **= "*`int`*"**|Indica il numero di cifre a destra della virgola decimale in un numero. Il numero 123,45, ad esempio, ha una scala di 2.<br /><br /> Il valore deve essere un numero intero.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
+|SCALE **="*`int`*"**|Indica il numero di cifre a destra della virgola decimale in un numero. Il numero 123,45, ad esempio, ha una scala di 2.<br /><br /> Il valore deve essere un numero intero.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Indica se una colonna supporta o meno valori NULL. Questo attributo è completamente indipendente da FIELDS. Se, tuttavia, una colonna non ammette valori Null e il valore del campo è NULL, ovvero non è stato specificato alcun valore, verrà restituito un errore di run-time.<br /><br /> L'attributo NULLABLE viene utilizzato solo per un'istruzione SELECT FROM OPENROWSET(BULK...) semplice.|Facoltativo (disponibile per qualsiasi tipo di dati)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Valori Xsi:type dell'elemento \<COLUMN>  
@@ -249,7 +249,7 @@ ms.locfileid: "53373873"
 |Stringa di caratteri|`SQLCHAR`, `SQLVARYCHAR`, `SQLNCHAR` e `SQLNVARCHAR`|Nessuna.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita delle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode), oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
+>  Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
   
  Per altre informazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
@@ -308,9 +308,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. Ordinamento dei campi dati di tipo carattere identico a quello delle colonne della tabella  
  Nell'esempio seguente viene illustrato un file di formato XML che descrive un file di dati contenente tre campi dati di tipo carattere. Il file di formato esegue il mapping tra il file di dati e una tabella che contiene tre colonne. Tra i campi dati e le colonne della tabella esiste una corrispondenza di tipo uno-a-uno.  
   
- **Tabella (riga):** Person (Age int, varchar (20) FirstName, LastName varchar(30))  
+ **Tabella (riga):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **File di dati (record):** Età\<tab > Firstname\<tab > Lastname\<restituire >  
+ **File di dati (record):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
  Il file di formato XML seguente legge il file di dati e quindi la tabella.  
   
@@ -346,9 +346,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordinamento dei campi dati diverso da quello delle colonne della tabella  
  Nell'esempio seguente viene illustrato un file di formato XML che descrive un file di dati contenente tre campi dati di tipo carattere. Il file di formato esegue il mapping tra il file di dati e una tabella che contiene tre colonne ordinate in modo diverso rispetto ai campi del file di dati.  
   
- **Tabella (riga):** Person (Age int, varchar (20) FirstName, LastName varchar(30))  
+ **Tabella (riga):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **File di dati** (record): Età\<tab > Lastname\<tab > Firstname\<restituire >  
+ **File di dati** (record): Age\<tab>Lastname\<tab>Firstname\<return>  
   
  Nell'elemento `<RECORD>` il file di formato rappresenta i valori dei dati di tutti e tre i campi come dati di tipo carattere.  
   
@@ -381,9 +381,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="c-omitting-a-data-field"></a>C. Omissione di un campo dati  
  Nell'esempio seguente viene illustrato un file di formato XML che descrive un file di dati contenente quattro campi dati di tipo carattere. Il file di formato esegue il mapping tra il file di dati e una tabella che contiene tre colonne. Il secondo campo dati non corrisponde a nessuna colonna della tabella.  
   
- **Tabella (riga):** Person (Age int, varchar (20) FirstName, LastName Varchar(30))  
+ **Tabella (riga):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **File di dati (record):** Età\<tab > employeeID\<tab > Firstname\<scheda > Lastname\<restituire >  
+ **File di dati (record):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
  Nell'elemento `<RECORD>` il file di formato rappresenta i valori dei dati di tutti e quattro i campi come dati di tipo carattere. Per ogni campo, l'attributo TERMINATOR indica il carattere di terminazione che segue il valore dei dati.  
   

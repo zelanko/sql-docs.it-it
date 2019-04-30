@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93790b3df8cb1d78ab2e0988cdc43cbd9af0718c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063017"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connessione ADO e gli eventi di Recordset
 Due oggetti ADO possono generare eventi: i [Connection](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Il **ConnectionEvent** famiglia relativa alle operazioni sulle **connessione** oggetto e il **RecordsetEvent** famiglia relativa alle operazioni sul  **Recordset** oggetto.
@@ -32,7 +32,7 @@ Due oggetti ADO possono generare eventi: i [Connection](../../../ado/reference/a
 
 |ConnectionEvent|Descrizione|
 |---------------------|-----------------|
-|[RollbackTransComplete BeginTransComplete, CommitTransComplete,](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestione delle transazioni** -notifica che la transazione corrente sulla connessione è stata avviata, il commit o rollback.|
+|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestione delle transazioni** -notifica che la transazione corrente sulla connessione è stata avviata, il commit o rollback.|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestione delle connessioni** -notifica che è possibile avviare la connessione corrente, è stata avviata o è scaduta.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Comando di gestione delle esecuzioni** -notifica che l'esecuzione del comando corrente per la connessione verrà avviato o è scaduta.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informativo** -notifica dell'esistenza di informazioni aggiuntive sull'operazione corrente.|

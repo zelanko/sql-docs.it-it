@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061529"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>Esempio di diagnostica di driver basato su file
 Un driver basati su file agisce sia come un driver ODBC come origine dati. Può pertanto generare errori e avvisi sia come componente in una connessione ODBC e come un'origine dati. Poiché si tratta anche il componente che si interfaccia con gestione Driver, viene formattato e restituisce gli argomenti per **SQLGetDiagRec**.  

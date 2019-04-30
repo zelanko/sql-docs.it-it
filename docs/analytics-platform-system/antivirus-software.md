@@ -10,11 +10,11 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199618"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus per il sistema di piattaforma Analitica
 Se il data center richiede un software antivirus, usare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. È consigliabile non installare il software antivirus a meno che non è un requisito fisso del data center.  
@@ -62,11 +62,11 @@ Per installare il software antivirus nelle macchine virtuali, escludere nell'ele
   
 -   G:\  
   
-**_appliance_domain_- VMM**  
+**_appliance_domain_-VMM**  
   
 -   Nessuna restrizione  
   
-**_appliance_domain_- servizi di distribuzione Windows**  
+**_appliance_domain_-WDS**  
   
 -   Nessuna restrizione  
   

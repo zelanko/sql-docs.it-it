@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190225"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)
 
@@ -108,7 +108,7 @@ ms.locfileid: "56802447"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Opzioni di configurazione per l'impostazione delle per: in un messaggio  
+##  <a name="bkmk_setting_TO_field"></a> Opzioni di configurazione per l'impostazione delle per: Campo di un messaggio  
  Le sottoscrizioni definite dall'utente create in base alle autorizzazioni concesse dall'attività **Gestione di sottoscrizioni individuali** contengono un nome utente preimpostato che si basa sull'account utente di dominio. Quando l'utente crea la sottoscrizione, l'indirizzo del nome del destinatario incluso nel campo **A:** viene immesso automaticamente in base all'account utente di dominio della persona che crea la sottoscrizione.  
   
  Se si utilizza un server SMTP o un server d'inoltro che utilizza account di posta elettronica diversi dall'account utente di dominio, il recapito del report non riuscirà quando il server SMTP tenterà di recapitare il report a tale utente.  
@@ -180,15 +180,15 @@ ms.locfileid: "56802447"
   
 2.  Aprire il file RSReportServer.config in un editor di testo.  
   
-3.  Verificare che <`UrlRoot`> sia impostato sull'indirizzo URL del server di report. Questo valore viene impostato quando si configura il server di report e quindi dovrebbe essere già inserito. In caso contrario, digitare l'indirizzo URL del server di report.  
+3.  Verificare che <`UrlRoot`> è impostato per l'indirizzo URL del server di report. Questo valore viene impostato quando si configura il server di report e quindi dovrebbe essere già inserito. In caso contrario, digitare l'indirizzo URL del server di report.  
   
 4.  Nella sezione relativa al recapito individuare <`ReportServerEmail`>.  
   
-5.  In <`SMTPServer`> digitare il nome del server SMTP. Questo valore può corrispondere a un indirizzo IP, un nome UNC di un computer dell'Intranet aziendale o un nome di dominio completo.  
+5.  In <`SMTPServer`>, digitare il nome del server SMTP. Questo valore può corrispondere a un indirizzo IP, un nome UNC di un computer dell'Intranet aziendale o un nome di dominio completo.  
   
-6.  Verificare che <`SendUsing`> sia impostato su 2. Se è impostato un valore diverso, il server di report non è configurato per l'utilizzo di un servizio SMTP remoto.  
+6.  Verificare che <`SendUsing`> è impostato su 2. Se è impostato un valore diverso, il server di report non è configurato per l'utilizzo di un servizio SMTP remoto.  
   
-7.  In <`From`> digitare il nome di un account con l'autorizzazione a inviare posta elettronica dal server SMTP.  
+7.  In <`From`>, digitare il nome di un account che dispone dell'autorizzazione per l'invio di posta elettronica dal server SMTP.  
   
 8.  Salvare il file.  
   

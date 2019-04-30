@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204982"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Visualizzazione dei riquadri di Progettazione query e Progettazione viste (Visual Database Tools)
   La finestra Progettazione query e Progettazione viste è costituita da quattro riquadri separati: Diagramma, Criteri, SQL e Risultati. Quando si apre una vista o si crea una nuova query, in genere vengono aperti tutti e quattro questi riquadri. Qualora però uno qualsiasi di tali riquadri non fosse aperto e si desiderasse aprirlo, è necessario che la finestra Progettazione query e Progettazione viste sia già visualizzata.  

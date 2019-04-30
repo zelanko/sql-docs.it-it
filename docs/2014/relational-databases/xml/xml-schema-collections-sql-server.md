@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193036"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
   Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite la `xml` tipo di dati. È facoltativamente possibile associare schemi XSD a una variabile o una colonna di `xml` tipo tramite una raccolta XML schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
@@ -111,7 +111,7 @@ ms.locfileid: "58533713"
   
 -   MODELGROUP  
   
- Ad esempio:  
+ Ad esempio:   
   
 -   **SomeAttribute** è un componente di tipo ATTRIBUTE.  
   

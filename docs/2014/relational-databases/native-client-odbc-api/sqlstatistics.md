@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188612"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics** può essere eseguito su un cursore statico. Un tentativo di eseguire **SQLStatistics** su un cursore aggiornabile (dinamico o gestito da keyset) restituirà SQL_SUCCESS_WITH_INFO a indicare che il tipo di cursore è stato modificato.  

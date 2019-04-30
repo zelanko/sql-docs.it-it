@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062629"
 ---
 # <a name="streams-and-persistence"></a>Flussi e persistenza
 Il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto [salvare](../../../ado/reference/ado-api/save-method.md) gli archivi di metodo, o *persiste*, un **Recordset** in un file e il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)metodo ripristini il **Recordset** da tale file.  
@@ -163,5 +163,5 @@ function GetRs()
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

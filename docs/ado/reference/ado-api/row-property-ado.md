@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192829"
 ---
 # <a name="row-property-ado"></a>Proprietà Row (ADO)
 Ottiene o imposta un DB OLE **riga** oggetto da o in un [interfaccia ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) oggetto. Quando si usa **put_Row** per impostare un **riga** dell'oggetto, una riga viene trasformata in un oggetto ADO **Record** oggetto.  
@@ -41,7 +41,7 @@ HRESULT put_Row([in] IUnknown* pRow);
  *ppRow*  
  Puntatore a OLE DB **riga** oggetto.  
   
- *pRow*  
+ *PRow*  
  OLE DB **riga** oggetto.  
   
 ## <a name="return-values"></a>Valori restituiti  

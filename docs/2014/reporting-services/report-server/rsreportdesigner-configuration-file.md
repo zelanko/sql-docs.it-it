@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190786"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner - file di configurazione
   Nel file RSReportDesigner.config sono archiviate le impostazioni delle estensioni per il rendering e l'elaborazione dati disponibili per Progettazione report. Le informazioni sulle estensioni per l'elaborazione dati sono contenute nell'elemento `Data`. Le informazioni sulle estensioni per il rendering sono incluse nell'elemento `Render`. L'elemento `Designer` enumera i generatori di query utilizzati in Progettazione report.  

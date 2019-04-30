@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155909"
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
 È possibile scrivere un gestore personalizzato se sei un amministratore di server IIS che richiede l'impostazione predefinita il supporto di servizi desktop remoto, ma un maggior controllo sulle richieste degli utenti e diritti di accesso.  

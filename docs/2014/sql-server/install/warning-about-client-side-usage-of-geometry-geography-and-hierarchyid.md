@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185868"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avviso relativo all'utilizzo sul lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID
   L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono determinate condizioni.  

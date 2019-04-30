@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193243"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utilizzo della modalità RAW con FOR XML
   Nella modalità RAW ogni riga del set di risultati della query viene trasformata in un elemento XML al quale è assegnato l'identificatore generico \<row> o il nome di elemento specificato facoltativamente. Per impostazione predefinita, viene eseguito il mapping di ogni valore di colonna del set di righe diverso da NULL a un attributo dell'elemento \<row>. Se alla clausola FOR XML viene aggiunta la direttiva ELEMENTS, viene eseguito il mapping di ogni valore di colonna a un sottoelemento dell'elemento \<row>. Insieme alla direttiva ELEMENTS è possibile specificare facoltativamente l'opzione XSINIL per eseguire il mapping dei valori di colonna NULL del set di risultati a un elemento con l'attributo xsi:nil=`"`true`"`.  
@@ -35,7 +35,7 @@ ms.locfileid: "58537043"
 ## <a name="in-this-section"></a>In questa sezione  
  In questa sezione sono disponibili gli esempi seguenti:  
   
--   [Esempio: Durante il recupero delle informazioni sul modello di prodotto in formato XML](example-retrieving-product-model-information-as-xml.md)  
+-   [Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML](example-retrieving-product-model-information-as-xml.md)  
   
 -   [Esempio: Specifica di XSINIL con la direttiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
@@ -43,11 +43,11 @@ ms.locfileid: "58537043"
   
 -   [Esempio: Recupero di dati binari](example-retrieving-binary-data.md)  
   
--   [Esempio: Ridenominazione di &#60;riga&#62; elemento](example-renaming-the-row-element.md)  
+-   [Esempio: Ridenominazione dell'elemento &#60;row&#62;](example-renaming-the-row-element.md)  
   
--   [Esempio: Specifica un elemento radice per il codice XML generato da FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Esempio: Specifica di un elemento radice per codice XML generato da FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Esempio: L'esecuzione di query sulle colonne](example-querying-xmltype-columns.md)  
+-   [Esempio: Esecuzione di query sulle colonne di tipo XML](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

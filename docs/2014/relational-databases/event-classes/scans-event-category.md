@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 676e0deaea8fa740a9b9fb007a6217b91f1e3863
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044089"
 ---
 # <a name="scans-event-category"></a>categoria di eventi Analisi
   La categoria di eventi **Analisi** contiene eventi di analisi.  

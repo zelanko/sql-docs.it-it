@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226016"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configurazione avanzata più siti Web (modalità nativa SSRS)
   Questa finestra di dialogo consente di creare e gestire gli URL utilizzati per accedere a un server di report o a Gestione report. La finestra di dialogo **Configurazione avanzata più siti Web** viene utilizzata per creare URL aggiuntivi, URL personalizzati che includono un nome di intestazione host o per specificare un indirizzo IP in formato IPv4 o IPv6.  
@@ -27,7 +27,7 @@ ms.locfileid: "48185371"
   
  La creazione di più URL è utile se si desidera configurare modalità di accesso diverse a un server di report. L'accesso al server di report tramite connessioni Intranet ed Extranet, ad esempio, richiede in genere che siano presenti più URL per ogni tipo di connessione.  
   
- Per aprire la **configurazione avanzata più siti Web** della finestra di dialogo fare clic su **avanzate** sul **URL servizio Web** o la **URL gestione Report**nella pagina di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Quando la finestra di dialogo **Configurazione avanzata più siti Web** viene visualizzata, è possibile fare clic su **Aggiungi** o **Modifica** per definire nuovi URL o modificare o eliminare URL esistenti.  
+ Per aprire la finestra di dialogo **Configurazione avanzata più siti Web** fare clic su **Avanzate** nella pagina **URL servizio Web** o **URL Gestione report** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Quando la finestra di dialogo **Configurazione avanzata più siti Web** viene visualizzata, è possibile fare clic su **Aggiungi** o **Modifica** per definire nuovi URL o modificare o eliminare URL esistenti.  
   
  Scegliere **OK** per salvare le modifiche. Se dopo avere aggiunto o rimosso URL si chiude la finestra di dialogo senza prima avere scelto **OK**, le modifiche andranno perdute.  
   

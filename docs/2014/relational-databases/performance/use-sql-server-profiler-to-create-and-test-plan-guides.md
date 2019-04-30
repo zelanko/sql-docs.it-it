@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150486"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
   Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide** . Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
