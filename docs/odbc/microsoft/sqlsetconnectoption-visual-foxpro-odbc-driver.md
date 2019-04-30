@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 398d098615a0453cb016286867836388fd817540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631789"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473027"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (driver ODBC Visual FoxPro)
 > [!NOTE]  
 >  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: parziale  
+ Supporto: Partial  
   
  Conformità di API ODBC: Livello 1  
   
- Imposta le opzioni che determinano gli aspetti delle connessioni. Questa funzione è supportata parzialmente: il driver supporta tutti i valori per il *fOption* argomento, ma non supportano alcuni degli *vParam* valori per il *fOption* argomento SQL_TXN_ISOLATION.  
+ Imposta le opzioni che determinano gli aspetti delle connessioni. Questa funzione è supportata parzialmente: Il driver supporta tutti i valori per il *fOption* argomento, ma non supportano alcuni degli *vParam* valori per il *fOption* argomento SQL_TXN_ISOLATION.  
   
  Nella tabella seguente vengono descritte solo quegli argomenti con il comportamento specifico all'implementazione del Driver ODBC Visual FoxPro **SQLSetConnectOption**.  
   

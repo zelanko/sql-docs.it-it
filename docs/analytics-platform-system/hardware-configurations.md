@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283253"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurazioni hardware, sistema di piattaforma Analitica
 L'hardware del sistema di piattaforma Analitica (AP) è stato progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. L'appliance scala di archiviazione per SQL Server Parallel Data Wareouse (PDW) da pochi terabyte a più di 6 petabyte di dati.  

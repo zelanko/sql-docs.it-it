@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751743"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460133"
 ---
 # <a name="create-a-project"></a>Creazione di un progetto
   È possibile creare uno o più progetti in una soluzione esistente.  
@@ -94,7 +94,7 @@ ms.locfileid: "52751743"
   
 4.  Fare clic su **OK**.  
   
- È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti script è: C:\Documents and Settings \\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
+ È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti di script è: C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](solution-explorer.md)   

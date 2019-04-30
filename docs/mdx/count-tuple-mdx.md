@@ -1,5 +1,5 @@
 ---
-title: Conteggio (tupla) (MDX) | Documenti Microsoft
+title: Conteggio (Tuple) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3775af63181489b982778d40ddd69ebc12872271
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285041"
 ---
 # <a name="count-tuple-mdx"></a>Count (Tuple) (MDX)
 
@@ -32,7 +32,7 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una tupla.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Restituisce il numero di dimensioni in una tupla.  
   
 ## <a name="example"></a>Esempio  
@@ -48,7 +48,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Vedere anche  
  [Conteggio &#40;dimensione&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [Conteggio &#40;livelli di gerarchia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Conteggio &#40;impostare&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

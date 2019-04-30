@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287754"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Individuare testo, numeri o date in un report (Reporting Services in modalità integrata SharePoint)
   È possibile cercare contenuto in un report digitando la parola o la frase che si desidera trovare (la lunghezza massima di un termine di ricerca è 256 caratteri). La ricerca è una tecnica di navigazione in cui viene trovato un valore corrispondente a un criterio nel report e la selezione viene spostata sulla parte del report che contiene tale valore.  

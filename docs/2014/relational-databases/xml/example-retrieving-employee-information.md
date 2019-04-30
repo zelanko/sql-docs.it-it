@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287842"
 ---
 # <a name="example-retrieving-employee-information"></a>Esempio: Recupero di informazioni sui dipendenti
   In questo esempio vengono recuperati ID e nome di ogni dipendente. Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è possibile ottenere il valore employeeID dalla colonna BusinessEntityID della tabella Employee. I nomi dei dipendenti possono essere ottenuti dalla tabella Person. La colonna BusinessEntityID può essere utilizzata per unire in join le tabelle.  

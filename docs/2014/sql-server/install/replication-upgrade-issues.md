@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282231"
 ---
 # <a name="replication-upgrade-issues"></a>Problemi di aggiornamento della replica
   Negli argomenti seguenti vengono descritti i problemi di replica che possono influire sull'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vengono illustrate le azioni che è possibile eseguire per tentare di ridurre gli effetti di queste modifiche nell'ambiente.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Il seguito all'aggiornamento le sottoscrizioni ad aggiornamento in coda che usano Accodamento messaggi verranno modificate](../../../2014/sql-server/install/upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md)  
   

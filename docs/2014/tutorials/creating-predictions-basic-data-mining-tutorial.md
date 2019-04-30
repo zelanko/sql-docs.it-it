@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285686"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Creazione di stime (Esercitazione di base sul data mining)
   Dopo aver testato l'accuratezza dei modelli di data mining e ha deciso che si è soddisfatti dei risultati, è quindi possibile generare stime tramite il generatore di Query di stima nel **stima modello di Data Mining** scheda modelli di Data Mining Finestra di progettazione.  

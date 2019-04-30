@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287474"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
   In una clausola FOR XML è possibile richiedere che la query restituisca uno schema inline oltre ai risultati della query. Per ottenere uno schema XDR, utilizzare la parola chiave XMLDATA nella clausola FOR XML. Per ottenere uno schema XSD, utilizzare invece la parola chiave XMLSCHEMA.  
@@ -36,7 +36,7 @@ ms.locfileid: "58529333"
   
  Se si specifica la parola chiave XMLSCHEMA in una query FOR XML, si otterrà sia uno schema che i dati XML, ovvero il risultato della query. Ogni elemento di livello principale dei dati fa riferimento allo schema precedente tramite una dichiarazione dello spazio dei nomi predefinito che, a sua volta, fa riferimento allo spazio dei nomi di destinazione dello schema inline.  
   
- Esempio:  
+ Ad esempio:   
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  

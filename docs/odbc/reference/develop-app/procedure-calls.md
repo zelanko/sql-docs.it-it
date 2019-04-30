@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284580"
 ---
 # <a name="procedure-calls"></a>Chiamate di procedura
 Oggetto *procedure* è un oggetto eseguibile archiviato nell'origine dati. In genere, si tratta di una o più istruzioni SQL precompilate. La sequenza di escape per chiamare una routine  
   
- **{**[**? =**]**chiamare** *nome procedura*[**(**[*parametro*] [**,**[*parametro*]]... **)**]**}**  
+ **{**[**?=**]**call** *procedure-name*[**(**[*parameter*][**,**[*parameter*]]...**)**]**}**  
   
  in cui *-nome della routine* specifica il nome di una stored procedure e *parametro* specifica un parametro di routine.  
   
- Per altre informazioni sulla sequenza di escape chiamata di procedura, vedere [procedura sequenza di Escape Call](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) nell'appendice c: SQL grammatica.  
+ Per altre informazioni sulla sequenza di escape chiamata di procedura, vedere [procedura sequenza di Escape Call](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) nell'appendice c: Grammatica SQL.  
   
  Una procedura può avere zero o più parametri. Può inoltre restituire un valore, come indicato dall'indicatore di parametro facoltativo **? =** all'inizio della sintassi. Se *parametro* è un input o un parametro di input/output può essere un valore letterale o un marcatore di parametro. Tuttavia, applicazioni interoperative devono usare sempre i marcatori di parametro poiché alcune origini dati non accetta i valori dei parametri di valore letterale. Se *parametro* è un parametro di output deve essere un marcatore di parametro. Marcatori di parametro devono essere associati con **SQLBindParameter** prima della chiamata di procedura viene eseguita l'istruzione.  
   

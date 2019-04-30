@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283519"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso di repository test (OracleToSQL)
 Gli archivi di Repository Test SSMA SSMA Tester test case e risultati dei test per un uso successivo. I dati del Repository vengono salvati nelle tabelle di SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nello schema **ssma_oracle_utilities** del **ssmatesterdb** database.  

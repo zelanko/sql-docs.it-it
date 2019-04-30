@@ -5,16 +5,16 @@ description: Informazioni su come connettersi all'istanza master di SQL Server e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860172"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472273"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Connettersi a un cluster di SQL Server i big data con Azure Data Studio
 
@@ -45,7 +45,7 @@ Per connettersi a un cluster di big data con Azure Data Studio, creare una nuova
 1. Dalla riga di comando, trovare l'indirizzo IP dell'istanza master con il comando seguente:
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. In Azure Data Studio, premere **F1** > **nuova connessione**.
@@ -83,7 +83,7 @@ Nella maggior parte dei casi, la connessione all'istanza master di SQL Server co
 1. Dalla riga di comando, trovare l'indirizzo IP del gateway di HDFS/Spark con uno dei comandi seguenti.
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. In Azure Data Studio, premere **F1** > **nuova connessione**.

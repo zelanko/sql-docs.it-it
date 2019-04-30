@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583404"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472169"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Che cos'è il controller in un cluster di big data di SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Il controller ospita la logica di base per distribuire e gestire un cluster di big data. Si occupa di tutte le interazioni con Kubernetes, le istanze di SQL Server che fanno parte del cluster e altri componenti come HDFS e Spark. 
+Il controller ospita la logica di base per distribuire e gestire un cluster di big data. Si occupa di tutte le interazioni con Kubernetes, le istanze di SQL Server che fanno parte del cluster e altri componenti come HDFS e Spark.
 
 Il servizio controller fornisce le funzionalità di base seguenti:
 
@@ -31,9 +31,10 @@ Il servizio controller fornisce le funzionalità di base seguenti:
 - Gestire i pool di calcolo, dati e archiviazione
 - Esporre gli strumenti di monitoraggio per osservare lo stato del cluster
 - Esporre gli strumenti di risoluzione dei problemi per rilevare e correggere problemi imprevisti
-- Gestire la sicurezza del cluster: verificare che gli endpoint cluster protetto, gestire utenti e ruoli, configurare le credenziali per la comunicazione all'interno del cluster
-- Gestire il flusso di lavoro degli aggiornamenti in modo che vengono implementate in modo sicuro (non disponibile nella versione CTP 2.4)
-- Gestire la disponibilità elevata e ripristino di emergenza per i servizi con stato nel cluster (non disponibile nella versione CTP 2.4)
+- Gestire la sicurezza del cluster:
+  - Verificare che gli endpoint cluster sicuro
+  - Gestire utenti e ruoli
+  - Configurare le credenziali per la comunicazione all'interno del cluster
 
 ## <a name="deploying-the-controller-service"></a>Distribuzione del servizio controller
 

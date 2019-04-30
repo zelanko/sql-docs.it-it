@@ -16,11 +16,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287844"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilizzo dei progetti SSMA (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è innanzitutto necessario creare un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -84,7 +84,7 @@ Per eseguire la migrazione dei dati dal database MySQL a SQL Server o SQL Azure,
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   Azure SQL database  
+    -   Database SQL di Azure  
   
 E quindi fare clic su **OK**  
   

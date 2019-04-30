@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282024"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Visualizzare la pagina Dettagli Esplora oggetti
-  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile visualizzare un report per ogni oggetto selezionato in Esplora soluzioni. Questo report, denominato pagina Dettagli Esplora oggetti, viene creato da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e visualizzato nella finestra del documento.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile visualizzare un report per ogni oggetto selezionato in Esplora soluzioni. Questo report, denominato pagina Dettagli Esplora oggetti, viene creato da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e visualizzato nella finestra del documento.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>Visualizzazione della pagina Dettagli Esplora oggetti  
   

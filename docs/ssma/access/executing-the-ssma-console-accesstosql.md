@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408318"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473523"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Esecuzione della Console SSMA (AccessToSQL)
 Microsoft offre un solido set di comandi di file di script e opzioni della riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -25,7 +25,7 @@ I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio
   
 **Command**  
   
-Crea-nuovo-progetto: Crea un nuovo progetto SSMA.  
+create-new-project: Crea un nuovo progetto SSMA.  
   
 **Script**  
   
@@ -149,7 +149,7 @@ Definizione del server viene recuperato dall'attributo del nome definito per ogn
 ```  
 **Command**  
   
-caricamento-accesso-database: Consente di caricare i file di database di access  
+load-access-database: Consente di caricare i file di database di access  
   
 **Script**  
   
@@ -254,7 +254,7 @@ I comandi di Report generano i report sulle prestazioni di varie attività di Co
   
 **Command**  
   
-generare report di valutazione  
+generate-assessment-report  
   
 -   Genera report di valutazione nel database di origine.  
   
@@ -508,7 +508,7 @@ Mapping dello schema tra i database di origine e di destinazione viene iniziata 
   
 **Command**  
   
-mappa dello schema: Mapping dello schema del database di origine allo schema di destinazione.  
+map-schema: Mapping dello schema del database di origine allo schema di destinazione.  
   
 **Script**  
   
@@ -547,11 +547,11 @@ synchronize-target
   
 3.  `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   -Totale report come avviso  
+    -   report-total-as-warning  
   
-    -   report-each-come-avviso  
+    -   report-each-as-warning  
   
-    -   Errore-script  
+    -   fail-script  
   
 4.  `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene fornito percorso della cartella, solo del file in base al nome **TargetSynchronizationReport.XML** viene creato.  
   
@@ -612,11 +612,11 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 3.  `on-error:` Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   -Totale report come avviso  
+    -   report-total-as-warning  
   
-    -   report-each-come-avviso  
+    -   report-each-as-warning  
   
-    -   Errore-script  
+    -   fail-script  
   
 4.  `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di aggiornamento (attributo facoltativo) se viene fornito percorso della cartella, solo del file in base al nome **SourceDBRefreshReport.XML** viene creato.  
   
@@ -661,7 +661,7 @@ La generazione di Script, i comandi consentono di salvare l'output della console
   
 **Command**  
   
-come Save-script  
+save-as-script  
   
 Consente di salvare gli script degli oggetti in un file indicato quando metabase target, si tratta di un'alternativa al comando di sincronizzazione in cui in si ottenere gli script ed eseguire lo stesso nel database di destinazione.  
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608938"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453428"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Valutazione degli schemi DB2 per la conversione (DB2ToSQL)
 Prima di caricare gli oggetti e la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario determinare come complessa la migrazione sarà e quanto tempo richiederà la migrazione. SSMA è possibile creare un report di valutazione che mostra la percentuale di oggetti che verranno convertite correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
@@ -35,7 +35,7 @@ Durante la creazione di questo report di valutazione, SSMA converte gli oggetti 
   
     SSMA mostrerà lo stato di avanzamento nella barra di stato nella parte inferiore della finestra. Se il riquadro di Output è visibile, si noteranno anche messaggi nel riquadro di Output.  
   
-    Una volta completata, la valutazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per DB2: verrà visualizzata la finestra di Report di valutazione.  
+    Una volta completata, la valutazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per DB2: Verrà visualizzata la finestra di Report di valutazione.  
   
 ## <a name="using-assessment-reports"></a>Uso dei report di valutazione  
 La finestra di Report di valutazione contiene tre riquadri:  
@@ -78,7 +78,7 @@ Riquadro statistiche di conversione sono indicate le statistiche di conversione.
     -   È possibile escludere l'oggetto dalla migrazione. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati ed Esplora i metadati di DB2, deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Conversione di schemi DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[Converting DB2 Schemas &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Database DB2 la migrazione a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

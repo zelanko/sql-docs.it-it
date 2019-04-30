@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 998028cafe4d08be660276a4f88f17667d919863
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950197"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461082"
 ---
 # <a name="securable-items"></a>Elementi a sicurezza diretta
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la sicurezza basata sui ruoli per controllare l'accesso agli elementi archiviati in un server di report. Quando si concede a un utente l'accesso a un server di report, in genere si creano due assegnazioni di ruolo:  

@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287777"
 ---
-# <a name="examples-using-path-mode"></a>Esempi: Utilizzo della modalità PATH
+# <a name="examples-using-path-mode"></a>Esempi: Uso della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Specifica di una query semplice in modalità PATH  

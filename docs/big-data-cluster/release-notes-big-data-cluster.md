@@ -5,17 +5,17 @@ description: Questo articolo descrive gli ultimi aggiornamenti e problemi noti p
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/28/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a3148b9e3d7b2797684c2330e231640fb9ac2a1d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860528"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473536"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster di big data in SQL Server
 
@@ -24,6 +24,99 @@ ms.locfileid: "58860528"
 Questo articolo elenca gli aggiornamenti e conoscere i problemi per le versioni più recenti di SQL Server cluster di big data.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp25"></a> CTP 2.5 (aprile)
+
+Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i cluster di big data in SQL Server 2019 CTP 2.5.
+
+### <a name="whats-new"></a>Novità
+
+| Nuova funzionalità o aggiornamento | Dettagli |
+|:---|:---|
+| Profili di distribuzione | Usare l'impostazione predefinita e personalizzata [file JSON di configurazione di distribuzione](deployment-guidance.md#configfile) per le distribuzioni di cluster di big data anziché le variabili di ambiente. |
+| Distribuzioni fornite dall'utente | `mssqlctl cluster create` a questo punto richiede eventuali impostazioni necessarie per le distribuzioni predefinito. |
+| Modifiche ai nomi di endpoint del servizio e i pod | I seguenti endpoint esterni sono stati modificati i nomi:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** improvements | Uso **mssqlctl** al [elencare gli endpoint esterni](deployment-guidance.md#endpoints) e verificare la versione di **mssqlctl** con il `--version` parametro. |
+| Eseguire l'installazione offline | Linee guida per le distribuzioni di cluster non in linea dei big Data. |
+| Miglioramenti di suddivisione in livelli di HDFS | La suddivisione in livelli S3, la memorizzazione nella cache di montaggio e OAuth supporto per Azure Data Lake Store Gen2. |
+| Nuovo `mssql` connettore Spark-SQL Server | |
+
+### <a name="known-issues"></a>Problemi noti
+
+Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
+
+#### <a name="deployment"></a>Distribuzione
+
+- Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato.
+
+   > [!IMPORTANT]
+   > È necessario eseguire il backup dei dati e quindi eliminare il cluster di big data esistente (con la versione precedente di **mssqlctl**) prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
+
+- Dopo la distribuzione nel servizio contenitore di AZURE, è possibile visualizzare i seguenti due eventi di avviso dalla distribuzione. Entrambi questi eventi sono presenti problemi noti, ma non impediscono è avere distribuito il cluster di big data nel servizio contenitore di AZURE.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- In caso di una distribuzione cluster con i big data, non viene rimosso lo spazio dei nomi associato. Ciò può comportare uno spazio dei nomi orfano sul cluster. Soluzione alternativa consiste nell'eliminare manualmente lo spazio dei nomi prima di distribuire un cluster con lo stesso nome.
+
+
+
+#### <a id="externaltablesctp24"></a> Tabelle esterne
+
+- Distribuzione di cluster di big data non crea più il **SqlDataPool** e **SqlStoragePool** origini dati esterne. È possibile creare queste origini dati manualmente per supportare la virtualizzazione dei dati per il pool di dati e il pool di archiviazione.
+
+   ```sql
+   -- Create the SqlDataPool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+
+   -- Create the SqlStoragePool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+   END
+   ```
+
+- È possibile creare una tabella esterna di pool di dati per una tabella che contiene i tipi di colonna non supportati. Se si esegue una query della tabella esterna, viene visualizzato un messaggio simile al seguente:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Se si esegue una query una tabella esterna del pool di archiviazione, è possibile ottenere un errore se vengono copiato i file sottostante in HDFS nello stesso momento.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Se si sta creando una tabella esterna a Oracle che usano tipi di dati carattere, la procedura guidata la virtualizzazione di Studio di Azure Data interpreta queste colonne come VARCHAR nella definizione della tabella esterna. Ciò causerà un errore nel DDL della tabella esterna. Modificare lo schema Oracle per utilizzare il tipo NVARCHAR2, oppure creare manualmente le istruzioni di tabella esterna e specificare NVARCHAR invece di usare la procedura guidata.
+
+#### <a name="application-deployment"></a>Distribuzione dell'applicazione
+
+- Quando si chiama un'applicazione di R, Python o MLeap dall'API REST, la chiamata con timeout di 5 minuti.
+
+#### <a name="spark-and-notebooks"></a>Spark e notebook
+
+- Gli indirizzi IP del POD possono cambiare nell'ambiente di Kubernetes come riavvii POD. Nello scenario in cui i pod master viene riavviato, la sessione di Spark potrebbe non riuscire con `NoRoteToHostException`. Questo problema è causato dalla cache JVM non aggiornati con nuovo indirizzo IP indirizzi.
+
+- Se hai Jupyter già installato e Python separato in Windows, i notebook Spark potrebbero non riuscire. Per risolvere questo problema, eseguire l'aggiornamento di Jupyter per la versione più recente.
+
+- In un notebook, se si sceglie la **Aggiungi testo** comando, la cella di testo viene aggiunto in modalità anteprima anziché in modalità di modifica. È possibile fare clic sull'icona di anteprima per attivare/disattivare per la modalità di modifica e modificare la cella.
+
+#### <a name="hdfs"></a>HDFS
+
+- Se facendo clic su un file in HDFS per visualizzarlo in anteprima, si potrebbe essere visualizzato l'errore seguente:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Attualmente non è possibile visualizzare in anteprima file di dimensioni superiori a 30 MB in Azure Data Studio.
+
+- Modifiche di configurazione HDFS che implicano modifiche alle hdfs-Site. XML non sono supportate.
+
+#### <a name="security"></a>Sicurezza
+
+- Il SA_PASSWORD fa parte dell'ambiente e individuabile (ad esempio in un file di dump del cavo di alimentazione). È necessario reimpostare il SA_PASSWORD nell'istanza master dopo la distribuzione. Questo non è un bug, ma un passaggio di sicurezza. Per altre informazioni su come modificare il SA_PASSWORD in un contenitore Linux, vedere [modificare la password SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- I log di servizio contenitore di AZURE possono contenere la password dell'amministratore di sistema per le distribuzioni cluster di big data.
 
 ## <a id="ctp24"></a> CTP 2.4 (marzo)
 
@@ -49,7 +142,7 @@ Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
 - Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato.
 
    > [!IMPORTANT]
-   > È necessario eseguire il backup dei dati e quindi eliminare il cluster di big data esistente (con la versione precedente di **mssqlctl**) prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-guidance.md#upgrade).
+   > È necessario eseguire il backup dei dati e quindi eliminare il cluster di big data esistente (con la versione precedente di **mssqlctl**) prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
 
 - Dopo la distribuzione nel servizio contenitore di AZURE, è possibile visualizzare i seguenti due eventi di avviso dalla distribuzione. Entrambi questi eventi sono presenti problemi noti, ma non impediscono è avere distribuito il cluster di big data nel servizio contenitore di AZURE.
 
@@ -193,7 +286,7 @@ Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
 - Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato.
 
    > [!IMPORTANT]
-   > È necessario eseguire il backup dei dati e quindi eliminare il cluster di big data esistente (con la versione precedente di **mssqlctl**) prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-guidance.md#upgrade).
+   > È necessario eseguire il backup dei dati e quindi eliminare il cluster di big data esistente (con la versione precedente di **mssqlctl**) prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
 
 - Il **ACCEPT_EULA** variabile di ambiente deve essere "yes" o "Sì" per accettare le condizioni di licenza. Nelle versioni precedenti consentiti "y" e "Y", ma questi non vengono più accettati e causerà la distribuzione ha esito negativo.
 
@@ -243,7 +336,7 @@ Se si usa kubeadm per la distribuzione di Kubernetes in più computer, il portal
    mssqlctl cluster create --name <cluster_name>
    ```
 
-- Per informazioni importanti sull'aggiornamento all'ultima versione dei cluster di big data e **mssqlctl**, vedere [esegue l'aggiornamento a una nuova versione](deployment-guidance.md#upgrade).
+- Per informazioni importanti sull'aggiornamento all'ultima versione dei cluster di big data e **mssqlctl**, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
 
 #### <a name="external-tables"></a>Tabelle esterne
 
@@ -302,7 +395,7 @@ Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
 
 #### <a name="deployment"></a>Distribuzione
 
-- Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato. È necessario eseguire il backup ed eliminare qualsiasi cluster di big data esistente prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-guidance.md#upgrade).
+- Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato. È necessario eseguire il backup ed eliminare qualsiasi cluster di big data esistente prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
 
 - Dopo la distribuzione nel servizio contenitore di AZURE, è possibile visualizzare i seguenti due eventi di avviso dalla distribuzione. Entrambi questi eventi sono presenti problemi noti, ma non impediscono è avere distribuito il cluster di big data nel servizio contenitore di AZURE.
 
@@ -370,7 +463,7 @@ Le sezioni seguenti riportano i problemi noti per i cluster di big data di SQL S
 
 #### <a name="deployment"></a>Distribuzione
 
-- Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato. È necessario eseguire il backup ed eliminare qualsiasi cluster di big data esistente prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-guidance.md#upgrade).
+- Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato. È necessario eseguire il backup ed eliminare qualsiasi cluster di big data esistente prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
 
 - Dopo la distribuzione nel servizio contenitore di AZURE, è possibile visualizzare i seguenti due eventi di avviso dalla distribuzione. Entrambi questi eventi sono presenti problemi noti, ma non impediscono è avere distribuito il cluster di big data nel servizio contenitore di AZURE.
 

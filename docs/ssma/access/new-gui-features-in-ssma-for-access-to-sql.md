@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e33c149f270f499921824e70ca18c58118409cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664399"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453455"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuove funzionalità GUI in SSMA per Access to SQL
 In questo capitolo vengono descritte nuove funzionalità dell'interfaccia utente di SSMA  

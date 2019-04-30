@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953377"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460995"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
   Per un server di report eseguito in modalità integrata SharePoint, le impostazioni di sicurezza definite nel sito di SharePoint determinano le modalità di visualizzazione e gestione di report, modelli di report e origini dei dati condivise. Se si usano le assegnazioni di autorizzazioni, i livelli di autorizzazione e i gruppi di SharePoint predefiniti, sarà possibile usare i report e gli altri documenti tramite le impostazioni di sicurezza correnti.  

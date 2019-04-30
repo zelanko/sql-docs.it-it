@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668300"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453321"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introduzione a SSMA per DB2 Console (DB2ToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di DB2. Anche nell'elenco, nel presente documento, vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
@@ -53,11 +53,11 @@ Dopo l'esecuzione di comandi di script SSMA e le opzioni, il programma di consol
   
 Colore dall'interpretazione dell'output della console nella tabella seguente:  
   
-|Colore|Description|  
+|Colore|Descrizione|  
 |---------|---------------|  
 |Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Data e un timestamp, messaggio all'utente|  
-|bianco|Comandi di file di script, il tipo di messaggio|  
+|Bianco|Comandi di file di script, il tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e il risultato di un'operazione|  

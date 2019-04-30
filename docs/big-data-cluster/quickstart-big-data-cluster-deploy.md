@@ -5,17 +5,17 @@ description: Procedura dettagliata di una distribuzione di cluster di big data 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582915"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473474"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Avvio rapido: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Eseguire lo script di distribuzione
 
-Usare la procedura seguente per eseguire lo script di distribuzione. Questo script crea un servizio contenitore di AZURE in Azure e quindi distribuire un cluster di big data di SQL Server 2019 al servizio contenitore di AZURE. È inoltre possibile modificare lo script con loro [variabili di ambiente](deployment-guidance.md#env) per creare una distribuzione personalizzata.
+Usare la procedura seguente per eseguire lo script di distribuzione. Questo script crea un servizio contenitore di AZURE in Azure e quindi distribuire un cluster di big data di SQL Server 2019 al servizio contenitore di AZURE. È inoltre possibile modificare lo script con loro [variabili di ambiente](deployment-guidance.md#configfile) per creare una distribuzione personalizzata.
 
 1. Eseguire lo script con il comando seguente:
 
@@ -114,7 +114,7 @@ Dopo 10 a 20 minuti, si dovrebbe ricevere una notifica che il pod controller sia
 ```
 
 > [!IMPORTANT]
-> L'intera distribuzione può richiedere molto tempo a causa del tempo necessario per scaricare le immagini del contenitore per i componenti del cluster di big data. Tuttavia, non richiederà alcune ore. Se si verificano problemi con la distribuzione, vedere la [risoluzione dei problemi di distribuzione](deployment-guidance.md#troubleshoot) sezione dell'articolo di istruzioni di distribuzione.
+> L'intera distribuzione può richiedere molto tempo a causa del tempo necessario per scaricare le immagini del contenitore per i componenti del cluster di big data. Tuttavia, non richiederà alcune ore. Se si verificano problemi con la distribuzione, vedere [monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big data](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Esaminare il cluster
 
@@ -149,20 +149,20 @@ Aprire una nuova finestra di comando da utilizzare **kubectl** durante il proces
    ```
 
 > [!TIP]
-> Per altre informazioni su come monitorare e risolvere i problemi di una distribuzione, vedere la [risoluzione dei problemi di distribuzione](deployment-guidance.md#troubleshoot) sezione dell'articolo di istruzioni di distribuzione.
+> Per altre informazioni su come monitorare e risolvere i problemi di una distribuzione, vedere [monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big data](cluster-troubleshooting-commands.md).
 
 ### <a name="use-the-cluster-administration-portal"></a>Usare il portale di amministrazione del Cluster
 
-Il pod Controller è in esecuzione, è possibile utilizzare anche nel portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `endpoint-service-proxy` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali usate per accedere al portale corrispondano ai valori per **utente Controller** e **Password** specificato nello script di distribuzione.
+Il pod Controller è in esecuzione, è possibile utilizzare anche nel portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `mgmtproxy-svc-external` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali usate per accedere al portale corrispondano ai valori per **utente Controller** e **Password** specificato nello script di distribuzione.
 
-È possibile ottenere l'indirizzo IP del **endpoint-servizio-proxy** servizio eseguendo questo comando in una finestra bash o cmd:
+È possibile ottenere l'indirizzo IP del **mgmtproxy-svc-external** servizio eseguendo questo comando in una finestra bash o cmd:
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> Nella versione CTP 2.4, si verrà visualizzato un avviso di sicurezza all'accesso alla pagina web, perché i cluster di big data è attualmente in uso certificati SSL generati automaticamente.
+> Nella versione CTP 2.5, si verrà visualizzato un avviso di sicurezza all'accesso alla pagina web, perché i cluster di big data è attualmente in uso certificati SSL generati automaticamente.
 
 ## <a name="connect-to-the-cluster"></a>Connettersi al cluster
 

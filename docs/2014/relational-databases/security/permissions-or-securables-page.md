@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284551"
 ---
 # <a name="permissions-or-securables-page"></a>Pagina Autorizzazioni o Entità a sicurezza diretta
   Usare la pagina **Autorizzazioni** o la pagina **Entità a protezione diretta** per visualizzare o impostare le autorizzazioni per le entità a protezione diretta. È possibile accedere a questa pagina da diversi tipi di oggetti. Il contenuto della pagina può modificare leggermente, in base alle modalità in cui la pagina è aperta e al contenuto. Quando la pagina viene visualizzata, la griglia superiore della pagina potrebbe contenere alcuni elementi o potrebbe essere vuota. Per aggiungere elementi alla griglia superiore, fare clic su **Cerca**. Selezionare un elemento in tale griglia, quindi impostare le autorizzazioni appropriate nella scheda **Esplicita** . Per visualizzare autorizzazioni aggregate, usare la scheda **Valide**.  
@@ -34,7 +34,7 @@ ms.locfileid: "48123771"
 ## <a name="upper-grid"></a>Griglia superiore  
  La griglia superiore include uno o più elementi per i quali è possibile impostare le autorizzazioni. In questa finestra di dialogo è disponibile un pulsante **Cerca** che consente di selezionare oggetti o entità da aggiungere alla griglia superiore. Nel nome della griglia potrebbe essere visualizzato **Entità a protezione diretta** oppure uno o più tipi di entità o di entità a protezione diretta. Le colonne visualizzate nella griglia superiore variano a seconda del tipo di entità o di entità a sicurezza diretta.  
   
- **Nome**  
+ **Name**  
  Nome di ogni entità o entità a sicurezza diretta aggiunto alla griglia.  
   
  **Tipo**  

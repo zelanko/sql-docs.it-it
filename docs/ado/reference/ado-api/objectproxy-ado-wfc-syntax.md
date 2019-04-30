@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af28755fee20c478237edec22936fc694995d554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678509"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459411"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (sintassi ADO/WFC)
 Un **ObjectProxy** oggetto rappresenta un server e viene restituito dal **createObject** metodo per il [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto. La classe ObjectProxy dispone del metodo **chiamare**, che può richiamare un metodo nel server e restituire un oggetto risultante dalla chiamata.  
@@ -46,7 +46,7 @@ public Object ObjectProxy.( String method, Object[] args)
  *ObjectProxy*  
  Un' **ObjectProxy** oggetto che rappresenta il server.  
   
- *(Metodo)*  
+ *method*  
  Stringa contenente il nome del metodo da richiamare sul server.  
   
  *args*  

@@ -4,18 +4,18 @@ description: Questo articolo descrive come SQL Server viene eseguito in Linux e 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/25/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408878"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457372"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
@@ -26,25 +26,25 @@ A partire da SQL Server 2017, viene eseguito SQL Server in Linux. È lo stesso m
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Anteprima di SQL Server 2019 viene eseguito su Linux. È lo stesso motore di database di SQL Server, con molti servizi indipendentemente dal sistema operativo e le funzionalità di simile. Per altre informazioni su questa versione, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+Anteprima di SQL Server 2019 viene eseguito su Linux. È lo stesso motore di database di SQL Server, con molti servizi indipendentemente dal sistema operativo e le funzionalità di simile. Per altre informazioni su questa versione, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [Anteprima di SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> [Anteprima di SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [Anteprima di SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+> [Anteprima di SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> Anteprima di SQL Server 2019 è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+> Anteprima di SQL Server 2019 è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
-## <a name="install"></a>Install
+## <a name="install"></a>Installazione
 
 Per iniziare, installare SQL Server in Linux con una delle seguenti esercitazioni di avvio rapido:
 
@@ -57,7 +57,7 @@ Per iniziare, installare SQL Server in Linux con una delle seguenti esercitazion
 > [!NOTE]
 > Docker stesso viene eseguito su più piattaforme, il che significa che è possibile eseguire l'immagine Docker in Linux, Mac e Windows.
 
-## <a name="connect"></a>Connect
+## <a name="connect"></a>Connessione
 
 Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. È possibile connettersi in locale o in modalità remota e con un'ampia gamma di strumenti e driver. Le guide rapide viene illustrato come usare il [sqlcmd](sql-server-linux-setup-tools.md) lo strumento da riga di comando. Altri strumenti includono:
 
@@ -99,7 +99,7 @@ Se ha già familiarità con SQL Server in Linux, consultare le note sulla versio
 Quindi è Esaminiamo novità recenti:
 
 - [Novità di SQL Server 2017](sql-server-linux-whats-new.md)
-- [Novità per SQL Server 2019 anteprima in Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [Novità per SQL Server 2019 anteprima in Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

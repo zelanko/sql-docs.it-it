@@ -1,7 +1,7 @@
 ---
 title: Novità - servizi di SQL Server Machine Learning | Microsoft Docs
 description: Nuovo gli annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server, servizi Machine Learning di SQL Server 2017.
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MT
+ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645523"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63458800"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità in servizi di SQL Server Machine Learning
 
@@ -30,6 +30,7 @@ Questa versione aggiunge le funzionalità di richiesta per R e Python operazioni
 
 | Versione | Aggiornamento delle funzionalità |
 |---------|----------------|
+| CTP 2.5 | Nuove [estendibilità di Microsoft SDK per Java](java/java-sdk.md). |
 | CTP 2.4 | Il supporto per Linux [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) per R, Python e Java. |
 | | La variabile di ambiente che specifica il percorso dell'interprete Java è stato modificato da `JAVA_HOME` a `JRE_HOME`. |
 | CTP 2.3 | Supportate, nuove [tipi di dati Java](java/java-sql-datatypes.md). |

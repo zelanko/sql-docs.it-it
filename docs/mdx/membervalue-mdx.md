@@ -1,5 +1,5 @@
 ---
-title: MemberValue (MDX) | Documenti Microsoft
+title: MemberValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73a54986a951095b16465cd4934b4dfd447d38bb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742170"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456713"
 ---
 # <a name="membervalue-mdx"></a>MemberValue (MDX)
 
@@ -54,6 +54,6 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

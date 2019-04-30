@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812663"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460016"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Eliminare le righe nel riquadro Risultati (Visual Database Tools)
   Per eliminare record dal database, è necessario eliminare righe nel riquadro Risultati. Per eliminare tutte le righe, è possibile utilizzare una query di eliminazione. Per altre informazioni vedere [Creazione di query &#40;Visual Database Tools&#41;](visual-database-tools.md). Per eliminare righe solo dal riquadro Risultati, modificare i criteri della query. Per altre informazioni vedere [Definizione di condizioni di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

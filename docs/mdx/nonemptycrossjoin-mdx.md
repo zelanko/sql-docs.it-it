@@ -1,5 +1,5 @@
 ---
-title: NonEmptyCrossjoin (MDX) | Documenti Microsoft
+title: NonEmptyCrossjoin (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7da56ac658f57d6eb664762f9dd94351df39fe0f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742650"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456571"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
 
@@ -35,18 +35,18 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Conteggio*  
+ *Count*  
  Espressione numerica valida che specifica il numero di set da restituire.  
   
-## <a name="remarks"></a>Remarks  
- Il **NonEmptyCrossjoin** funzione restituisce il prodotto incrociato di due o più set, escludendo le tuple vuote o le tuple senza dati ottenuti dalle tabelle dei fatti sottostanti. A causa di come **NonEmptyCrossjoin** funzione works tutte calcolate i membri vengono automaticamente esclusi.  
+## <a name="remarks"></a>Note  
+ Il **NonEmptyCrossjoin** funzione restituisce il prodotto incrociato di due o più set di set, escludendo le tuple vuote o le tuple senza dati ottenuti dalle tabelle dei fatti sottostanti. A causa di come la **NonEmptyCrossjoin** funzione lavori, tutti calcolati i membri vengono automaticamente esclusi.  
   
- Se *conteggio* viene omesso, la funzione cross join di tutti i set specificati e consente di escludere i membri vuoti dal set risultante. Se si specifica un numero di set, la funzione eseguirà il cross join dei numeri di set specificati, a partire dal primo set specificato. Il **NonEmptyCrossjoin** funzione utilizza tutti i set rimanenti specificati nei set successivi, ma che non sono stati cross join, per determinare quali membri sono considerati non vuoti in risultante dal cross join di set. Il **NonEmptyCrossjoin** funzione rispetta il **NON_EMPTY_BEHAVIOR** impostazione delle misure calcolate.  
+ Se *conteggio* non viene specificato, la funzione cross join tutti i set specificati ed esclude i membri vuoti dal set risultante. Se si specifica un numero di set, la funzione eseguirà il cross join dei numeri di set specificati, a partire dal primo set specificato. Il **NonEmptyCrossjoin** funzione Usa tutti i set rimanenti specificati nei set successivi, ma che non sono stati cross join, per determinare quali membri sono considerati non vuoti in risultante dal cross set unito. Il **NonEmptyCrossjoin** funzione rispetta le **NON_EMPTY_BEHAVIOR** impostazione delle misure calcolate.  
   
 > [!IMPORTANT]  
->  Questa funzione è deprecata e non deve essere utilizzata, poiché viene mantenuta solo per gestire la compatibilità con le versioni precedenti. Utilizzare invece il [Exists (MDX)](../mdx/exists-mdx.md) funzione con l'argomento di nome gruppo di misure o [NonEmpty (MDX)](../mdx/nonempty-mdx.md) (funzione).  
+>  Questa funzione è deprecata e non deve essere utilizzata, poiché viene mantenuta solo per gestire la compatibilità con le versioni precedenti. È invece consigliabile usare la [Exists (MDX)](../mdx/exists-mdx.md) canonica con gli argomenti Nome gruppo di misure o il [NonEmpty (MDX)](../mdx/nonempty-mdx.md) (funzione).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

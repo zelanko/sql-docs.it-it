@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283414"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Esempio di file di input XML semplice (DTA)
   Copiare e incollare questo esempio di file di input XML semplice da utilizzare per l'ottimizzazione dei carichi di lavoro nell'editor XML o nell'editor di testo preferito. Sostituire quindi i valori specificati per gli elementi **Server**, **Database**, **Schema**, **Table**, **Workload**e **TuningOptions** con quelli per la sessione di ottimizzazione specifica. Per altre informazioni sugli attributi e sugli elementi figlio che è possibile usare con questi elementi, vedere [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). Nell'esempio seguente viene utilizzato solo un subset delle opzioni relative agli attributi e agli elementi figlio disponibili.  

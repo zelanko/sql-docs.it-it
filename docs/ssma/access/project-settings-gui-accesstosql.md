@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754629"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453476"
 ---
-# <a name="project-settings-gui-accesstosql"></a>Impostazioni progetto (GUI) (AccessToSQL)
+# <a name="project-settings-gui-accesstosql"></a>Project Settings (GUI) (AccessToSQL)
 Le impostazioni del progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se includere report sui dati con report di valutazione.  
   
 Nel riquadro interfaccia utente grafica è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  

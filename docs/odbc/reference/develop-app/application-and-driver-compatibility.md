@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287146"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilità dell'applicazione e del driver
 Driver e le applicazioni ODBC rientrano in un numero di categorie oltre alla relativa versione. Alcune di queste applicazioni sono compatibili con alcuni driver; in altri casi, il tipo dell'applicazione o del driver potrebbe avere un impatto sui problemi di compatibilità tra di essi.  

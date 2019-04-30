@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520636"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453422"
 ---
 # <a name="creating-script-files-db2tosql"></a>Creazione di file di Script (DB2ToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -26,7 +26,7 @@ Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei.
   
 2.  **Server:** Consente all'utente di impostare le definizioni del server di origine/destinazione. Può essere anche in un file di connessione server separato.  
   
-3.  **comandi script:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
+3.  **script-commands:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
   
 Ogni sezione viene descritto in dettaglio di seguito:  
   
@@ -86,7 +86,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
   
-    -   destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Esempio:**  
   
@@ -200,7 +200,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Skip: La console ignora gli oggetti che esistono già nel database  
   
-    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
+    -   ask-user: Richiede l'input dell'utente ('Sì' / 'no')  
   
     **Esempio:**  
   
@@ -292,7 +292,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
-    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
+    -   debug: Tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
     > Obbligatori vengono registrati a qualsiasi livello.  

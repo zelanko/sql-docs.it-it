@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90b21c6fa21322afe1d9351e73460fce1a4592f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944157"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461873"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Collegare un report a un modello come report click-through
   Invece di utilizzare i modelli di report click-through predefiniti, è possibile creare un report con Generatore report e quindi collegarlo a un'entità specifica nel modello di report. Quando l'utente che visualizza il report fa clic sui dati interattivi nel report principale, questo report viene visualizzato come report click-through. Per collegare un report a un'entità, utilizzare Gestione report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

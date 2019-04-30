@@ -1,5 +1,5 @@
 ---
-title: Operatori bit per bit | Documenti Microsoft
+title: Operatori bit per bit | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284934"
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
 
@@ -23,12 +23,12 @@ ms.locfileid: "34739420"
   
  MDX supporta gli operatori logici elencati nella tabella seguente.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
 |[IS](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
 |[NOT](../mdx/not-mdx.md)|Esegue la negazione logica di un'espressione numerica.|  
-|[O](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
+|[OR](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
 |[XOR](../mdx/xor-mdx.md)|Esegue un'operazione di esclusione logica tra due espressioni numeriche.|  
   
 ## <a name="see-also"></a>Vedere anche  

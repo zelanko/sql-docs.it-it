@@ -1,31 +1,30 @@
 ---
-title: Usare kubectl per risolvere i problemi di monitoraggio /
+title: Monitorare e risolvere i problemi
 titleSuffix: SQL Server big data clusters
-description: Questo articolo forniscono i comandi di kubectl utile per il monitoraggio e risoluzione dei problemi relativi a un cluster di big data di SQL Server 2019 (anteprima).
+description: Questo articolo include comandi utili per il monitoraggio e risoluzione dei problemi relativi a un cluster di big data di SQL Server 2019 (anteprima).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954107"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472301"
 ---
-# <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Comandi di Kubectl per il monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big Data
+# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive alcuni comandi utili di Kubernetes che è possibile usare per monitorare e risolvere i problemi di un cluster di big data di SQL Server 2019 (anteprima). Questo articolo illustra le attività comuni, ad esempio la copia dei file in o da un contenitore in esecuzione uno dei servizi cluster di big data di SQL Server. Viene inoltre illustrato come visualizzare i dettagli di un pod o altri elementi di Kubernetes che si trovano nel cluster di big data.
+Questo articolo descrive alcuni comandi utili di Kubernetes che è possibile usare per monitorare e risolvere i problemi di un cluster di big data di SQL Server 2019 (anteprima). Viene illustrato come visualizzare i dettagli di un pod o altri elementi di Kubernetes che si trovano nel cluster di big data. Questo articolo descrive anche le attività comuni, ad esempio la copia dei file in o da un contenitore in esecuzione uno dei servizi cluster di big data di SQL Server.
 
-## <a name="kubectl-command-examples"></a>Esempi di comando di Kubectl
-
-Eseguire il comando seguente **kubectl** comandi sul computer client Linux (bash) o Windows (cmd o PS). Richiedono precedente autenticazione nel cluster e un contesto del cluster da eseguire. Per un cluster servizio contenitore di AZURE creato in precedenza, ad esempio, è possibile eseguire `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` per scaricare il file di configurazione del cluster Kubernetes e impostare il contesto del cluster.
+> [!TIP]
+> Eseguire il comando seguente **kubectl** comandi sul computer client Linux (bash) o Windows (cmd o PS). Richiedono precedente autenticazione nel cluster e un contesto del cluster da eseguire. Per un cluster servizio contenitore di AZURE creato in precedenza, ad esempio, è possibile eseguire `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` per scaricare il file di configurazione del cluster Kubernetes e impostare il contesto del cluster.
 
 ## <a name="get-status-of-pods"></a>Ottenere lo stato dei POD
 
@@ -41,56 +40,101 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>Mostra lo stato di tutti i POD nel cluster di big data di SQL Server
 
-Usare il `-n` parametro per specificare uno spazio dei nomi specifico. Si noti che SQL Server in un nuovo spazio dei nomi creato in fase di bootstrap del cluster vengono creati i POD del cluster di big data basata sul nome del cluster specificato nella `mssqlctl cluster create --name <cluster_name>` comando.
+Usare il `-n` parametro per specificare uno spazio dei nomi specifico. Si noti che i POD del cluster di SQL Server i big data vengono creati in un nuovo spazio dei nomi creato in fase di bootstrap del cluster in base al nome del cluster specificato nel file di configurazione della distribuzione. Il nome predefinito, `mssql-cluster`, qui viene usato.
 
 ```bash
-kubectl get pods -n <namespace_name>
+kubectl get pods -n mssql-cluster
 ```
 
-Ad esempio, il comando seguente mostra lo stato dei POD in un cluster di big data denominato `big_data_cluster`:
+Si dovrebbe visualizzato un output simile all'elenco seguente per un cluster in esecuzione big data:
 
-```bash
-kubectl get pods -n big_data_cluster
+```output
+PS C:\> kubectl get pods -n mssql-cluster
+NAME              READY   STATUS    RESTARTS   AGE
+appproxy-f2qqt    2/2     Running   0          110m
+compute-0-0       3/3     Running   0          110m
+control-zlncl     4/4     Running   0          118m
+data-0-0          3/3     Running   0          110m
+data-0-1          3/3     Running   0          110m
+gateway-0         2/2     Running   0          109m
+logsdb-0          1/1     Running   0          112m
+logsui-jtdnv      1/1     Running   0          112m
+master-0          7/7     Running   0          110m
+metricsdb-0       1/1     Running   0          112m
+metricsdc-shv2f   1/1     Running   0          112m
+metricsui-9bcj7   1/1     Running   0          112m
+mgmtproxy-x6gcs   2/2     Running   0          112m
+nmnode-0-0        1/1     Running   0          110m
+storage-0-0       7/7     Running   0          110m
+storage-0-1       7/7     Running   0          110m
 ```
+
+> [!NOTE]
+> Durante la distribuzione di POD con un **lo stato** dei **ContainerCreating** ancora riaperto. Se la distribuzione si blocca per qualche motivo, questo può avere un'idea in cui il problema potrebbe essere. Si analizzino i **pronti** colonna. Queste informazioni indicano quanti contenitori è sono avviata nel pod. Si noti che le distribuzioni possono richiedere 30 minuti o più, a seconda della configurazione e la rete. Gran parte di questo tempo viene impiegata per scaricare le immagini del contenitore per i diversi componenti.
 
 ## <a name="get-pod-details"></a>Ottenere i dettagli di pod
 
-Eseguire il comando seguente per ottenere una descrizione dettagliata di un pod specifico nell'output di formato json. Include informazioni dettagliate, ad esempio il nodo corrente di Kubernetes che il pod viene inserito in, i contenitori in esecuzione all'interno di pod e l'immagine usata per avviare i contenitori. Inoltre, Mostra altri dettagli, ad esempio etichette, stato e salvati in modo permanente le attestazioni di volumi che sono associate i pod.
+Eseguire il comando seguente per ottenere una descrizione dettagliata di un pod specifico nell'output di formato JSON. Include informazioni dettagliate, ad esempio il nodo corrente di Kubernetes che il pod viene inserito in, i contenitori in esecuzione all'interno di pod e l'immagine usata per avviare i contenitori. Inoltre, Mostra altri dettagli, ad esempio etichette, stato e salvati in modo permanente le attestazioni di volumi che sono associate i pod.
 
 ```bash
 kubectl describe pod  <pod_name> -n <namespace_name>
 ```
 
-L'esempio seguente mostra i dettagli per il `mssql-data-pool-master-0` pod in un cluster di big data denominato `big_data_cluster`:
+L'esempio seguente mostra i dettagli per il `master-0` pod in un cluster di big data denominato `mssql-cluster`:
 
 ```bash
-kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
+kubectl describe pod  master-0 -n mssql-cluster
 ```
 
-## <a name="get-status-of-services"></a>Ottenere lo stato dei servizi
+Se si sono verificati errori, è possibile incontrare l'errore negli eventi di recenti per i pod.
 
-Eseguire il comando seguente per ottenere i dettagli per i servizi cluster di big data. Questi dettagli includono il tipo e gli indirizzi IP associati con le porte e i rispettivi servizi. Si noti che i servizi cluster di SQL Server i big data vengono creati in un nuovo spazio dei nomi creato in fase di bootstrap del cluster in base al nome del cluster specificato nella `mssqlctl cluster create --name <cluster_name>` comando.
+## <a name="get-pod-logs"></a>Ottenere i log di pod
+
+È possibile recuperare i registri per contenitori in esecuzione in un pod. Il comando seguente recupera i log per tutti i contenitori in esecuzione nel pod denominato `master-0` vengono inseriti in un file denominato `master-0-pod-logs.txt`:
+
+```bash
+kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+```
+
+## <a id="services"></a> Ottenere lo stato dei servizi
+
+Eseguire il comando seguente per ottenere i dettagli per i servizi cluster di big data. Questi dettagli includono il tipo e gli indirizzi IP associati con le porte e i rispettivi servizi. Si noti che i servizi cluster di SQL Server i big data vengono creati in un nuovo spazio dei nomi creato in fase di bootstrap del cluster in base al nome del cluster specificato nel file di configurazione di distribuzione.
 
 ```bash
 kubectl get svc -n <namespace_name>
 ```
 
-L'esempio seguente mostra lo stato per i servizi in un cluster di big data denominato `big_data_cluster`:
+L'esempio seguente mostra lo stato per i servizi in un cluster di big data denominato `mssql-cluster`:
 
 ```bash
-kubectl get svc -n big_data_cluster
+kubectl get svc -n mssql-cluster
 ```
+
+I servizi seguenti supportano le connessioni esterne per i cluster di big data:
+
+| Servizio | Descrizione |
+|---|---|
+| **master-svc-external** | Fornisce l'accesso all'istanza master.<br/>(**EXTERNAL-IP, 31433** e il **SA** utente) |
+| **controller-svc-external** | Supporta gli strumenti e i client che gestiscono il cluster. |
+| **mgmtproxy-svc-external** | Fornisce l'accesso per il [portale di amministrazione Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
+| **gateway-svc-external** | Fornisce l'accesso al gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e il **radice** utente) |
+| **appproxy-svc-external** | Supporta gli scenari di distribuzione dell'applicazione. |
+
+> [!TIP]
+> Si tratta di un modo per visualizzare i servizi con **kubectl**, ma è anche possibile usare `mssqlctl cluster endpoints list` comando per visualizzare tali endpoint. Per altre informazioni, vedere [ottenere gli endpoint del cluster di big data](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Ottenere i dettagli del servizio
 
-Eseguire questo comando per ottenere una descrizione dettagliata di un servizio in formato json output. Che include i dettagli come etichette, selettore, indirizzo IP, external-IP (se il servizio è di tipo LoadBalancer), porta e così via.
-```
-kubectl describe pod  <pod_name> -n <namespace_name>
+Eseguire questo comando per ottenere una descrizione dettagliata di un servizio in formato JSON output. Che include i dettagli come etichette, selettore, indirizzo IP, external-IP (se il servizio è di tipo LoadBalancer), porta e così via.
+
+```bash
+kubectl describe service <service_name> -n <namespace_name>
 ```
 
-Esempio:
-```
-kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
+Nell'esempio seguente recupera i dettagli per il **master-svc-external** servizio:
+
+```bash
+kubectl describe service master-svc-external -n mssql-cluster
 ```
 
 ## <a name="run-commands-in-a-container"></a>Eseguire i comandi in un contenitore
@@ -107,10 +151,10 @@ Le due sezioni seguenti forniscono due esempi di esecuzione di un comando in un 
 
 ### <a id="restartsql"></a> Accedere a un contenitore specifico e riavviare il processo di SQL Server
 
-Nell'esempio seguente viene illustrato come riavviare il processo di SQL Server nel `mssql-server` contenitore nel `mssql-master-pool-0` pod:
+Nell'esempio seguente viene illustrato come riavviare il processo di SQL Server nel `mssql-server` contenitore nel `master-0` pod:
 
 ```bash
-kubectl exec -it mssql-master-pool-0  -c mssql-server -n big_data_cluster -- /bin/bash 
+kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
 supervisorctl restart mssql
 ```
 
@@ -119,7 +163,7 @@ supervisorctl restart mssql
 Nell'esempio seguente viene illustrato come riavviare tutti i servizi gestiti da **supervisord**: 
 
 ```bash
-kubectl exec -it mssql-master-pool-0  -c mssql-server -n big_data_cluster -- /bin/bash 
+kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
 supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
@@ -140,17 +184,17 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 ### <a id="copyfrom"></a> Copiare i file da un contenitore
 
 Nell'esempio seguente copia i file di log di SQL Server dal contenitore per il `~/temp/sqlserverlogs` percorso nel computer locale (in questo esempio il computer locale è un client Linux):
- 
+
 ```bash
-kubectl cp mssql-master-pool-0:/var/opt/mssql/log -c mssql-server -n big_data_cluster ~/tmp/sqlserverlogs
+kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
 ### <a id="copyinto"></a> Copiare i file nel contenitore
 
-L'esempio seguente copia il **AdventureWorks2016CTP3.bak** file dal computer locale al contenitore di istanza master di SQL Server (`mssql-server`) nella `mssql-master-pool-0` pod. Il file viene copiato il `/tmp` directory nel contenitore. 
+L'esempio seguente copia il **AdventureWorks2016CTP3.bak** file dal computer locale al contenitore di istanza master di SQL Server (`mssql-server`) nella `master-0` pod. Il file viene copiato il `/tmp` directory nel contenitore. 
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n big_data_cluster
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
 ## <a id="forcedelete"></a> Eliminazione forzata un pod
@@ -161,10 +205,10 @@ Non è consigliabile forzare l'eliminazione un pod. Ma per il test di disponibil
 kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 ```
 
-L'esempio seguente elimina il pod del pool di archiviazione, `mssql-storage-pool-default-0`:
+L'esempio seguente elimina il pod del pool di archiviazione, `storage-0-0`:
 
 ```bash
-kubectl delete pods mssql-storage-pool-default-0 -n big_data_cluster --grace-period=0 --force
+kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
 ## <a id="getip"></a> Ottenere l'indirizzo IP di pod
@@ -175,20 +219,24 @@ Per la risoluzione dei problemi, potrebbe essere necessario ottenere l'indirizzo
 kubectl get pods <pod_name> -o yaml -n <namespace_name> | grep hostIP
 ```
 
-L'esempio seguente ottiene l'indirizzo IP del nodo di `mssql-master-pool-0` pod è in esecuzione in:
+L'esempio seguente ottiene l'indirizzo IP del nodo di `master-0` pod è in esecuzione in:
 
 ```bash
-kubectl get pods mssql-master-pool-0 -o yaml -n big_data_cluster | grep hostIP
+kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
 
-## <a name="start-the-kubernetes-dashboard"></a>Avviare il dashboard di Kubernetes
+## <a name="cluster-administration-portal"></a>Portale di amministrazione cluster
+
+Usare la [portale di amministrazione cluster](cluster-admin-portal.md) per monitorare lo stato del cluster di big data. Ad esempio, durante le distribuzioni, è possibile usare la **distribuzione** scheda. È necessario attendere per il **mgmtproxy-svc-external** avvio prima di accedere a questo portale, pertanto non sarà disponibile all'inizio di una distribuzione del servizio.
+
+## <a name="kubernetes-dashboard"></a>Dashboard di Kubernetes
 
 È possibile avviare il dashboard di Kubernetes per altre informazioni sul cluster. Le sezioni seguenti illustrano come avviare il dashboard per Kubernetes nel servizio contenitore di AZURE e per eseguire il bootstrap utilizzando kubeadm Kubernetes.
  
 ### <a name="start-dashboard-when-cluster-is-running-in-aks"></a>Avviare il dashboard di quando il cluster è in esecuzione nel servizio contenitore di AZURE
 
 Per avviare il dashboard di Kubernetes eseguire:
- 
+
 ```bash
 az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
@@ -198,7 +246,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 
 Quando si avvia il dashboard nel browser, è possibile ottenere gli avvisi di autorizzazione a causa di RBAC viene abilitata per impostazione predefinita nei cluster servizio contenitore di AZURE e l'account di servizio utilizzato dal dashboard non dispone delle autorizzazioni sufficienti per accedere a tutte le risorse (ad esempio,  *non è consentito il Pod: Utente "del sistema: serviceaccount:kube-system: kubernetes-dashboard" non è possibile elencare i POD nello spazio dei nomi "default"*). Eseguire il comando seguente per concedere le autorizzazioni necessarie per `kubernetes-dashboard`e quindi riavviare il dashboard:
 
-```
+```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
 ```
 
@@ -206,10 +254,10 @@ kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterr
 
 Per altre istruzioni su come distribuire e configurare il dashboard del cluster Kubernetes, vedere [la documentazione di Kubernetes](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/). Per avviare il dashboard di Kubernetes, eseguire questo comando:
 
-```
+```bash
 kubectl proxy
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per il monitoraggio e risoluzione dei problemi che è specifica di SQL Server i cluster di big data, vedere la [portale di amministrazione cluster](cluster-admin-portal.md).
+Per altre informazioni sui cluster di big data, vedere [quali sono i cluster di SQL Server i big data](big-data-cluster-overview.md).

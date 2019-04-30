@@ -1,5 +1,5 @@
 ---
-title: 'Esempi: Uso della modalità AUTO | Microsoft Docs'
+title: 'Esempi: Utilizzo della modalità AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287805"
 ---
-# <a name="examples-using-auto-mode"></a>Esempi: Utilizzo della modalità AUTO
+# <a name="examples-using-auto-mode"></a>Esempi: Uso della modalità AUTO
   Negli esempi seguenti viene illustrato l'utilizzo della modalità AUTO. Molte di queste query vengono eseguite sui documenti XML con istruzioni per la produzione di biciclette, archiviati nella colonna Instructions della tabella ProductModel del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: Recupero di informazioni dettagliate sugli ordini cliente e ordine  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: Recupero di informazioni sul cliente, l'ordine e i dettagli dell'ordine  
  Questa query recupera informazioni sul cliente, sull'ordine e sui dettagli dell'ordine per un cliente specifico.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: Specifica di GROUP BY e funzioni di aggregazione  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: Specifica della clausola GROUP BY e di funzioni di aggregazione  
  La query seguente restituisce gli ID di singoli clienti e il numero degli ordini effettuati da tali clienti.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: Specifica le colonne calcolate in modalità AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: Specifica di colonne calcolate in modalità AUTO  
  Questa query restituisce i nomi concatenati dei singoli clienti e le informazioni sugli ordini. Poiché la colonna calcolata viene assegnata al livello più interno rilevato fino a quel punto, che in questo esempio è l'elemento <`SOH`>, nel risultato i nomi concatenati dei clienti vengono aggiunti come attributi dell'elemento <`SOH`>.  
   
 ```  
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Per impostazione predefinita, quando si utilizza la modalità AUTO per recuperare dati binari, al posto dei dati binari viene restituito un riferimento a un URL relativo alla radice virtuale del database in cui è stata eseguita la query. Questa situazione si presenta se non è specificata l'opzione BINARY BASE64.  
   
- Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Ad esempio:  
+ Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Ad esempio:   
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283175"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Opzioni (finestre di progettazione-pagina piani)
   Utilizzare la finestra di dialogo **Opzioni** per determinare il comportamento predefinito della finestra di progettazione quando si aggiungono nuove forme all'area di progettazione. Scegliere **Opzioni** dal menu **Strumenti**, espandere **Finestre di progettazione**e selezionare **Piani di manutenzione**.  

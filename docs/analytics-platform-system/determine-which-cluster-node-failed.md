@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283150"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinare quale cluster nodo non è riuscita per il sistema di piattaforma Analitica
 Questo argomento descrive come determinare il nome del nodo Analitica Platform System (APS) che non è riuscita dopo un failover del cluster si è verificato e ha generato un avviso di failover cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per contribuire a risolvere il problema.  

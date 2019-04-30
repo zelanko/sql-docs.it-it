@@ -4,18 +4,18 @@ description: Questo articolo contiene le note sulla versione e le funzionalità 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
-ms.translationtype: MT
+ms.openlocfilehash: 56cb3c4fc617e4b158b974c82bec87401c01fca5
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566570"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455151"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Note sulla versione di anteprima di SQL Server 2019 in Linux
 
@@ -24,7 +24,7 @@ ms.locfileid: "58566570"
 Le note sulla versione seguenti si applicano all'anteprima di SQL Server 2019 in esecuzione su Linux. Questo articolo viene suddiviso in sezioni per ogni versione. Ogni versione ha un collegamento a un articolo di supporto che descrive il modifiche CU nonché collegamenti a Linux download del pacchetto.
 
 > [!TIP]
-> Per altre informazioni sulle nuove funzionalità di Linux di SQL Server 2019, vedere [nuove funzionalità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> Per altre informazioni sulle nuove funzionalità di Linux di SQL Server 2019, vedere [nuove funzionalità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -46,7 +46,7 @@ La maggior parte degli strumenti client esistenti destinati a SQL Server possono
 
 La tabella seguente elenca la cronologia delle versioni per l'anteprima di SQL Server 2019 che nelle versioni CTP.
 
-| Versione               | Versione       | Data di rilascio |
+| Versione               | Version       | Data di rilascio |
 |-----------------------|---------------|--------------|
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |

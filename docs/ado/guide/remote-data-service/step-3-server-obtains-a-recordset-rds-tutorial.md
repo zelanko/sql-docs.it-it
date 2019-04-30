@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316766"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Passaggio 3: Il server ottiene un recordset (esercitazione su RDS)
 Il programma del server usa il testo di stringa e un comando connect per eseguire query sull'origine dati per le righe desiderate. ADO viene in genere utilizzato per recuperare **Recordset**, anche se altri dati di Microsoft interfacce di accesso, ad esempio OLE DB, è possibile usare.  

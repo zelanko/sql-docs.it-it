@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280625"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455091"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -109,7 +109,7 @@ Questi comandi scaricano il pacchetto più recente e sostituire i file binari ch
 
 Per eseguire il rollback o il downgrade da SQL Server a una versione precedente, procedere come segue:
 
-1. Identificare il numero di versione per il pacchetto di SQL Server che si desidera effettuare il downgrade a. Per un elenco di numeri di pacchetto, vedere la [note sulla versione](sql-server-linux-release-notes.md).
+1. Identificare il numero di versione per il pacchetto di SQL Server che si desidera effettuare il downgrade a. Per un elenco di numeri di pacchetto, vedere la [note sulla versione](../linux/sql-server-linux-release-notes.md).
 
 1. Effettuare il downgrade a una versione precedente di SQL Server. Nei comandi seguenti, sostituire `<version_number>` con il numero di versione di SQL Server identificato nel passaggio uno.
 
@@ -178,7 +178,7 @@ Se la macchina Linux non ha accesso al repository online usati nel [introduttive
 > [!TIP]
 > Se è stato installato correttamente con i passaggi di avvio rapido, non occorre scaricare o installare manualmente i pacchetti di SQL Server. In questa sezione è solo per lo scenario offline.
 
-1. **Scaricare il pacchetto di motore di database per la tua piattaforma**. Trovare collegamenti ai download dei pacchetti nella sezione dei dettagli del pacchetto di [note sulla versione](sql-server-linux-release-notes.md).
+1. **Scaricare il pacchetto di motore di database per la tua piattaforma**. Trovare collegamenti ai download dei pacchetti nella sezione dei dettagli del pacchetto di [note sulla versione](../linux/sql-server-linux-release-notes.md).
 
 1. **Spostare il pacchetto scaricato nel computer Linux**. Se si usa un altro computer per scaricare i pacchetti, è un modo per spostare i pacchetti nel computer Linux con il **scp** comando.
 

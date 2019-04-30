@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b2c967ac293ed59fde6494e12c2afc2c5b6de90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687209"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63464721"
 ---
 # <a name="getobjectowner-method-adox"></a>Metodo GetObjectOwner (ADOX)
 Restituisce il proprietario di un oggetto in un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md).  

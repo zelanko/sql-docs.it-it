@@ -5,16 +5,16 @@ description: Descrive i passaggi e le risorse per la distribuzione di cluster di
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860432"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472243"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster di SQL Server i big Data
 
@@ -45,21 +45,23 @@ I cluster di big data vengono distribuiti come una serie di contenitori correlat
 
 - **Minikube**: Minikube consente di eseguire Kubernetes in locale in un singolo server. È una scelta ottimale se si sta tentando di usare i cluster di big data o necessario utilizzarlo in uno scenario di test o sviluppo. Per altre informazioni sull'uso di Minikube, vedere la [Minikube documentazione](https://kubernetes.io/docs/setup/minikube/). Per requisiti specifici per l'uso di Minikube con i cluster di big data, vedere [configurare minikube per le distribuzioni di cluster di SQL Server 2019 dei big data](deploy-on-minikube.md).
 
-## <a name="deployment-scripts"></a>Script di distribuzione
-
-Gli script di distribuzione per distribuzione di Kubernetes sia i cluster di big data in un unico passaggio. Offrono inoltre spesso valori predefiniti per le variabili di ambiente necessarie. Per un esempio di uno script di distribuzione per il cluster di big data in Azure Kubernetes Service (AKS), vedere [distribuire un 2019 di Server SQL cluster dei big data con uno script di distribuzione (AKS)](quickstart-big-data-cluster-deploy.md).
-
-È possibile personalizzare qualsiasi script di distribuzione tramite la creazione di una versione personalizzata che consente di configurare le variabili di ambiente cluster di big data in modo diverso.
-
 ## <a name="deploy-a-big-data-cluster"></a>Distribuire un cluster Big Data
 
-Per distribuire un cluster di big data e Kubernetes servizio contenitore di AZURE con un unico script, vedere l'esempio seguente:
+Dopo la configurazione di Kubernetes, si distribuisce un cluster di big data con il `mssqlctl cluster create` comando. Quando si distribuisce, è possibile eseguire diversi approcci.
 
-- [Distribuire un cluster di SQL Server 2019 dei big data con uno script di distribuzione (AKS)](quickstart-big-data-cluster-deploy.md)
+- Se si distribuisce in un ambiente di sviluppo e test, è possibile scegliere di usare uno dei [le configurazioni predefinite](deployment-guidance.md#deploy) disql **mssqlctl**.
 
-Per istruzioni dettagliate di distribuzione per la distribuzione di cluster di big data con AKS e kubeadm MiniKube, vedere l'articolo seguente:
+- Per personalizzare la distribuzione, è possibile creare e usare la propria [i file di configurazione di distribuzione](deployment-guidance.md#configfile). 
 
-- [Come distribuire i cluster di big data di SQL Server in Kubernetes](deployment-guidance.md)
+- Per un'installazione completamente automatica, è possibile passare tutte le altre impostazioni nelle variabili di ambiente. Per altre informazioni, vedere [distribuzioni automatiche](deployment-guidance.md#unattended).
+
+## <a name="deployment-scripts"></a>Script di distribuzione
+
+Gli script di distribuzione per distribuzione di Kubernetes sia i cluster di big data in un unico passaggio. Offrono inoltre spesso valori predefiniti per le impostazioni del cluster di big data. Per un esempio di uno script di distribuzione per il cluster di big data in Azure Kubernetes Service (AKS), vedere l'articolo seguente:
+
+[Distribuire un 2019 di Server SQL cluster dei big data con uno script di distribuzione (AKS)](quickstart-big-data-cluster-deploy.md).
+
+È possibile personalizzare qualsiasi script di distribuzione tramite la creazione di una versione personalizzata che consente di configurare le variabili di ambiente cluster di big data in modo diverso.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

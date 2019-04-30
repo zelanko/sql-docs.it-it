@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287866"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Allocazione di un handle di istruzione ODBC
 Prima che l'applicazione può eseguire un'istruzione, è necessario allocare un handle di istruzione come indicato di seguito:  
   
-1.  L'applicazione dichiara una variabile di tipo HSTMT. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle della connessione in cui si desidera allocare l'istruzione e l'opzione SQL_HANDLE_STMT. Esempio:  
+1.  L'applicazione dichiara una variabile di tipo HSTMT. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle della connessione in cui si desidera allocare l'istruzione e l'opzione SQL_HANDLE_STMT. Ad esempio:  
   
     ```  
     SQLHSTMT hstmt1;  

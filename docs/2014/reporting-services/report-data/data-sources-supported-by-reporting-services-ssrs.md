@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 87cc2d927bc3a0786e935e2cd20c669a8bfac87a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955537"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461723"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -104,7 +104,7 @@ ms.locfileid: "59955537"
   
 ###  <a name="DataSourcesTable"></a> Tipi di origini dei dati  
   
-|Origine di<br /><br /> Dati di report|Tipo di origine dati di Reporting Services|Nome dell'estensione per l'elaborazione dati/provider di dati|Versione del provider di dati sottostante<br /><br /> (Facoltativo)|Dati<br /><br /> Source<br /><br /> Piattaforma x86|Dati<br /><br /> Source<br /><br /> Piattaforma x64|Versione dell'origine dati|RS<br /><br /> Piattaforma x86|RS<br /><br /> Piattaforma x64|  
+|Origine di<br /><br /> Dati di report|Tipo di origine dati di Reporting Services|Nome dell'estensione per l'elaborazione dati/provider di dati|Versione del provider di dati sottostante<br /><br /> (Facoltativo)|Dati<br /><br /> `Source`<br /><br /> Piattaforma x86|Dati<br /><br /> `Source`<br /><br /> Piattaforma x64|Versione dell'origine dati|RS<br /><br /> Piattaforma x86|RS<br /><br /> Piattaforma x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|[Microsoft SQL Server](#MicrosoftSQLServer)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|[OLEDB](#OLEDBSQL)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.|Y|Y|  

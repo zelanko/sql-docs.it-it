@@ -1,5 +1,5 @@
 ---
-title: Operatori unari | Documenti Microsoft
+title: Gli operatori unari | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6704d9a2fad8b1b19d7757c0e6de40bfccdcc1f8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287795"
 ---
 # <a name="unary-operators"></a>Operatori unari
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743320"
   
  MDX supporta gli operatori unari elencati nella tabella seguente.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |[- (negativo)](../mdx/negative-mdx.md)|Restituisce l'opposto del valore di un'espressione numerica.|  
 |[+ (positivo)](../mdx/positive-mdx.md)|Restituisce il valore positivo di un'espressione numerica.|  
@@ -41,7 +41,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- Inoltre, MDX utilizzare speciali operatori unari per determinare l'operazione di aggregazione eseguita dal [RollupChildren](../mdx/rollupchildren-mdx.md) (funzione). Per ulteriori informazioni su questi operatori unari speciali, vedere [aggiungere un'aggregazione personalizzata a una dimensione](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
+ Inoltre, MDX utilizzare speciali operatori unari per determinare l'operazione di aggregazione eseguita dal [RollupChildren](../mdx/rollupchildren-mdx.md) (funzione). Per altre informazioni su questi operatori unari speciali, vedere [aggiungere un'aggregazione personalizzata a una dimensione](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  

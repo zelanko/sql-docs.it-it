@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283555"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Uso dei progetti SSMA (OracleToSQL)
 Eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -80,7 +80,7 @@ Eseguire la migrazione dei dati da database Oracle a [!INCLUDE[ssNoVersion](../.
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL database  
+    -   Database SQL di Azure  
   
 ## <a name="customizing-project-settings"></a>Personalizzazione delle impostazioni di progetto  
 Oltre a definire impostazioni predefinite del progetto che si applicano a tutti i nuovi progetti SSMA, è possibile personalizzare le impostazioni per ogni progetto. Per altre informazioni, vedere [impostazione delle opzioni progetto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
@@ -100,7 +100,7 @@ Quando si salva un progetto, SSMA consente di mantenere le impostazioni del prog
   
         Salvataggio di metadati potrebbe richiedere alcuni minuti. Se non si desidera salvare i metadati, non selezionare le caselle di controllo.  
   
-    2.  Scegliere il **salvare** pulsante.  
+    2.  Fare clic sul pulsante **Salva**.  
   
         Analizza gli schemi di Oracle e salvare i metadati del file di progetto SSMA.  
   

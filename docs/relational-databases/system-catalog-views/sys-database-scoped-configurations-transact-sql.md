@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947655"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473747"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ ms.locfileid: "51947655"
 |**Valore**|**sqlvariant**|Il valore impostato per questa opzione di configurazione per la replica primaria.|  
 |**value_for_secondary**|**sqlvariant**|Il valore impostato per questa opzione di configurazione per le repliche secondarie.|  
 |**is_value_default**|**bit** |Specifica se il valore impostato è il valore predefinito.|
-|**elevate_resumable**|nvarchar(60)|Il database con ambito di set predefinito per l'opzione resumable per operazioni sugli indici| 
   
-##  <a name="Permissions"></a> Permissions  
- È richiesta l'appartenenza al ruolo **public** .  
+##  <a name="Permissions"></a> Autorizzazioni  
+È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="remarks"></a>Note  
- Quando viene restituito NULL come valore per **value_for_secondary**, ciò significa che il database secondario viene impostato alla replica primaria.  
+Quando viene restituito NULL come valore per **value_for_secondary**, ciò significa che il database secondario viene impostato alla replica primaria.  
  
- Le impostazioni di configurazione con ambito database saranno trasferite insieme al database. Ciò significa che quando un database viene ripristinato o collegato, le impostazioni di configurazione esistenti non vengono modificate.
+Le impostazioni di configurazione con ambito database saranno trasferite insieme al database. Ciò significa che quando un database viene ripristinato o collegato, le impostazioni di configurazione esistenti non vengono modificate.
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

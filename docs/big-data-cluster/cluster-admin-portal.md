@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582236"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472142"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Come usare il portale di amministrazione cluster per monitorare un cluster di big data di SQL Server
 
@@ -35,10 +35,10 @@ Nel portale di amministrazione del cluster consente di:
 
 Seguire le [avvio rapido per distribuire il cluster di big data](quickstart-big-data-cluster-deploy.md) finché non viene visualizzata la **portale di amministrazione cluster** sezione. Dopo aver creato il cluster di big data in esecuzione con mssqlctl, seguire queste istruzioni:
 
-Il pod controller è in esecuzione, è possibile utilizzare il portale di amministrazione cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `endpoint-service-proxy` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
+Il pod controller è in esecuzione, è possibile utilizzare il portale di amministrazione cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `mgmtproxy-svc-external` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
 
 > [!NOTE]
-> Per CTP 2.4, è disponibile un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
+> Per 2.5 CTP, è disponibile un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
 
 ## <a name="overview"></a>Panoramica
 

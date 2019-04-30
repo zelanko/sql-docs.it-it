@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407848"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453586"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Utilizzo di FilesExecuting di Script di esempio Console della Console SSMA (AccessToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -67,5 +67,5 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
 [Creazione di file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
-[Generazione di report &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)  
+[Generating Reports &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)  
   

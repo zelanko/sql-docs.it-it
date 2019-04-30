@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657015"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453545"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrazione guidata (AccessToSQL)
 La migrazione guidata consente la migrazione di uno o più database da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Usando la procedura guidata, verranno creare un progetto, aggiungere database al progetto, selezionare gli oggetti per eseguire la migrazione e connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È anche convertire, caricare e migrare i dati e schemi di accesso. Facoltativamente, è possibile collegare le tabelle di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle o di SQL Azure.  

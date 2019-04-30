@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d4ed9d30be850df2ad18374790a91fd72f5e50a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262350"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installare un server di report in modalità nativa di Reporting Services
   Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può essere installato dall'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dalla riga di comando. Nell'Installazione guidata è possibile scegliere di installare i file e di configurare il server con le impostazioni predefinite oppure di installare solo i file e di non configurare il server. In questo argomento viene esaminata la *configurazione predefinita per la modalità nativa* in cui tramite il programma di installazione viene sia installata e configurata un'istanza del server di report. Al termine dell'installazione, il server di report è in esecuzione e pronto per essere utilizzato. Un server di report in modalità nativa viene eseguito come server applicazioni autonomo. La modalità nativa è la modalità predefinita del server.  

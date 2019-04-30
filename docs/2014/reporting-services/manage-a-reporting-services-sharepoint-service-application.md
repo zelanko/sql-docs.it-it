@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d82bf60225c2559866ee100127058e5b58a2bdd9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948515"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461982"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  

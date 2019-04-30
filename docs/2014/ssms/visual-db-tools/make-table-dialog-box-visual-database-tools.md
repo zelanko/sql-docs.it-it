@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810693"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459977"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Finestra di dialogo Creazione tabella (Visual Database Tools)
   Consente di assegnare un nome a una tabella creata per copiarvi delle righe. Questa finestra di dialogo viene visualizzata quando si cambia il tipo di query in modo da disporre di una query di creazione tabella. Per cambiare il tipo di query, scegliere **Modifica tipo** dal menu **Progettazione query**e quindi fare clic su **Creazione tabella**.  

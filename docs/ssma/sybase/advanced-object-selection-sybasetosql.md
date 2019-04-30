@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2f1ee73e2d6ad21ea57825bd31997db0a519a720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283619"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Selezione avanzata di oggetti (SybaseToSQL)
 Il **Advanced sezione oggetto** nella finestra di dialogo consente di filtrare gli oggetti di database usando le stringhe e le sottostringhe nel nome dell'oggetto e quindi selezionare o deselezionare gli oggetti. SSMA esegue operazioni di conversione e la migrazione per oggetti selezionati.  

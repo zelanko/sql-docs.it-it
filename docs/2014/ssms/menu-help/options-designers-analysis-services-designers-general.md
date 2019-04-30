@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283644"
 ---
 # <a name="options-designers-analysis-services-designers-general"></a>Opzioni (finestre di progettazione Analysis Services le finestre di progettazione-generale)
   Usare la pagina **Finestre di progettazione**, **Piani di manutenzione**, **Analysis Services** e **Generale** per determinare il comportamento predefinito delle finestre di progettazione di Analysis Services.  

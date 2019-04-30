@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac92c6d40ea9ead6b8875e3338bb740b4bdf8523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631819"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473181"
 ---
 # <a name="types-of-changes"></a>Tipi di modifiche
 Tre tipi di modifiche vengono apportati in ODBC 3. *x* (e qualsiasi versione di ODBC). Ognuno di questi riguarda la compatibilità con le versioni precedenti in modo diverso e viene gestita in modo diverso. Queste modifiche sono descritte nella tabella seguente.  
   
-|Tipo di modifica|Description|  
+|Tipo di modifica|Descrizione|  
 |--------------------|-----------------|  
 |Nuove funzionalità|Si tratta di funzioni che hanno familiarità con ODBC 3. *x*, ad esempio descrittori o associazione out-of-line. Questi sono implementati solo quando l'applicazione e driver, nonché gestione Driver, sono della versione 3*x*, pertanto non viene eseguito alcun tentativo di rendere questi compatibile con le versioni precedenti.|  
 |Funzionalità duplicate|Si tratta di funzionalità che esistono in ODBC 2 *. x* mentre ODBC 3. *x* ma vengono implementati in modi diversi in ognuno. Le funzioni **SQLAllocHandle** e **SQLAllocStmt** sono un esempio. I problemi di compatibilità con le versioni precedenti per queste e altre funzionalità duplicate vengono principalmente gestiti dai mapping di gestione Driver.|  

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283492"
 ---
 # <a name="report-server-web-service-endpoints"></a>Endpoint del servizio Web ReportServer
   Il servizio Web ReportServer fornisce diversi endpoint per la gestione di un server di report e per l'esecuzione e la navigazione dei report.  

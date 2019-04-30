@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281651"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Esempio del metodo Append di Keys, di Type di Key e delle proprietà RelatedColumn, RelatedTable e UpdateRule (VB)
 Il codice seguente viene illustrato come creare una nuova relazione di chiave esterna tra due tabelle esistente denominato **clienti** e **ordini**.  

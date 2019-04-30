@@ -1,5 +1,5 @@
 ---
-title: ParallelPeriod (MDX) | Documenti Microsoft
+title: ParallelPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742370"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473081"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -38,14 +38,14 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
- Pur essendo simili per il [Cousin](../mdx/cousin-mdx.md) funzione, il **ParallelPeriod** funzione è più strettamente correlata alle serie temporali. Il **ParallelPeriod** funzione accetta il predecessore del membro specificato al livello specificato, consente di trovare pari livello del predecessore con l'intervallo specificato e infine restituisce il periodo parallelo del membro specificato tra i discendenti di pari livello.  
+## <a name="remarks"></a>Note  
+ Pur essendo simili per il [Cousin](../mdx/cousin-mdx.md) funzione, il **ParallelPeriod** funzione è più strettamente correlata alle serie temporali. Il **ParallelPeriod** funzione recupera il predecessore del membro specificato al livello specificato, consente di trovare pari livello del predecessore con il numero di posizioni specificato e infine restituisce il periodo parallelo del membro specificato tra il discendenti dell'elemento di pari livello.  
   
- Il **ParallelPeriod** funzione include i valori predefiniti seguenti:  
+ Il **ParallelPeriod** funzione contiene i valori predefiniti seguenti:  
   
--   Se si specifica un'espressione di livello né un'espressione di membro, il valore del membro predefinito è il membro corrente della prima gerarchia nella prima dimensione di tipo *ora* nel gruppo di misure.  
+-   Se viene specificata né un'espressione di livello né un'espressione di membro, il valore del membro predefinito è il membro corrente della prima gerarchia nella prima dimensione di tipo *ora* nel gruppo di misure.  
   
--   Se viene specificata un'espressione di livello, ma non viene specificata un'espressione di membro, il valore del membro predefinito è *Level_Expression*. **Hierarchy.CurrentMember**.  
+-   Se si specifica un'espressione di livello, ma non viene specificata un'espressione di membro, il valore del membro predefinito è *Level_Expression*. **Hierarchy.CurrentMember**.  
   
 -   Il valore di indice predefinito è 1.  
   
@@ -77,6 +77,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

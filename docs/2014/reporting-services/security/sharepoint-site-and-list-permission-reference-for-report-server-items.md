@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a08fccd5b6739dd27fc25c87e8b6ff3facfd62e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970947"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461053"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
   In questo argomento vengono fornite informazioni di riferimento sulle autorizzazioni disponibili in SharePoint e che possono essere utilizzate per consentire l'accesso alle operazioni di un server di report eseguito in modalità integrata SharePoint. Tali informazioni sono utili per la scelta delle autorizzazioni da utilizzare per creare livelli di autorizzazione personalizzati.  

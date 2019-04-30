@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: bfa7b7481589ccb636147b3842a15b92f1a59d43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540615"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453694"
 ---
 # <a name="managing-passwords-accesstosql"></a>La gestione delle password (AccessToSQL)
 Questa sezione riguarda la protezione delle password di database e la procedura per importare o esportare tali tra server:  
