@@ -1,5 +1,5 @@
 ---
-title: Istruzione DROP SUBCUBE (MDX) | Documenti Microsoft
+title: Istruzione DROP SUBCUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 437018bc1cc83e1ea8a2a52a8ed9f37aa2a9121e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285005"
 ---
-# <a name="mdx-data-definition---drop-subcube"></a>Definizione dei dati MDX - rilascio SOTTOCUBO
+# <a name="mdx-data-definition---drop-subcube"></a>Definizione dei dati MDX - DROP SUBCUBE
 
 
   Elimina un sottocubo specificato, ripristinando il cubo definito in precedenza o la definizione di sottocubo con il nome specificato.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260831"
 ---
 # <a name="report-server-system-properties"></a>Proprietà di sistema del server di report
   I nomi di proprietà di sistema seguenti sono riservati. Non è possibile creare proprietà definite dall'utente con lo stesso nome. È possibile leggere o modificare numerose di queste proprietà utilizzando i metodi del servizio Web.  

@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f64eda5ad640e50afd25db111de74141e41e652d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280783"
 ---
 # <a name="setup-program"></a>Programma di installazione
-> **Nota:** a partire da Windows XP e Windows Server 2003 **ODBC è incluso nel sistema operativo Windows**. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+> **NOTA:** A partire da Windows XP e Windows Server 2003, **ODBC è incluso nel sistema operativo Windows**.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  L'utente esegue il programma di installazione per avviare il processo di installazione. Il programma di installazione viene scritto dallo sviluppatore dell'applicazione o driver. Oltre a installare i componenti ODBC, può installare altro software. Ad esempio, gli sviluppatori di applicazioni usino lo stesso programma di installazione per installare i componenti ODBC sia per installare le proprie applicazioni.  
   

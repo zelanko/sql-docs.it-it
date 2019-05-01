@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 927558fc5da39f612acd7f8a3270d8810569258a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184151"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462323"
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
   È possibile eseguire una ricerca incrementale in un singolo documento o in una singola finestra immettendo il testo. Verrà evidenziato il primo set di caratteri che corrisponde ai caratteri immessi durante la ricerca incrementale nel documento o nella finestra. La ricerca viene estesa automaticamente a tutto il testo all'interno di un documento o di una finestra, fatta eccezione per il testo nascosto.  
@@ -53,6 +53,6 @@ ms.locfileid: "48184151"
  [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
  [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

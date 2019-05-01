@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281916"
 ---
 # <a name="registry-entries-for-data-sources"></a>Voci del Registro di sistema per le origini dati
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Il programma di installazione DLL mantiene le informazioni nel Registro di sistema su ogni origine dati. In Microsoft Windows NT o Windows 2000 e Microsoft Windows 95 o 98, queste informazioni vengono archiviate in altra sottochiave di una delle seguenti due chiavi del Registro di sistema:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47692919"
   
  ODBC  
   
- ODBC. ini  
+ Odbc.ini  
   
  HKEY_CURRENT_USER  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47692919"
   
  ODBC  
   
- ODBC. ini  
+ Odbc.ini  
   
  La chiave utilizzata dipende dal fatto che l'origine dati è un *origine dati di sistema,* disponibile per tutti gli utenti, o una *origine dati dell'utente,* che è disponibile solo per l'utente corrente. Origini dati di sistema vengono archiviate nell'albero di HKEY_LOCAL_MACHINE e le origini dati utente vengono archiviate nella struttura HKEY_CURRENT_USER. Tutti gli altri aspetti, origini dati di sistema e le origini dati utente sono identiche.  
   

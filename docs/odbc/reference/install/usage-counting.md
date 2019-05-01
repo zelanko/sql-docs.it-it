@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273384"
 ---
 # <a name="usage-counting"></a>Conteggio utilizzi
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Due tipi di conteggi dell'utilizzo vengono mantenuti nel Registro di sistema per ogni componente: un conteggio di utilizzo del componente e uno o più conteggi dell'utilizzo di file facoltativa. Il conteggio di utilizzo del componente aiuta il programma di installazione DLL mantenere le voci del Registro di sistema. Viene archiviato nel valore UsageCount sotto la ODBC Core, driver e le sottochiavi di Microsoft translator. Per il formato del valore UsageCount e altre informazioni su queste sottochiavi, vedere [le voci del Registro di sistema per i componenti ODBC](../../../odbc/reference/install/registry-entries-for-odbc-components.md).  
   
@@ -60,9 +60,9 @@ ms.locfileid: "47664629"
   
  Nella tabella seguente viene illustrato il formato del valore di conteggio dell'utilizzo del file.  
   
-|nome|Tipo di dati|data|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
-|*percorso completo*|REG_DWORD|*count*|  
+|*full-path*|REG_DWORD|*count*|  
   
  Ad esempio, si supponga che un driver per Informix Usa i file Infrmx32.dll e Infrmx32.hlp e si supponga che questo driver è stato installato due volte. I valori nella sottochiave SharedDlls per il driver Informix sarà come segue:  
   

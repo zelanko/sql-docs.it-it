@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282420"
 ---
 # <a name="security-considerations-for-extensions"></a>Considerazioni sulla sicurezza per le estensioni
   È necessario che ogni applicazione destinata a CLR (Common Language Runtime) interagisca con il relativo sistema di sicurezza. L'applicazione viene valutata automaticamente al momento dell'esecuzione e a tale applicazione viene concesso da CLR un set di autorizzazioni. A seconda delle autorizzazioni ricevute, l'applicazione può continuare a essere eseguita oppure viene generata un'eccezione di sicurezza. I criteri e le impostazioni di sicurezza locali nei file di configurazione dei criteri di sicurezza per un server di report specifico definiscono le autorizzazioni per il codice ricevute da un assembly.  

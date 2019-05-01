@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d0a654b70fb93020bbb0dcfde159b4884cb15c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280968"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Voci del Registro di sistema per i componenti ODBC
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Il programma di installazione DLL mantiene le informazioni nel Registro di sistema su ogni componente ODBC installati. Nei computer che eseguono Microsoft Windows NT e Microsoft Windows 95 o 98, queste informazioni vengono archiviate nelle sottochiavi della chiave del Registro di sistema seguente:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47651479"
   
  ODBC  
   
- Odbcinst. ini  
+ Odbcinst.ini  
   
  Trattandosi di Odbcinst. ini una sottochiave dell'albero HKEY_LOCAL_MACHINE, le informazioni sui componenti ODBC sono disponibile per tutti gli utenti del computer.  
   

@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240931"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -69,11 +69,11 @@ Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database
 
 2. Scrivere **sql** nell'editor, selezionare con la freccia verso il basso la voce **sqlCreateStoredProcedure** e premere il *tab* (o *invio*) per espandere il frammento relativo alle stored procedure.
 
-   ![elenco di frammenti](./media/tutorial-sql-editor/snippet-list.png)
+   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
 3. Il frammento creato include due campi per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName* e premere il pulsante destro del mouse. Selezionare quindi **Modifica tutte le occorrenze**. A questo punto digitare *getCustomer* e tutte le voci *StoredProcedureName* verranno sostituite da *getCustomer*.
 
-   ![Frammento di codice](./media/tutorial-sql-editor/snippet.png)
+   ![snippet](./media/tutorial-sql-editor/snippet.png)
 
 5. Sostituire allo stesso modo tutte le occorrenze di *SchemaName* con *dbo*. 
 6. Il frammento contiene segnaposto per parametri e testo da aggiornare nel corpo. Il comando *EXECUTE* contiene inoltre il segnaposto come commento, poiché non si sa a priori il numero di parametri che avrà la procedura. er questa esercitazione il frammento di codice di aggiornamento risulterà simile al codice seguente:
