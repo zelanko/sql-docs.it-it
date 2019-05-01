@@ -1,5 +1,5 @@
 ---
-title: Impostazioni (GUI) (MySQLToSQL) del progetto | Microsoft Docs
+title: Project Settings (GUI)  (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 15107082c9556b42e53a0746c8400e83f22abf3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261810"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Impostazioni del progetto (interfaccia utente grafica) (MySQLToSQL)
 Le impostazioni del progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se includere report sui dati con report di valutazione.  

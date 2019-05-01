@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250473"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtro dei dati pubblicati per la replica di tipo merge
   Oltre ai filtri di riga e di colonna statici che è possibile definire con altri tipi di replica, la replica di tipo merge offre filtri di riga con parametri e filtri join. Per altre informazioni sui filtri di riga e di colonna statici, vedere [Filtrare i dati pubblicati](../publish/filter-published-data.md).  

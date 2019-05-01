@@ -1,5 +1,5 @@
 ---
-title: 'Attività 3 (facoltativo): Verifica delle viste sottoscrizioni | Microsoft Docs'
+title: 'Attività 3 (facoltativa): Verifica delle viste sottoscrizioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249984"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Attività 3 (facoltativo): Verifica delle viste sottoscrizioni
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Attività 3 (facoltativa): Verifica delle viste sottoscrizioni
   In questa attività viene verificato che le viste SQL vengano create tramite SQL Server Management Studio.  
   
 1.  Avvio veloce **SQL Server Management Studio**. Fare clic sul **avviare** e fare clic **tutti i programmi**, fare clic su **Microsoft SQL Server 2012**, quindi fare clic su **SQL Server Management Studio**.  

@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249337"
 ---
 # <a name="activity-monitor"></a>Monitoraggio attività
   Monitoraggio attività consente di visualizzare informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Vantaggi di Monitoraggio attività  
- Monitoraggio attività è una finestra del documento a schede che include i riquadri espandibili e comprimibili seguenti: **Cenni preliminari sulla**, **attività utente attive**, **attese risorse**, **i/o del File di dati**, e **query recenti con costo elevato**. Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È anche possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.  
+ Monitoraggio attività è una finestra del documento a schede che include i riquadri espandibili e comprimibili seguenti: **Panoramica**, **Attività utente attive**, **Attese risorse**, **I/O file di dati**, e **Query recenti con costo elevato**. Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È anche possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.  
   
  Per le colonne incluse nel **attività utente attive**, **attese risorse**, **i/o File di dati**, e **query recenti con costo elevato** i riquadri, è possibile personalizzare la visualizzazione nei modi seguenti:  
   

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249322"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
   Fornisce proprietà per la visualizzazione delle informazioni relative a un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,7 +44,7 @@ class SQLErrorLogFile
 |InstanceName|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
 |LastModified|Tipo di dati: `datetime`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
 |LogFileSize|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
-|nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome del file di log.|  
+|Nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
 ## <a name="remarks"></a>Note  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245410"
 ---
 # <a name="arguments-dialog-box"></a>Argomenti - finestra di dialogo
   Nella finestra di dialogo **Argomenti** vengono specificati gli argomenti nuovi o esistenti per uno strumento. Questa finestra di dialogo viene visualizzata all'avvio di uno strumento esterno per il quale nella finestra di dialogo **Strumenti esterni** è selezionata l'opzione **Richiedi argomenti** .  

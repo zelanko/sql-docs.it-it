@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250129"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Esercitazione per l'inserimento e l'aggiornamento dei dati in una tabella
   Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istruzione INSERT. Dopo aver inserito i dati, si procederà alla modifica del contenuto di una riga mediante l'istruzione UPDATE. Per limitare l'operazione di aggiornamento a una sola riga verrà utilizzata la clausola WHERE dell'istruzione UPDATE. Le quattro istruzioni immetteranno i dati seguenti.  
@@ -29,7 +29,7 @@ ms.locfileid: "48217633"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
- La sintassi di base è INSERT, nome tabella, elenco colonne, VALUES, a cui segue quindi un elenco dei valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
+ La sintassi di base è la seguente: INSERT, nome della tabella, elenco di colonne, valori e quindi un elenco di valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
   
 ### <a name="to-insert-data-into-a-table"></a>Per inserire dati in una tabella  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48217633"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [La lettura dei dati in una tabella &#40;esercitazione&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Lettura dei dati di una tabella &#40;Esercitazione&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   

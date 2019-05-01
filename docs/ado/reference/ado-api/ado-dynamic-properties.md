@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249046"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
 Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolte del [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. L'origine per queste proprietà è di provider di dati, ad esempio la [il Provider OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio le [Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Vedere la documentazione di provider di servizio per altre informazioni su una proprietà dinamica specifica o provider di dati appropriato.  
@@ -31,7 +31,7 @@ Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/re
 |||  
 |-|-|  
 |[Ottimizzazione](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Specifica se è necessario creare un indice su questo campo.|  
-|[Richiesta](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
 |[Proprietà dinamica Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Specifica un nome per il **Recordset** oggetto.|  
 |[La risincronizzazione di comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Specifica un comando fornito dall'utente di stringhe che il **Risincronizza** i problemi di metodi per aggiornare i dati nella tabella denominata nel **tabella univoca** proprietà dinamica.|  
 |[Tabella univoca, Schema univoco, catalogo univoco](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabella univoca** specifica il nome della tabella di base su cui sono consentite aggiornamenti, inserimenti ed eliminazioni.<br /><br /> **Schema univoco** specifica lo schema, o nome del proprietario della tabella.<br /><br /> **Catalogo univoco** specifica il catalogo, o il nome del database contenente la tabella.|  
@@ -41,7 +41,7 @@ Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/re
  [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   

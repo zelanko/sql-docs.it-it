@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: faf680e657cc533f9874b0d041aac0d3fe29f34b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244999"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>Metodo SetNumValue (classe ClientNetworkProtocolProperty)
   Imposta il valore numerico della proprietà corrente a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  

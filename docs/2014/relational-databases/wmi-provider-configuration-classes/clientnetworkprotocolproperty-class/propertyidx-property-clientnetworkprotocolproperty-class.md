@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245113"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyIdx (classe ClientNetworkProtocolProperty)
   Ottiene o imposta il valore di indice della proprietà nella matrice di proprietà a cui fa riferimento la [proprietà Properties (classe ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) dell'oggetto della [classe ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  

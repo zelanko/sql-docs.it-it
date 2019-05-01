@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d7631df4a1e4c6ec37effbc06b6a141b0d41ebc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249286"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Opzioni di convalida delle sottoscrizioni (sottoscrizioni di tipo merge)
   Utilizzare la finestra di dialogo **Opzioni di convalida delle sottoscrizioni** per specificare se la convalida deve utilizzare solo il conteggio delle righe o deve utilizzare il conteggio delle righe e il checksum binario.  

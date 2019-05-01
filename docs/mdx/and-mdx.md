@@ -1,5 +1,5 @@
 ---
-title: E (MDX) | Documenti Microsoft
+title: AND (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249876"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -36,10 +36,10 @@ Expression1 AND Expression2
  Espressione MDX valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un valore booleano che restituisce true se entrambi i parametri restituiscono **true**; in caso contrario, **false**.  
+ Valore booleano che restituisce true se entrambi i parametri restituiscono **true**; in caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
- Il **AND** gestisce entrambe le espressioni come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima di eseguire la congiunzione logica. Nella tabella seguente viene illustrato come la **AND** operatore esegue la congiunzione logica.  
+## <a name="remarks"></a>Note  
+ Il **AND** gestisce entrambe le espressioni come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima di eseguire la congiunzione logica. La tabella seguente illustra come la **AND** operatore esegue la congiunzione logica.  
   
 |*Expression1*|*Expression2*|Valore restituito|  
 |-------------------|-------------------|------------------|  

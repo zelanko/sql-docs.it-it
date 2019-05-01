@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249677"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
   Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  

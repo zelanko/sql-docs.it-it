@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250886"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Attività 4: Esportazione dei risultati dell'attività di corrispondenza in un file di Excel
   In questa attività vengono esportati i risultati dell'attività di corrispondenza in un file di Excel.  
@@ -30,11 +30,11 @@ ms.locfileid: "56020442"
   
 5.  Verificare che **Record Pivot** sia selezionata per il **regola di sopravvivenza**. Quando si seleziona questa opzione, come output da un cluster viene selezionato il record pivot per ogni cluster. Di seguito sono riportate le altre opzioni per la regola di sopravvivenza:  
   
-    1.  **Record più completo:** il record superstite è quello con il maggior numero di campi popolati.  
+    1.  **Record più completo:** Il record superstite è quello con il maggior numero di campi popolati.  
   
-    2.  **Record più lungo:** il record superstite è quello con il maggior numero di termini nei campi di origine.  
+    2.  **Record più lungo:** Il record superstite è quello con il maggior numero di termini nei campi di origine.  
   
-    3.  **Record più completo e più lungo:** il record superstite è quello con il maggior numero di campi popolati e di termini in ogni campo.  
+    3.  **Record più completo e più lungo:** Il record superstite è quello con il maggior numero di campi popolati e con il maggior numero di termini in ogni campo.  
   
      ![Esportare i risultati dalla pagina corrispondenza](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "esportare i risultati dalla pagina corrispondenza")  
   

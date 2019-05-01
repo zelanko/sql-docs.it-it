@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245719"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Server di destinazione (scheda Stato server di destinazione)
   Utilizzare questa pagina per visualizzare lo stato dei server di destinazione per questo server master.  

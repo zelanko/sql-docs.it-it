@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249396"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizzazione ed elaborazione del modello di previsione (Esercitazione intermedia sul data mining)
   L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series fornisce parametri che influiscono sulle modalità di creazione di un modello e di analisi dei dati temporali. La modifica di queste proprietà può influire in modo significativo sul modo in cui il modello di data mining esegue le stime.  

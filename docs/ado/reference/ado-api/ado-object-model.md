@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c15f9e01f24a3c4a9fb41b577f3c51e4d0230d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249003"
 ---
 # <a name="ado-object-model"></a>Modello a oggetti ADO
 Le figure seguenti mostrano gli oggetti ADO e le relative raccolte.  
@@ -29,7 +29,7 @@ Le figure seguenti mostrano gli oggetti ADO e le relative raccolte.
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Interfacce e oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

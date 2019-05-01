@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249561"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
-Provider di dati, i provider di servizi e componenti del servizio possono aggiungere proprietà dinamiche per le **delle proprietà** raccolte di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. Un determinato provider può inoltre inserire le proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate le [proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sezione. Più sono elencati sotto il provider specifici nel [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md) sezione.  
+Provider di dati, i provider di servizi e componenti del servizio possono aggiungere proprietà dinamiche per le **delle proprietà** raccolte di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. Un determinato provider può inoltre inserire le proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate le [proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sezione. Più sono elencati sotto il provider specifici nel [appendice a: I provider](../../../ado/guide/appendixes/appendix-a-providers.md) sezione.  
   
  Le tabelle seguenti sono cross-indexes dei nomi ADO e OLE DB per ogni proprietà dinamica di provider OLE DB standard. I provider possono aggiungere ulteriori proprietà oltre a quelle elencate di seguito. Per informazioni specifiche sulle proprietà dinamiche specifiche del provider, vedere la documentazione del provider.  
   
@@ -52,12 +52,12 @@ Provider di dati, i provider di servizi e componenti del servizio possono aggiun
 |Livelli di isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Mantenimento isolamento|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Locale Identifier|DBPROP_INIT_LCID|  
-|Percorso|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |Dimensione massima dell'indice|DBPROP_MAXINDEXSIZE|  
 |Dimensioni massime delle righe|DBPROP_MAXROWSIZE|  
 |Dimensioni massime riga con BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modalità|DBPROP_INIT_MODE|  
 |Più set di parametri|DBPROP_MULTIPLEPARAMSETS|  
 |Risultati multipli|DBPROP_MULTIPLERESULTS|  
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -196,7 +196,7 @@ Provider di dati, i provider di servizi e componenti del servizio possono aggiun
 |Catalogo univoco|DBPROP_ADC_UNIQUECATALOG|  
 |Righe univoche|DBPROP_UNIQUEROWS|  
 |Schema univoco|DBPROP_ADC_UNIQUESCHEMA|  
-|Tabella univoca|DBPROP_ADC_UNIQUETABLE|  
+|tabella univoca|DBPROP_ADC_UNIQUETABLE|  
 |Aggiornabile|DBPROP_UPDATABILITY|  
 |Criteri di aggiornamento|DBPROP_ADC_UPDATECRITERIA|  
 |Update Resync|DBPROP_ADC_UPDATERESYNC|  

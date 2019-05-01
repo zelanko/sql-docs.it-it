@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261814"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Impostazioni del progetto (migrazione) (MySQLToSQL)
 La pagina di migrazione del **impostazioni del progetto** nella finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA viene eseguita la migrazione dei dati da MySQL a SQL Server.  
@@ -46,7 +46,7 @@ Nel riquadro di migrazione è disponibile nel **impostazioni del progetto** e **
 |**Migrazione di date non valide**|Specifica come eseguire la migrazione di date non valide con, ad esempio ' 2007-04-23' o ' 2000-06-31 10:00:00 "in formati di data e data/ora.<br /><br />**Modalità predefinita**:  Set NULL<br /><br />**La modalità ottimistico**:  Set NULL<br /><br />**Modalità intero**:  Set NULL|  
 |**Valori di tempo negativi migrazione**|Specifica come eseguire la migrazione di valori negativi, ad esempio '-30:11:00' nelle colonne dell'ora.<br /><br />**Modalità predefinita**:  Set NULL<br /><br />**La modalità ottimistico**:  Set NULL<br /><br />**Modalità intero**:  Set NULL|  
 |**Valori di ora più di 24 ore la migrazione**|Specifica come eseguire la migrazione di valori di ora di più di ' 23: 59:59' nelle colonne dell'ora.<br /><br />**Modalità predefinita**:  Set NULL<br /><br />**La modalità ottimistico**:  Set NULL<br /><br />**Modalità intero**:  Set NULL|  
-|**Troncare i valori binari per rientrare nella colonna**|In caso affermativo, SSMA tronca i valori binari da MySQL che non rientrano nelle colonne della tabella SQL e genera il messaggio di errore appropriato. Se No, la riga causa un errore<br /><br />**Modalità predefinita**:  No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:  No|  
+|**Troncare i valori binari per rientrare nella colonna**|In caso affermativo, SSMA tronca i valori binari da MySQL che non rientrano nelle colonne della tabella SQL e genera il messaggio di errore appropriato. Se No, la riga causa un errore<br /><br />**Modalità predefinita**:  No<br /><br />**La modalità ottimistico**:  no<br /><br />**Modalità intero**:  no|  
 |**Troncare i valori di carattere per rientrare nella colonna**|SSMA tronca i valori dei caratteri MySQL che non rientrano nelle colonne della tabella SQL e genera il messaggio di errore appropriato.<br /><br />**Modalità predefinita**:  No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:  No|  
 |**Migrazione zero date**|Specifica come eseguire la migrazione zero date, ad esempio ' 0000-00: 00' o ' 0000-00: 00 00:00:00 "nelle colonne DATE e DATETIME.<br /><br />**Modalità predefinita**:  Set NULL<br /><br />**La modalità ottimistico**:  Set NULL<br /><br />**Modalità intero**:  Set NULL|  
 |**Zero nella migrazione di date**|Specifica come eseguire la migrazione di date con zero parti, ad esempio "2009-01-00' o ' 2000-00: 00 11:00:00 ' nelle colonne DATE e DATETIME.<br /><br />**Modalità predefinita**:  Set NULL<br /><br />**La modalità ottimistico**:  Set NULL<br /><br />**Modalità intero**:  Set NULL|  

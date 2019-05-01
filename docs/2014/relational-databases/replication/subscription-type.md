@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249374"
 ---
 # <a name="subscription-type"></a>Tipo di sottoscrizione
   La replica di tipo merge offre due tipi di sottoscrizioni, ovvero server e client, definiti rispettivamente come globale e locale nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). I Sottoscrittori con una sottoscrizione di tipo server sono in grado di:  
@@ -38,7 +38,7 @@ ms.locfileid: "52799693"
  Per ogni Sottoscrittore, selezionare **Client** o **Server** nell'elenco a discesa nella colonna **Tipo di sottoscrizione** . Per i Sottoscrittori con sottoscrizioni server, immettere un numero compreso tra 0 e 99,99 nella colonna **Priorità per la risoluzione dei conflitti** . Maggiore è questo numero, più alta è la priorità per il Sottoscrittore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  
   

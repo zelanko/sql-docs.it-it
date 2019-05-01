@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di funzioni logiche | Documenti Microsoft
+title: Uso di funzioni logiche | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63d8cb22a8533cf352acb690f87916e2e9d568d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249832"
 ---
 # <a name="using-logical-functions"></a>Utilizzo di funzioni logiche
 
 
   Una funzione logica esegue un confronto o un'operazione logica su oggetti ed espressioni e restituisce un valore booleano. Le funzioni logiche sono fondamentali nelle espressioni MDX per determinare la posizione di un membro.  
   
- La funzione logica utilizzata più di frequente è il **IsEmpty** (funzione). Per ulteriori informazioni su come utilizzare il **IsEmpty** funzione, vedere [funziona con i valori vuoti](../mdx/working-with-empty-values.md).  
+ La funzione logica più diffuso è il **IsEmpty** (funzione). Per altre informazioni su come usare il **IsEmpty** function, vedere [uso di valori vuoti](../mdx/working-with-empty-values.md).  
   
  La query seguente viene illustrato come utilizzare il **IsLeaf** e **IsAncestor** funzioni:  
   
