@@ -43,6 +43,6 @@ ms.locfileid: "63312064"
 5.  Verificare l'istruzione T-SQL e fare clic su **Esegui**.  
   
 ### <a name="return-to-tutorials-portal"></a>Ritornare al portale delle esercitazioni  
- [Esercitazione: SQL Server Backup and Restore in Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Esercitazione: SQL Server Backup e ripristino di Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   
