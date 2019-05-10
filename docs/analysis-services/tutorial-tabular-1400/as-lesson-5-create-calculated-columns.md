@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services tutorial-lezione 5: Creare colonne calcolate | Microsoft Docs'
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776074"
 ---
 # <a name="create-calculated-columns"></a>Creare colonne calcolate
 
@@ -47,7 +47,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
     Una nuova colonna denominata **CalculatedColumn1** verrà inserita a sinistra della colonna **Calendar Quarter** .  
   
-4.  Nella barra della formula sopra la tabella digitare la formula DAX seguente: La funzionalità Completamento automatico consente di digitare i nomi completi di colonne e tabelle ed elencare le funzioni disponibili.  
+4.  Nella barra della formula sopra la tabella digitare la formula DAX seguente: Completamento automatico consente di digitare i nomi completi di colonne e tabelle ed elenca le funzioni disponibili.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ La colonna calcolata DayOfWeek fornisce un nome ordinabile per il giorno della s
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Creare una colonna calcolata ProductSubcategoryName nella tabella DimProduct  
   
   
-1.  Nel **DimProduct** tabella, scorrere fino all'estrema destra della tabella. Si noti che la colonna all'estrema destra è denominata **Aggiungi colonna** (in corsivo). Fare clic sull'intestazione di colonna.  
+1.  Nel **DimProduct** tabella, scorrere fino all'estrema destra della tabella. Si noti che la colonna più a destra è denominata ***Aggiungi colonna***, fare clic sull'intestazione di colonna.  
   
 2.  Sulla barra della formula digitare la formula seguente:  
     

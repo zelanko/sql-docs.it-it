@@ -1,5 +1,5 @@
 ---
-title: Pianificare le attività amministrative SSAS con SQL Server Agent | Documenti Microsoft
+title: Pianificare attività amministrative SSAS con SQL Server Agent | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019118"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357516"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "34019118"
 ## <a name="prerequisites"></a>Prerequisiti  
  È necessario che il servizio SQL Server Agent sia installato.  
   
- Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. L'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<instancename >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. L'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<NomeIstanza >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- È consigliabile utilizzare un database di test. È possibile distribuire il database di esempio multidimensionale AdventureWorks o un progetto dell'esercitazione multidimensionale di Analysis Services da utilizzare in questa procedura dettagliata. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
+ È consigliabile utilizzare un database di test. È possibile distribuire il database di esempio multidimensionale AdventureWorks o un progetto dell'esercitazione multidimensionale di Analysis Services da utilizzare in questa procedura dettagliata. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../multidimensional-tutorial/install-sample-data-and-projects.md).  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Esempio 1: Elaborazione di una dimensione in un'attività pianificata  
  In questo esempio viene illustrato come creare e pianificare un processo che elabora una dimensione.  
@@ -83,13 +83,13 @@ ms.locfileid: "34019118"
   
 7.  In **Server** digitare **localhost** per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost\\**\<*nome istanza*> per un'istanza denominata.  
   
-     Se si eseguirà il processo da un computer remoto, utilizzare il nome del server e il nome dell'istanza in cui il processo verrà eseguito. Utilizzare il formato \< *nome server*> per un'istanza predefinita, e \< *nome server*>\\<*istanza nome*> per un'istanza denominata.  
+     Se si eseguirà il processo da un computer remoto, utilizzare il nome del server e il nome dell'istanza in cui il processo verrà eseguito. Usare il formato \< *nome server*> per un'istanza predefinita, e \< *nome del server*>\\<*istanza nome*> per un'istanza denominata.  
   
 8.  In **Tipo**selezionare **Comando di SQL Server Analysis Services**.  
   
 9. In **Comando**fare clic con il pulsante destro del mouse e scegliere **Incolla**. Lo script XMLA generato nel passaggio precedente verrà visualizzato nella finestra di comando.  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
 11. In **Selezione pagina**fare clic su **Pianificazioni**e quindi su **Nuovo**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34019118"
   
 15. Al termine del processo fare clic su **Chiudi**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Esempio 2: Elaborazione batch di una dimensione e una partizione in un'attività pianificata  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Esempio 2: Una dimensione e una partizione in un'attività pianificata per l'elaborazione batch  
  Le procedure in questo esempio dimostrano come creare e pianificare un processo per l'elaborazione batch di una dimensione database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e contemporaneamente per l'elaborazione di una partizione del cubo che dipende dalla dimensione per l'aggregazione. Per altre informazioni sull'elaborazione batch di oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Elaborazione batch &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Creare uno script per l'elaborazione batch di una dimensione e una partizione in un processo di SQL Server Agent  
@@ -205,7 +205,7 @@ ms.locfileid: "34019118"
   
 10. In **Comando**fare clic con il pulsante destro del mouse e scegliere **Incolla**.  
   
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
   
 12. Nella pagina **Pianificazioni** fare clic su **Nuova**.  
   
@@ -222,6 +222,6 @@ ms.locfileid: "34019118"
 16. Al termine del processo fare clic su **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni di elaborazione e le impostazioni di &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

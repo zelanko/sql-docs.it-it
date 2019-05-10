@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63455091"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775507"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -82,7 +82,7 @@ Quando si installa o si esegue l'aggiornamento di SQL Server, ottenere la versio
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Esecuzione in Docker](quickstart-install-connect-docker.md)
-- [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 ## <a id="sqlvnext"></a> Installare l'anteprima di SQL Server 2019
 

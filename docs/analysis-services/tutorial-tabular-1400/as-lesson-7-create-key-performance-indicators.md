@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685408"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877625"
 ---
 # <a name="create-key-performance-indicators"></a>Creare indicatori di prestazioni chiave
 
@@ -40,7 +40,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
 3.  Sulla barra della formula sopra la tabella digitare la formula seguente: 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     Questa misura viene usata come misura di Base per l'indicatore KPI.  

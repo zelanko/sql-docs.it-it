@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530373"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450106"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_OAMethod objecttoken , methodname
   
  Se il metodo restituisce un valore singolo, specificare una variabile locale per *returnvalue*, che restituisce il metodo restituisce un valore nella variabile locale o non si specifica *returnvalue*, che restituisce il metodo restituito al client come set di risultati a colonna singola, singola riga.  
   
- Se il metodo restituisce il valore è un oggetto OLE *returnvalue* deve essere una variabile locale del tipo di dati **int**. Nella variabile locale viene archiviato un token di oggetto utilizzabile in altre stored procedure di automazione OLE.  
+ Se il metodo restituisce il valore è un oggetto OLE *returnvalue* deve essere una variabile locale del tipo di dati **int**. Un token di oggetto viene archiviato nella variabile locale e questo token di oggetto può essere usato con altre procedure di automazione OLE archiviati.  
   
  Quando il metodo di valore restituito è una matrice, se *returnvalue* viene specificato, è impostato su NULL.  
   
@@ -93,7 +93,7 @@ sp_OAMethod objecttoken , methodname
   
  Se a tutti i valori di dati di una colonna è associato lo stesso tipo di dati, tale tipo verrà applicato all'intera colonna. Se i valori di dati di una colonna sono tipi di dati diversi, il tipo di dati della colonna viene scelto in base allo schema seguente.  
   
-||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  È anche possibile usare **sp_OAMethod** per ottenere un valore della proprietà.  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
+ Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o execute direttamente su questa Stored Procedure. `Ole Automation Procedures` configurazione deve essere **abilitato** usare eventuali procedure di sistema correlate a automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
   

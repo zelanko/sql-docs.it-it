@@ -1,5 +1,5 @@
 ---
-title: Architettura di Data Mining | Documenti Microsoft
+title: Architettura di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019998"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450049"
 ---
 # <a name="data-mining-architecture"></a>Architettura di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,25 +26,25 @@ ms.locfileid: "34019998"
   
  [Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
- [Percorso di archiviazione del database](../../analysis-services/multidimensional-models/database-storage-location.md)  
+ [Percorso di archiviazione dei database](../../analysis-services/multidimensional-models/database-storage-location.md)  
   
- [Passare a un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Per altre informazioni sulla modalità in cui è possibile implementare di data mining nella soluzione di Business Intelligence, vedere la sezione relativa alle guide alle soluzioni di MSDN Library.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Architettura logica & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Architettura logica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Architettura fisica & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
- [Servizi di Data Mining e origini dati](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
+ [Servizi di data mining e origini dati](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
- [Gestione di soluzioni di Data Mining e gli oggetti](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Gestione degli oggetti e delle soluzioni di data mining](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [Cenni preliminari sulla sicurezza & #40; Data Mining & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [Panoramica della sicurezza &#40;data mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione del modello multidimensionale](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Programmazione di Data Mining](../../analysis-services/data-mining-programming.md)  
+ [Programmazione di data mining](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

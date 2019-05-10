@@ -2,17 +2,17 @@
 title: Problemi noti per l'integrazione di Python - servizi di SQL Server Machine Learning e linguaggio R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
+ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650702"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64906159"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti di Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -214,7 +214,7 @@ Per altri problemi noti che potrebbero influire sulle soluzioni R, vedere la [Ma
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1. Accesso negato avviso durante l'esecuzione di script R in SQL Server in un percorso non predefinito
 
-Se l'istanza di SQL Server è stato installato in un percorso non predefinito, ad esempio all'esterno di `Program Files` cartella, l'avviso ACCESS_DENIED viene generato quando si prova a eseguire gli script che installa un pacchetto. Ad esempio: 
+Se l'istanza di SQL Server è stato installato in un percorso non predefinito, ad esempio all'esterno di `Program Files` cartella, l'avviso ACCESS_DENIED viene generato quando si prova a eseguire gli script che installa un pacchetto. Ad esempio:
 
 > *In `normalizePath(path.expand(path), winslash, mustWork)` : percorso [2] = "~ExternalLibraries/R/8/1": Accesso negato*
 
@@ -406,6 +406,29 @@ La funzione `rxDTree` attualmente non supporta le trasformazioni nella formula. 
 
 I fattori ordinati vengono trattati proprio come i fattori in tutte le funzioni di analisi RevoScaleR eccetto `rxDTree`.
 
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20. Ad come un OutputDataSet in R
+
+Usando `data.table` come un `OutputDataSet` in R non è supportato in SQL Server 2017 Cumulative Update 13 (CU13) e versioni precedenti. Potrebbe essere visualizzato il messaggio seguente:
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` come un `OutputDataSet` in R è supportato in SQL Server 2017 Cumulative Update 14 (CU14) e versioni successive.
+
 ## <a name="python-script-execution-issues"></a>Problemi di esecuzione degli script di Python
 
 In questa sezione contiene i problemi noti che sono specifici per l'esecuzione di Python in SQL Server, nonché i problemi relativi ai pacchetti Python pubblicati da Microsoft, tra cui [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -465,8 +488,19 @@ A partire da SQL Server 2017 CU2, potrebbe essere visualizzato il seguente messa
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state è utilizzato prima della dichiarazione globale*
 
-
 Questo problema è stato risolto in SQL Server 2017 Cumulative Update 3 (CU3). 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. Tipi di dati numeric, decimal e money non supportati
+
+A partire da SQL Server 2017 Cumulative Update 12 (CU12), tipi di dati numeric, decimal e money in WITH RESULT SETS non sono supportati quando si usa Python con `sp_execute_external_script`. Possono essere visualizzati i messaggi seguenti:
+
+> *[Codice: 39004, lo stato di SQL: S1000] si è verificato un errore di script 'Python' durante l'esecuzione di 'sp_execute_external_script' con HRESULT 0x80004004.*
+
+> *[Codice: 39019, lo stato di SQL: S1000] si è verificato un errore dello script esterno:*
+> 
+> *Errore SqlSatelliteCall: Tipo non supportato nello schema di output. Tipi supportati: il bit, smallint, int, datetime, smallmoney, real e float. Char, varchar sono parzialmente supportate.*
+
+Questo è stato risolto in SQL Server 2017 Cumulative Update 14 (CU14).
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise e Microsoft R Open
 

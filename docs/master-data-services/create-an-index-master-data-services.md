@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774103"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477079"
 ---
 # <a name="create-an-index-master-data-services"></a>Creare un indice (Master Data Services)
 
@@ -24,12 +24,12 @@ ms.locfileid: "52774103"
 
   Creare un indice personalizzato in un elenco di attributi a cui si eseguono spesso query per migliorare le prestazioni delle query.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  **Per creare un indice**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52774103"
   
 -   **Il**: data e ora dell'ultimo aggiornamento dell'indice.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  [Modificare ed eliminare un indice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  

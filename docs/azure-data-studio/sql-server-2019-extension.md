@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 72ba0ed0ba190f390f355b9a7fcf823b3d99d766
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775363"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione di SQL Server 2019 (anteprima)
 
-L'estensione di SQL Server 2019 (anteprima) offre supporto in anteprima per nuove funzionalità e strumenti di spedizione supportare [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Ciò include il supporto di anteprima per [i cluster di SQL Server 2019 dei big data](../big-data-cluster/big-data-cluster-overview.md), un integrata [esperienza notebook](../big-data-cluster/notebooks-guidance.md)e un PolyBase [guidata Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+L'estensione di SQL Server 2019 (anteprima) offre supporto in anteprima per nuove funzionalità e strumenti di spedizione supportare [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Ciò include il supporto di anteprima per [i cluster di SQL Server 2019 dei big data](../big-data-cluster/big-data-cluster-overview.md), un integrata [esperienza notebook](../big-data-cluster/notebooks-guidance.md)e un PolyBase [guidata Create External Table](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installare l'estensione di SQL Server 2019 (anteprima)
 

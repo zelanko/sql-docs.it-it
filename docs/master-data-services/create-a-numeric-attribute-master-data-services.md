@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14c4d735b4bd295577b7e08a5ca6afdfed5aa95c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f00183cdc91fabfcf168ceee8871b6033af2fdc3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777113"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477024"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Creare un attributo numerico (Master Data Services)
 
@@ -30,12 +30,12 @@ ms.locfileid: "52777113"
 > [!NOTE]  
 >  Gli attributi numerici presentano limitazioni. Per altre informazioni, vedere [Attributi &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52777113"
 |colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato dell'attributo.<br /><br /> Quando si fa clic su Salva, viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento dell'attributo.<br /><br /> Se si verificano errori durante la creazione o la modifica di un attributo viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
-|nome|Nome dell'attributo.|  
+|Nome|Nome dell'attributo.|  
 |Nome visualizzato|Nome visualizzato dell'attributo.|  
 |Descrizione|Descrizione dell'attributo.|  
 |Larghezza in pixel visualizzazione|Larghezza dell'attributo.|  

@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 7ac5e43a92012d2027847d9ea3630a17e7722609
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774237"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master del cluster dei big data di SQL Server
 

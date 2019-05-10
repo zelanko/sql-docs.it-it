@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7ff9b57b8b83b8850aac4a854a3fd7b04a76804
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a81b217b00ead3f9c26915f19c540e1225a198c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030662"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486351"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
 
@@ -34,7 +34,7 @@ ms.locfileid: "56030662"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola di dominio.  
   
 ##  <a name="Build"></a> Compilare le regole di dominio  
