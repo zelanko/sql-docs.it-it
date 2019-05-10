@@ -8,21 +8,19 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764603"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488037"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Questo argomento riepiloga le modifiche e gli aggiornamenti disponibili nella versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -229,12 +227,12 @@ ms.locfileid: "52764603"
  **Pacchetti di distribuzione per i modelli di esempio aggiornati**  
   
  I pacchetti di esempio sono stati aggiornati per supportare nuovi scenari. Per altre informazioni, vedere [Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di Master Data Services e Data Quality Services supportate dalle edizioni di SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Funzionalità deprecate di Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
- [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
+ [Funzionalità deprecate di Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
+ [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 927990916440cc33c56a362b17b77adbb726620e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779563"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488914"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflitti di unione [Master Data Services]
 
@@ -24,7 +24,7 @@ ms.locfileid: "52779563"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]se si prova a pubblicare dati modificati da un altro utente, la pubblicazione non riesce e viene visualizzato un errore di conflitto. Per risolvere questo errore, è possibile usare la funzionalità Conflitti di unione e ripubblicare le modifiche.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  

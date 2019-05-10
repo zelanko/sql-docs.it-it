@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774926"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481198"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opzioni (Risultati delle query e pagina Servizi di dipendenza)
   Utilizzare questa pagina per specificare il server a cui connettersi per utilizzare Servizi di dipendenza. Servizi di dipendenza consente di estrarre informazioni sulle dipendenze tra oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archiviati in server diversi. Per visualizzare le dipendenze tra oggetti utilizzare il **dipendenze tra gli oggetti** nella finestra di dialogo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

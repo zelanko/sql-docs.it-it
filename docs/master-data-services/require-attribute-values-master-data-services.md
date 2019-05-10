@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3daebd23c88fe1865755fe4a24a672377fe077c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765493"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485971"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Richiedere valori di attributo (Master Data Services)
 
@@ -30,12 +30,12 @@ ms.locfileid: "52765493"
 > [!NOTE]  
 >  I membri a cui mancano valori di attributo basati su dominio non sono visualizzati nelle gerarchie derivate basate su tali relazioni.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Per richiedere valori di attributo  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52765493"
   
 15. Nella finestra di dialogo di conferma, fare clic su **OK**. Il valore nella colonna **Stato della regola di business** è **Attiva**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   

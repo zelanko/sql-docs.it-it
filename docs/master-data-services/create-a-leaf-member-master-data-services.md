@@ -12,15 +12,15 @@ helpviewer_keywords:
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ffc3b726b0143b67a4991b8c22486259865ed804
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 43108a02bb4eace9fda31fd8cdd1c75cefaadcc1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822055"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487482"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52822055"
   
  È anche possibile usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  

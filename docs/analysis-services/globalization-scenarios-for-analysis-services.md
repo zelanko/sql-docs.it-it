@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659696"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357397"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scenari di globalizzazione per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659696"
 |**Funzionalità**|**Tabella**|**Multidimensionale**|  
 |[Lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Ereditata dal sistema operativo.|Ereditata, ma con possibilità di sostituire la lingua e le regole di confronto per gli oggetti principali nella gerarchia del modello.|  
 |Ambito del supporto di traduzione|Didascalie e descrizioni.|È possibile creare traduzioni per nomi di oggetti, didascalie, identificatori e descrizioni, anche in qualsiasi alfabeto e lingua Unicode. Ciò vale anche quando gli strumenti e l'ambiente sono in un'altra lingua. Ad esempio, in un ambiente di sviluppo che usa la lingua inglese e le regole di confronto in caratteri latini in tutto lo stack, è possibile includere nel modello un oggetto che usa caratteri cirillici nel nome.|  
-|Implementazione del supporto di traduzione|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per generare file di traduzione da completare e quindi importare nuovamente nel modello.<br /><br /> Per informazioni dettagliate, vedere [Traduzioni in modelli tabulari &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi.<br /><br /> Per altre informazioni, vedere [Translations in Multidimensional Models &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) [Traduzioni nei modelli multidimensionali &#40;Analysis Services&#41;]. Una lezione su come usare questa funzionalità disponibili [lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md) del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esercitazione.|  
+|Implementazione del supporto di traduzione|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per generare file di traduzione da completare e quindi importare nuovamente nel modello.<br /><br /> Per informazioni dettagliate, vedere [Traduzioni in modelli tabulari &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi.<br /><br /> Per altre informazioni, vedere [Translations in Multidimensional Models &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) [Traduzioni nei modelli multidimensionali &#40;Analysis Services&#41;]. |  
 |Conversione di valuta|Non disponibile.|La conversione di valuta viene eseguita tramite script MDX specializzati che convertono le misure contenenti dati di valuta. È possibile usare la Configurazione guidata funzionalità di Business Intelligence in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per generare uno script MDX che utilizzi una combinazione di dati e metadati di dimensioni, attributi e gruppi di misure per la conversione di misure contenenti dati di valuta. Vedere [Conversioni di valuta &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

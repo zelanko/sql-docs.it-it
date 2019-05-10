@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ee3e777d517558f09a8edad35ed8bbc68a53d9cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792472"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480468"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una raccolta di routine SQLCR (SQL Common Language Runtime) che fanno riferimento agli assembly Microsoft .NET Framework 4. Quando si installano aggiornamenti di .NET Framework nel computer che possono interessare un assembly .NET Framework di riferimento di questo tipo, tale operazione comporta una modifica nell'ID della versione del modulo (MVID, Module Version ID) dell'assembly nel Global Assembly Cache (GAC). Questa modifica determina una mancata corrispondenza tra i MVID dell'assembly a cui si fa riferimento nella GAC e l'assembly in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472101"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774229"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Usare curl per caricare i dati in HDFS nel cluster di SQL Server i big Data
 
@@ -40,7 +40,7 @@ A questo punto, è possibile costruire l'URL di accesso di WebHDFS come indicato
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-Ad esempio: 
+Ad esempio:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

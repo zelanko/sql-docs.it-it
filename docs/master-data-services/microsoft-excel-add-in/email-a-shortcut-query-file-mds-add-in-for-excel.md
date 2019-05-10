@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419302"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488063"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
 
@@ -37,7 +37,7 @@ ms.locfileid: "52419302"
   
 2.  Nel gruppo **Salva e invia** fare clic su **Invia query**. Verrà visualizzato un messaggio di posta elettronica con il file di query collegamento allegato.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Per aprire il file di query collegamento, nel computer del destinatario del messaggio di posta elettronica deve essere installato MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] . Il destinatario può fare doppio clic sul file per aprirlo.  
   

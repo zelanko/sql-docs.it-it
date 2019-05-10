@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 544e61a95f4a2177e60c2b3fe11a91a5a23480e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866171"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489680"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati Master in Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati master in Excel
   In questa attività viene verificata la visualizzazione dei dati aggiornati da MDS in Excel.  
   
 1.  A questo punto, passare alla finestra di excel che dispone **Cleansed and Matched Suppliers** foglio di lavoro aperto.  

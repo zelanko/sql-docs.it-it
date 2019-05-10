@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792952"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484264"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importazione di un dominio da un file DQS
   In questo argomento viene descritto come importare un dominio da un file DQS in una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un file di dati DQS viene creato esportando un dominio o una Knowledge Base dall'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . I file di dati DQS sono crittografati, pertanto non è possibile visualizzarne il contenuto.  

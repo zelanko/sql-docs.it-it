@@ -2,21 +2,21 @@
 title: Abilitare o disabilitare la raccolta dati di utilizzo e segnalazione degli arresti anomali
 titleSuffix: Azure Data Studio
 description: In questo articolo viene illustrato come controllare se vengono raccolti e inviati a Microsoft informazioni sull'utilizzo e dati di segnalazione arresto anomalo del sistema.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 7eeebe22f73815b053c0b9d1adfb53259732695f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239447"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089538"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Abilitare o disabilitare la raccolta di dati di utilizzo per [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -36,7 +36,7 @@ Per tutti gli eventi di telemetria da disattiva [!INCLUDE[name-sos](../includes/
 
 ## <a name="how-to-disable-crash-reporting"></a>Come disabilitare la segnalazione degli arresti anomali
 
-Per disabilitare la segnalazione di arresto anomalo del sistema, scegliere File  >  Preferenze  >  Impostazioni e aggiungere l'opzione seguente:
+Per disabilitare la segnalazione di arresto anomalo del sistema, scegliere **File**  >  **Preferenze**  >  **Impostazioni** e aggiungere l'opzione seguente:
 
 ```json
     "telemetry.enableCrashReporter": false

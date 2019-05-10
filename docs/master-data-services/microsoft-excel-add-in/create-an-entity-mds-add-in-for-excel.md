@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663739"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488239"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Creare un'entità (componente aggiuntivo MDS per Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47663739"
 
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], gli amministratori possono creare nuove entità per archiviare i dati. Quando si crea un'entità, è necessario caricare almeno un campionamento dei dati che si desidera archiviare.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso alle aree funzionali **Amministrazione sistema** e **Visualizzatore** .  
@@ -73,7 +73,7 @@ ms.locfileid: "47663739"
   
 12. Fare clic su **OK**. Dopo che l'entità è stata creata, viene visualizzata una nuova riga di intestazione, le celle vengono evidenziate e il nome del foglio viene aggiornato in base al nome dell'entità.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Per visualizzare gli errori che si sono verificati, fare clic su **Mostra stato** nel gruppo **Pubblica e convalida**. Verranno visualizzate le colonne ValidationStatus e InputStatus. Per altre informazioni, vedere [Convalida dei dati &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   

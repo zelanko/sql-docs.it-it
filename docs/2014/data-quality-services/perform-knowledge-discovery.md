@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792319"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481300"
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
   In questo argomento viene descritto come compilare una Knowledge Base tramite l'individuazione delle informazioni. Durante il processo di individuazione in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vengono analizzati i dati in un'origine dati di esempio tramite un processo computerizzato e vengono aggiunte le informazioni ottenute dalla Knowledge Base. Tali informazioni possono essere modificate e migliorate nel passaggio **Gestisci valori di dominio** dell'attività di individuazione delle informazioni o nell'attività di gestione del dominio.  

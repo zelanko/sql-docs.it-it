@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e0dac258c03bafb0769e5abb1697be67b1289f2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62691317"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105520"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "62691317"
 |database_id|**int**|Identificatore del database utilizzato dal contesto esplicito (ad esempio, usare DB_X).|Vedere ID nel [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |comando|**nvarchar(4000)**|Contiene il testo completo della richiesta di stato inviato dall'utente.|Qualsiasi testo di query o di richiesta valido. Le query che durano più di 4000 byte vengono troncate.|  
 |resource_class|**nvarchar(20)**|La classe di risorse per questa richiesta. Vedere correlati **concurrency_slots_used** nelle [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Per altre informazioni sulle classi di risorse, vedere [classi & i carico di lavoro di gestione delle risorse](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classi di risorse dinamiche</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importanza (classificazione del carico di lavoro è disponibile in anteprima in SQL Data Warehouse Gen2. L'anteprima dell'importanza e della classificazione per la gestione del carico di lavoro è destinata alle build con data di rilascio 9 aprile 2019 o successiva.  Si consiglia agli utenti di evitare l'uso di build precedenti a tale data per il test della gestione del carico di lavoro.  Per determinare se la compilazione è in grado di gestione del carico di lavoro, eseguire select @@version quando si è connessi all'istanza di SQL Data Warehouse.)|**nvarchar(32)**|L'importanza di impostare la richiesta è stata inviata. Le richieste con una priorità inferiore rimarrà in coda in stato sospeso, se vengono inviate le richieste di maggiore importanza.  Le richieste con un'importanza superiore verranno eseguite prima delle richieste di importanza inferiore che sono state inviate in precedenza.  Per altre informazioni sull'importanza, vedere [carico di lavoro di importanza](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Bassa</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>Elevata|
+|importance|**nvarchar(32)**|L'importanza di impostare la richiesta è stata inviata. Le richieste con una priorità inferiore rimarrà in coda in stato sospeso, se vengono inviate le richieste di maggiore importanza.  Le richieste con un'importanza superiore verranno eseguite prima delle richieste di importanza inferiore che sono state inviate in precedenza.  Per altre informazioni sull'importanza, vedere [carico di lavoro di importanza](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Bassa</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>Elevata|
   
  Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.   
   

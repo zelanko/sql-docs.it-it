@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a0927a940b23a906f2dcd5c595326d9b13f065c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796818"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477163"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
 
@@ -29,12 +29,12 @@ ms.locfileid: "52796818"
   
  Dopo aver creato una gerarchia esplicita, è possibile aggiungervi membri nell'area funzionale **Esplora** .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario abilitare l'entità per le gerarchie esplicite e le raccolte.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52796818"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni gerarchia esplicita creata, viene aggiunta una riga con sette colonne alla griglia. Di seguito sono descritte le colonne.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")|  
 |nome|Il nome della gerarchia esplicita.|  
@@ -69,7 +69,7 @@ ms.locfileid: "52796818"
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato la gerarchia esplicita.|  
 |Data aggiornamento|Data e ora dell'ultimo aggiornamento della gerarchia esplicita.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Creare membri consolidati &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   

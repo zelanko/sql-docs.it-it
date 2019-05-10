@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866509"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489703"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Attività 8: Aggiunta di un nuovo valore per l'entità State in Excel
   In questa attività viene aggiunto un valore per l'entità State in Excel e viene pubblicata la modifica nel server MDS.  

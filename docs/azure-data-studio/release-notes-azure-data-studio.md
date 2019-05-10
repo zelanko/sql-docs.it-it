@@ -2,25 +2,40 @@
 title: Note sulla versione
 titleSuffix: Azure Data Studio
 description: Note sulla versione di Azure Data Studio
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143710"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450034"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scaricare e installare la versione più recente.](download.md)**
+
+## <a name="may-2019"></a>Maggio 2019
+
+8 maggio 2019 &nbsp;  /  &nbsp; versione: 1.7.0 
+
+&nbsp;
+
+| Cambia | Dettagli |
+| :----- | :------ |
+| Versione dell'estensione per confronto Schema | Confronto schema è una funzionalità ben nota in SQL Server Data Tools (SSDT) e il caso d'uso principale consiste nel confrontare e visualizzare le differenze tra i database e i file con estensione dacpac ed eseguire determinate azioni per renderli uguali. |
+| Spostare visualizzazione attività alla finestra di Output | Gli utenti possono ora visualizzare lo stato dell'attività con esecuzione prolungata, ad esempio Backup, ripristino e confronto Schema nella visualizzazione attività nella finestra di Output
+| Pagina di benvenuto aggiunto | &bull; &nbsp; I collegamenti alle azioni comuni come nuova Query, nuovi File, nuovo Notebook <br/>&bull; &nbsp; Collegamenti alla documentazione e Github |
+| Miglioramenti di Notebook SQL | &bull; &nbsp; Miglioramenti di rendering markdown, incluso un supporto migliore per tabelle e le note <br/>&bull; &nbsp; Miglioramenti all'usabilità per la barra degli strumenti <br/>&bull; &nbsp; I collegamenti markdown per i notebook attendibili non è più richiedono Ctrl/Cmd + clic e possono essere selezionati direttamente <br/>&bull; &nbsp; Miglioramenti nella pulizia dei processi di Jupyter dopo la chiusura notebook e ridurre gli errori quando si avvia contemporaneamente più blocchi appunti <br/>&bull; &nbsp; Miglioramenti alle connessioni di notebook SQL per assicurarsi che gli errori non si verificano durante l'esecuzione di 2 notebook nello stesso database <br/>&bull; &nbsp; Miglioramenti al notebook lo scorrimento automatico per la cella attualmente in esecuzione quando si fa clic sul pulsante Esegui celle nella barra degli strumenti <br/>&bull; &nbsp; Miglioramenti di prestazioni e stabilità generali |
+| Bug risolti e problemi. | Visualizzare [bug e problemi, in GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>Aprile 2019
 

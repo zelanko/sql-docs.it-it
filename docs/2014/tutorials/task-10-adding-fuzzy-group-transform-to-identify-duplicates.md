@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223377"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481256"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Attività 10: Aggiunta della trasformazione Raggruppamento fuzzy per l'identificazione di duplicati
   In questa attività viene aggiunta una trasformazione Raggruppamento fuzzy al flusso di dati. La trasformazione Raggruppamento fuzzy consente di identificare i duplicati nei dati di origine. Visualizzare [la trasformazione Raggruppamento Fuzzy](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) per altri dettagli.  
