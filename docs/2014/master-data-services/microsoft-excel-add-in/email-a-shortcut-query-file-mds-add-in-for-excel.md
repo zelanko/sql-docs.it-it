@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3eb075777b65a410f27e318e2d923f0b0882822d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765665"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478895"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] inviare tramite posta elettronica un file di query collegamento a un'altra persona per assicurarsi di usare gli stessi dati. È necessario condividere query anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica.  

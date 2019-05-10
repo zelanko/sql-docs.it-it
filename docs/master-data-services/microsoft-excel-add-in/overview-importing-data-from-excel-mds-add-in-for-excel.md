@@ -1,5 +1,5 @@
 ---
-title: 'Panoramica: Importazione di dati da Excel (componente aggiuntivo MDS per Excel) | Microsoft Docs'
+title: 'Panoramica: Importazione di dati da Excel (aggiuntivo MDS per Excel) | Microsoft Docs'
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 6a43eb9fbf6877a43454e85bf59f97b4650e96ae
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502945"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481174"
 ---
-# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Panoramica: Importazione di dati da Excel (componente aggiuntivo MDS per Excel)
+# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Panoramica: Importazione dei dati da Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

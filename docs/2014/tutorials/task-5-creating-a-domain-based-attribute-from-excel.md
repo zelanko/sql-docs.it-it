@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143078"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489100"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Attività 5: Creazione di un attributo basato su dominio di Excel
   In questa attività si converte il **lo stato** attributo delle **Supplier** entità sotto forma di un **attributo basato su dominio**. Dopo aver configurato l'attributo State da uno basato su dominio e pubblicarlo in MDS, una nuova entità denominata **lo stato** verrà creato nel server MDS con tutti i valori nella colonna e il **stato** attributo del **Supplier** entità verrà popolato con i valori di **stato** entità. A questo punto, il **Suppliers** modello deve disporre di due entità: **Supplier** e **stato** in cui il **stato** attributo del **Supplier** entità è un attributo basato su dominio che dipende da **stato** entità.  

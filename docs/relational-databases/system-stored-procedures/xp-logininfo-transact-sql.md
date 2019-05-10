@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62644808"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099953"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  Se *account_name* e **membri** sono specificati, viene restituito un elenco dei membri del gruppo di livello successivo. Se *account_name* è un gruppo locale, l'elenco può includere utenti locali, gli utenti del dominio e gruppi. Se *account_name* è un account di dominio, l'elenco è costituito da utenti di dominio. Per recuperare informazioni sull'appartenenza ai gruppi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere connesso al controller di dominio. Se il server non può contenere il controller di dominio, non verranno restituite informazioni.  
   
- **xp_logininfo** restituisce solo le informazioni da gruppi globali di Active Directory, i gruppi universali non.  
+ **xp_logininfo** restituisce solo informazioni dai gruppi globali di Active Directory, i gruppi universali non.  
   
 ## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al **sysadmin** ruolo del server o appartenenza al **pubblici** ruolo predefinito del database nel **master** database con l'autorizzazione EXECUTE.  

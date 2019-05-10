@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6eea9f96939f61da77262b549e2ec966ae9a957b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137444"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489713"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lezione 4: Archiviazione dei dati fornitore in MDS
   Master Data Services (MDS) è una soluzione SQL Server per la gestione dei dati master. Nella gestione dei dati master vengono descritti gli sforzi fatti da un'organizzazione per individuare e definire elenchi non transazionali di dati.  

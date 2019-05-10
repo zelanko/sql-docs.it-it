@@ -11,15 +11,15 @@ helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20720a3050fd8f45ff93268f118c9eb74fdbcf76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 63416f019cfde8ec47029cf962e4aa29643c40c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752013"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485982"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Tabella di gestione temporanea delle relazioni (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52752013"
 ##  <a name="TableColumns"></a> Colonne della tabella  
  Nella seguente tabella viene illustrato il motivo per cui viene utilizzato ogni campo della tabella di staging Relazione.  
   
-|Nome colonna|Descrizione|valore|  
+|Nome colonna|Descrizione|Value|  
 |-----------------|-----------------|-----------|  
 |**ID**|Un identificatore assegnato automaticamente.|Non immettere un valore in questo campo. Se il batch non è stato elaborato, questo campo è vuoto.|  
 |**RelationshipType**|Obbligatorio<br /><br /> Il tipo di relazione impostata.|I valori possibili sono:<br /><br /> **1**:Padre<br /><br /> **2**: Pari livello (allo stesso livello)|  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748833"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477059"
 ---
 # <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
 
@@ -27,12 +27,12 @@ ms.locfileid: "52748833"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un modello per contenere oggetti modello.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model"></a>Per creare un modello  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52748833"
   
 -   **Nome**: Nome del modello.  
   
--   **Descrizione**: Descrizione del modello.  
+-   **Descrizione**: La descrizione del modello.  
   
 -   **Giorni di conservazione log**: numero di giorni di conservazione del log per il modello.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52748833"
   
 -   **Data e ora di aggiornamento**: Data e ora dell'ultimo aggiornamento del modello.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

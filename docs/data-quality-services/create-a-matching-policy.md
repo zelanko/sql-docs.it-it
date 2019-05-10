@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87ef5477bcff01caec7027bb5aac713fbc0ccc8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98557d690edfcb3148dbc0b876e7ff26804de7db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023734"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480462"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
 
@@ -37,7 +37,7 @@ ms.locfileid: "56023734"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare i criteri di corrispondenza, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="MatchingRules"></a> Modalità di impostazione dei parametri relativi alle regole di corrispondenza  
@@ -207,7 +207,7 @@ ms.locfileid: "56023734"
   
 -   **Valori totali**: numero complessivo di valori nei campi dell'origine dati  
   
--   **Nuovi valori**: numero totale di valori nuovi dall'esecuzione precedente e la loro percentuale rispetto al totale  
+-   **Nuovi valori**: numero totale di valori nuovi dall'esecuzione precedente e percentuale di tali valori rispetto al totale  
   
 -   **Valori univoci**: numero totale di valori univoci nei campi e percentuale di tali valori rispetto al totale  
   

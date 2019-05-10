@@ -2,26 +2,26 @@
 title: Esegui i notebook in Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Questo articolo illustra come eseguire i notebook di Jupyter in Azure Data Studio connesso a un cluster di big data di SQL Server 2019.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859972"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462054"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Come usare i notebook in fase di anteprima di SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come avviare l'esperienza Notebook in Azure Data Studio e su come iniziare a creare i tuoi notebook. Viene inoltre illustrato come scrivere i notebook con kernel diversi.
+Questo articolo descrive come avviare l'esperienza Notebook nella versione più recente di [**Studio di Azure Data**](../azure-data-studio/download.md) e su come iniziare a creare i tuoi notebook. Viene inoltre illustrato come scrivere i notebook con kernel diversi.
 
 ## <a name="connect-to-sql-server"></a>Connessione a SQL Server
 
@@ -48,7 +48,7 @@ Esistono diversi modi per avviare un nuovo notebook.
 
 L'installazione di Notebook in Azure Data Studio supporta in modo nativo SQL Kernel. Se si sono uno sviluppatore SQL e si desidera usare i notebook e quindi il risultato sarà la prescelta Kernel. 
 
-Il Kernel SQL è anche utilizzabile per connettersi alle istanze del server PostgreSQL. Se si è uno sviluppatore di PostgreSQL e si desidera connettersi al PostgreSQL Server, quindi scaricare il [ **estensioni di PostgreSQL** ](../azure-data-studio/postgres-extension.md) nel marketplace delle estensioni di Studio dei dati di Azure.
+Il Kernel SQL è anche utilizzabile per connettersi alle istanze del server PostgreSQL. Se si è uno sviluppatore di PostgreSQL e si vuole connettere il notebook per il PostgreSQL Server, quindi scaricare il [ **estensioni di PostgreSQL** ](../azure-data-studio/postgres-extension.md) nel marketplace delle estensioni di Studio dei dati di Azure e quindi avvio veloce **nuovo Notebook** per aprire un'istanza di notebook per la connessione al server PostgreSQL.
 
 ![Connessione di PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ Kernel di SQL per connettersi all'istanza del PostgreSQL Server
 Risultati delle query
 
 ![Risultati query](media/notebooks-guidance/pgsql-cell-results.png)
+
+Se si desidera aggiungere celle testo a quella esistente Notebook collegati al Kernel di SQL, fare clic sui **+ testo** comando sulla barra degli strumenti.
+
+![Barra degli strumenti del blocco appunti](media/notebooks-guidance/notebook-toolbar.png)
+
+Le modifiche di cella per la modalità di modifica e a questo punto digitare markdown e si vedrà l'anteprima allo stesso tempo
+
+![Cella di markdown](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Facendo clic all'esterno della cella di testo visualizzerà il testo di markdown.
+
+![Testo di markdown](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Configurare Python per i notebook
 
@@ -119,9 +132,27 @@ Apri in Studio di Azure Data i notebook sono predefiniti **attendibile**.
 
 Se si apre un Notebook da un'altra origine, verrà aperta **Non Trusted** modalità e quindi è possibile renderlo **attendibile**.
 
+### <a name="run-cells"></a>Eseguire le celle
+Se si desidera eseguire tutte le celle del blocco appunti, quindi fare clic sui **eseguire le celle** pulsante sulla barra degli strumenti.
+
+![Testo di markdown](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>Cancella risultati
+
+Se si desidera cancellare i risultati di tutte le celle eseguite nel blocco appunti, quindi è possibile fare clic sui **Clear Results** pulsante sulla barra degli strumenti.
+
+![Testo di markdown](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>Salvare
 
-È possibile salvare i Notebook dal **Ctrl + S** o facendo clic sui **salvataggio File**, **Salva con nome File...**  e **File Salva tutto** comandi dal menu File e **File: Salvare** comandi immessi nel riquadro comandi.
+Per salvare il notebook di effettuare una delle operazioni seguenti.
+
+- Selezionare Ctrl + S
+- Fare clic su **File** > **Salva**
+- Fare clic su **File** > **Salva con nome...**
+- Fare clic su **File** > **Salva tutto** 
+- Nel riquadro comandi, immettere **File: Salvare** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Kernel di Pyspark3/PySpark
 

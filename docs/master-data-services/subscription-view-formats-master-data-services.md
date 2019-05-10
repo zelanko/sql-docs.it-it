@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1031a8f30ff65a00dafeff90e5ce0b5efa1155f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27d0f3f85117812719a642c947fda71b71c4e32c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766640"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488006"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formati di vista sottoscrizioni [Master Data Services]
 
@@ -26,7 +26,7 @@ ms.locfileid: "52766640"
   
 ## <a name="subscription-view-formats"></a>Formati di vista sottoscrizioni  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**Membri foglia**|Contiene i membri foglia e i relativi valori di attributo associati.|  
 |**Cronologia dei membri foglia**|Contiene i dati cronologici dei membri foglia e i valori di attributo associati. Il formato di visualizzazione è lo stile 4 di tipo Dimensione a modifica lenta.|  

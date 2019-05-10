@@ -12,15 +12,15 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaf7ced1193059e9559749786f73703a4160a7a4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: de7325ccf703866355f7b1cc2699ea7ac5587fc0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040262"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489268"
 ---
 # <a name="manage-dqs-log-files"></a>Gestire i file di log DQS
 
@@ -46,11 +46,11 @@ ms.locfileid: "56040262"
   
 -   UID (ID interno dell'infrastruttura DQS)  
   
--   Namespace  
+-   Spazio dei nomi  
   
 -   Classe e metodo  
   
--   Message  
+-   `Message`  
   
  Oltre a questi valori, nel file di log vengono visualizzate anche informazioni sulla versione dell'applicazione, il nome del computer, il nome dell'utente e il sistema operativo.  
   

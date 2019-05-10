@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147946"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449948"
 ---
 # <a name="data-mining-query-tools"></a>Strumenti query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "50147946"
 ##  <a name="bkmk_SSIS"></a> Componenti di data mining di Integration Services  
  È anche possibile includere le query di stima in un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le attività e le trasformazioni seguenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supportano la creazione ed esecuzione di query di stima DMX e istruzioni DMX.  
   
-|Componente|Description|  
+|Componente|Descrizione|  
 |---------------|-----------------|  
 |Attività Query di data mining|Consente di eseguire query DMX e altre istruzioni DMX come parte di un flusso di controllo.<br /><br /> In questo editor attività è presente il generatore delle query di stima e una casella di testo che consente di modificare la query DMX manualmente. Tuttavia, l'editor attività non può convalidare la query su oggetti in una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pertanto, è consigliabile creare una query all'interno di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e incollare il testo dell'istruzione o eseguire una query nell'editor attività.|  
 |Query di data mining - trasformazione|Consente di eseguire una query di stima in un flusso di dati utilizzando i dati forniti da un'origine del flusso di dati.<br /><br /> In questo editor attività è presente il generatore delle query di stima e una casella di testo che consente di modificare la query DMX manualmente.<br /><br /> La trasformazione può essere utilizzata solo per la creazione di query in cui vengono utilizzati dati nel flusso di dati; ovvero, query in cui viene utilizzata la sintassi PREDICTION JOIN. Questo componente non può essere utilizzato per l'esecuzione di query sul contenuto o di altri tipi di istruzioni DMX.|  
   
 ##  <a name="bkmk_API"></a> Application Programming Interface  
- È possibile creare applicazioni personalizzate che consentono di eseguire query sui modelli di data mining utilizzando diversi linguaggi di programmazione, in combinazione con protocolli server quale OLE DB o un client ADOMD di Analysis Services. Per altre informazioni, vedere [Programmazione di data mining](../../analysis-services/data-mining-programming.md).  
+ È possibile creare applicazioni personalizzate che consentono di eseguire query sui modelli di data mining utilizzando diversi linguaggi di programmazione, in combinazione con protocolli server quale OLE DB o un client ADOMD di Analysis Services. Per altre informazioni, vedere [Programmazione di data mining](../../analysis-services/data-mining/data-mining-programming.md).  
   
  Tuttavia, XMLA costituisce il formato di messaggio sottostante per tutte le interazioni con un server Analysis Services. All'interno di un messaggio XMLA, le query sono rappresentate in modo diverso a seconda se si invia una query di stima basata su DMX, una query sul contenuto o una query mediante la quale vengono recuperati i metadati del modello utilizzando i set di righe dello schema di data mining.  
   

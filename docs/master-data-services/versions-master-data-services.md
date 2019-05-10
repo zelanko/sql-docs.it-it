@@ -13,15 +13,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 11d553d22388b981ddc539e822fa7b98eaee4e67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27b5758dcac60f2c36ad08f600a36d9d501a811d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770233"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486486"
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "52770233"
   
 1.  Una versione iniziale viene creata automaticamente quando si crea un modello e si popola il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con i dati master dell'azienda. In base alle autorizzazioni, gli utenti hanno la possibilità di apportare modifiche a tale versione, se necessario.  
   
-2.  Quando si desidera eseguire il commit di una versione di un modello, bloccare la versione in modo che solo gli amministratori di modelli siano in grado di aggiornare i dati. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Se vengono configurate notifiche, verrà inviata una notifica tramite posta elettronica agli amministratori di modelli ogni volta che lo stato della versione viene modificato. Per altre informazioni, vedere [Configurare notifiche di posta elettronica &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Quando si desidera eseguire il commit di una versione di un modello, bloccare la versione in modo che solo gli amministratori di modelli siano in grado di aggiornare i dati. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Se vengono configurate notifiche, verrà inviata una notifica tramite posta elettronica agli amministratori di modelli ogni volta che lo stato della versione viene modificato. Per altre informazioni, vedere [Configurare notifiche di posta elettronica &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Applicare regole business ai dati della versione bloccata ed esaminare gli eventuali problemi di convalida. Se necessario, è possibile immettere le informazioni mancanti o ripristinare la transazione che ha causato il problema. È inoltre possibile sbloccare la versione per consentire agli utenti di apportare modifiche.  
   

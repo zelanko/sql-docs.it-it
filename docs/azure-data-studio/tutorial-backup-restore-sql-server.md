@@ -2,21 +2,21 @@
 title: Eseguire il backup e ripristinare un database
 titleSuffix: Azure Data Studio
 description: Informazioni su come eseguire il backup e ripristinare un database tramite Data Studio di Azure
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 5550a1151ed0fb71a769e7990d9cd47b3e9b0e47
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309581"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089690"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino di database usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

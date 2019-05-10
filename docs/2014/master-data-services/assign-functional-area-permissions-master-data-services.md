@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b1649b95e751a3ea3a93285f480b0ec9b2b04075
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765910"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480105"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Assegnare autorizzazioni per aree funzionali (Master Data Services)
   Assegnare autorizzazioni per aree funzionali per consentire a utenti e gruppi di accedere alle aree funzionali di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
