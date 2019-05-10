@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765200"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482879"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisiti dell'applicazione Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] è un'applicazione Web ospitata da Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 7 o versioni successive. IE 7 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
@@ -81,7 +81,7 @@ ms.locfileid: "62765200"
   
 ### <a name="accounts-and-permissions"></a>Account e autorizzazioni  
   
-|Tipo|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |Account di Windows|È necessario accedere al computer server Web con un account di Windows che disponga dell'autorizzazione per configurare ruoli di Windows, servizi ruolo e funzionalità e per creare e gestire pool di applicazioni, siti Web e applicazioni Web in IIS sul computer locale.|  
 |Account servizio|Quando si crea l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], è necessario specificare un'identità per il pool di applicazioni in cui viene eseguita l'applicazione. Questo account può essere diverso dall'account del servizio che è stato specificato durante la creazione del database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Questa identità deve essere un account utente di dominio e viene aggiunta al ruolo di database mds_exec nel database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per consentirne l'accesso. Per altre informazioni, vedere [Account di accesso, utenti e ruoli di database &#40;Master Data Services&#41;](../database-logins-users-and-roles-master-data-services.md). Questo account viene aggiunto anche a un gruppo di Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], **MDS_ServiceAccounts**, a cui viene concessa l'autorizzazione per la directory di compilazione temporanea, **MDSTempDir**, nel file system. Per altre informazioni, vedere [Autorizzazioni per file e cartelle &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md).<br /><br /> Per evitare errori del server, l'account del pool di applicazioni richiede l'autorizzazione VIEW SERVER STATE. Ad esempio, il comando Convalida versione di MDS avrà esito negativo con un errore del server. Per altre informazioni, vedere [Il comando Convalida versione di MDS ha esito negativo con un errore del server in SQL Server 2012 e SQL Server 2014](https://go.microsoft.com/fwlink/p/?LinkId=526304).|  

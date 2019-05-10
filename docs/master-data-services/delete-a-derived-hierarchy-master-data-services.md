@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8918a9c8373f8d711f0400915be97dc6799a5b5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 66671c88d3cf2cec018da1450ce8564853a3e3f1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779603"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487798"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminare una gerarchia derivata (Master Data Services)
 
@@ -30,12 +30,12 @@ ms.locfileid: "52779603"
 > [!NOTE]  
 >  L'eliminazione di una gerarchia derivata non influenza le relazioni tra attributi sulle quali è basata la gerarchia.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>Per eliminare una gerarchia derivata  
   

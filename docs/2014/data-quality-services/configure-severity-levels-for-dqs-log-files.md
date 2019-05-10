@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793202"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480920"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurare livelli di gravità per i file di log DQS
   In questo argomento viene descritto come configurare i livelli di gravità per le varie attività e i vari moduli di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) tramite il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. I livelli di gravità definiscono l'intensità degli eventi che si verificano in DQS. Gli eventi DQS dispongono dei livelli di gravità seguenti, in ordine di gravità decrescente:  

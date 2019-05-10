@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c0ef9c1b18c38b38ddefe900018bd0323956c88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925345"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483416"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Creare un amministratore di modelli (Master Data Services)
   Nelle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], creare un amministratore di modelli quando si desidera che un utente o gruppo affinché **Update** dell'autorizzazione per tutti gli oggetti in uno o più modelli.  

@@ -1,5 +1,5 @@
 ---
-title: Configurazione errori per cubi, partizioni e l'elaborazione della dimensione | Documenti Microsoft
+title: Configurazione errori per cubi, partizioni e l'elaborazione della dimensione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025548"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357343"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configurazione errori per cubi, partizioni e l'elaborazione della dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "34025548"
   
  **Risposta del server a errori specifici**  
   
-|Proprietà|Valore predefinito|Altri valori|  
+|Proprietà|Impostazione predefinita|Altri valori|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Si verifica durante l'inizializzazione della configurazione degli errori.|**IgnoreError** non registra né conteggia l'errore; l'elaborazione continua finché il conteggio errori è al di sotto del limite massimo.|**ReportAndContinue** registra e conteggia l'errore.<br /><br /> **ReportAndStop** segnala l'errore e arresta immediatamente l'elaborazione, indipendentemente dal limite errori.|  
 |**KeyNotFound**<br /><br /> Si verifica quando una chiave esterna in una tabella dei fatti non dispone di una chiave primaria corrispondente in una tabella delle dimensioni correlata, ad esempio una tabella dei fatti relativa alle vendite con un record con un ID prodotto che non esiste nella tabella delle dimensioni del prodotto. Questo errore può verificarsi durante l'elaborazione di partizioni o di dimensioni con schema snowflake.|**ReportAndContinue** registra e conteggia l'errore.|**ReportAndStop** segnala l'errore e arresta immediatamente l'elaborazione, indipendentemente dal limite errori.<br /><br /> **IgnoreError** non registra né conteggia l'errore; l'elaborazione continua finché il conteggio errori è al di sotto del limite massimo. I record che attivano questo errore vengono convertiti in membri sconosciuti per impostazione predefinita, tuttavia, in alternativa, è possibile modificare la proprietà **KeyErrorAction** per rimuoverli.|  
@@ -142,7 +142,7 @@ ms.locfileid: "34025548"
   
 -   Impostare **NullProcessing**=**Errore** per escludere i record con valori Null. Verrà generato l'errore **NullKeyNotAllowed** , che viene registrato e conteggiato per il limite di errori di chiave. È possibile impostare la proprietà di configurazione degli errori in **Chiave Null non consentita** su **IgnoreError** per consentire la continuazione dell'elaborazione.  
   
- I valori Null possono rappresentare un problema per i campi non chiave, in quanto le query MDX restituiscono risultati diversi a seconda se Null viene interpretato come valore pari a zero o vuoto. Per questo motivo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce opzioni di elaborazione dei valori Null che consentono di predefinire il comportamento di conversione desiderato. Per informazioni dettagliate, vedere [Definizione delle proprietà UnknownMember e NullProcessing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) e <xref:Microsoft.AnalysisServices.NullProcessing> .  
+ I valori Null possono rappresentare un problema per i campi non chiave, in quanto le query MDX restituiscono risultati diversi a seconda se Null viene interpretato come valore pari a zero o vuoto. Per questo motivo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce opzioni di elaborazione dei valori Null che consentono di predefinire il comportamento di conversione desiderato.  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>Impostazione della proprietà NullProcessing in un attributo della dimensione  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025548"
 ##  <a name="bkmk_next"></a> Passaggio successivo  
  Stabilire se gli errori determineranno l'arresto dell'elaborazione o verranno ignorati. Si tenga presente che solo l'errore viene ignorato. Il record che ha causato l'errore non viene ignorato; viene rimosso o convertito in membro sconosciuto. I record che violano le regole di integrità dei dati non vengono mai aggiunti al database. Per impostazione predefinita, l'elaborazione viene arrestata al primo errore, ma è possibile modificare questo comportamento aumentando il limite errori. Nello sviluppo del cubo, può essere utile ridurre le regole di configurazione degli errori, consentendo la continuazione dell'elaborazione, in modo che vi siano dati con cui eseguire il test.  
   
- Decidere se modificare i comportamenti di elaborazione dei valori Null predefiniti. Per impostazione predefinita, i valori Null in una colonna stringa vengono elaborati come valori vuoti, mentre i valori Null in una colonna numerica vengono elaborati come valori pari a zero. Per istruzioni sull'impostazione dell'elaborazione di valori Null in un attributo, vedere [Definizione delle proprietà UnknownMember e NullProcessing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Decidere se modificare i comportamenti di elaborazione dei valori Null predefiniti. Per impostazione predefinita, i valori Null in una colonna stringa vengono elaborati come valori vuoti, mentre i valori Null in una colonna numerica vengono elaborati come valori pari a zero.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà dei log](../../analysis-services/server-properties/log-properties.md)   
- [Che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definizione delle proprietà UnknownMember e NullProcessing](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
