@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5a7e0907732b1d944ce0425b55133ba915d3575
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6256ad8ee35b17336940d92ee7b0c917cb591ac
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926182"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480090"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Compatibilità con le versioni precedenti (Master Data Services)
   In questa sezione vengono descritte le differenze tra le versioni di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Vengono illustrate caratteristiche che non sono più disponibili o che verranno rimosse a partire da una delle prossime versioni. Vengono inoltre descritte le modifiche apportate al prodotto che interromperanno il funzionamento o influiranno sul comportamento di un'applicazione esistente che include la funzionalità di Integration Services.  

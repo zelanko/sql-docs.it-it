@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6a65e16bd82c6f44df7b8a2d4172a75d5b4ef9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 077e9268c7a68e7b6e5b96cdbf7aca6f22daf860
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668419"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485249"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operazioni del servizio Web per categoria (Master Data Services)
 
@@ -141,7 +141,7 @@ ms.locfileid: "47668419"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Operazioni di esportazione dei dati  
- Queste operazioni vengono utilizzate per esportare i dati tramite l'utilizzo di viste sottoscrizioni. Per altre informazioni, vedere [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Queste operazioni vengono utilizzate per esportare i dati tramite l'utilizzo di viste sottoscrizioni. Per altre informazioni, vedere [Panoramica: Esportazione di dati &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  

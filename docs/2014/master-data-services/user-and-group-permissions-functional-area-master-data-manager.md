@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763366"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482557"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master)
   Nell'area funzionale Autorizzazioni utenti e gruppi, gli amministratori possono concedere l'autorizzazione ad aree funzionali, ad attributi (nella scheda Modelli) e a membri (nella scheda Membri gerarchia). Le autorizzazioni sovrapposte vengono risolte per determinare l'autorizzazione di un utente a ogni singolo valore di attributo.  

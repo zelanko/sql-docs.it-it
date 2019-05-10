@@ -17,7 +17,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58534007"
@@ -38,9 +38,9 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione a cui accedere. **«***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione a cui accedere. **‘***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @login = ] 'login'` ID di accesso. **«***account di accesso***'** viene **sysname**, non prevede alcun valore predefinito.  
+`[ @login = ] 'login'` ID di accesso. **‘***account di accesso***'** viene **sysname**, non prevede alcun valore predefinito.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

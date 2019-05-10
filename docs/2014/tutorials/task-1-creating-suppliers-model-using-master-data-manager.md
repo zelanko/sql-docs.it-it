@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222674"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481339"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Attività 1: Creazione del modello Supplier tramite Gestione dati master
   In questa attività si crea un modello denominato **Suppliers** in MDS tramite **Master Data Manager**.  

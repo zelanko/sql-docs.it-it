@@ -11,15 +11,15 @@ helpviewer_keywords:
 - members [Master Data Services], creating consolidated members
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925318"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483437"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro consolidato quando si desidera un nodo padre per una gerarchia esplicita. I membri consolidati possono avere attributi specifici, che vengono usati per il raggruppamento. Come illustrato nell'esempio seguente, i membri consolidati possono essere usati per i gruppi di account che includono account sottostanti.  

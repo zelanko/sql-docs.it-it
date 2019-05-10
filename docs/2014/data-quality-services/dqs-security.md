@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ff745dfbbae04132e8ea7f3565eee804e9de0e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae5ff9bf9fe78ca7230865c6f3df5f2b1333f005
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755192"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480852"
 ---
 # <a name="dqs-security"></a>Sicurezza relativa a DQS
   L'infrastruttura di sicurezza di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) si basa sull'infrastruttura di sicurezza di SQL Server. Un amministratore del database concede a un utente un set di autorizzazioni associando l'utente a un ruolo DQS. Così facendo, si determinano le risorse DQS a cui l'utente ha accesso e le attività funzionali che è in grado di svolgere.  

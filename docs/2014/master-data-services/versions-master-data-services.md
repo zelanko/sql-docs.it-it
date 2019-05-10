@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767393"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481351"
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile creare più versioni dei dati master all'interno di un modello. È possibile bloccare le versioni mentre si convalidano i dati ed è possibile eseguire il commit dopo la convalida dei dati. Le versioni di cui si è eseguito il commit costituiscono un record controllabile di modifiche. Ogni versione creata contiene tutti i membri, i valori di attributo, i membri della gerarchia, le relazioni della gerarchia e le raccolte per il modello.  

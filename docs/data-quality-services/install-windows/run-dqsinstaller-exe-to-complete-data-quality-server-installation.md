@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013422"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487537"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Eseguire DQSInstaller.exe per completare l'installazione del server DQS
 
@@ -56,7 +56,7 @@ ms.locfileid: "56013422"
 3.  Viene richiesto di digitare una password per la chiave master del database. Questa chiave è necessaria per crittografare le chiavi del provider di servizio dati di riferimento che saranno archiviate nel database DQS_MAIN quando i provider di dati di riferimento vengono configurati in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) in un secondo momento.  
   
     > [!IMPORTANT]  
-    >  La password deve contenere almeno 8 caratteri e deve contenere caratteri di tre delle quattro categorie seguenti: una lettera maiuscola (A, B, C,... Z), una lettera minuscola (a, b, c,... z), un numero (0, 1, 2,... 9) e un carattere speciale o non alfanumerico (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Ad esempio: P@ssword. Tramite il programma di installazione verrà richiesto di immettere un'altra password se quella corrente non soddisfa il requisito.  
+    >  La password deve essere composta da almeno 8 caratteri e deve contenere caratteri di tre delle quattro categorie seguenti: una lettera maiuscola (A, B, C,... Z), una lettera minuscola (a, b, c,... z), un numero (0, 1, 2,... 9) e un carattere speciale o non alfanumerico (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Ad esempio: P@ssword. Tramite il programma di installazione verrà richiesto di immettere un'altra password se quella corrente non soddisfa il requisito.  
   
 4.  Immettere una password, confermarla, quindi premere INVIO per continuare l'installazione.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "56013422"
   
 4.  Le azioni obbligatorie vengono eseguite in base al comando specificato. Se si è scelto di installare [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] senza parametri della riga di comando, i passaggi restanti sono uguali a quelli indicati da 2 a 6 nella precedente sezione [Eseguire DQSInstaller.exe dalla schermata Start, dal menu Start o da Esplora risorse](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Concedere ruoli DQS appropriati agli utenti in base al relativo profilo di lavoro. Vedere [Concedere ruoli DQS agli utenti](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   

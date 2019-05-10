@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262406"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489529"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Attività 9: Creazione di una gerarchia derivata tramite Gestione dati master
   In questa attività viene creata una gerarchia derivata mediante Gestione dati master. Questa gerarchia derivata viene ricavata dalle relazioni tra attributi basati su dominio tra il **Supplier** e **stato** entità.  

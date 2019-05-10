@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222770"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481309"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Attività 1: Definizione di criteri di corrispondenza
   In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. La regola avrà un solo prerequisito: **Supplier ID**, il che significa che gli ID dei fornitori devono corrispondere prima di usare gli altri domini nella regola. La regola usa due altri domini: **Nome fornitore** con **somiglianza** valore impostato su **70%** e **Contact Email** con **somiglianza** valore impostato su **30%**.  

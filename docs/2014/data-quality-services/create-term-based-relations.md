@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756437"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480823"
 ---
 # <a name="create-term-based-relations"></a>Creare relazioni basate su termini
   In questo argomento viene descritto come creare relazioni basate su termini per un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relazione basata su termini (TRB) consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. È possibile, ad esempio, configurare una relazione basata su termini che modifica il termine "Inc." in "Incorporated". Il termine "Inc." verrà modificato ogni volta che viene trovato nel dominio. Le istanze di "Contoso, Inc." verranno modificate in "Contoso, Incorporated" e i due valori saranno considerati sinonimi esatti.  

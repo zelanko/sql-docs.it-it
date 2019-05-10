@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa3c8cfcb4eb90c34bbab94a0d61998a6bc3c916
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518634"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485571"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
 
@@ -83,7 +83,7 @@ ms.locfileid: "62518634"
     </setting>  
     ```  
   
-3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:  
+3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:   
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

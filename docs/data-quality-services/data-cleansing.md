@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: c45e7f7122aba245297a4ab6fe74ea978bb2a6ad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027482"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480445"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -69,13 +69,13 @@ ms.locfileid: "56027482"
   
 -   **Suggeriti**: valori per i quali DQS ha trovato suggerimenti con un livello di confidenza superiore al valore *soglia di suggerimento automatico* ma inferiore al valore *soglia di correzione automatica*. È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
   
--   **Nuovi**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping ad altre schede. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
+-   **Nuovi**: Valori validi per il quale DQS non ha informazioni sufficienti (suggerimenti) e pertanto non è possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
   
--   **Non validi**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
+-   **Non validi**: Valori che sono stati contrassegnati come non validi nel dominio della knowledge base o valori che non hanno superato una regola o un riferimento di dominio dati. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
   
 -   **Con correzione**: valori corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore *soglia di correzione automatica*. Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
   
--   **Corretti**: valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
+-   **Corretti**: Valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
   
 > [!NOTE]  
 >  Nelle schede **Suggeriti**, **Con correzione**e **Corretti** viene visualizzato il valore iniziale per un dominio, se applicabile, nella colonna **Correggi in** rispetto al relativo valore del dominio.  

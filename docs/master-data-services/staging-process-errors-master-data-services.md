@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766133"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488024"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errori del processo di gestione temporanea (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52766133"
 
   Al termine del processo di staging, per tutti i record elaborati è presente un valore nella colonna ErrorCode delle tabelle di staging. Questi valori sono elencati nella seguente tabella.  
   
-|codice|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
+|Codice|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Lo stesso codice membro è presente più volte nella tabella di staging.|Nel batch di gestione temporanea lo stesso codice membro è presente più volte. Il membro non è stato né creato né aggiornato.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210003|I valori degli attributi fanno riferimento a un membro inesistente o inattivo.|Quando si gestiscono temporaneamente gli attributi basati su dominio, è necessario utilizzare il codice, piuttosto che il nome. Si applica a **ImportType0**, **1**e **2**.|Foglia<br /><br /> Consolidata|  

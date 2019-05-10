@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4c9e337bfd091c02645119c1f8f4c81eb8daab29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b9f30d90656977bc969987271896c4c548df80e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793013"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480718"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.  

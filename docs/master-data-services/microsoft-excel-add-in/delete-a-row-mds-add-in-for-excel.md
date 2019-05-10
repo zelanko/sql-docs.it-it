@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 06d859b254c31d17b7b82ce24638ee6c16ca437c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 7c2eae25d729cf93206203da784185ed484c3b1d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854719"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488016"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Eliminare una riga (componente aggiuntivo MDS per Excel)
 
@@ -27,7 +27,7 @@ ms.locfileid: "47854719"
 > [!NOTE]  
 >  Gli amministratori possono riattivare membri eliminati. Per altre informazioni, vedere [Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../../master-data-services/reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Visualizzatore** .  

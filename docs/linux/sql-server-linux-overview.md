@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 9feb60a7e3498bd940f97b8176375dc0f63133af
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63457372"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775753"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
@@ -52,7 +52,7 @@ Per iniziare, installare SQL Server in Linux con una delle seguenti esercitazion
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Esecuzione in Docker](quickstart-install-connect-docker.md)
-- [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 > [!NOTE]
 > Docker stesso viene eseguito su più piattaforme, il che significa che è possibile eseguire l'immagine Docker in Linux, Mac e Windows.

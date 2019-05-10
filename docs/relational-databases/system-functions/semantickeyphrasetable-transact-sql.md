@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 01e00d353f3585f7fd2568d5b8906e202263c212
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414488"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103297"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +68,12 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Tabella restituita  
  Nella tabella seguente vengono descritte le informazioni sulle frasi chiave restituite da questa funzione per i set di righe.  
   
-|Nome della colonna|Tipo|Descrizione|  
+|Nome della colonna|Type|Descrizione|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|ID della colonna da cui è stata estratta e indicizzata la frase chiave corrente.<br /><br /> Vedere le funzioni COL_NAME e COLUMNPROPERTY per informazioni dettagliate su come recuperare il nome di colonna da column_id e viceversa.|  
 |**document_key**|**\***<br /><br /> Questa chiave corrisponde al tipo della chiave univoca nella tabella di origine.|Valore della chiave univoca del documento o della riga da cui è stata indicizzata la frase chiave corrente.|  
-|**frase chiave**|**NVARCHAR**|Frase chiave trovata nella colonna identificata da column_id e associato con il documento specificato da document_key.|  
-|**punteggio**|**REAL**|Valore relativo per la frase chiave nella sua relazione con tutte le altre frasi chiave nello stesso documento presente nella colonna indicizzata.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
+|**keyphrase**|**NVARCHAR**|Frase chiave trovata nella colonna identificata da column_id e associato con il documento specificato da document_key.|  
+|**score**|**REAL**|Valore relativo per la frase chiave nella sua relazione con tutte le altre frasi chiave nello stesso documento presente nella colonna indicizzata.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [trovare frasi chiave nei documenti mediante ricerca semantica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

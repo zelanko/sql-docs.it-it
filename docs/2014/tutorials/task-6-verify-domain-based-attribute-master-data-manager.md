@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866169"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488956"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master
   In questa attività si verifica che l'entità **State** venga creata in **MDS** e che l'attributo **State** dell'entità **Supplier** sia un attributo basato su dominio che dipende dall'entità **State** tramite **Gestione dati master**.  
   
 1.  Passare all'applicazione Web **Gestione dati master**.  
@@ -38,7 +38,7 @@ ms.locfileid: "62866169"
   
 8.  Ripetere i passaggi precedenti per gli altri stati.  
   
-    |Codice|Nome|  
+    |Codice|nome|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  

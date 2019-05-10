@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 111b4dc0c1731b28da503794008be2b4d269094f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755816"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481127"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
   In questo argomento viene descritto come modificare e aumentare i metadati in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dopo avere generato le informazioni mediante l'individuazione delle informazioni, importato le informazioni nella Knowledge Base o nei domini oppure basato una Knowledge Base su un'altra Knowledge Base, è possibile modificare in modo interattivo i valori dei dati. La generazione della Knowledge Base non solo sfrutta i processi computerizzati, ma consente di utilizzare informazioni personalizzate per verificare i valori dei dati e modificarli nei modi seguenti:  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86889fa3800ea2e2542ecbbc3e1996b486c14fe9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: b6c9ae9ad42efac5e922db0cf2edd15e231fb16f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038782"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489280"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
 
@@ -43,7 +43,7 @@ ms.locfileid: "56038782"
   
 -   Se il tipo di dati è una stringa, è possibile specificare che DQS non identifichi errori di sintassi quando si è certi che le stringhe non contengono tali errori.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  L'utilizzo di un dominio consente di effettuare le operazioni seguenti:  
   
 |||  

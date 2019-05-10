@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee0818babb7fb973aed7e61c5efc4b42600af5a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5153aebb1598a3cba9ff860654e2dae9ae7f33d8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031722"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487309"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importazione dei valori di un progetto di pulizia in un dominio
 
@@ -36,7 +36,7 @@ ms.locfileid: "56031722"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per importare in un dominio informazioni sulla qualità dei dati raccolta durante il processo di pulizia, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Import"></a> Importazione dei valori di un progetto di pulizia  
@@ -70,7 +70,7 @@ ms.locfileid: "56031722"
   
 9. Per cercare una stringa specifica, immettere la stringa nella casella di testo **Trova** . Fare clic sulla freccia Su o Giù per spostarsi tra i valori che soddisfano il criterio di ricerca. Questi verranno evidenziati in giallo.  
   
-10. Fare clic su **Fine**.  
+10. Scegliere **Fine**.  
   
     > [!NOTE]  
     >  Per ulteriori informazioni sull'utilizzo di valori nella scheda **Valori di dominio** , vedere [Change Domain Values](../data-quality-services/change-domain-values.md).  

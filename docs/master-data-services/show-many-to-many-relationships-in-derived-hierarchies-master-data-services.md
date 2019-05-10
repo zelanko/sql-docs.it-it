@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797133"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488068"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
 
@@ -92,7 +92,7 @@ Per istruzioni sulla distribuzione del modello di esempio Customer e di altri mo
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Sicurezza dei membri  
- Una gerarchia che consente la duplicazione dei membri (consente che un membro abbia più di un elemento padre) non può essere usata per assegnare autorizzazioni di sicurezza ai membri. Ad esempio  
+ Una gerarchia che consente la duplicazione dei membri (consente che un membro abbia più di un elemento padre) non può essere usata per assegnare autorizzazioni di sicurezza ai membri. Ad esempio:  
   
 -   Una gerarchia derivata ricorsiva (RDH) che non effettua l'ancoraggio delle ricorsioni null (ciascun membro al livello ricorsivo appare sia sotto la radice sia sotto il suo elemento padre ricorsivo).  
   
