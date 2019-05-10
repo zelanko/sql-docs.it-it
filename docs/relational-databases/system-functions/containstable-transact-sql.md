@@ -1,5 +1,5 @@
 ---
-title: La funzione CONTAINSTABLE (Transact-SQL) | Microsoft Docs
+title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a987309091ada65c036d518d948c21c521bded
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 534d1457f984c496b416edae421ab0f52c619eeb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524439"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097285"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>b. Restituzione di valori di rango  
+### <a name="b-returning-rank-values"></a>B. Restituzione di valori di rango  
  Nell'esempio seguente viene eseguita una ricerca dei nomi di prodotto che includono le parole "frame", "wheel" o "tire". Ogni parola viene ponderata in modo diverso. Per ogni riga restituita corrispondente ai criteri di ricerca, viene illustrata la prossimità relativa (valore di rango assegnato) della corrispondenza. Le righe di rango superiore vengono restituite per prime.  
   
 ```  

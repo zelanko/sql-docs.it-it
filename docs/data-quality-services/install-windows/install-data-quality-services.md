@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024722"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487444"
 ---
 # <a name="install-data-quality-services"></a>Installare Data Quality Services
 
@@ -52,7 +52,7 @@ ms.locfileid: "56024722"
   
 |Componente DQS|Requisiti minimi di sistema|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memoria (RAM): Minima: 2 GB. Consigliata: almeno 4 GB<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Motore di database. Per altre informazioni, vedere [Informazioni sul Motore di database di SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memoria (RAM): Minima: 2 GB. Consigliata: Almeno 4 GB<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Motore di database. Per altre informazioni, vedere [Informazioni sul Motore di database di SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installato durante l'installazione di [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , se non è già presente)<br /><br /> Internet Explorer 6.0 SP1 o versione successiva|  
   
 > [!IMPORTANT]  

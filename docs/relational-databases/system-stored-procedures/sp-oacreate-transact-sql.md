@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589580"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450027"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *ProgID*  
+ *progid*  
  ProgID dell'oggetto OLE da creare. Questa stringa di caratteri descrive la classe dell'oggetto OLE e ha il formato: **«**_OLEComponent_**.** _Oggetti_**'**  
   
  *OLEComponent* è il nome del componente del server di automazione OLE, e *oggetto* è il nome dell'oggetto OLE. L'oggetto OLE specificato deve essere valido e deve supportare le **IDispatch** interfaccia.  
@@ -52,8 +52,8 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Ad esempio, {00026BA1-0000-0000-C000-000000000046} è il CLSID dell'oggetto SQL-DMO **SQLServer** oggetto.  
   
- _vengono restituite le_ **OUTPUT**  
- È il token di oggetto restituito, e deve essere una variabile locale del tipo di dati **int**. Questo token, che identifica l'oggetto OLE creato, viene utilizzato nelle chiamate alle altre stored procedure di automazione OLE.  
+ _objecttoken_ **OUTPUT**  
+ È il token di oggetto restituito, e deve essere una variabile locale del tipo di dati **int**. Questo token, che identifica l'oggetto OLE creato e viene usato nelle chiamate per le altre procedure di automazione OLE archiviati.  
   
  *context*  
  Specifica il contesto di esecuzione in cui viene eseguito il nuovo oggetto OLE. I possibili valori sono i seguenti:  
@@ -84,7 +84,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  L'oggetto OLE creato viene distrutto automaticamente al termine del batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
+ Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o execute direttamente su questa Stored Procedure. `Ole Automation Procedures` configurazione deve essere **abilitato** usare eventuali procedure di sistema correlate a automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -105,7 +105,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-clsid"></a>b. Utilizzo di un valore CLSID  
+### <a name="b-using-clsid"></a>B. Utilizzo di un valore CLSID  
  L'esempio seguente crea un SQL-DMO **SQLServer** oggetto con valore CLSID corrispondente.  
   
 ```  

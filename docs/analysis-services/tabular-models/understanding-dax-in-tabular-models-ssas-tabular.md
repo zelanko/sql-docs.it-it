@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072448"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356504"
 ---
 # <a name="dax-in-tabular-models"></a>DAX nei modelli tabulari 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Nei primi quattro casi, tramite DAX viene contrassegnata l'intera colonna in cui è contenuta la formula non valida. Nell'ultimo caso, tramite DAX la colonna che si trova in uno stato non elaborato viene visualizzata in grigio.  
   
 ##  <a name="bkmk_addional_resources"></a> Risorse aggiuntive  
- In [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) vengono fornite istruzioni dettagliate sulla creazione di un modello tabulare che include molti calcoli in colonne calcolate, misure e filtri di riga. Per la maggior parte delle formule viene fornita una descrizione dello scopo della formula.  
+ In [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md) vengono fornite istruzioni dettagliate sulla creazione di un modello tabulare che include molti calcoli in colonne calcolate, misure e filtri di riga. Per la maggior parte delle formule viene fornita una descrizione dello scopo della formula.  
   
  Il [blog del Team di Analysis Services](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornisce informazioni aggiornate, suggerimenti, notizie e annunci. 
   
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Misure](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Colonne calcolate](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Indicatori KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Origini dati supportate](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

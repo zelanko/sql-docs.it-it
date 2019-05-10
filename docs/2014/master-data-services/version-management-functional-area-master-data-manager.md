@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ced43d5008531f540bd9985a817794baa88705fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1c9ea0381b9741831b24c0148013925f781b5e02
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62922862"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478552"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Area funzionale Gestione versioni (Gestione dati master)
   Nell'area funzionale Gestione versioni, gli amministratori possono convalidare dati, rivedere e invertire transazioni, creare copie di dati con versione e versioni del flag di dati per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
