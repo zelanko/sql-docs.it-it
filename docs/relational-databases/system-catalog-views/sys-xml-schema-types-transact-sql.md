@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_types catalog view
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea20d8e326d006e1a405adffcf73fae6ca1e4473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ce5530e160fe6473ff84fca0978b5fc467fe688
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715956"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945857"
 ---
 # <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni componente di XML schema che è un tipo **symbol_space** dei **T**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**\<colonne ereditate >**||Eredita le colonne da [xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Il tipo è un tipo abstract. Tutte le istanze di un elemento di questo tipo è necessario utilizzare **xsi: Type** per indicare un tipo derivato non abstract.<br /><br /> 0 = Il tipo non è abstract (predefinito)|  

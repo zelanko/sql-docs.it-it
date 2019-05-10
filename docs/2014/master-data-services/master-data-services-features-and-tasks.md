@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764838"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482896"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Caratteristiche e attività di Master Data Services
   Vengono fornite informazioni su come usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per gestire i dati master dell'organizzazione, come creare e gestire oggetti modello che rappresentano i contenitori per i dati, come organizzare e gestire i dati master stessi, come importare ed esportare i dati master, nonché condividere i modelli tra ambienti di test e di produzione e infine come sviluppare applicazioni personalizzate che accedono al servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c291ad016664cf8ac7dcbe2deb9cc04680a707c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765023"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485069"
 ---
 # <a name="tracing-master-data-services"></a>Traccia (Master Data Services)
 
@@ -66,7 +66,7 @@ ms.locfileid: "52765023"
     |CorrelationID|Per ogni richiesta viene assegnato un ID di correlazione. Tutte le tracce attivate dalla richiesta condividono lo stesso ID di correlazione.<br /><br /> Quando si verifica un errore nell'interfaccia utente, l'ID di correlazione viene visualizzato nel messaggio di errore.|  
     |Operation|Nome dell'operazione di richiesta. Se la richiesta è una richiesta dell'interfaccia utente Web, il nome dell'operazione è l'URL. Se la richiesta è una richiesta API, il nome dell'operazione è il nome del servizio.|  
     |Level|Livello di questa voce di traccia.|  
-    |Message|Corpo del messaggio della traccia|  
+    |`Message`|Corpo del messaggio della traccia|  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Post di blog sulla [risoluzione dei problemi relativi al miglioramento della registrazione](https://go.microsoft.com/fwlink/p/?LinkId=615377)su msdn.com.  

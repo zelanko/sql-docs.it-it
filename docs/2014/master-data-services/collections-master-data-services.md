@@ -10,15 +10,15 @@ helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925610"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483539"
 ---
 # <a name="collections-master-data-services"></a>Raccolte (Master Data Services)
   Una raccolta è un gruppo di membri foglia e membri consolidati da una singola entità. Utilizzare le raccolte quando non è necessaria una gerarchia completa e si desidera visualizzare raggruppamenti diversi dei membri per la creazione di report o l'analisi o quando è necessario creare una tassonomia.  
