@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532483"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088511"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,6 +101,8 @@ sp_describe_undeclared_parameters
 -   Se l'input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch dichiara una variabile locale con lo stesso nome come un parametro dichiarato in \@params.  
   
 - Se l'istruzione fa riferimento a tabelle temporanee.
+
+- La query include la creazione di una tabella permanente sulla quale viene eseguita una query.
   
  Se \@tsql non contiene parametri, diversi da quelli dichiarati in \@params, la procedura restituisce un set di risultati vuoto.  
   
@@ -165,7 +167,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Deduzione semplice  
   
-     Se E (\@p) = \@p e TT (\@p) esiste, ad esempio, se \@p è direttamente un argomento a una delle espressioni elencate all'inizio del passaggio 2, l'algoritmo di deduzione dei tipi deduce il tipo di dati di \@p come TT ( \@p). Esempio:  
+     Se E (\@p) = \@p e TT (\@p) esiste, ad esempio, se \@p è direttamente un argomento a una delle espressioni elencate all'inizio del passaggio 2, l'algoritmo di deduzione dei tipi deduce il tipo di dati di \@p come TT ( \@p). Ad esempio:   
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -213,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Il tipo di dati che produce il numero più piccolo di conversioni implicite in E (\@p) sia selezionata. Se un particolare tipo di dati produce un tipo di dati per E (\@p) che è diverso da TT (\@p), l'algoritmo di deduzione dei tipi considera questa conversione come una conversione implicita aggiuntiva dal tipo di dati e (\@p) a TT (\@p).  
   
-     Esempio:  
+     Ad esempio:   
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

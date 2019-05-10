@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676905"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106283"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Prestazioni le procedure consigliate e linee guida per la configurazione per SQL Server in Linux
 
@@ -62,7 +62,7 @@ Si tratta di prestazioni correlati ad alta le impostazioni di sistema operativo 
 
 La tabella seguente fornisce indicazioni per le impostazioni della CPU:
 
-| Impostazione | valore | Ulteriori informazioni |
+| Impostazione | Value | Ulteriori informazioni |
 |---|---|---|
 | Governor frequenza della CPU | prestazioni | Vedere le **cpupower** comando |
 | ENERGY_PERF_BIAS | prestazioni | Vedere le **x86_energy_perf_policy** comando |
@@ -71,7 +71,7 @@ La tabella seguente fornisce indicazioni per le impostazioni della CPU:
 
 La tabella seguente fornisce indicazioni per le impostazioni del disco:
 
-| Impostazione | valore | Ulteriori informazioni |
+| Impostazione | Value | Ulteriori informazioni |
 |---|---|---|
 | Read-ahead disco | 4096 | Vedere le **blockdev** comando |
 | impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Vedere le **sysctl** comando |
@@ -100,7 +100,7 @@ Usare la **opzione noatime** attributo con qualsiasi file system che viene usato
 
 La maggior parte delle installazioni di Linux devono avere questa opzione per impostazione predefinita. È consigliabile per l'esperienza con prestazioni più coerente mantenere abilitata questa opzione di configurazione.
 
-### <a name="swapfile"></a>file di scambio
+### <a name="swapfile"></a>swapfile
 
 Assicurarsi di che disporre di un file di scambio configurati correttamente per evitare eventuali problemi di memoria insufficiente. Consultare la documentazione di Linux per informazioni su come creare e impostare correttamente le dimensioni di un file di scambio.
 
