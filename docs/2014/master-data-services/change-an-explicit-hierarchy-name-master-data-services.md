@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df02cc4a8f3ed35a360ac6d323ce88640c49247e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925882"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484033"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia esplicita (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di una gerarchia esplicita.  
