@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217789"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489621"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Attività 8: Creazione di una regola per un dominio composito
   In questa attività viene creata una regola per il **Address Validation** dominio composito. Definire una regola tra domini: se **Città** viene **Los Angeles**, **stato** deve essere **autorità di certificazione** dove **Città** e **stato** sono due domini.  

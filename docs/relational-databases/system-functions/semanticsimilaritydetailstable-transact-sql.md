@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718059"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103268"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabella restituita  
  Nella tabella seguente vengono descritte le informazioni sulle frasi chiave restituite da questa funzione per i set di righe.  
   
-|Nome della colonna|Tipo|Description|  
+|Nome della colonna|Type|Descrizione|  
 |------------------|----------|-----------------|  
-|**frase chiave**|**NVARCHAR**|Frase chiave che contribuisce alla somiglianza tra documento di origine e il documento corrispondente.|  
-|**punteggio**|**REAL**|Valore relativo per la frase chiave nella relazione con tutte le altre frasi chiave analoghe nei due documenti.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
+|**keyphrase**|**NVARCHAR**|Frase chiave che contribuisce alla somiglianza tra documento di origine e il documento corrispondente.|  
+|**score**|**REAL**|Valore relativo per la frase chiave nella relazione con tutte le altre frasi chiave analoghe nei due documenti.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [trovare documenti simili e correlati tramite la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

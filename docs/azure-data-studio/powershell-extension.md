@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 0ffb46d5d498ba04a6916e7e2d56ffccaaa71aef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137162"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105956"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Supporto dell'Editor PowerShell per Azure Data Studio
 
@@ -85,13 +85,45 @@ o se si usa la versione di anteprima dell'estensione
 $HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
 ```
 
-Per aprire/visualizzazione esempi dell'estensione in Azure Data Studio, eseguire il comando seguente dal prompt dei comandi di PowerShell:
+Per aprire/visualizzazione esempi dell'estensione in Azure Data Studio, eseguire il codice seguente dal prompt dei comandi di PowerShell:
 
 ```powershell
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
 ```
 
-### <a name="sql-powershell-examples"></a>Esempi di SQL PowerShell
+### <a name="creating-and-opening-files"></a>Creazione e apertura file
+
+Per creare e aprire un nuovo file all'interno dell'editor, usare il nuovo-EditorFile da entro il terminale integrato di PowerShell.
+
+```powershell
+PS C:\temp> New-EditorFile ExportData.ps1
+```
+
+Questo comando funziona per qualsiasi tipo di file, non solo i file di PowerShell.
+
+```powershell
+PS C:\temp> New-EditorFile ImportData.py
+```
+
+Per aprire uno o più file in Azure Data Studio, usare il `Open-EditorFile` comando.
+
+```powershell
+Open-EditorFile ExportData.ps1, ImportData.py
+```
+
+### <a name="no-focus-on-console-when-executing"></a>Non lo stato attivo sulla console durante l'esecuzione
+
+Per gli utenti che sono abituati all'utilizzo di SQL Server Management Studio, abituali la possibilità di eseguire una query e quindi la possibilità di eseguirla di nuovo ancora senza dover tornare al riquadro query.  In questo caso, il comportamento predefinito dell'editor del codice potrebbe sembrare strano all'utente.  Per mantenere lo stato attivo nell'editor, quando si esegue con <kbd>F8</kbd> modificare l'impostazione seguente:
+
+```json
+"powershell.integratedConsole.focusConsoleOnExecute": false
+```
+
+Il valore predefinito è `true` per scopi di accessibilità.
+
+Tenere presente questa impostazione impedisce lo stato attivo dalla modifica nella console, anche quando si usa un comando che in modo esplicito le chiamate per l'input, ad esempio `Get-Credential`.
+
+## <a name="sql-powershell-examples"></a>Esempi di SQL PowerShell
 Per usare questi esempi (sotto), è necessario installare il modulo SqlServer dal [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
 
 ```powershell
@@ -115,16 +147,33 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
+Il `SqlServer` modulo contiene un Provider denominato `SQLRegistration` che consente di accedere a livello di codice i tipi seguenti di connessioni a SQL Server salvati:
 
-Nell'esempio seguente, si farà un `dir` (alias di `Get-ChildItem`) per ottenere l'elenco di tutte le istanze di SQL Server sia incluso nel file server registrati e quindi usare il `Get-SqlDatabase` per ottenere un elenco di database per ognuna di tali istanze.
++ Server del motore di database (server registrati)
++ Server di gestione centrale (di corsi CMS)
++ Analysis Services
++ Integration Services
++ Reporting Services
+
+ Nell'esempio seguente, si farà un `dir` (alias di `Get-ChildItem`) per ottenere l'elenco di tutte le istanze di SQL Server sia incluso nel file server registrati.
 
 ```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
-WHERE { $_.Mode -ne 'd' } |
-FOREACH {
-    Get-SqlDatabase -ServerInstance $_.Name
-}
+dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
 ```
+
+Di seguito è riportato un esempio di come output è simile:
+
+```powershell
+Mode Name
+---- ----
+-    ServerA
+-    ServerB
+-    localhost\SQL2017
+-    localhost\SQL2016Happy
+-    localhost\SQL2017
+```
+
+Per molte operazioni che coinvolgono un database o oggetti all'interno di un database, il `Get-SqlDatabase` cmdlet può essere utilizzato.  Se si specificano valori per entrambi i `-ServerInstance` e `-Database` verranno recuperati i parametri, solo tale oggetto di un database.  Tuttavia, se si specifica solo il `-ServerInstance` parametro, verrà restituito un elenco completo di tutti i database in tale istanza.
 
 Di seguito è riportato un esempio di come output sarà simile:
 
@@ -143,7 +192,7 @@ tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ```
 
-Questo esempio Usa la `Get-SqlDatabase` cmdlet per recuperare un elenco di tutti i database nell'istanza ServerB, quindi presenta una griglia di tabella (utilizzando la `Out-GridView` cmdlet) per selezionare i database di eseguire il backup.  Una volta che l'utente fa clic sul pulsante "OK", solo i database evidenziati verranno sottoposti a backup.
+Nell'esempio successivo viene utilizzata la `Get-SqlDatabase` cmdlet per recuperare un elenco di tutti i database nell'istanza ServerB, quindi presenta una griglia di tabella (utilizzando la `Out-GridView` cmdlet) per selezionare i database di eseguire il backup.  Una volta che l'utente fa clic sul pulsante "OK", solo i database evidenziati verranno sottoposti a backup.
 
 ```powershell
 Get-SqlDatabase -ServerInstance ServerB |
@@ -159,28 +208,6 @@ WHERE {$_.Mode -ne 'd' } |
 FOREACH {
     Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
 }
-```
-
-### <a name="sql-powershell-examples"></a>Esempi di SQL PowerShell
-Per usare questi esempi (sotto), è necessario installare il modulo SqlServer dal [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
-
-```powershell
-Install-Module -Name SqlServer -AllowPrerelease
-```
-
-In questo esempio, utilizziamo il `Get-SqlInstance` per ottenere gli oggetti Server SMO per ServerA e ServerB.  Il valore predefinito di output per questo comando includerà il nome dell'istanza, versione, Service Pack & livello di aggiornamento di aggiornamento Cumulativo delle istanze.
-
-```powershell
-Get-SqlInstance -ServerInstance ServerA, ServerB
-```
-
-Di seguito è riportato un esempio di come output sarà simile:
-
-```
-Instance Name             Version    ProductLevel UpdateLevel
--------------             -------    ------------ -----------
-ServerA                   13.0.5233  SP2          CU4
-ServerB                   14.0.3045  RTM          CU12
 ```
 
 In questo esempio, si farà un `dir` (alias di `Get-ChildItem`) per ottenere l'elenco di tutte le istanze di SQL Server sia incluso nel file server registrati e quindi usare il `Get-SqlDatabase` per ottenere un elenco di database per ognuna di tali istanze.
@@ -208,24 +235,6 @@ PBIRSTempDB          Normal       16.00 MB    4.20 MB Simple       140 sa
 SSISDB               Normal      325.06 MB   26.21 MB Full         140 sa   
 tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa   
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa   
-```
-
-Questo esempio Usa la `Get-SqlDatabase` cmdlet per recuperare un elenco di tutti i database nell'istanza ServerB, quindi presenta una griglia di tabella (utilizzando la `Out-GridView` cmdlet) per selezionare i database di eseguire il backup.  Una volta che l'utente fa clic sul pulsante "OK", solo i database evidenziati verranno sottoposti a backup.
-
-```powershell
-Get-SqlDatabase -ServerInstance ServerB |
-Out-GridView -PassThru |
-Backup-SqlDatabase -CompressionOption On
-```
-
-In questo esempio, anche in questo caso, ottiene un elenco di tutte le istanze di SQL Server sia incluso nel file server registrati, quindi chiama il `Get-SqlAgentJobHistory` quali report sono trascorsi dalla mezzanotte, per ogni istanza di SQL Server elencata ogni processo di SQL Agent non riuscito.
-
-```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
-WHERE {$_.Mode -ne 'd' } |
-FOREACH {
-    Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
-}
 ```
 
 ## <a name="reporting-problems"></a>Segnalazione di problemi
