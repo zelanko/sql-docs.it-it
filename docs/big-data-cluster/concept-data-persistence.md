@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776165"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
 
@@ -49,19 +49,19 @@ Per usare un archivio permanente durante la distribuzione, impostare i valori de
 > [!WARNING]
 > L'esecuzione senza un archivio permanente può lavorare in un ambiente di test, ma potrebbero verificarsi in un cluster non funzionali. Al riavvio del pod, i dati dei metadati e/o utente del cluster andranno perse definitivamente. Non è consigliabile eseguire questa configurazione. 
 
-In questa sezione fornisce altri esempi su come configurare le impostazioni di archiviazione per la distribuzione del cluster SQL Server i big Data.
+[Configurare l'archiviazione](#config-samples) sezione fornisce altri esempi su come configurare le impostazioni di archiviazione per la distribuzione del cluster SQL Server i big Data.
 
 ## <a name="aks-storage-classes"></a>Classi di archiviazione servizio contenitore di AZURE
 
 Servizio contenitore di AZURE viene fornito con [due classi di archiviazione predefinite](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predefinita** e **gestiti premium** insieme dinamico strumento di provisioning per loro. È possibile specificare uno di questi due o creare la propria classe di archiviazione per la distribuzione di cluster di big data con abilitata l'archiviazione permanente. Per impostazione predefinita, incorporato nel file di configurazione del cluster di aks *aks-dev-test.json* viene fornito con le configurazioni di archiviazione permanente usare **gestiti premium** classe di archiviazione.
 
 > [!WARNING]
-> Volumi permanenti creati con **predefinite** classe di archiviazione dispongono di un criterio di recupero dei *eliminare*. In modo che al momento la si elimina il cluster di big data di SQL Server, le attestazioni di volume permanente recuperare anche i volumi eliminati e quindi permanenti. **premium Managed** dispone di un criterio di recupero dei *Mantieni*. È possibile trovare ulteriori informazioni sulle classi di archiviazione nel servizio contenitore di AZURE e le relative configurazioni nelle [ciò](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) articolo.
+> Volumi permanenti creati con le classi di archiviazione predefinito **predefinito** e **premium gestiti** dispongono di un criterio di recupero dei *Elimina*. In modo che al momento la si elimina il cluster di big data di SQL Server, le attestazioni di volume permanente recuperare anche i volumi eliminati e quindi permanenti. È possibile creare classi di archiviazione personalizzati usando **dischi di azure** privioner con un *Mantieni* occupata da criteri come illustrato nel [ciò](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) articolo.
 
 
 ## <a name="minikube-storage-class"></a>Classe di archiviazione Minikube
 
-Minikube dotato di una classe di archiviazione predefinito denominata **standard** insieme a un strumento di provisioning dinamico appositamente. La configurazione compilata nel file per minikube *minikube-dev-test.json* presenta le impostazioni di configurazione di archiviazione nella specifica di piano di controllo. Le stesse impostazioni verranno applicate a tutte le specifiche di pool. È anche possibile personalizzare una copia di questo file e usarlo per la distribuzione del cluster di big data su minikube. Manualmente, è possibile modificare il file personalizzato e modificare le dimensioni delle attestazioni volumi permanenti per i pool specifici supportare i carichi di lavoro da eseguire. O, per vedere la sezione esempi su come eseguire le modifiche mediante *mssqlctl* comandi.
+Minikube dotato di una classe di archiviazione predefinito denominata **standard** insieme a un strumento di provisioning dinamico appositamente. La configurazione compilata nel file per minikube *minikube-dev-test.json* presenta le impostazioni di configurazione di archiviazione nella specifica di piano di controllo. Le stesse impostazioni verranno applicate a tutte le specifiche di pool. È anche possibile personalizzare una copia di questo file e usarlo per la distribuzione del cluster di big data su minikube. Manualmente, è possibile modificare il file personalizzato e modificare le dimensioni delle attestazioni volumi permanenti per i pool specifici supportare i carichi di lavoro da eseguire. In alternativa, vedere [configurare l'archiviazione](#config-samples) sezione per esempi su come eseguire questa operazione consente di modificare usando *mssqlctl* comandi.
 
 ## <a name="kubeadm-storage-classes"></a>Classi di archiviazione Kubeadm
 
@@ -97,7 +97,7 @@ L'esempio seguente aggiorna la dimensione di attestazioni di volume permanente p
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>Configura classe di archiviazione
+### <a id="config-samples"></a> Configura classe di archiviazione
 
 Esempio seguente viene illustrato come modificare la classe di archiviazione per il piano di controllo:
 

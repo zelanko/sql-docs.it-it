@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472301"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877666"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big Data
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: eafc21d079561b6024d23b3e90bd24dbf7b369fc
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774739"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux
 
@@ -152,7 +152,7 @@ Le sezioni seguenti forniscono domande e risposte comuni per SQL Server in esecu
 
 1. **È possibile migrare i dati da Oracle e altri motori di database a SQL Server in Linux?**
 
-   Sì. SSMA supporta la migrazione tra diversi tipi di motori di database: Microsoft Access, DB2, MySQL, Oracle e SAP ASE (noto in precedenza come SAP Sybase ASE). Per un esempio d'uso di SSMA, vedere [eseguire la migrazione di uno schema Oracle a SQL Server in Linux con SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Sì. SSMA supporta la migrazione tra diversi tipi di motori di database: Microsoft Access, DB2, MySQL, Oracle e SAP ASE (noto in precedenza come SAP Sybase ASE). Per un esempio d'uso di SSMA, vedere [eseguire la migrazione di uno schema Oracle a SQL Server in Linux con SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json).
 
 1. **Quali autorizzazioni sono necessarie per i file di SQL Server?**
 
