@@ -2,21 +2,21 @@
 title: 'Esercitazione: Abilitare il widget di esempio le query più lente cinque'
 titleSuffix: Azure Data Studio
 description: Con questa esercitazione viene illustrato come abilitare il widget di esempio delle cinque query più lente nella dashboard del database.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239617"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089680"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiungere il *cinque query più lente* widget al dashboard del database di esempio
 

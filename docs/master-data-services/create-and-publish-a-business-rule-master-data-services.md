@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777343"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489610"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Creare e pubblicare una regola business (Master Data Services)
 
@@ -27,12 +27,12 @@ ms.locfileid: "52777343"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola business per garantire l'accuratezza dei dati master. Dopo avere creato una regola, è necessario pubblicarla prima di poterla applicare ai dati.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Per creare e pubblicare una regola business  
   
@@ -106,13 +106,13 @@ ms.locfileid: "52777343"
 |nome|Descrizione|  
 |----------|-----------------|  
 |Stato|Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che la regola di business è in fase di aggiornamento.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Se si verificano errori durante la creazione o la modifica di una regola business, viene visualizzata l'immagine seguente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|nome|Nome della regola business.|  
+|Nome|Nome della regola business.|  
 |Descrizione|Descrizione della regola business.|  
 |Stato della regola di business|Uno degli stati di regola business seguenti: Regola non definita, Attiva, Esclusa, Modifiche in sospeso, Esclusione in sospeso ed Eliminazione in sospeso.|  
 |Esclusione|Specifica se la regola business è esclusa.|  
 |Notification|Specifica l'utente o il gruppo selezionato a cui inviare la notifica tramite posta elettronica.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   

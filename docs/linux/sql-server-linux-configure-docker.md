@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516517"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376840"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore SQL Server in Docker
 
@@ -83,11 +83,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> Passando il valore **Y** alla variabile di ambiente **ACCEPT_EULA** e un valore edition **MSSQL_PID**, Esprimi che si abbia una licenza valida ed esistente per l'edizione e la versione di SQL Server che si intende usare. L'utente accetta inoltre che l'utilizzo del software di SQL Server in esecuzione in un'immagine del contenitore Docker sarà disciplinato dalle condizioni di licenza di SQL Server.
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> Per un elenco completo dei valori possibili per **MSSQL_PID**, vedere [le impostazioni di configurazione SQL Server con le variabili di ambiente in Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 
@@ -537,7 +537,7 @@ In Windows, verificare che si avvia PowerShell o prompt dei comandi come amminis
 
 Se il contenitore di SQL Server non viene eseguito correttamente, provare a eseguire i test seguenti:
 
-- Se si verifica un errore, ad esempio **' non è stato possibile creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: bind 0.0.0.0:1433 di ascolto tcp: indirizzo già in uso.'** , quindi si sta provando a eseguire il mapping a una porta che è già in uso la porta del contenitore 1433. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, usare il `-p` parametro per eseguire il mapping a una porta dell'host diversa la porta del contenitore 1433. Ad esempio:  
+- Se si verifica un errore, ad esempio **' non è stato possibile creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: bind 0.0.0.0:1433 di ascolto tcp: indirizzo già in uso.'** , quindi si sta provando a eseguire il mapping a una porta che è già in uso la porta del contenitore 1433. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, usare il `-p` parametro per eseguire il mapping a una porta dell'host diversa la porta del contenitore 1433. Ad esempio: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

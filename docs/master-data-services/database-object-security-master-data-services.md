@@ -11,15 +11,15 @@ helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783613"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487736"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
 
