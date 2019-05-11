@@ -1,6 +1,6 @@
 ---
-title: Conversioni di valuta (Analysis Services) | Microsoft Docs
-ms.date: 05/08/2018
+title: Conversioni di valuta in Analysis Services | Microsoft Docs
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,53 +9,47 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e5e23e81f4f22ea7a31fdf09d46a1ccfdae52bf6
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207210"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527396"
 ---
-# <a name="currency-conversions-analysis-services"></a>Conversioni di valuta (Analysis Services)
+# <a name="currency-conversions-in-analysis-services"></a>Conversioni di valuta in Analysis Services
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-  [!INCLUDE[applies](../includes/applies-md.md)] solo a Multidimensional  
-  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una serie di funzionalità, basate su script MDX (Multidimensional Expressions), che implementano il supporto per la conversione di valuta nei cubi che supportano più valute.  
+ Analysis Services Usa una combinazione di funzionalità, basate su script MDX (Multidimensional Expressions), per fornire supporto per la conversione di valuta nei cubi che supportano più valute.  
   
 ## <a name="currency-conversion-terminology"></a>Terminologia relativa alla conversione di valuta  
- Di seguito sono elencati i termini relativi alla conversione di valuta usati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+
+ Per descrivere la funzionalità di conversione di valuta viene usata la terminologia seguente:  
   
- Valuta pivot  
- La valuta in base a cui vengono immessi i tassi di cambio nel gruppo di misure di tipo Tasso.  
+ **Valuta pivot** -valuta le rispetto alla quale vengono immessi i tassi di cambio nel gruppo di misure frequenza.  
   
- Valuta locale  
- La valuta usata per l'archiviazione delle transazioni su cui sono basate le misure da convertire.  
+ **Valuta locale** -è la valuta usata per archiviare le transazioni in cui sono basate le misure da convertire.  
   
- La valuta locale può essere identificata da uno degli identificatori seguenti:  
+Valuta locale può essere identificata in uno dei modi:  
   
 -   Un identificatore di valuta nella tabella dei fatti archiviata con la transazione, come nel caso di applicazioni per operazioni bancarie in cui la transazione stessa identifica la valuta usata per la transazione.  
   
 -   Un identificatore di valuta associato a un attributo di una tabella delle dimensioni che viene quindi associata a una transazione nella tabella dei fatti. È il caso di applicazioni finanziarie, in cui la valuta usata per la transazione associata è identificata dall'ubicazione o da un altro identificatore, ad esempio una filiale.  
   
- Valuta report  
- La valuta in cui viene convertita la valuta pivot nelle transazioni.  
+**Valuta report** -è la valuta in cui le transazioni vengono convertite dalla valuta pivot.  
   
 > [!NOTE]  
 >  In molte conversioni di valuta molti-a-uno la valuta pivot e la valuta report corrispondono.  
   
- Dimensione di tipo Valuta  
- Una dimensione del database definita con le impostazioni seguenti:  
+ **Dimensione di tipo valuta** -una dimensione del database definita con le impostazioni seguenti:  
   
 -   La proprietà **Type** della dimensione è impostata su Currency.  
   
 -   La proprietà **Type** di un attributo della dimensione è impostata su CurrencyName.  
   
-    > [!IMPORTANT]  
-    >  I valori di questo attributo devono essere usati in tutte le colonne che devono includere un identificatore di valuta.  
+I valori di questo attributo devono essere usati in tutte le colonne che devono includere un identificatore di valuta.  
   
- Gruppo di misure di tipo Tasso  
- Un gruppo di misure di un cubo definito con le impostazioni seguenti:  
+**Gruppo di misure frequenza** -un gruppo di misure in un cubo definito con le impostazioni seguenti:  
   
 -   Tra una dimensione di tipo Valuta e il gruppo di misure di tipo Tasso esiste una relazione tra dimensioni di tipo Regolare.  
   
@@ -65,8 +59,7 @@ ms.locfileid: "53207210"
   
 -   Una o più misure, che rappresentano i tassi di cambio inclusi nel gruppo di misure di tipo Tasso.  
   
- Dimensione di tipo Valuta report  
- La dimensione, specificata dalla Configurazione guidata funzionalità di Business Intelligence dopo che è stata definita una conversione di valuta, contenente le valute report per la conversione. La dimensione di tipo Valuta report è basata su una query denominata, definita nella vista origine dati su cui è basata la dimensione di tipo Valuta associata al gruppo di misure di tipo Tasso, che deriva dalla tabella della dimensione principale della dimensione di tipo Valuta. La dimensione è definita con le impostazioni seguenti:  
+**Dimensione di tipo valuta report** -la dimensione, definito dalla configurazione guidata di Business Intelligence dopo aver definita una conversione di valuta, contenente le valute report per la conversione di valuta. La dimensione di tipo Valuta report è basata su una query denominata, definita nella vista origine dati su cui è basata la dimensione di tipo Valuta associata al gruppo di misure di tipo Tasso, che deriva dalla tabella della dimensione principale della dimensione di tipo Valuta. La dimensione è definita con le impostazioni seguenti:  
   
 -   La proprietà **Type** della dimensione è impostata su Currency.  
   
@@ -75,12 +68,15 @@ ms.locfileid: "53207210"
 -   La proprietà **Type** di un attributo della dimensione è impostata su CurrencyDestination e la colonna associata all'attributo contiene gli identificatori di valuta che rappresentano le valute report per la conversione.  
   
 ## <a name="defining-currency-conversions"></a>Definizione delle conversioni di valuta  
+
  La Configurazione guidata funzionalità di Business Intelligence consente di definire la funzionalità di conversione di valuta per un cubo. In alternativa, le conversioni di valuta possono essere definite in modo manuale tramite script MDX.  
   
 ### <a name="prerequisites"></a>Prerequisiti  
+
  Per poter definire una conversione di valuta in un cubo tramite la Configurazione guidata funzionalità di Business Intelligence, è prima necessario definire almeno una dimensione di tipo Valuta, una dimensione temporale e un gruppo di misure di tipo Tasso. Quando si esegue la Configurazione guidata funzionalità di Business Intelligence, questi oggetti vengono usati per recuperare i dati e i metadati per la creazione della dimensione di tipo Valuta report e dello script MDX necessari per l'implementazione della funzionalità di conversione di valuta.  
   
 ### <a name="decisions"></a>Decisioni  
+
  Per consentire la creazione della dimensione di tipo Valuta report e dello script MDX per l'implementazione della funzionalità di conversione di valuta tramite la Configurazione guidata funzionalità di Business Intelligence, è prima necessario stabilire:  
   
 -   Direzione del tasso di cambio  
@@ -93,7 +89,8 @@ ms.locfileid: "53207210"
   
 -   Valute report  
   
-### <a name="exchange-rate-directions"></a>Direzioni del tasso di cambio  
+### <a name="exchange-rate-directions"></a>Direzioni del tasso di Exchange  
+
  Il gruppo di misure di tipo Tasso include misure che rappresentano i tassi di cambio tra le valute locali e la valuta pivot, denominata anche valuta aziendale. L'insieme di direzione del tasso di cambio e tipo di conversione determina l'operazione che lo script MDX generato dalla Configurazione guidata funzionalità di Business Intelligence esegue sulle misure da convertire. Nella tabella seguente vengono descritte le operazioni eseguite a seconda della direzione del tasso di cambio e del tipo di conversione selezionati tra le opzioni disponibili nella configurazione guidata.  
   
 |||||  
@@ -105,6 +102,7 @@ ms.locfileid: "53207210"
  La direzione del tasso di cambio viene impostata nel passaggio **Impostazione opzioni di conversione valuta** della Configurazione guidata funzionalità di Business Intelligence. Per altre informazioni sull'impostazione della direzione di conversione, vedere [Impostazione opzioni di conversione valuta &#40;Configurazione guidata funzionalità di Business Intelligence&#41](http://msdn.microsoft.com/library/a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d).  
   
 ### <a name="converted-members"></a>Membri convertiti  
+
  La Configurazione guidata funzionalità di Business Intelligence consente di specificare le misure del gruppo di misure di tipo Tasso che devono essere usate per la conversione di valori per:  
   
 -   Misure di altri gruppi di misure.  
@@ -116,6 +114,7 @@ ms.locfileid: "53207210"
  Nella configurazione guidata queste informazioni vengono usate nello script MDX generato automaticamente per determinare l'ambito della conversione di valuta. Per altre informazioni sull'impostazione dei membri per le conversioni di valuta, vedere [Selezione membri &#40;Configurazione guidata funzionalità di Business Intelligence&#41;](http://msdn.microsoft.com/library/1a147461-d594-41e7-a41d-09d2d003e1e0).  
   
 ### <a name="conversion-types"></a>Tipi di conversione  
+
  La Configurazione guidata funzionalità di Business Intelligence supporta tre tipi di conversione di valuta:  
   
 -   **Uno-a-molti**  
@@ -139,6 +138,7 @@ ms.locfileid: "53207210"
  Se si specifica il tipo di conversione, nella Configurazione guidata funzionalità di Business Intelligence vengono definite la query denominata e la struttura della dimensione della dimensione di tipo Valuta report, nonché la struttura dello script MDX definito per la conversione di valuta.  
   
 ### <a name="local-currencies"></a>Valute locali  
+
  Se si imposta il tipo di conversione molti-a-molti o molti-a-uno, è necessario specificare la modalità di identificazione delle valute locali in base alle quali lo script MDX generato da Configurazione guidata funzionalità di Business Intelligence esegue le conversioni di valuta. La valuta locale di una transazione della tabella dei fatti può essere identificata in uno dei modi seguenti:  
   
 -   Nel gruppo di misure è inclusa una relazione tra dimensioni di tipo Regolare con la dimensione di tipo Valuta. Ad esempio, nel database di esempio [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel gruppo di misure Internet Sales è inclusa una relazione tra dimensioni di tipo Regolare con la dimensione di tipo Valuta. La tabella dei fatti per tale gruppo di misure include una colonna chiave esterna che fa riferimento agli identificatori di valuta della tabella della dimensione. In questo caso è possibile selezionare l'attributo dalla dimensione di tipo Valuta a cui fa riferimento il gruppo di misure per identificare la valuta locale per le transazioni della tabella dei fatti di tale gruppo di misure. Ciò si verifica in genere nelle applicazioni per transazioni bancarie in cui la valuta usata viene determinata dalla transazione stessa.  
@@ -146,6 +146,7 @@ ms.locfileid: "53207210"
 -   Nel gruppo di misure è inclusa una relazione tra dimensioni di tipo Riferimento con la dimensione di tipo Valuta tramite un'altra dimensione che fa riferimento direttamente alla dimensione di tipo Valuta. Ad esempio, nel database di esempio [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , il gruppo di misure Financial Reporting dispone di una relazione con dimensioni di tipo Riferimento alla dimensione di tipo Valuta tramite la dimensione Organization. La tabella dei fatti per tale gruppo di misure include una colonna chiave esterna che fa riferimento ai membri della tabella della dimensione per la dimensione Organization. Questa tabella della dimensione include a sua volta una colonna chiave esterna che fa riferimento agli identificatori di valuta nella tabella della dimensione per la dimensione di tipo Valuta. Ciò si verifica in genere nella applicazioni per relazioni finanziarie in cui la valuta di una transazione viene determinata dall'ubicazione o filiale. In questo caso è possibile selezionare l'attributo che fa riferimento alla dimensione di tipo Valuta nella dimensione dell'entità aziendale.  
   
 ### <a name="reporting-currencies"></a>Valute report  
+
  Se si imposta il tipo di conversione molti-a-molti o uno-a-molti, è necessario specificare le valute report in base alle quali lo script MDX generato dalla Configurazione guidata funzionalità di Business Intelligence esegue le conversioni di valuta. È possibile specificare tutti i membri della dimensione di tipo Valuta correlati al gruppo di misure di tipo Tasso oppure selezionare singoli membri.  
   
  Nella Configurazione guidata funzionalità di Business Intelligence viene creata una dimensione di tipo Valuta report basata sulla query denominata. Quest'ultima è formulata in base alla tabella della dimensione per la dimensione di tipo Valuta usando le valute report selezionate.  
@@ -155,11 +156,13 @@ ms.locfileid: "53207210"
   
  Per ogni conversione di valuta definita in un cubo viene definita una dimensione di tipo Valuta report distinta. Le dimensioni di tipo Valuta report possono essere rinominate. In questo caso tuttavia è necessario aggiornare anche lo script MDX generato per la conversione di valuta in modo che nei riferimenti alle dimensioni di tipo Valuta report del comando script sia usato il nome corretto.  
   
-## <a name="defining-multiple-currency-conversions"></a>Definizione di più conversioni di valuta  
+## <a name="defining-multiple-currency-conversions"></a>La definizione di più conversioni di valuta  
+
  La Configurazione guidata funzionalità di Business Intelligence consente di definire il numero di conversioni di valuta desiderato in base alle specifiche esigenze. È possibile sovrascrivere una conversione di valuta esistente o accodare una nuova conversione allo script MDX di un cubo. La definizione di più conversioni di valuta in un cubo offre una maggiore flessibilità nelle applicazioni di Business Intelligence con requisiti di report complessi, ad esempio in applicazioni per relazioni finanziarie che supportano più requisiti di conversione distinti per la gestione di report internazionali.  
   
-### <a name="identifying-currency-conversions"></a>Identificazione delle conversioni di valuta  
- Nella Configurazione guidata funzionalità di Business Intelligence, per identificare le varie conversioni di valuta, i comandi script per la conversione di valuta vengono inseriti nei commenti seguenti:  
+### <a name="currency-conversion-in-multidimensional-models-by-using-business-intelligence-wizard"></a>Conversione di valuta nei modelli multidimensionali tramite configurazione guidata Business Intelligence  
+ 
+Nella Configurazione guidata funzionalità di Business Intelligence, per identificare le varie conversioni di valuta, i comandi script per la conversione di valuta vengono inseriti nei commenti seguenti:  
   
  `//<Currency conversion>`  
   
