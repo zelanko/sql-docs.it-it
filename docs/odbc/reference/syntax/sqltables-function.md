@@ -20,12 +20,12 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233358"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536801"
 ---
 # <a name="sqltables-function"></a>Funzione SQLTables
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "63233358"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLTables(  
      SQLHSTMT       StatementHandle,  
@@ -162,7 +162,7 @@ SQLRETURN SQLTables(
 ## <a name="example"></a>Esempio  
  Esempio di codice seguente non libera gli handle e le connessioni. Visualizzare [funzione SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) e [SQLFreeStmt-funzione](../../../odbc/reference/syntax/sqlfreestmt-function.md) per esempi di codice liberare l'handle e le istruzioni.  
   
-```  
+```cpp  
 // SQLTables.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

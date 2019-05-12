@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982393"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536313"
 ---
 # <a name="sqlsetpos-function"></a>Funzione SQLSetPos
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982393"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>Esempio di codice  
  Nell'esempio seguente, un'applicazione consente all'utente di individuare la tabella ORDERS e aggiornare lo stato dell'ordine. Il cursore è gestito da keyset con una dimensione di set di righe di 20 e Usa il controllo della concorrenza ottimistica confronto tra le versioni di riga. Dopo ogni set di righe viene recuperato, l'applicazione lo stampa e consente all'utente di selezionare e aggiornare lo stato di un ordine. L'applicazione utilizza **SQLSetPos** per posizionare il cursore nella riga selezionata ed esegue un aggiornamento posizionato della riga. La gestione degli errori è omessa per maggiore chiarezza.  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

@@ -20,12 +20,12 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132698"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537982"
 ---
 # <a name="sqlgetinfo-function"></a>Funzione SQLGetInfo
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "63132698"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetInfo(  
      SQLHDBC         ConnectionHandle,  
@@ -1805,7 +1805,7 @@ SQLRETURN SQLGetInfo(
   
  Per un altro esempio di utilizzo **SQLGetInfo**, vedere [funzione SQLTables](../../../odbc/reference/syntax/sqltables-function.md).  
   
-```  
+```cpp  
 SQLUINTEGER fFuncs;  
   
 SQLGetInfo(hdbc,   

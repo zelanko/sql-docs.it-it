@@ -20,12 +20,12 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465957"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536524"
 ---
 # <a name="sqlnativesql-function"></a>Funzione SQLNativeSql
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465957"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -97,25 +97,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>Commenti  
  Di seguito sono riportati esempi di cosa **SQLNativeSql** potrebbe restituire la stringa di input seguente SQL che contiene la funzione scalare CONVERT. Si supponga che la colonna Employee!1!empID sia di tipo INTEGER nell'origine dati:  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Un driver per Microsoft SQL Server potrebbe restituire la stringa SQL tradotta seguente:  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  Un driver per ORACLE Server potrebbe restituire la stringa SQL tradotta seguente:  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Un driver per Ingres potrebbe restituire la stringa SQL tradotta seguente:  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

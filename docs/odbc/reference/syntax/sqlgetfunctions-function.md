@@ -20,12 +20,12 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240234"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538013"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions Function
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "63240234"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -148,7 +148,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>Esempio di codice  
  I tre esempi seguenti mostrano come un'applicazione usa **SQLGetFunctions** per determinare se un driver supporta **SQLTables**, **SQLColumns**, e  **SQLStatistics**. Se il driver non supporta queste funzioni, l'applicazione si disconnette dal driver. Il primo esempio viene chiamato **SQLGetFunctions** una volta per ogni funzione.  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +171,7 @@ SQLDisconnect(hdbc);
   
  Nel secondo esempio, chiama un'applicazione di ODBC 3.x **SQLGetFunctions** e lo passa una matrice in cui **SQLGetFunctions** restituisce informazioni su tutti i ODBC 3.x e le funzioni precedenti.  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +193,7 @@ SQLDisconnect(hdbc);
   
  Il terzo esempio è un'applicazione ODBC 2.x chiama **SQLGetFunctions** e lo passa una matrice di 100 elementi in cui **SQLGetFunctions** restituisce informazioni su tutti i ODBC 2.x e le funzioni precedenti.  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

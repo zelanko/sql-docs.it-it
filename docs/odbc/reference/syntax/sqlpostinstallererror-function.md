@@ -20,12 +20,12 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a189bd082bbf3d5f08080fccec48334165d5d15c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac7fb545938a0ec5f212e9c0da867fbea5db4817
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465316"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536619"
 ---
 # <a name="sqlpostinstallererror-function"></a>Funzione SQLPostInstallerError
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465316"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 RETCODE SQLPostInstallerError(  
      DWORD    fErrorCode,  

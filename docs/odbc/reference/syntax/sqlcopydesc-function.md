@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259275"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537731"
 ---
 # <a name="sqlcopydesc-function"></a>Funzione SQLCopyDesc
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259275"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>Esempio di codice  
  Nell'esempio seguente, descrittore operazioni vengono utilizzate per copiare i campi della tabella PartsSource nella tabella di PartsCopy. Il contenuto della tabella PartsSource venga recuperato nel buffer di righe nel *hstmt0*. Questi valori vengono usati come parametri di un'istruzione INSERT su *hstmt1* per popolare le colonne della tabella PartsCopy. A tale scopo, i campi di implementazione di *hstmt0* vengono copiati i campi dell'IPD dei *hstmt1*e i campi del ARD dei *hstmt0* vengono copiati i campi di APD di *hstmt1*. Uso **SQLSetDescField** su cui impostare SQL_DESC_PARAMETER_TYPE attributo dell'IPD SQL_PARAM_INPUT quando si copiano i campi IRD da un'istruzione con parametri di output per i campi IPD che devono essere parametri di input.  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

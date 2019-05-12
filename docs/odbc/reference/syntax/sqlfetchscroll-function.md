@@ -20,12 +20,12 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982178"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537362"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -38,7 +38,7 @@ ms.locfileid: "62982178"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetchScroll(  
       SQLHSTMT      StatementHandle,  
@@ -257,9 +257,9 @@ SQLRETURN SQLFetchScroll(
   
  Se il cursore rileva righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva queste modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostata su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ aggiornare. Nel secondo caso, vengono aggiornati i dati nei buffer di set di righe, ma non refetched ed eliminate righe non vengono rimosse dal set di risultati. Di conseguenza, quando una riga viene eliminata dal o inserita nel set di righe corrente, il cursore non modifica i buffer di righe. Al contrario, rileva la modifica quando recupera qualsiasi set di righe incluse in precedenza la riga eliminata o include ora la riga inserita.  
   
- Ad esempio:  
+ Ad esempio:   
   
-```  
+```cpp  
 // Fetch the next rowset.  
 SQLFetchScroll(hstmt, SQL_FETCH_NEXT, 0);  
 // Delete third row of the rowset. Does not modify the rowset buffers.  
