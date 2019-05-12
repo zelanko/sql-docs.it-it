@@ -20,12 +20,12 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237856"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538046"
 ---
 # <a name="sqlbulkoperations-function"></a>Funzione SQLBulkOperations
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "63237856"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -261,7 +261,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="code-example"></a>Esempio di codice  
  Nell'esempio seguente recupera 10 righe di dati in una fase della tabella Customers. Viene quindi richiesto all'utente un'azione da eseguire. Per ridurre il traffico di rete, il buffer di esempio aggiornamenti, eliminazioni e inserisce in locale nelle matrici associate, ma solo a offset oltre i dati di set di righe. Quando l'utente sceglie di inviare aggiornamenti, eliminazioni e inserimenti alla origine dati, il codice imposta l'associazione offset in modo appropriato e chiama **SQLBulkOperations**. Per semplicità, l'utente non è possibile memorizzare nel buffer più di 10 aggiornamenti, eliminazioni o inserimenti.  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

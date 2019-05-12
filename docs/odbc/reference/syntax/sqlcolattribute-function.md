@@ -20,12 +20,12 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca10614062a495de2c8f0ee80d7bbd5c0e675ad4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449754"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537565"
 ---
 # <a name="sqlcolattribute-function"></a>Funzione SQLColAttribute
 **Conformità**  
@@ -39,7 +39,7 @@ ms.locfileid: "65449754"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -192,7 +192,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="example"></a>Esempio  
  Esempio di codice seguente non libera gli handle e le connessioni. Visualizzare [funzione SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md), [programma di esempio ODBC](../../../odbc/reference/sample-odbc-program.md), e [SQLFreeStmt-funzione](../../../odbc/reference/syntax/sqlfreestmt-function.md) per esempi di codice liberare l'handle e le istruzioni.  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   
