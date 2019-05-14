@@ -1,6 +1,13 @@
+---
+ms.openlocfilehash: e0ef092d2227f380c9da1f982d954b8b5d310aaf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877729"
+---
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Supporto
 
-- [Tutti i modi per ottenere assistenza](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [UserVoice - Suggerimenti per migliorare SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 - [Installazione e aggiornamento - Forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - Forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
@@ -12,6 +19,4 @@
 - [Condizioni di licenza e informazioni per Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299)
 - [Opzioni di supporto per utenti aziendali](https://support.microsoft.com/gp/support-options-for-business)
 - [Contatta Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [Modificare i documenti su SQL](https://aka.ms/editsqldocs)
-- [Commenti e suggerimenti sulla documentazione di SQL](https://aka.ms/sqldocsfeedback)
-- [Sondaggio sulla documentazione di SQL](https://aka.ms/sqldocsurvey)
+- [Tutti i modi per ottenere assistenza](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

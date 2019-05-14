@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255016"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946234"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "54255016"
   
 -   A. Creazione di un file di formato non XML per dati nativi  
   
--   b. Creazione di un file di formato non XML per dati di tipo carattere  
+-   B. Creazione di un file di formato non XML per dati di tipo carattere  
   
 -   C. Creazione di un file di formato non XML per dati nativi Unicode  
   
@@ -89,7 +89,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Per altre informazioni, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>b. Creazione di un file di formato non XML per dati di tipo carattere  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. Creazione di un file di formato non XML per dati di tipo carattere  
  Nell'esempio seguente viene creato un file di formato XML, `Department.fmt`, per la tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Nel file di formato vengono utilizzati formati di dati di tipo carattere e un carattere di terminazione del campo non predefinito (`,`). Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
@@ -181,7 +181,7 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
   
 -   A. Creazione di un file di formato XML per dati di tipo carattere  
   
--   b. Creazione di un file di formato XML per dati nativi  
+-   B. Creazione di un file di formato XML per dati nativi  
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
@@ -228,7 +228,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Per informazioni sulla sintassi di questo file di formato, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Per informazioni sui dati di tipo carattere, vedere [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
-#### <a name="b-creating-an-xml-format-file-for-native-data"></a>b. Creazione di un file di formato XML per dati nativi  
+#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. Creazione di un file di formato XML per dati nativi  
  Nell'esempio seguente viene creato un file di formato XML, `Department-n.xml`, per la tabella `HumanResources.Department` . Nel file di formato vengono utilizzati tipi di dati nativi. Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  

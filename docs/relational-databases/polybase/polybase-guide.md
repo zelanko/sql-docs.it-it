@@ -1,6 +1,6 @@
 ---
 title: Che cos'è PolyBase? | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e91afc38ec7cfa4d37217a3152ca731d3c8dac39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3520ff79f3bc79107966024a8c28b80ee8b47507
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775460"
 ---
 # <a name="what-is-polybase"></a>Che cos'è PolyBase?
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-asdw-pdw-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
@@ -44,7 +44,7 @@ PolyBase esegue il push di alcuni calcoli sul nodo Hadoop per ottimizzare la que
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 PolyBase consente all'istanza di SQL Server di elaborare query Transact-SQL che leggono i dati da origini dati esterne. SQL Server 2016 e versioni successive possono accedere a dati esterni in Hadoop e Archiviazione BLOB di Azure. A partire da SQL Server 2019 CTP 2.0, è ora possibile usare PolyBase per accedere ai dati esterni in [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) e [MongoDB](polybase-configure-mongodb.md).
 
@@ -91,7 +91,7 @@ PolyBase rende possibili gli scenari seguenti in SQL Server:
 
 - **Integrarsi con strumenti BI.** Usare PolyBase con la business intelligence e lo stack di analisi di Microsoft o usare strumenti di terze parti compatibili con SQL Server.
 
-## <a name="performance"></a>restazioni
+## <a name="performance"></a>Prestazioni
 
 - **Eseguire il push del calcolo in Hadoop.** Query Optimizer prende una decisione basata sui costi di eseguire il push del calcolo in Hadoop se in questo modo migliorano le prestazioni della query.  Per prendere la decisione basata sui costi, usa le statistiche sulle tabelle esterne. Il push del calcolo crea processi MapReduce e sfrutta le risorse di calcolo distribuite di Hadoop.
 
@@ -109,7 +109,7 @@ Prima di usare PolyBase, è necessario [installare la funzionalità PolyBase](po
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Archiviazione BLOB di Azure](polybase-configure-azure-blob-storage.md)

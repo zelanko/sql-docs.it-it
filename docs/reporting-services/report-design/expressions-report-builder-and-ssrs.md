@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285989"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775540"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
   Le espressioni vengono ampiamente usate nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per recuperare, calcolare, visualizzare, raggruppare, ordinare, filtrare, parametrizzare e formattare i dati. 
@@ -56,13 +56,9 @@ ms.locfileid: "56285989"
   
  Per altre informazioni, vedere [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-### <a name="report-model-formulas"></a>Formule di modelli di report  
- Durante la progettazione di una query per un set di dati in cui viene usato un modello di report come origine dati, è possibile creare *formule*. Le formule sono calcoli eseguiti su valori in un report basati su dati di un modello di report.  
-  
- Per altre informazioni, vedere [Formule nelle query del modello di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
-   
-##  <a name="DisplayText"></a> Informazioni sui simboli di prefissi in espressioni semplici  
- Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferimento è a un campo, un parametro, una raccolta predefinita o la raccolta ReportItems. Nella tabella seguente vengono riportati esempi di testo visualizzato e di quello relativo alle espressioni:  
+## <a name="DisplayText"></a> Informazioni sui simboli di prefissi in espressioni semplici  
+
+Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferimento è a un campo, un parametro, una raccolta predefinita o la raccolta ReportItems. Nella tabella seguente vengono riportati esempi di testo visualizzato e di quello relativo alle espressioni:  
   
 |Elemento|Esempio di testo visualizzato|Esempio di testo dell'espressione|  
 |----------|--------------------------|-----------------------------|  
@@ -88,7 +84,7 @@ ms.locfileid: "56285989"
 |[Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Viene descritto come accedere alle classi CLR predefinite <xref:System.Math> e <xref:System.Convert>, ad altre classi CLR, a funzioni della libreria di runtime di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o a metodi da un assembly esterno.<br /><br /> Viene descritto come accedere a codice personalizzato incorporato nel report o compilato e installato come assembly personalizzato sia nel client che nel server di report.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> Convalida delle espressioni  
- Quando si crea un'espressione per una proprietà specifica dell'elemento del report, i riferimenti che è possibile includere in un'espressione dipendono dai valori accettati dalla proprietà dell'elemento del report e dall'ambito nel quale viene valutata la proprietà. Ad esempio  
+ Quando si crea un'espressione per una proprietà specifica dell'elemento del report, i riferimenti che è possibile includere in un'espressione dipendono dai valori accettati dalla proprietà dell'elemento del report e dall'ambito nel quale viene valutata la proprietà. Esempio:  
   
 -   Per impostazione predefinita, l'espressione [Sum] consente di calcolare la somma di dati presenti nell'ambito al momento della valutazione dell'espressione. Per una cella della tabella, l'ambito dipende dalle appartenenze ai gruppi di righe e di colonne. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
   
