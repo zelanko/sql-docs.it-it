@@ -24,7 +24,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
 ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/18/2018
 ms.locfileid: "53591865"
@@ -46,7 +46,7 @@ ms.locfileid: "53591865"
  Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Se non si specifica un'istanza denominata, **sqlservr** avvia l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Per l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare l'applicazione **sqlservr** nella directory appropriata per l'istanza. Nel caso dell'istanza predefinita, eseguire **sqlservr** dalla directory \MSSQL\Binn. Nel caso dell'istanza denominata, eseguire **sqlservr** dalla directory \MSSQL$\*nome_istanza*\Binn.  
+>  Per l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare l'applicazione **sqlservr** nella directory appropriata per l'istanza. Nel caso dell'istanza predefinita, eseguire **sqlservr** dalla directory \MSSQL\Binn. Nel caso dell'istanza denominata, eseguire **sqlservr** dalla directory \MSSQL$*nome_istanza*\Binn.  
   
  **-c**  
  Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modo indipendente da Gestione controllo servizi di Windows. Questa opzione viene utilizzata dal prompt dei comandi all'avvio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per ridurre il tempo di avvio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
