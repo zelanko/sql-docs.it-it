@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628158"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577993"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628158"
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
 Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+
+## <a name="notes-on-linux-version"></a>Note sulla versione di Linux
+
+A causa di un modo in cui il motore SQL funziona in Linux, alcune di queste informazioni non corrisponde a dati di diagnostica Linux. Ad esempio, `os_thread_id` non corrisponde al risultato di strumenti, ad esempio `ps`,`top` o il procfs (/proc/`pid`).  Ciò è dovuto il livello di astrazione piattaforma (SQLPAL), un livello tra i componenti di SQL Server e il sistema operativo.
 
 ## <a name="examples"></a>Esempi  
  All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono avviati dei thread a cui vengono associati thread di lavoro. Componenti esterni, ad esempio una stored procedure estesa, possono tuttavia avviare thread nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di controllo su questi thread. DM os_threads può offrire informazioni sui thread non autorizzati che utilizzano risorse nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo.  

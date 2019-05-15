@@ -10,21 +10,24 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306159"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502848"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Chiavi di crittografia SSRS - Eseguire il backup e il ripristino delle chiavi di crittografia
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Un aspetto importante della configurazione del server di report riguarda la creazione di una copia di backup della chiave simmetrica utilizzata per crittografare le informazioni riservate. La copia di backup della chiave è obbligatoria per molte operazioni di routine e consente di riutilizzare un database del server di report esistente in una nuova installazione.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+
+> [!NOTE]
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
  È necessario ripristinare la copia di backup della chiave di crittografia se si verifica uno degli eventi seguenti:  
   
@@ -44,11 +47,15 @@ ms.locfileid: "58306159"
  Durante il backup della chiave simmetrica, la chiave viene scritta nel file specificato dall'utente e quindi viene codificata utilizzando la password fornita dall'utente. La chiave simmetrica non può mai essere archiviata non crittografata, pertanto è necessario fornire una password per codificarla al momento di salvarla su disco. Dopo aver creato il file, è necessario archiviarlo in un percorso protetto e **ricordare la password** per poterlo sbloccare. Per eseguire il backup della chiave simmetrica, è possibile utilizzare gli strumenti riportati di seguito.  
   
  **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt** .  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Modalità SharePoint:** pagine di Amministrazione centrale SharePoint o PowerShell.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Eseguire il backup di server di report in modalità SharePoint  
  Per i server di report in modalità SharePoint è possibile utilizzare i comandi di PowerShell o le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere la sezione "Gestione chiavi" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Eseguire il backup di chiavi di crittografia - Gestione configurazione Reporting Services (modalità nativa)  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30b7c524a47459354f6e42e734fbbe4c8faec4ea
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c5705a237bda9b426b8f39103b9c9fdf19abb00c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256996"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088692"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ In questo argomento viene descritto come visualizzare il log degli errori di  [!
   
 Nel Visualizzatore file di log sono visualizzate informazioni sui log relativi a molti componenti diversi. Quando il Visualizzatore file di log è aperto, selezionare i log che si desidera visualizzare nel riquadro **Seleziona log** . In ogni log vengono visualizzate le colonne appropriate per il tipo di log specifico. I log disponibili dipendono dalla modalità di apertura del Visualizzatore file di log.  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Sicurezza](#Security)  
+    [Security](#Security)  
   
 -   [Per visualizzare il log degli errori di SQL Server Agent utilizzando SQL Server Management Studio](#SSMSProcedure)  
   
