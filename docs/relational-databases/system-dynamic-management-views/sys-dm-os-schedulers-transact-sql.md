@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939699"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626765"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,6 +62,10 @@ ms.locfileid: "62939699"
 |memory_object_address|**varbinary(8)**|Indirizzo di memoria dell'oggetto memoria dell'utilità di pianificazione. Non ammette i valori Null.|  
 |task_memory_object_address|**varbinary(8)**|Indirizzo di memoria dell'oggetto memoria dell'attività. Non ammette i valori Null. Per altre informazioni, vedere [DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Espone il quantum dell'utilità di pianificazione utilizzato da SQLOS.|  
+| total_cpu_usage_ms |**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive <br><br> CPU totale usata da questa utilità di pianificazione come riportato da lavoratori non preemptive. Non ammette i valori Null.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indica alla limitazione basata sul [Service Level Objective](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sarà sempre pari a 0 per le versioni non di Azure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ammette i valori Null.|
+|total_scheduler_delay_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive <br><br> Tempo trascorso tra un ruolo di lavoro per la disattivazione e un altro passaggio. Può essere causato da dipendenti che lavorano preemptive ritardare la pianificazione del thread di lavoro non preemptive avanti oppure a causa di un sistema operativo pianificazione di thread da altri processi. Non ammette i valori Null.|
+|ideal_workers_limit|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive <br><br> Quanti ruoli di lavoro dovrebbe essere idealmente nell'utilità di pianificazione. Se i ruoli di lavoro corrente supera il limite a causa del carico sbilanciato attività, appena diventano inattive vengono tagliati. Non ammette i valori Null.|
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
 ## <a name="permissions"></a>Permissions

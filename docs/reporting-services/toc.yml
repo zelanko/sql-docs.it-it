@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Che cos'è SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
@@ -1592,7 +1592,7 @@
   items:
     - name: API REST
       href: ../reporting-services/developer/rest-api.md
-    - name: Esempi di API REST +
+    - name: Esempi di API REST >
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: Integrazione di Reporting Services nelle applicazioni
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
@@ -1909,7 +1909,7 @@
         - name: 'Lezione 9: Compilare ed eseguire l''applicazione'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Esercitazioni di Generatore report
-      href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+      href: ../reporting-services/report-builder-tutorials.md
       items:
         - name: Prerequisiti per le esercitazioni
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
