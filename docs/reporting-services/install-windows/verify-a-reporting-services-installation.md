@@ -12,17 +12,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814054"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503287"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
+
+> [!NOTE]
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> Verifica dell'installazione in modalità SharePoint  
   
@@ -71,6 +76,8 @@ ms.locfileid: "51814054"
 1.  Completare una delle esercitazioni di Reporting Services. Per altre informazioni, vedere [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Scaricare il database di esempio Adventure Works e i report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da GitHub. Per ulteriori informazioni, vedere [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> Verificare un'installazione in modalità nativa  
  Quando si installa un server di report in modalità nativa utilizzando la configurazione predefinita, verranno eseguite l'installazione e la distribuzione del server. Per verificare se la distribuzione del server di report viene completata, è sufficiente eseguire alcuni semplici test. A tale scopo occorre disporre dei privilegi di amministratore locale. Per consentire l'esecuzione dei test da parte di altri utenti, è necessario configurare l'accesso di tali utenti al server di report.  

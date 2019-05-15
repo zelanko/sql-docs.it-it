@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710642"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503037"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa
 
@@ -27,6 +27,9 @@ Reporting Services in modalità nativa supporta un modello di distribuzione con 
 Per il Server di report di Microsoft Power BI è necessario configurare l'affinità del client (denominata anche sessioni permanenti) nel bilanciamento del carico per gli ambienti scale-out, al fine di garantire prestazioni adeguate.  
   
 Per SQL Server 2016 Reporting Services e versioni precedenti, i server di report in modalità SharePoint usano l'infrastruttura dei prodotti SharePoint per la scalabilità orizzontale. La scalabilità orizzontale della modalità SharePoint viene eseguita aggiungendo più server di report in modalità SharePoint alla farm di SharePoint. Per informazioni sulla scalabilità orizzontale in modalità SharePoint, vedere [Aggiungere un ulteriore server di report a una farm &#40;con scalabilità orizzontale SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
  
   La *distribuzione con scalabilità orizzontale* viene usata negli scenari seguenti:  
   

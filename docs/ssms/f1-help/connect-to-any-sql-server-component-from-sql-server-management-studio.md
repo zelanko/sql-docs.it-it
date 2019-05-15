@@ -13,15 +13,15 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3acb06bf912f0c5f9195ad002c9aab8b721e60d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ce85a190288adeb02f19d71a76cc5a0d6c8605b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720149"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102696"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Connessione ai componenti di SQL Server da SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "47720149"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 Sebbene [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consenta di lavorare con le query senza prima stabilire una connessione a un'origine dei dati, la maggior parte delle altre attività richiede una connessione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] offre la finestra di dialogo **Connetti al server** per configurare le proprietà di connessione ai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . All'avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , si apre la finestra di dialogo **Connetti al server** in cui viene chiesto di connettersi a un server. La finestra di dialogo **Connetti al server** visualizza le ultime impostazioni di connessione usate.  
   

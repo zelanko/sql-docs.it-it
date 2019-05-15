@@ -1,9 +1,8 @@
 ---
 title: Proprietà dell'oggetto con valori di tabella (colonna) (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,53 +12,53 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81ab7f8547376344a1106a473f6f5ef69a3b1b9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28cb15b30f838f3acb1cb097f751b0f60de7ca52
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792979"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098044"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Proprietà colonna dell'oggetto valutato a livello di tabella (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Queste proprietà vengono visualizzate quando si seleziona una colonna in un oggetto con valori di tabella nel riquadro **Diagramma** di Progettazione query e Progettazione viste.  
+  Queste proprietà vengono visualizzate quando si seleziona una colonna in un oggetto con valori di tabella nel riquadro **Diagramma** di Progettazione query e Progettazione viste.  
   
 > [!NOTE]  
-> Le proprietà illustrate in questo argomento sono ordinate per categoria anziché alfabeticamente.  
+>  Le proprietà illustrate in questo argomento sono ordinate per categoria anziché alfabeticamente.  
   
 > [!NOTE]  
-> È possibile che le finestre di dialogo e i comandi di menu visualizzati varino da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .  
+>  È possibile che le finestre di dialogo e i comandi di menu visualizzati varino da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .  
   
-**Categoria Identità**  
-Espandere questa categoria per visualizzare la proprietà **Nome** .  
+ **Categoria Identità**  
+ Espandere questa categoria per visualizzare la proprietà **Nome** .  
   
-**Nome**  
-Indica il nome della colonna selezionata.  
+ **Nome**  
+ Indica il nome della colonna selezionata.  
   
-**Categoria Progettazione query**  
-Espandere questa categoria per visualizzare le proprietà per **Consenti valori Null**, **Regole di confronto**, **Tipo di dati**, **Lunghezza**, **Precisione**, **Scala**e **Dimensione**.  
+ **Categoria Progettazione query**  
+ Espandere questa categoria per visualizzare le proprietà per **Consenti valori Null**, **Regole di confronto**, **Tipo di dati**, **Lunghezza**, **Precisione**, **Scala**e **Dimensione**.  
   
-**Consenti valori Null**  
-Indica se il tipo di dati della colonna accetta valori Null.  
+ **Consenti valori Null**  
+ Indica se il tipo di dati della colonna accetta valori Null.  
   
-**Regole di confronto**  
-Indica l'impostazione delle regole di confronto per la colonna selezionata. È possibile impostare il confronto nella scheda Proprietà colonna di Progettazione tabelle.  
+ **Regole di confronto**  
+ Indica l'impostazione delle regole di confronto per la colonna selezionata. È possibile impostare il confronto nella scheda Proprietà colonna di Progettazione tabelle.  
   
-**Tipo di dati**  
-Mostra il tipo di dati della colonna selezionata.  
+ **Tipo di dati**  
+ Mostra il tipo di dati della colonna selezionata.  
   
-**Length**  
-Indica il numero di caratteri o cifre consentiti dal tipo di dati della colonna selezionata. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
+ **Lunghezza**  
+ Indica il numero di caratteri o cifre consentiti dal tipo di dati della colonna selezionata. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
 > [!NOTE]  
-> Per le dimensioni in byte, vedere la proprietà **Dimensione** di seguito.  
+>  Per le dimensioni in byte, vedere la proprietà **Dimensione** di seguito.  
   
-**Precisione**  
-Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
+ **Precisione**  
+ Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
-**Scala**  
-Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
+ **Scala**  
+ Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
-**Dimensione**  
-Indica la dimensione in byte consentita dal tipo di dati della colonna. Ad esempio, un tipo di dati nchar può avere una lunghezza di 10 (il numero di caratteri), ma avrebbe una dimensione di 20 per quanto riguarda i set di caratteri Unicode.  
+ **Dimensione**  
+ Indica la dimensione in byte consentita dal tipo di dati della colonna. Ad esempio, un tipo di dati nchar può avere una lunghezza di 10 (il numero di caratteri), ma avrebbe una dimensione di 20 per quanto riguarda i set di caratteri Unicode.  
+  
   

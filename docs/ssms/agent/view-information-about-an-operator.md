@@ -15,16 +15,16 @@ helpviewer_keywords:
 - notifications [SQL Server], job status
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c34ab77bdb69282d271a82cd69e4e26d2a66a6ca
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256396"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103203"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "54256396"
 
 In questo argomento viene descritta la procedura per visualizzare le infomazioni relative a un operatoe di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-    [Sicurezza](#Security)  
+    [Security](#Security)  
   
 -   **Per visualizzare le informazioni relative a un operatore utilizzando:**  
   
@@ -91,7 +91,7 @@ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- reports information about operator François Ajenstat   

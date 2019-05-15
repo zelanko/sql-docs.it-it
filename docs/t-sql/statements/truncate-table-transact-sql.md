@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da038c619f4679600087fb3d46e88d96b059794b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801565"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503315"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,8 +46,7 @@ Rimuove tutte le righe da una tabella o da partizioni specificate di una tabella
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
-    [ { database_name .[ schema_name ] . | schema_name . } ]  
-    table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( PARTITIONS ( { <partition_number_expression> | <range> }   
     [ , ...n ] ) ) ]  
 [ ; ]  
@@ -59,7 +58,7 @@ TRUNCATE TABLE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
+TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -107,7 +106,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  TRUNCATE TABLE rimuove tutte le righe da una tabella, ma non rimuove la struttura della tabella e le relative colonne, i vincoli, gli indici e così via. Per rimuovere la definizione della tabella in aggiunta ai relativi dati, utilizzare l'istruzione DROP TABLE.  
   
- Se la tabella include una colonna Identity, il contattore per quella colonna viene reimpostato sul valore di inizializzazione definito per la colonna. Se non è stato definito alcun valore di inizializzazione, viene utilizzato il valore predefinito 1. Per mantenere il contatore della tabella Identity, utilizzare l'istruzione DELETE.  
+ Se la tabella include una colonna Identity, il contattore per quella colonna viene reimpostato sul valore di inizializzazione definito per la colonna. Se non è stato definito alcun valore di inizializzazione, viene utilizzato il valore predefinito. Per mantenere il contatore della tabella Identity, utilizzare l'istruzione DELETE.  
   
 ## <a name="restrictions"></a>Restrictions  
  Non è possibile utilizzare TRUNCATE TABLE sulle tabelle:  
@@ -131,7 +130,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>Troncamento delle tabelle di grandi dimensioni  
  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile eliminare o troncare le tabelle che includono più di 128 extent senza mantenere attivi blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione minima necessaria è ALTER su *table_name*. Le autorizzazioni per l'istruzione TRUNCATE TABLE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server sysadmin, dei ruoli predefiniti del database db_owner e db_ddladmin e al proprietario della tabella e non sono trasferibili. È tuttavia possibile incorporare l'istruzione TRUNCATE TABLE all'interno di un modulo, ad esempio una stored procedure, e concedere le autorizzazioni necessarie al modulo tramite la clausola EXECUTE AS.  
   
 ## <a name="examples"></a>Esempi  
@@ -152,7 +151,7 @@ FROM HumanResources.JobCandidate;
 GO  
 ```  
   
-### <a name="b-truncate-table-partitions"></a>b. Troncare le partizioni di una tabella  
+### <a name="b-truncate-table-partitions"></a>B. Troncare le partizioni di una tabella  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   

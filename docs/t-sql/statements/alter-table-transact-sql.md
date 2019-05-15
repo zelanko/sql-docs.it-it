@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a312663c26142bfd532adbcaba80d2a6ee30d6db
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683681"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502857"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -90,7 +90,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 ## <a name="syntax-for-disk-based-tables"></a>Sintassi per le tabelle basate su disco
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -249,7 +249,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## <a name="syntax-for-memory-optimized-tables"></a>Sintassi per le tabelle con ottimizzazione per la memoria
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -380,7 +380,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -662,7 +662,7 @@ Per altre informazioni, vedere [Configurazione di operazioni parallele sugli ind
 
 ONLINE **=** { ON | **OFF** } \<se si applica a drop_clustered_constraint_option> specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF. È possibile eseguire REBUILD come operazione ONLINE.
 
-ON: i blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine, Questo comportamento consente l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un breve periodo. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, se viene creato un indice non cluster. In alternativa, viene acquisito un blocco di modifica dello schema (SCH-M) quando un indice cluster viene creato o eliminato online e quando un indice cluster o non cluster viene ricompilato. L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale. È consentita solo l'operazione di ricompilazione dell'heap a thread singolo.
+ON: i blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. Questo comportamento consente l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un breve periodo. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, se viene creato un indice non cluster. In alternativa, viene acquisito un blocco di modifica dello schema (SCH-M) quando un indice cluster viene creato o eliminato online e quando un indice cluster o non cluster viene ricompilato. L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale. È consentita solo l'operazione di ricompilazione dell'heap a thread singolo.
 
 Per eseguire l'istruzione DDL per un'operazione **SWITCH** o la ricompilazione dell'indice online, è necessario completare tutte le transazioni bloccanti attive in esecuzione in una specifica tabella. Durante l'esecuzione, l'operazione **SWITCH** o di ricompilazione impedisce l'avvio di nuove transazioni e può influire in modo significativo sulla velocità effettiva del carico di lavoro e ritardare temporaneamente l'accesso alla tabella sottostante.
 
@@ -848,7 +848,7 @@ Quando si disabilita Stretch per una tabella, esistono due opzioni disponibili p
 - Per disabilitare l'estensione per una tabella e copiare i dati remoti per la tabella da Azure a SQL Server, eseguire il comando seguente. Questo comando non può essere annullato.
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ Dopo aver copiato tutti i dati remoti da Azure a SQL Server, l'estensione viene 
 - Per disabilitare l'estensione per una tabella e abbandonare i dati remoti, eseguire il comando seguente.
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
@@ -1007,7 +1007,7 @@ Nelle versioni precedenti l'uso del formato server.database.schema.tabella gener
 
 Per risolvere il problema, rimuovere l'uso di un prefisso in quattro parti.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È necessario disporre dell'autorizzazione ALTER per la tabella.
 
@@ -1042,7 +1042,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO
 ```
 
-#### <a name="b-adding-a-column-with-a-constraint"></a>b. Aggiunta di una colonna con un vincolo
+#### <a name="b-adding-a-column-with-a-constraint"></a>B. Aggiunta di una colonna con un vincolo
 
 Nell'esempio seguente viene aggiunta una nuova colonna con un vincolo `UNIQUE`.
 
@@ -1279,7 +1279,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### <a name="b-dropping-constraints-and-columns"></a>b. Eliminazione di vincoli e colonne
+#### <a name="b-dropping-constraints-and-columns"></a>B. Eliminazione di vincoli e colonne
 
 Nel primo esempio viene rimosso un vincolo `UNIQUE` da una tabella. Nel secondo esempio vengono rimossi due vincoli e una singola colonna.
 
@@ -1304,7 +1304,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
@@ -1359,7 +1359,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-#### <a name="b-changing-the-size-of-a-column"></a>b. Modifica delle dimensioni di una colonna
+#### <a name="b-changing-the-size-of-a-column"></a>B. Modifica delle dimensioni di una colonna
 
 Nell'esempio seguente vengono aumentate le dimensioni di una colonna **varchar** e la precisione e la scala di una colonna **decimal**. Poiché le colonne contengono dati, le relative dimensioni possono solo essere aumentate. Si noti inoltre che `col_a` è definito in un indice univoco. Le dimensioni di `col_a` possono ancora essere aumentate poiché il tipo di dati è **varchar** e l'indice non è il risultato di un vincolo PRIMARY KEY.
 
@@ -1471,7 +1471,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 Per altri esempi sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
 
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modifica di una tabella columnstore per modificare la compressione dell'archivio
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modifica di una tabella columnstore per modificare la compressione dell'archivio
 
 Nell'esempio seguente viene compressa una partizione di tabella columnstore applicando un algoritmo di compressione aggiuntivo. Questa compressione riduce le dimensioni della tabella, ma aumenta il tempo necessario per l'archiviazione e il recupero. È utile per l'archiviazione o in situazioni in cui è richiesto uno spazio inferiore ed è possibile concedere più tempo per l'archiviazione e il recupero.
 
@@ -1584,7 +1584,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>b. Disabilitazione e riabilitazione di un trigger
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. Disabilitazione e riabilitazione di un trigger
 
 Nell'esempio seguente viene utilizzata l'opzione `DISABLE TRIGGER` di `ALTER TABLE` per disabilitare il trigger e consentire un inserimento che altrimenti violerebbe il trigger. `ENABLE TRIGGER` viene quindi utilizzato per abilitare nuovamente il trigger.
 
@@ -1640,7 +1640,7 @@ REBUILD WITH
 ;
 ```
 
-#### <a name="b-online-alter-column"></a>b. Modifica colonna online
+#### <a name="b-online-alter-column"></a>B. Modifica colonna online
 
 L'esempio seguente illustra come eseguire un'operazione di modifica colonna con l'opzione ONLINE.
 
@@ -1683,7 +1683,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```
 
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Eseguire la migrazione di una soluzione esistente per usare il controllo delle versioni di sistema
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Eseguire la migrazione di una soluzione esistente per usare il controllo delle versioni di sistema
 
 Nell'esempio seguente viene illustrato come eseguire la migrazione per il controllo delle versioni di sistema da una soluzione che usa i trigger per simulare il supporto temporale. In questo esempio si presuppone l'esistenza di una soluzione in cui siano usate una tabella `ProjectTask` e una tabella `ProjectTaskHistory` per la soluzione esistente, vale a dire le colonne `Changed Date` e `Revised Date` per i periodi. Tali colonne di periodo non devono usare il tipo di dati `datetime2` e la tabella `ProjectTask` deve avere una chiave primaria definita.
 
@@ -1757,7 +1757,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';
 ```
 
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>b. Determinazione dei valori limite per una tabella partizionata
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Determinazione dei valori limite per una tabella partizionata
 
 Tramite la query seguente vengono restituiti i valori limite per ogni partizione nella tabella `FactResellerSales` .
 
@@ -1782,7 +1782,7 @@ ORDER BY p.partition_number;
 
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. Determinazione della colonna di partizione per una tabella partizionata
 
-Tramite la query seguente viene restituito il nome della colonna di partizionamento per la tabella. `FactResellerSales`(Indici per tabelle con ottimizzazione per la memoria).
+Tramite la query seguente viene restituito il nome della colonna di partizionamento per la tabella. `FactResellerSales`.
 
 ```sql
 SELECT t.object_id AS Object_ID, t.name AS TableName,

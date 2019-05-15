@@ -2,21 +2,21 @@
 title: Esportare un report tramite l'accesso con URL | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bf1113603800d232ccdc88aa6b436f8d8a0e6f6c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a6d6d9dd46e6c54dc9be72e30a19498bf39391c
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503999"
 ---
 # <a name="export-a-report-using-url-access"></a>Esportare un report tramite l'accesso con URL
   Facoltativamente, è possibile definire il formato di rendering di un report con il parametro URL *rs:Format* .  Il rendering dei formati HTML 4.0 e HTM5 (estensione per il rendering) viene eseguito nel browser e per gli altri formati il browser richiede di salvare l'output del report in un file locale.  
@@ -26,13 +26,17 @@ ms.locfileid: "51814204"
 ```  
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  Da un server di report in modalità integrata SharePoint:  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
-  
+ 
+::: moniker-end
+ 
  Ad esempio, il comando URL seguente nel browser esporta un report PPTX da un'istanza denominata del server di report:  
   
 ```  

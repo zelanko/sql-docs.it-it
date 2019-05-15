@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744561"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090250"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creare un gruppo di disponibilità indipendente dal dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Per un cluster di gruppi di lavoro di un gruppo di disponibilità indipendente d
 
 Attualmente non è possibile creare un gruppo di disponibilità indipendente dal dominio interamente con SQL Server Management Studio. Anche se la procedura per la creazione del gruppo di disponibilità indipendente dal dominio è sostanzialmente identica alla creazione di un gruppo di disponibilità normale, alcuni aspetti come la creazione dei certificati sono possibili solo con Transact-SQL. L'esempio seguente presuppone la configurazione di un gruppo di disponibilità con due repliche, una primaria e una secondaria. 
 
-1. Seguendo la procedura illustrata in [questo post di blog](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), distribuire un cluster di gruppi di lavoro composto da tutti i server che faranno parte del gruppo di disponibilità. Prima di configurare il cluster di gruppi di lavoro, assicurarsi che il suffisso DNS comune sia già configurato.
+1. Seguendo la procedura illustrata in [questo post di blog](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), distribuire un cluster di gruppi di lavoro composto da tutti i server che faranno parte del gruppo di disponibilità. Prima di configurare il cluster di gruppi di lavoro, assicurarsi che il suffisso DNS comune sia già configurato.
 2. [Abilitare la funzionalità Gruppi di disponibilità AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) in ogni istanza che farà parte del gruppo di disponibilità. Sarà necessario riavviare ogni istanza di SQL Server.
 3. Per ogni istanza che ospiterà la replica primaria è necessaria una chiave master del database. Se non esiste già una chiave master, eseguire questo comando:
 
@@ -126,7 +126,7 @@ Attualmente non è possibile creare un gruppo di disponibilità indipendente dal
    ```
 
 10. Per qualsiasi replica che potrebbe essere primaria, creare un account di accesso e un utente in tutte le relative repliche secondarie.
-11. Ripristinare in ogni istanza i certificati per le altre istanze per cui sono stati creati un account di accesso e un utente. Nella replica primaria ripristinare tutti i certificati delle repliche secondarie. Ripristinare il certificato della replica primaria in ogni replica secondaria e anche in qualsiasi altra replica che potrebbe essere primaria. Ad esempio
+11. Ripristinare in ogni istanza i certificati per le altre istanze per cui sono stati creati un account di accesso e un utente. Nella replica primaria ripristinare tutti i certificati delle repliche secondarie. Ripristinare il certificato della replica primaria in ogni replica secondaria e anche in qualsiasi altra replica che potrebbe essere primaria. Esempio:
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]

@@ -33,74 +33,78 @@
   items:
     - name: Panoramica delle esercitazioni su Analysis Services
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: Modellazione tabulare (livello di compatibilità 1400)
-      href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+    - name: Modellazione tabulare
       items:
-        - name: 1 - Creare un progetto di modello tabulare
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - Recuperare i dati
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
-        - name: 3 - Contrassegnare come tabella data
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
-        - name: 4 - Creare relazioni
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
-        - name: 5 - Creare colonne calcolate
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
-        - name: 6 - Creare misure
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
-        - name: 7 - Creare indicatori di prestazioni chiave
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
-        - name: 8 - Creare prospettive
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
-        - name: 9 - Creare gerarchie
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
-        - name: 10 - Creare partizioni
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
-        - name: 11 - Creare ruoli
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
-        - name: 12 - Analizzare in Excel
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
-        - name: 13 - Distribuire
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
-        - name: Lezione supplementare - Righe di dettaglio
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
-        - name: Lezione supplementare - Sicurezza dinamica
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
-        - name: Lezione supplementare - Gerarchie incomplete
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: Modellazione tabulare (livello di compatibilità 1200)
-      href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
-      items:
-        - name: 1 - Creare un nuovo modello di progetto tabulare
-          href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - Aggiungere dati
-          href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
-        - name: 3 - Contrassegnare come tabella data
-          href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
-        - name: 4 - Creare relazioni
-          href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
-        - name: 5 - Creare colonne calcolate
-          href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
-        - name: 6 - Creare misure
-          href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
-        - name: 7 - Creare indicatori di prestazioni chiave
-          href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
-        - name: 8 - Creare prospettive
-          href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
-        - name: 9 - Creare gerarchie
-          href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
-        - name: 10 - Creare partizioni
-          href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
-        - name: 11 - Creare ruoli
-          href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
-        - name: 12 - Analizzare in Excel
-          href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
-        - name: 13 - Distribuire
-          href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
-        - name: 'Lezione supplementare: Implementare la sicurezza dinamica mediante i filtri di riga'
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
-        - name: 'Lezione supplementare: Configurare le proprietà di creazione di report per i report Power View'
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+        - name: Esercitazione sulle vendite via Internet (1400)
+          items:
+            - name: Panoramica dell'esercitazione sulle vendite via Internet (1400)
+              href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+            - name: 1 - Creare un progetto di modello tabulare
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - Recuperare i dati
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
+            - name: 3 - Contrassegnare come tabella data
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+            - name: 4 - Creare relazioni
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
+            - name: 5 - Creare colonne calcolate
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+            - name: 6 - Creare misure
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
+            - name: 7 - Creare indicatori di prestazioni chiave
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+            - name: 8 - Creare prospettive
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+            - name: 9 - Creare gerarchie
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+            - name: 10 - Creare partizioni
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
+            - name: 11 - Creare ruoli
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
+            - name: 12 - Analizzare in Excel
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+            - name: 13 - Distribuire
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
+            - name: Lezione supplementare - Righe di dettaglio
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+            - name: Lezione supplementare - Sicurezza dinamica
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+            - name: Lezione supplementare - Gerarchie incomplete
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+        - name: Esercitazione sulle vendite via Internet (1200)
+          items:
+            - name: Panoramica dell'esercitazione sulle vendite via Internet (1200)
+              href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
+            - name: 1 - Creare un nuovo modello di progetto tabulare
+              href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - Aggiungere dati
+              href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
+            - name: 3 - Contrassegnare come tabella data
+              href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
+            - name: 4 - Creare relazioni
+              href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
+            - name: 5 - Creare colonne calcolate
+              href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
+            - name: 6 - Creare misure
+              href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
+            - name: 7 - Creare indicatori di prestazioni chiave
+              href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
+            - name: 8 - Creare prospettive
+              href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
+            - name: 9 - Creare gerarchie
+              href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
+            - name: 10 - Creare partizioni
+              href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
+            - name: 11 - Creare ruoli
+              href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
+            - name: 12 - Analizzare in Excel
+              href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
+            - name: 13 - Distribuire
+              href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
+            - name: 'Lezione supplementare: Implementare la sicurezza dinamica mediante i filtri di riga'
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+            - name: 'Lezione supplementare: Configurare le proprietà di creazione di report per i report Power View'
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
     - name: Modellazione multidimensionale
       href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
       items:
@@ -1414,7 +1418,7 @@
           href: ../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
-    - name: Guida per gli sviluppatori (Analysis Services)
+    - name: Panoramica della documentazione per gli sviluppatori
       href: ../analysis-services/analysis-services-developer-documentation.md
     - name: Modelli tabulari
       items:
@@ -1475,10 +1479,11 @@
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
         - name: AMO (Analysis Management Objects) +
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-        - name: Sviluppo con Analysis Services Scripting Language (ASSL)
-          href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+        - name: ASSL (Analysis Services Scripting Language)
           items:
-            - name: Informazioni di riferimento su Analysis Services Scripting Language (ASSL per XMLA) +
+            - name: Sviluppo con Analysis Services Scripting Language (ASSL)
+              href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+            - name: Informazioni di riferimento su Analysis Services Scripting Language (ASSL per XMLA)
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: Oggetti ASSL e relative caratteristiche
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1518,222 +1523,233 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: Convenzioni XML di ASSL
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: XML for Analysis (XMLA) +
+        - name: Informazioni di riferimento per XML for Analysis (XMLA) +
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-        - name: Programmazione di server ADOMD.NET
-          href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+        - name: ADOMD.NET
           items:
+            - name: Informazioni di riferimento su ADOMD.NET +
+              href: /bi-reference/adomd/developing-with-adomd-net
+            - name: Programmazione di server ADOMD.NET
+              href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
             - name: Funzionalità server di ADOMD.NET
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
             - name: Architettura degli oggetti server in ADOMD.NET
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
             - name: Funzioni definite dall'utente e stored procedure
               href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
-            - name: Informazioni di riferimento su ADOMD.NET +
-              href: /bi-reference/adomd/developing-with-adomd-net
-        - name: Oggetti di database (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-        - name: Relazioni tra attributi
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-        - name: Attributi e gerarchie di attributi
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-        - name: Proprietà delle dimensioni del database - Tipi
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-        - name: Proprietà delle dimensioni del database
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
-        - name: Oggetti dimensione (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-        - name: Traduzioni delle dimensioni
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-        - name: Dimensioni - Introduzione
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
-        - name: Dimensioni - Archiviazione
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-        - name: Dimensioni (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
-        - name: Memorizzazione nella cache attiva (dimensioni)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-        - name: Gerarchie utente - Proprietà dei livelli
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-        - name: Gerarchie utente - Proprietà
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-        - name: Gerarchie definite dall'utente
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
-        - name: Dimensioni abilitate per la scrittura
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-        - name: Aggregations and Aggregation Designs
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-        - name: Calcoli
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
-        - name: Celle del cubo (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-        - name: Oggetti cubo (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-        - name: 'Proprietà dei cubi: programmazione del modello multidimensionale'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-        - name: Archiviazione di cubi (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-        - name: Traduzioni di cubi
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
-        - name: Relazioni tra dimensioni
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-        - name: 'Partizioni: elaborazione e modalità di archiviazione delle partizioni'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-        - name: 'Partizioni: caching attivo'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-        - name: 'Partizioni: partizioni remote'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-        - name: 'Partizioni: partizioni abilitate per la scrittura'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-        - name: Partizioni (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
-        - name: prospettive
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
-        - name: Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-        - name: Ruoli di sicurezza (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-        - name: Oggetti server (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-        - name: Informazioni sull'architettura logica Microsoft OLAP
-          href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-        - name: Requisiti di architettura client per sviluppo Analysis Services
-          href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-        - name: Tipi di dati in Analysis Services
-          href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
-        - name: Cubi locali (Analysis Services - Dati multidimensionali)
-          href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-        - name: Specifiche di capacità massima (Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-        - name: Regole di denominazione degli oggetti (Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-        - name: Componenti del server del motore OLAP
-          href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
-        - name: Informazioni sull'architettura Microsoft OLAP
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-        - name: Informazioni sull'architettura fisica Microsoft OLAP
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-        - name: Analysis Services Personalization Extensions
-          href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-        - name: Accesso al contesto di query nelle stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-        - name: Chiamata di stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-        - name: Creazione di stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-        - name: Debug di stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-        - name: Definizione delle stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-        - name: Progettazione di stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-        - name: Impostazione della sicurezza per stored procedure
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-        - name: Estensione delle funzionalità OLAP
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
-        - name: Estensione di OLAP tramite personalizzazioni
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-        - name: Accesso ai dati con MDX
-          href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
-        - name: Query su dati multidimensionali con MDX
-          href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
-        - name: Concetti chiave di MDX
-          href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+        - name: OLAP
           items:
-            - name: Auto Exist
-              href: ../analysis-services/multidimensional-models/mdx/autoexists.md
-            - name: Contesto di calcolo
-              href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
-            - name: Membri calcolati in sub-SELECT e sottocubi
-              href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
-            - name: Spazio del cubo
-              href: ../analysis-services/multidimensional-models/mdx/cube-space.md
-            - name: Sub-SELECT nelle query
-              href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
-            - name: Tuple
-              href: ../analysis-services/multidimensional-models/mdx/tuples.md
-            - name: Totali visualizzati e non visualizzati
-              href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
-            - name: 'Utilizzo di membri, tuple e set (MDX)'
-              href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
-        - name: Nozioni fondamentali sulle query MDX
-          href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+            - name: OLAP logico
+              items:
+                - name: Oggetti di database (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+                - name: Relazioni tra attributi
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+                - name: Attributi e gerarchie di attributi
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+                - name: Proprietà delle dimensioni del database - Tipi
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+                - name: Proprietà delle dimensioni del database
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+                - name: Oggetti dimensione (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+                - name: Traduzioni delle dimensioni
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+                - name: Dimensioni - Introduzione
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
+                - name: Dimensioni - Archiviazione
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+                - name: Dimensioni (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+                - name: Memorizzazione nella cache attiva (dimensioni)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+                - name: Gerarchie utente - Proprietà dei livelli
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+                - name: Gerarchie utente - Proprietà
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+                - name: Gerarchie definite dall'utente
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+                - name: Dimensioni abilitate per la scrittura
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+                - name: Aggregations and Aggregation Designs
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+                - name: Calcoli
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
+                - name: Celle del cubo (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+                - name: Oggetti cubo (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+                - name: 'Proprietà dei cubi: programmazione del modello multidimensionale'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+                - name: Archiviazione di cubi (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+                - name: Traduzioni di cubi
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
+                - name: Relazioni tra dimensioni
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+                - name: 'Partizioni: elaborazione e modalità di archiviazione delle partizioni'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+                - name: 'Partizioni: caching attivo'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+                - name: 'Partizioni: partizioni remote'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+                - name: 'Partizioni: partizioni abilitate per la scrittura'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+                - name: Partizioni (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+                - name: prospettive
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
+                - name: Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+                - name: Ruoli di sicurezza (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+                - name: Oggetti server (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+                - name: Informazioni sull'architettura logica Microsoft OLAP
+                  href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
+            - name: OLAP fisico
+              items:
+                - name: Requisiti di architettura client per sviluppo Analysis Services
+                  href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+                - name: Tipi di dati in Analysis Services
+                  href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
+                - name: Cubi locali (Analysis Services - Dati multidimensionali)
+                  href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+                - name: Specifiche di capacità massima (Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+                - name: Regole di denominazione degli oggetti (Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+                - name: Componenti del server del motore OLAP
+                  href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
+                - name: Informazioni sull'architettura Microsoft OLAP
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+                - name: Informazioni sull'architettura fisica Microsoft OLAP
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
+            - name: Estensione di OLAP
+              items:
+                - name: Estensione delle funzionalità OLAP
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
+                - name: Estensione di OLAP tramite personalizzazioni
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+                - name: Analysis Services Personalization Extensions
+                  href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+                - name: Accesso al contesto di query nelle stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+                - name: Chiamata di stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+                - name: Creazione di stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+                - name: Debug di stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+                - name: Definizione delle stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+                - name: Progettazione di stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+                - name: Impostazione della sicurezza per stored procedure
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: Multidimensional Data Expressions (MDX)
           items:
-            - name: Query MDX - Query di base
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
-            - name: Query MDX - Parola chiave EXISTING
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
-            - name: Query MDX e assi di sezionamento - Restrizione della query
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
-            - name: Query MDX e assi di sezionamento - Specificare il contenuto di un asse di query
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
-            - name: Query MDX e assi di sezionamento - Specificare il contenuto di un asse di sezionamento
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
-            - name: Query MDX e assi di sezionamento - Uso degli assi in un semplice esempio
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
-            - name: Definizione del contesto di cubo in una query
-              href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
-            - name: Compilazione di sottocubi in MDX
-              href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
-            - name: Set denominati MDX - Creazione
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
-            - name: Set denominati MDX - Creazione di set con ambito query
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
-            - name: Set denominati MDX - Creazione di set con ambito sessione
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
-            - name: Membri calcolati MDX - Creazione di membri calcolati
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
-            - name: Membri calcolati MDX - Con ambito query
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
-            - name: Membri calcolati MDX - Con ambito sessione
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
-            - name: Calcolo di celle MDX - Creazione
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
-            - name: Calcolo di celle MDX - Con ambito query
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
-            - name: Calcolo di celle MDX - Con ambito sessione
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
-            - name: Creazione di misure in MDX
-              href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
-            - name: Proprietà dei membri MDX
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
-            - name: Proprietà dei membri MDX - Intrinseche
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
-            - name: Proprietà dei membri MDX - Definite dall'utente
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
-            - name: Proprietà delle celle MDX - Uso
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
-            - name: Proprietà delle celle MDX - Contenuto di FORMAT_STRING
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
-            - name: Proprietà delle celle MDX - Contenuto di FORE_COLOR e BACK_COLOR
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
-            - name: Proprietà delle celle MDX - FORMATTED_VALUE
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
-            - name: Manipolazione dei dati MDX
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
-            - name: Manipolazione dei dati MDX - Recuperare i dati di origine con DRILLTHROUGH
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
-            - name: Manipolazione dei dati MDX - Funzione RollupChildren
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
-            - name: Manipolazione dei dati MDX - Informazioni su ordini di calcolo e di valutazione
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
-            - name: Modifica dei dati MDX
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
-            - name: Modifica dei dati MDX - Uso di writeback dei cubi
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
-            - name: Utilizzo di variabili e parametri
-              href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
-        - name: Nozioni fondamentali sullo scripting MDX
-          href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
-          items:
-            - name: Script MDX di base
-              href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
-            - name: Gestione di ambito e contesto
-              href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
-            - name: Gestione degli errori
-              href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
-            - name: Istruzioni e funzioni MDX supportate
-              href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
+            - name: Accesso ai dati con MDX
+              href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+            - name: Query su dati multidimensionali con MDX
+              href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
+            - name: Concetti chiave di MDX
+              href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+              items:
+                - name: Auto Exist
+                  href: ../analysis-services/multidimensional-models/mdx/autoexists.md
+                - name: Contesto di calcolo
+                  href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
+                - name: Membri calcolati in sub-SELECT e sottocubi
+                  href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
+                - name: Spazio del cubo
+                  href: ../analysis-services/multidimensional-models/mdx/cube-space.md
+                - name: Sub-SELECT nelle query
+                  href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
+                - name: Tuple
+                  href: ../analysis-services/multidimensional-models/mdx/tuples.md
+                - name: Totali visualizzati e non visualizzati
+                  href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
+                - name: 'Utilizzo di membri, tuple e set (MDX)'
+                  href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
+            - name: Nozioni fondamentali sulle query MDX
+              href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+              items:
+                - name: Query MDX - Query di base
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
+                - name: Query MDX - Parola chiave EXISTING
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
+                - name: Query MDX e assi di sezionamento - Restrizione della query
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
+                - name: Query MDX e assi di sezionamento - Specificare il contenuto di un asse di query
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+                - name: Query MDX e assi di sezionamento - Specificare il contenuto di un asse di sezionamento
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+                - name: Query MDX e assi di sezionamento - Uso degli assi in un semplice esempio
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+                - name: Definizione del contesto di cubo in una query
+                  href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
+                - name: Compilazione di sottocubi in MDX
+                  href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
+                - name: Set denominati MDX - Creazione
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
+                - name: Set denominati MDX - Creazione di set con ambito query
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
+                - name: Set denominati MDX - Creazione di set con ambito sessione
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
+                - name: Membri calcolati MDX - Creazione di membri calcolati
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
+                - name: Membri calcolati MDX - Con ambito query
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
+                - name: Membri calcolati MDX - Con ambito sessione
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
+                - name: Calcolo di celle MDX - Creazione
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
+                - name: Calcolo di celle MDX - Con ambito query
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
+                - name: Calcolo di celle MDX - Con ambito sessione
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
+                - name: Creazione di misure in MDX
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
+                - name: Proprietà dei membri MDX
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
+                - name: Proprietà dei membri MDX - Intrinseche
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
+                - name: Proprietà dei membri MDX - Definite dall'utente
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
+                - name: Proprietà delle celle MDX - Uso
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
+                - name: Proprietà delle celle MDX - Contenuto di FORMAT_STRING
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
+                - name: Proprietà delle celle MDX - Contenuto di FORE_COLOR e BACK_COLOR
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
+                - name: Proprietà delle celle MDX - FORMATTED_VALUE
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
+                - name: Manipolazione dei dati MDX
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
+                - name: Manipolazione dei dati MDX - Recuperare i dati di origine con DRILLTHROUGH
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+                - name: Manipolazione dei dati MDX - Funzione RollupChildren
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
+                - name: Manipolazione dei dati MDX - Informazioni su ordini di calcolo e di valutazione
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+                - name: Modifica dei dati MDX
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
+                - name: Modifica dei dati MDX - Uso di writeback dei cubi
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
+                - name: Utilizzo di variabili e parametri
+                  href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
+            - name: Nozioni fondamentali sullo scripting MDX
+              href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
+              items:
+                - name: Script MDX di base
+                  href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
+                - name: Gestione di ambito e contesto
+                  href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
+                - name: Gestione degli errori
+                  href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
+                - name: Istruzioni e funzioni MDX supportate
+                  href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
     - name: Data Mining
       items:
         - name: Programmazione di data mining

@@ -2,8 +2,8 @@
 title: 'Avvio rapido: Connettersi ed eseguire query su un database SQL di Azure'
 titleSuffix: Azure Data Studio
 description: Questa Guida introduttiva illustra come usare Azure Data Studio per connettersi a un database SQL ed eseguire una query
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255957"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620349"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Avvio rapido: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] connettersi ed eseguire query di database SQL di Azure
 
@@ -39,7 +39,7 @@ Se non si dispone di un server SQL di Azure, completare una delle guide introdut
 
 Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Database SQL di Azure.
 
-1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] verrà mostrata la pagina **Connessione**. Se non viene visualizzato il **connessione** pagina, selezionare **Aggiungi connessione**, o la **nuova connessione** icona nel **server** sidebar:
+1. La prima volta che si esegue [!INCLUDE[name-sos](../includes/name-sos-short.md)] il **benvenuto** deve aperta la pagina. Se non viene visualizzato il **benvenuto** pagina, selezionare **consentono** > **benvenuto**. Selezionare **nuova connessione** per aprire il **connessione** riquadro:
    
    ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-icon.png)
 

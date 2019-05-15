@@ -2,29 +2,33 @@
 title: Aggiornare un database del server di report | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03b999b35cf9b308d683c8888980d7e60a24fb36
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a386e072660c67e2885b8b6303a066f71a23b01
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027530"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502640"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
 
 Il database del server di report fornisce archiviazione per una o più istanze del server di report. Poiché lo schema del database del server di report può essere modificato con ogni nuova versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario che la versione del database corrisponda alla versione dell'istanza del server di report in uso. Nella maggior parte dei casi, un database del server di report può essere aggiornato automaticamente senza alcun intervento dell'utente.  
   
  **Modalità nativa:** nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il database del server di report è costituito in realtà da due database i cui nomi predefiniti sono ReportServer e ReportServerTempDB.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Modalità SharePoint:** nella modalità SharePoint di SQL Server 2016 Reporting Services il database del server di report è in realtà una raccolta di database creata per ogni istanza dell'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+::: moniker-end
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Modalità di aggiornamento di un database del server di report in modalità nativa
 

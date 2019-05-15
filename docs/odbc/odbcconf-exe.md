@@ -13,12 +13,12 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33688a46be5e5e33aa940f3553c98db5091b159d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b4d7b20c690a1f4d7f3b445afb8348549309e5c
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62677377"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538204"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF.EXE
 ODBCCONF.exe è uno strumento da riga di comando che consente di configurare i nomi delle origini dati e i driver ODBC.  
@@ -28,7 +28,7 @@ ODBCCONF.exe è uno strumento da riga di comando che consente di configurare i n
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 ODBCCONF [switches] action  
 ```  
   
@@ -58,11 +58,11 @@ ODBCCONF [switches] action
   
 |Azione|Descrizione|  
 |------------|-----------------|  
-|CONFIGDRIVER *nome_driver * * i parametri di configurazione specifici del driver*|Carica la DLL di installazione di driver appropriato e chiama il **ConfigDriver** (funzione).<br /><br /> Equivalente per la [funzione SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Ad esempio:<br /><br /> /A {CONFIGDRIVER "Nome Driver" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "Nome Driver" "DriverODBCVer = 03.80"}|  
-|CONFIGDSN *nome_driver* DSN =*name* &#124; *attributi*|Aggiunge o modifica un'origine dati di sistema.<br /><br /> Equivalente per la [funzione SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Ad esempio: <br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|CONFIGDRIVER *nome_driver * * i parametri di configurazione specifici del driver*|Carica la DLL di installazione di driver appropriato e chiama il **ConfigDriver** (funzione).<br /><br /> Equivalente per la [funzione SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Ad esempio: <br /><br /> /A {CONFIGDRIVER "Nome Driver" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "Nome Driver" "DriverODBCVer = 03.80"}|  
+|CONFIGDSN *nome_driver* DSN =*name* &#124; *attributi*|Aggiunge o modifica un'origine dati di sistema.<br /><br /> Equivalente per la [funzione SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Ad esempio:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
 |CONFIGSYSDSN *nome_driver* DSN =*name* &#124; *attributi*|Aggiunge o modifica un'origine dati di sistema.<br /><br /> Equivalente per la [funzione SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Ad esempio: <br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
-|/INSTALLDRIVER|Equivalente a [funzione SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Per informazioni sulla sintassi delle coppie parola chiave / valore passata a /INSTALLDRIVER, vedere [sottochiavi di specifica di Driver](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Ad esempio:<br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
-|INSTALLTRANSLATOR *configurazione di Microsoft translator * * percorso del driver*|Aggiunge informazioni su una funzione di conversione per la **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. I traduttori INI\ODBC** chiave del Registro di sistema.<br /><br /> Equivalente a [funzione SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Per informazioni sulla sintassi delle coppie parola chiave / valore passata a /INSTALLDRIVER, vedere [sottochiavi di specifica di Microsoft Translator](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Ad esempio: <br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
+|/INSTALLDRIVER|Equivalente a [funzione SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Per informazioni sulla sintassi delle coppie parola chiave / valore passata a /INSTALLDRIVER, vedere [sottochiavi di specifica di Driver](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Ad esempio: <br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
+|INSTALLTRANSLATOR *configurazione di Microsoft translator * * percorso del driver*|Aggiunge informazioni su una funzione di conversione per la **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. I traduttori INI\ODBC** chiave del Registro di sistema.<br /><br /> Equivalente a [funzione SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Per informazioni sulla sintassi delle coppie parola chiave / valore passata a /INSTALLDRIVER, vedere [sottochiavi di specifica di Microsoft Translator](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Ad esempio:<br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
 |REGSVR *dll*|Registra una DLL.<br /><br /> Equivalente allo regsvr32.exe.<br /><br /> Ad esempio:<br /><br /> /A {REGSVR c:\my.dll}|  
 |SETFILEDSNDIR|Quando HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC File DSN\DefaultDSNDir non esiste, l'azione SETFILEDSNDIR crearlo e assegnare il valore in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, aggiungendovi \ODBC\Data origini.<br /><br /> Il valore in corrispondenza di HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC File DSN\DefaultDSNDir specifica il percorso predefinito usato dall'amministratore origine dati ODBC quando si crea un'origine dati basata su file.<br /><br /> Ad esempio: <br /><br /> /A {SETFILEDSNDIR}|  
   
