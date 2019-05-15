@@ -2,18 +2,18 @@
 title: Pianificare la progettazione e la distribuzione di report | Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814234"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503689"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e la distribuzione di report impaginati. Viene illustrato come pianificare un ambiente di creazione di report e un server di report che interagiscono.
@@ -51,8 +51,12 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
 -   **Generatore report:** salvare un report nel server di report da Generatore report.  
   
 -   **Portale Web** : caricare un report in un server di report in modalità nativa da [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint:** caricare un report in un sito di SharePoint configurato con un server di report in modalità SharePoint.  
+
+::: moniker-end
   
 -   **A livello di programmazione:** pubblicare un report a livello di programmazione tramite le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
@@ -66,7 +70,13 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
  Quando si carica una definizione di report nel server di report o si aggiorna un server di report che contiene report esistenti, il server di report mantiene il formato originale della definizione del report. **Quando viene utilizzato per la prima volta**, il server di report aggiorna il report nel database del server di report a un formato binario mantenuto per le viste successive. La definizione del report (con estensione RDL) non viene aggiornata.  
   
- È possibile estrarre dal server di report una copia di sola lettura del file di definizione del report (con estensione RDL). In un server di report in modalità nativa, passare a [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selezionare il report e fare clic su **Download**. In una distribuzione in modalità SharePoint, passare alla raccolta documenti, selezionare il report e fare clic su **Scarica una copia**.  
+ È possibile estrarre dal server di report una copia di sola lettura del file di definizione del report (con estensione RDL). In un server di report in modalità nativa, passare a [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selezionare il report e fare clic su **Download**. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+In una distribuzione in modalità SharePoint, passare alla raccolta documenti, selezionare il report e fare clic su **Scarica una copia**.  
+
+::: moniker-end
   
  Per aggiornare la definizione di report, è necessario aprire il report in un ambiente di creazione di report, ad esempio SQL Server Data Tools o Generatore report, e quindi salvarlo.  
   

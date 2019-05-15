@@ -12,16 +12,16 @@ helpviewer_keywords:
 - events [SQL Server], forwarding
 - alerts [SQL Server], forwarded events
 ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc60b53841cc44d094d5cea339ba2bd06f492aa6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 425fa57e064f5bebb76a1de1149ba56f43dcfce2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502445"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096617"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52502445"
 
 In questo argomento viene descritto come designare un server al quale verranno inoltrati eventi da [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Si noti che l'inoltro di eventi si applica agli eventi inoltrati tra server, non agli eventi inoltrati tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ospitate in un singolo computer. Notare inoltre che per ricevere eventi inoltrati, il server di gestione degli avvisi deve essere un'istanza predefinita di SQL Server.  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -45,7 +45,7 @@ In questo argomento viene descritto come designare un server al quale verranno i
   
 ### <a name="Security"></a>Security  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="Permissions"></a>Permissions  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  

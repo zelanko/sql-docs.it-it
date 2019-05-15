@@ -17,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83afb8016d2887af305ed61089a05a6e85150fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec1bbc16f12424c1be539e9b82f56224822646b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855069"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450058"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,22 +45,22 @@ Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows P
   
 |Cartella|Spazio dei nomi del modello a oggetti di SQL Server|Oggetti|  
 |------------|---------------------------------------|-------------|  
-|SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|Oggetti di database, come tabelle, viste e stored procedure.|  
-|SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Oggetti di gestione basata sui criteri, come criteri e facet.|  
-|SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Oggetti server registrati, come gruppi di server e server registrati.|  
-|SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|Oggetti utilità, ad esempio le istanze gestite del [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|Oggetti applicazione del livello dati, ad esempio pacchetti DAC e operazioni quali l'implementazione di DAC.|  
-|SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|Oggetti dell'agente di raccolta dati, ad esempio set di raccolta e archivi di configurazione.|  
-|SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oggetti come progetti, pacchetti e ambienti.|  
-|SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oggetti come cubi, aggregazioni e dimensioni.|  
+|`SQLSERVER:\SQL`|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|Oggetti di database, come tabelle, viste e stored procedure.|  
+|`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Oggetti di gestione basata sui criteri, come criteri e facet.|  
+|`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Oggetti server registrati, come gruppi di server e server registrati.|  
+|`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|Oggetti utilità, ad esempio le istanze gestite del [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
+|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|Oggetti applicazione del livello dati, ad esempio pacchetti DAC e operazioni quali l'implementazione di DAC.|  
+|`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Oggetti dell'agente di raccolta dati, ad esempio set di raccolta e archivi di configurazione.|  
+|`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oggetti come progetti, pacchetti e ambienti.|  
+|`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oggetti come cubi, aggregazioni e dimensioni.|  
   
  È ad esempio possibile utilizzare la cartella SQLSERVER:\SQL per iniziare percorsi che possono rappresentare qualsiasi oggetto supportato dal modello a oggetti SMO. La parte iniziale di un percorso SQLSERVER:\SQL è SQLSERVER:\SQL\\*NomeComputer*\\*NomeIstanza*. I nodi che seguono il nome dell'istanza possono essere raccolte di oggetti, come *Database* o *Viste*, e nomi di oggetti, ad esempio AdventureWorks2012. Gli schemi non sono rappresentati come classi di oggetti. Quando si specifica il nodo per un oggetto di livello principale in uno schema, ad esempio una tabella o una vista, è necessario specificare il nome dell'oggetto nel formato *NomeSchema.NomeOggetto*.  
   
  L'esempio seguente illustra il percorso della tabella Vendor nello schema Purchasing del database AdventureWorks2012 in un'istanza predefinita del [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale:  
   
-```  
+```powershell
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
-```  
+```
   
  Per altre informazioni sulla gerarchia del modello a oggetti SMO, vedere [Diagramma del modello a oggetti SMO](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md).  
   
@@ -68,8 +68,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 |Percorso|Classe SMO|  
 |----------|---------------|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## <a name="sql-server-provider-tasks"></a>Attività del provider di SQL Server  
   
@@ -78,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Viene descritto come utilizzare i cmdlet di Windows PowerShell per spostarsi tra i nodi all'interno di un percorso e, a ogni nodo, ottenere un elenco degli oggetti in corrispondenza di quel nodo.|[Spostarsi all'interno dei percorsi di SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Utilizzo di percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
 |Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Conversione di URN in percorsi di provider di SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
-|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione in motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  

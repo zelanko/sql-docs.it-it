@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aed644bec059dadff338711634c6ec7d252498cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e2c4e739852adcb492241a46b5f04a755728c63f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701850"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105463"
 ---
 # <a name="create-a-wmi-event-alert"></a>Creare un avviso per evento WMI
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ In questo argomento viene descritto come creare un avviso di [!INCLUDE[ssNoVersi
   
 Per informazioni sull'uso del provider WMI per il monitoraggio degli eventi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Per informazioni sulle autorizzazioni necessarie per ricevere notifiche di avviso per eventi WMI, vedere [Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md). Per altre informazioni su WQL, vedere [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -90,7 +90,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  

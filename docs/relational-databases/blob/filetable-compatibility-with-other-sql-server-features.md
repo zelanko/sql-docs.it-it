@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4afc0cfe0b310dcfcc106fc9d38b028c88f0261c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094370"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52522370"
   
 -   La funzionalità FileTable è supportata parzialmente dai [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Dopo un failover, i dati FileTable sono accessibili nella replica primaria, ma non nelle repliche secondarie leggibili.  
   
-    > **NOTA:**  si noti che dopo un failover, tutte le funzionalità FILESTREAM sono supportate. I dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
+    > **NOTA:**  Si noti che dopo un failover, tutte le funzionalità FILESTREAM sono supportate. I dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
   
 -   Le funzioni FILESTREAM e FileTable accettano o restituiscono nomi di rete virtuale anziché nomi computer. Per altre informazioni su queste funzioni, vedere [Funzioni FileStream e FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52522370"
   
 -   La vista potrebbe essere aggiornabile in base alla semantica delle viste aggiornabili, ma i vincoli di tabella sottostanti possono rifiutare gli aggiornamenti come nella tabella.  
   
--   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Ad esempio  
+-   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Esempio:  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

@@ -2,8 +2,8 @@
 title: 'Avvio rapido: Connettersi ed eseguire query di SQL Server'
 titleSuffix: Azure Data Studio
 description: Questa Guida introduttiva illustra come usare Azure Data Studio per connettersi a SQL Server ed eseguire una query
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142412"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620385"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
@@ -37,7 +37,7 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
 
    
 1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
-1. Alla prima esecuzione di  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* verrà mostrata la finestra di dialogo **Connessione**.  Se il **connessione** finestra di dialogo non si apre, fare clic sui **nuova connessione** icona nel **server** pagina:
+1. La prima volta che si esegue [!INCLUDE[name-sos](../includes/name-sos-short.md)] il **benvenuto** deve aperta la pagina. Se non viene visualizzato il **benvenuto** pagina, selezionare **consentono** > **benvenuto**. Selezionare **nuova connessione** per aprire il **connessione** riquadro:
    
    ![Icona "Nuova connessione"](media/quickstart-sql-server/new-connection-icon.png)
 

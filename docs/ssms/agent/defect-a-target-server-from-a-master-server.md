@@ -14,16 +14,16 @@ helpviewer_keywords:
 - master servers [SQL Server], defecting target servers
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d539e6a6446fc17ae935a372e9c8562d84b71c35
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1f4efd1610d6cf2fdca1c2f1c6ab992452c5211d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703529"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096709"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Escludere un server di destinazione da un server master
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51703529"
 
 In questo argomento viene descritto come escludere un server di destinazione da un server master in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects (SMO). Eseguire questa procedura dal server di destinazione.  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -72,7 +72,7 @@ Per eseguire questa stored procedure, è necessario che gli utenti siano membri 
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
 ```  
 sp_msx_defect ;  

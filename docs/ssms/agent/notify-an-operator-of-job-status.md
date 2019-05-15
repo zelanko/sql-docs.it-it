@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, notification options
 - notifications [SQL Server], job status
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 627b25149bae300a19360fa23288a05569430c81
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 56d6a4c0dffdbb0b768ab0ef0808932d59e3f814
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702809"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105495"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51702809"
 
 In questo argomento si illustra come impostare opzioni di notifica in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects, in modo che tramite [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia possibile inviare notifiche agli operatori relative ai processi.  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -51,7 +51,7 @@ In questo argomento si illustra come impostare opzioni di notifica in [!INCLUDE[
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -95,7 +95,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  

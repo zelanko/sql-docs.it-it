@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d78edce14b7e88648ce134c2bb3d7def7003f516
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591535"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102976"
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Utilizzare questa finestra di dialogo per individuare le dipendenze prima di mod
 **Oggetti dipendenti da** _\<oggetto selezionato>_  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
-**Oggetti da cui dipende** _\<oggetto selezionato>_ ****  
+**Oggetti da cui** **dipende** _\<oggetto selezionato>_  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
 **Dipendenze**  

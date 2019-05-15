@@ -13,16 +13,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - members [SQL Server], job categories
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 389c9345697a2039ae48f737c32e87916eadf681
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131131"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106312"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modificare l'appartenenza a una categoria di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ In questo argomento viene descritto come modificare l'appartenenza della categor
   
 Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È possibile creare categorie di processi personalizzate. È inoltre possibile modificare l'appartenenza dei processi di Microsoft SQL Server Agent alle categorie del processo.  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-    [Sicurezza](#Security)  
+    [Security](#Security)  
   
 -   **Per modificare l'appartenenza a una categoria di processi usando:**  
   
@@ -79,7 +79,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  

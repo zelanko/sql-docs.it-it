@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012662"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503959"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ CREATE TABLE AS SELECT (CTAS) è una delle più importanti funzionalità T-SQL d
 ## <a name="syntax"></a>Sintassi   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required
@@ -114,7 +114,7 @@ L'istruzione SELECT è la differenza fondamentale tra CTAS e CREATE TABLE.
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 CTAS richiede l'autorizzazione `SELECT` per tutti gli oggetti a cui si fa riferimento in *select_criteria*.
 
 Per le autorizzazioni per la creazione di una tabella, vedere [Autorizzazioni](https://msdn.microsoft.com/library/mt203953/#Permissions) in CREATE TABLE. 
@@ -227,7 +227,7 @@ DROP TABLE FactInternetSales_old;
 
 <a name="ctas-change-column-attributes-bk"></a>
 
-### <a name="b-use-ctas-to-change-column-attributes"></a>b. Usare CTAS per modificare gli attributi di colonna 
+### <a name="b-use-ctas-to-change-column-attributes"></a>B. Usare CTAS per modificare gli attributi di colonna 
 Si applica a: Azure SQL Data Warehouse e Parallel Data Warehouse
 
 In questo esempio viene usata un'istruzione CTAS per modificare i tipi di dati, il supporto dei valori Null e le regole di confronto per diverse colonne della tabella DimCustomer2.  

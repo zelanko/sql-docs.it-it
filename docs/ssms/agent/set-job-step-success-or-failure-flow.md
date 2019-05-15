@@ -13,16 +13,16 @@ helpviewer_keywords:
 - failed jobs [SQL Server]
 - jobs [SQL Server Agent], action flow logic
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3f2da19f628722202a139f81e60affd04c11728
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c14f10c9bba7dbdd40c1e2554fb590cd6f814043
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698261"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105985"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Quando si creano processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)]
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -85,7 +85,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE msdb;  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f153a2d66722ec8bc06389ad379cbe2faaf9af65
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eb2abb926aa90ec2379c1a367671f876d38382cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701410"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096508"
 ---
 # <a name="edit-an-operator"></a>Modifica di un operatore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51701410"
 
 In questo argomento viene descritto come modificare la disponibilità degli operatori per la ricezione di notifiche e dei relativi indirizzi di posta elettronica, cercapersone e Net Send in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -91,7 +91,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- updates the operator status to enabled, and sets the days   

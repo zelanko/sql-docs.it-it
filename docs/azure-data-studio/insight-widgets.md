@@ -1,9 +1,9 @@
 ---
-title: Usare il widget Insight per monitorare i server e database
+title: Usare i widget Insight in Azure dati Studio per monitorare i server e database
 titleSuffix: Azure Data Studio
 description: Informazioni su widget insight in Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238881"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620342"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di Insight in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-I widget di Insight trasformano le query Transact-SQL (T-SQL) utilizzate per monitorare i server e i database in visualizzazioni dettagliate. 
+I widget di Insight trasformano le query Transact-SQL (T-SQL) utilizzate per monitorare i server e i database in visualizzazioni dettagliate.
 
-Gli insight sono grafici personalizzabili da aggiungere ai dashboard di monitoraggio di server e database. Con essi è possibile visualizzare informazioni generali sui server e sui database, esaminare ulteriori dettagli ed eseguire azioni di gestione definite dall'utente. 
+Gli insight sono grafici personalizzabili da aggiungere ai dashboard di monitoraggio di server e database. Con essi è possibile visualizzare informazioni generali sui server e sui database, esaminare ulteriori dettagli ed eseguire azioni di gestione definite dall'utente.
 
 È possibile costruire accattivanti dashboard di gestione server e database simili all'esempio seguente:
 
@@ -34,11 +34,11 @@ Per iniziare a comprendere e creare i tipi diversi di widget Insight, vedere le 
 
 - [Costruire un widget Insight personalizzato](tutorial-build-custom-insight-sql-server.md)
 - *Abilitare widget insight predefiniti*
-   - [Abilitare l'insight di monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
-   - [Abilitare l'insight di spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
+  - [Abilitare l'insight di monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
+  - [Abilitare l'insight di spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>Query SQL 
+## <a name="sql-queries"></a>Query SQL
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] cerca di evitare l'introduzione di un nuovo linguaggio e di un'interfaccia complessa, lasciando spazio alla scrittura T-SQL e a configurazioni minimali basate su JSON. La configurazione dei widget Insight tramite T-SQL sfrutta le innumerevoli utili query T-SQL che possono essere convertite in widget dettagliati.
 

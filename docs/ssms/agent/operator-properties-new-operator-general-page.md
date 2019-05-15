@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.general.f1
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 253d1630db6cc6c16166226b89d6d8705d88a9ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 822bb95a67d3e2916a55d904e47ae0ee6ec15690
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673199"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105382"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Proprietà Operatore - Nuovo operatore (pagina Generale)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Consente di selezionare i giorni in cui il cercapersone è attivo.
 Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invierà messaggi al cercapersone.  
   
 **Fine giornata lavorativa**  
-Consente di selezionare l'ora oltre cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non invierà più messaggi al cercapersone.  
+Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non invierà più messaggi al cercapersone.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Operatori](../../ssms/agent/operators.md)  

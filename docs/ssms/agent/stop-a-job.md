@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, stopping
 - stopping jobs
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 38a3f3cc58f0ddcc9f7864e94466095316cc2e17
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: daedb5dbd9bb08c0ee68e149ee70deab24426782
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696329"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089457"
 ---
 # <a name="stop-a-job"></a>Stop a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ In questo argomento viene illustrato l'arresto di un processo di [!INCLUDE[msCoN
 -   Per un processo multiserver, viene inviata un'istruzione STOP a tutti i server di destinazione del processo.  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -74,7 +74,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- stops a job named Weekly Sales Data Backup  

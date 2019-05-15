@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5486e2dc10e13d3c022ec3d470781a5556c63dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 966cd899d5a3d6019febd4ba939f360c16c9cd78
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723799"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095209"
 ---
 # <a name="custom-reports-in-management-studio"></a>Report personalizzati in Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Quando si utilizzano report personalizzati, tenere presenti le limitazioni segue
 ## <a name="managing-custom-reports"></a>Gestione dei report personalizzati  
 In presenza di numerosi report personalizzati, è consigliabile organizzare tali report utilizzando cartelle del file system con autorizzazioni del file system NTFS appropriate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 I report personalizzati vengono eseguiti utilizzando le autorizzazioni dell'utente corrente. Per impedire che le query eseguite dal report vengano modificate da utenti malintenzionati, è consigliabile impostare le autorizzazioni per la cartella del file system contenente i file di report in modo da limitare l'accesso.  
   
 Sia l'utente che l'account utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessitano dell'accesso in lettura alla cartella del file system contenente i file di report.  

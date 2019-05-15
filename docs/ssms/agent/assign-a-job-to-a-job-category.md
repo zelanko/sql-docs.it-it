@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, assigning
 - assigning job to category
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67f6b97276a50d5796c0ad55eda2463d7f47859e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4947751be0d3ed2c0d10cfce774f1fa9cec35a38
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701809"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097556"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ In questo argomento viene descritto come assegnare i processi di [!INCLUDE[msCoN
   
 Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È possibile assegnare processi a categorie predefinite, oppure creare una categoria definita dall'utente e usarla per l'assegnazione dei processi.  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -53,7 +53,7 @@ Le categorie consentono di organizzare i processi per semplificare le operazioni
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -79,7 +79,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  

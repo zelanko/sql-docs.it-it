@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ac157acea3b64b81bef5eb505b4c9b0d3525ba11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d9d1f61302d33bf038c9dbbde7c30a6aaf41282
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674945"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104286"
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47674945"
  **Memorizza password**  
  Consente di archiviare la password immessa. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
-> **NOTA:** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e fare clic su **Salva**.  
+> **NOTA:** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e quindi fare clic su **Salva**.  
   
  **Nome server registrato**  
  Nome che si desidera venga visualizzato nel componente Server registrati. Non è necessario che questo nome corrisponda a quello indicato nella casella **Nome server** .  

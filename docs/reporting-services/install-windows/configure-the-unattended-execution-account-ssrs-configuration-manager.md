@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099912"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502940"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
@@ -75,6 +75,9 @@ ms.locfileid: "50099912"
  Per recuperare file di immagine, il server di report utilizza automaticamente l'account e non è necessario alcun intervento specifico dell'utente. Per usare l'account per connettersi a origini dati esterne che forniscono dati ai report, è necessario specificare l'opzione **Tipo di credenziali** nella pagina delle proprietà dell'origine dati del report o dell'origine dati condivisa:  
   
 -   Nel [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o in un sito di SharePoint, selezionare l'opzione **Credenziali non richieste** .  
+
+> [!NOTE]
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
  L'account per l'elaborazione automatica dei report viene utilizzato principalmente per la connessione a server esterni e non come account di accesso a server di database. Se si desidera utilizzare le credenziali dell'account per accedere a un database, è necessario specificarle nella stringa di connessione. È possibile specificare **Integrated Security=SSPI** se il server di database supporta la sicurezza integrata di Windows e l'account usato per l'elaborazione automatica dei report è autorizzato a leggere il database. In caso contrario, è necessario immettere il nome e la password dell'utente nella stringa di connessione, in cui verranno visualizzati come testo non crittografato da tutti gli utenti che dispongono dell'autorizzazione necessaria per modificare le proprietà di connessione dell'origine dati.  
   

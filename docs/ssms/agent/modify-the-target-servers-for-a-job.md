@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], modifying
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 39f1972ab71378faef8879c77d369af17a702569
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e1421bb3305704dcaeacc5ae1e240330f5a2bdb1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698199"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105582"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modifica dei server di destinazione di un processo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51698199"
 
 In questo argomento viene illustrato come modificare i server di destinazione per i processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -76,7 +76,7 @@ Per impostazione predefinita, questa stored procedure può essere eseguita dai m
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio il processo multiserver Weekly Sales Backups viene assegnato al server SEATTLE2.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio il processo multiserver Weekly Sales Backups viene assegnato al server SEATTLE2.  
   
 ```  
 USE msdb ;  

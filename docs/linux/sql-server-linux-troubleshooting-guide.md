@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215457"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626667"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi di SQL Server in Linux
 
@@ -27,7 +27,9 @@ Questo documento descrive come risolvere i problemi di Microsoft SQL Server in e
 > Per le risposte alle domande più frequenti, vedere la [SQL Server in Linux FAQ](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Risolvere gli errori di connessione
-Se si verificano problemi di connessione a SQL Server a Linux, esistono alcuni aspetti da controllare. 
+Se si verificano problemi di connessione a SQL Server a Linux, esistono alcuni aspetti da controllare.
+
+- Se non si riesce a connettersi in locale usando **localhost**, provare a usare invece l'indirizzo IP 127.0.0.1. È possibile che **localhost** non viene correttamente associato a questo indirizzo.
 
 - Verificare che il nome del server o l'indirizzo IP sia raggiungibile dal computer client.
 
@@ -193,7 +195,7 @@ Come ultima risorsa, è possibile scegliere di rigenerare lo schema e i database
 
 ## <a name="improve-performance"></a>Migliorare le prestazioni
 
-Esistono molti fattori che influiscono sulle prestazioni, tra cui Progettazione database, l'hardware e le richieste di carico di lavoro. Se si intende per migliorare le prestazioni, iniziare esaminando le procedure consigliate, vedere l'articolo [consigliate per le prestazioni e linee guida per la configurazione per SQL Server in Linux](sql-server-linux-performance-best-practices.md). Quindi, esplorare alcuni degli strumenti disponibili per la risoluzione dei problemi di prestazioni.
+Esistono molti fattori che influiscono sulle prestazioni, tra cui Progettazione database, l'hardware e le richieste di carico di lavoro. Se si intende per migliorare le prestazioni, iniziare esaminando le procedure consigliate, vedere l'articolo [consigliate per le prestazioni e linee guida per la configurazione per SQL Server in Linux](sql-server-linux-performance-best-practices.md). Quindi analizzare alcuni degli strumenti disponibili per la risoluzione dei problemi di prestazioni.
 
 - [Archivio query](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Viste a gestione dinamica (DMV) del sistema](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

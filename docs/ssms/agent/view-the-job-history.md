@@ -14,16 +14,16 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 - displaying job history
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1618df076a60d75300ea406f80b9974e093f9229
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 410d603b502cb2bb3da4c451a8b408eba3bc5e69
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699635"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088902"
 ---
 # <a name="view-the-job-history"></a>Visualizzare la cronologia processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ In questo argomento viene descritto come visualizzare il log della cronologia pr
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -72,7 +72,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- lists all job information for the NightlyBackups job.  

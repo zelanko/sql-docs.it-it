@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], error numbers
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8663e9976dfa48d02b6b874f5d53692300cfbf0a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 453c8e5a2361e93580b7cdd737f03d357946df89
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699141"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090146"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Creazione di un avviso utilizzando un numero di errore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51699141"
 
 In questo argomento viene descritto come creare un avviso di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che viene generato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando si verifica un erroe a cui è associato un numero specifico tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -90,7 +90,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- adds an alert (Test Alert) that runs the Back up

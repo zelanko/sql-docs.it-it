@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256946"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101973"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
 **DbSqlPackage** è un provider **MSDeploy** che consente di interagire con database di SQL Server o SQL Azure. **DbSqlPackage** supporta le azioni seguenti:  

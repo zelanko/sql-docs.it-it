@@ -13,16 +13,16 @@ helpviewer_keywords:
 - logs [SQL Server], jobs
 - removing job step logs
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f474c6b2381b4a1779cee982486e3deafaf6a038
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e5e15c07338afe9274a747f9e4b19db0d4ff76cd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696559"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096766"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Il log di output dei passaggi di processo eliminati viene eliminato automaticame
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  

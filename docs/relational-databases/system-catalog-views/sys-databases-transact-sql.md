@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b656e0119e99f37c62a19df2ec2b1f053f414323
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
-ms.translationtype: HT
+ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080371"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560128"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Se non è un database `ONLINE`, oppure `AUTO_CLOSE` è impostata su `ON` e il da
 |**is_temporal_retention_enabled**|**bit**|Indica se l'attività pulizia file dei criteri di conservazione temporale è abilitato.<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|L'impostazione delle regole di confronto del catalogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|L'impostazione delle regole di confronto del catalogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**int**|Riservato per uso interno</br>**Si applica a**: Azure SQL Data Warehouse
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on si trova in</br>0 = is_result_set_caching_on è disattivata</br>**Si applica a**: Azure SQL Data Warehouse Gen2
   
 ## <a name="permissions"></a>Permissions  
  Se il chiamante di `sys.databases` non è il proprietario del database e il database non è `master` oppure `tempdb`, le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono `ALTER ANY DATABASE` o `VIEW ANY DATABASE` l'autorizzazione a livello di server, o `CREATE DATABASE` l'autorizzazione per il `master` database. Il database a cui è connesso il chiamante può sempre essere visualizzato `sys.databases`.  
@@ -140,7 +140,7 @@ SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>b. Verificare lo stato di copia in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>B. Verificare lo stato di copia in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  Query di esempio seguente il `sys.databases` e `sys.dm_database_copies` operazione di copia di viste per restituire informazioni su un database.  
   
 **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
