@@ -15,15 +15,14 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a747f7dea48d8c8d733e256473609f37764850a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290637"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877726"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Contiene anche le funzionalità aggiunte o aggiornate nel [Feature Pack di Azure per Integration Services & #40; SSIS & #41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
 
@@ -367,10 +366,10 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] ha introdotto la proprietà **ValidationDetails** in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Questa nuova proprietà non è stata annunciata o documentata in quel momento. La proprietà **ValidationDetails** è disponibile anche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>Vedere anche  
  [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Edizioni e funzionalità supportate per SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - job steps [Analysis Services]
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c72154e0cb963e5a3c819c064155bd8ea869aa85
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 8bbe55fb0bacc59983c80f1ba03683f3e1efa377
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257216"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095889"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
@@ -34,7 +34,7 @@ In questo argomento viene descritto come creare e definire passaggi del processo
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Sicurezza](#Security)  
+    [Security](#Security)  
   
 -   **Per creare i passaggi di un processo di SQL Server utilizzando i comandi e/o le query di Analysis Services con:**  
   
@@ -112,7 +112,7 @@ In questo argomento viene descritto come creare e definire passaggi del processo
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a job step that uses XMLA to create a relational data source that
@@ -155,7 +155,7 @@ Per altre informazioni, vedere [sp_add_jobstep (Transact-SQL)](https://msdn.micr
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a job step that uses MDX to return data  
