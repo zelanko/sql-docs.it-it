@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b021451fc0334d931b0321272b23d7ac4100ee3a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024962"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502798"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_name  
-}  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }
   
 <xml_index_option> ::=  
 {   
@@ -210,7 +207,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
  ON  
- I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi a livello di pagina.  
+ I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF  
  I blocchi a livello di pagina non vengono utilizzati.  
@@ -227,7 +224,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Disattiva la generazione di piani paralleli.  
   
  \>1  
- Consente di limitare al valore specificato, o a un valore più basso in base al carico di lavoro corrente del sistema, il numero massimo di processori usati in un'operazione parallela sugli indici.  
+ Consente di limitare al valore specificato, o a un valore più basso in base al carico di lavoro corrente del sistema, il numero massimo di processori utilizzati in un'operazione parallela sugli indici.  
   
  0 (predefinito)  
  Utilizza il numero effettivo di processori o un numero inferiore in base al carico di lavoro corrente del sistema.  
@@ -265,7 +262,7 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO  
 ```  
   
-### <a name="b-creating-a-secondary-xml-index"></a>b. Creazione di un indice XML secondario  
+### <a name="b-creating-a-secondary-xml-index"></a>B. Creazione di un indice XML secondario  
  Nell'esempio seguente viene creato un indice XML secondario sulla colonna `CatalogDescription` della tabella `Production.ProductModel`.  
   
 ```sql  

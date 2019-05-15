@@ -4,15 +4,15 @@ ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d02280799725420f2d9df3845034fe4deb91bea2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 36460943b233f02e4d029b7865c7d7fa3844b488
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285519"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502916"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>Come trovare il codice Product Key per SQL Server 2017 Reporting Services
 
@@ -41,7 +41,12 @@ Per trovare il codice Product Key, per prima cosa scaricare ed eseguire il progr
 ## <a name="related-information"></a>Informazioni correlate
 
 - Per informazioni sull'installazione della modalità nativa di SQL Server Reporting Services, vedere [Installare un server di report di Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md). 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 - Per informazioni sull'installazione di SQL Server 2016 Reporting Services e versioni precedenti in modalità integrata SharePoint, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 

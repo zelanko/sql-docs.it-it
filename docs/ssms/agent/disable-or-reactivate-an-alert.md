@@ -18,16 +18,16 @@ helpviewer_keywords:
 - reactivating alerts
 - removing alerts
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be329e621c4ae9e81b3d7994e472b403e16c0ca1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef25f7bbdaaa039c288e6b581fa8f9b86fb30a30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701824"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096545"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disabilitazione o riattivazione di un avviso
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51701824"
 
 In questo argomento viene illustrata la disabilitazione o la riattivazione di un avviso di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -78,7 +78,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  
