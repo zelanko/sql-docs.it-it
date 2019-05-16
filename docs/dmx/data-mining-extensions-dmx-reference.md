@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38032727"
@@ -96,7 +96,7 @@ ms.locfileid: "38032727"
   
  Le funzioni DMX consentono di calcolare nuove informazioni e di ottenere informazioni individuate durante il training dei modelli. È possibile utilizzare tali funzioni per vari scopi, inclusa la generazione di statistiche che descrivono i dati sottostanti o l'accuratezza di una stima oppure una descrizione dettagliata di una stima.  
   
- **Per altre informazioni****informazioni:** [comprensione DMX un'istruzione Select](../dmx/understanding-the-dmx-select-statement.md), [funzioni di stima correlate &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [Data Mining Extensions &#40;DMX&#41; riferimento alle funzioni  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Per altre informazioni** **informazioni:** [comprensione DMX un'istruzione Select](../dmx/understanding-the-dmx-select-statement.md), [funzioni di stima correlate &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [Data Mining Extensions &#40;DMX&#41; riferimento alle funzioni  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [Torna a istruzioni DMX](#BKMK_DMXStatements)  
   
