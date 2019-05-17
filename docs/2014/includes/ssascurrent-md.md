@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 632f00e561663c09dbc8d69ac6e3060506ae08dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126011"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65817941"
 ---
 SQL Server 2014 Analysis Services \(SSAS\)
