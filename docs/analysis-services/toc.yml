@@ -33,7 +33,7 @@
   items:
     - name: Panoramica delle esercitazioni su Analysis Services
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: Modellazione tabulare
+    - name: Modelli tabulari
       items:
         - name: Esercitazione sulle vendite via Internet (1400)
           items:
@@ -105,9 +105,10 @@
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
             - name: 'Lezione supplementare: Configurare le proprietà di creazione di report per i report Power View'
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: Modellazione multidimensionale
-      href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
+    - name: Modelli multidimensionali
       items:
+        - name: Esercitazione su Adventure Works
+          href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
         - name: Scenario dell'esercitazione
           href: ../analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario.md
         - name: Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services
@@ -219,7 +220,7 @@
         - name: Installazione di Analisi Services in modalità Power Pivot
           href: ../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
           items:
-            - name: Verificare un'installazione Power Pivot per SharePoint
+            - name: Verificare un'installazione PowerPivot per SharePoint
               href: ../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
             - name: Esempio di una configurazione con privilegi minimi per Power Pivot per SharePoint 2016
               href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md

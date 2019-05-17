@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: Criteri di supporto per SSMS
               href: ../ssms/support-policy.md
-        - name: 'Esercitazioni: SQL Server Management Studio'
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: Connettersi ed eseguire query in SQL Server con SSMS
@@ -9274,6 +9274,10 @@
                           items:
                             - name: Oggetti supportati dalla procedura guidata di generazione script
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: Risoluzione dei problemi
+          items:
+            - name: Ottenere il dump completo della memoria
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: Riferimenti
           items:
             - name: Ambiente SSMS
