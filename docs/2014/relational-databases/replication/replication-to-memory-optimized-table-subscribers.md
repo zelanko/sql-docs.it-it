@@ -301,7 +301,7 @@ GO
   
 -   Vengono applicate restrizioni all'aggiornamento della chiave primaria delle tabelle replicate in una tabella ottimizzata per la memoria in un sottoscrittore. Per altre informazioni, vedere [la replica delle modifiche a una chiave primaria](#PrimaryKey).  
   
--   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Per informazioni, vedere [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
+-   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Per informazioni, vedere [Costrutti T-SQL non supportati da OLTP in memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Modifica di un file dello schema  
   

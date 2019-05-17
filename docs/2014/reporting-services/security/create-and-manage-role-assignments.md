@@ -42,7 +42,7 @@ ms.locfileid: "63242681"
   
  Per creare un'assegnazione di ruolo, è necessario appartenere al gruppo locale Administrators nel server di report. È possibile delegare tale compito assegnando altri utenti al ruolo **Gestione contenuto** .  
   
- Per altre informazioni, vedere [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Creazione di un'assegnazione di ruolo a livello di sistema  
  Per creare o gestire un'assegnazione di ruolo a livello di sistema, utilizzare Gestione report e aprire la pagina Impostazioni sito.  
