@@ -3,7 +3,7 @@ title: Estensione di SQL Server 2019 (anteprima)
 titleSuffix: Azure Data Studio
 description: Estensione di anteprima di SQL Server 2019 per Data Studio di Azure
 ms.custom: seodec18
-ms.date: 05/09/2019
+ms.date: 05/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 045152d472029c1ff3fe50230b20b69a851d9dcb
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: 37d2a5aa07c02540b57bbbf70f49279dce9d388a
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450096"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779261"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione di SQL Server 2019 (anteprima)
 
@@ -30,9 +30,9 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
    |Piattaforma|Scarica|Data di rilascio|Versione
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092118)|8 maggio 2019 |0.13.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092117)|8 maggio 2019 |0.13.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092116)|8 maggio 2019 |0.13.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092817)|15 maggio 2019 |0.13.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092816)|15 maggio 2019 |0.13.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092815)|15 maggio 2019 |0.13.1
 
 1. In Azure Data Studio scegliere **installare l'estensione dal pacchetto VSIX** dalle **File** menu e selezionare il file VSIX scaricato.
 

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690807"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805175"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ Questo comando reimposta tutti i contatori su 0.
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|Tipo |Descrizione| 
+|type |Descrizione| 
 |-------------------------- |--------------------------| 
 |ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -778,6 +778,10 @@ Questo comando reimposta tutti i contatori su 0.
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
 |RBIO_WAIT_VLF |TBD <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|RBIO_RG_STORAGE |Si verifica quando un nodo di calcolo con scalabilità elevatissima database è limitato a causa dell'utilizzo di log ritardata in uno o più server di pagina. <br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure.|
+|RBIO_RG_DESTAGE |Si verifica quando un nodo di calcolo con scalabilità elevatissima database è limitato a causa dell'utilizzo di log ritardata per l'archiviazione dei log a lungo termine. <br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure.|
+|RBIO_RG_REPLICA |Si verifica quando un nodo di calcolo del database è limitata a causa dell'errore di su scala molto vasta ritardato consumo del log dei nodi di replica secondaria leggibile. <br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure.|
+|RBIO_RG_LOCALDESTAGE |Si verifica quando un nodo di calcolo con scalabilità elevatissima database è limitato a causa dell'utilizzo di log ritardata dal servizio di log. <br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure.|
 |RECOVER_CHANGEDB |Si verifica durante la sincronizzazione dello stato del database in modalità standby a caldo (warm standby).| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
