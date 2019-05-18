@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e0dac258c03bafb0769e5abb1697be67b1289f2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105520"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836164"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -42,6 +42,8 @@ ms.locfileid: "65105520"
 |comando|**nvarchar(4000)**|Contiene il testo completo della richiesta di stato inviato dall'utente.|Qualsiasi testo di query o di richiesta valido. Le query che durano più di 4000 byte vengono troncate.|  
 |resource_class|**nvarchar(20)**|La classe di risorse per questa richiesta. Vedere correlati **concurrency_slots_used** nelle [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Per altre informazioni sulle classi di risorse, vedere [classi & i carico di lavoro di gestione delle risorse](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classi di risorse dinamiche</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(32)**|L'importanza di impostare la richiesta è stata inviata. Le richieste con una priorità inferiore rimarrà in coda in stato sospeso, se vengono inviate le richieste di maggiore importanza.  Le richieste con un'importanza superiore verranno eseguite prima delle richieste di importanza inferiore che sono state inviate in precedenza.  Per altre informazioni sull'importanza, vedere [carico di lavoro di importanza](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Bassa</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>Elevata|
+|group_name| |Riservato per uso interno.</br>Si applica a: Azure SQL Data Warehouse|
+|resource_allocation_percentage| |Riservato per uso interno.</br>Si applica a: Azure SQL Data Warehouse|
   
  Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.   
   
