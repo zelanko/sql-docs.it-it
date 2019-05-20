@@ -11,14 +11,18 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa3db05644d582574bad2fd04bdca55b8a9c174d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04ced3ce325755f465aaf203f08ed08e38d99f62
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270966"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716163"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (database SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene spostato un ambiente da una cartella a un'altra all'interno del catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

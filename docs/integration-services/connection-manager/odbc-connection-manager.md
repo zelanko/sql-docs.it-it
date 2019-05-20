@@ -18,14 +18,18 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8874015d91d377a46688f042599a8f2f98d1dc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 767e94fe1a87973331ccae234bc85270a5cee800
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280945"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728140"
 ---
 # <a name="odbc-connection-manager"></a>gestione connessione ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Una gestione connessione ODBC consente la connessione di un pacchetto a un'ampia gamma di sistemi di gestione di database in base alla specifica ODBC (Open Database Connectivity).  
   
  Quando si aggiunge una connessione ODBC a un pacchetto e si impostano le proprietà della gestione connessione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione e la aggiunge alla raccolta **Connections** del pacchetto. In fase di esecuzione la gestione connessione viene risolta in una connessione ODBC fisica.  

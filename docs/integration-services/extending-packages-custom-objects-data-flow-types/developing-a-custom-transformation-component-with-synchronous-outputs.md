@@ -22,14 +22,18 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2076e445d90945d02ab41ac2ec2cb6165ba08f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5335e93d133787f1ee2f855d3a2eb9ad1faa2824
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290107"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724795"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Sviluppo di un componente di trasformazione personalizzato con output sincroni
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   I componenti di trasformazione con output sincroni ricevono righe dai componenti a monte, quindi leggono o modificano i valori nelle colonne di queste righe mentre le passano ai componenti a valle. Possono anche definire colonne di output aggiuntive derivate dalle colonne fornite dai componenti a monte, ma non aggiungono righe al flusso di dati. Per altre informazioni sulla differenza tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Questo tipo di componente è indicato per attività in cui i dati vengono modificati in linea quando vengono forniti al componente e in cui il componente non deve necessariamente vedere tutte le righe prima di elaborarle. Si tratta del componente più facile da sviluppare, perché le trasformazioni con output sincroni solitamente non si connettono a origini dati esterne, non gestiscono colonne di metadati esterne né aggiungono righe ai buffer di output.  

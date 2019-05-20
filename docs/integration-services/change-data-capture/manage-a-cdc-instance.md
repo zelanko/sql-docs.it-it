@@ -13,14 +13,18 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6964ac46f08a11aac9f3619acf181f11fd78960
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b5d988854d3dcf63b1a6be85d672fb2af31d6620
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274788"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728718"
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
   
  Fare clic sul nome di un'istanza nel riquadro sinistro per visualizzare le relative informazioni.  

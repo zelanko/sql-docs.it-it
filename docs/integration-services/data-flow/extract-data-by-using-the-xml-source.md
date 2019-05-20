@@ -15,14 +15,18 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe29c2bff8c3eb45fc987993714a035f6d4889d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 45e24864ad54d8b54dbf32c71e675e995217a18d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270627"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726824"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Estrazione dei dati tramite l'origine XML
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile aggiungere e configurare un'origine XML solo se il pacchetto include già almeno un'attività Flusso di dati.  
   
 ### <a name="to-extract-data-using-an-xml-source"></a>Per estrarre dati tramite un'origine XML  

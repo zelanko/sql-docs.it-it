@@ -13,14 +13,18 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271718"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727603"
 ---
 # <a name="hadoop-pig-task"></a>Attività Pig Hadoop
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Usare l'attività Pig Hadoop per eseguire script Pig in un cluster Hadoop.  
   
  Per aggiungere un'attività Pig Hadoop, trascinarla e rilasciarla nella finestra di progettazione. Fare doppio clic sull'attività o fare clic con il pulsante destro del mouse e scegliere **Modifica**per visualizzare la finestra di dialogo **Editor attività Pig Hadoop** .  

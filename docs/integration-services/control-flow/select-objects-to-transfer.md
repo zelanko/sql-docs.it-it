@@ -13,14 +13,18 @@ ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c14c572d68ee24a0f9239e5ef0b2c7b7b11424
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c2e7ef3c3e4a6c61fe3250ec8d9d267503d9ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269975"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727487"
 ---
 # <a name="select-objects-to-transfer"></a>Selezione oggetti da trasferire
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare questa finestra di dialogo per selezionare gli oggetti da trasferire tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un'attività di trasferimento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Per specificare il trasferimento di tutti gli oggetti, selezionare la casella di controllo nella riga del titolo della griglia degli oggetti.  

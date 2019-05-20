@@ -14,14 +14,18 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6dd9ed869034959484427c063e101fe12d8f3d39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a45ce170d7965ca8358dd6a442a25a67190651cb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282215"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714380"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (database SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Vengono visualizzati i messaggi registrati durante le operazioni nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

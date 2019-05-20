@@ -14,14 +14,18 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54e4796f4a4c97dad255dd2e047f184fb8b0b879
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77ce175f9f525e2e65698712b9de6ef11a9ae6d1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279295"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725256"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (minore o uguale a) (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viene eseguito un confronto per determinare se la prima espressione è minore o uguale alla seconda. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
   
 > [!NOTE]  

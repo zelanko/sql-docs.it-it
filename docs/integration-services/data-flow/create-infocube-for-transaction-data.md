@@ -11,14 +11,18 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cdca90b8cdde1e9995da7ec28d29191dd2a36200
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dc45f1e3c819caedea79e169c72cdc6b6245d854
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270718"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727098"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Crea InfoCube per dati transazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Usare la finestra di dialogo **Crea InfoCube per dati transazione** per creare un nuovo InfoCube per i dati della transazione nel sistema SAP Netweaver BW.  
   
  È possibile aprire la finestra di dialogo **Crea InfoCube per dati transazione** dalla pagina **Gestione connessione** dell' **Editor destinazione SAP BW**. Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

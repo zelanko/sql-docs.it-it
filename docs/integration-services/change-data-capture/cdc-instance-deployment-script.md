@@ -11,14 +11,18 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75d66755f85650c6ac8630c08dc38e5d295b6f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c9942407693caaf1a8c0c2ef3222c20a237774c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273665"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729099"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC Instance Deployment Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nella finestra di dialogo CDC Instance Deployment Script viene visualizzato lo script di distribuzione dell'istanza di CDC. Questo script può essere usato per ricreare il database CDC con tutti i relativi elementi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa.  
   
  Al completamento dello script di distribuzione, è necessario accertare le condizioni seguenti:  

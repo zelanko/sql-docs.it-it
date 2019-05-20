@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271972"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727331"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
   
 -   Scrivere in una variabile i valori restituiti da un metodo di servizio Web. È ad esempio possibile ottenere la temperatura massima del giorno da un metodo di servizio Web e quindi utilizzare tale valore per aggiornare una variabile utilizzata in un'espressione che imposta il valore di una colonna.  

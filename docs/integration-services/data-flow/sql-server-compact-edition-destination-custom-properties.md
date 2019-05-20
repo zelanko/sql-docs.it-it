@@ -11,14 +11,18 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82c4ae27d88ddafd24d0db0a87e2ca73ff60e9cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1eaa38203d81cab931ab4ae1aa4ab120ae55bb83
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270360"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726328"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Proprietà personalizzate della destinazione SQL Server Compact Edition
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact include sia proprietà personalizzate sia le proprietà comuni a tutti i componenti del flusso di dati.  
   
  La tabella seguente descrive le proprietà personalizzate della destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. Tutte le proprietà sono di lettura/scrittura.  

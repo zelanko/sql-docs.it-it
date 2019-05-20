@@ -18,14 +18,18 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289433"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723545"
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca possono utilizzare query SQL. Nell'attività Esegui SQL, tramite le istruzioni SQL vengono creati, aggiornati ed eliminati dati e oggetti di database e vengono eseguite stored procedure e istruzioni SELECT. Nell'origine OLE DB e nella trasformazione Ricerca, le istruzioni SQL sono solitamente istruzioni SELECT o EXEC. Queste ultime eseguono in genere stored procedure che restituiscono set di risultati.  
   
  Le query possono essere analizzate per stabilire se sono valide. Quando si analizza una query che utilizza una connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la query viene analizzata ed eseguita e il risultato dell'esecuzione, ovvero esito positivo o negativo, viene assegnato al risultato dell'analisi. Se la query utilizza una connessione a dati diversi da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione viene semplicemente analizzata.  

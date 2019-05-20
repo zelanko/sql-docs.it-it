@@ -11,14 +11,18 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69d125ec70ea297edc4e02b9a2ee4b034a88a2c3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 196647a2c4f6dc872ec1aba7bb91d24c8809113c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289567"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722678"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lezione 1: Preparazione alla creazione del pacchetto di distribuzione
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In questa lezione verranno illustrate le procedure per creare le cartelle di lavoro e le variabili di ambiente a supporto dell'esercitazione, per creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , per aggiungere diversi pacchetti e i rispettivi file di supporto al progetto, nonché per implementare le configurazioni nei pacchetti.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di distribuire i pacchetti in base a un progetto. Il primo passaggio della creazione del pacchetto di distribuzione consiste pertanto nella raccolta di tutti i pacchetti e delle rispettive dipendenze in un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Risulta spesso utile includere altre informazioni nei pacchetti distribuiti, ad esempio un file Leggimi contenente la documentazione di base relativa al gruppo di pacchetti.  

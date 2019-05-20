@@ -15,14 +15,18 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8f7a5a5258e1ff90568ce90a34e67b01bd22d4cd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281235"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726737"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Caricamento dei dati tramite la destinazione OLE DB
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile aggiungere e configurare una destinazione OLE DB solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
   
 ### <a name="to-load-data-using-an-ole-db-destination"></a>Per caricare dati tramite una destinazione OLE DB  

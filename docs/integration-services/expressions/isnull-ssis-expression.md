@@ -14,14 +14,18 @@ ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7cdee630de0a3827dd2a9b2ad4a1353efb2ff2d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f57f66c531619ab81b9e7cd6f7b49324efd7f09f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279705"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725294"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Restituisce un risultato booleano che varia a seconda che un'espressione abbia o meno un valore Null.  
   
 ## <a name="syntax"></a>Sintassi  

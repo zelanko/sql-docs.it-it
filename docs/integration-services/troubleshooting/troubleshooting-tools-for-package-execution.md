@@ -17,14 +17,18 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a43ee9007ab396357e2390841384e61101fa4ec4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290127"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713666"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi quando si eseguono i pacchetti dopo averli completati e distribuiti.  
   
  In fase di progettazione, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] offre punti di interruzione che consentono di sospendere l'esecuzione dei pacchetti, una finestra di stato e visualizzatori dati che consentono di visualizzare il passaggio dei dati nel flusso di dati. Queste funzionalità non sono tuttavia disponibili quando si eseguono i pacchetti distribuiti. Le tecniche principali per la risoluzione dei problemi relativi ai pacchetti distribuiti sono le seguenti:  

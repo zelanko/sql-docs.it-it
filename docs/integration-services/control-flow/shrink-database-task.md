@@ -17,14 +17,18 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8c4d8e63cb2d721e60741f5df164048a6c0b5c4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1ad3d92ece3a3d625c83232519bf0fdbeb94995d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290747"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727440"
 ---
 # <a name="shrink-database-task"></a>Compatta database - attività
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Con l'attività Compatta database è possibile ridurre le dimensioni dei file di log e di dati del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Tramite l'attività Compatta database un pacchetto può compattare file per uno o più database.  

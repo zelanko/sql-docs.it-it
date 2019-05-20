@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281535"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719621"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra diversi messaggi di eventi nel registro eventi applicazioni di Windows. nel registro eventi applicazioni di Windows.  
   
  In questo argomento vengono fornite informazioni sui messaggi di evento comuni registrati da un pacchetto nel registro eventi applicazioni. Alcuni di questi messaggi vengono registrati per impostazione predefinita, anche se per il pacchetto non è stata abilitata la funzione di registrazione. Altri messaggi, invece, vengono registrati solo se tale funzione è stata abilitata. L'origine eventi per i messaggi è SQLISPackage, indipendentemente dal fatto che la registrazione avvenga per impostazione predefinita o perché è stata abilitata la funzione di registrazione.  

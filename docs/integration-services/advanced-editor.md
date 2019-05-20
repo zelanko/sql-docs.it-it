@@ -17,14 +17,18 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f5fd00c43d0b7279e000d3640b0c5d0aca3544a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276496"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729417"
 ---
 # <a name="advanced-editor"></a>Editor avanzato
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare la finestra di dialogo **Editor avanzato** per configurare le proprietà per l'oggetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] selezionato.  
   
  L' **Editor avanzato** è disponibile per la maggior parte degli oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che dispongono di proprietà configurabili. Questo è l'unico editor disponibile per gli oggetti che non espongono un'interfaccia utente personalizzata.  

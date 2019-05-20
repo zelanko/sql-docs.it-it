@@ -11,14 +11,18 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b166ceafd545952039d9c1929dc8aea6dc538d24
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273545"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724505"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Supportare più destinazioni in componenti personalizzati
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT per Visual Studio 2015, vedere [Scaricare la versione più recente di SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
@@ -34,7 +38,7 @@ Tutti e cinque i tipi di estensioni personalizzate di SSIS supportano più desti
 -   Provider di log
 -   Componenti del flusso di dati
 
-Per le estensioni gestite, la finestra di progettazione SSIS carica la versione dell'estensione per la versione di destinazione specificata. Ad esempio
+Per le estensioni gestite, la finestra di progettazione SSIS carica la versione dell'estensione per la versione di destinazione specificata. Esempio:
 -   Quando la versione di destinazione è SQL Server 2012, la finestra di progettazione carica la versione 2012 dell'estensione.
 -   Quando la versione di destinazione è SQL Server 2016, la finestra di progettazione carica la versione 2016 dell'estensione.
 

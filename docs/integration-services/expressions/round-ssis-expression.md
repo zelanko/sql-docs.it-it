@@ -14,14 +14,18 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3bb02a98330a7ad93e7784ae9ce6d08284585ff9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0128172fa800cde1dafb0a127a1463e3295ce06f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275947"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724988"
 ---
 # <a name="round-ssis-expression"></a>ROUND (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Restituisce un'espressione numerica arrotondata alla lunghezza o alla precisione specificata. Il parametro length deve restituire un valore integer.  
   
 ## <a name="syntax"></a>Sintassi  

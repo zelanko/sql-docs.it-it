@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282665"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726376"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Impostazione delle proprietà di un componente del flusso di dati
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Per impostare le proprietà dei componenti flusso di dati, tra cui origini, destinazioni e trasformazioni, utilizzare una delle funzionalità seguenti:  
   
 -   Editor dei componenti forniti da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Gli editor includono solo le proprietà personalizzate di ogni componente flusso di dati.  
@@ -129,15 +133,15 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |ComponentClassID|String|Valore CLSID del componente.|  
 |ContactInfo|String|Informazioni di contatto dello sviluppatore di un componente.|  
 |Descrizione|String|Descrizione del componente flusso di dati. Il valore predefinito di questa proprietà è il nome del componente flusso di dati.|  
-|ID|Integer|Valore che identifica in modo univoco questa istanza del componente.|  
+|ID|Valore intero|Valore che identifica in modo univoco questa istanza del componente.|  
 |IdentificationString|String|Identifica il componente.|  
 |IsDefaultLocale|Boolean|Indica se il componente utilizza le impostazioni locali dell'attività Flusso di dati alla quale appartiene.|  
-|LocaleID|Integer|Impostazioni locali che il componente flusso di dati utilizza durante l'esecuzione del pacchetto. Tutte le impostazioni locali di Windows sono disponibili per l'utilizzo nei componenti flusso di dati.|  
+|LocaleID|Valore intero|Impostazioni locali che il componente flusso di dati utilizza durante l'esecuzione del pacchetto. Tutte le impostazioni locali di Windows sono disponibili per l'utilizzo nei componenti flusso di dati.|  
 |nome|String|Nome del componente del flusso di dati.|  
-|PipelineVersion|Integer|Versione dell'attività Flusso di dati nella quale il componente è progettato per l'esecuzione.|  
+|PipelineVersion|Valore intero|Versione dell'attività Flusso di dati nella quale il componente è progettato per l'esecuzione.|  
 |UsesDispositions|Boolean|Indica se un componente ha un output degli errori.|  
 |ValidateExternalMetadata|Boolean|Indica se i metadati delle colonne esterne sono convalidati. Il valore predefinito di questa proprietà è **True**.|  
-|Versione|Integer|Versione di un componente.|  
+|Versione|Valore intero|Versione di un componente.|  
   
 ###  <a name="inputs"></a> Proprietà degli input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le trasformazioni e le destinazioni includono input. L'input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
@@ -150,12 +154,12 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
 |HasSideEffects|Boolean|Indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati se non è collegato a un componente a valle e se la proprietà **RunInOptimizedMode** è impostata su **true**.|  
-|ID|Integer|Valore che identifica l'input in modo univoco.|  
+|ID|Valore intero|Valore che identifica l'input in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'input.|  
 |IsSorted|Boolean|Indica se i dati nell'input sono ordinati.|  
 |nome|String|Nome dell'input.|  
-|SourceLocale|Integer|ID delle impostazioni locali (LCID) dei dati di input.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. , I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
+|SourceLocale|Valore intero|ID delle impostazioni locali (LCID) dei dati di input.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. . I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
   
  Le destinazioni e alcune trasformazioni non supportano gli output degli errori e le proprietà ErrorRowDisposition e TruncationRowDisposition di questi componenti sono di sola lettura.  
   
@@ -166,17 +170,17 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|Set di flag che specificano il confronto di colonne che hanno un tipo di dati character. Per altre informazioni, vedere [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
+|ComparisonFlags|Valore intero|Set di flag che specificano il confronto di colonne che hanno un tipo di dati character. Per altre informazioni, vedere [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
 |Descrizione|String|Descrive la colonna di input.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID della colonna di metadati esterna assegnato a una colonna di input.|  
-|ID|Integer|Valore che identifica la colonna di input in modo univoco.|  
+|ID|Valore intero|Valore che identifica la colonna di input in modo univoco.|  
 |IdentificationString|String|Stringa che identifica la colonna di input.|  
-|LineageID|Integer|ID della colonna a monte.|  
+|LineageID|Valore intero|ID della colonna a monte.|  
 |LineageIdentificationString|String|Stringa di identificazione che include il nome della colonna a monte.|  
 |nome|String|Nome della colonna di input.|  
-|SortKeyPosition|Integer|Valore che indica se una colonna è ordinata, l'ordinamento e la sequenza di ordinamento di più colonne. Il valore **0** indica che la colonna non è ordinata.  Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|SortKeyPosition|Valore intero|Valore che indica se una colonna è ordinata, l'ordinamento e la sequenza di ordinamento di più colonne. Il valore **0** indica che la colonna non è ordinata.  Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
 |UpstreamComponentName|String|Nome del componente a monte.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Valore che determina come una colonna di input viene utilizzata dal componente.|  
@@ -194,14 +198,14 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |Descrizione|String|Descrive l'output.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
-|ExclusionGroup|Integer|Valore che identifica un gruppo di output che si escludono a vicenda.|  
+|ExclusionGroup|Valore intero|Valore che identifica un gruppo di output che si escludono a vicenda.|  
 |HasSideEffects|Boolean|Valore che indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati se non è collegato a un componente a monte e se la proprietà **RunInOptimizedMode** è impostata su **true**.|  
-|ID|Integer|Valore che identifica l'output in modo univoco.|  
+|ID|Valore intero|Valore che identifica l'output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'output.|  
 |IsErrorOut|Boolean|Indica se l'output è un output degli errori.|  
 |IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è **False**.<br /><br /> **\*\* Importante \*\*** L'impostazione del valore della proprietà **IsSorted** su **True** non determina l'ordinamento dei dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |nome|String|Nome dell'output.|  
-|SynchronousInputID|Integer|ID di un input sincrono all'output.|  
+|SynchronousInputID|Valore intero|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
   
 ###  <a name="outputcolumns"></a> Proprietà delle colonne di output  
@@ -211,18 +215,18 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|Set di flag che specificano il confronto di colonne che hanno un tipo di dati character. Per altre informazioni, vedere [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
+|ComparisonFlags|Valore intero|Set di flag che specificano il confronto di colonne che hanno un tipo di dati character. Per altre informazioni, vedere [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
 |Descrizione|String|Descrive la colonna di output.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**. Il valore predefinito è **Interrompi componente**.|  
-|ExternalMetadataColumnID|Integer|ID della colonna di metadati esterna assegnato a una colonna di input.|  
-|ID|Integer|Valore che identifica la colonna di output in modo univoco.|  
+|ExternalMetadataColumnID|Valore intero|ID della colonna di metadati esterna assegnato a una colonna di input.|  
+|ID|Valore intero|Valore che identifica la colonna di output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica la colonna di output.|  
-|LineageID|Integer|ID della colonna di output. I componenti a valle fanno riferimento alla colonna utilizzando questo valore.|  
+|LineageID|Valore intero|ID della colonna di output. I componenti a valle fanno riferimento alla colonna utilizzando questo valore.|  
 |LineageIdentificationString|String|Stringa di identificazione che include il nome della colonna.|  
 |nome|String|Nome della colonna di output.|  
-|SortKeyPosition|Integer|Valore che indica se una colonna è ordinata, l'ordinamento e la sequenza di ordinamento di più colonne. Il valore **0** indica che la colonna non è ordinata. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|SpecialFlags|Integer|Valore che contiene i flag speciali della colonna di output.|  
+|SortKeyPosition|Valore intero|Valore che indica se una colonna è ordinata, l'ordinamento e la sequenza di ordinamento di più colonne. Il valore **0** indica che la colonna non è ordinata. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|SpecialFlags|Valore intero|Valore che contiene i flag speciali della colonna di output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**. Il valore predefinito è **Interrompi componente**.|  
   
  Le colonne di output includono anche un set di proprietà del tipo di dati.  
@@ -235,7 +239,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |Descrizione|String|Descrive la colonna esterna.|  
-|ID|Integer|Valore che identifica la colonna in modo univoco.|  
+|ID|Valore intero|Valore che identifica la colonna in modo univoco.|  
 |IdentificationString|String|Stringa che identifica la colonna.|  
 |nome|String|Nome della colonna esterna.|  
   
@@ -248,11 +252,11 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|CodePage|Integer|Specifica la tabella codici per i dati stringa non Unicode.|  
+|CodePage|Valore intero|Specifica la tabella codici per i dati stringa non Unicode.|  
 |DataType|Integer (enumerazione)|Tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] della colonna. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
-|Length|Integer|Lunghezza della colonna in caratteri.|  
-|Precisione|Integer|Precisione di una colonna numerica.|  
-|Scala|Integer|Scala di una colonna numerica.|  
+|Length|Valore intero|Lunghezza della colonna in caratteri.|  
+|Precisione|Valore intero|Precisione di una colonna numerica.|  
+|Scala|Valore intero|Scala di una colonna numerica.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Proprietà personalizzate dei componenti flusso di dati
 Per informazioni sulle proprietà personalizzate, vedere gli argomenti seguenti  

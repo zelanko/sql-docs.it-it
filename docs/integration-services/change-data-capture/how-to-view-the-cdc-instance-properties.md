@@ -11,14 +11,18 @@ ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 663131afa6741e1e8addc9809080bed1e1fda67c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0fddc9de23354536b7e6ed1956ad903ce559184
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290267"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728711"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Procedura di visualizzazione delle proprietà dell'istanza di CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In questa procedura viene descritto come utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create per gestire l'operazione delle istanze.  
   
 ### <a name="to-view-information-about-a-specific-instance"></a>Per visualizzare informazioni su un'istanza specifica  

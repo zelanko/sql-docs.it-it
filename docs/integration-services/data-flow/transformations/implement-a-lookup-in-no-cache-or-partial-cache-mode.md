@@ -16,14 +16,18 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 767c643644207d1ca72826831711bd36b385a1d7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 01ceb28c3f1b52318f7099a4a1225a0b24219da3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281265"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726051"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementazione di una ricerca in modalità No Cache o Partial Cache
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Partial Cache o No Cache:  
   
 -   Partial Cache  

@@ -14,14 +14,18 @@ ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4a0f08864aa25ad7cb1d77f11e95e50c5a21d437
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 991ef48e2b4cef24eba5034f07d5545e01198e5d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277352"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724998"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viene restituita la parte di un'espressione di caratteri che inizia in corrispondenza della posizione specificata e ha la lunghezza specificata. I parametri *position* e *length* devono restituire valori integer.  
   
 ## <a name="syntax"></a>Sintassi  

@@ -11,14 +11,18 @@ ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aa86686db300a58987b842bf8457a28adf3a9fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ccaf85f1dd7a6146a1bff1bc1656fbbce3a3ee82
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290052"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729027"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Guida procedurale del servizio Change Data Capture per Oracle di Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In questa sezione viene illustrato come eseguire le attività nella console di configurazione del servizio CDC.  
   
 ## <a name="learn-how-to-use-the-cdc-service-for-oracle-service-configuration-ui"></a>Informazioni sull'utilizzo del servizio CDC per l'interfaccia utente di configurazione del servizio Oracle  

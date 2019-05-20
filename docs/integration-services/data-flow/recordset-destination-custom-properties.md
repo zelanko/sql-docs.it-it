@@ -11,14 +11,18 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cb31139e542344f3b7fd8354c250452783ba5bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282808"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726487"
 ---
 # <a name="recordset-destination-custom-properties"></a>Proprietà personalizzate della destinazione recordset
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destinazione recordset include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della destinazione recordset. Tutte le proprietà sono di lettura/scrittura.  

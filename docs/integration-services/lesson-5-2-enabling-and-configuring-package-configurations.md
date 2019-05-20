@@ -11,14 +11,18 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271694"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721517"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lezione 5-2: Abilitare e configurare le configurazioni di pacchetti
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In questa attività si converte il progetto nel modello di distribuzione del pacchetto e si abilitano le configurazioni di pacchetto usando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà **Directory** del contenitore Ciclo Foreach. Il valore della proprietà **Directory** è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. È anche possibile popolare una nuova cartella di dati di esempio da usare per i test.  
   

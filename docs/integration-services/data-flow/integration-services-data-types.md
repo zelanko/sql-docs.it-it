@@ -19,14 +19,18 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b3c641f9ade72d1a821739f84e20e04305951a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64fb0e9310230634c36ee0c1bca0cf9c89914bab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274416"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726877"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
   
  Alcuni componenti flusso di dati consentono di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i tipi di dati gestiti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per altre informazioni sul mapping tra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
@@ -61,7 +65,7 @@ ms.locfileid: "58274416"
 |DT_UI4|Intero senza segno a 4 byte.|  
 |DT_UI8|Intero senza segno a 8 byte.|  
 |DT_WSTR|Stringa di caratteri Unicode con terminazione Null e lunghezza massima di 4000 caratteri. Se un valore di una colonna contiene ulteriori terminatori Null, la stringa verrà troncata in corrispondenza del primo carattere Null.|  
-|DT_IMAGE|Valore binario con dimensioni massime di 2^31-1 (2.147.483.647) byte. ,|  
+|DT_IMAGE|Valore binario con dimensioni massime di 2^31-1 (2.147.483.647) byte. .|  
 |DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2^30–1 (1.073.741.823) caratteri.|  
 |DT_TEXT|Stringa di caratteri [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/Multibyte Character Set con lunghezza massima di 2^31-1 (2.147.483.647) caratteri.|  
   

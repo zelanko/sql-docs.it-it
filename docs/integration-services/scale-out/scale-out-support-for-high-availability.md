@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241461"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718416"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In SSIS Scale Out la disponibilità elevata sul lato Scale Out Worker viene assicurata attraverso l'esecuzione di pacchetti con più istanze di Scale Out Worker.
 

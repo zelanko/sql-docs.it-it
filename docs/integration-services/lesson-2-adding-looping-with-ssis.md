@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274175"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722451"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Lezione 2: Aggiungere cicli con SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nella [Lezione 1: Creare un progetto e un pacchetto di base con SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md) è stato creato un pacchetto che estrae dati da un'unica origine file flat. I dati vengono quindi trasformati usando le trasformazioni Ricerca. Il pacchetto carica infine i dati in una copia della tabella dei fatti **FactCurrencyRate** nel database di esempio **AdventureWorksDW2012**.  
   

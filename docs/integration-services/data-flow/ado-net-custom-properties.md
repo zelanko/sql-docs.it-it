@@ -11,14 +11,18 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77b941d4f1460b81acf2e90185f6e1a4d9ecbde9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277520"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727227"
 ---
 # <a name="ado-net-custom-properties"></a>Proprietà personalizzate ADO NET
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Proprietà personalizzate delle origini**  
   
  L'origine ADO NET include sia proprietà personalizzate sia le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -43,8 +47,8 @@ ms.locfileid: "58277520"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|BatchSize|Integer|Numero di righe in un batch inviato al server. Il valore **0** indica che le dimensioni del batch corrispondono alle dimensioni del buffer interno. Il valore predefinito di questa proprietà è **0**.|  
-|CommandTimeout|Integer|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
+|BatchSize|Valore intero|Numero di righe in un batch inviato al server. Il valore **0** indica che le dimensioni del batch corrispondono alle dimensioni del buffer interno. Il valore predefinito di questa proprietà è **0**.|  
+|CommandTimeout|Valore intero|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
 |TableOrViewName|String|Nome della tabella o vista di destinazione.|  
   
  Per altre informazioni, vedere [Destinazione ADO NET](../../integration-services/data-flow/ado-net-destination.md).  

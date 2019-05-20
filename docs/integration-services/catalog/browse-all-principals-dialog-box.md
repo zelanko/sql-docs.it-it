@@ -13,14 +13,18 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3cb979449214daa1cf9d4d03a01cd53f72eabef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276930"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729237"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Finestra di dialogo Sfoglia tutte le entità
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Usare la finestra di dialogo **Sfoglia tutte le entità** per selezionare un'entità di database per modificare le autorizzazioni dell'entità per il progetto selezionato o per tutti i progetti contenuti in una cartella selezionata.  
   
  **Per saperne di più**  

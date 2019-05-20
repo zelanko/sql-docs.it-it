@@ -16,14 +16,18 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027c7c142a825b6ebed8bac35f38779a6ac4bd12
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279835"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725943"
 ---
 # <a name="ole-db-command-transformation"></a>Comando OLE DB - trasformazione
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Comando OLE DB esegue un'istruzione SQL per ogni riga in un flusso di dati. È ad esempio possibile eseguire un'istruzione SQL che inserisce, aggiorna o elimina righe in una tabella di database.  
   
  Per configurare la trasformazione comando OLE DB, procedere nel modo seguente:  

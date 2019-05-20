@@ -17,14 +17,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 0e2bcd19b705aa3dd0afb229d523b9ceb3725fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319312"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726567"
 ---
 # <a name="power-query-source-preview"></a>Origine Power Query (anteprima)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Questo articolo descrive come configurare le proprietà dell'origine Power Query nel flusso di dati di SQL Server Integration Services (SSIS). Power Query è una tecnologia che consente di connettersi a diverse origini dati e trasformare dati tramite Excel o Power BI Desktop. Per altre informazioni, vedere l'articolo [Panoramica e formazione su Power Query](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). Lo script generato da Power Query può essere copiato e incollato nell'origine Power Query nel flusso di dati SSIS per configurarlo.
   

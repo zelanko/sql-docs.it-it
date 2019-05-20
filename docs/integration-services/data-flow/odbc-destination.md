@@ -16,14 +16,18 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273426"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726627"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tramite la destinazione ODBC viene eseguito il caricamento bulk di dati in tabelle di database supportate da ODBC. La destinazione ODBC utilizza una gestione connessione ODBC per la connessione all'origine dati.  
   
  Una destinazione ODBC include i mapping tra le colonne di input e le colonne presenti nell'origine dati di destinazione. Non è necessario eseguire il mapping delle colonne di input a tutte le colonne di destinazione ma, a seconda delle proprietà delle colonne di destinazione, possono verificarsi errori se non viene eseguito il mapping di alcuna colonna di input alle colonne di destinazione. Se, ad esempio, una colonna di destinazione non ammette valori Null, sarà necessario eseguire il mapping di una colonna di input a tale colonna. È inoltre possibile eseguire il mapping di colonne di tipi diversi, ma se i dati di input non sono compatibili per il tipo di colonna di destinazione, si verifica un errore in fase di esecuzione. A seconda dell'impostazione del comportamento in seguito all'errore, l'errore viene ignorato, provoca un problema o la riga viene inviata all'output degli errori.  

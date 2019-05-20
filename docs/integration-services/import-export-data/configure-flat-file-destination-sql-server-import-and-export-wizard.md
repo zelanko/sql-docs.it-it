@@ -12,14 +12,18 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e8e7090865428be5da4e917b9894c940ef5975b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222035"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723964"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Se è stata selezionata una destinazione file flat, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Configurazione destinazione file flat** dopo aver specificato che si vuole copiare una tabella o dopo aver indicato una query. In questa pagina è possibile specificare le opzioni di formattazione per il file flat di destinazione. Facoltativamente, è possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>Screenshot della pagina Configurare la destinazione del file flat  

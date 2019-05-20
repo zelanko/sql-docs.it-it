@@ -15,14 +15,18 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3d544999b83645e40b7579d7c5e049cff2d36439
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 441c5d157be083baff6b3ae1810bc2da932f188e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782063"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728378"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gestione connessione di Azure Data Lake Analytics
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Un pacchetto di SQL Server Integration Services (SSIS) è in grado di usare la gestione connessione di Azure Data Lake Analytics per connettersi a un account di Data Lake Analytics con uno dei due tipi di autenticazione seguenti:
 -   Identità utente di Azure Active Directory (Azure AD)

@@ -11,14 +11,18 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9e03c2b26d702dee0edc1ef445a4a362e9ab359
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 75a1cd07710bb95c041d0de8a00cb23f7354eb91
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281415"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722397"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lezione 3-1: Copiare il pacchetto della lezione 2
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In questa attività si procederà alla creazione di una copia del pacchetto Lesson 2.dts creato nella lezione 2. Se non è stata completata la lezione 2, è possibile aggiungere al progetto il pacchetto della lezione 2 completato incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 3.
 

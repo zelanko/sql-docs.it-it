@@ -14,14 +14,18 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e392e406ce9c17cc24f57a22cef03de2c363a21
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5079a0fbfd3a870875043b40be3c406c72730fbd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289053"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729327"
 ---
 # <a name="package-properties-dialog-box"></a>Finestra di dialogo Proprietà pacchetto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare la finestra di dialogo **Proprietà pacchetto** per visualizzare le proprietà dei pacchetti archiviati nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Per altre informazioni, vedere [Server Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md).  
