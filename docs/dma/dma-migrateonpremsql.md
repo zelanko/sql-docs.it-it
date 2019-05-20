@@ -2,7 +2,7 @@
 title: Aggiornamento SQL Server locale a SQL Server o SQL Server nelle macchine virtuali di Azure usando Data Migration Assistant | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per eseguire l'aggiornamento di un Server SQL locale a una versione successiva di SQL Server o a SQL Server in macchine virtuali di Azure
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706936"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875174"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Eseguire l'aggiornamento in SQL Server locale a SQL Server o SQL Server in macchine virtuali di Azure usando Data Migration Assistant
 
 Data Migration Assistant offre valutazioni senza problemi di SQL Server in locale e gli aggiornamenti alle versioni successive di SQL Server o la migrazione a SQL Server in macchine virtuali di Azure o Database SQL di Azure.
 
-Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQL Server locale alla versione più recente di SQL Server o a SQL Server in macchine virtuali di Azure usando Data Migration Assistant.   
+Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQL Server in locale per le versioni successive di SQL Server o a SQL Server in macchine virtuali di Azure usando Data Migration Assistant.
 
 ## <a name="create-a-new-migration-project"></a>Creare un nuovo progetto di migrazione
 
