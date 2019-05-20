@@ -16,14 +16,18 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272199"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727686"
 ---
 # <a name="file-system-task"></a>Attività File system
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività File system consente di eseguire operazioni su file e directory nel file system. Tramite l'attività File system un pacchetto può ad esempio creare, spostare o eliminare file e directory. È inoltre possibile utilizzare l'attività File system per impostare attributi su file e directory, ad esempio per impostare file come nascosti o in sola lettura.  
   
  Tutte le operazioni dell'attività File system utilizzano un'origine, che può essere costituita da un file o una directory. Il file copiato o la directory eliminata tramite un'attività è un'origine. L'origine può essere specificata tramite una gestione connessione file che punta alla directory o al file oppure specificando il nome di una variabile che contiene il percorso dell'origine. Per altre informazioni, vedere [Gestione connessione File](../../integration-services/connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  

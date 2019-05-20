@@ -12,14 +12,18 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b3df75759684eb094113096b636288e9e1db6f6b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 3ebfc24eef8919ffa43824447ae32773d106158f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221888"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723972"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Scelta destinazione (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Dopo aver fornito informazioni sull'origine dei dati e su come connettersi a tale origine, nell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzata l'opzione **Scegliere una destinazione**. In questa pagina fornire informazioni sulla destinazione per i dati e su come connettersi a tale destinazione.
   
 Per informazioni sulle destinazioni di dati che è possibile usare, vedere [Quali origini e destinazioni di dati è possibile usare?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources). 

@@ -16,14 +16,18 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282715"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719569"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Riusare il flusso di controllo dei pacchetti tramite le parti del pacchetto del flusso di controllo
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Salvare un'attività o un contenitore di flusso di controllo di uso comune in un file di parte autonomo (file con estensione dtsxp) e riusarli più volte in uno o più pacchetti usando le parti del flusso di controllo. Questa riusabilità semplifica la progettazione e la manutenzione dei pacchetti SSIS.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>Creare una nuova parte del pacchetto del flusso di controllo  

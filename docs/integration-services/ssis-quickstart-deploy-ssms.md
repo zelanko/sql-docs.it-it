@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 483a36678484dca38a0321fc539330fb34725d7e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 768d655c8300d21b5f4e2483edc0471bf157e074
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281775"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717703"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS) per connettersi al database del catalogo SSIS e quindi eseguire la Distribuzione guidata di Integration Services per distribuire un progetto SSIS nel catalogo SSIS. 
 
 SQL Server Management Studio è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Per altre informazioni su SSMS, vedere [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).

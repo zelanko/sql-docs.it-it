@@ -14,14 +14,18 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7aad7ade17e7131b2c1d25ccb7c7bfa8c5d2a4fa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2bfae0cb69e712c0d0ac3a8afb8e7da362f9703e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274986"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723684"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile aggiornare i pacchetti creati nelle versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] che consente di semplificare il processo. Poiché è possibile configurare la procedura guidata in modo da eseguire il backup dei pacchetti originali, sarà possibile continuare a utilizzarli nel caso in cui si riscontrino difficoltà nell'aggiornamento.  
   
  L'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] viene installato durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

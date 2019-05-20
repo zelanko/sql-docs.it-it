@@ -14,14 +14,18 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9d56775d0754676d22717a193ea6749ae70a11f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 56134fd6e9c71d041f0feeed075d350935fe78a0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279845"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724916"
 ---
 # <a name="syntax-ssis"></a>Sintassi (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La sintassi delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è simile a quella utilizzata nei linguaggi C e C#. Le espressioni includono elementi quali identificatori (colonne e variabili), valori letterali, operatori e funzioni. In questo argomento vengono riepilogati i requisiti specifici della sintassi dell'analizzatore di espressioni, in relazione ai diversi elementi delle espressioni.  
   
 > [!NOTE]  

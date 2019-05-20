@@ -17,14 +17,18 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1a8773a0c58b597f5a139346919c62d41968e79
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272138"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715460"
 ---
 # <a name="system-variables"></a>Variabili di sistema
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
   
  È possibile usare tutte le variabili, di sistema e definite dall'utente, nelle associazioni di parametro usate dall'attività Esegui SQL per il mapping delle variabili ai parametri.  

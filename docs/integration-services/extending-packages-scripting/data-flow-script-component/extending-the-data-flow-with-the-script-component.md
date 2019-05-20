@@ -25,14 +25,18 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cfe49773c7f9f481a7c26579c91283495220443
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7d1688210ac2813ec48ff5c6ceddde853e07b2c8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271406"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724295"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Estensione del flusso di dati con il componente script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il componente script estende le funzionalità del flusso di dati dei pacchetti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con codice personalizzato scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# che viene compilato ed eseguito in fase di esecuzione del pacchetto. Il componente script semplifica lo sviluppo di un'origine, di una trasformazione o di una destinazione personalizzata del flusso di dati quando le origini, le trasformazioni e le destinazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non soddisfano pienamente specifici requisiti. Dopo aver configurato il componente con gli input e gli output previsti, scrive automaticamente tutto il codice dell'infrastruttura richiesto, consentendo agli sviluppatori di concentrarsi esclusivamente sul codice necessario per l'elaborazione personalizzata.  
   
  Un componente script interagisce con il pacchetto che lo contiene e con il flusso di dati tramite le classi generate automaticamente negli elementi di progetto **ComponentWrapper** e **BufferWrapper**, che sono rispettivamente istanze delle classi <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> e <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>. Queste classi rendono disponibili connessioni, variabili e altri elementi del pacchetto come oggetti tipizzati e gestiscono input e output. Il componente script può inoltre utilizzare lo spazio dei nomi [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e la libreria di classi [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], nonché assembly personalizzati, per implementare la funzionalità personalizzata.  

@@ -12,14 +12,18 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 08baea2a92d21d9dca3a53dc17d6499f77e193d3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 302cb0b4f041c674eda5af46bec91ca768d8f822
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222075"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724014"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo la pagina di benvenuto, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine.
   
 Per informazioni sulle origini dati che è possibile usare, vedere [Quali origini dati e destinazioni è possibile usare](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)

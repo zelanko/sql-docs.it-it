@@ -32,14 +32,18 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276756"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719995"
 ---
 # <a name="legacy-package-deployment-ssis"></a>distribuzione del pacchetto legacy (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include strumenti e procedure guidate per la distribuzione di pacchetti dal computer di sviluppo al server di produzione o ad altri computer.  
   
  La procedura per la distribuzione di pacchetti prevede quattro passaggi.  

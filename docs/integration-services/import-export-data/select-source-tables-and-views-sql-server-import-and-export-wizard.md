@@ -12,14 +12,18 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f69c65df07ce74b3caf6ae9989aac59f4119c3c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e20ae3e7392c01195ecb8cb829976efb3d6ad2c9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275940"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723743"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo aver specificato che si vuole copiare un'intera tabella o dopo aver specificato una query, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Seleziona tabelle e viste di origine**. In questa pagina è possibile selezionare le tabelle e le viste esistenti da copiare. Viene poi eseguito il mapping delle tabelle di origine in tabelle di destinazione nuove o esistenti. Facoltativamente, è anche possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.
 
 > [!TIP]

@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274314"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726207"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Configurazione guidata dimensioni a modifica lenta è l'editor per la trasformazione Dimensione a modifica lenta. La compilazione e la configurazione del flusso di dati di una dimensione a modifica lenta può risultare particolarmente complessa. Configurazione guidata dimensioni a modifica lenta rappresenta il modo più semplice per compilare il flusso di dati per gli output della trasformazione Dimensione a modifica lenta assistendo l'utente nel mapping delle colonne, nella selezione delle colonne chiave business, nell'impostazione degli attributi relativi alla modifica delle colonne e nella configurazione del supporto per i membri derivati della dimensione.  
   
  È necessario scegliere almeno una colonna chiave business nella tabella delle dimensioni ed eseguirne il mapping a una colonna di input. Il valore della chiave business collega un record nell'origine a un record nella tabella delle dimensioni. La trasformazione utilizza questo mapping per individuare il record nella tabella delle dimensioni e determinare se si tratta di un record nuovo o modificato. La chiave business in genere è la chiave primaria nell'origine ma può essere una chiave alternativa purché identifichi in modo esclusivo un record e il suo valore non cambi. La chiave business può essere anche una chiave composta, formata da più colonne. La chiave primaria nella tabella delle dimensioni è in genere una chiave surrogata, ovvero è un valore numerico generato automaticamente da una colonna Identity o da una soluzione personalizzata come ad esempio uno script.  

@@ -18,14 +18,18 @@ ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c193c1516f4356980f90b641e9b0d42a89430b2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b8bac99b9335275fe5adee6f630c451208e176aa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280385"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726043"
 ---
 # <a name="import-column-transformation"></a>Trasformazione Importa colonna
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Importa colonna legge i dati dai file e li aggiunge alle colonne in un flusso di dati. Tramite questa trasformazione un pacchetto può aggiungere a un flusso di dati immagini e testo archiviati in file distinti. Un flusso di dati che carica dati in una tabella in cui sono archiviate informazioni sui prodotti può ad esempio includere la trasformazione Importa colonna per importare dai rispettivi file i commenti dei clienti su ogni prodotto e aggiungerli al flusso di dati.  
   
  Per configurare la trasformazione Importa colonna, procedere nel modo seguente:  

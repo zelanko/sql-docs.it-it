@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274846"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722091"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lezione 3-3: Testare il pacchetto creato nella lezione 3 dell'esercitazione
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In questa attività viene eseguito il pacchetto **Lesson 3.dtsx**. Mentre il pacchetto viene eseguito, nella finestra **Eventi del log** sono elencate le voci di log che SSIS scrive nel file di log del provider di log. Al termine dell'esecuzione del pacchetto è possibile visualizzare il contenuto del file di log.  
   

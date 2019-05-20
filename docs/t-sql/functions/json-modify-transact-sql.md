@@ -11,15 +11,17 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026522"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577461"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Aggiorna il valore di una proprietà in una stringa JSON e restituisce la stringa JSON aggiornata.  
   
@@ -31,7 +33,8 @@ ms.locfileid: "56026522"
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Argomenti
+
  *expression*  
  Espressione. In genere il nome di una variabile o di una colonna che contiene testo JSON.  
   
@@ -44,16 +47,16 @@ JSON_MODIFY ( expression , path , newValue )
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *append*  
+- *append*  
     Modificatore facoltativo che specifica che il nuovo valore deve essere aggiunto alla matrice a cui fa riferimento  *\<json path>*.  
   
--   *lax*  
+- *lax*  
     Specifica che la proprietà a cui fa riferimento  *\<json path>* non deve necessariamente esistere. Se la proprietà non è presente, JSON_MODIFY tenta di inserire il nuovo valore nel percorso specificato. L'inserimento può non riuscire se la proprietà non può essere inserita nel percorso. Se non si specifica né *lax* né *strict*, *lax* è la modalità predefinita.  
   
--   *strict*  
+- *strict*  
     Specifica che la proprietà a cui fa riferimento  *\<json path>* deve essere presente nell'espressione JSON. Se la proprietà non è presente, JSON_MODIFY restituisce un errore.  
   
--   *\<json path>*  
+- *\<json path>*  
     Specifica il percorso della proprietà da aggiornare. Per altre informazioni, vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
@@ -67,10 +70,12 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSf
   
 Se il tipo del valore è NVARCHAR o VARCHAR, JSON_MODIFY sottopone a escape tutti i caratteri speciali nel nuovo valore. Un valore di testo non viene sottoposto a escape se si tratta di codice JSON correttamente formattato generato da FOR JSON, JSON_QUERY o JSON_MODIFY.  
   
-## <a name="return-value"></a>Valore restituito  
+## <a name="return-value"></a>Valore restituito
+
  Restituisce il valore aggiornato di *expression* come testo JSON correttamente formattato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  La funzione JSON_MODIFY consente di aggiornare il valore di una proprietà esistente, inserire una nuova coppia chiave:valore o eliminare una chiave in base a una combinazione di modalità e valori forniti.  
   
  La tabella seguente confronta il comportamento di **JSON_MODIFY** in modalità lax e in modalità strict. Per altre informazioni sulla specifica facoltativa della modalità del percorso (lax o strict), vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
@@ -86,10 +91,11 @@ Se il tipo del valore è NVARCHAR o VARCHAR, JSON_MODIFY sottopone a escape tutt
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="example---basic-operations"></a>Esempio: operazioni di base  
+### <a name="example---basic-operations"></a>Esempio: operazioni di base
+
  L'esempio seguente illustra le operazioni di base che è possibile eseguire con testo JSON.  
   
- **Query**  
+ **Query**
   
 ```sql  
 
@@ -122,7 +128,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **Risultati**  
+ **Risultati**
   
 ```json  
 {
@@ -144,10 +150,11 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>Esempio: più aggiornamenti  
+### <a name="example---multiple-updates"></a>Esempio: più aggiornamenti
+
  Con JSON_MODIFY è possibile aggiornare una sola proprietà. Se è necessario eseguire più aggiornamenti, è possibile usare più chiamate a JSON_MODIFY.  
   
- **Query**  
+ **Query**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -161,7 +168,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **Risultati**  
+ **Risultati**
   
 ```json  
 {
@@ -177,7 +184,7 @@ PRINT @info
 ### <a name="example---rename-a-key"></a>Esempio: ridenominazione di una chiave  
  L'esempio seguente illustra come rinominare una proprietà all'interno di testo JSON con la funzione JSON_MODIFY. Prima è possibile inserire il valore di una proprietà esistente come nuova coppia chiave-valore. È quindi possibile eliminare la chiave precedente impostando il valore della proprietà precedente su NULL.  
   
- **Query**  
+ **Query**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -196,7 +203,7 @@ SET @product=
 PRINT @product
 ```  
   
- **Risultati**  
+ **Risultati**
   
 ```json  
 {
@@ -208,10 +215,11 @@ PRINT @product
   
  Se si non esegue il cast del nuovo valore a un tipo numerico, JSON_MODIFY lo considera come testo e lo racchiude tra virgolette doppie.  
   
-### <a name="example---increment-a-value"></a>Esempio: incremento di un valore  
+### <a name="example---increment-a-value"></a>Esempio: incremento di un valore
+
  L'esempio seguente illustra come incrementare il valore di una proprietà all'interno di testo JSON con la funzione JSON_MODIFY. Prima è possibile inserire il valore della proprietà esistente come nuova coppia chiave-valore. È quindi possibile eliminare la chiave precedente impostando il valore della proprietà precedente su NULL.  
   
- **Query**  
+ **Query**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -226,7 +234,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **Risultati**  
+ **Risultati**
   
 ```json  
 {
@@ -236,7 +244,8 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>Esempio: modifica di un oggetto JSON  
+### <a name="example---modify-a-json-object"></a>Esempio: modifica di un oggetto JSON
+
  JSON_MODIFY considera l'argomento *newValue* come testo normale anche se contiene testo JSON correttamente formattato. Di conseguenza, l'output JSON della funzione è racchiuso tra virgolette doppie e tutti i caratteri speciali sono sottoposti a escape, come illustrato nell'esempio seguente.  
   
  **Query**  
@@ -253,7 +262,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **Risultati**  
+ **Risultati**
   
 ```json  
 {
@@ -281,7 +290,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **Risultati**  
+ **Risultati**
   
 ```json  
 {
@@ -293,7 +302,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>Esempio: aggiornamento di una colonna JSON  
+### <a name="example---update-a-json-column"></a>Esempio: aggiornamento di una colonna JSON
+
  L'esempio seguente aggiorna il valore di una proprietà in una colonna di tabella contenente codice JSON.  
   
 ```sql  
@@ -303,8 +313,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
  [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Dati JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

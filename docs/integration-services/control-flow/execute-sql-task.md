@@ -21,14 +21,18 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273909"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727717"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
   
 -   Troncare una tabella o una vista per prepararla per l'inserimento di dati.  

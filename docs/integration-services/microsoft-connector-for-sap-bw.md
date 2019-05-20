@@ -11,14 +11,18 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4555f8ac86bb3755aa2357ced05dec5d54d038c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 22dd86257529f3e872ec2a42c4439ba4518cb7ac
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272899"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720121"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW è un set di tre componenti che consente di estrarre o caricare i dati in un sistema SAP NetWeaver BW versione 7.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW per SQL Server 2016 è un componente del Feature Pack di SQL Server 2016. Per installare Connector for SAP BW e la relativa documentazione, scaricare ed eseguire il programma di installazione dalla [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  

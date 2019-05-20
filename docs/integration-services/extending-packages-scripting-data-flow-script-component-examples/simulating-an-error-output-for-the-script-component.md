@@ -16,14 +16,18 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53d4bbc5b87dbbf4586baf6418b52076b95f65a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3ec797c98cd0d18408c511b20313b99ca50f04b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288857"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724367"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulazione di un output degli errori per il componente script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Anche se non è possibile configurare direttamente un output come output degli errori nel componente script per la gestione automatica delle righe di errori, è possibile riprodurre la funzionalità di un output degli errori incorporato creando un output aggiuntivo e utilizzando la logica condizionale nello script per indirizzare le righe a questo output quando è appropriato. È necessario imitare il comportamento di un output degli errori incorporato aggiungendo due colonne di output aggiuntive per ricevere il numero di errore e l'ID della colonna nella quale si è verificato un errore.  
   
  Se si desidera aggiungere la descrizione dell'errore che corrisponde a un codice di errore [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinito specifico, è possibile utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, disponibile tramite la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> del componente script.  

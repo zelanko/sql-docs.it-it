@@ -11,14 +11,18 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290287"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721967"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
   
 L'Installazione guidata pacchetti consente di eseguire in modo semplificato i passaggi necessari per installare e configurare i pacchetti. I pacchetti verranno installati in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer di destinazione, ovvero il computer in cui si copia il pacchetto di distribuzione. Verrà inoltre creata la cartella C:\DeploymentTutorialInstall nella quale verranno installati i file non di pacchetto.  

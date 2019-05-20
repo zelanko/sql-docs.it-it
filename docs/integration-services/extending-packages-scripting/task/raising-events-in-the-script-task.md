@@ -21,14 +21,18 @@ ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a20aee1b6c33a6106dd5a1154d2dfe6c7661ef7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e3ccbd04f8d940cbe2ae9ecce3243c8aa8021d33
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289377"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724067"
 ---
 # <a name="raising-events-in-the-script-task"></a>Generazione di eventi nell'attività Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Gli eventi consentono di segnalare errori, avvisi e altre informazioni, ad esempio l'avanzamento o lo stato delle attività, al pacchetto contenitore. Il pacchetto fornisce gestori eventi per la gestione di notifiche degli eventi. L'attività Script può generare eventi chiamando metodi sulla proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> dell'oggetto **Dts**. Per altre informazioni sulla gestione degli eventi da parte dei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vedere [Gestori eventi di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
   
  Gli eventi possono essere registrati in qualsiasi provider di log abilitato nel pacchetto. I provider di log archiviano informazioni sugli eventi in un archivio dati. L'attività Script può anche utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> per registrare informazioni in un provider di log senza generare un evento. Per altre informazioni sull'uso del metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>, vedere [Registrazione nell'attività Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  

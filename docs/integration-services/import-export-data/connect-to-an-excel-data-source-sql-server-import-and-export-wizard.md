@@ -10,14 +10,18 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221815"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723892"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questo articolo illustra come connettersi a un'origine dati **Microsoft Excel** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata di SQL Server.
 
 La schermata seguente mostra una connessione di esempio a una cartella di lavoro di Microsoft Excel.
@@ -35,7 +39,7 @@ Per connettersi ai file Excel, può essere necessario scaricare e installare fil
 > Le opzioni di connessione per il provider di dati sono le stesse sia nel caso in cui Excel rappresenti l'origine sia nel caso in cui rappresenti la destinazione. Ovvero, le opzioni visualizzate sono le stesse in entrambe le pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata.
 
 **Percorso file di Excel**  
- Specificare il percorso e il nome del file Excel. Ad esempio
+ Specificare il percorso e il nome del file Excel. Esempio:
 -   Per un file nel computer locale, **C:\\MyData.xlsx**.
 -   Per un file in una condivisione di rete, **\\\\Sales\\Database\\Northwind.xlsx**.
 

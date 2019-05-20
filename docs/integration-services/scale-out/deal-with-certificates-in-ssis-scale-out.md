@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 6be7f71593fba0347438a953ffa0732d3f499ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12f67e7a17ba253ab49b1e61fe3de33a45e0cb55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764468"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718727"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gestire i certificati in SQL Server Integration Services Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Per proteggere la comunicazione tra Scale Out Master e istanze di Scale Out Worker, SSIS Scale Out usa due certificati, uno per Scale Out Master e uno per le istanze di Scale Out Worker. 
 
@@ -44,7 +48,7 @@ Creare e installare un nuovo certificato SLL nel nodo master con il comando segu
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
-Ad esempio
+Esempio:
 
 ```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -57,7 +61,7 @@ Controllare l'associazione originale con il comando seguente:
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-Ad esempio
+Esempio:
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
@@ -70,7 +74,7 @@ netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
-Ad esempio
+Esempio:
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
@@ -108,7 +112,7 @@ Creare e installare un certificato con il comando seguente:
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 
-Ad esempio
+Esempio:
 
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
@@ -124,7 +128,7 @@ certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
 
-Ad esempio
+Esempio:
 
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine

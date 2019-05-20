@@ -25,14 +25,18 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 509523c636205e883a3fd55ed0bc5101b8649576
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 889bd1f743b30727bed5266b0c725733b823d654
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290687"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724144"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Riferimenti ad altri assembly nelle soluzioni di scripting
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La libreria di classi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce allo sviluppatore di script un potente set di strumenti per l'implementazione di funzionalità personalizzate nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'attività Script e il componente script possono anche utilizzare assembly gestiti personalizzati.  
   
 > [!NOTE]

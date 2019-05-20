@@ -12,14 +12,18 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0299a7b8bc6f43989b83bb24fa7cc23833ed4c09
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8326920e557d6ed304414f96a7da040de0093dd0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276525"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723729"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Salvare ed eseguire il pacchetto (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo aver specificato e configurato l'origine dati e la destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare le proprie informazioni come pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) per personalizzarlo e usarlo di nuovo in seguito.
   
 **Cos'è un pacchetto?** La procedura guidata usa SQL Server Integration Services (SSIS) per copiare i dati. In SSIS il pacchetto rappresenta l'unità di base. La procedura guidata crea un pacchetto SSIS in memoria mentre ci si sposta tra le pagine della procedura guidata e si specificano le opzioni.

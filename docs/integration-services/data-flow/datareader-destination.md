@@ -16,14 +16,18 @@ ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b384f9d1ad2140ca5c7aef586a9948521459c5eb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fe2c9335eeb25fec264e2750dc1f9487ca53ff80
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270561"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726989"
 ---
 # <a name="datareader-destination"></a>DataReader - destinazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destinazione DataReader espone i dati in un flusso di dati usando l'interfaccia **DataReader** di ADO.NET. I dati possono essere quindi utilizzati da altre applicazioni. È ad esempio possibile configurare l'origine dati di un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo da usare i risultati dell'esecuzione di un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A tale scopo è necessario creare un flusso di dati che implementa la destinazione DataReader.  
   
  Per informazioni sull'accesso e la lettura di valori nella destinazione DataReader a livello di programmazione, vedere [Caricamento dell'output di un pacchetto locale](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md).  

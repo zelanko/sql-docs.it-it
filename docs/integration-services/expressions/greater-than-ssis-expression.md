@@ -14,14 +14,18 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f493fc040e090294afa9671123613f5acac50a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2c6253baf56d869eb5748f07a9648a7e8e57ccb8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274065"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725337"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (maggiore di) (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Esegue un confronto per determinare se la prima espressione è maggiore della seconda. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
   
 > [!NOTE]  

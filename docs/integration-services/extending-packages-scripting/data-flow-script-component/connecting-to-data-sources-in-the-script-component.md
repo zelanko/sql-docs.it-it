@@ -13,14 +13,18 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 247b0b7a1f54417257d3af0e59f07dadf6d669e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f9d4fecd34be2464947ce3c493b8bd333d2ce0c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280395"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724162"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connessione a origini dati nel componente script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Una gestione connessione è un'unità pratica che incapsula e archivia le informazioni necessarie per la connessione a un'origine dati di un determinato tipo. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
  È possibile rendere disponibili le gestioni connessioni esistenti per l'accesso da parte dello script personalizzato nel componente di origine o destinazione facendo clic sui pulsanti **Aggiungi** e **Rimuovi** nella pagina **Gestioni connessioni** dell'**Editor trasformazione Script**. È tuttavia necessario scrivere codice personalizzato per caricare o salvare i dati e possibilmente per aprire e chiudere la connessione all'origine dati. Per altre informazioni sulla pagina **Gestioni connessioni** dell'**Editor trasformazione Script**, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) ed [Editor trasformazione Script &#40;pagina Gestioni connessioni&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  

@@ -12,14 +12,18 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281525"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723772"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Se nell'elenco **Mapping** della finestra di dialogo **Mapping colonne** è stato specificato un mapping tra i tipi di dati che può avere esito negativo, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata mostra la pagina **Verifica mapping tra i tipi di dati** . In questa pagina è possibile esaminare le informazioni dettagliate sulle conversioni dei tipi di dati da eseguire tramite la procedura guidata per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi che consentono di distinguere le conversioni dei tipi di dati per cui si prevede un esito positivo da quelle che possono provocare errori o troncamenti. Per ogni conversione, decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.   
   
 > [!TIP]

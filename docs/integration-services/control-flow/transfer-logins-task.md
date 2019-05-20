@@ -17,14 +17,18 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: feed75c71d49f64ad7fd8285fd45f36ed19a7eda
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc1df2936c51509ffe3e2b68c6ee497e18558dbc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282506"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727387"
 ---
 # <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Trasferisci account di accesso trasferisce uno o più account di accesso tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Trasferimento di account di accesso tra istanze di SQL Server  

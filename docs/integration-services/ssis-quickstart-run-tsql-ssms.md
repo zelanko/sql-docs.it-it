@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d335f45519b7521b4680ec260f0d12084259e2cf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: afb1f780509968536b12c60bc50c4d7e3f537c49
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272622"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717397"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Eseguire un pacchetto SSIS da SSMS con Transact-SQL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS) per connettersi al database del catalogo SSIS e quindi usare istruzioni Transact-SQL per eseguire un pacchetto SSIS archiviato nel catalogo SSIS.
 
 SQL Server Management Studio è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Per altre informazioni su SSMS, vedere [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).

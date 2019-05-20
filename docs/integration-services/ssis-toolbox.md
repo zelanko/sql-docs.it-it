@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289637"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717280"
 ---
 # <a name="ssis-toolbox"></a>Casella degli strumenti SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tutti i componenti installati nel computer locale vengono visualizzati automaticamente nella **Casella degli strumenti SSIS**. Quando si installano componenti aggiuntivi, fare clic con il pulsante destro del mouse all'interno della casella degli strumenti, quindi fare clic su **Aggiorna casella degli strumenti** per aggiungere i componenti.  
  
  Quando si crea un nuovo progetto SSIS o si apre un progetto esistente, la **Casella degli strumenti SSIS** viene visualizzata automaticamente. La casella degli strumenti può essere aperta anche facendo clic sul relativo pulsante posto nell'angolo superiore destro dell'area di progettazione del pacchetto oppure facendo clic su VISUALIZZA-> Altre finestre -> Casella degli strumenti SSIS.

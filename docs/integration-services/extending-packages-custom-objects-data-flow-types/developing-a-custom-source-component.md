@@ -22,14 +22,18 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 169b815d9cbf09c2fc4ccf24e5585f4c2c8e5d56
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca8e895537a518e7d18f16309acda34cb02aef44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275755"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724817"
 ---
 # <a name="developing-a-custom-source-component"></a>Sviluppo di un componente di origine personalizzato
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di origine in grado di connettersi a origini dati personalizzate e di fornire dati da tali origini ad altri componenti in un'attività Flusso di dati. La possibilità per creare origini personalizzate si rivela utile quando è necessario connettersi a origini dati non accessibili tramite una delle origini di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esistenti.  
   
  I componenti di origine includono uno o più output e nessun input. In fase di progettazione tali componenti vengono utilizzati per creare e configurare connessioni, leggere metadati di colonne dall'origine dati esterna e configurare le colonne di output dell'origine in base all'origine dati esterna. Durante l'esecuzione, si connettono all'origine dati esterna e aggiungono righe a un buffer di output. L'attività Flusso di dati fornisce quindi questo buffer di righe di dati ai componenti a valle.  

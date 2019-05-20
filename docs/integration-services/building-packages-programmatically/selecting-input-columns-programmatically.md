@@ -22,14 +22,18 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f7ec94a084105f4f9d1fc455814fd46a7ecab46
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: c841f1df93ffda6b453fe67301fb36d10c972782
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671237"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729213"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Selezione delle colonne di input a livello di programmazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo avere connesso i componenti a livello di programmazione, selezionare le colonne dei componenti upstream che verranno trasformate o passate ai componenti downstream. Se non si selezionano colonne di input per il componente, quest'ultimo non riceve righe dall'attività Flusso di dati.  
   
 ## <a name="selecting-columns"></a>Selezione di colonne  

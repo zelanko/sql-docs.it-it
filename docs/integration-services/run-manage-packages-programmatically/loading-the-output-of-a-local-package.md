@@ -17,14 +17,18 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf9107bb5a6e514e84fb17ae143491c9c3637991
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 385fd9fe4224c754af7546ffe2737316aaaf62fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272933"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719284"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Caricamento dell'output di un pacchetto locale
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le applicazioni client possono leggere l'output dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando viene salvato nelle destinazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o quando viene salvato in una destinazione file flat usando le classi dello spazio dei nomi **System.IO**. Tuttavia, un'applicazione client può anche leggere l'output di un pacchetto direttamente dalla memoria, senza la necessità di un passaggio intermedio per rendere persistenti i dati. La chiave per questa soluzione è lo spazio dei nomi **Microsoft.SqlServer.Dts.DtsClient**, che contiene implementazioni speciali delle interfacce **IDbConnection**, **IDbCommand**, e **IDbDataParameter** dello spazio dei nomi **System. Data**. L'assembly Microsoft.SqlServer.Dts.DtsClient.dll è installato per impostazione predefinita in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
 
 > [!IMPORTANT]
@@ -49,7 +53,7 @@ ms.locfileid: "58272933"
   
 4.  Creare un oggetto di tipo **DtsClient.DtsCommand** che usi l'oggetto **DtsConnection** creato in precedenza e impostare la relativa proprietà **CommandText** sul nome della destinazione DataReader nel pacchetto. Chiamare quindi il metodo **ExecuteReader** dell'oggetto comando per caricare i risultati del pacchetto in un nuovo DataReader.  
   
-5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto usando la raccolta di oggetti **DtsDataParameter** nell'oggetto **DtsCommand** per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nello spazio dei nomi **DtsClient** affinché sia possibile usarli con l'oggetto **DtsDataParameter** da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto **DtsDataParameter** alla raccolta **Parametri** di **DtsCommand** omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Ad esempio  
+5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto usando la raccolta di oggetti **DtsDataParameter** nell'oggetto **DtsCommand** per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nello spazio dei nomi **DtsClient** affinché sia possibile usarli con l'oggetto **DtsDataParameter** da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto **DtsDataParameter** alla raccolta **Parametri** di **DtsCommand** omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Esempio:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

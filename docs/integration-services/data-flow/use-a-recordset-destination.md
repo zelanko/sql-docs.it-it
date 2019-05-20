@@ -13,14 +13,18 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1c1df83eff1f9800e9a17a9241b902b2522cebb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271026"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725725"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati **Object** . Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
   
  È possibile utilizzare la destinazione recordset in molti scenari diversi. Di seguito sono riportati alcuni esempi:  

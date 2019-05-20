@@ -11,14 +11,18 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282435"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723042"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lezione 1-4 - Aggiunta delle configurazioni dei pacchetti
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In questa attività si procederà all'aggiunta di una configurazione a ogni pacchetto. Le configurazioni consentono di aggiornare i valori delle proprietà dei pacchetti e gli oggetti dei pacchetti in fase di esecuzione.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include diversi tipi di configurazioni. È possibile archiviare le configurazioni in variabili di ambiente, voci del Registro di sistema, variabili definite dall'utente, tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e file XML. Per offrire maggiore flessibilità, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta l'utilizzo di configurazioni indirette, ovvero l'utilizzo di una variabile di ambiente per specificare il percorso della configurazione nella quale sono specificati i valori effettivi. I pacchetti del progetto Deployment Tutorial utilizzano una combinazione di file di configurazione XML e configurazioni indirette. In un file di configurazione XML è possibile includere configurazioni per più proprietà e, quando opportuno, farvi riferimento con più pacchetti. In questa esercitazione verrà utilizzato un file di configurazione separato per ogni pacchetto.  

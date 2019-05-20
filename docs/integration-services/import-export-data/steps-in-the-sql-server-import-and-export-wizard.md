@@ -10,14 +10,18 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75ab1dd193cd8691166eff42fe30d11c89503dc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dafe47a0a136c7ab5640fc667b46cc496cfdbcb2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290517"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723698"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Passaggi dell'Importazione/Esportazione guidata SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In questo argomento viene descritta la sequenza dei passaggi per l'importazione e l'esportazione dei dati nell'Importazione/Esportazione guidata SQL Server. Sono anche disponibili collegamenti alle singole pagine della documentazione che descrivono ogni pagina o la finestra di dialogo usata nella procedura guidata.
 
 Questo articolo descrive solo i **passaggi** della procedura guidata. Per altre informazioni, vedere [Attività e contenuti correlati](#related).

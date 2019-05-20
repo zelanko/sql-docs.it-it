@@ -19,14 +19,18 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a06b74d65cdc33429ce694d04753863d711c5cae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290677"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720054"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  

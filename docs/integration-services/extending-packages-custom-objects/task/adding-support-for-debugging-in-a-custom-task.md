@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282385"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724488"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Aggiunta di supporto per il debug in un'attività personalizzata
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente la sospensione di pacchetti, attività e altri tipi di contenitori durante l'esecuzione tramite l'utilizzo di punti di interruzione. L'utilizzo di punti di interruzione consente di rivedere e correggere gli errori che impediscono la corretta esecuzione dell'applicazione o delle attività. L'architettura dei punti di interruzione consente al client di valutare il valore di runtime degli oggetti nel pacchetto in determinati punti dell'esecuzione mentre l'elaborazione dell'attività è sospesa.  
   
  Gli sviluppatori di attività personalizzate possono utilizzare questa architettura per creare destinazioni di punti di interruzione personalizzati utilizzando l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> e la relativa interfaccia padre <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> definisce l'interazione tra il motore di runtime e l'attività per la creazione e la gestione di siti o destinazioni di punti di interruzione personalizzati. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> fornisce metodi e proprietà che vengono chiamati dal motore di runtime per notificare all'attività di sospendere o riprendere l'esecuzione.  

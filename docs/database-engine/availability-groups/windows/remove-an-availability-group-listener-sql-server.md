@@ -14,45 +14,27 @@ ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 828c85714f44a870843b6c6b6382fbc4b1af2bd4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3fb1c490f8a20da4df987c003a4aa1d89619ed94
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134131"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "62826251"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Rimuovere un listener del gruppo di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustra come rimuovere un listener da un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Prima di iniziare:**  
   
-     [Prerequisiti](#Prerequisites)  
-  
-     [Indicazioni](#Recommendations)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per rimuovere un listener utilizzando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Indicazioni  
  Prima di eliminare un listener del gruppo di disponibilità, si consiglia di verificare che non sia utilizzato da alcuna applicazione.  
+ 
   
-###  <a name="Security"></a> Sicurezza  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -75,7 +57,7 @@ ms.locfileid: "54134131"
  **Result**  
  Viene visualizzato un collegamento, **Esito positivo** o **Errore**, su cui è possibile fare clic per altre informazioni.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per rimuovere un listener del gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  

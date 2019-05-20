@@ -11,14 +11,18 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cb42182c362f0ad71689098dc361ef470c36a00
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9a7f1437346baa2c54801af591a5f23a208d42c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272629"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723446"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Passaggio 1-1: Creazione di cartelle di lavoro e variabili di ambiente
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In questa attività si procederà alla creazione della cartella di lavoro C:\DeploymentTutorial e delle nuove variabili di ambiente`DataTransfer` e `LoadXMLData`che verranno utilizzate nelle attività successive dell'esercitazione.  
   
 La cartella di lavoro si trova nella radice dell'unità C. È comunque possibile utilizzare un'unità o un percorso diverso, se necessario. In questo caso, sarà tuttavia necessario prendere nota del percorso e quindi utilizzarlo ogni volta che nell'esercitazione si fa riferimento al percorso della cartella di lavoro DeploymentTutorial.  

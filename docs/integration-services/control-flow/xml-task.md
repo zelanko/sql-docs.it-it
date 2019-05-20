@@ -17,14 +17,18 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f41f693c05c2f5977301ac4863fe978cc876ea4f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59291551"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727299"
 ---
 # <a name="xml-task"></a>Attività XML
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività XML consente di eseguire operazioni su dati in formato XML. Tramite questa attività un pacchetto può recuperare documenti XML, applicare operazioni ai documenti utilizzando fogli di stile XSLT (Extensible Stylesheet Language Transformation) ed espressioni XPath, unire più documenti oppure convalidare, confrontare e salvare i documenti aggiornati in file e variabili.  
   
  Questa attività consente ai pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di modificare dinamicamente documenti XML in fase di esecuzione. È possibile utilizzare l'attività XML per gli scopi seguenti:  

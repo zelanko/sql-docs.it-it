@@ -19,14 +19,18 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b19b574a61ad5667d6617b68b8472589a2328bb1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289997"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717844"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Usare l'Aggiornamento guidato pacchetti SSIS per aggiornare i pacchetti creati in versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel formato della versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  

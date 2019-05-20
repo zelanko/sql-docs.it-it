@@ -18,14 +18,18 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89637c641506ae3c536143fc8e55160d5cd1f4e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e59dea663e0a18dd9a6b7505d3c4491f0e7128c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271395"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727067"
 ---
 # <a name="data-flow"></a>Flusso di dati
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
   
 > [!NOTE]  

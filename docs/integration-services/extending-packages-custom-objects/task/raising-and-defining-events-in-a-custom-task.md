@@ -25,14 +25,18 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5241480a1c572085a2f931b22eb76eca9f207178
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fa79702aadcca09c43d1ca6d9fbeef0988d8f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281935"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724426"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Generazione e definizione di eventi in un'attività personalizzata
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include una raccolta di eventi che forniscono lo stato di avanzamento durante la convalida e l'esecuzione di un'attività. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> definisce questi eventi e viene fornita alle attività come parametro per i metodi <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
   
  È disponibile un altro set di eventi, definiti nell'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>, che vengono generati per conto dell'attività da <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>. L'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> genera gli eventi che si verificano prima e dopo la convalida e l'esecuzione, mentre l'attività genera gli eventi che si verificano durante l'esecuzione e la convalida.  

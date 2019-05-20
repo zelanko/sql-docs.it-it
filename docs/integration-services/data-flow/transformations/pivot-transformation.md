@@ -19,14 +19,18 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 513ba314cf3168a03b4d559d01c6e17d62f5e13d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8bc233f7b23d08b9fd697eeddfae683420be33c5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282813"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726021"
 ---
 # <a name="pivot-transformation"></a>Pivot - trasformazione
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Pivot consente di convertire un set di dati normalizzato in una versione meno normalizzata ma più compatta, trasformando i dati di input tramite Pivot in base a un valore di colonna. Un set di dati normalizzato di nome **Orders** che elenca nomi di clienti, prodotti e quantità vendute, ad esempio, include in genere più righe per ogni cliente che ha acquistato più prodotti, indicando su ogni riga i dettagli dell'ordine di un prodotto specifico. Trasformando il set di dati tramite Pivot in base alla colonna dei prodotti, la trasformazione Pivot può restituire in output un set di dati con una singola riga per cliente, nella quale sono elencati tutti gli acquisti effettuati dal cliente, utilizzando i nomi dei prodotti come nomi delle colonne e visualizzando le quantità come valori nelle colonne dei prodotti. Poiché non tutti i clienti acquistano tutti i prodotti, molte colonne possono contenere valori Null.  
   
  Quando si trasforma un set di dati tramite Pivot, le colonne di input svolgono ruoli diversi nel processo. Una colonna può partecipare nei modi seguenti:  

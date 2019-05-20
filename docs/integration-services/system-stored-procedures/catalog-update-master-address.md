@@ -11,14 +11,18 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3cc04877f54df9c1865633d2ac7ec4430cbbe00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b120ee8d8744214119df9442a4901a5cf9295b13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795899"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715692"
 ---
 # <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (database SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Consente di aggiornare l'endpoint di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master.
@@ -39,7 +43,7 @@ Endpoint di Scale Out Master. *masterAddress* è di tipo **nvarchar**.
 ## <a name="result-sets"></a>Set di risultati  
  None  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
    
 -   Appartenenza al ruolo del database **ssis_admin**  

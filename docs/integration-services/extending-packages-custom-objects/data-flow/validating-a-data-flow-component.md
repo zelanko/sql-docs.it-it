@@ -22,14 +22,18 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c74c19a2127daad9ab43c8a40903cbf1c5ee64f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 03c0d26ae97be2ca22b341c40b01cf0e5c558399
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282966"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724637"
 ---
 # <a name="validating-a-data-flow-component"></a>Convalida di un componente del flusso di dati
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> viene fornito per impedire l'esecuzione di un componente che non è configurato correttamente. Utilizzare questo metodo per verificare che un componente includa il numero previsto di oggetti di input e output, che i valori delle proprietà personalizzate del componente siano accettabili e che siano state specificate le eventuali connessioni richieste. Utilizzare questo metodo anche per verificare che le colonne nelle raccolte di input e output includano i tipi di dati corretti e che l'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> di ogni colonna sia impostato correttamente per il componente. L'implementazione della classe di base assiste nel processo di convalida controllando la raccolta di colonne di input del componente e verificando che ogni colonna della raccolta faccia riferimento a una colonna presente in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> del componente a monte.  
   
 ## <a name="validate-method"></a>Metodo Validate  

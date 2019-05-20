@@ -16,14 +16,18 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd066885e321a9233cae82769676c7c526322aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274246"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726158"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivazione di valori di colonna tramite la trasformazione Colonna derivata
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile aggiungere e configurare una trasformazione Colonna derivata solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
   
  Nella trasformazione Colonna derivata vengono utilizzate espressioni per aggiornare i valori di colonne esistenti o aggiungere valori a nuove colonne. Quando si sceglie di aggiungere valori a nuove colonne, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene valutata l'espressione e vengono definiti di conseguenza i metadati delle colonne. Se ad esempio un'espressione determina la concatenazione di due colonne, ognuna con tipo di dati DT_WSTR e lunghezza di 50, con uno spazio tra i valori delle due colonne, la nuova colonna dispone del tipo di dati DT_WSTR e di una lunghezza di 101. È possibile aggiornare il tipo di dati di nuove colonne. L'unico requisito è rappresentato dal fatto che il tipo di dati deve essere compatibile con i dati inseriti. Nella finestra di dialogo **Editor trasformazione Colonna derivata** viene ad esempio generato un errore di convalida quando si assegna un valore di data a una colonna con tipo di dati integer. A seconda del tipo di dati selezionato, è possibile specificare la lunghezza, la precisione, la scala e la tabella codici della colonna.  

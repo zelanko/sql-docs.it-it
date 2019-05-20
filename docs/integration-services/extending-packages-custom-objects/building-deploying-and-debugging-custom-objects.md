@@ -13,14 +13,18 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ed254b6dd9b9bca5216962f769a55db99823dff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6f96e795b44e936c4088e4ded571e76c33d4863
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271325"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724801"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilazione, distribuzione e debug di oggetti personalizzati
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo avere scritto il codice di un oggetto personalizzato per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario compilare l'assembly, distribuirlo e integrarlo in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] per renderlo disponibile per l'uso nei pacchetti e quindi sottoporlo a test e debug.  
   
 ##  <a name="top"></a>Passaggi per la compilazione, la distribuzione e il debug di un oggetto personalizzato per Integration Services  

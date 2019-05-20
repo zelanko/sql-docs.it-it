@@ -11,14 +11,18 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280025"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723080"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lezione 1-5: Aggiungere e configurare l'origine file flat
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In questa attività verrà aggiunta al pacchetto e configurata un'origine file flat. Un'origine file flat è un componente flusso di dati che usa i metadati definiti da una gestione connessione file flat. Questi metadati specificano il formato e la struttura dei dati che devono essere estratti dal file flat da un processo di trasformazione. L'origine file flat estrae dati da un unico file flat usando le definizioni di formato di file presenti nella gestione connessione file flat.  
   
 Per questa attività verrà configurata l'origine file flat in modo da usare la gestione connessione **Sample Flat File Source Data** creata in precedenza.  

@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279885"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723761"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Se nella pagina **Salvare ed eseguire il pacchetto** l'utente ha specificato di voler salvare le proprie impostazioni come pacchetto di SQL Server Integration Services (SSIS), l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Salva pacchetto SSIS**. In questa pagina è necessario specificare opzioni aggiuntive per il salvataggio del pacchetto creato dalla procedura guidata.  
 
 Le opzioni presenti nella pagina **Salva pacchetto SSIS** dipendono dalle scelte effettuate in precedenza nella pagina **Salvare ed eseguire il pacchetto** per salvare il pacchetto in SQL Server o nel file system. Per esaminare di nuovo la pagina **Salvare ed eseguire il pacchetto** , vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).

@@ -13,14 +13,18 @@ ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9261837d0242e6f5058e685bd8dc35876b38842f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5988f27997ae67842d7812275c9ffa8a6353c7e2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290457"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727877"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Rapporto di valori Null nella colonna (Attività Profiling dati)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la richiesta **Richiesta profilo Rapporto di valori Null nella colonna** selezionata nel riquadro delle richieste. Il profilo Rapporto di valori Null nella colonna segnala la percentuale di valori Null nella colonna selezionata e consente di identificare eventuali problemi nei dati, ad esempio un rapporto inaspettatamente elevato di valori Null in una colonna. Un profilo Rapporto di valori Null nella colonna può analizzare, ad esempio, una colonna contenente CAP e individuare una percentuale eccessivamente elevata di CAP mancanti.  
   
 > [!NOTE]  

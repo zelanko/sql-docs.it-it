@@ -29,14 +29,18 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282575"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725809"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
   
  È possibile utilizzare la trasformazione Estrazione termini per individuare il contenuto di un set di dati. Il testo contenuto nei messaggi di posta elettronica, ad esempio, può fornire utili commenti e suggerimenti sui prodotti. È pertanto possibile utilizzare la trasformazione Estrazione termini per estrarre gli argomenti di discussione dei messaggi al fine di analizzare tali commenti e suggerimenti.  

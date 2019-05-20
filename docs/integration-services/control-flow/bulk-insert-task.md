@@ -19,14 +19,18 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290707"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728012"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Inserimento bulk rappresenta un modo efficiente per copiare grandi quantità di dati in una tabella o in una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si supponga, ad esempio, che nella propria società venga usato un mainframe per archiviare l'elenco prodotti, che include un milione di righe, ma che il sistema e-commerce dell'azienda usi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per popolare le pagine Web. È necessario aggiornare la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei prodotti durante la notte utilizzando l'elenco master dei prodotti del mainframe. A tale scopo è possibile salvare l'elenco prodotti in un file delimitato da tabulazione e utilizzare l'attività Inserimento bulk per copiare i dati direttamente nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per garantire la massima velocità di copia, non è consentito eseguire trasformazioni durante lo spostamento dei dati dal file di origine alla tabella o alla vista.  

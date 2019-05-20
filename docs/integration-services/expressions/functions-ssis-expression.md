@@ -17,14 +17,18 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0b768e591f73d004959b728d055a9232043c594
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba74954d0cf587161b02d1a37a09f222722f9f61
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272741"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725387"
 ---
 # <a name="functions-ssis-expression"></a>Funzioni (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nel linguaggio delle espressioni è incluso un set di funzioni che è possibile utilizzare nelle espressioni. Un'espressione può contenere anche una sola funzione, ma in genere in un'espressione vengono utilizzate più funzioni, in combinazione con vari operatori.  
   
  Le funzioni disponibili possono essere suddivise nelle categorie seguenti:  
@@ -48,7 +52,7 @@ ms.locfileid: "58272741"
 |[LN &#40;espressione SSIS&#41;](../../integration-services/expressions/ln-ssis-expression.md)|Restituisce il logaritmo naturale di un'espressione numerica.|  
 |[LOG &#40;espressione SSIS&#41;](../../integration-services/expressions/log-ssis-expression.md)|Viene restituito il logaritmo in base 10 di un'espressione numerica.|  
 |[POWER &#40;espressione SSIS&#41;](../../integration-services/expressions/power-ssis-expression.md)|Restituisce il risultato dell'elevamento a potenza di un'espressione numerica.|  
-|[ROUND &#40;espressione SSIS&#41;](../../integration-services/expressions/round-ssis-expression.md)|Restituisce un'espressione numerica arrotondata alla lunghezza o alla precisione specificata. ,|  
+|[ROUND &#40;espressione SSIS&#41;](../../integration-services/expressions/round-ssis-expression.md)|Restituisce un'espressione numerica arrotondata alla lunghezza o alla precisione specificata. .|  
 |[SIGN &#40;espressione SSIS&#41;](../../integration-services/expressions/sign-ssis-expression.md)|Restituisce il segno positivo (+), negativo (-) o zero (0) di un'espressione numerica.|  
 |[SQUARE &#40;espressione SSIS&#41;](../../integration-services/expressions/square-ssis-expression.md)|Restituisce il quadrato di un'espressione numerica.|  
 |[SQRT &#40;espressione SSIS&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|Restituisce la radice quadrata di un'espressione numerica.|  

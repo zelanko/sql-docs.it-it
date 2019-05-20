@@ -21,14 +21,18 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 202ea098033914875e99510377dcfcd2db6d7506
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67f27f17df5bf41f0b2b88265d0eb91df824a57c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273566"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718118"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] la sicurezza è costituita da diversi livelli che forniscono un ambiente di sicurezza protetto e flessibile. Questi livelli di sicurezza includono l'uso di firme digitali, proprietà dei pacchetti, ruoli di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e autorizzazioni del sistema operativo. La maggior parte di queste caratteristiche di sicurezza rientra nelle categorie di identità e di controllo dell'accesso.  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>Attenuazione di minacce e vulnerabilità

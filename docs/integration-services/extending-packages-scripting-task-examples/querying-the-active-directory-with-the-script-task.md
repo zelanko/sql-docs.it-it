@@ -18,14 +18,18 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 078d028bb1f997e6a198c91b8019519f81460ae6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bd648817edb921df46c73f341d02b9e389fa522
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270642"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724314"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Esecuzione di query su Active Directory tramite l'attività Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un servizio directory di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che rende disponibile un archivio centralizzato di metadati sugli utenti e su altre risorse dell'organizzazione, come computer e stampanti. Lo spazio dei nomi **System.DirectoryServices** in Microsoft .NET Framework fornisce le classi da usare con Active Directory per indirizzare il flusso di lavoro dell'elaborazione dei dati in base alle informazioni archiviate.  
   
 > [!NOTE]  
@@ -44,7 +48,7 @@ ms.locfileid: "58270642"
   
 4.  Nel progetto di script aggiungere un riferimento allo spazio dei nomi **System.DirectoryServices**.  
   
-5.  , Nel codice usare un'istruzione **Imports** per importare lo spazio dei nomi **DirectoryServices**.  
+5.  . Nel codice usare un'istruzione **Imports** per importare lo spazio dei nomi **DirectoryServices**.  
   
 > [!NOTE]  
 >  Per eseguire correttamente lo script, è necessario che l'azienda utilizzi Active Directory nella propria rete e archivi le informazioni sui dipendenti utilizzati nell'esempio.  

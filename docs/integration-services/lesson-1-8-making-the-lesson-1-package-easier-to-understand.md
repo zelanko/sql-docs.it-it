@@ -11,14 +11,18 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b145bff827dfa60d6d5d232af8fb26816ebd873
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f830393b516ac583a6c0ae72332bef8ac8177714
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283125"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722842"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lezione 1-8: Annotare e formattare il pacchetto della lezione 1 
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dopo avere completato la configurazione del pacchetto della lezione 1, è il momento probabilmente di riordinarne il layout. Se le forme nei layout di controllo e del flusso di dati sono di dimensioni diverse o non sono disposte in modo uniforme, potrebbe essere più difficile comprendere il pacchetto.  
   

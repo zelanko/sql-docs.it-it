@@ -16,14 +16,18 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28bfe8de3327702c0d56e762a560732c3b9812a4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277810"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724417"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisi di formati di file di testo non standard con il componente script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando i dati di origine sono disposti in un formato non standard, può risultare utile consolidare tutta la logica di analisi in un singolo script anziché concatenare più trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ottenere lo stesso risultato.  
   
  [Esempio 1: Analisi di record delimitati da righe](#example1)  

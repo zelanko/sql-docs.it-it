@@ -15,14 +15,18 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: de2a16ccd38bad4fd36d5ca16cadd2e3264e6baf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6393a3c60abdde6d55302aa83c0c9d687e1af029
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270996"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723716"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Avviare l'Importazione/Esportazione guidata SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 
 Avviare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno dei modi descritti in questo argomento per importare ed esportare dati da qualsiasi origine dati supportata.

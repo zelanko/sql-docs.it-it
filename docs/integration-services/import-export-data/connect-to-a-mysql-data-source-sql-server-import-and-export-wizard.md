@@ -10,14 +10,18 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3772028888e7c91b9be9b6fd3f905fb57db8636b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: a359cdc0467d06cf0f67c1229981466f9b440101
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221945"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723922"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati MySQL (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questo argomento illustra come connettersi a un'origine dati **MySQL** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server. Sono disponibili diversi provider di dati che è possibile usare per connettersi a MySQL.
 
 > [!IMPORTANT]

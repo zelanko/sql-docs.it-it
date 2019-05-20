@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4bbb7d1fff70060ec0d3cf5878710177a231896e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00211061180339a1c537fba2101caf323758dd8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727859"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718556"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Modificare l'account per la registrazione di Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Durante l'esecuzione di pacchetti SSIS in Scale Out, i messaggi di evento vengono registrati nel database SSISDB con un account utente creato automaticamente, denominato **##MS_SSISLogDBWorkerAgentLogin##**. L'account di accesso dell'utente usa l'autenticazione di SQL Server.
 
 Se si vuole modificare l'account usato per la registrazione in Scale Out, eseguire le operazioni seguenti:

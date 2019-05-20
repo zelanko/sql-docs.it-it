@@ -18,14 +18,18 @@ ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d342299ad922b2c2720ecfc6f15f509b1269d90c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d5e7e6cdb7dc5cc50d292ef0b6b0e39b176e837
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289807"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729304"
 ---
 # <a name="connecting-tasks-programmatically"></a>Connessione di attività a livello di programmazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un vincolo di precedenza, rappresentato nel modello a oggetti dalla classe <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, stabilisce l'ordine di esecuzione degli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.Executable> in un pacchetto. Con il vincolo di precedenza, l'esecuzione dei contenitori e delle attività di un pacchetto diventa dipendente dal risultato dell'esecuzione di un'attività o di un contenitore precedente. I vincoli di precedenza vengono stabiliti tra coppie di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.Executable> chiamando il metodo <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> della raccolta <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> sull'oggetto contenitore. Dopo aver creato un vincolo tra due oggetti eseguibili, impostare la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> per stabilire i criteri per l'esecuzione del secondo eseguibile definito nel vincolo.  
   
  È possibile utilizzare sia un vincolo che un'espressione in un singolo vincolo di precedenza, a seconda del valore specificato per la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A>, come descritto nella tabella seguente:  

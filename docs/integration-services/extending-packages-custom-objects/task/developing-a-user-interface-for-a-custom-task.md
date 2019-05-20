@@ -22,14 +22,18 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be57f4c502aae46719e25b4f0dfce56ad44246d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed8c9c9679ceafa3a046f684b77893aaee01763e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283015"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724444"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Sviluppo di un'interfaccia utente per un'attività personalizzata
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre agli sviluppatori di attività la possibilità di creare facilmente un'interfaccia utente personalizzata per un'attività da integrare e visualizzare in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interfaccia utente può fornire informazioni utili all'utente in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] oltre a indicazioni su come configurare correttamente le proprietà e le impostazioni dell'attività personalizzata.  
   
  Per sviluppare un'interfaccia utente personalizzata per un'attività, è necessario utilizzare due classi importanti, descritte nella tabella seguente.  

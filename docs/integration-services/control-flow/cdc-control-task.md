@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283035"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727917"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  
   
  L'attività di controllo CDC consente di gestire lo stato del pacchetto CDC in una variabile del pacchetto SSIS e di renderlo persistente in una tabella di database, in modo che lo stato venga mantenuto tra attivazioni del pacchetto e tra più pacchetti che eseguono insieme un processo CDC comune. Un'attività, ad esempio, può essere responsabile del caricamento iniziale e l'altra degli aggiornamenti trickle-feed.  

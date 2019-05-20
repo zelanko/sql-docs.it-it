@@ -19,14 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 607c095af9539fb40d33e27350ab1f287183062c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 39401de76578ede9bb9ec1d30bc16f1fb933ce57
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272864"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723563"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Progetti e soluzioni di Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per lo sviluppo di pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 I pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] risiedono in progetti. Per creare e usare progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è necessario installare l'ambiente [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere [Installazione di Integration Services](../integration-services/install-windows/install-integration-services.md).  

@@ -11,14 +11,18 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dbec1a2d2fd19e26fc56e8f73db312f2994d300
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4d8fdf2a714f47e40e4c2afe12bb7357068fa9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270904"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722080"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lezione 3: Aggiungere la registrazione con SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include funzionalità di registrazione che consentono di risolvere i problemi e monitorare l'esecuzione dei pacchetti offrendo una traccia degli eventi generati dalle attività e dai contenitori. Le funzionalità di registrazione sono flessibili. È possibile abilitare la registrazione a livello di pacchetto o in singole attività o contenitori all'interno del pacchetto. Selezionare gli eventi da registrare e creare più log per un singolo pacchetto.  
   

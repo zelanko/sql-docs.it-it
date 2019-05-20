@@ -26,14 +26,18 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277380"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717874"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
   
  In tale finestra **le proprietà** possono essere elencate per categorie o in ordine alfabetico. Per elencare gli elementi della finestra **Proprietà** per categoria, fare clic sull'icona Per categoria.  
@@ -50,7 +54,7 @@ ms.locfileid: "58277380"
   
 -   [Varie](#Misc)  
   
--   [Sicurezza](#Security)  
+-   [Security](#Security)  
   
 -   [Transazioni](#Transactions)  
   

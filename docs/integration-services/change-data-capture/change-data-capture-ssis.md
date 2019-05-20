@@ -14,14 +14,18 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06e24dcef49f54000010455c1070877f82947ebe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ff79d145f11d64c7ac97a9d068ea99ec7886d2e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281115"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728997"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Change Data Capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre una soluzione efficace alla sfida posta dall'esecuzione di caricamenti incrementali da tabelle di origine in data mart e data warehouse.  
   
 ## <a name="what-is-change-data-capture"></a>Informazioni su Change Data Capture  

@@ -19,14 +19,18 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61f4236d4bfe3578afc83bb9ac034e2ebc792928
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4db63681f489b0f375846272b7093545eb8fefa6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270005"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725935"
 ---
 # <a name="row-count-transformation"></a>Conteggio righe - trasformazione
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Conteggio righe consente di contare le righe che passano attraverso un flusso di dati e di memorizzare il totale in una variabile.  
   
  Un pacchetto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] può usare i numeri delle righe per aggiornare le variabili utilizzate in script, espressioni ed espressioni di proprietà. È ad esempio possibile utilizzare la variabile che contiene il numero delle righe per aggiornare il testo di un messaggio di posta elettronica in modo che includa il numero delle righe. La variabile utilizzata dalla trasformazione Conteggio righe deve esistere e trovarsi nell'ambito dell'attività Flusso di dati a cui appartiene il flusso di dati con la trasformazione Conteggio righe.  

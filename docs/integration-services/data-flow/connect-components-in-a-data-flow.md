@@ -14,14 +14,18 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70d7ba9d1828813c71cf88baab9709c10338c82d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8d353876938b3e64317f461240b2333e71217449
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271279"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727116"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Connessione di componenti in un flusso di dati
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Questa procedura descrive la connessione dell'output dei componenti di un flusso di dati ad altri componenti dello stesso flusso di dati.  
 Per costruire il flusso di dati in un pacchetto, è possibile usare l'area di progettazione della scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se un flusso di dati contiene due componenti, sarà possibile connetterli connettendo l'output di un'origine o trasformazione all'input di una trasformazione o destinazione. Il connettore tra due componenti del flusso di dati è detto percorso.  
   

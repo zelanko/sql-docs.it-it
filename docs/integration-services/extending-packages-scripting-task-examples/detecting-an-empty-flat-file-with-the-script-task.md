@@ -16,14 +16,18 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ac64165e396272c525d7abfba2a3584947cf3e2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 41795aafbbb63e88ef400bffbbd563c11d7207e2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274337"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724357"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Rilevamento di un file flat vuoto con l'attività Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'origine file flat non determina se un file flat contiene righe di dati prima di tentare di elaborarlo. È possibile migliorare l'efficienza di un pacchetto, specialmente di un pacchetto che scorre numerosi file flat, ignorando i file che non contengono alcuna riga di dati. L'attività Script consente di cercare un file flat vuoto prima che il pacchetto inizi a elaborare il flusso di dati.  
   
 > [!NOTE]  

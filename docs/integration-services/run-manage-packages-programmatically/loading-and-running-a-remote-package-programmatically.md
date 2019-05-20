@@ -15,14 +15,18 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2b44c9abc97032e1f3c11b20e25cbffbd5bff7f9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274670"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719444"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Per eseguire pacchetti remoti da un computer locale in cui non è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], avviare i pacchetti in modo che vengano eseguiti nel computer remoto in cui è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tale scopo, configurare il computer locale per l'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, un servizio Web o un componente remoto per avviare i pacchetti nel computer remoto. Se si tenta di avviare i pacchetti remoti direttamente dal computer locale, i pacchetti verranno caricati e ne verrà effettuato il tentativo di esecuzione dal computer locale. Se nel computer locale non è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], i pacchetti non verranno eseguiti.  
   
 > [!NOTE]  

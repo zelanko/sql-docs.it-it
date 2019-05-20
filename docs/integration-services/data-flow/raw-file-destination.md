@@ -21,14 +21,18 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282304"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726527"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destinazione file non elaborato scrive dati non elaborati in un file. Poiché il formato dei dati è nativo della destinazione, non è necessaria alcuna conversione e quasi nessuna analisi dei dati. Questo significa che la destinazione file non elaborato è in grado di scrivere i dati più rapidamente rispetto ad altre destinazioni, quali le destinazioni file flat e OLE DB.  
   
  Oltre alla scrittura di dati non elaborati in un file, la destinazione file non elaborato può essere utilizzata anche per generare un file non elaborato vuoto contenente solo le colonne (file di soli metadati), senza dover eseguire il pacchetto. Si utilizza l'origine file non elaborato per recuperare dati non elaborati scritti in precedenza dalla destinazione. È anche possibile puntare l'origine file non elaborato al file di soli metadati.  

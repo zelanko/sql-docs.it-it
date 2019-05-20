@@ -20,14 +20,18 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c432741bd8ba3d369230ac72e26ee5516d21d97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290437"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726815"
 ---
 # <a name="flat-file-destination"></a>file flat - destinazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destinazione file flat scrive dati in un file di testo che può essere in formato delimitato, a larghezza fissa, a larghezza fissa con delimitatore di riga o non allineato a destra.  
   
  Per configurare la destinazione file flat, procedere nel modo seguente:  

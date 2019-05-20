@@ -24,14 +24,18 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 195291c878f0529d24fe05a1b806974f61fa6df9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272578"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719904"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilità di esecuzione pacchetti (dtexecui.exe)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
   
  I pacchetti vengono eseguiti nello stesso processo dell'utilità **dtexecui.exe** . Questa utilità è uno strumento a 32 bit, quindi i pacchetti eseguiti usando **dtexecui.exe** in un ambiente a 64 bit vengono eseguiti in Windows on Win32 (WOW). Quando si sviluppano e si verificano i comandi usando l'utilità dtexecui.exe in un computer a 64 bit, è consigliabile eseguire la verifica in modalità a 64 bit usando la versione a 64 bit di **dtexec.exe** prima della distribuzione o della pianificazione dei comandi su un server di produzione.  

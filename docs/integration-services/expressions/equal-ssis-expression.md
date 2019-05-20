@@ -14,14 +14,18 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 782d0289c90255743774de65f18848b7e9891271
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ce9b5f138929da84e9a007cbabb4b6f36260f95b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270606"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725449"
 ---
 # <a name="-equal-ssis-expression"></a>== (uguale) (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viene eseguito un confronto per determinare se due espressioni sono uguali. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
  Per alcuni tipi di dati, tuttavia, è necessario che l'espressione includa un cast esplicito per consentirne la corretta valutazione. Per altre informazioni sui cast supportati tra tipi di dati, vedere [Cast &#40;espressione SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  

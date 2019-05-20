@@ -19,14 +19,18 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273003"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726238"
 ---
 # <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Mappa caratteri consente di applicare funzioni per i valori stringa, quale la conversione da minuscolo a maiuscolo, a dati di tipo carattere. È possibile utilizzare questa trasformazione solo su dati di colonna con un tipo di dati string.  
   
  La trasformazione Mappa caratteri consente di convertire dati di colonna sul posto oppure di aggiungere una colonna all'output della trasformazione e inserire i dati convertiti nella nuova colonna. È possibile applicare vari set di operazioni di mapping alla stessa colonna di input e inserire i risultati in colonne diverse. È ad esempio possibile convertire la stessa colonna in maiuscolo e minuscolo, quindi inserire i risultati in due colonne diverse.  

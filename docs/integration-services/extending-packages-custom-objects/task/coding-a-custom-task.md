@@ -19,14 +19,18 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b58065146f19351c3eab9489a6e507fdc298853
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277640"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724462"
 ---
 # <a name="coding-a-custom-task"></a>Scrittura del codice di un'attività personalizzata
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.Task> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
   
 ## <a name="configuring-the-task"></a>Configurazione dell'attività  

@@ -16,14 +16,18 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9269920c478b13d7e981acc619075c5017055b8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0e849d6ee10486489d7ba6ce3b115613b109f44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276368"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724866"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Restituisce un'espressione di caratteri dopo aver convertito i caratteri minuscoli in caratteri maiuscoli.  
   
 ## <a name="syntax"></a>Sintassi  

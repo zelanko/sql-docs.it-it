@@ -16,14 +16,18 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67807b396e61c0c2085fcdeab20d44e5a0b33bb5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a9d1cc86315446a7744693a39105ea5e542f6885
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279145"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724386"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Ottimizzazione di un output degli errori con il componente script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Per impostazione predefinita, le due colonne supplementari in un output degli errori di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ovvero ErrorCode e ErrorColumn, contengono solo codici numerici che rappresentano un numero di errore e l'ID della colonna in cui si è verificato l'errore. Tali valori numerici possono avere un'utilità limitata senza la descrizione dell'errore e il nome della colonna corrispondenti.  
   
  In questo argomento viene descritto come aggiungere la descrizione dell'errore e il nome della colonna ai dati dell'output degli errori esistente nel flusso di dati tramite il componente script. Nell'esempio viene aggiunta la descrizione dell'errore che corrisponde a un codice di errore specifico predefinito di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, disponibile tramite la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> del componente script. Nell'esempio viene poi aggiunto il nome della colonna che corrisponde all'ID di derivazione acquisito tramite il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> della stessa interfaccia.  

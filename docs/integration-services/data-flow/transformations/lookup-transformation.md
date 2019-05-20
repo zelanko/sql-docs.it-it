@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273285"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726002"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
   
  Il set di dati di riferimento può essere un file di cache, una vista o una tabella esistente, una nuova tabella o il risultato di una query SQL. La trasformazione Ricerca utilizza una gestione connessione OLE DB o una gestione connessione cache per connettersi al set di dati di riferimento. Per altre informazioni, vedere [Gestione connessione OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gestione connessione della cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  

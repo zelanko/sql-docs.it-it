@@ -14,14 +14,18 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 908a65661cc0aa38a9d52cdf8fc365cd7a665d35
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cb4bd503220a08736053674c30b0e6c1c3d9b1de
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269995"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725146"
 ---
 # <a name="month-ssis-expression"></a>MONTH (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viene restituito un valore integer che rappresenta la parte corrispondente al mese di una data.  
   
 ## <a name="syntax"></a>Sintassi  

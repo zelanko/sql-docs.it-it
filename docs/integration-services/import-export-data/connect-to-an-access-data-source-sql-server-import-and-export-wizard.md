@@ -10,14 +10,18 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b211885f68be72dbcb03f959aaa1f79307658805
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 790ffc531244e3a1b757b8809e7ca09e737e87b4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221925"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723871"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questo argomento illustra come connettersi a un'origine dati **Microsoft Access** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
 
 La schermata seguente mostra una connessione di esempio a un database Microsoft Access. In questo esempio non è necessario immettere un nome utente e una password perché il database di destinazione non usa un file di informazioni sul gruppo di lavoro.
@@ -75,7 +79,7 @@ La versione più recente dei componenti può aprire file creati da versioni prec
 
 Se il computer ha una versione a 32 bit di Office, è necessario installare la versione a 32 bit dei componenti e verificare anche di eseguire il pacchetto in modalità a 32 bit.
 
-Se si ha un abbonamento a Office 365, assicurarsi di scaricare Access Database Engine 2016 Redistributable e non Microsoft Access 2016 Runtime. Durante l'esecuzione del programma di installazione potrebbe essere visualizzato un messaggio di errore che indica non è possibile installare il download in modalità affiancata con i componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio
+Se si ha un abbonamento a Office 365, assicurarsi di scaricare Access Database Engine 2016 Redistributable e non Microsoft Access 2016 Runtime. Durante l'esecuzione del programma di installazione potrebbe essere visualizzato un messaggio di errore che indica non è possibile installare il download in modalità affiancata con i componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Esempio:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

@@ -16,14 +16,18 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290537"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727171"
 ---
 # <a name="cdc-source"></a>Origine CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
   
  L'intervallo di dati delle modifiche letti dall'origine CDC è denominato intervallo di elaborazione CDC ed è determinato dall'attività di controllo CDC eseguita prima dell'inizio del flusso di dati corrente. L'Intervallo di elaborazione CDC viene derivato dal valore di una variabile del pacchetto che gestisce lo stato dell'elaborazione CDC per un gruppo di tabelle.  

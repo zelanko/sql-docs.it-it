@@ -22,14 +22,18 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67fb4b94e777a974ff42c59d730a58bb1396f289
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275284"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725917"
 ---
 # <a name="percentage-sampling-transformation"></a>Campionamento percentuale - trasformazione
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Campionamento percentuale consente di creare un set di dati campione selezionando una percentuale delle righe di input della trasformazione. Il set di dati campione viene ottenuto selezionando casualmente dall'input della trasformazione un numero di righe sufficiente per ottenere un campione rappresentativo dell'input.  
   
 > [!NOTE]  

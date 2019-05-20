@@ -18,14 +18,18 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dbbad401e6233478039786d24df0bd15ac21e805
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9941fcae545bdf641ff024b3884970b90e23350e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272597"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727319"
 ---
 # <a name="wmi-event-watcher-task"></a>Attività Monitoraggio eventi WMI
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Monitoraggio eventi WMI consente di monitorare gli eventi di WMI (Windows Management Instrumentation, Strumentazione gestione Windows) utilizzando una query WQL (Management Instrumentation Query Language) per specificare gli eventi desiderati. È possibile utilizzare l'attività Monitoraggio eventi WMI per gli scopi seguenti:  
   
 -   Attendere la notifica dell'aggiunta di file a una cartella e quindi avviare l'elaborazione dei file.  

@@ -24,14 +24,18 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb6ae0f62967da4ecf26bd47b29187538ca95fe0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 63fe305bb47c43d9302b90256fc21ac41491984a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276704"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729287"
 ---
 # <a name="enabling-logging-programmatically"></a>Abilitazione della registrazione a livello di programmazione
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il motore di runtime include una raccolta di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> che consentono l'acquisizione di informazioni specifiche degli eventi durante la convalida e l'esecuzione di pacchetti. Gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sono disponibili per gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, compresi gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> e <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La registrazione viene abilitata su singoli contenitori o sull'intero pacchetto.  
   
  Sono disponibili diversi tipi di provider di log che un contenitore può utilizzare. In questo modo è possibile creare e archiviare le informazioni del log in modo flessibile in molti formati. Per integrare un oggetto contenitore nella registrazione, sono necessari due passaggi: viene innanzitutto abilitata la registrazione, quindi viene selezionato un provider di log. Le proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> del contenitore vengono utilizzate per specificare gli eventi registrati e per selezionare il provider di log.  

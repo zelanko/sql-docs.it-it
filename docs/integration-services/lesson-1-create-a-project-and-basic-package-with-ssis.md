@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281665"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722571"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base con SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In questa lezione viene creato un pacchetto ETL semplice che estrae i dati da un'unica origine file flat, li trasformai usando due trasformazioni Ricerca e scrive i dati trasformati in una copia della tabella dei fatti **FactCurrencyRate** del database di esempio **AdventureWorksDW2012**. In questa lezione si apprenderà come creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   

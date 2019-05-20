@@ -8,23 +8,23 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a4d94524bfe9b991f59dfbe21a5160c5b726ef1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0f90a0406ead09efaac27326fa6071270401b74b
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501992"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820952"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurazione di editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   È possibile personalizzare il funzionamento degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando le apposite opzioni.  
   
 ## <a name="settng-editor-options"></a>Impostazione delle opzioni degli editor  
- È possibile impostare la maggior parte delle opzioni degli editor scegliendo **Opzioni** dal menu **Strumenti** per visualizzare la finestra di dialogo **Opzioni**. Nella finestra di dialogo **Opzioni** aprire il nodo **Editor di testo** nel riquadro sinistro per impostare le opzioni di modifica di codice e testo. I nodi in Editor di testo si applicano a editor specifici:  
+ È possibile impostare la maggior parte delle opzioni degli editor scegliendo **Opzioni** dal menu **Strumenti** per visualizzare la finestra di dialogo **Opzioni**. Nella finestra di dialogo **Opzioni** , aprire il nodo **Editor di testo** nel riquadro sinistro per impostare le opzioni di modifica di codice e testo. I nodi in Editor di testo si applicano a editor specifici:  
   
 1.  **Tutte le lingue**: le opzioni impostate in questo nodo si applicano a tutti gli editor di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. È possibile ignorare queste impostazioni utilizzando gli altri nodi che consentono di configurare opzioni diverse per un editor specifico.  
   

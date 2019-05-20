@@ -19,14 +19,18 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6552d4efaa0f32d428bb9516313d7a8ef47220a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48d6db7b2c68fac233dbc585ddbcf4ffb795ca8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270913"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718946"
 ---
 # <a name="save-packages"></a>Salvataggio di pacchetti
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile usare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare i pacchetti e quindi salvarli nel file system come file XML, con estensione dtsx. È inoltre possibile salvare copie del file XML di un pacchetto nel database msdb in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti. L'archivio pacchetti è costituito dalle cartelle del percorso del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Se si salva un pacchetto nel file system, successivamente sarà possibile utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per importarlo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md).  

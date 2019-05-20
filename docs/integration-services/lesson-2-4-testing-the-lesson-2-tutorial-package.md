@@ -11,14 +11,18 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272214"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722463"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lezione 2-4: Testare il pacchetto creato nella lezione 2 dell'esercitazione
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dopo aver configurato il contenitore Ciclo Foreach e la gestione connessione file flat, il pacchetto creato nella lezione 2 consente di eseguire un'iterazione dei 14 file flat contenuti nella cartella Dati di esempio. Ogni volta che un nome di file corrisponde ai criteri specificati, il contenitore Ciclo Foreach popola la variabile definita dall'utente con il nome del file. Tale variabile aggiorna di conseguenza la proprietà ConnectionString della gestione connessione file flat, che stabilisce una connessione al nuovo file flat. Il contenitore Ciclo Foreach esegue quindi l'attività del flusso di dati non modificati sui dati del nuovo file flat.  
   

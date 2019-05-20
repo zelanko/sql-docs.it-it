@@ -14,14 +14,18 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8f00f51ee6db4b93ba56211755e067c008898c4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bd00eff761b25182d39d7ac3e7630272429ebe16
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271394"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724842"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (diverso da) (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viene eseguito un confronto per determinare se due espressioni con tipi di dati compatibili sono diverse. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
   
  Per alcuni tipi di dati, tuttavia, è necessario che l'espressione includa un cast esplicito per consentirne la corretta valutazione. Per altre informazioni sui cast supportati tra tipi di dati, vedere [Cast &#40;espressione SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  

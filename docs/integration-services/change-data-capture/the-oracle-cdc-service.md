@@ -11,14 +11,18 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276085"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728477"
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il servizio Oracle CDC è un servizio di Windows in cui viene eseguito il programma xdbcdcsvc.exe. È possibile configurare il servizio Oracle CDC per eseguire più servizi di Windows nello stesso computer, ciascuno con un nome del servizio Windows diverso. La creazione di più servizi Windows Oracle CDC in un solo computer viene spesso effettuata per migliorare la separazione tra gli stessi o quando ciascun servizio richiede l'utilizzo di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa.  
   
  Un servizio Oracle CDC viene creato utilizzando Oracle CDC Service Configuration Console o definito tramite l'interfaccia della riga di comando incorporata nel programma xdbcdcsvc.exe. In entrambi i casi, ogni servizio Oracle CDC creato è associato a una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che può essere cluster o con mirroring con l'impostazione **AlwaysOn** , mentre le informazioni di connessione (stringa di connessione e credenziali di accesso) sono parte della configurazione del servizio.  

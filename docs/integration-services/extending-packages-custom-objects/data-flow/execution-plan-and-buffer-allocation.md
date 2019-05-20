@@ -21,14 +21,18 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bc51d3b3a1f7265d73e43526da6b70e70f35978
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7219499b05a3e0229d685fdf518eea41a734daba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270439"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724688"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Piano di esecuzione e allocazione di buffer
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Prima dell'esecuzione, l'attività Flusso di dati esamina i propri componenti e genera un piano di esecuzione per ogni sequenza di componenti. In questa sezione vengono fornite informazioni sul piano di esecuzione, su come visualizzarlo e su come influisce sull'allocazione dei buffer di input e output.  
   
 ## <a name="understanding-the-execution-plan"></a>Informazioni sul piano di esecuzione  

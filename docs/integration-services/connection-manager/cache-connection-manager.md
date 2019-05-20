@@ -15,14 +15,18 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289937"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728313"
 ---
 # <a name="cache-connection-manager"></a>gestione connessione della cache
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La gestione connessione della cache consente di leggere i dati dalla trasformazione cache o da un file di cache (con estensione caw) e di salvarli in un file di cache. Se si configura la gestione connessione della cache in modo da utilizzare un file di cache, i dati sono archiviati sempre in memoria.  
   
  La trasformazione Trasformazione cache consente di scrivere i dati da un'origine dati connessa nel flusso di dati a una gestione connessione della cache. La trasformazione Ricerca in un pacchetto consente di effettuare ricerche nei dati.  

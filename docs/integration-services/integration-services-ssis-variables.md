@@ -19,14 +19,18 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06924024dca7eef1b6d1ff7f2ada916a84143628
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5f286a0cd957ed62ab3edb51eb96565431afb22a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281875"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723532"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
   
  Nei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile usare variabili per gli scopi seguenti:  

@@ -15,14 +15,18 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e3f98e88428c25c3ecf2af415c942c30a18e9cf1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 329d50bd54556f41bf053b63ffdaa294ab4515f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273376"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727795"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare la pagina **Richieste profilo** di **Editor attività Profiling dati** per selezionare e configurare i profili che si desidera calcolare. In una singola attività Profiling dati è possibile calcolare più profili per più colonne o combinazioni di colonne in più tabelle o viste.  
   
  Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  

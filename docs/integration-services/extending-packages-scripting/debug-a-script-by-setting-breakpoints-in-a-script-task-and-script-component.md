@@ -14,14 +14,18 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1719647906f96bdf5602ca6110195a141d4e787
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cf18c8a549a53c1e872d456e28625b7ec0ffa95c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277580"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724147"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In questa procedura viene descritto come impostare i punti di interruzione negli script utilizzati nell'attività e nel componente Script.  
   
  Dopo aver impostato i punti di interruzione nello script, nella finestra di dialogo **Imposta punti di interruzione - \<nome oggetto>** vengono elencati i punti di interruzione insieme a quelli predefiniti.  

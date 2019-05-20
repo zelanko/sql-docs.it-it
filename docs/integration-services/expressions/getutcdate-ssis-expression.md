@@ -16,14 +16,18 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bac11c827ef91a84056babd81750c1f134d765b9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 93407a41ef455dfd1b5aae2899b1f1100c514734
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289697"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725362"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viene restituita la data corrente del sistema in base all'ora UTC (Universal Time Coordinated o ora di Greenwich) utilizzando un formato DT_DBTIMESTAMP. La funzione GETUTCDATE non accetta argomenti.  
   
 ## <a name="syntax"></a>Sintassi  

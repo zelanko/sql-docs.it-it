@@ -11,14 +11,18 @@ ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2ed03eb751b0b048fee4737d312f381f655b72b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e1d4761db172138eb86e3cf511b904c5b86b90c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273237"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713749"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Le informazioni in questi file sono utili per risolvere i problemi di esecuzione dei pacchetti.  
   
 > **NOTA** I file di dump del debug possono contenere informazioni sensibili. Per proteggere tali informazioni, è possibile utilizzare un elenco di controllo di accesso per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug ai servizi di supporto [!INCLUDE[msCoName](../../includes/msconame-md.md)] , è consigliabile rimuovere eventuali informazioni sensibili o riservate.  

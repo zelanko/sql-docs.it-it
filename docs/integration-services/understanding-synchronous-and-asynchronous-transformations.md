@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283025"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713605"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Informazioni sulle trasformazioni sincrone e asincrone
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La differenza tra una trasformazione sincrona e una asincrona in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] può essere definita più facilmente iniziando con una descrizione della trasformazione sincrona. Se la trasformazione sincrona non soddisfa le esigenze specifiche, è possibile che la progettazione richieda una trasformazione asincrona.  
   
 ## <a name="synchronous-transformations"></a>Trasformazioni sincrone  
@@ -42,7 +46,7 @@ ms.locfileid: "58283025"
   
 -   Non esiste una corrispondenza uno-a-uno tra righe di input e righe di output. Un esempio è la trasformazione Aggregazione, in cui il componente deve aggiungere una riga all'output per mantenere i valori di aggregazione calcolati.  
   
- Per specificare una trasformazione asincrona durante la creazione di script e la programmazione in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], assegnare il valore 0 alla proprietà **SynchronousInputID** degli output del componente. , In questo modo si indica al motore flusso di dati di non inviare automaticamente ogni riga agli output. È quindi necessario scrivere codice per inviare ogni riga in modo esplicito all'output appropriato aggiungendola al nuovo buffer di output creato per l'output di una trasformazione asincrona.  
+ Per specificare una trasformazione asincrona durante la creazione di script e la programmazione in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], assegnare il valore 0 alla proprietà **SynchronousInputID** degli output del componente. . In questo modo si indica al motore flusso di dati di non inviare automaticamente ogni riga agli output. È quindi necessario scrivere codice per inviare ogni riga in modo esplicito all'output appropriato aggiungendola al nuovo buffer di output creato per l'output di una trasformazione asincrona.  
   
 > [!NOTE]  
 >  Poiché un componente di origine deve anche aggiungere in modo esplicito ogni riga che legge dall'origine dati ai propri buffer di output, un'origine è simile a una trasformazione con output asincroni.  

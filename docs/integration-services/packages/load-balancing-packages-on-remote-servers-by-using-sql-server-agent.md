@@ -15,14 +15,18 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4485a60e816bd6feeb31f7357a87af378d2b6b99
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 36b28f90047bb7d116fffc1564eaecf43858822c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282645"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719811"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quando è necessario eseguire numerosi pacchetti, è preferibile utilizzare altri server eventualmente disponibili. L'utilizzo di altri server per l'esecuzione di più pacchetti controllati da un unico pacchetto padre è detto bilanciamento del carico. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]il bilanciamento del carico è una procedura manuale che deve essere definita dai proprietari dei pacchetti. Il bilanciamento del carico non viene infatti eseguito automaticamente dai server. Inoltre, sui server remoti è possibile eseguire esclusivamente pacchetti interi, non singole attività in altri pacchetti.  
   
  Il bilanciamento del carico risulta utile negli scenari seguenti:  

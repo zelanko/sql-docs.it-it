@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275243"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725661"
 ---
 # <a name="add-or-change-a-property-expression"></a>Aggiunta o modifica di un'espressione di proprietà
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   È possibile creare espressioni di proprietà per pacchetti, attività, contenitori Ciclo Foreach, contenitori Ciclo For, contenitori Sequenza, gestori di eventi, gestioni connessioni a livello di pacchetto e progetto e provider di log.  
   
  Per creare o modificare espressioni di proprietà, è possibile usare l' **Editor espressioni di proprietà** o il **Generatore di espressioni**. È possibile accedere all' **Editor espressioni di proprietà** dagli editor personalizzati disponibili per attività e contenitori o dalla finestra **Proprietà** . È possibile accedere al**Generatore di espressioni** dall' **Editor espressioni di proprietà**. È possibile scrivere espressioni sia nell'**Editor espressioni di proprietà** che nel **Generatore di espressioni**, tuttavia **Generatore di espressioni** offre un set di strumenti dell'interfaccia grafica che semplificano la compilazione di espressioni complesse.  

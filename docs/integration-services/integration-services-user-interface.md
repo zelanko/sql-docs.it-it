@@ -17,14 +17,18 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d8e8a699ababd04002cd85582f55ae7903f0474
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275421"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723514"
 ---
 # <a name="integration-services-user-interface"></a>Interfaccia utente di Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oltre alle aree di progettazione disponibili nelle schede di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'interfaccia utente consente l'accesso alle seguenti finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e per la configurazione delle proprietà degli oggetti di pacchetto:  
   
 -   Finestre e finestre di dialogo che consentono di aggiungere ai pacchetti configurazioni e funzionalità, ad esempio la registrazione.  

@@ -12,14 +12,18 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8a3624eeae89d520fb9e97e50af1d32de6dab55
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: fadf1fac6929433c217241039634a7af8658f4f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222045"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724002"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Completamento procedura guidata (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Dopo aver specificato se si vuole eseguire immediatamente l'operazione di copia e, facoltativamente, dopo aver salvato il pacchetto creato dalla procedura guidata, Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Completamento procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata e quindi scegliere **Fine** per avviare l'operazione di copia.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Screenshot della pagina Completamento procedura guidata 

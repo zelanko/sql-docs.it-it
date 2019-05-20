@@ -16,14 +16,18 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e14d92b18c22d793a71d5337f32383b0b887a85
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280755"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723513"
 ---
 # <a name="integration-services-transactions"></a>Transazioni di Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nei pacchetti vengono utilizzate transazioni per l'associazione di azioni del database eseguite dalle attività in unità atomiche in modo da mantenere l'integrità dei dati. Tutti i tipi di contenitori di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ovvero pacchetti, ciclo For, ciclo Foreach, contenitori Sequenza, nonché gli host di attività in cui è incapsulata ogni attività, possono essere configurati per l'uso delle transazioni. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include tre opzioni per la configurazione delle transazioni: **NotSupported**, **Supported** e **Required**.  
   
 -   L'opzione**Required** indica che il contenitore avvia una transazione, a meno che il contenitore padre non abbia già avviato un'altra transazione. In questo caso, il contenitore parteciperà alla transazione in corso. Si supponga, ad esempio, che un pacchetto includa un contenitore Sequenza con l'opzione **Required** . Se il pacchetto non è stato configurato per il supporto di transazioni, il contenitore avvierà la propria transazione. Se per il pacchetto è stata impostata l'opzione **Required** , il contenitore Sequenza parteciperà alla transazione del pacchetto.  

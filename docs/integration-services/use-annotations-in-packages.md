@@ -15,14 +15,18 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c4d9cc0f6d3487a1eae6118c2df64527d97160f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a9953cba066e658b6198718f4039487330e8f15f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282015"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713619"
 ---
 # <a name="use-annotations-in-packages"></a>Utilizzo di annotazioni nei pacchetti
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili annotazioni che è possibile utilizzare per ottenere pacchetti autodocumentati, più semplici da capire e gestire. È possibile aggiungere annotazioni alle aree di progettazione dei flussi di controllo, dei flussi di dati e dei gestori di eventi di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Nelle annotazioni può essere contenuto qualsiasi tipo di testo e possono essere utilizzate per aggiungere etichette, commenti e altre informazioni descrittive a un pacchetto. Le annotazioni sono disponibili solo in modalità progettazione. Non possono essere ad esempio scritte nei log.  
   
  Quando si preme INVIO, il testo viene riportato nella riga successiva. Le dimensioni della casella delle annotazioni aumentano automaticamente man mano che si aggiungono le righe di testo. Le annotazioni dei pacchetti vengono rese persistenti come testo non crittografato nella sezione CDATA del file del pacchetto.  

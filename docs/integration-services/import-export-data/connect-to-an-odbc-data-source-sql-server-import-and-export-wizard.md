@@ -10,14 +10,18 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 261f29d8cebfcb9837bae0640df50913d96f05ea
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222061"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723940"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questo argomento illustra come connettersi a un'origine dati **ODBC** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
 
 Può essere necessario scaricare il driver ODBC da Microsoft o da terze parti.
@@ -142,7 +146,7 @@ Per compilare e testare la stringa di connessione per il driver ODBC nel compute
     TrustServerCertificate=No  
     DATABASE=WideWorldImporters    
     WSID=<local computer name>  
-    APP=Microsoft® Windows® Operating System  
+    APP=MicrosoftÂ® WindowsÂ® Operating System  
     Trusted_Connection=Yes  
     SERVER=localhost   
     ```

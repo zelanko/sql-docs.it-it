@@ -19,14 +19,18 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a97fe11d254d16fa6242513a9542b30f5efd3cf4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c821414a3e514e6c426c634a6de735da0fb4b64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271096"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727406"
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Trasferisci database trasferisce un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A differenza di altre attività che trasferiscono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo eseguendone una copia, l'attività Trasferisci database può copiare o spostare un database. Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.  
   
 ## <a name="offline-and-online-modes"></a>Modalità offline e online  

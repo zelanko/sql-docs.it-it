@@ -11,14 +11,18 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2191132ecd09b2ebc8744927542e524af601bf1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c2489e492674a37a63e84b409e60dd40247800e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273371"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726367"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Questa origine include un output e un output degli errori.  

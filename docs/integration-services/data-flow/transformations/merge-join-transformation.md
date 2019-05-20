@@ -20,14 +20,18 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 785f7f0af9a41052a870edc8feaf566585a45e89
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277740"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725966"
 ---
 # <a name="merge-join-transformation"></a>Merge join - trasformazione
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La trasformazione Merge join fornisce un output generato unendo in join due set di dati ordinati, tramite un join di tipo FULL, LEFT o INNER. È ad esempio possibile utilizzare un join di tipo LEFT per unire in join una tabella che include informazioni sui prodotti con una tabella in cui sono elencati i relativi paesi di produzione. Il risultato è costituito da una tabella in cui sono elencati tutti i prodotti e i relativi paesi di origine.  
   
  Per configurare la trasformazione Merge join, procedere nel modo seguente:  

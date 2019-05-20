@@ -13,14 +13,18 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31e092d5913cb1cc9f4572e6ee7d5b8174b59beb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a0b1b7e7a0cecb2f71d8e326615bb25259ca0fcf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275716"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727637"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
   
  Tuttavia, una volta stabiliti i criteri per la qualità dei dati, è possibile automatizzare operazioni periodiche di analisi e pulizia dell'origine dati. Considerare gli scenari seguenti:  

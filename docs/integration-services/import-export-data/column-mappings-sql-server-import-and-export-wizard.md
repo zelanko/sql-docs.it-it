@@ -12,14 +12,18 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222095"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723947"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo aver selezionato le tabelle e le viste esistenti per copiare o rivedere la query fornita, fare clic su **Modifica mapping**per consentire a Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di visualizzare la finestra di dialogo **Mapping colonne** . In questa pagina è necessario specificare e configurare le colonne di destinazione per ricevere i dati copiati dalle colonne di origine. Spesso non è necessario apportare modifiche in questa pagina.
   
 Se non si vuole copiare tutte le colonne della tabella selezionata, è possibile escludere in questa pagina le colonne non necessarie. Selezionare **Ignora** nella colonna **Destinazione** dell'elenco **Mapping** per le colonne che non si desidera copiare.

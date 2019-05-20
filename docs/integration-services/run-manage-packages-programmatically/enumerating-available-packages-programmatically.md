@@ -15,14 +15,18 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad1532d5f3cca914ad169eb9dec95a16960a7344
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb810b333d2e9f353070bcc12ca84fbf3eb9566
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271612"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719374"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di codice
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <a name="top"></a> Quando si usano i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a livello di programmazione, può essere necessario determinare se esiste un singolo pacchetto o cartella o enumerare i pacchetti salvati disponibili per il caricamento e l'esecuzione. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> dello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> fornisce un'ampia varietà di metodi e classi per soddisfare questi requisiti.    
     
 ##  <a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella    

@@ -16,14 +16,18 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7c0029a40ed27794f7b406ae6e6ba238a5e659e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: de404b8650c78671380a2515848a16a2ebf1b9f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272745"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713613"
 ---
 # <a name="variables-window"></a>Finestra Variabili
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Usare la finestra **Variabili** per creare e modificare variabili definite dall'utente e visualizzare quelle di sistema.  
   
  Per impostazione predefinita la finestra **Variabili** si trova sotto l'area **Gestioni connessioni** in Progettazione SSIS, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Se non viene visualizzata la finestra **Variabili**, fare clic su **Variabili** nel menu **SSIS** per visualizzare la finestra.  

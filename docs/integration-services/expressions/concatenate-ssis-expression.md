@@ -15,14 +15,18 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78371637089696416b5a753f57458275d27d6aa6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 22ea0df2836f762eeb001e17ef0c66c7202593b8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274822"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725554"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (concatenazione) (espressione SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Vengono concatenate due espressioni in modo da formare un'unica espressione.  
   
 ## <a name="syntax"></a>Sintassi  

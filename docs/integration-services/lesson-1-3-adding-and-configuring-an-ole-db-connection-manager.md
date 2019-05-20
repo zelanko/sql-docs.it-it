@@ -11,14 +11,18 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f52d5b011e2932ceeadc7f81a564dd52ad503917
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e55427c2249a93d2a97bbc13b7385dd56fac5d01
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274996"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723497"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lezione 1-3: Aggiungere e configurare una gestione connessione OLE DB
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dopo aver aggiunto una gestione connessione file flat per connettersi all'origine dati, si aggiunge una gestione connessione OLE DB per connettersi alla destinazione dei dati. Una gestione connessione OLE DB abilita un pacchetto all'estrazione di dati o al caricamento di dati in un'origine dati compatibile con OLE DB. Una gestione connessione OLE DB consente di specificare il server, il metodo di autenticazione e il database predefinito per la connessione.  
   

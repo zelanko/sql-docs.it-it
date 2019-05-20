@@ -13,14 +13,18 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f09237459aed33110adf37c0ea90c0639a1b62ab
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d7f388a854897b450a6e29b78763125c01e6037
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290467"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726173"
 ---
 # <a name="create-relationships"></a>Crea relazioni
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare la finestra di dialogo **Crea relazioni** per modificare i mapping tra le colonne di origine e le colonne della tabella di ricerca configurati nell'Editor trasformazione Ricerca fuzzy, nell'Editor trasformazione Ricerca e nell'Editor trasformazione Ricerca termini.  
   
 > [!NOTE]  

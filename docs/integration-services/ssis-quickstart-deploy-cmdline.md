@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 583e6f8f5213ae8fb7f803f872813551f7fb07fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b313dcc83da401cfb371e708e36456645a11296e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290207"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717647"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questa guida introduttiva illustra come distribuire un progetto SSIS al prompt dei comandi eseguendo la Distribuzione guidata Integration Services, `ISDeploymentWizard.exe`.
 
 Per altre informazioni sulla procedura, vedere [Distribuzione guidata Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).

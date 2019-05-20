@@ -15,14 +15,18 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4309524aa80c09b92a486cbb210656a756ed18af
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0b038e81c70e3368e9f66c6dfefc925e282b27d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290327"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713742"
 ---
 # <a name="debugging-script"></a>Debug degli script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Gli script utilizzati nell'attività e nel componente Script vengono scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
  VSTA consente di impostare punti di interruzione negli script. I punti di interruzione possono essere gestiti in VSTA o tramite la finestra di dialogo **Imposta punti di interruzione** disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Per altre informazioni, vedere [Debug del flusso di controllo](../../integration-services/troubleshooting/debugging-control-flow.md).  

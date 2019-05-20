@@ -12,14 +12,18 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 708448cb0993af1bdb9f4d1784daf217ffd442c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270713"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723691"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dopo aver fornito informazioni sulla destinazione dei dati e su come connettersi a tale destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra la pagina **Impostazione copia tabella o query**. In questa pagina è possibile scegliere una delle opzioni seguenti.
 -   **Copia i dati da una o più tabelle o viste**. Per selezionare una o più tabelle da un elenco.
 -   **Scrivi una query per specificare i dati da trasferire**. Per immettere o incollare il testo di una query SQL.

@@ -16,14 +16,18 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a1a82c380a26d2de22c5f66dbf67f23f4cef14d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04dc5c791a9a3cfc0cd28941705c5e300ebeef8a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282375"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727355"
 ---
 # <a name="update-statistics-task"></a>Attività Aggiorna statistiche
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'attività Aggiorna statistiche consente di aggiornare le informazioni sulla distribuzione dei valori di chiave per uno o più gruppi o raccolte di statistiche nella tabella o vista indicizzata specificata. Per altre informazioni, vedere [Statistics](../../relational-databases/statistics/statistics.md).  
   
  Tramite l'attività Aggiorna statistiche un pacchetto può aggiornare le statistiche per uno o più database. Se si utilizza l'attività per aggiornare le statistiche in un singolo database, sarà possibile scegliere le viste e le tabelle di cui aggiornare le statistiche. È possibile configurare l'attività in modo da aggiornare tutte le statistiche, solo le statistiche delle colonne oppure solo le statistiche degli indici.  

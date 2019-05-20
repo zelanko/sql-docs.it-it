@@ -11,14 +11,18 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bf96ba0d5c6fb244f9979054be8228ce4a38d34
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 001ba5fc56393cbbcdbc8b5379abc8390dc05e0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272086"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721237"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Lezione 6-3: Testare il pacchetto della lezione 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In fase di esecuzione il pacchetto ottiene il valore per la proprietà **Directory** dal parametro **VarFolderName**.  
   
 Per verificare che il pacchetto aggiorni la proprietà **Directory**, eseguire il pacchetto. Poiché sono stati copiati tre file di dati di esempio nella nuova directory, il flusso di dati viene eseguito tre volte.
