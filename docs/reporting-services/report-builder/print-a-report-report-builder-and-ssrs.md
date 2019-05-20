@@ -2,18 +2,18 @@
 title: Stampare un report (Generatore report e SSRS) | Microsoft Docs
 ms.date: 03/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3904d1498207bbd1384639613457257fbc75647d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292909"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581173"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Stampare un report (Generatore report e SSRS)
   Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo da un browser, dal portale Web di Reporting Services o da qualsiasi applicazione usata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  

@@ -1,8 +1,8 @@
 ---
-title: 'Esercitazione: Creare un report grafico rapido offline (Generatore report) | Microsoft Docs'
+title: 'Tutorial: Create a Quick Chart Report Offline (Report Builder) (Esercitazione: Creare un report grafico rapido offline (Generatore report)) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286069"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571763"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
 

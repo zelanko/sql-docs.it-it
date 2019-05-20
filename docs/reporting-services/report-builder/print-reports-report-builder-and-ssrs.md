@@ -2,18 +2,18 @@
 title: Stampare report (SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c3b18a02c29be7221e70f1b4092cd9b212de3133
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292379"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581161"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Stampare report - Reporting Services (SSRS)
   Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo dal portale Web o da qualsiasi applicazione usata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  

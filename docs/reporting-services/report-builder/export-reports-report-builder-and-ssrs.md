@@ -2,17 +2,17 @@
 title: Esportare report (Generatore Report e SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289029"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580814"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Esportare report (Generatore Report e SSRS)
 
@@ -96,15 +96,15 @@ ms.locfileid: "56289029"
   
 -   **Estensioni per il renderer di dati** Le estensioni per il rendering di dati rimuovono tutte le informazioni di formattazione e layout dal report e visualizzano solo i dati. Il file risultante può essere usato per importare i dati del report non elaborati in un altro tipo di file, ad esempio Excel, in un altro database, in un messaggio di dati XML o in un'applicazione personalizzata. I renderer di dati non supportano le interruzioni di pagina.  
   
-     Sono supportate le estensioni seguenti per il rendering di dati: CSV, XML e Atom.  
+     Sono supportate le estensioni per il rendering di dati CSV, XML e Atom.  
   
 -   **Estensioni per il renderer interruzione di pagina automatica** Le estensioni per il rendering di interruzioni di pagina automatiche mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per la visualizzazione su schermo e il recapito, ad esempio in una pagina Web o nei controlli **ReportViewer** .  
   
-     Sono supportate le estensioni per il rendering di interruzioni di pagina automatiche: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e Archivio Web (MHTML).  
+     Sono supportate le estensioni per il rendering di interruzioni di pagina automatiche [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e archivio Web (MHTML).  
   
 -   **Estensioni per il renderer interruzione di pagina manuale** Le estensioni per il rendering di interruzioni di pagina manuali mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per garantire una stampa coerente o per la visualizzazione del report online in formato libro.  
   
-     Sono supportate le estensioni per il rendering di interruzioni di pagina manuali: TIFF e PDF.  
+     Sono supportate le estensioni per il rendering di interruzioni di pagina manuali TIFF e PDF.  
   
 ##  <a name="ExportFormats"></a> Formati che è possibile esportare durante la visualizzazione dei report  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili estensioni per il rendering per l'esecuzione del rendering dei report in formati diversi. È consigliabile ottimizzare la progettazione del report per il formato di file scelto.  La tabella seguente elenca i formati che è possibile esportare dall'interfaccia utente.  Esistono altri formati che è possibile usare con le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o se si esporta dall'accesso con URL.  Vedere la sezione [Altri modi di esportare report](#OtherWaysExportingReports)in questo argomento.  
@@ -116,7 +116,7 @@ ms.locfileid: "56289029"
 |CSV|data|L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.<br /><br /> Per altre informazioni, vedere [Esportazione in un file CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Interruzione di pagina automatica|Visualizzato come "Excel" nel menu di esportazione durante la revisione dei report. L'estensione per il rendering di Excel consente di eseguire il rendering di un report in formato Excel (con estensione xlsx) compatibile con [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Per altre informazioni, vedere [Esportazione in Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Interruzione di pagina manuale|L'estensione per il rendering di PowerPoint consente di eseguire il rendering di un report in formato PowerPoint (con estensione pptx) compatibile con PowerPoint 2013.|  
-|File TIFF|Interruzione di pagina manuale|L'estensione per il rendering delle immagini genera bitmap o metafile dei report. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata.<br /><br /> L'estensione per il rendering delle immagini permette di generare file in tutti i formati supportati da [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file di immagine](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|File TIFF|Interruzione di pagina manuale|L'estensione per il rendering delle immagini genera bitmap o metafile dei report. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata.<br /><br /> L'estensione per il rendering delle immagini consente di generare file in tutti i formati supportati da [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file di immagine](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Archivio Web|Interruzione di pagina automatica|L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.<br /><br /> L'estensione per il rendering HTML è l'estensione per il rendering predefinita per i report visualizzati in anteprima in Generatore report e visualizzati in un browser, inclusi quelli eseguiti nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Per altre informazioni, vedere [Rendering in formato HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Interruzione di pagina automatica|Visualizzato come "Word" nel menu di esportazione durante la visualizzazione dei report. L'estensione per il rendering di Word consente di eseguire il rendering di un report in formato Word (con estensione docx) compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Per altre informazioni, vedere [Esportazione in Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Dati|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br/><br/> Per altre informazioni, vedere [Esportazione in XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  

@@ -2,21 +2,21 @@
 title: Sintassi del percorso di elemento per i dati del report XML (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ffa45f4eb7fdd8d989810dcdea6cfab0cd4cb4cc
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420196"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573164"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
   In Progettazione report è possibile specificare i dati da utilizzare per un report da un'origine dati XML definendo un percorso di elemento con distinzione tra maiuscole e minuscole. Un percorso di elemento indica come attraversare i nodi gerarchici XML e i relativi attributi nell'origine dei dati XML. Per usare il percorso di elemento predefinito, lasciare vuota la query del set di dati o l'elemento **ElementPath** XML dell'elemento **Query** XML. Quando vengono recuperati i dati dall'origine dei dati XML, i nodi elemento con valori di testo e gli attributi dei nodi elemento diventano colonne del set di risultati. Quando si esegue la query, i valori dei nodi e degli attributi diventano i dati delle righe. Le colonne sono visualizzate come raccolta di campi di set di dati nel riquadro Dati report. In questo argomento viene descritta la sintassi del percorso di elemento.  
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Quando il percorso di elemento è vuoto, per la query viene utilizzato il percorso di elemento predefinito, ovvero il primo percorso di una raccolta di nodi foglia. Nel primo esempio l'utilizzo di un percorso di elemento vuoto corrisponde alla definizione del percorso di elemento /Customers/Customer/Orders/Order. Tutti gli attributi e i valori del nodo nel percorso vengono restituiti nel set di risultati, mentre i nomi degli attributi e del nodo vengono visualizzati come campi del set di dati.  
   
- **Esempio 1**: *vuoto*  
+ **Esempio n. 1**: *vuoto*  
   
 |JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

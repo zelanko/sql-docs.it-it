@@ -2,7 +2,7 @@
 title: Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e8d4b084b8c8f015cdc04c3d4f2ff208cd2388a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297607"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572341"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  

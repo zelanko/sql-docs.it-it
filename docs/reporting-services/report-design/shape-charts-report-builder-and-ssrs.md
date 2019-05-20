@@ -2,18 +2,18 @@
 title: Grafici con forme (Generatore report e SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 84b61392cc0b080ae8e58e5518ad920bc756a64f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9c85407198fdcdafcecc549bab764a3c1545766
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291649"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576711"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Grafici con forme (Generatore report e SSRS)
   In un grafico con forme i dati relativi ai valori vengono visualizzati come percentuali di un intero. I grafici con forme vengono solitamente utilizzati per indicare confronti proporzionali tra valori diversi in un set. Le categorie sono rappresentate da singoli segmenti della forma. Le dimensioni del segmento sono determinate dal valore. L'utilizzo dei grafici con forme è simile a quello dei grafici a torta, ad eccezione del fatto che le categorie vengono ordinate dal valore più alto a quello più basso.  

@@ -2,7 +2,7 @@
 title: Report Definition Language (SSRS) | Microsoft Docs
 ms.date: 01/24/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4bc5d5f802993129ec70fc27a33a6fe22977971d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306009"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579993"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -80,7 +80,7 @@ ms.locfileid: "58306009"
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
 |DateTime, DateTimeOffset|DateTime|  
-|Int16, Int32, UInt16, Byte, SByte|Integer|  
+|Int16, Int32, UInt16, Byte, SByte|Valore intero|  
 |Single, Double|float|  
 |String, Char, GUID, Timespan|String|  
   

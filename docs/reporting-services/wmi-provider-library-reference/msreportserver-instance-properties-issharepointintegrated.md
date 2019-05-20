@@ -2,20 +2,20 @@
 title: Proprietà IsSharePointIntegrated (MSReportServer_Instance WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
 ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2e5a2990e61d0b94a7d9d8ca05b06344dafcca28
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a1e785172a14ad553f40f8b151b0ee3715490fd6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "47594820"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569112"
 ---
 # <a name="msreportserverinstance-properties---issharepointintegrated"></a>Proprietà di MSReportServer_Instance - IsSharePointIntegrated
   Viene specificato se il server di report è in modalità integrata SharePoint. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], questa proprietà restituisce sempre **False** poiché in modalità SharePoint le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono servizi condivisi SharePoint e non vengono controllate dai provider WMI.  

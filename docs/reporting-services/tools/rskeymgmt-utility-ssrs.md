@@ -2,7 +2,7 @@
 title: Utilità rskeymgmt (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8d6d83624fc47a12387e2edf02381faa3cfaedcf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545375"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571480"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -104,7 +104,7 @@ rskeymgmt {-?}
  **-t**  *trace*  
  Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire lo strumento è necessario essere un amministratore locale ed eseguirlo a livello locale nel computer in cui risiede il server di report. L'utilità rskeymgmt interagisce con l'istanza locale del servizio Windows ReportServer. L'utilità non è infatti in grado di connettersi alle istanze remote del servizio Windows ReportServer e pertanto non può essere utilizzata per gestire le chiavi di crittografia di un'istanza remota del server di report.  
   
 > [!NOTE]  

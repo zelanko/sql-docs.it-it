@@ -2,18 +2,18 @@
 title: Tipo di connessione Oracle (SSRS) | Microsoft Docs
 ms.date: 01/11/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813421"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577895"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo di connessione Oracle (SSRS)
 Per utilizzare dati di un database Oracle nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo Oracle. Questo tipo di origine dati predefinita usa il provider di dati Oracle direttamente e richiede un componente software client Oracle.

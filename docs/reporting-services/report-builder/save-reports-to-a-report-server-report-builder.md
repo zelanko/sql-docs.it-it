@@ -2,18 +2,18 @@
 title: Salvare i report in un server di report (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8a751d0c7d6438eece89d66805bcb0c7fb2c96be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298269"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580667"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
   In Generatore report è possibile salvare una definizione del report in un server di report, operazione anche nota come pubblicazione di un report. Quando viene salvato in un server di report, il report può essere visualizzato anche da altri utenti. Ogni volta che si esegue il report pubblicato, verranno recuperati i dati più recenti. Per salvare una copia statica di un report visualizzabile, esportare il report in un formato di file diverso e salvarlo o utilizzare la caratteristica di cronologia dei report per salvare versioni di report visualizzabili.  

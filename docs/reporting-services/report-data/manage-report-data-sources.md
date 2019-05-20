@@ -2,7 +2,7 @@
 title: Gestire origini dati dei report | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f04b7e05737db7eadb28f8c8f5266c6e984e0094
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5df5e6b333f91ca69472c6d91bbf72a1ca7c819d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028940"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572632"
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i report, i modelli di report e le sottoscrizioni guidate dai dati recuperano i dati da origini dati esterne. Per connettersi a un'origine dati esterna, un server di report utilizza le informazioni di connessione all'origine dei dati definite in o a cui si fa riferimento dal report, dal modello o dalla sottoscrizione. Le proprietà di connessione alle origini dati vengono sempre definite al momento della creazione del report o del modello, ma possono essere gestite in modo indipendente dopo la pubblicazione del report o del modello in un server di report.  

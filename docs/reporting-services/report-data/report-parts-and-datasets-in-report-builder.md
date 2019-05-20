@@ -2,18 +2,18 @@
 title: Parti del report e set di dati in Generatore report | Microsoft Docs
 ms.date: 09/16/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ee8ead2185908724b20fa690cabfe67044d15d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611479"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571194"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
   In Generatore report il modo più semplice per includere dati in un report consiste nell'aggiungere parti del report esistenti dalla Raccolta parti del report. Nelle parti del report sono contenuti i set di dati dai quali dipendono, chiamati *set di dati dipendenti*. I set di dati dipendenti sono basati sulle origini dati condivise e possono essere set di dati incorporati o condivisi. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

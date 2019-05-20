@@ -2,20 +2,20 @@
 title: Proprietà server (pagina Generale) | Microsoft Docs
 ms.date: 06/08/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c9079baf374b6ab60cf275aaa6551eba5385e79
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712032"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576163"
 ---
 # <a name="report-server-properties-general-page"></a>Proprietà del server di report (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  

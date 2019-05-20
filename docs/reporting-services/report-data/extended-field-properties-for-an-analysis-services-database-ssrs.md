@@ -2,18 +2,18 @@
 title: Proprietà di campo estese per un database di Analysis Services (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73a2539ad976de2a25361835b9c33b03a79fdf97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031260"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573314"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
   L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto alle proprietà di campo **Value** e **IsMissing** , disponibili nell'origine dati e supportate dall'estensione per l'elaborazione dati. Le proprietà estese non vengono visualizzate nel riquadro Dati report all'interno della raccolta di campi per un set di dati del report. È possibile includere valori di proprietà di campo estese in un report scrivendo espressioni mediante la raccolta predefinita **Campi** nelle quali i valori sono specificati per nome.  

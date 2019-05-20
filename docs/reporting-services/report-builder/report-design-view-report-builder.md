@@ -2,7 +2,7 @@
 title: Visualizzazione di progettazione report (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74b2396d7e32e5f8b596e4dcb5abc84645e8fc84
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286039"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577983"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report impaginati necessari. L'area di progettazione si trova al centro della finestra ed è circondata dalla barra multifunzione e dai riquadri. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Questo articolo illustra i riquadri che consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  

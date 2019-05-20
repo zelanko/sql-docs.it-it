@@ -2,7 +2,7 @@
 title: Utilità RS.exe (SSRS) | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e923092cbd81bcee6bee7c76f956bae2ede45c35
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983982"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581291"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  
@@ -97,7 +97,7 @@ rs {-?}
  **-t**  
  (Facoltativo) Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Autorizzazioni  
  Per eseguire questo strumento, è necessario disporre dell'autorizzazione per connettersi all'istanza del server di report in cui lo script è in esecuzione. È possibile eseguire script per apportare modifiche nel computer locale o in un computer remoto. Per apportare modifiche a un server di report installato in un computer remoto, specificare il computer remoto nell'argomento **-s** .  
   
 ##  <a name="bkmk_examples"></a> Esempi  

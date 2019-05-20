@@ -2,7 +2,7 @@
 title: Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dc2b972c797a6f78170eeeba4867f6f377793dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631149"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580041"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] offre caratteristiche di sicurezza predefinite che è possibile usare per concedere l'accesso agli elementi del server di report dai siti e dalle raccolte di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  

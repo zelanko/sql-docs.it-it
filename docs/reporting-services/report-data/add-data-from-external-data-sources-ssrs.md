@@ -1,19 +1,21 @@
 ---
 title: Aggiungere dati da origini dati esterne (SSRS) | Microsoft Docs
-ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+reviewer: ''
+ms.custom: ''
+ms.date: 03/17/2017
+ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028410"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578231"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Aggiungere dati da origini dati esterne (SSRS)
   Per recuperare dati da un'origine dati esterna, utilizzare una connessione dati. Le informazioni di connessione dati vengono in genere fornite dal proprietario dell'origine dati esterna che è responsabile della concessione delle autorizzazioni e di specificare i tipi di credenziali da utilizzare. Le informazioni di connessione dati vengono salvate come un'origine dati del report. Il tipo di origine dati consente di specificare quale estensione per i dati utilizzare per recuperare i dati.  
@@ -88,10 +90,9 @@ ms.locfileid: "50028410"
 |[Tipo di connessione OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)|OLE DB|  
 |[Tipo di connessione ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
-|[Connessione a un modello di report &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)|Modello con estensione smdl|  
   
-  
-##  <a name="Related"></a> Sezioni correlate  
+##  <a name="Related"></a> Sezioni correlate
+
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
 |Argomento|Descrizione|  

@@ -2,20 +2,20 @@
 title: Reporting Services in SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292329"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581342"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
 
@@ -237,7 +237,7 @@ ms.locfileid: "56292329"
   
 
 ##  <a name="bkmk_SourceControl"></a> Controllo del codice sorgente  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo Opzioni** per specificare il plug-in e configurare le proprietà.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
  Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella si trova nel percorso seguente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  

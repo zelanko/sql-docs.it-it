@@ -2,7 +2,7 @@
 title: Caselle di testo (Generatore report e SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ef1eb498077cf7d2592592f9c74b5af0516dbceb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294655"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573722"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   Quando si pensa a una casella di testo, di solito si immagina una casella autonoma contenente testo in un'area, ad esempio, di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] alcune caselle di testo sono esattamente questo e possono visualizzare testo statico per titoli, descrizioni ed etichette oppure testo dinamico basato su espressioni. Tuttavia, anche ogni cella in una tabella o matrice (o in un'area dati Tablix) contiene una casella di testo, che può essere formattata esattamente allo stesso modo delle caselle di testo autonome di un report.  
@@ -51,7 +51,7 @@ ms.locfileid: "56294655"
   
  L'orientamento viene impostato sulla casella di testo e si applica a tutto il testo contenuto nella casella. Non è possibile specificare un orientamento diverso per varie parti della casella di testo.  
   
- Per informazioni introduttive, vedere la sezione relativa alla rotazione del testo in [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e [Impostare l'orientamento della casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Per iniziare, vedere la sezione sulla rotazione del testo in [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e [Impostare l'orientamento della casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Procedure  
  [Aggiungere, spostare o eliminare una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

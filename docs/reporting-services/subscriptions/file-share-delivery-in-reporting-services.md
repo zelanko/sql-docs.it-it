@@ -2,21 +2,21 @@
 title: Recapito tramite condivisione file in Reporting Services | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889992"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575994"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite condivisione file che consente di recapitare un report a una cartella. L'estensione per il recapito tramite condivisione file è disponibile per impostazione predefinita e non richiede alcuna operazione di configurazione. Per fare in modo che il recapito dei file abbia esito positivo, è necessario impostare autorizzazioni di accesso in scrittura sulla cartella condivisa. L'account che richiede le autorizzazioni di scrittura può avere credenziali configurate nella sottoscrizione o un **account di condivisione file** configurato per il server di report. Per altre informazioni sull'account di condivisione file, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Inoltre, gli utenti che richiedono l'accesso ai report devono disporre di autorizzazioni in lettura per la cartella condivisa.  
@@ -68,9 +68,9 @@ ms.locfileid: "55889992"
 ##  <a name="bkmk_file_options"></a> Opzioni relative ai file  
  Quando si crea una sottoscrizione di condivisione file, è possibile configurare la modalità di creazione del nome file e se il file sovrascrive le versioni precedenti del report. Un nome file completo è costituito da tre parti, ovvero il nome, l'estensione e un testo o un numero aggiunto al file per creare un nome file univoco  
   
- **Nome file:** il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
+ **Nome file** : il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
   
- **Sovrascrivi:** È possibile specificare le opzioni di sovrascrittura per riutilizzare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
+ **Sovrascrittura:** è possibile specificare le opzioni di sovrascrittura per riusare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
   
  Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A tale scopo, aggiungere la variabile **@timestamp** al nome file, ad esempio *CompanySales@timestamp*. In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
   

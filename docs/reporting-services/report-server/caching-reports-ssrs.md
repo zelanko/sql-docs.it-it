@@ -2,7 +2,7 @@
 title: Memorizzazione dei report nella cache (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 18b41757ada0d21136e5768eade88ecf8b2a7d40
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029760"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580447"
 ---
 # <a name="caching-reports-ssrs"></a>Memorizzazione dei report nella cache (SSRS)
   Nel server di report è possibile memorizzare nella cache una copia di un report già elaborato, che verrà utilizzata quando un utente apre il report. Per l'utente, l'unico elemento disponibile per determinare che il report è una copia memorizzata nella cache è rappresentato dalla data e dall'ora di esecuzione del report. Se la data e l'ora non sono quelle correnti e se il report non è uno snapshot, significa che il report è stato recuperato dalla cache.  

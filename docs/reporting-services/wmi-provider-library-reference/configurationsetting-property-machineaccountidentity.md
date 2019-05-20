@@ -2,20 +2,20 @@
 title: Proprietà MachineAccountIdentity (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 964882042f14ca79c8e45ccea8617f8aa9479dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c755fd18f3b904f6c28707752e5ff00c6086f0b9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785209"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570289"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>Proprietà di ConfigurationSetting - MachineAccountIdentity
   Ottiene l'identità dell'account del computer in cui è installato il server di report.  

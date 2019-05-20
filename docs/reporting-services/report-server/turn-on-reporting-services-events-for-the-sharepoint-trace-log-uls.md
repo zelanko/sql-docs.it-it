@@ -2,18 +2,18 @@
 title: Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409538"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580943"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
 
@@ -42,8 +42,8 @@ ms.locfileid: "52409538"
 |--------------|-----------|-----------------|  
 |Database|Dettagliato|Registra eventi che comportano l'accesso al database.|  
 |Generale|Dettagliato|Registra eventi che comportano l'accesso agli elementi seguenti:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pagine Web<br /><br /> Gestore HTTP Visualizzatore report<br /><br /> Accesso al report (file con estensione rdl)<br /><br /> Origini dati (file con estensione rsds)<br /><br /> URL nel sito di SharePoint (file con estensione smdl)|  
-|Office Server General|Exception|Registra errori di accesso.|  
-|Topologia|Verbose|Registra informazioni sull'utente corrente|  
+|Office Server General|Eccezione|Registra errori di accesso.|  
+|Topologia|Dettagliato|Registra informazioni sull'utente corrente|  
 |web part|Dettagliato|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|  
   
 ##  <a name="bkmk_turnon"></a> Per abilitare e disabilitare gli eventi di Reporting Services nella categoria Reporting Services  

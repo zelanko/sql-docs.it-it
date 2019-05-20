@@ -2,18 +2,18 @@
 title: Aggiungere un'interruzione di pagina (Generatore report e SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e6ac35167dec8a42495714a110535c1a1be16c46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ca618e82e9eed6a0cb43582b8aa1feff33d67626
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296069"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574809"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Aggiungere un'interruzione di pagina (Generatore report e SSRS)
   È possibile aggiungere un'interruzione di pagina a rettangoli, aree dati o gruppi all'interno di aree dati per controllare la quantità di informazioni in ogni pagina. Con l'aggiunta di interruzioni di pagina è possibile migliorare le prestazioni dei report pubblicati, perché quando si visualizza il report è necessario elaborare solo gli elementi presenti in ogni pagina. Quando l'intero report è costituito da un'unica pagina, prima che sia possibile visualizzare il report è necessario che tutti gli elementi vengano elaborati.  

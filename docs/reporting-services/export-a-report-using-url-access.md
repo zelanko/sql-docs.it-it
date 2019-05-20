@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a6d6d9dd46e6c54dc9be72e30a19498bf39391c
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: 24cc4fbe1a1cadeeb9c2e94fe0da85fce24db8a6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503999"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571493"
 ---
 # <a name="export-a-report-using-url-access"></a>Esportare un report tramite l'accesso con URL
   Facoltativamente, è possibile definire il formato di rendering di un report con il parametro URL *rs:Format* .  Il rendering dei formati HTML 4.0 e HTM5 (estensione per il rendering) viene eseguito nel browser e per gli altri formati il browser richiede di salvare l'output del report in un file locale.  

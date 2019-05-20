@@ -2,21 +2,21 @@
 title: Specificare le impostazioni relative alle informazioni sul dispositivo in un URL | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], URLs
 - URL access [Reporting Services], device information settings
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b51b0d3e90252ef2b901de4ef48e443ef36079c0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 906a21de49d562d788f9a1384b31e080616c67c4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813318"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578436"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>Specificare le impostazioni relative alle informazioni sul dispositivo in un URL
   Le impostazioni relative alle informazioni sul dispositivo sono parametri passati a un'estensione per il rendering. Se si usano i metodi del servizio Web ReportServer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire il rendering di un report, viene passato un elemento XML **DeviceInfo** come parametro di input. Gli elementi figlio dell'elemento **DeviceInfo** sono specifici delle impostazioni relative alle informazioni sul dispositivo di diverse estensioni per il rendering. È possibile includere le impostazioni relative alle informazioni sul dispositivo in un URL usando la stringa di parametri *rc:tag=value* , dove *tag* è il nome dell'elemento delle impostazioni relative alle informazioni sul dispositivo a cui si accede. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  

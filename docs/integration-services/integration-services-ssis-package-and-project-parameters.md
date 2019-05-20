@@ -14,14 +14,18 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 97c652c257b6d2aea6eec532c14ffebb6044ed45
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281315"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723597"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
   
  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è possibile creare, modificare o eliminare i parametri di progetto utilizzando la finestra **Project.params** . Per creare, modificare ed eliminare i parametri di pacchetto, utilizzare la scheda **Parametri** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per associare un parametro nuovo o esistente a una proprietà di un'attività, utilizzare la finestra di dialogo **Imposta parametri** . Per altre informazioni sull'utilizzo della finestra **Project.params** e della scheda **Parametri** , vedere [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Per altre informazioni sulla finestra di dialogo **Imposta parametri** , vedere [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  

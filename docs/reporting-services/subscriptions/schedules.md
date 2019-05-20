@@ -2,7 +2,7 @@
 title: Pianificazioni | Microsoft Docs
 ms.date: 07/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711472"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578101"
 ---
 # <a name="schedules"></a>Pianificazioni
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre **pianificazioni condivise** e **pianificazioni in base al report** che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.
@@ -29,7 +29,7 @@ ms.locfileid: "52711472"
   
 -   Le pianificazioni in base al report vengono create quando si definisce una sottoscrizione o si impostano le proprietà di esecuzione dei report. L'impostazione delle informazioni di pianificazione fa parte del processo di definizione di una sottoscrizione o di impostazione di proprietà. Per definire una pianificazione in base al report, è necessario aprire il report o la sottoscrizione che la utilizzerà.  
   
- In una pianificazione condivisa sono contenute le informazioni sulla pianificazione e sull'occorrenza che possono essere utilizzate da qualsiasi numero di sottoscrizioni e report pubblicati in esecuzione in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se il numero di report e sottoscrizioni in esecuzione contemporaneamente è elevato, è possibile creare una pianificazione condivisa per tali processi. Se si desidera modificare successivamente il criterio di occorrenza o la data di fine, è possibile apportare la modifica in un unico punto.  
+ In una pianificazione condivisa sono contenute le informazioni sulla pianificazione e sull'occorrenza che possono essere utilizzate da qualsiasi numero di sottoscrizioni e report pubblicati in esecuzione in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se il numero di report e sottoscrizioni in esecuzione contemporaneamente è elevato, è possibile creare una pianificazione condivisa per tali processi. Se si desidera modificare successivamente il criterio di occorrenza o la data di fine, è possibile apportare la modifica in un unico punto.  
   
  Le pianificazioni condivise sono più semplici da gestire e consentono una maggiore flessibilità nella gestione di operazioni pianificate. È possibile ad esempio sospendere e quindi riprendere una pianificazione condivisa. Inoltre, se si rileva che sono in esecuzione contemporaneamente troppe operazioni pianificate, sarà possibile creare più pianificazioni condivise per eseguirle in orari diversi, quindi modificare le informazioni sulla pianificazione fino a quando il carico di elaborazione non risulterà distribuito in modo equo nel server di report.  
   
