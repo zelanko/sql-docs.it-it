@@ -2,18 +2,18 @@
 title: Add 3D Effects to a Chart (Report Builder and SSRS) (Aggiungere effetti 3D a un grafico (Generatore report e SSRS)) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c50208b7899fe492da09d3a77c26087dc6a4cbf9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: eb5fd8c6130f7f10effc9f9682fbde6063dca093
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288509"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581674"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Effetti per i grafici - Aggiungere effetti 3D (Generatore Report)
   Gli effetti tridimensionali (3D) possono essere usati per fornire profondità e aggiungere un impatto visivo ai grafici impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio, se si desidera evidenziare una particolare sezione di un grafico a torta esplosa, è possibile ruotare e modificare la prospettiva del grafico in modo che si noti prima di tutto tale sezione. Quando al grafico vengono applicati effetti 3D, tutti i colori delle sfumature e gli stili di tratteggio vengono disabilitati.  

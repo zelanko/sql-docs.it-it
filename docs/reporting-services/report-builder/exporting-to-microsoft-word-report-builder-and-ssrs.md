@@ -2,20 +2,20 @@
 title: Esportazione in Microsoft Word (Generatore report e SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: L'estensione per il rendering di Word consente di eseguire il rendering di report impaginati nel formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (con estensione docx). Il formato è Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296599"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581231"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
@@ -74,7 +74,7 @@ ms.locfileid: "56296599"
   
 -   **Espressione complessa:**  l'espressione è `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Espressione con sequenze di testo:** testo, **vendite medie** ed espressione, `=Avg(Fields!YTDPurchase.Value, "Sales)` e testo, **numero di pagina** ed espressione `=Globals!PageNumber`  
+-   **Espressione con sequenze di testo:** testo, **Average Sales**, espressione,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, testo, **Page Number**ed espressione `=Globals!PageNumber`  
   
  Per evitare questo problema, usare più sequenze di testo invece di una sola espressione complessa quando si usano espressioni nei piè di pagina e nelle intestazioni. Le due espressioni seguenti sono equivalenti. La prima è un'espressione complessa, mentre nella seconda vengono utilizzate sequenze di testo. Il renderer di Word consente di analizzare correttamente solo la seconda espressione.  
   

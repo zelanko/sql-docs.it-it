@@ -2,18 +2,18 @@
 title: Generazione di feed di dati dai report (Generatore report e SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cfb8ec1aeb1d9c4333ef5c2bdded97f47d15b2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298339"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580741"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
 
@@ -105,7 +105,7 @@ ms.locfileid: "56298339"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>Utilizzo dei feed di dati  
- Tutti i feed di dati generati dal report includono gli elementi del report che si trovano nell'ambito dell'elemento padre dell'area dati che genera i feed di dati. , Immaginare un report che dispone di diverse tabelle e di un grafico. Le caselle di testo nel corpo del report forniscono il testo descrittivo di ogni area dati. Ogni voce di ciascun feed di dati generato dal report include il valore della casella di testo. Ad esempio se il testo è "Il grafico visualizza le medie delle vendite mensili per area di vendita", tutti e tre i feed di dati includono questo testo in ogni riga.  
+ Tutti i feed di dati generati dal report includono gli elementi del report che si trovano nell'ambito dell'elemento padre dell'area dati che genera i feed di dati. . Immaginare un report che dispone di diverse tabelle e di un grafico. Le caselle di testo nel corpo del report forniscono il testo descrittivo di ogni area dati. Ogni voce di ciascun feed di dati generato dal report include il valore della casella di testo. Ad esempio se il testo è "Il grafico visualizza le medie delle vendite mensili per area di vendita", tutti e tre i feed di dati includono questo testo in ogni riga.  
   
  Se il layout del report include le relazioni di dati gerarchiche, ad esempio le aree dati nidificate, tali relazioni sono incluse nel set di righe bidimensionale dei dati del report.  
   

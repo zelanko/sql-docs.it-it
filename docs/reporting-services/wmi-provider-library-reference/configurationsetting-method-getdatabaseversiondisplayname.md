@@ -2,20 +2,20 @@
 title: Metodo GetDatabaseVersionDisplayName (WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5fdabaeb773d0311cf079c46b09fc30f90189bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854159"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570954"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Metodo di ConfigurationSetting - GetDatabaseVersionDisplayName
   Ottiene il nome visualizzato di una stringa di versione di un database del server di report specifico.  
@@ -43,7 +43,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="remarks"></a>Remarks  
  Nella tabella seguente viene mostrato il mapping dalla versione del database alla stringa visualizzata.  
   
-|**Versione**|**Versione**|**Nome visualizzato**|  
+|**Versione**|**Version**|**Nome visualizzato**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  

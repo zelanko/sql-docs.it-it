@@ -2,18 +2,18 @@
 title: Tipi di dati nelle espressioni (Generatore report e SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284590"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580862"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -28,12 +28,12 @@ ms.locfileid: "56284590"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|String|Impostazione predefinita: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Impostazione predefinita: Boolean|  
-|Integer|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Impostazione predefinita: DateTime<br /><br /> DateTimeOffset|  
-|float|Impostazione predefinita: Double<br /><br /> Single, Decimal|  
-|Binario|Impostazione predefinita: Byte[]|  
+|String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valore predefinito: Boolean|  
+|Valore intero|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
+|float|Valore predefinito: Double<br /><br /> Single, Decimal|  
+|Binario|Valore predefinito: Byte []|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  
@@ -106,7 +106,7 @@ ms.locfileid: "56284590"
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
--   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio  
+-   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Esempio:  
   
     -   Nell'espressione seguente solo la parte relativa all'ora della differenza di fuso orario dall'ora UTC viene prima estratta e poi convertita in minuti: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

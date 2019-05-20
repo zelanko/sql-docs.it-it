@@ -2,21 +2,21 @@
 title: Tasti di scelta rapida (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17718148e369e53d9b33867975ca4d3b9af1a13f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1f84f5331946a5887f833f7e579eb078a8854662
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292209"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581191"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tasti di scelta rapida (Generatore report)
   Quando si crea e modifica un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Generatore report è possibile usare tutti i tasti di scelta rapida per la navigazione disponibili nell'ambiente Windows, nonché scegliere tra diversi schemi di mappatura della tastiera standard.  

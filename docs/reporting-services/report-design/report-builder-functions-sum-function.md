@@ -2,18 +2,18 @@
 title: Funzione Sum (Generatore report e SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 690422b46505a22f9d15f59449be08162ec2e85a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8f2b86d4fe54943ccc3f4c0f06243b72af5779ce
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292231"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577214"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funzioni di Generatore report - Funzione Sum
   Restituisce la somma di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  
