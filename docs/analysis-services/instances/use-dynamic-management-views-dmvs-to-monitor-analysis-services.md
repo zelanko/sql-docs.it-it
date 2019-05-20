@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984102"
@@ -153,7 +153,7 @@ I set di righe dello schema sono descritti nelle due protocolli di SQL Server An
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|Restituisce un elenco di nomi, tipi di dati e valori di enumerazione di enumeratori supportati dal provider XMLA per un'origine dati specifica.|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|Descrive le istanze nel server.|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|Fornisce informazioni sui processi attivi in esecuzione nel server. Un processo fa parte di un comando che esegue un'attività specifica per conto del comando.|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|Restituisce informazioni sulle parole chiave riservate dal server di XMLA.|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|Restituisce informazioni sulle parole chiave riservate dal server di XMLA.|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|Restituisce informazioni sui valori letterali supportati dal server.|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|Restituisce informazioni sul contenuto di un file di backup. |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|Fornisce informazioni sui blocchi correnti presenti nel server.|  
