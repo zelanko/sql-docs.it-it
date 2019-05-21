@@ -43,9 +43,9 @@ ms.locfileid: "63185898"
   
      Viene visualizzato il riquadro **Dati grafico** .  
   
-6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
+6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
   
-7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
+7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
   
      In genere per i grafici sparkline e per le barre dei dati, non viene aggiunto un campo all'area **Gruppo serie** in quanto si desidera una sola serie per ogni riga.  
   
