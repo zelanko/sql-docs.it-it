@@ -2,18 +2,18 @@
 title: Ricerca, visualizzazione e gestione dei report (Generatore report SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711012"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581239"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
   In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per individuare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  
@@ -67,7 +67,7 @@ ms.locfileid: "52711012"
   
  Alcune di queste attività potrebbero essere eseguite per conto dell'utente dall'amministratore del server di report. Per altre informazioni sulle attività eseguite in un server di report, vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- In Gestione report sono inclusi in genere cartelle, report, origini dati e modelli di report, nonché la cartella Report personali. Report personali è un'area di lavoro personale utilizzabile per archiviare e gestire i report di cui si è proprietari. Le altre cartelle del server di report sono pubbliche e in genere è necessario disporre di autorizzazioni avanzate per aggiungere o modificare contenuto in tali cartelle. È possibile creare cartelle all'interno di Report personali per migliorare l'organizzazione dei report.  
+ In Gestione report sono in genere inclusi cartelle, report e origini dati, nonché la cartella Report personali. Report personali è un'area di lavoro personale utilizzabile per archiviare e gestire i report di cui si è proprietari. Le altre cartelle del server di report sono pubbliche e in genere è necessario disporre di autorizzazioni avanzate per aggiungere o modificare contenuto in tali cartelle. È possibile creare cartelle all'interno di Report personali per migliorare l'organizzazione dei report.  
   
  Tramite Gestione report, i report vengono visualizzati nel Visualizzatore HTML di Reporting Services. Il Visualizzatore HTML fornisce un framework per la visualizzazione di report in HTML e include una barra degli strumenti dei report, una sezione relativa ai parametri, una relativa alle credenziali e una mappa documento. Nella barra degli strumenti dei report sono disponibili funzionalità di navigazione, zoom, aggiornamento, ricerca, esportazione, stampa e feed di dati per la pagina. La barra degli strumenti dei report viene inoltre visualizzata in una finestra del browser nella parte superiore dei report quando si accede ad essi tramite un URL. La funzionalità di stampa è facoltativa e deve essere attivata dall'amministratore. Se disponibile, sulla barre degli strumenti dei report viene visualizzata l'icona di una stampante. Nelle illustrazioni seguenti la barra degli strumenti dei report in una finestra Gestione report e le relative funzionalità vengono mostrate in primo piano.  
   
@@ -105,9 +105,9 @@ Barra degli strumenti dei report
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Ricerca di elementi di un server di report in un sito di SharePoint  
  Per impostare le proprietà, è prima necessario individuare l'elemento desiderato. Gli elementi dei server di report sono sempre archiviati in raccolte o in una cartella all'interno di una raccolta.  
   
- Quando si accede al sito di SharePoint, viene visualizzata la pagina Sfoglia e la scheda Strumenti raccolta. Nella pagina Sfoglia sono elencate le raccolte e il contenuto della raccolta selezionata. È possibile visualizzare il report, i modelli di report e altri elementi nella raccolta, esplorare cartelle ed eseguire ricerche nel sito per individuare elementi.  
+ Quando si accede al sito di SharePoint, viene visualizzata la pagina Sfoglia e la scheda Strumenti raccolta. Nella pagina Sfoglia sono elencate le raccolte e il contenuto della raccolta selezionata. È possibile visualizzare il report e altri elementi nella raccolta, esplorare cartelle ed eseguire ricerche nel sito per individuare elementi.  
   
- Per distinguere gli elementi del server di report dagli altri elementi di un sito di SharePoint, è possibile usare l'icona per identificare visivamente un elemento oppure lasciare per qualche istante il puntatore del mouse sull'elemento e leggere l'estensione del file. Nella figura seguente vengono illustrati cartelle, un modello di report e una definizione di report nella raccolta **Documenti** :  
+ Per distinguere gli elementi del server di report dagli altri elementi di un sito di SharePoint, è possibile usare l'icona per identificare visivamente un elemento oppure lasciare per qualche istante il puntatore del mouse sull'elemento e leggere l'estensione del file. Nella figura seguente vengono illustrate le cartelle e una definizione di report nella raccolta **Documenti**:  
   
  ![Raccolta di SharePoint con elementi del server di report](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Raccolta di SharePoint con elementi del server di report")  
   

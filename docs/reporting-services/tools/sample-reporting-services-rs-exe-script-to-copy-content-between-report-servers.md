@@ -2,18 +2,18 @@
 title: Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report | Microsoft Docs
 ms.date: 03/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 62048b27a917684188c8d8c47cfc67817ed63efa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ac4cd0cda54e3bb6c0f6723155f7be22b544a5a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528585"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571443"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
 
@@ -49,7 +49,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 |Elemento|Migrato|SharePoint|Descrizione|  
 |----------|--------------|----------------|-----------------|  
 |Password|**No**|**No**|**NON** viene eseguita la migrazione delle password. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione. Ad esempio, origini dati con credenziali archiviate.|  
-|Report personali|**No**|**No**|La funzionalità "Report personali" in modalità nativa è basata su singoli account di accesso utente, pertanto il servizio di scripting non ha accesso al contenuto di "Report personali" per utenti diversi dal parametro **–u** usato per eseguire lo script RSS. "Report personali", poi, non è una funzionalità della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e gli elementi nelle cartelle non possono essere copiati in un ambiente SharePoint. Di conseguenza, lo script non copia gli elementi del report presenti nelle cartelle "Report personali" in un server di report di origine in modalità nativa.<br /><br /> Per eseguire la migrazione del contenuto in cartelle "Report personali" con questo script, completare la procedura seguente:<br /><br /> 1.  Creare nuove cartelle in Gestione report. Se lo si desidera, è possibile creare cartelle o sottocartelle per ogni utente.<br />2.  Effettuare l'accesso con l'account di un utente con contenuto in "Report personali".<br />3.  In Gestione report fare clic sulla cartella **Report personali**.<br />4.  Fare clic sulla visualizzazione **Dettagli** per la cartella.<br />5.  Selezionare ogni report che si desidera copiare.<br />6.  Sulla barra degli strumenti di Gestione report fare clic su **Sposta**.<br />7.  Selezionare la cartella di destinazione desiderata.<br />8.  Ripetere i passaggi da 2 a 7 per ogni utente.<br />9. Eseguire lo script.|  
+|Report personali|**No**|**No**|La funzionalità "Report personali" in modalità nativa è basata su singoli account di accesso utente, pertanto il servizio di scripting non ha accesso al contenuto di "Report personali" per utenti diversi dal parametro **–u** usato per eseguire lo script RSS. "Report personali", poi, non è una funzionalità della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e gli elementi nelle cartelle non possono essere copiati in un ambiente SharePoint. Di conseguenza, lo script non copia gli elementi del report presenti nelle cartelle "Report personali" in un server di report di origine in modalità nativa.<br /><br /> Per eseguire la migrazione del contenuto in cartelle "Report personali" con questo script, completare la procedura seguente:<br /><br /> 1.  Creare nuove cartelle in Gestione report. Se lo si desidera, è possibile creare cartelle o sottocartelle per ogni utente.<br />2.  Effettuare l'accesso con l'account di un utente con contenuto in "Report personali".<br />3.  In Gestione report fare clic sulla cartella **Report personali**.<br />4.  Fare clic sulla visualizzazione **Dettagli** per la cartella.<br />5.  Selezionare i singoli report che si intende copiare.<br />6.  Sulla barra degli strumenti di Gestione report fare clic su **Sposta**.<br />7.  Selezionare la cartella di destinazione desiderata.<br />8.  Ripetere i passaggi da 2 a 7 per ogni utente.<br />9. Eseguire lo script.|  
 |Cronologia|**No**|**No**||  
 |Impostazioni di cronologia|Sì|Sì|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
 |Pianificazioni|sì|sì|Per eseguire la migrazione delle pianificazioni, è necessario che SQL Server Agent sia in esecuzione nel server di destinazione. Se SQL Server Agent non è in esecuzione nel server di destinazione, viene visualizzato un messaggio di errore simile a questo:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
@@ -77,7 +77,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 |Elemento o risorsa|Origine|Destinazione|  
 |----------------------|------------|------------|  
 |Elementi del catalogo|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
-|Ruolo|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
+|Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
 |Criteri di sistema|<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|  
 |Pianificazione|<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|  
 |Sottoscrizione|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  

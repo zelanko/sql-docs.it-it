@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose (Service Broker) utilità | Microsoft Docs
+title: Utilità ssbdiagnose (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590545"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821098"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.  
-  
+  L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.
+
+> [!NOTE]
+> L'utilità ssbdiagnose non viene più installata con l'ultima versione di SQL Server Management Studio (SSMS) 18.0. Per installare l'ultima versione di ssbdiagnose, installare [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791).
+> In una versione futura non sarà più necessario installare una versione precedente di SSMS per scaricare l'ultima versione di ssbdiagnose. SSMS 18.x viene eseguito side-by-side con le versioni 17.x, di conseguenza è possibile installare entrambe nel computer.
+
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -310,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>Variabili di ambiente sqlcmd  
  L'utilità **ssbdiagnose** supporta le variabili di ambiente SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD e SQLCMDLOGINTIMOUT usate anche dall'utilità **sqlcmd** . Per impostare le variabili di ambiente, è possibile usare il comando SET del prompt dei comandi o il comando **setvar** negli script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguiti tramite **sqlcmd**. Per altre informazioni sull'uso di **setvar** in **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In ogni clausola **connectionoptions** l'account di accesso specificato mediante **-E** o **-U** deve essere un membro del ruolo predefinito del server **sysadmin** nell'istanza specificata in **-S**.  
   
 ## <a name="examples"></a>Esempi  
@@ -331,7 +335,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Controllo della configurazione di due servizi in computer separati che utilizzano un unico account di accesso  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Controllo della configurazione di due servizi in computer separati che utilizzano un unico account di accesso  
  Nell'esempio seguente viene illustrato come richiedere un report di configurazione quando il servizio Initiator e quello di destinazione si trovano in computer separati, ma l'accesso ai servizi può essere eseguito utilizzando lo stesso account con autenticazione di Windows.  
   
 ```  

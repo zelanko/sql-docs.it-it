@@ -2,18 +2,18 @@
 title: Spostamento di database del server di report in un altro computer (modalità nativa SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100222"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619679"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100222"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Agent i processi usati per attivare una pianificazione verranno ricreati nella istanza di database. Non è necessario spostare i processi nel nuovo computer, ma è necessario eliminare quelli che non verranno più utilizzati.  
   
--   Le sottoscrizioni, gli snapshot e i report memorizzati nella cache vengono mantenuti nel database spostato. Se uno snapshot non esegue la scelta di dati aggiornati dopo che il database è stato spostato, deselezionare le opzioni relative in Gestione report, fare clic su **Applica** per salvare le modifiche, ricreare la pianificazione e fare nuovamente clic su **Applica** per salvare le modifiche.  
+-   Le sottoscrizioni, gli snapshot e i report memorizzati nella cache vengono mantenuti nel database spostato. Se uno snapshot non include i dati aggiornati dopo lo spostamento del database, deselezionare le opzioni relative allo snapshot e selezionare **Applica** per salvare le modifiche, creare di nuovo la pianificazione e selezionare ancora una volta **Applica** per salvare le modifiche.  
   
 -   Il report temporaneo e i dati della sessione utente archiviati nel database reportservertempdb vengono mantenuti quando si sposta il database.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili diversi modi per spostare i database, tra cui backup e ripristino, collegamento e scollegamento e copia. Non tutti gli approcci sono appropriati per spostare un database esistente in una nuova istanza del server. L'approccio da utilizzare per spostare il database del server di report dipende dai requisiti di disponibilità del sistema. Il modo più semplice per spostare i database del server di report consiste nel collegarli e scollegarli. Questo approccio richiede tuttavia di portare in modalità offline il server di report mentre lo si scollega. Il backup e il ripristino rappresentano un'opzione migliore se si desidera ridurre al minimo le interruzioni del servizio, tuttavia per eseguire queste operazioni è necessario usare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . La copia del database, in particolare l'utilizzo della procedura Copia guidata database, non è consigliabile in quanto non consente di mantenere le impostazioni delle autorizzazioni nel database.  
   
 > [!IMPORTANT]  
->  È consigliabile eseguire la procedura descritta in questo argomento quando lo spostamento del database del server di report è l'unica modifica che si desidera apportare all'installazione esistente. Per la migrazione di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completa, vale a dire lo spostamento del database e la modifica dell'identità del servizio Windows ReportServer usato dal database, è necessario riconfigurare le informazioni di connessione e reimpostare la chiave di crittografia.  
+>  È consigliabile eseguire la procedura descritta in questo articolo quando lo spostamento del database del server di report è l'unica modifica che si intende apportare all'installazione esistente. Per la migrazione di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completa, vale a dire lo spostamento del database e la modifica dell'identità del servizio Windows ReportServer usato dal database, è necessario riconfigurare le informazioni di connessione e reimpostare la chiave di crittografia.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Scollegamento e collegamento dei database del server di report  
  Se il server di report può essere portato in modalità offline, è possibile scollegare i database per spostarli nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare. In questo modo, è possibile mantenere le autorizzazioni presenti nei database. Se si usa un database SQL Server, è necessario spostarlo in un'altra istanza di SQL Server. Dopo avere spostato i database, è necessario riconfigurare la connessione del server di report al database del server di report. Se si sta eseguendo una distribuzione con scalabilità orizzontale, è necessario riconfigurare la connessione al database del server di report per ogni server di report della distribuzione.  

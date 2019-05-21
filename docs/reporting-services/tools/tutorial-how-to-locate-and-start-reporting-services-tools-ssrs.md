@@ -1,8 +1,8 @@
 ---
 title: 'Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS) | Microsoft Docs'
-ms.date: 12/07/2018
+ms.date: 05/15/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 description: Questa esercitazione illustra gli strumenti usati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report di Report Services impaginati e per dispositivi mobili.
 ms.custom: seodec18
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7c4722d276321a8839d7d569c084a8b4e4253280
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291829"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875170"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56291829"
 -   Gestire le chiavi di crittografia.  
 -   Configurare l'elaborazione automatica del report e il relativo recapito per posta elettronica.  
   
-**Installazione:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+**Installazione:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Per avviare Gestione configurazione Reporting Services  
   
@@ -73,7 +73,7 @@ ms.locfileid: "56291829"
 ##  <a name="web-portal-native-mode"></a>Portale Web (modalità nativa)  
  Usare [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) (Portale Web (modalità nativa SSRS)) per impostare autorizzazioni, gestire sottoscrizioni e pianificazioni e usare report. Il portale Web può essere usato anche per visualizzare i report.  
   
- **Installazione:** il portale Web viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Installazione:** il portale Web viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Per aprire il portale Web è necessario disporre di autorizzazioni sufficienti (inizialmente, solo i membri del gruppo Administrators locale dispongono delle autorizzazioni per l'accesso alle funzionalità del portale Web). Il portale Web offre diverse pagine e opzioni a seconda delle assegnazioni di ruolo dell'utente corrente. Per gli utenti che non dispongono di autorizzazioni verrà visualizzata una pagina vuota. Per gli utenti con autorizzazioni per la visualizzazione di report verranno visualizzati collegamenti per aprire i report. Per sapere di più sulle autorizzazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "56291829"
 4.  Se si esegue il portale Web nel server di report locale, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Gli amministratori del server di report possono utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per gestire un server di report insieme ad altri componenti server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
+ Gli amministratori del server di report possono utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per gestire un server di report insieme ad altri componenti server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere l'esercitazione sull'[uso di SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio).  
   
 ### <a name="to-start-sql-server-management-studio"></a>Per avviare SQL Server Management Studio  
   
@@ -109,7 +109,7 @@ ms.locfileid: "56291829"
 5.  Fare clic su **Connetti**. È possibile espandere il nodo radice per impostare proprietà server, modificare definizioni di ruolo o disabilitare funzionalità del server di report.  
   
 ##  <a name="bkmk_ssdt"></a> SQL Server Data Tools con Progettazione report e Creazione guidata report  
- Sono disponibili due diversi strumenti per creare report impaginati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    Progettazione report e [Generatore report](#bkmk_report_builder).  
+ Sono disponibili due diversi strumenti per creare report impaginati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero Progettazione report e [Generatore report](#bkmk_report_builder).  
   
  Progettazione report è disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. L'area di progettazione di Progettazione report include finestre a schede, procedure guidate e menu per l'accesso alle funzionalità per la creazione di report. Lo strumento di progettazione report diventa disponibile quando si sceglie un modello di progetto per il server di report o di procedura guidata di server di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per sapere di più, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  

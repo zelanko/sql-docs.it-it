@@ -1,22 +1,22 @@
 ---
 title: Riferimento ai parametri di accesso con URL | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515117"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620591"
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
   È possibile usare i seguenti parametri come parte di un URL per configurare l'aspetto dei [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]report. I parametri più comuni sono elencati in questa sezione: I parametri rilevano la distinzione tra maiuscole e minuscole e iniziano con i prefissi di parametro *rs:* se indirizzati al server di report e *rc:* se indirizzati a un visualizzatore HTML. È inoltre possibile specificare parametri specifici per dispositivi o estensioni per il rendering. Per altre informazioni sui parametri specifici per il dispositivo, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "52515117"
 -   [Comandi Web part del visualizzatore di report (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Comandi del visualizzatore HTML (rc:)  
- I comandi del visualizzatore HTML vengono usati per individuare il visualizzatore HTML (ad esempio da Gestione report) e hanno il prefisso *rc:*:  
+ - I comandi del visualizzatore HTML vengono usati per individuare il visualizzatore HTML e sono preceduti dal prefisso *rc:*:
   
 -   *Toolbar* :  
                   Visualizza o nasconde la barra degli strumenti. Se il valore di questo parametro è **false**, tutte le opzioni rimanenti vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano. Il valore predefinito di questo parametro è **true**.  

@@ -1,8 +1,8 @@
 ---
 title: Generatore report in SQL Server | Microsoft Docs
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290299"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620605"
 ---
 # <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo anziché usare Progettazione report in Visual Studio.  Quando si progetta un report impaginato, si crea una definizione del report che specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare il report in anteprima in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Pubblicare quindi il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint (2016 e versioni precedenti). È anche possibile pubblicare un report impaginato nel servizio Power BI. Sono disponibili altre informazioni sui [report impaginati in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (anteprima).
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo invece di usare Progettazione report in Visual Studio/SSDT.  Quando si progetta un report impaginato, si crea una definizione del report che specifica quali dati recuperare, dove recuperarli e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare il report in anteprima in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Pubblicare quindi il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint (2016 e versioni precedenti). 
+
+È anche possibile pubblicare un report impaginato nel servizio Power BI. Sono disponibili altre informazioni sui [report impaginati in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (anteprima).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -46,7 +49,6 @@ ms.locfileid: "56290299"
 -   **Modificare report esistenti.** Con [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]è possibile personalizzare e aggiornare report creati in Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 -   **Modificare i dati** filtrandoli, raggruppandoli e ordinandoli o aggiungendo formule o espressioni.  
-  
 -   **Aggiungere grafici, misuratori, grafici sparkline e indicatori** per riepilogare i dati in un formato visivo e presentare in modo immediato volumi elevati di informazioni aggregate.  
   
 -   **Aggiungere funzionalità interattive** quali mappe documento, pulsanti Mostra/Nascondi e collegamenti drill-through a sottoreport e report drill-through. È possibile utilizzare parametri e filtri per filtrare i dati per le viste personalizzate.  
