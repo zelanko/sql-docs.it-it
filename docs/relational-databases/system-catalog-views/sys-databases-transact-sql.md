@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560128"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949111"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Se non è un database `ONLINE`, oppure `AUTO_CLOSE` è impostata su `ON` e il da
 |**is_temporal_retention_enabled**|**bit**|Indica se l'attività pulizia file dei criteri di conservazione temporale è abilitato.<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|L'impostazione delle regole di confronto del catalogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|L'impostazione delle regole di confronto del catalogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on si trova in</br>0 = is_result_set_caching_on è disattivata</br>**Si applica a**: Azure SQL Data Warehouse Gen2
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on si trova in</br>0 = is_result_set_caching_on è disattivata</br>**Si applica a**: Azure SQL Data Warehouse Gen2. Sebbene questa funzionalità è in corso implementato in tutte le aree, controllare la versione distribuita per l'istanza e la versione più recente [note sulla versione di Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) per la disponibilità delle funzionalità.|
   
 ## <a name="permissions"></a>Permissions  
  Se il chiamante di `sys.databases` non è il proprietario del database e il database non è `master` oppure `tempdb`, le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono `ALTER ANY DATABASE` o `VIEW ANY DATABASE` l'autorizzazione a livello di server, o `CREATE DATABASE` l'autorizzazione per il `master` database. Il database a cui è connesso il chiamante può sempre essere visualizzato `sys.databases`.  

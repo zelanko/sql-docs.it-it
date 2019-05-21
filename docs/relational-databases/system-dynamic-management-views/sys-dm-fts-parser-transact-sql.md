@@ -3,7 +3,6 @@ title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: douglaslMS
-ms.author: douglasl
+auauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535302"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944238"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  Identificatore delle impostazioni locali (LCID) del word breaker da usare per l'analisi *stringa_query*.  
   
  *stoplist_id*  
- ID di parole non significative, se presente, da utilizzare il word breaker identificato da *lcid*. *stoplist_id* viene **int**. Se si specifica NULL, non viene utilizzato alcun elenco di parole non significative. Se si specifica 0, viene utilizzato l'elemento STOPLIST di sistema.  
+ ID di parole non significative, se presente, da utilizzare il word breaker identificato da *lcid*. *stoplist_id* viene **int**. Se si specifica 'NULL', non viene utilizzato alcun elenco di parole non significative. Se si specifica 0, viene utilizzato l'elemento STOPLIST di sistema.  
   
  L'ID di un elenco di parole non significative è univoco all'interno di un database. Per ottenere l'ID di parole non significative per un indice full-text in un tabella specifica, utilizzare il [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) vista del catalogo.  
   
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile dall'utente, ma è utile per relative una parola chiave specificata per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o di un set di dati.|  
+|parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile dall'utente, ma è utile per relative una parola chiave specificata per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
 |group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per `multi`<br />1 per `million`<br />2 per `multimillion`|  
 |occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per `SQL`<br />2 per `Server`<br />3 per `query`<br />4 per `processor`|  
@@ -140,7 +140,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>b. Visualizzazione dell'output di un word breaker specifico nel contesto di applicazione di filtri dell'elenco di parole non significative  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B. Visualizzazione dell'output di un word breaker specifico nel contesto di applicazione di filtri dell'elenco di parole non significative  
  Nell'esempio seguente viene restituito l'output relativo all'utilizzo del word breaker inglese, il cui LCID è 1033, e di un elenco di parole non significative, il cui ID è 77, sulla stringa di query seguente:  
   
  `"The Microsoft business analysis" OR "MS revenue"`  

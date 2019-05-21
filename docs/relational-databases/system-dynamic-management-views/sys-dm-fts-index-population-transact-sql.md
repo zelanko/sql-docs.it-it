@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8119326d4e310eafbc82361594a65d35accb7fce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 223277050e7c758d2fcd5d46e62cf171fc2a1cca
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618219"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947311"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni sui popolamenti di frasi chiave semantiche e indici full-text in corso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database contenente l'indice full-text in fase di popolamento.|  
 |**catalog_id**|**int**|ID del catalogo full-text contenente l'indice full-text.|  
