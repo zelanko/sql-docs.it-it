@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720369"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983105"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ sp_help_fulltext_catalog_components
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Nome catalogo full-text**|**int**|Nome del catalogo full-text.|  
 |**id catalogo full-text**|**sysname**|ID del catalogo full-text.|  
-|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filter<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
+|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filtro<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
 |**componentname**|**sysname**|Nome del componente.|  
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
 |**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è membro del **serveradmin** ruolo predefinito del server.|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**Produttore**|**sysname**|Nome del produttore del componente.|  
+|**manufacturer**|**sysname**|Nome del produttore del componente.|  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  

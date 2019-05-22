@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,23 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9b7cac79155e89217a64fbbc309082322853f80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b7f6ff5e7f16012d33f805227e6dda997cfc60d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041592"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981060"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Creazione di sezioni CDATA mediante sql:use-cdata (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In XML vengono utilizzate le sezioni CDATA per eseguire l'escape di blocchi di testo contenenti caratteri che, altrimenti, verrebbero riconosciuti come caratteri di markup.  
   
- Un database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] talvolta può contenere caratteri considerati caratteri di markup dal parser XML, ad esempio le parentesi angolari (< e >), il simbolo minore di o uguale a (<=) e l'e commerciale (&). Per evitare che ciò accada, è tuttavia possibile eseguire il wrapping di questo tipo di caratteri speciali in una sezione CDATA. Il testo nella sezione CDATA viene considerato testo normale dal parser XML.  
+ Un database di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può talvolta contenere caratteri che vengono trattati come caratteri di markup dal parser XML, ad esempio, l'angolo tra parentesi quadre (< e >), simbolo minore di-o-uguale a (< =), e la e commerciale (&) vengono considerati come caratteri di markup. Per evitare che ciò accada, è tuttavia possibile eseguire il wrapping di questo tipo di caratteri speciali in una sezione CDATA. Il testo nella sezione CDATA viene considerato testo normale dal parser XML.  
   
  Il **SQL: use-cdata** annotazione viene usata per specificare che i dati restituiti dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere incapsulate in una sezione CDATA (vale a dire, indica se il valore da una colonna che è specificato da **SQL: field** deve essere incluso in una sezione CDATA). Il **SQL: use-cdata** annotazione può essere specificata solo su elementi che eseguono il mapping a una colonna di database.  
   

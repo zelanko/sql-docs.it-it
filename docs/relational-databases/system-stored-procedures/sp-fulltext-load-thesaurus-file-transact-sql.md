@@ -17,15 +17,15 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d076bfde2e4dc4a71af558a08f197d20144ce9db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ea972558da077dd984ce2ef30c99e1b46b0e5c4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840971"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983011"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Valore intero che esegue il mapping dell'identificatore delle impostazioni locali (LCID) della lingua per cui si desidera caricare la definizione XML del thesaurus. Per ottenere gli identificatori LCID delle lingue disponibili in un'istanza del server, usare il [Sys. fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista del catalogo.  
   
- **@loadOnlyIfNotLoaded** = *Azione*  
+ **@loadOnlyIfNotLoaded** = *action*  
  Specifica se il file del thesaurus viene caricato nelle tabelle interne del thesaurus anche se è già stato caricato. *azione* è uno di:  
   
-|valore|Definizione|  
+|Value|Definizione|  
 |-----------|----------------|  
 |**0**|Il file del thesaurus viene caricato indipendentemente dal fatto che sia già caricato. Si tratta del comportamento predefinito di **sp_fulltext_load_thesaurus_file**.|  
 |1|Il file del thesaurus viene caricato solo se non è ancora caricato.|  

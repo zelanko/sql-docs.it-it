@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_pendingchanges
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baf9443372b36eaaa5aac26ddaaa10d3609bcea4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef93287acb610e813f20f213e8fb6a325058116d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833749"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983021"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Key**|*|Valore di chiave full-text dalla tabella specificata.|  
-|**Valore DocId**|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
+|**DocId**|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
 |**Stato**|**int**|0 = La riga verrà rimossa dall'indice full-text.<br /><br /> 1 = Alla riga verrà applicata l'indicizzazione full-text.<br /><br /> 2 = La riga è aggiornata.<br /><br /> -1 = La riga è in uno stato di transizione (elaborazione batch senza commit) o in uno stato di errore.|  
 |**DocState**|**tinyint**|Dump non elaborato della colonna relativa allo stato del mapping dell'identificatore interno del documento (DocId).|  
   

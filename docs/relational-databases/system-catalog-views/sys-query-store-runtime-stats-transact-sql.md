@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542251"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980051"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542251"
 |**runtime_stats_interval_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determina il tipo di esecuzione di query:<br /><br /> 0 - esecuzione normale (correttamente completata)<br /><br /> 3 - client ha avviato ha interrotto l'esecuzione<br /><br /> 4 - eccezione ha interrotto l'esecuzione|  
 |**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0 - normale<br /><br /> 3 - interrotta<br /><br /> 4 - eccezione|  
-|**first_execution_time**|**datetimeoffset**|Ora della prima esecuzione del piano di query entro l'intervallo di aggregazione.|  
-|**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione della query prevede entro l'intervallo di aggregazione.|  
+|**first_execution_time**|**datetimeoffset**|Ora della prima esecuzione del piano di query entro l'intervallo di aggregazione. Si riferisce all'ora di fine dell'esecuzione della query.|  
+|**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione della query prevede entro l'intervallo di aggregazione. Si riferisce all'ora di fine dell'esecuzione della query.|  
 |**count_executions**|**bigint**|Numero totale di esecuzioni del piano di query entro l'intervallo di aggregazione.|  
 |**avg_duration**|**float**|La durata per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
 |**last_duration**|**bigint**|Durata ultima per la query prevede entro l'intervallo di aggregazione (espresso in microsecondi).|  

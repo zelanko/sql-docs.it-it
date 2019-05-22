@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 5f249871fd1037ad5fcf485c85e7b758e9becf7a
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947605"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979978"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_xml_removedocument hdoc
  Handle del nuovo documento. Se non è un valore valido, viene restituito un errore. *hdoc* è un numero intero.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o >0 (esito negativo)  
+ 0 (esito positivo) o > 0 (esito negativo)  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
@@ -62,7 +62,7 @@ EXEC sp_xml_removedocument @hdoc;
 ## <a name="see-also"></a>Vedere anche      
  <br>[Stored procedure (Transact-SQL) di sistema](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[Stored procedure (Transact-SQL) per XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[Sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
  <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
   

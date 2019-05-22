@@ -11,22 +11,22 @@ dev_langs:
 helpviewer_keywords:
 - Stretch Database, stored procedures
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 5acbd4a14de04df412d71fb4ec8fd7d40e8fb7a8
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905739"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979980"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database (Transact-SQL) le Stored procedure estese
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  In questa sezione vengono descritte le stored procedure estese associate a Stretch Database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
 [Sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) rimuove la connessione autenticata tra un database locale abilitato per l'estensione e il database di Azure remoto.
 
 [sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) Ottiene il numero di ore di dati migrati che SQL Server viene mantenuto in una tabella di staging al fine di garantire un ripristino completo del database di Azure remoto, se è necessario un ripristino.

@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489599"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982110"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -302,8 +302,7 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
     Figura 17
 
-    Per ogni replica, configurare le impostazioni **Commit sincrono**, **Failover automatico** e **Secondario leggibile** seguenti. Vedere figura
-17.
+    Per ogni replica, configurare le impostazioni **Commit sincrono**, **Failover automatico** e **Secondario leggibile** seguenti. Vedere Figura 17.
 
     **Commit sincrono**: garantisce che se il commit di una transazione viene eseguito nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
 

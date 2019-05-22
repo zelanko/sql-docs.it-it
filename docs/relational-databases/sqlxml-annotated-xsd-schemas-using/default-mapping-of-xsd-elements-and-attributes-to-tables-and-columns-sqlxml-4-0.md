@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +24,16 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e41910316b7f28475fac6188d2186395a7e66bb4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d07235635f4858d1690170b9112b2ffa3c4fa0a3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034342"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980993"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping predefinito di elementi e attributi XSD a tabelle e colonne (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "56034342"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>b. Mapping di un elemento XML a una colonna del database  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapping di un elemento XML a una colonna del database  
  Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. Il  **\<Person. Contact >** elemento è di tipo complesso ed è associato alla tabella con lo stesso nome del database. Gli elementi  **\<FirstName >** e  **\<LastName >** e **EmployeeID** attributo sono di tipo semplice e, pertanto, associare il colonne con lo stesso nome. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
   
 ```  

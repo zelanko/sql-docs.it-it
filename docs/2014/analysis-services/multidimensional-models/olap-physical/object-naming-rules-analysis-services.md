@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dce01d84be7f2850f916b21ccb02fb7cd24a6cdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698926"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979967"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
   In questo argomento vengono descritte le convenzioni di denominazione dell'oggetto, le parole riservate e i caratteri che non possono essere utilizzati nel nome dell'oggetto, nel codice o nello script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -70,9 +70,9 @@ ms.locfileid: "62698926"
 |------------|------------------------|  
 |`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Visualizzare [convenzioni di denominazione (Windows)](/windows/desktop/DNS/naming-conventions) per informazioni dettagliate.|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` o `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
-|`Dimension` o `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
-|Tutti gli altri oggetti|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
+|`Level` o `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
+|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
+|Tutti gli altri oggetti|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
  **Eccezioni: Quando sono consentiti i caratteri riservati**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62698926"
 |--------------------------------------------------|----------------------------------|  
 |MOLAP (tutte le versioni)|No|  
 |Tabulare - 1050|No|  
-|Tabulare - 1100|no|  
+|Tabulare - 1100|No|  
 |Tabulare - 1130 e superiore|Yes|  
   
  I database possono avere un valore ModelType predefinito. Il valore predefinito è equivalente a multidimensionale e quindi non supporta l'utilizzo di caratteri riservati nei nomi delle colonne.  

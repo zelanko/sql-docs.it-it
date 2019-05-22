@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030722"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980756"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Specifica del livello di nidificazione nelle relazioni ricorsive mediante sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Usare la **SQL: max-depth** annotazione nello schema per specificare la profondità di ricorsione in una relazione ricorsiva descritta nello schema. Il valore della **SQL: max-depth** annotazione è un numero intero positivo (da 1 a 50) che indica il numero di ricorsioni:  Un valore pari a 1 arresta la ricorsione in corrispondenza dell'elemento per cui il **SQL: max-depth** annotazione è specificata; un valore pari a 2 Arresta la ricorsione al livello successivo dall'elemento in corrispondenza del quale **SQL: max-depth** è specificato ; E così via.  
   
 > [!NOTE]  
->  Nell'implementazione sottostante una query XPath specificata rispetto a un schema di mapping viene convertita in una query SELECT... FOR XML EXPLICIT. Questa query richiede che venga specificato un livello di nidificazione limitato della ricorsione. Maggiore è il valore specificato per **SQL: max-depth**, maggiore sarà la query FOR XML EXPLICIT che viene generato. con un probabile rallentamento del tempo di recupero.  
+>  Nell'implementazione sottostante una query XPath specificata rispetto a uno schema di mapping viene convertita in un'istruzione SELECT... PER la query XML EXPLICIT. Questa query richiede che venga specificato un livello di nidificazione limitato della ricorsione. Maggiore è il valore specificato per **SQL: max-depth**, maggiore sarà la query FOR XML EXPLICIT che viene generato. con un probabile rallentamento del tempo di recupero.  
   
 > [!NOTE]  
 >  Gli updategram e il caricamento bulk XML ignorano l'annotazione max-depth, pertanto gli inserimenti o gli aggiornamenti ricorsivi si verificheranno indipendentemente dal valore specificato per max-depth.  

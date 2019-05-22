@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello per Sequence Clustering i modelli di data mining | Documenti Microsoft
+title: Contenuto dei modelli per i modelli Sequence Clustering di data mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019288"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961374"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34019288"
  NODE_TYPE  
  Un modello Sequence Clustering restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |1 (Model)|Nodo radice per il modello|  
 |5 (Cluster)|Contiene un conteggio delle transizioni nel cluster, un elenco degli attributi e statistiche che descrivono i valori nel cluster.|  
@@ -227,7 +227,7 @@ ORDER BY Count(*) DESC
   
  Nella tabella seguente sono contenuti i risultati della tabella NODE_DISTRIBUTION, insieme ai valori di probabilità arrotondati visualizzati nel visualizzatore grafico.  
   
-|Product|Supporto (tabella NODE_DISTRIBUTION)|Probabilità (tabella NODE_DISTRIBUTION)|Probabilità (da grafico)|  
+|Prodotto|Supporto (tabella NODE_DISTRIBUTION)|Probabilità (tabella NODE_DISTRIBUTION)|Probabilità (da grafico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |mancanti|48.447887|0.138028169|(non mostrato)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -259,7 +259,7 @@ ORDER BY Count(*) DESC
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Esempi di query su modelli Sequence Clustering](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Esempi di query sul modello di cluster di sequenza](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   
