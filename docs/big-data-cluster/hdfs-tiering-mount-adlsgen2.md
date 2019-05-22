@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317130"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993967"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Come Azure Data Lake Store montaggio Gen2 per HDFS la suddivisione in livelli in un cluster di big data
 
@@ -100,22 +100,22 @@ Creare un file locale denominato **filename.creds** che contiene le credenziali 
 
 Ora che è stato creato un file di credenziali con le chiavi di accesso o tramite OAuth, è possibile avviare il montaggio. I passaggi seguenti montare l'archiviazione HDFS remoto in Azure Data Lake per l'archiviazione HDFS locale del cluster di big data.
 
-1. Uso **kubectl** per trovare l'indirizzo IP dell'endpoint **mgmtproxy-svc-external** servizio nel cluster di big data. Cercare il **External-IP**.
+1. Uso **kubectl** per trovare l'indirizzo IP dell'endpoint **controller-svc-external** servizio nel cluster di big data. Cercare il **External-IP**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Accedi con **mssqlctl** usando l'indirizzo IP esterno dell'endpoint del proxy di gestione con il nome utente del cluster e la password:
+1. Accedi con **mssqlctl** usando l'indirizzo IP esterno dell'endpoint del controller con il nome utente del cluster e la password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montare l'archiviazione HDFS remoto in Azure usando **montare archiviazione mssqlctl creare**. Prima di eseguire il comando seguente, sostituire i valori segnaposto:
+1. Montare l'archiviazione HDFS remoto in Azure usando **istallazione del pool di archiviazione cluster mssqlctl creare**. Prima di eseguire il comando seguente, sostituire i valori segnaposto:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Se è stato montato, sarà possibile eseguire query sui dati HDFS ed eseguire i 
 Per elencare lo stato di tutti i punti di montaggio del cluster di big data, usare il comando seguente:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Per elencare lo stato di un montaggio in un percorso specifico in HDFS, usare il comando seguente:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Eliminare il montaggio
 
-Per eliminare il montaggio, usare il **mssqlctl archiviazione montaggio delete** comando e specificare il percorso di montaggio in HDFS:
+Per eliminare il montaggio, usare il **mssqlctl cluster pool di archiviazione montaggio delete** comando e specificare il percorso di montaggio in HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

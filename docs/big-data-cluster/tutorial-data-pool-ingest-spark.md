@@ -5,17 +5,17 @@ description: Questa esercitazione illustra come inserire dati nel pool di dati d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582754"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994171"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark
 
@@ -56,7 +56,7 @@ La procedura seguente crea una tabella esterna nel pool di dati denominato **web
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Creare una tabella esterna denominata **web_clickstreams_spark_results** nel pool di dati.
@@ -74,13 +74,13 @@ La procedura seguente crea una tabella esterna nel pool di dati denominato **web
       );
    ```
   
-1. In CTP 2.4, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
+1. Nella versione CTP 3.0, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
 
 ## <a name="start-a-spark-streaming-job"></a>Avviare un processo di streaming Spark
 
 Il passaggio successivo consiste nel creare un processo che carica i dati clickstream web dal pool di archiviazione (distribuito Hadoop HDFS) di streaming Spark nella tabella esterna che è stato creato nel pool di dati.
 
-1. In Azure Data Studio, connettersi per la **gateway HDFS/Spark** del cluster di big data. Per altre informazioni, vedere [Connect per il gateway HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. In Azure Data Studio, connettersi all'istanza master del cluster di big data. Per altre informazioni, vedere [connettersi a un cluster di big data](connect-to-big-data-cluster.md).
 
 1. Fare doppio clic sulla connessione di gateway HDFS/Spark nel **server** finestra. Quindi selezionare **nuovo processo Spark**.
 

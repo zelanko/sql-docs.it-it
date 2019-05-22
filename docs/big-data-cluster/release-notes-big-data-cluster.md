@@ -5,17 +5,17 @@ description: Questo articolo descrive gli ultimi aggiornamenti e problemi noti p
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775074"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993352"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster di big data in SQL Server
 
@@ -24,6 +24,104 @@ ms.locfileid: "64775074"
 Questo articolo elenca gli aggiornamenti e conoscere i problemi per le versioni più recenti di SQL Server cluster di big data.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp30"></a> CTP 3.0 (maggio)
+
+Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i cluster di big data in CTP 3.0 per SQL Server 2019.
+
+### <a name="whats-new"></a>Novità
+
+| Nuova funzionalità o aggiornamento | Dettagli |
+|:---|:---|
+| **mssqlctl** updates | Numerosi **mssqlctl** [gli aggiornamenti di comando e parametro](../big-data-cluster/reference-mssqlctl.md). Ciò include un aggiornamento per il **mssqlctl login** comando, che ora ha come destinazione il nome utente di controller e l'endpoint. |
+| Miglioramenti di archiviazione | Supporto per configurazioni di archiviazione diversi per i log e dati. Inoltre, è stato ridotto il numero di attestazioni di volume permanente per un cluster di big data. |
+| Più istanze del pool di calcolo | Supporto per più istanze di calcolo del pool. |
+| Funzionalità e il nuovo comportamento di pool | Il pool di calcolo viene ora usato per impostazione predefinita per le operazioni di pool di dati e i pool di archiviazione in un **ROUND_ROBIN** sola distribuzione. Il pool di dati ora può usare un nuovo nuove **REPLICATO** tipo di distribuzione, il che significa che gli stessi dati sono presenti in tutte le istanze di pool di dati. |
+
+### <a name="known-issues"></a>Problemi noti
+
+Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
+
+#### <a name="hdfs"></a>HDFS
+
+- Azure Data Studio restituisce un errore quando si tenta di creare una nuova cartella in HDFS. Per abilitare questa funzionalità, installare la build Insider di Studio dei dati di Azure:
+  
+   - [Programma di installazione di Windows utente - **build Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Programma di installazione di Windows System - **build Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows con estensione ZIP - **build Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS - ZIP **build Insider**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [Linux con estensione TAR. -GZ **build Insider**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- Se facendo clic su un file in HDFS per visualizzarlo in anteprima, si potrebbe essere visualizzato l'errore seguente:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Attualmente non è possibile visualizzare in anteprima file di dimensioni superiori a 30 MB in Azure Data Studio.
+
+- Modifiche di configurazione HDFS che implicano modifiche alle hdfs-Site. XML non sono supportate.
+
+#### <a name="deployment"></a>Distribuzione
+
+- Le procedure di distribuzione precedenti per i cluster abilitate per GPU dei big data non sono supportate nella versione CTP 3.0. Una procedura di distribuzione alternativo è in fase di analisi. Per il momento, l'articolo "Distribuzione del cluster con supporto per GPU ed eseguire TensorFlow un big data" è stata temporaneamente non pubblicato per evitare confusione.
+
+- Aggiornamento di un cluster di dati dei big data da una versione precedente non è supportato.
+
+   > [!IMPORTANT]
+   > È necessario eseguire il backup dei dati e quindi eliminare il cluster di big data esistente (con la versione precedente di **mssqlctl**) prima di distribuire la versione più recente. Per altre informazioni, vedere [esegue l'aggiornamento a una nuova versione](deployment-upgrade.md).
+
+- Dopo la distribuzione nel servizio contenitore di AZURE, è possibile visualizzare i seguenti due eventi di avviso dalla distribuzione. Entrambi questi eventi sono presenti problemi noti, ma non impediscono è avere distribuito il cluster di big data nel servizio contenitore di AZURE.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- In caso di una distribuzione cluster con i big data, non viene rimosso lo spazio dei nomi associato. Ciò può comportare uno spazio dei nomi orfano sul cluster. Soluzione alternativa consiste nell'eliminare manualmente lo spazio dei nomi prima di distribuire un cluster con lo stesso nome.
+
+#### <a name="external-tables"></a>Tabelle esterne
+
+- Distribuzione di cluster di big data non crea più il **SqlDataPool** e **SqlStoragePool** origini dati esterne. È possibile creare queste origini dati manualmente per supportare la virtualizzazione dei dati per il pool di dati e il pool di archiviazione.
+
+   > [!NOTE]
+   > L'URI per la creazione di queste origini dati esterne è diversa tra le versioni CTP. Vedere i comandi di Transact-SQL seguenti per informazioni su come crearli 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   ```
+
+- È possibile creare una tabella esterna di pool di dati per una tabella che contiene i tipi di colonna non supportati. Se si esegue una query della tabella esterna, viene visualizzato un messaggio simile al seguente:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Se si esegue una query una tabella esterna del pool di archiviazione, è possibile ottenere un errore se vengono copiato i file sottostante in HDFS nello stesso momento.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Se si sta creando una tabella esterna a Oracle che usano tipi di dati carattere, la procedura guidata la virtualizzazione di Studio di Azure Data interpreta queste colonne come VARCHAR nella definizione della tabella esterna. Ciò causerà un errore nel DDL della tabella esterna. Modificare lo schema Oracle per utilizzare il tipo NVARCHAR2, oppure creare manualmente le istruzioni di tabella esterna e specificare NVARCHAR invece di usare la procedura guidata.
+
+#### <a name="application-deployment"></a>Distribuzione dell'applicazione
+
+- Quando si chiama un'applicazione di R, Python o MLeap dall'API REST, la chiamata con timeout di 5 minuti.
+
+#### <a name="spark-and-notebooks"></a>Spark e notebook
+
+- Gli indirizzi IP del POD possono cambiare nell'ambiente di Kubernetes come riavvii POD. Nello scenario in cui i pod master viene riavviato, la sessione di Spark potrebbe non riuscire con `NoRoteToHostException`. Questo problema è causato dalla cache JVM non aggiornati con nuovo indirizzo IP indirizzi.
+
+- Se hai Jupyter già installato e Python separato in Windows, i notebook Spark potrebbero non riuscire. Per risolvere questo problema, eseguire l'aggiornamento di Jupyter per la versione più recente.
+
+- In un notebook, se si sceglie la **Aggiungi testo** comando, la cella di testo viene aggiunto in modalità anteprima anziché in modalità di modifica. È possibile fare clic sull'icona di anteprima per attivare/disattivare per la modalità di modifica e modificare la cella.
+
+#### <a name="security"></a>Sicurezza
+
+- Il SA_PASSWORD fa parte dell'ambiente e individuabile (ad esempio in un file di dump del cavo di alimentazione). È necessario reimpostare il SA_PASSWORD nell'istanza master dopo la distribuzione. Questo non è un bug, ma un passaggio di sicurezza. Per altre informazioni su come modificare il SA_PASSWORD in un contenitore Linux, vedere [modificare la password SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- I log di servizio contenitore di AZURE possono contenere la password dell'amministratore di sistema per le distribuzioni cluster di big data.
 
 ## <a id="ctp25"></a> CTP 2.5 (aprile)
 
@@ -60,24 +158,19 @@ Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
 
 - In caso di una distribuzione cluster con i big data, non viene rimosso lo spazio dei nomi associato. Ciò può comportare uno spazio dei nomi orfano sul cluster. Soluzione alternativa consiste nell'eliminare manualmente lo spazio dei nomi prima di distribuire un cluster con lo stesso nome.
 
-
-
-#### <a id="externaltablesctp24"></a> Tabelle esterne
+#### <a name="external-tables"></a>Tabelle esterne
 
 - Distribuzione di cluster di big data non crea più il **SqlDataPool** e **SqlStoragePool** origini dati esterne. È possibile creare queste origini dati manualmente per supportare la virtualizzazione dei dati per il pool di dati e il pool di archiviazione.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   END
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    ```
 
 - È possibile creare una tabella esterna di pool di dati per una tabella che contiene i tipi di colonna non supportati. Se si esegue una query della tabella esterna, viene visualizzato un messaggio simile al seguente:
@@ -201,21 +294,14 @@ Un nuovo client Python Kubernetes (versione 9.0.0) modificato l'eliminazione deg
 - Distribuzione di cluster di big data non crea più il **SqlDataPool** e **SqlStoragePool** origini dati esterne. È possibile creare queste origini dati manualmente per supportare la virtualizzazione dei dati per il pool di dati e il pool di archiviazione.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
    ```
 
 - È possibile creare una tabella esterna di pool di dati per una tabella che contiene i tipi di colonna non supportati. Se si esegue una query della tabella esterna, viene visualizzato un messaggio simile al seguente:

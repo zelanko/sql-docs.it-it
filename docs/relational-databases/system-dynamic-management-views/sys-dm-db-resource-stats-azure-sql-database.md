@@ -1,7 +1,7 @@
 ---
 title: DM db_resource_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325504"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993883"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325504"
 |max_session_percent|**numero decimale (5,2)**|Numero massimo di sessioni simultaneo espresso in percentuale del limite del livello di servizio del database.|  
 |dtu_limit|**int**|Database max DTU impostazione corrente per il database durante questo intervallo. Per i database usando il modello basato su vCore, questa colonna è NULL.|
 |cpu_limit|**numero decimale (5,2)**|Numero di Vcore per il database durante questo intervallo. Per i database usando il modello basato su DTU, questa colonna è NULL.|
+|avg_instance_cpu_percent|**numero decimale (5,2)**|Database medio della CPU in percentuale.|
+|avg_instance_memory_percent|**numero decimale (5,2)**|Utilizzo della memoria medio del database in percentuale.|
+|avg_login_rate_percent|**numero decimale (5,2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|replica_role|**int**|Rappresenta il corrente ruolo della replica con 0 come primario, 1 come replica secondaria e 2 come utilità di inoltro (primario con del replica geografica secondaria). Verrà visualizzato "1" quando si è connessi con finalità di sola lettura a tutte le repliche secondarie leggibili. Se ci si connette a una replica geografica secondaria senza specificare la finalità di sola lettura, si dovrebbe vedere "2" (la connessione al server di inoltro).|
 |||
   
 > [!TIP]  

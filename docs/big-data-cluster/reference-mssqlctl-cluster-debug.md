@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi di debug di mssqlctl cluster.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774862"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993658"
 ---
 # <a name="mssqlctl-cluster-debug"></a>debug cluster mssqlctl
 
@@ -28,7 +28,7 @@ L'articolo seguente fornisce informazioni di riferimento per la **debug cluster*
 [mssqlctl cluster debug-log di copia](#mssqlctl-cluster-debug-copy-logs) | Copiare i log.
 [dump del debug mssqlctl cluster](#mssqlctl-cluster-debug-dump) | Dump di registrazione di trigger.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug-log di copia
-Copiare i log di debug dal cluster.
+Copiare i log di debug dal cluster: configurazione di kube è necessaria nel sistema.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath
 #### `--verbose`
 Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
 ## <a name="mssqlctl-cluster-debug-dump"></a>dump del debug mssqlctl cluster
-Attivare i dump di registrazione e copiarlo dal contenitore.
+Attivare i dump di registrazione e copiarlo dal contenitore: configurazione di kube è necessaria nel sistema.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

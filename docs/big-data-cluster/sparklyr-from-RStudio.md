@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620315"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994172"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usare sparklyr nel cluster di big data di SQL Server
 
@@ -49,7 +49,7 @@ Per connettersi da un client per il cluster di big data usando Livy e il gateway
 In RStudio, creare uno script R e connettersi a Spark come nell'esempio seguente:
 
 > [!TIP]
-> Per il `<USERNAME>` e `<PASSWORD>` valori, usare il nome utente (come radice) e la password impostati durante la distribuzione di cluster di big data. Per il `<IP>` e `<PORT>` valori, vedere la documentazione sulle [gateway HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+> Per il `<USERNAME>` e `<PASSWORD>` valori, usare il nome utente (come radice) e la password impostati durante la distribuzione di cluster di big data. Per il `<IP>` e `<PORT>` valori, vedere la documentazione relativa [la connessione a un cluster di big data](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)

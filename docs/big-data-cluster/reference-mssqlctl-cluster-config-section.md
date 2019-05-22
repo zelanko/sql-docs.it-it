@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi di sezione mssqlctl cluster c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5a793e7d0fcaf782a09a4981491ef0a8d90ab5a
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 8239367b45ac327abde919910ccc1336ebb8f5b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759138"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993347"
 ---
 # <a name="mssqlctl-cluster-config-section"></a>sezione configurazione cluster mssqlctl
 
@@ -25,23 +25,35 @@ L'articolo seguente fornisce informazioni di riferimento per la **sezione di con
 ## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
-[sezione di configurazione del cluster mssqlctl ottenere](#mssqlctl-cluster-config-section-get) | Ottiene una sezione da un file di configurazione.
+[presentazione di sezione Configurazione cluster mssqlctl](#mssqlctl-cluster-config-section-show) | Ottiene una sezione da un file di configurazione.
 [gruppo di sezione di configurazione di cluster mssqlctl](#mssqlctl-cluster-config-section-set) | Imposta una sezione per un file di configurazione.
-## <a name="mssqlctl-cluster-config-section-get"></a>sezione di configurazione del cluster mssqlctl ottenere
+## <a name="mssqlctl-cluster-config-section-show"></a>presentazione di sezione Configurazione cluster mssqlctl
 Ottiene la sezione specificata nel file di configurazione selezionato in base al percorso json specificato.
 ```bash
-mssqlctl cluster config section get --json-path -j 
-                                    --config-file -f  
-                                    [--target -t]
+mssqlctl cluster config section show --json-path -j 
+                                     --config-file -c  
+                                     [--target -t]  
+                                     [--force -f]
+```
+### <a name="examples"></a>Esempi
+Ottiene un valore alla fine del percorso di una chiave json semplice.
+```bash
+mssqlctl cluster config section show --config-file custom-config.json --json-path 'metadata.name' --target section.json
+```
+Ottiene un valore alla fine di un percorso di chiave json con un'istruzione condizionale
+```bash
+mssqlctl cluster config section show --config-file custom-config.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--json-path -j`
 Il percorso json che comporta la sezione o il valore desiderato dal file di configurazione, vale a dire key1.key2.key3. Usa il linguaggio di query jsonpath https://github.com/h2non/jsonpath-ng, ad esempio: -j ' $. spec.pools [? ( @.spec.type = = "Master")]... degli endpoint
-#### `--config-file -f`
+#### `--config-file -c`
 Percorso del file di configurazione del cluster.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--target -t`
-Percorso del file di dove si desidera che il file sezione inserito.
+Percorso del file di dove si desidera che il file sezione inserito. Valore predefinito: indirizzati a stdout.
+#### `--force -f`
+Forzare la sovrascrittura del file di destinazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
@@ -54,20 +66,54 @@ Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath
 #### `--verbose`
 Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
 ## <a name="mssqlctl-cluster-config-section-set"></a>gruppo di sezione di configurazione di cluster mssqlctl
-Imposta la sezione specificata nel file di configurazione selezionato in base al percorso json specificato.
+Imposta la sezione specificata nel file di configurazione selezionato in base al percorso json specificato.  Examplesbelow tutti sono espressi in Bash.  Se si usa un'altra riga di comando, tenere presente che potrebbe essere necessario escapequotations in modo appropriato.  In alternativa, è possibile usare la funzionalità di file di patch.
 ```bash
-mssqlctl cluster config section set --config-file -f 
+mssqlctl cluster config section set --config-file -c 
                                     [--json-values -j]  
                                     [--patch-file -p]
 ```
+### <a name="examples"></a>Esempi
+Ad esempio, 1 (inline) - impostazione della porta di un singolo endpoint (Endpoint Controller).
+```bash
+mssqlctl cluster config section set --config-file custom-config.json --json-values '$.spec.controlPlane.spec.endpoints[?(@.name=="Controller")].port=30080'
+```
+Ad esempio, 1 (patch): impostare la porta di un singolo endpoint (Endpoint Controller) con file di patch.
+```bash
+mssqlctl cluster config section set --config-file custom-config.json --patch ./patch.json
+
+    Patch File Example (patch.json): 
+        {"patch":[{"op":"replace","path":"$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
+```
+Ad esempio, 2 (inline) - archiviazione piano dei Set di controllo.
+```bash
+mssqlctl cluster config section set --config-file custom-config.json --json-values 'spec.controlPlane.spec.storage=spec.controlPlane.spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+```
+Ad esempio, 2 (patch): archiviazione di piano di controllo di Set con file di patch.
+```bash
+mssqlctl cluster config section set --config-file custom-config.json --patch ./patch.json
+
+    Patch File Example (patch.json): 
+        {"patch":[{"op":"replace","path":"spec.controlPlane.spec.storage","value":{"accessMode":"ReadWriteMany","className":"managed-premium","size":"10Gi"}}]}
+```
+Ex 3(inline) - impostare l'archiviazione del pool, inclusi le repliche (Pool di archiviazione).
+```bash
+mssqlctl cluster config section set --config-file custom-config.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+```
+Ad esempio, 3 (patch): impostare archiviazione pool, incluse le repliche (Pool di archiviazione) con file di patch.
+```bash
+mssqlctl cluster config section set --config-file custom-config.json --patch ./patch.json
+
+    Patch File Example (patch.json): 
+        {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
+```
 ### <a name="required-parameters"></a>Parametri obbligatori
-#### `--config-file -f`
+#### `--config-file -c`
 Percorso di file di configurazione di cluster di file di configurazione da impostare
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--json-values -j`
-Un elenco di coppie di valore della chiave di percorsi json per i valori: key1.subkey1=value1,key2.subkey2=value2. È possibile fornire inline valori json, ad esempio: key ='{"tipo": "cluster", "name": "test-cluster"}' oppure specificare un percorso di file, ad esempio key=./values.json
+Un elenco di coppie di valore della chiave di percorsi json per i valori: key1.subkey1=value1,key2.subkey2=value2. È possibile fornire inline valori json, ad esempio: key ='{"tipo": "cluster", "name": "test-cluster"}' oppure specificare un percorso di file, ad esempio key=./values.json. Se si desidera impostare un valore che richiede un'istruzione condizionale, usare la notazione jsonpath da cui iniziare il percorso con un carattere $. In questo modo sarà possibile eseguire un'istruzione condizionale, ad esempio -j $. key1.key2 [? ( @.key3= = 'someValue'] .key4 = valore. È possibile riscontrare esempi riportati di seguito. Per altre informazioni, vedere: https://jsonpath.com/
 #### `--patch-file -p`
-Percorso di un file di patch json che si basa la libreria di jsonpatch e jsonpath: https://github.com/stefankoegl/python-json-patch , https://github.com/h2non/jsonpath-ng -un semplice esempio: {"patch": [{"op": "Aggiungi", "path": "metadata.name", "value": "test"}, {"op": "Aggiungi", "path": "metadata.array", "value": [1, 2, 3]}]} . Includere la chiave "patch" e ha il valore da una matrice delle patch che si intende eseguire.  Verrà eseguito di conseguenza. Un esempio più complesso: {"patch": [{"op": "replace", "path": "$. spec.pools [? ( @.spec.type = = 'Master')]... endpoint di","value": {"name": "Nuovo Endpoint"}}]}
+Percorso di un file di patch json che si basa la libreria jsonpatch: http://jsonpatch.com/. È necessario avviare il file di patch json con una chiave denominata "patch", il cui valore è una matrice di operazioni patch che si intende eseguire. Per il percorso di un'operazione patch, è possibile usare la notazione, ad esempio key1.key2 per la maggior parte delle operazioni. Se si vuole eseguire un'operazione di sostituzione e si sostituisce un valore in una matrice che richiede un'istruzione condizionale, usare la notazione jsonpath da cui iniziare il percorso con un carattere $. In questo modo sarà possibile eseguire un'istruzione condizionale, ad esempio $. key1.key2 [? ( @.key3= = 'someValue'] .key4. Vedere gli esempi seguenti. Per altre informazioni, vedere: https://jsonpath.com/.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.

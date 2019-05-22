@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945161"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994149"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire un notebook di esempio in un cluster di big data di SQL Server
 
@@ -52,7 +52,7 @@ Usare le istruzioni seguenti per caricare il file di notebook di esempio **spark
 
 La procedura seguente illustra come aprire il file di notebook in Azure Data Studio:
 
-1. In Azure Data Studio, connettersi al gateway HDFS/Spark del cluster di big data. Per altre informazioni, vedere [Connect per il gateway HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. In Azure Data Studio, connettersi all'istanza master del cluster di big data. Per altre informazioni, vedere [connettersi a un cluster di big data](connect-to-big-data-cluster.md).
 
 1. Fare doppio clic sulla connessione di gateway HDFS/Spark nel **server** finestra. Quindi selezionare **aprire Notebook**.
 

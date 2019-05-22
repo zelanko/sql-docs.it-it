@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472142"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994093"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Come usare il portale di amministrazione cluster per monitorare un cluster di big data di SQL Server
 
@@ -38,7 +38,7 @@ Seguire le [avvio rapido per distribuire il cluster di big data](quickstart-big-
 Il pod controller è in esecuzione, è possibile utilizzare il portale di amministrazione cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `mgmtproxy-svc-external` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
 
 > [!NOTE]
-> Per 2.5 CTP, è disponibile un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
+> Versione CTP 3.0, è un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
 
 ## <a name="overview"></a>Panoramica
 

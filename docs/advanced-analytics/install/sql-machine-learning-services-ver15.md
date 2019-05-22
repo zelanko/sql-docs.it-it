@@ -3,30 +3,30 @@ title: Differenze in SQL Server 2019 - SQL Server Machine Learning Services
 description: Scopri quali sono le novità per R e Python SQL Server machine learning le estensioni nella versione di anteprima di SQL Server 2019.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745901"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994227"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Differenze nell'installazione di SQL Server Machine Learning Services in SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In Windows, il programma di installazione di SQL Server 2019 cambia il meccanismo di isolamento per i processi esterni. Questa modifica sostituisce gli account di lavoro locale con [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), una tecnologia di isolamento per le applicazioni client in esecuzione su Windows. 
 
-Non sono presenti elementi azione specifica per l'amministratore a seguito della modifica. In un server nuovo o aggiornato, tutti gli script esterni e il codice eseguito da [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) seguire automaticamente il nuovo modello di isolamento. Questo vale per R, Python e l'estensione del linguaggio Java nuovi introdotti in SQL Server 2019.
+Non sono presenti elementi azione specifica per l'amministratore a seguito della modifica. In un server nuovo o aggiornato, tutti gli script esterni e il codice eseguito da [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) seguire automaticamente il nuovo modello di isolamento. 
 
 Riepilogo, le differenze principali in questa versione sono:
 
 + Account utente locali sotto **gruppo di utenti limitati SQL (SQLRUserGroup)** vengono creati o utilizzati per eseguire i processi esterni non sono più. AppContainers sostituirli.
-+ **SQLRUserGroup** appartenenza è stato modificato. Invece di più account utente locale, l'appartenenza è costituito da solo l'account del servizio Launchpad di SQL Server. I processi R, Python e Java eseguito ora con l'identità del servizio Launchpad isolato tramite AppContainers.
++ **SQLRUserGroup** appartenenza è stato modificato. Invece di più account utente locale, l'appartenenza è costituito da solo l'account del servizio Launchpad di SQL Server. I processi R e Python eseguito ora con l'identità del servizio Launchpad isolato tramite AppContainers.
 
 Anche se è stato modificato il modello di isolamento, i parametri di procedura guidata e riga di comando di installazione sono uguali in SQL Server 2019. Per informazioni sull'installazione, vedere [installare SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 
@@ -49,7 +49,7 @@ Come parte del passaggio a AppContainers, sono disponibili nuove regole del fire
 
 ## <a name="program-file-permissions"></a>Autorizzazioni di file di programma
 
-Come con le versioni precedenti, il **SQLRUserGroup** continua a fornire lettura e autorizzazioni di esecuzione dei file eseguibili di SQL Server **Binn**, **R_SERVICES**e  **PYTHON_SERVICES** le directory. In questa versione, l'unico membro del **SQLRUserGroup** è l'account del servizio Launchpad di SQL Server.  Quando il servizio Launchpad viene avviato un ambiente di esecuzione di R, Python o Java, il processo viene eseguito come servizio LaunchPad.
+Come con le versioni precedenti, il **SQLRUserGroup** continua a fornire lettura e autorizzazioni di esecuzione dei file eseguibili di SQL Server **Binn**, **R_SERVICES**e  **PYTHON_SERVICES** le directory. In questa versione, l'unico membro del **SQLRUserGroup** è l'account del servizio Launchpad di SQL Server.  Quando il servizio Launchpad viene avviato un ambiente di esecuzione R o Python, il processo viene eseguito come servizio LaunchPad.
 
 ## <a name="implied-authentication"></a>Autenticazione implicita
 

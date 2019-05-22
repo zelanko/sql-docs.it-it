@@ -1,7 +1,7 @@
 ---
 title: Installazione e configurazione di Master Data Services | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488228"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994121"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -128,8 +128,19 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 2.  Fare clic su **Crea database**e quindi fare clic su **Avanti** nella **Creazione guidata database**.  
   
-3.  Nella pagina **Server di database** selezionare il **Tipo di autenticazione** e fare clic su **Test connessione** per verificare di poter stabilire la connessione al database usando le credenziali per il tipo di autenticazione selezionato. Scegliere **Avanti**.
-  
+3.  Nel **Server di Database** , specificare l'istanza di SQL Server. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Aggiunge il supporto per l'istanza gestita di SQL Server. Impostare il valore della **istanza di SQL Server** all'host di un Database SQL di Azure a istanza gestita. Ad esempio `xxxxxx.xxxxxx.database.windows.net`.
+
+4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che sia possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Scegliere **Avanti**.
+
+    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], istanza gestita di connettersi al Database SQL di Azure, usare uno dei tipi di autenticazione seguenti:
+    >
+    >- Autenticazione integrata di Azure Active Directory: **Utente corrente-integrata con Active Directory**
+    >- Autenticazione di SQL Server: **Account di SQL Server**.
+    >
+    >In istanza gestita di Database SQL di Azure, l'utente deve essere un membro del `sysadmin` ruolo predefinito del server.
+
     > [!NOTE]  
     >  Quando si seleziona il tipo di autenticazione **Utente corrente - sicurezza integrata**, la casella **Nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows connesso al computer. Se si esegue [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale (VM) Azure, nella casella **Nome utente** viene visualizzato il nome della macchina virtuale e il nome utente per l'account amministratore locale nella macchina virtuale. 
 

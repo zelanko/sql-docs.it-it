@@ -5,16 +5,16 @@ description: Informazioni su come eseguire una distribuzione non in linea di un 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd7c0e3b8fcf92721e95231175cb33d81c6775e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759148"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994012"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione non in linea di un cluster di big data di SQL Server
 
@@ -42,7 +42,7 @@ I passaggi seguenti descrivono come il cluster di big data il pull delle immagin
    > [!TIP]
    > Questi comandi usano PowerShell ad esempio, ma è possibile eseguirli da cmd, bash o da qualunque shell dei comandi eseguibili docker. In Linux, aggiungere `sudo` per ogni comando.
 
-1. Eseguire il pull di cluster di big data le immagini del contenitore, ripetere il comando seguente. Sostituire `<SOURCE_IMAGE_NAME>` con ogni [nome immagine](#images). Sostituire `<SOURCE_DOCKER_TAG>` con il tag per i big data cluster versione, ad esempio **ctp2.5**.  
+1. Eseguire il pull di cluster di big data le immagini del contenitore, ripetere il comando seguente. Sostituire `<SOURCE_IMAGE_NAME>` con ogni [nome immagine](#images). Sostituire `<SOURCE_DOCKER_TAG>` con il tag per i big data cluster versione, ad esempio **ctp3.0**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -174,16 +174,17 @@ Per installare **kubectl** a un computer offline, usare la procedura seguente.
 
 1. Copiare la cartella nel computer di destinazione.
 
-## <a name="deploy-with-from-repository"></a>Distribuire con dal repository
+## <a name="deploy-from-private-repository"></a>Distribuire da repository privato
 
-Per distribuire dal repository privato, usare la procedura descritta nel [Guida alla distribuzione](deployment-guidance.md), ma personalizzare le seguenti variabili di ambiente in modo che corrisponda il repository Docker privato.
+Per distribuire dal repository privato, usare la procedura descritta nel [Guida alla distribuzione](deployment-guidance.md), ma usare un file di configurazione di distribuzione personalizzato che specifica le informazioni del repository Docker private. Quanto segue **mssqlctl** comandi illustrano come modificare le impostazioni di Docker in un file di configurazione di distribuzione personalizzato denominato **custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+La distribuzione richiede il nome utente di docker e la password, oppure è possibile specificarli nel **DOCKER_USERNAME** e **DOCKER_PASSWORD** le variabili di ambiente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

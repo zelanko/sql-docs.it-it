@@ -1,21 +1,21 @@
 ---
-title: S3 di montaggio per la suddivisione in livelli di HDFS
+title: Montare S3 per la suddivisione in livelli HDFS
 titleSuffix: SQL Server big data clusters
 description: Questo articolo illustra come configurare la suddivisione in livelli per montare un file system di S3 esterni in HDFS in un cluster di big data (anteprima) di SQL Server 2019 HDFS.
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330611"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993952"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare S3 per HDFS la suddivisione in livelli in un cluster di big data
 
@@ -48,22 +48,22 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
 
 Ora che è stato creato un file di credenziali con le chiavi di accesso, è possibile avviare il montaggio. I passaggi seguenti montare l'archiviazione HDFS remoto S3 nell'archivio HDFS locale del cluster di big data.
 
-1. Uso **kubectl** per trovare l'indirizzo IP per il **mgmtproxy-svc-external** servizio nel cluster di big data. Cercare il **External-IP**.
+1. Uso **kubectl** per trovare l'indirizzo IP dell'endpoint **controller-svc-external** servizio nel cluster di big data. Cercare il **External-IP**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Accedi con **mssqlctl** usando l'indirizzo IP esterno dell'endpoint del proxy di gestione con il nome utente del cluster e la password:
+1. Accedi con **mssqlctl** usando l'indirizzo IP esterno dell'endpoint del controller con il nome utente del cluster e la password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montare l'archiviazione HDFS remoto in Azure usando **montare archiviazione mssqlctl creare**. Prima di eseguire il comando seguente, sostituire i valori segnaposto:
+1. Montare l'archiviazione HDFS remoto in Azure usando **istallazione del pool di archiviazione cluster mssqlctl creare**. Prima di eseguire il comando seguente, sostituire i valori segnaposto:
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ Se è stato montato, sarà possibile eseguire query sui dati HDFS ed eseguire i 
 Per elencare lo stato di tutti i punti di montaggio del cluster di big data, usare il comando seguente:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Per elencare lo stato di un montaggio in un percorso specifico in HDFS, usare il comando seguente:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Eliminare il montaggio
 
-Per eliminare il montaggio, usare il **mssqlctl archiviazione montaggio delete** comando e specificare il percorso di montaggio in HDFS:
+Per eliminare il montaggio, usare il **mssqlctl cluster pool di archiviazione montaggio delete** comando e specificare il percorso di montaggio in HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -5,17 +5,17 @@ description: Informazioni sul funzionamento di persistenza dei dati in un cluste
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d08d3607a2670a441cdd300ca25b95ad760e0ab5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776165"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994063"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
 
@@ -34,17 +34,22 @@ Analogamente ad altre personalizzazioni, è possibile specificare le impostazion
 ```json
     "storage": 
     {
-        "usePersistentVolume": true,
-        "className": "managed-premium",
+      "data": {
+        "className": "default",
+        "accessMode": "ReadWriteOnce",
+        "size": "15Gi"
+      },
+      "logs": {
+        "className": "default",
         "accessMode": "ReadWriteOnce",
         "size": "10Gi"
     }
 ```
 
-Per usare un archivio permanente durante la distribuzione, impostare i valori delle **usePersistentVolume** chiave *true* e **className** chiave al nome della classe di archiviazione da usare per il rispettivo pool. È anche possibile personalizzare le dimensioni delle attestazioni volume permanente creato come parte della distribuzione. Come procedura consigliata, è consigliabile usare le classi di archiviazione con un *Retain* [recuperare criteri](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+Distribuzione di cluster di big data usano archiviazione permanente per archiviare i dati, metadati e i log per i vari componenti. È possibile personalizzare le dimensioni delle attestazioni volume permanente creato come parte della distribuzione. Come procedura consigliata, è consigliabile usare le classi di archiviazione con un *Retain* [recuperare criteri](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
-> Nella versione CTP 2.5, è possibile modificare archiviazione configurazione impostazione dopo la distribuzione. Inoltre, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
+> Nella versione CTP 3.0, è possibile modificare l'archivio configurazione impostazione dopo la distribuzione. Inoltre, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
 
 > [!WARNING]
 > L'esecuzione senza un archivio permanente può lavorare in un ambiente di test, ma potrebbero verificarsi in un cluster non funzionali. Al riavvio del pod, i dati dei metadati e/o utente del cluster andranno perse definitivamente. Non è consigliabile eseguire questa configurazione. 
@@ -53,7 +58,7 @@ Per usare un archivio permanente durante la distribuzione, impostare i valori de
 
 ## <a name="aks-storage-classes"></a>Classi di archiviazione servizio contenitore di AZURE
 
-Servizio contenitore di AZURE viene fornito con [due classi di archiviazione predefinite](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predefinita** e **gestiti premium** insieme dinamico strumento di provisioning per loro. È possibile specificare uno di questi due o creare la propria classe di archiviazione per la distribuzione di cluster di big data con abilitata l'archiviazione permanente. Per impostazione predefinita, incorporato nel file di configurazione del cluster di aks *aks-dev-test.json* viene fornito con le configurazioni di archiviazione permanente usare **gestiti premium** classe di archiviazione.
+Servizio contenitore di AZURE viene fornito con [due classi di archiviazione predefinite](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predefinita** e **gestiti premium** insieme dinamico strumento di provisioning per loro. È possibile specificare uno di questi due o creare la propria classe di archiviazione per la distribuzione di cluster di big data con abilitata l'archiviazione permanente. Per impostazione predefinita, incorporato nel file di configurazione del cluster di aks *aks-dev-test.json* viene fornito con le configurazioni di archiviazione permanente usare **predefinito** classe di archiviazione.
 
 > [!WARNING]
 > Volumi permanenti creati con le classi di archiviazione predefinito **predefinito** e **premium gestiti** dispongono di un criterio di recupero dei *Elimina*. In modo che al momento la si elimina il cluster di big data di SQL Server, le attestazioni di volume permanente recuperare anche i volumi eliminati e quindi permanenti. È possibile creare classi di archiviazione personalizzati usando **dischi di azure** privioner con un *Mantieni* occupata da criteri come illustrato nel [ciò](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) articolo.
@@ -68,7 +73,7 @@ Minikube dotato di una classe di archiviazione predefinito denominata **standard
 Kubeadm non viene fornito con una classe di archiviazione predefinito. È necessario creare classi di archiviazione e volumi permanenti con archiviazione locale o strumento di provisioning preferito, ad esempio [torre](https://github.com/rook/rook). In tal caso, imposterebbe il **className** alla classe di archiviazione è stato configurato. 
 
 > [!NOTE]
-> In incorporato nel file di configurazione di distribuzione per kubeadm *kubeadm-dev-test.json*, il valore predefinito per **usePersistentVolume** chiave è *true*, pertanto è necessario impostare il valore per la **className** in caso contrario, avrà esito negativo le convalide di pre-distribuzione. La distribuzione ha anche un passaggio di convalida che controlla l'esistenza della classe di archiviazione, ma non per i necessari volumi permanenti. È necessario assicurarsi di che creare sufficiente volumi a seconda della scalabilità del cluster. In CTP2.5, per la dimensione del cluster è necessario creare almeno 23 volumi. [Di seguito](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) è riportato un esempio su come creare volumi permanenti con strumento di provisioning locale.
+>  In incorporato nel file di configurazione di distribuzione per *kubeadm kubeadm-dev-test.json* Nessun nome di classe di archiviazione specificato per l'archiviazione dei dati e log. Prima della distribuzione, è necessario personalizzare il file di configurazione e impostare il valore per NomeClasse in caso contrario, che le convalide di pre-distribuzione avrà esito negativo. La distribuzione ha anche un passaggio di convalida che controlla l'esistenza della classe di archiviazione, ma non per i necessari volumi permanenti. È necessario assicurarsi di che creare sufficiente volumi a seconda della scalabilità del cluster. Nella versione CTP 3.0, per la dimensione del cluster è necessario creare almeno 23 volumi. [Di seguito](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) è riportato un esempio su come creare volumi permanenti con strumento di provisioning locale.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Personalizzare le configurazioni di archiviazione per ogni pool
@@ -85,16 +90,16 @@ Quindi, è possibile personalizzare il file config modificandola manualmente opp
 
 Per impostazione predefinita, la dimensione delle attestazioni volume permanente sottoposta a provisioning per ognuno dei POD effettuato il provisioning del cluster è 10 GB. È possibile aggiornare questo valore per supportare i carichi di lavoro che viene eseguito in un file di configurazione personalizzato prima della distribuzione del cluster.
 
-L'esempio seguente aggiorna solo le dimensioni di volume permanente attestazioni nel pool di archiviazione a 32Gi:
+L'esempio seguente aggiorna solo le dimensioni di volume permanente attestazioni per i dati archiviati nel pool di archiviazione a Gi 100. Si noti che la sezione archiviazione deve esistere nel file di configurazione per il pool di archiviazione prima di eseguire questo comando:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 L'esempio seguente aggiorna la dimensione di attestazioni di volume permanente per tutti i pool di 32Gi:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> Configura classe di archiviazione
@@ -102,7 +107,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 Esempio seguente viene illustrato come modificare la classe di archiviazione per il piano di controllo:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.storage.className=<yourStorageClassName>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 Un'altra opzione è necessario modificare manualmente il file di configurazione personalizzato o usare jsonpatch, come nell'esempio seguente che modifica la classe di archiviazione per pool di archiviazione. Creare un *patch.json* file con questo contenuto:
@@ -111,19 +116,21 @@ Un'altra opzione è necessario modificare manualmente il file di configurazione 
 {
   "patch": [
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "<yourStorageClassName>",
-          "size": "32Gi"
+          "data": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
-    }
   ]
 }
 ```
@@ -131,7 +138,7 @@ Un'altra opzione è necessario modificare manualmente il file di configurazione 
 Applicare il file della patch. Uso *gruppo di sezione di configurazione di cluster mssqlctl* comando per applicare le modifiche nel file di patch di JSON. Nell'esempio seguente applica il file patch.json un custom.json file configurazione di destinazione distribuzione.
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

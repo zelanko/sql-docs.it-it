@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774229"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994042"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Usare curl per caricare i dati in HDFS nel cluster di SQL Server i big Data
 
@@ -32,7 +32,7 @@ kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .stat
 ```
 
 > [!NOTE]
-> Il `<cluster name>` qui è il nome del cluster fornito quando è stato eseguito `mssqlctl cluster create --name <cluster name>`.
+> Il `<cluster name>` qui è il nome del cluster specificato nel file di configurazione della distribuzione. Il nome predefinito è `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Creare l'URL per accedere a WebHDFS
 
@@ -40,7 +40,7 @@ A questo punto, è possibile costruire l'URL di accesso di WebHDFS come indicato
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-Ad esempio:
+Ad esempio: 
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

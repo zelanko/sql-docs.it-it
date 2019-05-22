@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,17 +17,17 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 92e5aaf103c1c8d08b8527bf859415686fd5f4f8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774922"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993622"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Restituisce l'equivalente dell'ultimo piano di esecuzione effettivo per un piano di query memorizzati nella cache in precedenza. 
+Restituisce l'equivalente dell'ultimo piano di esecuzione effettivo per un piano di query memorizzati nella cache in precedenza.
 
 ## <a name="syntax"></a>Sintassi
 

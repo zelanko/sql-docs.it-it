@@ -5,22 +5,22 @@ description: Informazioni su come usare il connettore Spark MSSQL in Spark per l
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759218"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994182"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL
 
 Un modello di utilizzo principali dei big data è l'elaborazione dati di volumi elevati in Spark, seguita dalla scrittura dei dati a SQL Server per l'accesso alle applicazioni line-of-business. Questi modelli di utilizzo trarre vantaggio da un connettore che utilizza ottimizzazioni principali di SQL e fornisce un meccanismo efficiente di scrittura.
 
-Fornisce un nuovo connettore MSSQL Spark che Usa SQL Server in blocco scrittura delle API per un efficiente Spark in scrittura SQL con i cluster di CTP2.5 Big Data. Questo articolo fornisce un esempio di come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL. In questo esempio, i dati vengono letti da HDFS in un cluster di big data, di elaborazione Spark e quindi scritto per l'istanza master di SQL Server nel cluster usando il nuovo connettore Spark MSSQL.
+I cluster di big Data offre un nuovo connettore MSSQL Spark che Usa SQL Server in blocco scrittura delle API per un efficiente Spark in scrittura SQL. Questo articolo fornisce un esempio di come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL. In questo esempio, i dati vengono letti da HDFS in un cluster di big data, di elaborazione Spark e quindi scritto per l'istanza master di SQL Server nel cluster usando il nuovo connettore Spark MSSQL.
 
 ## <a name="mssql-spark-connector-interface"></a>Interfaccia Connector Spark MSSQL
 

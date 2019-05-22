@@ -3,17 +3,17 @@ title: Installare nuovi pacchetti di linguaggio R - servizi di SQL Server Machin
 description: Aggiungere nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506930"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994205"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installare nuovi pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Questo articolo descrive come installare nuovi pacchetti R in un'istanza di SQL 
 
 La libreria di pacchetti R si trova fisicamente nella cartella file di programma dell'istanza di SQL Server, in una cartella sicura con accesso limitato. La scrittura in questa posizione richiede le autorizzazioni di amministratore.
 
-I non amministratori possono installare i pacchetti, ma questa operazione richiede funzionalità non disponibili nelle installazioni iniziale e configurazione supplementari. Esistono due approcci per le installazioni del pacchetto senza privilegi di amministratore: RevoScaleR con versione 9.0.1 e versioni successive, o a utilizzare CREATE EXTERNAL LIBRARY (solo SQL Server 2017). In SQL Server 2017 **dbo_owner** o un altro utente con l'autorizzazione CREATE EXTERNAL LIBRARY è possibile installare pacchetti R nel database corrente.
+I non amministratori possono installare i pacchetti, ma questa operazione richiede configurazione aggiuntiva e funzionalità non disponibili nelle installazioni iniziale. Esistono due approcci per le installazioni del pacchetto senza privilegi di amministratore: RevoScaleR con versione 9.0.1 e versioni successive, o a utilizzare CREATE EXTERNAL LIBRARY (solo SQL Server 2017). In SQL Server 2017 **dbo_owner** o un altro utente con l'autorizzazione CREATE EXTERNAL LIBRARY è possibile installare pacchetti R nel database corrente.
 
 Gli sviluppatori di R sono abituati alla creazione di librerie utente per i pacchetti di che cui hanno bisogno se ubicate centralmente le librerie sono inaccessibile. Questa pratica è problematica per il codice R eseguito in un'istanza di motore di database di SQL Server. SQL Server non è possibile caricare i pacchetti da librerie esterne, anche se tale libreria nello stesso computer. Nel codice R in esecuzione in SQL Server, è possono utilizzare solo i pacchetti della libreria di istanza.
 
@@ -41,7 +41,6 @@ Accesso al file system è in genere limitato sul server e anche se si dispone di
 Prima di installare nuovi pacchetti, considerare se la funzionalità abilitata per un determinato pacchetto sono appropriata in un ambiente di SQL Server. In un ambiente con protezione avanzato di SQL Server, si potrebbe voler evitare quanto segue:
 
 + Pacchetti che richiedono l'accesso alla rete
-+ Pacchetti che richiedono Java o altri Framework non viene in genere usato in un ambiente di SQL Server
 + Pacchetti che richiedono l'accesso con privilegi elevati di file system
 + Pacchetto viene usato per lo sviluppo web o altre attività che non traggono vantaggio dall'esecuzione all'interno di SQL Server
 
@@ -51,7 +50,7 @@ In generale, i server che ospitano i database di produzione bloccano le connessi
 
 Che identifica tutte le dipendenze diventa complicato. Per R, è consigliabile usare [miniCRAN per creare un repository locale](create-a-local-package-repository-using-minicran.md) e quindi trasferire il repository completamente definito in un'istanza di SQL Server isolata.
 
-In alternativa, è possibile eseguire manualmente questa procedura:
+In alternativa, è possibile eseguire manualmente questi passaggi:
 
 1. Identificare tutte le dipendenze di pacchetto. 
 2. Controllare se tutti i pacchetti necessari sono già installati nel server. Se il pacchetto viene installato, verificare che la versione sia corretta.
