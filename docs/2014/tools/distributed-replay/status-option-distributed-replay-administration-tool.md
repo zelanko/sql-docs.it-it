@@ -37,7 +37,7 @@ dreplay status [-mcontroller] [-fstatus_interval]
   
  Se il parametro **-m** non è specificato, viene usato il computer locale.  
   
- *intervallo_stato***-f**  
+ *intervallo_stato* **-f**  
  Specifica la frequenza in secondi in base alla quale visualizzare lo stato.  
   
  Se il parametro **-f** non è specificato, l'intervallo predefinito è 30 secondi.  
