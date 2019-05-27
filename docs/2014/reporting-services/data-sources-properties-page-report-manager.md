@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165368"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109415"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Pagina delle proprietà Origini dati (Gestione report)
   La pagina delle proprietà Origini dati consente di definire la modalità di connessione del report corrente a un'origine dati esterna. In questa pagina è possibile sostituire le informazioni di connessione all'origine dati pubblicate originalmente con il report. Se per un report vengono utilizzate più origini dati, nella pagina delle proprietà è disponibile una sezione specifica per ogni origine dati. Le origini dati vengono elencate nell'ordine in cui sono definite nel report.  

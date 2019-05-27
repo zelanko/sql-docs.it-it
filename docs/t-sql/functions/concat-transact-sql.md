@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e679c1c9090f189881ad9de3b1615d6ecfa5b72
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801275"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943862"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,9 +55,9 @@ Il tipo restituito dipende dal tipo degli argomenti. Nella tabella seguente vien
 |Tipo di input|Tipo di output e lunghezza|  
 |---|---|
 |1. Qualsiasi argomento di<br><br />un tipo di sistema CLR SQL<br><br />un UDT CLR SQL<br><br />o Gestione configurazione<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. In alternativa, qualsiasi argomento di tipo<br><br />**varbinary(max)**<br><br />o Gestione configurazione<br><br />**ntext**|**varchar(max)**, a meno che uno dei parametri non sia un tipo **nvarchar** di qualsiasi lunghezza. In questo caso `CONCAT` restituisce un risultato di tipo **nvarchar(max)**.|  
+|2. In alternativa, qualsiasi argomento di tipo<br><br />**varbinary(max)**<br><br />o Gestione configurazione<br><br />**ntext**|**varchar(max)** , a meno che uno dei parametri non sia un tipo **nvarchar** di qualsiasi lunghezza. In questo caso `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
 |3. In alternativa, qualsiasi argomento di tipo **nvarchar** di 4000 caratteri al massimo<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
-|4. In tutti gli altri casi|**varchar**(<= 8000) (un elemento **varchar** di 8000 caratteri al massimo), a meno che uno dei parametri non sia un tipo nvarchar di qualsiasi lunghezza. In questo caso, `CONCAT` restituisce un risultato di tipo **nvarchar(max)**.|  
+|4. In tutti gli altri casi|**varchar**(<= 8000) (un elemento **varchar** di 8000 caratteri al massimo), a meno che uno dei parametri non sia un tipo nvarchar di qualsiasi lunghezza. In questo caso, `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
   
 Quando `CONCAT` riceve argomenti di input **nvarchar** di lunghezza < = 4000 caratteri, o argomenti di input **varchar** di lunghezza < = 8000 caratteri, le conversioni implicite possono influire sulla lunghezza del risultato. Gli altri tipi di dati hanno lunghezze diverse quando vengono convertiti in modo implicito in stringhe. Ad esempio un tipo **int** (14) ha una lunghezza stringa 12, mentre un tipo **float** ha una lunghezza stringa 32. Pertanto, una concatenazione di due interi restituisce un risultato con una lunghezza non inferiore a 24.
   
@@ -83,7 +83,7 @@ Happy Birthday 11/25
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-concat-with-null-values"></a>b. Utilizzo di CONCAT con valori NULL  
+### <a name="b-using-concat-with-null-values"></a>B. Utilizzo di CONCAT con valori NULL  
   
 ```sql
 CREATE TABLE #temp (  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -17,12 +16,12 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69df18da28672f05099f22821240fdf28e1fb880
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153101"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095970"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Estensioni personalizzate rilevate nel server di report (Upgrade Advisor)
   Nei file di configurazione sono state rilevate impostazioni di estensioni personalizzate, indicanti che l'installazione include una o più estensioni personalizzate per l'elaborazione dati, il recapito, il rendering, la sicurezza o l'autenticazione. In seguito all'aggiornamento le impostazioni di configurazione delle estensioni verranno spostate con il server di report aggiornato. Tuttavia, se le estensioni personalizzate sono installate nella cartella di installazione del server di report esistente, i file di assembly per tali estensioni non verranno spostate nella nuova cartella di installazione durante il processo di aggiornamento. Dopo che l'aggiornamento è stato completato, è necessario spostare i file di assembly nella nuova cartella di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48153101"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, recapito, rendering, sicurezza e autenticazione.  
   
  Se nell'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono presenti estensioni o assembly personalizzati, è possibile utilizzare il programma di installazione per eseguire un aggiornamento, ma potrebbe essere necessario spostare le estensioni nel nuovo percorso di installazione dopo il completamento dell'aggiornamento oppure eseguire altri passaggi prima dell'aggiornamento.  

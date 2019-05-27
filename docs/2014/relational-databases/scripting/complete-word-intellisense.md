@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - word completion [IntelliSense]
@@ -16,12 +15,12 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec8603dd46b6ab4a0fe6f3e7539efdcebd876ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbfa7853e1b12bc31b5676e3b64082a57a3c800a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209557"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064159"
 ---
 # <a name="complete-word-intellisense"></a>Completa parola (IntelliSense)
   L'opzione Completa parola di [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense immette la parte rimanente di un nome di variabile, di comando o di funzione dopo che è stato digitato un numero di caratteri sufficiente per identificare il termine in modo univoco.  

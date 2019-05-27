@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190898"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103403"
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nei file di log HTTP del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -61,21 +60,21 @@ ms.locfileid: "63190898"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Questo valore è facoltativo. Il valore predefinito è ReportServerServiceHTTP_. È possibile specificare un valore diverso se desidera utilizzare una convenzione di denominazione del file diversa (ad esempio per includere il nome del server se i file di log vengono salvati in una posizione centrale).|Yes|  
 |HTTPTraceSwitches|Questo valore è facoltativo. Se lo si specifica, è possibile configurare i campi utilizzati nel file di log in formato delimitato da virgole.|No|  
-|date|Data di esecuzione dell'attività.|no|  
+|Date|Data di esecuzione dell'attività.|No|  
 |Time|Ora di esecuzione dell'attività.|No|  
 |ClientIp|Indirizzo IP del client che ha eseguito l'accesso al server di report.|Yes|  
-|UserName|Nome dell'utente che ha eseguito l'accesso al server di report.|no|  
-|ServerPort|Numero della porta utilizzata per la connessione.|No|  
-|Host|Contenuto dell'intestazione host.|no|  
+|UserName|Nome dell'utente che ha eseguito l'accesso al server di report.|No|  
+|ServerPort|Numero della porta utilizzata per la connessione.|no|  
+|Host|Contenuto dell'intestazione host.|No|  
 |Metodo|Azione o metodo SOAP chiamato dal client.|Yes|  
 |UriStem|Risorsa cui è stato eseguito l'accesso.|Yes|  
 |UriQuery|Query utilizzata per accedere alla risorsa.|No|  
 |ProtocolStatus|Codice di stato HTTP.|Yes|  
-|BytesReceived|Numero di byte ricevuti dal server.|No|  
-|TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|No|  
+|BytesReceived|Numero di byte ricevuti dal server.|no|  
+|TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|no|  
 |ProtocolVersion|Versione del protocollo utilizzata dal client.|no|  
-|UserAgent|Tipo di browser utilizzato dal client.|no|  
-|CookieReceived|Contenuto del cookie ricevuto dal server.|no|  
+|UserAgent|Tipo di browser utilizzato dal client.|No|  
+|CookieReceived|Contenuto del cookie ricevuto dal server.|No|  
 |CookieSent|Contenuto del cookie inviato dal server.|No|  
 |Referrer|Sito precedente visitato dal client.|No|  
   

@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c230b7cbf3d9e3c4297acecc5262a4315af03578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56ca7cf78cce14c198d78121d175159d90a6aa7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846524"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096921"
 ---
 # <a name="filter-and-sort-dialog-box"></a>Finestra di dialogo Filtra e ordina
-In Esplora oggetti di SQL Server è possibile fare clic con il pulsante destro del mouse su una tabella o vista e scegliere **Visualizza dati**. Per altre informazioni, vedere [Procedura: Visualizzare e modificare i dati in una tabella](../ssdt/how-to-view-and-edit-data-in-a-table.md). A partire dalla versione di SQL Server Data Tools di marzo 2014, l'**Editor dati** contiene il pulsante Ordina e filtra nella barra degli strumenti. È possibile modificare i dati visualizzati in una tabella o una vista.  
+In Esplora oggetti di SQL Server è possibile fare clic con il pulsante destro del mouse su una tabella o vista e scegliere **Visualizza dati**. Per altre informazioni, vedere [Procedura: Visualizzare e modificare dati in una tabella](../ssdt/how-to-view-and-edit-data-in-a-table.md). A partire dalla versione di SQL Server Data Tools di marzo 2014, l'**Editor dati** contiene il pulsante Ordina e filtra nella barra degli strumenti. È possibile modificare i dati visualizzati in una tabella o una vista.  
   
 Nella finestra di dialogo **Filtra e ordina** è possibile specificare quali dati verranno visualizzati nell'**Editor dati**:  
   

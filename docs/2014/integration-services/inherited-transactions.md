@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], inherited
@@ -15,12 +14,12 @@ ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aeb90951cea0b50226c2db87e22268822b58b1b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767819"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058059"
 ---
 # <a name="inherited-transactions"></a>Transazioni ereditate
   Un pacchetto può eseguire un altro pacchetto tramite l'attività Esegui pacchetto. Il pacchetto figlio, ovvero il pacchetto eseguito dall'attività Esegui pacchetto, può creare la propria transazione del pacchetto o ereditare quella del padre.  

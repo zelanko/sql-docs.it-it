@@ -1,71 +1,86 @@
 ---
 title: 'Lezione 4: Aggiunta di una tabella al report (Reporting Services) | Microsoft Docs'
-ms.date: 05/23/2016
+ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287239"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106012"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lezione 4: Aggiunta di una tabella al report (Reporting Services)
-Dopo aver definito il set di dati, è possibile iniziare la progettazione del report. È possibile creare un layout del report trascinando le aree dati, le caselle di testo, le immagini e altri elementi che si desidera includere nel report e rilasciandoli nell'area di progettazione.  
+
+Dopo aver definito il set di dati, è possibile iniziare la progettazione del report. Per creare un layout di report, trascinare gli *oggetti del report* dal riquadro **Casella degli strumenti** all'**area di progettazione**. I tipi di oggetti del report includono ad esempio:
+
+- Tabella
+- Casella di testo
+- image
+- Riga
+- Rectangle
+- Grafico
+- Mappa
+
+Le *aree dati*sono elementi che contengono righe ripetute di dati provenienti dai set di dati sottostanti. Dopo avere aggiunto un'area dati, è possibile aggiungervi dei campi. Un report di base conterrà una sola area dati. È possibile aggiungerne altre per visualizzare altre informazioni, ad esempio un grafico.
+
+## <a name="add-a-table-data-region-and-fields-to-a-report-layout"></a>Aggiungere un'area dati tabella e i campi a un layout di report
+
+1. Selezionare la scheda **Casella degli strumenti** nel riquadro sinistro di Progettazione report. Con il mouse selezionare l'oggetto **Tabella** e trascinarlo nell'area di progettazione del report. In Progettazione report verrà disegnata un'area dati tabella composta da tre colonne al centro dell'area di progettazione. Se la scheda **Casella degli strumenti** non è visualizzata, scegliere **Casella degli strumenti** dal menu **Visualizza**.
+
+    ![ssrs_ssdt_addtable](media/ssrs-ssdt-addtable.png)
+
+    È anche possibile aggiungere una tabella al report dall'area di progettazione. Fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere **Inserisci** > **Tabella**.
+
+2. Nel riquadro **Dati report** espandere AdventureWorksDataset per visualizzare i campi.
+
+3. Trascinare il campo `[Date]` dal riquadro **Dati report** alla prima colonna della tabella.
+
+    > [!IMPORTANT]
+    > Quando si rilascia il campo nella prima colonna, si verificano i due eventi indicati di seguito. Per prima cosa, in Progettazione report verrà visualizzato tra parentesi quadre il nome del campo, detto *espressione del campo*, nella cella di dati: `[Date]`. In secondo luogo verrà aggiunta un'etichetta di colonna alla riga di intestazione, proprio sopra l'espressione del campo. Per impostazione predefinita, l'etichetta di colonna è il nome del campo. Se si vuole modificare l'etichetta di colonna, è possibile selezionarla e digitare un nuovo valore.
+
+4. Trascinare il campo `[Order]` dal riquadro **Dati report** alla seconda colonna della tabella.
+
+5. Trascinare il campo `[Product]` dal riquadro **Dati report** alla terza colonna della tabella.
+
+6. Trascinare il campo `[Qty]` sul bordo destro della terza colonna fino a quando non viene visualizzato un cursore verticale e il puntatore del mouse assume l'aspetto del segno più [+]. Quando si rilascia il pulsante del mouse, viene creata una quarta colonna per l'espressione del campo `[Qty]`.
+
+    ![ssrs_tutorial_addcolumn](media/ssrs-tutorial-addcolumn.png)
+
+7. Aggiungere il campo `[LineTotal]` nello stesso modo, creando una quinta colonna. L'etichetta di colonna aggiunta è "Line Total". Progettazione report crea automaticamente un nome descrittivo per la colonna dividendo "LineTotal" in due parole.
+
+Nel diagramma riportato di seguito è illustrata un'area dati della tabella popolata con i campi seguenti: Date, Order, Product, Qty e Line Total.
+![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
+
+## <a name="preview-your-report"></a>Visualizzare l'anteprima del report
+
+Mediante la visualizzazione in anteprima di un report è possibile visualizzare il report visualizzabile senza la necessità di pubblicarlo in un server di report. Visualizzare spesso l'anteprima del report durante la progettazione. In questo modo è possibile convalidare la progettazione e le connessioni dati correggendo gli errori e i problemi man mano che si procede.
+
+### <a name="to-preview-a-report"></a>Per visualizzare l'anteprima di un report
+
+- Selezionare la scheda **Anteprima**. Il report verrà eseguito in Progettazione report e verrà mostrato nella visualizzazione **Anteprima**.
+
+    ![ssrs_ssdt_preview](media/ssrs-ssdt-preview.png)
+
+La figura seguente illustra parte del report nella visualizzazione **Anteprima**.
+
+   ![Anteprima, righe di dettaglio della tabella con cinque colonne](media/rs-basictabledetailspreview.png "Anteprima, righe di dettaglio della tabella con cinque colonne")
+
+Esaminare i valori di Date e Line Total. Nella lezione successiva verrà illustrato come formattarli per ottenere una visualizzazione più chiara.
+
+> [!NOTE]
+> Scegliere **Salva tutto** dal menu **File** per salvare il report.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+È stata aggiunta un'area dati tabella al report, quindi si sono aggiunti campi all'area dati ed è stata visualizzata l'anteprima del report. Nella lezione successiva verrà illustrato come formattare le intestazioni di colonna e le espressioni dei campi. Passare quindi a [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
-Le *aree dati*sono elementi che contengono righe ripetute di dati provenienti dai set di dati sottostanti. In un report di base è disponibile una sola area dati, tuttavia è possibile aggiungerne altre, ad esempio se si desidera aggiungere un grafico al report tabulare. Dopo avere aggiunto un'area dati, è possibile aggiungervi dei campi.  
-  
-### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>Per aggiungere un'area dati tabella e campi a un layout del report  
-  
-1.  Nella **casella degli strumenti**fare clic su **Tabella**, fare clic sull'area di progettazione e trascinare il mouse. In Progettazione report verrà disegnata un'area dati tabella composta da tre colonne al centro dell'area di progettazione. È possibile che la **casella degli strumenti** venga visualizzata come scheda sul lato sinistro del riquadro **Dati report** . Per aprire la **casella degli strumenti**, spostare il puntatore sulla scheda **Casella degli strumenti** . Se la **casella degli strumenti** non è visibile, nel menu **Visualizza** scegliere **Casella degli strumenti**.
-  
-     ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
-  
-  È anche possibile aggiungere una tabella al report dall'area di progettazione.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci** e fare clic su **Tabella**.
-2.  Nel riquadro **Dati report** espandere il set di dati **AdventureWorksDataset** per visualizzare i campi.  
-  
-3.  Trascinare il campo *Date* dal riquadro **Dati report** alla prima colonna della tabella.  
-  
-    Quando si rilascia il campo nella prima colonna, si verificano i due eventi indicati di seguito. Inizialmente nella cella di dati verrà visualizzato il nome del campo, noto come *espressione di campo*, tra parentesi: `[Date]`. In secondo luogo un valore di intestazione di colonna verrà aggiunto automaticamente alla riga Intestazione, proprio sopra l'espressione di campo. Per impostazione predefinita, il nome della colonna rappresenta il nome del campo. È possibile selezionare il testo della riga Intestazione e digitare un nuovo nome.  
-  
-4.  Trascinare il campo *Order* dal riquadro **Dati report** alla seconda colonna della tabella.  
-  
-5.  Trascinare il campo *Product* dal riquadro **Dati report** alla terza colonna della tabella.  
-  
-6.  Trascinare il campo Qty nel bordo destro della terza colonna fino a quando non si ottiene un cursore verticale e il puntatore del mouse assume l'aspetto del segno più [+]. Quando si rilascia il pulsante del mouse, viene creata una quarta colonna per `[Qty]`.  
-![ssrs_tutorial_addcolumn](../reporting-services/media/ssrs-tutorial-addcolumn.png)  
-  
-7.  Aggiungere il campo LineTotal con la stessa procedura, creando una quinta colonna. L'intestazione di colonna è Totale riga. Progettazione report crea automaticamente un nome descrittivo per la colonna suddividendo LineTotal in due parole.  
-  
-  
-Nel diagramma riportato di seguito è illustrata un'area dati della tabella popolata con i campi seguenti: Date, Order, Product, Qty e Line Total.  
-![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
-  
-## <a name="preview-your-report"></a>Visualizzazione in anteprima di un report  
-Mediante la visualizzazione in anteprima di un report è possibile visualizzare il report visualizzabile senza la necessità di pubblicarlo in un server di report. In fase di progettazione può risultare utile visualizzare il report in anteprima con una certa frequenza. Tramite la visualizzazione in anteprima del report verrà inoltre eseguita la convalida nelle connessioni dati e alla progettazione in modo che sia possibile correggere eventuali errori prima di pubblicare il report in un server di report.  
-  
-#### <a name="to-preview-a-report"></a>Per visualizzare l'anteprima di un report  
-  
--   Fare clic sulla scheda **Anteprima** . Il report verrà eseguito in Progettazione report e l'anteprima verrà visualizzata nella visualizzazione Anteprima.
-![ssrs_ssdt_preview](../reporting-services/media/ssrs-ssdt-preview.png)  
-  
-    Nel diagramma seguente viene mostrata parte del report in visualizzazione Anteprima.  
-  
-    ![Anteprima, righe di dettaglio della tabella con 5 colonne](../reporting-services/media/rs-basictabledetailspreview.png "Anteprima, righe di dettaglio della tabella con 5 colonne")  
-  
-    Si noti che per la valuta (nella colonna Line Total) sono presenti sei posizioni dopo il numero decimale e per la data è incluso un timestamp. Nella lezione successiva verrà illustrato come correggere questa formattazione.  
-  
-> [!NOTE]  
-> Per salvare il report, scegliere **Salva tutti** nel menu **File** .  
-  
-## <a name="next-steps"></a>Next Steps  
-È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
-  
-## <a name="see-also"></a>Vedere anche  
-[Tabelle &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
-[Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Vedere anche
+
+[Tabelle &#40;Generatore report e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
+[Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

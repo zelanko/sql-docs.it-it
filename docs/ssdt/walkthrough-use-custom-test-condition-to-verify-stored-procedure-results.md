@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832999"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097434"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Utilizzo di una condizione di test personalizzata per verificare i risultati di una stored procedure
-In questa procedura dettagliata dell'estensione di funzionalità verrà creata una condizione di test di cui ne verrà verificata la funzionalità tramite la creazione di uno unit test di SQL Server. Il processo include la creazione di un progetto libreria di classi per la condizione di test, nonché la firma e l'installazione della condizione di test. Se è già disponibile una condizione di test che si vuole aggiornare, vedere [Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure
+In questa procedura dettagliata dell'estensione di funzionalità verrà creata una condizione di test di cui ne verrà verificata la funzionalità tramite la creazione di uno unit test di SQL Server. Il processo include la creazione di un progetto libreria di classi per la condizione di test, nonché la firma e l'installazione della condizione di test. Se si dispone di una condizione di test da aggiornare, vedere [Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 Vengono illustrate le attività seguenti:  
   
@@ -381,7 +381,7 @@ Nella prossima esercitazione verrà illustrato come creare uno unit test. Per cr
   
 6.  Fare clic su **Annulla** per creare lo unit test senza configurare il progetto di test per l'uso di una connessione del database. Il test vuoto viene visualizzato nella finestra di progettazione unit test di SQL Server. Viene aggiunto un file di codice sorgente Visual C\# al progetto di test.  
   
-    Per altre informazioni sulla creazione e sulla configurazione degli unit test del database con connessioni del database, vedere [How to: Create an Empty SQL Server Unit Test](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Per altre informazioni sulla creazione e sulla configurazione degli unit test del database con connessioni del database, vedere [Procedura: Creare uno unit test di SQL Server vuoto](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Fare clic su **Fare clic qui per creare** per completare la creazione dello unit test. Verrà visualizzata la nuova condizione di test nel progetto SQL Server.  
   

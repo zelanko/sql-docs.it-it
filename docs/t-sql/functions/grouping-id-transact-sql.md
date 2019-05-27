@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836829"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943068"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  GROUPING_ID \<column_expression> deve corrispondere esattamente all'espressione presente nell'elenco GROUP BY. Se ad esempio si effettua il raggruppamento per DATEPART (yyyy, \<*nome colonna*>), usare GROUPING_ID (DATEPART (yyyy, \<*nome colonna*>)). Se si effettua il raggruppamento per \<*nome colonna*>, usare GROUPING_ID (\<*nome colonna*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Confronto tra GROUPING_ID () e GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) immette l'equivalente del valore GROUPING (\<column_expression>) restituito per ogni colonna nell'elenco di colonne in ogni riga di output come stringa di valori uno e zero. GROUPING_ID interpreta tale stringa come numero in base 2 e restituisce il valore intero equivalente. Si consideri ad esempio l'istruzione seguente: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Nella tabella seguente vengono mostrati i valori di input e output di GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) immette l'equivalente del valore GROUPING (\<column_expression>) restituito per ogni colonna nell'elenco di colonne in ogni riga di output come stringa di valori uno e zero. GROUPING_ID interpreta tale stringa come numero in base 2 e restituisce il valore intero equivalente. Si consideri ad esempio l'istruzione seguente: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Nella tabella seguente vengono mostrati i valori di input e output di GROUPING_ID ().  
   
 |Colonne aggregate|Input di GROUPING_ID (a, b, c) = GROUPING (a) + GROUPING (b) + GROUPING (c)|Output di GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

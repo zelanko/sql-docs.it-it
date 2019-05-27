@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982110"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015095"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -304,15 +304,15 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
     Per ogni replica, configurare le impostazioni **Commit sincrono**, **Failover automatico** e **Secondario leggibile** seguenti. Vedere Figura 17.
 
-    **Commit sincrono**: garantisce che se il commit di una transazione viene eseguito nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
+**Commit sincrono**: garantisce che se il commit di una transazione viene eseguito nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
 
-    In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi sono nello stesso data center. Se sono in data center diversi, il commit sincrono può rallentare le prestazioni del database.
+In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi sono nello stesso data center. Se sono in data center diversi, il commit sincrono può rallentare le prestazioni del database.
 
-    Se questa casella di controllo non è selezionata, viene usato il commit asincrono.
+Se questa casella di controllo non è selezionata, viene usato il commit asincrono.
 
-    **Failover automatico:** quando la replica primaria è inattiva, il gruppo di disponibilità esegue automaticamente il failover nella replica secondaria se è stato selezionato il failover automatico. Questa opzione può essere abilitata solo sulle repliche con commit sincrono.
+**Failover automatico:** quando la replica primaria è inattiva, il gruppo di disponibilità esegue automaticamente il failover nella replica secondaria se è stato selezionato il failover automatico. Questa opzione può essere abilitata solo sulle repliche con commit sincrono.
 
-    **Secondario leggibile:** per impostazione predefinita, gli utenti non possono connettersi alle repliche secondarie. Questa opzione consente agli utenti di connettersi a una replica secondaria con accesso in sola lettura.
+**Secondario leggibile:** per impostazione predefinita, gli utenti non possono connettersi alle repliche secondarie. Questa opzione consente agli utenti di connettersi a una replica secondaria con accesso in sola lettura.
 
 8.  Nella pagina **Specifica repliche** fare clic sulla scheda **Listener** ed eseguire le operazioni seguenti. Vedere Figura 18.
 

@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877726"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713860"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Contiene anche le funzionalità aggiunte o aggiornate nel [Feature Pack di Azure per Integration Services & #40; SSIS & #41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
 
@@ -284,7 +288,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
  Gestione connessione Excel, Origine Excel e Destinazione Excel ora offrono il supporto esplicito per le origini dati di Excel 2016.  
 
 ####  <a name="SAPBW"></a> Rilasciato Connector for SAP BW per SQL Server 2016  
- Microsoft® Connector for SAP BW per Microsoft SQL Server® 2016 è stato rilasciato come parte del Feature Pack di SQL Server 2016. Per scaricare i componenti del Feature Pack, vedere il [Feature Pack di Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
+ MicrosoftÂ® Connector per SAP BW per Microsoft SQL ServerÂ® 2016 è stato rilasciato come parte di SQL Server 2016 Feature Pack. Per scaricare i componenti del Feature Pack, vedere[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Rilasciato Connector v4.0 per Oracle e Teradata
 Rilasciato Microsoft Connectors v4.0 per Oracle e Teradata. Per il download, vedere [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Microsoft Connectors v4.0 per Oracle e Teradata).
@@ -345,7 +349,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
  L'Importazione/Esportazione guidata SQL Server può ora importare dati da (e salvare dati in) Archiviazione BLOB Azure. Per altre informazioni, vedere [Scelta origine dati &#40;Importazione/Esportazione guidata SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) e [Scelta destinazione &#40;SQL Importazione/Esportazione guidata SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Rilascio di Change Data Capture Designer and Service per Oracle per Microsoft SQL Server 2016  
- Microsoft® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL Server® 2016 è stato rilasciato come parte del Feature Pack di SQL Server 2016.  Questi componenti ora supportano Oracle 12c nell'installazione classica (l'installazione multi-tenant non è supportata) Per scaricare i componenti del Feature Pack, vedere il [Feature Pack di Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).  
+ MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ® 2016 è stato rilasciato come parte di SQL Server 2016 Feature Pack.  Questi componenti ora supportano Oracle 12c nell'installazione classica (l'installazione multi-tenant non è supportata) Per scaricare i componenti del Feature Pack, vedere [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
 ####  <a name="cdc2016"></a> Componenti CDC aggiornati per SQL Server 2016  
  I componenti Attività di controllo, Origine e Trasformazione Splitter di CDC (Change Data Capture) sono stati aggiornati in modo da offrire la completa compatibilità con SQL Server 2016. Non vi è alcuna nuova funzionalità e non sono state apportate modifiche al comportamento.  

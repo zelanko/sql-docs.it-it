@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.speconnstring.f1
@@ -13,12 +12,12 @@ ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe778141f128a05c00d6a51a66394ed5c70fdb0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746689"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068544"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Specifica di una stringa di connessione (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di specificare una stringa di connessione per connettersi a un'origine dati OLE DB oppure ODBC. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9dfa6ac6a609b5bc562267383371fcd19a73215b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56cc6461f56dfa21b27a8cb9d7992a0c46627e9c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760289"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095275"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ Dettagli Esplora oggetti supporta la selezione di più oggetti. Ad esempio, se i
 ## <a name="sql-server-object-search"></a>Ricerca di oggetti SQL Server  
 Caratteri jolly  
   
--   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Eseguire ricerche di testo con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Ambito di ricerca  
   
@@ -100,5 +100,5 @@ Set di grandi dimensioni
 -   La ricerche eseguite su set di grandi dimensioni possono richiedere tempi particolarmente lunghi e ridurre le prestazioni del server.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Visualizza](../../ssms/object/object-explorer.md)  
+[Esplora oggetti](../../ssms/object/object-explorer.md)  
   

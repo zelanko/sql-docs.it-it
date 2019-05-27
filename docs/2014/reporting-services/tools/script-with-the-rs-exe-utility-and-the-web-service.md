@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Web service [Reporting Services], scripts
@@ -17,12 +16,12 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d84bb8722fd31a08ff7788ad31c601b377c23d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158291"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099715"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Eseguire lo script con l'utilità rs.exe e il servizio Web
   Gli sviluppatori e gli amministratori del server di report possono eseguire operazioni su un server di report con l'utilità **rs** (RS.exe). Tramite questa utilità, è possibile amministrare a livello di programmazione un server di report usando gli script scritti con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

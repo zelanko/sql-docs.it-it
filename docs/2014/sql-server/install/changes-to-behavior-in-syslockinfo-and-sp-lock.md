@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
@@ -14,12 +13,12 @@ ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214999"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096651"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>Modifiche al comportamento in syslockinfo e sp_lock
   **syslockinfo** e **sp_lock** possono restituire valori imprevisti. Possono inoltre restituire righe aggiuntive, mentre precedenti versioni di **syslockinfo** e **sp_lock** ha restituito un massimo di due righe per ogni risorsa di blocco.  

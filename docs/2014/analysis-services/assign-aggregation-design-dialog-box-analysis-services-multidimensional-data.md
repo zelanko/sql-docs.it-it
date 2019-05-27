@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.copyaggregationdesign.f1
@@ -13,12 +12,12 @@ ms.assetid: 50c26cb1-c294-4f17-8b9e-435fdbd4806d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11ee89e8849155f905e3908e491184f78a8f08b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643225"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062225"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Assegna progettazione aggregazioni (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Assegna progettazione aggregazioni** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per assegnare le progettazioni delle aggregazioni a una o più partizioni di destinazione. Per visualizzare la finestra di dialogo **Assegna progettazione aggregazioni** fare clic con il pulsante destro del mouse su una partizione o aggregazione in **Esplora oggetti** e quindi scegliere **Assegna progettazione aggregazioni**.  

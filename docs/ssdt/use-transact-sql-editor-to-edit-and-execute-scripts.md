@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f2862d1e5ae68e5b97a9721d22758c5441e9b50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669769"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102065"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Utilizzare l'Editor Transact-SQL per modificare ed eseguire script
 L'editor Transact\-SQL offre un'esperienza di modifica e di debug completa durante l'utilizzo degli script. Viene richiamato quando si usa il menu contestuale **Visualizza codice** per aprire un'entità del database in un progetto o in un database connesso. Viene anche aperto automaticamente quando si usa il menu contestuale **Nuova query** da Esplora oggetti di SQL Server o si aggiunge un nuovo oggetto script a un progetto di database.  

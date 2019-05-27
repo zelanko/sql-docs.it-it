@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.previewselecttable.f1
@@ -13,12 +12,12 @@ ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0148a2997d1b0c90873be41981459ea33e845c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748754"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070716"
 ---
 # <a name="preview-selected-table-ssas"></a>Anteprima tabella selezionata (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di visualizzare in anteprima i dati nella tabella selezionata, selezionare le colonne da includere nell'importazione dei dati e filtrare i dati nelle colonne selezionate. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650556"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096524"
 ---
 # <a name="check-files-in-use"></a>Controllo file in uso
   Per evitare il riavvio di Windows dopo l'installazione degli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilizzare la pagina Controllo file in uso per identificare i processi che bloccano i file necessari per il programma di installazione degli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -45,10 +44,10 @@ ms.locfileid: "62650556"
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |Process|Indica il nome completo del processo che utilizza i file da aggiornare.|  
-|Tipo|Indica il tipo di processo.|  
+|Type|Indica il tipo di processo.|  
 |Account|Indica l'account con il quale viene eseguito il processo.|  
 |ID processo|Indica l'ID del processo.|  
   

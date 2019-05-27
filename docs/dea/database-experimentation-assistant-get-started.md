@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
+ms.reviewer: mathoma
 manager: craigg
-ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45cd72d4383b0bae756b7b8f59502c981dfd6622
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63125693"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015129"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Introduzione a Database sperimentazione Assistant
 

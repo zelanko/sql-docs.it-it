@@ -14,16 +14,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669610"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935481"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51669610"
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in una colonna di tipo **geometry** è necessario specificare le coordinate **(**_X-min_**,**_Y-min_**)** e **(**_X-max_**,**_Y-max_**)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
+     Quando si crea un indice in una colonna di tipo **geometry** è necessario specificare le coordinate **(** _X-min_ **,** _Y-min_ **)** e **(** _X-max_ **,** _Y-max_ **)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - null values [SQL Server], replacement values
 - ISNULL function
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95c6ddb7dd0f3fa688b7309fa12a1b6d8588eba1
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 1fc40d263e5b7e22c38f225f50809d35e0b73415
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803046"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949239"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ GO
  (1 row(s) affected)
  ```  
   
-### <a name="b-using-isnull"></a>b. Utilizzo di ISNULL  
+### <a name="b-using-isnull"></a>B. Utilizzo di ISNULL  
  Nell'esempio seguente vengono selezionate la descrizione, la percentuale di sconto, la quantità minima e la quantità massima per tutte le offerte speciali in `AdventureWorks2012`. Se la quantità massima per una determinata offerta speciale è NULL, il valore di `MaxQty` visualizzato nel set di risultati è `0.00`.  
   
 ```  

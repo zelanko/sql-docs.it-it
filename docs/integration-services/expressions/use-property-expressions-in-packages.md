@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277660"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724892"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
   
  È possibile aggiungere un'espressione a pacchetti, attività, cicli Foreach, cicli For, sequenze, enumeratori Foreach, gestori eventi, gestioni connessioni a livello di pacchetto o progetto oppure provider di log. Qualsiasi proprietà di questi oggetti che sia di lettura/scrittura può implementare un'espressione di proprietà. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta l'utilizzo delle espressioni di proprietà in alcune proprietà personalizzate di componenti del flusso di dati. Le variabili e i vincoli di precedenza non supportano le espressioni di proprietà, ma includono speciali proprietà in cui è possibile utilizzare espressioni.  
@@ -137,11 +141,11 @@ ms.locfileid: "58277660"
   
  Rows Processed:  
   
- NASDAQ: 7058 7058  
+ NASDAQ: 7058  
   
- NYSE: 3528 3528  
+ NYSE: 3528  
   
- AMEX: 1102 1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Espressione di proprietà per la proprietà Executable dell'attività Esegui processo  
  L'espressione di proprietà seguente consente di impostare la proprietà Executable dell'attività Esegui processo. Nell'espressione viene utilizzata una combinazione di valori letterali stringa, operatori e funzioni, e precisamente le funzioni DATEPART e GETDATE e l'operatore condizionale.  
