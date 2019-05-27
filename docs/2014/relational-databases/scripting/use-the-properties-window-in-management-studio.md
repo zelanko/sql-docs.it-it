@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -15,12 +14,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a210cea5407bc56e45c4ea8cc12a578ed488b59c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280684"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063244"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizzo della finestra Proprietà in Management Studio
   Nella finestra Proprietà è indicato lo stato di un elemento in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio una connessione o un operatore Showplan, e vengono riportate informazioni su oggetti di database come ad esempio tabelle, visualizzazioni e finestre di progettazione.  

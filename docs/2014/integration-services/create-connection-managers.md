@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
@@ -19,12 +18,12 @@ ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832005"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060116"
 ---
 # <a name="create-connection-managers"></a>Creazione di gestioni connessioni
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile un'ampia gamma di gestioni connessioni che consentono di soddisfare le esigenze di attività che si connettono a diversi tipi di server e origini dati. Le gestioni connessioni vengono utilizzate dai componenti del flusso di dati che estraggono e caricano dati in diversi tipi di archivi dati e dai provider di log che scrivono log in un server, in una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o in un file. Un pacchetto che include un'attività Invia messaggi, ad esempio, utilizza un tipo di gestione connessione SMTP (Simple Mail Transfer Protocol) per connettersi a un server SMTP. Un pacchetto che include un'attività Esegui SQL può usare una gestione connessione OLE DB per connettersi a un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104923"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
   Per modificare l'ordinamento dei dati in un'area dati quando si esegue un report per la prima volta, è necessario impostare l'espressione di ordinamento nel gruppo o nell'area dati. Per impostazione predefinita, l'espressione di ordinamento per un gruppo viene impostata automaticamente su un valore identico a quello dell'espressione di raggruppamento.  

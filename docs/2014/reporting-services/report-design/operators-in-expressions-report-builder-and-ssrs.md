@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105496"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatori nelle espressioni (Generatore report e SSRS)
   Un operatore è un simbolo che rappresenta le azioni applicate a uno o più termini di un'espressione. In un'espressione sono supportate le categorie di operatori seguenti: aritmetico, di confronto, di concatenazione, logico o bit per bit e di scorrimento bit.  
@@ -66,7 +65,7 @@ ms.locfileid: "63209079"
 |--------------|-----------------|  
 |And|Esegue una congiunzione logica di due espressioni booleane oppure una congiunzione bit per bit di due espressioni numeriche.|  
 |Not|Esegue una negazione logica di un'espressione booleana oppure una negazione bit per bit di un'espressione numerica.|  
-|e|Esegue una disgiunzione logica di due espressioni booleane oppure una disgiunzione bit per bit di due valori numerici.|  
+|Oppure|Esegue una disgiunzione logica di due espressioni booleane oppure una disgiunzione bit per bit di due valori numerici.|  
 |Xor|Esegue un'operazione di esclusione logica di due espressioni booleane oppure un'esclusione bit per bit di due espressioni numeriche.|  
 |AndAlso|Esegue una congiunzione logica di due espressioni.|  
 |OrElse|Esegue una disgiunzione logica di due espressioni.|  

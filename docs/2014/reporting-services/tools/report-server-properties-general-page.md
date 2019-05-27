@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 578d824aa4438ce45dda223c040aa06e8bc9c6f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100005"
 ---
 # <a name="server-properties-general-page"></a>Proprietà server (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  

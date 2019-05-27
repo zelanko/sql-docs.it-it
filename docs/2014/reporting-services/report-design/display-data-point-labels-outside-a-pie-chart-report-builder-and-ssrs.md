@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 49ea3e0e87d9594ff16b3512533597ea9a9ea37c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185511"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106052"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Visualizzazione delle etichette dei punti dati al di fuori di un grafico a torta (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]le etichette del grafico a torta sono ottimizzate per essere visualizzate solo su diverse sezioni di dati. Se il grafico a torta contiene un numero eccessivo di sezioni, è possibile che le etichette si sovrappongano. Per risolvere questo problema, è possibile visualizzare le etichette al di fuori del grafico a torta, lasciando più spazio per le etichette dati più lunghe. Se le etichette continuano a sovrapporsi, è possibile creare più spazio abilitando gli effetti 3D. In questo modo il diametro del grafico a torta viene ridotto, creando uno spazio maggiore intorno al grafico.  

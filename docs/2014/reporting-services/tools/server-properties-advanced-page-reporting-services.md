@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
@@ -13,12 +12,12 @@ ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4123ea79502821026b80254db4fba7a61e5f565
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158760"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099660"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
   Questa pagina consente di impostare le proprietà di sistema nel server di report. Le proprietà di sistema possono essere impostate in diversi modi. Questo strumento fornisce un'interfaccia utente grafica che consente di impostare le proprietà senza dovere scrivere codice.  
@@ -39,7 +38,7 @@ ms.locfileid: "63158760"
  Indica se la registrazione per l'esecuzione di report è attivata. Il valore predefinito è `true`. Per altre informazioni sul log di esecuzione del server di report, vedere [Log di esecuzione Server di Report e vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono i valori compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.  
+ Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono i valori compresi tra `-1` e `2`,`147`,`483`,`647`. Se il valore è `-1` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.  
   
  **SessionTimeout**  
  Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è `600`.  
@@ -72,10 +71,10 @@ ms.locfileid: "63158760"
  **All** = gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.  
   
  **SystemReportTimeout**  
- Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è `1800`.  
+ Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra `-1` e `2`,`147`,`483`,`647`. Se il valore è `-1` durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è `1800`.  
   
  **SystemSnapshotLimit**  
- Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1`, non vi sono limiti per gli snapshot.  
+ Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra `-1` e `2`,`147`,`483`,`647`. Se il valore è `-1`, non vi sono limiti per gli snapshot.  
   
  **EnableIntegratedSecurity**  
  Determina se la sicurezza integrata di Windows è supportata per le connessioni alle origini dati dei report. Il valore predefinito è `True`. I valori validi sono i seguenti:  

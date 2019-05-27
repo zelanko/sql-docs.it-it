@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
@@ -15,12 +14,12 @@ ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8ef0cc4c24383abe3554b71cda7c462d54a924d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061184"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor attività Inserimento bulk (pagina Opzioni)
   Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk consente di copiare grandi quantità di dati all'interno di una vista o tabella di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

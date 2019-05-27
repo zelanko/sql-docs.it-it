@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106434"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS)
   La raccolta di campi predefinita, in cui sono incluse le raccolte `Globals` e `User`, rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta `Globals` fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta `User` fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  
@@ -45,9 +44,9 @@ ms.locfileid: "63022479"
 ### <a name="renderformat"></a>RenderFormat  
  Nella tabella seguente vengono descritti i membri per `RenderFormat`.  
   
-|Membro|Tipo|Descrizione|  
+|Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
-|nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
+|Nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|`Boolean`|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
 |DeviceInfo|Raccolta nome/valore di sola lettura|Coppie chiave/valore per i parametri deviceinfo per la richiesta di rendering corrente.<br /><br /> È possibile specificare i valori stringa usando la chiave o un indice nella raccolta.|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
@@ -13,12 +12,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62989026"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095336"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Account di esecuzione (modalità nativa SSRS)
   Utilizzare questa pagina per configurare un account da utilizzare per l'esecuzione automatica. L'account verrà utilizzato in circostanze particolari, ovvero quando non sono disponibili altre origini di credenziali, in particolare:  

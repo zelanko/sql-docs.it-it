@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
@@ -21,12 +20,12 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736799"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073389"
 ---
 # <a name="parent-child-hierarchy"></a>Gerarchia padre-figlio
   Una gerarchia padre-figlio è una gerarchia in una dimensione standard contenente un attributo padre. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. La posizione di un membro in una gerarchia padre-figlio è determinata dalle proprietà `KeyColumns` e `RootMemberIf` dell'attributo padre, mentre la posizione di un membro in un livello è determinata dalla proprietà `OrderBy` dell'attributo padre. Per altre informazioni sulle proprietà degli attributi, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

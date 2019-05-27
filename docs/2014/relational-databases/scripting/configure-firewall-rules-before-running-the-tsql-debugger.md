@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
@@ -22,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 219b2fd0a31fbb5351044d041e3b5a4adbdda022
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064186"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurazione del debugger Transact-SQL
   È necessario configurare regole di Windows Firewall per abilitare il debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in un computer diverso da Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

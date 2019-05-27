@@ -3,19 +3,19 @@ title: Pianificare i pacchetti SSIS in Linux con cron | Microsoft Docs
 description: Questo articolo descrive come pianificare i pacchetti di SQL Server Integration Services (SSIS) in Linux con il servizio cron.
 author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 32734698fffde10594513ad770b2129886e97b01
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2e3c9f6ee7a02fcdfe1bb2888832b156669cbc11
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486044"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014997"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Esecuzione in Linux con cron pacchetti pianificazione SQL Server Integration Services
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d69ba0371f77692f53464cc889ae8204f87d4cd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689386"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085901"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Modificare la discretizzazione di una colonna in un modello di data mining
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discretizza automaticamente i valori, vale a dire, bin di dati numerico colonna-in determinati scenari. Se, ad esempio, i dati includono dati numerici continui e si crea un modello di albero delle decisioni, ogni colonna di dati continui verrà automaticamente inserita in contenitori, a seconda della distribuzione dei dati. Se si desidera determinare il metodo di discretizzazione dei dati, è necessario modificare le proprietà nella colonna della struttura di data mining che controlla la modalità di utilizzo dei dati del modello.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - replication upgrade issues
@@ -14,12 +13,12 @@ ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63282231"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092753"
 ---
 # <a name="replication-upgrade-issues"></a>Problemi di aggiornamento della replica
   Negli argomenti seguenti vengono descritti i problemi di replica che possono influire sull'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vengono illustrate le azioni che è possibile eseguire per tentare di ridurre gli effetti di queste modifiche nell'ambiente.  

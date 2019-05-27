@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
@@ -13,12 +12,12 @@ ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889807"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056437"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Report per il server Integration Services
   Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
@@ -32,7 +31,7 @@ ms.locfileid: "62889807"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|Sezione|Descrizione|  
+|`Section`|Descrizione|  
 |-------------|-----------------|  
 |**Informazioni sulle esecuzioni**|Viene mostrato il numero di esecuzioni che si trovano in stati diversi (operazione non riuscita, in esecuzione, operazione riuscita e altri) nelle ultime 24 ore.|  
 |**Informazioni sui pacchetti**|Viene mostrato il numero totale di pacchetti eseguiti nelle ultime 24 ore.|  
@@ -46,7 +45,7 @@ ms.locfileid: "62889807"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|Sezione|Descrizione|  
+|`Section`|Descrizione|  
 |-------------|-----------------|  
 |Filtro|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
 |Informazioni sulle esecuzioni|Indica l'ora di inizio, l'ora di fine e la durata di ogni esecuzione del pacchetto. È possibile visualizzare un elenco di valori dei parametri utilizzati con l'esecuzione di un pacchetto, ad esempio i valori passati a un pacchetto figlio utilizzando l'attività Esegui pacchetto. Per visualizzare l'elenco dei parametri, fare clic su Panoramica.|  
@@ -60,7 +59,7 @@ ms.locfileid: "62889807"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|Sezione|Descrizione|  
+|`Section`|Descrizione|  
 |-------------|-----------------|  
 |Filtro|Mostra il filtro corrente applicato al report, ad esempio le connessioni con una stringa specificata e il valore di **Intervallo di ore ultimo errore** .<br /><br /> Impostare un valore per **Intervallo di ore ultimo errore** per visualizzare solo gli errori di connessione che si sono verificati durante un intervallo di date. L'intervallo può estendersi per più giorni, mesi o anni.|  
 |Dettagli|Mostra la stringa di connessione, il numero di esecuzioni durante le quali una connessione non è riuscita e la data in cui l'ultima connessione non è riuscita.|  

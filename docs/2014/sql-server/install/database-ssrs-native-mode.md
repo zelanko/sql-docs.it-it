@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
@@ -13,12 +12,12 @@ ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278554"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095721"
 ---
 # <a name="database-ssrs-native-mode"></a>Database (modalità nativa SSRS)
   Utilizzare la pagina Database per creare e configurare i database del server di report che forniscono spazio di archiviazione interno per una o più istanze del server di report. Se si configura un server di report per l'utilizzo di un database del server di report remoto, è necessario utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare il database.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087766"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Confronto tra soluzioni tabulari e multidimensionali (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce due approcci distinti per la modellazione dei dati: tabulari e multidimensionali. Benché sia presente una sovrapposizione significativa dei due approcci, ci sono anche differenze importanti quali la decisione su come procedere. In questo argomento vengono confrontate le funzionalità e viene illustrato il modo in cui ogni approccio risolve i requisiti di progetto comuni. Ad esempio, se il supporto di un'origine dati specifica è di importanza fondamentale, la sezione sulle origini dati consente di facilitare la decisione su quale approccio di modellazione adottare.  
@@ -98,17 +97,17 @@ ms.locfileid: "62680821"
 ||||  
 |-|-|-|  
 ||**Multidimensionale**|**Tabella**|  
-|Azioni|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|no|  
+|Azioni|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|No|  
 |Oggetti Aggregation|[Sì](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
 |Misure calcolate|[Sì](multidimensional-models/create-calculated-members.md)|Yes|  
-|Assembly personalizzati|[Sì](multidimensional-models/multidimensional-model-assemblies-management.md)|no|  
+|Assembly personalizzati|[Sì](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
 |Rollup personalizzati|Yes|No|  
 |Distinct Count|[Sì](multidimensional-models/use-aggregate-functions.md)|Sì (tramite DAX) *|  
 |Drill-through|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
 |Gerarchie|[Sì](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
 |KPI|[Sì](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
 |Gruppi di misure collegati|[Sì](multidimensional-models/linked-measure-groups.md)|No|  
-|Relazioni molti-a-molti|[Sì](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
+|Relazioni molti-a-molti|[Sì](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|no|  
 |Gerarchie padre-figlio|[Sì](multidimensional-models/parent-child-dimension.md)|Sì (tramite DAX)|  
 |Partizioni|[Sì](tabular-models/partitions-ssas-tabular.md)|  
 |prospettive|[Sì](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sì](tabular-models/partitions-ssas-tabular.md)|  

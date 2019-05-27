@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224932"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105690"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)
   Oltre alle aree dati quali tabelle, matrici e grafici, nei report vengono utilizzati altri elementi, ad esempio immagini, caselle di testo e rettangoli, per aumentarne l'impatto visivo, evidenziare le informazioni più importanti o fornire informazioni correlate. È possibile modificare la formattazione di un elemento del report. È possibile, ad esempio, aggiungere un bordo o un riempimento, modificare la visibilità o la direzione iniziale oppure specificare valori esatti per le dimensioni e la posizione dell'elemento.  

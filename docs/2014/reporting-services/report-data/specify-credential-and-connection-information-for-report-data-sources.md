@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -29,12 +28,12 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3eab390eb43d41d89bc5cf3b1cefe84c121ce9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654902"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107043"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
   Un server di report utilizza credenziali per connettersi a origini dei dati esterne che forniscono contenuto ai report o informazioni sui destinatari alle sottoscrizioni guidate dai dati. È possibile specificare credenziali che utilizzano l'autenticazione di Windows, l'autenticazione del database, l'autenticazione personalizzata o che non utilizzano alcuna autenticazione. Quando si invia una richiesta di connessione in rete, il server di report rappresenterà un account utente o l'account di esecuzione automatica. Per altre informazioni sul contesto di protezione in cui viene eseguita una richiesta di connessione, vedere [Configurazione dell'origine dei dati e connessioni di rete](#DataSourceConfigurationConnections) più avanti in questo argomento.  

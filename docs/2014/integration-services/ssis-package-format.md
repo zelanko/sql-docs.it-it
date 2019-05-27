@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b7288952ce9b57b0825f20d1a93fcbcd20d3c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766324"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055345"
 ---
 # <a name="ssis-package-format"></a>Formato del pacchetto SSIS
   Nella versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono state apportate modifiche significative al formato dei pacchetti (file DTSX) per semplificare la lettura del formato e il confronto dei pacchetti. È inoltre possibile unire in modo più affidabile i pacchetti che non contengono modifiche in conflitto o modifiche archiviate in formato binario.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
@@ -13,12 +12,12 @@ ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679749"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086623"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Scheda Convalida incrociata (vista Grafico accuratezza modello di data mining)
   La convalida incrociata consente di partizionare una struttura di data mining in sezioni trasversali, eseguire in maniera iterativa il training dei modelli e testarli a fronte di ciascuna sezione trasversale. È possibile specificare un numero di riduzioni in cui suddividere i dati. Ciascuna riduzione viene a sua volta utilizzata come dati di test, mentre i dati rimanenti vengono usati per eseguire il training di un nuovo modello. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene quindi generato un set di misure di accuratezza standard per ogni modello. Confrontando le misure relative ai modelli generati per ogni sezione trasversale, è possibile valutare l'affidabilità del modello di data mining per l'intero set di dati.  

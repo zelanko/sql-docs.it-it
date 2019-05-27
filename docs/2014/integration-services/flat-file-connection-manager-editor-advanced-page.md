@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 067bb5a2da9a93bc29e93a3844a29e1a4028c7d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058785"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor gestione connessione file flat (pagina Avanzate)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor gestione connessione file flat** per impostare le proprietà che specificano come Integration Services legge e scrive i dati nei file flat. È possibile modificare i nomi delle colonne del file flat e impostare le proprietà che includono il tipo di dati e i delimitatori per ogni colonna del file.  

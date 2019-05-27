@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 62009c07a7b643a3a9d0a202588f64bded967acb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 878e9a4bff1625042a08ec7e43699fa067dea532
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63460692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101504"
 ---
 # <a name="item-level-tasks"></a>Attività a livello di elemento
   Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](tasks-and-permissions-system-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](tasks-and-permissions.md).  

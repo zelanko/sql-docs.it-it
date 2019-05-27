@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.resultset.f1
@@ -15,12 +14,12 @@ ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da5cfd11c00876a4d7f3d8c784715e79bd1c73ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898424"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058972"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor attività Esegui SQL (pagina Set dei risultati)
   La pagina **Set dei risultati** della finestra di dialogo **Editor attività Esegui SQL** consente di eseguire il mapping dei risultati dell'istruzione SQL a variabili nuove o esistenti. Le opzioni disponibili in questa finestra di dialogo sono disabilitate se **ResultSet** è impostato su **None**nella pagina Generale.  

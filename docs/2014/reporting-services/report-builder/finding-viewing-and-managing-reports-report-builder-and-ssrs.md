@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 543edca0cbe8fd376df75158a2c4c8c5aba1cdca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63205181"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107833"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
   In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per individuare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  

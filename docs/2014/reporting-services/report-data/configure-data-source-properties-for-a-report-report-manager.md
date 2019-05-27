@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
@@ -13,12 +12,12 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98916a7e6a9247661fdefe3a779e08f255d56ac8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697531"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107419"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurare le proprietà delle origini dati per un report (Gestione report)
   Quando si esegue un report, il server di report recupera informazioni sulla proprietà per determinare come connettersi a un'origine dati. Il tipo di origine dati, la stringa di connessione e le informazioni sulle credenziali sono specificati nelle pagine delle proprietà dell'origine dati del report pubblicato. È possibile impostare le proprietà per modificare le informazioni sulla connessione all'origine dati rispetto ai valori originali specificati al momento della creazione del report.  

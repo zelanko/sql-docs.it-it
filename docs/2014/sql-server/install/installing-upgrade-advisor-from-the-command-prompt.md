@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -16,12 +15,12 @@ ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63301341"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094340"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installazione di Preparazione aggiornamento dal prompt dei comandi
   È possibile installare Preparazione aggiornamento utilizzando l'Installazione guidata o dal prompt dei comandi. Il prompt dei comandi consente di eseguire installazioni automatiche e automatizzate.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
@@ -14,12 +13,12 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99b9192f2bf2b6e1fe00e1b0e367ff254219539c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774065"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089971"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Opzioni (Risultati query/SQL Server/Multiserver)
   Quando si esegue una query su più server contemporaneamente, utilizzare questa pagina per specificare le opzioni per la visualizzazione dei set di risultati. Con la funzione Unisci risultati, i set di risultati di tutti i server vengono combinati in un singolo set. Quando si uniscono i risultati, il server che risponde per primo imposta lo schema per il set di risultati. Perché sia possibile unire i set di risultati, la query deve restituire lo stesso numero di colonne con nomi uguali da ogni server. Quando si uniscono i risultati, viene visualizzato un messaggio per ogni server che non corrisponde allo schema (numero di colonne e nomi di colonna) restituito dal server che ha risposto per primo.  

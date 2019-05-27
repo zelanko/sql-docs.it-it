@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185735"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106384"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta ReportItems (Generatore report e SSRS)
   La raccolta predefinita `ReportItems` è il set di caselle di testo di elementi del report, ad esempio righe di un'area dati o caselle di testo nell'area di progettazione del report. La raccolta `ReportItems` include caselle di testo che si trovano nell'ambito corrente di un'intestazione di pagina, un piè di pagina o il corpo di un report. Questa raccolta viene determinata in fase di esecuzione dal componente Elaborazione report e dal renderer di report. L'ambito corrente cambia quando il componente Elaborazione report combina in successione i dati del report e gli elementi di layout dei relativi elementi mentre l'utente visualizza le pagine di un report. È possibile utilizzare la raccolta predefinita `ReportItems` per produrre intestazioni di pagina in formato dizionario in cui vengono visualizzati il primo e l'ultimo elemento in ogni pagina.  

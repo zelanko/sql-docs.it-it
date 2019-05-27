@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
@@ -13,15 +12,15 @@ ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 081b149bc4f7927d17ac18895bc901f133545e9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328751"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063365"
 ---
 # <a name="watch-window"></a>finestra Espressioni di controllo
-  Nella finestra **Espressione di controllo** vengono visualizzate informazioni sulle espressioni selezionate. Possono essere presenti fino a quattro finestre Espressioni di controllo: **Espressione di controllo 1**, **guardare 2, 3 guarda**, e **guarda 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  
+  Nella finestra **Espressione di controllo** vengono visualizzate informazioni sulle espressioni selezionate. Possono essere presenti fino a quattro finestre Espressioni di controllo: **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3** e **Espressione di controllo 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  
   
 ## <a name="task-list"></a>Elenco attività  
  **Per accedere alle finestre Espressione di controllo**  
@@ -44,7 +43,7 @@ ms.locfileid: "53328751"
   
 -   Espressioni compilate applicando operatori a uno o più parametri, variabili o funzioni di sistema, ad esempio @@IntegerCounter + 1 o FirstName + LastName.  
   
--   Istruzioni Transact-SQL che restituiscono un singolo valore, ad esempio: SELECT CharacterCol FROM MyTable in cui PrimaryKey = 1.  
+-   Istruzioni Transact-SQL che restituiscono un singolo valore, come ad esempio: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
  **Valore**  
  Consente di visualizzare il valore restituito dopo che il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] valuta l'espressione specificata in **Nome**.  

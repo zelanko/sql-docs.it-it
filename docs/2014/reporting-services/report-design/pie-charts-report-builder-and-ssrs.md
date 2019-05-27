@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f10e941ef5acd180e8b279762e84535bad5689e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105488"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Grafici a torta (Generatore report e SSRS)
   Nei grafici a torta e in quelli ad anello i dati vengono visualizzati come percentuali rispetto a un valore intero. I grafici a torta vengono utilizzati principalmente per eseguire confronti tra gruppi. I grafici a torta e ad anello, insieme ai grafici a piramide e a imbuto, costituiscono un gruppo di grafici noti come grafici con forme. I grafici con forme non includono assi. Quando un campo numerico viene inserito in un grafico con forme, viene calcolata la percentuale di ogni valore rispetto al totale. Per altre informazioni sui grafici con forme, vedere [Grafici con forme &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  

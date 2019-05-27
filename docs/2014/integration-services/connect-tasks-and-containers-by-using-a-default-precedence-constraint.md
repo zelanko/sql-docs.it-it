@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -16,12 +15,12 @@ ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834053"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060425"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Connessione di attività e contenitori tramite un vincolo di precedenza predefinito
   Un vincolo di precedenza connette due eseguibili, che possono essere costituiti da qualsiasi attività oppure da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Questa procedura descrive l'impostazione del comportamento predefinito dei vincoli di precedenza e la connessione di eseguibili tramite i vincoli di precedenza predefiniti.  

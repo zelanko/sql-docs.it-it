@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b8deec4f9049d7d677ff809e900e4d5f9d4fa61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768297"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058702"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Editor destinazione file flat (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione file flat** per selezionare la connessione file flat per la destinazione e specificare se eseguire la sovrascrittura o l'accodamento al file di destinazione esistente. La destinazione file flat scrive dati in un file di testo che può essere in formato delimitato, a larghezza fissa o misto, a larghezza fissa con delimitatori di riga oppure non allineato a destra.  

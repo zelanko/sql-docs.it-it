@@ -1,11 +1,10 @@
 ---
-title: 'Opzioni (Editor di testo: Scheda Editor e barra di stato pagina) | Microsoft Docs'
+title: 'Opzioni (pagina Editor di testo: Scheda Editor e barra di stato pagina) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
@@ -14,14 +13,14 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089235"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (Editor di testo: Scheda Editor e barra di stato pagina)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (pagina Editor di testo: Scheda editor e barra di stato)
   Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
   
 ## <a name="option-settings-by-editor"></a>Impostazioni delle opzioni in base all'editor  

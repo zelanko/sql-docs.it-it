@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
@@ -13,12 +12,12 @@ ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080405"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Finestra di dialogo Inserisci funzione (SSAS)
   La finestra di dialogo **Inserisci funzione** consente di scegliere da un elenco di funzioni utilizzabili quando si compilano formule. Per accedere a questa finestra di dialogo da Progettazione modelli, nella barra della formula sopra ogni tabella fare clic sul pulsante della funzione (**fx**). Per ulteriori informazioni sulla scelta di funzioni da utilizzare nelle formule, vedere le sezioni relative all'introduzione a DAX e alla compilazione di una formula.  

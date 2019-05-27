@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085644"
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
   Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  

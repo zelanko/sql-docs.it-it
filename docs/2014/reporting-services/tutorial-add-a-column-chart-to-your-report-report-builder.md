@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648251"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099130"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
   In un istogramma le serie vengono visualizzate come set di barre verticali raggruppate per categoria. Un istogramma può essere utile per:  

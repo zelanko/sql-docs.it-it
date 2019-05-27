@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34a71ed768c49436a4dba4ecf225bdd009132866
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892105"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058035"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>Installare e disinstallare il componente di origine OData
   In questo argomento vengono fornite le istruzioni per installare il componente di origine OData nel computer o per eseguirne la rimozione.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,12 +19,12 @@ ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835224"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060954"
 ---
 # <a name="common-properties"></a>Proprietà comuni
   Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] hanno proprietà comuni e proprietà personalizzate a livello di componente, input e output, colonne di input e colonne di output. Molte proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -179,7 +178,7 @@ ms.locfileid: "62835224"
 |ID|Valore intero|Valore che identifica la colonna di output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica la colonna di output.|  
 |LineageID|Valore intero|ID della colonna di output. I componenti a valle fanno riferimento alla colonna utilizzando questo valore.|  
-|nome|String|Nome della colonna di output.|  
+|Nome|String|Nome della colonna di output.|  
 |SortKeyPosition|Valore intero|Valore che indica se una colonna è ordinata, l'ordinamento e la sequenza di ordinamento di più colonne. Il valore **0** indica che la colonna non è ordinata. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Valore intero|Valore che contiene i flag speciali della colonna di output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I possibili valori sono `Fail component`, `Ignore failure` e `Redirect row`. Il valore predefinito è `Fail component`.|  

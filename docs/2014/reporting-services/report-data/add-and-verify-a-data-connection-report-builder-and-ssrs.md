@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 51ac8bee672064e07d66d924bc8efef0fc8aa1d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697730"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107514"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Aggiungere e verificare una connessione dati o un'origine dati (Generatore report e SSRS)
   In Generatore report è possibile aggiungere un'origine dati condivisa dal server di report o creare un'origine dati incorporata per il report in uso. In Progettazione report è possibile creare un'origine dati condivisa o un'origine dati incorporata e distribuirla a un server di report.  

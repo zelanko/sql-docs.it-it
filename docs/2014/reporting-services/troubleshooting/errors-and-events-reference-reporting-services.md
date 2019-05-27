@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb18f324ca3f4ed6111181d5f6ed2fd3ca58ce1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190790"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099322"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guida di riferimento a errori ed eventi (Reporting Services)
   In questo argomento vengono fornite informazioni sugli errori e sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Anche i file di log di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contengono informazioni sugli errori. Per altre informazioni sui tipi di file di log disponibili e sulla modalità di visualizzazione di tali file, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "63190790"
 ## <a name="report-server-events"></a>Eventi del server di report  
  Gli eventi del server di report riportati di seguito vengono registrati nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|ID evento|Tipo|Category|`Source`|Descrizione|  
+|ID evento|Type|Category|`Source`|Descrizione|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Errore|Pianificazione|Server di report|Quando si definisce un'operazione pianificata, ad esempio la sottoscrizione e il recapito di report, deve essere in esecuzione SQL Server Agent.|  
 |[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Errore|Avvio/Chiusura|Server di report<br /><br /> Elaborazione pianificazione e recapito|*\<Origine>* non è in grado di connettersi al database del server di report. Per altre informazioni, vedere [Servizio Windows ReportServer &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  

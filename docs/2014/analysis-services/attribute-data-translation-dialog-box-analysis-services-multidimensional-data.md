@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
@@ -15,12 +14,12 @@ ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650662"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063071"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Traduzione dati attributo (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Traduzione dati attributo** per impostare la colonna contenente i dati della didascalia della traduzione, nonché le regole di confronto e il tipo di ordinamento da usare per i dati tradotti. Per visualizzare la finestra di dialogo **Traduzione dati attributo** , è possibile:  

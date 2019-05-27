@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -23,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1188f0d5cb68a86b6e3f3305ec9b5a40e51a8d3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242464"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101936"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concessione di autorizzazioni in un server di report in modalità nativa
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si utilizzano l'autorizzazione basata sui ruoli e un sottosistema di autenticazione per determinare gli utenti cui è consentito eseguire operazioni e accedere agli elementi in un server di report. L'autorizzazione basata sui ruoli consente di suddividere in ruoli il set di azioni che un utente può eseguire. L'autenticazione è basata sull'autenticazione di Windows incorporata o su un modulo di autenticazione personalizzato fornito dall'utente. È possibile utilizzare ruoli predefiniti o personalizzati con entrambi i tipi di autenticazione.  

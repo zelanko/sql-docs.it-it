@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10435"
@@ -15,12 +14,12 @@ ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5ba45fa4070a025101d9bf2c06bc69f8aa5d8b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa8ae6d36ddd7c23b48ec65f8fab387e690f1d83
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697808"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107560"
 ---
 # <a name="report-data-pane-report-builder"></a>Riquadro dei dati del report (Generatore report)
   Usare il riquadro **Dati report** per visualizzare i parametri, le origini dati, i set di dati, le raccolte di campi e le immagini attualmente definiti nel report. Nel riquadro dei dati del report è riportata una visualizzazione gerarchica degli elementi che rappresentano i dati del report. I nodi di livello superiore rappresentano campi, parametri, immagini e riferimenti a origini dati predefiniti. Espandere ogni nodo per visualizzare gli elementi dei dati. Ad esempio, quando si espande il nodo di un'origine dati, verranno visualizzati i set di dati definiti per tale origine dati. Quando si espande un set di dati, verrà visualizzata la relativa raccolta di campi. Trascinare gli elementi nell'area di progettazione del report o nel riquadro Raggruppamento per collegare i dati agli elementi del report selezionati nella pagina del report. Per altre informazioni, vedere [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-builder/report-design-view-report-builder.md).  

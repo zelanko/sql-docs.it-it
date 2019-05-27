@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767273"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057762"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapping di set di risultati a variabili in un'attività Esegui SQL
   Questo argomento descrive la procedura per il mapping di un set di risultati a una variabile in un'attività Esegui SQL. Se su un set di risultati viene eseguito il mapping a una variabile, sarà disponibile anche per altri elementi nel pacchetto. Si consideri ad esempio un'attività Script contenente uno script in grado di leggere la variabile e quindi utilizzare i valori del set di risultati oppure un'origine XML in grado di utilizzare il set di risultati archiviato in una variabile. Se viene generato da un pacchetto padre, il set di risultati potrà essere reso disponibile a un pacchetto figlio chiamato da un'attività Esegui pacchetto mappando tale set di risultati a una variabile nel pacchetto padre e quindi creando nel pacchetto figlio una configurazione Variabile pacchetto padre, per l'archiviazione del valore della variabile padre.  

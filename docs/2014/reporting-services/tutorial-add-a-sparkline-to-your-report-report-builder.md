@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648687"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099036"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico Sparkline al Report (Generatore Report)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
   In questa esercitazione si creerà un report tabella semplice basato su dati di vendita di esempio, quindi si aggiungerà un grafico sparkline a una cella della tabella.  
   
  Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](https://go.microsoft.com/fwlink/?LinkId=184851). Nell'immagine seguente viene illustrato il report di esempio simile a quello che verrà creato.  

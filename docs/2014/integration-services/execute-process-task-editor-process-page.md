@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.process.f1
@@ -15,12 +14,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 543ab9724f44e5db1f4532eeadcce79b36de52b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769587"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059027"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Utilizzare la pagina **Processo** della finestra di dialogo **Editor attività Esegui processo** per configurare le opzioni di esecuzione del processo. Tali opzioni includono il file eseguibile da avviare, il relativo percorso, gli argomenti del prompt dei comandi, nonché le variabili per la generazione dell'input e l'acquisizione dell'output.  

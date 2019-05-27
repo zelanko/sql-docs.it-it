@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020722"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107761"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS)
   Benché un browser sia l'applicazione client più comune per visualizzare un report, le funzionalità di stampa dei browser non sono tra le più adatte per la stampa dei report, in quanto sono state progettate per la stampa di pagine Web. Le pagine stampate da un browser includono in genere tutti gli elementi visivi presenti nella pagina Web, più le informazioni dell'intestazione e del piè di pagina che identificano la pagina o il sito Web. Se si avvia la stampa dal browser, viene stampato il contenuto della finestra corrente. Per i report a più pagine, il browser stampa al massimo la prima pagina e, se la pagina del report è più grande delle dimensioni di una pagina stampata, il risultato non risulta completo.  

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 815822c983154d55cf67ec02475e81f33008d42e
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449680"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619599"
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
 
-Un'*assegnazione di ruolo* è costituita dai criteri di sicurezza che determinano le autorizzazioni di un utente o un gruppo. Le autorizzazioni stabiliscono se l'utente o il gruppo può accedere a un elemento specifico del server di report o eseguire un'attività. Un'assegnazione di ruolo è costituita da un unico nome di un account utente o di gruppo e da una o più definizioni di ruolo.
+Un'*assegnazione di ruolo* è costituita dai criteri di sicurezza che determinano le autorizzazioni di un utente o un gruppo. Le autorizzazioni stabiliscono se l'utente o il gruppo può accedere o modificare un elemento specifico del server di report o eseguire un'attività. Un'assegnazione di ruolo è costituita da un unico nome di un account utente o di gruppo e da una o più definizioni di ruolo.
 
 L'ambito delle assegnazioni di ruolo è definito a *livello di elemento* oppure a *livello di sistema*.
 
-- Un'assegnazione di ruolo a livello di elemento viene creata nel contesto di un elemento o di un ramo specifico della gerarchia di cartelle nel server di report. Per creare un'assegnazione di ruolo per una cartella o un elemento specifico, è necessario accedere a tale elemento o cartella.
+- Un'assegnazione di ruolo a livello di elemento viene creata per un elemento o un ramo specifico della gerarchia di cartelle nel server di report. Per creare un'assegnazione di ruolo per una cartella o un elemento specifico, è necessario accedere a tale elemento o cartella.
 
 - Le assegnazioni di ruolo a livello di sistema consentono a utenti selezionati di eseguire attività che influiscono sull'intero sito del server di report. Queste attività includono:
   - Creazione di pianificazioni condivise
@@ -39,27 +39,23 @@ La sicurezza a livello di sistema non definisce l'accesso agli elementi della ge
 
 ## <a name="creating-an-item-level-role-assignment"></a>Creazione di un'assegnazione di ruolo a livello di elemento
 
-Per creare o gestire assegnazioni di ruolo, accedere al portale Web. Aprire la pagina delle **proprietà di sicurezza** dell'elemento che si vuole proteggere.
-
-È possibile creare un'assegnazione di ruolo separata per ogni account utente o di gruppo che deve accedere al server di report. Se l'account fa parte di un dominio diverso da quello in cui si trova il server di report, è necessario specificare il nome di dominio. Dopo aver specificato un account, scegliere una o più definizioni di ruolo. Le definizioni di ruolo si sommano tra loro, ovvero l'assegnazione per un determinato utente o gruppo supporta la combinazione di tutte le attività delle varie definizioni.
+Da qui è possibile creare un'assegnazione di ruolo separata per ogni account utente o di gruppo che deve accedere al server di report. Se l'account fa parte di un dominio diverso da quello in cui si trova il server di report, è necessario specificare il nome di dominio. Dopo aver specificato un account, scegliere una o più definizioni di ruolo. Le definizioni di ruolo si sommano tra loro, ovvero l'assegnazione per un determinato utente o gruppo supporta la combinazione di tutte le attività delle varie definizioni.
 
 Per consentire un accesso esteso, scegliere un elemento in posizione elevata nella gerarchia di cartelle, ad esempio la cartella radice Home. In seguito si potranno creare assegnazioni di ruolo per bloccare aree specifiche della gerarchia di cartelle.
 
 Per creare un'assegnazione di ruolo, è necessario appartenere al gruppo locale Administrators nel server di report. È possibile delegare tale compito assegnando altri utenti al ruolo **Gestione contenuto** .
 
-Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+Per altre informazioni o per creare o gestire le assegnazioni di ruolo, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md)
   
 ## <a name="creating-a-system-level-role-assignment"></a>Creazione di un'assegnazione di ruolo a livello di sistema
 
-Per creare o gestire un'assegnazione di ruolo a livello di sistema, accedere al portale Web e aprire la pagina Impostazioni sito.
-
 Le assegnazioni di ruolo a livello di sistema e di elemento sono associate. È necessario creare un'assegnazione di ruolo a livello di sistema per ogni utente o gruppo che ha un'assegnazione di ruolo a livello di elemento.
 
-Le assegnazioni di ruolo a livello di sistema includono un'ampia gamma di autorizzazioni, ma non le autorizzazioni che fanno parte di un'assegnazione di ruolo a livello di elemento. 
+Le assegnazioni di ruolo a livello di sistema includono un'ampia gamma di autorizzazioni, ma non le autorizzazioni che fanno parte di un'assegnazione di ruolo a livello di elemento.
 
-A differenza delle autorizzazioni di sistema in un computer, i ruoli a livello di sistema nei server di report non definiscono autorizzazioni globali che includono il set completo di tutte le possibili attività, ma specificano solo un set di attività il cui ambito è il sito del server di report. Le assegnazioni di ruolo a livello di sistema determinano se gli utenti possono visualizzare le proprietà dell'applicazione, ad esempio l'immagine o il titolo della home page, visualizzare o gestire le pianificazioni condivise o usare Generatore report.
+A differenza delle autorizzazioni di sistema in un computer, i ruoli a livello di sistema nei server di report non definiscono autorizzazioni globali che includono tutte le attività possibili, ma specificano solo un set di attività il cui ambito è il sito del server di report. Le assegnazioni di ruolo a livello di sistema determinano se gli utenti possono visualizzare le proprietà dell'applicazione, ad esempio l'immagine o il titolo della home page, visualizzare o gestire le pianificazioni condivise o usare Generatore report.
 
-Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md) e [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md).  
+Per altre informazioni o per creare o gestire un'assegnazione di ruolo a livello di sistema, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md) e [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md).  
 
 ## <a name="modifying-a-role-assignment"></a>Modifica di assegnazioni di ruolo
 

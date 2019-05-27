@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156567"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107643"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
   In Generatore report è possibile salvare una definizione del report in un server di report, operazione anche nota come pubblicazione di un report. Quando viene salvato in un server di report, il report può essere visualizzato anche da altri utenti. Ogni volta che si esegue il report pubblicato, verranno recuperati i dati più recenti. Per salvare una copia statica di un report visualizzabile, esportare il report in un formato di file diverso e salvarlo o utilizzare la caratteristica di cronologia dei report per salvare versioni di report visualizzabili.  

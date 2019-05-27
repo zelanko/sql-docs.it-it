@@ -1,7 +1,7 @@
 ---
 title: Novità di Reporting Services (SSRS) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
@@ -9,19 +9,19 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 02/28/2019
-ms.openlocfilehash: 77a3bdb162298cfaa972ccd7dacce02db9b5e48e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.date: 05/08/2019
+ms.openlocfilehash: d92275ebbccd90cc3a066ec58726c1db3c61c34b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775105"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620588"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Informazioni sulle novità di SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Questo argomento illustra le principali aree funzionali e viene aggiornato man mano che vengono rilasciati nuovi elementi.
+Informazioni sulle novità di SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Questo articolo illustra le principali aree funzionali e viene aggiornato man mano che vengono rilasciati nuovi elementi.
 
 Per le note sulla versione corrente, vedere [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
@@ -52,7 +52,7 @@ Per altre informazioni, vedere [Add comments to a report in a report server](htt
 
 ### <a name="dax-queries-in-reporting-tools"></a>Query DAX negli strumenti di report
 
-Nelle versioni più recenti di Generatore Report e SQL Server Data Tools è possibile creare query DAX native nei modelli di dati tabulari di SQL Server Analysis Services supportati trascinando i campi desiderati nelle finestre di progettazione delle query. Vedere il [blog di Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+Nelle versioni più recenti di Generatore Report e SQL Server Data Tools è possibile creare query DAX native in base ai modelli di dati tabulari di SQL Server Analysis Services. È possibile trascinare i campi nelle finestre di progettazione query. Vedere il [blog di Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 ### <a name="rest-api-support"></a>Supporto delle API REST
 
@@ -60,7 +60,7 @@ Per consentire lo sviluppo di applicazioni e personalizzazioni moderne, SQL Serv
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Supporto della progettazione query per DAX in Generatore Report ed SQL Server Data Tools
 
-In Generatore Report e SQL Server Data Tools è ora possibile creare query DAX native nei modelli di dati tabulari di SQL Server Analysis Services supportati. È possibile usare la progettazione query in entrambi gli strumenti per trascinare i campi voluti e generare la query DAX automaticamente anziché scriverla manualmente.  
+In Generatore Report e SQL Server Data Tools è ora possibile creare query DAX native nei modelli di dati tabulari di SQL Server Analysis Services supportati. È possibile usare progettazione query in entrambi gli strumenti per trascinare i campi desiderati. La query DAX viene quindi generata automaticamente.
 
 Altre informazioni nel [blog di Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -74,9 +74,16 @@ Altre informazioni nel [blog di Reporting Services](https://blogs.msdn.microsoft
 
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-È disponibile un nuovo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. Si tratta di un portale aggiornato e moderno che include indicatori KPI, report per dispositivi mobili, report impaginati e file di Excel e Power BI Desktop. Il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] sostituisce Gestione Report delle versioni precedenti.
+È disponibile un nuovo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. Il portale Web aggiornato include
+- KPI
+- Report per dispositivi mobili
+- Report impaginati
+- file di Excel
+- File di Power BI Desktop
 
-Per creare report per dispositivi mobili, sarà necessario usare [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]. 
+Il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] sostituisce Gestione Report delle versioni precedenti.
+
+Per creare report per dispositivi mobili, è necessario usare [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)].
 
 Per altre informazioni sul [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], vedere [Portale Web (modalità nativa SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
@@ -90,7 +97,7 @@ Per altre informazioni sulla personalizzazione, vedere [Personalizzazione del po
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicatori di prestazioni chiave (KPI) nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
-È possibile creare indicatori KPI direttamente nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , contestuali alla cartella corrente. Durante la creazione di indicatori KPI, è possibile scegliere i campi del set di dati e riepilogare tali valori. È anche possibile selezionare il contenuto correlato per eseguire il drill-through a ulteriori dettagli.
+Nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] è possibile creare direttamente indicatori KPI contestuali alla cartella corrente. Durante la creazione di indicatori KPI, è possibile scegliere i campi del set di dati e riepilogare i relativi valori. È anche possibile selezionare il contenuto correlato per eseguire il drill-through ed esporre ulteriori dettagli.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -98,7 +105,12 @@ Per altre informazioni, vedere [Utilizzo degli indicatori KPI nel portale Web](h
 
 ### <a name="mobile-reports"></a>Report per dispositivi mobili
 
-I report per dispositivi mobili di Reporting Services sono report dedicati, ottimizzati per una vasta gamma di fattori di forma, e forniscono un'esperienza ottimale agli utenti che accedono ai report dai dispositivi mobili. I report per dispositivi mobili offrono un'ampia gamma di visualizzazioni, ad esempio grafici temporali, categorie e di confronto, mappe ad albero e mappe personalizzate. È possibile connettere i report per dispositivi mobili a una gamma di origini dati, tra cui dati locali tabulari e multidimensionali di SQL Server Analysis Services. I report per dispositivi mobili possono essere disposti in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili che si adattano in modo ottimale agli schermi di qualsiasi dimensione. È quindi possibile salvare i report per dispositivi mobili in un server di Reporting Services, visualizzarli e interagire con essi in un browser o nell'app Power BI per dispositivi mobili su iPad, iPhone, telefoni Android e dispositivi Windows 10.
+I report per dispositivi mobili di Reporting Services sono report dedicati, ottimizzati per una vasta gamma di fattori di forma, e forniscono un'esperienza ottimale agli utenti che accedono ai report dai dispositivi mobili. I report per dispositivi mobili offrono un'ampia gamma di visualizzazioni, ad esempio grafici temporali, per categorie e di confronto, mappe ad albero e mappe personalizzate. È possibile connettere i report per dispositivi mobili a una gamma di origini dati, tra cui dati locali tabulari e multidimensionali di SQL Server Analysis Services. I campi dei report per dispositivi mobili possono essere posizionati su un'area di progettazione regolando le righe e le colonne della griglia. Gli elementi dei report per dispositivi mobili flessibili si adattano automaticamente in base alle dimensioni di qualsiasi schermo. È quindi possibile salvare i report per dispositivi mobili in un server di Reporting Services, visualizzarli e interagire con essi in un browser o nell'app Power BI per dispositivi mobili. I dispositivi supportati includono:
+
+- iPad
+- iPhone
+- Telefoni Android
+- e qualsiasi dispositivo Windows 10
 
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
 
@@ -130,7 +142,7 @@ Per altre informazioni, vedere:
 
 ### <a name="microsoft-net-framework-4-support"></a>Supporto per Microsoft .NET Framework 4  
 
-[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supporta le versioni correnti di Microsoft .NET Framework 4. incluse le versioni 4.0 e 4.5.1. Se non è installata alcuna versione di .NET Framework 4.x, il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installa .NET 4.0 durante il passaggio di installazione delle funzionalità.  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] supporta le versioni correnti di Microsoft .NET Framework 4, incluse le versioni 4.0 e 4.5.1. Se non è già installata una versione di .NET Framework 4.x, il programma di installazione di [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] installa .NET 4.0 durante il passaggio di installazione delle funzionalità.  
 
 ### <a name="report-improvements"></a>Miglioramenti dei report
 
@@ -144,7 +156,13 @@ Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Re
 
 **Incorporamento di report:** è ora possibile incorporare report per dispositivi mobili e report impaginati in altre pagine Web e applicazioni usando un iframe e i parametri URL.  
 
-**Aggiunta di elementi di un report a un dashboard di Power BI:** quando si visualizza un report nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], è possibile selezionare elementi del report e aggiungerli a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Gli elementi che è possibile aggiungere sono i grafici, i pannelli dei misuratori, le mappe e le immagini. È possibile **(1)** selezionare il gruppo contenente il dashboard in cui si intende aggiungere l’elemento, **(2)** selezionare il dashboard a cui si intende aggiungere l’elemento e **(3)** selezionare la frequenza con cui si desidera che il riquadro venga aggiornato nel dashboard.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.  
+**Aggiunta di elementi di un report a un dashboard di Power BI:** quando si visualizza un report nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], è possibile selezionare elementi del report e aggiungerli a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Gli elementi che è possibile aggiungere sono i grafici, i pannelli dei misuratori, le mappe e le immagini. È possibile effettuare le operazioni seguenti:
+
+1. Selezionare il gruppo contenente il dashboard a cui si vogliono aggiungere gli elementi.
+2. Selezionare il dashboard a cui si vuole aggiungere l'elemento.
+3. Selezionare la frequenza di aggiornamento del riquadro nel dashboard.
+
+![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -162,7 +180,9 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Per altre informazioni, vedere [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF sostituisce ActiveX per la stampa remota:** l'esperienza di stampa ActiveX tramite la barra degli strumenti del visualizzatore di report è stata sostituita da un'esperienza moderna basata su PDF idonea a tutti i browser supportati, incluso Microsoft Edge. Non è più necessario scaricare controlli ActiveX. In base al browser usato e alle applicazioni e ai servizi di visualizzazione di file PDF installati, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aprirà una finestra di dialogo di stampa per stampare il report o richiederà di scaricare un file PDF del report.  Un amministratore può comunque disabilitare la stampa lato client da [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
+**PDF sostituisce ActiveX per la stampa remota:** la barra degli strumenti di Visualizzatore report ora stampa tramite PDF anziché tramite i controlli ActiveX. Il nuovo Visualizzatore report è supportato dai browser più moderni, incluso Microsoft Edge. Non è più necessario scaricare controlli ActiveX. In base al browser usato e alle applicazioni e ai servizi di visualizzazione di file PDF installati, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aprirà una finestra di dialogo di stampa per stampare il report o verrà richiesto all'utente di scaricare un file PDF. Un amministratore può comunque disabilitare la stampa lato client da [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+
+Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -173,7 +193,7 @@ Per altre informazioni, vedere [Export a Report Using URL Access](../reporting-s
 |**Abilitare e disabilitare le sottoscrizioni**. Sono disponibili nuove opzioni dell'interfaccia utente per disabilitare e abilitare rapidamente le sottoscrizioni. Le sottoscrizioni disabilitate mantengono le rispettive proprietà di configurazione, ad esempio la pianificazione, e possono essere abilitate con facilità.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Per altre informazioni, vedere [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Modalità nativa|  
 |**Descrizione della sottoscrizione**. Quando si crea una nuova sottoscrizione, è ora possibile includere una descrizione del report come parte delle proprietà della sottoscrizione. La descrizione viene inclusa nella pagina di riepilogo della sottoscrizione.|Modalità SharePoint e nativa|  
 |**Cambiare il proprietario della sottoscrizione**. L'interfaccia utente migliorata consente di cambiare rapidamente il proprietario di una sottoscrizione. Le versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] consentono agli amministratori di cambiare i proprietari di una sottoscrizione usando uno script. A partire dalla versione [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , è possibile cambiare i proprietari della sottoscrizione usando l'interfaccia utente o uno script. Il cambiamento del proprietario della sottoscrizione è un'attività amministrativa comune quando gli utenti lasciano l'organizzazione o cambiano ruolo all'interno di essa.|Modalità SharePoint e nativa|  
-|**Credenziali condivise per sottoscrizioni con condivisioni file**. Sono ora disponibili due flussi di lavoro con le sottoscrizioni con condivisioni file di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> A partire da questa versione, l'amministratore di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può configurare un singolo account di condivisione file, usato per una o più sottoscrizioni. L'account di condivisione file viene configurato in modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mediante **Specificare un account di condivisione file**in Gestione configurazione e quindi gli utenti selezionano **Usa l'account di condivisione file**nella pagina di configurazione della sottoscrizione.<br /><br /> È possibile configurare singole sottoscrizioni con credenziali specifiche per la condivisione file di destinazione.<br /><br /> È anche possibile combinare i due approcci e fare in modo che alcune sottoscrizioni con condivisioni file usino l'account di condivisione file centrale, mentre altre sottoscrizione usano credenziali specifiche.|Modalità nativa|  
+|**Credenziali condivise per sottoscrizioni con condivisioni file**. Sono ora disponibili due flussi di lavoro con le sottoscrizioni con condivisioni file di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> A partire da questa versione, l'amministratore di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può configurare un singolo account di condivisione file, che può essere usato per più sottoscrizioni. L'account di condivisione file viene configurato tramite l'opzione **Specificare un account di condivisione file** in Gestione configurazione modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Nella pagina di configurazione della sottoscrizione gli utenti selezioneranno **Usa l'account di condivisione file**.<br /><br /> È possibile configurare singole sottoscrizioni con credenziali specifiche per la condivisione file di destinazione.<br /><br /> È anche possibile combinare i due approcci e fare in modo che alcune sottoscrizioni con condivisioni file usino l'account di condivisione file centrale, mentre altre sottoscrizioni usano credenziali specifiche.|Modalità nativa|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
@@ -188,7 +208,7 @@ La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurren
 |Nuovo|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Riquadro Parametri personalizzato:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro.   Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Riquadro Parametri personalizzato:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri")  
 
@@ -201,9 +221,9 @@ La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurren
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Novità di Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Compatibilità con le versioni precedenti](reporting-services-backward-compatibility.md)   
-[Funzionalità di Reporting Services supportate dalle edizioni di SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
-[Eseguire l'aggiornamento e la migrazione di Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Compatibilità con le versioni precedenti](reporting-services-backward-compatibility.md)  
+[Funzionalità di Reporting Services supportate dalle edizioni di SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Eseguire l'aggiornamento e la migrazione di Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
@@ -15,12 +14,12 @@ ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084204"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modificare manualmente un query di stima
   Dopo avere progettato una query tramite il generatore delle query di stima, è possibile modificarla passando alla visualizzazione Testo query nella scheda **Stima modello di data mining** di Progettazione modelli di data mining. Nella parte inferiore dello schermo viene visualizzato un editor di testo per visualizzare la query creata tramite il generatore delle query.  

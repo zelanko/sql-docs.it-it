@@ -1,7 +1,7 @@
 ---
 title: Connessione al motore di database mediante la protezione estesa | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774546"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015005"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "59774546"
      La variabile relativa ai nomi **SPN NTLM accettati** è necessaria quando un server è noto con più nomi SPN. Se un client tenta di connettersi al server tramite un nome SPN valido sconosciuto al server, l'associazione al servizio non riuscirà. Per evitare questo problema, gli utenti possono specificare diversi nomi SPN che rappresentano il server utilizzando **SPN NTLM accettati**. L'impostazione**SPN NTLM accettati** è costituita da una serie di nomi SPN separati da punti e virgola. Per consentire, ad esempio, l'uso dei nomi **MSSQLSvc/ HostName1.Contoso.com** e **MSSQLSvc/ HostName2.Contoso.com**, digitare **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** nella casella **SPN NTLM accettati** . La lunghezza massima della variabile è di 2048 caratteri. **SPN NTLM accettati** è disponibile in **Proprietà - Protocolli per MSSQLSERVER (scheda Avanzate)** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Abilitazione della protezione estesa per il motore di database  
- Per utilizzare la **protezione estesa**, è necessario disporre sia sul server che sul client di un sistema operativo che supporti **questa caratteristica**. È inoltre necessario che la **protezione estesa** sia abilitata nel sistema operativo. Per ulteriori informazioni sull'abilitazione della **protezione estesa** per il sistema operativo in uso, vedere [Protezione estesa per l'autenticazione](https://support.microsoft.com/kb/968389).  
+ Per utilizzare la **protezione estesa**, è necessario disporre sia sul server che sul client di un sistema operativo che supporti **questa caratteristica**. È inoltre necessario che la **protezione estesa** sia abilitata nel sistema operativo. Per ulteriori informazioni sull'abilitazione della **protezione estesa** per il sistema operativo in uso, vedere [Protezione estesa per l'autenticazione](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa** per alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà resa disponibile negli aggiornamenti futuri. Dopo aver abilitato la **protezione estesa** nel server, effettuare i passaggi seguenti per abilitarla **protezione estesa**:  
   
 1.  Dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server** , quindi fare clic su **Gestione configurazione SQL Server**.  
   
-2.  Espandere **Configurazione di rete SQL Server** e quindi fare clic con il pulsante destro del mouse su **Protocolli per** _\<_NomeIstanza*>* e scegliere **Proprietà**.  
+2.  Espandere **Configurazione di rete SQL Server** e quindi fare clic con il pulsante destro del mouse su **Protocolli per** _\<_NomeIstanza *>* e scegliere **Proprietà**.  
   
 3.  Sia per l'associazione di canale che per l'associazione al servizio, nella scheda **Avanzate** configurare l'impostazione adatta per **Protezione estesa** .  
   

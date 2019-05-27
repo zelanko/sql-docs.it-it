@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29574c58eef6f18d685b48dd8d695a5fc42c3e6e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105805"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di intervalli su un misuratore (Generatore report e SSRS)
   Un intervallo del misuratore è un'area sulla scala del misuratore tramite cui viene indicata un'importante sottosezione dei valori sul misuratore. L'uso di un intervallo del misuratore consente di indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori. Gli intervalli sono definiti da un valore iniziale e un valore finale.  

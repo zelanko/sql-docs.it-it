@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 79205aa8721c46f51b5e51acad326da0b7bfcc59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63189233"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108060"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
   Quando si installa la modalità SharePoint di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , i cmdlet di PowerShell sono installati per supportare i server di report in modalità SharePoint. I cmdlets riguardano tre categorie di funzionalità.  
@@ -85,7 +84,7 @@ ms.locfileid: "63189233"
   
 3.  Fare clic su **Shell di gestione SharePoint**.  
   
- Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Ad esempio:  
+ Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Ad esempio:   
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ad73f9ac85bcc770b9337b5f84282fc7fc3018a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fcb3e8c423e629a33a0c173e3264ee11ee178f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151474"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104177"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Memorizzare nella cache set di dati condivisi (SSRS)
   I risultati della query per un set di dati condiviso possono essere copiati in una cache per fornire dati coerenti per più report e migliorare il tempo di risposta per la query del set di dati. In modo analogo ai report, è possibile configurare un set di dati condiviso da memorizzare nella cache al momento del primo utilizzo o specificando una pianificazione.  

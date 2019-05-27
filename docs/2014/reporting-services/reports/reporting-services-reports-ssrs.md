@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
@@ -13,12 +12,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97e99e90d50b6a033f8cc2fe12ce3233ee56c959
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63189241"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102464"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   I report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report si converte in un elemento di report archiviato nel server di report o nel sito di SharePoint. I report sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

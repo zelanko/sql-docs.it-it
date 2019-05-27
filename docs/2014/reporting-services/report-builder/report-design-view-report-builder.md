@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -22,12 +21,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107693"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report necessari. L'area di progettazione si trova al centro della finestra, con la barra multifunzione nella parte superiore mentre i riquadri Dati report, Raggruppamento e Proprietà nonché Raccolta parti del report sono a sinistra, in basso e a destra. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Sulla barra multifunzione le voci di menu tradizionali sono suddivise in categorie che è possibile individuare e utilizzare facilmente. I riquadri consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  

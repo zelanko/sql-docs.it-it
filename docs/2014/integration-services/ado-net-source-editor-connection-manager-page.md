@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836973"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061684"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor origine ADO NET (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine ADO.NET** per selezionare la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  

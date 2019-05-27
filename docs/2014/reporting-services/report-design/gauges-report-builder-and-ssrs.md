@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10226"
@@ -159,12 +158,12 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225100"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105751"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
   L'area dati del misuratore è un'area dati unidimensionale in cui viene visualizzato un solo valore nel set di dati. Un misuratore viene sempre posizionato in un pannello del misuratore, dove è possibile aggiungere misuratori figlio o adiacenti. In un singolo pannello del misuratore è possibile creare più misuratori che condividono funzioni come il filtraggio, il raggruppamento o l'ordinamento.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], connections
@@ -15,12 +14,12 @@ ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 776e3d8c8b8731fb56d51213ffe085c857066cd7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060391"
 ---
 # <a name="connect-components-with-paths"></a>Connessione di componenti con i percorsi
   Per costruire il flusso di dati in un pacchetto, è possibile usare l'area di progettazione della scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)]. Se un flusso di dati contiene due componenti, sarà possibile connetterli connettendo l'output di un'origine o trasformazione all'input di una trasformazione o destinazione. Il connettore tra due componenti del flusso di dati è detto percorso.  

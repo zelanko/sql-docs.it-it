@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
@@ -14,12 +13,12 @@ ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772267"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062005"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Aggiunta, eliminazione o condivisione di una gestione connessione in un pacchetto
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili diverse gestioni connessioni per la connessione a origini dati diverse, ad esempio database relazionali, database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e file in formato CSV e XML. Una gestione connessione può essere creata al livello del pacchetto o al livello del progetto. La gestione connessione creata al livello del progetto è disponibile per tutti i pacchetti nel progetto. La gestione connessione creata al livello del pacchetto è invece disponibile per quel pacchetto specifico.  

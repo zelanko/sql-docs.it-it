@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - interactive searches [SQL Server Management Studio]
@@ -15,12 +14,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe26ee01517f23ba146b326c1e401496f05cc0c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022319"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063791"
 ---
 # <a name="search-documents-interactively"></a>Ricerca interattiva all'interno di documenti
   La finestra di dialogo **Trova e sostituisci** consente di eseguire una ricerca in uno o più file o finestre aperti e passare da un risultato della ricerca all'altro. Questa tecnica consente di esaminare ogni singola corrispondenza della ricerca contestualmente, ossia nel testo che la precede e la segue. È inoltre possibile eseguire operazioni di ricerca bulk ed esaminare i risultati corrispondenti in formato report usando la finestra di dialogo **Trova e sostituisci** .  

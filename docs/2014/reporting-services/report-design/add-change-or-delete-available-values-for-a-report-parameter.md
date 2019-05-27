@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.availablevalues.f1
@@ -15,12 +14,12 @@ ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e9944e437be03dd7cfac3cbe6bad7c5224f3b462
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185935"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106682"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare valori disponibili per un parametro di report (Generatore report e SSRS)
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori disponibili da visualizzare. Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro.  

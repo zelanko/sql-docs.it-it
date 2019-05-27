@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc6d8cfe6d77bd773317d2eae2ac98a9e200c70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834631"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060565"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurazione del servizio Integration Services come risorsa cluster
   In questa sezione vengono fornite le istruzioni necessarie per la configurazione per i clienti che ritengono che i vantaggi della configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster siano prevalenti rispetto agli svantaggi. [!INCLUDE[msCoName](../includes/msconame-md.md)] non consiglia tuttavia la configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster.  

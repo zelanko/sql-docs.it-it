@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -19,12 +18,12 @@ ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80e36518f44b55699289a8691527ee04df72e3f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53a22e87ead90694dea0511be206c50f52663102
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697817"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107512"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Tipo di connessione di Analysis Services per DMX (SSRS)
   Quando si crea un set di dati da un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , Progettazione report visualizza la finestra Progettazione query MDX (Multidimensional Expression) se rileva un cubo valido. Se non viene rilevato alcun cubo, ma è disponibile un modello di data mining, in Progettazione report viene visualizzata la finestra Progettazione query DMX (Data Mining Extensions). Per visualizzare alternativamente le finestre di progettazione MDX e DMX, fare clic sul pulsante **Tipo di comando DMX** (![Passa alla visualizzazione linguaggio query DMX](../media/rsqdicon-commandtypedmx.gif "Passa alla visualizzazione linguaggio query DMX")) sulla barra degli strumenti. La finestra di progettazione query DMX consente di compilare in modo interattivo una query DMX tramite elementi grafici. Per utilizzare Progettazione query DMX, l'origine dei dati specificata deve avere già un modello di data mining che fornisce i dati. I risultati della query vengono convertiti in un set di righe bidimensionale da utilizzare nel report.  

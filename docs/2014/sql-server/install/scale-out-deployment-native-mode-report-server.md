@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
@@ -13,12 +12,12 @@ ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092425"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
   La pagina **Distribuzione con scalabilità orizzontale** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o di creare un join di un server di report per una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  

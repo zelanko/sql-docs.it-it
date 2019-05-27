@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
@@ -13,12 +12,12 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 590cbab5e2b4091c4d0112914631f57d6f7bc8ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137296"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106084"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Aree dati e mappe (Generatore report e SSRS)
   Un'area dati è un oggetto in un report che consente di visualizzare dati da un set di dati del report. I dati del report possono essere visualizzati come numeri e testo in una tabella, una matrice o un elenco, graficamente in un grafico o un misuratore e su uno sfondo geografico in una mappa. Le tabelle, le matrici e gli elenchi sono tutti basati sull'area dati *Tablix* , che si espande in base alle necessità per visualizzare tutti i dati dal set di dati. Un'area dati Tablix supporta più gruppi di righe e colonne, nonché righe e colonne statiche e dinamiche. Un grafico consente di visualizzare più serie e gruppi di categorie in un'ampia gamma di formati di grafico. Un misuratore consente di visualizzare un singolo valore o un valore aggregato per un set di dati. Una mappa consente di visualizzare dati spaziali come elementi della mappa che possono variare nell'aspetto in base ai dati aggregati di un set di dati.  

@@ -18,18 +18,20 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 168022a77687fd8d655b02e975dbe88fbb0bf685
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803126"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943721"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Funzioni e tipi di dati di data e ora (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Le sezioni in questo argomento trattano tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Tipi di dati di data e ora](#DateandTimeDataTypes)  
@@ -123,11 +125,11 @@ Le seguenti tabelle elencano le funzioni di data e ora [!INCLUDE[tsql](../../inc
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Restituisce il valore corrente, per la sessione, di SET DATEFIRST.|**tinyint**|Non deterministica|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Imposta il primo giorno della settimana su un numero compreso tra 1 e 7.|Non applicabile|Non applicabile|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|Imposta l'ordine delle datepart (mese/giorno/anno) per l'immissione di dati **datetime** o **smalldatetime**.|Non applicabile|Non applicabile|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; * *@***number_var* }|Imposta il primo giorno della settimana su un numero compreso tra 1 e 7.|Non applicabile|Non applicabile|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|Imposta l'ordine delle datepart (mese/giorno/anno) per l'immissione di dati **datetime** o **smalldatetime**.|Non applicabile|Non applicabile|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Restituisce il nome della lingua attualmente in uso. @@LANGUAGE non è una funzione di data o ora. Comunque, l'impostazione della lingua può influire sull'output di funzioni di data.|Non applicabile|Non applicabile|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|Imposta la lingua per la sessione e i messaggi di sistema. SET LANGUAGE non è una data o una funzione dell'ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|Restituisce informazioni su formati della data di tutte le lingue supportate. **sp_helplanguage** non è una stored procedure relativa a data o ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; * *@***language_var* }|Imposta la lingua per la sessione e i messaggi di sistema. SET LANGUAGE non è una data o una funzione dell'ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _language_ **'** ]|Restituisce informazioni su formati della data di tutte le lingue supportate. **sp_helplanguage** non è una stored procedure relativa a data o ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Funzioni che convalidano i valori di data e ora
   

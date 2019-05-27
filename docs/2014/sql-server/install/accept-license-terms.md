@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - license terms
@@ -16,12 +15,12 @@ ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096843"
 ---
 # <a name="accept-license-terms"></a>Accettazione delle condizioni di licenza
   Usare la pagina **Condizioni di Licenza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accettare le condizioni di licenza per la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso.  
@@ -47,7 +46,7 @@ ms.locfileid: "63224826"
   
  Le informazioni relative all'utilizzo delle caratteristiche vengono inviate a [!INCLUDE[msCoName](../../includes/msconame-md.md)]e archiviate con diritti di accesso limitati.  
   
- Per disabilitare la segnalazione di Analisi utilizzo software al termine dell'installazione, usare lo strumento **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  , disponibile nel menu Strumenti di configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**** .  
+ Per disabilitare la segnalazione di Analisi utilizzo software al termine dell'installazione, **usare lo strumento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, disponibile nel menu **Strumenti di configurazione** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per le azioni di installazione quali aggiornamento, ripristino, installazione e così via, le informazioni vengono raccolte e caricate solo durante l'esecuzione del programma di installazione  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297549"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095012"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>Dopo l'aggiornamento, nella ricerca full-text non saranno consentiti i predicati nell'espressione OUTPUT INTO
   I predicati full-text non sono consentiti nella clausola OUTPUT quando il livello di compatibilità del database è impostato su 100 o su un valore più alto.  

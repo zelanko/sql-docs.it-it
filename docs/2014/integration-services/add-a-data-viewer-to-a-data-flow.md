@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data viewers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837393"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062089"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Aggiunta di un visualizzatore dati a un flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta e la configurazione di un visualizzatore dati in un flusso di dati. In un visualizzatore dati vengono visualizzati i dati in transito tra due componenti flusso di dati, ad esempio i dati estratti da un'origine dei dati prima che vengano modificati da una trasformazione del flusso di dati.  

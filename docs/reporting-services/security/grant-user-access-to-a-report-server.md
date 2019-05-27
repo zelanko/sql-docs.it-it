@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449692"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619604"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Concedere l'accesso utente a un server di report
 
@@ -53,24 +53,24 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 1. Avviare il [portale Web](../web-portal-ssrs-native-mode.md).
 
-2. Selezionare l' *icona dell'ingranaggio* in alto a destra.
+2. Selezionare l'icona a forma di **ingranaggio** nella parte superiore destra e quindi selezionare **Impostazioni sito** dal menu a discesa.
 
-3. Selezionare **Impostazioni sito**.
+    ![Icona a forma di ingranaggio del portale Web del server di report e menu a discesa](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. Selezionare **Sicurezza**.
+3. Selezionare **Sicurezza**.
 
-5. Fare clic su **Aggiungi gruppo o utente**.
+4. Fare clic su **Aggiungi gruppo o utente**.
 
-6. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>.
+5. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>.
 
     > [!NOTE]
     > Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
 
-7. Selezionare un ruolo a livello di sistema e fare clic su **OK**.
+6. Selezionare un ruolo a livello di sistema e fare clic su **OK**.
 
     Poiché i ruoli sono cumulativi, se si seleziona sia Amministratore sistema che Utente sistema, un utente o un gruppo sarà in grado di eseguire le attività in entrambi ruoli.
 
-8. Ripetere le operazioni per creare assegnazioni per utenti o gruppi aggiuntivi.
+7. Ripetere le operazioni per creare assegnazioni per utenti o gruppi aggiuntivi.
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>Per aggiungere un utente o un gruppo a un ruolo a livello di elemento
 

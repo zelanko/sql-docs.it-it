@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659230"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107846"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generare i feed di dati da un report (Generatore report e SSRS)
   È possibile generare feed di dati conformi ad Atom da report e usarli in applicazioni in cui sono supportati, ad esempio il client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

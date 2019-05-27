@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -16,12 +15,12 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092654"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestione configurazione Reporting Services (modalità nativa)
   Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. Se si è installato un server di report mediante l'opzione di installazione di tipo "solo file", è necessario utilizzare Gestione configurazione per configurare il server prima di poterlo utilizzare. Se si è installato un server di report mediante l'opzione di installazione della configurazione predefinita, è possibile utilizzare Gestione configurazione per verificare o modificare le impostazioni specificate durante l'installazione. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'istanza remota o locale di un server di report.  

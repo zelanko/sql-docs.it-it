@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -17,12 +16,12 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242681"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102002"
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
   Un' *assegnazione di ruolo* rappresenta criteri di sicurezza che determinano se un utente o un gruppo può accedere a un elemento specifico del server di report oppure eseguire una determinata operazione. Un'assegnazione di ruolo è costituita da un unico nome di un account utente o di gruppo e da una o più definizioni di ruolo.  

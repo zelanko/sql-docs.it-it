@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -25,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ea53907b9561a92ef46056fad145f5d0236048cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963387"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102819"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
@@ -91,16 +90,16 @@ ms.locfileid: "59963387"
 |**Gestione configurazione**|Yes|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Gestione report**|Yes|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Yes|No.|  
-|**Report personali**|Yes|No|  
+|**Report personali**|Yes|no|  
 |**Sottoscrizioni personali** e metodi di invio in batch|Yes|No|  
-|**Avvisi dati**|No|Yes|  
+|**Avvisi dati**|no|Yes|  
 |**Power View**|No|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Yes|Yes<br /><br /> I report RDL possono essere eseguiti nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa o SharePoint.|  
 |**Report RDLX**|No|Yes<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|  
 |**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Yes|  
 |**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Yes|  
-|**Backup e recupero di SharePoint**|No|Yes|  
-|**Supporto del log ULS**|no|Yes|  
+|**Backup e recupero di SharePoint**|no|Yes|  
+|**Supporto del log ULS**|No|Yes|  
   
 ##  <a name="bkmk_nativemode"></a> Modalità nativa  
  In modalità nativa un server di report è un server applicazioni autonomo che fornisce tutte le funzionalità necessarie per la visualizzazione, la gestione, l'elaborazione e il recapito di report e modelli di report. Questa è la modalità predefinita per le istanze del server di report. È possibile installare un server di report in modalità nativa configurato durante l'installazione oppure configurarlo per le operazioni in modalità nativa al termine dell'installazione.  
@@ -151,7 +150,7 @@ ms.locfileid: "59963387"
   
  In Reporting Services sono disponibili estensioni predefinite che consentono di utilizzare tutte le funzionalità del server senza la necessità di sviluppare componenti personalizzati. Nella tabella seguente sono descritte le estensioni predefinite che concorrono a formare un'istanza del server di report completa con funzionalità immediatamente disponibili per l'utilizzo:  
   
-|Tipo|Impostazione predefinita|  
+|Type|Impostazione predefinita|  
 |----------|-------------|  
 |Autenticazione|Un'istanza del server di report predefinita supporta l'autenticazione di Windows, incluse le funzionalità di rappresentazione e delega, se abilitate nel dominio.|  
 |Elaborazione dati|In un'istanza del server di report predefinita sono incluse le estensioni per l'elaborazione dati per origini dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse e ODBC.|  

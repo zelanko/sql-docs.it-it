@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188486"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108045"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Pianificare la progettazione e la distribuzione di report (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e distribuzione di report. Utilizzare questo argomento per la pianificazione di un ambiente di creazione di report e un server di report che interagiscono. In questo argomento viene fornita una panoramica del supporto delle definizioni di report mediante i componenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definizione di report è un file XML scritto in linguaggio RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Ogni definizione di report è conforme a una versione di schema specifica elencata all'inizio del file.  
@@ -70,7 +69,7 @@ ms.locfileid: "63188486"
   
 |Versione del server di report|Versione dello schema RDL|  
 |---------------------------|------------------------|  
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> e<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> e<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]|2005 RDL<br /><br /> 2000 RDL|  
   
@@ -89,7 +88,7 @@ ms.locfileid: "63188486"
   
 |Ambiente di creazione|Versione di RDL creata|Distribuzione versione RDL|Distribuzione alle versioni del server di report|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|Progettazione report in SQL Server 2014 Data Tools - Business Intelligence per Microsoft Visual Studio 2012, nell'Area download Microsoft.<br /><br /> Oppure<br /><br /> Progettazione report in SQL Server 2012 Data Tools - Business Intelligence per Microsoft Visual Studio 2012, nell'Area download Microsoft.<br /><br /> e<br /><br /> Progettazione report in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluso in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea 2010 RDL. All'apertura di RDL esistente:<br /><br /> 2000 RDL, aggiornamenti a 2010 RDL<br /><br /> 2005 RDL, aggiornamenti a 2010 RDL<br /><br /> 2008 RDL, aggiornamenti a 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Progettazione report in SQL Server 2014 Data Tools - Business Intelligence per Microsoft Visual Studio 2012, nell'Area download Microsoft.<br /><br /> Oppure<br /><br /> Progettazione report in SQL Server 2012 Data Tools - Business Intelligence per Microsoft Visual Studio 2012, nell'Area download Microsoft.<br /><br /> Oppure<br /><br /> Progettazione report in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluso in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea 2010 RDL. All'apertura di RDL esistente:<br /><br /> 2000 RDL, aggiornamenti a 2010 RDL<br /><br /> 2005 RDL, aggiornamenti a 2010 RDL<br /><br /> 2008 RDL, aggiornamenti a 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Progettazione report in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Crea 2010 RDL. All'apertura di RDL esistente:<br /><br /> 2000 RDL, aggiornamenti a 2010 RDL<br /><br /> 2005 RDL, aggiornamenti a 2010 RDL<br /><br /> 2008 RDL, aggiornamenti a 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Progettazione report in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crea 2008 RDL. All'apertura di RDL esistente:<br /><br /> 2000 RDL, aggiornamenti a 2008 RDL<br /><br /> 2005 RDL, aggiornamenti a 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
 |Generatore report [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|Crea 2010 RDL. All'apertura di RDL esistente:<br /><br /> 2000 RDL, aggiornamenti a 2010 RDL<br /><br /> 2005 RDL, aggiornamenti a 2010 RDL<br /><br /> 2008 RDL, aggiornamenti a 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
@@ -106,8 +105,8 @@ ms.locfileid: "63188486"
   
 |Controllo ReportViewer nel prodotto|Versione di RDL per l'anteprima locale|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> e<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> e<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> e<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Oppure<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Oppure<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
  Per ulteriori informazioni, vedere quanto segue:  
   

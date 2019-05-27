@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - drop system objects [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d420e2dba1dfdb284b0002eca6d8408c4e019e8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294486"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093081"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>Rimuovere le istruzioni che eliminano oggetti di sistema
   Sono state rilevate istruzioni che eliminano oggetti di sistema. Gli oggetti di sistema, incluse le stored procedure estese, vengono distribuiti in sola lettura **risorsa** (mssqlsystemresource) del database e non può essere eliminata. Modificare le applicazioni in modo da revocare o negare l'autorizzazione EXECUTE sugli oggetti di sistema.  

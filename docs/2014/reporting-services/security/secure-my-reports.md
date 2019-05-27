@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
@@ -17,12 +16,12 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: de90bbfad9bdd204e4eaf4c7c9afe96e6f8519f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 88bceac4d712eb1010e4915e11267b7d2ee258a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966801"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101739"
 ---
 # <a name="secure-my-reports"></a>Proteggere i report personali
   La caratteristica Report personali è un'area di lavoro gestita dall'utente nella quale è possibile eseguire varie operazioni sui report. Per garantire che la cartella Report personali possa essere utilizzata in base alle caratteristiche per cui è stata progettata, le autorizzazioni necessarie per questa cartella sono meno restrittive rispetto a quelle di altre cartelle disponibili a livello generale. Per gli utenti con autorizzazioni di sola visualizzazione ed esecuzione di report in altre cartelle, potrebbe essere necessario un set di autorizzazioni più ampio che consenta di gestire le cartelle Report personali e il contenuto di cui sono proprietari. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili un'assegnazione e una definizione di ruoli specifici per questo scopo.  

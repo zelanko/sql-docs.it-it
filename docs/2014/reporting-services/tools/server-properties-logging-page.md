@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.logging.f1
@@ -13,12 +12,12 @@ ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 53bf911fa6971f3b3d2567d55e18dfbac27a56aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635123"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099526"
 ---
 # <a name="server-properties-logging-page"></a>Proprietà  server (pagina Registrazione)
   Utilizzare questa pagina per impostare i limiti relativi ai dati sull'esecuzione dei report raccolti dal server di report. I dati di esecuzione vengono archiviati internamente nel database del server di report. È possibile tenere traccia dell'attività di un server di report eseguito in modalità nativa o in modalità integrata SharePoint. Se il server di report fa parte di una distribuzione con scalabilità orizzontale, nel log di esecuzione del report viene conservato un record di tutte le attività del report per l'intera distribuzione in un unico file di log.  

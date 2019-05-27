@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ffa01b53544d0af2ea12b146a122ff51e58cfcad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657879"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107984"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interfaccia utente di Progettazione query relazionale
   In Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di una query che consente di specificare i dati da recuperare da [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] di [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  

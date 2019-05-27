@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d22bbe58ac04786186a4b8cca7e51a61ea5b66e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837294"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062063"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Aggiunta di un registro per i contatori delle prestazioni del flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta di un registro per i contatori delle prestazioni forniti dal motore del flusso di dati.  
