@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58b0ea08b09e62881de6cef073ae931ecb598978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701215"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076935"
 ---
 # <a name="batch-processing-analysis-services"></a>Elaborazione batch (Analysis Services)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare il comando Batch per inviare al server più comandi di elaborazione in una sola richiesta. Tramite l'elaborazione batch è possibile determinare gli oggetti da elaborare e l'ordine di elaborazione. Un batch può inoltre essere eseguito come una serie di processi autonomi o come una transazione nella quale l'esito negativo di un processo causa il rollback dell'intero batch.  

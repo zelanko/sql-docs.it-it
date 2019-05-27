@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62688768"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107802"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funzionalità interattiva per estensioni per il rendering di report differenti (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili caratteristiche interattive che consentono di utilizzare un report in fase di esecuzione. Solo alcuni formati di rendering dei report supportano l'intera gamma di caratteristiche interattive. È possibile utilizzare la tabella seguente per comprendere la modalità di utilizzo delle diverse caratteristiche interattive in formati specifici.  

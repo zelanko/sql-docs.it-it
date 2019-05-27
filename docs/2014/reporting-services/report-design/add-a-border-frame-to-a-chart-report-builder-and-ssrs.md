@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6b354cbb09a61e5fdd2444afaff0e6c8e0bb5b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185967"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106904"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Aggiungere un bordo o un frame a un grafico (Generatore report e SSRS)
   Per aumentare l'impatto visivo di un grafico è possibile utilizzare un bordo/frame intorno alla parte esterna del grafico. È possibile selezionare un bordo o un frame utilizzando la finestra di dialogo **Proprietà grafico** o il riquadro Proprietà. Non è possibile applicare i bordi del grafico ad altre aree dati.  

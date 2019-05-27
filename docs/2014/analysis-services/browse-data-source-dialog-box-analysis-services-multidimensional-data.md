@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.datasourcebrowse.f1
@@ -15,12 +14,12 @@ ms.assetid: 134355cb-69a7-4b16-8076-82ede43ce940
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ddba1f5e79f1fe67f0b9319341f2599ac05cc9c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655516"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064551"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo per l'esplorazione dell'origine dei dati (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Sfoglia origine dati** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per visualizzare i primi 1.000 record della tabella selezionata.  
