@@ -17,16 +17,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701319"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946540"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quali sono le funzioni del database SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
 |[Funzioni per i cursori](cursor-functions-transact-sql.md)|Restituiscono informazioni sui cursori.|  
 |[Funzioni e tipi di dati di data e ora](date-and-time-data-types-and-functions-transact-sql.md)|Eseguono operazioni su valori di input di data e ora e restituiscono valori stringa, numerici o di data e ora.|  
 |[Funzioni JSON](json-functions-transact-sql.md)|Consentono di convalidare o modificare i dati JSON e di eseguire query su di essi.|  
-|[Funzioni logiche](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Eseguono operazioni logiche.|  
+|[Funzioni logiche](logical-functions-choose-transact-sql.md)|Eseguono operazioni logiche.|  
 |[Funzioni matematiche](mathematical-functions-transact-sql.md)|Eseguono calcoli in base ai valori di input specificati come parametri per le funzioni e restituiscono valori numerici.|  
 |[Funzioni per i metadati](metadata-functions-transact-sql.md)|Restituiscono informazioni sul database e sugli oggetti di database.|  
 |[Funzioni di sicurezza](security-functions-transact-sql.md)|Restituiscono informazioni sugli utenti e sui ruoli.|  

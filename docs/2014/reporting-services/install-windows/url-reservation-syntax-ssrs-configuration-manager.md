@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -13,12 +12,12 @@ ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 885e8ffb9eaa02aae02db590c8d042dadb1f2ab0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5b8cc62556749a310f8c11a5efcae32eafbd8ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224924"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108613"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
   In questo argomento vengono descritte le parti della stringa URL per il servizio Web ReportServer e per Gestione report. La stringa URL archiviata internamente ha una struttura diversa da un URL digitato nella barra degli indirizzi di una finestra del browser. La stringa della prenotazione URL viene visualizzata nella finestra Risultati dello strumento di configurazione di Reporting Services quando si configura un URL e nel file RSReportServer.config. Conoscere il modo in cui è definita la stringa URL può risultare utile ai fini della risoluzione dei problemi relativi alle prenotazioni URL o per eseguire una query su HTTP.SYS per visualizzare le prenotazioni URL interne definite nel server.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054492"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Visualizzazione dei metadati dei percorsi nell'Editor percorso flusso di dati
   I percorsi connettono due componenti flusso di dati. Affinché sia possibile visualizzare i metadati di un percorso, il flusso di dati deve contenere almeno due componenti connessi. Per altre informazioni, vedere [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md).  

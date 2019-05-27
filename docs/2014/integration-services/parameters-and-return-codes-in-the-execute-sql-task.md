@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890199"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056792"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parametri e codici restituiti nell’attività Esegui SQL
   Le stored procedure e le istruzioni SQL utilizzano spesso parametri di `input`, parametri di `output`e codici restituiti. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] l'attività Esegui SQL supporta parametri di tipo `Input`, `Output` e `ReturnValue`. Il tipo `Input` viene utilizzato per i parametri di input, il tipo `Output` per i parametri di output e il tipo `ReturnValue` per i codici restituiti.  

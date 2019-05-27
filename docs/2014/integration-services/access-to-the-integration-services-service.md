@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,12 +19,12 @@ ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ef77b0dac4db5b30eb12f3a857a3c25cb3caa57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e3654be0afe51be6566a09897a2656dd53c77696
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062243"
 ---
 # <a name="access-to-the-integration-services-service"></a>Accesso al servizio Integration Services
   Tramite i livelli di protezione dei pacchetti è possibile limitare gli utenti a cui è consentito modificare ed eseguire un pacchetto. Per limitare gli utenti a cui è consentito visualizzare l'elenco di pacchetti attualmente in esecuzione in un server e arrestare i pacchetti attualmente in esecuzione in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]è necessaria una protezione aggiuntiva.  

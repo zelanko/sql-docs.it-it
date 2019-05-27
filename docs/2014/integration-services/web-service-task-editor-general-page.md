@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054536"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Servizio Web** per specificare una gestione connessione HTTP e il percorso del file WSDL (Web Services Description Language) usato dall'attività Servizio Web, descrivere l'attività Servizio Web e scaricare il file WSDL.  

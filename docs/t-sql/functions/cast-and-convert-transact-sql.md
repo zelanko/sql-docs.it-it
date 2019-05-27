@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801835"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942898"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ Queste funzioni convertono un'espressione da un tipo di dati a un altro.
 
 **Cast**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **Converti**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -176,12 +177,12 @@ Se il tipo di dati di **expression** è *xml*, *style* può avere uno dei valori
 |valore|Output|  
 |---|---|
 |**0** (predefinito)|Viene usato il comportamento di analisi predefinito, ovvero vengono eliminati gli spazi vuoti non significativi e non vengono consentiti subset DTD interni.<br /><br />**Nota:** quando si esegue la conversione nel tipo di dati **xml**, gli spazi vuoti non significativi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono gestiti diversamente rispetto a XML 1.0. Per altre informazioni, vedere [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
-|**1**|Mantiene gli spazi vuoti non significativi. Con questa impostazione dello stile, il comportamento predefinito di **xml:space** è equivalente a **xml:space="preserve"**.|  
+|**1**|Mantiene gli spazi vuoti non significativi. Con questa impostazione dello stile, il comportamento predefinito di **xml:space** è equivalente a **xml:space="preserve"** .|  
 |**2**|Abilita l'elaborazione limitata di subset DTD interni.<br /><br /> Se abilitata, il server può usare le informazioni seguenti disponibili in un subset DTD intero per eseguire operazioni di analisi senza convalida.<br /><br />   - Vengono applicati i valori predefiniti per gli attributi<br />   - I riferimenti alle entità interne vengono risolti ed espansi<br />   - Viene controllata la correttezza della sintassi del modello di contenuti DTD<br /><br /> Il parser ignora i subset DTD esterni. Inoltre, non valuta la dichiarazione XML per verificare se l'attributo **standalone** ha un valore **yes** o **no**. Analizza invece l'istanza XML come documento autonomo.|  
 |**3**|Mantiene gli spazi non significativi e consente l'elaborazione limitata di subset DTD interni.|  
   
 ## <a name="binary-styles"></a>Stili binary
-Se il tipo di dati di **expression** è **binary(n)**, **char(n)**, **varbinary(n)** o *varchar(n)*, *style* può avere uno dei valori indicati nella tabella seguente. I valori dello stile non indicati nella tabella restituiscono un errore.
+Se il tipo di dati di **expression** è **binary(n)** , **char(n)** , **varbinary(n)** o *varchar(n)* , *style* può avere uno dei valori indicati nella tabella seguente. I valori dello stile non indicati nella tabella restituiscono un errore.
   
 |valore|Output|  
 |---|---|
@@ -204,8 +205,8 @@ Quando si esegue la conversione tra **datetimeoffset** e i tipi di dati di carat
   
 ## <a name="large-value-data-types"></a>Tipi di dati per valori di grandi dimensioni
 Per quanto riguarda le conversioni implicite ed esplicite, i tipi di dati per valori di grandi dimensioni si comportano come i tipi di dati per valori di dimensioni minori, in particolare i tipi di dati **nvarchar**, **varbinary** e **varchar**. Considerare tuttavia queste indicazioni:
--   La conversione di **image** in **varbinary(max)** e viceversa funziona come conversione implicita, come le conversioni tra **text** e **varchar(max)** e **ntext** e **nvarchar(max)**.  
--   La conversione di tipi di dati per valori di grandi dimensioni, ad esempio **varchar(max)**, in tipi di dati per valori di dimensioni minori, ad esempio **varchar**, è una conversione implicita, ma si verifica un troncamento se la dimensione del valore più grande supera la lunghezza specificata per il tipo di dati più piccolo.  
+-   La conversione di **image** in **varbinary(max)** e viceversa funziona come conversione implicita, come le conversioni tra **text** e **varchar(max)** e **ntext** e **nvarchar(max)** .  
+-   La conversione di tipi di dati per valori di grandi dimensioni, ad esempio **varchar(max)** , in tipi di dati per valori di dimensioni minori, ad esempio **varchar**, è una conversione implicita, ma si verifica un troncamento se la dimensione del valore più grande supera la lunghezza specificata per il tipo di dati più piccolo.  
 -   La conversione di **varchar**, **nvarchar** o **varbinary** nei corrispondenti tipi di dati per valori di grandi dimensioni avviene in modo implicito.  
 -   La conversione del tipo di dati **sql_variant** in tipi di dati per valori di grandi dimensioni è una conversione esplicita.  
 -   Non è possibile convertire i tipi di dati per valori di grandi dimensioni nel tipo di dati **sql_variant**.  
@@ -221,7 +222,7 @@ I tipi di dati **text** e **image** non supportano la conversione automatica del
 ## <a name="output-collation"></a>Regole di confronto per l'output  
 Quando l'output delle funzioni CAST o CONVERT è una stringa di caratteri e le funzioni ricevono come input una stringa di caratteri, l'output e l'input hanno le stesse regole di confronto e le stesse etichette delle regole di confronto. Se l'input non è una stringa di caratteri, all'output sono associate le regole di confronto predefinite del database e un'etichetta delle regole di confronto a cui possono essere assegnati valori predefiniti. Per altre informazioni, vedere [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
-Per assegnare all'output regole di confronto diverse, applicare la clausola COLLATE all'espressione risultante della funzione CAST o CONVERT. Ad esempio
+Per assegnare all'output regole di confronto diverse, applicare la clausola COLLATE all'espressione risultante della funzione CAST o CONVERT. Esempio:
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -366,7 +367,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>b. Utilizzo della funzione CAST con operatori aritmetici  
+### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilizzo della funzione CAST con operatori aritmetici  
 In questo esempio viene eseguito il calcolo di una sola colonna (`Computed`) dividendo il totale delle vendite dell'anno in corso (`SalesYTD`) per la percentuale di commissione (`CommissionPCT`). Questo valore viene arrotondato al numero intero più vicino e viene quindi eseguito il CAST del valore a un tipo di dati `int`.
   
 ```sql
@@ -421,7 +422,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Utilizzo di CAST per migliorare la leggibilità del testo  
-Questo esempio usa CAST nell'elenco SELECT per convertire la colonna `Name` in una colonna **char(10)**. Viene usato il database AdventureWorksDW.
+Questo esempio usa CAST nell'elenco SELECT per convertire la colonna `Name` in una colonna **char(10)** . Viene usato il database AdventureWorksDW.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  

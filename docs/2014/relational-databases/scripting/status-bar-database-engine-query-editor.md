@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62667587"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063631"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
   La barra di stato delle finestre dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] può apparire di colore diverso in modo da indicare a quale istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connessa ciascuna finestra.  
