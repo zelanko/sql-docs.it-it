@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec0b3ead95fe196f75b003d2fd844bbf2520ced9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6db4de99458ced7471414540bc46704cfab928fb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092511"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063324"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintassi Transact-SQL supportata da IntelliSense
   In questo argomento vengono descritti le istruzioni e gli elementi di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] supportati da IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875216"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943499"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ PATINDEX ( '%pattern%' , expression )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che in genere indica una colonna in cui viene cercato il modello specificato. *expression* appartiene alla categoria di tipi di dati per stringhe di caratteri.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **bigint** se *expression* è del tipo di dati **varchar(max)** o **nvarchar(max)**, in caso contrario **int**.  
+ **bigint** se *expression* è del tipo di dati **varchar(max)** o **nvarchar(max)** , in caso contrario **int**.  
   
 ## <a name="remarks"></a>Remarks  
  Se *pattern* o *expression* è NULL, PATINDEX restituisce NULL.  
@@ -63,7 +63,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
  Quando si usano le regole di confronto SC, qualsiasi coppia di surrogati UTF-16 nel parametro *expression* viene considerata come un singolo carattere dal valore restituito. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0x0000 (**char(0)**) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in PATINDEX.  
+ 0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in PATINDEX.  
   
 ## <a name="examples"></a>Esempi  
   

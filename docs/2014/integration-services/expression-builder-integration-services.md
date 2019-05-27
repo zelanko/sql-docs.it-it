@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b0b6aa04e1e4fd9d578a60a1f821e91b0f02131
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769637"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058902"
 ---
 # <a name="expression-builder-integration-services"></a>Generatore di espressioni (Integration Services)
   Nella finestra di dialogo **Generatore di espressioni** è disponibile un'interfaccia utente grafica per la compilazione delle espressioni utilizzate dalle espressioni di proprietà. È possibile accedere alla finestra di dialogo **Generatore di espressioni** dalle finestre di dialogo delle attività personalizzate in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e dalla finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Aggregate Geometry Methods [SQL Server]
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a826fd2e2a2be92b71a74e3a59945bd167277ea6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 510a62bb5d4727f549f446daec020ed10de645af
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513693"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939097"
 ---
 # <a name="static-aggregate-geometry-methods"></a>Metodi geometry di aggregazione statici
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

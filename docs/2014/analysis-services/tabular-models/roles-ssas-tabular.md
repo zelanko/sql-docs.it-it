@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756902"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066632"
 ---
 # <a name="roles-ssas-tabular"></a>Ruoli (SSAS tabulare)
   I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. In ogni ruolo sono contenuti membri, in base al nome utente o gruppo di Windows, e autorizzazioni, ad esempio per la lettura, l'elaborazione e l'amministratore. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890427"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057704"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor trasformazione Merge join
   Utilizzare la finestra di dialogo **Editor trasformazione Merge join** per specificare il tipo di join, le colonne di join e le colonne di output per l'unione di due input combinati tramite un join.  

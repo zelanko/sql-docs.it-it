@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
@@ -14,12 +13,12 @@ ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61b488250267e497541f15033b347074648d3c9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086151"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092035"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>La categoria di processi per il log shipping di SQL Server Agent impedisce il completamento dell'aggiornamento
   Il processo di aggiornamento non verrà completato se esiste una categoria di processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent denominata Log shipping.  
@@ -27,7 +26,7 @@ ms.locfileid: "48086151"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Esiste una categoria di processi di sistema denominata Log shipping. Se una delle installazioni da aggiornare contiene già una categoria di processi creata dall'utente denominata Log shipping, sarà necessario rinominarla prima dell'aggiornamento. In caso contrario, l'aggiornamento non verrà completato.  
   
 ## <a name="see-also"></a>Vedere anche  

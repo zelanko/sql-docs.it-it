@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aa5b08a35a2eaf0d82b79145ecacde9d50579ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057836"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Editor trasformazione Ricerca (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo Editor trasformazione Ricerca per selezionare la modalità di cache, selezionare il tipo di connessione e specificare la modalità di gestione delle righe senza voci corrispondenti.  

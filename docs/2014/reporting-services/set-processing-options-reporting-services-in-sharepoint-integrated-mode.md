@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
@@ -14,12 +13,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb3edf70f1823017b1c155c085044a2432f332b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101341"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
   È possibile impostare le opzioni di elaborazione di un report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per determinare il momento in cui deve avvenire l'elaborazione dei dati. È inoltre possibile impostare un valore di timeout per l'elaborazione del report e opzioni che determinano se attivare o meno la cronologia del report per il report corrente.  
