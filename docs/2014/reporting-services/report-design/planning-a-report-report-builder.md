@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -14,12 +13,12 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215734"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105455"
 ---
 # <a name="planning-a-report-report-builder"></a>Pianificazione di un report (Generatore report)
   Generatore report consente di creare molti tipi di report. Ad esempio è possibile creare report in cui vengono mostrati dati di vendita dettagliati o riepilogativi, tendenze di marketing e di vendite, report operativi o dashboard. È possibile anche creare report con funzionalità avanzate di formattazione del testo, ad esempio per gli ordini di vendita, i cataloghi del prodotto o lettere tipo. Tutti questi report vengono creati utilizzando combinazioni diverse degli stessi blocchi predefiniti di compilazione di Generatore report. Per creare un report utile, facilmente comprensibile, può essere opportuno innanzitutto una pianificazione. Di seguito sono riportate alcune considerazioni da tenere presenti prima di iniziare:  
@@ -36,7 +35,7 @@ ms.locfileid: "63215734"
   
      Generatore report fornisce molti elementi che possono essere aggiunti al report per semplificarne la lettura, evidenziare le informazioni chiave, facilitarne l'esplorazione da parte dell'utente e così via. La definizione del report consente di determinare se sono necessari elementi del report quali caselle di testo, rettangoli, immagini e righe. Potrebbe inoltre essere necessario mostrare o nascondere elementi, aggiungere una mappa documento, includere report drill-through o sottoreport oppure collegare altri report. Per altre informazioni, vedere [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) e [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **I dati che si desidera vedere i lettori? Filtro dei dati o del formato per lettori diversi**  
+-   **Quali dati devono essere letti dagli utenti? Filtro dei dati o del formato per lettori diversi**  
   
      Potrebbe essere necessario restringere l'ambito del report a utenti o percorsi specifici oppure a un particolare periodo di tempo. Per filtrare i dati del report, utilizzare i parametri per recuperare e visualizzare solo i dati desiderati. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md).  
   

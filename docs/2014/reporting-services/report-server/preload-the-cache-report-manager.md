@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103593"
 ---
 # <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
   Per precaricare la cache per un set di dati condiviso, è possibile creare un piano di aggiornamento della cache per il set di dati stesso.  
@@ -87,7 +86,7 @@ ms.locfileid: "63191079"
   
 8.  Scegliere **Avanti**.  
   
-9. Specificare la query o il comando per il recupero dei dati relativi ai sottoscrittori. Se lo si desidera, aumentare il periodo di timeout per le query che richiedono un'elaborazione prolungata. Ad esempio:  
+9. Specificare la query o il comando per il recupero dei dati relativi ai sottoscrittori. Se lo si desidera, aumentare il periodo di timeout per le query che richiedono un'elaborazione prolungata. Ad esempio:   
   
     ```  
     Select * from UserInfo  
@@ -114,7 +113,7 @@ ms.locfileid: "63191079"
   
 17. Selezionare una delle due opzioni della cache e configurare la scadenza come segue:  
   
-    -   Per eseguire la copia memorizzata nella cache scadono dopo un periodo di tempo specifico, fare clic su **memorizzare nella Cache una copia temporanea del report. La copia del report scadrà dopo il numero di minuti seguente.** Digitare il numero di minuti alla scadenza del report.  
+    -   Per impostare la scadenza della copia memorizzata nella cache dopo un determinato periodo di tempo, fare clic su **Memorizza nella cache una copia temporanea del report. La copia del report scadrà dopo il numero di minuti seguente.** Digitare il numero di minuti alla scadenza del report.  
   
     -   Per impostare la scadenza della copia memorizzata nella cache in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Per impostare una pianificazione per la scadenza del report, fare clic su **Configura**oppure selezionare una pianificazione condivisa.  
   

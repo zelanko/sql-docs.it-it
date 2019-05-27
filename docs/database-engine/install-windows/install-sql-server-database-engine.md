@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532768"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484330"
 ---
 # <a name="install-sql-server-database-engine"></a>Installare il motore di database di SQL Server
 
@@ -37,7 +37,7 @@ Quando si seleziona **Motore di database di [!INCLUDE[ssNoVersion](../../include
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Replica - componente facoltativo  
+-   [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md) - componente facoltativo  
 
 -   [Machine Learning Services (In-Database) con R e Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - componente facoltativo
 
@@ -47,6 +47,9 @@ Quando si seleziona **Motore di database di [!INCLUDE[ssNoVersion](../../include
   
     > [!NOTE]  
     >  In questa versione, la selezione della casella di controllo **Data Quality Services** nell'installazione non comporta l'installazione del server Data Quality Services (DQS). Sarà necessario eseguire dei passaggi aggiuntivi postinstallazione per installare server DQS. Per altre informazioni, vedere [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
+    
+- [Servizio Query PolyBase per i dati esterni](../../relational-databases/polybase/polybase-guide.md) - componente facoltativo 
+
   
  Le funzionalità aggiuntive seguenti rappresentano opzioni disponibili per molti scenari utente tipici:  
   

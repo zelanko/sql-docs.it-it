@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802885"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503247"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -46,7 +46,7 @@ Importa un file di dati in una tabella o una vista di database in un formato spe
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   
@@ -94,7 +94,7 @@ BULK INSERT
  **'** _data_file_ **'**  
  Percorso completo del file contenente i dati da importare nella tabella o nella vista specificata. L'istruzione BULK INSERT consente di importare dati da un disco, ad esempio unità di rete, dischi floppy, dischi rigidi e così via.   
  
- *data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Ad esempio   
+ *data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Esempio:   
 
 ```sql
 BULK INSERT Sales.Orders
@@ -224,7 +224,7 @@ LASTROW **=** _last_row_ Specifica il numero dell'ultima riga da caricare. Il va
  ROWS_PER_BATCH **=** _rows_per_batch_  
  Indica il numero approssimativo di righe di dati nel file di dati.  
   
- Per impostazione predefinita, tutti i dati nel file di dati vengono inviati al server come singola transazione e il numero di righe nel batch non è noto per Query Optimizer. Se si specifica ROWS_PER_BATCH (con valore > 0), il server utilizza questo valore per ottimizzare l'operazione di importazione bulk. Il valore specificato per ROWS_PER_BATCH deve essere più o meno uguale al numero effettivo di righe. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.  
+ Per impostazione predefinita, tutti i dati nel file di dati vengono inviati al server come singola transazione e il numero di righe nel batch non è noto per Query Optimizer. Se si specifica ROWS_PER_BATCH (con valore > 0), il server usa questo valore per ottimizzare l'operazione di importazione bulk. Il valore specificato per ROWS_PER_BATCH deve essere più o meno uguale al numero effettivo di righe. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.  
   
  
  TABLOCK  
@@ -380,7 +380,7 @@ Prima di [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, i file 
   
  Per altre considerazioni sulla sicurezza, vedere [Importare dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
 
  Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. Nel database SQL di Azure, sono necessarie le autorizzazioni INSERT e ADMINISTER DATABASE BULK OPERATIONS. È inoltre richiesta l'autorizzazione ALTER TABLE se si verificano una o più delle condizioni seguenti:  
   
@@ -415,7 +415,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > [!IMPORTANT]
 > Il database SQL di Azure non supporta la lettura da file di Windows.
   
-### <a name="b-using-the-firetriggers-argument"></a>b. Utilizzo dell'argomento FIRE_TRIGGERS  
+### <a name="b-using-the-firetriggers-argument"></a>B. Utilizzo dell'argomento FIRE_TRIGGERS  
 
  Nell'esempio seguente viene specificato l'argomento `FIRE_TRIGGERS`.  
   

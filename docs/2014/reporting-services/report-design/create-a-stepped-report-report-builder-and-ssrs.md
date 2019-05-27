@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f2e83f23870d355394241550ffab24838a6b43f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206402"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106125"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creazione di un report con rientri (Generatore report e SSRS)
   In un report con rientri le righe di dettaglio oppure i gruppi figlio vengono visualizzati rientrati sotto un gruppo padre della stessa colonna, come illustrato nell'esempio seguente:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654665"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105816"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
   Per punto dati si intende l'entità singola più piccola di un grafico. Nei grafici senza forme la rappresentazione dei punti dati dipende dal relativo tipo di grafico. Una serie di linee è ad esempio costituita da uno o più punti dati connessi. Nei grafici con forme i punti dati sono rappresentati dai singoli segmenti o sezioni che costituiscono l'intero grafico. In un grafico a torta, ad esempio, ogni parte è un punto dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 624681d8f784d3169b1f5e17a34daef99a71459b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461088"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105383"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Tipi di rendering (Generatore report e SSRS)
   A seconda del renderer selezionato, vengono applicate regole specifiche al corpo del report e al relativo contenuto durante il rendering di un report. La disposizione degli elementi del report in una pagina dipende dalla combinazione dei seguenti fattori:  

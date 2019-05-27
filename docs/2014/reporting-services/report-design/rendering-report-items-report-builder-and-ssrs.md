@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215427"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105347"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering degli elementi del report (Generatore report e SSRS)
   Il numero, le dimensioni e la posizione degli elementi del report influiscono sulla modalità di paginazione del corpo del report da parte dei renderer. Di seguito è riportata una descrizione della modalità di rendering dei vari elementi del report.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49ba35fb0ecb5ed70fe737a10ce9a700d4e4c816
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185907"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106591"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Aggiungere, spostare o eliminare una casella di testo (Generatore report e SSRS)
   Le caselle di testo costituiscono l'elemento utilizzato più di frequente nei report. È possibile aggiungere una casella di testo al corpo del report per visualizzare informazioni diverse, ad esempio titoli, scelte di parametri, campi incorporati e date.  

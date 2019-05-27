@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185810"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106445"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta di campi del set di dati (Generatore report e SSRS)
   In ogni set di dati di un report è contenuta una raccolta Campi. La raccolta Campi rappresenta il set di campi specificati dalla query del set di dati, più qualsiasi campo calcolato aggiuntivo creato dall'utente. Dopo la creazione di un set di dati, la raccolta di campi viene visualizzata nel riquadro **Dati report** .  

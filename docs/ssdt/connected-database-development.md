@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 536dbcddf73d8b6af5e1106a7eb279cc1db22f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655889"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105772"
 ---
 # <a name="connected-database-development"></a>Sviluppo del database connesso
 Questa sezione descrive le funzionalità fornite da SQL Server Data Tools per la progettazione di un database connesso e l'esecuzione di query su tale database.  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 264de74dbc3ee09cd333ceb4815c77890938894b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9991405a69aa43a7452d65003e2ef149c8dbc074
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697869"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104898"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,24 +90,24 @@ Nella tabella seguente vengono elencati i tipi di account di Windows che possono
 |Account Sistema locale (NT AUTHORITY\System)|Supportato<br /><br />Vedere Limitazione 2 di seguito.|Non supportato|Supportato<br /><br />Vedere Limitazione 2 di seguito.|  
 |Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportato|Non supportato|Non supportato|  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitazione 1: utilizzo di account non amministrativi per l'amministrazione multiserver  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitazione 1: uso di account non amministrativi per l'amministrazione multiserver  
 È possibile che l'integrazione nei server di destinazione non riesca e venga visualizzato il messaggio di errore "Operazione di integrazione non riuscita".  
   
-Per risolvere il problema, riavviare i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
+Per risolvere il problema, riavviare i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitazione 2: utilizzo dell'account Sistema locale per l'amministrazione multiserver  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitazione 2: uso dell'account Sistema locale per l'amministrazione multiserver  
 Quando il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con l'account Sistema locale, l'amministrazione multiserver è supportata solo quando sia il server master che il server di destinazione risiedono sullo stesso computer. Se si utilizza questa configurazione, quando si integrano i server di destinazione nel server master viene restituito il messaggio seguente:  
   
 "Verifica che l'account di avvio dell'agente per *<target_server_computer_name>* disponga dei diritti per l'accesso come server di destinazione".  
   
 Questo messaggio può essere ignorato. L'operazione di integrazione verrà completata correttamente. Per altre informazioni, vedere [Creare un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitazione 3: utilizzo dell'account Servizio di rete quando è un utente di SQL Server  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitazione 3: uso dell'account Servizio di rete quando è un utente di SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non essere avviato correttamente se si esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account Servizio di rete e a quest'ultimo è stato esplicitamente consentito l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione. È necessario eseguire questa operazione una sola volta.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitazione 4: utilizzo dell'account Servizio di rete quando SQL Server Reporting Services è in esecuzione sullo stesso computer  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitazione 4: uso dell'account Servizio di rete quando SQL Server Reporting Services è in esecuzione nello stesso computer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non essere avviato correttamente se si esegue il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account Servizio di rete sullo stesso computer in cui viene eseguito anche [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione, quindi riavviare sia il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È necessario eseguire questa operazione una sola volta.  
@@ -119,7 +119,7 @@ Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](.
   
 **Per specificare il profilo di posta di SQL Server Agent**  
   
--   [Procedura: Configurazione di SQL Server Agent Mail per l'utilizzo di Posta elettronica database (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Procedura: Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di specificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere avviato all'avvio del sistema operativo.  

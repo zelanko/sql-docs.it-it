@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2bf3deb1614e586e38ce05f7016e92ec3f802e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216095"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105258"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Funzione Last (Generatore report e SSRS)
   Restituisce l'ultimo valore nell'ambito specificato dell'espressione specificata.  

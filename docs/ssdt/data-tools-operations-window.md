@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 99ed8322745c86bbcf18356c27ed9ec68ab34b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604529"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099375"
 ---
 # <a name="data-tools-operations-window"></a>Finestra Operazioni degli strumenti dati
 Nella finestra **Operazioni degli strumenti dati** viene visualizzato lo stato di alcune operazioni descritte in questo argomento e vengono notificati eventuali errori.  
@@ -36,7 +36,7 @@ Nella finestra **Operazioni degli strumenti dati** viene visualizzato lo stato q
   
 -   Eliminazione di un oggetto da **Esplora oggetti di SQL Server**. Per altre informazioni, vedere [Procedura: Eliminare oggetti e risolvere le dipendenze](../ssdt/how-to-delete-objects-and-resolve-dependencies.md).  
   
--   Pubblicazione dei risultati. Per altre informazioni, vedere [Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+-   Pubblicazione dei risultati. Per altre informazioni, vedere [Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md).  
   
 -   Distribuzione. Per altre informazioni, vedere [Procedura: Compilare e distribuire in un database locale](../ssdt/how-to-build-and-deploy-to-a-local-database.md).  
   

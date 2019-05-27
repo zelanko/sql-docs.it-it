@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63207210"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106502"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Aggiunta di dati a un'area dati Tablix (Generatore report e SSRS)
   Per visualizzare i dati di un set di dati del report in una tabella o una matrice, specificare in ogni cella dati il nome di un campo del set di dati da visualizzare. È possibile visualizzare dati dettaglio o dati raggruppati. Se si aggiungono gruppi a una tabella o una matrice, vengono automaticamente aggiunte le righe e le colonne per i valori e i dati di gruppo. È quindi possibile aggiungere subtotali e totali per i dati.  

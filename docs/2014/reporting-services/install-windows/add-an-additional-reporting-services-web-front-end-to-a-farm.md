@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2bd5c489bf799e39b51bf61f0f9e8922a993f65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7996ea2541963d0c7a2060d819667e25d102305
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225350"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108956"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Aggiungere un ulteriore front-end Web di Reporting Services a una farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La modalità SharePoint include i componenti necessari per server applicazioni e server front-end Web (WFE). Questo argomento è incentrato sull'installazione dei componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] obbligatori per un server WFE, incluse le pagine di applicazione utilizzate dalle funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio sottoscrizioni, avvisi dati e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L'installazione primaria di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necessaria per un server WFE consiste nell'installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint 2010.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10530"
@@ -14,12 +13,12 @@ ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c6d90ae9945e7014158916df0ec5e04f03a6541
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306622"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104300"
 ---
 # <a name="report-properties-dialog-box-references"></a>Finestra di dialogo Proprietà report, Riferimenti
   Selezionare **Riferimenti** nella finestra di dialogo **Proprietà report** per aggiungere o rimuovere riferimenti ad assembly personalizzati o altri assembly esterni e a istanze di classe personalizzate utilizzate da espressioni nella definizione del report.  

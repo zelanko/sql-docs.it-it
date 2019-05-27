@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933578"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104225"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domini applicazione per applicazioni del server di report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]il server di report viene implementato come un unico servizio che contiene il servizio Web ReportServer, Gestione report e un'applicazione di elaborazione in background. Ogni applicazione viene eseguita nel proprio dominio all'interno del singolo processo del server di report. Nella maggior parte dei casi, i domini applicazione vengono creati, configurati e gestiti internamente. Tuttavia la conoscenza del modo in cui vengono eseguite le operazioni di riciclo per i domini applicazione del server di report può risultare utile per ottenere prestazioni elevate, per ricercare problemi di memoria o per risolvere interruzioni del servizio.  

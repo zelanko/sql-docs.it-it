@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ecb91bd2a4b570a1e625a013270e59a121e6430a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215445"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105245"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Funzione InScope (Generatore report e SSRS)
   Indica se l'istanza corrente di un elemento è inclusa nell'ambito specificato.  

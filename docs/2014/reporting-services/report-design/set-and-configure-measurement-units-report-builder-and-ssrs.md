@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d29a18d8d194928389ca78fbd854ccb021871c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105005"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Impostare e configurare le unità di misura (Generatore report e SSRS)
   Gli indicatori forniscono due unità di misura: percentuale e numerica. Per impostazione predefinita, gli indicatori vengono configurati in modo da utilizzare le percentuali come unità di misura. Pertanto i valori dell'indicatore assegnati a ogni icona nel set di indicatori sono determinati da un intervallo di percentuale. Gli intervalli di percentuale sono divisi uniformemente tra le icone nel set di indicatori. Ogni icona rappresenta uno stato dell'indicatore. È possibile modificare le percentuali per ogni icona nel set di indicatori specificando percentuali di inizio e di fine differenti. Gli indicatori rilevano automaticamente anche i valori minimo e massimo nei dati.  
