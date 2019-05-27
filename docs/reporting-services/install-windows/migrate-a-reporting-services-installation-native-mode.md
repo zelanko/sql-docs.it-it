@@ -1,18 +1,18 @@
 ---
 title: Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712422"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503588"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
 
@@ -38,9 +38,10 @@ Questo argomento fornisce istruzioni dettagliate per la migrazione di una delle 
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 Per informazioni sulla migrazione di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  Per migrazione si intende lo spostamento di file di dati di un'applicazione a una nuova istanza di SQL Server. Di seguito sono elencati i motivi comuni per cui eseguire la migrazione dell'installazione:  
   
@@ -89,7 +90,7 @@ Per informazioni sulla migrazione di una distribuzione di [!INCLUDE[ssRSnoversio
   
 * Scrivere codice che chiama il provider WMI per copiare dati tra database. Per altre informazioni su questo approccio, vedere [Accedere al provider WMI per Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* Se il numero di elementi non è elevato, è possibile ripubblicare report, modelli di report e origini dati condivise da Progettazione report, Progettazione modelli e Generatore report nel nuovo server di report. Ricreare assegnazioni di ruolo, sottoscrizioni, pianificazioni condivise, pianificazioni dello snapshot del report, proprietà personalizzate impostate nei report o in altri elementi, sicurezza degli elementi dei modelli e proprietà impostate nel server di report. È necessario sapere che la cronologia del report e i dati del log di esecuzione del report andranno persi se si eseguono queste azioni.
+* Se il numero di elementi non è elevato, è possibile ripubblicare report e origini dati condivise da Progettazione report, Progettazione modelli e Generatore report nel nuovo server di report. Ricreare assegnazioni di ruolo, sottoscrizioni, pianificazioni condivise, pianificazioni dello snapshot del report, proprietà personalizzate impostate nei report o in altri elementi, sicurezza degli elementi dei modelli e proprietà impostate nel server di report. È necessario sapere che la cronologia del report e i dati del log di esecuzione del report andranno persi se si eseguono queste azioni.
   
 ## <a name="bkmk_before_you_start"></a> Prima di iniziare
 

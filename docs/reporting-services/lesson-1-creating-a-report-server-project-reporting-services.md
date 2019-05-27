@@ -1,80 +1,70 @@
 ---
-title: 'Lezione 1: Creazione di un progetto server di report (Reporting Services) | Microsoft Docs'
-ms.date: 11/30/2016
+title: 'Lesson 1: Creating a Report Server Project (Reporting Services) (Lezione 1: Creazione di un progetto server report (Reporting Services)) | Microsoft Docs'
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292349"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095849"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server di report (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server report (Reporting Services)
 
-In questa lezione si creerà un *progetto server di report* e un file di *definizione del report (con estensione rdl)* in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] all'interno di Visual Studio. 
+In questa lezione si creano un *progetto server di report* e un file di *definizione del report (con estensione rdl)* usando *Progettazione report*.
 
-Per creare un report con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], è innanzitutto necessario creare un progetto server di report in cui è possibile salvare il file della definizione del report (con estensione rdl) e altri file di risorse necessari per il report. 
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è un ambiente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] per la creazione di soluzioni di Business Intelligence. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] , origini dati condivise, set di dati condivisi e parti di report.
 
-Nelle lezioni successive verranno definiti un'origine dati per il report, un set di dati e il layout del report. Quando si esegue il report, i dati vengono recuperati e combinati con il layout, quindi visualizzati sullo schermo, da dove sarà possibile esportarli, stamparli o salvarli.  
+Quando si creano report con Progettazione report, viene creato un progetto server di report contenente i file di report e gli altri file di risorse usati dai report.
+
+## <a name="to-create-a-report-server-project"></a>Per creare un progetto server di report
   
-  
-  
-## <a name="to-create-a-report-server-project"></a>Per creare un progetto server di report  
-  
-1.  Aprire [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
-  
-2.  Nel menu **File** > **Nuovo** > **Progetto**.  
+1. Scegliere **Nuovo** > **Progetto** dal menu **File**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  In **Installato** > **Modelli** > **Business Intelligence**fare clic su **Reporting Services**.
+2. Nella colonna più a sinistra selezionare **Reporting Services** sotto **Installati**. In alcuni casi si può trovare nel gruppo **Business Intelligence**.
 
-    ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
+    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-5. Fare clic su **Progetto server di report** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
+    > [!IMPORTANT]
+    > Per Visual Studio, se Reporting Services non è disponibile nella colonna a sinistra, aggiungere Progettazione report installando il carico di lavoro SSDT. Scegliere **Ottieni strumenti e funzionalità** dal menu **Strumenti** e quindi selezionare **SQL Server Data Tools** nei carichi di lavoro visualizzati. Se nella colonna centrale non vengono visualizzati gli oggetti Reporting Services, aggiungere le estensioni di Reporting Services. Scegliere **Estensioni e aggiornamenti** > **Online** dal menu **Strumenti**. Nella colonna centrale selezionare **Microsoft Reporting Services Projects** (Progetti di Microsoft Reporting Services) > **Download** nelle estensioni visualizzate. Per SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-   >**Nota**: se non vengono visualizzate le opzioni **Business Intelligence** o **Progetto server di report**, è necessario aggiornare SSDT con i modelli di Business Intelligence. Vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-  
-5.  In **Nome**digitare **Esercitazione**.  
+3. Selezionare l'icona di **Progetto server di report** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;nella colonna centrale della finestra di dialogo **Nuovo progetto**.
 
-    Per impostazione predefinita, viene creato nella cartella Visual Studio 2015\Projects in una nuova directory.
-    
-    ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
-  
-6.  Fare clic su **OK** per creare il progetto.  
-  
-    Il progetto Esercitazione viene visualizzato sul lato destro del riquadro Esplora soluzioni.  
-  
-## <a name="to-create-a-new-report-definition-file"></a>Per creare un nuovo file di definizione del report  
-  
-1.  Nel riquadro **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Report** > **Aggiungi** > **Nuovo elemento**. 
+4. Nella casella di testo **Nome** digitare "Tutorial" come nome del progetto. Per impostazione predefinita, nella casella di testo **Percorso** viene visualizzato il percorso della cartella "Documenti\Visual Studio 20xx\Projects\". Progettazione report crea una cartella denominata Tutorial in questo percorso e il progetto Tutorial in tale cartella. Se il progetto non appartiene a una soluzione di Visual Studio, Visual Studio crea anche un file di soluzione con estensione sln.
 
-    >**Suggerimento**: se non viene visualizzato il riquadro **Esplora soluzioni**, scegliere **Esplora soluzioni** dal menu **Visualizza**. 
+5. Selezionare **OK** per creare il progetto. Il progetto Tutorial verrà visualizzato nel riquadro **Esplora soluzioni** a destra.
+  
+## <a name="creating-a-report-definition-file-rdl"></a>Creazione di un file di definizione del report (RDL)  
+  
+1. Nel riquadro **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla cartella **Report**. Se il riquadro **Esplora soluzioni** non è visualizzato, scegliere **Esplora soluzioni** dal menu **Visualizza**.
+
+2. Scegliere **Aggiungi** > **Nuovo elemento**.
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
-  
-2.  Nella finestra **Aggiungi nuovo elemento** fare clic su **Report** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png).  
-  
-3.  Digitare **Sales Orders.rdl**in **Nome** , quindi fare clic su **Aggiungi**.  
-  
-    Verranno visualizzati Progettazione report e il nuovo file con estensione rdl nella visualizzazione Progettazione.  
-    
-    ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
-  
-     Progettazione report è il componente di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] eseguito in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e ha due viste: **Progettazione** e **Anteprima**. Fare clic sulla scheda corrispondente per cambiare la vista.  
-  
-    I dati vengono definiti nel riquadro **Dati report** . Il layout dei report viene definito nella vista **Progettazione** . Dopo aver eseguito il report, è possibile vederne l'aspetto nella vista **Anteprima** .  
-  
-## <a name="next-lesson"></a>Lezione successiva  
-In questo modo è stato creato un progetto di report denominato Esercitazione, cui è stato aggiunto un file di definizione del report (con estensione rdl). Il passaggio successivo consiste nello specificare un'origine dei dati per il report. Vedere [Lezione 2: Definizione delle informazioni di connessione &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
-  
-## <a name="see-also"></a>Vedere anche  
-[Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
 
+3. Nella finestra **Aggiungi nuovo elemento** selezionare l'icona **Report**.
+
+4. Digitare "Sales Orders.rdl" nella casella di testo **Nome**.
+
+5. Selezionare il pulsante **Aggiungi** in basso a destra nella finestra di dialogo **Aggiungi nuovo elemento** per completare il processo. Il nuovo file di report Sales Orders verrà aperto in Progettazione report nella visualizzazione Progettazione.
+
+    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Sono stati così creati il progetto report Tutorial e il report Sales Orders. Nelle lezioni rimanenti verranno illustrate le procedure per:
+
+- Configurare un'origine dati per il report
+- Creare un set di dati dall'origine dati
+- Progettare e formattare il layout del report
+
+Passare a [Lezione 2: Specifica delle informazioni di connessione &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

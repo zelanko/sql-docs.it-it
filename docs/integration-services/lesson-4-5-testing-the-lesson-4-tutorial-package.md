@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280955"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721509"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lezione 4-5: Testare il pacchetto della lezione 4
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In fase di esecuzione, il file danneggiato **Currency_BAD.txt** non è in grado di generare una corrispondenza all'interno della trasformazione Lookup Currency Key. Dato che l'output degli errori di Lookup Currency Key è stato configurato per il reindirizzamento delle righe con esito negativo alla nuova destinazione Failed Rows, il componente non presenta errori e il pacchetto viene eseguito correttamente. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] riporta tutte le righe di errore nel file **ErrorOutput.txt**.  
   

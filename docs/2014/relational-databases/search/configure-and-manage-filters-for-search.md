@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eecfb2ef387bb5989f7c25a7bf7493d71899415b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281994"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011574"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurazione e gestione di filtri per la ricerca
   L'indicizzazione di documenti in una colonna di dati di tipo `varbinary`, `varbinary(max)`, `image` o `xml` richiede operazioni di elaborazione aggiuntive, che devono essere eseguite mediante un filtro. Il filtro estrae le informazioni testuali dal documento rimuovendo la formattazione, quindi invia il testo al word breaker per la lingua associata alla colonna della tabella.  

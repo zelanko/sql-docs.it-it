@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/07/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802313"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626698"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -427,7 +424,7 @@ ONLINE = { ON | **OFF** } specifica se le tabelle sottostanti e gli indici assoc
 > [!NOTE]
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-ON: i blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine, in modo da consentire l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un periodo molto breve. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, in caso di creazione di un indice non cluster. In caso di creazione o di eliminazione di un indice cluster online o di ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.
+ON: i blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. in modo da consentire l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un periodo molto breve. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, in caso di creazione di un indice non cluster. In caso di creazione o di eliminazione di un indice cluster online o di ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.
 
 OFF: i blocchi di tabella vengono applicati per la durata dell'operazione sugli indici. Un'operazione sugli indici offline che crea, ricompila o elimina un indice cluster oppure ricompila o elimina un indice non cluster acquisisce un blocco di modifica dello schema (SCH-M) sulla tabella. Il blocco impedisce agli utenti di accedere alla tabella sottostante per la durata dell'operazione. Un'operazione sugli indici offline che crea un indice non cluster acquisisce un blocco condiviso (S) sulla tabella. Tale blocco impedisce l'aggiornamento della tabella sottostante ma consente operazioni di lettura, ad esempio l'esecuzione di istruzioni SELECT.
 
@@ -475,7 +472,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF } **si applica da** [!INCLUDE[ssKatmai](../../
 
 Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.
 
-ON: i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi a livello di pagina.
+ON: i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.
 
 OFF: i blocchi a livello di pagina non vengono usati.
 
@@ -514,9 +511,9 @@ Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. S
 
 \<partition_number_expression> può essere specificato nei modi seguenti:
 
-- Fornire il numero di una partizione, ad esempio ON PARTITIONS (2).
-- Fornire i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).
-- Fornire sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).
+- Specificare il numero di una partizione, ad esempio ON PARTITIONS (2).
+- Specificare i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).
+- Specificare sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).
 
 \<range> può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: ON PARTITIONS (6 TO 8).
 
@@ -752,12 +749,12 @@ La compressione dei dati è descritta nell'argomento [Compressione dei dati](../
 Agli indici partizionati vengono applicate le restrizioni seguenti:
 
 - Non è possibile modificare l'impostazione di compressione di una singola partizione se la tabella include indici non allineati.
-- La sintassi ALTER INDEX \<index> ... REBUILD PARTITION... consente di ricompilare la partizione specificata dell'indice.
-- La sintassi ALTER INDEX \<index> ... REBUILD WITH ... consente di ricompilare tutte le partizioni dell'indice.
+- La sintassi ALTER INDEX \<index> ... La sintassi REBUILD PARTITION ricompila la partizione specificata dell'indice.
+- La sintassi ALTER INDEX \<index> ... La sintassi REBUILD WITH ricompila tutte le partizioni dell'indice.
 
 Per valutare il modo in cui la modifica dello stato di compressione influirà su una tabella, un indice o una partizione, usare la stored procedure [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .
 
@@ -788,7 +785,7 @@ CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address 
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ```
 
-### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>b. Creare un indice rowstore composto non cluster semplice
+### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. Creare un indice rowstore composto non cluster semplice
 
 Nell'esempio seguente viene creato un indice composto non cluster per le colonne `SalesQuota` e `SalesYTD` della tabella `Sales.SalesPerson`.
 

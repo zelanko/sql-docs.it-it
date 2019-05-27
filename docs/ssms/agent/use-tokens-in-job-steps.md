@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342875"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089446"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**(MSSA)**|Nome del servizio SQLServerAgent master.|  
 |**(OSCMD)**|Prefisso per il programma usato per l'esecuzione dei passaggi di processo **CmdExec** .|  
 |**(SQLDIR)**|Directory in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita corrisponde a C:\Programmi\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Token di sostituzione per il percorso della cartella del log degli errori di SQL Server, ad esempio $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Token di sostituzione per il percorso della cartella del log degli errori di SQL Server, ad esempio $(ESCAPE_SQUOTE(SQLLOGDIR)). Questo token è disponibile solo in SQL Server 2014 e versioni successive.|  
 |**(STEPCT)**|Numero di esecuzioni del passaggio, escluse le esecuzioni non completate. Può essere utilizzato dal comando del passaggio per imporre l'interruzione di un ciclo a più passaggi.|  
 |**(STEPID)**|ID del passaggio.|  
 |**(SRVR)**|Nome del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza denominata, questo token include il nome dell'istanza.|  
@@ -115,7 +115,7 @@ Dopo aver eseguito lo script di aggiornamento, una macro `ESCAPE_NONE` viene ins
   
 `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
-### <a name="b-using-tokens-in-nested-strings"></a>b. Utilizzo di token in stringhe nidificate  
+### <a name="b-using-tokens-in-nested-strings"></a>B. Utilizzo di token in stringhe nidificate  
 Negli script dei passaggi di processo in cui i token vengono utilizzati in istruzioni o stringhe nidificate, è necessario riscrivere le istruzioni nidificate come più istruzioni prima di inserire le macro di escape appropriate.  
   
 Si consideri, ad esempio, il passaggio di processo seguente che non è stato aggiornato con una macro di escape e nel quale viene utilizzato il token `A-MSG` :  

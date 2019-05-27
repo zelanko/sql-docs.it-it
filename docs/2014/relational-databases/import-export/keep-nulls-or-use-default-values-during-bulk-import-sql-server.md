@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063995"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011899"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
   Per impostazione predefinita, durante l'importazione di dati in una tabella il comando **bcp** e l'istruzione BULK INSERT osservano gli eventuali valori predefiniti che sono stati definiti per le colonne della tabella. Ad esempio, se un file di dati contiene un campo Null, verrà caricato nel campo il valore predefinito della colonna. Il comando **bcp** e l'istruzione BULK INSERT consentono entrambi di specificare che dovranno essere mantenuti i valori Null.  

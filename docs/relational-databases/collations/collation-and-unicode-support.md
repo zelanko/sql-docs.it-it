@@ -1,7 +1,7 @@
 ---
 title: Regole di confronto e supporto Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206440"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775035"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019]
     
     -   Regole di confronto versione 100    
     
-    -   Regole di confronto versione 140    
+    -   Regole di confronto versione 140   
+    
+    -   Regole di confronto BIN2<sup>1</sup>
     
 -   Il flag UTF8 non può essere applicato a:    
     
     -   Regole di confronto versione 90 che non supportano caratteri supplementari (\_SC) o con distinzione tra selettori di variazione (\_VSS)    
     
-    -   Regole di confronto binarie BIN o BIN2    
+    -   Regole di confronto binarie BIN o BIN2<sup>2</sup>    
     
-    -   Regole di confronto di SQL \*       
+    -   Regole di confronto di SQL \*  
+    
+<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 Per valutare i problemi relativi all'utilizzo di tipi di dati Unicode o non Unicode, è necessario eseguire il test dello scenario per verificare le differenze di prestazioni nell'ambiente specifico. È consigliabile standardizzare le regole di confronto usate nei sistemi presenti nell'ambito dell'organizzazione, quindi distribuire server e client Unicode laddove possibile.    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 Tutte le nuove regole di confronto supportano in modo predefinito i caratteri supplementari. Per nessuna nuova regola di confronto esiste o è necessario il flag SC.
 
 Queste regole di confronto sono supportate negli indici del motore di database, nelle tabelle ottimizzate per la memoria, negli indici columnstore e nei moduli compilati in modo nativo.
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>Supporto UTF-8
+
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione o come regola di confronto di livello database o colonna per i dati di testo. La codifica UTF-8 è consentita nei tipi di dati `CHAR` e `VARCHAR` ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto con il suffisso `UTF8`. 
+
+Ad esempio da `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` consentono solo la codifica UTF-16 e rimangono invariati.
+
+A seconda del set di caratteri in uso, questa funzionalità può offrire importanti risparmi di risorse di archiviazione. Se ad esempio si cambia il tipo di dati di una colonna esistente con stringhe ASCII (Latin) da `NCHAR(10)` in `CHAR(10)` usando una regola di confronto con supporto UTF-8, i requisiti di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la stessa stringa Unicode.
+
 ##  <a name="Related_Tasks"></a> Attività correlate    
     
 |Attività|Argomento|    
@@ -260,6 +275,7 @@ Queste regole di confronto sono supportate negli indici del motore di database, 
 ##  <a name="Related_Content"></a> Contenuto correlato    
 [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)   (Procedure consigliate di SQL Server: modifica delle regole di confronto)  
 [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server Best Practices Migration to Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) (Procedure consigliate di SQL Server: migrazione a Unicode) - non più aggiornato   
 [Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

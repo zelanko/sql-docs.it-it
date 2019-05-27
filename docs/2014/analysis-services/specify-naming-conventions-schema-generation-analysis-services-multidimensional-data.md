@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
@@ -13,12 +12,12 @@ ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746274"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068350"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Impostazione convenzioni di denominazione (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Impostazione convenzioni di denominazione** per definire le convenzioni di denominazione utilizzate in Generazione guidata schema per la creazione di oggetti dello schema.  

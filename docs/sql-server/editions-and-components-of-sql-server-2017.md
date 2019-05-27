@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788098"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560116"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Gruppi di disponibilità Always On<sup>3</sup>|Sì|no|no|no|no|
 |Gruppi di disponibilità di base<sup>4</sup>|no|Sì|no|no|no|
 |Ripristino di pagine e file online|Sì|no|no|no|no|
-|Indicizzazione online|Sì|no|no|no|no|
+|Creazione e ricompilazione di indici online|Sì|no|no|no|no|
 |Ricompilazioni degli indici online ripristinabili|Sì|no|no|no|no|
 |Modifica dello schema online|Sì|no|no|no|no|
 |Recupero rapido|Sì|no|no|no|no|

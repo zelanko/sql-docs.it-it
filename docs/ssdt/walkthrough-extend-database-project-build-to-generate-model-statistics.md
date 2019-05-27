@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello | Microsoft Docs'
+title: 'Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523419"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102044"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
 È possibile creare un collaboratore alla compilazione per eseguire azioni personalizzate quando si compila un progetto di database. In questa procedura dettagliata, si crea un collaboratore alla compilazione denominato ModelStatistics che restituisce statistiche dal modello di database SQL quando si compila un progetto di database. Poiché questo collaboratore alla compilazione accetta i parametri durante la compilazione, sono richiesti alcuni passaggi aggiuntivi.  
@@ -525,7 +525,7 @@ Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per pa
   
 1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto e selezionare "Ricompila". In questo modo il progetto verrà ricompilato ed è necessario verificare le statistiche del modello generate, con l'output incluso nell'output di compilazione e salvato in ModelStatistics.xml. Si noti che può essere necessario scegliere "Mostra tutti i file" in Esplora soluzioni per visualizzare il file XML.  
   
-2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>**, **Strumenti di Visual Studio** e quindi scegliere **Prompt dei comandi di Visual Studio (<Visual Studio Version>)**.  
+2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>**, su **Strumenti di Visual Studio** e quindi su **Prompt dei comandi di Visual Studio (<Visual Studio Version>)**.  
   
 3.  Al prompt dei comandi, passare alla cartella contenente il progetto SQL.  
   
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>Vedere anche  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

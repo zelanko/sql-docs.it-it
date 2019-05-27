@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829677"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721474"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 È ora possibile spostare progetti, pacchetti e carichi di lavoro di SQL Server Integration Services (SSIS) nel cloud di Azure. Distribuire, eseguire e gestire progetti e pacchetti SSIS nel catalogo SSIS (SSISDB) per il database SQL di Azure o Istanza gestita di database SQL con strumenti noti come SQL Server Management Studio (SSMS).
 
 ## <a name="benefits"></a>Vantaggi
@@ -42,9 +46,9 @@ La differenza più significativa è la separazione dell'archiviazione dal runtim
 
 **Provisioning**. Prima di distribuire ed eseguire i pacchetti SSIS in Azure, è necessario eseguire il provisioning del catalogo SSIS (SSISDB) e del runtime di integrazione Azure-SSIS.
 
--   Per eseguire il provisioning di SSIS in Azure nel portale di Azure, seguire i passaggi di provisioning in questo articolo: [Eseguire il provisioning del runtime di integrazione SSIS di Azure in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Per effettuare il provisioning di SSIS in Azure nel portale di Azure, seguire la procedura di provisioning descritta in questo articolo: [Effettuare il provisioning di Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   Per eseguire il provisioning di SSIS in Azure con PowerShell, seguire i passaggi di provisioning in questo articolo: [Eseguire il provisioning del runtime di integrazione SSIS di Azure in Azure Data Factory con PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Per effettuare il provisioning di SSIS in Azure in PowerShell, seguire la procedura di provisioning descritta in questo articolo: [Effettuare il provisioning di Azure-SSIS Integration Runtime in Azure Data Factory con PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 È sufficiente eseguire il provisioning del runtime di integrazione Azure-SSIS una sola volta. Successivamente, è possibile usare strumenti familiari, ad esempio SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS), per distribuire, configurare, eseguire, monitorare, pianificare e gestire i pacchetti.
 
@@ -112,7 +116,7 @@ Per distribuire progetti in Azure è possibile usare diversi strumenti e opzioni
 
 Il processo di distribuzione convalida i pacchetti, per verificare che siano eseguibili nel runtime di integrazione SSIS di Azure. Per altre informazioni, vedere [Convalidare i pacchetti SQL Server Integration Services (SSIS) distribuiti in Azure](ssis-azure-validate-packages.md).
 
-Per un esempio di distribuzione che usa SSMS e la Distribuzione guidata Integration Services, vedere [Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Per un esempio di distribuzione in cui si usano SSMS e la Distribuzione guidata Integration Services, vedere [Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="version-support"></a>Supporto versione
 

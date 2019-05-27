@@ -1,8 +1,8 @@
 ---
 title: Mascheramento dati dinamici | Microsoft Docs
-ms.date: 04/23/2018
+ms.date: 05/02/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -10,45 +10,45 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088979"
 ---
 # <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ![Mascheramento dati dinamici](../../relational-databases/security/media/dynamic-data-masking.png)
 
 La maschera dati dinamica (DDM) limita l'esposizione dei dati sensibili nascondendoli agli utenti senza privilegi. Può essere usata per semplificare notevolmente la progettazione e la codifica della sicurezza nell'applicazione.  
 
-La maschera dati dinamica aiuta a impedire l'accesso non autorizzato ai dati sensibili consentendo agli utenti di definire la quantità di dati sensibili da rivelare, con un impatto minimo sul livello dell'applicazione. La funzionalità DDM può essere configurata nel database per nascondere i dati sensibili nei set di risultati delle query in campi di database designati, senza modificare i dati nel database. La maschera dati dinamica è semplice da usare con le applicazioni esistenti, poiché vengono applicate le regole per la maschera nei risultati della query. Molte applicazioni sono in grado di mascherare i dati sensibili senza modificare le query esistenti.
+La maschera dati dinamica è utile per impedire l'accesso non autorizzato ai dati sensibili consentendo agli utenti di specificare la quantità di dati sensibili da visualizzare, con un impatto minimo sul livello dell'applicazione. È possibile configurare DDM in campi di database designati per nascondere i dati sensibili nei set di risultati delle query. Con DDM i dati nel database non vengono modificati. La maschera dati dinamica è semplice da usare con le applicazioni esistenti, poiché vengono applicate le regole per la maschera nei risultati della query. Molte applicazioni sono in grado di mascherare i dati sensibili senza modificare le query esistenti.
 
 * I criteri di mascheramento dei dati centrali operano direttamente sui campi sensibili del database.
 * Designare gli utenti con privilegi o ruoli che hanno accesso ai dati sensibili.
-* Le funzionalità DDM offrono funzioni di mascheramento completo e parziale, nonché una maschera casuale per dati numerici.
+* Le funzionalità DDM offrono funzioni di mascheramento completo e parziale, oltre a una maschera casuale per dati numerici.
 * Semplici comandi [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definiscono e gestiscono le maschere.
 
-Ad esempio, un addetto del call center può identificare i chiamanti da diverse cifre del codice fiscale o dal numero della carta di credito, ma tali elementi di dati non devono essere completamente visibili all'addetto. È possibile definire una regola per la maschera che nasconde nel set di risultati di una query tutte le cifre, ad eccezione delle ultime quattro di qualsiasi codice fiscale o numero di carta di credito. Un altro esempio: usando la maschera dati appropriata per proteggere i dati relativi a informazioni personali, uno sviluppatore può eseguire una query negli ambienti di produzione per la risoluzione dei problemi senza violare la regolamentazione di conformità.
+Ad esempio, un addetto del call center può identificare i chiamanti da diverse cifre del codice fiscale o dal numero della carta di credito,  ma tali dati non devono essere completamente visibili all'addetto. È possibile definire una regola per la maschera che nasconde nel set di risultati di una query tutte le cifre, ad eccezione delle ultime quattro di qualsiasi codice fiscale o numero di carta di credito. Un altro esempio: usando la maschera dati appropriata per proteggere i dati relativi a informazioni personali, uno sviluppatore può eseguire una query negli ambienti di produzione per la risoluzione dei problemi senza violare la regolamentazione di conformità.
 
 Lo scopo della maschera dati dinamica consiste nel limitare l'esposizione dei dati sensibili, impedendo la visualizzazione dei dati agli utenti che non dovrebbero averne accesso. La maschera dati dinamica non mira a impedire agli utenti del database di connettersi direttamente al database ed eseguire query complete che espongano parti dei dati sensibili. La maschera dati dinamica è complementare ad altre funzionalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio il controllo, la crittografia e la sicurezza a livello di riga, ed è consigliabile usare questa funzionalità insieme alle altre per ottimizzare la protezione dei dati sensibili nel database.  
   
-Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]e viene configurato usando i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per altre informazioni sulla configurazione di una maschera dati dinamica tramite il portale di Azure, vedere [Introduzione alla Maschera dati dinamica del database SQL (portale di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]e viene configurato usando i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per altre informazioni sulla configurazione di una maschera dati dinamica tramite il portale di Azure, vedere [Maschera dati dinamica del database SQL (portale di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
-## <a name="defining-a-dynamic-data-mask"></a>Definizione di una maschera dati dinamica  
+## <a name="defining-a-dynamic-data-mask"></a>Definizione di una maschera dati dinamica
  Una regola per la maschera può essere definita in una colonna all'interno di una tabella, al fine di nascondere i dati in tale colonna. Sono disponibili quattro tipi di maschere.  
   
 |Funzione|Descrizione|Esempi|  
 |--------------|-----------------|--------------|  
 |Default|Maschera completa in base al tipo di dati dei campi designati.<br /><br /> Per il tipo di dati stringa usare XXXX o X minori se la dimensione del campo è inferiore a 4 caratteri  (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Per il tipo di dati numerici, usare il valore zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Per i tipi di dati data e ora, usare 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Per i tipi di dati binati, usare un singolo byte di valore 0 ASCII (**binary**, **varbinary**, **image**).|Esempio di sintassi di definizione della colonna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Metodo di maschera che espone la prima lettera di un indirizzo di posta elettronica e il suffisso costante ".com", sotto forma di un indirizzo di posta elettronica. , `aXXX@XXXX.com`.|Esempio di sintassi di definizione: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|Email|Metodo di maschera che espone la prima lettera di un indirizzo di posta elettronica e il suffisso costante ".com", sotto forma di un indirizzo di posta elettronica. `aXXX@XXXX.com`.|Esempio di sintassi di definizione: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Casuale|Una funzione di maschera casuale per l'uso in qualsiasi tipo numerico al fine di mascherare il valore originale con un valore casuale in un intervallo specificato.|Esempio di sintassi di definizione: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Stringa personalizzata|Metodo di maschera che espone la prima e l'ultima lettera e aggiunge al centro una stringa di riempimento personalizzata. `prefix,[padding],suffix`<br /><br /> Nota: se il valore originale è troppo breve per completare l'intera maschera, parte del prefisso o del suffisso non sarà esposta.|Esempio di sintassi di definizione: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Esempi aggiuntivi:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Non sono necessarie autorizzazioni per creare una tabella con una maschera dati dinamica. Sono sufficienti le autorizzazioni standard per schemi **CREATE TABLE** e **ALTER** .  
   
  L'aggiunta, la sostituzione o la rimozione della maschera da una colonna richiede le autorizzazioni **ALTER ANY MASK** e **ALTER** sulla tabella. È opportuno concedere l'autorizzazione **ALTER ANY MASK** a un responsabile della sicurezza.  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Introduzione alla Maschera dati dinamica del database SQL (portale di anteprima di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [Maschera dati dinamica del database SQL (portale di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

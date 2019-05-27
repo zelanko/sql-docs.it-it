@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1c93fcf0c19f41f1dfbb3f2e44a95b623836ebca
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541898"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821851"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "52541898"
   
 1.  **Prima di iniziare:**  [Colori della barra di stato](#StatusBarColors)  
   
-2.  **Per impostare un colore di stato del server in:**  [Esplora oggetti](#SetOEServerColor), [Server registrato](#SetRegServerColor)  
+2.  **Per impostare un colore di stato per un server in:**  [Esplora oggetti](#SetOEServerColor), [Server registrato](#SetRegServerColor)  
   
-3.  **Per utilizzare un colore di stato:**  [Aprire l'editor di query con un colore per il server](#OpenServerColor), [Aprire l'editor di query specificato un colore di stato](#OpenSpecColor)  
+3.  **Per usare un colore di stato:**  [Aprire l'editor di query con un colore per il server](#OpenServerColor), [Aprire l'editor di query specificando un colore di stato](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Colori della barra di stato  
  È possibile associare un colore della barra di stato a uno specifico nodo server in **Esplora oggetti** o **Server registrati**. È possibile specificare i colori solo per nodi server connessi a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], non ai nodi server per altre tecnologie SQL Server. È inoltre possibile specificare anche un colore della barra di stato personalizzato ogni volta che si connette una nuova finestra dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile aprire una finestra dell'editor di query utilizzando il colore di stato definito per il nodo server oppure specificare un colore univoco per la finestra in questione.  
@@ -40,7 +40,7 @@ ms.locfileid: "52541898"
   
 2.  Nella finestra di dialogo **Connetti al server** selezionare **Opzioni >>**.  
   
-3.  Selezionare la casella di controllo **Usa colore personalizzato**.  
+3.  Selezionare la casella di controllo **Usa colore personalizzato** .  
   
 4.  Per selezionare il colore, fare clic sul pulsante **Seleziona...**  
   
@@ -53,9 +53,9 @@ ms.locfileid: "52541898"
   
 1.  In **Server registrati** fare clic con il pulsante destro del mouse sul nodo server desiderato, quindi scegliere **Proprietà...**  
   
-2.  Nella finestra di dialogo **Modifica proprietà registrazione server** selezionare la scheda **Proprietà connessione**.  
+2.  Nella finestra di dialogo **Modifica proprietà registrazione server** selezionare la scheda **Proprietà connessione** .  
   
-3.  Selezionare la casella di controllo **Usa colore personalizzato**.  
+3.  Selezionare la casella di controllo **Usa colore personalizzato** .  
   
 4.  Per selezionare il colore, fare clic sul pulsante **Seleziona...**  
   

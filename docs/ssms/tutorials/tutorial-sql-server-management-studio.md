@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: SQL Server Management Studio (SSMS) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800975"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620509"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Esercitazioni per SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-L'esercitazione su SQL Server Management Studio (SSMS) illustra l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente anche di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, ad esempio i database. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
+Le esercitazioni per SQL Server Management Studio (SSMS) illustrano l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre un'interfaccia grafica per la configurazione, il monitoraggio e la gestione del database SQL di Azure, dell'istanza gestita del database SQL di Azure, di Azure SQL Data Warehouse e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente anche di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, ad esempio i database. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 
@@ -41,9 +41,9 @@ In queste esercitazioni sono incluse nozioni utili relative alla presentazione d
   
 Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Queste esercitazioni consentono di acquisire familiarità con le varie funzionalità disponibili in SSMS.  In queste esercitazioni viene illustrato come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.  
 
-Di seguito gli argomenti trattati dalle esercitazioni: 
+Di seguito gli argomenti trattati dalle esercitazioni:
 
-  
+
 - [Esercitazione: Connettersi ed eseguire query in SQL Server con SSMS](connect-query-sql-server.md)
 
     In questa esercitazione si apprende come connettersi all'istanza di SQL Server. Sono disponibili anche informazioni su alcuni comandi Transact-SQL (T-SQL) di base per creare un nuovo database ed eseguire una query. 

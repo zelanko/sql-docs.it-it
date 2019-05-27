@@ -11,14 +11,18 @@ ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: caa86a14e114958ef109d54e2f2d374c8b096b4d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277000"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728727"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Modalità di gestione di un servizio CDC da CDC Designer Console
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In questa procedura viene illustrato come utilizzare CDC Designer Console per gestire un servizio CDC.  
   
 ### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Per gestire un servizio CDC da CDC Designer Console  

@@ -30,15 +30,15 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060314"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014811"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
   Un updategram indica un'operazione di inserimento quando un'istanza di record è presente il  **\<dopo >** blocco ma non nel corrispondente  **\<prima >** blocco. In questo caso, l'updategram inserisce il record nel  **\<dopo >** blocco nel database.  

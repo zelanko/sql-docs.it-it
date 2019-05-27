@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155872"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011773"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utilizzo di un file di formato per l'importazione bulk dei dati (SQL Server)
   In questo argomento viene illustrato l'utilizzo di un file di formato per operazioni di importazione bulk. Il file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.  È possibile usare un file in formato XML o non XML per eseguire un'importazione in blocco dei dati quando si usa un comando **bcp** o un'istruzione BULK INSERT o INSERT. Comando SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)].  

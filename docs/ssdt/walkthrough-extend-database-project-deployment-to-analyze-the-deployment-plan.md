@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512615"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097462"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
 È possibile creare collaboratori alla distribuzione per eseguire azioni personalizzate quando si distribuisce un progetto SQL. È possibile creare un elemento DeploymentPlanModifier o DeploymentPlanExecutor. Utilizzare DeploymentPlanModifier per modificare il piano prima di eseguirlo e DeploymentPlanExecutor per eseguire operazioni mentre il piano è in esecuzione. In questa procedura dettagliata viene creato un elemento DeploymentPlanExecutor denominato DeploymentUpdateReportContributor che crea un report sulle azioni eseguite quando si distribuisce un progetto di database. Poiché questo collaboratore alla compilazione accetta un parametro per controllare se il report viene generato, è necessario eseguire un'operazione necessaria aggiuntiva.  
   
 In questa procedura dettagliata, vengono eseguite le attività principali seguenti:  
@@ -742,6 +742,6 @@ Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. �
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Procedura dettagliata: estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

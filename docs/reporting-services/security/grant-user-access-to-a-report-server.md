@@ -1,8 +1,8 @@
 ---
 title: Concedere l'accesso utente a un server di report | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021855"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449692"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Concedere l'accesso utente a un server di report
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021855"
 
  **Server di report in modalità SharePoint** : per un server di report configurato per la modalità integrata SharePoint, l'accesso da un sito di SharePoint viene configurato mediante le autorizzazioni relative. I livelli di autorizzazione sul sito di SharePoint determinano l'accesso al contenuto e alle operazioni del server di report. Per concedere le autorizzazioni a un sito di SharePoint, è necessario disporre dei privilegi di amministratore. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Server di report in modalità nativa**: questo argomento riguarda un server di report configurato per la modalità nativa e l'uso del portale Web per assegnare utenti a un ruolo. Sono disponibili due tipi di ruoli:
+ **Server di report in modalità nativa:** questo articolo riguarda un server di report configurato per la modalità nativa e l'uso del portale Web per l'assegnazione di utenti a un ruolo. Sono disponibili due tipi di ruoli:
 
 - Ruoli a livello di elemento, utilizzati per visualizzare, aggiungere e gestire contenuto del server di report, sottoscrizioni, elaborazione e cronologia dei report. I ruoli a livello di elemento vengono definiti per il nodo radice, ovvero la cartella Home, oppure per cartelle o elementi specifici nei livelli inferiori della gerarchia.
 
@@ -61,7 +61,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 5. Fare clic su **Aggiungi gruppo o utente**.
 
-6. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>. 
+6. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>.
 
     > [!NOTE]
     > Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
@@ -95,10 +95,8 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Pagina Nuova assegnazione ruolo: Modifica assegnazione ruolo &#40;Modifica assegnazione ruolo&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Pagina delle proprietà sicurezza, Elementi&#40;Gestione report&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)   
+[Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)  
 [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206327"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718282"
 ---
 # <a name="troubleshoot-scale-out"></a>Risolvere i problemi di Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out richiede la comunicazione tra il database del catalogo SSIS `SSISDB`, il servizio Scale Out Master e il servizio Scale Out Worker. In alcuni casi la comunicazione viene interrotta a causa di errori di configurazione, mancanza di autorizzazioni di accesso e per altri motivi. Questo articolo contiene le informazioni necessarie per risolvere i problemi relativi alla configurazione di Scale Out.
 

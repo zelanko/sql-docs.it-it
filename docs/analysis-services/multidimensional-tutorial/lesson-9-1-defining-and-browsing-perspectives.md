@@ -69,7 +69,7 @@ Nelle procedure descritte in questo argomento vengono definite diverse prospetti
   
     -   Dimensione del cubo**Promotion**   
   
-    -    di**Reseller Revenue**   
+    -   di**Reseller Revenue**   
   
     -   Set denominato**Large Resellers**   
   

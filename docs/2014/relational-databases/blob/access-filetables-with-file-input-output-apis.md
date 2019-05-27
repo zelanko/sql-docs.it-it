@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62876913"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010363"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
   Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
@@ -114,13 +114,13 @@ ms.locfileid: "62876913"
 |**Crittografia**|Yes||  
 |**TxF**|No||  
 |**ID file**|No||  
-|**ID oggetto**|No||  
-|**Collegamenti simbolici**|No||  
+|**ID oggetto**|no||  
+|**Collegamenti simbolici**|no||  
 |**Collegamenti reali**|No||  
 |**Nomi brevi**|No||  
 |**Notifiche di modifica di directory**|No||  
 |**Blocco di intervalli di byte**|Yes|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
-|**File di cui è stato eseguito il mapping in memoria**|no||  
+|**File di cui è stato eseguito il mapping in memoria**|No||  
 |**Annullamento I/O**|Yes||  
 |**Sicurezza**|No|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Journal USN**|No|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  

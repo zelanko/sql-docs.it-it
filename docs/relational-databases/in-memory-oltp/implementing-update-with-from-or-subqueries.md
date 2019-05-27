@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653301"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104992"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementazione di UPDATE con FROM o sottoquery
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-I moduli T-SQL compilati in modo nativo non supportano la clausola FROM e le sottoquery nelle istruzioni UPDATE (supportate in SELECT). Le istruzioni UPDATE con la clausola FROM vengono in genere usate per aggiornare le informazioni di una tabella in base a un parametro con valori di tabella (TVP) o per aggiornare le colonne di una tabella in un trigger AFTER. 
+
+
+In un modulo T-SQL compilato in modo nativo gli elementi della sintassi seguente dell'istruzione UPDATE di Transact-SQL *non* sono supportati:
+
+- Clausola FROM
+- Sottoquery
+
+Al contrario, in moduli compilati in modo nativo gli elementi precedenti *sono* supportati nell'istruzione SELECT.
+
+Le istruzioni UPDATE con una clausola FROM vengono spesso usate per aggiornare le informazioni di una tabella in base a un parametro con valori di tabella (TVP) o per aggiornare le colonne di una tabella in un trigger AFTER.
 
 Per lo scenario di aggiornamento basato su un parametro con valori di tabella (TVP), vedere [Implementazione della funzionalità MERGE](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md). 
 
-L'esempio riportato di seguito illustra un aggiornamento eseguito in un trigger: la colonna LastUpdated della tabella viene aggiornata alla data/ora corrente dopo (AFTER) gli aggiornamenti. La soluzione usa una variabile di tabella con una colonna identity e un ciclo WHILE per l'iterazione delle righe nella variabile di tabella e l'esecuzione dei singoli aggiornamenti.
-  
-L'istruzione UPDATE T-SQL originale è la seguente:  
-  
-  
-  
-   ```
+Nell'esempio seguente viene illustrato un aggiornamento eseguito in un trigger. Nella tabella la colonna denominata LastUpdated è impostata sugli aggiornamenti AFTER di data e ora correnti. La soluzione alternativa consente di eseguire i singoli aggiornamenti usando gli elementi seguenti:
+
+- Una variabile di tabella che contiene una colonna IDENTITY.
+- Un ciclo WHILE per eseguire l'iterazione delle righe nella variabile di tabella.
+
+Ecco l'istruzione UPDATE originale di T-SQL:
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-Il codice T-SQL di esempio di questa sezione illustra una soluzione in grado di offrire buone prestazioni. La soluzione viene implementata in un trigger compilato in modo nativo. È fondamentale notare nel codice:  
+Il codice T-SQL di esempio nel blocco seguente illustra una soluzione in grado di offrire prestazioni adeguate. La soluzione viene implementata in un trigger compilato in modo nativo. È fondamentale notare nel codice:  
   
 - Il tipo denominato dbo.Type1, ovvero un tipo di tabella ottimizzata per la memoria.  
 - Il ciclo WHILE nel trigger.  
@@ -50,13 +59,13 @@ Il codice T-SQL di esempio di questa sezione illustra una soluzione in grado di 
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ Il codice T-SQL di esempio di questa sezione illustra una soluzione in grado di 
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ Il codice T-SQL di esempio di questa sezione illustra una soluzione in grado di 
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ Il codice T-SQL di esempio di questa sezione illustra una soluzione in grado di 
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

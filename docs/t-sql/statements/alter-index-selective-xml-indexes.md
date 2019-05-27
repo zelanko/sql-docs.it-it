@@ -13,12 +13,12 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ef7298fea5aa4c4d74932a7238a5603862ed626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3f15837f71e920c7b604e95039c94fd3383b0f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813789"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504031"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (indici XML selettivi)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ALTER INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
 <promoted_node_path_action_list> ::=   
 <promoted_node_path_action_item> [, <promoted_node_path_action_list>]  
   
@@ -131,9 +131,9 @@ identifier
  FOR **(** \<promoted_node_path_action_list> **)**  
  Elenco dei percorsi indicizzati che si desidera aggiungere o rimuovere.  
   
--   **Usare ADD per aggiungere un percorso.** Per aggiungere un percorso, ricorrere alla stessa sintassi usata per generare percorsi nell'istruzione CREATE SELECTIVE XML INDEX. Per informazioni sui percorsi che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+-   **Usare ADD per aggiungere un percorso.** Per aggiungere un percorso, usare la stessa sintassi usata per generare percorsi nell'istruzione CREATE SELECTIVE XML INDEX. Per informazioni sui percorsi che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
--   **Usare REMOVE per rimuovere un percorso.** Se si rimuove un percorso, fornire il nome specificato per il percorso in fase di creazione.  
+-   **Usare REMOVE per rimuovere un percorso.** Se si rimuove un percorso con REMOVE, specificare il nome assegnato al percorso in fase di creazione.  
   
  [WITH **(** \<index_options> **)**]  
  È possibile specificare \<index_options> solo se si usa ALTER INDEX senza la clausola FOR. Se si utilizza ALTER INDEX per aggiungere o rimuovere percorsi nell'indice, le opzioni dell'indice sono argomenti non validi. Per altre informazioni sulle opzioni di indicizzazione, vedere [CREATE XML INDEX &#40;Indici XML selettivi&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
@@ -145,7 +145,7 @@ identifier
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Per eseguire ALTER INDEX, è necessario disporre dell'autorizzazione ALTER per la tabella o la vista.  
   
 ## <a name="examples"></a>Esempi  

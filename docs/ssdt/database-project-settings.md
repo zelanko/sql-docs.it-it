@@ -38,15 +38,15 @@ f1_keywords:
 - sql.data.tools.dbassemblyinfo
 - sql.data.tools.extendedpropertieseditor.dialog
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143581"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099379"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
 Le impostazioni del progetto di database vengono usate per controllare gli aspetti delle configurazioni relative a database, debug e compilazione. Tali impostazioni sono suddivise nelle categorie seguenti.  
@@ -222,7 +222,7 @@ Inoltre, la pubblicazione sulla riga di comando consente di eseguire l'override 
 |Stringa di connessione di destinazione|Data Source=(localdb)\\*NomeSoluzione*;Initial Catalog=*NomeProgettoDatabase*;Integrated Security=True;Pooling=False;Connect Timeout=30|Consente di specificare le informazioni di connessione per il server di database da utilizzare come destinazione per la configurazione della compilazione specificata. La stringa di connessione predefinita si trova in un'istanza del database locale di SQL Server creata dinamicamente e in un database.|  
 |Distribuisci proprietà database|Sì|Consente di specificare se le impostazioni DatabaseProerties.DatabaseProperties vengono distribuite o aggiornate quando si distribuisce il progetto di database.|  
 |Ricrea sempre database|no|Consente di specificare se eliminare e ricreare il database anziché eseguire un aggiornamento incrementale. Può essere necessario selezionare questa casella di controllo se, ad esempio, si vuole eseguire gli unit test del database per una distribuzione pulita del database. Se questa casella di controllo è deselezionata, il database esistente verrà aggiornato, non eliminato e ricreato.|  
-|Blocca distribuzione incrementale in caso di perdita di dati|sì|Consente di specificare se la distribuzione viene arrestata nel caso in cui un aggiornamento possa provocare una perdita di dati. Se viene selezionata questa casella di controllo, le modifiche che causerebbero una perdita di dati comportano l'arresto della distribuzione e la visualizzazione di un errore, pertanto i dati non vengono persi. Ad esempio la distribuzione viene arrestata se una colonna `varchar(50)` viene modificata in `varchar(30)`.<br /><br />**NOTA** La distribuzione viene bloccata solo nelle tabelle in cui sono contenuti dati e dove è possibile che avvenga la perdita di questi dati. Se non si perde alcun dato, la distribuzione continua.|  
+|Blocca distribuzione incrementale in caso di perdita di dati|sì|Consente di specificare se la distribuzione viene arrestata nel caso in cui un aggiornamento possa provocare una perdita di dati. Se viene selezionata questa casella di controllo, le modifiche che causerebbero una perdita di dati comportano l'arresto della distribuzione e la visualizzazione di un errore, pertanto i dati non vengono persi. Ad esempio la distribuzione viene arrestata se una colonna `varchar(50)` viene modificata in `varchar(30)`.<br /><br />**NOTA** La distribuzione viene bloccata solo se le tabelle in cui può verificarsi la perdita di dati contengono dati. Se non si perde alcun dato, la distribuzione continua.|  
 |Esegui istruzioni DROP su oggetti nel database di destinazione ma non nel progetto|no|Consente di specificare se gli oggetti presenti nel database di destinazione, ma non nel progetto di database, devono essere eliminati come parte dello script di distribuzione. È possibile escludere alcuni file nel progetto per rimuoverli temporaneamente dallo script di compilazione. Tuttavia, potrebbe essere necessario lasciare le versioni esistenti di tali oggetti nel database di destinazione. Questa casella di controllo non ha effetto se è selezionata la casella di controllo **Ricrea sempre database**, perché il database verrà eliminato.|  
 |Non utilizzare le istruzioni ALTER ASSEMBLY per aggiornare i tipi CLR|no|Consente di specificare se vengono utilizzate le istruzioni ALTER ASSEMBLY per aggiornare i tipi CLR (Common Language Runtime) o se l'oggetto che consente di creare istanze del tipo CLR verrà invece eliminato e ricreato quando vengono distribuite le modifiche.|  
 |Avanzate|no|Pulsante di comando che consente di specificare le opzioni tramite cui vengono controllati eventi e comportamenti per la distribuzione.|  

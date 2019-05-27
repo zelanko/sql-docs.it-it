@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c2d28900e8e0c75123e48704de56ff69d720d17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261000"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108753"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
   In questo argomento viene fornita una panoramica dei passaggi necessari per eseguire la migrazione di una distribuzione in modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da un ambiente SharePoint a un altro. I passaggi specifici possono variare a seconda della versione dalla quale si esegue la migrazione. Per altre informazioni sugli scenari di aggiornamento e di migrazione per la modalità SharePoint, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). Se si vuole solo copiare gli elementi del report da un server a un altro, vedere [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

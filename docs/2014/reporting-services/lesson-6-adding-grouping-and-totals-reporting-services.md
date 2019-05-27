@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278797"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108409"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
   È possibile aggiungere gruppi e totali al report per organizzare e riepilogare i dati.  
@@ -41,13 +40,13 @@ ms.locfileid: "63278797"
   
 2.  Se non viene visualizzato il **gruppi di righe** riquadro, fare doppio clic nell'area di progettazione e fare clic su **view** e quindi fare clic su **raggruppamento**.  
   
-3.  Dal **i dati del Report** riquadro, trascinare il `Date` campo il **gruppi di righe** riquadro. Posizionarlo al di sopra della riga **(Dettagli)**.  
+3.  Dal riquadro **Dati report** trascinare il campo `Date` nel riquadro **Gruppi di righe**. Posizionarlo al di sopra della riga **(Dettagli)**.  
   
      L'handle di riga contiene ora una parentesi quadra per mostrare un gruppo. La tabella presenta ora due colonne Date, una su ogni lato di una linea verticale tratteggiata.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Dal **i dati del Report** riquadro, trascinare il `Order` campo il **gruppi di righe** riquadro. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.  
+4.  Dal riquadro **Dati report** trascinare il campo `Order` nel riquadro **Gruppi di righe**. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.  
   
      L'handle di riga contiene ora due parentesi quadre per mostrare due gruppi. La tabella ora presenta due `Order` colonne, troppo.  
   

@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664019"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090243"
 ---
-# <a name="how-to-fix-errors"></a>Procedura: Correzione di errori
+# <a name="how-to-fix-errors"></a>Procedura: Correggere gli errori
 Nel riquadro Elenco errori vengono visualizzati tutti gli errori di distribuzione e di compilazione. Vengono inoltre visualizzati gli errori di sintassi e semantici causati dalle modifiche nell'Editor Transact\-SQL o in Progettazione tabelle quando si modificano entità del database e relative definizioni. L'Elenco errori viene aggiornato dinamicamente quando si modificano gli script nelle diverse schede. È quindi possibile seguire gli errori identificati per un'ulteriore risoluzione dei problemi.  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ Nel riquadro Elenco errori vengono visualizzati tutti gli errori di distribuzion
   
 3.  Si noti che nel riquadro **Elenco errori**, nella parte inferiore della schermata, vengono visualizzati immediatamente un avviso e un errore simili ai seguenti.  
   
-**Avviso SQL71502: Funzione: [dbo].[GetProductsBySupplier] contiene un riferimento non risolto a un oggetto. L'oggetto non esiste oppure il riferimento è ambiguo poiché potrebbe fare riferimento a uno dei seguenti oggetti: [dbo].[Product].[p]::[ShelfLife] o [dbo].[Product].[ShelfLife]. Errore SQL71501: Vincolo CHECK: [dbo].[CK_Product_ShelfLife] contiene un riferimento non risolto all'oggetto [dbo].[Product].[ShelfLife].**  
+**Avviso SQL71502: Funzione: [dbo].[GetProductsBySupplier] contiene un riferimento non risolto a un oggetto. L'oggetto non esiste oppure il riferimento è ambiguo poiché potrebbe fare riferimento a uno dei seguenti oggetti: [dbo].[Product].[p]::[ShelfLife] o [dbo].[Product].[ShelfLife].Errore SQL71501: Vincolo CHECK: [dbo].[CK_Product_ShelfLife] contiene un riferimento non risolto all'oggetto [dbo].[Product].[ShelfLife].**  
   
 4.  È possibile fare clic con il pulsante destro del mouse sull'**Elenco errori** e usare i menu contestuali per ordinare i risultati, filtrare le voci da visualizzare e le colonne di informazioni da mostrare per ogni voce.  
   

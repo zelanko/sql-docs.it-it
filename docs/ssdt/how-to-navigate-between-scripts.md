@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.editor.howto.navigate
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0627b9a4f0512c7e711212606b855c11011fff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702879"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099669"
 ---
-# <a name="how-to-navigate-between-scripts"></a>Procedura: Navigazione tra script
+# <a name="how-to-navigate-between-scripts"></a>Procedura: Navigare tra script
 L'Editor Transact\-SQL per lo sviluppo offline fornisce due strumenti di navigazione utili, familiari agli utenti di Visual Studio, ovvero Vai a definizione e Trova tutti i riferimenti. È possibile, ad esempio, fare clic con il pulsante destro del mouse sul nome di una tabella e utilizzare "Trova tutti i riferimenti" per elencare tutti i riferimenti alla tabella nel progetto. È possibile fare doppio clic su un risultato della ricerca per andare al file di codice specifico. In questo file, è possibile fare di nuovo clic con il pulsante destro del mouse sul nome della tabella e scegliere "Vai a definizione" per tornare alla definizione della tabella.  
   
 > [!WARNING]  

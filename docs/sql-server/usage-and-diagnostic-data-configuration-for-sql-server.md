@@ -1,5 +1,5 @@
 ---
-title: Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server | Microsoft Docs
+title: Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server (Analisi utilizzo software) | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582714"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372754"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server (Analisi utilizzo software)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -55,6 +55,12 @@ Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on
 
 > [!NOTE]
 > È possibile disabilitare l'invio di informazioni a Microsoft solo nelle versioni a pagamento di SQL Server.
+
+## <a name="remarks"></a>Remarks
+ - La rimozione o la disabilitazione del servizio Analisi utilizzo software di SQL non è supportata. 
+ - La rimozione di risorse di Analisi utilizzo software di SQL dal gruppo di cluster non è supportata. 
+
+Per rifiutare esplicitamente la raccolta di dati, vedere [Attivazione o disattivazione del controllo locale](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)
 
 ## <a name="error-and-usage-reporting-application"></a>Applicazione Segnalazione errori e utilizzo funzionalità 
 

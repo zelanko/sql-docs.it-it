@@ -3,19 +3,19 @@ title: Estrarre, trasformare e caricare i dati in Linux con SSIS | Microsoft Doc
 description: Questo articolo viene descritto SQL Server Integration Services (SSIS) per i computer Linux
 author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9790835dfa3f81105ac36818ecdda418c5433a84
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 085c688a71c8f301a06256d49afc4297e9cb0fac
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488352"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009969"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
 

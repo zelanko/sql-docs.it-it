@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582765"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372443"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>Introduzione
 
-Microsoft SQL Server include funzionalità che supportano Internet e sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo. Queste informazioni sono denominate *informazioni standard del computer*. Il componente per il controllo locale della [raccolta di dati di diagnostica e utilizzo di SQL Server](https://support.microsoft.com/kb/3153756) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
+Microsoft SQL Server include funzionalità che supportano Internet e sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo. Queste informazioni sono denominate *informazioni standard del computer*. Il componente per il controllo locale della [raccolta di dati di diagnostica e utilizzo di SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
 
 In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server e Analysis Services (SSAS). In SQL Server 2016 CU4 e SQL Server 2016 SP1 il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati di diagnostica e utilizzo non è disponibile.
+
+## <a name="remarks"></a>Remarks
+
+ - La rimozione o la disabilitazione del servizio Analisi utilizzo software di SQL non è supportata. 
+ - La rimozione di risorse di Analisi utilizzo software di SQL dal gruppo di cluster non è supportata. 
+
+Per rifiutare esplicitamente la raccolta di dati, vedere [Attivazione o disattivazione del controllo locale](#turning-local-audit-on-or-off)
 
 ## <a name="prerequisites"></a>Prerequisites 
 

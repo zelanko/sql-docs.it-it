@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277510"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719592"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
   
  È possibile configurare l'ambito di registrazione che si verifica durante l'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](#server_logging)  
@@ -528,7 +532,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indica che l'attività ha iniziato a eseguire un pacchetto DTS 2000.|  
-|**ExecuteDTS80PackageTaskEnd**|Indica che l'attività è terminata.<br /><br /> Nota: L'esecuzione del pacchetto DTS 2000 può continuare anche dopo il termine dell'attività.|  
+|**ExecuteDTS80PackageTaskEnd**|Indica che l'attività è terminata.<br /><br /> Nota: l'esecuzione del pacchetto DTS 2000 può continuare anche dopo il termine dell'attività.|  
 |**ExecuteDTS80PackageTaskTaskInfo**|Offre informazioni descrittive sull'attività.|  
 |**ExecuteDTS80PackageTaskTaskResult**|Restituisce il risultato dell'esecuzione del pacchetto DTS 2000 eseguito dall'attività.|  
   

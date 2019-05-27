@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: d944c2192e73fd0cb887d0491ecba707a90ff7b5
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185127"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527358"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "54185127"
   
  La figura seguente illustra l'architettura della crittografia TDE: Solo gli elementi a livello di database, la chiave di crittografia del database e le parti ALTER DATABASE sono configurabili dall'utente quando si usa TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Visualizza la gerarchia descritta nell'argomento.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Visualizza la gerarchia descritta nell'argomento.")  
+ ![Visualizza la gerarchia descritta nell'argomento.](../../../relational-databases/security/encryption/media/tde-architecture.png "Visualizza la gerarchia descritta nell'argomento.")  
   
 ## <a name="using-transparent-data-encryption"></a>Uso della crittografia trasparente dei dati  
  Per usare TDE, eseguire le operazioni seguenti:  
@@ -127,7 +127,7 @@ GO
 |[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista del catalogo che consente di visualizzare i certificati di un database.|  
 |[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|Tramite la vista a gestione dinamica vengono fornite informazioni relative alle chiavi di crittografia usate in un database e allo stato di crittografia di un database.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Ogni funzionalità e comando di TDE ha requisiti specifici relativi alle autorizzazioni, descritti nelle tabelle precedenti.  
   
  La visualizzazione dei metadati interessati da TDE richiede l'autorizzazione VIEW DEFINITION per il certificato.  
@@ -226,9 +226,29 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption e dati FILESTREAM  
  Anche se si abilita TDE, i dati FILESTREAM non vengono crittografati.  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>Analisi Transparent Data Encryption (TDE)
+
+Per abilitare Transparent Data Encryption (TDE) in un database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve eseguire un'analisi della crittografia che legge ogni pagina dei file di dati nel pool di buffer e quindi riscrive le pagine crittografate su disco. Per offrire all'utente maggior controllo sull'analisi della crittografia, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] include la sintassi per sospendere l'analisi TDE quando il carico di lavoro nel sistema è pesante o durante gli orari strategici per l'azienda e di riprenderla in un momento successivo.
+
+Per sospendere l'analisi della crittografia TDE, usare la sintassi seguente:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+Per riprendere l'analisi della crittografia TDE, usare la sintassi seguente:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+Per visualizzare lo stato corrente dell'analisi della crittografia, `encryption_scan_state` è stato aggiunta alla DMV `sys.dm_database_encryption_keys`. È anche disponibile una nuova colonna denominata `encryption_scan_modify_date` che conterrà la data e l'ora dell'ultima modifica dello stato dell'analisi della crittografia. Si noti anche che se l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene riavviata mentre l'analisi della crittografia è sospesa, verrà registrato un messaggio nel log degli errori all'avvio che indica la presenza di un'analisi esistente sospesa.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption ed estensione del pool di buffer  
- I file correlati all'estensione del pool di buffer non vengono crittografati quando il database viene crittografato con TDE. Per tali file è necessario usare strumenti di crittografia a livello di file system, come Bitlocker o EFS.  
+ I file correlati all'estensione del pool di buffer non vengono crittografati quando il database viene crittografato con TDE. Per tali file è necessario usare strumenti di crittografia a livello di file system, come BitLocker o EFS.  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption e OLTP in memoria  
  È possibile abilitare TDE in un database contenente oggetti di OLTP in memoria. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , se la funzionalità TDE è abilitata, i dati e i record del log di OLTP in memoria vengono crittografati. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] i record di log OLTP in memoria vengono crittografati se è abilitata la crittografia TDE, ma non vengono crittografati i file del filegroup MEMORY_OPTIMIZED_DATA.  

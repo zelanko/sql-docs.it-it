@@ -2,7 +2,7 @@
 title: Supporto browser per Reporting Services e Power View | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021217"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574813"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
 
@@ -82,7 +82,11 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  Se si usa un prodotto SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere  [Pianificare il supporto dei browser in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>Requisiti di autenticazione
 
@@ -142,7 +146,11 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  Per altre informazioni sul supporto browser per SharePoint 2016, vedere [Pianificare il supporto dei browser in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 

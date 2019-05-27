@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507748"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098381"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opzioni (Ambiente- pagina Tipi di carattere e colori)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Consente di visualizzare l'elenco di tutti gli elementi dell'interfaccia utente 
 |Finestre di progettazione Business Intelligence|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre di Progettazione di Business Intelligence .|  
   
 **Valori predefiniti**  
-Il pulsante **Valori predefiniti** reimposta i valori predefiniti del tipo di carattere e dei colori dell'elemento selezionato dall'elenco **Mostra impostazioni per** .  
+Il pulsante **Valori predefiniti** reimposta i valori predefiniti del tipo di carattere e dei colori dell'elemento selezionato dall'elenco **Mostra impostazioni per**.  
   
 **Carattere (tipi di carattere a larghezza fissa in grassetto)**  
 Consente di visualizzare l'elenco di tutti i tipi di carattere installati nel sistema. Quando si apre questo elenco a discesa per la prima volta, viene selezionato il tipo di carattere corrente dell'elemento scelto nell'elenco **Mostra impostazioni per** . I tipi di carattere a larghezza fissa, più facili da allineare in un editor, vengono visualizzati in grassetto.  

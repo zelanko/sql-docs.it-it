@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140043"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011536"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurazione e gestione di word breaker e stemmer per la ricerca
   Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica riguarda la ricerca dell'inizio e della fine delle parole (isolamento delle parole) e la coniugazione dei verbi (flessione). Word breaker e stemmer sono specifici della lingua e le regole per l'analisi linguistica variano a seconda della lingua. Un *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni. Lo *stemmer* genera forme flessive di una particolare parola in base alle regole di quella lingua, ad esempio "running", "ran" e "runner" sono varie forme della parola "run".  

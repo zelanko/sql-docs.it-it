@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538663"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560147"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -55,7 +55,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 &nbsp;
 
-## <a name="overview-sql-server"></a>Panoramica SQL Server
+## <a name="overview-sql-server"></a>Panoramica: SQL Server
 
 In SQL Server, questa istruzione consente di modificare un database oppure i file e i filegroup associati al database. Consente di aggiungere o rimuovere file e filegroup in un database, modificare gli attributi di un database oppure dei relativi file e filegroup, modificare le regole di confronto e impostare le opzioni del database. Non è possibile modificare snapshot di database. Per la modifica delle opzioni di database associate alla replica, usare [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
 
@@ -72,6 +72,9 @@ ALTER DATABASE: l'articolo corrente fornisce la sintassi e le informazioni corre
 [SET HADR di ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Fornisce la sintassi e le informazioni correlate per le opzioni [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] di ALTER DATABASE per la configurazione di un database secondario in una replica secondaria di un gruppo di disponibilità Always On.
 
 [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) Include la sintassi e le informazioni correlate per le opzioni SET di ALTER DATABASE relative ai livelli di compatibilità del database.
+
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+Fornisce la sintassi per le configurazioni con ambito database usate per impostazioni a livello di database singolo, come i comportamenti correlati all'ottimizzazione query e all'esecuzione di query. 
 
 ## <a name="syntax"></a>Sintassi
 
@@ -279,7 +282,7 @@ GO
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Panoramica Database singolo/pool elastico di database SQL di Azure
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Panoramica: Database singolo/pool elastico di database SQL di Azure
 
 Nel database SQL di Azure usare questa istruzione per modificare un database in un database singolo/pool elastico. Usare questa istruzione per modificare il nome di un database, modificare l'obiettivo di servizio e l'edizione del database, creare un join con o rimuovere il database da un pool elastico, impostare le opzioni di database, aggiungere o rimuovere il database come database secondario in una relazione di replica geografica e impostare il livello di compatibilità del database.
 
@@ -666,7 +669,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>Panoramica Istanza gestita di database SQL di Azure
+## <a name="overview-azure-sql-database-managed-instance"></a>Panoramica: Istanza gestita di database SQL di Azure
 
 Nell'istanza gestita di database SQL di Azure usare questa istruzione per impostare le opzioni di database.
 
@@ -722,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>Argomenti
 
-*database_name*      
-Nome del database da modificare.
+*database_name* è il nome del database da modificare.
 
-CURRENT     
-Specifica che il database corrente in uso deve essere modificato.
+CURRENT Specifica che il database corrente in uso deve essere modificato.
 
 ## <a name="remarks"></a>Remarks
 Per rimuovere un database usare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
@@ -786,18 +788,25 @@ ALTER DATABASE WideWorldImporters
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Panoramica Azure SQL Data Warehouse
+## <a name="overview-azure-sql-data-warehouse"></a>Panoramica: Azure SQL Data Warehouse
 
-Modifica il nome, la dimensione massima o l'obiettivo di servizio per un database.
+In Azure SQL Dta Warehouse 'ALTER DATABASE' modifica il nome, la dimensione massima o l'obiettivo di servizio per un database.
+
+A causa della lunghezza, la sintassi di ALTER DATABASE è separata in più articoli.
+
+[Opzioni ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) Fornisce la sintassi e le informazioni correlate per la modifica degli attributi di un database utilizzando le opzioni SET di ALTER DATABASE.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -815,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name*     
-Specifica il nome del database da modificare.
+*database_name* specifica il nome del database da modificare.
 
-MODIFY NAME = *new_database_name*    
-Rinomina il database con il nome specificato come *new_database_name*.
+MODIFY NAME = *new_database_name* rinomina il database con il nome specificato come *new_database_name*.
 
-MAXSIZE    
-Il valore predefinito è 245.760 GB (240 TB).
+MAXSIZE: il valore predefinito è 245.760 GB (240 TB).
 
 **Si applica a:** ottimizzato per il calcolo di prima generazione
 
@@ -832,8 +838,7 @@ Dimensioni massime consentite per il database. Le dimensioni del database non po
 
 Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE. I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono limitati dal valore MAXSIZE.
 
-SERVICE_OBJECTIVE      
-Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per SQL Data Warehouse, vedere [Unità Data Warehouse (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per SQL Data Warehouse, vedere [Unità Data Warehouse (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -904,7 +909,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 &nbsp;
 
-## <a name="overview-analytics-platform-system"></a>Panoramica Sistema della piattaforma di analisi
+## <a name="overview-analytics-platform-system"></a>Panoramica: Sistema della piattaforma di analisi
 
 Modifica le opzioni relative alle dimensioni massime del database per le tabelle replicate, le tabelle distribuite e il log delle transazioni in PDW. Usare questa istruzione per gestire le allocazioni dello spazio su disco per un database man mano che le sue dimensioni aumentano o diminuiscono. L'articolo descrive anche la sintassi correlata all'impostazione di opzioni di database in PDW.
 
@@ -949,7 +954,7 @@ LOG_SIZE = *size* [GB]
 Specifica in gigabyte le nuove dimensioni massime per ogni database per l'archiviazione dei log delle transazioni nel database da modificare. Le dimensioni vengono distribuite su tutti i nodi di calcolo nell'appliance.
 
 ENCRYPTION { ON | OFF }         
-Imposta il database per l'utilizzo della crittografia (ON) o no (OFF). È possibile configurare la crittografica per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo quando l'opzione [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) è stata impostata su **1**. Prima di configurare la tecnologia Transparent Data Encryption, è necessario creare una chiave di crittografia del database. Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md).
+Imposta il database in modo che sia crittografato (ON) o non crittografato (OFF). È possibile configurare la crittografica per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo quando l'opzione [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) è stata impostata su **1**. Prima di configurare la tecnologia Transparent Data Encryption, è necessario creare una chiave di crittografia del database. Per altre informazioni sulla crittografia del database, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
 SET AUTO_CREATE_STATISTICS { ON | OFF }        
 Quando l'opzione per la creazione automatica delle statistiche, AUTO_CREATE_STATISTICS, è impostata su ON, Query Optimizer crea le statistiche necessarie per colonne singole nel predicato di query, per migliorare le stime della cardinalità per il piano di query. Queste statistiche di colonna singola vengono create in colonne che ancora non dispongono di un istogramma in un oggetto statistiche esistente.

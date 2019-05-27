@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526715"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094265"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52526715"
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di conoscenza dei file.|Poiché una tabella FileTable viene visualizzata come cartella nel file system di Windows, è possibile caricare facilmente file in un nuova tabella FileTable tramite alcuni dei metodi disponibili per lo spostamento o la copia di file. Questi metodi includono Esplora risorse, opzioni della riga di comando, ad esempio xcopy e robocopy, nonché applicazioni o script personalizzati.<br /><br /> Non è possibile convertire una cartella esistente in tabella FileTable.|  
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per altre informazioni, vedere [Esempio: Migrazione di file dal file system in una tabella FileTable](#HowToMigrateFiles) in questo articolo.|  
   
-###  <a name="HowToLoadNew"></a> Caricare file in una tabella FileTable  
+###  <a name="HowToLoadNew"></a> Procedura: Caricare file in una tabella FileTable  
 Per caricare i file in una tabella FileTable è possibile usare i metodi seguenti:  
   
 -   Trascinare e rilasciare file dalle cartelle di origine alla nuova cartella FileTable in Esplora risorse.  
@@ -99,7 +99,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) con la clausola IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Procedura: Caricamento bulk di file in una tabella FileTable  
+###  <a name="HowToBulkLoad"></a> Procedura: Eseguire il caricamento bulk di file in una tabella FileTable  
  È possibile utilizzare diversi metodi per eseguire il caricamento bulk di file in una tabella FileTable:  
   
 -   **bcp**  
@@ -122,7 +122,7 @@ UPDATE PhotoMetadata
   
  Per informazioni su come disabilitare i vincoli FileTable, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Procedura: Disabilitare i vincoli FileTable per il caricamento bulk  
+###  <a name="disabling"></a> Procedura: Disabilitare vincoli FileTable per eseguire il caricamento bulk  
  Per eseguire il caricamento bulk di file in una tabella FileTable senza la necessità di applicare vincoli definiti dal sistema, è possibile disabilitare temporaneamente i vincoli. Per altre informazioni, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>Vedere anche  

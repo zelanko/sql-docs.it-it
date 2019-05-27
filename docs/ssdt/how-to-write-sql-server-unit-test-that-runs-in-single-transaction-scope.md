@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681289"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099553"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione
 È possibile modificare unit test in modo che vengano eseguiti nell'ambito di una singola transazione. Se si adotta questo approccio, al termine del test è possibile eseguire il rollback di tutte le modifiche apportate dal test. Nelle procedure seguenti viene descritto come procedere:  
@@ -156,7 +156,7 @@ In questo esempio viene usata una transazione di ambiente quando si usa il tipo 
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Per avviare il servizio Distributed Transaction Coordinator  
-Per alcune procedure di questo argomento vengono utilizzati tipi dell'assembly System.Transactions. Prima di utilizzare queste procedure, è necessario assicurarsi che il servizio Distributed Transaction Coordinator sia in esecuzione nel computer in cui si eseguono gli unit test. In caso contrario, i test avranno esito negativo e verrà visualizzato il seguente messaggio di errore: "Il metodo di test *ProjectName*.*TestName*.*MethodName* ha generato un'eccezione: System.Data.SqlClient.SqlException: MSDTC sul server '*ComputerName*' non è disponibile".  
+Per alcune procedure di questo argomento vengono utilizzati tipi dell'assembly System.Transactions. Prima di utilizzare queste procedure, è necessario assicurarsi che il servizio Distributed Transaction Coordinator sia in esecuzione nel computer in cui si eseguono gli unit test. In caso contrario, se i test non vengono superati, viene visualizzato il messaggio di errore seguente: "Il metodo di test *NomeProgetto*.*NomeTest*.*NomeMetodo* ha generato un'eccezione: System.Data.SqlClient.SqlException: MSDTC sul server '*NomeComputer*' non è disponibile.  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Per avviare il servizio Distributed Transaction Coordinator  
   

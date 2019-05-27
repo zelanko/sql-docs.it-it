@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478286"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503731"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -353,7 +352,7 @@ Nome del database in cui è viene creata la tabella. *database_name* deve specif
 Nome dello schema a cui appartiene la nuova tabella.
 
 *table_name*    
-Nome della nuova tabella. I nomi delle tabelle devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). *table_name* può essere costituito al massimo da 128 caratteri, ad eccezione dei nomi di tabelle temporanee locali, ovvero i nomi preceduti da un solo simbolo di cancelletto (#), che non possono superare i 116 caratteri.
+Il nome della nuova tabella. I nomi delle tabelle devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). *table_name* può essere costituito al massimo da 128 caratteri, ad eccezione dei nomi di tabelle temporanee locali, ovvero i nomi preceduti da un solo simbolo di cancelletto (#), che non possono superare i 116 caratteri.
 
 AS FileTable    
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -460,10 +459,10 @@ DEFAULT
 Specifica il valore assegnato alla colonna quando non viene specificato un valore in modo esplicito durante un inserimento. È possibile applicare le definizioni DEFAULT a qualsiasi colonna, ad eccezione di quelle definite come **timestamp** o con la proprietà `IDENTITY`. Se si specifica un valore predefinito per una colonna di tipo definito dall'utente, il tipo deve supportare la conversione implicita da *constant_expression* nel tipo definito dall'utente. Le definizioni DEFAULT vengono rimosse quando la tabella viene eliminata. È possibile usare come predefinito solo un valore costante, ad esempio una stringa di caratteri, una funzione scalare (una funzione di sistema, definita dall'utente o CLR) oppure un valore NULL. Per garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile assegnare un nome di vincolo a una definizione DEFAULT.
 
 *constant_expression*    
-Costante, valore NULL o funzione di sistema utilizzata come valore predefinito della colonna.
+Costante, valore NULL o funzione di sistema che si usa come valore predefinito della colonna.
 
 *memory_optimized_constant_expression*     
-Costante, valore NULL o funzione di sistema utilizzata come valore predefinito della colonna. Deve essere supportata nelle stored procedure compilate in modo nativo. Per altre informazioni sulle funzioni predefinite nelle store procedure compilate in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
+Costante, valore NULL o funzione di sistema supportata e usata come valore predefinito della colonna. Deve essere supportata nelle stored procedure compilate in modo nativo. Per altre informazioni sulle funzioni predefinite nelle store procedure compilate in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
 
 IDENTITY    
 Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssDE](../../includes/ssde-md.md)] assegna un valore univoco e incrementale alla colonna. Le colonne Identity vengono in genere utilizzate in combinazione con vincoli PRIMARY KEY come identificatori di riga univoci per la tabella. La proprietà `IDENTITY` può essere assegnata a colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di inizializzazione, sia l'incremento oppure nessuno dei due. In questo secondo caso, il valore predefinito è (1,1).
@@ -603,7 +602,7 @@ CONSTRAINT
 Parola chiave facoltativa che indica l'inizio di una definizione di vincolo PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY o CHECK.
 
 *constraint_name*     
-Nome di un vincolo. I nomi di vincolo devono essere univoci nell'ambito dello schema a cui appartiene la tabella.
+Il nome di un vincolo. I nomi di vincolo devono essere univoci nell'ambito dello schema a cui appartiene la tabella.
 
 NULL | NOT NULL     
 Indica se i valori NULL sono consentiti nella colonna. L'opzione NULL non è esattamente un vincolo, ma può essere specificata allo stesso modo di NOT NULL. È possibile specificare NOT NULL per le colonne calcolate solo se è specificato PERSISTED.
@@ -623,7 +622,7 @@ FOREIGN KEY REFERENCES
 Vincolo che impone l'integrità referenziale dei dati di una o più colonne. È necessario che ogni valore delle colonne sia incluso nelle colonne di riferimento corrispondenti della tabella di riferimento. È possibile fare riferimento a vincoli FOREIGN KEY solo nelle colonne che nella tabella con riferimenti corrispondono a vincoli PRIMARY KEY o UNIQUE e nelle colonne a cui viene fatto riferimento in un indice univoco nella tabella di riferimento. È necessario contrassegnare come PERSISTED anche le chiavi esterne nelle colonne calcolate.
 
 [ _schema\_name_**.**] *referenced_table_name*]      
-Nome della tabella a cui fa riferimento il vincolo FOREIGN KEY e dello schema a cui appartiene.
+Il nome della tabella a cui fa riferimento il vincolo FOREIGN KEY e lo schema a cui appartiene.
 
 **(** *ref_column* [ **,**... *n* ] **)** è una colonna o un elenco di colonne della tabella a cui fa riferimento il vincolo FOREIGN KEY.
 
@@ -684,13 +683,13 @@ Vincolo che impone l'integrità di dominio tramite la limitazione dei valori che
 Espressione logica che restituisce TRUE o FALSE. L'espressione non può includere tipi di dati alias.
 
 *column*     
-Colonna o elenco di colonne, indicate tra parentesi, utilizzate nei vincoli di tabella per indicare le colonne specificate nella definizione del vincolo.
+Colonna o elenco di colonne, tra parentesi, usate nei vincoli di tabella per indicare le colonne specificate nella definizione del vincolo.
 
 [ **ASC** | DESC ]     
 Specifica l'ordinamento della colonna o delle colonne che fanno parte dei vincoli di tabella. Il valore predefinito è ASC.
 
 *partition_scheme_name*     
-Nome dello schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di una tabella partizionata. Lo schema di partizione deve essere presente nel database.
+Il nome dello schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di una tabella partizionata. Lo schema di partizione deve essere presente nel database.
 
 [ _partition\_column\_name_**.** ]      
 Specifica la colonna in base alla quale verrà partizionata una tabella partizionata. La colonna deve corrispondere a quella specificata nella funzione di partizione usata da *partition_scheme_name* in termini di tipo di dati, lunghezza e precisione. Una colonna calcolata utilizzata in una funzione di partizione deve essere contrassegnata in modo esplicito come PERSISTED.
@@ -699,13 +698,13 @@ Specifica la colonna in base alla quale verrà partizionata una tabella partizio
 > Si consiglia di specificare NOT NULL sulla colonna di partizionamento di tabelle partizionate oppure di tabelle non partizionate che rappresentano origini o destinazioni di operazioni ALTER TABLE...SWITCH. In questo modo, i vincoli CHECK su colonne di partizionamento non devono verificare la presenza di valori Null.
 
 WITH FILLFACTOR **=**_fillfactor_     
-Specifica la percentuale di riempimento impostata da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ogni pagina di indice utilizzata per archiviare i dati dell'indice. I valori per *fillfactor* specificati dall'utente possono essere compresi tra 1 e 100. Se non viene specificato alcun valore, il valore predefinito è 0. I valori 0 e 100 relativi al fattore di riempimento sono equivalenti.
+Specifica la percentuale di riempimento impostata da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ogni pagina di indice usata per archiviare i dati dell'indice. I valori per *fillfactor* specificati dall'utente possono essere compresi tra 1 e 100. Se non viene specificato alcun valore, il valore predefinito è 0. I valori 0 e 100 relativi al fattore di riempimento sono equivalenti.
 
 > [!IMPORTANT]
 > WITH FILLFACTOR = *fillfactor* è documentata come unica opzione di indice per i vincoli PRIMARY KEY o UNIQUE solo per motivi di compatibilità con le versioni precedenti. Non sarà più documentata in questo senso nelle versioni future.
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS     
-Nome del set di colonne. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Per altre informazioni sui set di colonne, vedere [Utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md).
+Il nome del set di colonne. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Per altre informazioni sui set di colonne, vedere [Utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md).
 
 PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* )        
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -819,10 +818,10 @@ FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 Specifica il nome delle regole di confronto da applicare alla colonna **Name** della tabella FileTable. Nelle regole di confronto specificate non deve essere applicata la distinzione tra maiuscole e minuscole ai fini della conformità con la semantica di denominazione dei file di Windows. Se questo valore non è specificato, vengono utilizzate le regole di confronto predefinite del database. Se nelle regole di confronto predefinite del database viene applicata la distinzione tra maiuscole e minuscole, viene generato un errore e l'operazione CREATE TABLE non riesce.
 
 *collation_name*     
-Nome delle regole di confronto senza distinzione tra maiuscole e minuscole.
+Il nome delle regole di confronto senza distinzione tra maiuscole e minuscole.
 
 database_default        
-Viene specificato che è necessario usare le regole di confronto predefinite per il database. Nelle regole di confronto non deve essere applicata la distinzione tra maiuscole e minuscole.
+Specifica che è necessario usare le regole di confronto predefinite per il database. Nelle regole di confronto non deve essere applicata la distinzione tra maiuscole e minuscole.
 
 FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*          
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -1087,7 +1086,7 @@ Prima di creare una tabella partizionata con CREATE TABLE, è necessario creare 
 Per visualizzare un report per una tabella e le relative colonne, usare `sp_help` o `sp_helpconstraint`. Per rinominare una tabella, usare `sp_rename`. Per visualizzare un report per le viste e le stored procedure che dipendono da una tabella, usare [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) e [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).
 
 ## <a name="nullability-rules-within-a-table-definition"></a>Regole per il supporto di valori Null all'interno di una definizione di tabella
-L'impostazione del supporto di valori Null per una colonna determina se la colonna ammette o meno valori Null (NULL) come dati. NULL non equivale né a zero né a uno spazio vuoto, ma indica che non è stata immessa alcuna voce oppure che è stato specificato un valore NULL esplicito e in genere implica che il valore è sconosciuto o non applicabile.
+L'impostazione del supporto di valori Null per una colonna determina se la colonna ammette o meno valori Null (NULL) come dati. NULL è diverso da zero o non è vuoto ma indica che non è stata immessa alcuna voce oppure che è stato specificato un valore NULL esplicito e in genere implica che il valore è sconosciuto o non applicabile.
 
 Se si usa l'istruzione `CREATE TABLE` o `ALTER TABLE` per creare o modificare una tabella, le impostazioni del database e della sessione influenzano e talvolta sostituiscono il supporto dei valori Null del tipo di dati usato in una definizione di colonna. È consigliabile definire sempre in modo esplicito una colonna come NULL o NOT NULL per le colonne non calcolate oppure, se si utilizza un tipo di dati definito dall'utente, consentire nella colonna l'utilizzo dell'impostazione predefinita relativa al supporto di valori Null per tale tipo di dati. Le colonne di tipo sparse devono consentire sempre valori Null.
 

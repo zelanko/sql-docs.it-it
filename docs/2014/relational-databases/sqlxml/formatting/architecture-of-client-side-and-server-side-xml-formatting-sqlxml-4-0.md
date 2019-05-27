@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client, XML
 - SQLXMLOLEDB Provider, XML formatting architecture
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef2127e3f554ac4d7bbd92e9d823ecd1e025fe9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03601c4d36a3e11de4df35bc32237ac554ca93fd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131447"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014435"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architettura della formattazione XML sul lato client e sul lato server (SQLXML 4.0)
   Nell'illustrazione seguente viene mostrata l'architettura della formattazione XML sul lato server.  

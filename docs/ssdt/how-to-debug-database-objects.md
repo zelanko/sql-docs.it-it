@@ -8,22 +8,22 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9c087ed280233cadc67abc8cf0160b1c36664bc0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674140"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090196"
 ---
 # <a name="how-to-debug-database-objects"></a>Procedura: Eseguire il debug di oggetti di database
 Uno unit test di SQL Server è costituito dagli elementi seguenti:  
   
 -   Codice dello unit test scritto in Visual C\# o Visual Basic. Questo codice, generato dalla finestra di progettazione unit test di SQL Server, è responsabile dell'invio dello script Transact\-SQL che forma il corpo del test.  
   
--   Una o più condizioni di test, scritte in Visual C\# o Visual Basic. Per eseguire il debug delle condizioni di test, attenersi alla procedura per eseguire il debug di uno unit test come descritto in [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) o [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Una o più condizioni di test, scritte in Visual C\# o Visual Basic. Per eseguire il debug delle condizioni di test, attenersi alla procedura per eseguire il debug di uno unit test come descritto in [Procedura: Eseguire il debug durante l'esecuzione di un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) oppure [Procedura: Eseguire il debug durante l'esecuzione di un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Uno o più script Transact\-SQL eseguiti sugli oggetti nel database sottoposto a test. Non è possibile eseguire il debug di questi script Transact\-SQL.  
   

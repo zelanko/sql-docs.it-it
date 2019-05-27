@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145990"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011466"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
   Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Si tratta di un concetto logico che fa riferimento a un gruppo di indici full-text.  
@@ -43,11 +43,11 @@ ms.locfileid: "48145990"
   
   
 ##  <a name="props"></a> Visualizzare le proprietà di un catalogo Full-Text  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni quali FULLTEXTCATALOGPROPERTY sono utilizzabile per ottenere il valore di varie proprietà relative all'indicizzazione full-text. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
+ Per ottenere il valore di varie proprietà di indicizzazione full-text, è possibile utilizzare funzioni quali [!INCLUDE[tsql](../../includes/tsql-md.md)] FULLTEXTCATALOGPROPERTY. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-text.  
   
-|Proprietà|Description|Funzione|  
+|Proprietà|Descrizione|Funzione|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|Impostazione relativa alla distinzione tra caratteri accentati e non accentati.|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|Indica se il catalogo full-text viene importato o meno.|FULLTEXTCATALOGPROPERTY|  

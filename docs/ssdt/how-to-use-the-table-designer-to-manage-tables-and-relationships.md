@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652874"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096867"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedura: Utilizzo di Progettazione tabelle per gestire tabelle e relazioni
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedura: Usare Progettazione tabelle per gestire tabelle e relazioni
 Progettazione tabelle offre uno strumento visivo insieme all'Editor Transact\-SQL per la creazione e la modifica della struttura della tabella, inclusi oggetti di programmazione specifici della tabella, per i database di SQL Server.  Viene avviata quando si crea una nuova tabella per un progetto o un database connesso o quando si fa doppio clic per modificare una tabella in Esplora oggetti di SQL Server o Esplora soluzioni.  
   
 La finestra di progettazione è costituita dalla Griglia colonne, dal riquadro di script e dal riquadro Contesto. Nella Griglia colonne sono elencate tutte le colonne della tabella. È possibile aggiungere, modificare ed eliminare colonne in questa griglia.  Il riquadro Contesto offre una vista logica della definizione di tabella (chiavi, indici, vincoli, trigger e così via) e consente di selezionare un oggetto per evidenziare le relative relazioni alle singole colonne. È anche possibile aggiungere nuovi oggetti alla tabella in questo riquadro nonché modificare le proprietà di un oggetto selezionato nella griglia delle proprietà. Nel riquadro di script viene mostrata la definizione della struttura della tabella e viene evidenziato lo script dell'oggetto selezionato nel riquadro Contesto o nella Griglia colonne. È possibile modificare lo script insieme alla Griglia colonne e al riquadro Contesto durante la visualizzazione. Tutte le modifiche di uno dei tre riquadri verranno propagate immediatamente negli altri due.  

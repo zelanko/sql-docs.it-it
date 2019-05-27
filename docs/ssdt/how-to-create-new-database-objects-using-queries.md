@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780349"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098173"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creazione di nuovi oggetti di database tramite query
+# <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creare nuovi oggetti di database tramite query
 Se si preferisce usare script per creare o modificare viste, stored procedure, funzioni, trigger o tipi definiti dall'utente, è possibile usare l'Editor Transact\-SQL. L'Editor Transact\-SQL fornisce IntelliSense e altro supporto del linguaggio. Per altre informazioni, vedere [Usare l'Editor Transact-SQL per modificare ed eseguire script](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 L'Editor Transact\-SQL viene richiamato quando si usa il menu contestuale **Visualizza codice** per aprire un'entità del database in un database connesso o in un progetto. Viene anche aperto automaticamente quando si usa il menu contestuale **Nuova query** da Esplora oggetti di SQL Server o si aggiunge un nuovo oggetto script a un progetto di database. Se non si è connessi a un database ma si vuole eseguire una query sul database stesso, è possibile usare la finestra di dialogo **Nuova connessione query** selezionando il menu **Editor Transact-SQL** dal menu **SQL** per connettersi a un database e avviare l'Editor Transact\-SQL.  

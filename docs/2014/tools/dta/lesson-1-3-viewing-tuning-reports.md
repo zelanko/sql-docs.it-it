@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173641"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110147"
 ---
 # <a name="viewing-tuning-reports"></a>Visualizzazione dei report di ottimizzazione
   Nell'attività precedente di questa lezione sono stati esaminati gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di creare o eliminare oggetti di database dalle indicazioni di Ottimizzazione guidata motore di database generate come risultato della sessione di ottimizzazione di MySession. La sessione di ottimizzazione di MySession è stata creata in [Ottimizzazione di un carico di lavoro](lesson-1-1-tuning-a-workload.md).  

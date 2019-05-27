@@ -1,21 +1,21 @@
 ---
 title: Sviluppare con le API REST per Reporting Services| Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254696"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502737"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Sviluppare con le API REST per Reporting Services
 
@@ -33,10 +33,10 @@ La coppia richiesta-risposta di un'API REST può essere suddivisa in cinque comp
 
 * L'**URI della richiesta**, costituito da: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Anche se l'URI della richiesta è incluso nell'intestazione del messaggio di richiesta, viene qui considerato come elemento distinto perché la maggior parte dei linguaggi o dei framework richiede di passarlo separatamente dal messaggio di richiesta.
 
-    * Schema dell'URI: indica il protocollo usato per trasmettere la richiesta. Ad esempio, `http` o `https`.
+    * Schema URI: indica il protocollo usato per trasmettere la richiesta. Ad esempio, `http` o `https`.
     * Host dell'URI: specifica il nome di dominio o l'indirizzo IP del server in cui l'endpoint del servizio REST è ospitato, ad esempio `myserver.contoso.com`.
     * Percorso della risorsa: specifica la risorsa o la raccolta di risorse che può includere più segmenti usati dal servizio per determinare la selezione di queste risorse. Ad esempio: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` può essere usato per ottenere le proprietà specificate per CatalogItem.
-    * Stringa di query (facoltativo): specifica parametri semplici aggiuntivi, ad esempio la versione dell'API o i criteri di selezione delle risorse.
+    * Stringa di query (facoltativo): fornisce parametri semplici aggiuntivi, ad esempio la versione dell'API o i criteri di selezione delle risorse.
 
 * Campi di intestazione del messaggio di richiesta HTTP:
 
@@ -56,7 +56,7 @@ La coppia richiesta-risposta di un'API REST può essere suddivisa in cinque comp
 
 ## <a name="api-documentation"></a>Documentazione dell'API
 
-Un'API REST moderna richiede una documentazione moderna. L'API REST si basa sulla specifica OpenAPI (anche nota come specifica Swagger) e la documentazione è disponibile in [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Oltre a documentare l'API, SwaggerHub consente anche di generare una libreria client nel linguaggio preferito, ovvero JavaScript, TypeScript, C#, Java, Python, Ruby e altri.
+Un'API REST moderna richiede una documentazione moderna. L'API REST si basa sulla specifica OpenAPI (detta anche specifica Swagger) e la documentazione è disponibile in [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Oltre a documentare l'API, SwaggerHub consente anche di generare una libreria client nel linguaggio preferito, ovvero JavaScript, TypeScript, C#, Java, Python, Ruby e altri.
 
 ## <a name="testing-api-calls"></a>Test delle chiamate API
 

@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991904"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099963"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
 
@@ -176,6 +176,11 @@ L'agente di raccolta dati disponibile in [!INCLUDE[ssNoVersion](../../includes/s
   
 4. Nel data warehouse configurato nel passaggio 1 trovare la tabella custom_snapshots.cdc_log_scan_data. In questa tabella viene fornito uno snapshot cronologico di dati dalle sessioni di analisi del log. Questi dati possono essere utilizzati per analizzare nel corso del tempo latenza, velocità effettiva e altri indicatori di prestazioni.  
   
+## <a name="ScriptUpgrade"></a> Modalità di aggiornamento script
+
+Quando si applicano gli aggiornamenti cumulativi o Service Pack a un'istanza, è possibile che al riavvio l'istanza passi alla modalità di aggiornamento script. In questa modalità SQL Server potrebbe eseguire un passaggio per analizzare e aggiornare le tabelle CDC interne e questa operazione potrebbe implicare la rigenerazione di oggetti, tra cui gli indici sulle tabelle di acquisizione. A seconda della quantità di dati interessati, questo passaggio potrebbe richiedere tempo o comportare un utilizzo elevato del log delle transazioni per i database CDC abilitati.
+
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

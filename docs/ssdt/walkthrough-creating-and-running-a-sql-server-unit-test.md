@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305959"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101943"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 In questa procedura dettagliata viene creato uno unit test di SQL Server tramite cui viene verificato il comportamento di diverse stored procedure. Vengono creati unit test di SQL Server per semplificare l'identificazione di eventuali difetti del codice che potrebbero causare il comportamento non corretto dell'applicazione. È possibile eseguire test dell'applicazione e unit test di SQL Server come parte di un gruppo di test automatizzato.  
@@ -723,7 +723,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Superato|  
     |Sales_uspShowOrderDetailsTest|Superato|  
-    |Sales_uspFillOrderTest|Non viene superato con l'errore seguente: "Condizione ScalarValueCondition (scalarValueCondition2) non riuscita: Set di risultati 1 Riga 1 Colonna 1: valori non corrispondenti, '-100' effettivi, '100' previsti". Questo errore si verifica perché nella definizione della stored procedure è contenuto un errore secondario.|  
+    |Sales_uspFillOrderTest|Non superato con l'errore seguente: "Condizione ScalarValueCondition (scalarValueCondition2) non riuscita: ResultSet 1 Riga 1 Colonna 1: valori non corrispondenti, '-100' effettivi, '100' previsti". Questo errore si verifica perché la definizione della stored procedure contiene un errore secondario.|  
   
     Successivamente sarà possibile correggere l'errore ed eseguire nuovamente il test.  
   

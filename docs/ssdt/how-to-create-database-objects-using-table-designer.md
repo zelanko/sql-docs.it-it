@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396144"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098155"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creazione di oggetti di database tramite Progettazione tabelle
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creare oggetti di database tramite Progettazione tabelle
 Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è visivamente molto simile a SSMS, ma consente di creare nuovi oggetti tramite menu contestuali con un funzionamento è simile ai corrispondenti di SSMS.  
   
 È ad esempio possibile creare un nuovo database nel nodo **Database**. Analogamente, è possibile selezionare un database specifico e creare o modificare definizioni di tabella e relativi oggetti di programmazione correlati immediatamente tramite la nuova Progettazione tabelle. Da Progettazione tabelle è possibile passare a un riquadro di script che consente di modificare direttamente lo script mediante il quale viene definita questa tabella.  
@@ -57,7 +57,7 @@ Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è vi
 5.  Aggiungere un'altra colonna. Immettere **Address** per il campo **Name**, **nvarchar (MAX)** per **Tipo di dati** e deselezionare il campo **Consenti valori Null**.  
   
     > [!WARNING]  
-    > Se si modificano gli oggetti da un database connesso, non salvarli nell'unità locale. Per salvare correttamente le modifiche nel database, seguire i passaggi indicati nella prossima procedura [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+    > Se si modificano gli oggetti da un database connesso, non salvarli nell'unità locale. Per salvare correttamente le modifiche nel database, seguire i passaggi descritti in [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Ripetere i passaggi elencati in precedenza per creare un'altra tabella denominata **Customer**. Questa volta, aggiungere alla tabella Customer le colonne seguenti utilizzando la Griglia colonne. Inoltre, modificare lo script in modo che il nome della tabella sia `[dbo].[Customer]`.  
   

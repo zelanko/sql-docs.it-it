@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9600287fb847dcea4f24c565a843e9757e364c5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973833"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105238"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Gruppi di disponibilità Always On: interoperabilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,7 @@ Nella tabella seguente vengono elencate le funzionalità di [!INCLUDE[ssNoVersio
 Le funzionalità seguenti interagiscono con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con restrizioni specifiche. Per informazioni dettagliate, vedere gli argomenti collegati.
 
 - Transazioni tra database/distribuite ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e Windows Server 2016). Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- L'[agente di raccolta dati del sistema di statistiche query](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) non può essere eseguito in modo affidabile in un ambiente con database secondari non leggibili. Per usare l'agente di raccolta dati del sistema di statistiche query, impostare tutte le repliche del gruppo di disponibilità secondario in modo da consentire l'[accesso in lettura](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
 ## <a name="NoInterop"></a> Funzionalità prive di interoperabilità con i gruppi di disponibilità AlwaysOn
 

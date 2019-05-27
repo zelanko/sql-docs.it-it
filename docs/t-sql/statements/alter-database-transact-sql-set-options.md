@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202431"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL)
 
@@ -60,6 +60,8 @@ Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Vien
 ## <a name="sql-server"></a>SQL Server
 
 Il mirroring del database, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e i livelli di compatibilità sono opzioni `SET` ma, poiché richiedono lunghe descrizioni, vengono illustrati in articoli distinti. Per altre informazioni, vedere [Mirroring del database ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) e [ Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+
+Le configurazioni con ambito database vengono usate per impostare diverse configurazioni di database a livello di singolo database. Per altre informazioni, vedere [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
 > Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni di impostazione a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte di seguito sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.

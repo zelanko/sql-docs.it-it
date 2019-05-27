@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LingerTimeout property
@@ -36,12 +35,12 @@ ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b000357da2bfa2dac698bef0b500b2193c5f62e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746713"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068879"
 ---
 # <a name="network-properties"></a>Proprietà di rete
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

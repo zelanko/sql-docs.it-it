@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
@@ -13,12 +12,12 @@ ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068206"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Impostazione valute report (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Impostazione valute report** per definire le valute report per la funzionalità di conversione valuta che copre il tipo di conversione molti-a-molti o uno-a-molti specificato nella pagina **Selezione tipo di conversione**. La valuta report è la valuta in cui vengono convertiti i valori per le misure selezionate nella pagina **Selezione misure**. I membri selezionati dalla dimensione di tipo Valuta definiscono una dimensione di tipo Valuta report per la conversione di valuta generata dalla Configurazione guidata funzionalità di Business Intelligence.  

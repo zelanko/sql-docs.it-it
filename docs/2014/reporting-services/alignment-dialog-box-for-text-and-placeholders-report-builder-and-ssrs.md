@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10136"
@@ -16,12 +15,12 @@ ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233457"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110035"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Finestra di dialogo Allineamento per testo e segnaposto (Generatore report e SSRS)
   Selezionare la scheda **Allineamento** per definire la posizione dei valori all'interno della cella o dell'area dati selezionata. È possibile formattare solo l'allineamento orizzontale del testo singolo all'interno di una casella di testo. Se si desidera impostare valori del riempimento nella casella di testo o l'allineamento verticale del testo, utilizzare le proprietà della casella di testo corrispondenti. Per altre informazioni, vedere [finestra di dialogo Proprietà casella di testo, allineamento &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

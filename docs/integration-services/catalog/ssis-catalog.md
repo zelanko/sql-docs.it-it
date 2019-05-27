@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283205"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729170"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il catalogo **SSISDB** è il punto centrale dell'utilizzo di progetti [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) che sono stati distribuiti nel server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
  
 > [!NOTE]
@@ -172,13 +176,13 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 |Nome proprietà (finestra di dialogo**Proprietà catalogo** )|Nome proprietà (vista di database)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Nome algoritmo di crittografia|ENCRYPTION_ALGORITHM|  
-|Pulisci log periodicamente|OPERATION_CLEANUP_ENABLED|  
+|Pulisci log periodicamente|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |Periodo di memorizzazione (giorni)|RETENTION_WINDOW|  
 |Rimuovi periodicamente versioni precedenti|VERSION_CLEANUP_ENABLED|  
 |Numero massimo di versioni per progetto|MAX_PROJECT_VERSIONS|  
 |Livello di registrazione predefinito per l'intero server|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  I progetti, gli ambienti e i pacchetti sono contenuti in cartelle che sono oggetti a protezione diretta. È possibile concedere le autorizzazioni a una cartella, inclusa l'autorizzazione MANAGE_OBJECT_PERMISSIONS. L'autorizzazione MANAGE_OBJECT_PERMISSIONS consente di delegare l'amministrazione del contenuto di una cartella a un utente senza dover concedere all'utente l'appartenenza al ruolo ssis_admin. È inoltre possibile concedere autorizzazioni per progetti, ambienti e operazioni. Le operazioni includono l'inizializzazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la distribuzione di progetti, la creazione e l'avvio di esecuzioni, la convalida di progetti e pacchetti e la configurazione del catalogo **SSISDB** .  
   
  Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md).  

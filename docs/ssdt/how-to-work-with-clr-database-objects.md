@@ -10,24 +10,24 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396884"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099588"
 ---
-# <a name="how-to-work-with-clr-database-objects"></a>Procedura: Utilizzo di oggetti di database CLR
+# <a name="how-to-work-with-clr-database-objects"></a>Procedura: Utilizzare oggetti di database CLR
 In aggiunta al linguaggio di programmazione Transact\-SQL, è possibile usare i linguaggi .NET Framework per creare oggetti di database che recuperano e aggiornano i dati. Gli oggetti di database scritti in codice gestito vengono denominati oggetti di database CLR (Common Language Runtime) di SQL Server. Per una spiegazione dei vantaggi derivanti dall'uso di oggetti di database CLR ospitati in SQL Server, nonché per informazioni su come scegliere tra Transact\-SQL e CLR, vedere [Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantaggi dell'uso di codice gestito per creare oggetti di database](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   
 Per creare un oggetto di database CLR mediante SQL Server Data Tools, è necessario creare un progetto di database a cui aggiungere un oggetto di database CLR. A differenza delle versioni precedenti di Visual Studio, non è necessario creare un progetto CLR separato a cui aggiungere un riferimento dal progetto di database. Quando si compila e si pubblica il progetto di database, gli oggetti CLR vengono pubblicati automaticamente nel progetto allo stesso momento. In seguito alla pubblicazione, gli oggetti CLR possono essere chiamati ed eseguiti come qualsiasi altro oggetto di database.  
   
 Nelle pagine delle proprietà CLR e Compilazione CLR sono contenute molte impostazioni per l'utilizzo di oggetti di database CLR nel progetto in uso. In particolare, nella pagina delle proprietà CLR è disponibile un'impostazione a livello di autorizzazione con cui è possibile impostare le autorizzazioni per l'assembly CLR. È inoltre disponibile l'impostazione "Genera DDL" per controllare se vengono generate istruzioni DDL per gli oggetti di database CLR aggiunti al progetto. Nella pagina delle proprietà Compilazione CLR sono contenute tutte le opzioni del compilatore che è possibile impostare per configurare la compilazione di codice CLR nel progetto. Per accedere alle pagine delle proprietà, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Proprietà**.  
   
-Per abilitare il debug degli oggetti di database CLR, aprire **Esplora oggetti di SQL Server**. Fare clic con il pulsante destro del mouse sul server contenente gli elementi di database CLR di cui si vuole eseguire il debug, quindi scegliere **Consenti debug di SQL/CLR**. Verrà visualizzata una finestra di messaggio con l'avviso: "Durante il debug, tutti i thread gestiti sul server verranno arrestati. Abilitare il debug SQL/CLR su questo server?". Quando si esegue il debug degli oggetti di database CLR, l'interruzione dell'esecuzione interromperà tutti i thread sul server, influendo su altri utenti. Per questo motivo non deve essere eseguito il debug di applicazioni per gli oggetti di database CLR su un server di produzione. Tenere presente che una volta avviato il debug non sarà più possibile modificare le impostazioni in **Esplora oggetti di SQL Server**. Le modifiche apportate in **Esplora oggetti di SQL Server** non saranno applicate fino all'avvio della prossima sessione di debug.  
+Per abilitare il debug degli oggetti di database CLR, aprire **Esplora oggetti di SQL Server**. Fare clic con il pulsante destro del mouse sul server contenente gli elementi di database CLR di cui si vuole eseguire il debug, quindi scegliere **Consenti debug di SQL/CLR**. Verrà visualizzata una finestra di messaggio con l'avviso: "Si noti che durante il debug tutti i thread gestiti sul server verranno arrestati. Abilitare il debug SQL/CLR su questo server?". Quando si esegue il debug degli oggetti di database CLR, l'interruzione dell'esecuzione interromperà tutti i thread sul server, influendo su altri utenti. Per questo motivo non deve essere eseguito il debug di applicazioni per gli oggetti di database CLR su un server di produzione. Tenere presente che una volta avviato il debug non sarà più possibile modificare le impostazioni in **Esplora oggetti di SQL Server**. Le modifiche apportate in **Esplora oggetti di SQL Server** non saranno applicate fino all'avvio della prossima sessione di debug.  
   
 Per altre informazioni sui requisiti di compilazione di oggetti di database CLR, vedere [Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
   

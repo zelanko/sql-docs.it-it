@@ -11,14 +11,18 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55c040385615c0bd7db750f7eb31a0f2eb7aa73b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273841"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721447"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lezione 4-4: Aggiungere una destinazione file flat
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 L'output degli errori della trasformazione Lookup Currency Key reindirizza tutte le righe di dati in cui la ricerca ha avuto esito negativo all'operazione di trasformazione Script. Per fornire altre informazioni sugli errori, la trasformazione Script esegue uno script che ottiene la descrizione di ciascun errore.  
   

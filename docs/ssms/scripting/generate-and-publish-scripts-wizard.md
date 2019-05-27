@@ -40,22 +40,22 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530565"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820802"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
 
-Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Generare script per database con l'opzione Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Esercitazione: Procedura guidata Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
 
 
   
@@ -67,7 +67,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
  Per pubblicare un database in un servizio di hosting Web, selezionare l'opzione **Pubblica su servizio Web** nella pagina **Imposta opzioni di generazione script** della procedura guidata.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  L'autorizzazione minima per pubblicare un database è l'appartenenza al ruolo predefinito del database db_ddladmin per il database di origine. L'autorizzazione minima per pubblicare uno script del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al provider di hosting è l'appartenenza al ruolo predefinito del database db_ddladmin sul database di destinazione.  
   
  È inoltre necessario fornire un nome utente e una password per accedere all'account del provider di hosting ed eseguire la pubblicazione guidata. Il database di destinazione deve essere creato nel provider di hosting prima della pubblicazione del database di origine. La pubblicazione sovrascrive gli oggetti presenti nel database esistente.  
@@ -193,7 +193,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 -   **Script per USE DATABASE**: consente di aggiungere l'istruzione **USE DATABASE** allo script. Per verificare che gli oggetti di database vengano creati nel database corretto, includere l'istruzione **USE DATABASE** . Se si prevede di usare lo script in un database diverso, selezionare **False** per omettere l'istruzione **USE DATABASE** . Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Tipi di dati per cui generare lo script**: consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Solo schema**.  
+-   **Tipi di dati per cui generare lo script**: consente di selezionare cosa includere negli script, ovvero **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Solo schema**.  
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo agli script per tabelle o viste.  
   
@@ -263,7 +263,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 11. **Genera script per associazioni** : consente di includere nello script inviato al provider per la pubblicazione l'associazione per gli oggetti predefiniti e gli oggetti della regola. Il valore predefinito è **True**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) e [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Tipi di dati da pubblicare**: consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Schema e dati**.  
+12. **Tipi di dati da pubblicare**: consente di selezionare cosa includere negli script, ovvero **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Schema e dati**.  
   
  **Opzioni di pubblicazione**: consente di specificare se usare transazioni per la pubblicazione nel provider di hosting Web.  
   
@@ -349,7 +349,7 @@ Per generare script di oggetti con la sintassi di [!INCLUDE[ssSDW_md](../../incl
 1. Fare clic su **Strumenti** e quindi su **Opzioni**.  
 2. In **Opzioni generali di scripting** impostare:  
     1. Script per il tipo di motore di database: **Database SQL di Microsoft Azure**.  
-    2. Script per l'edizione del motore di database: **Edizione di Microsoft Azure SQL Data Warehouse**.  
+    2. Script per l'edizione del motore di database: **Edizione Microsoft Azure SQL Data Warehouse**.  
 3. Fare clic su **OK**.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Come generare script per SQL Data Warehouse quando non è l'opzione di scripting predefinita  
@@ -361,7 +361,7 @@ Se si imposta [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] come opzione di s
 3. Scegliere gli oggetti per i quali generare script.  
 4. In **Opzioni di scripting**fare clic su **Avanzate**. In **Generale** impostare:  
     1. Script per il tipo di motore di database: **Database SQL di Microsoft Azure**.  
-    2. Script per l'edizione del motore di database: **Edizione di Microsoft Azure SQL Data Warehouse**.  
+    2. Script per l'edizione del motore di database: **Edizione Microsoft Azure SQL Data Warehouse**.  
 5. Fare clic su **Salva o pubblica script** e quindi su **Fine**.  
 
 Le opzioni impostate nel passaggio 4 non verranno memorizzate. Se si vuole che queste opzioni vengano memorizzate, seguire le istruzioni in **Come impostare le opzioni di scripting su SQL Data Warehouse**.  

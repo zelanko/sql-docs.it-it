@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96effd7670d22461f6c347c9220f7a3c26b7f611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e4c14a1e4f0ef2196cf2cebfd5e1c531cf7878e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624519"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101952"
 ---
 # <a name="project-oriented-offline-database-development"></a>Sviluppo di database offline orientato ai progetti
 Questa sezione descrive le funzionalità fornite SQL Server Data Tools (SSDT) per la creazione, la compilazione, il debug e la pubblicazione di un progetto di database.  
@@ -46,7 +46,7 @@ Se si usa SSDT, sarà possibile creare un database di sviluppo da un database di
 |[Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Impostare la piattaforma SQL Server di destinazione per il progetto su qualsiasi istanza supportata di SQL Server e convalidare la sintassi.|  
 |[Procedura: Creare uno snapshot di un progetto](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Creare un proxy di sola lettura dello schema del database e ripristinare il progetto di origine qualora vengano applicate al progetto modifiche non desiderate.|  
 |[Procedura: Usare oggetti di Microsoft SQL Server 2012 nel progetto](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Aggiungere un nuovo oggetto Sequence al progetto.|  
-|[Procedura: Utilizzare oggetti di database CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Creare e pubblicare oggetti CLR nel progetto di database di SQL Server Data Tools.|  
+|[Procedura: Usare oggetti di database CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Creare e pubblicare oggetti CLR nel progetto di database di SQL Server Data Tools.|  
 |[Procedura: Convertire progetti di database Visual Studio 2010 in progetti di database di SQL Server e destinarli di nuovo a una piattaforma differente](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Convertire progetti di database di SQL Server, CLR e di applicazione di livello dati esistenti creati in Visual Studio 2010 nel progetto di database di SQL Server Data Tools.|  
 |[Procedura: Specificare script pre-distribuzione o post-distribuzione](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Viene illustrato come utilizzare gli script da eseguire prima o dopo la distribuzione del database.|  
   

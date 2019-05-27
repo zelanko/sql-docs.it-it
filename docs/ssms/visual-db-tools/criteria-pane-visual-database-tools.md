@@ -16,15 +16,15 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a4df3e9ed712975aa6d372dbc9afc3ce76bbeaa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514048"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095201"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Riquadro Criteri (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Se il riquadro Criteri non è visibile, fare clic con il pulsante destro del mou
 |colonna|All|Visualizza il nome di una colonna di dati utilizzata per la query o l'espressione per una colonna calcolata. Questa colonna è bloccata in modo da essere sempre visibile quando si scorre orizzontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Specifica un nome alternativo per una colonna o il nome che è possibile utilizzare per una colonna calcolata.|  
 |Tabella|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Specifica il nome della tabella o dell'oggetto con struttura a tabella per la colonna di dati associata. Questa colonna è vuota per le colonne calcolate.|  
-|Output|SELECT, INSERT FROM, MAKE TABLE|Specifica se una colonna di dati viene inserita nell'output della query.<br /><br />Nota: se il database lo consente, è possibile usare una colonna di dati per le clausole di ricerca o di ordinamento senza visualizzarla nel set di risultati.|  
+|Output|SELECT, INSERT FROM, MAKE TABLE|Specifica se una colonna di dati viene inserita nell'output della query.<br /><br />Nota: Se il database lo consente, è possibile usare una colonna di dati per le clausole di ricerca o di ordinamento senza visualizzarla nel set di risultati.|  
 |Tipo di ordinamento|SELECT, INSERT FROM|Specifica che la colonna di dati associata viene utilizzata per ordinare i risultati della query e indica se l'ordinamento è crescente o decrescente.|  
 |Ordinamento|SELECT, INSERT FROM|Specifica la priorità di ordinamento delle colonne di dati utilizzate per ordinare il set di risultati. Quando si modifica il criterio di ordinamento di una colonna di dati, il criterio di ordinamento di tutte le altre colonne verrà aggiornato di conseguenza.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Specifica che la colonna di dati associata viene utilizzata per creare una query di aggregazione. Questa colonna della griglia viene visualizzata solo se è stato scelto **Raggruppa** dal menu **Strumenti** o se è stata aggiunta una clausola GROUP BY al riquadro SQL.<br /><br />Per impostazione predefinita, il valore di questa colonna è impostato su **Group By**e la colonna fa parte della clausola GROUP BY.<br /><br />Quando ci si sposta in una cella di questa colonna e si seleziona una funzione di aggregazione da applicare alla colonna di dati associata, in base all'impostazione predefinita l'espressione risultante viene aggiunta come colonna di output al set di risultati.|  

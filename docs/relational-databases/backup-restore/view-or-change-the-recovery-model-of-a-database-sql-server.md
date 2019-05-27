@@ -1,7 +1,7 @@
 ---
 title: Visualizzare o modificare il modello di recupero di un database (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/05/2016
+ms.date: 05/10/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753517"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560076"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "50753517"
   
   Un *modello di recupero* è una proprietà del database che determina la modalità di registrazione delle transazioni, se è necessario e possibile eseguire il backup del log delle transazioni e quali tipi di operazioni di ripristino sono disponibili. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. In genere, un database utilizza il modello di recupero con registrazione completa o con registrazione minima. In un database è possibile passare a un modello di recupero diverso in qualsiasi momento. Il database **modello** imposta il modello di recupero predefinito dei nuovi database.  
   
-  Per una spiegazione più dettagliata dei [modelli di recupero](recovery-models-sql-server.md), vedere [SQL Server Recovery Models (Modelli di recupero di SQL Server)](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) a cura degli esperti di [MSSQLTips!](https://www.mssqltips.com/)
+  Per una spiegazione più approfondita, vedere [modelli di recupero](recovery-models-sql-server.md).
   
   
 ##  <a name="BeforeYouBegin"></a> Operazioni preliminari  
@@ -80,7 +80,7 @@ ms.locfileid: "50753517"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene mostrato come eseguire una query sulla vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per individuare il modello di recupero del database **model** .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene mostrato come eseguire una query sulla vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per individuare il modello di recupero del database **model** .  
   
 ```sql  
 SELECT name, recovery_model_desc  
@@ -96,14 +96,14 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene mostrato come impostare il modello di recupero nel database `model` su `FULL` utilizzando l'opzione `SET RECOVERY` dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene mostrato come impostare il modello di recupero nel database `model` su `FULL` utilizzando l'opzione `SET RECOVERY` dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
 ```sql  
 USE [master] ;  
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Indicazioni: dopo la modifica del modello di recupero  
+##  <a name="FollowUp"></a> Raccomandazioni: fasi successive alla modifica del modello di recupero  
   
 -   **Dopo il passaggio tra i modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk**  
   
@@ -111,13 +111,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Dopo il passaggio dal modello di recupero con registrazione minima delle operazioni bulk al modello di recupero con registrazione completa, eseguire il backup del log.  
   
-        >**NOTA:** la strategia di backup rimane invariata, cioè continua l'esecuzione di backup del database, del log e differenziali periodici.  
+        >**NOTA:** La strategia di backup rimane invariata, cioè continua l'esecuzione di backup del database, del log e differenziali periodici.  
   
 -   **Dopo il passaggio dal modello di recupero con registrazione minima**  
   
     -   Immediatamente dopo il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, eseguire un backup di database completo o differenziale per avviare la catena di log.  
   
-        >**NOTA:** il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ha effetto solo dopo il primo backup dei dati.  
+        >**NOTA:** Il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ha effetto solo dopo il primo backup dei dati.  
   
     -   Pianificare backup regolari dei log e aggiornare il piano di ripristino di conseguenza.  
   

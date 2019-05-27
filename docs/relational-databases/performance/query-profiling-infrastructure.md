@@ -1,7 +1,7 @@
 ---
 title: Infrastruttura di profilatura delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568276"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ L'*infrastruttura del profilo delle statistiche di esecuzione query* o profilatu
 - [Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> L'uso delle statistiche di query dinamiche con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa l'infrastruttura di profilatura standard.    
-> Nelle versioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'[infrastruttura di profilatura lightweight](#lwp) è abilitata, verrà usata da Statistiche query dinamiche al posto della profilatura standard.
+> Fare clic sul pulsante *Includi statistiche query dinamiche* in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per usare l'infrastruttura di profilatura standard.    
+> Nelle versioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'[infrastruttura di profilatura lightweight](#lwp) è abilitata, verrà usata da Statistiche query dinamiche al posto della profilatura standard quando viene visualizzata tramite [Monitoraggio attività](../../relational-databases/performance-monitor/activity-monitor.md) o eseguendo direttamente una query sul DMV di [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md). 
 
 I seguenti metodi di raccolta delle informazioni sui piani di esecuzione per **tutte le sessioni** usano l'infrastruttura di profilatura standard:
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] include una nuova versione rivista della profilatura lightweight che raccoglie il totale di righe per tutte le esecuzioni. La profilatura lightweight è abilitata per impostazione predefinita in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e il flag di traccia 7412 non ha alcun effetto.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] include una nuova versione rivista della profilatura lightweight che raccoglie il totale di righe per tutte le esecuzioni. La profilatura lightweight è abilitata per impostazione predefinita in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e il flag di traccia 7412 non ha alcun effetto. È possibile disabilitare la profilatura lightweight a livello di database usando la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-È stata introdotta una nuova DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) per restituire l'equivalente dell'ultimo piano di esecuzione effettivo noto per la maggior parte delle query. Un nuovo evento esteso *query_post_execution_plan_profile* raccoglie l'equivalente di un piano di esecuzione effettivo in base alla profilatura leggera, a differenza di *query_post_execution_showplan* che usa la profilatura standard. 
+È stata introdotta una nuova DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) per restituire l'equivalente dell'ultimo piano di esecuzione effettivo noto per la maggior parte delle query. Tale DMF è denominata *statistiche dell'ultimo piano di query*. È possibile abilitare le statistiche dell'ultimo piano di query a livello di database usando la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-È possibile configurare una sessione di esempio che usa l'evento esteso *query_post_execution_plan_profile* come illustrato nell'esempio seguente:
+Un nuovo evento esteso *query_post_execution_plan_profile* raccoglie l'equivalente di un piano di esecuzione effettivo in base alla profilatura leggera, a differenza di *query_post_execution_showplan* che usa la profilatura standard. È possibile configurare una sessione di esempio che usa l'evento esteso *query_post_execution_plan_profile* come illustrato nell'esempio seguente:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>Esempio 1 - Sessione Evento esteso con profilatura standard
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>Esempio 2 - Sessione Evento esteso con profilatura leggera
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Remarks

@@ -1,28 +1,28 @@
 ---
-title: Note sulla versione per SSMS | Microsoft Docs
+title: Note sulla versione per SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
+ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042500"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65198077"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. È possibile [fare clic qui per scaricare le versioni precedenti di SQL Server Management Studio](#previous-ssms-releases).
+Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS.
 
 <!--
 The latest ## H2 section of this Release Notes article has been reformatted to match the new standard.
@@ -42,446 +42,276 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="180-rc1-march-2019"></a>18.0 (RC1), marzo 2019
+## <a name="180-ga-april-2019"></a>18.0 (disponibilità generale), aprile 2019
 
-Download: &nbsp; &nbsp; [Scaricare SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)<br/>
-Numero di build: &nbsp; &nbsp; 15.0.18098.0<br/>
-Data di rilascio: &nbsp; &nbsp; 28 marzo 2019
+Download: &nbsp; &nbsp; [Scaricare SSMS 18.0 (disponibilità generale)](download-sql-server-management-studio-ssms.md)<br/>
+Numero di build: &nbsp; &nbsp; 15.0.18118.0<br/>
+Data di rilascio: &nbsp; &nbsp; 24 aprile 2019
 
-Questa sezione elenca le novità di SSMS 18.0 RC1.
+È disponibile la versione 18.0 di SSMS in disponibilità generale. Se è necessaria una versione precedente, vedere [Versioni precedenti di SSMS](release-notes-ssms.md#previous-ssms-releases).
 
-Release Candidate 1 (RC1) è un'anteprima pubblica di SSMS 18.0. Fino a quando la versione 18 non viene rilasciata per la disponibilità generale, la versione 17.\* è la versione più recente che è stata rilasciata per la disponibilità generale.
-
-> [!NOTE]
-> Per un log completo delle modifiche a partire da SSMS 17.9.1, vedere [SSMS 18.0 Anteprima: log delle modifiche fino a RC1](#180-preview---cumulative-changelog-through-rc1).
-
-### <a name="whats-new-in-rc1"></a>Novità di RC1
+## <a name="whats-new-in-180-ga"></a>Novità della versione 18.0 (disponibilità generale)
 
 | Nuovo elemento | Dettagli |
 | :------- | :------ |
-| **SSMS:** &nbsp; &nbsp; Abilitazione della connettività degli endpoint XMLA per i set di dati di Power BI. | Gli endpoint XMLA (XML for Analysis) forniscono accesso al motore di Analysis Services nel servizio Power BI. In questo modo gli strumenti come SSMS e Profiler SQL possono connettersi ai set di dati di Power BI per attività di monitoraggio, gestione, debug e così via.<br/><br/> Per informazioni estese, vedere il post di blog [XMLA endpoint connectivity](https://go.microsoft.com/fwlink/?linkid=2085204) (Connettività dell'endpoint XMLA) del 28 marzo 2019. |
-| **SMO:** &nbsp; &nbsp; Aggiunto il supporto per l'eliminazione a catena nei _vincoli di arco_. | La funzionalità è stata aggiunta sia in SQL Server Management Studio che in SQL Server Management Objects (SMO). |
-| **SMO:** &nbsp; &nbsp; Aggiunto il supporto dell'autorizzazione di _lettura/scrittura_ per la classificazione dei dati. | &nbsp; |
-| **File di controllo:** &nbsp; &nbsp; Aggiornato l'elenco delle azioni di controllo note. | L'elenco include ora FEATURE RESTRICTION ADD/CHANGE GROUP/DROP. |
-| &nbsp; | &nbsp; |
-
-### <a name="bug-fixes"></a>Correzioni di bug
-
-| Correzione di bug | Dettagli |
-| :------ | :------ |
-| **SQL Server Management Studio (SSMS) - Generale:** &nbsp; &nbsp; Risolto un problema che impediva l'autenticazione a più fattori (MFA) quando gli identificatori utente appartenevano a più tenant. | &nbsp; |
-| **SQL Server Management Studio (SSMS) - Generale:** &nbsp;&nbsp; Risolto un problema in cui il report Perf Dashboard segnalava attese PAGELATCH e PAGEIOLATCH che non si trovavano nei sottoreport. | &nbsp; |
-| **Editor SSMS:** &nbsp; &nbsp; Risolto un problema in cui varie viste di sistema e funzioni con valore di tabella non erano colorate correttamente. | &nbsp; |
-| **Esplora oggetti:** Aggiunto il corretto escape nel filtro di Esplora oggetti. | Vedere il [commento per Azure 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803). |
-| **SMO:** &nbsp; &nbsp; Risolto un problema in cui `GetDbComparer` impostava erroneamente per impostazione predefinita le regole di confronto su CI per tutti i database di Azure. | &nbsp; |
-| **Supporto di istanza gestita:** &nbsp; &nbsp; Miglioramento della visualizzazione di proprietà specifiche del server di istanze gestite. | Queste proprietà includono la generazione di hardware, il livello di servizio e l'archiviazione, sia usati che riservati. |
-| **Database SQL di Azure:** &nbsp; &nbsp; Risolto un problema in cui gli obiettivi del livello servizio erano impostati come hardcoded, rendendo più difficile per SSMS supportare gli obiettivi del livello servizio più recenti di SQL Azure. | Ora gli utenti possono accedere ad Azure e consentire a SSMS di recuperare tutti i dati degli obiettivi del livello servizio applicabili.<br/>Gli elementi di dati SLO applicabili sono Edition e Max Size. |
-| **Griglia risultati:** &nbsp; &nbsp; Risolto un problema che generava un'eccezione _Indice fuori intervallo_ quando si faceva clic sulla griglia. | &nbsp; |
-| **Griglia risultati:** &nbsp; &nbsp; Risolto un problema in cui il colore di sfondo della griglia risultati veniva ignorato. | Vedere il [commento per Azure 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916). |
-| **Profiler**: &nbsp; &nbsp; Risolto un problema che impediva l'avvio di SQL Profiler in Windows 7 SP1. | &nbsp; |
-| **Showplan:** &nbsp; &nbsp; Aggiunti quattro attributi in `RunTimeCountersPerThread` relativi al piano di esecuzione xml effettivo. | &bull; &nbsp; &nbsp; `HpcRowCount` - Numero di righe elaborate dal dispositivo hpc.<br/><br/>&bull; &nbsp; &nbsp; `HpcKernelElapsedUs` - Attesa del tempo trascorso per l'esecuzione del kernel in uso.<br/><br/>&bull; &nbsp; &nbsp; `HpcHostToDeviceBytes` - Byte trasferiti dall'host al dispositivo.<br/><br/>&bull; &nbsp; &nbsp; `HpcDeviceToHostBytes` - Byte trasferiti dal dispositivo all'host. |
-| **Importazione guidata applicazione livello dati:** &nbsp; &nbsp; Risolto un problema in cui l'utente non riusciva a importare un'applicazione livello dati (.dacpac) a causa dell'accesso limitato al server. | Ad esempio, gli utenti non potevano importare un file con estensione dacpac se non avevano accesso a tutti i database nello stesso server. |
-| **Importazione guidata applicazione livello dati:** &nbsp; &nbsp; Risolto un problema che rendeva l'importazione estremamente lenta quando molti database erano ospitati nello stesso server di Azure SQL. | &nbsp; |
-| &nbsp; | &nbsp; |
-
-### <a name="deprecated-features"></a>Caratteristiche deprecate
-
-| Funzionalità deprecata | Dettagli |
-| :----------------- | :------ |
-| Rimossa la funzionalità Mascheramento statico dei dati (anteprima). | &nbsp; |
-| &nbsp; | &nbsp; |
-
-### <a name="known-issues"></a>Problemi noti
-
-- Nessuna.
-
-## <a name="180-preview---cumulative-changelog-through-rc1"></a>Anteprima 18.0 - Log delle modifiche cumulativo fino a RC1
-
-Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, significa che la modifica è avvenuta nella prima anteprima pubblica di SSMS 18.0, vale a dire SSMS 18.0 *Anteprima 4*.
-
-### <a name="whats-new"></a>Novità
-
-- **SSMS**
-  - File di download di dimensioni più piccole
-    - Le dimensioni correnti del bundle sono inferiori alla metà di quelle di SSMS 17.x (circa 400 MB). Le dimensioni aumenteranno un po' quando verranno aggiunti i componenti Integration Services a SSMS, ma non raggiungeranno quelle delle versioni precedenti.
-  - SSMS si basa sulla nuova versione di VS 2017 Isolated Shell
-    - Si tratta di una shell moderna (è stata scelta la versione VS 2017 15.6.4). La nuova shell sblocca tutte le correzioni di accessibilità integrate sia in SSMS che in Visual Studio.
-  - Miglioramenti di accessibilità di SSMS
-    - È stata dedicata un'attenzione particolare ai problemi di accessibilità in tutti gli strumenti (SSMS, DTA e Profiler)
-  - SSMS può essere installato in una cartella personalizzata
-    - Attualmente questa opzione è disponibile solo nell'installazione dalla riga di comando. Passare l'argomento aggiuntivo seguente a SSMS-Setup-ENU.exe:
-      - SSMSInstallRoot=C:\MySSMS18
-      - Per impostazione predefinita il nuovo percorso di installazione per SSMS è il seguente:
-      - %Programmi(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe
-      - Nota: questo non significa che SSMS sia multi-istanza.
-  - SSMS non condivide più componenti con il motore SQL
-    - È stata dedicata un'attenzione particolare a evitare la condivisione di componenti con il motore SQL. Questa condivisione generava spesso problemi di funzionalità quando venivano usati i file installati da altre applicazioni.
-  - SSMS richiede NetFx 4.7.2 o versioni successive
-    - Il requisito minimo è passato da NetFx4.6.1 a NetFx4.7.2. In questo modo è possibile sfruttare le nuove funzionalità incluse nel nuovo framework.
-  - SSMS non è supportato in Windows 8 e Windows Server 2012. In Windows 10/Windows Server 2016 sarà richiesta la versione più recente 1607 (10.0.14393)
-    - A causa della nuova dipendenza da NetFx 4.7.2, SSMS 18.0 non viene installato in Windows 8, Windows Server 2012 e nelle versioni meno recenti di Windows 10 and Windows Server 2016. In questi sistemi operativi il programma di installazione di SSMS si bloccherà. Nota: Windows 8.1 è ancora supportato.
-  - SSMS non viene aggiunto alla variabile di ambiente PATH
-    - Il percorso di SSMS.EXE e degli strumenti in generale non viene più aggiunto al percorso. Gli utenti possono aggiungerlo direttamente o tramite il menu Start se usano una versione recente di Windows.
-  - Supporto per SQL Server SQL2019
-    - Si tratta della prima versione di SSMS che supporta completamente SQL Server 2019 (livello di compatibilità 150 e così via)
-    - Supporto di "BATCH_STARTED_GROUP" e "BATCH_COMPLETED_GROUP" in SQLSERVER2018 e nell'istanza gestita in SSMS
-    - Supporto di SMO per l'inlining della funzione definita dall'utente
-    - GraphDB: è stato aggiunto un flag nello showplan per la sequenza Graph TC.
-    - Always Encrypted: è stato aggiunto supporto per AEv2/Enclave
-    - Always Encrypted: la finestra di dialogo di connessione ha una nuova scheda "Always Encrypted" quando l'utente fa clic sul pulsante "Opzioni" per abilitare e configurare il supporto degli enclave.
-  - Gli ID pacchetto non sono più necessari per sviluppare le estensioni di SSMS
-    - In passato SSMS caricava in modo selettivo solo i pacchetti noti e gli sviluppatori dovevano registrare i propri pacchetti. Questo non si verifica più.
-  - Il supporto per valori DPI alti è abilitato per impostazione predefinita
-  - Maggiore supporto del database SQL di Azure
-  - Le proprietà del database SLO/Edition/MaxSize ora accettano nomi personalizzati, facilitando il supporto di edizioni future del database SQL di Azure
-  - Aggiunto il supporto per gli SKU vCore recentemente aggiunti (utilizzo generico e business critical): Gen4_24 e tutti gli SKU Gen5.
-  - Opzione di configurazione AUTOGROW_ALL_FILES disponibile per i filegroup in SSMS
-  - Rimosse le opzioni a rischio "lightweight pooling" e "priority boost" dalla GUI SSMS. Per informazioni dettagliate, vedere https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
-  - L'editor SQL supporta la combinazione di tasti CTRL+D per duplicare le righe. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
-  - Nuovi menu e tasti di scelta rapida per la creazione di file: CTRL+ALT+N. Sarà possibile continuare a usare CTRL+N per creare una nuova query. Nota: se si sta eseguendo la migrazione da "SSMS 18.0 Anteprima 1", è necessario reimpostare le impostazioni utente da"**Strumenti | Impostazioni di importazione / esportazione | Reset all settings**" (Reimposta tutte le impostazioni).
-  - La finestra di dialogo "Nuova regola del firewall" ora consente di specificare un nome di regola anziché generarne uno automaticamente. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039)=
-  - Classificazione dei dati: aggiornamento degli elementi consigliati
-  - Funzionalità IntelliSense migliorata nell'editor, in particolare per T-SQL v140
-  - Aggiunta del supporto UTF-8 nella finestra di dialogo delle regole di confronto dell'interfaccia utente di SSMS.
-  - Passaggio a "Gestione credenziali di Windows" per le password MRU della finestra di dialogo Connessione. Risolve un problema esistente da tempo per cui la persistenza delle password non è sempre affidabile. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.
-  - Supporto migliorato per i sistemi con più monitor, con un numero crescente di finestre e più finestre di dialogo ora visualizzate sul monitor previsto.
-  - Viene visualizzata la configurazione server "backup checksum default" nella nuova pagina Impostazioni database della finestra di dialogo Proprietà server. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974
-  - [Novità in Anteprima 5] Dimensioni massime dei file di log degli errori incluse in "Configura log degli errori di SQL Server". Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/33624115 
-  - [Novità in Anteprima 6] Aggiunta l'opzione "Esegui migrazione ad Azure" al menu Strumenti. Sono stati integrati [Database Migration Assistant](https://aka.ms/get-dma) e [Servizio Migrazione del database](https://aka.ms/get-dms) per un accesso rapido e veloce e per accelerare le migrazioni ad Azure.
-  - [Novità in Anteprima 6] Nella versione precedente di SSMS 18.0 (prima di Anteprima 6) la combinazione di tasti **CTRL+ALT+J** è associata all'opzione "Database disponibili". In Anteprima 6 e nelle versioni successive è stato ripristino il tasto di scelta rapida **CTRL + U**, come in SSMS 17.x.
-  - [Novità in Anteprima 6] È stata aggiunta logica per chiedere all'utente di eseguire il commit delle transazioni aperte quando si usa "Cambia connessione".
-  - [Novità in Anteprima 7] È stato aggiunto il supporto per le regole di confronto `UTF8_BIN2`.
-
-- **SMO**
-  - Supporto SMO esteso per la creazione di indici ripristinabili
-  - Aggiunto un nuovo evento per gli oggetti SMO ("PropertyMissing") che aiuta gli autori di applicazioni a rilevare i problemi di prestazioni SMO in tempi più rapidi.  
-  - Nuova proprietà DefaultBackupChecksum esposta nell'oggetto Configuration, che esegue il mapping alla configurazione server "backup checksum default"
-  - [Novità in Anteprima 5] Nuova proprietà ProductUpdateLevel esposta nell'oggetto Server, che esegue il mapping al livello di servizio per la versione di SQL in uso (ad esempio CU12 RTM, e così via)
-  - [Novità in Anteprima 5] Nuova proprietà LastGoodCheckDbTime esposta in un oggetto Database, che esegue il mapping alla proprietà del database "lastgoodcheckdbtime". Se tale proprietà non è disponibile, sarà restituito il valore predefinito 1/1/1900 12:00:00 AM.
-  - [Novità in Anteprima 5] Percorso file RegSrvr.xml (file di configurazione Server registrato) spostato in "%AppData%\Microsoft\SQL Server Management Studio". È senza versione, in modo che possa essere condiviso tra più versioni di SSMS
-  - [Novità in Anteprima 7] È stato aggiunto **Cloud di controllo**  come nuovo tipo di quorum e nuovo tipo di risorsa sia in SMO che in SSMS.
-  - [Novità in Anteprima 7] È stato aggiunto il supporto per i [vincoli di arco](../relational-databases/tables/graph-edge-constraints.md) sia in SMO che in SSMS.
-  - [Novità in RC1] Aggiunto il supporto per l'eliminazione a catena nei "vincoli di arco" sia in SMO che in SSMS.
-  - [Novità in RC1] Aggiunto il supporto delle autorizzazioni di "lettura/scrittura" per la classificazione dei dati.
-
-
-- **Integrazione di Azure Data Studio**
-  - Aggiunta voce di menu per avviare e scaricare Azure Data Studio
-  - [Novità in Anteprima 5] Aggiunta la voce di menu Start Azure Data Studio (Avvia Azure Data Studio) in Esplora oggetti
-  - [Novità in Anteprima 7] In Azure Data Studio, è stata abilitata l'esecuzione di query o la creazione di un nuovo notebook tramite clic con il pulsante destro del mouse su un database in Esplora oggetti.
-
-- **Showplan**
-  - Aggiunti il tempo trascorso reale e le righe effettive rispetto alle righe stimate (se disponibili) sotto il nodo dell'operatore ShowPlan. In questo modo il piano effettivo appare coerente con il piano Statistiche query dinamiche.
-  - Modificata la descrizione comando e aggiunto un commento quando si fa clic sul pulsante Modifica query per un elemento ShowPlan, per indicare all'utente che l'elemento ShowPlan potrebbe essere troncato dal motore SQL se la query supera i 4000 caratteri.
-  - Aggiunta logica per visualizzare "Materializer Operator (External Select)"
-  - Aggiunto un nuovo attributo showplan BatchModeOnRowStoreUsed per identificare facilmente le query che usano la funzionalità "batch-mode scan on rowstores". Ogni volta che una query esegue "batch mode scan on rowstores" (analisi in modalità batch su rowstore) viene aggiunto un nuovo attributo (BatchModeOnRowStoreUsed="true") all'elemento StmtSimple.
-  - [Novità in Anteprima 7] È stato aggiunto il supporto di Showplan a LocalCube RelOp per `DW ROLLUP` e `CUBE`.
-
-- **Aggiornamento del livello di compatibilità del database**
-  - [Novità in Anteprima 5] Aggiunta una nuova opzione in <Database name> -> Attività -> Aggiornamento database. Questa opzione consentirà di avviare il nuovo Assistente ottimizzazione query per guidare gli utenti nel processo di:
-    - Raccolta di baseline delle prestazioni prima dell'aggiornamento del livello di compatibilità del database. 
-    - Aggiornamento al livello di compatibilità del database desiderato
-    - Raccolta di un secondo passaggio di dati delle prestazioni nel corso dello stesso carico di lavoro.
-    - Rilevamento delle regressioni del carico di lavoro e specifica di elementi consigliati testati per migliorare le prestazioni del carico di lavoro.
-
-    Questa funzionalità è simile al processo di aggiornamento del database documentato in [Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), tranne nell'ultimo passaggio in cui l'Assistente ottimizzazione query non si basa su uno stato valido noto in precedenza per generare elementi consigliati.
-
-- **Archivio query**
-  - [Novità in Anteprima 5] Migliorata l'usabilità di alcuni report (Consumo complessivo risorse) grazie all'aggiunta di migliaia di separatori per i numeri visualizzati sull'asse Y dei grafici.
-  - [Novità in Anteprima 5] Aggiunto un nuovo report Statistiche di attesa query.
-
-- **Maschera dati**
-  - [Novità in Anteprima 5] Aggiunta una maschera dati statica. La maschera dati statica è uno strumento di protezione dei dati che consente agli utenti di creare una copia del database per mascherare i propri dati sensibili nella copia. Questa funzionalità si rivelerà utile a chi condivide il database di produzione con utenti non di produzione, ad esempio con il team di sviluppo/test o di analisi. Per altre informazioni, vedere [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/) (Maschera dati statica per database SQL di Azure e SQL Server).
-  - [Novità in Anteprima 7] I file di configurazione JSON sono ora supportati
-  - [Novità in Anteprima 7] Il formato del file di configurazione XML è stato modificato per renderlo più flessibile in futuro.  I file di configurazione esistenti dovranno essere ricreati.
-  - [Novità in Anteprima 7] È ora possibile mascherare i database contenenti tabelle temporali e ottimizzate per la memoria.  Alle tabelle ottimizzate per la memoria e temporali si applicano ancora alcune restrizioni.
-  - [Novità in Anteprima 7] L'operazione di copia di database locali ora usa l'opzione `COPY_ONLY` per il passaggio `BACKUP DATABASE`.
-  - [Novità in Anteprima 7] Per i database mascherati viene ora impostato il modello di recupero `SIMPLE` mentre l'operazione di mascheramento è in corso, per ridurre l'uso di log. Dopo il completamento dell'operazione, l'opzione torna al valore originario.
-  - [Novità in Anteprima 7] Mentre l'operazione di mascheramento è in corso, ai database mascherati viene assegnato il nome `<output database name>-MaskInProgress`. Dopo il completamento dell'operazione, questi database vengono rinominati in `<output database name>`.
-  - [Novità in Anteprima 7] L'ordine di visualizzazione delle colonne nell'interfaccia utente di configurazione è cambiato da alfabetico a ordinale.
-  - [Novità in Anteprima 7] È stata rimossa l'opzione di selezione bulk delle colonne nell'interfaccia utente di configurazione per evitare un comportamento imprevisto.
-  - [Novità in Anteprima 7] È stata migliorata la logica di ripetizione dei tentativi interna per gli errori di connessione e comando.
- 
-- **Always On**
-  - Rigenerazione hash per RTO (tempo di recupero stimato) e RPO (perdita di dati stimata) nel dashboard Always On di SSMS. La documentazione viene aggiornata in https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups
-
-- **File di controllo**
-  - Metodo di autenticazione modificata dal metodo basato sulla Chiave account di archiviazione all'autenticazione basata su Azure AD
-  - [Novità in RC1] Aggiornato l'elenco delle azioni di controllo conosciute per includere la RESTRIZIONE FUNZIONALITÀ AGGIUNGI/MODIFICA GRUPPO/ELIMINA.
-
-- **SSIS**
-  - [Novità in Anteprima 5] Aggiunta del supporto per consentire ai clienti di pianificare in Azure-SSIS Integration Runtime i pacchetti SSIS che si trovano nel cloud di Azure per enti pubblici
-  - [Novità in Anteprima 6] Quando si usa SQL Agent dell'istanza gestita da SSMS, è possibile configurare i parametri e la gestione connessione nel passaggio di processo dell'agente SSIS.
-  - [Novità in Anteprima 7] Quando ci si connette al database SQL di Azure o a Istanza gestita di database SQL di Azure, è possibile effettuare la connessione con "\<default\>" come database iniziale.
-  - [Novità in Anteprima 7] È stata aggiunta la voce "Try SSIS in Azure Data Factory" (Prova SSIS in Azure Data Factory) nel nodo "Cataloghi di Integration Services". Tale voce può essere usata per avviare "Integration Runtime Creation Wizard" (Creazione guidata Integration Runtime) e creare rapidamente "Azure-SSIS Integration Runtime".
-  - [Novità in Anteprima 7] È stato aggiunto il pulsante "Create SSIS IR" (Crea SSIS IR) in "Catalog Creation Wizard" (Creazione guidata catalogo). Tale pulsante può essere usato per avviare "Integration Runtime Creation Wizard" (Creazione guidata Integration Runtime) e creare rapidamente "Azure-SSIS Integration Runtime".
-  - [Novità in Anteprima 7] ISDeploymentWizard ora supporta l'autenticazione SQL, nonché l'autenticazione integrata e l'autorizzazione tramite password di Azure Active Directory in modalità riga di comando.
-
-- **Classificazione dati**
-  - Riorganizzazione del menu attività Classificazione dati : è stato aggiunto un sottomenu al menu delle attività del database ed è stata aggiunta un'opzione per aprire il report dal menu senza dover aprire prima la finestra Classifica dati.
-  - [Novità in Anteprima 7] È stata aggiunta la nuova funzionalità 'Classificazione dati' in SMO. L'oggetto colonna espone nuove proprietà: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (sola lettura). Per altre informazioni, vedere: https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current 
-  - [Novità in Anteprima 7] È stata aggiunta la voce "Classification Report" (Report di classificazione) al riquadro a comparsa "Classificazione dati".
-
-- **Valutazione della vulnerabilità**
-  - [Novità in Anteprima 5] Abilitato il menu delle attività Valutazione della vulnerabilità in Azure SQL Data Warehouse.
-  - [Novità in Anteprima 7] È stato modificato il set di regole di valutazione della vulnerabilità eseguito nei server di Istanza gestita di database SQL di Azure, in modo da rendere coerenti con il database SQL di Azure i risultati dell'analisi di "Valutazione della vulnerabilità". 
-  - [Novità in Anteprima 7] "Valutazione della vulnerabilità" ora supporta Azure SQL Data Warehouse.
-
-- **Crittografia sempre attiva**
-  - La casella di controllo Abilita Always Encrypted nella nuova scheda Always Encrypted nella finestra di dialogo Connetti al server ora consente di abilitare o disabilitare facilmente la funzionalità Always Encrypted per una connessione di database. 
-
-- [**Always Encrypted con enclave sicuri**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
-  - Nell'anteprima di SQL Server 2019 sono stati apportati diversi miglioramenti per il supporto della funzionalità Always Encrypted con enclave sicuri
-    - Un campo di testo per specificare l'URL di attestazione dell'enclave nella finestra di dialogo Connetti al server (la nuova scheda Always Encrypted).
-    - La nuova casella di controllo nella finestra di dialogo Nuova chiave master della colonna per controllare se una nuova chiave master della colonna consente i calcoli dell'enclave.
-    - Altre finestre di dialogo di gestione delle chiavi Always Encrypted ora visualizzano informazioni su quali chiavi master della colonna consentono i calcoli dell'enclave.
-
-- **Procedura guidata Importa file flat**
-  - [Novità in Anteprima 7] È stata aggiunta la logica per notificare all'utente che un'importazione di file flat può aver causato una ridenominazione delle colonne.
-
-- **Data-tier Application Wizard**
-  - [Novità in Anteprima 7] È stato aggiunto il supporto per l'applicazione livello dati di importazione/esportazione con tabelle grafi.
-
-- **Istanza gestita di database SQL di Azure**
-  - [Novità in Anteprima 7] È stato aggiunto l'**account di accesso di AAD** come nuovo tipo di account di accesso in SMO e SSMS durante la connessione a un'istanza gestita di database SQL di Azure.
-
-- **Visualizzatore XEvent**
-  - [Novità in Anteprima 7] Nel visualizzatore XEvent è stata abilitata la finestra di showplan per un maggior numero di XEvents.
-
-
-
-
-### <a name="bug-fixes"></a>Correzioni di bug
-
-- **Arresti anomali/interruzioni**
-  - Correzione di un'origine di arresti anomali SSMS comuni associati agli oggetti GDI
-  - Correzione di un'origine comune di blocchi del sistema e prestazioni insufficienti quando si seleziona "Script come Crea/Aggiorna/Rilascia" (rimosse operazioni inutili di recupero di oggetti SMO)
-  - Correzione di un blocco durante la connessione a un database SQL di Azure con MFA mentre sono abilitate le tracce ADAL
-  - Correzione di un blocco (o un blocco percepito) in Statistiche query dinamiche chiamato da Monitor attività (il problema si manifesta quando si usa l'autenticazione di SQL Server senza nessuna impostazione "Mantieni informazioni di sicurezza").
-  - Correzione di un blocco quando si seleziona "Report" in Esplora oggetti e si rilevano connessioni con latenza elevata o impossibilità temporanea di accesso alle risorse.
-  - [Novità in Anteprima 5] Correzione dell'arresto anomalo del sistema in SSMS quando si tenta di usare il server di gestione centrale e i server di database SQL Azure. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/33374884. 
-  - [Novità in Anteprima 5] Correzione dell'interruzione in Esplora oggetti ottimizzando il modo in cui viene recuperata la proprietà IsFullTextEnabled
-  - [Novità in Anteprima 5] Correzione dell'interruzione in "Copia guidata database" evitando la compilazione di query non necessarie per recuperare le proprietà del database
-  - [Novità in Anteprima 7] È stato corretto il problema che causava il blocco o l'arresto anomalo di SSMS durante la modifica di T-SQL. 
-
-- **Finestra di dialogo di connessione**
-  - Abilitata la rimozione di nomi utente dall'elenco nomi utente precedenti premendo CANC. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32897632)
-
-- **XEvent**
-  - Aggiunte due colonne "action_name" e "class_type_desc" che visualizzano i campi ID azione e tipo classe come stringhe leggibili.
-  - Rimosso il limite massimo di 1.000.000 di eventi per il visualizzatore XEvent.
-
-- **Tabelle esterne**
-  - Aggiunta del supporto per Rejected_Row_Location in modelli, SMO, IntelliSense e nella griglia delle proprietà
-
-- **Opzioni SSMS**
-  - Correzione di un problema per cui la pagina "**Strumenti | Opzioni | Esplora oggetti di SQL Server** | Comandi" non viene ridimensionata correttamente.
-  - Per impostazione predefinita, SSMS ora disabilita il download automatico di DTD nell'editor XMLA. L'editor di script XMLA usa il servizio di linguaggio XML e per impostazione predefinita impedisce di scaricare automaticamente DTD per file XMLA potenzialmente dannosi.  Questo comportamento viene definito disattivando l'impostazione "Automatically download DTDs and Schemas" (Scarica automaticamente DTD e schemi) in Strumenti->Opzioni->Ambiente->Editor di testo->XML->Varie.  
-  - [Novità in Anteprima 5] Ripristinata la scelta rapida da tastiera CTRL+D, disponibile nella versione precedente di SSMS. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/35544754
-
-- **SQL Server Management Studio (SSMS) - Generale**
-  - [Novità in Anteprima 7] È stato corretto il problema che causava il blocco o l'arresto anomalo di SSMS durante la modifica di T-SQL.
-  - [Novità in Anteprima 7] È stato corretto il problema per il quale non veniva effettuato il passaggio di `ApplicationIntent` nelle connessioni in `Registered Servers`.
-  - [Novità in Anteprima 7] È stato corretto il problema per il quale il rendering del modulo dell'**interfaccia utente della creazione guidata di una nuova sessione di XEvent** non veniva eseguito correttamente nei monitor con valori DPI alti.
-  - [Novità in Anteprima 7] È stato corretto il problema dell'importazione di file `.bacpac`.
-  - [Novità in Anteprima 7] È stato corretto il problema a causa del quale se si provava a visualizzare le proprietà di un database con `FILEGROWTH > 2048GB` veniva generato un errore di overflow aritmetico.
-  - [Novità in Anteprima 7] È stato corretto il problema che impediva a SSMS di aprire un file con estensione sql con un doppio clic.
-  - [Novità in RC1] Risolto un problema che impediva l'autenticazione MFA quando gli ID utente appartenevano a più tenant.
-  - [Novità in RC1] Risolto un problema in cui il report Perf Dashboard segnalava attese PAGELATCH e PAGEIOLATCH che non si trovavano nei sottoreport.
-
-- **Editor SSMS**
-  - Correzione di un problema per cui nella "Tabella di sistema SQL" in cui il ripristino dei colori predefiniti imposta il colore verde limone anziché il verde predefinito, rendendo difficile la lettura su uno sfondo bianco. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
-  - Correzione di un problema per cui IntelliSense non funziona quando si usa l'autenticazione AAD per connettersi ad Azure SQLDW.
-  - Correzione di un problema di IntelliSense in Azure quando l'utente non possiede le credenziali per l'accesso master
-  - Correzione di frammenti di codice per la creazione di "tabelle temporanee" che vengono interrotti quando le regole di confronto del database di destinazione fanno distinzione tra maiuscole e minuscole.
-  - [Novità in Anteprima 6] Nuova funzione TRANSLATE ora riconosciuta da IntelliSense. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430
-  - [Novità in Anteprima 6] Funzionalità IntelliSense migliorata nella funzione FORMAT predefinita. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676
-  - [Novità in Anteprima 6] LAG e LEAD vengono ora riconosciuti come funzioni predefinite. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757
-  - [Novità in Anteprima 6] Correzione di un problema per cui IntelliSense genera un avviso quando si usa "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)"
-  - [Novità in RC1] Risolto un problema in cui varie viste di sistema e vari valori di tabella non erano colorati correttamente.
-
-- **Esplora oggetti**
-  - Correzione di un problema per cui SSMS genera un'eccezione, ad esempio perché non è possibile eseguire il cast dell'oggetto da DBNull ad altri tipi, quando si prova a espandere il nodo "Gestione" in Esplora oggetti (errore di configurazione di DataCollector)
-  - Correzione di un problema per cui CANC non funziona quando si rinomina un nodo. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32910247 e altri duplicati
-  - Correzione di un problema per cui Esplora oggetti non applica escape alle virgolette prima di chiamare "Modifica le prime n righe" e rende confusa la struttura
-  - Correzione di un problema per cui la procedura guidata "Importare un'applicazione livello dati" non viene avviata dalla struttura di Archiviazione di Azure.
-  - Correzione di un problema per cui in "Configurazione guidata Posta elettronica database" lo stato della casella di controllo SSL non viene mantenuto.Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)
-  - Correzione di un problema per cui in SSMS l'opzione Chiudi connessioni esistenti viene disattivata quando si tenta di ripristinare il database con is_auto_update_stats_async_on
-  - Correzione di un problema per cui se si fa clic con il pulsante destro del mouse sui nodi in Esplora oggetti (ad esempio "Tabelle") e si vuole eseguire un'azione, ad esempio filtrare le tabelle selezionando Filtro > Impostazioni filtro, il modulo delle impostazioni filtro può essere visualizzato in un altro schermo rispetto a quello in cui SSMS è attualmente attivo. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106.
-  - Correzione di un problema rilevato da tempo per cui CANC non funziona in Esplora oggetti quando si tenta di rinominare un oggetto. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510
-  - Quando si visualizzano le proprietà di file di database esistenti, le dimensioni vengono visualizzate in una colonna "Dimensioni (MB)" anziché "Dimensioni iniziali (MB)", che è la colonna visualizzata quando si crea un nuovo database. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024
-  - Disattivazione della voce di menu contestuale "Progettazione" in "Tabelle grafi" perché questo tipo di tabella non è supportato nella versione corrente di SSMS.
-  - [Novità in Anteprima 5] È stato corretto il problema per cui la finestra di dialogo "Nuova pianificazione processo" non eseguiva il rendering correttamente nei monitor con valori DPI alti. Per informazioni dettagliate, vedere https://feedback.azure.com/admin/v3/suggestions/35541262 
-  - [Novità in Anteprima 5] Correzione del problema e ottimizzazione della visualizzazione delle dimensioni del database ("Dimensioni (MB)") in Esplora oggetti. Si usano solo 2 cifre decimali e il separatore delle migliaia. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/34379308
-  - [Novità in Anteprima 5] Correzione di un problema che impedisce la creazione di un "Indice spaziale" generando un errore simile a "Per eseguire questa azione, impostare la proprietà PartitionScheme".
-  - [Novità in Anteprima 5] Miglioramenti minori delle prestazioni in Esplora oggetti per evitare di eseguire query aggiuntive, quando possibile.
-  - [Novità in Anteprima 5] Estensione della logica per richiedere una conferma quando si rinomina un database per tutti gli oggetti dello schema. L'impostazione può essere configurata e questa opzione disabilitata
-  - [Novità in RC1] Aggiunto il corretto escape nel filtro di Esplora oggetti. Per informazioni dettagliate, vedere [Commento per Azure 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803).
-
-- **Visualizzatore della Guida**
-  - Miglioramento della logica associata al supporto delle modalità online/offline. Alcuni problemi devono essere ancora risolti
-  - Correzione di "Visualizza Guida" per rispettare le impostazioni online/offline. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791
-
-- **Scripting per gli oggetti**
-  - Miglioramento generali delle prestazioni. La generazione di script WideWorldImporters viene eseguita in metà tempo rispetto a SSMS 17.7
-  - Quando si aggiungono oggetti allo script la configurazione con ambito database che ha valori predefiniti viene omessa 
-  - Non generare T-SQL dinamico durante lo scripting. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)
-  - Omettere le sintassi dei grafi "as edge" e "as node" per lo scripting di una tabella in SQL Server 2016 e versioni precedenti.
-  - Correzione di un problema per cui non è possibile eseguire lo script degli oggetti di database quando si usa l'autenticazione a più fattori di Azure Active Directory per connettersi al database SQL di Azure.
-  - [Novità in Anteprima 6] Correzione di un problema per cui il tentativo di eseguire lo script di un indice spaziale con GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID in un database SQL di Azure genera un errore.
-  - [Novità in Anteprima 7] È stato corretto il problema per cui gli script di un database SQL di Azure usavano sempre come destinazione un'istanza di SQL Server locale, anche se le impostazioni di scripting di **Esplora oggetti** erano definite in modo da corrispondere all'origine.
-- [Novità in Anteprima 7] È stato corretto il problema per cui venivano create istruzioni T-SQL non corrette quando si provava a inserire in uno script una tabella in un database di Azure SQL Data Warehouse che includeva indici cluster e non cluster.
-- [Novità in Anteprima 7] È stato corretto il problema per cui venivano create istruzioni T-SQL non corrette (duplicate) quando si provava a inserire in uno script una tabella in un database di Azure SQL Data Warehouse che includeva indici columnstore cluster e indici cluster.
-- [Novità in Anteprima 7] È stato corretto l'inserimento in script delle tabelle partizionate senza valori di intervallo (database di Azure SQL Data Warehouse).
-- [Novità in Anteprima 7] È stato corretto il problema che impediva di inserire in uno script `SERVER_PERMISSION_CHANGE_GROUP` di un controllo o di una specifica di controllo.
-- [Novità in Anteprima 7] È stato corretto un problema che impediva di generare script di statistiche da Azure SQL Data Warehouse. Vedere i [forum dei commenti di Microsoft Azure](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296).
-
-- **Progettazione tabelle**
-  - [Novità in Anteprima X, X<4] Correzione di un arresto anomalo in "Modifica 200 righe"
-  - Correzione di un problema per cui la finestra di progettazione consente l'aggiunta di una tabella durante la connessione a un database SQL di Azure
-
-- **SMO**
-  - Correzione di un problema per cui SMO/ServerConnection non gestisce correttamente le connessioni basate su SqlCredential. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941
-  - [Novità in Anteprima 6] Correzione di un problema per cui un'applicazione scritta con SQL Server Management Objects (SMO) genera un errore se si tenta di enumerare i database dallo stesso server in più thread, anche se usa istanze di SqlConnection diverse in ogni thread.
-  - [Novità in Anteprima 7] È stata corretta la regressione delle prestazioni durante il trasferimento da tabelle esterne.
-  - [Novità in Anteprima 7] È stato corretto il problema nel thread safety `ServerConnection` a causa del quale l'interfaccia SMO perde istanze di `SqlConnection` quando la destinazione è il database SQL di Azure.
-  - [Novità in Anteprima 7] È stato corretto il problema che causava un errore `StringBuilder.FormatError` durante il tentativo di ripristinare un database se il nome di questo conteneva parentesi graffe `{}`.
-  - [Novità in RC1] Risolto un problema in cui i database di Azure in SMO utilizzavano per impostazione predefinita le regole di confronto senza distinzione maiuscole/minuscole per tutti i confronti tra stringhe invece di usare le regole di confronto specificate per il database.
- 
-- **Analysis Services**
-  - Correzione di un problema per cui "Impostazioni avanzate" per l'interfaccia utente AS Xevent viene troncata
-  - [Novità in Anteprima 5] Correzione di un problema per cui l'analisi DAX genera l'eccezione File non trovato
-  - [Novità in Anteprima 5] Aggiunto nuovamente il collegamento "Distribuzione guidata" al menu Start
-
-- **IS**
-  - [Novità in Anteprima 5] Correzione di un problema per cui la distribuzione guidata non si connette a SQL Server quando nello stesso computer sono installati sia SQL Server 2019 che SSMS 18.0.
-  - [Novità in Anteprima 5] Correzione di un problema per cui l'attività di pianificazione della manutenzione non può essere modificata durante la progettazione della pianificazione della manutenzione.
-  - [Novità in Anteprima 5] Correzione di un problema per cui la distribuzione guidata viene bloccata se il progetto in distribuzione viene rinominato.
-  - [Novità in Anteprima 5] Abilitata l'impostazione dell'ambiente nella funzionalità di pianificazione di Azure-SSIS IR.
-
-- **Procedura guidata Importa file flat**
-  - Correzione di un problema per cui la procedura guidata Importa file flat non consente di modificare la tabella di destinazione quando la tabella è già esistente. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)
-  - Correzione di un problema per cui la procedura guidata "Importa file flat" non gestisce correttamente le virgolette doppie (escape). Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32897998)
-  - Correzione di un problema di gestione errata dei tipi a virgola mobile (per impostazioni locali che usano un delimitatore diverso dal punto)
-  - Correzione di un problema associato all'importazione di bit quando i valori sono 0 o 1. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535
-  - Correzione di un problema per cui i valori float vengono immessi come null. 
-  - [Novità in Anteprima 7] È stato corretto il problema a causa del quale l'importazione guidata non era in grado di elaborare valori decimali negativi.
-  - [Novità in Anteprima 7] È stato corretto il problema a causa del quale la procedura guidata non era in grado di eseguire l'importazione da file CSV a colonna singola.
-
-- **Disponibilità elevata e ripristino di emergenza e gruppo di disponibilità**
-  - [Novità in Anteprima 5] Correzione di un problema per cui i ruoli nella procedura guidata "Failover del gruppo di disponibilità" vengono sempre visualizzati come "Risoluzione in corso" 
-  - [Novità in Anteprima 5] Correzione di un problema per cui SSMS visualizza avvisi troncati nel dashboard del gruppo di disponibilità.
-
-- **Classificazione dati** 
-  - Correzione di un problema per cui la parte di raccomandazione della classificazione dei dati non funziona con una nuova installazione.
-  - [Novità in Anteprima 6] Risolto un problema nel salvataggio delle classificazioni nel riquadro di classificazione dei dati mentre sono aperti altri riquadri di classificazione dei dati in altri database.
-
-- **Backup/ripristino/collegamento/scollegamento del database**
-  - Correzione di un problema per cui non è possibile collegare un database quando il nome file fisico del file con estensione mdf non corrisponde al nome file originale
-  - Correzione di un problema per cui SSMS non trova un piano di ripristino valido o ne trova uno non ottimale. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
-  - Correzione di un arresto anomalo di SSMS durante il tentativo di ripristino di un backup di URL. Si tratta di una regressione introdotta nelle anteprime precedenti.
-  - [Novità in Anteprima 5] Risolto un problema per cui nella procedura guidata "Collega database" non vengono visualizzati file secondari rinominati. Tali file vengono ora visualizzati con l'aggiunta di un commento, ad esempio "Non trovato". Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32897434
-
-- **Monitoraggio attività processi**
-  - Correzione di un arresto anomalo quando si usa Monitoraggio attività processi (con filtri)
-
-- **Supporto di istanza gestita**
-  - Miglioramento del supporto di istanze gestite: disabilitazione delle opzioni non supportate nell'interfaccia utente e risoluzione di un problema di Visualizza log di controllo per la gestione della destinazione di controllo URL.
-  - La procedura guidata "Genera e pubblica script" include clausole CREATE DATABASE non supportate
-  - Statistiche sulle query dinamiche è stata disabilitata per le istanze di CL
-  - Proprietà database -> File genera codice script errato per ALTER DB ADD FILE
-  - Correzione della regressione con l'utilità di pianificazione di SQL Agent in cui la pianificazione ONIDLE viene scelta anche quando si sceglie un altro tipo di pianificazione
-  - Regolazione di MAXTRANSFERRATE, MAXBLOCKSIZE per i backup in Archiviazione di Azure
-  - Problema per cui il backup della parte finale del log viene aggiunto allo script prima dell'operazione RESTORE (operazione non supportata in CL).
-  - La procedura guidata Crea database non esegue correttamente lo scripting dell'istruzione CREATE DATABASE
-  - Correzione di un problema per cui veniva visualizzato un errore quando si provava a usare "Monitor attività" durante la connessione a istanze gestite.
-  - [Novità in Anteprima 5] Supporto migliorato per gli accessi di AAD (in SSMS Explorer).
-  - [Novità in Anteprima 5] Scripting migliorato degli oggetti filegroup di SMO.
-  - [Novità in Anteprima 5] Interfaccia utente migliorata per credenziali e controlli.
-  - [Novità in Anteprima 5] Supporto aggiunto per la logica di replica.
-  - [Novità in Anteprima 7] È stato corretto il problema a causa del quale se si faceva clic con il pulsante destro del mouse su un database e si sceglieva **Importa applicazione livello dati**, l'operazione aveva esito negativo.
-  - [Novità in Anteprima 7] È stato corretto il problema a causa del quale venivano visualizzati errori se si faceva clic con il pulsante destro del mouse su un `TempDB`.
-  - [Novità in Anteprima 7] È stato corretto il problema a causa del quale se si inseriva in uno script in SMO l'istruzione `ALTER DB ADD FILE`, lo script T-SQL generato era vuoto.
-  - [Novità in RC1] Migliorata la visualizzazione di proprietà specifiche del server Istanze gestite (generazione di hardware, livello di servizio, spazio di archiviazione usato e riservato).
-
-- **Database SQL di Azure**
-  - Correzione di un problema per cui l'elenco di database non veniva compilato correttamente per la finestra delle query di Azure SQL DB se la connessione veniva eseguita a un database utente in Azure SQL DB anziché a un database master.
-  - Correzione di un problema per cui non è possibile aggiungere "Tabella temporale" a un database SQL di Azure.
-  - [Novità in Anteprima 6] Abilitata l'opzione di sottomenu Proprietà statistiche nel menu Statistiche in Azure, che è ormai completamente supporta da molto tempo.
-  - Correzione di problemi in un controllo comune dell'interfaccia utente di Azure UI che impedisce all'utente di visualizzare le sottoscrizioni di Azure (se il loro numero è maggiore di 50). Impostazione dell'ordinamento in base al nome anziché in base all'ID sottoscrizione. L'utente poteva trovare questa impostazione ad esempio quando provava a ripristinare un backup da un URL.
-  - Correzione di un problema nel controllo interfaccia utente di Azure comune per cui l'enumerazione di sottoscrizioni può generare un errore "L'indice non è compreso nell'intervallo. Deve essere non negativo e inferiore al numero di colonne." quando l'utente non aveva sottoscrizioni in alcuni tenant. L'utente poteva trovare questa impostazione ad esempio quando provava a ripristinare un backup da un URL.
-  - [Novità in RC1] Risolto un problema in cui gli obiettivi del livello servizio erano impostati come hardcoded, rendendo più difficile per SSMS supportare gli obiettivi del livello servizio più recenti di SQL Azure. Ora gli utenti possono accedere ad Azure e consentire a SSMS di recuperare tutti i dati degli obiettivi del livello servizio applicabili (Edition e Max Size).
-
-- **Query Data Store**
-  - [Novità in Anteprima 6] Correzione di un problema per cui si può generare un'eccezione "DocumentFrame (SQLEditors)".
-  - [Novità in Anteprima 6] Correzione di un problema durante il tentativo di impostare un intervallo di tempo personalizzato nei report predefiniti di Query Store. Non è possibile selezionare AM o PM nell'intervallo iniziale/finale
-
-- **Griglia risultati**
-  - Correzione di un problema in modalità Contrasto elevato (i numeri di riga selezionati non erano visibili).
-  - [Novità in RC1] Risolto un problema che generava un'eccezione "Indice fuori intervallo" quando si faceva clic sulla griglia.
-  - [Novità in RC1] Risolto un problema in cui è il colore di sfondo della griglia risultati veniva ignorato. Per informazioni dettagliate, vedere [Commento per Azure 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916).
-
-- **Profiler XEvent**
-  - Correzione di un problema per cui il profiler XEvent non veniva avviato se connesso a un server SQL Server a 96 nuclei.
-
-- **Importazione guidata applicazione livello dati**
-  - [Novità in Anteprima 5] Correzione di un problema per cui l'importazione guidata applicazione livello dati non funziona correttamente se ci si è connessi tramite Azure Active Directory.
-
-- **Visualizzatore XEvent**
-  - [Novità in Anteprima 5] Correzione di un problema per cui il visualizzatore XEvent si arresta in modo anomalo quando si tenta di raggruppare gli eventi usando le "opzioni della barra degli strumenti degli eventi estesi"
-
-- **Valutazione della vulnerabilità**
-  - [Novità in Anteprima 5] Correzione di un problema per cui i risultati dell'analisi non vengono caricati correttamente.
-
-- **Copia guidata database**
-  - [Novità in Anteprima 6] Il tentativo di Genera script/Trasferisci/Copia guidata database di creare una tabella con una tabella in memoria non forza ansi_padding on
-  - [Novità in Anteprima 6] Attività Trasferisci database/Copia guidata database interrotte in SQL 2017 e SQL 2019
-  - [Novità in Anteprima 6] Creazione della tabella di script di Genera script/Trasferisci/Copia guidata database prima della creazione di un'origine dati esterni associata
-
-- **Profiler**
-  - [Novità in Anteprima 6] Aggiunta dell'evento "Aggregate Table Rewrite Query" (Aggrega query di riscrittura tabella) agli eventi Profiler.
-  - [Novità in RC1] Risolto un problema che impediva l'avvio di SQL Profiler in Windows 7 SP1.
-
-- **Showplan**
-  - [Novità in Anteprima 6] Vengono visualizzate le proprietà del nuovo operatore di concessione memoria quando è presente più di un thread.
-  - [Novità in RC1] Aggiungere i seguenti 4 attributi in RunTimeCountersPerThread del piano di esecuzione xml: HpcRowCount (numero di righe elaborate dal dispositivo hpc), HpcKernelElapsedUs (tempo di attesa scaduto per l'esecuzione del kernel in uso), HpcHostToDeviceBytes (byte trasferiti dall'host al dispositivo) e HpcDeviceToHostBytes (byte trasferiti dal dispositivo all'host).
-
-- **Maschera dati**
-  - [Novità in Anteprima 7] È stato corretto un bug a causa del quale non era possibile copiare automaticamente database locali con più log e file di tabelle ottimizzate per la memoria FileStream.
-
-- **Data-tier Application Wizard**
-  - [Novità in RC1] Risolto un problema in cui l'utente non riusciva a importare un'applicazione livello dati (.dacpac) a causa dell'accesso limitato al server (ad esempio, nessun accesso a tutti i database nello stesso server).
-  - [Novità in RC1] Risolto un problema che rendeva l'importazione estremamente lenta quando molti database erano ospitati nello stesso server di Azure SQL.
-
-### <a name="deprecated-features"></a>Caratteristiche deprecate
-
-Le funzionalità seguenti non sono più disponibili in SSMS:
-
+|Supporto per SQL Server 2019|SSMS 18.0 è la prima versione di SSMS che *supporta completamente* SQL Server 2019 (livello di compatibilità 150).|
+|Supporto per SQL Server 2019|Supporto di "BATCH_STARTED_GROUP" e "BATCH_COMPLETED_GROUP" in SQL Server 2019 e in Istanza gestita di SQL.|
+|Supporto per SQL Server 2019|SMO: aggiunta del supporto per l'inlining della funzione definita dall'utente.|
+|Supporto per SQL Server 2019|GraphDB: aggiunta di un flag nello showplan per la sequenza Graph TC.|
+|Supporto per SQL Server 2019|Always Encrypted: aggiunta del supporto per AEv2/Enclave.|
+|Supporto per SQL Server 2019|Always Encrypted: la finestra di dialogo di connessione ha una nuova scheda "Always Encrypted" quando l'utente fa clic sul pulsante "Opzioni" per abilitare e configurare il supporto degli enclave.|
+|File di download di SSMS di dimensioni più piccole| Le dimensioni correnti sono di circa 500 MB, quasi la metà del bundle SSMS 17.x.
+|SSMS è basato su Visual Studio 2017 Shell (Isolated). |La nuova shell (SSMS è basato su Visual Studio 2017 15.9.11) include tutte le correzioni per l'accessibilità apportate sia in SSMS sia in Visual Studio, oltre alle ultime correzioni per la sicurezza.|
+|Miglioramenti di accessibilità di SSMS | È stata dedicata un'attenzione particolare ai problemi di accessibilità in tutti gli strumenti (SSMS, DTA e Profiler)|
+|SSMS può ora essere installato in una cartella personalizzata | Questa opzione è disponibile sia dalla riga di comando (utile per l'installazione automatica) che dall'interfaccia utente di installazione. Dalla riga di comando passare questo argomento aggiuntivo a SSMS-Setup-ENU.exe:<br>   SSMSInstallRoot=C:\MySSMS18<br>   Per impostazione predefinita, il nuovo percorso di installazione per SSMS è : %Programmi(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe<br>Questo non significa che SSMS sia multi-istanza.|
+|SSMS consente l'installazione in una lingua diversa da quella del sistema operativo|Il blocco per l'installazione in lingue miste è stato rimosso. È ad esempio possibile installare SSMS in tedesco in una versione di Windows in francese. Se la lingua del sistema operativo non corrisponde a quella di SSMS, l'utente deve cambiare la lingua in **Strumenti** > **Opzioni** > **Impostazioni internazionali**, altrimenti SSMS visualizzerà l'interfaccia utente in inglese.|
+|SSMS non condivide più componenti con il motore SQL |È stata dedicata un'attenzione particolare a evitare la condivisione di componenti con il motore SQL. Questa condivisione generava spesso problemi di funzionalità quando venivano usati i file installati da altre applicazioni.|
+|SSMS richiede NetFx 4.7.2 o versioni successive|Il requisito minimo è passato da NetFx4.6.1 a NetFx4.7.2: in tal modo è possibile trarre vantaggio dalle nuove funzionalità incluse nel nuovo framework.|
+|Possibilità di eseguire la migrazione delle impostazioni di SSMS| La prima volta che SSMS 18 viene avviato, all'utente verrà chiesto di eseguire la migrazione delle impostazioni della versione 17.x. I file di impostazioni dell'utente vengono ora archiviati in un file XML normale, migliorando la portabilità e possibilmente consentendo le modifiche.|
+|Supporto per valori DPI alti| Il supporto per valori DPI alti è ora abilitato per impostazione predefinita.|
+|SSMS viene fornito con il driver Microsoft OLE DB | Per i dettagli, vedere [Scaricare il driver Microsoft OLE DB per SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
+|SSMS non è supportato in Windows 8. Per Windows 10/Windows Server 2016 è richiesta la versione 1607 (10.0.14393) o successiva|A causa della nuova dipendenza da NetFx 4.7.2, SSMS 18.0 non viene installato in Windows 8, nelle versioni meno recenti di Windows 10 e in Windows Server 2016. In questi sistemi il programma di installazione di SSMS si bloccherà. Windows 8.1 è ancora supportato.|
+|SSMS non viene più aggiunto alla variabile di ambiente PATH|Il percorso di SSMS.EXE (e degli strumenti in generale) non viene più aggiunto alla variabile PATH. Gli utenti possono aggiungerlo direttamente o, nel caso di un computer Windows moderno, tramite il menu Start.|
+|Gli ID pacchetto non sono più necessari per sviluppare le estensioni di SSMS| In passato SSMS caricava in modo selettivo solo i pacchetti noti e gli sviluppatori dovevano registrare i propri pacchetti. Questo non si verifica più.|
+|SQL Server Management Studio (SSMS) - Generale|Opzione di configurazione AUTOGROW_ALL_FILES disponibile per i filegroup in SSMS.|
+|SQL Server Management Studio (SSMS) - Generale|Rimozione delle opzioni a rischio 'lightweight pooling' e 'priority boost' dalla GUI di SSMS. Per i dettagli, vedere [Priority boost details – and why it's not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
+|SQL Server Management Studio (SSMS) - Generale|Nuovi menu e tasti di scelta rapida per la creazione di file: **CTRL+ALT+N**. **CTRL+N** continua a funzionare per creare una nuova query.|
+|SQL Server Management Studio (SSMS) - Generale|La finestra di dialogo **Nuova regola del firewall** consente ora di specificare un nome di regola invece di generarne uno automaticamente.|
+|SQL Server Management Studio (SSMS) - Generale|Funzionalità IntelliSense migliorata nell'editor, in particolare per T-SQL v140 e successive.|
+|SQL Server Management Studio (SSMS) - Generale|Aggiunta del supporto UTF-8 nella finestra di dialogo delle regole di confronto dell'interfaccia utente di SSMS.|
+|SQL Server Management Studio (SSMS) - Generale|Passaggio a "Gestione credenziali di Windows" per le password MRU della finestra di dialogo Connessione. Risolve un problema esistente da tempo per cui la persistenza delle password non era sempre affidabile.|
+|SQL Server Management Studio (SSMS) - Generale|Supporto migliorato per i sistemi con più monitor, con un numero crescente di finestre e più finestre di dialogo ora visualizzate sul monitor previsto.|
+|SQL Server Management Studio (SSMS) - Generale|Viene visualizzata la configurazione server "backup checksum default" nella nuova pagina Impostazioni database della finestra di dialogo Proprietà server. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974. |
+|SQL Server Management Studio (SSMS) - Generale|Dimensioni massime dei file di log degli errori incluse in "Configura log degli errori di SQL Server". Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/33624115. |
+|SQL Server Management Studio (SSMS) - Generale|Aggiunta dell'opzione "Esegui migrazione ad Azure" al menu Strumenti. Sono stati integrati Database Migration Assistant e Servizio Migrazione del database per un accesso rapido e veloce e per accelerare le migrazioni ad Azure. |
+|SQL Server Management Studio (SSMS) - Generale|È stata aggiunta logica per chiedere all'utente di eseguire il commit delle transazioni aperte quando si usa "Cambia connessione".|
+|Integrazione di Azure Data Studio|Aggiunta di una voce di menu per avviare e scaricare Azure Data Studio.|
+|Integrazione di Azure Data Studio|Aggiunta della voce di menu "Start Azure Data Studio" (Avvia Azure Data Studio) in Esplora oggetti.|
+|Integrazione di Azure Data Studio|Quando si fa clic con il pulsante destro del mouse su un nodo di database in Esplora oggetti, vengono visualizzati i menu di scelta rapida per eseguire una query o per creare un nuovo notebook in Azure Data Studio.|
+|Supporto di Azure SQL| Le proprietà del database SLO/Edition/MaxSize ora accettano nomi personalizzati, facilitando il supporto delle edizioni future del database SQL di Azure.|
+|Supporto di Azure SQL| Aggiunto il supporto per gli SKU vCore recentemente aggiunti (utilizzo generico e business critical): Gen4_24 e tutti gli SKU Gen5.|
+|Istanza gestita di SQL di Azure|Aggiunta di un nuovo tipo di account di accesso di AAD in SMO e SSMS quando ci si connette a un'istanza gestita di database SQL di Azure.|
+|Always On|Rigenerazione hash per RTO (tempo di recupero stimato) e RPO (perdita di dati stimata) nel dashboard Always On di SSMS. Vedere la documentazione aggiornata all'indirizzo https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups. |
+|Always Encrypted| La casella di controllo Abilita Always Encrypted nella nuova scheda Always Encrypted nella finestra di dialogo Connetti al server ora consente di abilitare o disabilitare facilmente la funzionalità Always Encrypted per una connessione di database.|
+|Always Encrypted con enclave sicuri| Nell'anteprima di SQL Server 2019 sono stati apportati diversi miglioramenti per il supporto della funzionalità Always Encrypted con enclave sicuri:<br>Un campo di testo per specificare l'URL di attestazione dell'enclave nella finestra di dialogo Connetti al server (la nuova scheda Always Encrypted).<br>La nuova casella di controllo nella finestra di dialogo Nuova chiave master della colonna per controllare se una nuova chiave master della colonna consente i calcoli dell'enclave.<br>Altre finestre di dialogo di gestione delle chiavi Always Encrypted ora visualizzano informazioni su quali chiavi master della colonna consentono i calcoli dell'enclave.|
+|File di controllo|Metodo di autenticazione cambiato dal metodo basato sulla Chiave account di archiviazione all'autenticazione basata su Azure AD.|
+|File di controllo|Aggiornato l'elenco delle azioni di controllo conosciute per includere la RESTRIZIONE FUNZIONALITÀ AGGIUNGI/MODIFICA GRUPPO/ELIMINA.|
+|Classificazione dei dati| Riorganizzazione del menu attività Classificazione dati : è stato aggiunto un sottomenu al menu delle attività del database ed è stata aggiunta un'opzione per aprire il report dal menu senza dover aprire prima la finestra Classifica dati.|
+|Classificazione dei dati|Aggiunta della nuova funzionalità 'Classificazione dati' in SMO. L'oggetto colonna espone nuove proprietà: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (sola lettura). Per altre informazioni, vedere [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql) |
+|Classificazione dei dati|Aggiunta della nuova voce di menu "Classification Report" (Report di classificazione) nel riquadro a comparsa "Classificazione dati".|
+|Classificazione dei dati| Raccomandazioni aggiornate.|
+|Aggiornamento del livello di compatibilità del database|Aggiunta di una nuova opzione in **<Database name>** > **Attività** > **Aggiornamento database**. Questa opzione consentirà di avviare il nuovo **Assistente ottimizzazione query** per guidare gli utenti nel processo di:<br>Raccolta di baseline delle prestazioni prima dell'aggiornamento del livello di compatibilità del database.<br>Aggiornamento al livello di compatibilità del database desiderato.<br>Raccolta di un secondo passaggio di dati sulle prestazioni nel corso dello stesso carico di lavoro.<br>Rilevamento delle regressioni del carico di lavoro e specifica di elementi consigliati testati per migliorare le prestazioni del carico di lavoro.<br>È simile al processo di aggiornamento del database documentato negli [scenari di utilizzo dell'archivio query](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), tranne nell'ultimo passaggio in cui l'Assistente ottimizzazione query non si basa su uno stato valido noto in precedenza per generare le raccomandazioni.|
+|Importazione guidata applicazione livello dati|È stato aggiunto il supporto per l'applicazione livello dati di importazione/esportazione con tabelle grafi.|
+|Procedura guidata Importa file flat|Aggiunta della logica per notificare all'utente che un'importazione può aver causato una ridenominazione delle colonne.|
+|Integration Services (SSIS)|Aggiunta del supporto per consentire ai clienti di pianificare in Azure-SSIS IR i pacchetti SSIS che si trovano nel cloud di Azure per enti pubblici.|
+|Integration Services (SSIS)|Quando si usa il servizio SQL Agent dell'istanza gestita di Azure SQL tramite SSMS, è possibile configurare i parametri e la gestione connessioni nel passaggio di processo dell'agente SSIS.|
+|Integration Services (SSIS)|Quando ci si connette al database SQL di Azure o a Istanza gestita di database SQL di Azure, è possibile effettuare la connessione con *default* come database iniziale.|
+|Integration Services (SSIS)|Aggiunta della nuova voce **Try SSIS in Azure Data Factory** (Prova SSIS in Azure Data Factory) nel nodo "Cataloghi di Integration Services", che può essere usata per avviare "Integration Runtime Creation Wizard" (Creazione guidata Integration Runtime) e creare rapidamente "Azure-SSIS Integration Runtime".
+|Integration Services (SSIS)|Aggiunta del pulsante **Create SSIS IR** (Crea SSIS IR) in "Catalog Creation Wizard" (Creazione guidata catalogo), che può essere usato per avviare "Integration Runtime Creation Wizard" (Creazione guidata Integration Runtime) e creare rapidamente "Azure-SSIS Integration Runtime".|
+|Integration Services (SSIS)|ISDeploymentWizard supporta ora l'autenticazione SQL, nonché l'autenticazione integrata e l'autorizzazione tramite password di Azure Active Directory in modalità riga di comando.|
+|Integration Services (SSIS)|La distribuzione guidata supporta ora la creazione e la distribuzione in SSIS Integration Runtime di Azure Data Factory.|
+|Scripting per gli oggetti|Aggiunta di nuove voci di menu per "CREATE OR ALTER" quando si esegue lo scripting per gli oggetti.|
+|Archivio query|Migliorata l'usabilità di alcuni report (Consumo complessivo risorse) grazie all'aggiunta di migliaia di separatori per i numeri visualizzati sull'asse Y dei grafici.|
+|Archivio query|Aggiunto un nuovo report Statistiche di attesa query.|
+|Archivio query|Aggiunta della metrica "Conteggio esecuzioni" alla vista "Tracked Query" (Query rilevata).|
+|Strumenti di replica|Aggiunta del supporto per la funzionalità di specifica delle porte non predefinite in Monitoraggio replica e SSMS.|
+|Showplan |Aggiunti il tempo trascorso reale e le righe effettive rispetto alle righe stimate (se disponibili) sotto il nodo dell'operatore ShowPlan. In questo modo il piano effettivo appare coerente con il piano Statistiche query dinamiche.|
+|Showplan |Modificata la descrizione comando e aggiunto un commento quando si fa clic sul pulsante Modifica query per un elemento ShowPlan, per indicare all'utente che l'elemento ShowPlan potrebbe essere troncato dal motore SQL se la query supera i 4000 caratteri.|
+|Showplan |Aggiunto codice per visualizzare "Materializer Operator (External Select)".|
+|Showplan |Aggiunto un nuovo attributo showplan BatchModeOnRowStoreUsed per identificare facilmente le query che usano la funzionalità "batch-mode scan on rowstores". Ogni volta che una query esegue "batch mode scan on rowstores" (analisi in modalità batch su rowstore) viene aggiunto un nuovo attributo (BatchModeOnRowStoreUsed="true") all'elemento StmtSimple.|
+|Showplan |Aggiunta del supporto di Showplan a LocalCube RelOp per DW ROLLUP e CUBE.|
+|Showplan|Nuovo operatore LocalCube per la nuova funzionalità di aggregazione ROLLUP e CUBE in Azure SQL Data Warehouse.|
+|SMO| Supporto SMO esteso per la creazione di indici ripristinabili.|
+|SMO| Aggiunto un nuovo evento per gli oggetti SMO ("PropertyMissing") che aiuta gli autori di applicazioni a rilevare i problemi di prestazioni SMO in tempi più rapidi.|
+|SMO| Nuova proprietà DefaultBackupChecksum esposta nell'oggetto Configuration, che esegue il mapping alla configurazione server "backup checksum default".|
+|SMO| Nuova proprietà ProductUpdateLevel inclusa nell'oggetto Server, che esegue il mapping al livello di servizio per la versione di SQL in uso (ad esempio CU12, RTM).|
+|SMO| Nuova proprietà LastGoodCheckDbTime inclusa in un oggetto Database, che esegue il mapping alla proprietà del database "lastgoodcheckdbtime". Se tale proprietà non è disponibile, sarà restituito il valore predefinito 1/1/1900 12:00:00 AM.|
+|SMO|Percorso del file RegSrvr.xml (file di configurazione Server registrato) spostato in "%AppData%\Microsoft\SQL Server Management Studio"(senza versione, quindi può essere condiviso tra più versioni di SSMS).|
+|SMO|Aggiunta di "Cloud di controllo" come nuovo tipo di quorum e nuovo tipo di risorsa.|
+|SMO|Aggiunta del supporto per i "vincoli di arco" sia in SMO che in SSMS.|
+|SMO|Aggiunto il supporto per l'eliminazione a catena nei "vincoli di arco" sia in SMO che in SSMS.|
+|SMO|Aggiunto il supporto dell'autorizzazione di "lettura/scrittura" per la classificazione dei dati.|
+|Valutazione della vulnerabilità| Abilitazione del menu delle attività Valutazione della vulnerabilità in Azure SQL DW.|
+|Valutazione della vulnerabilità|Modifica del set di regole di valutazione della vulnerabilità eseguito nei server di Istanza gestita di database SQL di Azure, in modo da rendere coerenti con il database SQL di Azure i risultati dell'analisi di "Valutazione della vulnerabilità".|
+|Valutazione della vulnerabilità| "Valutazione vulnerabilità" supporta ora Azure SQL Data Warehouse.|
+|Valutazione della vulnerabilità|Aggiunta di una nuova funzionalità per l'esportazione in Excel dei risultati dell'analisi di Valutazione vulnerabilità.|
+|Visualizzatore XEvent|Visualizzatore XEvent: abilitata la finestra di showplan per un maggior numero di XEvent.|
+
+
+## <a name="bug-fixes-in-180-ga"></a>Correzioni di bug nella versione 18.0 (disponibilità generale)
+
+| Nuovo elemento | Dettagli |
+| :------- | :------ |
+|Arresti anomali e blocchi|Correzione di un'origine di arresti anomali SSMS comuni associati agli oggetti GDI.|
+|Arresti anomali e blocchi|Correzione di un'origine comune di blocchi del sistema e prestazioni insufficienti quando si seleziona "Script come Crea/Aggiorna/Rilascia" (rimosse operazioni inutili di recupero di oggetti SMO).|
+|Arresti anomali e blocchi|Correzione di un blocco durante la connessione a un database SQL di Azure con MFA mentre sono abilitate le tracce ADAL.|
+|Arresti anomali e blocchi|Correzione di un blocco (o un blocco percepito) in Statistiche query dinamiche chiamato da Monitor attività (il problema si manifesta quando si usa l'autenticazione di SQL Server senza nessuna impostazione "Mantieni informazioni di sicurezza").|
+|Arresti anomali e blocchi|Correzione di un blocco quando si seleziona "Report" in Esplora oggetti e si rilevano connessioni con latenza elevata o impossibilità temporanea di accesso alle risorse.|
+|Arresti anomali e blocchi|Correzione di un problema di arresto anomalo in SSMS quando si prova a usare il server di gestione centrale e i server SQL di Azure. Per informazioni dettagliate, vedere l'articolo sull'[errore e arresto anomalo dell'applicazione SMSS 17.5 quando si usa il server di gestione centrale](https://feedback.azure.com/forums/908035/suggestions/33374884). |
+|Arresti anomali e blocchi|Risolto un blocco in Esplora oggetti mediante l'ottimizzazione del modo in cui viene recuperata la proprietà IsFullTextEnabled.|
+|Arresti anomali e blocchi|Correzione di un blocco in "Copia guidata database" evitando la compilazione di query non necessarie per recuperare le proprietà del database.|
+|Arresti anomali e blocchi|Correzione di un problema che causa il blocco o l'arresto anomalo di SSMS durante la modifica di T-SQL.|
+|Arresti anomali e blocchi|Riduzione di un problema per cui SSMS non risponde durante la modifica di grandi script T-SQL.|
+|Arresti anomali e blocchi|Correzione di un problema per cui la memoria di SSMS si esaurisce durante la gestione dei set di dati di grandi dimensioni restituiti dalle query.|
+|SQL Server Management Studio (SSMS) - Generale|Correzione di un problema per cui "ApplicationIntent" non viene passato nelle connessioni in "Server registrati".|
+|SQL Server Management Studio (SSMS) - Generale|Correzione di un problema per cui il rendering del modulo dell'"interfaccia utente della creazione guidata di una nuova sessione di XEvent" non viene eseguito correttamente nei monitor con valori DPI alti.|
+|SQL Server Management Studio (SSMS) - Generale|Correzione di un problema che si verifica durante il tentativo di importare un file bacpac.|
+|SQL Server Management Studio (SSMS) - Generale|Correzione di un problema per cui viene generato un errore di overflow aritmetico durante il tentativo di visualizzare le proprietà di un database (con FILEGROWTH > 2048 GB).|
+|SQL Server Management Studio (SSMS) - Generale|Risolto un problema in cui il report Perf Dashboard segnalava attese PAGELATCH e PAGEIOLATCH che non si trovavano nei sottoreport.|
+|SQL Server Management Studio (SSMS) - Generale|Un'altra serie di correzioni per fare in modo che SSMS riconosca più monitor e apra una finestra di dialogo nel monitor corretto.|
+|Analysis Services|Correzione di un problema per cui "Impostazioni avanzate" per l'interfaccia utente AS Xevent viene troncata.|
+|Analysis Services|Risolto un problema per cui l'analisi DAX generava l'eccezione File non trovato.|
+|Database SQL di Azure|Correzione di un problema per cui l'elenco di database non viene compilato correttamente per la finestra delle query del database SQL di Azure in caso di connessione a un database utente nel database SQL di Azure invece che a un database master.|
+|Database SQL di Azure|Correzione di un problema per cui non è possibile aggiungere "Tabella temporale" a un database SQL di Azure.|
+|Database SQL di Azure|Abilitata l'opzione di sottomenu Proprietà statistiche nel menu Statistiche in Azure, che è ormai completamente supporta da molto tempo.|
+|Azure SQL - Supporto generale|Correzione di problemi in un controllo comune dell'interfaccia utente di Azure UI che impedisce all'utente di visualizzare le sottoscrizioni di Azure (se il loro numero è maggiore di 50). Impostazione dell'ordinamento in base al nome anziché in base all'ID sottoscrizione. L'utente poteva trovare questa impostazione ad esempio quando provava a ripristinare un backup da un URL.|
+|Azure SQL - Supporto generale|Correzione di un problema nel controllo interfaccia utente di Azure comune per cui l'enumerazione di sottoscrizioni può generare un errore "L'indice non è compreso nell'intervallo. Deve essere non negativo e inferiore al numero di colonne." quando l'utente non aveva sottoscrizioni in alcuni tenant. L'utente poteva trovare questa impostazione ad esempio quando provava a ripristinare un backup da un URL.|
+|Azure SQL - Supporto generale|Correzione di un problema per cui gli obiettivi del livello di servizio vengono impostati come hardcoded, rendendo più difficile per SSMS supportare gli obiettivi del livello di servizio più recenti di SQL di Azure. Ora gli utenti possono accedere ad Azure e consentire a SSMS di recuperare tutti i dati degli obiettivi del livello di servizio applicabili (Edition e Max Size)|
+|Supporto per Istanza gestita di database SQL di Azure|Miglioramento del supporto di istanze gestite: disabilitazione delle opzioni non supportate nell'interfaccia utente e correzione di un problema dell'opzione Visualizza log di controllo per la gestione della destinazione di controllo URL.|
+|Supporto per Istanza gestita di database SQL di Azure|La procedura guidata "Genera e pubblica script" include clausole CREATE DATABASE non supportate.|
+|Supporto per Istanza gestita di database SQL di Azure|Abilitazione di Statistiche query dinamiche per le istanze gestite.|
+|Supporto per Istanza gestita di database SQL di Azure|Proprietà database -> File generava codice script errato per ALTER DB ADD FILE.|
+|Supporto per Istanza gestita di database SQL di Azure|Correzione della regressione con l'utilità di pianificazione di SQL Agent in cui la pianificazione ONIDLE veniva scelta anche quando era stato scelto un altro tipo di pianificazione.|
+|Supporto per Istanza gestita di database SQL di Azure|Regolazione di MAXTRANSFERRATE, MAXBLOCKSIZE per i backup in Archiviazione di Azure.|
+|Supporto per Istanza gestita di database SQL di Azure|Problema per cui il backup della parte finale del log viene aggiunto allo script prima dell'operazione RESTORE (operazione non supportata in CL).|
+|Supporto per Istanza gestita di database SQL di Azure|La procedura guidata Crea database non esegue correttamente lo scripting dell'istruzione CREATE DATABASE.|
+|Supporto per Istanza gestita di database SQL di Azure|Gestione speciale dei pacchetti SSIS all'interno di SSMS durante la connessione a istanze gestite.|
+|Supporto per Istanza gestita di database SQL di Azure|Correzione di un problema per cui veniva visualizzato un errore quando si provava a usare "Monitor attività" durante la connessione a istanze gestite.|
+|Supporto per Istanza gestita di database SQL di Azure|Supporto migliorato per l'accesso di AAD (in SSMS Explorer).|
+|Supporto per Istanza gestita di database SQL di Azure|Scripting degli oggetti filegroup di SMO migliorato.|
+|Supporto per Istanza gestita di database SQL di Azure|Interfaccia utente migliorata per le credenziali.|
+|Supporto per Istanza gestita di database SQL di Azure|Supporto aggiunto per la logica di replica.|
+|Supporto per Istanza gestita di database SQL di Azure|Correzione di un problema per cui se si fa clic con il pulsante destro del mouse su un database e si sceglie 'Importa applicazione livello dati', l'operazione ha esito negativo.|
+|Supporto per Istanza gestita di database SQL di Azure|Correzione di un problema per cui se si fa clic con il pulsante destro del mouse su "TempDB" vengono generati errori.|
+|Supporto per Istanza gestita di database SQL di Azure|Correzione di un problema per cui quando si prova a creare lo script dell'istruzione ALTER DB ADD FILE in SMO, lo script T-SQL generato è vuoto.|
+|Supporto per Istanza gestita di database SQL di Azure|Migliorata la visualizzazione di proprietà specifiche del server Istanze gestite (generazione di hardware, livello di servizio, spazio di archiviazione usato e riservato).|
+|Supporto per Istanza gestita di database SQL di Azure|Correzione di un problema per cui lo scripting di un database ("Script come CREATE") non include filegroup e file aggiuntivi. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/37326799. |
+|Backup/ripristino/collegamento/scollegamento del database|Correzione di un problema per cui l'utente non è in grado di associare un database quando il nome file fisico del file con estensione mdf non corrisponde al nome file originale.|
+|Backup/ripristino/collegamento/scollegamento del database|Correzione di un problema per cui SSMS non trova un piano di ripristino valido o ne trova uno non ottimale. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752. |
+|Backup/ripristino/collegamento/scollegamento del database|Risolto un problema per cui nella procedura guidata "Collega Database" non venivano visualizzati file secondari rinominati. Ora tali file vengono visualizzati con l'aggiunta di un commento, ad esempio "Non trovato". Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32897434. |
+|Copia guidata database|Il tentativo di Genera script/Trasferisci/Copia guidata database di creare una tabella con una tabella in memoria non forza ansi_padding on.|
+|Copia guidata database|Attività Trasferisci database/Copia guidata database interrotte in SQL Server 2017 e SQL Server 2019.|
+|Copia guidata database|Creazione della tabella di script di Genera script/Trasferisci/Copia guidata database prima della creazione di un'origine dati esterni associata.|
+|Finestra di dialogo di connessione|Abilitazione della rimozione di nomi utente dall'elenco di nomi utente precedente premendo CANC. Per informazioni dettagliate, vedere l'articolo su come [consentire l'eliminazione di utenti dalla finestra di accesso di SSMS](https://feedback.azure.com/forums/908035/suggestions/32897632).|
+|Importazione guidata applicazione livello dati|Correzione di un problema per cui l'importazione guidata di applicazione livello dati non funziona se ci si connette tramite AAD.|
+|Classificazione dei dati|Correzione di un problema che si verifica quando si salvano le classificazioni nel riquadro di classificazione dei dati mentre sono aperti altri riquadri di classificazione dei dati in altri database.|
+|Importazione guidata applicazione livello dati|Risolto un problema in cui l'utente non riusciva a importare un'applicazione livello dati (.dacpac) a causa dell'accesso limitato al server (ad esempio, nessun accesso a tutti i database nello stesso server).|
+|Importazione guidata applicazione livello dati|Risolto un problema che rendeva l'importazione estremamente lenta quando molti database erano ospitati nello stesso server di Azure SQL.|
+|Tabelle esterne|Aggiunta del supporto per Rejected_Row_Location in modelli, SMO, IntelliSense e nella griglia delle proprietà.|
+|Procedura guidata Importa file flat|Correzione di un problema per cui la procedura guidata "Importa file flat" non gestisce correttamente le virgolette doppie (escape). Vedere https://feedback.azure.com/forums/908035/suggestions/32897998. |
+|Procedura guidata Importa file flat|Correzione di un problema di gestione errata dei tipi a virgola mobile (per impostazioni locali che usano un delimitatore diverso dal punto).|
+|Procedura guidata Importa file flat|Correzione di un problema associato all'importazione di bit quando i valori sono 0 o 1. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535. |
+|Procedura guidata Importa file flat|Correzione di un problema per cui i valori float vengono immessi come null.|
+|Procedura guidata Importa file flat|È stato corretto il problema a causa del quale l'importazione guidata non era in grado di elaborare valori decimali negativi.|
+|Procedura guidata Importa file flat|È stato corretto il problema a causa del quale la procedura guidata non era in grado di eseguire l'importazione da file CSV a colonna singola.|
+|Procedura guidata Importa file flat|[In SSMS 17.9] Correzione di un problema per cui la procedura guidata Importa file flat non consente di cambiare la tabella di destinazione se esiste già. Vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186. |
+|Visualizzatore della Guida|Miglioramento della logica associata al supporto delle modalità online/offline. Alcuni problemi devono essere ancora risolti.|
+|Visualizzatore della Guida|Correzione di "Visualizza Guida" per rispettare le impostazioni online/offline. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791. |
+|Disponibilità elevata e ripristino di emergenza<BR> Gruppi di disponibilità (disponibilità generale)|Correzione di un problema per cui i ruoli nella procedura guidata "Failover gruppo di disponibilità" vengono sempre visualizzati come "Risoluzione in corso".|
+|Disponibilità elevata e ripristino di emergenza<BR> Gruppi di disponibilità (disponibilità generale)|Risolto un problema per cui SSMS visualizzava avvisi troncati nel dashboard del gruppo di disponibilità.|
+|Integration Services|Correzione di un problema per cui la distribuzione guidata non si connette a SQL Server quando nello stesso computer sono installati sia SQL Server 2019 che SSMS 18.0.|
+|Integration Services|Risolto un problema per cui l'attività di pianificazione della manutenzione non poteva essere modifica al momento della progettazione della pianificazione della manutenzione.|
+|Integration Services|Correzione di un problema per cui la distribuzione guidata si blocca se il progetto in distribuzione viene rinominato.|
+|Integration Services|Abilitata l'impostazione dell'ambiente nella funzionalità di pianificazione di Azure-SSIS IR.|
+|Integration Services|Correzione di un problema per cui la creazione guidata di SSIS Integration Runtime smette di rispondere se l'account utente appartiene a più di 1 tenant.|
+|Monitoraggio attività processi|Correzione di un arresto anomalo quando si usa Monitoraggio attività processi (con filtri).|
+|Esplora oggetti|Correzione di un problema per cui SSMS genera un'eccezione, ad esempio perché non è possibile eseguire il cast dell'oggetto da DBNull ad altri tipi, quando si prova a espandere il nodo "Gestione" in Esplora oggetti (errore di configurazione di DataCollector).|
+|Esplora oggetti|Correzione di un problema per cui Esplora oggetti non applica escape alle virgolette prima di richiamare "Modifica le prime n righe" e rende confusa la struttura.|
+|Esplora oggetti|Correzione di un problema per cui la procedura guidata "Importare un'applicazione livello dati" non viene avviata dalla struttura di Archiviazione di Azure.|
+|Esplora oggetti|Correzione di un problema per cui in "Configurazione guidata Posta elettronica database" lo stato della casella di controllo SSL non viene mantenuto. Vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541. |
+|Esplora oggetti|Correzione di un problema per cui in SSMS l'opzione Chiudi connessioni esistenti viene disattivata quando si prova a ripristinare il database con is_auto_update_stats_async_on.|
+|Esplora oggetti|Correzione di un problema per cui se si fa clic con il pulsante destro del mouse sui nodi in Esplora oggetti (ad esempio "Tabelle") e si vuole eseguire un'azione, ad esempio filtrare le tabelle selezionando Filtro > Impostazioni filtro, il modulo delle impostazioni filtro può essere visualizzato in un altro schermo rispetto a quello in cui SSMS è attualmente attivo. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106. |
+|Esplora oggetti|Correzione di un problema rilevato da tempo per cui CANC non funziona in Esplora oggetti quando si tenta di rinominare un oggetto. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510, https://feedback.azure.com/forums/908035/suggestions/32910247 e altri duplicati. |
+|Esplora oggetti|Quando si visualizzano le proprietà di file di database esistenti, le dimensioni vengono visualizzate in una colonna "Dimensioni (MB)" anziché "Dimensioni iniziali (MB)", che è la colonna visualizzata quando si crea un nuovo database. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024. |
+|Esplora oggetti|Disattivazione della voce di menu contestuale "Progettazione" in "Tabelle grafi" perché questo tipo di tabella non è supportato nella versione corrente di SSMS.|
+|Esplora oggetti|Correzione di un problema per cui la finestra di dialogo "Nuova pianificazione processo" non viene visualizzata correttamente nei monitor con valori DPI alti. Per informazioni dettagliate, vedere https://feedback.azure.com/admin/v3/suggestions/35541262. |
+|Esplora oggetti|Correzione del problema e ottimizzazione della visualizzazione delle dimensioni del database ("Dimensioni (MB)") in Esplora oggetti. Si usano solo 2 cifre decimali e il separatore delle migliaia. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/34379308. |
+|Esplora oggetti|Correzione di un problema che impedisce la creazione di un "Indice spaziale" con un errore analogo a "Per eseguire questa azione, impostare la proprietà PartitionScheme".|
+|Esplora oggetti|Miglioramenti delle prestazioni minori in Esplora oggetti per evitare di eseguire query aggiuntive, quando possibile.|
+|Esplora oggetti|Estensione della logica per richiedere una conferma quando si rinomina un database per tutti gli oggetti dello schema (l'impostazione può essere configurata).|
+|Esplora oggetti|Aggiunto il corretto escape nel filtro di Esplora oggetti. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/36678803. |
+|Esplora oggetti|Correzione/ottimizzazione della visualizzazione in Dettagli Esplora oggetti per mostrare i numeri con i separatori corretti. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32900944. |
+|Esplora oggetti|Correzione del menu di scelta rapida nel nodo "Tabelle" per cui, quando ci si connette a SQL Express, il riquadro a comparsa "Nuovo" è mancante, le tabelle grafi vengono visualizzate in modo non corretto e la tabella System-Versioned è mancante. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Scripting per gli oggetti|Miglioramento delle prestazioni generali: la generazione di script WideWorldImporters viene eseguita in metà tempo rispetto a SSMS 17.7.|
+|Scripting per gli oggetti|Quando si aggiungono oggetti allo script, la configurazione con ambito database che ha valori predefiniti viene omessa.|
+|Scripting per gli oggetti|Evitare di generare T-SQL dinamico durante lo scripting. Vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |
+|Scripting per gli oggetti|Omettere le sintassi dei grafi "as edge" e "as node" per lo scripting di una tabella in SQL Server 2016 e versioni precedenti.|
+|Scripting per gli oggetti|Correzione di un problema per cui non è possibile eseguire lo script degli oggetti di database quando si usa AAD con MFA per connettersi al database SQL di Azure.|
+|Scripting per gli oggetti|Correzione di un problema per cui il tentativo di eseguire lo script di un indice spaziale con GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID in un database SQL di Azure genera un errore.|
+|Scripting per gli oggetti|Correzione di un problema per cui gli script di un database SQL di Azure usano sempre come destinazione un'istanza di SQL locale, anche se le impostazioni di scripting di "Esplora oggetti" sono definite in modo da corrispondere all'origine.|
+|Scripting per gli oggetti|Correzione di un problema per cui durante il tentativo di creare lo script di una tabella in un database SQL Data Warehouse che include indici cluster e non cluster vengono generate istruzioni T-SQL non corrette.|
+|Scripting per gli oggetti|Correzione di un problema per cui durante il tentativo di creare lo script di una tabella in un database SQL Data Warehouse con indici columnstore cluster e indici cluster vengono generate istruzioni T-SQL non corrette (duplicate).|
+|Scripting per gli oggetti|Correzione del problema di scripting di tabelle partizionate senza valori di intervallo (database SQL Data Warehouse).|
+|Scripting per gli oggetti|Correzione di un problema per cui l'utente non è in grado di creare lo script di un controllo o di una specifica di controllo SERVER_PERMISSION_CHANGE_GROUP.|
+|Scripting per gli oggetti|Correzione di un problema per cui l'utente non è in grado di creare lo script di statistiche da SQL Data Warehouse. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296. |
+|Scripting per gli oggetti|Correzione di un problema per cui la "Generazione guidata script" visualizza una tabella errata con un errore di scripting se l'opzione "Continua generazione di script in caso di errore" è impostata su False.|
+|Scripting per gli oggetti|Miglioramento della generazione di script in SQL Server 2019.|
+|Profiler|Aggiunta dell'evento "Aggregate Table Rewrite Query" (Aggrega query di riscrittura tabella) agli eventi Profiler.|
+|Query Data Store|Correzione di un problema per cui si può generare un'eccezione "DocumentFrame (SQLEditors)".|
+|Query Data Store|Correzione di un problema che si verifica quando l'utente tenta di impostare un intervallo di tempo personalizzato nei report predefiniti di Query Store. L'utente non può selezionare AM o PM nell'intervallo iniziale/finale.|
+|Griglia dei risultati|Correzione di un problema in modalità Contrasto elevato (i numeri di riga selezionati non erano visibili).|
+|Griglia dei risultati|Risolto un problema che generava un'eccezione "Indice fuori intervallo" quando si faceva clic sulla griglia.|
+|Griglia dei risultati|Risolto un problema in cui è il colore di sfondo della griglia risultati veniva ignorato. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32895916. |
+|Showplan|Vengono visualizzate le proprietà del nuovo operatore di concessione memoria quando è presente più di un thread.|
+|Showplan|Aggiungere i seguenti 4 attributi in RunTimeCountersPerThread del piano di esecuzione xml: HpcRowCount (numero di righe elaborate dal dispositivo hpc), HpcKernelElapsedUs (tempo di attesa scaduto per l'esecuzione del kernel in uso), HpcHostToDeviceBytes (byte trasferiti dall'host al dispositivo) e HpcDeviceToHostBytes (byte trasferiti dal dispositivo all'host).|
+|Showplan|Correzione di un problema per cui i nodi di piano simili vengono evidenziati nella posizione errata.|
+|SMO|Correzione di un problema per cui SMO/ServerConnection non gestisce correttamente le connessioni basate su SqlCredential. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941. |
+|SMO|Correzione di un problema per cui un'applicazione scritta con SQL Server Management Objects (SMO) genera un errore se si tenta di enumerare i database dallo stesso server in più thread, anche se usa istanze di SqlConnection diverse in ogni thread.|
+|SMO|Correzione della regressione delle prestazioni durante il trasferimento da tabelle esterne.|
+|SMO|Correzione del problema nel thread safety ServerConnection per cui l'interfaccia SMO perde istanze di SqlConnection quando la destinazione è Azure.|
+|SMO|Correzione di un problema che genera un errore StringBuilder.FormatError durante il tentativo di ripristinare un database il cui nome contiene parentesi graffe.|
+|SMO|Correzione di un problema per cui i database di Azure in SMO usano per impostazione predefinita le regole di confronto senza distinzione tra maiuscole e minuscole per tutti i confronti tra stringhe invece di usare le regole di confronto specificate per il database.|
+|Editor SSMS|Correzione di un problema per cui nella "Tabella di sistema SQL" il ripristino dei colori predefiniti imposta il colore verde limone invece del verde predefinito, rendendo difficile la lettura su uno sfondo bianco. Per informazioni dettagliate, vedere l'articolo sul [ripristino del colore predefinito errato per la tabella di sistema SQL](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906). Questo problema persiste ancora nelle versioni di SSMS non in lingua inglese.|
+|Editor SSMS|Correzione di un problema per cui IntelliSense non funziona quando si usa l'autenticazione AAD per connettersi ad Azure SQLDW.|
+|Editor SSMS|Correzione di un problema di IntelliSense in Azure quando l'utente non ha accesso al database **master**.|
+|Editor SSMS|Correzione di frammenti di codice per la creazione di "tabelle temporanee" che vengono interrotti quando le regole di confronto del database di destinazione fanno distinzione tra maiuscole e minuscole.|
+|Editor SSMS|Nuova funzione TRANSLATE ora riconosciuta da IntelliSense. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430. |
+|Editor SSMS|Funzionalità IntelliSense migliorata nella funzione FORMAT predefinita. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676. |
+|Editor SSMS|LAG e LEAD vengono ora riconosciuti come funzioni predefinite. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757. |
+|Editor SSMS|Correzione di un problema per cui IntelliSense genera un avviso quando si usa "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)".|
+|Editor SSMS|Risolto un problema in cui varie viste di sistema e vari valori di tabella non erano colorati correttamente.|
+|Editor SSMS|Correzione di un problema per cui quando si fa clic su una scheda dell'editor, questa si chiude invece di ricevere lo stato attivo. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/37291114. |
+|Opzioni SSMS|Correzione di un problema per cui la pagina **Strumenti** > **Opzioni** > **Esplora oggetti di SQL Server** > **Comandi** non viene ridimensionata correttamente.|
+|Opzioni SSMS|Per impostazione predefinita, SSMS ora disabilita il download automatico di DTD nell'editor XMLA. L'editor di script XMLA usa il servizio di linguaggio XML e per impostazione predefinita impedisce ora di scaricare automaticamente DTD per file XMLA potenzialmente dannosi. Questo comportamento viene controllato disattivando l'impostazione "Scarica automaticamente le DTD e gli schemi" in **Strumenti** > **Opzioni** > **Ambiente** > **Editor di testo** > **XML** > **Varie**. |
+|Opzioni SSMS|Ripristinata la scelta rapida da tastiera **CTRL+D**, disponibile nella versione precedente di SSMS. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/35544754. |
+|Progettazione tabelle|Correzione di un arresto anomalo in "Modifica 200 righe".|
+|Progettazione tabelle|Correzione di un problema per cui la finestra di progettazione consente l'aggiunta di una tabella durante la connessione a un database Azure SQL.|
+|Valutazione della vulnerabilità|Correzione di un problema per cui i risultati dell'analisi non vengono caricati correttamente.|
+|XEvent|Aggiunte due colonne "action_name" e "class_type_desc" che visualizzano i campi ID azione e tipo classe come stringhe leggibili.|
+|XEvent|Rimosso il limite massimo di 1.000.000 di eventi per il visualizzatore XEvent.|
+|Profiler XEvent|Correzione di un problema per cui il profiler XEvent non veniva avviato se connesso a un server SQL Server a 96 nuclei.|
+|Visualizzatore XEvent|Correzione di un problema per cui il visualizzatore XEvent si arresta in modo anomalo quando si prova a raggruppare gli eventi usando le opzioni della barra degli strumenti Eventi estesi.|
+
+## <a name="deprecated-and-removed-features-in-180-ga"></a>Funzionalità deprecate e rimosse nella versione 18.0 (disponibilità generale)
+
+Funzionalità deprecate e rimosse
 - Debugger Transact-SQL
 - Diagrammi di database
-- OSQL.EXE
-- Interfaccia utente di amministrazione Dreplay
+- Gli strumenti seguenti non vengono più installati con SSMS:
+  - OSQL.EXE
+  - DReplay.exe
+  - SQLdiag.exe
+  - SSBDiagnose.exe
+  - bcp.exe
+  - sqlcmd.exe
 - Strumenti di Configuration Manager:
   - Gestione configurazione SQL Server e Gestione configurazione server di report non sono più inclusi nell'installazione di SSMS.
-
 - Criteri standard DMF
-  - I criteri non vengono più installati con SSMS. Vengono spostati in Git. Gli utenti possono contribuire a svilupparli e scaricarli/installarli in base alle esigenze.
-
+  - I criteri non vengono più installati con SSMS. Verranno spostati in Git. Gli utenti potranno contribuire allo sviluppo e scaricarli/installarli in base alle esigenze.
 - Opzione della riga di comando -P di SSMS rimossa
   - A causa di problemi di sicurezza, l'opzione per specificare password non crittografate nella riga di comando è stata rimossa.
-
-- Genera script | Pubblica su servizio Web è stato rimosso. Questa funzionalità (deprecata) è stata rimossa dall'interfaccia utente di SSMS.
-- Il nodo "Manutenzione | Legacy" di Esplora oggetto è stato rimosso. L'opzione Genera e pubblica script | Pubblica su servizio Web è stata rimossa. I nodi *obsoleti* "Piani di manutenzione del database" e "SQL Mail" non saranno più accessibili. I nodi recenti "Posta elettronica database" e "Piani di manutenzione" funzionano come di consueto.
-- [Novità in RC1] Rimossa la funzionalità Maschera dati statica (anteprima).
-
-### <a name="known-issues"></a>Problemi noti
-
-- N/D
+- Rimozione dell'opzione Genera script > Pubblica su servizio Web
+  - Questa funzionalità deprecata è stata rimossa dall'interfaccia utente di SSMS.
+- Rimozione del nodo "Manutenzione > Legacy" di Esplora oggetti.
+  - I nodi obsoleti "Piani di manutenzione del database" e "SQL Mail" non saranno più accessibili. I nodi recenti "Posta elettronica database" e "Piani di manutenzione" funzionano come di consueto.
 
 
-## <a name="1791-latest-ga-release"></a>17.9.1 (versione disponibile a livello generale più recente)
 
-![Scaricare](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
+
+Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti dei titoli nelle sezioni seguenti:
+
+## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![Scaricare](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Numero di versione: 17.9.1<br>
 - Numero di build: 14.0.17289.0<br>
@@ -500,9 +330,8 @@ Le funzionalità seguenti non sono più disponibili in SSMS:
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## <a name="179"></a>17.9
 
-![Scaricare](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
+## <a name="downloadssdtmediadownloadpng-ssms-179httpsgomicrosoftcomfwlinklinkid2014306clcid0x409"></a>![Scaricare](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
 Numero di build: 14.0.17285.0<br>
 Data di rilascio: 04 settembre 2018
@@ -565,7 +394,7 @@ Monitoraggio attività:
 
 Integrazione di Microsoft Azure: 
 
-- Correzione di un problema a causa del quale SQL Server Management Studio mostra solo le prime 50 sottoscrizioni (finestre di dialogo Always Encrypted, finestre di dialogo per il backup/ripristino da URL e così via). 
+- Correzione di un problema per cui SQL Server Management Studio mostra solo le prime 50 sottoscrizioni (finestre di dialogo Always Encrypted, finestre di dialogo per il backup/ripristino da URL e altre).
 - Risolto un problema a causa del quale SSMS generava un'eccezione ("L'indice non è compreso nell'intervallo") durante il tentativo di accedere a un account di Microsoft Azure senza account di archiviazione (nella finestra di dialogo per il ripristino del backup da URL). 
 
 Scripting per gli oggetti: 
@@ -585,11 +414,6 @@ Help:
 > Quando si usa l'autenticazione *Active Directory - Universale con supporto MFA* con l'editor di query SQL, è possibile che la connessione degli utenti venga chiusa e riaperta ogni volta che viene chiamata una query. Gli effetti collaterali di tale chiusura includono il rilascio imprevisto delle tabelle temporanee e talvolta l'assegnazione di un nuovo SPID alla connessione. Questa chiusura non si verifica se è presente una transazione aperta sulla connessione. Per risolvere questo problema, gli utenti possono impostare `persist security info=true` nei parametri di connessione.
 
 
-
-
-## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
-
-Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti dei titoli nelle sezioni seguenti:
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![download](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *È stato rilevato un bug nella versione 17.8 correlato al provisioning dei database SQL, quindi SSMS 17.8.1 sostituisce 17.8.*
@@ -699,7 +523,7 @@ Telemetria:
 - Risolto il problema per cui SSMS si arresta in modo anomalo nel tentativo di connettersi a un server, dopo il rifiuto esplicito dell'invio dei dati di telemetria.
  
 Database SQL di Azure: 
-- Risolto un problema per cui l'utente non poteva impostare o modificare il livello di compatibilità (menu a discesa vuoto). Nota: per impostare il livello di compatibilità su 150, l'utente deve comunque usare il pulsante *Script* e modificare manualmente lo script. 
+- Risolto un problema per cui l'utente non poteva impostare o modificare il livello di compatibilità (menu a discesa vuoto). Per impostare il livello di compatibilità su 150, l'utente deve comunque usare il pulsante *Script* e modificare manualmente lo script. 
  
 SMO: 
 - Esposta l'impostazione delle dimensioni del log degli errori in SMO. Per informazioni dettagliate, vedere [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115) (Impostare le dimensioni massime dei log degli errori in SQL Server).  
@@ -825,7 +649,7 @@ Disponibile a livello generale| Numero di build: 14.0.17224.0
 Individuazione dati e classificazione:
 
 - È stata aggiunta una nuova funzionalità SQL di individuazione e classificazione dei dati per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili presenti nei database. 
-- L'individuazione automatica e la classificazione dei dati più sensibili, come ad esempio i dati aziendali, finanziari, medici, personali e così via, possono avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione.
+- L'individuazione automatica e la classificazione dei dati più sensibili, come i dati aziendali, finanziari, medici, personali e così via, possono avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione.
 - Altre informazioni sono disponibili in [Individuazione dati e classificazione SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Editor query:
@@ -905,11 +729,11 @@ Showplan:
 - Possibilità di eseguire l'analisi di un singolo piano direttamente dal piano effettivo generato.
 - Nuovo set di icone.
 - Aggiunta del supporto per riconoscere l'applicazione di operatori logici, ad esempio GbApply e InnerApply.
-        
+
 Profiler XE:
 - Rinominato in Profiler XEvent.
 - I comandi di menu Arresta/Avvia ora arrestano/avviano la sessione per impostazione predefinita.
-- Abilitazione dei tasti di scelta rapida (ad esempio, CTRL+F per la ricerca).
+- Abilitazione dei tasti di scelta rapida (ad esempio **CTRL+F** per la ricerca).
 - Aggiunta delle azioni database\_name e client\_hostname agli eventi appropriati nelle sessioni di Profiler XEvent. Per applicare la modifica, potrebbe essere necessario eliminare le istanze della sessione QuickSessionStandard o QuickSessionTSQL sui server - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Riga di comando:
@@ -1002,7 +826,7 @@ Disponibile a livello generale| Numero di build: 14.0.17199.0
 - È stato risolto un problema per cui la finestra di dialogo di connessione non cancella l'ultimo database usato quando le informazioni salvate includono un database con nome e l'utente seleziona impostazioni predefinite.
 - Scripting per gli oggetti: È stato risolto un problema in cui "Generate database script" (Genera script del database) non funzionava e restituiva un errore quando l'utente aveva un database Data Warehouse in pausa nel server, ma aveva selezionato un altro database non DW e stava provando a eseguire uno script.
 È stato risolto un problema per cui l'intestazione delle stored procedure con script non corrispondeva alle impostazioni di script, restituendo uno script fuorviante - [Argomento Connect 3139784](https://connect.microsoft.com/SQLServer/feedback/details/3139784).
-È stato riabilitato il pulsante "Script" per gli oggetti SQL Azure.
+Riabilitazione del pulsante "Script" per gli oggetti SQL di Azure.
   È stato risolto un problema per cui SSMS non consentiva lo scripting per "Modifica" o "Esegui" su determinati oggetti (UDF, View, SP, Trigger) se connesso a un database SQL di Azure - [Argomento Connect 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386).
 - Editor query:
   - Miglioramento di IntelliSense nell'interazione con i database SQL di Azure.
@@ -1091,7 +915,7 @@ Disponibile a livello generale| Numero di build: 14.0.17177.0
 Tutte le opzioni di scripting sono state spostate nella relativa sezione, *Opzioni versione*, e non si trovano più in *Opzioni generali di scripting*.
 
 - Aggiunto il supporto per i cloud nazionali nel ripristino dall'URL.
-- I report QueryStoreUI ora supportano metriche aggiuntive, come RowCount, DOP, CLR Time e così via, da sys.query_store_runtime_stats.
+- I report QueryStoreUI ora supportano metriche aggiuntive (ad esempio RowCount, DOP, CLR Time) da sys.query_store_runtime_stats.
 - IntelliSense è ora supportato per il database SQL di Azure https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
 - Sicurezza: per impostazione predefinita, la finestra di dialogo di connessione non riterrà attendibili i certificati del server e richiederà la crittografia per le connessioni del database SQL di Azure.
 - Miglioramenti generali del supporto per SQL Server in Linux:
@@ -1106,7 +930,7 @@ Tutte le opzioni di scripting sono state spostate nella relativa sezione, *Opzio
   - Nuovo sottoreport sui latch cronologici.
 - La ricerca nel nodo showplan permette di cercare tra le proprietà del piano. È possibile cercare facilmente qualsiasi proprietà operatore, come il nome della tabella. Per usare questa opzione quando si visualizza un piano:
   - Fare clic con il pulsante destro del mouse sul piano e scegliere l'opzione Trova nodo nel menu di scelta rapida.
-  - Usare CTRL+F.
+  - Usare **CTRL+F**
 
 
 **Analysis Services (AS)**
@@ -1139,7 +963,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ### <a name="bug-fixes"></a>Correzioni di bug
 
 - Risolto un problema che si presentava durante il tentativo di stampare i risultati di una query come testo.  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
-- Risolto un problema per cui SSMS eliminava erroneamente tabelle e altri oggetti durante lo scripting dell'eliminazione di tali oggetti in un database SQL di Azure.
+- Correzione di un problema per cui SSMS elimina erroneamente tabelle e altri oggetti durante lo scripting dell'eliminazione di tali oggetti in un database SQL di Azure.
 - Risolto un problema per cui in alcuni casi SSMS non si avvia e restituisce un messaggio di errore simile a: "Impossibile trovare uno o più componenti. Reinstallare l'applicazione".
 - Risolto un problema per cui lo SPID nell'interfaccia utente di SSMS non viene aggiornato né sincronizzato. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - Risolto un problema nell'installazione invisibile all'utente di SSMS in cui l'argomento /passive veniva considerato come /quiet.
@@ -1159,8 +983,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - QueryStoreUI: risolto un problema per cui gli intervalli di tempo non personalizzati non funzionavano correttamente per tutti i report.
 - Always Encrypted: miglioramento della messaggistica per lo stato autorizzazione AKV nella finestra di dialogo New CMK (Nuovo CMK). Aggiunta di descrizioni comando all'elenco a discesa CEK per facilitare la distinzione di CEK con nomi lunghi. Risolto un problema per cui i provider degli archivi delle chiavi CNG non vengono visualizzati nella finestra di dialogo Nuova chiave master della colonna per Always Encrypted
 - Corretto il "Nome applicazione" non coerente per le connessioni di SSMS. https://connect.microsoft.com/SQLServer/feedback/details/3135115
-- Risolto un problema per cui SSMS non generava script corretti per SQL Azure (tabelle e indici con l'opzione DATA_COMPRESSIONS). https://connect.microsoft.com/SQLServer/feedback/details/3133148
-- Risolto un problema per cui l'utente non poteva usare i tasti di scelta rapida CTRL+Q per l'Avvio veloce. Nota: i nuovi tasti di scelta rapida per attivare o disattivare l'opzione "IntelliSense abilitato" nell'Editor di Query sono CTRL+B e CTRL+I. https://connect.microsoft.com/SQLServer/feedback/details/3131968
+- Correzione di un problema per cui SSMS non genera script corretti per SQL di Azure (tabelle e indici con l'opzione DATA_COMPRESSIONS). https://connect.microsoft.com/SQLServer/feedback/details/3133148
+- Correzione di un problema per cui l'utente non è in grado di usare i tasti di scelta rapida **CTRL+Q** per Avvio veloce. I nuovi tasti di scelta rapida per attivare o disattivare l'opzione "IntelliSense abilitato" nell'Editor di query sono **CTRL+B** e **CTRL+I**. https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - Risolto un problema in "Ripristina database" per cui SSMS generava un'eccezione durante il tentativo di selezionare un account di archiviazione da una sottoscrizione che include account con domini personalizzati definiti.
 - Risolto un problema in "Diagramma di database" per cui SSMS generava un errore "Indice oltre i limiti della matrice" e l'utente non poteva impostare la "Vista tabella" su un'opzione diversa da quella standard. https://connect.microsoft.com/SQLServer/feedback/details/3133792 e https://connect.microsoft.com/SQLServer/feedback/details/3135326
 - Risolto un problema in "Backup/Ripristino su URL" per cui SSMS non riusciva a enumerare gli account di archiviazione della versione classica.
@@ -1254,7 +1078,7 @@ Disponibile a livello generale| Numero di build: 14.0.17099.0
 - Quando si generano script per il database SQL di Azure, negli script vengono ora inclusi full-text, regole e database
 - Correzioni della personalizzazione nelle schermate iniziali per SSMS e Profiler
 - Rimozione dell'interfaccia utente per il punto di controllo dell'utilità da SSMS
-- SSMS può creare i database di SQL Azure edizione "PremiumRS"
+- SSMS può ora creare i database SQL di Azure edizione "PremiumRS"
 - Gruppi di disponibilità AlwaysOn
   - Aggiunto il supporto di nuovi tipi di cluster: EXTERNAL e NONE. Aggiunto il supporto di SQL Server in Linux. Aggiunto il seeding automatico come opzione per la sincronizzazione dei dati iniziale. Correzione di alcuni bug, ad esempio nella gestione degli URL di endpoint, nell'aggiornamento del database e nel layout dell'interfaccia utente. Rimozione delle funzionalità associate alla replica di Azure
   - Migliorato IntelliSense per diverse parole chiave del gruppo di disponibilità
@@ -1265,8 +1089,7 @@ Disponibile a livello generale| Numero di build: 14.0.17099.0
   - Aggiunto "(in pausa)" al titolo della Panoramica se la raccolta di dati Monitoraggio attività viene messa in pausa
   - Estensioni grafiche per SQL Server: Nuove icone per il nodo grafico e le tabelle bordi. Il nodo grafico e le tabelle edge verranno visualizzate nella cartella Tabelle grafi. Modelli disponibili per creare il nodo grafico e le tabelle bordi.
 - Modalità presentazione: Tre nuove attività disponibili tramite Avvio veloce (CTRL+Q) PresentOn: attiva la modalità presentazione PresentEdit: modifica la dimensione del tipo di carattere per la modalità presentazione.  "Tipo di carattere Editor di testo" per Editor di query.  "Tipo di carattere ambiente" per altri componenti.
-RestoreDefaultFonts: ripristina le impostazioni predefinite.
-*Nota: non è attualmente disponibile un comando PresentOff.  Per disattivare la modalità presentazione è possibile usare l'opzione RestoreDefaultFonts*
+RestoreDefaultFonts: ripristina le impostazioni predefinite. Non è attualmente disponibile un comando PresentOff. Usare l'opzione RestoreDefaultFonts per disattivare la modalità presentazione*
 
 ### <a name="bug-fixes"></a>Correzioni di bug
 
@@ -1386,7 +1209,7 @@ In questa versione sono stati risolti i problemi seguenti:
 
 Se si verificano problemi durante l'installazione di SSMS che non vengono risolti con una disinstallazione e reinstallazione standard, è possibile provare a [ripristinare](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 Isolated Shell. Se il ripristino di Visual Studio 2015 Isolated Shell non risolve il problema, la procedura seguente consente di risolvere molti problemi casuali:
 
-1.  Disinstallare SSMS nello stesso modo in cui si disinstalla un'applicazione qualsiasi, usando *Programmi*, *Programmi e funzionalità* e così via, a seconda della versione di Windows.
+1.  Disinstallare SSMS nello stesso modo in cui si disinstalla qualsiasi applicazione, usando *App e funzionalità*, *Programmi e funzionalità*, a seconda della versione di Windows in uso.
 
 2.  Disinstallare Visual Studio 2015 Isolated Shell **da un prompt dei comandi con privilegi elevati**:
    

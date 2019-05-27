@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743247"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071805"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint)
   Una distribuzione di PowerPivot per SharePoint consente di utilizzare lo spazio su disco del computer host per memorizzare nella cache database PowerPivot per ricaricamenti più veloci. Ogni database PowerPivot caricato in memoria viene innanzitutto memorizzato nella cache su disco in modo che possa essere ricaricato rapidamente in un secondo momento per soddisfare nuove richieste. Per impostazione predefinita, in PowerPivot per SharePoint viene utilizzato tutto lo spazio su disco disponibile per memorizzare nella cache i database, ma è possibile modificare questo comportamento impostando proprietà che limitano la quantità di spazio su disco utilizzata.  

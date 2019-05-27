@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270702"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727131"
 ---
 # <a name="comparing-string-data"></a>confronto di dati stringa
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il confronto tra stringhe costituisce una parte importante di molte delle trasformazioni eseguite da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e viene utilizzato anche nella valutazione di espressioni in variabili ed espressioni di proprietà. La trasformazione Ordinamento, ad esempio, confronta i valori in un set di dati per disporre i dati in ordine crescente o decrescente.  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>Configurazione di trasformazioni per i confronti di stringhe  
@@ -64,7 +68,7 @@ ms.locfileid: "58270702"
  È inoltre possibile specificare impostazioni locali per le gestioni connessioni file flat e per più file flat.  
   
 ## <a name="setting-comparison-options"></a>Impostazione delle opzioni di confronto  
- Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. Questa opzione consente di ignorare segni diacritici quale l'accento, di modo che caratteri come "a" e "á" vengano considerati identici ai fini del confronto.  
+ Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. Questa opzione consente di ignorare segni diacritici come l'accento, affinché i caratteri come "a" e "Ã¡" vengano considerati identici ai fini del confronto.  
   
  Nella tabella seguente vengono descritte le opzioni di confronto disponibili e uno stile di ordinamento.  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58270702"
 |Ignora maiuscole/minuscole|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |Ignora Katakana/Hiragana|Specifica se nel confronto viene fatta distinzione tra i due tipi di caratteri Kana giapponesi, Hiragana e Katakana. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la distinzione tra Katakana e Hiragana.|  
 |Ignora larghezza caratteri|Specifica se nel confronto viene fatta distinzione tra un carattere a un byte (metà larghezza) e lo stesso carattere rappresentato con due byte (larghezza intera). Se questa opzione è impostata, nel confronto tra stringhe la rappresentazione a un byte e quella a due byte dello stesso carattere verranno considerate uguali.|  
-|Ignora caratteri senza spaziatura|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
+|Ignora caratteri senza spaziatura|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "Ã¥" verrà considerato uguale al carattere "a".|  
 |Ignora simboli|Specifica se nel confronto viene fatta distinzione tra lettere e simboli, ad esempio gli spazi, i segni di punteggiatura, i simboli di valuta e i simboli matematici. Se questa opzione è impostata, nel confronto verranno ignorati i simboli. Ad esempio, la stringa " New York" verrà considerata identica alla stringa "New York" e la stringa "*ABC" verrà considerata identica alla stringa "ABC"'.|  
 |Ordina i segni di punteggiatura come simboli|Specifica se nel confronto tutti i segni di punteggiatura, ad eccezione del segno meno e dell'apostrofo, precedono i caratteri alfanumerici. Ad esempio, se questa opzione è impostata la stringa ".ABC" precederà la stringa "ABC".|  
   

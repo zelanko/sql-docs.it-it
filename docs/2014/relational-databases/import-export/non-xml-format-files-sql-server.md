@@ -11,15 +11,15 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064052"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011883"
 ---
 # <a name="non-xml-format-files-sql-server"></a>File in formato non XML (SQL Server)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]sono supportati due tipi di file di formato per l'esportazione e l'importazione bulk: *file di formato non XML* e *file di formato XML*.  

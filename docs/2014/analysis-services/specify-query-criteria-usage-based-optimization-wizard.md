@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1
@@ -13,12 +12,12 @@ ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088d53d1257c4b0d4b141b1e090ab1174416d397
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746145"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068217"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Impostazione criteri di query (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Impostazione criteri di query** per scegliere una o più opzioni di filtro per identificare le query da ottimizzare.  

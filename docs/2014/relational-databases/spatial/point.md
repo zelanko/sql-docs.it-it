@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191946"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014146"
 ---
 # <a name="point"></a>Punto
   Nei dati spaziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un `Point` è un oggetto senza dimensioni che rappresenta una sola posizione e può contenere valori Z (innalzamento) e M (misura).  

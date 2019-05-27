@@ -11,15 +11,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a49d7db68fe32d9794e89db66020d7f90555508
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63218223"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011394"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Funzionalità deprecate della ricerca full-text in SQL Server 2014
   In questo argomento vengono descritte le funzionalità deprecate della ricerca full-text ancora disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  

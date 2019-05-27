@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database | Microsoft Docs'
+title: 'Procedura: Cambiare la piattaforma di destinazione e pubblicare un progetto di database | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516703"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090108"
 ---
-# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database
+# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database
 È possibile impostare la versione di destinazione di SQL Server per il progetto di database SQL Server Data Tools (SSDT) su qualsiasi istanza supportata di SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 o SQL Azure). In questo modo, è possibile centralizzare lo sviluppo del database in un unico progetto, ma la pubblicazione viene eseguita in più versioni di istanze di SQL Server in base alle esigenze.  
   
 In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa in considerazione la piattaforma di destinazione e vengono rilevati automaticamente eventuali errori nel codice, ad esempio se si utilizzano funzionalità non supportate per un progetto che verrà pubblicato in SQL Azure.  
@@ -41,7 +41,7 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
   
 2.  Aggiungere `ON [PRIMARY]` alla fine dell'istruzione `CREATE TABLE` .  
   
-3.  Si noti che nel riquadro **Elenco errori** viene visualizzato l'errore seguente: SQL70015: 'Schema di partizionamento e riferimento a filegroup' non supportato in SQL Azure.  
+3.  Si noti che nel riquadro **Elenco errori** viene visualizzato l'errore seguente:  SQL70015: 'Schema di partizionamento e riferimento a filegroup' non è supportato in SQL di Azure.  
   
     SSDT consente di convalidare automaticamente lo script in base alla piattaforma di destinazione. In questo caso, poiché il filegroup non è supportato in SQL Azure, viene restituito un errore da SSDT. Per un elenco di istruzioni Transact\-SQL non supportate in SQL Azure, vedere [Istruzioni Transact-SQL parzialmente supportate (database SQL di Microsoft Azure)](https://msdn.microsoft.com/library/ee336267.aspx).  
   

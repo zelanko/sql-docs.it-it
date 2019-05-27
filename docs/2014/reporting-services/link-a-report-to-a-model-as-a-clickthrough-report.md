@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
@@ -15,12 +14,12 @@ ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90b21c6fa21322afe1d9351e73460fce1a4592f8
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461873"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108364"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Collegare un report a un modello come report click-through
   Invece di utilizzare i modelli di report click-through predefiniti, è possibile creare un report con Generatore report e quindi collegarlo a un'entità specifica nel modello di report. Quando l'utente che visualizza il report fa clic sui dati interattivi nel report principale, questo report viene visualizzato come report click-through. Per collegare un report a un'entità, utilizzare Gestione report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

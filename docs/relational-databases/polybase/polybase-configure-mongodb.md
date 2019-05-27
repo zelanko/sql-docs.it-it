@@ -1,25 +1,25 @@
 ---
 title: Configurare PolyBase per l'accesso a dati esterni in MongoDB | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: 871e53571d88fbc24bd597b6e70dbab6723a58c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044497"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774714"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in MongoDB.
 
@@ -27,82 +27,52 @@ L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire
 
 Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md).
 
-## <a name="configure-an-external-table"></a>Configurare una tabella esterna
+Prima di creare credenziali con ambito database, è necessario creare una [chiave master](../../t-sql/statements/create-master-key-transact-sql.md). 
+    
+
+## <a name="configure-a-mongodb-external-data-source"></a>Configurare un'origine dati MongoDB esterna
 
 Per eseguire query sui dati da un'origine dati MongoDB, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare queste tabelle esterne.
 
-In questa sezione verranno creare questi oggetti:
+In questa sezione vengono usati i comandi Transact-SQL seguenti:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL)
-- CREATE EXTERNAL TABLE (Transact-SQL)
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. Creare una chiave master nel database, se non esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una credenziale con ambito database per l'accesso all'origine di MongoDB.
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
-     ```
-    ## <a name="arguments"></a>Argomenti
-    PASSWORD ='password'
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source. 
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    ```
+1. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-    Password utilizzata per crittografare la chiave master nel database. password deve soddisfare i requisiti per i criteri password di Windows del computer che esegue l'hosting dell'istanza di SQL Server.
-
-1.   Creare una credenziale con ambito database per l'accesso all'origine di MongoDB.
-
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL credential_name 
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
-
-1.  Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
-
-     ```sql
-     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
+    ```sql
+    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
-    */  
+    */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (
-    LOCATION = mongodb://<server>[:<port>],
+    WITH (LOCATION = 'mongodb://<server>[:<port>]',
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = credential_name
-    );
-     ```
-
-1.  Creare tabelle esterne che rappresentano i dati archiviati nel sistema esterno MongoDB [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
-
-     ```sql
-     /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE customers(
-     [O_ORDERKEY] DECIMAL(38) NOT NULL,
-     [O_CUSTKEY] DECIMAL(38) NOT NULL,
-     [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
-     [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
-     [O_ORDERDATE] DATETIME2(0) NOT NULL,
-     [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
-     )
-     WITH (
-     LOCATION='customer',
-     DATA_SOURCE= external_data_source_name
-     );
-     ```
+    CREDENTIAL = credential_name);
+    ```
 
 1. **Facoltativo:** Creare statistiche per una tabella esterna.
 
     È consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni, per prestazioni ottimali delle query.
 
-     ```sql
-      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    ```
 
+>[!IMPORTANT] 
+>Dopo aver creato un'origine dati esterna, è possibile usare il comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) per creare una tabella disponibile per query su tale origine. 
 
 ## <a name="flattening"></a>Rendere flat
  L'impostazione per l'appiattimento è abilitata per i dati nidificati e ripetuti delle raccolte di documenti MongoDB. L'utente deve abilitare `create an external table` e specificare in modo esplicito uno schema relazionale per le raccolte di documenti MongoDB che possono avere dati nidificati e/o ripetuti. Il rilevamento automatico dello schema per le raccolte di documenti Mongo verrà abilitato in attività cardine future.

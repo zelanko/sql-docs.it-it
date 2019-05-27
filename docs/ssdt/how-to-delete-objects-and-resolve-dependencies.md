@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676169"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090210"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procedura: Eliminazione oggetti e risoluzione dipendenze
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procedura: Eliminare oggetti e risolvere le dipendenze
 Quando si rinomina o si elimina un oggetto in **Esplora oggetti di SQL Server**, in SQL Server Data Tools vengono rilevati automaticamente tutti i relativi oggetti di dipendenza e verrà preparato uno script ALTER per rinominare o eliminare la dipendenza in base alle esigenze.  
   
 > [!WARNING]  
@@ -47,7 +47,7 @@ Quando si rinomina o si elimina un oggetto in **Esplora oggetti di SQL Server**,
     > [!WARNING]  
     > Dipendenze basate su script, quali i riferimenti a una tabella da una vista o stored procedure, non vengono aggiornati automaticamente da SSDT. Al termine della ridenominazione, è possibile usare il riquadro **Elenco errori** per individuare tutte le altre dipendenze e correggerle manualmente.  
   
-5.  Applicare la modifica seguendo i passaggi nella procedura [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) precedente.  
+5.  Applicare la modifica seguendo i passaggi descritti in [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Fare di nuovo clic con il pulsante destro del mouse sulla tabella **Customers** in **Esplora oggetti di SQL Server** e selezionare **Visualizza dati**. Si noti che i dati della tabella non sono stati modificati dopo l'operazione di ridenominazione.  
   

@@ -23,14 +23,18 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8159be3478fbf4d3e83de6a066a07104997c4ade
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c540acdbda08d79f89b6bba3a016314609e6607f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222085"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723813"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
  L'Importazione/Esportazione guidata[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare facilmente i dati da un'origine a una destinazione. Questa panoramica descrive le origini dati che la procedura guidata può usare come origini e destinazioni, nonché le autorizzazioni necessarie per eseguirla.
 
@@ -47,7 +51,7 @@ Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes
  
 | Origine dati | È necessario scaricare file aggiuntivi? |
 |-------------|-----------------------------------------|
-|**Database aziendali**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e altri.|SQL Server o SQL Server Data Tools (SSDT) installa i file necessari per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ma SSDT non installa tutti i file necessari per connettersi ad altri database aziendali, ad esempio Oracle o IBM DB2.<br/><br/>Per connettersi a un database aziendale sono in genere necessari due elementi:<br/><br/>1. **Software client**. Se il software client relativo al proprio database aziendale è già installato, non sono generalmente necessari altri componenti per eseguire la connessione. Se invece il software client non è installato, chiedere all'amministratore del database come poterne installare una copia con licenza.<br/><br/>2. **Driver o provider**. Microsoft installa i driver e i provider per la connessione a Oracle. Per connettersi a IBM DB2, scaricare il provider Microsoft® OLEDB per DB2 v5.0 per Microsoft SQL Server da [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati SQL Server ](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) o [Connettersi a un'origine dati Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
+|**Database aziendali**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e altri.|SQL Server o SQL Server Data Tools (SSDT) installa i file necessari per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ma SSDT non installa tutti i file necessari per connettersi ad altri database aziendali, ad esempio Oracle o IBM DB2.<br/><br/>Per connettersi a un database aziendale sono in genere necessari due elementi:<br/><br/>1. **Software client**. Se il software client relativo al proprio database aziendale è già installato, non sono generalmente necessari altri componenti per eseguire la connessione. Se invece il software client non è installato, chiedere all'amministratore del database come poterne installare una copia con licenza.<br/><br/>2. **Driver o provider**. Microsoft installa i driver e i provider per la connessione a Oracle. Per connettersi a IBM DB2, scaricare il provider MicrosoftÂ® OLEDB per DB2 v5.0 per Microsoft SQL Server da [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati SQL Server ](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) o [Connettersi a un'origine dati Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
 |**File di testo** (file flat)|Non sono necessari file aggiuntivi.<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati file flat](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**File di Microsoft Excel e Microsoft Access**|Microsoft Office non installa tutti i file necessari per eseguire la connessione a file Excel e Access come origini dati. Scaricare [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) o [Connettersi a un'origine dati Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Origini dati di Azure**<br/>Attualmente solo Archiviazione BLOB di Azure.|SQL Server Data Tools non installa i file necessari per connettersi ad Archiviazione BLOB di Azure come origine dati. È necessario scaricare [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Per altre informazioni, vedere [Connettersi ad Archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|

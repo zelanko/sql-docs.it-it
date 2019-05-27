@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412068"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581309"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Indici columnstore - Data warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,14 +64,14 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Esempio: usare un indice non cluster per imporre un vincolo di chiave primaria su un indice columnstore.  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Esempio: usare un indice non cluster per imporre un vincolo di chiave primaria su una tabella columnstore  
  Per motivi di progettazione, una tabella columnstore non consente vincoli di chiave primaria. È ora possibile imporre un vincolo di chiave primaria su una tabella columnstore tramite un indice non cluster. Una chiave primaria è equivalente a un vincolo UNIQUE su una colonna non NULL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa un vincolo UNIQUE come indice non cluster. Combinando questi fatti, l'esempio seguente definisce un vincolo UNIQUE sulla colonna non NULL accountkey. Il risultato è un indice non cluster che impone un vincolo di chiave primaria come vincolo UNIQUE su una colonna non NULL.  
   
  La tabella viene quindi convertita in un indice columnstore cluster. Durante la conversione l'indice non cluster diventa permanente. Il risultato è un indice columnstore cluster con un indice non cluster che impone un vincolo di chiave primaria. Poiché qualsiasi aggiornamento o inserimento nella tabella columnstore influirà anche sull'indice non cluster, tutte le operazioni che violano il vincolo UNIQUE e la caratteristica non NULL causeranno l'esito negativo dell'intera operazione.  
   
  Il risultato è un indice columnstore con un indice non cluster che impone un vincolo di chiave primaria su entrambi gli indici.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501984"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096525"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Impostazione di un operatore alternativo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52501984"
 
 Un operatore alternativo è un utente che riceve l'avviso nel caso in cui l'operatore designato non sia raggiungibile. In questo argomento viene descritto come impostare un operatore alternativo per la ricezione di notifiche di avvisi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-**Contenuto dell'argomento**  
+**Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -56,7 +56,7 @@ Un operatore alternativo è un utente che riceve l'avviso nel caso in cui l'oper
   
 ### <a name="Security"></a>Security  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="Permissions"></a>Permissions  
 Solo i membri del ruolo predefinito del server **sysadmin** possono definire operatori alternativi.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
@@ -73,7 +73,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono definire ope
   
 5.  Nell'elenco **Operatore** selezionare l'operatore che si vuole rendere alternativo.  
   
-6.  Selezionare tutte le caselle di controllo necessarie a specificare come l'operatore riceverà la notifica: **Posta elettronica**, **Cercapersone**o **Net Send**.  
+6.  Selezionare una qualsiasi o tutte le caselle di controllo seguenti per specificare il modo in cui l'operatore riceverà la notifica: **Posta elettronica**, **Cercapersone** o **Net Send**.  
   
 7.  Al termine, fare clic su **OK**.  
   

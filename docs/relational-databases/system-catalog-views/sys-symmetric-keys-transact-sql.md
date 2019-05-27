@@ -1,5 +1,5 @@
 ---
-title: symmetric_keys (Transact-SQL) | Microsoft Docs
+title: sys.symmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e5bc6d2959e14c7af7e5ccefddc14e9bb630ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07b60dacedec35460fd0e23e1d28769dcc5674fc
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672949"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175622"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce una riga per ogni chiave simmetrica creata con l'istruzione CREATE SYMMETRIC KEY.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nome della chiave. Valore univoco all'interno del database.|  
+|**name**|**sysname**|Nome della chiave. Univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità di database proprietaria della sottoscrizione.|  
 |**symmetric_key_id**|**int**|ID della chiave. Univoco all'interno del database.|  
-|**lunghezza_chiave**|**int**|Lunghezza della chiave in bit.|  
+|**key_length**|**int**|Lunghezza della chiave in bit.|  
 |**key_algorithm**|**char(2)**|Algoritmo utilizzato con la chiave:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = Chiave EKM|  
 |**algorithm_desc**|**nvarchar(60)**|Descrizione dell'algoritmo utilizzato con la chiave.<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (solo algoritmi EKM)|  
 |**create_date**|**datetime**|Data di creazione della chiave.|  

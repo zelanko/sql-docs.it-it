@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151637"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011941"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET(BULK...) (SQL Server)
   In questo argomento viene fornita una panoramica sull'utilizzo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e dell'istruzione INSERT...SELECT * FROM OPENROWSET(BULK...) per effettuare l'importazione bulk di dati da un file di dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'argomento include anche considerazioni sulla sicurezza per l'uso di BULK INSERT e OPENROWSET(BULK…), nonché sull'uso di questi metodi per l'importazione bulk da un'origine dei dati remota.  

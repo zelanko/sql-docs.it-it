@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222145"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771474"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -537,7 +537,7 @@ Con le autorizzazioni è possibile evitare che vengano accidentalmente alterati 
 
 ## <a name="examples"></a>Esempi
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. Creazione di un database senza specificare i file
-Nell'esempio seguente viene creato il database `mytest` insieme al file di log delle transazioni e al file primario corrispondenti. Poiché l'istruzione non specifica elementi \<filespec>, le dimensioni del file di database primario corrispondono a quelle del file primario del database modello. Il file di log delle transazioni viene impostato sul valore più grande tra 512 KB e il 25% delle dimensioni del file di dati primario. Poiché MAXSIZE non è specificato, le dimensioni dei file possono aumentare fino a riempire lo spazio disponibile su disco. In questo esempio viene inoltre illustrato come eliminare l'eventuale database denominato `mytest` prima di creare il database `mytest`.
+Nell'esempio seguente viene creato il database `mytest` insieme al file di log delle transazioni e al file primario corrispondenti. Poiché l'istruzione non specifica elementi \<filespec>, le dimensioni del file di database primario corrispondono a quelle del file primario del database modello. Il file di log delle transazioni viene impostato sul valore più maggiore tra 512 kB e il 25% delle dimensioni del file di dati primario. Poiché MAXSIZE non è specificato, le dimensioni dei file possono aumentare fino a riempire lo spazio disponibile su disco. In questo esempio viene inoltre illustrato come eliminare l'eventuale database denominato `mytest` prima di creare il database `mytest`.
 
 ```sql
 USE master;
@@ -554,7 +554,7 @@ WHERE name = N'mytest';
 GO
 ```
 
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>b. Creazione di un database che specifica i file di dati e i file di log delle transazioni
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Creazione di un database che specifica i file di dati e i file di log delle transazioni
 Nell'esempio seguente viene creato il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè `Sales_dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales_dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales_log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .
 
 ```sql
@@ -1042,7 +1042,7 @@ Se non viene impostato alcun `MAXSIZE`valore quando viene usato il modello vCore
 
 Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:
 
-- Se il valore di EDITION è specificato e il valore di MAXSIZE viene omesso, viene utilizzato il valore predefinito dell'edizione. Ad esempio, se EDITION è impostato su Standard e MAXSIZE non è specificato, il valore di MAXSIZE viene automaticamente impostato su 500 MB.
+- Se il valore di EDITION è specificato e il valore di MAXSIZE viene omesso, viene utilizzato il valore predefinito dell'edizione. Ad esempio, se EDITION è impostato su Standard e MAXSIZE non è specificato, il valore di MAXSIZE viene automaticamente impostato su 250 MB.
 - Se né MAXSIZE né EDITION sono specificati, EDITION viene impostato su Standard (S0) e MAXSIZE viene impostato su 250 GB.
 
 SERVICE_OBJECTIVE     
@@ -1354,7 +1354,7 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
 ```
 
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>b. Creare un database del data warehouse con tutte le opzioni
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. Creare un database del data warehouse con tutte le opzioni
 Esempio di creazione di un data warehouse di 10 TB usando tutte le opzioni.
 
 ```sql
@@ -1487,7 +1487,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 100 GB);
 ```
 
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>b. Creazione di un database con dimensioni in GB parziali
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. Creazione di un database con dimensioni in GB parziali
 L'esempio seguente crea il database `mytest` con AUTOGROW OFF, un'allocazione dello spazio di archiviazione pari a 1,5 GB per ogni nodo di calcolo per le tabelle replicate, 5,25 GB per appliance per le tabelle distribuite e 10 GB per appliance per il log delle transazioni.
 
 ```sql

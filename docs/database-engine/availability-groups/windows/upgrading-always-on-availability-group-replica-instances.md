@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535853"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450092"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Prima di iniziare, esaminare le informazioni seguenti:
 - [Verificare se per i database del gruppo di disponibilità siano in uso Change Data Capture o la replica](#special-steps-for-change-data-capture-or-replication): se i database nel gruppo di disponibilità sono abilitati per Change Data Capture (CDC), seguire queste [istruzioni](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->L'uso di più versioni delle istanze di SQL Server nello stesso gruppo di disponibilità è supportato solo nel contesto di un aggiornamento in sequenza che aggiorna le repliche nelle posizioni originali. Una versione successiva di un'istanza di SQL Server non può essere aggiunta come nuova replica a un gruppo di disponibilità esistente. Ad esempio non è possibile aggiungere una replica SQL Server 2017 a un gruppo di disponibilità SQL Server 2016 esistente. Per eseguire la migrazione a una nuova versione dell'istanza di SQL Server che usa gruppi di disponibilità, l'unico metodo supportato è un gruppo di disponibilità distribuito in SQL Server 2016 Enterprise Edition o versioni successive.
+>L'uso di più versioni delle istanze di SQL Server nello stesso gruppo di disponibilità è supportato solo nel contesto di un aggiornamento in sequenza e non deve rimanere in tale stato per periodi di tempo prolungati perché l'aggiornamento deve essere eseguito rapidamente. L'altra opzione per eseguire l'aggiornamento di SQL Server 2016 e versioni successive prevede l'uso di un gruppo di disponibilità distribuito.
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Informazioni di base sull'aggiornamento in sequenza per i gruppi di disponibilità AlwaysOn  
 Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi di disponibilità, osservare le linee guida seguenti quando si eseguono gli aggiornamenti dei server:  

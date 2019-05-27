@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a4748e76ac377e87003f2b811753db5de1cbe02
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 589edbc9b3f19597a84a3393f693078bca89dee7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393656"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094187"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52393656"
   
 ### <a name="rotating-the-symmetric-key"></a>Rotazione della chiave simmetrica  
  Durante l'uso di RBS è consigliabile ruotare periodicamente la chiave simmetrica dell'archivio delle credenziali. Si tratta di una comune procedura consigliata di sicurezza per soddisfare i criteri di sicurezza dell'organizzazione.  Un modo per eseguire la rotazione della chiave simmetrica dell'archivio delle credenziali di RBS consiste nell'usare lo [script riportato di seguito](#Key_rotation) nel database di RBS.  È anche possibile usare questo script per eseguire la migrazione a proprietà per aumentare la sicurezza della crittografia, come l'algoritmo o la lunghezza della chiave. Eseguire il backup del database prima della rotazione della chiave.  Al termine dello script sono previsti alcuni passaggi di verifica.  
-Se i criteri di sicurezza in uso richiedono proprietà diverse per la chiave (ad esempio, algoritmo o lunghezza della chiave) da quelle specificate, lo script può essere usato come modello. È possibile modificare le proprietà della chiave in due posizioni: 1) creazione della chiave temporanea 2) creazione della chiave permanente.  
+Se i criteri di sicurezza in uso richiedono proprietà diverse per la chiave (ad esempio, algoritmo o lunghezza della chiave) da quelle specificate, lo script può essere usato come modello. Modificare le proprietà delle chiavi in due momenti, ovvero durante la creazione della chiave temporanea e durante la creazione della chiave permanente.  
   
 ##  <a name="rbsresources"></a> Risorse di RBS  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807253"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011152"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
   Le funzioni [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) restituiscono una colonna denominata RANK che contiene valori ordinali compresi tra 0 e 1000 (valori di classificazione). Questi valori vengono utilizzati per classificare le righe restituite in base al grado di corrispondenza con i criteri di selezione. I valori di pertinenza indicano solo un ordine relativo di pertinenza delle righe nel set di risultati, dove un valore inferiore indica una pertinenza inferiore. I valori effettivi sono senza importanza e in genere variano ogni volta che viene eseguita la query.  
@@ -37,7 +37,7 @@ ms.locfileid: "52807253"
   
 ##  <a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio A: Cercare solo le prime tre corrispondenze  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio a: Ricerca delle prime tre corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire solo le prime tre corrispondenze.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Esempio B: La ricerca per prime dieci corrispondenze  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Esempio b: Ricerca delle prime dieci corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire la descrizione dei primi 5 prodotti la cui colonna `Description` include la parola "aluminum" accanto alla parola "light" o "lightweight".  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  Statistiche quali `IndexRowCount` possono variare notevolmente. Se, ad esempio, un catalogo presenta 2 miliardi di righe nell'indice master, un nuovo documento viene indicizzato in un indice intermedio in memoria e la pertinenza corrispondente basata sul numero di documenti dell'indice in memoria potrebbe essere asimmetrica rispetto alla pertinenza per i documenti dall'indice master. Per questo motivo, dopo ogni popolamento che determini l'indicizzazione o la reindicizzazione di un grande numero di righe è consigliabile unire gli indici in un indice master utilizzando l'istruzione ALTER FULLTEXT CATALOG ... Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Il motore di ricerca full-text, inoltre, unirà automaticamente gli indici in base a parametri quali il numero e le dimensioni di indici intermedi.  
   
- I valori `MaxOccurrence` vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze rientrano nell'intervallo tra i valori di tabella adiacenti 32 e 128, i documenti vengono di fatto gestiti come se avessero la stessa lunghezza, 128 (32 < `docLength` <= 128).  
+ I valori `MaxOccurrence` vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze di documento sono compresi nell'intervallo tra i valori di tabella adiacenti 32 e 128, essi vengono di fatto gestiti come se avessero la stessa lunghezza, 128 (32 < `docLength` < = 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

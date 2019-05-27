@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533427"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090202"
 ---
-# <a name="how-to-debug-stored-procedures"></a>Procedura: Debug di stored procedure
+# <a name="how-to-debug-stored-procedures"></a>Procedura: Eseguire il debug di stored procedure
 Il debugger Transact\-SQL consente di eseguire il debug di stored procedure in modo interattivo visualizzando lo stack di chiamate SQL, i parametri e le variabili locali per la stored procedure SQL. Come accade per l'esecuzione del debug in altri linguaggi di programmazione, è possibile visualizzare e modificare parametri e variabili locali, visualizzare variabili globali, nonché controllare e gestire punti di interruzione durante l'esecuzione del debug dello script Transact\-SQL.  
   
 In questo esempio viene illustrato come creare ed eseguire il debug di una stored procedure Transact\-SQL eseguendo istruzioni.  

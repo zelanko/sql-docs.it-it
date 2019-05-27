@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2739af6b1fdb6630b44ae56d1ab0b83ef5fa4535
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748853"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070751"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Elabora (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Elabora** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per elaborare oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Elabora** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , è possibile:  

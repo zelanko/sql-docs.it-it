@@ -14,16 +14,16 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617876"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821878"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52617876"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **NOTA:** nell'esempio precedente l'opzione **-E** non è specificata perché è l'opzione predefinita e **sqlcmd** si connette all'istanza predefinita usando l'autenticazione di Windows.  
+    > **NOTA:** Nell'esempio precedente l'opzione **-E** non è specificata perché è l'opzione predefinita. **sqlcmd** si connette all'istanza predefinita usando l'autenticazione di Windows.  
   
 -   Connessione a un'istanza denominata utilizzando l'autenticazione di Windows per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52617876"
     > **SUGGERIMENTO** Per un elenco delle opzioni supportate dall'utilità **sqlcmd** , eseguire: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Eseguire le istruzioni Transact-SQL in modo interattivo usando sqlcmd  
- È possibile usare l'utilità **sqlcmd** in modo interattivo per eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in una finestra del prompt dei comandi. Per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con **sqlcmd**, eseguire l'utilità senza usare le opzioni **-Q**, **-q**, **-Z**o **-i** per specificare eventuali file di input o query. Ad esempio  
+ È possibile usare l'utilità **sqlcmd** in modo interattivo per eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in una finestra del prompt dei comandi. Per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con **sqlcmd**, eseguire l'utilità senza usare le opzioni **-Q**, **-q**, **-Z**o **-i** per specificare eventuali file di input o query. Esempio:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52617876"
 ## <a name="quoted-strings"></a>Stringhe tra virgolette  
  I caratteri racchiusi tra virgolette vengono utilizzati senza alcuna pre-elaborazione aggiuntiva, fatta eccezione per il fatto che è possibile inserire virgolette in una stringa immettendo due virgolette consecutive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta questa sequenza di caratteri come virgoletta. La traduzione avviene tuttavia nel server. Le variabili di scripting non vengono espanse se sono incluse all'interno di una stringa.  
   
- Ad esempio  
+ Esempio:  
   
  `sqlcmd`  
   

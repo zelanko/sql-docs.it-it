@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 683d8f082a41b328f9cf86134cee0440e2ca3e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818765"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090115"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Procedura: Clonazione di un database esistente
+# <a name="how-to-clone-an-existing-database"></a>Procedura: Clonare un database esistente
 In questa attività vengono utilizzati alcuni dei passaggi di procedure precedenti per creare un nuovo database in cui trasferire i dati esistenti. Vengono inoltre usati i passaggi illustrati in [Procedura: Usare il confronto schema per confrontare definizioni di database diverse](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) per sincronizzare lo schema di un database di origine e di un database del progetto.  
   
 Se si utilizzano questi passaggi, è possibile creare facilmente un database di sviluppo o di test da un database di produzione con schema e dati identici. Inoltre, è possibile continuare a sviluppare il database di test in una modalità connessa o creare un progetto di database per lo sviluppo e il test offline, senza interrompere le operazioni del database di produzione.  

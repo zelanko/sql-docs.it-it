@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157621"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175041"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader caricatore della riga di comando per Parallel Data Warehouse
 **dwloader** è uno strumento da riga di comando di Parallel Data Warehouse (PDW) che esegue il caricamento bulk delle righe nella tabella in una tabella esistente. Durante il caricamento di righe, è possibile aggiungere tutte le righe alla fine della tabella (*modalità append* oppure *modalità fastappend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità upsert*), o eliminare tutte le esistente righe prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*ricaricare modalità*).  
@@ -43,7 +43,7 @@ ms.locfileid: "63157621"
   
 5.  Eseguire **dwloader**.  
   
-    Accedere al server di caricamento ed eseguire il file eseguibile **dwloader.exe** con le opzioni della riga di comando appropriate.  
+    Accedere al server durante il caricamento, eseguire l'eseguibile **dwloader.exe** con le opzioni della riga di comando appropriate.  
   
 6.  Verificare i risultati.  
   
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -143,7 +144,7 @@ Esempi:
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 Specifica l'appliance di SQL Server PDW che riceverà i dati caricati.  
   
 *Per le connessioni Infiniband*, *target_appliance* viene specificato come < appliance-name >-SQLCTL01. Per configurare questa impostazione è denominata connessione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
@@ -159,7 +160,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-T** *target_database_name.* [*schema*]. *table_name*  
 Il nome in tre parti per la tabella di destinazione.  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 Il percorso di uno o più file di origine da caricare. Ogni file di origine deve essere un file di testo o un file di testo che viene compresso con gzip. Solo un file di origine può essere compresse in ogni file gzip.  
   
 Per formattare un file di origine:  
@@ -174,7 +175,7 @@ Per specificare il percorso di origine dati:
   
 -   Il percorso di origine dati può essere un percorso di rete o un percorso locale in una directory nel server durante il caricamento.  
   
--   Per specificare tutti i file in una directory, immettere il percorso della directory aggiungendo il * carattere jolly.  Il caricatore non carica i file da qualsiasi sottodirectory che si trovano nel percorso dell'origine dati... Gli errori del caricatore quando esiste una directory in un file gzip.  
+-   Per specificare tutti i file in una directory, immettere il percorso della directory aggiungendo il * carattere jolly.  Il caricatore non carica i file da qualsiasi sottodirectory che si trovano nel percorso dei dati di origine. Gli errori del caricatore quando esiste una directory in un file gzip.  
   
 -   Per specificare alcuni dei file in una directory, usare una combinazione di caratteri e il * con caratteri jolly.  
   
@@ -219,7 +220,7 @@ Per i file ASCII, inserendo i delimitatori consecutivamente sono rappresentati i
 Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di dati. Le opzioni sono ASCII (impostazione predefinita), UTF8, UTF16 o UTF16BE, in cui è little-endian UTF16 e UTF16BE è big endian. Queste opzioni sono maiuscole e minuscole.  
   
 **-t** *field_delimiter*  
-Il delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo può essere uno o più di questi caratteri di escape ASCII o i valori esadecimali ASCII...  
+Il delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è uno o più di questi caratteri di escape ASCII o i valori esadecimali ASCII.  
   
 |Nome|Carattere escape|Caratteri esadecimali|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dym
 Esempi di file di input per 04 marzo 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* è un formato data personalizzato (ad esempio, MM/GG/AAAA) e incluso per motivi di compatibilità. dwloader non non enfoce il formato di data personalizzato. Al contrario, quando si specifica un formato data personalizzato **dwloader** lo convertirà nell'impostazione corrispondente di ymd, ydm, mdy, ydm, dym o dmy.  
+*custom_date_format* è un formato data personalizzato (ad esempio, MM/GG/AAAA) e incluso per motivi di compatibilità. dwloader non applica il formato di data personalizzato. Al contrario, quando si specifica un formato data personalizzato **dwloader** lo convertirà nell'impostazione corrispondente di ymd, ydm, mdy, ydm, dym o dmy.  
   
-Ad esempio, se si specifica -D MM/GG/AAAA, dwloader prevede che tutti i data di input devono essere ordinati in primo luogo, con mese e giorno e quindi anno (mdy). Non applica 2 mesi di carattere, 2 giorni a una cifra e 4 cifre come specificato dal formato di date personalizzato. Di seguito sono riportati alcuni esempi dei modi le date possono essere formattate nel file di input quando il formato della data è -D MM/GG/AAAA: 02/01/2013, Jan.02.2013, 1 o 2 o 2013  
+Ad esempio, se si specifica -D MM/GG/AAAA, dwloader prevede che tutti i data di input devono essere ordinati in primo luogo, con mese e giorno e quindi anno (mdy). Non applica 2 caratteri mesi, giorni a 2 cifre e 4 cifre come specificato dal formato di date personalizzato. Di seguito sono riportati alcuni esempi dei modi le date possono essere formattate nel file di input quando il formato della data è -D MM/GG/AAAA: 02/01/2013, Jan.02.2013, 1 o 2 o 2013  
   
 Per informazioni di formattazione più complete, vedere [tipo di dati le regole di conversione per dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -481,7 +482,10 @@ Viene eseguito alcun rollback con la modalità di transazione multipla, il che s
 Verificare che l'appliance di destinazione disponga di un certificato di SQL Server PDW valido da un'autorità attendibile. Questa scheda consente di assicurare i dati non viene soggetta a Hijack da un utente malintenzionato e inviato a un percorso non autorizzato. Il certificato deve essere già installato nell'appliance. L'unico metodo supportato per installare il certificato è per l'amministratore del dispositivo di installarlo usando lo strumento Gestione configurazione. Chiedere all'amministratore di appliance se non si è certi se l'appliance è installato un certificato attendibile.  
   
 **-se**  
-Ignorare il caricamento di file vuoti. Anche questo ignora la decompressione di file gzip vuoto.  
+Ignorare il caricamento di file vuoti. Anche questo ignora la decompressione di file gzip vuoto.
+
+**-l**  
+Disponibile con aggiornamento CU7.4, specifica la lunghezza riga massima (in byte) che può essere caricata. I valori validi sono numeri interi compresi tra 32768 e 33554432. Usare solo quando necessario per caricare righe di grandi dimensioni (superiori a 32KB), come verrà allocata più memoria nel client e server.
   
 ## <a name="return-code-values"></a>Valori restituiti  
 0 (esito positivo) o un altro valore intero (errore)  
@@ -542,7 +546,7 @@ Non usare una stringa vuota come delimitatore. Quando una stringa vuota viene ut
 -   **Upsert** -Upsert carica i dati in una tabella di staging e quindi esegue un'operazione di merge dalla tabella di staging nella tabella finale. Upsert non richiede un blocco esclusivo sulla tabella finale. Le prestazioni possono variare quando si usa upsert. Testare il comportamento nell'ambiente in uso.  
   
 ### <a name="locking-behavior"></a>Comportamento di blocco  
-**Un blocco in modalità append**  
+**Aggiungere modalità blocco**  
   
 Accodare può essere eseguito in modalità multi-transazionale (usando l'argomento -m) ma non è sicura delle transazioni. Pertanto aggiungere deve essere utilizzato come un'operazione transazionale (senza usare l'argomento -m). Sfortunatamente, durante l'operazione INSERT-SELECT finale, in modalità transazionale è attualmente circa sei volte più lenta rispetto alla modalità multi-transazionale.  
   
@@ -552,10 +556,10 @@ La modalità append carica i dati in due fasi. La fase uno carica i dati dal fil
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|Yes|Yes|Yes|Minimo|  
 |Heap|Yes|No|Yes|Minimo|  
-|Heap|No|Yes|No|Minimo|  
-|Heap|No|No|No|Minimo|  
-|Cl|Yes|Yes|No|Minimo|  
-|Cl|Yes|No|Yes|Full|  
+|Heap|No|Yes|no|Minimo|  
+|Heap|no|no|No|Minimo|  
+|Cl|Yes|Yes|no|Minimo|  
+|Cl|Yes|no|Yes|Full|  
 |Cl|No|Yes|No|Minimo|  
 |Cl|no|No|Yes|Full|  
   
@@ -600,7 +604,7 @@ Nell'esempio seguente fa parte di uno script di batch che carica i dati in **Adv
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-Il frammento di script seguente usa dwloader per caricare i dati nelle tabelle DimAccount e DimCurrency. Questo script Usa un indirizzo Ethernet. Se si sta usando InfiniBand, server sarebbe *< appliance_name >*`-SQLCTL01`.  
+Il frammento di script seguente usa dwloader per caricare i dati nelle tabelle DimAccount e DimCurrency. Questo script Usa un indirizzo Ethernet. Se si sta usando InfiniBand, server sarebbe *< appliance_name >* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  

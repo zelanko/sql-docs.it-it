@@ -11,14 +11,18 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271175"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727206"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
   
  I componenti CDC di SSIS sono progettati per usare le funzionalità CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in cui le tabelle di origine rappresentano lo stesso database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o un database Oracle (quando si usa Oracle CDC Service per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Le tabelle partizionate non sono supportate.  
@@ -40,7 +44,7 @@ ms.locfileid: "58271175"
 ## <a name="installation"></a>Installazione  
  Questa sezione descrive le procedure di installazione dei componenti CDC per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- I componenti CDC per SSIS sono inclusi nel pacchetto con Microsoft® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL Server®. Questo download fa parte del Feature Pack di SQL Server. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ I componenti CDC per SSIS sono inclusi nel pacchetto con MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ®. Questo download fa parte del Feature Pack di SQL Server. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ### <a name="version-support"></a>Supporto versione
 

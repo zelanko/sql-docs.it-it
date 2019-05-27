@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775955"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
 
@@ -61,6 +61,8 @@ Aggregazione parziale significa che deve verificarsi un'aggregazione finale dopo
 ## <a name="known-limitations"></a>Limitazioni note
 
 PolyBase include le limitazioni seguenti:
+
+- Per usare PolyBase, sono necessarie le autorizzazioni a livello di CONTROLLO SERVER o sysadmin per il database.
 
 - Le dimensioni massime consentite per la riga, inclusa la lunghezza totale delle colonne di lunghezza variabile, non possono superare 32 kB in SQL Server o 1 MB in Azure SQL Data Warehouse.
 

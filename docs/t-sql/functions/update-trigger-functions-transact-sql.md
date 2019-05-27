@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980347"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775999"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Funzioni di trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  La clausola IF UPDATE(*column*) funziona esattamente come una clausola IF, IF...ELSE o WHILE e può usare il blocco BEGIN...END. Per altre informazioni, vedere [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) può essere usata in qualsiasi punto del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ 
+Se si applica un trigger a una colonna, il valore `UPDATED` verrà restituito come `true` o `1`, anche se il valore della colonna rimane invariato. Si tratta di un comportamento predefinito e il trigger deve implementare la logica di business che determina se l'operazione di inserimento/aggiornamento/eliminazione è consentita o meno. 
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato un trigger che stampa un messaggio nel client in corrispondenza di un tentativo di aggiornamento della la colonna `StateProvinceID` o `PostalCode` della tabella `Address`.  

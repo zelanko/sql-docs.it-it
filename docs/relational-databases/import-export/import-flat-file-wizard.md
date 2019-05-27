@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217819"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946435"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Il nuovo nome di tabella deve essere univoco. In caso contrario, la procedura gu
 
 ![Finestra di specifica della procedura guidata](media/import-flat-file-wizard/importffspecify.png)
 
-### <a name="step-3-preview-data"></a>Passaggio 3: Anteprima dati
+### <a name="step-3-preview-data"></a>Passaggio 3: Anteprima dei dati
 La procedura guidata genera un'anteprima che consente di visualizzare le prime 50 righe. Se sono presenti problemi fare clic su Annulla, in caso contrario passare alla pagina successiva.
 
 ![Anteprima della procedura guidata](media/import-flat-file-wizard/importffpreview.png)

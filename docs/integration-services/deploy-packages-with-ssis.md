@@ -21,14 +21,18 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277280"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725754"
 ---
 # <a name="deploy-packages-with-ssis"></a>Esercitazione SSIS: Distribuzione di pacchetti
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include strumenti che consentono di distribuire in modo semplice i pacchetti in un altro computer. Gli strumenti di distribuzione consentono inoltre di gestire eventuali dipendenze, ad esempio configurazioni e file necessari per il pacchetto. In questa esercitazione verrà illustrato come utilizzare tali strumenti per installare pacchetti e relative dipendenze in un computer di destinazione.    
     
 Verranno innanzitutto eseguite le attività di preparazione alla distribuzione. Verrà creato un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] al quale verranno aggiunti i pacchetti e i file di dati esistenti. Non verrà creato alcun nuovo pacchetto da zero, bensì si utilizzeranno solo i pacchetti completi creati appositamente ai fini di questa esercitazione. Non sarà necessario modificare le funzionalità dei pacchetti dell'esercitazione, tuttavia, dopo avere aggiunto i pacchetti al progetto, potrebbe risultare utile aprirli in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] ed esaminarne i contenuti. In questo modo sarà possibile acquisire familiarità con i tipi di dipendenze dei pacchetti, ad esempio i file di log, e con le interessanti caratteristiche dei pacchetti.    

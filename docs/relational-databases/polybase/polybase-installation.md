@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775049"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -40,15 +41,16 @@ Per installare una versione di valutazione di SQL Server, visitare [SQL Server V
    
 - Polybase funziona correttamente se è abilitato il protocollo TCP/IP. TCP/IP è abilitato per impostazione predefinita in tutte le edizioni di SQL Server tranne le edizioni Developer e SQL Server Express. Perché PolyBase funzioni correttamente nelle edizioni Developer ed Express è necessario abilitare la connettività TCP/IP. Vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- MSVC++ 2012. 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > È possibile installare PolyBase in una sola istanza di SQL Server per computer.
-> 
-> [!IMPORTANT]
-> 
-> Per usare la funzionalità di distribuzione di calcolo su Hadoop, il cluster Hadoop di destinazione deve disporre dei componenti principali di HDFS, YARN e MapReduce con il server della cronologia processo abilitato. PolyBase invia la query di distribuzione tramite MapReduce e recupera lo stato dal server della cronologia processo. Senza uno dei due componenti la query ha esito negativo.
+
+
+>[!NOTE]
+>Per usare PolyBase, sono necessarie le autorizzazioni a livello di CONTROLLO SERVER o sysadmin per il database.
+
+>[!IMPORTANT]
+>Per usare la funzionalità di distribuzione di calcolo su Hadoop, il cluster Hadoop di destinazione deve disporre dei componenti principali di HDFS, YARN e MapReduce con il server della cronologia processo abilitato. PolyBase invia la query di distribuzione tramite MapReduce e recupera lo stato dal server della cronologia processo. Senza uno dei due componenti la query ha esito negativo.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Singolo nodo o gruppo di scalabilità orizzontale di PolyBase
 
@@ -74,11 +76,10 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
    ![Servizi PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servizi PolyBase")  
    
 4. Nella pagina Configurazione server configurare il **servizio motore PolyBase di SQL Server** e **SQL Server PolyBase Data Movement Service** per l'esecuzione con lo stesso account di dominio.  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >In un gruppo con scalabilità orizzontale di PolyBase, il motore PolyBase e il servizio di spostamento dati di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio. Vedere [Gruppi con scalabilità orizzontale di PolyBase](#enable).
-   
+
 5. Nella pagina Configurazione di PolyBase, selezionare una delle due opzioni. Per altre informazioni, vedere [Gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
    - Usare un'istanza di SQL Server come istanza abilitata di PolyBase autonoma.  
@@ -91,8 +92,7 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
    
 6. Nella pagina Configurazione di PolyBase, specificare un intervallo di porte che comprenda almeno sei porte. L'installazione di SQL Server alloca le prime sei porte disponibili dell'intervallo.  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
 
 

@@ -13,14 +13,18 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abe1a05a159c7cadb9407ae20cd696ccd9bb9c4c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5032c7f48bdafdab0430357c01698f5672b2f830
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277430"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727497"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Impostazione dell'attività Profiling dati
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Prima di poter esaminare un profilo dei dati di origine, configurare ed eseguire l'attività Profiling dati. È necessario creare questa attività all'interno di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'attività Profiling dati, utilizzare lo strumento Editor attività Profiling dati. Questo editor consente di selezionare la destinazione dell'output dei profili e i profili da calcolare. Dopo avere configurato l'attività, è necessario eseguire il pacchetto per calcolare i profili dati.  
   
 ## <a name="requirements-and-limitations"></a>Requisiti e limitazioni  

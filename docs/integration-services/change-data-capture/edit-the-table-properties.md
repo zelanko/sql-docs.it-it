@@ -13,14 +13,18 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f629b0f7905cce4547d76ddfe97adc7dedd17079
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278080"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728847"
 ---
 # <a name="edit-the-table-properties"></a>Modificare le proprietà delle tabelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilizzare questa finestra di dialogo per modificare colonne specifiche della tabella selezionata in cui vengono acquisite le modifiche. È anche possibile modificare le informazioni **Security Role** e **Capture Instance** .  
   
 ### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>Per modificare le colonne da includere nell'istanza di CDC  

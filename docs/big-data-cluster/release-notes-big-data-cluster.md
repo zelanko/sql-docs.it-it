@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993352"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014984"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster di big data in SQL Server
 
@@ -37,6 +37,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 | Miglioramenti di archiviazione | Supporto per configurazioni di archiviazione diversi per i log e dati. Inoltre, è stato ridotto il numero di attestazioni di volume permanente per un cluster di big data. |
 | Più istanze del pool di calcolo | Supporto per più istanze di calcolo del pool. |
 | Funzionalità e il nuovo comportamento di pool | Il pool di calcolo viene ora usato per impostazione predefinita per le operazioni di pool di dati e i pool di archiviazione in un **ROUND_ROBIN** sola distribuzione. Il pool di dati ora può usare un nuovo nuove **REPLICATO** tipo di distribuzione, il che significa che gli stessi dati sono presenti in tutte le istanze di pool di dati. |
+| Miglioramenti alle tabelle esterne | Consente di digitare le tabelle esterne dell'origine dati HADOOP ora supporta la lettura di righe fino a 1 MB di dimensioni. Le tabelle esterne (ODBC, pool di archiviazione, pool di dati) ora il supporto delle righe larghe come una tabella di SQL Server. |
 
 ### <a name="known-issues"></a>Problemi noti
 

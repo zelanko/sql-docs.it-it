@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9687226caec47161fb42038994be279a89becc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659579"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090230"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Procedura: Modifica di una tabella esistente tramite query
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Procedura: Modificare una tabella esistente tramite query
 È possibile modificare la definizione di una tabella o dei relativi dati scrivendo una query Transact\-SQL. Per visualizzare o immettere dati in una tabella in modo visivo, usare l'editor dei dati come descritto in [Sviluppo del database connesso](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  

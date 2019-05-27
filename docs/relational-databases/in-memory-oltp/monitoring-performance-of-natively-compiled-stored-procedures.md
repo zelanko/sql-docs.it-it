@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711512"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106228"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Questo articolo illustra come monitorare le prestazioni di stored procedure compilate in modo nativo e di altri moduli T-SQL compilati in modo nativo.  
   
@@ -29,7 +30,9 @@ ms.locfileid: "52711512"
  È possibile usare**line_number**con **object_id** nell'evento esteso per esaminare la query. È possibile utilizzare la query seguente per recuperare la definizione della routine. Il numero di riga può essere utilizzato per identificare la query all'interno della definizione:  
   
 ```sql  
-select [definition] from sys.sql_modules where object_id=object_id  
+SELECT [definition]
+    from sys.sql_modules
+    where object_id=object_id;
 ```  
   
   
@@ -38,7 +41,7 @@ select [definition] from sys.sql_modules where object_id=object_id
 
 Le statistiche di esecuzione si riflettono nelle viste di sistema [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) e [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), nonché in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
-### <a name="enabling-procedure-level-execution-statistics-collection"></a>Abilitazione della raccolta delle statistiche di esecuzione a livello di routine
+## <a name="procedure-level-execution-statistics"></a>Statistiche di esecuzione a livello di routine
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di routine tramite [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di routine per tutti i moduli T-SQL compilati in modo nativo nell'istanza corrente:
 ```sql
@@ -47,10 +50,12 @@ EXEC sys.sp_xtp_control_proc_exec_stats 1
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di routine tramite l'opzione di [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di routine per tutti i moduli T-SQL compilati in modo nativo nel database corrente:
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
-### <a name="enabling-query-level-execution-statistics-collection"></a>Abilitazione della raccolta delle statistiche di esecuzione a livello di query
+## <a name="query-level-execution-statistics"></a>Statistiche di esecuzione a livello di query
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di query tramite [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di query per tutti i moduli T-SQL compilati in modo nativo nell'istanza corrente:
 ```sql
@@ -59,7 +64,9 @@ EXEC sys.sp_xtp_control_query_exec_stats 1
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di istruzione tramite l'opzione di [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di query per tutti i moduli T-SQL compilati in modo nativo nel database corrente:
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="sample-queries"></a>Query di esempio
@@ -68,49 +75,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
  
   
  La query seguente restituisce i nomi delle routine e le statistiche di esecuzione per le stored procedure compilate in modo nativo nel database corrente, dopo la raccolta delle statistiche:  
-  
-```sql  
-select object_id,  
-       object_name(object_id) as 'object name',  
-       cached_time,  
-       last_execution_time,  
-       execution_count,  
-       total_worker_time,  
-       last_worker_time,  
-       min_worker_time,  
-       max_worker_time,  
-       total_elapsed_time,  
-       last_elapsed_time,  
-       min_elapsed_time,  
-       max_elapsed_time   
-from sys.dm_exec_procedure_stats  
-where database_id=db_id() and object_id in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by total_worker_time desc  
-```  
-  
- La query seguente restituisce il testo della query nonché le statistiche di esecuzione per tutte le query nelle stored procedure compilate in modo nativo nel database corrente per il quale sono state raccolte le statistiche, ordinate in base al tempo del processo, in ordine decrescente.  
-  
-```sql  
-select st.objectid,   
-       object_name(st.objectid) as 'object name',   
-       SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
-       qs.creation_time,  
-       qs.last_execution_time,  
-       qs.execution_count,  
-       qs.total_worker_time,  
-       qs.last_worker_time,  
-       qs.min_worker_time,  
-       qs.max_worker_time,  
-       qs.total_elapsed_time,  
-       qs.last_elapsed_time,  
-       qs.min_elapsed_time,  
-       qs.max_elapsed_time  
-from sys.dm_exec_query_stats qs cross apply sys.dm_exec_sql_text(sql_handle) st  
-where  st.dbid=db_id() and st.objectid in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by qs.total_worker_time desc  
-```  
+
+```sql
+SELECT
+        object_id,
+        object_name(object_id) as 'object name',
+        cached_time,
+        last_execution_time,  execution_count,
+        total_worker_time,    last_worker_time,
+        min_worker_time,      max_worker_time,
+        total_elapsed_time,   last_elapsed_time,
+        min_elapsed_time,     max_elapsed_time
+    from
+        sys.dm_exec_procedure_stats
+    where
+        database_id = db_id()
+        and
+        object_id in
+            (
+            SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    order by
+        total_worker_time desc;
+```
+
+La query seguente restituisce il testo della query nonché le statistiche di esecuzione per tutte le query nelle stored procedure compilate in modo nativo nel database corrente per il quale sono state raccolte le statistiche, ordinate in base al tempo del processo, in ordine decrescente.  
+
+```sql
+SELECT
+        st.objectid,
+        object_name(st.objectid) as 'object name',
+        SUBSTRING()
+            st.text,
+            (qs.statement_start_offset/2) + 1,
+            ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1
+            ) as 'query text',
+        qs.creation_time,
+        qs.last_execution_time,   qs.execution_count,
+        qs.total_worker_time,     qs.last_worker_time,
+        qs.min_worker_time,       qs.max_worker_time,
+        qs.total_elapsed_time,    qs.last_elapsed_time,
+        qs.min_elapsed_time,      qs.max_elapsed_time
+    FROM
+                    sys.dm_exec_query_stats qs
+        cross apply sys.dm_exec_sql_text(sql_handle) st
+    WHERE
+        st.dbid = db_id()
+        and
+        st.objectid in
+            (SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    ORDER BY
+        qs.total_worker_time desc;
+```
 
 ## <a name="query-execution-plans"></a>Piani di esecuzione di query
 

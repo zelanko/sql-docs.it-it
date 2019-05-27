@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530789"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098073"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Procedura: Creazione di uno snapshot di un progetto
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Procedura: Creare uno snapshot di un progetto
 Un file di **applicazione livello dati** fornisce una rappresentazione di sola lettura dello schema del database al momento della creazione. È considerato essenzialmente uno schema del database da cui è possibile importare nuovamente gli oggetti dello schema in un progetto. Inoltre, è possibile confrontarlo con lo schema di un database o di un progetto e aggiornare il database o il progetto affinché rifletta lo schema definito nello snapshot.  
   
 In caso di errore da parte di un utente in un progetto di database di origine, è possibile ripristinare lo stato in cui si trovava il progetto di origine al momento della creazione dello snapshot. Inoltre, è possibile creare snapshot in varie fasi dello sviluppo per una base di riferimento.  

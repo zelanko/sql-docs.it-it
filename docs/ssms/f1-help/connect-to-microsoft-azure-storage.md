@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523566"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102710"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Connetti ad Archiviazione di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Specificare le informazioni seguenti sull'account di Microsoft Azure e fare clic
    >
    >  Il valore per una delle intestazioni HTTP non è nel formato corretto. (Microsoft.SqlServer.StorageClient).
    >
-   >  Il server remoto ha restituito un errore: richiesta non valida (400). (Sistema)
+   >  Errore del server remoto: (400) Richiesta errata. (Sistema)
 
 2.  **Chiave account** - specificare la chiave account per l'account di archiviazione specificato.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717418"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013365"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Esecuzione del caricamento bulk di dati XML (SQLXML 4.0)
   Il caricamento bulk XML è un oggetto COM autonomo che consente di caricare dati XML semistrutturati nelle tabelle Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

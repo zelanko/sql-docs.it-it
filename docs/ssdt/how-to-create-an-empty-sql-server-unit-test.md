@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681239"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098034"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedura: Creare uno unit test di SQL Server vuoto
 Includere unit test nel progetto di database per verificare che le modifiche apportate agli oggetti di database non interrompano la funzionalità esistente. Le procedure seguenti illustrano come creare unit test di SQL Server per qualsiasi oggetto di database. SQL Server Data Tools include alcune funzionalità di supporto aggiuntive per trigger, stored procedure e funzioni di database. Per altre informazioni, vedere [Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -96,7 +96,7 @@ Dopo aver configurato il progetto di test e aver creato il database, procedere c
 -   Aggiungere condizioni di test o un'altra istruzione di asserzione per verificare i risultati dello script.  
   
 > [!NOTE]  
-> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: Aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedura: Eseguire unit test di SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  

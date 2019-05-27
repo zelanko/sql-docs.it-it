@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631939"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011328"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
   In questo argomento viene illustrato come ottenere i valori richiesti prima di poter aggiungere una proprietà a un elenco delle proprietà di ricerca e abilitarlo per la ricerca full-text. In questi valori sono inclusi il GUID del set di proprietà e l'identificatore di tipo integer di una proprietà del documento.  
@@ -41,8 +41,8 @@ ms.locfileid: "62631939"
 |Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Descrizione|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autori|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autore o autori di un elemento specificato.|  
-|Tag|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Set di parole chiave (note anche come tag) assegnate all'elemento.|  
-|Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo di file percepito in base al relativo tipo canonico.|  
+|`Tags`|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Set di parole chiave (note anche come tag) assegnate all'elemento.|  
+|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo di file percepito in base al relativo tipo canonico.|  
 |Titolo|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titolo dell'elemento. Ad esempio, il titolo di un documento, l'oggetto di un messaggio, la didascalia di una foto o il nome di un brano musicale.|  
   
  Per favorire la coerenza fra formati di file, Microsoft ha identificato subset di proprietà del documento ad alta priorità e di utilizzo frequente per diverse categorie di documenti, quali comunicazioni, contatti, documenti, file musicali, immagini e video. Per altre informazioni sulle principali proprietà classificate per ogni categoria, vedere la pagina [System-Defined Properties for Custom File Formats](https://go.microsoft.com/fwlink/?LinkId=144336) (Proprietà definite dal sistema per formati di file personalizzati) nella documentazione di Windows Search.  

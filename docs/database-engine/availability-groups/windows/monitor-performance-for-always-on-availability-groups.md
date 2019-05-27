@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872321"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104915"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le prestazioni di Gruppi di disponibilità Always On sono un aspetto importante per garantire il contratto di servizio per i database cruciali. Conoscere come i gruppi di disponibilità inviano i log alle repliche secondarie può aiutare a stimare l'obiettivo del tempo di ripristino (RTO, recovery time objective) e l'obiettivo del punto di ripristino (RPO, recovery point objective) dell'implementazione della disponibilità e identificare i colli di bottiglia in gruppi o repliche di disponibilità le cui prestazioni risultano scarse. In questo articolo viene descritto il processo di sincronizzazione, viene illustrato come calcolare alcune delle metriche chiave e vengono specificati i collegamenti ad alcuni scenari comuni per la risoluzione dei problemi relativi alle prestazioni.  
-  
- Vengono trattati gli argomenti seguenti:  
-  
--   [Processo di sincronizzazione dei dati](#data-synchronization-process)  
-  
--   [Controlli di flusso](#flow-control-gates)  
-  
--   [Stima del tempo di failover (RTO)](#estimating-failover-time-rto)  
-  
--   [Stima della possibile perdita dei dati (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [Monitoraggio di RTO e RPO](#monitoring-for-rto-and-rpo)  
-  
--   [Scenari di risoluzione dei problemi relativi alle prestazioni](#BKMK_SCENARIOS)  
-  
--   [Eventi estesi utili](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>Processo di sincronizzazione dei dati  
  Per stimare il tempo di sincronizzazione completa e identificare il collo di bottiglia, è necessario conoscere il processo di sincronizzazione. Un collo di bottiglia delle prestazioni può verificarsi in punto qualsiasi del processo. Se si individua il punto del collo di bottiglia è possibile analizzare in modo approfondito i problemi sottostanti. La figura e la tabella seguenti illustrano il processo di sincronizzazione dei dati:  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872321"
 |**Sequence**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
 |1|Generazione log|I dati del log vengono scaricati su disco. Il log deve essere replicato nelle repliche secondarie. I record del log immettono la coda di invii.|[SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Acquisizione|I log di ogni database vengono acquisiti e inviati alla coda del partner corrispondente (uno per ogni coppia di replica/database). Il processo di acquisizione viene eseguito in modo continuo purché la replica di disponibilità sia connessa e lo spostamento dei dati non sia per qualche motivo sospeso. La coppia replica/database avrò lo stato Sincronizzazione in corso o Sincronizzato. Se il processo di acquisizione non esegue l'analisi e accoda i messaggi a una velocità sufficiente, si crea la coda di invii del log.|[SQL Server: Replica di disponibilità> Byte inviati alla replica/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vale a dire un'aggregazione della somma di tutti i messaggi di database accodati per tale replica di disponibilità.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) nella replica primaria.|  
-|3|Send|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Replica di disponibilità > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms) (Tempo acknowledgement messaggio)|  
+|3|Invio|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Ricezione e memorizzazione nella cache|Ogni replica secondaria riceve il messaggio e lo memorizza nella cache.|Contatore delle prestazioni [SQL Server:Replica di disponibilità > Byte log ricevuti/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Finalizzazione|Il log viene scaricato nella replica secondaria per la finalizzazione. Dopo aver scaricato il log, alla replica primaria viene inviato un acknowledgement.<br /><br /> Finalizzando il log, si evita la perdita dei dati.|Contatore delle prestazioni [SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo di attesa [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Ripristinare|Ripristinare le pagine scaricate nella replica secondaria. Le pagine vengono mantenute nella coda di rollforward in attesa del rollforward.|[SQL Server:Replica di database > Byte di cui è stato eseguito il rollforward/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo di attesa [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

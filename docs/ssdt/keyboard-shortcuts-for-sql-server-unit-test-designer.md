@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6d6621f14b8294e93110311ca5ea210652bb868
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 757eebf28764c3332b54143424d525a0f2de9ae8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659581"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088910"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>Tasti di scelta rapida per la finestra di progettazione unit test di SQL Server
 È possibile usare i tasti di scelta rapida seguenti per spostarsi all'interno della finestra di progettazione unit test di SQL Server.  

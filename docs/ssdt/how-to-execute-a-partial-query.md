@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1c10ec2282e5e7870ec05de356b0d2f1461e95f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677315"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090170"
 ---
-# <a name="how-to-execute-a-partial-query"></a>Procedura: Esecuzione di una query parziale
+# <a name="how-to-execute-a-partial-query"></a>Procedura: Eseguire una query parziale
 L'Editor Transact\-SQL consente di evidenziare un segmento specifico dello script ed eseguirlo come una singola query. In questo modo è più semplice eseguire il debug di sezioni di query complesse.  
   
 > [!WARNING]  

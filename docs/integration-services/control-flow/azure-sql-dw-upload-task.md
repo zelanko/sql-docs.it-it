@@ -14,14 +14,18 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710619"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727927"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 L'**'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
 L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Modelli e strategie di caricamento di Azure SQL Data Warehouse).
@@ -36,8 +40,8 @@ Nella pagina **Generale** configurare le proprietà seguenti.
 
 **SourceType** specifica il tipo di archivio dati di origine. Selezionare uno dei tipi seguenti:
 
-* **FileSystem:** i dati di origine si trovano nel file system locale.
-* **BlobStorage:** i dati di origine si trovano in Archiviazione BLOB di Azure.
+* **FileSystem:** i dati di origine risiedono nel file system locale.
+* **BlobStorage:** i dati di origine risiedono in Archiviazione BLOB di Azure.
 
 Di seguito sono elencate le proprietà per ogni tipo di origine.
 

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188402"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108160"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Pagina Nuova assegnazione di ruolo: Modifica assegnazione ruolo (gestione Report)
   La pagina Nuova assegnazione ruolo o Modifica assegnazione ruolo consente di concedere le autorizzazioni per operazioni ed elementi del server di report. Per ogni utente che deve accedere a un server di report è necessario definire almeno un'assegnazione di ruolo per definire il livello di accesso. È possibile creare assegnazioni di ruolo nel nodo radice o in uno specifico report, modello, cartella, risorsa o origine dati condivisa. Il sistema di sicurezza di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] si basa su assegnazioni di ruolo che vengono applicate agli elementi. Tramite un'assegnazione di ruolo, un gruppo o un utente viene assegnato a una definizione di ruolo e ogni definizione di ruolo identifica le attività che i gruppi o gli utenti sono autorizzati a eseguire in relazione a un elemento specifico.  
   
- Le assegnazioni di ruolo a livello di elemento possono avere effetti estesi. Sebbene possano essere associate a un singolo report o a una singola cartella, è inoltre possibile definire le assegnazioni a un livello alto della gerarchia di cartelle in modo che vengano ereditate dalle cartelle e dagli elementi ai livelli inferiori dell'albero. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md).  
+ Le assegnazioni di ruolo a livello di elemento possono avere effetti estesi. Sebbene possano essere associate a un singolo report o a una singola cartella, è inoltre possibile definire le assegnazioni a un livello alto della gerarchia di cartelle in modo che vengano ereditate dalle cartelle e dagli elementi ai livelli inferiori dell'albero. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
   
 ## <a name="navigation"></a>Navigazione  
  Utilizzare la procedura riportata di seguito per navigare fino a questo percorso nell'interfaccia utente.  

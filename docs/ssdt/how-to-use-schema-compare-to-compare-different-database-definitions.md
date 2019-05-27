@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668549"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095938"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedura: Utilizzo del confronto schema per confrontare definizioni di database diverse
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedura: Usare il confronto schema per confrontare definizioni di database diverse
 In SQL Server Data Tools (SSDT) è inclusa un'utilità Confronto schema che è possibile usare per confrontare due definizioni di database.  L'origine e la destinazione del confronto possono essere qualsiasi combinazione di un database connesso, un progetto di database di SQL Server, uno snapshot o un file con estensione dacpac.  I risultati del confronto vengono visualizzati come un set di azioni da intraprendere sulla destinazione per renderla uguale all'origine.  Una volta completato il confronto, è possibile aggiornare direttamente la destinazione (se la destinazione è un progetto o un database) oppure generare uno script di aggiornamento che produce gli stessi effetti.  
   
 Le differenze tra l'origine e la destinazione sono visualizzate in una griglia per facilitarne la revisione.  È possibile esaminare e rivedere tutte le differenze nella griglia dei risultati o sotto forma di script.  È possibile quindi escludere in maniera selettiva specifiche differenze.  

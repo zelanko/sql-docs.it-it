@@ -2,27 +2,26 @@
 title: Glossario (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3f4f8a9e97890f398c61210b6f00829b6add20c1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296476"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580724"
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
-  
   
 |Nome|Definizione|  
 |----------|----------------|  
 |.NET Framework|Componente integrante di Windows che supporta la compilazione, la distribuzione e l'esecuzione di applicazioni e servizi Web di nuova generazione. Rende disponibile un ambiente per più linguaggi basato su standard e altamente produttivo per l'integrazione di investimenti esistenti con applicazioni e servizi di nuova generazione ed è caratterizzato dalla flessibilità necessaria per affrontare le sfide connesse alla distribuzione e all'esecuzione di applicazioni di tipo Internet. .NET Framework è costituito da tre parti principali, ovvero Common Language Runtime, un set gerarchico di librerie di classi unificate e una versione di ASP basata su componenti denominata ASP.NET. Vedere anche: ASP.NET, Common Language Runtime, libreria di classi .NET Framework.|  
 |ActiveX Data Objects (ADO)|Oggetti COM che forniscono l'accesso alle origini dati. Tale API fornisce un livello tra OLE DB e linguaggi di programmazione diversi, ad esempio Visual Basic, Visual Basic, Applications Edition, pagine ASP e Visual Basic Scripting di Microsoft Internet Explorer.|  
-|report ad hoc|Report con estensione rdl creato in Generatore report 1.0 che accede a modelli di report.|  
+|report ad hoc|  
 |area di controllo|Area di controllo o di stato collegata al bordo di un riquadro o di una finestra, ad esempio una barra degli strumenti o un righello.|  
 |aggregazione|Valore di riepilogo che comprende più valori singoli.|  
 |funzione di aggregazione|Funzione che esegue un calcolo su più valori e restituisce un singolo valore di riepilogo.|  
@@ -60,7 +59,6 @@ ms.locfileid: "56296476"
 |area dati grafico|Elemento del report in un layout di report in cui i dati vengono visualizzati in formato grafico.|  
 |child|Membro del successivo livello inferiore in una gerarchia, direttamente correlato al membro corrente.|  
 |clausola|In Transact-SQL, sottounità di un'istruzione SQL. Una clausola inizia con una parola chiave.|  
-|report click-through|Report che visualizza dati dei modelli di report correlati quando si fa clic sui dati all'interno di un report di Generatore report visualizzabile.|  
 |applicazione client|Applicazione che recupera dati da un server ed esegue l'analisi e la presentazione a livello locale dei dati di database relazionali o multidimensionali.|  
 |cursore client|Cursore implementato nel client. L'intero set di risultati viene dapprima trasferito al client. Il software dell'API client implementa quindi la funzionalità del cursore in base al set di risultati memorizzato nella cache.|  
 |CLR|Vedere: Common Language Runtime|  
@@ -93,7 +91,7 @@ ms.locfileid: "56296476"
 |estensione per l'elaborazione dati|Componente di Reporting Services che viene utilizzato per recuperare i dati del report da un'origine dati esterna.|  
 |provider di dati|Livello di software che gestisce la comunicazione tra estensioni per i dati e software personalizzato specifico per ogni tipo di origine dati esterna. A seconda dell'origine dati specifica, Microsoft e altri fornitori di terze parti offrono più provider di dati.|  
 |area dati|Elemento del report che consente di visualizzare righe ripetute di dati in una tabella, una matrice o un grafico da un set di dati sottostante.|  
-|origine dati|1. In ADO e OLE DB, posizione di un'origine di dati esposti da un provider OLE DB. 2. Origine dati di un oggetto, ad esempio un cubo o una dimensione. Si riferisce inoltre alla specifica delle informazioni necessarie per accedere ai dati di origine. A volte fa riferimento a un oggetto con ClassType clsDataSource. <br />3. In Reporting Services, tipo di origine dati, stringa di connessione e credenziali specificate che possono essere salvate separatamente in un server di report e condivise tra progetti o incorporate in un file di definizione del report (con estensione rdl).|  
+|origine dati|1. In ADO e OLE DB, posizione di un'origine di dati esposti da un provider OLE DB. 2. Origine dati di un oggetto, ad esempio un cubo o una dimensione. Si riferisce inoltre alla specifica delle informazioni necessarie per accedere ai dati di origine. A volte fa riferimento a un oggetto con ClassType clsDataSource. <br />3. In Reporting Services, tipo di origine dati, stringa di connessione e credenziali specificate che possono essere salvate separatamente in un server di report e condivise tra progetti report o incorporate in un file di definizione del report (con estensione rdl).|  
 |nome origine dati|In un report, nome dell'oggetto origine dati.|  
 |Tipo di dati|Attributo che specifica il tipo di informazioni che può essere archiviato in una colonna, un parametro o una variabile.|  
 |data warehouse|Database appositamente strutturato per l'esecuzione di query e analisi.|  
@@ -110,19 +108,19 @@ ms.locfileid: "56296476"
 |script del database|Raccolta di istruzioni utilizzate per la creazione degli oggetti di database.|  
 |immagine con associazione a dati|Immagine che esiste in un database, ad esempio un campo di un database contenente immagini.|  
 |sottoscrizione guidata dai dati|Sottoscrizione disponibile in Reporting Services che prevede l'utilizzo di una query per recuperare i dati della sottoscrizione da un'origine dati esterna durante la fase di esecuzione.|  
-|set di dati|1. In OLE DB per OLAP, set di dati multidimensionali risultanti dall'esecuzione di un'istruzione MDX SELECT.   <br />2. In Reporting Services, specificazione denominata che include una definizione delle origini dati, una definizione delle query e i valori dei parametri facoltativi, i campi calcolati, nonché informazioni sul filtro e sulle regole di confronto come parte di un file di definizione del report (estensione rdl). Un file con estensione rdl può includere più set di dati.|  
+|set di dati|1. In OLE DB per OLAP, set di dati multidimensionali risultanti dall'esecuzione di un'istruzione MDX SELECT.   <br />2. In Reporting Services, specifica denominata che include una definizione delle origini dati, una definizione delle query e i valori dei parametri facoltativi, i campi calcolati, nonché informazioni su filtro e regole di confronto come parte di un file di definizione del report (con estensione rdl). Un file con estensione rdl può includere più set di dati.|  
 |DBCS|Double Byte Character Set|  
-|predefiniti|1. Valore di dati, impostazione di opzioni, regole di confronto o nome assegnato automaticamente dal sistema quando un utente non specifica il valore, l'impostazione, le regole di confronto o il nome. 2. Azione eseguita automaticamente quando si verificano eventi specifici se un utente non ha impostato l'azione da eseguire.|  
+|predefiniti|1. Valore di dati, impostazione di opzione, regole di confronto o nome assegnato automaticamente dal sistema quando un utente non specifica il valore, l'impostazione, le regole di confronto o il nome. 2. Azione eseguita automaticamente quando si verificano eventi specifici se un utente non ha impostato l'azione da eseguire.|  
 |database predefinito|Database al quale l'utente viene connesso subito dopo l'accesso a SQL Server.|  
 |istanza predefinita|Istanza di SQL Server che utilizza lo stesso nome del computer in cui è installata.|  
-|delimiter|1. In Transact-SQL, caratteri che indicano l'inizio e la fine del nome di un oggetto, ovvero le virgolette doppie ("") o le parentesi quadre ([]). 2. In Integration Services e Reporting Services, caratteri utilizzati per separare record, campi o stringhe.|  
+|delimiter|1. In Transact-SQL, caratteri che indicano l'inizio e la fine del nome di un oggetto, ovvero virgolette doppie ("") o parentesi quadre ([]). 2. In Integration Services e Reporting Services, caratteri utilizzati per separare record, campi o stringhe.|  
 |estensione per il recapito|Componente di Reporting Services utilizzato per distribuire un report in percorsi di destinazione o dispositivi specifici.|  
 |protocollo di recapito|Set di regole di comunicazione utilizzate per il routing dei messaggi di notifica a sistemi di recapito esterni.|  
 |elemento dipendente|In un server di report, elemento del catalogo di un report a cui altri elementi contengono un riferimento. Quando, ad esempio, una definizione di report contiene un riferimento a un'origine dati condivisa, l'origine dati è un elemento dipendente.|  
 |scala distanza|Tipo di legenda di mappa che consente di visualizzare unità di distanza per la risoluzione corrente dei dati della mappa.|  
 |distribuzione|In un livello mappa, algoritmo da utilizzare per dividere valori analitici in intervalli secondari. Gli intervalli possono essere calcolati per fornire intervalli equidistanti tra il valore di inizio e di fine (EqualInterval) o possono essere impostati su valori in modo che in ogni intervallo (EqualDistribution) sia presente un numero equivalente di elementi.|  
 |mappa documento|Riquadro di navigazione disponibile in un report e disposto in una gerarchia di collegamenti a sezioni e gruppi del report.|  
-|domain|1. Nel sistema di sicurezza di Windows, raccolta di computer raggruppati per la visualizzazione e l'amministrazione che condividono lo stesso database di sicurezza. 2. Nei database relazionali, set di valori validi consentiti in una colonna.|  
+|domain|1. Nel sistema di sicurezza di Windows, raccolta di computer raggruppati a scopo di visualizzazione e amministrazione che condividono lo stesso database di sicurezza. 2. Nei database relazionali, set di valori validi consentiti in una colonna.|  
 |drill-down/drill-up|Navigazione tra i livelli di dati dal livello meno dettagliato (superiore) a quello più dettagliato (inferiore).|  
 |drill-through|1. In Analysis Services, recupero dei dati dettagliati in base ai quali sono stati riepilogati i dati di una cella del cubo. 2. In Reporting Services, apertura dei report correlati tramite clic sui collegamenti ipertestuali disponibili nel report drill-through principale.|  
 |drill-down/drill-up|Tecnica di visualizzazione dei livelli di dati dal livello meno dettagliato (superiore) a quello più dettagliato (inferiore). Viene creato tramite l'aggiunta di elementi Toggle (segni più e meno) per visualizzare e nascondere livelli della gerarchia di una tabella o una matrice.|  
@@ -134,7 +132,7 @@ ms.locfileid: "56296476"
 |origini dati incorporate|Elemento XML che rappresenta una connessione dati e che è incluso in una singola definizione di report e viene da questa utilizzato.|  
 |set di dati incorporato|Set di dati di un report incluso in una singola definizione di report o in una singola definizione di parte del report.|  
 |crittografia|Metodologia che consente di mantenere riservati i dati sensibili convertendoli in un formato non leggibile.|  
-|entità|1. In Reporting Services, un'entità è una raccolta logica di elementi del modello, ad esempio campi di origine, ruoli, cartelle ed espressioni, presentati in una forma nota agli utenti. 2. In Master Data Services, oggetto all'interno di un modello. Ogni entità contiene membri correlati definiti da attributi.|  
+|entità|1. In Reporting Services, un'entità è una raccolta logica di elementi del modello, ad esempio campi di origine, ruoli, cartelle ed espressioni, presentati in termini aziendali noti. 2. In Master Data Services, oggetto all'interno di un modello. Ogni entità contiene membri correlati definiti da attributi.|  
 |enumerazione|Set fisso di valori interi o costanti di tipo stringa che possono essere utilizzati per specificare il valore di determinate proprietà.|  
 |proiezione equirettangolare|In un elemento del report mappa, proiezione cilindrica equidistante molto semplice in cui la coordinata orizzontale corrisponde alla longitudine e la coordinata verticale corrisponde alla latitudine.|  
 |log degli errori|1. In SQL Server, file di testo in cui vengono registrate le informazioni di sistema. 2. In Integration Services, record di errori, avvisi oppure eventi che può essere archiviato da più provider di log, ad esempio SQL Server Profiler, il registro eventi di Windows Event e SQL Server.|  
@@ -148,7 +146,7 @@ ms.locfileid: "56296476"
 |campo|1. Area di una finestra o di un record in cui viene archiviato un singolo valore di dati.  2. In Generatore report, i campi di un set di dati rappresentano dati numerici o non numerici di una connessione dati. Possono essere inclusi, ad esempio, importi di vendita, vendite totali, nomi dei clienti, identificatori di database, URL, immagini e dati spaziali. Un report può includere tre tipi di campi, ovvero i campi del set di dati, i campi calcolati del set di dati e i campi predefiniti.|  
 |filter|1. Set di criteri che controlla il set di record restituito come set di risultati.  2. Nella ricerca full-text, dopo aver specificato un'estensione di file, i filtri estraggono il testo da un file archiviato in una colonna di tipo varbinary(max) o image.|  
 |espressione di filtro|Espressione utilizzata per filtrare i dati nell'operatore Filter.|  
-|file flat|File costituito da record di un unico tipo, in cui non sono presenti informazioni sulla struttura incorporate che regolano le relazioni tra record.|  
+|file flat|File costituito da record di un unico tipo, in cui non sono incorporate informazioni sulla struttura che regolano le relazioni tra record.|  
 |chiave esterna|Colonna o combinazione di colonne i cui valori corrispondono alla chiave primaria (PK, primary key) o alla chiave univoca nella stessa tabella o in una tabella diversa. Definita anche chiave di riferimento.|  
 |tabella della chiave esterna|Tabella che contiene una chiave esterna.|  
 |function|Parte di codice utilizzata come singola unità logica. Una funzione viene chiamata per nome, accetta parametri di input facoltativi e restituisce uno stato e parametri di output facoltativi.|  
@@ -166,7 +164,7 @@ ms.locfileid: "56296476"
 |mappa termica|Tipo di presentazione di mappa in cui l'intensità di colore per ogni poligono corrisponde ai dati analitici correlati. I valori minori in un intervallo, ad esempio, vengono visualizzati in blu (freddo), mentre quelli maggiori vengono visualizzati in rosso (caldo).|  
 |gerarchia|Struttura logica ad albero che consente di organizzare i membri di una dimensione in modo tale che ogni membro sia associato a un membro padre e a nessuno o più membri figlio.|  
 |disponibilità elevata|Stato di una risorsa che rimane operativa e utilizzabile dai client la maggior parte del tempo con una percentuale di errori che interrompono il servizio molto bassa.|  
-|HTML|Vedere Hypertext Markup Language|  
+|HTML|Vedere: Hypertext Markup Language|  
 |Visualizzatore HTML|Interfaccia utente costituita da una barra degli strumenti del report e da altri elementi di navigazione che consentono di utilizzare un report.|  
 |Hypertext Markup Language|Linguaggio di markup di testo utilizzato per creare documenti per il Web. Il linguaggio HTML definisce la struttura e il layout di un documento Web utilizzando numerosi tag e attributi.|  
 |identificatore|Nome di un oggetto in un database.|  
@@ -177,12 +175,12 @@ ms.locfileid: "56296476"
 |istanza|1. Copia di SQL Server in esecuzione in un computer. 2. Copia specifica di un elemento del report, ad esempio una parte del report, un sottoreport, un membro dinamico o un gruppo.|  
 |integer|Categoria di tipi di dati numerici che include i tipi di dati bigint, int, smallint e tinyint.|  
 |Internet Protocol Security|Regole che vengono seguite dai computer per garantire comunicazioni private e protette su reti Internet Protocol (IP) tramite l'utilizzo di servizi di sicurezza basati su crittografia.|  
-|IPsec|Vedere Internet Protocol Security|  
+|IPsec|Vedere: Internet Protocol Security|  
 |ISO|Uno dei due organismi responsabili dello sviluppo di standard internazionali per le comunicazioni di dati. L'International Organization for Standardization (ISO) collabora con l'International Electrotechnical Commission (IEC) per la definizione di standard in ambiente di elaborazione. I due organismi hanno pubblicato insieme lo standard ISO/IEC SQL-92 per SQL.|  
 |assegnazione di ruolo a livello di elemento|Criteri di sicurezza che si applicano a un elemento nella cartella del server di report.|  
 |assegnazione di ruolo a livello di elemento|Modello di sicurezza che definisce un ruolo utilizzato per controllare l'accesso o l'interazione con un elemento nello spazio dei nomi della cartella del server di report.|  
 |indicatore di prestazioni chiave (KPI)|Metrica standardizzata quantificabile che riflette una variabile aziendale critica, ad esempio una quota di mercato, misurata nel tempo.|  
-|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio SELECT, FROM e AND.|  
+|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio, SELECT, FROM ed AND.|  
 |Indicatore KPI|Vedere: indicatore di prestazioni chiave (KPI)|  
 |campo etichette|Campo del set di dati di un report che identifica un'etichetta per un campo chiave corrispondente. I parametri e le aree dati possono visualizzare l'etichetta per un campo chiave anziché il valore.|  
 |latenza|Quantità di tempo che intercorre tra il completamento di una modifica dei dati in un server e il momento in cui tale modifica è visibile in un altro server.|  
@@ -193,7 +191,7 @@ ms.locfileid: "56296476"
 |livello linea|In un elemento di report mappa, livello in cui vengono visualizzati dati spaziali come linee, ad esempio, per percorsi o itinerari.|  
 |report collegato|Report che fa riferimento a una definizione di report esistente utilizzando un set diverso di valori di parametro o di proprietà. Un report collegato è un elemento del server di report che fornisce un punto di accesso a un report esistente. Tale elemento è concettualmente simile al collegamento a un programma utilizzato per l'esecuzione di un programma o per l'apertura di un file.|  
 |area dati elenco|Area dati in un layout report ripetuta con ogni gruppo o riga nel set di dati del report. È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati,|  
-|server locale|1. Nelle connessioni di SQL Server, istanza di SQL Server in esecuzione nello stesso computer dell'applicazione. <br />2. In un'istruzione Transact-SQL, durante la risoluzione dei riferimenti agli oggetti di database, istanza di SQL Server che esegue l'istruzione. <br />3. Nelle query distribuite di SQL Server, istanza di SQL Server che esegue la query distribuita. Il server locale accede quindi a qualsiasi server collegato cui viene fatto riferimento nella query.|  
+|server locale|1. Nelle connessioni SQL Server, istanza di SQL Server in esecuzione nello stesso computer dell'applicazione. <br />2. In un'istruzione Transact-SQL, durante la risoluzione dei riferimenti agli oggetti di database, istanza di SQL Server che esegue l'istruzione. <br />3. Nelle query distribuite di SQL Server, istanza di SQL Server che esegue la query distribuita. Il server locale accede quindi a qualsiasi server collegato cui viene fatto riferimento nella query.|  
 |impostazioni locali|Attributo del sistema operativo Windows che definisce determinate funzionalità relative alla lingua.|  
 |identificatore delle impostazioni locali (LCID)|Numero univoco che identifica le impostazioni locali in ambiente Windows.|  
 |file di log|File o set di file che contiene i record delle modifiche apportate a un database.|  
@@ -204,13 +202,13 @@ ms.locfileid: "56296476"
 |relazione molti-a-uno|Relazione tra due tabelle in cui una riga di una tabella può essere associata a più righe dell'altra tabella.|  
 |mappa|Elemento di report che funge da contenitore per titoli, diversi tipi di legende e livelli mappa.|  
 |dati mappa|I dati mappa sono costituiti da poligoni, linee, punti e tessere mappa Bing.  I dati mappa possono essere incorporati in un report o importati da file di forma ESRI (con estensione shp), query di dati spaziali di SQL Server o un servizio Web che restituisce immagini come tessere mappa di Microsoft Bing.|  
-|viewport mappa|Area della mappa da visualizzare nell'elemento di report mappa. È possibile, ad esempio, incorporare tutti gli Stati Uniti in un report, ma, in questo caso, verrà visualizzata solo l'area degli stati a nordovest.|  
+|viewport mappa|Area della mappa da visualizzare nell'elemento di report mappa. È possibile, ad esempio, incorporare la mappa completa degli Stati Uniti in un report visualizzando però solo l'area degli stati nord-occidentali.|  
 |marker|Simbolo visualizzato in un livello punto mappa in corrispondenza della posizione di ogni punto.|  
 |database master|Database di sistema in cui vengono registrate tutte le informazioni a livello di sistema relative a un'istanza di SQL Server.|  
 |file master|File installato con le versioni precedente di SQL Server utilizzato per archiviare i database di sistema master, model e tempdb e i relativi log delle transazioni, nonché il database di esempio pubs e il relativo log delle transazioni.|  
 |campi delle corrispondenze|Set di campi utilizzati per compilare una relazione tra dati analitici e dati spaziali.|  
 |area dati matrice|Area dati in un layout report che fornisce funzionalità simili a schede incrociate e report di tabella pivot. In fase di esecuzione, quando si combinano i dati del report e le aree dati, la matrice si espande orizzontalmente e verticalmente nella pagina. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella.|  
-|MDX|Vedere Espressioni MDX (MDX)|  
+|MDX|Vedere: MDX (Multidimensional Expressions)|  
 |proiezione Mercator|In un elemento di report mappa, proiezione di mappa cilindrica ideata da Gerardus Mercator nel 1569.|  
 |metadati|Informazioni sulle proprietà dei dati, ad esempio il tipo di dati in una colonna (numerico, di testo e così via) o la lunghezza di una colonna; informazioni su un file, quali titolo, descrizione, data di creazione e data dell'ultima modifica; informazioni sulla struttura dei dati o informazioni che specificano la progettazione di oggetti quali cubi o dimensioni.|  
 |metodo|Funzione che esegue un'azione tramite l'utilizzo di un oggetto COM, come avviene in SQL-DMO, OLE DB e ADO (ActiveX Data Objects).|  
@@ -229,7 +227,7 @@ ms.locfileid: "56296476"
 |espressione numerica|Qualsiasi espressione che restituisce un numero.|  
 |oggetto|Uno dei componenti di un database, ad esempio una tabella, un indice o una stored procedure.|  
 |identificatore di oggetto|1. Nome univoco assegnato a un oggetto. 2. In Servizio metadati, identificatore univoco creato in base a un identificatore univoco globale (GUID) e un identificatore interno.|  
-|Origine dati ODBC|1. Posizione di un set di dati cui è possibile accedere tramite un driver ODBC. 2. Definizione archiviata che contiene tutte le informazioni di connessione necessarie a un'applicazione ODBC per stabilire una connessione all'origine dati.|  
+|Origine dati ODBC|1. Posizione di un set di dati accessibile usando un driver ODBC. 2. Definizione archiviata che contiene tutte le informazioni di connessione necessarie a un'applicazione ODBC per stabilire una connessione all'origine dati.|  
 |driver ODBC|Libreria di collegamento dinamico (DLL, Dynamic Link Library) che un'applicazione ODBC compatibile, ad esempio Excel, può utilizzare per accedere a un'origine dati ODBC.|  
 |OGC|Acronimo di Open Geospatial Consortium.|  
 |OLAP|Vedere: elaborazione analitica online|  
@@ -240,7 +238,7 @@ ms.locfileid: "56296476"
 |elaborazione analitica online|Tecnologia che utilizza le strutture multidimensionali per consentire un rapido accesso ai dati per l'esecuzione di analisi.|  
 |operatore|Segno o simbolo che specifica il tipo di calcolo da eseguire in un'espressione. Sono disponibili operatori matematici, di confronto, logici e di riferimento.|  
 |aggregazione esterna|Funzione di aggregazione che specifica come parametro di ambito un'altra funzione di aggregazione.|  
-|riempimento|1. Stringa aggiunta in genere quando l'ultimo blocco di testo normale è breve. 2. Spazio stabilito in una cella per creare o mantenere una dimensione specifica.|  
+|riempimento|1. Stringa in genere aggiunta quando l'ultimo blocco di testo non crittografato è breve. 2. Spazio stabilito in una cella per creare o mantenere una dimensione specifica.|  
 |pagina|In Generatore report, per pagina si intende la pagina cartacea fisica. Il formato carta specificato per il report controlla la modalità di rendering del report stesso.|  
 |tavolozza|Set di valori predefiniti o definiti dall'utente per i colori utilizzati in grafici, mappe e misuratori.|  
 |parametro|Raccolta globale predefinita in un report che consente agli utenti di impostare valori che possono modificare i dati e l'aspetto del report e connettere report correlati. I parametri del report vengono creati automaticamente da parametri di query e parametri di set di dati, e manualmente da autori del report.|  
@@ -248,7 +246,7 @@ ms.locfileid: "56296476"
 |filtro di riga con parametri|Filtro di riga disponibile con la replica di tipo merge che consente di limitare i dati replicati a un Sottoscrittore in base a una funzione di sistema oppure a una funzione definita dall'utente.|  
 |padre|Membro del successivo livello superiore in una gerarchia, direttamente correlato al membro corrente.|  
 |autorizzazione|Regola associata a un oggetto per definire gli utenti che possono ottenere l'accesso all'oggetto e per specificare la modalità di accesso.|  
-|trasformare tramite Pivot|1. Rotazione per l'inversione di righe e colonne in una visualizzatore di dati a campi incrociati. 2. Selezione delle dimensioni da un set di dimensioni disponibili in una struttura multidimensionale di dati per la visualizzazione nelle righe e colonne di una struttura a campi incrociati.|  
+|trasformare tramite Pivot|1. Rotazione per l'inversione di righe e colonne in un visualizzatore di dati a campi incrociati. 2. Selezione delle dimensioni da un set di dimensioni disponibili in una struttura multidimensionale di dati per la visualizzazione nelle righe e colonne di una struttura a campi incrociati.|  
 |segnaposto|Carattere o simbolo utilizzato al posto di un valore, di un testo o di un oggetto effettivo. Il valore effettivo rappresentato dal segnaposto è sconosciuto o non disponibile al momento corrente oppure non viene visualizzato per motivi di sicurezza. Quando in una casella di testo viene definita un'espressione semplice o complessa, la rappresentazione risultante dell'espressione nella visualizzazione della struttura è denominata segnaposto.|  
 |dati planari|Dati che specificano punti, linee o aree su una superficie geometrica piana.|  
 |livello poligono|In un elemento di report mappa, livello in cui vengono visualizzati dati spaziali come aree, ad esempio aree geografiche come le regioni.|  
@@ -261,14 +259,14 @@ ms.locfileid: "56296476"
 |protocol|Set standard di formati e procedure che consentono lo scambio di informazioni tra computer.|  
 |provider|1. Provider OLE DB. 2. Libreria di collegamento dinamico (DLL, Dynamic Link Library) in-process che consente di accedere a un database.|  
 |parametri di query|Parametri specificati in una query del set di dati, ad esempio una query Transact-SQL.|  
-|RDL|Vedere Report Definition Language|  
+|RDL|Vedere: Report Definition Language|  
 |record|Gruppo di campi di informazioni correlati (colonne) trattati come unità. Un record viene in genere definito riga in un database relazionale.|  
 |rettangolo|Elemento del report che può essere utilizzato come contenitore per più elementi del report o come elemento grafico in un report.|  
 |gerarchia ricorsiva|1. Gerarchia di dati da un singolo set di dati di un report che include più livelli gerarchici in una struttura gerarchia, ad esempio il report per definire la struttura di relazioni tra responsabili e dipendenti in una gerarchia organizzativa. 2. In Master Data Services, gerarchia derivata che include una relazione ricorsiva. Una relazione ricorsiva si verifica quando un'entità include un attributo basato su dominio che si fonda sull'entità stessa.|  
 |database relazionale|Database o sistema di gestione di database che archivia informazioni in tabelle come righe e colonne di dati ed esegue ricerche utilizzando i dati in colonne specifiche di una tabella per individuare dati aggiuntivi in un'altra tabella.|  
 |sistema di gestione di database relazionali|Sistema che organizza i dati in righe e colonne correlate.|  
 |OLAP relazionale|Modalità di archiviazione che utilizza le tabelle di un database relazionale per l'archiviazione di strutture multidimensionali.|  
-|relazione|1. Collegamento tra tabelle che mette in relazione la chiave primaria di una tabella con una chiave esterna di un'altra tabella. Nel diagramma di un database la relazione viene rappresentata da una linea continua se tra le tabelle viene applicata l'integrità referenziale oppure da una linea tratteggiata se l'integrità referenziale non viene applicata per le transazioni INSERT e UPDATE. In corrispondenza delle estremità di una linea di relazione è visualizzato un simbolo di chiave primaria per rappresentare una relazione chiave primaria/chiave esterna oppure un simbolo di infinito per identificare il lato della chiave esterna di una relazione uno-a-molti. <br />2. In Servizio metadati, associazione tra una coppia di oggetti, dove un oggetto è l'origine e l'altro oggetto è la destinazione. L'associazione viene ripetuta per ogni successiva coppia di oggetti in modo tale che la destinazione di una relazione diventi l'origine della relazione successiva. In questo modo, tutti gli oggetti di un modello informativo vengono associati tramite una catena di relazioni che si estendono da un oggetto a quello successivo.|  
+|relazione|1. Collegamento tra tabelle che mette in relazione la chiave primaria di una tabella con una chiave esterna di un'altra tabella. Nel diagramma di un database la relazione viene rappresentata da una linea continua se tra le tabelle viene applicata l'integrità referenziale oppure da una linea tratteggiata se l'integrità referenziale non viene applicata per le transazioni INSERT e UPDATE. In corrispondenza delle estremità di una linea di relazione è visualizzato un simbolo di chiave primaria per rappresentare una relazione chiave primaria/chiave esterna oppure un simbolo di infinito per identificare il lato della chiave esterna di una relazione uno-a-molti. <br />2. In servizi metadati, associazione tra una coppia di oggetti, dove un oggetto è l'origine e l'altro oggetto è la destinazione. L'associazione viene ripetuta per ogni successiva coppia di oggetti in modo tale che la destinazione di una relazione diventi l'origine della relazione successiva. In questo modo, tutti gli oggetti di un modello informativo vengono associati tramite una catena di relazioni che si estendono da un oggetto a quello successivo.|  
 |report visualizzabile|Report elaborato che contiene sia i dati che le informazioni di layout, in un formato appropriato per la visualizzazione.|  
 |estensione per il rendering|Componente di Reporting Services utilizzato per l'elaborazione del formato di output di un report.|  
 |estensione/estensioni per il rendering|Plug-in che esegue il rendering di report in un formato specifico.|  
@@ -283,12 +281,10 @@ ms.locfileid: "56296476"
 |layout del report|Posizione di aree dati, elementi del report e testo all'interno di un report e formattazione applicata.|  
 |modello di layout di report|Modello di report tabella, matrice o grafico preimpostato in Generatore report.|  
 |collegamento al report|URL a un report con collegamento ipertestuale.|  
-|modello di report|Descrizione dei metadati di dati aziendali, utilizzata per creare report ad hoc in Generatore report.|  
 |parametro del report|Parametro definito all'interno della definizione di un report. Tutti i parametri di query includono parametri di report, ma questi ultimi possono essere creati indipendentemente da una query.|  
 |parti del report|Elementi del report pubblicati separatamente in un server di report e che possono essere riutilizzati in altri report. È possibile pubblicare elementi di report quali tabelle, matrici, grafici e immagini come parti di report. Le parti del report hanno estensione rsc e sono conformi allo schema componentdefinition.xsd.|  
 |estensione per l'elaborazione dei report|Componente di Reporting Services utilizzato per estendere la logica di elaborazione dei report.|  
 |rendering del report|Azione tramite cui il layout del report viene combinato con i dati dell'origine dati ai fini della visualizzazione del report.|  
-|server di report|Percorso di rete da cui viene avviata la versione ClickOnce di Generatore report e in cui viene salvato, gestito e pubblicato un report.|  
 |amministratore del server di report|Utente con privilegi elevati che può accedere a tutte le impostazioni e a tutto il contenuto di un server di report.|  
 |database del server di report|Database utilizzato come archivio interno per un server di report.|  
 |account di esecuzione server di report|Account con cui vengono eseguiti il servizio Web ReportServer e il servizio Windows ReportServer.|  
@@ -300,13 +296,13 @@ ms.locfileid: "56296476"
 |controlli ReportViewer|Controllo server Web e controllo Windows Form che assicurano funzionalità incorporate per l'elaborazione di report in applicazioni ASP.NET e Windows Form.|  
 |resource|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  
 |set di risultati|Set di righe restituite da un'istruzione SELECT.|  
-|ruolo|1. Utente o gruppo a cui viene concesso un set di autorizzazioni specifiche.  <br />2. In Analysis Services, un ruolo utilizza gli account di sicurezza di Windows per limitare l'ambito di accesso e le autorizzazioni per l'accesso a database, cubi, dimensioni e modelli di data mining.  <br />3. In una sessione di mirroring del database, il server principale e il server mirror eseguono ruoli principali e mirror complementari. Facoltativamente, il ruolo del server di controllo del mirroring viene eseguito da una terza istanza di server.|  
+|ruolo|1. Utente o gruppo a cui viene concesso un set di autorizzazioni specifiche.  <br />2. In Analysis Services, un ruolo usa gli account di sicurezza di Windows per limitare l'ambito di accesso e le autorizzazioni per l'accesso degli utenti a database, cubi, dimensioni e modelli di data mining.  <br />3. In una sessione di mirroring del database, il server principale e il server mirror eseguono ruoli principali e mirror complementari. Facoltativamente, il ruolo del server di controllo del mirroring viene eseguito da una terza istanza di server.|  
 |assegnazione di ruolo|Criteri di sicurezza che definiscono gli utenti e i gruppi autorizzati ad accedere a elementi specifici e a eseguire determinate operazioni.|  
 |definizione di ruolo|Raccolta denominata di attività che specifica le operazioni che possono essere eseguite da un utente in un server di report.|  
 |riga|In una tabella SQL, singola occorrenza dell'oggetto modellato dalla tabella.|  
 |funzione di aggregazione a livello di riga|Funzione che genera valori di riepilogo visualizzati come righe aggiuntive nei risultati della query.|  
 |filtro di riga|Filtro che limita le righe da includere in un set di dati.|  
-|identificatore di riga|1. Colonna o set di colonne utilizzate per distinguere ogni singola riga da tutte le altre della tabella. 2. In un heap, puntatore alla riga|  
+|identificatore di riga|1. Colonna o set di colonne usato per distinguere ogni singola riga da tutte le altre della tabella. 2. In un heap, puntatore alla riga|  
 |scalare|Campo a valore singolo, opposto a un'aggregazione.|  
 |aggregazione scalare|Funzione di aggregazione, ad esempio MIN(), MAX() o AVG(), che viene specificata nell'elenco di colonne dell'istruzione SELECT contenente solo funzioni di aggregazione.|  
 |schema|Nello standard SQL-92, raccolta di oggetti di database di proprietà di un singolo utente che formano un unico spazio dei nomi. Uno spazio dei nomi è un set di oggetti che non può avere nomi duplicati.|  
@@ -329,14 +325,14 @@ ms.locfileid: "56296476"
 |SKU|Modalità di identificazione di edizioni diverse dello stesso prodotto. Anche acronimo di Stock Keeping Unit (codice di riferimento del prodotto), terminologia aziendale standard.|  
 |sezione|Subset di dati di un cubo, specificato limitando una o più dimensioni in base ai membri della dimensione.|  
 |smart tag|Espone le configurazioni chiave direttamente nell'area di progettazione per garantire una maggiore produttività in fase di progettazione in Visual Studio 2005.|  
-|SMDL|Vedere SMDL|  
+|SMDL|Vedere: linguaggio SMDL|  
 |snapshot|Vedere: snapshot del report|  
 |ordinamento|Set di regole nelle regole di confronto che definiscono il modo in cui verranno valutati i caratteri nelle operazioni di confronto e la sequenza in cui verranno ordinati.|  
 |dati spaziali|Dati che specificano le posizioni degli oggetti su una superficie piana o curva. I dati spaziali possono essere punti, linee o poligoni.|  
 |tipi di dati spaziali|Specificano i dati che rappresentano informazioni geometriche (planari) o geografiche (geodetiche).|  
-|SQL|Vedere Structured Query Language (SQL)|  
+|SQL|Vedere: Structured Query Language (SQL)|  
 |query SQL|Istruzione SQL, ad esempio SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
-|autenticazione di SQL Server|Meccanismo per convalidare un tentativo di connessione a un'istanza di SQL Server specificando un ID e una password per l'accesso a SQL Server.|  
+|autenticazione di SQL Server|Meccanismo per convalidare un tentativo di connessione a un'istanza di SQL Server specificando un ID e una password di accesso di SQL Server.|  
 |accesso di SQL Server|Account archiviato in SQL Server che consente agli utenti di connettersi a SQL Server.|  
 |Istruzione SQL|Comando SQL o Transact-SQL, ad esempio SELECT o DELETE, che esegue un'azione sui dati.|  
 |stringa di connessione statica|Set di valori che il report utilizza sempre per stabilire la connessione alla stessa origine dati ogni volta che viene eseguito.|  
@@ -348,26 +344,25 @@ ms.locfileid: "56296476"
 |assegnazione di ruolo a livello di sistema|Assegnazione di ruolo che si applica al sito nel suo complesso.|  
 |definizione di ruolo a livello di sistema|Definizione di ruolo che fornisce autorità a livello di sito.|  
 |stored procedure di sistema|Set di stored procedure di SQL Server che possono essere utilizzate per eseguire azioni quali il recupero delle informazioni dal catalogo di sistema o l'esecuzione di attività amministrative.|  
-|table|1. Oggetto bidimensionale, composto da righe e colonne, utilizzato per archiviare i dati relativi a un'entità modellata in un database relazionale. 2. Area dati in un layout di report in cui i dati sono visualizzati in formato a colonne.|  
+|table|1. Oggetto bidimensionale, costituito da righe e colonne, usato per archiviare i dati relativi a un'entità modellata in un database relazionale. 2. Area dati in un layout di report in cui i dati sono visualizzati in formato a colonne.|  
 |area dati tabella|Elemento del report in un layout del report in cui i dati vengono visualizzati in formato a colonne.|  
 |Tablix|Area dati RDL di Reporting Services che contiene righe e colonne analoghe a una tabella oppure a una matrice e che possibilmente condivide le caratteristiche di entrambe.|  
-|attività|Raccolta di autorizzazioni che costituiscono un'attività (gestire report, cartelle e così via).|  
+|attività|Raccolta delle autorizzazioni che costituiscono un'attività (gestione di report, gestione di cartelle e così via).|  
 |Transact-SQL|Linguaggio che contiene i comandi utilizzati per amministrare le istanze di SQL Server, per creare e gestire tutti gli oggetti in un'istanza di SQL Server e per inserire, recuperare, modificare ed eliminare tutti i dati nelle tabelle di SQL Server. Transact-SQL è un'estensione del linguaggio definito negli standard SQL pubblicati da ISO (International Standards Organization) e ANSI (American National Standards Institute).|  
 |istanza utente|Istanza di SQL Server Express generata dall'istanza padre per conto di un utente.|  
 |asse dei valori (y)|Asse in cui vengono visualizzati valori di dati numerici in un grafico. Tale asse è in genere l'asse verticale. Eccezione: nei grafici a barre gli assi sono invertiti e l'asse y consente di visualizzare il raggruppamento di dati.|  
 |espressione valore|Espressione MDX (Multidimensional Expressions) che restituisce un valore. Le espressioni valore possono essere applicate a set, tuple, membri, livelli, numeri o stringhe.|  
-|variabile|1. In Integration Services archivia i valori che possono essere utilizzati in script, espressioni e espressioni di proprietà per impostare i valori di colonna e le proprietà degli oggetti di pacchetto. <br />2. Entità definite che costituiscono valori assegnati. Una variabile locale viene definita tramite un'istruzione DECLARE@localvariable e ad essa viene assegnato un valore iniziale all'interno del batch di istruzioni in cui è stata dichiarata tramite un'istruzione SELECT o SET@localvariable.|  
+|variabile|1. In Integration Services archivia i valori che possono essere usati in script, espressioni ed espressioni di proprietà per impostare i valori di colonna e le proprietà degli oggetti di pacchetto. <br />2. Entità definite che costituiscono valori assegnati. Una variabile locale viene definita tramite un'istruzione DECLARE@localvariable e ad essa viene assegnato un valore iniziale all'interno del batch di istruzioni in cui è stata dichiarata tramite un'istruzione SELECT o SET@localvariable.|  
 |intervallo variabile|Opzione in un grafico di Reporting Services che può essere specificata per calcolare automaticamente il numero ottimale di etichette che possono essere posizionate su un asse, in base alla larghezza o all'altezza del grafico.|  
 |visualizzazione|In mappe, grafici e misuratori, modo in cui un utente sceglie di visualizzare dati analitici.|  
 |Servizio Web|In Reporting Services, servizio che utilizza Simple Object Access Protocol (SOAP) tramite HTTP e opera come interfaccia per le comunicazioni tra i programmi client e il server di report.|  
 |Strumentazione gestione Windows (WMI)|Interfaccia che fornisce informazioni sugli oggetti in un ambiente gestito.|  
 |WKB|Rappresentazione di dati well-know binary, in base a quanto specificato dall'Open Geospatial Consortium (OGC).|  
 |WKT|Rappresentazione di dati well-know text, in base a quanto specificato dall'Open Geospatial Consortium (OGC).|  
-|WMI|Vedere Strumentazione gestione Windows (WMI)|  
+|WMI|Vedere: Strumentazione gestione Windows|  
 |asse x|Vedere: asse delle categorie (x)|  
 |asse y|Vedere: asse dei valori (y)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)

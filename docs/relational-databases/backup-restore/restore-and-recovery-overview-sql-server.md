@@ -1,7 +1,7 @@
 ---
 title: Panoramica del ripristino e del recupero (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242042"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461823"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242042"
 -   [Recovery Advisor: pagina di introduzione](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Recovery Advisor: Pagina relativa all'utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> Ripristino accelerato del database
+
+In SQL Server 2019 preview CTP 2.3 viene introdotto il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) per SQL Server locale. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database di SQL Server. Il [recupero del database](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) è il processo che SQL Server usa per avviare ogni database in uno stato coerente a livello di transazioni o in uno stato normale. Un database in cui è abilitato il ripristino accelerato del database completa l'operazione di ripristino in modo considerevolmente più veloce dopo un failover o una chiusura non normale. 
+
+È possibile abilitare il ripristino accelerato del database per ogni database in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 o versioni successive usando la sintassi seguente:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Questa sintassi non è necessaria per sfruttare i vantaggi di questa funzionalità nel database SQL di Azure in cui è la funzione è abilitata per impostazione predefinita.
+
+In caso di database critici con possibili transazioni di grandi dimensioni, provare a usare questa funzionalità durante l'anteprima. Inviare commenti al [team di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  Nessuna.  
   

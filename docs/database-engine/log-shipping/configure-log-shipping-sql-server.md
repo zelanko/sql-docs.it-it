@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703809"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105979"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47703809"
 > [!NOTE]  
 >  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e le versioni successive supportano la compressione dei backup. Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup per i backup del log. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47703809"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -70,7 +70,7 @@ ms.locfileid: "47703809"
   
 5.  Nella casella **Percorso di rete della cartella di backup** digitare il percorso di rete della condivisione creata per la cartella di backup dei log delle transazioni.  
   
-6.  Se la cartella di backup si trova nel server primario, digitare il percorso locale della cartella di backup nella casella **Se la cartella di backup si trova nel server primario, digitare il percorso locale della cartella** . Se la cartella di backup non si trova nel server primario, è possibile lasciare vuota la casella.  
+6.  Casella **Se la cartella di backup si trova nel server primario, digitare il percorso locale della cartella (ad esempio: c:\\backup)**. Se la cartella di backup non si trova nel server primario, è possibile lasciare vuota la casella.  
   
     > [!IMPORTANT]  
     >  Se l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server principale viene eseguito utilizzando l'account di sistema locale, è necessario creare la cartella di backup nel server primario e specificare il percorso locale della cartella.  
@@ -79,7 +79,7 @@ ms.locfileid: "47703809"
   
 8.  Si noti la pianificazione di backup presente nella casella **Pianificazione** in **Processo di backup**. Se si desidera personalizzare la pianificazione dell'installazione, fare clic su **Pianificazione** e quindi modificare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in base alle specifiche esigenze.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup del log scegliendo una delle opzioni seguenti: **Utilizza l'impostazione predefinita del server**, **Comprimi backup**o **Non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup per i backup del log scegliendo una delle opzioni seguenti: **Usa l'impostazione predefinita del server**, **Comprimi backup** o **Non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Fare clic su **OK**.  
   

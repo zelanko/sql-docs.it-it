@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658295"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713316"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658295"
   
 -   È possibile eseguire più rapidamente operazioni di manutenzione su una o più partizioni. Le operazioni risultano più efficienti perché vengono applicate solo a subset di dati e non all'intera tabella. È ad esempio possibile scegliere di comprimere i dati in una o più partizioni oppure ricompilare una o più partizioni di un indice.  
   
--   È possibile ottenere migliori prestazioni con le query in base alle tipologie eseguite con maggiore frequenza e alla configurazione hardware in uso. Ad esempio, Query Optimizer è in grado di elaborare query di tipo equijoin tra due o più tabelle partizionate in modo più rapido quando le colonne di partizionamento nelle tabelle corrispondono, in quanto è possibile unire in join le partizioni stesse.  
+-   È possibile ottenere migliori prestazioni con le query in base alle tipologie eseguite con maggiore frequenza e alla configurazione hardware in uso. Ad esempio, Query Optimizer può elaborare più velocemente le query di tipo equijoin tra due o più tabelle partizionate quando le colonne di partizionamento corrispondono alle colonne in cui le tabelle sono unite in join. Per altre informazioni, vedere [Query](#queries) più avanti.
   
 Quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'ordinamento dei dati per le operazioni di I/O, i dati vengono innanzitutto ordinati in base alla partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accede a un'unità per volta, il che può comportare una riduzione delle prestazioni. Per migliorare le prestazioni di ordinamento dei dati, eseguire lo striping dei file di dati delle partizioni tra più dischi configurando un sistema RAID. In questo modo, benché tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati vengano comunque ordinati in base alla partizione, è possibile accedere a tutte le unità di ogni partizione simultaneamente.  
   

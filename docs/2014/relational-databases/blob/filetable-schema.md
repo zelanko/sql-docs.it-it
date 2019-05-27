@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5c2c2993b4c6ee002c2be0f8bbae28abaa2d87c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920130"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010115"
 ---
 # <a name="filetable-schema"></a>Schema delle tabelle FileTable
   Viene descritto lo schema predefinito e fisso di una tabella FileTable.  
   
-|Nome dell'attributo di file|Tipo|Dimensione|Impostazione predefinita|Descrizione|Accessibilità al file system|  
+|Nome dell'attributo di file|type|Dimensione|Impostazione predefinita|Descrizione|Accessibilità al file system|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|variabile|Oggetto `hierarchyid` che identifica la posizione dell'elemento.|Posizione del nodo corrente nel FileNamespace gerarchico.<br /><br /> Chiave primaria per la tabella.|Può essere creato e modificato impostando i valori del percorso di Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Valore restituito dalla funzione `NEWID()`.|ID univoco per i dati FILESTREAM.|Non applicabile.|  

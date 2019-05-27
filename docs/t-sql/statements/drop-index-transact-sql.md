@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132451"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503463"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,7 @@ DROP INDEX [ IF EXISTS ]
     [ owner_name. ] table_or_view_name.index_name  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_clustered_index_option> ::=  
 {  
@@ -100,16 +97,13 @@ DROP INDEX
     index_name ON <object>  
   
 <object> ::=   
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] table_name  
+DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -256,7 +250,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 1.  Eliminare l'indice cluster.  
   
-2.  Modificare la tabella utilizzando un'opzione ALTER TABLE ... REBUILD... specificando l'opzione di compressione.  
+2.  Modificare la tabella usando un'opzione ALTER TABLE ... REBUILD... e specificando l'opzione di compressione.  
   
 Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli superiori degli indici cluster, pertanto l'operazione è piuttosto veloce. Quando un indice cluster viene eliminato ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricompila l'heap due volte, una volta per l'operazione descritta nel passaggio 1 e una volta per quella descritta nel passaggio 2. Per altre informazioni sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
@@ -270,7 +264,7 @@ Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli
   
  Per altre informazioni sugli indici spaziali, vedere [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire DROP INDEX è necessario disporre almeno dell'autorizzazione ALTER sulla tabella o sulla vista. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ## <a name="examples"></a>Esempi  
@@ -284,7 +278,7 @@ DROP INDEX IX_ProductVendor_BusinessEntityID
 GO  
 ```  
   
-### <a name="b-dropping-multiple-indexes"></a>b. Eliminazione di più indici  
+### <a name="b-dropping-multiple-indexes"></a>B. Eliminazione di più indici  
  Nell'esempio seguente vengono eliminati due indici in una transazione singola nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

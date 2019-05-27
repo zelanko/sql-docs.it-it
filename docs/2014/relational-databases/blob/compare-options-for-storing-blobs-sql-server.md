@@ -7,15 +7,15 @@ ms.technology: filestream
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877218"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010353"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
   Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,9 +50,9 @@ ms.locfileid: "62877218"
 |**Singola soluzione per le attività di gestione**|No|Yes|**Sì**|  
 |**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Yes|**Sì**|  
 |**Modello di sicurezza integrata**|No|Yes|**Sì**|  
-|**Aggiornamenti sul posto di dati FILESTREAM**|Yes|no|**Sì**|  
-|**Gerarchia di file e directory gestita nel database**|No|no|**Sì**|  
-|**Compatibilità delle applicazioni di Windows**|Yes|No|**Sì**|  
+|**Aggiornamenti sul posto di dati FILESTREAM**|Yes|No|**Sì**|  
+|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|  
+|**Compatibilità delle applicazioni di Windows**|Yes|no|**Sì**|  
 |**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
   
 ##  <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  

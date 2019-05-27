@@ -11,14 +11,18 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282985"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720145"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'utilità del prompt dei comandi **dtexec** viene usata per configurare ed eseguire i pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'utilità **dtexec** è possibile accedere a tutte le funzionalità di configurazione ed esecuzione dei pacchetti, ad esempio parametri, connessioni, proprietà, variabili, registrazione e indicatori di stato. L'utilità **dtexec** consente di caricare i pacchetti da queste origini: server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , file di progetto con estensione ispac, database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system.  
   
 > **NOTA:** Quando si usa la versione corrente dell'utilità **dtexec** per eseguire un pacchetto creato con una versione precedente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'utilità aggiorna temporaneamente il pacchetto al formato corrente. Tuttavia, non è possibile usare l'utilità **dtexec** per salvare il pacchetto aggiornato. Per altre informazioni su come rendere permanente l'aggiornamento di un pacchetto alla versione corrente, vedere [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
@@ -85,7 +89,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> Fasi di esecuzione  
  L'esecuzione di questa utilità si articola nelle quattro fasi descritte di seguito.  
   
-1.  Determinazione dell'origine del comando: il prompt dei comandi legge l'elenco delle opzioni e degli argomenti specificati. Tutte le fasi successive vengono ignorate se viene rilevata un'opzione **/?** o **/HELP** .  
+1.  Determinazione dell'origine del comando: il prompt dei comandi esegue la lettura dell'elenco delle opzioni e degli argomenti specificati. Tutte le fasi successive vengono ignorate se viene rilevata un'opzione **/?** o **/HELP** .  
   
 2.  Caricamento dei pacchetti: Viene caricato il pacchetto specificato dall'opzione **/SQL**, **/FILE** o **/DTS**.  
   
@@ -250,7 +254,7 @@ dtexec /option [value] [/option [value]]...
   
      Per ulteriori informazioni sui file di dump del debug, vedere [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
--   **/DumpOnError**: (Facoltativo) Consente di creare i file di dump del debug, con estensione MDMP e TMP, quando si verifica un errore durante l'esecuzione del pacchetto.  
+-   **/DumpOnError**: (Facoltativo) Consente di creare i file di dump del debug, con estensione .mdmp e .tmp, quando si verifica un errore durante l'esecuzione del pacchetto.  
   
      Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   

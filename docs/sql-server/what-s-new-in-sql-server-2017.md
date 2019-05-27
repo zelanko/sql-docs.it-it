@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306049"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729438"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che offre opzioni di linguaggi di sviluppo, tipi di dati, memorizzazione in locale e nel cloud e sistemi operativi rendendo disponibili le funzionalità di SQL Server in Linux, nei contenitori Docker basati su Linux e in Windows. Questo argomento offre un riepilogo delle novità delle aree di funzionalità specifiche e include collegamenti ad altre informazioni. Per altre informazioni correlate a SQL Server in Linux, vedere [Documentazione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [Scaricare SQL Server 2017, ottobre 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [Scaricare SQL Server 2017, ottobre 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > Con la disponibilità generale, vengono rilasciati a intervalli regolari aggiornamenti cumulativi che mettono a disposizione numerosi miglioramenti e diverse correzioni. Per informazioni sul rilascio dell'aggiornamento cumulativo più recente, vedere [Aggiornamenti cumulativi di SQL Server 2017](https://aka.ms/sql2017cu).
