@@ -1,6 +1,6 @@
 ---
 title: Gestire un server di report in modalità nativa di Reporting Services | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27588665db387c7812b1779fd71e3002b1b80e36
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581092"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175201"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gestione di un server di report in modalità nativa
   In questa sezione sono disponibili le procedure per la configurazione di un'istanza del server di report in modalità nativa utilizzando Gestione configurazione Reporting Services.  
@@ -36,7 +36,7 @@ ms.locfileid: "65581092"
  Viene illustrato come registrare manualmente un SPN per un server di report eseguito tramite un account utente di dominio in una rete che utilizza l'autenticazione Kerberos.  
   
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- Viene illustrato come configurare uno o più URL utilizzati per accedere al servizio Web ReportServer e a Gestione report.  
+ Viene illustrato come configurare uno o più URL usati per accedere al servizio Web ReportServer e al portale Web.  
   
  [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Illustra le procedure per creare un database del server di report. Questa procedura è obbligatoria per la distribuzione di un'installazione di Reporting Services.  
@@ -52,7 +52,7 @@ ms.locfileid: "65581092"
  Viene illustrato come aprire le porte utilizzate per le richieste in ingresso e le risposte in uscita da un server di report.  
   
  [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Vengono descritti i passaggi aggiuntivi richiesti per connettersi a Gestione report o a un server di report usando `https://localhost`.  
+ Vengono descritti i passaggi aggiuntivi richiesti per connettersi al portale Web o a un server di report usando `https://localhost`.  
   
  [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Viene illustrato come configurare un'istanza remota del server di report a cui connettersi e da configurare per un computer diverso.  

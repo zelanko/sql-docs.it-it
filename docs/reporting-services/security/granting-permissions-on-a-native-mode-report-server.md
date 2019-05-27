@@ -1,6 +1,6 @@
 ---
 title: Concessione di autorizzazioni in un server di report in modalità nativa | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579829"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175638"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concessione di autorizzazioni in un server di report in modalità nativa
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si utilizzano l'autorizzazione basata sui ruoli e un sottosistema di autenticazione per determinare gli utenti cui è consentito eseguire operazioni e accedere agli elementi in un server di report. L'autorizzazione basata sui ruoli consente di suddividere in ruoli il set di azioni che un utente può eseguire. L'autenticazione è basata sull'autenticazione di Windows incorporata o su un modulo di autenticazione personalizzato fornito dall'utente. È possibile utilizzare ruoli predefiniti o personalizzati con entrambi i tipi di autenticazione.  
@@ -41,9 +41,9 @@ ms.locfileid: "65579829"
   
 2.  Individuare gli utenti e i gruppi che devono accedere al server di report e il livello di autorizzazioni richiesto. La maggior parte degli utenti dovrebbe essere assegnata al ruolo **Visualizzazione** o al ruolo **Generatore report** . Il ruolo **Server di pubblicazione** dovrebbe essere utilizzato per un numero più limitato di utenti. Il ruolo **Gestione contenuto**dovrebbe essere assegnato a pochissimi utenti.  
   
-3.  Utilizzare Gestione report per assegnare ruoli nella cartella Home, ovvero la cartella di livello principale della gerarchia di cartelle del server di report.  
+3.  Usare il portale Web per assegnare ruoli nella cartella Home, ovvero la cartella di livello principale della gerarchia di cartelle del server di report, per ogni utente o gruppo che richiede l'accesso.  
   
-4.  A questo livello del sito, nella pagina Impostazioni sito di Gestione report, creare un'assegnazione di ruolo a livello di sistema per ogni utente e gruppo usando i ruoli predefiniti **Utente sistema** e **Amministratore sistema**.  
+4.  A questo livello del sito, nella pagina Impostazioni sito del portale Web, creare un'assegnazione di ruolo a livello di sistema per ogni utente e gruppo usando i ruoli predefiniti **Utente sistema** e **Amministratore sistema**.  
   
 5.  Creare assegnazioni di ruolo aggiuntive secondo necessità per cartelle, report e altri elementi specifici. Evitare di creare un numero elevato di assegnazioni di ruolo. Se si creano troppi ruoli, sarà difficile tenere traccia dei diversi livelli di autorizzazione per ogni utente.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65579829"
 |Strumento|Attività|  
 |----------|-----------|  
 |Management Studio: consente di visualizzare, modificare, creare ed eliminare definizioni di ruolo.|[Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Gestione report: consente di assegnare utenti e gruppi a ruoli.|[Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Portale Web: consente di assegnare utenti e gruppi a ruoli.|[Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modifica o eliminare un'assegnazione di ruolo](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   

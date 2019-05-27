@@ -1,6 +1,6 @@
 ---
 title: Memorizzare nella cache set di dati condivisi (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582222"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175596"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Memorizzare nella cache set di dati condivisi (SSRS)
   I risultati della query per un set di dati condiviso possono essere copiati in una cache per fornire dati coerenti per più report e migliorare il tempo di risposta per la query del set di dati. In modo analogo ai report, è possibile configurare un set di dati condiviso da memorizzare nella cache al momento del primo utilizzo o specificando una pianificazione.  
@@ -51,7 +51,7 @@ ms.locfileid: "65582222"
   
  Durante la permanenza nella cache dei risultati della query per una combinazione di parametri specifica, ogni report avviato per l'elaborazione che include un riferimento al set di dati condiviso con tali valori dei parametri utilizzerà i dati memorizzati nella cache.  
   
- È possibile specificare la quantità di tempo in cui mantenere i dati nella cache prima che scadano. Per altre informazioni, vedere [Pagina Memorizzazione nella cache, set di dati condivisi &40 #;Gestione report&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ È possibile specificare la quantità di tempo in cui mantenere i dati nella cache prima che scadano. Per altre informazioni, vedere [Utilizzo dei set di dati condivisi](../../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="preloading-the-cache"></a>Precaricamento della cache  
  È possibile precaricare la cache creando un piano di aggiornamento che consente di specificare la frequenza di aggiornamento della cache tramite una pianificazione condivisa o specifica per l'elemento. Per evitare che per uno stesso elemento siano presenti più voci nella cache, è necessario specificare una pianificazione in base alla quale il tempo per l'elaborazione della query sull'origine dati esterna sia sufficiente. Se ad esempio il tempo necessario per l'esecuzione della query è di 20 minuti, l'aggiornamento deve essere pianificato con frequenza maggiore di 20 minuti. Per altre informazioni, vedere [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "65582222"
   
 -   È necessario disporre delle autorizzazioni ReadPolicy e UpdatePolicy sul set di dati condiviso.  
   
- I piani di aggiornamento della cache si applicano sia ai set di dati condivisi che ai report. Per altre informazioni, vedere [Opzioni di aggiornamento cache &#40;Gestione report&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ I piani di aggiornamento della cache si applicano sia ai set di dati condivisi che ai report. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Condizioni che determinano la scadenza della cache  
  Le condizioni seguenti possono provocare l'invalidità di una cache di un set di dati condiviso.  
@@ -93,7 +93,7 @@ ms.locfileid: "65582222"
   
  Gli aggiornamenti dei piani di aggiornamento della cache per i set di dati condivisi non influiscono sui report già in elaborazione, ma influiscono solo su avvii futuri di report che fanno riferimento al set di dati condiviso.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>Vedere anche
   
+ [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  
   
