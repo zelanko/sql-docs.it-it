@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
@@ -15,12 +14,12 @@ ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733260"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083252"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelle nidificate (Analysis Services - Data mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In *è disponibile un metodo univoco per la gestione di questi casi,* tramite tabelle annidate. Nella figura seguente viene illustrato il concetto di tabella nidificata.  

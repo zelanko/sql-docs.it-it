@@ -23,16 +23,16 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f514bd7b5f18fba37ba8159ee4fe1804b5d8b8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02ad3631a37600b3b3a18af38b90a805fe00af5c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722449"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944034"
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,7 +126,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. Restituzione dell'ID oggetto per un oggetto specificato  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D: Restituzione dell'ID oggetto per un oggetto specificato  
  Nell'esempio seguente viene restituito l'ID oggetto per la tabella `FactFinance` nel database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  

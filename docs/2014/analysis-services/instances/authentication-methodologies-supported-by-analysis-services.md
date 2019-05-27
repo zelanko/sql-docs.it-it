@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730278"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080336"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologie di autenticazione supportate da Analysis Services
   Per la connessione a un'istanza di Analysis Services da un'applicazione client è necessaria l'autenticazione di Windows (integrata). È possibile fornire un'identità utente di Windows utilizzando uno dei metodi seguenti:  

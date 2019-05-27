@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209278"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105593"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parti del report possono essere pubblicate nei server di report e riutilizzate in altri report e da altri utenti se hanno le autorizzazioni appropriate.  
@@ -54,7 +53,7 @@ ms.locfileid: "63209278"
   
 |Proprietà|Descrizione|Parte del report<br /><br /> Criteri di ricerca nella raccolta|  
 |--------------|-----------------|---------------------------------------------|  
-|nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  
+|Nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  
 |Descrizione|Può essere necessario organizzare i nomi delle parti del report in modo da semplificare la ricerca nella raccolta. Ad esempio, è possibile cercare la descrizione che inizia con "Vendite>>" per trovare tutte le parti di report in cui sono presenti dati e presentazioni relativi alle vendite.|Yes|  
 |CreatedBy|ID dell'utente che ha aggiunto la parte del report al database del server di report. Il formato esatto dipende dal metodo di autenticazione. Alcuni metodi di autenticazione, ad esempio, consentono di visualizzare il nome di dominio\utente completo nei campi CreatedBy e ModifiedBy.|Yes|  
 |CreationDate|Data in cui è stata originariamente creata la parte del report.<br /><br /> Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  

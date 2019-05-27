@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af0534e049c5038676849f40178d865e9f15de61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794631"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066803"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Elaborare partizioni nel Database dell'area di lavoro (SSAS tabulare)
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Nelle attività di questo argomento viene descritto come elaborare le partizioni nel database dell'area lavoro modello tramite la finestra di dialogo **Elabora partizioni** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

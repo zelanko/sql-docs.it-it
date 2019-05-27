@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e328dc12005a7f46702094fc33446d9f8768f6b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b58d7b9d449a6fe9ab3e5de8a7e369d57d13d70
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217638"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095953"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Modifiche ai limiti di memoria e CPU per SQL Server Standard e Enterprise (Upgrade Advisor)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard ed Enterprise supportano un massimo di 64 GB di memoria di sistema.  
@@ -28,7 +27,7 @@ ms.locfileid: "48217638"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition supporta 128 gigabyte di memoria di sistema e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise supporta al massimo il valore massimo del sistema operativo.  
   
 > [!NOTE]  

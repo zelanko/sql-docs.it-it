@@ -19,16 +19,16 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a21adcc5d53bb3685de95f9916487fce486ca104
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: d5d3ec1ee3518c4d9f0b66100fff421a5827b353
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826066"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947895"
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ SELECT CURRENT_USER;
 GO  
 ```  
   
-### <a name="b-using-currentuser-as-a-default-constraint"></a>b. Utilizzo di CURRENT_USER come vincolo DEFAULT  
+### <a name="b-using-currentuser-as-a-default-constraint"></a>B. Utilizzo di CURRENT_USER come vincolo DEFAULT  
 Questo esempio crea una tabella che usa `CURRENT_USER` come vincolo `DEFAULT` per la colonna `order_person` di una riga di dati sulle vendite.
   
 ```sql

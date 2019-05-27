@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855317"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092855"
 ---
 # <a name="rename-user-sys"></a>Rinominare l'utente sys
   È stato rilevato il nome utente **sys** in un database. Questo nome è riservato. Rinominare l'utente prima di eseguire l'aggiornamento. Se l'utente non viene rinominato, il database si troverà in stato sospetto dopo il processo di aggiornamento e non sarà disponibile finché non viene portato online.  

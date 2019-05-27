@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.f1
@@ -13,12 +12,12 @@ ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729638"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079430"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare la scheda **KPI** in Progettazione cubi per visualizzare e modificare gli indicatori di prestazioni chiave (KPI) per il cubo selezionato.  

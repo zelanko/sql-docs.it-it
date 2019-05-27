@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62775021"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089332"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opzioni (Query risultati SQL Server pagina generale)
   Utilizzare questa pagina per specificare le impostazioni predefinite del riquadro Risultati query. Per visualizzare le impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Risultati query**, selezionare **SQL Server** e quindi fare clic su **Generale**. Le modifiche apportate a queste opzioni si applicano soltanto alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**.  

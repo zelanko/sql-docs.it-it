@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681218"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088145"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Elenco di controllo per la preparazione di data mining
   Sebbene i componenti aggiuntivi Data mining forniscano un modo piuttosto semplice e divertente per creare e provare i modelli, quando è necessario ottenere risultati ripetibili e utilizzabili, è necessario concedere il tempo appropriato per la formulazione dei requisiti aziendali di base e per il recupero e la preparazione dei dati. In questa sezione viene fornito un elenco di controllo per pianificare la ricerca e vengono descritti i problemi comuni.  

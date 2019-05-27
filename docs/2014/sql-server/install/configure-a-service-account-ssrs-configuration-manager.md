@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
@@ -16,12 +15,12 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033618"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096103"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurare un account del servizio (Gestione configurazione SSRS)
   In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il servizio Web Report Server, Gestione report e l'applicazione di elaborazione in background vengono eseguiti all'interno di un singolo servizio. L'account utilizzato per l'esecuzione di tale servizio viene definito durante l'installazione, quando si specifica l'account nella pagina Identità servizio Web, ma è possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se si desidera utilizzare un account diverso oppure aggiornare la password.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
@@ -24,12 +23,12 @@ ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075056"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
   Dopo avere abilitato l'accesso in lettura a un cubo, è possibile impostare ulteriori autorizzazioni che consentono o negano in modo esplicito l'accesso ai membri della dimensione, comprese le misure presenti all'interno della Dimensione di tipo misure in cui sono contenute tutte le misure usate in un cubo. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  

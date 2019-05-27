@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatcher.wmiquery.f1
@@ -15,12 +14,12 @@ ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c3286d1246efb8b5ae2e17cf8df5d38d865a9f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877682"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054376"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor attività Monitoraggio eventi WMI (pagina Opzioni WMI)
   Usare la pagina **Opzioni WMI** della finestra di dialogo **Editor attività Monitoraggio eventi WM** per specificare l'origine della query WQL e la modalità di risposta dell'attività Monitoraggio eventi WMI agli eventi del servizio Strumentazione Gestione Windows (WMI).  

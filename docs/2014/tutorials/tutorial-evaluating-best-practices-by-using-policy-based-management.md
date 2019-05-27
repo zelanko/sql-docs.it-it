@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
@@ -19,14 +18,14 @@ ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064424"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Esercitazione: La valutazione di procedure consigliate tramite la gestione basata su criteri
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Esercitazione: Valutazione di procedure consigliate tramite la gestione basata su criteri
   Questa esercitazione per la valutazione di procedure consigliate tramite la gestione basata su criteri è destinata agli utenti che hanno una certa familiarità con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma non con la gestione basata su criteri. La gestione basata su criteri è un sistema per definire i criteri che possono essere utilizzati per applicare gli standard di amministrazione del sito. In questa gestione è incluso un set di criteri per procedure consigliate utilizzabili per analizzare un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modo da poter determinare se l'istanza soddisfa le linee guida e le indicazioni delle procedure consigliate.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  

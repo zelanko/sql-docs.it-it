@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -16,12 +15,12 @@ ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054724"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utilizzare i valori di variabili e parametri in un pacchetto figlio
   In questa procedura viene descritto come creare una configurazione di pacchetto in cui viene utilizzato il tipo di configurazione variabile padre. Questo tipo di configurazione consente a un pacchetto figlio eseguito da un pacchetto padre di accedere a una variabile del pacchetto padre.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703328"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079872"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Verifica di un'installazione PowerPivot per SharePoint
   Un'istanza di PowerPivot per SharePoint installata in una farm di SharePoint viene amministrata tramite Amministrazione centrale SharePoint. Come minimo, è possibile controllare le pagine in Amministrazione centrale e nei siti di SharePoint per verificare che le funzionalità e i componenti server PowerPivot siano disponibili. Tuttavia, per verificare completamente un'installazione, è necessario disporre di una cartella di lavoro di PowerPivot pubblicabile in SharePoint e accessibile da una raccolta. A scopo di test, è possibile pubblicare una cartella di lavoro di esempio contenente già dati PowerPivot e utilizzarla per confermare la corretta configurazione dell'integrazione SharePoint.  

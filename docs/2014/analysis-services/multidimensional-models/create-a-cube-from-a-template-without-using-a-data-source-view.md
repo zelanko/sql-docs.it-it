@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700316"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076513"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
   Selezionare **Build the cube without using a data source** (Crea il cubo senza usare un'origine dati) nella prima pagina di Creazione guidata cubo per creare un cubo senza usare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  

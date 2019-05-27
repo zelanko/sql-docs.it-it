@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722894"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084921"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
   Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

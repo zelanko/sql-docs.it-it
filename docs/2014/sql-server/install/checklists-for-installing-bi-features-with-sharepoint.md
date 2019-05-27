@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a677729f5c0f7a5ee1b6d10bbb3491937255b555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a5056eda52064120164a25b270a5292951f71fa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190606"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096507"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>Elenchi di controllo per l'installazione delle funzionalità di Business Intelligence con SharePoint
   In questa sezione vengono forniti elenchi di controllo per l'installazione delle caratteristiche Business Intelligence di SQL Server in diverse combinazioni o topologie di scalabilità orizzontale. Se sono già note le procedure necessarie per eseguire un programma di installazione per l'installazione di una caratteristica di Business Intelligence, un elenco di controllo rappresenta il passaggio successivo per comprendere l'ordine di installazione consigliato e se siano necessarie altre modifiche alla configurazione per consentire scenari di integrazione delle caratteristiche.  

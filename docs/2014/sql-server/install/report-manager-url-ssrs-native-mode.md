@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.reportmanagervirtualdirectory.f1
@@ -13,12 +12,12 @@ ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f5e472f0cb8cb1a2fc8ed9d85b73622617a3a70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2679abba1e452ec65b43ca16cc90fc7cb244436
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63282046"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092785"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>URL di Gestione report (modalità nativa SSRS)
   Utilizzare la pagina URL Gestione report per configurare o modificare l'URL utilizzato per accedere a Gestione report. Per impostazione predefinita, l'URL di Gestione report eredita il prefisso, l'indirizzo IP e la porta dell'URL del servizio Web ReportServer. Ciò è dovuto al fatto che Gestione report fornisce accesso front-end al servizio Web in cui è in esecuzione lo stesso servizio del server di report. Se si isolano le applicazioni del servizio e si utilizza Gestione report per accedere a un servizio Web ReportServer in un computer diverso, è necessario modificare il file RSReportServer.config perché Gestione report punti a un'istanza diversa. Per altre informazioni sulla configurazione di una connessione di gestione Report a un server di report remoto, vedere [Gestione configurazione Reporting Services &#40;in modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  

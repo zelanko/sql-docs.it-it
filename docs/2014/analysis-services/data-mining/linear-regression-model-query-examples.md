@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722253"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084302"
 ---
 # <a name="linear-regression-model-query-examples"></a>Esempi di query sul modello di regressione lineare
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto potrebbe ad esempio fornire dettagli aggiuntivi sulla formula di regressione, mentre una query di stima potrebbe indicare se un nuovo punto dati si adatta al modello. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  

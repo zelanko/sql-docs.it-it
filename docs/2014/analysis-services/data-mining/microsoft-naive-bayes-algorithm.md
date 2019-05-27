@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
@@ -17,12 +16,12 @@ ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734857"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083882"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Microsoft Naive Bayes
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione basato su teoremi di Bayes e fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la modellazione predittiva. La parola naive nel nome Naive Bayes deriva dal fatto che nell'algoritmo vengono utilizzate tecniche di Bayes, ma non vengono considerate le dipendenze eventualmente presenti.  

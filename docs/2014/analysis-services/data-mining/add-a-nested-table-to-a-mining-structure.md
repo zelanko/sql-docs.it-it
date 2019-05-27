@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], nested
@@ -16,12 +15,12 @@ ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 00ac2368cdba8d1f84141cf7881bc97563bab684
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689365"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086357"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Aggiungere una tabella nidificata a una struttura di data mining
   È possibile utilizzare Progettazione modelli di data mining per aggiungere una tabella nidificata a una struttura di data mining dopo averla creata tramite la Creazione guidata modello di data mining.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - low latency MOLAP
@@ -26,12 +25,12 @@ ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0738c0968606ea4f618f4d527db8c99cfff19296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741907"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072986"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Impostare l'archiviazione delle partizioni (Analysis Services - Multidimensionale)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  

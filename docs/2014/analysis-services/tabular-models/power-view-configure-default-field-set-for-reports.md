@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - ql12.asvs.bidtoolset.deffieldset.f1
@@ -13,12 +12,12 @@ ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7f98ccd639747da0401b7f40c84120bd81c42b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795385"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066885"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>Configurare il set di campi predefiniti per i report Power View (SSAS tabulare)
   Un set di campi predefiniti è un elenco predefinito di colonne e misure che vengono aggiunte automaticamente all'area di disegno di un report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando si seleziona la tabella nell'elenco dei campi del report. I creatori del modello tabulare possono creare un set di campi predefinito per eliminare passaggi ridondanti per i creatori di report che utilizzano il modello. Ad esempio, se è noto che la maggior parte degli autori del report che utilizza le informazioni di contatto dei clienti desidera vedere sempre il nome di un contatto, il numero telefonico principale, un indirizzo di posta elettronica e il nome dell'azienda, è possibile pre-selezionare tali colonne in modo che vengano sempre aggiunte all'area di disegno del report quando l'autore fa clic sulla tabella Customer Contact.  

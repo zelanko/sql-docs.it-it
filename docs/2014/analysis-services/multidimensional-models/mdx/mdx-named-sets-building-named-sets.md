@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], named sets
@@ -18,12 +17,12 @@ ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98d363ab09e75905b13503687fe425a981c790e7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699603"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074152"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Compilazione di set denominati in MDX (MDX)
   Un'espressione set può essere costituita da una dichiarazione lunga e complessa e risultare pertanto difficile da seguire o comprendere oppure essere utilizzata con tale frequenza che la presenza di definizioni ripetute del set può creare confusione. Per semplificare l'utilizzo di espressioni lunghe, complesse o usate di frequente, le espressioni MDX (Multidimensional Expressions) consentono di definire un'espressione di questo tipo come *set denominato*.  

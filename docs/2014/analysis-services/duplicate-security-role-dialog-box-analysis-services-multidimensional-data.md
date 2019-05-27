@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.duplicaterole.f1
@@ -13,12 +12,12 @@ ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731560"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081503"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Ruolo di sicurezza duplicato di (Analysis Services - Dati multidimensionali)
   Usare la **duplicati sicurezza ruolo di Analysis Services - \<nome database >- \<copia dal nome del ruolo >** nella finestra di dialogo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] duplicare un ruolo esistente in un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Per visualizzare la finestra di dialogo **Duplica ruolo**, è possibile fare clic con il pulsante destro del mouse su un ruolo in Esplora oggetti e quindi scegliere **Duplica**.  

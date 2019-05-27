@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082993"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
   Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
@@ -42,12 +41,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838004"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088555"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] sono disponibili tre fonti principali di informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -78,7 +77,7 @@ ms.locfileid: "62838004"
   
  Nella tabella seguente vengono descritte queste risorse con i relativi destinatari.  
   
-|Risorsa|Destinatari|  
+|Resource|Destinatari|  
 |--------------|--------------|  
 |[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Sviluppatori che compilano database, sistemi per la gestione di report e soluzioni di Business Intelligence per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che progettano applicazioni e siti Web per l'utilizzo di questi sistemi.|  
 |[Centro per sviluppatori XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Creatori di siti Web e sviluppatori di applicazioni i cui siti e le cui applicazioni utilizzano il linguaggio XML per l'archiviazione e la manipolazione dei dati.|  
@@ -87,7 +86,7 @@ ms.locfileid: "62838004"
 ## <a name="additional-online-information"></a>Ulteriori informazioni online  
  Informazioni aggiuntive su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono disponibili nei siti Web [!INCLUDE[msCoName](../includes/msconame-md.md)] seguenti.  
   
-|Risorsa|Descrizione|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Informazioni di prevendita per la valutazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come strumento per l'archiviazione dei dati e per soluzioni di Business Intelligence.|  
 |[Della Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Repository in cui è possibile eseguire la ricerca di articoli relativi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] scritti dai tecnici del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)].|    

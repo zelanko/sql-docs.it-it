@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -21,12 +20,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a0cb21136253767f009cb19604c8a0ea7e4c71a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733723"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083781"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   In seguito alla progettazione e all'elaborazione di un modello di data mining mediante i dati della struttura di data mining sottostante, il modello di data mining è completo e contiene il *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700304"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076343"
 ---
 # <a name="create-a-report-data-source"></a>Creare un'origine dati per il report
   Per connettere Power View a un modello multidimensionale, è necessario creare una definizione condivisa di origine dati del report (file con estensione rsds) in una raccolta di SharePoint. Il file con estensione rsds specifica il nome di un'istanza del server Analysis Services, un tipo di connessione, una stringa di connessione e le credenziali utilizzate per connettersi al modello multidimensionale. Quando un utente fa clic sul file con estensione rsds, viene visualizzato nel browser un nuovo report Power View (file con estensione rdlx) vuoto.  

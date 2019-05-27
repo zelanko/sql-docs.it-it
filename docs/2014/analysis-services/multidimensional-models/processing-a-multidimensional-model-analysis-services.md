@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736918"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073357"
 ---
 # <a name="multidimensional-model-object-processing"></a>Elaborazione di oggetti del modello multidimensionale
   L'elaborazione è un passaggio, o una serie di passaggi, durante i quali tramite Analysis Services vengono caricati i dati da un'origine dati relazionale in un modello multidimensionale. Per gli oggetti in cui viene utilizzata l'archiviazione MOLAP, i dati vengono salvati su disco nella cartella dei file di database. Per l'archiviazione ROLAP, l'elaborazione avviene su richiesta, in risposta a una query MDX su un oggetto. Per gli oggetti in cui viene utilizzata l'archiviazione ROLAP, l'elaborazione si riferisce all'aggiornamento della cache prima della restituzione dei risultati della query.  

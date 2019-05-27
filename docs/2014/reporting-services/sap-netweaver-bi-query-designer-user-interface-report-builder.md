@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10014"
@@ -15,12 +14,12 @@ ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f87e9cb6153c94ab40e6b415fb19c6a61929f99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 62d81c5ff260ffc96eb3bc27c64173f2d8e7f789
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102326"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query SAP NetWeaver BI (Generatore report)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati SAP NetWeaver® Business Intelligence. La finestra Progettazione query con interfaccia grafica MDX è disponibili due modalità: Modalità di progettazione e Query. In ogni modalità è disponibile un riquadro metadati dal quale è possibile trascinare membri da un InfoCube, un MultiProvider o una query Web definita sull'origine dei dati per la compilazione di una query MDX che recupera dati quando il report viene elaborato.  

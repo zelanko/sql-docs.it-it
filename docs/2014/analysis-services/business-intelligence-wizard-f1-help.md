@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
@@ -13,12 +12,12 @@ ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62664257"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088394"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence
   Utilizzare questa procedura guidata per definire le funzionalità di Business Intelligence ed impostare le opzioni avanzate di cubi e dimensioni. La procedura guidata consente di impostare proprietà di oggetti esistenti, creare nuovi oggetti e generare script MDX (Multidimensional Expression) per offrire, ad esempio, funzionalità di Business Intelligence per le dimensioni e di conversione di valuta.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.f1
@@ -13,12 +12,12 @@ ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731797"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081744"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Struttura dimensione (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la pagina **Struttura dimensione** in Progettazione dimensioni per modificare gli attributi, le gerarchie e i livelli della dimensione selezionata. La pagina **Struttura dimensione** contiene una barra degli strumenti e tre riquadri.  

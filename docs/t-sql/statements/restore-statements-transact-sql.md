@@ -37,16 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e1e25d8d5709f409f504d85f7917b85c1e6f3886
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828171"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947046"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 
@@ -431,11 +431,11 @@ Per altre informazioni, vedere [Ripristinare un database a uno snapshot del data
 Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I supporti protetti con password possono tuttavia essere sovrascritti con l'opzione FORMAT dell'istruzione BACKUP.
 
 > [!IMPORTANT]
-> Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.
+> Il livello di protezione garantito da questa password è vulnerabile. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.
 > [!NOTE]
 > Per informazioni specifiche sul backup e sul ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.
 
@@ -448,7 +448,7 @@ In tutti gli esempi si presuppone che sia stato eseguito un backup completo del 
 Sono disponibili gli esempi seguenti per l'istruzione RESTORE:
 
 - A. [Ripristino di un database completo](#restoring_full_db)
-- b. [Ripristino di backup completi e differenziali del database](#restoring_full_n_differential_db_backups)
+- B. [Ripristino di backup completi e differenziali del database](#restoring_full_n_differential_db_backups)
 - C. [Ripristino di un database con la sintassi RESTART](#restoring_db_using_RESTART)
 - D. [Ripristino di un database e spostamento dei file](#restoring_db_n_move_files)
 - E. [Copia di un database tramite BACKUP e RESTORE](#copying_db_using_bnr)
@@ -810,7 +810,7 @@ Per altre informazioni, vedere [Istanza gestita](/azure/sql-database/sql-databas
 
 Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Per eseguire RESTORE, l'utente deve avere le autorizzazioni CREATE DATABASE.
 
@@ -881,7 +881,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 &nbsp;
 
-## <a name="analytics-platform-system"></a>Piattaforma di strumenti analitici
+## <a name="analytics-platform-system"></a>Sistema della piattaforma di analisi
 
 Ripristina un database utente [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] da un backup di database a un'appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Il database viene ripristinato da un backup creato in precedenza dal comando [BACKUP DATABASE - Piattaforma di strumenti analitici](../../t-sql/statements/backup-transact-sql.md) di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Usare le operazioni di backup e ripristino per creare un piano di ripristino di emergenza o per spostare i database da un'appliance a un'altra.
 
@@ -935,7 +935,7 @@ RESTORE HEADERONLY specifica che vengono restituite solo le informazioni di inte
 
 I risultati di RESTORE HEADERONLY seguono il modello dei risultati di RESTORE HEADERONLY di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il risultato ha più di 50 colonne, che non vengono usate tutte da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per una descrizione delle colonne nei risultati di RESTORE HEADERONLY di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È necessaria l'autorizzazione **CREATE ANY DATABASE**.
 
@@ -998,7 +998,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```
 
-### <a name="b-restore-a-full-and-differential-backup"></a>b. Ripristinare un backup completo e un backup differenziale
+### <a name="b-restore-a-full-and-differential-backup"></a>B. Ripristinare un backup completo e un backup differenziale
 
 L'esempio seguente ripristina un backup completo e quindi un backup differenziale nel database SalesInvoices2013
 

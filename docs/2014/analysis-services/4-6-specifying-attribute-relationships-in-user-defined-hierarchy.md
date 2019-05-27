@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62512625"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063026"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente
   Come è già stato illustrato in questa esercitazione, è possibile organizzare le gerarchie degli attributi in livelli all'interno delle gerarchie utente in modo da offrire agli utenti percorsi di navigazione in un cubo. Una gerarchia utente può rappresentare una gerarchia naturale, ad esempio una città, uno stato e un paese, oppure un percorso di navigazione, ad esempio il nome di un dipendente, la funzione e il reparto di appartenenza. Ai fini della navigazione, non esiste differenza tra questi due tipi di gerarchie utente.  

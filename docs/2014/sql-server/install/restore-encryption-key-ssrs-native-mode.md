@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
@@ -13,12 +12,12 @@ ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126922"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092522"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Ripristino della chiave di crittografia (modalità nativa SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzata una chiave di crittografia per proteggere dati sensibili archiviati nel database del server di report. Per garantire di disporre di accesso continuo ai dati crittografati, è importante creare una copia di backup della chiave di crittografia qualora sia necessario ripristinarla in seguito a causa di modifiche all'account del servizio o come parte di una migrazione pianificata. In questo argomento è offerta una panoramica sull'utilizzo della Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per ripristinare le chiavi.  

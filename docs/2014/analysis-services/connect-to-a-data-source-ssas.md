@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndatasource.f1
@@ -13,12 +12,12 @@ ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680415"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087336"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Connessione a un'origine dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di creare una nuova connessione a diverse origini dati, ad esempio database relazionali, feed di dati e file. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 207e8dbd7ea9c0fcb2c453fb6611efcfc4ab7a16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083275"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Esempi di query sul modello Naive Bayes
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. È inoltre possibile recuperare metadati relativi al modello tramite una query sul set di righe dello schema di data mining. In questa sezione viene illustrato come creare entrambi i tipi di query per i modelli basati sull'algoritmo Microsoft Naive Bayes.  

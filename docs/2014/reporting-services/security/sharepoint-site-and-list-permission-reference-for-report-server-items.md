@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,12 +15,12 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a08fccd5b6739dd27fc25c87e8b6ff3facfd62e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: b3e97899fb58049b04860a564b3769feb13217fc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461053"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101531"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
   In questo argomento vengono fornite informazioni di riferimento sulle autorizzazioni disponibili in SharePoint e che possono essere utilizzate per consentire l'accesso alle operazioni di un server di report eseguito in modalità integrata SharePoint. Tali informazioni sono utili per la scelta delle autorizzazioni da utilizzare per creare livelli di autorizzazione personalizzati.  

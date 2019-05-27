@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - match case [SQL Server]
@@ -29,12 +28,12 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135145"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090196"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
   È possibile eseguire ricerche e sostituzioni di testo in diversi modi. Nel **Edit** dal menu **Trova e sostituisci** offre quattro scelte: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file**, oppure **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  

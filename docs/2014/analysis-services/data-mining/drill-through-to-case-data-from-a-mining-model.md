@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722513"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084605"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Eseguire il drill-through sui dati del case da un modello di data mining
   Se il modello di data mining è stato configurato per consentire il drill-through sui case del modello, quando si esplora il modello è possibile recuperare informazioni dettagliate sui case utilizzati per creare il modello. Inoltre, se la struttura di data mining sottostante è stata configurata per consentire il drill-through sui case della struttura e si dispone delle autorizzazioni appropriate, è possibile restituire informazioni sulla struttura di data mining. Possono anche essere incluse colonne non incluse nel modello di data mining.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -16,12 +15,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636780"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062619"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Finestra di dialogo Proprietà computer Analysis Server (Analysis Services)
   Usare la finestra di dialogo **Proprietà computer Analysis Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per definire le impostazioni generali, di sicurezza e di lingua e regole di confronto per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per visualizzare la finestra di dialogo **Proprietà computer Analysis Server**, è possibile fare clic con il pulsante destro del mouse su un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in **Esplora oggetti** e scegliere **Proprietà** dal menu di scelta rapida. Nella finestra di dialogo **Proprietà computer Analysis Server** sono incluse le proprietà seguenti.  

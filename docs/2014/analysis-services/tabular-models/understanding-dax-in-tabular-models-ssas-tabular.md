@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e02123703295d13a0be9bcb74382ce4a7ed9dd66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066265"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Informazioni su DAX nei modelli tabulari (SSAS tabulare)
   Data Analysis Expressions (DAX) è il linguaggio delle formule usato per creare calcoli personalizzati in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per cartelle di lavoro di Microsoft Excel e progetti di modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
@@ -104,7 +103,7 @@ ms.locfileid: "62756779"
 |Numero decimale|Numero reale a 64 bit (otto byte) <sup>1, 2</sup>|I numeri reali sono numeri che possono avere cifre decimali e coprono un ampio intervallo di valori:<br /><br /> Valori negativi compresi tra -1,79E +308 e -2,23E -308<br /><br /> Zero<br /><br /> Valori positivi compresi tra 2,23E -308 e 1,79E + 308<br /><br /> Tuttavia, il numero di cifre significative è limitato a 17 cifre decimali.|  
 |Boolean|Boolean|Valore True o False.|  
 |Testo|String|Stringa di dati di tipo carattere Unicode. Può trattarsi di stringhe, numeri o date rappresentati in un formato di testo.|  
-|date|Data/ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
+|Date|Data/ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
 |Currency|Currency|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   

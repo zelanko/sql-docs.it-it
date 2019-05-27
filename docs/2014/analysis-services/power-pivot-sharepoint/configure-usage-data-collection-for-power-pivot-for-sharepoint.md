@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071736"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot.  
@@ -180,7 +179,7 @@ ms.locfileid: "62749476"
   
  Nella tabella seguente sono riportati i valori predefiniti per la configurazione della raccolta dei dati sull'utilizzo.  
   
-|Impostazione|Valore predefinito|Tipo|Intervallo valido|  
+|Impostazione|Valore predefinito|Type|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
 |**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<enabled>|Boolean|Questi valori sono abilitati o disabilitati.|  
 |**Query Reporting interval**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
@@ -15,12 +14,12 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7dd6e11704497bd37fa4eb78948376587ece1119
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844755"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089141"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Opzioni (pagina Editor di testo - Transact-SQL - tabulazioni)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di tabulazione dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzato per programmare gli script [!INCLUDE[tsql](../includes/tsql-md.md)]. Per visualizzare queste impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Editor di testo**, espandere la sottocartella **Transact-SQL** e quindi fare clic su **Schede**.  

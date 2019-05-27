@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.versioncompat.f1
@@ -13,12 +12,12 @@ ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757633"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067596"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Livello di compatibilità (SSAS tabulare SP1)
   È possibile specificare *livello di compatibilità* durante la creazione di nuovi progetti di modello tabulare, quando si aggiornano i progetti di modelli tabulari esistenti, fase di aggiornamento esistente distribuiti i database modello tabulare o durante l'importazione di cartelle di lavoro di PowerPivot.  

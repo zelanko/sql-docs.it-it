@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a26f748a5dd8e291587b4e35e0f0677d9da415cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f379675a4d7b37b9eab69598f7c04bc57306d46
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172291"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092106"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>Rilevato un gruppo di servizi Web ReportServer di SQL Server 2005 (Upgrade Advisor)
   È stato rilevato che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza è associata una [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] gruppo di servizio Web ReportServer.  
@@ -30,7 +29,7 @@ ms.locfileid: "48172291"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non usa il [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] gruppo di servizio Web ReportServer. Quando si esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo gruppo di servizi viene eliminato e gli elenchi di controllo di accesso (ACL) personalizzati o gli utenti che appartengono al gruppo non vengono mantenuti durante l'aggiornamento.  
   
 ## <a name="corrective-action"></a>Azione correttiva  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0126337fb1f871a4d89354bd65cbfd11932bf5c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794605"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066371"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Distribuzione di una soluzione del modello tabulare (SSAS tabulare)
   Una volta creato, un progetto di modello tabulare deve essere distribuito affinché gli utenti esplorino il modello tramite un'applicazione client di creazione report. In questo argomento vengono illustrate le varie proprietà e i diversi metodi che è possibile utilizzare in caso di distribuzione di soluzioni di modelli tabulari nell'ambiente.  

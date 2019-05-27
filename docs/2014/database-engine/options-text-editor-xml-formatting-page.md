@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843815"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089850"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opzioni (Editor di testo - XML - pagina Formattazione)
 
@@ -27,7 +26,7 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
   
 ## <a name="attributes"></a>Attributi  
  **Mantieni la formattazione manuale degli attributi**  
- Consente di non riformattare gli attributi. Impostazione predefinita.  
+ Consente di non riformattare gli attributi. Questa è l'impostazione predefinita.  
   
 > [!NOTE]  
 >  Se gli attributi sono disposti su più righe, a ogni riga di attributi verrà applicato un rientro corrispondente al rientro dell'elemento padre.  
@@ -51,7 +50,7 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
   
 ## <a name="mixed-content"></a>Contenuto misto  
  **Formatta contenuto misto per impostazione predefinita.**  
- Viene riformattato il contenuto misto, tranne quando il contenuto si trova in un ambito `xml:space="preserve"`. Impostazione predefinita.  
+ Viene riformattato il contenuto misto, tranne quando il contenuto si trova in un ambito `xml:space="preserve"`. Questa è l'impostazione predefinita.  
   
  Se un elemento contiene testo e markup, il contenuto viene considerato misto. Di seguito viene riportato un esempio di elemento con contenuto misto.  
   

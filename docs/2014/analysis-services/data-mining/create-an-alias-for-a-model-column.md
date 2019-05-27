@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
@@ -15,12 +14,12 @@ ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d73461578a939c11771ba329524ef36d2b52cc83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722713"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085321"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Creare un alias per una colonna di un modello
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile creare un alias per una colonna di un modello. Questa funzione può risultare utile quando il nome della struttura di data mining è troppo lungo o quando si desidera scegliere un nome più descrittivo del contenuto della colonna o del relativo utilizzo nel modello. Se ad esempio si crea una copia di una colonna di una struttura e quindi si discretizza la colonna in modo diverso per un determinato modello, è possibile rinominarla per riflettere più accuratamente il contenuto.  
