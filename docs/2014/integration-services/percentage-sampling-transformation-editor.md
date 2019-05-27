@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e419dd8943aa85df1d7828ca3a5980648799013
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056715"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>Editor trasformazione Campionamento percentuale
   Utilizzare la finestra di dialogo **Editor trasformazione Campionamento percentuale** per dividere parte di un input in un campione utilizzando la percentuale di righe specificata. La trasformazione divide l'input in due output separati.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5135fa8ed6565096e8e2cf5ff851c3c0c2aced72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3319b72f1c3b37805a653d1f315aa0a3363521a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733002"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082934"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Grafico a dispersione (Analysis Services - Data mining)
   In un *grafico a dispersione* sono tracciati i valori effettivi nei dati rispetto ai valori stimati dal modello. Nel grafico a dispersione i valori effettivi e i valori previsti vengono visualizzati rispettivamente lungo l'asse X e lungo l'asse Y. Viene inoltre visualizzata una linea che illustra la stima perfetta, in cui il valore stimato corrisponde esattamente al valore effettivo. La distanza di un punto da questa linea ideale inclinata di 45 gradi indica il livello di precisione della stima.  

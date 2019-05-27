@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715148"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085346"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
   È possibile creare query di stima mentre si compila una soluzione di data mining in BI Development Studio, o facendo clic con il pulsante destro del mouse su un modello di data mining esistente in SQL Server Management Studio e scegliendo quindi l'opzione **Compila query di stima**.  

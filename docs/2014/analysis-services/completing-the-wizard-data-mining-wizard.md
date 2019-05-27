@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087706"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Completamento procedura guidata (Creazione guidata modello di data mining)
   Usare la pagina **Completamento procedura guidata** per esaminare la struttura di data mining che verrà creata al termine della procedura guidata. È anche possibile modificare il nome della struttura di data mining.  

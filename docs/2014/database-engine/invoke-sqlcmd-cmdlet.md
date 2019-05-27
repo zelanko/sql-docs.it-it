@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -16,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774595"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064713"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che esegue script contenenti istruzioni provenienti dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **sqlcmd**.  
@@ -64,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Contesto del percorso in Invoke-Sqlcmd  
  Se non si utilizza il parametro -Database, il contesto del database per Invoke-Sqlcmd viene impostato dal percorso che è attivo al momento della chiamata di cmdlet.  
   
-|Percorso|Contesto del database|  
+|`Path`|Contesto del database|  
 |----------|----------------------|  
 |Inizia con un'unità diversa da SQLSERVER:|Il database predefinito per l'ID di accesso nell'istanza predefinita nel computer locale.|  
 |SQLSERVER:\SQL|Il database predefinito per l'ID di accesso nell'istanza predefinita nel computer locale.|  

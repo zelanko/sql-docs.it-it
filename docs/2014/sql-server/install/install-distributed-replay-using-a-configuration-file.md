@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1ba661a0a00931f52aa7d38cc8d96730c685fa7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62913539"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094580"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Installare i componenti Riesecuzione distribuita tramite un file di configurazione
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consente di generare un file di configurazione in base alle impostazioni predefinite del sistema e ai dati di input dell'utente. Se si specifica che si desidera installare gli strumenti di gestione, è possibile utilizzare il file di configurazione per distribuire i tre componenti Riesecuzione distribuita, ovvero lo strumento di amministrazione, il controller di Riesecuzione distribuita e il client Riesecuzione distribuita. Sono supportate le operazioni di installazione, ripristino e disinstallazione dei componenti Riesecuzione distribuita.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
@@ -13,12 +12,12 @@ ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774968"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089375"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opzioni (esecuzione Query-SQL Server-ANSI pagina)
   L'insieme di queste opzioni SET dello standard ANSI (ISO) definisce l'ambiente di elaborazione della query per l'intera durata della query dell'utente o dell'esecuzione di un trigger o di una stored procedure. Queste opzioni SET tuttavia non includono tutte le opzioni necessarie per la conformità allo standard ISO. Questa pagina consente di indicare se [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debba eseguire le query utilizzando tutte o una parte delle impostazioni specificate nello standard ISO. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni relative alle query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **ANSI**in **Esecuzione**.  

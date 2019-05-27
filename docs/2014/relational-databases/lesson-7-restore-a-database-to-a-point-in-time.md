@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743350"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090719"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lezione 8. ripristinare un database in Archiviazione di Windows Azure
   In questa lezione, verrà illustrato come creare un file di backup in locale e quindi ripristinarlo in Archiviazione di Windows Azure. Si noti che è possibile impostare il database localmente o in una macchina virtuale in Windows Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6 e 7.  

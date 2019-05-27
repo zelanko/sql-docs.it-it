@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374843"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095000"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Guida per l'utilizzo delle funzionalità di Business Intelligence di SQL Server in una farm di SharePoint 2010
   In questo argomento viene riepilogata la disponibilità delle funzionalità in base alle versioni e alle edizioni del software in uso. Vengono inoltre illustrati i requisiti di installazione di SharePoint 2010 per l'utilizzo di funzionalità SQL Server specifiche. Per informazioni correlate a SharePoint 2013, vedere [topologie di distribuzione per le funzionalità di SQL Server BI in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f50e2d4a1cee7bfb36d03f69a8ee4a41772939b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298805"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094605"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installare la modalità SharePoint di Reporting Services per SharePoint 2013
   Nelle procedure contenute in questo argomento viene illustrata l'installazione di un unico server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint. Nei passaggi è inclusa l'esecuzione dell'Installazione guidata di SQL Server, nonché di attività di configurazione in cui viene utilizzata Amministrazione centrale SharePoint. L'argomento può inoltre essere utilizzato per singole procedure di aggiornamento di un'installazione esistente, ad esempio per creare una applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

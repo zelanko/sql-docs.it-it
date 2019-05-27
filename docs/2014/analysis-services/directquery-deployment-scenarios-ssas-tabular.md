@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731667"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081644"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scenari di distribuzione DirectQuery (SSAS tabulare)
   In questo argomento viene fornita una procedura dettagliata del processo di progettazione e distribuzione per i modelli DirectQuery. È possibile configurare DirectQuery per l'utilizzo dei soli dati relazionali (solo DirectQuery) oppure è possibile configurare il modello per alternare l'utilizzo dei soli dati memorizzati nella cache o dei soli dati relazionali (modalità ibrida). In questo argomento viene illustrato il processo di implementazione per entrambe le modalità e vengono descritte le possibili differenze nei risultati della query a seconda della modalità e della configurazione della sicurezza.  

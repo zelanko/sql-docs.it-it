@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
@@ -13,12 +12,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6ade5a39c974af7a87bb33aab6da490e0c3ae0e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757182"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066843"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurare le proprietà Comportamento tabella per i report Power View (SSAS tabulare)
   Se si usa un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà del comportamento delle tabelle che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084830"
 ---
 # <a name="data-mining-tools"></a>Strumenti di data mining
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre gli strumenti seguenti che consentono di creare soluzioni di data mining:  
@@ -72,7 +71,7 @@ ms.locfileid: "62722884"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Attività di data mining e trasformazioni in Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dispone di numerosi componenti che supportano il data mining.  
   
- Alcuni strumenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono progettati per consentire di automatizzare attività di data mining comuni, tra cui stime, compilazioni di modelli ed elaborazioni. Ad esempio:  
+ Alcuni strumenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono progettati per consentire di automatizzare attività di data mining comuni, tra cui stime, compilazioni di modelli ed elaborazioni. Ad esempio:   
   
 -   Creare un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che consenta di aggiornare automaticamente il modello ogni volta che il set di dati viene aggiornato con nuovi clienti.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62722884"
   
 -   Generare automaticamente modelli passati sui parametri.  
   
- Tuttavia, è possibile utilizzare il data mining anche in un flusso di lavoro del pacchetto, come input ad altri processi. Ad esempio:  
+ Tuttavia, è possibile utilizzare il data mining anche in un flusso di lavoro del pacchetto, come input ad altri processi. Ad esempio:   
   
 -   Utilizzare i valori delle probabilità generati dal modello per ponderare i punteggi per il text mining o per altre attività di classificazione.  
   

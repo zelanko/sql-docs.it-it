@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - validating data mining models
@@ -16,12 +15,12 @@ ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085531"
 ---
 # <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
   In questo argomento viene illustrata la creazione di un report di convalida incrociata utilizzando la scheda Grafico di accuratezza in Progettazione modelli di data mining. Per informazioni generali sui report di convalida incrociata e sulle misure statistiche in esso contenute, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md).  

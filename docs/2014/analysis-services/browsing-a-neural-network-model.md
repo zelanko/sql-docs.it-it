@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660194"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088446"
 ---
 # <a name="browsing-a-neural-network-model"></a>Esplorazione di un modello di rete neurale
   Quando si apre un modello di regressione logistica o di rete neurale utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore del modello di rete neurale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sugli schemi del modello e sui dati sottostanti.  

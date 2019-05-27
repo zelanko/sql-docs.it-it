@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [data mining]
@@ -15,12 +14,12 @@ ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77a0c6f2f0100e7e0c0e73ee70bc8705135d259f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722813"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084796"
 ---
 # <a name="data-types-data-mining"></a>Tipi di dati (data mining)
   Quando si crea un modello di data mining o una struttura di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario definire i tipi di dati per ogni colonna della struttura. Il tipo di dati indica al motore di data mining se i dati presenti nell'origine dati sono numerici o di testo e il modo in cui devono essere elaborati. Se nei dati di origine ad esempio sono contenuti dati numerici, è possibile specificare se i numeri devono essere considerati come numeri interi o se devono essere utilizzate posizioni decimali.  

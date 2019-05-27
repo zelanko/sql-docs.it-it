@@ -26,16 +26,16 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5a1f24be0dff936bb7b2ab71606b0c2dd704988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 837f3a8760611ced15c5face56080031cd5d911f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658299"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948631"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ SYSDATETIME ( )
  **datetime2(7)**  
   
 ## <a name="remarks"></a>Remarks  
- Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a SYSDATETIME ovunque possano fare riferimento a un'espressione **datetime2(7)**.  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a SYSDATETIME ovunque possano fare riferimento a un'espressione **datetime2(7)** .  
   
  SYSDATETIME è una funzione non deterministica. Le viste e le espressioni che fanno riferimento a questa funzione in una colonna non sono indicizzabili.  
   

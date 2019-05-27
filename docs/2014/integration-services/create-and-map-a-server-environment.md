@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
@@ -16,12 +15,12 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060144"
 ---
 # <a name="create-and-map-a-server-environment"></a>Creare ed eseguire il mapping di un ambiente server
   Creare un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto distribuito nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
@@ -13,12 +12,12 @@ ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680308"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087354"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Connessione a un file flat (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di connettersi a un file flat (con estensione txt), a un file con valori delimitati da tabulazioni (con estensione tab) o a un file con valori delimitati da virgole (con estensione csv). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

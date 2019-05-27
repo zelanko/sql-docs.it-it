@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57988797"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947473"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -52,7 +52,7 @@ STRING_SPLIT ( string , separator )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo carattere, ad esempio **nvarchar**, **varchar**, **nchar** o **char**.  
   
  *separator*  
- È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) a carattere singolo di qualsiasi tipo, ad esempio **nvarchar(1)**, **varchar (1)**, **nchar (1)** o **char (1)**, usata come separatore per sottostringhe concatenate.  
+ È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) a carattere singolo di qualsiasi tipo, ad esempio **nvarchar(1)** , **varchar (1)** , **nchar (1)** o **char (1)** , usata come separatore per sottostringhe concatenate.  
   
 ## <a name="return-types"></a>Tipi restituiti  
 
@@ -99,7 +99,7 @@ WHERE RTRIM(value) <> '';
 
 STRING_SPLIT restituirà una stringa vuota se non c'è niente tra i separatori. La condizione RTRIM(value) <> " rimuoverà i token vuoti.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>b. Dividere una stringa di valori delimitati da virgola in una colonna
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Dividere una stringa di valori delimitati da virgola in una colonna
 
 La tabella Product ha una colonna con un elenco di tag delimitati da virgole illustrato nell'esempio seguente:  
   

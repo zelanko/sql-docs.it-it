@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DECRYPTBYKEYAUTOASYMSKEY function
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6452ae04f35c81f6ef7beb9d379ad55a056d2021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c82a43c833db36e77eae93a1fe529736e4b4fa4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664069"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945509"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispond
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOASYMKEY` consente di combinare le funzionalità sia di `OPEN SYMMETRIC KEY` che di `DECRYPTBYKEY`. In un'unica operazione consente prima di decrittografare una chiave simmetrica e quindi di usarla per la decrittografia del testo crittografato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione `VIEW DEFINITION` per la chiave simmetrica e l'autorizzazione `CONTROL` per la chiave asimmetrica.  
   
 ## <a name="examples"></a>Esempi

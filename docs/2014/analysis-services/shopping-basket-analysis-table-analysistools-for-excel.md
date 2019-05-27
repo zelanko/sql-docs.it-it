@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - shopping basket analysis
@@ -17,12 +16,12 @@ ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068682"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Market basket analysis (Strumenti di analisi tabelle per Excel)
   ![Strumento per gli acquisti](media/tat-shopbskt.gif "strumento per gli acquisti")  

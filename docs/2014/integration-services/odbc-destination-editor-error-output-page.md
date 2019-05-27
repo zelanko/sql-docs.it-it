@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
@@ -13,12 +12,12 @@ ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf651979dcf1cf651fecb6c9f385396a7dcb801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057195"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Editor destinazione ODBC (pagina Output errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **ODBC Destination Editor** per selezionare le opzioni di gestione degli errori.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801635"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982532"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Impedisce gli aggiornamenti eseguiti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola `WHERE CURRENT OF` di un'istruzione `UPDATE` o `DELETE`. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  Definisce le colonne aggiornabili nel cursore. Se è specificato l'argomento OF <column_name> [, <... n>], è possibile apportare modifiche solo nelle colonne elencate. Se si specifica `UPDATE` senza un elenco di colonne, è possibile aggiornare tutte le colonne.  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ Specifica che gli aggiornamenti o le eliminazioni posizionate eseguite tramite i
   
 Se le clausole nell'argomento *select_statement* sono in conflitto con la funzionalità del tipo di cursore richiesto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte il cursore in modo implicito in un altro tipo. Per ulteriori informazioni, vedere l'argomento relativo alla conversione implicita dei cursori.  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Definisce le colonne aggiornabili nel cursore. Se si specifica `OF <column_name> [, <... n>]`, è possibile apportare modifiche solo nelle colonne elencate. Se l'istruzione `UPDATE` viene specificata senza un elenco di colonne, è possibile aggiornare tutte le colonne, a meno che non sia stata specificata l'opzione di concorrenza `READ_ONLY`.  
   
 ## <a name="remarks"></a>Remarks  
@@ -166,7 +166,7 @@ Dopo la dichiarazione di un cursore è possibile eseguire le stored procedure di
   
  È possibile usare variabili come parte dell'istruzione *select_statement* che dichiara un cursore. Dopo la dichiarazione di un cursore i valori delle variabili di cursore non cambiano.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione `DECLARE CURSOR` vengono assegnate per impostazione predefinita a qualsiasi utente che disponga delle autorizzazioni per l'istruzione `SELECT` nelle viste, nelle tabelle e nelle colonne usate nel cursore.
  
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
@@ -186,7 +186,7 @@ OPEN vend_cursor
 FETCH NEXT FROM vend_cursor;  
 ```  
   
-### <a name="b-using-nested-cursors-to-produce-report-output"></a>b. Utilizzo di cursori annidati per la generazione di report  
+### <a name="b-using-nested-cursors-to-produce-report-output"></a>B. Utilizzo di cursori annidati per la generazione di report  
  Nell'esempio seguente viene illustrato in che modo è possibile nidificare i cursori per generare report complessi. Il cursore interno viene dichiarato per ogni fornitore.  
   
 ```sql  

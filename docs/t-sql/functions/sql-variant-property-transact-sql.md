@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL_VARIANT_PROPERTY function
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc50bcf8c4170372b49d3a448526e9a64f7ac3b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a9f7c245f08ffcd3211277a4d201ed884d66caa
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595409"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947661"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  Espressione di tipo **sql_variant**.  
   
  *property*  
- Contiene il nome della proprietà **sql_variant** per la quale è necessario specificare informazioni. *property* è **varchar(** 128 **)**. I valori possibili sono i seguenti:  
+ Contiene il nome della proprietà **sql_variant** per la quale è necessario specificare informazioni. *property* è **varchar(** 128 **)** . I valori possibili sono i seguenti:  
   
 |valore|Descrizione|Tipo di base di sql_variant restituito|  
 |-----------|-----------------|----------------------------------------|  

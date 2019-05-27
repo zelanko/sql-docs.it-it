@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], relational
@@ -15,12 +14,12 @@ ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b38ae218dbe1f5f2cc1f0f1090ed2d82e52a96e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715368"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085392"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Creare una nuova struttura di data mining relazionale
   Usare la Creazione guidata modello di data mining per creare una nuova struttura di data mining che usa dati da un database relazionale o da un'altra origine, quindi salvare la struttura ed eventuali modelli correlati in un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

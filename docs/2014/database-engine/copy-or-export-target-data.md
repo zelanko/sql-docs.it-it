@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3c44b821-7a0e-4c96-8994-cba4e6337bdc
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 749af9366ef78ef182ad037258eb75603333195f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 610c9d33ecb2423a64ae76708d2f38d1f8fd88a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808206"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065098"
 ---
 # <a name="copy-or-export-target-data"></a>Copiare o esportare i dati di destinazione
   È possibile copiare i dati di destinazione ed esportare i dati di destinazione in un file CSV.  

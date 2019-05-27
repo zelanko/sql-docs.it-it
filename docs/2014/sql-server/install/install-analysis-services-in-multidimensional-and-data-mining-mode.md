@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
@@ -17,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8843131bfefd3d11e1f3b5509c2375235f8bf2f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349268"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094617"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installazione di Analysis Services in modalità Multidimensionale e Data Mining
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre funzionalità di elaborazione analitica in linea (OLAP) e di data mining per applicazioni di Business Intelligence. In questa versione, il supporto per i database OLAP e modelli di data mining è disponibile quando si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nelle *modalità multidimensionale*. La modalità multidimensionale è una delle tre modalità del server in cui viene eseguito [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si tratta della modalità predefinita. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i valori predefiniti, si ottiene un'istanza che esegue database multidimensionali e modelli di data mining.  

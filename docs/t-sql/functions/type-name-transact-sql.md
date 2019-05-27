@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4252f3511baadc5536823323c026811ee53dd201
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 610fe4a3eee5ee6db5e0e00f7940208b38df7ff1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257176"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946841"
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  TYPE_NAME restituisce NULL quando *type_id* non è valido oppure quando il chiamante non dispone di autorizzazioni sufficienti per fare riferimento al tipo.  
   
- La funzione TYPE_NAME può essere utilizzata sia con tipi di dati di sistema che con tipi di dati definiti dall'utente. Il nome restituito è sempre non qualificato, indipendentemente dallo schema in cui il tipo è contenuto, e non include pertanto il prefisso _schema_**.** biz:,  
+ La funzione TYPE_NAME può essere utilizzata sia con tipi di dati di sistema che con tipi di dati definiti dall'utente. Il nome restituito è sempre non qualificato, indipendentemente dallo schema in cui il tipo è contenuto, e non include pertanto il prefisso _schema_ **.** biz:,  
   
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
