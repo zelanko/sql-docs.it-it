@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748363"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070349"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Oggetti relazionali (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Oggetti relazionali** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare tabelle, viste o altri oggetti di un'origine dati in cui si desidera impostare la memorizzazione nella cache attiva. Per visualizzare questa finestra di dialogo di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile fare clic sul pulsante con i punti di sospensione (**...**) per una delle opzioni disponibili in **Specifica tabelle di rilevamento** della scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** .  

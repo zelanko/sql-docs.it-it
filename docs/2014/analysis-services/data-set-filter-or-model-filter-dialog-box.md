@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732597"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082606"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Finestra di dialogo Filtro dei set di dati o Filtro modello
   Questa finestra di dialogo consente di compilare i filtri che è possibile applicare a un set di dati.  Il set di dati può essere un set esterno utilizzato per eseguire il test o un set di dati di case per un modello di data mining. Il nome della finestra di dialogo varia a seconda che il filtro venga utilizzato per un set di dati esterno o per un modello di data mining.  

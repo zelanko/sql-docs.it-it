@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266227"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109894"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
   La pagina Scegli percorso elemento consente di selezionare una cartella per un nuovo report collegato o per un nuovo modello. Se si crea un modello o un report collegato per un gruppo di utenti specifico, potrebbe essere utile inserire l'elemento in una cartella contenente altri report e modelli utilizzati dallo stesso gruppo. È necessario selezionare una cartella esistente e per la quale si dispone delle autorizzazioni per l'aggiunta di contenuto.  

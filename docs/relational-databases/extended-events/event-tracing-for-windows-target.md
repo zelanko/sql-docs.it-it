@@ -1,7 +1,7 @@
 ---
 title: Destinazione di Event Tracing for Windows| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478116"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198317"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
 
@@ -60,7 +60,8 @@ ms.locfileid: "58478116"
 |default_etw_session_logfile_size_mb|Qualsiasi valore intero senza segno. Questo valore è facoltativo.|Dimensioni del file di log, in megabyte (MB), per la sessione di Eventi estesi. Il valore predefinito è 20 MB.|  
 |default_etw_session_buffer_size_kb|Qualsiasi valore intero senza segno. Questo valore è facoltativo.|Dimensioni del buffer in memoria, in kilobyte (MB), per la sessione di Eventi estesi. Il valore predefinito è 128 MB.|  
 |tentativi|Qualsiasi valore intero senza segno.|Numero di tentativi di pubblicazione dell'evento al sottosistema ETW prima di eliminare l'evento. Il valore predefinito è 0.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  La configurazione di queste impostazioni è facoltativa. La destinazione ETW utilizza valori predefiniti per queste impostazioni.  
   
  La destinazione ETW è responsabile per:  
@@ -80,19 +81,22 @@ ms.locfileid: "58478116"
     > [!IMPORTANT]  
     >  Impossibile modificare il percorso del file dopo l'inizio della prima sessione.  
   
--   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
-  
+-   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione ETW a una sessione di Eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  Per altre informazioni su un esempio completo che mostra come usare la destinazione ETW e come visualizzare i dati, vedere [Monitorare l'attività del sistema mediante gli eventi estesi](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Destinazioni degli eventi estesi di SQL Server](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

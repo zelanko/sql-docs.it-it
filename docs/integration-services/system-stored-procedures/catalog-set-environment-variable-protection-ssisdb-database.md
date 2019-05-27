@@ -11,12 +11,12 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ca421c3d1cdd2be5cbfbc57a867339c2ce2a228
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 015c0f51b728ba3f601722d1d44c1e3b2f173973
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65715908"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198172"
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (database SSISDB)
 
@@ -33,18 +33,18 @@ ms.locfileid: "65715908"
 catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
-    , [ @is_sensitive = ] is_sensitive  
+    , [ @sensitive = ] sensitive  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)**.  
+ Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)**.  
+ Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)** .  
   
  [ @sensitive = ] *sensitive*  
  Viene indicato se nella variabile è contenuto o meno un valore importante. Utilizzare un valore pari a `1`, per indicare che il valore della variabile di ambiente è importante o, in caso contrario, un valore pari a `0`. Un valore, se importante, viene crittografato quando viene archiviato; altrimenti, viene archiviato non crittografato. Il parametro *sensitive* è di tipo **bit**.  

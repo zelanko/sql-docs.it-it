@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
@@ -15,12 +14,12 @@ ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729675"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079469"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Colonne chiave (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Colonne chiave** per modificare la proprietà **KeyColumns** di un attributo. Per altre informazioni, vedere [Modificare la proprietà KeyColumn di un attributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  

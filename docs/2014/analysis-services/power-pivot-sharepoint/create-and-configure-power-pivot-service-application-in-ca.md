@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac1b7ad9e5308437dacf51b7960822e7636ab3e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749380"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071580"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Creare e configurare un'applicazione del servizio PowerPivot in Amministrazione centrale
   Un'applicazione del servizio PowerPivot è un'istanza del servizio condiviso del servizio di sistema PowerPivot. Ogni applicazione del servizio possiede impostazioni di configurazione, proprietà, un'identità e un sistema di archiviazione dati interno propri.  

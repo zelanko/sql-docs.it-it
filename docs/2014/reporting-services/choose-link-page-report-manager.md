@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266060"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109882"
 ---
 # <a name="choose-link-page-report-manager"></a>Pagina Scegli collegamento (Gestione report)
   La pagina Scegli collegamento consente di selezionare un report diverso su cui basare il report collegato selezionato. I report collegati sono basati su altri report già pubblicati in un server di report. Un report collegato utilizza il layout e i dati del report di base, ma dispone di pagine delle proprietà separate, in modo che sia possibile personalizzare le proprietà dei parametri, le impostazioni di sicurezza, il nome, la descrizione e il percorso.  

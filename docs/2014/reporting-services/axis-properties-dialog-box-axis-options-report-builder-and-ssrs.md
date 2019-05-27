@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
@@ -14,12 +13,12 @@ ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 553d1d4e2be366cc56ed37caad6a9db20850e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239341"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109956"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà asse, Opzioni asse (Generatore report e SSRS)
   Selezionare **opzioni dell'asse** nel **orizzontale** oppure **proprietà asse verticale** finestra di dialogo per definire l'aspetto dell'asse specificato del grafico. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]il grafico visualizzava tutte le etichette sull'asse x per impostazione predefinita. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, tuttavia, il grafico ignora le etichette allo scopo di produrre un'immagine più pulita sul grafico ed evitare la sovrapposizione delle etichette. Per altre informazioni, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

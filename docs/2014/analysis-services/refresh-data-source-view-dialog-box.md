@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
@@ -15,12 +14,12 @@ ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748485"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070512"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Finestra di dialogo Aggiorna vista origine dati
   Utilizzare la finestra di dialogo **Aggiorna vista origine dati** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per accettare o annullare le modifiche che verranno apportate dall'aggiornamento della vista origine dati. La finestra di dialogo visualizza le modifiche che verranno apportate alla vista origine dati in seguito alle modifiche apportate all'origine dei dati sottostante. Fare clic su **OK** per accettare le modifiche e aggiornare la vista origine dati oppure fare clic su **Annulla** per ignorare le modifiche e lasciare invariata la vista origine dati. Per visualizzare la finestra di dialogo **Aggiorna vista origine dati** eseguire una delle operazioni seguenti:  

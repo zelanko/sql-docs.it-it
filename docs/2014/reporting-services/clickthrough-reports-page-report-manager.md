@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
@@ -13,12 +12,12 @@ ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109803"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Pagina Report click-through (Gestione report)
   Un report click-through consente di visualizzare una tabella di dati correlati quando si fa clic sui dati interattivi inclusi nel report. Questi report vengono generati dal server di report in base alle informazioni incluse nel modello utilizzato per creare il report. Se non si desidera utilizzare i report click-through generati dal server di report, è possibile creare report personalizzati da pubblicare in un server di report e di cui eseguire il mapping a punti dati interattivi definiti nel modello. I report personalizzati devono essere creati in Generatore report dallo stesso modello, quindi pubblicati nel server di report. Per eseguire il mapping dei report personalizzati agli elementi nel modello, utilizzare la pagina Report click-through in Gestione report.  

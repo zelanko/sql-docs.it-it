@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssas.instancerename.f1
@@ -13,12 +12,12 @@ ms.assetid: 3708d992-8dd9-461c-8aa0-5da6df96ed70
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748333"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070364"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Finestra di dialogo Rinomina istanza (Analysis Services)
   Utilizzare la finestra di dialogo **Rinomina istanza** per rinominare un'istanza esistente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È possibile visualizzare la finestra di dialogo **Rinomina istanza** avviando lo strumento **Ridenominazione istanza** (asinstancerename.exe) in C:\Programmi\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  

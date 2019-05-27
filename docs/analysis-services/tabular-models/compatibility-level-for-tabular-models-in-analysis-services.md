@@ -1,6 +1,6 @@
 ---
 title: Livello di compatibilità per i modelli tabulari in Analysis Services | Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709119"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175128"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Livello di compatibilità per i modelli tabulari di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ Le funzionalità principali nel livello di compatibilità 1400 includono:
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>Controllare il livello di compatibilità supportato per un server in SSMS  
  In SSMS fare clic con il pulsante destro del mouse sul nome del server > **Proprietà** > **Livello di compatibilità supportato**.  
-  
- Questa proprietà specifica il massimo livello di compatibilità di un database che verrà eseguito nel server. Il livello di compatibilità supportato è di sola lettura e non può essere modificato.  
+
+ Questa proprietà specifica il massimo livello di compatibilità di un database che verrà eseguito nel server. Il livello di compatibilità supportato è di sola lettura e non può essere modificato.
+ 
+> [!NOTE]  
+>  In SSMS, quando si è connessi a un server di SQL Server Analysis Services, server Azure Analysis Services o dell'area di lavoro di Power BI Premium, la proprietà a livello di compatibilità supportato mostrerà 1200. Questo è un problema noto e verrà risolto in un SQL Server Management Studio prossimi aggiornamenti. Quando è stato risolto, questa proprietà indicherà il massimo livello di compatibilità supportato. 
   
 ## <a name="see-also"></a>Vedere anche  
  [Livello di compatibilità di un database multidimensionale](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079834"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
   In questo argomento vengono illustrate l'esperienza utente relativamente alle cartelle di lavoro create in ambienti di PowerPivot precedenti e la modalità di aggiornamento delle cartelle di lavoro di PowerPivot in modo che sia possibile avvalersi delle nuove funzionalità introdotte in questa versione. Per altre informazioni sulle nuove funzionalità, vedere [What ' s New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  

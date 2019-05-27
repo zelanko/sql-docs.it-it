@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importing.f1
@@ -13,12 +12,12 @@ ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59caffb94baf8ae4a991bf793a3b77386bd1075f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730167"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080506"
 ---
 # <a name="importing-ssas"></a>Importazione (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di visualizzare lo stato dell'operazione di importazione. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

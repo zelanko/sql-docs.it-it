@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45fad1a973c06fd487dc3b2a92b7c45679f8bc93
-ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
-ms.translationtype: HT
+ms.openlocfilehash: 8d041e9554b976f46b121f2c39d8170183b85c6e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66036928"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110215"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Note sulla versione di anteprima di SQL Server 2019 in Linux
 
@@ -48,7 +48,7 @@ La tabella seguente elenca la cronologia delle versioni per l'anteprima di SQL S
 
 | Versione               | Version       | Data di rilascio |
 |-----------------------|---------------|--------------|
-| [CTP 3.0](#CTP30)     | 15.0.1500.28  | 2019-5-22    |
+| [CTP 3.0](#CTP30)     | 15.0.1600.8  | 2019-5-22    |
 | [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
@@ -215,7 +215,7 @@ Per iniziare, vedere le guide introduttive seguenti:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Eseguire l'installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Esecuzione in Docker](quickstart-install-connect-ubuntu.md)
 - [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Esecuzione e connessione - Cloud](quickstart-install-connect-clouds.md)

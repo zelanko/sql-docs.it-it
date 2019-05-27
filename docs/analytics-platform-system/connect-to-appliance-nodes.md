@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134400"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186802"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Connettersi ai nodi di appliance nel sistema di piattaforma Analitica
 Questo articolo illustra vari modi per connettersi a ogni nodo nell'appliance del sistema di piattaforma Analitica.  
@@ -26,6 +26,9 @@ Prima di usare Hadoop con SQL Server PDW, chiedere all'amministratore di applian
 Ciascuno dei nodi di appliance è possibile accedere direttamente solo in scenari di utilizzo specifico e dai tipi di utente specifico. La tabella seguente elenca ogni nodo di appliance e gli scenari in cui gli utenti si connetteranno direttamente a tale nodo.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> Modificare le impostazioni di database o una tabella nodi di controllo o di calcolo senza il consenso esplicito del Team del prodotto o Team di supporto clienti di APS potrebbe rendere l'appliance APS esplicitamente il supporto.
   
 |||  
 |-|-|  

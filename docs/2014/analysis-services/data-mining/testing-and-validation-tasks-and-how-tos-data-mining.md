@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732842"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082865"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Attività e procedure di test e convalida (data mining)
   Per mettere a confronto l'accuratezza predittiva dei modelli di data mining in una struttura di data mining, è possibile usare la scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
