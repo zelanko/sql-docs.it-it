@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774897"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,28 +70,37 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *path_to_file*  
- Specifica il percorso completo, nome di file incluso, del file in cui verrà salvato il certificato. Questo percorso può essere un percorso locale o un percorso UNC di rete. L'impostazione predefinita è rappresentata dal percorso della cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- *path_to_private_key_file*  
- Specifica il percorso completo, nome di file incluso, del file in cui verrà salvata la chiave privata. Questo percorso può essere un percorso locale o un percorso UNC di rete. L'impostazione predefinita è rappresentata dal percorso della cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *certname*  
+ Il nome del certificato di cui eseguire il backup.
 
- *encryption_password*  
+ TO FILE = '*path_to_file*'  
+ Specifica il percorso completo, nome di file incluso, del file in cui verrà salvato il certificato. Questo percorso può essere un percorso locale o un percorso UNC di rete. Se si specifica solo un nome, il file verrà salvato nella cartella di dati utente predefinita dell'istanza, che può essere o meno la cartella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA. Per LocalDB di SQL Server Express, la cartella di dati utente predefinita dell'istanza corrisponde al percorso specificato dalla variabile di ambiente `%USERPROFILE%` per l'account che ha creato l'istanza.  
+
+ WITH PRIVATE KEY specifica che la chiave privata del certificato deve essere salvata in un file. Questa clausola è facoltativa.
+
+ FILE = '*path_to_private_key_file*'  
+ Specifica il percorso completo, nome di file incluso, del file in cui verrà salvata la chiave privata. Questo percorso può essere un percorso locale o un percorso UNC di rete. Se si specifica solo un nome, il file verrà salvato nella cartella di dati utente predefinita dell'istanza, che può essere o meno la cartella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA. Per LocalDB di SQL Server Express, la cartella di dati utente predefinita dell'istanza corrisponde al percorso specificato dalla variabile di ambiente `%USERPROFILE%` per l'account che ha creato l'istanza.  
+
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  Password utilizzata per crittografare la chiave privata prima di scriverla nel file di backup. Questa password è soggetta ai controlli di complessità delle password.  
   
- *decryption_password*  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave. Questo argomento non è necessario se il certificato viene crittografato tramite la chiave master. 
   
 ## <a name="remarks"></a>Remarks  
  Se la chiave privata è crittografata con una password nel database, è necessario specificare la password di decrittografia.  
   
- Quando si esegue il backup della chiave privata in un file, la crittografia è obbligatoria. La password usata per proteggere il certificato non corrisponde alla password usata per crittografare la chiave privata del certificato.  
-  
- Per ripristinare un certificato da un backup, usare l'istruzione [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ Quando si esegue il backup della chiave privata in un file, la crittografia è obbligatoria. La password usata per proteggere la chiave privata nel file non corrisponde a quella usata per crittografare la chiave privata del certificato nel database.  
+
+ Le chiavi private vengono salvate nel formato di file PVK.
+
+ Per ripristinare il backup di un certificato, con o senza la chiave privata, usare l'istruzione [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ Per ripristinare una chiave privata in un certificato esistente nel database, usare l'istruzione [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).
  
  Quando si esegue un backup, i file verranno inclusi nell'elenco di controllo di accesso per l'account del servizio dell'istanza di SQL Server. Se è necessario ripristinare il certificato in un server in esecuzione con un account diverso, sarà necessario modificare le autorizzazioni per i file in modo che possano essere letti dal nuovo account. 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il certificato ed è necessario conoscere la password utilizzata per crittografare la chiave privata. Se si esegue il backup della sola parte pubblica del certificato, questo comando richiede alcune autorizzazioni per il certificato ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per il certificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -104,7 +113,7 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';
 GO  
 ```  
   
-### <a name="b-exporting-a-certificate-and-a-private-key"></a>b. Esportazione di un certificato e di una chiave privata  
+### <a name="b-exporting-a-certificate-and-a-private-key"></a>B. Esportazione di un certificato e di una chiave privata  
  Nell'esempio seguente la chiave privata del certificato di cui si esegue il backup verrà crittografata con la password `997jkhUbhk$w4ez0876hKHJH5gh`.  
   
 ```  
@@ -129,6 +138,10 @@ GO
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

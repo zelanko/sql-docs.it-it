@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f99626134566335ca909fdc11d00e859b898538d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dddd702582cdc8b2baea11838b0ad7e0ccd8cc9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737765"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098215"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilazione e distribuzione in un database locale
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilare e distribuire in un database locale
 In Microsoft SQL Server 2012 è disponibile un'istanza del server su richiesta locale, denominata Runtime del database locale di SQL Server Express, che viene attivata quando si esegue il debug di un progetto di database di SQL Server. Questa istanza del server locale può essere utilizzata come sandbox per la compilazione, il test e il debug del progetto. È indipendente da tutte le istanze di SQL Server installate e non è accessibile al di fuori di SQL Server Data Tools (SSDT). Tale soluzione è ideale per gli sviluppatori che dispongono di accesso limitato ai database di produzione, o a cui non possono accedere affatto, ma che desiderano eseguire il test dei progetti in locale prima che vengano distribuiti nella produzione da persone autorizzate. Inoltre, quando si sviluppa una soluzione database per SQL Azure, è possibile avvalersi dei vantaggi forniti da questo server locale per sviluppare ed eseguire il test del progetto di database in locale, prima di distribuirlo nel cloud.  
   
 > [!WARNING]  

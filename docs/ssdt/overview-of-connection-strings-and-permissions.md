@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a61361460513e546e459aa6183b8081f510d8ed7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646869"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102026"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Panoramica delle stringhe di connessione e delle autorizzazioni
 Per l'esecuzione di unit test di SQL Server è necessario connettersi a un server di database usando una o due stringhe di connessione specifiche. Ogni stringa di connessione rappresenta un account con le autorizzazioni specifiche necessarie per eseguire l'attività o il set di attività in uno script specifico come parte del test. È possibile specificare queste stringhe nella finestra di dialogo **Configurazione test di SQL Server** o modificando manualmente il file app.config per il progetto di test.  
@@ -40,7 +40,7 @@ Le stringhe specificate nella finestra di dialogo di configurazione progetto ven
 ## <a name="windows-authentication-versus-sql-server-authentication"></a>Autenticazione di Windows e autenticazione di SQL Server  
 Quando si specificano le stringhe di connessione, è necessario scegliere tra l'utilizzo dell'autenticazione di Windows e l'autenticazione di SQL server. Un motivo per scegliere l'autenticazione di Windows è il fatto che supporta l'uso dei test in team meglio dell'autenticazione di SQL Server. Se si sceglie l'autenticazione di SQL Server, le stringhe di connessione vengono crittografate usando le API Data Protection (DPAPI), in base alle credenziali utente. Ciò significa che i test in questo progetto di test verranno eseguiti solo per l'utente corrente, non per i membri del team, i quali ottengono i test tramite il sistema di controllo del codice sorgente dopo che l'utente li ha archiviati. Per eseguire test in questo progetto di test, gli altri membri del team dovranno riconfigurare il progetto di test usando le proprie credenziali. A tale scopo, dovranno modificare la propria copia del file app.config o utilizzare la finestra di dialogo di configurazione progetto.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Lo script di test viene eseguito al livello di autorizzazione del contesto di esecuzione, ovvero lo stesso livello di autorizzazione che sarebbe attivo per i comandi dell'utente eseguiti sul database secondo l'utilizzo tipico. Le azioni pre-test e post-test e gli script TestInitialize e TestCleanup vengono eseguiti nel livello di autorizzazione del contesto autorizzato.  
   
 Poiché per lo script dell'azione post-test viene utilizzata la connessione con autorizzazione superiore, è possibile eseguirne la convalida. In questo script è inoltre possibile eseguire i comandi script per il test delle autorizzazioni. Per altre informazioni sulle autorizzazioni, vedere la sezione sugli unit test di SQL Server in [Autorizzazioni necessarie per SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md).  

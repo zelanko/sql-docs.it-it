@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580129"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -174,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>Argomenti  
+```
+
+## <a name="arguments"></a>Argomenti
+
  *index_name*  
  Nome dell'indice. I nomi di indice devono essere univoci all'interno di una tabella o di una vista, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
@@ -459,7 +460,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
  ON  
- I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi a livello di pagina.  
+ I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF  
  I blocchi a livello di pagina non vengono utilizzati.  
@@ -536,11 +537,11 @@ Il valore predefinito è 0 minuti.
   
  \<partition_number_expression> può essere specificato nei modi seguenti:  
   
--   Fornire il numero di una partizione, ad esempio ON PARTITIONS (2).  
+-   Specificare il numero di una partizione, ad esempio ON PARTITIONS (2).  
   
--   Fornire i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).  
+-   Specificare i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).  
   
--   Fornire sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).  
+-   Fornire sia intervalli che singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).  
   
  \<range> può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: ON PARTITIONS (6 TO 8).  
   
@@ -654,23 +655,28 @@ In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e nelle versioni successi
   
 Per ricompilare un indice columnstore cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Acquisisce un blocco esclusivo sulla tabella o partizione durante la ricompilazione. I dati sono "offline" e non disponibili durante la ricompilazione.  
+1. Acquisisce un blocco esclusivo sulla tabella o partizione durante la ricompilazione. I dati sono "offline" e non disponibili durante la ricompilazione.  
   
-2.  Deframmenta il columnstore eliminando fisicamente le righe eliminate in modo logico dalla tabella; i byte eliminati vengono recuperati sui supporti fisici.  
+1. Deframmenta il columnstore eliminando fisicamente le righe eliminate in modo logico dalla tabella; i byte eliminati vengono recuperati sui supporti fisici.  
   
-3.  Legge tutti i dati dell'indice columnstore originale, incluso il deltastore. Combina i dati in nuovi rowgroup e comprime i rowgroup nel columnstore.  
+1. Legge tutti i dati dell'indice columnstore originale, incluso il deltastore. Combina i dati in nuovi rowgroup e comprime i rowgroup nel columnstore.  
   
-4.  Richiede spazio sul supporto fisico per archiviare due copie dell'indice columnstore durante la ricompilazione. Al termine della ricompilazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina l'indice columnstore cluster originale.  
+1. Richiede spazio sul supporto fisico per archiviare due copie dell'indice columnstore durante la ricompilazione. Al termine della ricompilazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina l'indice columnstore cluster originale.
+
+1. Per una tabella di Azure SQL Data Warehouse con un indice columnstore cluster ordinato, ALTER INDEX REBUILD riordinerà i dati.  
   
-## <a name="reorganizing-indexes"></a> Riorganizzazione degli indici  
+## <a name="reorganizing-indexes"></a> Riorganizzazione degli indici
 La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente. Per visualizzare l'impostazione del fattore di riempimento, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 Quando viene specificata la parola chiave ALL, vengono riorganizzati gli indici relazionali, sia cluster sia non cluster, e gli indici XML della tabella. Quando si specifica ALL, vengono applicate alcune restrizioni. Vedere la definizione di ALL nella sezione Argomenti di questo articolo.  
   
 Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
- 
+
 > [!IMPORTANT]
 > Quando un indice viene riorganizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le statistiche non vengono aggiornate.
+
+>[!IMPORTANT]
+> Per una tabella di Azure SQL Data Warehouse con un indice columnstore cluster ordinato, `ALTER INDEX REORGANIZE` non riordina i dati. Per riordinare i dati, usare `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a> Disabilitazione degli indici  
 La disabilitazione di un indice impedisce agli utenti di accedere all'indice e, nel caso di indici cluster, ai dati della tabella sottostante. La definizione dell'indice rimane archiviata nel catalogo di sistema. La disabilitazione di un indice non cluster o di un indice cluster di una vista elimina fisicamente i dati dell'indice. La disabilitazione di un indice cluster impedisce l'accesso ai dati, i quali tuttavia rimangono archiviati in forma non gestita nell'albero B fino all'eliminazione o alla ricompilazione dell'indice. Per visualizzare lo stato di un indice abilitato o disabilitato, eseguire una query sulla colonna **is_disabled** della vista del catalogo **sys.indexes**.  
@@ -735,8 +741,7 @@ La funzionalità seguente è disabilitata per le operazioni di ricompilazione de
    -    ALTER TABLE con l'uso della ricompilazione dell'indice  
    -    Il comando DDL con "RESUMABLE=ON" non può essere eseguito all'interno di una transazione esplicita (non può far parte del blocco di commit BEGIN TRAN...)
    -    La ricompilazione di un indice contenente colonne calcolate o colonne TIMESTAMP come colonne chiave.
--   Nel caso in cui la tabella di base contenga colonne LOB, la ricompilazione dell'indice cluster ripristinabile richiede un blocco Sch-M all'inizio di questa operazione
-   -    L'opzione SORT_IN_TEMPDB=ON non è supportata per l'indice ripristinabile 
+-   Nel caso in cui la tabella di base contenga colonne LOB, la ricompilazione dell'indice cluster ripristinabile richiede un blocco Sch-M all'inizio di questa operazione 
 
 > [!NOTE]
 > Il comando DDL viene eseguito fin tanto che è completato, sospeso o non riuscito. Nel caso in cui il comando sia sospeso, verrà generato un errore a indicare che l'operazione è stata sospesa e che la creazione dell'indice non è stata completata. Altre informazioni sullo stato corrente dell'indice sono disponibili in [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Come in precedenza, in caso di errore verrà generato un errore. 
@@ -764,13 +769,13 @@ La funzionalità seguente è disabilitata per le operazioni di ricompilazione de
 Agli indici partizionati vengono applicate le restrizioni seguenti:  
   
 -   Quando si utilizza ALTER INDEX ALL ... non è possibile modificare l'impostazione di compressione di una singola partizione se la tabella include indici non allineati.  
--   La sintassi ALTER INDEX \<index> ... REBUILD PARTITION... consente di ricompilare la partizione specificata dell'indice.  
+-   La sintassi ALTER INDEX \<index> ... La sintassi REBUILD PARTITION ricompila la partizione specificata dell'indice.  
 -   La sintassi ALTER INDEX \<index> ... REBUILD WITH ... consente di ricompilare tutte le partizioni dell'indice.  
   
 ## <a name="statistics"></a>Statistiche  
  Quando si esegue **ALTER INDEX ALL ...** su una tabella, vengono aggiornate solo le statistiche associate agli indici. Le statistiche automatiche o manuali create sulla tabella, anziché su un indice, non vengono aggiornate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
 ## <a name="version-notes"></a>Note sulla versione  
@@ -870,7 +875,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Comprimere i rowgroup differenziali CLOSED nel columnstore  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Comprimere i rowgroup differenziali CLOSED nel columnstore  
  In questo esempio l'opzione REORGANIZE viene usata per comprimere tutti i rowgroup differenziali CLOSED nel columnstore come rowgroup compresso.   Questa opzione non è necessaria ma può essere utile quando il motore di tuple non comprime i rowgroup in modo sufficientemente rapido.  
   
 ```sql  
@@ -1005,7 +1010,7 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Ricompilazione di tutti gli indici di una tabella e impostazione di opzioni  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Ricompilazione di tutti gli indici di una tabella e impostazione di opzioni  
  Nell'esempio seguente viene specificata la parola chiave ALL. In questo modo vengono ricompilati tutti gli indici associati alla tabella Production.Product nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono inoltre specificate tre opzioni.  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

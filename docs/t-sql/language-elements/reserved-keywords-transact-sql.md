@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853570"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626682"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Parole chiave riservate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza parole chiave riservate per la definizione, la modifica e l'accesso ai database. Le parole chiave riservate fanno parte della grammatica del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per analizzare e interpretare istruzioni e batch [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nonostante da un punto di vista sintattico sia possibile utilizzare le parole chiave riservate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come identificatori e nomi di oggetto all'interno di script [!INCLUDE[tsql](../../includes/tsql-md.md)], in tal caso è necessario utilizzare identificatori delimitati.  
   
- La tabella seguente elenca le parole chiave riservate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e SQL Data Warehouse.  
+ La tabella seguente elenca le parole chiave riservate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Azure SQL Data Warehouse.  
   
 ||||  
 |-|-|-|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853570"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-La tabella seguente elenca le parole chiave riservate esclusive di **SQL Data Warehouse**.
+La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL Data Warehouse**.
 
 |||
 |-|-|
-|**Label**||
+|**LABEL**||
   
  Lo standard ISO definisce inoltre un elenco di parole chiave riservate. Non utilizzare le parole chiave riservate di ISO per i nomi di oggetto e gli identificatori. Le parole chiave riservate di ODBC, elencate nella tabella seguente, corrispondono a quelle di ISO.  
   

@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280855"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729057"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Progettazione Change Data Capture per Oracle di Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tramite CDC Designer Console è possibile sviluppare e gestire le istanze di Oracle CDC. CDC Designer Console è uno snap-in di Microsoft Management Console che contiene gli elementi seguenti:  
   
 -   New Instance Wizard (Procedura guidata nuova istanza): questa procedura guidata crea una nuova istanza di Oracle CDC. Per informazioni sull'utilizzo della New Instance Wizard, vedere [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
@@ -29,7 +33,7 @@ ms.locfileid: "58280855"
   
 -   CDC Instance Properties Editor (Editor proprietà istanza CDC): questa finestra di dialogo consente di modificare qualsiasi istanza del servizio Oracle CDC esistente. Per informazioni sulla modifica delle proprietà dell'istanza di CDC, vedere [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Microsoft® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL Server® 2016 fanno parte del Feature Pack di SQL Server 2016. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ MicrosoftÂ® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL ServerÂ® 2016 fanno parte di SQL Server 2016 Feature Pack. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ## <a name="in-this-documentation"></a>Contenuto della documentazione  
   

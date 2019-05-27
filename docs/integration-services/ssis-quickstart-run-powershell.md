@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282535"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717561"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Eseguire un pacchetto SSIS con PowerShell
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Questa guida introduttiva illustra come usare uno script di PowerShell per connettersi a un server di database ed eseguire un pacchetto SSIS.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -43,6 +47,16 @@ Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 5. Fare clic su **Mostra stringhe di connessione del database**.
 6. Esaminare l'intera stringa di connessione **ADO.NET**.
+
+## <a name="ssis-powershell-provider"></a>Provider PowerShell per SSIS
+È possibile usare il provider PowerShell per SSIS per connettersi a un catalogo SSIS ed eseguire pacchetti in esso presenti.
+
+Ecco un esempio di base su come eseguire un pacchetto SSIS in un catalogo pacchetti con il provider PowerShell per SSIS.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>Script di PowerShell
 Specificare i valori appropriati per le variabili nella parte superiore dello script seguente e quindi eseguire lo script per eseguire il pacchetto SSIS.
