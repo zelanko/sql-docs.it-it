@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [MDX]
@@ -19,12 +18,12 @@ ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 42c4d8581374c9805c28ce577249995427fd5c7e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699402"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073885"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Nozioni fondamentali sulle query MDX (Analysis Services)
   Nel linguaggio MDX (Multidimensional Expressions) è possibile eseguire query su oggetti multidimensionali, ad esempio un cubo, e restituire set di celle multidimensionali contenenti i dati del cubo. In questo argomento e negli argomenti correlati viene fornita una panoramica delle query MDX.  

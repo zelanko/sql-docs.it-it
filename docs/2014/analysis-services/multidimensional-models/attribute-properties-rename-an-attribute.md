@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
@@ -16,12 +15,12 @@ ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cefb51ce26bcc0bd454defe29c8d7f7969c1c6fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727262"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077216"
 ---
 # <a name="rename-an-attribute"></a>Rinominare un attributo
   Il nome di un attributo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene identificato tramite la proprietà **Name**. Per rinominare un attributo, fare clic con il pulsante destro del mouse su di esso nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], quindi scegliere **Rinomina**. Se nel riquadro **Attributi** è attivata la visualizzazione griglia, fare clic sul nome dell'attributo e modificarlo direttamente nella griglia. È inoltre possibile selezionare un attributo e impostare la proprietà **Name** nella finestra **Proprietà** .  

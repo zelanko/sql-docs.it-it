@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuregroupdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743703"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072268"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Finestra di dialogo Nuovo gruppo di misure (Progettazione cubi)
   Utilizzare la finestra di dialogo **Nuovo gruppo di misure** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere un nuovo gruppo di misure a un cubo in Progettazione cubi. Per visualizzare la finestra di dialogo **Nuovo gruppo di misure** è possibile:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
@@ -17,12 +16,12 @@ ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733415"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083303"
 ---
 # <a name="moving-data-mining-objects"></a>Spostamento di oggetti di data mining
   Gli scenari più comuni per lo spostamento di oggetti di data mining sono la distribuzione di un modello da un ambiente di test o analisi a un ambiente di produzione o la condivisione di modelli con altri utenti.  

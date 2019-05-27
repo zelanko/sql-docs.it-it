@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63046163"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011106"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
   Per definire ricerche full-text, le query full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano i predicati full-text (CONTAINS e FREETEXT) e le funzioni full-text (CONTAINSTABLE e FREETEXTTABLE). Tali predicati e funzioni supportano la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] avanzata che a sua volta supporta vari formati di termini di query. Per scrivere query full-text, è necessario sapere come e quando utilizzare questi predicati e queste funzioni.  

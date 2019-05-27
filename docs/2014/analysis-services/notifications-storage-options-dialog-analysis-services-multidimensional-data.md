@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.notifications.f1
@@ -13,12 +12,12 @@ ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a626f8f6fb28f280a12a3f7ab65c38d2b69cc8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072200"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Notifiche (finestra di dialogo Opzioni di archiviazione) (Analysis Services - Dati multidimensionali)
   Usare la scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per impostare il metodo di notifica e le relative impostazioni per una dimensione, un cubo, un gruppo di misure o una partizione.  

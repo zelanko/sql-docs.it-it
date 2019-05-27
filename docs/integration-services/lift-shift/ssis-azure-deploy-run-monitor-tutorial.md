@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 2e832343dfd54dd08a71c2724eed4cb7b156c758
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720858"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010504"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure
 
@@ -106,7 +106,7 @@ Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione gu
     -   Selezionare **Distribuisci** per avviare il processo di distribuzione.
 
     > [!NOTE]
-    > Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)**, assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
+    > Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)** , assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
 
 5.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione ha avuto esito negativo, selezionare **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.

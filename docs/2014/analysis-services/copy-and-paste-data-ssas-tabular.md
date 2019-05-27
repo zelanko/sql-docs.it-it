@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086972"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiare e incollare dati (SSAS tabulare)
   È possibile copiare i dati delle tabelle da applicazioni esterne e incollarli in una tabella nuova o esistente in Progettazione modelli. I dati incollati dagli Appunti devono essere in formato HTML, come i dati copiati da Excel o Word. Progettazione modelli rileverà e applicherà automaticamente i tipi di dati ai dati incollati. È anche possibile modificare manualmente il tipo di dati o la formattazione di visualizzazione di una colonna.  

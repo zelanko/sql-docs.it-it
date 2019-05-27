@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1864bd14a3822269594773afa8b01fe36723f6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722747"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085245"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  

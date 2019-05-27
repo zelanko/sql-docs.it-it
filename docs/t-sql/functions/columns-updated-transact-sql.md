@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775016"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+Se si applica un trigger a una colonna, il valore `COLUMNS_UPDATED` verrà restituito come `true` o `1`, anche se il valore della colonna rimane invariato. Si tratta di un comportamento predefinito e il trigger deve implementare la logica di business che determina se l'operazione di inserimento/aggiornamento/eliminazione è consentita o meno. 
   
 ## <a name="column-sets"></a>Set di colonne
 Quando un set di colonne è definito in una tabella, il comportamento della funzione `COLUMNS_UPDATED` è il seguente:
@@ -181,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
 Per controllare gli aggiornamenti eseguiti su colonne diverse dalle prime otto colonne di una tabella, usare la funzione `SUBSTRING` per controllare il bit corretto restituito da `COLUMNS_UPDATED`. Nell'esempio seguente vengono controllati gli aggiornamenti relativi alle colonne `3`, `5` e `9` della tabella `AdventureWorks2012.Person.Person`.
   
 ```sql

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
@@ -13,12 +12,12 @@ ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072736"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traduzioni nei modelli multidimensionali
   Supporto multilingue nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguita utilizzando le traduzioni. Ogni traduzione include un identificatore di lingua e le associazioni per le proprietà degli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere visualizzati in più lingue. Ad esempio, è possibile definire una traduzione per un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al fine di visualizzare la didascalia e la descrizione di tale database nella lingua specificata. Per altre informazioni sulle traduzioni, vedere [traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  

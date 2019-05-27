@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074901"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti (Analysis Services)
   L'autorizzazione per la lettura di una definizione dell'oggetto o dei metadati negli oggetti selezionati consente a un amministratore di concedere l'autorizzazione per la visualizzazione delle informazioni sull'oggetto, senza tuttavia concedere l'autorizzazione per la modifica della definizione dell'oggetto, per la modifica della struttura dell'oggetto o per la visualizzazione dei dati effettivi dell'oggetto. `Read Definition` le autorizzazioni possono essere concesse a livello di database, origine dati, dimensione, struttura di data mining e i livelli del modello di data mining. Se occorre `Read Definition` le autorizzazioni per un cubo, è necessario abilitare `Read Definition` per il database. Tenere presente che le autorizzazioni si sommano tra loro. Si supponga, ad esempio, uno scenario in cui un ruolo concede l'autorizzazione per la lettura dei metadati per un cubo, mentre un secondo ruolo concede allo stesso utente l'autorizzazione per la lettura dei metadati per una dimensione. Le autorizzazioni concesse dai due diversi ruoli si sommano, assegnando all'utente l'autorizzazione per la lettura sia dei metadati per il cubo che dei metadati per la dimensione inclusa nel database.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730383"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080622"
 ---
 # <a name="import-data-ssas-tabular"></a>Importare dati (SSAS tabulare)
   È possibile importare dati in un modello tabulare da diverse origini. Negli argomenti contenuti in questa sezione viene descritto come utilizzare l'Importazione guidata dati in Progettazione modelli per connettersi ai dati e selezionare quelli da importare in un progetto di modello.  

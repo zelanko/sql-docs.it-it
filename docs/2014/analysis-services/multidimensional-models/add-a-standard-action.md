@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727405"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077457"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
   Utilizzando la visualizzazione Azioni in Progettazione cubi è possibile aggiungere un'azione a un database. L'accesso a tale visualizzazione può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una volta creata, un'azione diventa disponibile agli utenti dopo aver rielaborato il cubo attinente. Per altre informazioni, vedere [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "62727405"
   
     -   Nell'elenco a discesa **Tipo** selezionare il tipo di azione che si desidera creare. Nella tabella seguente sono elencati i tipi di azioni disponibili.  
   
-        |Tipo|Descrizione|  
+        |Type|Descrizione|  
         |----------|-----------------|  
         |Set di dati|Consente di recuperare un set di dati.|  
         |Proprietario|Consente di eseguire un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d702e1dcf8bc710324e7593ebe469317d9f43e68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237902"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010942"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
   In questo argomento viene illustrato come impostare l'account del servizio Utilità di avvio del daemon filtri full-text di SQL (MSSQLFDLauncher) utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il servizio Utilità di avvio del daemon filtri full-text di SQL viene usato dalla ricerca full-text ssNoVersion per avviare il processo host del daemon di filtri che gestisce il word breaking e l'applicazione di filtri per la ricerca full-text. Per utilizzare la ricerca full-text, questo servizio deve essere in esecuzione.  

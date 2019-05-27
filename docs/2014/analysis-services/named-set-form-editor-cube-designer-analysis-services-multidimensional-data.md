@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
@@ -13,12 +12,12 @@ ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743643"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072346"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form set denominato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Editor form set denominato** nella scheda **Calcoli** in Progettazione cubi per creare o modificare un set denominato.  

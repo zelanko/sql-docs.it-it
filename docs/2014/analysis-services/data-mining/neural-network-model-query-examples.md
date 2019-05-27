@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083289"
 ---
 # <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto che consente di ottenere dettagli sui criteri individuati durante l'analisi oppure una query di stima in cui vengono utilizzati i criteri presenti nel modello per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello di rete neurale potrebbe ad esempio recuperare metadati del modello, quale il numero di livelli nascosti. In alternativa, una query di stima potrebbe suggerire classificazioni basate su un input e, facoltativamente, indicare le probabilità per ogni classificazione.  

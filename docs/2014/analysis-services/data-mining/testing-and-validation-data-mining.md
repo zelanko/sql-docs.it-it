@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -29,12 +28,12 @@ ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732909"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082795"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
   La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  

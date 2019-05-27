@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729317"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078969"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
   In questa lezione verrà utilizzata l'Importazione guidata tabella in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per connettersi al database SQL AdventureWorksDW, selezionare i dati, visualizzare un'anteprima, filtrare i dati e quindi importarli nell'area di lavoro del modello.  
@@ -61,7 +60,7 @@ ms.locfileid: "62729317"
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
-    |DimDate|date|  
+    |DimDate|Date|  
     |DimGeography|Geography|  
     |DimProduct|Prodotto|  
     |DimProductCategory|Product Category|  
@@ -96,7 +95,7 @@ ms.locfileid: "62729317"
   
 4.  Filtrare le tabelle restanti deselezionando le caselle di controllo per le colonne seguenti in ogni tabella:  
   
-    |date|  
+    |Date|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  

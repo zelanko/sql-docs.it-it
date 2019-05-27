@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728168"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078026"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Individua file di database (Analysis Services - Dati multidimensionali)
   Nella finestra di dialogo **Individua file di database** viene visualizzato un elenco di file disponibili nelle cartelle di dati e log definite per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Individua file di database** :  

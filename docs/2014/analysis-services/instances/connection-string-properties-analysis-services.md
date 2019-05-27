@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080163"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
   In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  

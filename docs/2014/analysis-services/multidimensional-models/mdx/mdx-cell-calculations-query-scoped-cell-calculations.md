@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
@@ -14,12 +13,12 @@ ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074420"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Creazione di formule per il calcolo di celle con ambito query (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) è possibile utilizzare la parola chiave `WITH` per descrivere celle calcolate nel contesto di una query. La parola chiave `WITH` ha la sintassi seguente:  

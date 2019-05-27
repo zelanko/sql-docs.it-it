@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
@@ -14,12 +13,12 @@ ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 409cdbaa10dc93c5cb659961f084d76bc3370bde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726475"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075582"
 ---
 # <a name="define-linked-dimensions"></a>Definizione delle dimensioni collegate
   Una dimensione collegata è basata su una dimensione creata e archiviata in un altro database di Analysis Services con la stessa versione e lo stesso livello di compatibilità. Utilizzando una dimensione collegata è possibile creare, archiviare e mantenere una dimensione in un database facendo in modo che tale dimensione sia disponibile per gli utenti di più database. Per gli utenti una dimensione collegata ha lo stesso aspetto di qualsiasi altra dimensione.  

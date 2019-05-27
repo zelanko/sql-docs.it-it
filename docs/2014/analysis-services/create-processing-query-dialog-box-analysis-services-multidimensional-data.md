@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679719"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086773"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query di elaborazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea query di elaborazione** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di elaborazione nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Una query di elaborazione è una query che restituisce un set di righe contenente le modifiche apportate a una tabella associata a un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a partire dall'ultimo polling della tabella eseguito per aggiornare in modo incrementale la cache OLAP multidimensionale (MOLAP) dell'oggetto. Per eseguire il polling di una tabella associata a un oggetto e stabilire se la tabella è stata modificata, Analysis Services utilizza un'altra query, definita query di polling. Le query di elaborazione non sono necessarie quando si aggiorna completamente la cache MOLAP relativa all'oggetto.  

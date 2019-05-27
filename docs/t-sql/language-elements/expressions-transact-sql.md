@@ -18,16 +18,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124101"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982335"
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,11 +86,11 @@ ms.locfileid: "54124101"
 |----------|----------------|  
 |*constant*|Simbolo che rappresenta un singolo valore di dati specifico. Per altre informazioni, vedere [Costanti &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Unità di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] che offre un servizio specifico e restituisce un valore singolo. *scalar_function* può essere costituito da funzioni scalari predefinite, ad esempio SUM, GETDATE o CAST, o da funzioni scalari definite dall'utente.|  
-|[ _table_name_**.** ]|Nome o alias di una tabella.|  
+|[ _table_name_ **.** ]|Nome o alias di una tabella.|  
 |*column*|Nome di colonna. In un'espressione è consentito soltanto il nome della colonna.|  
 |*variable*|Nome di una variabile o parametro. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** _expression_ **)**|Qualsiasi espressione valida, in base a quanto definito in questo argomento. Le parentesi sono operatori di raggruppamento che assicurano che tutti gli operatori dell'espressione tra parentesi siano valutati prima che l'espressione risultante venga combinata con un'altra espressione.|  
-|**(** _scalar_subquery_ **)**|Sottoquery che restituisce un valore. Ad esempio<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _scalar_subquery_ **)**|Sottoquery che restituisce un valore. Esempio:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Gli operatori unari possono essere applicati solo a espressioni che restituiscono un tipo di dati appartenente alla categoria dei tipi di dati numerici. Operatore con un solo operando numerico:<br /><br /> + indica un numero positivo.<br /><br /> - indica un numero negativo.<br /><br /> ~ indica l'operatore di complemento a uno.|  
 |{ *binary_operator* }|Operatore che consente di definire la modalità in base a cui due espressioni vengono unite per ottenere un unico risultato. *binary_operator* può essere un operatore aritmetico, l'operatore di assegnazione (=), un operatore bit per bit, un operatore di confronto, un operatore logico, l'operatore di concatenazione delle stringhe (+) o un operatore unario. Per altre informazioni sugli operatori, vedere [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Qualsiasi funzione di rango [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  

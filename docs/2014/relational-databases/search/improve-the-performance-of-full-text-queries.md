@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353015"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011272"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Migliorare le prestazioni delle query full-text
   Di seguito viene riportato un elenco di indicazioni che possono favorire il miglioramento delle prestazioni di esecuzione delle query full-text.  
@@ -48,7 +48,7 @@ ms.locfileid: "53353015"
 -   Per le applicazioni che contengono affermazioni a relazione selettiva, le prestazioni di esecuzione delle query che utilizzano predicati relazionali selettivi e predicati full-text non selettivi potrebbero risultare migliori se le query sono scritte per l'utilizzo di Query Optimizer. In questo modo, Query Optimizer sarà in grado di stabilire la possibilità o meno di utilizzare l'impostazione di intervalli o di predicati per produrre un piano di query efficace. Questo metodo è più semplice e spesso più efficiente rispetto all'indicizzazione di dati relazionali come dati full-text.  
   
 ## <a name="related-resources"></a>Risorse correlate  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544) (Ricerca full-text di SQL Server 2008: elementi interni e miglioramenti)  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

@@ -5,17 +5,17 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512958"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993938"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Usare la procedura guidata di creazione di una tabella esterna per i file CSV
 
@@ -26,15 +26,14 @@ SQL Server 2019 offre inoltre la possibilità di virtualizzare i dati da un file
 A partire da CTP 2.4, le origini dati esterne del pool di dati e del pool di archiviazione non vengono più create per impostazione predefinita nel cluster Big Data. Prima di usare la procedura guidata, creare l'origine dati esterna **SqlStoragePool** predefinita nel database di destinazione con la query Transact-SQL seguente. Verificare di aver prima cambiato il contesto della query sul database di destinazione.
 
 ```sql
-IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-  BEGIN
-    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+  -- Create default data sources for SQL Big Data Cluster
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+      CREATE EXTERNAL DATA SOURCE SqlDataPool
+      WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-  END
+      WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>Avviare la procedura guidata Tabella esterna

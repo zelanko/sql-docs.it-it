@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725139"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073725"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totali visualizzati e non visualizzati
   I totali visualizzati sono totali alla fine di una colonna o riga in cui vengono sommati tutti gli elementi visibili della colonna o riga. Questo è il comportamento predefinito per la maggior parte delle tabelle visualizzate. Tuttavia, in alcuni casi per l'utente è utile visualizzare solo alcune colonne di una tabella, conservando però i totali per la riga intera, compresi gli elementi non visualizzati. Questi vengono chiamati `Non Visual Totals`, perché il totale è il risultato di valori visualizzati e non visualizzati.  

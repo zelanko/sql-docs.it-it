@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.databaseproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732570"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082314"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Finestra di dialogo Proprietà database (SSAS - Multidimensionale)
   Utilizzare la finestra di dialogo **Proprietà database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Proprietà database** è possibile fare clic con il pulsante destro del mouse su un database in Esplora oggetti e scegliere **Proprietà**.  

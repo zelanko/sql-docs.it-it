@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920024"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009877"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Utilizzare directory e percorsi in FileTable
   Descrive la struttura di directory nella quale vengono archiviati i file in FileTable.  

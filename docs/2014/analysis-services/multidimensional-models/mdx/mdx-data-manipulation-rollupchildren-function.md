@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
@@ -16,12 +15,12 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699766"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074271"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Utilizzo della funzione RollupChildren (MDX)
   Espressioni MDX (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) (funzione) [Script per la ricerca e sostituzione] esegue il rollup di elementi figlio di un membro, applicando un operatore unario diverso a ogni elemento figlio e restituisce il valore di tale rollup sotto forma di numero. L'operatore unario utilizzato può essere specificato da una proprietà del membro associata al membro figlio oppure può essere costituito da un'espressione stringa fornita direttamente alla funzione.  

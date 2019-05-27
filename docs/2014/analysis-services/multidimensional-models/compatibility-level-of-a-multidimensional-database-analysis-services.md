@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701070"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076684"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Impostare il livello di compatibilità di un database multidimensionale (Analysis Services)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]la proprietà del livello di compatibilità del database determina il livello funzionale di un database. I livelli di compatibilità sono univoci per ogni tipo di modello. Ad esempio, un livello di compatibilità di `1100` ha un significato diverso a seconda del fatto che il database è multidimensionale o tabulare.  

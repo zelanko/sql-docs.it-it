@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - excluding mining model columns
@@ -15,12 +14,12 @@ ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 418fdb56792c9d8e3ca15128ad8f93fed2ae9c47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722403"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084562"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>Escludere una colonna da un modello di data mining
   Quando si crea un nuovo modello di data mining, potrebbe non essere necessario utilizzare tutte le colonne presenti nella struttura di data mining su cui il modello è basato. Ad esempio, si potrebbe avere aggiunto una colonna nome cliente per il drill-through, ma non si vuole usarlo per la modellazione. In alternativa, è possibile decidere di creare più copie di una colonna con discretizzazioni diverse e utilizzare solo una delle copie in ogni modello e ignorare il resto. È anche possibile aggiungere in modo selettivo le colonne di input in molti modelli diversi per capire come la variabile aggiunta influisce sulla colonna di output.  

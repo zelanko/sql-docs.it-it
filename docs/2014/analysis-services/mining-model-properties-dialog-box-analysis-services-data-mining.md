@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningmodelproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703262"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077687"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Finestra di dialogo Proprietà modello di data mining (Analysis Services - Data Mining)
   Utilizzare la finestra di dialogo **Proprietà modello di data mining** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un modello di data mining in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Proprietà modello di data mining** è possibile fare clic con il pulsante destro del mouse su un modello di data mining in **Esplora oggetti** e scegliere **Proprietà**.  

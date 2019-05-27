@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05236d05e1b543ea7acb36f0856083e1c1db77a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730678"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080649"
 ---
 # <a name="impersonation-information"></a>Impostazioni di rappresentazione
   Usare la pagina **Impostazioni di rappresentazione** per specificare le credenziali usate da Analysis Services per la connessione all'origine dati.  

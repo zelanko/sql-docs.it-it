@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], restoring
@@ -14,12 +13,12 @@ ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a66aabc9388c85e8d7d1e3df26bc02388347b6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a754ac9650c94511e8576a8a05e0b81fb38138a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736652"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073090"
 ---
 # <a name="restore-options"></a>Opzioni di ripristino
   È possibile eseguire il backup dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in diversi modi e in tutti i casi è necessario disporre delle autorizzazioni di amministratore sia per il computer server che per il database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ripristinare un database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile aprire la finestra di dialogo **Ripristina database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selezionare le opzioni di configurazione opportune e infine eseguire il ripristino dalla finestra di dialogo. Oppure, è possibile creare uno script utilizzando le impostazioni già specificate nel file; lo script può infine essere salvato per essere eseguito secondo necessità. In questo modo, il ripristino viene completato utilizzando XMLA, come descritto nella sezione seguente.  

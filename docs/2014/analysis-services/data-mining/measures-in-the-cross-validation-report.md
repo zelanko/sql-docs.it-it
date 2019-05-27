@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
@@ -17,12 +16,12 @@ ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df327dbf712e82100ea0edb3c2943ade9d6e1b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721923"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084163"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Misure nel report di convalida incrociata
   Durante la convalida incrociata, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di dividere i dati di una struttura di data mining in più sezioni trasversali e quindi di eseguire il test della struttura e di tutti i modelli di data mining associati in modo iterativo. In base a questa analisi, viene restituito un set di misure di accuratezza standard per la struttura e ciascun modello.  

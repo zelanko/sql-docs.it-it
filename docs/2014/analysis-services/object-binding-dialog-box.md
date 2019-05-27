@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.objectbinding.f1
@@ -15,12 +14,12 @@ ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab14c0aad6701311e4ae9bc59679daca566bcdde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743694"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072193"
 ---
 # <a name="object-binding-dialog-box"></a>Finestra di dialogo Associazione oggetto
   Utilizzare la finestra di dialogo **Associazione oggetto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire associazioni tra la proprietà di un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e una tabella o una colonna di una vista origine dati. Per visualizzare la finestra di dialogo **Associazione oggetto** selezionare **(nuovo)** nell'elenco a discesa per il valore delle proprietà seguenti di un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

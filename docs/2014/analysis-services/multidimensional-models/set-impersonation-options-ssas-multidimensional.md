@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -15,12 +14,12 @@ ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740902"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072954"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
   Quando si crea un oggetto `data source` in un modello di Analysis Services, una delle impostazioni da configurare è l'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  

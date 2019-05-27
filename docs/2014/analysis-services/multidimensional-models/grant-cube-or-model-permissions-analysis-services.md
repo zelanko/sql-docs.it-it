@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
@@ -18,12 +17,12 @@ ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725965"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075030"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
   Un cubo o un modello tabulare è l'oggetto query primario in un modello di dati di Analysis Services. Quando un utente si connette ai dati tabulari o multidimensionali da Excel per l'esplorazione ad hoc dei dati, in genere inizia selezionando un cubo o un modello tabulare specifico come struttura di dati necessaria per l'oggetto report Pivot. Questo argomento illustra come concedere le autorizzazioni necessarie per l'accesso ai dati tabulari o del cubo.  

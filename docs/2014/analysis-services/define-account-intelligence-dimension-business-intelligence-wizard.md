@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1adcc97430db480628b4b139ba12506766fe59fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7976b3a6711425aa9f0e0a454eee74cdfdfaf526
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732442"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082166"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Definizione funzionalità di Business Intelligence per la contabilità (Dimensione) (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare questa pagina per selezionare la dimensione alla quale verranno applicate le funzionalità di Business Intelligence per la contabilità, incluse le impostazioni del tipo di dimensione e di attributo, la definizione di misure semiadditive e altre funzionalità.  

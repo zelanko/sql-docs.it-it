@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
@@ -13,12 +12,12 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680106"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087167"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un feed di dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

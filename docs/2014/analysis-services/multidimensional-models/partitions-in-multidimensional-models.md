@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8caec3620a5f7c0df1e3a5d0558272b1a2fb7bfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073325"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partizioni nei modelli multidimensionali
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una *partizione* consente l'archiviazione fisica delle tabelle dei fatti in un gruppo di misure. Per ogni gruppo di misure viene automaticamente creata una singola partizione, ma è frequente creare partizioni aggiuntive per l'ulteriore segmentazione dei dati, con il conseguente miglioramento dell'elaborazione e delle prestazioni delle query.  

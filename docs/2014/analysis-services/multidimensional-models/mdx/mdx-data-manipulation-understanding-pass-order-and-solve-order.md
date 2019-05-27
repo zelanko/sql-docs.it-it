@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
@@ -19,12 +18,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39e1c4ae6de01be55bf94f60e06c7979765f1b62
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725477"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074243"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Informazioni sull'ordine di calcolo e di valutazione (MDX)
   L'operazione di calcolo di un cubo, risultante da uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo delle varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
@@ -204,7 +203,7 @@ FROM [Adventure Works]
 (($9,770,899.74 - 5,721,205.24) / $9,770,899.74) - ((9,791,060.30 - 5,718,327.17) / 9,791,060.30) = -0.15   
 ```  
   
- e  
+ Oppure  
   
 ```  
 0.4145 - 0.4160= -0.15  

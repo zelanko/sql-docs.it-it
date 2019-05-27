@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728107"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078425"
 ---
 # <a name="lesson-7-create-measures"></a>Lezione 7: Creare misure
   In questa lezione verranno create misure da includere nel modello. Analogamente alle colonne calcolate create nella lezione precedente, una misura è essenzialmente un calcolo creato utilizzando una formula DAX. A differenza delle colonne calcolate, tuttavia, le misure vengono valutate in base a un *filtro* selezionato dall'utente, ad esempio una colonna o un filtro dei dati specifico aggiunto al campo Etichette di riga in una tabella pivot.   Viene quindi calcolato un valore per ogni cella nel filtro tramite la misura applicata. Le misure sono calcoli potenti e flessibili che può essere utile includere in pressoché tutti i modelli tabulari per eseguire calcoli dinamici sui dati numerici. Per altre informazioni, vedere [Misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  

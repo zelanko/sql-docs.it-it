@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.Backup.f1
@@ -22,12 +21,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701776"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077025"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  

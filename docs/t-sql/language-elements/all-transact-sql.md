@@ -16,15 +16,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff274ae7251fdf60d6f92680f076d2e60f9eb37b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305489"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983238"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (_scalar_expression_**,** x _)_, dove *x* è un valore del set a colonna singola. In caso contrario restituisce FALSE.  
+ Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (_scalar_expression_ **,** x _)_ , dove *x* è un valore del set a colonna singola. In caso contrario restituisce FALSE.  
   
 ## <a name="remarks"></a>Remarks  
  ALL specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery. Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* <= ALL (sottoquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, perché alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  

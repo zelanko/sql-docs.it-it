@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
@@ -15,12 +14,12 @@ ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 181e2a367f6196d50f90aee77ca9590f55ba0ce4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733063"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083124"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisiti e considerazioni sull'elaborazione (data mining)
   In questo argomento vengono illustrate alcune considerazioni tecniche da tenere presenti quando si elaborano oggetti di data mining. Per una spiegazione generale dell'elaborazione e della modalità di applicazione al data mining, vedere [Elaborazione di oggetti di data mining](processing-data-mining-objects.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], dimension intelligence
@@ -16,12 +15,12 @@ ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bee662934a8c63393da3fdf1f6c64b3e9def579
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726931"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076916"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione
   L'aggiunta delle funzionalità avanzate di Business Intelligence per le dimensioni a un cubo o una dimensione consente di specificare un tipo di attività standard per una dimensione. Queste funzionalità avanzate specificano inoltre i tipi corrispondenti per gli attributi dimensione. Queste specifiche del tipo possono essere utilizzate dalle applicazioni client per l'analisi dei dati.  

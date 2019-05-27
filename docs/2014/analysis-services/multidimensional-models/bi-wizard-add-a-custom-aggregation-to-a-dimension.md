@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -17,12 +16,12 @@ ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076906"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Aggiungere un'aggregazione personalizzata a una dimensione
   È possibile aggiungere una funzionalità avanzata di aggregazione personalizzata a un cubo o una dimensione per sostituire le aggregazioni predefinite associate a un membro di una dimensione con un operatore unario diverso. Questa funzionalità consente di specificare nella tabella della dimensione una colonna dell'operatore unario che definisce il rollup per i membri di una gerarchia padre-figlio. L'operatore unario funge da attributo padre nella gerarchia padre-figlio.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
@@ -16,12 +15,12 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726392"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075395"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definizione di una vista origine dati (Analysis Services)
   Una vista origine dati contiene il modello logico dello schema usato dal [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database multidimensionale gli oggetti, ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  

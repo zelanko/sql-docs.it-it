@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: fb66fd1627907d0e9d26f3524835f5ad126c2b57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586204"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982522"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ GO
   
 Non è necessario deallocare una variabile di cursore in modo esplicito. La variabile viene deallocata in modo implicito quando non è più compresa nell'ambito.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione `DEALLOCATE` vengono assegnate per impostazione predefinita a qualsiasi utente valido.  
   
 ## <a name="examples"></a>Esempi  

@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154716"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981455"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenzioni della sintassi Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ Nella tabella seguente vengono elencate e descritte le convenzioni utilizzate ne
 |&#124; (barra verticale)|Separazione di elementi sintattici racchiusi tra parentesi quadre o graffe. Indica che è possibile utilizzare solo uno degli elementi.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |{ } (parentesi graffe)|Elementi sintattici obbligatori. Le parentesi graffe non devono essere digitate.|  
-|[**,**..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[ **,** ..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
 |[..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
 |;|Carattere di terminazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Anche se per la maggior parte delle istruzioni in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è necessario usare il punto e virgola, questo requisito verrà introdotto in una versione futura.|  
 |\<label> ::=|Nome di un blocco della sintassi. Usare questa convenzione per raggruppare ed etichettare sezioni di sintassi estese oppure un'unità sintattica che è possibile usare in più posizioni di un'istruzione. Ogni posizione in cui si potrebbe usare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari: \<label>.<br /><br /> Un set è una raccolta di espressioni, ad esempio \<grouping set>, mentre un elenco è una raccolta di set, ad esempio \<composite element list>.|  
@@ -94,7 +94,7 @@ Per omettere i nodi intermedi, contrassegnare queste posizioni con un punto. Nel
 |_database_._schema_._object_|Il nome del server viene omesso.|  
 |_database_.._object_|Il nome del server e del database viene omesso.|  
 |_schema_._object_|Il nome del server e del database viene omesso.|  
-|_object_|Il nome del server, del database e dello schema viene omesso.|  
+|_object_|Il nome dello schema, del database e del server viene omesso.|  
   
 ## <a name="code-example-conventions"></a>Convenzioni del codice di esempio  
 Se non indicato diversamente, gli esempi inclusi nella Guida di riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)] sono stati testati tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e le relative impostazioni predefinite per le opzioni seguenti:  

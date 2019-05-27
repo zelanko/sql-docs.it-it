@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
@@ -13,12 +12,12 @@ ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077676"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Finestra di dialogo Modifica mapping (Grafico accuratezza modello di data mining)
   Utilizzare la finestra di dialogo **Modifica mapping** per modificare la modalità con cui le colonne di input vengono unite in join alle colonne nel modello di data mining. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verrà eseguito il mapping di colonne automaticamente in base il colonna nome e tipo di dati, ma è possibile usare questa finestra di dialogo per modificare i mapping delle colonne. Se si apportano modifiche, è necessario assicurare che le colonne nell'origine dati esterna dispongano di tipi di dati e di contenuto corrispondenti alle colonne nel modello di data mining di cui si sta eseguendo il test.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722653"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085076"
 ---
 # <a name="data-mining-architecture"></a>Architettura di data mining
   In questa sezione viene descritta l'architettura delle soluzioni di data mining ospitate in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Negli argomenti di questa sezione viene descritta l'architettura logica e fisica di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che supporta il data mining e vengono fornite informazioni su client, provider e protocolli che è possibile usare per comunicare con i server di data mining e per usare oggetti di data mining in modalità locale o remota.  

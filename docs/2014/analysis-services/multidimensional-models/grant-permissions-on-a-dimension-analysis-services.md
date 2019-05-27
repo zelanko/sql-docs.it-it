@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
@@ -18,12 +17,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074963"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Concedere le autorizzazioni per una dimensione (Analysis Services)
   La sicurezza delle dimensioni viene usata per impostare le autorizzazioni su un oggetto dimensione e non sui relativi dati. In genere, consentire o negare l'accesso alle operazioni di elaborazione rappresenta l'obiettivo principale quando si impostano le autorizzazioni su una dimensione.  

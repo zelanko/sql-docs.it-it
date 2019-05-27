@@ -20,15 +20,15 @@ helpviewer_keywords:
 - KILL STATS JOB statement
 - statistics update jobs [SQL Server]
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd7b4165ae08bee50d8e236c91458927798c0954
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2a2a034348df16f7ea1f326d78322f578953757
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845059"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982137"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ KILL STATS JOB job_id
 ## <a name="remarks"></a>Remarks  
  job_id è indipendente da session_id o dall'unità di lavoro utilizzata nelle altre forme dell'istruzione KILL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli utenti devono disporre dell'autorizzazione VIEW SERVER STATE per accedere alle informazioni della vista a gestione dinamica sys.dm_exec_background_job_queue.  
   
  Le autorizzazioni per l'istruzione KILL STATS JOB vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server sysadmin e processadmin e non sono trasferibili.  

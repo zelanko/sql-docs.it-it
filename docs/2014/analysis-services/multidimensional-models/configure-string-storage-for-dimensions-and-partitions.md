@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076535"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
   È possibile riconfigurare l'archiviazione di stringhe per contenere stringhe molto grandi in attributi di dimensione o partizioni che superano il limite di dimensioni del file di 4 GB impostato per gli archivi di stringhe. Se nelle dimensioni o partizioni sono inclusi archivi di stringhe di queste dimensioni, è possibile risolvere il problema del vincolo delle dimensioni file modificando la proprietà **StringStoresCompatibilityLevel** a livello di dimensione o di partizione, per oggetti locali nonché collegati (locali o remoti).  

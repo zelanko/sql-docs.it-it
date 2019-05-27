@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
@@ -14,12 +13,12 @@ ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076776"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]la compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è molto simile alla compilazione di qualsiasi progetto di programmazione in Visual Studio. Quando si compila il progetto, nella directory di output viene creato un set di file XML. Questi file XML sono basati su Analysis Services Scripting Language (ASSL), il sottolinguaggio XML utilizzato dalle applicazioni client come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per comunicare con un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] allo scopo di creare o modificare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi file XML permettono di distribuire definizioni di oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

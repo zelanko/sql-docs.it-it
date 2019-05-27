@@ -18,16 +18,16 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802198"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982679"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ Restituisce il tipo di dati dell'_espressione_ con la precedenza del tipo di dat
 Quando tutti gli argomenti sono `NULL`, `COALESCE`restituisce `NULL`. Almeno uno dei valori Null deve essere un valore `NULL` tipizzato.  
   
 ## <a name="comparing-coalesce-and-case"></a>Confronto tra COALESCE e CASE  
-L'espressione `COALESCE` è una scorciatoia sintattica dell'espressione `CASE`.  Il codice `COALESCE`(_expression1_,_...n_) viene quindi riscritto da Query Optimizer come la seguente espressione `CASE`:  
+L'espressione `COALESCE` è una scorciatoia sintattica dell'espressione `CASE`.  Il codice `COALESCE`(_expression1_, _...n_) viene quindi riscritto da Query Optimizer come la seguente espressione `CASE`:  
   
 ```sql  
 CASE  
@@ -125,7 +125,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>b. Esecuzione di un esempio complesso  
+### <a name="b-running-a-complex-example"></a>B. Esecuzione di un esempio complesso  
 Nell'esempio seguente viene illustrata una tabella `wages` che include tre colonne con informazioni sulla retribuzione annua dei dipendenti, ovvero retribuzione oraria, stipendio e commissione. Un dipendente tuttavia riceve un solo tipo di paga. Per determinare l'importo totale pagato a tutti i dipendenti, utilizzare la funzione `COALESCE` per ottenere solo i valori non Null delle colonne `hourly_wage`, `salary` e `commission`.  
   
 ```sql  

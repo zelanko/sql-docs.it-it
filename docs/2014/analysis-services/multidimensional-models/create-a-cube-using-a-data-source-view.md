@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076563"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Creare un cubo tramite una vista origine dati
   Utilizzare questo metodo di compilazione di un nuovo cubo se si desidera utilizzare una vista origine dati esistente. Con questo metodo, è possibile specificare la vista origine dati, nonché selezionare le tabelle dei fatti e delle dimensioni che si desidera utilizzare nella vista origine dati. Successivamente è possibile scegliere le dimensioni e le misure che si desidera includere nel cubo.  

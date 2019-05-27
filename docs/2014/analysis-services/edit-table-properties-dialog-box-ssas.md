@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731493"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081439"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Finestra di dialogo Modifica proprietà tabella (SSAS)
   La finestra di dialogo **Modifica proprietà tabella** consente di visualizzare e modificare le proprietà di tabelle importate in Progettazione modelli tramite l'Importazione guidata tabella. Per accedere a questa finestra di dialogo, in Progettazione modelli selezionare una tabella, quindi scegliere **Proprietà tabella** dal menu **Tabella**.  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 7f7449741ac1c29595700c116118598a1b9cedf4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991794"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981626"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (concatenazione di stringhe) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ FROM Person.Person
 ORDER BY LastName ASC, FirstName ASC;  
 ```  
   
-### <a name="b-combining-numeric-and-date-data-types"></a>b. Combinazione di tipi di dati numeric e date  
+### <a name="b-combining-numeric-and-date-data-types"></a>B. Combinazione di tipi di dati numeric e date  
  Nell'esempio seguente viene usata la funzione `CONVERT` per concatenare i tipi di dati **numeric** e **date**.  
   
 ```sql  

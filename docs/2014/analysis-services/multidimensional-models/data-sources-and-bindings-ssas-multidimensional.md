@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -34,12 +33,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076075"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
   È possibile associare cubi, dimensioni e altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un'origine dati. Un'origine dati può essere rappresentata da uno dei seguenti oggetti:  
@@ -62,7 +61,7 @@ ms.locfileid: "62700089"
 |BigInt|Intero con segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int64 in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I8 in OLE DB.|  
 |Bool|Valore booleano. Per questo tipo di dati viene eseguito il mapping al tipo di dati Boolean in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_BOOL in OLE DB.|  
 |Currency|Valore di valuta compreso nell'intervallo tra -2 63 (o -922337.203.685.477,5808) e 2 63 -1 (o +922.337.203.685.477,5807) con un'approssimazione pari a dieci millesimi di unità di valuta. Per questo tipo di dati viene eseguito il mapping al tipo di dati Decimal in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_CY in OLE DB.|  
-|date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
+|Date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
 |Double|Numero a virgola mobile a precisione doppia compreso tra -1.79E +308 e 1.79E +308. Per questo tipo di dati viene eseguito il mapping al tipo di dati Double in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R8 in OLE DB.|  
 |Valore intero|Intero con segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I4 in OLE DB.|  
 |Single|Numero a virgola mobile a precisione singola compreso tra -3.40E +38 e 3.40E +38. Per questo tipo di dati viene eseguito il mapping al tipo di dati Single in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R4 in OLE DB.|  
@@ -169,7 +168,7 @@ ms.locfileid: "62700089"
   
  Le associazioni out-of-line vengono specificate includendo l'oggetto raccolta `Bindings` facoltativo nel comando di elaborazione. La raccolta `Bindings` facoltativa contiene i seguenti elementi.  
   
-|Proprietà|Cardinalità|Tipo|Descrizione|  
+|Proprietà|Cardinalità|Type|Descrizione|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|Fornisce una raccolta di nuove associazioni.|  
 |`DataSource`|0-1|`DataSource`|Sostituisce `DataSource` dal server da utilizzare.|  

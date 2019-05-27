@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702246"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076236"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Creare un progetto di Analysis Services (SSDT)
   È possibile definire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando il modello di progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o l'Importazione guidata database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per leggere il contenuto di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è attualmente caricata alcuna soluzione, creando un nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente creata una nuova soluzione. In caso contrario, il nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sarà aggiunto alla soluzione esistente. Le procedure consigliate per lo sviluppo di soluzioni prevedono la creazione di progetti separati per tipi diversi di dati dell'applicazione, utilizzando una sola soluzione se i progetti sono correlati. Ad esempio, potrebbe essere disponibile una sola soluzione contenente progetti separati per i pacchetti di Integration Services, i database di Analysis Services e i report di Reporting Services utilizzati dalla stessa applicazione aziendale.  

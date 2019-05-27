@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703308"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079754"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
   Un'istanza di Analysis Services registrerà le notifiche di server, errori e avvisi per il file msmdsrv log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](https://support.microsoft.com/kb/2965035).  
@@ -43,11 +42,11 @@ ms.locfileid: "62703308"
 ##  <a name="bkmk_location"></a> Posizione e tipi di log  
  Analysis Services fornisce i log descritti di seguito.  
   
-|Posizione o nome del file|Tipo|Utilizzo|Attivato per impostazione predefinita|  
+|Posizione o nome del file|Type|Utilizzo|Attivato per impostazione predefinita|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Yes|  
 |Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|No|  
-|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|No|  
+|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
   
  È consigliabile il collegamento seguente per le risorse di informazioni aggiuntive non trattate in questo argomento: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   

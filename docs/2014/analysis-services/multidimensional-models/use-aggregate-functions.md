@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072721"
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
   Quando una dimensione viene usata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è `Sum`. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  

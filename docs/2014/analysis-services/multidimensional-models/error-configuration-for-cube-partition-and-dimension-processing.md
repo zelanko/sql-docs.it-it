@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
@@ -15,12 +14,12 @@ ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726036"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075094"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Configurazione errori per l'elaborazione di cubi, partizioni e dimensioni (SSAS - multidimensionale)
   Con le proprietà di configurazione degli errori in oggetti dimensione, cubi o partizioni viene determinata la modalità di risposta del server in caso di errori di integrità dei dati durante l'elaborazione. L'attivazione di errori di questo tipo è in genere dovuta a chiavi duplicate, chiavi mancanti e valori Null in una colonna chiave e, anche se il record che causa l'errore non viene aggiunto al database, è possibile impostare le proprietà con cui vengono determinate le operazioni successive. Per impostazione predefinita, l'elaborazione viene arrestata. Tuttavia, durante lo sviluppo di un cubo, è possibile che l'elaborazione continui quando si verificano degli errori, in modo da poter testare i comportamenti del cubo con i dati importati, anche se incompleti.  

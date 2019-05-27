@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - empty scripts [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e95dff588932bc7885d2501e3d24cc643ae10272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: caa3b6f49ce778b78f066abf687a3a51b61cc487
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699930"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075814"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Definire le assegnazioni e altri comandi script
   Per creare uno script vuoto, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo comando script** sulla barra degli strumenti. Quando si crea un nuovo script, quest'ultimo viene inizialmente visualizzato con un titolo vuoto nel riquadro **Libreria script** della scheda Calcoli. I caratteri digitati nel riquadro Espressioni calcoli verranno visualizzati come nome dell'elemento in **Libreria script**. Nella prima riga è pertanto opportuno digitare un nome con commenti, in modo da identificare più agevolmente lo script nel riquadro **Libreria script** . Per altre informazioni, vedere [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)(Introduzione alla creazione di script MDX in Microsoft SQL Server 2005). Per altre informazioni sui problemi di prestazioni correlati a query e calcoli MDX, vedere la sezione "Scrittura efficiente di espressioni MDX" nel [SQL Server 2005 Analysis Services Performance Guide](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  

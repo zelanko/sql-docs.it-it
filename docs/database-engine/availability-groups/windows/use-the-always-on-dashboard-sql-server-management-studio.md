@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120198"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982795"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120198"
 -   Modalità e stato di sincronizzazione    
 -   Tempo per il ripristino del log  
   
-##  <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites  
  È necessario essere connessi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanza del server) che ospita la replica primaria o una replica secondaria di un gruppo di disponibilità.  
   
-### <a name="security"></a>Security  
-  
-#### <a name="permissions"></a>Permissions  
+ 
+### <a name="permissions"></a>Autorizzazioni  
  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>Per avviare il dashboard Always On  
@@ -56,7 +54,7 @@ ms.locfileid: "49120198"
   
 2.  Espandere il nodo **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità** **Mostra dashboard**.  
   
-###  <a name="change-always-on-dashboard-options"></a>Modificare le opzioni del dashboard Always On  
+##  <a name="change-always-on-dashboard-options"></a>Modificare le opzioni del dashboard Always On  
  È possibile usare la finestra di dialogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opzioni** per configurare il comportamento del dashboard Always On di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Dal menu **Strumenti** scegliere **Opzioni**.  
@@ -216,8 +214,7 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
     -   Per un database secondario, indica che il database non ha ancora avviato la sincronizzazione del log a causa di un problema di connessione, è stato sospeso o si trova in stati di transizione durante l'avvio o un cambio di ruolo.  
   
 -   **Sincronizzazione in corso**:
--   
-     Su una replica primaria:   
+- Su una replica primaria:   
     - In un database primario, indica che questo database è pronto ad accettare una richiesta di analisi da un database secondario.  
     - Su una replica secondaria, indica che è in corso uno spostamento dati attivo per quel database secondario. 
   
