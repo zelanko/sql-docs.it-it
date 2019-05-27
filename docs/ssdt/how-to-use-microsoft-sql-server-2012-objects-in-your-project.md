@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397093"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098410"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Utilizzo di oggetti di Microsoft SQL Server 2012 nel progetto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Usare oggetti di Microsoft SQL Server 2012 nel progetto
 In questo esempio, si aggiungerà un oggetto Sequence a un progetto di database per Microsoft SQL Server 2012.  
   
 Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze.  Per altre informazioni sugli oggetti Sequence, vedere [Numeri di sequenza](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Per informazioni sulle novità introdotte in Microsoft SQL Server 2012, vedere [Novità di SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -44,9 +44,9 @@ Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è 
     CACHE 10  
     ```  
   
-4.  Se la piattaforma di destinazione del progetto non è impostata su Microsoft SQL Server 2012, nell'**Elenco errori** verrà visualizzato un errore di sintassi per l'istruzione `CREATE SEQUENCE`. Per correggerlo, seguire l'argomento [Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per modificare la piattaforma di destinazione di conseguenza.  
+4.  Se la piattaforma di destinazione del progetto non è impostata su Microsoft SQL Server 2012, nell'**Elenco errori** verrà visualizzato un errore di sintassi per l'istruzione `CREATE SEQUENCE`. Per correggerlo, seguire l'argomento [Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per cambiare la piattaforma di destinazione di conseguenza.  
   
-5.  Seguire l'argomento [Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per pubblicare il progetto in un database nel server Microsoft SQL Server 2012 connesso.  
+5.  Seguire l'argomento [Procedura: Cambiare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per pubblicare il progetto in un database nel server Microsoft SQL Server 2012 connesso.  
   
 ### <a name="to-use-the-new-sequence-object"></a>Per utilizzare il nuovo oggetto Sequence  
   

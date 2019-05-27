@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757815"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068018"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Suggerisci colonne correlate (Creazione guidata modello di data mining)
   Usare la pagina **Suggerisci colonne correlate** per visualizzare le indicazioni specificate dalla funzionalità **Suggerisci** selezionata nella pagina precedente della procedura. Le colonne di input verranno selezionate automaticamente sulla base della relativa associazione alla colonna **Stimabile** scelta. Se si accettano, le modifiche apportate a questa finestra di dialogo verranno riflesse nella pagina **Impostazione dati di training**.  

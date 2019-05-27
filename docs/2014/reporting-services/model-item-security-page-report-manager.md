@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
@@ -13,12 +12,12 @@ ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188428"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108227"
 ---
 # <a name="model-item-security-page-report-manager"></a>Pagina sicurezza elemento modello (Gestione report)
   Questa pagina consente di proteggere parti di un modello concedendo o revocando autorizzazioni di sola lettura per elementi specifici. La sicurezza degli elementi dei modelli influisce sull'esplorazione ad hoc dei dati in fase di esecuzione e sulla possibilità di utilizzare parti di un modello pubblicato per la creazione di report in Generatore report. Per utilizzare questa caratteristica, è necessario disporre delle autorizzazioni Gestione contenuto.  

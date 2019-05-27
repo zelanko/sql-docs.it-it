@@ -1,9 +1,8 @@
 ---
-title: Creare, modificare ed eliminare FileTable | Microsoft Docs
+title: Creare, modificare ed eliminare tabelle FileTable | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
@@ -12,17 +11,17 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542380"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094358"
 ---
-# <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
+# <a name="create-alter-and-drop-filetables"></a>Creare, modificare ed eliminare tabelle FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "52542380"
   
 -   Nomi da utilizzare per i 3 vincoli di chiave primaria e univoci creati automaticamente.  
   
-###  <a name="HowToCreate"></a> Procedura: Creazione di una tabella FileTable  
+###  <a name="HowToCreate"></a> Procedura: Creare una tabella FileTable  
  **Creare una tabella FileTable tramite Transact-SQL**  
  Creare una tabella FileTable chiamando l'istruzione [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) con l'opzione **AS FileTable**. Poiché una tabella FileTable ha uno schema fisso, non è necessario specificare un elenco di colonne. È invece possibile specificare le impostazioni seguenti per la nuova tabella FileTable:  
   
@@ -109,7 +108,7 @@ GO
   
  Per informazioni sull'uso dell'istruzione ALTER TABLE per abilitare o disabilitare lo spazio dei nomi FileTable, inclusi i vincoli definiti dal sistema, vedere [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Procedura: Modifica della directory per una tabella FileTable  
+###  <a name="HowToChange"></a> Procedura: Modificare la directory per una tabella FileTable  
  **Modificare la directory per una tabella FileTable tramite Transact-SQL**  
  Chiamare l'istruzione ALTER TABLE e specificare un nuovo valore valido per l'opzione SET di **FILETABLE_DIRECTORY** .  
   

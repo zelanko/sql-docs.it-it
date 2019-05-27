@@ -24,16 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91a73ebf7d840669837a43cf89427463e9b46b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802905"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945712"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +96,7 @@ Ogni elemento *datepart* e le relative abbreviazioni restituiscono lo stesso val
   
 Il valore restituito dipende dalla lingua impostata tramite [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e in [Configurare l'opzione di configurazione del server default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) dell'account di accesso. Il valore restituito dipende da [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) se *date* è un valore letterale stringa di alcuni formati. SET DATEFORMAT non modifica il valore restituito quando la data è un'espressione della colonna di un tipo di dati ora e data.
   
-Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valori restituiti, per l'istruzione `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L'argomento *date* ha un tipo di dati **datetimeoffset(7)**. Le ultime due posizioni del valore restituito di *datepart* **nanosecond** sono sempre `00` e questo valore ha una scala di 9:
+Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valori restituiti, per l'istruzione `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L'argomento *date* ha un tipo di dati **datetimeoffset(7)** . Le ultime due posizioni del valore restituito di *datepart* **nanosecond** sono sempre `00` e questo valore ha una scala di 9:
 
 **.123456700**
   
@@ -120,7 +120,7 @@ Questa tabella elenca tutti gli argomenti *datepart*, con i corrispondenti valor
 ## <a name="week-and-weekday-datepart-arguments"></a>Argomenti datepart per settimana e giorno feriale
 Per un argomento *datepart* **week** (**wk**, **ww**) o **weekday** (**dw**), il valore restituito `DATEPART` dipende dal valore impostato da [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week**_datepart_. Ad esempio
+Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week**_datepart_. Esempio:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 

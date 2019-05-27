@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756272"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065772"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Risolvere i problemi relativi all'elaborazione dei dati (SSAS tabulare)
   In questo argomento vengono fornite informazioni sull'elaborazione (aggiornamento) dei dati del modello quando si crea un modello tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Non sono disponibili informazioni sull'elaborazione di dati in modelli distribuiti in un'istanza del server Analysis Services. Per altre informazioni sull'elaborazione dei dati in un modello distribuito, vedere [Creare script per le attività amministrative in Analysis Services](script-administrative-tasks-in-analysis-services.md).  

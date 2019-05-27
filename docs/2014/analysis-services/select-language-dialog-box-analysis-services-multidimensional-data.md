@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.languageselection.f1
@@ -17,12 +16,12 @@ ms.assetid: a85a106f-ff47-4b9e-ac62-4942e214df3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f3e5023741793547a087f78e8591ce6063df445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbe0f137f029fb364adafd6f3959c7e22984b73f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069505"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Seleziona lingua (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Seleziona lingua** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare una lingua per una nuova traduzione. Per visualizzare la finestra di dialogo **Seleziona lingua** è possibile:  

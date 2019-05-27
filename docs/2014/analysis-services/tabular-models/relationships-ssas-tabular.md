@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066695"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
   Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
@@ -99,7 +98,7 @@ ms.locfileid: "62756762"
   
  Nella tabella seguente sono riportate le relazioni tra le tre tabelle:  
   
-|Relazione|Tipo|colonna di ricerca|colonna|  
+|Relazione|Type|colonna di ricerca|colonna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|uno-a-uno|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|uno-a-molti|Customers.CustomerID|Orders.CustomerID|  
