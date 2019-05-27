@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44c4f0a5fbdaa64f2145113bf5135dad9acbddbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730738"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080527"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Importare da un'origine dati relazionale (SSAS tabulare)
   Tramite Importazione guidata tabella è possibile importare dati da un'ampia gamma di database relazionali. La procedura guidata è disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dal menu **Modello** . Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato. Per altre informazioni su origini dati e provider supportati, vedere [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  

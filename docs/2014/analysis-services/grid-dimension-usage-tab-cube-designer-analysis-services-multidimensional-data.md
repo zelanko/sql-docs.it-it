@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730778"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080806"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Griglia (scheda Utilizzo dimensioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Griglia** nella scheda **Utilizzo dimensioni** di Progettazione cubi consente di visualizzare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure. Ogni relazione tra dimensioni viene rappresentata come cella in una griglia, nella quale i gruppi di misure vengono visualizzati come colonne e le dimensioni come righe.  

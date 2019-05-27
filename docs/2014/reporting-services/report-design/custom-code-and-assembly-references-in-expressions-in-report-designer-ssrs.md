@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
@@ -20,12 +19,12 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df09ab032929de0eca51c9640f5c5cb23d1cde21
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020458"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106112"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS)
   È possibile aggiungere riferimenti a codice personalizzato incorporato in un report o ad assembly personalizzati compilati e salvati nel computer in uso e distribuiti nel server di report. Usare codice incorporato per costanti personalizzate, funzioni complesse o funzioni usate più volte in un singolo report. Usare gli assembly di codice personalizzati per mantenere il codice in un'unica posizione e condividerne l'utilizzo in più report. Il codice personalizzato può includere nuove costanti, variabili, funzioni o subroutine personalizzate. È possibile includere riferimenti di sola lettura a raccolte predefinite come ad esempio Parameters. Non è tuttavia possibile passare alle funzioni personalizzate set di valori di dati. In particolare, non sono supportate le aggregazioni personalizzate.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
@@ -13,12 +12,12 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085486"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
   Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non vuole eseguirne il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  

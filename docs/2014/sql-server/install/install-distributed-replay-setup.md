@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545385"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094633"
 ---
 # <a name="install-distributed-replay-setup"></a>Installare i componenti Riesecuzione distribuita (programma di installazione)
   Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
@@ -87,7 +86,7 @@ ms.locfileid: "52545385"
   
     -   Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
   
-     **Importante**: quando si configura Distributed Replay Controller, è possibile specificare uno o più account utente da usare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: Quando si configura Distributed Replay controller, è possibile specificare uno o più account utente che verrà utilizzato per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -107,7 +106,7 @@ ms.locfileid: "52545385"
   
     2.  Nei computer a 64 bit il percorso di installazione predefinito è **C:\Programmi (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. Al termine dell'operazione scegliere **Avanti**.  
+9. Una volta finito, fare clic su **Avanti**.  
   
 10. Nella pagina **Regole di installazione** viene convalidata la configurazione del computer tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una volta completato il processo di convalida, fare clic su **Avanti**.  
   

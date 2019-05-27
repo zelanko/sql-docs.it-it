@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
@@ -15,12 +14,12 @@ ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067125"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrare i dati di una tabella (SSAS tabulare)
   È possibile applicare filtri quando si importano dati per controllare le righe caricate in una tabella. Dopo aver importato i dati, non è possibile eliminare righe singole. Tuttavia, è possibile applicare filtri personalizzati per controllare la modalità in cui visualizzare tali righe. Le righe che non soddisfano i criteri di filtro sono nascoste. È possibile filtrare i dati in base a una o più colonne. I filtri sono additivi, pertanto ciascun filtro aggiuntivo è basato sul filtro corrente e consente di ridurre ulteriormente il subset di dati.  

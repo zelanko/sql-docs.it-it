@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186077"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106748"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
   È possibile permettere a un utente di espandere o comprimere in modo interattivo elementi del report oppure, per una tabella o una matrice, righe e colonne associate a un gruppo. Per consentire agli utenti di espandere o comprimere un elemento, impostare le proprietà di visibilità per tale elemento. L'impostazione della visibilità può essere usata in un visualizzatore di report HTML ed è a volte definita azione *drill-down* .  

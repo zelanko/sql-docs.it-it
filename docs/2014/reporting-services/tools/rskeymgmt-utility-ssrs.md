@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -22,12 +21,12 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941197"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099806"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  

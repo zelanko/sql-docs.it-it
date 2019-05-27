@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068473"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Impostazione tipo di contenuto e dati delle colonne (Creazione guidata modello di data mining)
   Usare la pagina **Impostazione tipo di contenuto e dati delle colonne** per specificare l'uso e il tipo di dati di ogni colonna selezionata nella pagina precedente della procedura guidata. Per ignorare la colonna, fare clic su **Indietro** per tornare alla pagina **Impostazione dati di training**e deselezionare tutte le caselle di controllo.  

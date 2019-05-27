@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a8c43d75b0b070a73f89a16300694fc11234d6a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63017093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104157"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alle applicazioni del server di report e ai report pubblicati si accede tramite URL che specificano un indirizzo IP, una porta e una directory virtuale. Se Windows Firewall è abilitato, la porta configurata per l'utilizzo da parte del server di report è probabilmente chiusa. Il fatto che una porta possa essere chiusa viene indicato dalla visualizzazione di una pagina Web vuota in seguito alla richiesta di un report o dalla visualizzazione di una pagina vuota quando si tenta di aprire Gestione report da un computer client remoto.  

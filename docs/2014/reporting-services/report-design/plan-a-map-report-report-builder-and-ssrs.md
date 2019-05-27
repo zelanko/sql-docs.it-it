@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105471"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
   Report validi presentano informazioni che consentono una migliore comprensione e determinano azioni specifiche. Per presentare i dati analitici, ad esempio i totali delle vendite o i dati demografici, rispetto a uno sfondo geografico, è possibile aggiungere una mappa al report. Una mappa può contenere più livelli, in ciascuno dei quali vengono visualizzati elementi della mappa definiti da un tipo specifico di dati spaziali, ossia punti che rappresentano posizioni, linee che rappresentano percorsi o poligoni che rappresentano aree. È possibile associare i dati analitici agli elementi della mappa su ogni livello.  

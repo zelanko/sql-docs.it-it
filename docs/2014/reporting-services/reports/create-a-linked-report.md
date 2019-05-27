@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
@@ -13,12 +12,12 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 36abfdc4ea1be04b45c834fde91762c035e0b9c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288505"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102700"
 ---
 # <a name="create-a-linked-report"></a>Creare un report collegato
   Un report collegato è un elemento del server di report che fornisce un punto di accesso a un report esistente. Tale elemento è concettualmente simile al collegamento a un programma utilizzato per l'esecuzione di un programma o per l'apertura di un file.  

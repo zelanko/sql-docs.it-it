@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 19c13fba697477174f671344304a9cd4befba53e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62666906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063642"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utilizzo dell'utilità sqlcmd
   L'utilità `sqlcmd` è un'utilità della riga di comando per l'esecuzione interattiva ad hoc di istruzioni e script [!INCLUDE[tsql](../../includes/tsql-md.md)], nonché per l'automazione di attività di scripting [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per utilizzare `sqlcmd` in modo interattivo o per compilare file script da eseguire tramite `sqlcmd`, è necessario conoscano [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilità `sqlcmd` viene in genere utilizzata nei modi seguenti:  
@@ -119,7 +118,7 @@ ms.locfileid: "62666906"
 ## <a name="quoted-strings"></a>Stringhe tra virgolette  
  I caratteri racchiusi tra virgolette vengono utilizzati senza alcuna pre-elaborazione aggiuntiva, fatta eccezione per il fatto che è possibile inserire virgolette in una stringa immettendo due virgolette consecutive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta questa sequenza di caratteri come virgoletta. La traduzione avviene tuttavia nel server. Le variabili di scripting non vengono espanse se sono incluse all'interno di una stringa.  
   
- Ad esempio:  
+ Ad esempio:   
   
  `sqlcmd`  
   

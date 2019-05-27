@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
@@ -13,12 +12,12 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a190d82a18f88d38b7e41642a1dd598ebd91215c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242840"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102025"
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzato un ruolo del database predefinito denominato `RSExecRole` che consente di concedere autorizzazioni del server di report al database relativo. Il `RSExecRole` ruolo viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  

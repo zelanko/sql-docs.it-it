@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.savecopyas.f1
@@ -15,12 +14,12 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0e28fec1fb562c5ba6ed28ad615f40ada5fc2db9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766793"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056314"
 ---
 # <a name="save-copy-of-package"></a>Salva copia del pacchetto
   Usare la finestra di dialogo **Salva copia del pacchetto**, disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], per salvare una copia di un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in un percorso diverso ed eventualmente modificarne il livello di protezione.  

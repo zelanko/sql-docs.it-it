@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
@@ -16,12 +15,12 @@ ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4bd22faaa9d0f3b6ce213c37e20615492b1e95d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190811"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103171"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Avviare e arrestare il servizio del server di report
   Un server di report viene implementato come un servizio Windows che contiene il servizio Web ReportServer, Gestione report e un'applicazione di elaborazione in background. Se si desidera utilizzare qualsiasi funzionalità del server di report, è necessario che il servizio sia in esecuzione. L'arresto del servizio determina l'interruzione di tutte le operazioni eseguite sul server di report.  

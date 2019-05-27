@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 154778d2c3a4056e1b16743ff629e4c4a5dae0a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836569"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061594"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
   È possibile usare la [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista per analizzare il flusso di dati dei pacchetti di database. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  

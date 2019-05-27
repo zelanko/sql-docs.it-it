@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes
@@ -13,12 +12,12 @@ ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 547ce7f80189cc15ea946f5cc8fab470ed83a754
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 417ca3c2e5e477960c4c905543f3a712a5ec7453
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095165"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>Gli indici full-text su colonne calcolate non persistenti non sono consentiti
   Non è possibile creare indici full-text in colonne calcolate non deterministiche e imprecise. Non è possibile utilizzare tali colonne come colonne tipo o come colonne chiave full-text.  

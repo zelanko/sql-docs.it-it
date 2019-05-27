@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29ea08478089982f9652154fa0a167d122b2cd34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 234ebb8b4490d496731e4fb33db8e73a978f7f15
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697460"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107384"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  

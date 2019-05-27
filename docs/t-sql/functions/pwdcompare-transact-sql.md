@@ -17,15 +17,15 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782369"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943281"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>Argomenti  
  **'** *clear_text_password* **'**  
- Password non crittografata. *clear_text_password* è di tipo **sysname** (**nvarchar(128)**).  
+ Password non crittografata. *clear_text_password* è di tipo **sysname** (**nvarchar(128)** ).  
   
  *password_hash*  
- Hash di crittografia di una password. *password_hash* è di tipo **varbinary(128)**.  
+ Hash di crittografia di una password. *password_hash* è di tipo **varbinary(128)** .  
   
  *version*  
  Parametro obsoleto che può essere impostato su 1 se *password_hash* rappresenta un valore relativo a un account di accesso di una versione precedente a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] di cui è stata eseguita la migrazione a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, ma che non è mai stato convertito nel sistema [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* è di tipo **int**.  
@@ -66,7 +66,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  **PWDCOMPARE** non può essere usata con le password di utenti del database indipendente. Non esiste un equivalente per i database indipendenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  PWDENCRYPT è disponibile per il ruolo public.  
   
  Per esaminare la colonna password_hash di sys.sql_logins, è richiesta l'autorizzazione CONTROL SERVER.  

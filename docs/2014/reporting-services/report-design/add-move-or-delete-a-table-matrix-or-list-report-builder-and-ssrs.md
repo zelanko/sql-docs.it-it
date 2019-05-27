@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb60f8152ad49b68723367cfb4f9f3941511954e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106594"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco (Generatore report e SSRS)
   In un'area dati vengono visualizzati i dati di un set di dati del report. Le aree dati includono tabelle, matrici, elenchi, grafici e misuratori. Per nidificare un'area dati in un'altra, aggiungere separatamente ogni area dati, quindi trascinare l'area dati figlio nell'area dati padre.  

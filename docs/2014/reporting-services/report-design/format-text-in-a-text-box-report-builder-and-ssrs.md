@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c39b81594339dbeac5e5487fcab7d054a80293a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 976130697e759fa4231ad73113d0970e345dbb3a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654655"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105871"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formattare il testo in una casella di testo (Generatore report e SSRS)
   È possibile formattare qualsiasi parte del testo all'interno di una casella di testo in modo indipendente e combinare testo segnaposto e testo statico in un'unica casella di testo. La possibilità di combinare i formati e aggiungere testo segnaposto consente di creare stampe unione o modelli per il testo nel report. Qualsiasi espressione può essere definita e formattata separatamente utilizzando un segnaposto.  

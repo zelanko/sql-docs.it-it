@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -17,12 +16,12 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 20d800cc906a3953fe2f5143e980fd2e869ec318
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306519"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101673"
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
   È possibile impostare la sicurezza per singoli report e risorse e controllare quindi i livelli di accesso concessi ai vari utenti per questi elementi. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono eseguire report, visualizzare risorse, modificare proprietà ed eliminare elementi. Per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un report o a una risorsa.  

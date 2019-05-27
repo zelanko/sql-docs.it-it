@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, nested
@@ -15,12 +14,12 @@ ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b9e66e04cc6e4ae179816b6f0b679178c2e7052
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0675c412d753a1ce60fa41c7ced40528b3c58f75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267595"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093832"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>I trigger AFTER nidificati vengono attivati anche quando l'opzione relativa alla nidificazione dei trigger è disattivata
   È presente un trigger AFTER nidificato in un trigger INSTEAD OF definito su una o più tabelle. I trigger AFTER annidati possono essere attivati anche se l'opzione di configurazione del server `nested triggers` è impostata su 0.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
@@ -20,12 +19,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188334"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102501"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -60,7 +59,7 @@ ms.locfileid: "63188334"
 ##  <a name="bkmk_RDL_Types"></a> Tipi RDL  
  Nella tabella seguente vengono elencati i tipi utilizzati negli elementi e negli attributi RDL.  
   
-|Tipo|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |`Binary`|Proprietà con valore binario codificato in base 64.|  
 |`Boolean`|Proprietà con `true` o `false` come valore dell'oggetto. Se non diversamente specificato, il valore di un oggetto booleano facoltativo omesso è `False`.|  

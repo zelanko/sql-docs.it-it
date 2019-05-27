@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -22,12 +21,12 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 371cedc8217cbce4eef4c476fd93605d8582f7dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f598946ec6231d1ca5edacf1810431beb4638f88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62938027"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100665"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Una sottoscrizione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato file specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report.  

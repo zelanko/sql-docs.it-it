@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -15,12 +14,12 @@ ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f04df51d1a88ac0fb13ce1a262b3e3ebc245004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b8d19d1f1fc33bfcd90f7cd801b2256a88859c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105733"
 ---
 # <a name="grouping-pane-report-builder"></a>Riquadro di raggruppamento (Generatore report)
   Nel riquadro Raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro Raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  

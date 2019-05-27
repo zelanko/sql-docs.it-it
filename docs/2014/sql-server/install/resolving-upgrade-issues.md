@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -31,12 +30,12 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753323"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092497"
 ---
 # <a name="resolving-upgrade-issues"></a>Risoluzione dei problemi di aggiornamento
   Negli argomenti di questa sezione vengono descritti i problemi relativi all'aggiornamento rilevabili e quelli non rilevabili che possono tuttavia influire sull'esecuzione dell'aggiornamento o del post-aggiornamento. I problemi sono organizzati per componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

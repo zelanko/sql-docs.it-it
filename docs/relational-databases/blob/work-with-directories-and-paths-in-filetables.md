@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c8f458f0405feec07a33a2355d117752c3b10e80
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418451"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094176"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Utilizzare directory e percorsi in FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52418451"
 |Ottenere un percorso UNC assoluto o relativo di un file o una directory in una tabella FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Ottenere il valore dell'ID di posizione del percorso di una directory o di un file specificato in una tabella FileTable, indicandone il percorso.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Procedura: Utilizzare percorsi relativi per codice portabile  
+##  <a name="BestPracticeRelativePaths"></a> Procedura: Usare percorsi relativi per il codice portabile  
  Per mantenere il codice e le applicazioni indipendenti dal database e dal computer correnti, evitare di scrivere codice basato su percorsi di file assoluti. Ottenere invece il percorso completo di un file al runtime mediante l'uso combinato delle funzioni [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) e [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md), come illustrato nell'esempio seguente. Per impostazione predefinita, la funzione **GetFileNamespacePath** restituisce il percorso relativo del file all'interno del percorso radice per il database.  
   
 ```sql  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 69acb3d6495ce7ec77b67feed7644945a477a86e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654406"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100744"
 ---
 # <a name="schedules"></a>Pianificazioni
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili pianificazioni condivise e pianificazioni in base al report che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.  

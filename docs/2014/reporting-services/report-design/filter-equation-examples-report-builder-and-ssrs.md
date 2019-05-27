@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
@@ -13,12 +12,12 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 601b3e1252f9221fe2760fe0dae19d2d750c61f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb56fdfd6d59884ac60b587748cf1f663fa3042d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654675"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105904"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Esempi di equazioni di filtro (Generatore report e SSRS)
   Per creare un filtro è necessario specificare una o più equazioni di filtro. Un'equazione di filtro include un'espressione, un tipo di dati, un operatore e un valore. In questo argomento vengono forniti esempi di filtri di uso comune.  

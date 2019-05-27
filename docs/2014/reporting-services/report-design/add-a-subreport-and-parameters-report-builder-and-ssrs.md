@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10093"
@@ -14,12 +13,12 @@ ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 906f4527bdca38f4571a2e1686f885a2857e47c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206861"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106787"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Aggiungere un sottoreport e di parametri (Generatore report e SSRS)
   Aggiungere sottoreport a un report quando si desidera creare un report principale in cui è possibile includere più report correlati. Un sottoreport rappresenta un riferimento a un altro report. Per correlare i report tramite valori dei dati, ad esempio per fare in modo che in più report vengano visualizzati i dati relativi allo stesso cliente, è necessario progettare come sottoreport un report con parametri, ovvero un report in cui sono visualizzati i dettagli relativi a un cliente specifico. Quando al report principale si aggiunge un sottoreport, è possibile specificare parametri da passare a quest'ultimo.  

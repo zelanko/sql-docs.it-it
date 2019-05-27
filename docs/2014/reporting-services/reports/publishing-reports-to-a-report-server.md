@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -24,12 +23,12 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63128612"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102490"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
   Dopo aver progettato e testato un report o set di report, è possibile usare le funzionalità di distribuzione predefinite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare il report in un server di report. sia singolarmente sia includendoli in un progetto server di report. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*, anziché il termine *pubblicare*. I due termini sono perfettamente equivalenti.  

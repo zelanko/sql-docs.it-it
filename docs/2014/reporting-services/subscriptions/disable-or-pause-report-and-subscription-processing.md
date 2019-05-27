@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -22,12 +21,12 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62510628"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100919"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Sospendere l'elaborazione del report e della sottoscrizione
   Non è possibile sospendere direttamente un report o una sottoscrizione, tuttavia è possibile interromperne l'elaborazione prima dell'avvio del processo o quando viene stabilita una connessione all'origine dei dati. È inoltre possibile impedire l'elaborazione di una sottoscrizione o di un report rendendolo inaccessibile agli utenti.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,12 +15,12 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c52bc6b7781b6593f945d582e033653aeb61dc9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242829"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101931"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] offre caratteristiche di sicurezza predefinite che è possibile usare per concedere l'accesso agli elementi del server di report dai siti e dalle raccolte di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  

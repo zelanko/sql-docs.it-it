@@ -1,7 +1,7 @@
 ---
 title: Colonne e tipo di dati XML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511578"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836155"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In questo argomento vengono illustrati i vantaggi e le limitazioni del tipo di dati **xml** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e viene spiegato come scegliere la modalità di archiviazione dei dati XML.  
   
@@ -175,6 +176,8 @@ ms.locfileid: "58511578"
 -   Non può essere utilizzato come parametro nelle funzioni scalari predefinite diverse da ISNULL, COALESCE e DATALENGTH.  
   
 -   Non può essere utilizzato come colonna chiave in un indice. Può tuttavia essere inserito come tipo di dati in un indice cluster o essere aggiunto in modo esplicito a un indice non cluster utilizzando la parola chiave INCLUDE durante la creazione dell'indice.  
+
+- Gli elementi XML supportano fino a 128 livelli di annidamento.
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

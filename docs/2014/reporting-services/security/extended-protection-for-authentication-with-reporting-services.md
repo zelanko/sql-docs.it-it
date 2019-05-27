@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242585"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101952"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
   La protezione estesa consiste in un set di miglioramenti apportati alle versioni recenti del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protezione estesa migliora la protezione di credenziali e autenticazione da parte delle applicazioni. La funzionalità non fornisce direttamente la protezione contro attacchi specifici quale l'inoltro delle credenziali, ma rende disponibile un'infrastruttura per le applicazioni, ad esempio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , per l'imposizione della protezione estesa per l'autenticazione.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2a9a349435c48c3f9c4a9ea4672ec52e83ce01d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893368"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058312"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Tabella di riferimento)
   Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per specificare la tabella di origine e l'indice da usare per la ricerca. Tale origine deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

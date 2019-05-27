@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
@@ -13,12 +12,12 @@ ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748403"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070542"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Query e filtro (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   In questa area della scheda **Esplorazione** in Progettazione cubi è presente un'area della query e del filtro che consente di scegliere dati del cubo da utilizzare nell'esplorazione o nelle query. È possibile aggiungere tutti gli oggetti cubo desiderati, quindi visualizzare i risultati nell'area dei dati o esportare i risultati in un report tramite Analizza in Excel per verificare come verranno visualizzati i dati agli utenti finali.  

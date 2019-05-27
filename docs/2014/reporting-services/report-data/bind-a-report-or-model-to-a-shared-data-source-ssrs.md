@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83edc5eb7d0a79e6af7bb88253cc501cc30d0f60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697509"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107446"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associare un report o un modello a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report o un modello da un server di test a uno di produzione, potrebbe essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report o il modello nel nuovo server, è necessario riassociarlo a un'origine dei dati condivisa archiviata nel nuovo server di report. Se il report o il modello non viene riassociato, non funzionerà correttamente quando vi si accede dal nuovo server di report.  

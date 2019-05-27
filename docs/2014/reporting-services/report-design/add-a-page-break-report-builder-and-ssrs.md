@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2fe0ade0d5011bfcbf6a2969f8e342ab20670a24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b54815164693171a54cf10b40a279fe8deb8337a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206970"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106798"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Aggiungere un'interruzione di pagina (Generatore report e SSRS)
   È possibile aggiungere un'interruzione di pagina a rettangoli, aree dati o gruppi all'interno di aree dati per controllare la quantità di informazioni in ogni pagina. Con l'aggiunta di interruzioni di pagina è possibile migliorare le prestazioni dei report pubblicati, perché quando si visualizza il report è necessario elaborare solo gli elementi presenti in ogni pagina. Quando l'intero report è costituito da un'unica pagina, prima che sia possibile visualizzare il report è necessario che tutti gli elementi vengano elaborati.  

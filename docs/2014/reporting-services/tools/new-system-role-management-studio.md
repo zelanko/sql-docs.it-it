@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newsystemrole.f1
@@ -13,12 +12,12 @@ ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 33cf72fa9f82b4bf6fdbd8b1b5b2b73757706206
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4d9227136ba3bd1526f8ec04476d6dc5d61ca41f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100175"
 ---
 # <a name="new-system-role-management-studio"></a>Nuovo ruolo a livello di sistema (Management Studio)
   Utilizzare questa pagina per creare una definizione di ruolo a livello di sistema. Tramite una definizione di ruolo a livello di sistema è possibile specificare un set di attività a livello di sistema consentite per un server di report nel suo complesso.  

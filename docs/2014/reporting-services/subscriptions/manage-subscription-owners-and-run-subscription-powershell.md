@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6598781301ad6e7483a3cea6b45949c1cd39cf3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648959"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100808"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione
   A partire da [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è possibile trasferire a livello di programmazione la proprietà di una sottoscrizione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  

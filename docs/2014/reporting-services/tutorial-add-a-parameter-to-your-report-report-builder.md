@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151564"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099084"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
   Aggiungere un parametro al report per consentire agli utenti di filtrare i dati del report dall'origine dati o nel report. I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report.  

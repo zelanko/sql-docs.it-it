@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
@@ -14,12 +13,12 @@ ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b2491a03e0d0121f3aa3b31f354f71b36088e5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766124"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054753"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Utilizzo di un'espressione in un vincolo di precedenza
   Questa procedura descrive come aggiungere un'espressione a un vincolo di precedenza tramite la finestra di dialogo **Editor vincoli di precedenza**. È possibile aggiungere un'espressione a un vincolo di precedenza solo se il pacchetto include almeno due eseguibili, costituiti da attività o contenitori, connessi da un vincolo di precedenza.  

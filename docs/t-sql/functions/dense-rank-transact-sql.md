@@ -18,16 +18,16 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 311e6ee0e470aa01933967c648c0f8e5c3ac503e
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a37eef1db62c91577fe8afb9851fc189d985681a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979433"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948882"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ ProductID   Name                               LocationID Quantity Rank
   
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classificazione di tutte le righe in un set di risultati  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificazione di tutte le righe in un set di risultati  
 Questo esempio restituisce i primi dieci dipendenti classificati in base allo stipendio. Poiché l'istruzione `SELECT` non ha specificato una clausola `PARTITION BY`, la funzione `DENSE_RANK` è stata applicata a tutte le righe del set di risultati.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889278"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055847"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Impostazione o modifica del livello di protezione dei pacchetti
   Per controllare l'accesso al contenuto dei pacchetti e ai valori sensibili contenuti, ad esempio password, impostare il valore della proprietà `ProtectionLevel`. Per poter compilare il progetto, ai pacchetti contenuti in un progetto deve essere assegnato lo stesso livello di protezione del progetto. Se si modifica l'impostazione della proprietà `ProtectionLevel` nel progetto, è necessario aggiornare manualmente l'impostazione delle proprietà per i pacchetti.  

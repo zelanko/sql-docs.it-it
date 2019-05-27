@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185803"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106433"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Riferimenti a raccolte DataSources e DataSets (Generatore report e SSRS)
   La raccolta `DataSources` rappresenta tutte le origini dati utilizzate in un report. Analogamente, la raccolta `DataSets` rappresenta tutti i set di dati per tutte le origini dati disponibili in un report. Usare il riquadro **Dati report** per ottenere una visualizzazione gerarchica dei set di dati del report organizzati sotto l'origine dati cui fanno riferimento. Se si includono riferimenti a queste raccolte, durante l'anteprima del report questi valori non verranno visualizzati. Le raccolte sono disponibili solo dopo la pubblicazione del report in un server di report.  

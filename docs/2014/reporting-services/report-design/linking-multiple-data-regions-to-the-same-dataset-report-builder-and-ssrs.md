@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d282636b58352f0ffad1083077bdab9769bd6fdc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209346"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105608"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Collegamento di più aree dati allo stesso set di dati (Generatore report e SSRS)
   È possibile aggiungere più aree dati a un report per fornire visualizzazioni diverse dei dati dello stesso set di dati del report. Può ad esempio verificarsi l'esigenza di visualizzare i dati sia in una tabella che visivamente in un grafico. A tale scopo, è necessario utilizzare espressioni e ambiti identici per le espressioni di filtro, le espressioni di ordinamento e le espressioni di raggruppamento appropriate.  

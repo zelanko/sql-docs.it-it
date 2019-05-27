@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], result lists
@@ -16,12 +15,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0229e95b6d4bdc4fec8950a5e8e5e155300bfd19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 957b6e46cb8c3b4cc551c616a1b547c3c1cbdeb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63136232"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090164"
 ---
 # <a name="search-documents-using-results-lists"></a>Ricerca nei documenti utilizzando gli elenchi dei risultati
   Nella finestra di dialogo **Trova e sostituisci** è possibile eseguire ricerche e sostituzioni di testo in tutti i file di un progetto o di una soluzione o in una cartella di file system, anche se i file non sono aperti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le corrispondenze delle ricerche eseguite con la finestra di dialogo **Trova e sostituisci** vengono visualizzate nelle finestre Risultati ricerca 1 e Risultati ricerca 2, in cui è possibile vedere il testo esatto dalla riga contenente la corrispondenza.  

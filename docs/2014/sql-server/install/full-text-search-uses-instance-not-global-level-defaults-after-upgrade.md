@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [Full-Text Search]
@@ -14,12 +13,12 @@ ms.assetid: 93ee8fcb-d11c-49fa-8fac-51ed31a8f008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d1974d81e36842f8c8d2c8ae70eceec26acb2dfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c81892d6b83cef87a27a836d9691779a841104a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175681"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095055"
 ---
 # <a name="upgrading-will-cause-full-text-search-to-use-instance-level-not-global-word-breakers-and-filters-by-default"></a>A seguito dell'aggiornamento, per la ricerca full-text verranno utilizzati per impostazione predefinita word breaker e filtri a livello di istanza, non globali
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la registrazione a livello di istanza per i nuovi word breaker e i nuovi filtri.  
@@ -27,7 +26,7 @@ ms.locfileid: "48175681"
 ## <a name="component"></a>Componente  
  Ricerca full-text  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la registrazione a livello di istanza per i nuovi word breaker e i nuovi filtri. La registrazione a livello di istanza garantisce un isolamento funzionale e la sicurezza delle istanze.  
   
 ## <a name="corrective-action"></a>Azione correttiva  

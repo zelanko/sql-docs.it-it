@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -16,12 +15,12 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255499"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103044"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Web part Visualizzatore report in un sito di SharePoint
   La web part Visualizzatore report è una web part personalizzata installata con il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint. È possibile utilizzare questa web part per visualizzare, esplorare, stampare ed esportare report in un server di report configurato per l'esecuzione in modalità integrata SharePoint. La web part Visualizzatore report è associata a file di definizione del report (con estensione rdl) elaborati da un server di report di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Non è possibile utilizzarla con altri documenti di report creati con altri prodotti software.  

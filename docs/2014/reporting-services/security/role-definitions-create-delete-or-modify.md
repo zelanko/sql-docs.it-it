@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -19,19 +18,19 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 703615793c1c9ced7252a03e7597b701c977fbdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101813"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Creare, eliminare o modificare un ruolo (Management Studio)
   In Reporting Services sono disponibili ruoli predefiniti che definiscono un livello di accesso a un server di report. La richiesta di accesso al server di report da parte di ogni utente o gruppo viene effettuata tramite un ruolo che descrive le attività che possono essere eseguite. I ruoli vengono definiti per il server di report complessivamente. Non è possibile variare una definizione di ruolo per parti specifiche del server di report o specificare che un ruolo venga utilizzato in modo diverso a seconda delle circostanze.  
   
  Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile eliminare solo ruoli che non sono utilizzati.  
   
- Per assegnare utenti e gruppi ai ruoli creati, utilizzare Gestione report. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
+ Per assegnare utenti e gruppi ai ruoli creati, utilizzare Gestione report. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
   
 > [!NOTE]  
 >  Se il server di report è configurato per la modalità integrata SharePoint e si è connessi al sito di SharePoint con cui il server di report è integrato, è possibile visualizzare e modificare i livelli di autorizzazione che controllano l'accesso al contenuto e alle operazioni del server di report.  

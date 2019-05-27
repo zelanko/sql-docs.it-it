@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
@@ -14,12 +13,12 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 964549d535fec50c0ec6e8dc17dd0ef2a1dda221
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62510922"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100871"
 ---
 # <a name="data-driven-subscriptions"></a>sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati consente di utilizzare i dati di sottoscrizione dinamici recuperati da un'origine dei dati esterna in fase di esecuzione. In una sottoscrizione guidata dai dati è inoltre possibile utilizzare testo statico e valori predefiniti specificati al momento della definizione della sottoscrizione. È possibile utilizzare le sottoscrizioni guidate dai dati per eseguire le operazioni seguenti:  

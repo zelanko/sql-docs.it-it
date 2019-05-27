@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df4a8ef1624d1f4244d96192bf4cb8486c92dd3d
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ffcb2612d84a7cd29044062ab264d6b40e3dfd64
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242214"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943710"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Istruzioni RESTORE - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  Specifica i dispositivi di backup logici o fisici da utilizzare per il ripristino.  
   
- { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
- Nome logico, conforme alle regole per gli identificatori, dei dispositivi di backup creati tramite **sp_addumpdevice** da cui viene ripristinato il database. Se indicato in forma di variabile (**@**_logical\_backup\_device\_name\_var_), il nome del dispositivo di backup può essere specificato come costante stringa (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
+ { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
+ Nome logico, conforme alle regole per gli identificatori, dei dispositivi di backup creati tramite **sp_addumpdevice** da cui viene ripristinato il database. Se indicato in forma di variabile ( **@** _logical\_backup\_device\_name\_var_), il nome del dispositivo di backup può essere specificato come costante stringa ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
- {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo (ad esempio percorso completo e nome di file) del dispositivo: DISK = 'C:\Programmi\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\.\TAPE0'. Se indicato come variabile (**@**_physical\_backup\_device\_name\_var_), il nome del dispositivo può essere specificato come costante stringa (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
+ {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
+ Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo (ad esempio percorso completo e nome di file) del dispositivo: DISK = 'C:\Programmi\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\.\TAPE0'. Se indicato come variabile ( **@** _physical\_backup\_device\_name\_var_), il nome del dispositivo può essere specificato come costante stringa ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
  Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per altre informazioni sull'uso dei nomi UNC, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -94,7 +94,7 @@ FROM <backup_device> [ ,...n ]
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può utilizzare RESTORE REWINDONLY.  
   
 ## <a name="see-also"></a>Vedere anche  

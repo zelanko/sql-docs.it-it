@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731403"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081265"
 ---
 # <a name="exploring-and-cleaning-data"></a>Esplorazione e pulizia dei dati
   La preparazione dei dati non è una semplice pulizia dei dati. Si tenga presente che la modalità con cui i dati vengono preparati influisce anche su come i risultati alla fine vengono interpretati. La preparazione dei dati include le attività seguenti:  

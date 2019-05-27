@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b54740d0d7870423778e2e8a692089fa3a8ebd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: edc19f948689fafea8cde0fb4ae2fd5f79de3242
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064054"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Abilitazione, disabilitazione ed eliminazione di punti di interruzione
   Per visualizzare e gestire tutti i punti di interruzione impostati, è possibile utilizzare la finestra **Punti di interruzione** . Utilizzare questa finestra per visualizzare informazioni sui punti di interruzione e per effettuare azioni quali l'eliminazione, la disabilitazione o l'abilitazione di punti di interruzione.  

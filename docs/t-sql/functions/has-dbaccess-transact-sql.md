@@ -22,16 +22,16 @@ helpviewer_keywords:
 - testing permissions
 - status information [SQL Server], user access
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ed76b4ddc84e3f61594ecd3296b5762a274bba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bf3b9c4dfd1216cccadb3a82e949168626206a6
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839069"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943117"
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ HAS_DBACCESS ( 'database_name' )
   
  HAS_DBACCESS restituisce 0 se il database è in modalità utente singolo ed è utilizzato da un altro utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  

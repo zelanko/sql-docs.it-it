@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
@@ -14,12 +13,12 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62652397"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098714"
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
   È possibile utilizzare i seguenti parametri come parte di un URL per configurare l'aspetto dei report. I parametri più comuni sono elencati in questa sezione: I parametri rilevano la distinzione tra maiuscole e minuscole e iniziano con i prefissi di parametro *rs:* se indirizzati al server di report e *rc:* se indirizzati a un visualizzatore HTML. È inoltre possibile specificare parametri specifici per dispositivi o estensioni per il rendering. Per altre informazioni sui parametri specifici per il dispositivo, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](specify-device-information-settings-in-a-url.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "62652397"
 |*PersistStreams*|Esegue il rendering di un report in un solo flusso persistente. Questo parametro viene utilizzato dal renderer di immagini per trasmettere il report visualizzabile un blocco alla volta. Dopo avere utilizzato il parametro in una stringa di accesso URL, utilizzare la stessa stringa di accesso con URL, sostituendo il parametro *GetNextStream* con il parametro *PersistStreams* per ottenere il blocco successivo nel flusso persistente. È possibile che questo comando dell'URL restituisca un flusso di 0 byte per indicare la fine del flusso persistente. Il valore predefinito è `false`.|  
 |*GetNextStream*|Ottiene il blocco di dati successivo in un flusso persistente al quale è possibile accedere tramite il parametro *PersistStreams* . Per ulteriori informazioni, vedere la descrizione relativa a *PersistStreams*. Il valore predefinito è `false`.|  
 |*SessionID*|Specifica una sessione di report attiva stabilita tra l'applicazione client e il server di report. Il valore di questo parametro viene impostato sull'identificatore della sessione.<br /><br /> È possibile specificare l'ID di sessione come cookie o come parte dell'URL. Nel caso in cui il server di report sia stato configurato per non utilizzare i cookie di sessione, la prima richiesta senza un ID di sessione specificato comporta un reindirizzamento con un ID di sessione. Per ulteriori informazioni sulle sessioni del server di report, vedere [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
-|*ClearSession*|Il valore `true` indica al server di report di rimuovere un report dalla sessione di report. Tutte le istanze del report associate a un utente autenticato vengono rimosse dalla sessione di report. (Un'istanza del report viene definita come lo stesso report, eseguire più volte con valori di parametro di report diverso). Il valore predefinito è `false`.|  
+|*ClearSession*|Il valore `true` indica al server di report di rimuovere un report dalla sessione di report. Tutte le istanze del report associate a un utente autenticato vengono rimosse dalla sessione di report. Un'istanza di un report viene definita quando lo stesso report viene eseguito più volte con valori dei parametri del report diversi. Il valore predefinito è `false`.|  
 |*ResetSession*|Il valore `true` indica al server di report di reimpostare la sessione del report rimuovendo l'associazione di quest'ultima con tutti gli snapshot del report. Il valore predefinito è `false`.|  
 |*ShowHideToggle*|Visualizza o nasconde una sezione del report. Specificare un integer positivo per rappresentare la sezione da attivare o disattivare.|  
   

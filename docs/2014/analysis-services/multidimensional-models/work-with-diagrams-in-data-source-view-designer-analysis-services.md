@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
@@ -18,12 +17,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743657"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072374"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utilizzare diagrammi in Progettazione vista origine dati (Analysis Services)
   Un diagramma vista origine dati è una rappresentazione visiva degli oggetti contenuti in tale vista. È possibile utilizzare il diagramma in modo interattivo per aggiungere, nascondere, eliminare o modificare oggetti specifici. Inoltre, è possibile creare più diagrammi nella stessa vista origine dati per concentrare l'attenzione su un subset degli oggetti.  

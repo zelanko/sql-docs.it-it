@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
@@ -13,12 +12,12 @@ ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33e6400c9076d96cbe9999cc4110b0e3bd5f0902
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058052"
 ---
 # <a name="import-project-wizard"></a>Importazione guidata progetto
   Utilizzare l'importazione guidata progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per creare un nuovo progetto di Integration Services basato su uno esistente. Importare i progetti che sono già stati distribuiti nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o importare i progetti da un file di distribuzione del progetto (con estensione ispac).  

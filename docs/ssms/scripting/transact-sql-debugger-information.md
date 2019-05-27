@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643314"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821836"
 ---
 # <a name="transact-sql-debugger---information"></a>Debugger Transact-SQL - Informazioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51643314"
 -   Fare clic su **Punti di interruzione** sulla barra degli strumenti **Debug**, quindi selezionare la finestra desiderata.  
   
 ## <a name="transact-sql-expressions"></a>Espressioni di Transact-SQL  
- Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4**.  
+ Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori dei dati attualmente assegnati a espressioni in un massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4**.  
   
  La finestra **Variabili locali** visualizza informazioni sulle variabili locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il set di espressioni elencate nella finestra **Variabili locali** cambia man mano che il debugger viene eseguito sulle varie parti del codice.  
   

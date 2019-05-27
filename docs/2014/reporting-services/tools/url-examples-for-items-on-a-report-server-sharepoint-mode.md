@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657438"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099444"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS)
   Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  

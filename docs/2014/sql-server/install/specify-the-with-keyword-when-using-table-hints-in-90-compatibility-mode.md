@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
@@ -14,12 +13,12 @@ ms.assetid: 7636cc85-5155-44db-baf6-df807761adb8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de4abebf061d2eaa419d8b71c9cf5a50d3e505db
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582944"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092156"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>Specificare la parola chiave WITH quando si utilizzano hint di tabella in modalità di compatibilità 90
   Gli hint di tabella sono supportati nella clausola FROM di una query solo se vengono specificati utilizzando la parola chiave WITH, con alcune eccezioni. Per ulteriori informazioni, vedere gli argomenti "FROM ([!INCLUDE[tsql](../../includes/tsql-md.md)])" e "Hint di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)])" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

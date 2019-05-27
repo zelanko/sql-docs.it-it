@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - access controls [Reporting Services]
@@ -19,12 +18,12 @@ ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 27baf79d25201f99f70760ef8673c4135f82f68e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 0e6098a51afde04164e3ef0dfa5e5297457b4440
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101803"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Ruoli e autorizzazioni (Reporting Services)
   In Reporting Services sono disponibili un sottosistema di autenticazione e un modello di autorizzazione basata sui ruoli. I modelli di autenticazione e autorizzazione variano a seconda che il server di report sia in esecuzione in modalità nativa o in modalità SharePoint. Se il server di report fa parte di una distribuzione di SharePoint, con le autorizzazioni di SharePoint è possibile determinare gli utenti che possono accedere al server di report.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2aa1133b9e23ea8f2174f73e9d8bf4a34ff0c824
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2c6e28a8c328bd1e38cee2f4cad74802a981aa9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131205"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095634"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Elenco di controllo di distribuzione: Reporting Services, Power View e PowerPivot per SharePoint
   Attenersi alla procedura seguente per installare queste funzionalità di Business Intelligence nella stessa farm di SharePoint: PowerPivot per SharePoint, Generatore Report, e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Sebbene nell'elenco di controllo venga consigliato un ordine di installazione specifico, in pratica è possibile installare queste funzionalità pressoché in qualsiasi ordine. Nell'elenco di controllo si suppone che i seguenti prodotti e funzionalità siano installati:  

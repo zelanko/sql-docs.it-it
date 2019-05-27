@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -18,12 +17,12 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62762025"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096184"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
   Ogni istanza del server di report richiede una connessione al database del server di report in cui sono archiviati report, modelli di report, origini dei dati condivise, risorse e metadati gestiti dal server. La connessione iniziale può essere creata durante l'installazione del server di report, se si sta installando la configurazione predefinita. Nella maggior parte dei casi è possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare la connessione al termine dell'installazione. È possibile modificare la connessione in qualsiasi momento per cambiare il tipo di account o reimpostare le credenziali. Per istruzioni dettagliate su come creare il database e configurare la connessione, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

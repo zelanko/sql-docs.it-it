@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services configuration
@@ -14,12 +13,12 @@ ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 095709115c15e770b8ad54678d4a359ab4b04ac8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 033c1ec1b0ad478e525f3ea9e8f172c5e5e31eef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215163"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096802"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Configurazione di Analysis Services - Provisioning account
   Utilizzare questa pagina per impostare la modalità server e per concedere le autorizzazioni amministrative a utenti o servizi che richiedono l'accesso illimitato ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Durante l'installazione non viene aggiunto automaticamente il gruppo locale BUILTIN\Administrators di Windows al ruolo di amministratore del server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza che viene installata. Se si desidera aggiungere il gruppo Administrators locale al ruolo di amministratore del server, è necessario specificare in modo esplicito tale gruppo.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bd85296b786683176c8c05e53cd7e0c11cc7cd18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d328f58da2be026046fc2688a4959b37f5ff7d65
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654698"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105876"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS)
   Quando i valori DateTime sono formattati correttamente su un asse, vengono visualizzati automaticamente in un grafico come giorni. Per specificare un intervallo di data o ora per l'asse X, ad esempio un intervallo di mesi o di ore, è necessario formattare le etichette dell'asse e impostare il tipo di intervallo dell'asse su un intervallo di data o ora valido.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], FOR BROWSE clause
@@ -14,12 +13,12 @@ ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 360208afdc5dddbd1795ba7aa47c2c05b7006b64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4811a3df80257b1e2d0e903fad562568eeec4ea2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506914"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095180"
 ---
 # <a name="for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes"></a>FOR BROWSE non consentita nelle viste in modalità di compatibilità 90 o successiva
   È stata rilevata la clausola FOR BROWSE in una vista. La clausola FOR BROWSE è consentita (e ignorata) nelle viste se la modalità di compatibilità del database è impostata su 80. Se è impostata la modalità di compatibilità 90 o successiva, la clausola FOR BROWSE non è consentita nelle viste.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767179"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057215"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor origine ODBC (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Source Editor** per selezionare la gestione connessione ODBC per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  

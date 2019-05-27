@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085135"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmi di data mining (Analysis Services - Data mining)
   Oggetto *algoritmo di data mining* è un set di approcci euristici e calcoli che crea un modello di data mining dai dati. Per creare un modello, tramite l'algoritmo vengono innanzitutto analizzati i dati forniti, ricercando tipi specifici di modelli o tendenze. I risultati dell'analisi vengono utilizzati dall'algoritmo per definire i parametri ottimali per la creazione del modello di data mining. Questi parametri vengono quindi applicati all'intero set di dati per estrarre modelli utilizzabili e statistiche dettagliate.  

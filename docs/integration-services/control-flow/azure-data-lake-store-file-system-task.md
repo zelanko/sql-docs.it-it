@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,18 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 02bbe8ec412c87b9a849f210d4a909eeecf7b5f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d07bedb102ee004c78d727afcf99320d12d68a4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800039"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014891"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Attività File system di Azure Data Lake Store
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 L'attività File System di Azure Data Lake Store consente agli utenti di eseguire varie operazioni del file system in [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
@@ -32,8 +36,8 @@ Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto,
 
 La proprietà **Operation** specifica l'operazione del file system da eseguire. Selezionare una delle operazioni seguenti:
 
-- **CopyToADLS** per caricare file in ADLS.
-- **CopyFromADLS** per scaricare file da ADLS.
+- **CopyToADLS:** carica i file in ADLS.
+- **CopyFromADLS:** scarica i file da ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Configurare le proprietà per l'operazione
 Per qualsiasi operazione è necessario specificare una gestione della connessione di Azure Data Lake.

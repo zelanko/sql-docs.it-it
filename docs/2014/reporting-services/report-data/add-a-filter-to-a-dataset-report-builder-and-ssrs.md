@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bb2c717ca9d88d9c1ff1fe4f02fb89c46fe8f0e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697759"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107543"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Aggiungere un filtro a un set di dati (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati per limitare i dati di un report dopo averli recuperati da un'origine dati esterna. Quando si aggiunge un filtro a un set di dati, tutte le parti di report o aree dati utilizzano solo dati che soddisfano le condizioni del filtro.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43864fb135faf61a2a0205199d7717d7b5c04026
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720611"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107075"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
   Per includere dati da un elenco Microsoft SharePoint nel report, è necessario aggiungere o creare un set di dati basato su un'origine dati del report di tipo Elenco Microsoft SharePoint. Si tratta di un tipo di origine dati predefinito basato sull'estensione per i dati dell'Elenco SharePoint di Microsoft SQL Server Reporting Services. Utilizzare questo tipo di origine dati per connettersi e recuperare i dati dell'elenco dai siti [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -51,9 +50,9 @@ ms.locfileid: "62720611"
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|<sup>3</sup> autenticazione delle attestazioni|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Yes|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|No|  
 |Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|No<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|No<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No<sup>2</sup>|  
   
  <sup>1</sup> credenziali archiviate e credenziali su richiesta con credenziali non Windows non è supportato.  
   

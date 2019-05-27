@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106554"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Aggiungere o eliminare un gruppo in un grafico (Generatore report e SSRS)
   Fare clic nell'area dati del grafico per visualizzare il **i dati del grafico** riquadro. Creare gruppi trascinando i campi del set di dati nelle aree **Gruppi di categorie** e **Gruppi di serie** . Per aggiungere gruppi nidificati, aggiungere più campi all'area.  

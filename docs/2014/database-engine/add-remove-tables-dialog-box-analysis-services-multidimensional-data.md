@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
@@ -15,12 +14,12 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792133"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065235"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo di aggiungere e rimuovere le tabelle (Analysis Services - dati multidimensionali)
   Per aggiungere o rimuovere tabelle di un'origine dati in una vista origine dati usare la finestra di dialogo **Aggiungi/Rimuovi tabelle** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per visualizzare la finestra di dialogo **Aggiungi/Rimuovi tabelle** è possibile:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
@@ -15,12 +14,12 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6a9b3f472d05c8d50a351323a0af794595c83f46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100112"
 ---
 # <a name="preview-view"></a>Visualizzazione Anteprima
   Utilizzare la visualizzazione **Anteprima** per visualizzare il report di cui è stato eseguito il rendering. Quando si visualizza l'anteprima di un report, Progettazione report esegue il report localmente e lo visualizza nella visualizzazione Anteprima. Nella modalità di anteprima, il report viene completamente elaborato. Se la query del report è complessa o il report contiene una grande quantità di dati, la visualizzazione dell'anteprima potrebbe impiegare alcuni minuti la prima volta. Per le modifiche successive che riguardano solo il formato del report, l'anteprima utilizza i dati nella cache.  

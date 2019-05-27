@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbca8d80adc2f37e441387d91701633f87e6a7c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f6379dbc6fa847b423205beddc2645428a0bb515
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672070"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089047"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

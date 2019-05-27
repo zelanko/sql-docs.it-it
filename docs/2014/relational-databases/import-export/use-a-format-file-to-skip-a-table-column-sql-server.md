@@ -10,15 +10,15 @@ helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065725"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011687"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utilizzo di un file di formato per ignorare una colonna di una tabella (SQL Server)
   In questo argomento vengono illustrati i file di formato. È possibile utilizzare un file di formato per evitare di importare la colonna di una tabella quando il campo non esiste nel file di dati. Un file di dati può contenere un numero di campi inferiore rispetto al numero di colonne della tabella solo se le colonne ignorate ammettono valori Null e/o hanno un valore predefinito.  

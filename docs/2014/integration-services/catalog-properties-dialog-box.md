@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 849346f33a3118029a46241644d7f1cce6dc7481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836250"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061107"
 ---
 # <a name="catalog-properties-dialog-box"></a>Finestra di dialogo Proprietà catalogo
   Utilizzare la finestra di dialogo Proprietà catalogo per configurare il catalogo di SSISDB. Le proprietà del catalogo consentono di definire come vengono crittografati i dati sensibili, come vengono mantenuti i dati del controllo delle versioni dei progetti e quando si verifica il timeout delle operazioni di convalida. Il catalogo di SSISDB rappresenta un punto centrale di archiviazione e amministrazione di progetti, pacchetti, parametri e ambienti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

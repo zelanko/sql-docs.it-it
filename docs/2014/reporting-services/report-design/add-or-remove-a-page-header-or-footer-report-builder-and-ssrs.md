@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106546"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report e SSRS)
   È possibile aggiungere testo statico, immagini, linee, rettangoli e bordi a intestazioni di pagina o piè di pagina. È possibile posizionare espressioni e immagini con associazioni a dati in una casella di testo se si desiderano dati variabili o calcolati in un'intestazione o in un piè di pagina.  

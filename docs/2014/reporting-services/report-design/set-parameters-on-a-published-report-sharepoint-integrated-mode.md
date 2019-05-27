@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
@@ -14,12 +13,12 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5be6c0698a20e9b05549ea81878c3d7929d0743
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215185"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105021"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>Impostazione dei parametri per un report pubblicato (Reporting Services in modalità integrata SharePoint)
   Un report con parametri è un report che accetta valori di input, che verranno utilizzati per filtrare i dati durante l'esecuzione del report. I parametri vengono definiti al momento della creazione del report. A seconda di come sono definiti i parametri nella definizione del report, un report può accettare un solo valore, più valori o valori dinamici, che cambiano in risposta a una selezione precedente. Se ad esempio si sceglie una categoria di prodotti, la selezione successiva dovrà essere un prodotto specifico di tale categoria. Un parametro può avere un valore predefinito, che può essere utilizzato per eseguire automaticamente una versione filtrata del report o essere sostituito da un altro valore.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], updategrams
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 135ca9d30b6baa9d5f358409c9a49fb3d0fc61e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131755"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014659"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
   In questo argomento viene illustrata la modalità di utilizzo dello schema di mapping (XSD o XDR) specificato in un updategram per l'elaborazione degli aggiornamenti. In un updategram, è possibile fornire il nome di uno schema di mapping con annotazioni da utilizzare per eseguire il mapping di elementi e attributi nell'updategram alle tabelle e colonne in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si specifica uno schema di mapping in un updategram, è necessario eseguire il mapping dei nomi di elemento e di attributo specificati nell'updategram agli elementi e agli attributi dello schema di mapping.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
@@ -15,12 +14,12 @@ ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c78fb92078c604d881f18ea3472e23619771b49
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059663"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
   In questa procedura viene descritto come impostare punti di interruzione in un pacchetto, in un'attività o in un contenitore Ciclo For, Ciclo Foreach o Sequenza.  

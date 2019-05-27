@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.eventsselection.f1
@@ -15,12 +14,12 @@ ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77660e19bed6781d73efdd36e6a752ae5c3cc1fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773467"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089536"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Proprietà tabella di traccia (scheda Selezione eventi)
   Utilizzare la scheda **Selezione eventi** nella finestra di dialogo **Proprietà tabella di traccia** per visualizzare le proprietà degli eventi e delle colonne di dati della traccia o per rimuovere eventi e colonne.  

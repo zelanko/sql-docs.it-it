@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62824555"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105939"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Report drill-through (Generatore report e SSRS)
   Un report drill-through è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa illustrazione, ad esempio, il report di riepilogo delle vendite include gli ordini di vendita e i totali. Quando un utente fa clic su un numero di ordine nell'elenco di riepilogo, viene aperto un altro report contenente i dettagli relativi a tale ordine.  
