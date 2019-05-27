@@ -24,16 +24,16 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6900fc7741cba1ec444ab745dd8ea63e3ec3b29c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: f84a13be4304b6e855c0b85da62532fb61932c8c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979617"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947939"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ GO
 110         n  
 ```
   
-### <a name="b-using-char-to-insert-a-control-character"></a>b. Utilizzo della funzione CHAR per inserire un carattere di controllo  
+### <a name="b-using-char-to-insert-a-control-character"></a>B. Utilizzo della funzione CHAR per inserire un carattere di controllo  
 In questo esempio si usa `CHAR(13)` per stampare nome e indirizzo di posta elettronica di un dipendente su righe diverse quando i risultati della query vengono restituiti in formato testo. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql

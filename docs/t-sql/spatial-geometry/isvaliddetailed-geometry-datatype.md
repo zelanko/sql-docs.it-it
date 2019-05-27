@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 461e6d8a2e71b0d2e56bea083597d6c9bd17ccea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4b5061d6840052f74c8c7c15db7f2482e9e31d2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816992"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935898"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Restituisce un messaggio che aiuta a identificare i problemi con un oggetto spaz
 |24416|Non valido perché nella curva {0} il bordo che inizia al punto {1} è una linea o un arco degenerato con estremità diametralmente opposte.|  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()**.  
+ L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()** .  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

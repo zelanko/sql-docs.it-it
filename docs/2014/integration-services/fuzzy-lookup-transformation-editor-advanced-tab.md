@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0739bb7100e61147e0ba35cb1cc75b1367634924
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893223"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058350"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per impostare i parametri relativi alla ricerca fuzzy.  

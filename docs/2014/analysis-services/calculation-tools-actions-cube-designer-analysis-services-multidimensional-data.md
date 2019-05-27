@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.calculationtoolspane.f1
@@ -13,12 +12,12 @@ ms.assetid: a3370370-43cd-4cc2-bb9f-c0d988b96f05
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62677075"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088340"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Strumenti di calcolo** della scheda **Azioni** in Progettazione cubi per esplorare i metadati, le funzioni e i modelli disponibili per le azioni, le azioni drill-through e le azioni report.  

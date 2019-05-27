@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680864"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087865"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Scheda Profili cluster (Visualizzatore modello di data mining)
   Usare la scheda **Profili cluster** per una vista complessiva dei cluster individuati dall'algoritmo all'interno di un modello di clustering. In questa scheda viene visualizzato ogni attributo, insieme alla relativa distribuzione in ciascun cluster.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.securitycontext.f1
@@ -13,12 +12,12 @@ ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069852"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Contesto di sicurezza (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Contesto di sicurezza** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare l'utente e il ruolo utilizzati per analizzare i dati o i metadati per un oggetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Contesto di sicurezza** fare clic su **Contesto di sicurezza** nel riquadro **Barra degli strumenti** della scheda **Calcoli** o della scheda **Esplorazione** in Progettazione cubi.  

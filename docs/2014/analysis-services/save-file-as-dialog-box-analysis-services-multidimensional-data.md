@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070044"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Salva file con nome (Analysis Services - Dati multidimensionali)
   La finestra di dialogo **Salva file con nome** visualizza un elenco di file disponibili nelle cartelle dei log e dei dati definiti per un istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Salva file con nome** è possibile:  
