@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
@@ -15,12 +14,12 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092285"
 ---
 # <a name="server-configuration---collation"></a>Configurazione del server - Regole di confronto
   Nella pagina Configurazione del server - Regole di confronto dell'Istallazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile modificare le impostazioni per le regole di confronto utilizzate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per scopi di ordinamento. Scegliere l'opzione che corrisponde alle impostazioni per le regole di confronto di installazioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o di un altro computer.  

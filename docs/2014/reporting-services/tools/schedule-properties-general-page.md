@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaaff2a90f18a4fb7cec3c049945c87fd0a5ed8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158720"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099734"
 ---
 # <a name="schedule-properties-general-page"></a>Proprietà pianificazione (pagina Generale)
   Utilizzare questa pagina per visualizzare o modificare una pianificazione condivisa. È possibile utilizzare le pianificazioni condivise al posto di di pianificazioni specifiche di report o sottoscrizioni. Le modifiche alla pianificazione vengono applicate dopo aver salvato la pianificazione stessa. La modifica di una pianificazione non ha effetto sui processi attualmente in corso. Se si modifica una pianificazione mentre è in uso, tutte le sottoscrizioni e i report in esecuzione attivati da tale pianificazione verranno portati a termine.  

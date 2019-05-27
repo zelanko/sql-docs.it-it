@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - installation prerequisites, Setup
@@ -16,17 +15,17 @@ ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 010f9ef7cfd46acb0b3245601af93cf150313227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171031"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094353"
 ---
 # <a name="installation-prerequisites"></a>Prerequisiti di installazione
-  Per la corretta installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che nel computer di installazione siano disponibili i componenti software riportati di seguito. Tali componenti verranno installati dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Per la corretta installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che nel computer di installazione siano disponibili i componenti software riportati di seguito. Tali componenti verranno installati dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 4.0 per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 4.0 per tutte le altre edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File di supporto per l'installazione  
   

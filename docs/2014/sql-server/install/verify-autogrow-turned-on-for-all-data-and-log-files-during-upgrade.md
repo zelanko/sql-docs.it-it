@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62985865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091223"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Verificare che l'aumento di dimensioni automatico sia attivato per tutti i file di dati e di log durante il processo di aggiornamento
   Sono stati rilevati file di dati o di log per cui non è impostato l'aumento automatico delle dimensioni. Funzionalità nuove e migliorate richiedono ulteriore spazio su disco per i database utente e la **tempdb** database di sistema. Per assicurare delle risorse possano aumentare le dimensioni durante l'aggiornamento e successive operazioni di produzione, è consigliabile impostare autogrow su ON per tutti i file di log e dati utente e la **tempdb** i file di dati e di log prima dell'aggiornamento.  

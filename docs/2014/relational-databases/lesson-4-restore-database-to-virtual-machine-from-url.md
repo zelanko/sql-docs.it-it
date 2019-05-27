@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e78a787a67c430ec82bea4788fd1c92c4c72c4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743307"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090682"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lezione 5. (facoltativo) crittografare il database tramite TDE
   Come passaggio facoltativo, è possibile crittografare il database appena creato. Transparent Data Encryption (TDE) esegue la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per questo tipo di crittografia viene utilizzata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. Per altre informazioni, vedere [Transparent Data Encryption &#40;Transparent Data Encryption&#41; ](security/encryption/transparent-data-encryption.md) e [spostare un Database protetto con TDE in un altro Server SQL](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  

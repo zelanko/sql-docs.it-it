@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 005d1e580f64adc3687886a1562598ac575183fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1cbb7d07835b63509ecd854788ce21e382141728
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158818"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099643"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Script e PowerShell con Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta un'ampia gamma di scenari di sviluppo e gestione tramite script, tra cui l'utilità della riga di comando rs.exe, i cmdlet PowerShell per server di report in modalità SharePoint, sfruttando il modello a oggetti [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da PowerShell per la modalità nativa e SharePoint.  

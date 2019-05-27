@@ -1,11 +1,10 @@
 ---
-title: 'Procedura: installare Upgrade Advisor | Microsoft Docs'
+title: 'Procedura: Installare Upgrade Advisor | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -16,14 +15,14 @@ ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d5be9a4514f002ebd8c9b7ffb05c6f614e2129
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112927"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094914"
 ---
-# <a name="how-to-install-upgrade-advisor"></a>Procedura: Installazione di Preparazione aggiornamento
+# <a name="how-to-install-upgrade-advisor"></a>Procedura: Installare Gestione spazio aggiornamenti
   Preparazione aggiornamento supporta l'analisi remota di tutti i componenti supportati, ad eccezione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se non si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile installare Preparazione aggiornamento in qualsiasi computer in grado di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che soddisfi i prerequisiti di Preparazione aggiornamento. Se si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario installare Preparazione aggiornamento nel server di report.  
   
  Per altre informazioni, vedere [installazione di preparazione aggiornamento](../../../2014/sql-server/install/installing-upgrade-advisor.md).  

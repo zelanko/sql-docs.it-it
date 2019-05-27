@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62666778"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090055"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utilizzo di sqlcmd con variabili di scripting
   Per variabile di scripting si intende una variabile utilizzata negli script. Le variabili di scripting consentono di utilizzare uno script in più scenari. Se, ad esempio, si desidera eseguire uno script su più server, è possibile utilizzare una variabile di scripting per il nome del server anziché modificare lo script per ogni server. È infatti sufficiente modificare il nome del server fornito alla variabile di scripting per eseguire lo stesso script su server diversi.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
@@ -14,12 +13,12 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdc9821d9e1d8b3013b146cba4b509cb744ef9e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62510895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100912"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite condivisione file che consente di recapitare un report a una cartella. L'estensione per il recapito tramite condivisione file è disponibile per impostazione predefinita e non richiede alcuna operazione di configurazione. Per fare in modo che il recapito dei file abbia esito positivo, è necessario impostare autorizzazioni di accesso in scrittura sulla cartella condivisa. Inoltre, gli utenti che richiedono l'accesso ai report devono disporre di autorizzazioni in lettura per la cartella condivisa.  

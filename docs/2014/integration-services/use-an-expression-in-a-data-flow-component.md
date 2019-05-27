@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], data flow
@@ -14,12 +13,12 @@ ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054815"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utilizzo di un'espressione in un componente flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta di un'espressione nella trasformazione Suddivisione condizionale o Colonna derivata. La trasformazione Suddivisione condizionale utilizza espressioni per definire le condizioni che dirigono le righe di dati all'output della trasformazione, mentre la trasformazione Colonna derivata utilizza espressioni per definire i valori assegnati alle colonne.  
