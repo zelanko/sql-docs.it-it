@@ -5,18 +5,18 @@ description: Questa Guida introduttiva illustra come installare SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 5d1294c9219fd14d5e1de363069e25a9bc144a6b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803096"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265358"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Avvio rapido: Installare SQL Server e creare un database in Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -36,13 +36,13 @@ In questa Guida introduttiva è installare SQL Server 2019 preview su Ubuntu 16.
 ::: moniker-end
 
 > [!TIP]
-> Questa esercitazione richiede l'input dell'utente e una connessione a internet. Se è interessati al [automatica](sql-server-linux-setup.md#unattended) oppure [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [informazioni aggiuntive sull'installazione per SQL Server in Linux](sql-server-linux-setup.md).
+> Questa esercitazione richiede l'input dell'utente e una connessione a internet. Se è interessati alle procedure di installazione automatica o offline, vedere [informazioni aggiuntive sull'installazione per SQL Server in Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 È necessario disporre di un computer con Ubuntu 16.04 **almeno 2 GB** di memoria.
 
-Per installare Ubuntu nel proprio computer, visitare [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server). È anche possibile creare macchine virtuali Ubuntu in Azure. Visualizzare [creare e gestire VM Linux con l'interfaccia della riga di comando Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Per installare Ubuntu 16.04 nel proprio computer, visitare [ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/). È anche possibile creare macchine virtuali Ubuntu in Azure. Visualizzare [creare e gestire VM Linux con l'interfaccia della riga di comando Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > A questo punto, il [sottosistema Windows per Linux](https://msdn.microsoft.com/commandline/wsl/about) per Windows 10 non è supportato come destinazione di installazione.
@@ -97,7 +97,7 @@ Per configurare SQL Server in Ubuntu, eseguire i comandi seguenti in un terminal
 5. Al termine della configurazione, verificare che il servizio sia in esecuzione:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. Se si prevede di connettersi in remoto, si potrebbe essere necessario anche aprire la porta TCP di SQL Server (valore predefinito 1433) nel firewall.
@@ -143,7 +143,7 @@ Per configurare SQL Server in Ubuntu, eseguire i comandi seguenti in un terminal
 5. Al termine della configurazione, verificare che il servizio sia in esecuzione:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. Se si prevede di connettersi in remoto, si potrebbe essere necessario anche aprire la porta TCP di SQL Server (valore predefinito 1433) nel firewall.

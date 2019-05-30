@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534653"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270160"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Viene utilizzata durante la risoluzione dei problemi e consente di specificare il numero di sequenza del file di log (LSN) della successiva transazione che dovrà essere applicata dall'agente di distribuzione nel Sottoscrittore, in modo che l'agente possa ignorare una transazione non riuscita. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore. e non è supportata per Sottoscrittori non SQL Server.  
+  Usato durante la risoluzione dei problemi per specificare l'ultima transazione recapitata utilizzando il numero di sequenza del log (LSN), consentendo all'agente di distribuzione avviare l'esecuzione della transazione successiva. Al riavvio, l'agente di distribuzione restituisce le transazioni superiore a questo limite (LSN) dalla cache del database di distribuzione (msrepl_commands). Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore. e non è supportata per Sottoscrittori non SQL Server.  
   
 > [!CAUTION]  
 >  Se si utilizza questa stored procedure in modo non corretto oppure si specifica un valore LSN non corretto, è possibile che l'agente di distribuzione annulli modifiche già applicate nel Sottoscrittore oppure ignori tutte le restanti modifiche.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_setsubscriptionxactseqno**.  
   
-  
+## <a name="see-more"></a>Altre informazioni
+
+[Blog: Come ignorare una transazione](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

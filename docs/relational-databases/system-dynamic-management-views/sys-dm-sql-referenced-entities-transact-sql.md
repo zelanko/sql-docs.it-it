@@ -1,7 +1,7 @@
 ---
-title: DM sql_referenced_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213460"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354404"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni entità definita dall'utente a cui si fa riferimento per nome nella definizione dell'entità di riferimento specificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un'entità definita dall'utente, denominato, viene creata una dipendenza tra due entità di *fa riferimento a entità*, viene visualizzata in base al nome in un'espressione SQL persistente di un'altra entità definite dall'utente, denominata il *riferimento entità* . Ad esempio, se una stored procedure è l'entità di riferimento specificata, questa funzione restituisce tutte le entità definite dall'utente indicate nella stored procedure, ad esempio tabelle, viste, tipi definiti dall'utente (UDT) o altre stored procedure.  
+Restituisce una riga per ogni entità definita dall'utente che viene referenziato per nome nella definizione di entità di riferimento specificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un'entità definita dall'utente, denominato, viene creata una dipendenza tra due entità di *fa riferimento a entità*, viene visualizzata in base al nome in un'espressione SQL persistente di un'altra entità definite dall'utente, denominata il *riferimento entità* . Ad esempio, se una stored procedure è l'entità di riferimento specificata, questa funzione restituisce tutte le entità definite dall'utente indicate nella stored procedure, ad esempio tabelle, viste, tipi definiti dall'utente (UDT) o altre stored procedure.  
   
  È possibile utilizzare questa funzione a gestione dinamica per creare un report sui seguenti tipi di entità indicati dall'entità di riferimento specificata:  
   
@@ -48,14 +49,13 @@ ms.locfileid: "53213460"
 -   Raccolte di XML Schema  
   
 -   Funzioni di partizione  
-  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
+
 ## <a name="syntax"></a>Sintassi  
   
 ```  
 sys.dm_sql_referenced_entities (  
-    ' [ schema_name. ] referencing_entity_name ' , ' <referencing_class> ' )  
+    ' [ schema_name. ] referencing_entity_name ' ,
+    ' <referencing_class> ' )  
   
 <referencing_class> ::=  
 {  
@@ -69,12 +69,12 @@ sys.dm_sql_referenced_entities (
  [ *schema_name*. ] *referencing_entity_name*  
  Nome dell'entità di riferimento. *schema_name* è obbligatorio quando la classe di riferimento è OBJECT.  
   
- *schema_name.referencing_entity_name* viene **nvarchar(517)**.  
+ *schema_name.referencing_entity_name* viene **nvarchar(517)** .  
   
- *< Classe_riferimenti >* :: = {oggetto | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  Classe dell'entità di riferimento specificata. È possibile specificare solo una classe per istruzione.  
   
- *< classe_riferimenti >* viene **nvarchar(60)**.  
+ *< classe_riferimenti >* viene **nvarchar(60)** .  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -92,13 +92,14 @@ sys.dm_sql_referenced_entities (
 |referenced_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità a cui viene fatto riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indica che l'associazione di schemi per l'entità cui viene fatto riferimento si verifica in fase di esecuzione. Di conseguenza, la risoluzione dell'ID dell'entità dipende dallo schema del chiamante. Ciò avviene quando l'entità cui viene fatto riferimento è una stored procedure, una stored procedure estesa o una funzione definita dall'utente chiamata all'interno di un'istruzione EXECUTE.<br /><br /> 1 = L'entità cui viene fatto riferimento è dipendente dal chiamante e viene risolta in fase di esecuzione. In questo caso, il valore di referenced_id è NULL.<br /><br /> 0 = L'ID dell'entità a cui viene fatto riferimento non è dipendente dal chiamante. Il valore è sempre 0 per i riferimenti associati a schemi e tra database e tra server che indicano in modo esplicito un nome schema. Ad esempio, un riferimento a un'entità nel formato `EXEC MyDatabase.MySchema.MyProc` non è dipendente dal chiamante. Tuttavia, un riferimento nel formato `EXEC MyDatabase..MyProc` è dipendente dal chiamante.|  
 |is_ambiguous|**bit**|Indica il riferimento è ambiguo e può essere risolta in fase di esecuzione per una funzione definita dall'utente, un tipo definito dall'utente (UDT) o un riferimento xquery a una colonna di tipo **xml**. Si supponga, ad esempio, che l'istruzione `SELECT Sales.GetOrder() FROM Sales.MySales` sia definita in una stored procedure. Durante l'esecuzione della stored procedure non è possibile sapere se `Sales.GetOrder()` è una funzione definita dall'utente nello schema `Sales` o una colonna `Sales` di tipo definito dall'utente con un metodo `GetOrder()`.<br /><br /> 1 = Il riferimento a una funzione definita dall'utente o al metodo del tipo definito dall'utente (UDT) della colonna è ambiguo.<br /><br /> 0 = Il riferimento non è ambiguo o l'entità può essere associata correttamente quando la funzione viene chiamata.<br /><br /> Il valore è sempre 0 per i riferimenti associati allo schema.|  
-|is_selected|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1=Colonna o oggetto selezionato.|  
-|is_updated|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= Colonna o oggetto modificato.|  
-|is_select_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= Oggetto utilizzato in una clausola SELECT * (solo a livello di oggetto).|  
-|is_all_columns_found|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = È possibile trovare tutte le dipendenze delle colonne per l'oggetto.<br /><br /> 0 = Impossibile trovare le dipendenze delle colonne per l'oggetto.|
-|is_insert_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto viene utilizzato in un'istruzione INSERT senza un elenco di colonne (solo oggetto livello).|  
-|is_incomplete|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto o la colonna contiene un errore di associazione e incompleta.|
-  
+|is_selected|**bit**|1=Colonna o oggetto selezionato.|  
+|is_updated|**bit**|1= Colonna o oggetto modificato.|  
+|is_select_all|**bit**|1= Oggetto utilizzato in una clausola SELECT * (solo a livello di oggetto).|  
+|is_all_columns_found|**bit**|1 = È possibile trovare tutte le dipendenze delle colonne per l'oggetto.<br /><br /> 0 = Impossibile trovare le dipendenze delle colonne per l'oggetto.|
+|is_insert_all|**bit**|1 = l'oggetto viene utilizzato in un'istruzione INSERT senza un elenco di colonne (solo oggetto livello).<br /><br />Questa colonna è stata aggiunta in SQL Server 2016.|  
+|is_incomplete|**bit**|1 = l'oggetto o la colonna contiene un errore di associazione e incompleta.<br /><br />Questa colonna è stata aggiunta in SQL Server 2016 SP2.|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="exceptions"></a>Eccezioni  
  In una delle seguenti condizioni, restituisce un set di risultati vuoto:  
   
@@ -124,20 +125,21 @@ sys.dm_sql_referenced_entities (
 |Tabella|Sì*|Yes|  
 |visualizzazione|Yes|Yes|  
 |Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
-|stored procedure CLR|No|Yes|  
+|stored procedure CLR|no|Yes|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
 |Funzione CLR definita dall'utente|No|Yes|  
 |Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|no|  
 |Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
-|Stored procedure estese|No|Yes|  
+|Stored procedure estese|no|Yes|  
 |Coda|No|Yes|  
 |Sinonimo|No|Yes|  
 |Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
 |Raccolta di XML Schema|No|Yes|  
 |Funzione di partizione|No|Yes|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
@@ -147,43 +149,65 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Restituzione di entità cui fa riferimento un trigger DDL a livello di database  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Restituisce le entità cui fanno riferimento un trigger DDL a livello di database  
  Nell'esempio seguente vengono restituite le entità (tabelle e colonne) cui fa riferimento il trigger DDL `ddlDatabaseTriggerLog` a livello di database.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc  
-FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIGGER');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc
+    FROM
+        sys.dm_sql_referenced_entities (
+            'ddlDatabaseTriggerLog',
+            'DATABASE_DDL_TRIGGER')
+;
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>b. Restituzione di entità cui fa riferimento un oggetto  
+### <a name="b-return-entities-that-are-referenced-by-an-object"></a>B. Restituisce le entità cui fanno riferimento un oggetto  
  Nell'esempio seguente vengono restituite le entità cui fa riferimento la funzione `dbo.ufnGetContactInformation` definita dall'utente.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc, is_caller_dependent, is_ambiguous  
-FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc,
+        is_caller_dependent,
+        is_ambiguous
+    FROM
+        sys.dm_sql_referenced_entities (
+            'dbo.ufnGetContactInformation',
+            'OBJECT')
+;
 GO  
 ```  
   
-### <a name="c-returning-column-dependencies"></a>C. Restituzione delle dipendenze della colonna  
+### <a name="c-return-column-dependencies"></a>C. Dipendenze della colonna restituito  
  Nell'esempio seguente viene creata la tabella `Table1` con la colonna calcolata `c` definita come somma delle colonne `a` e `b`. Viene quindi chiamata la vista `sys.dm_sql_referenced_entities`. La vista restituisce due righe, una per ogni colonna definita nella colonna calcolata.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
 GO  
-SELECT referenced_schema_name AS schema_name,  
-    referenced_entity_name AS table_name,  
-    referenced_minor_name AS referenced_column,  
-    COALESCE(COL_NAME(OBJECT_ID(N'dbo.Table1'),referencing_minor_id), 'N/A') AS referencing_column_name  
-FROM sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT');  
+SELECT
+        referenced_schema_name AS schema_name,  
+        referenced_entity_name AS table_name,  
+        referenced_minor_name  AS referenced_column,  
+        COALESCE(
+            COL_NAME(OBJECT_ID(N'dbo.Table1'),
+            referencing_minor_id),
+            'N/A') AS referencing_column_name  
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT')
+;
 GO
 
 -- Remove the table.  
@@ -193,7 +217,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  schema_name table_name referenced_column referencing_column  
  ----------- ---------- ----------------- ------------------  
  dbo         Table1     a                 c  
@@ -204,10 +228,7 @@ GO
  Nell'esempio seguente viene eliminata `Table1` e vengono create `Table2` e la stored procedure `Proc1`. La procedura fa riferimento a `Table2` e alla tabella `Table1` inesistente. La vista `sys.dm_sql_referenced_entities` viene eseguita con la stored procedure specificata come entità di riferimento. Il set di risultati indica una riga per `Table1` e 3 righe per `Table2`. Poiché `Table1` non è presente, le dipendenze della colonna non possono essere risolte e viene restituito l'errore 2020. La colonna `is_all_columns_found` restituisce 0 per `Table1`, a indicare che sono presenti colonne che non è stato possibile individuare.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
-    DROP TABLE dbo.Table1;  
+DROP TABLE IF EXISTS dbo.Table1;
 GO  
 CREATE TABLE dbo.Table2 (c1 int, c2 int);  
 GO  
@@ -215,15 +236,19 @@ CREATE PROCEDURE dbo.Proc1 AS
     SELECT a, b, c FROM Table1;  
     SELECT c1, c2 FROM Table2;  
 GO  
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name AS referenced_column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS referenced_column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1  
@@ -231,29 +256,43 @@ GO
  935674381     Table2       C2                      1  
  NULL          Table1       NULL                    0  
 
- Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+Msg 2020, Level 16, State 1, Line 1
+The dependencies reported for entity "dbo.Proc1" might not include
+  references to all columns. This is either because the entity
+  references an object that does not exist or because of an error
+  in one or more statements in the entity.  Before rerunning the
+  query, ensure that there are no errors in the entity and that
+  all objects referenced by the entity exist.
  ```
   
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. Dimostrazione della gestione delle dipendenze dinamiche  
- Nell'esempio seguente viene esteso l'esempio D per illustrare la gestione dinamica delle dipendenze. Nell'esempio viene prima ricreata `Table1`, eliminata nell'esempio D. Viene quindi rieseguita la vista `sys.dm_sql_referenced_entities` con la stored procedure specificata come entità di riferimento. Il set di risultati indica che vengono restituite entrambe le tabelle e le rispettive colonne definite nella stored procedure. Inoltre, la colonna `is_all_columns_found` restituisce 1 per tutti gli oggetti e le colonne.  
-  
+
+E questo esempio si presuppone che sia stato eseguito l'esempio D. Esempio E mostra che le dipendenze vengono mantenute in modo dinamico. L'esempio esegue le operazioni seguenti:
+
+1. Ricrea `Table1`, eliminata nell'esempio D.
+2. Eseguire quindi `sys.dm_sql_referenced_entities` viene eseguito di nuovo con la stored procedure specificata come entità di riferimento.
+
+Il set di risultati viene mostrato che le tabelle e le rispettive colonne definite nella stored procedure, vengono restituite. Inoltre, la colonna `is_all_columns_found` restituisce 1 per tutti gli oggetti e le colonne.
+
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
 GO   
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name as column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
 DROP TABLE Table1, Table2;  
 DROP PROC Proc1;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1 
@@ -267,18 +306,24 @@ GO
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Restituzione dell'utilizzo di oggetti e colonne  
  Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura consente di aggiornare le colonne `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` della `Employee` tabella basata su un oggetto specificato `BusinessEntityID` valore. Un'altra stored procedure, `upsLogError` è definito in un blocco TRY... Blocco CATCH per acquisire gli errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
-  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
+
 ```sql  
-SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
-FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
-  
+USE AdventureWorks2012;
+GO
+SELECT
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_selected,  is_updated,  is_select_all
+    FROM
+        sys.dm_sql_referenced_entities(
+            'HumanResources.uspUpdateEmployeePersonalInfo',
+            'OBJECT')
+;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  table_name    column_name         is_selected is_updated is_select_all  
  ------------- ------------------- ----------- ---------- -------------  
  uspLogError   NULL                0           0          0  

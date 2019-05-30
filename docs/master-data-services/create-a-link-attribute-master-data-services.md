@@ -14,21 +14,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 050256d488646425cd35580796e0fcfc771bea6d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487304"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354360"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Creare un attributo di collegamento (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un attributo per il collegamento quando si deve immettere un collegamento ipertestuale come valore di attributo, ad esempio https://www.contoso.com.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un attributo per il collegamento quando si deve immettere un collegamento ipertestuale come valore di attributo, ad esempio `https://www.contoso.com`.  
   
 > [!NOTE]  
->  Quando gli utenti immettono un valore per un attributo di collegamento, la stringa deve iniziare con **https://**. In caso contrario viene visualizzato un errore.  
+>  Quando gli utenti immettono un valore per un attributo di collegamento, la stringa deve iniziare con **https://** . In caso contrario viene visualizzato un errore.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  

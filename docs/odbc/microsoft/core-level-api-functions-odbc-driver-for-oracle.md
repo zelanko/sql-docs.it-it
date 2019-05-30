@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de862ffdc0ca3e1c975fd386ba3da464219ead50
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: c2e77ffd4fe892bc2f3d9a944c79d6b702d5e671
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015024"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354580"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funzioni API del livello di base (driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -41,7 +41,7 @@ ms.locfileid: "66015024"
 |**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:  SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.|  
 |**SQLDisconnect**|Chiude una connessione. Se il pool di connessioni è abilitato per un ambiente condiviso e un'applicazione chiama **SQLDisconnect** su una connessione in tale ambiente, viene restituita al pool di connessioni e ancora disponibile ad altri componenti tramite la connessione lo stesso ambiente condiviso.|  
 |**SQLError**|Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. Nella coda degli errori deve essere scaricata dopo ogni istruzione. In genere recupera un messaggio di errore Oracle e in caso contrario, è vuoto.|  
-|**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. Se la tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi tra backup preventivo contrassegni. Ad esempio, se il database contiene una tabella denominata *My Table* e il campo *My Field*, racchiudere ogni elemento dell'identificatore come segue:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Della tabella\`.\` My Field2\` FROM \`nella tabella ' \|  
+|**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. Se la tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi tra backup preventivo contrassegni. Ad esempio, se il database contiene una tabella denominata *My Table* e il campo *My Field*, racchiudere ogni elemento dell'identificatore come segue:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Della tabella\`.\` My Field2\` FROM \`mia tabella\`|  
 |**SQLExecute**|Esegue un'istruzione SQL preparata (un'istruzione già preparata da **SQLPrepare**). Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione.|  
 |**SQLFetch**|Recupera una riga da un set di risultati in posizioni specificate dalle chiamate precedenti a **SQLBindCol**. Prepara il driver per una chiamata a **SQLGetData** per le colonne non associate.|  
 |**SQLFreeConnect**|Rilascia un handle di connessione e libera tutta la memoria allocata per l'handle.|  
@@ -49,7 +49,7 @@ ms.locfileid: "66015024"
 |**SQLFreeStmt**|Arresta elaborazione associata a un oggetto specifico hstmt, chiude tutti i cursori aperti associati hstmt, ignora risultati in sospeso e, facoltativamente, rilascia tutte le risorse associate all'handle di istruzione.|  
 |**SQLGetCursorName**|Restituisce il nome del cursore associato hstmt specificato.|  
 |**SQLNumResultCols**|Restituisce il numero di colonne in un cursore del set di risultati.|  
-|**SQLPrepare**|Prepara un'istruzione SQL, pianificare come ottimizzare ed eseguire l'istruzione. L'istruzione SQL viene compilata per l'esecuzione dal **SQLExecDirect**.<br /><br /> Se la tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi tra backup preventivo contrassegni. Ad esempio, se il database contiene una tabella denominata *My Table* e il campo *My Field*, racchiudere ogni elemento dell'identificatore, come indicato di seguito:<br /><br /> Selezionare \`della tabella\`.\` Il campo relativo alla\` FROM \`nella tabella '<br /><br /> Per informazioni sull'uso di set di risultati contenenti matrici di parametri formali, vedere [restituzione di parametri di matrice dalle Stored procedure](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md). \|  
+|**SQLPrepare**|Prepara un'istruzione SQL, pianificare come ottimizzare ed eseguire l'istruzione. L'istruzione SQL viene compilata per l'esecuzione dal **SQLExecDirect**.<br /><br /> Se la tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi tra backup preventivo contrassegni. Ad esempio, se il database contiene una tabella denominata *My Table* e il campo *My Field*, racchiudere ogni elemento dell'identificatore, come indicato di seguito:<br /><br /> Selezionare \`della tabella\`.\` Il campo relativo alla\` FROM \`mia tabella\`<br /><br /> Per informazioni sull'uso di set di risultati contenenti matrici di parametri formali, vedere [restituzione di parametri di matrice dalle Stored procedure](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
 |**SQLRowCount**|Oracle non fornisce un modo per determinare il numero di righe in un risultato impostata fino a quando non dopo il recupero dell'ultima riga, pertanto, restituisce -1.|  
 |**SQLSetCursorName**|Associa un handle di istruzione attiva, un nome di cursore *hstmt*.|  
 |**SQLSetParam**|Sostituito da SQLBindParameter in ODBC 2. *x*.|  
