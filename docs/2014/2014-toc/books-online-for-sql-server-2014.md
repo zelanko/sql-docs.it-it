@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.openlocfilehash: 33cc877dfb2b1789aa775981e8377cf66b4ee950
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836202"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413210"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Books Online for SQL Server 2014
 
@@ -57,7 +57,7 @@ SQL Server 2016 e versioni successive, sono documentate [qui](https://docs.micro
   
 -   [SQL Server su Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [Centro risorse di SQL Server](https://go.microsoft.com/fwlink/?linkid=218841)  
+-   [Centro risorse di SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
 -   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   

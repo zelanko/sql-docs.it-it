@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106111"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413637"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il diritto SKU istanza gestita/Database SQL di Azure per il database in locale
 
@@ -41,7 +41,7 @@ Di seguito sono istruzioni che consentono di determinare le raccomandazioni dell
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Scaricare e installare la versione più recente di [DMA](https://aka.sm/get-dma). Se si dispone già di una versione precedente dello strumento, aprirlo e verrà richiesto per eseguire l'aggiornamento DMA.
+- Scaricare e installare la versione più recente di [DMA](https://aka.ms/get-dma). Se si dispone già di una versione precedente dello strumento, aprirlo e verrà richiesto per eseguire l'aggiornamento DMA.
 - Assicurarsi che il computer abbia [PowerShell versione 5.1](https://www.microsoft.com/download/details.aspx?id=54616) o versioni successive, che è necessario per eseguire tutti gli script. Per informazioni su findoug out quale versione di PowerShell è installata nel computer in uso, vedere l'articolo [scaricare e installare Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Assicurarsi che il computer abbia installato il modulo Powershell di Azure. Per altre informazioni, vedere l'articolo [installare il modulo Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verificare che il file di PowerShell **SkuRecommendationDataCollectionScript.ps1**, che è necessario per raccogliere i contatori delle prestazioni, viene installato nella cartella DMA.

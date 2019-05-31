@@ -17,12 +17,12 @@ ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816600"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403228"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Valori restituiti da SQLGetInfo per file di testo
 La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti dal **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines **SQLGetInfo** nel *fInfoType* argomento. Per altre informazioni sui valori restituiti da **SQLGetInfo**, vedere la [riferimento per programmatori ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
@@ -112,7 +112,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_GETDATA_EXTENSIONS|Più valori|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (virgolette inverse)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (virgolette inverse)|  
 |SQL_KEYWORDS|Più valori|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_SCROLL_OPTIONS|Più valori|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"TEXT"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Più valori|  
 |SQL_SUBQUERIES|Più valori|  
 |SQL_SYSTEM_FUNCTIONS|0|  
