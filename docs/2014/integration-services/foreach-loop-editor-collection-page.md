@@ -12,12 +12,12 @@ ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10132f54e7ce9cf094cb8fef5f98b1f67c83c7a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66058511"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428805"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor ciclo Foreach (pagina Raccolta)
   Usare la pagina **Raccolta** della finestra di dialogo **Editor ciclo Foreach** per specificare il tipo di enumeratore e configurarlo.  
@@ -72,7 +72,7 @@ ms.locfileid: "66058511"
 >   
 >  Quando si specifica un'estensione per il nome di file, l'enumeratore restituisce anche i file che presentano la stessa estensione con altri caratteri aggiunti. Si tratta dello stesso comportamento del comando **dir** del sistema operativo, che prevede anch'esso il confronto dei nomi di file 8.3 per la compatibilità con le versioni precedenti. Questo comportamento dell'enumeratore può provocare risultati imprevisti. Se, ad esempio, si desidera enumerare solo file di Excel 2003 e si specifica "* .xls", l'enumeratore restituirà anche i file di Excel 2007 perché presentano l'estensione ".xlsx".  
 >   
->  È possibile usare un'espressione per specificare i file da includere in una raccolta espandendo **Espressioni** nella pagina **Raccolta**, selezionando la proprietà **FileSpec** e quindi facendo clic sul pulsante con i puntini di sospensione (...) per aggiungere l'espressione di proprietà. Per altre informazioni sulla selezione dinamica di file specificati, vedere [filtro File impostati dinamicamente da SSIS: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
+>  È possibile usare un'espressione per specificare i file da includere in una raccolta espandendo **Espressioni** nella pagina **Raccolta**, selezionando la proprietà **FileSpec** e quindi facendo clic sul pulsante con i puntini di sospensione (...) per aggiungere l'espressione di proprietà. Per altre informazioni sulla selezione dinamica di file specificati, vedere [filtro File impostati dinamicamente da SSIS: FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)  
   
  **Completo**  
  Selezionare questa opzione per recuperare il percorso completo dei nomi di file. Se nell'opzione File si specificano caratteri jolly, i percorsi completi restituiti corrisponderanno al filtro.  
@@ -292,7 +292,7 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory s
   
 -   Intervento nel blog relativo all' [enumeratore Foreach Nodelist in SSIS](https://go.microsoft.com/fwlink/?LinkId=220671)sul sito Web bidn.com.  
   
--   Intervento nel blog concernente [filtro File impostati dinamicamente da SSIS: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), su beyondrelational.com.  
+-   Intervento nel blog concernente [filtro File impostati dinamicamente da SSIS: FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

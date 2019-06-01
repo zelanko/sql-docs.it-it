@@ -11,12 +11,12 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450034"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454731"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450034"
 
 | Cambia | Dettagli |
 | :----- | :------ |
-| Aggiunti **Admin pack per SQL Server** pacchetto di estensioni. | Questo rende più semplice installare le estensioni correlate all'amministrazione di SQL Server. ad esempio:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Aggiunti **Admin pack per SQL Server** pacchetto di estensioni. | Questo rende più semplice installare le estensioni correlate all'amministrazione di SQL Server. ad esempio:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Il filtro aggiunto esteso supporto per gli eventi nell'estensione di Profiler. | &nbsp; |
 | Sono state aggiunte salvare come funzionalità XML in grado di salvare i risultati di T-SQL in formato XML. | &nbsp; |
 | Aggiunti miglioramenti di creazione guidata applicazione livello dati. | &bull; &nbsp; Pulsante Genera script<br/>&bull; &nbsp; Visualizzazione aggiunta per fornire gli avvisi della possibile perdita di dati durante la distribuzione. |
@@ -485,14 +485,14 @@ Il *anteprima pubblica di febbraio* include alcuni suggerimenti sulle funzionali
 
 17 gennaio 2018 &nbsp;  /  &nbsp; versione: 0.25.4 &nbsp;  /  &nbsp; anteprima pubblica
 
-L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta.  Questa versione include i miglioramenti seguenti:
+L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
 
 &nbsp;
 
 | Cambia | Dettagli |
 | :----- | :------ |
 | Le connessioni server salvate sono disponibili nella finestra di dialogo di connessione. | &nbsp; |
-| Abilitare l'uscita Hot,  disattivata per impostazione predefinita. Per abilitarla vedere [impostazione uscita Hot](settings.md#hot-exit). | &nbsp; |
+| Abilitare l'uscita Hot, disattivata per impostazione predefinita. Per abilitarla vedere [impostazione uscita Hot](settings.md#hot-exit). | &nbsp; |
 | Ogni scheda è ora contraddistinta dal colore del relativo gruppo di server. La colorazione della scheda è disattivata per impostazione predefinita, per abilitare vedere [impostazione del colore di una scheda](settings.md#tab-color). | &nbsp; |
 | Modificata l'etichetta *Nome Server* in *Server* nella finestra di dialogo di connessione. | &nbsp; |
 | Corretto il comando non funzionante *Esegui Query corrente*. | &nbsp; |

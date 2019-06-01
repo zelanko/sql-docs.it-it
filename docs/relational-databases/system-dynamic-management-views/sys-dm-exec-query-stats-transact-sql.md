@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072355"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429023"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ Restituisce dati statistici aggregati sulle prestazioni dei piani di query memor
 |**min_spills**|**bigint**|Il numero minimo di pagine in cui questa query è sempre stati distribuiti durante una singola esecuzione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Il numero massimo di pagine in cui questa query è sempre stati distribuiti durante una singola esecuzione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|L'identificatore per il nodo in questa distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|Numero totale di letture di server remoto pagine effettuate dalle esecuzioni del piano dopo l'ultima compilazione.<br /><br /> **Si applica a:** Azure SQL DB su scala molto vasta |  
+|**last_page_server_reads**|**bigint**|Numero di letture di pagina remota server eseguita l'ultima volta che il piano è stato eseguito.<br /><br /> **Si applica a:** Azure SQL DB su scala molto vasta |  
+|**min_page_server_reads**|**bigint**|Numero minimo di server remoto pagina legge che questo piano effettuate durante una singola esecuzione.<br /><br /> **Si applica a:** Azure SQL DB su scala molto vasta |  
+|**max_page_server_reads**|**bigint**|Numero massimo di server remoto pagina legge che questo piano effettuate durante una singola esecuzione.<br /><br /> **Si applica a:** Azure SQL DB su scala molto vasta |  
 > [!NOTE]
 > <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta delle statistiche è abilitata, tempo del processo viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  
   
@@ -152,7 +155,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>b. Restituzione di aggregazioni relative al conteggio delle righe per una query  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Restituzione di aggregazioni relative al conteggio delle righe per una query  
  Nell'esempio seguente vengono restituite le informazioni di aggregazione relative al conteggio delle righe (totale righe, numero minimo righe, numero massimo righe e ultime righe) per le query.  
   
 ```sql  

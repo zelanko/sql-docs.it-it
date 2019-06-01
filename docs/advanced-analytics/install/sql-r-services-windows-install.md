@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: bc9762470b6e2a836c29f53ebfc3ffeadbcc381f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095948"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454688"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 3. Nel **Selezione funzionalità** pagina, selezionare le opzioni seguenti:
 
    - Selezionare **servizi motore di Database**. Il motore di database è obbligatorio in ogni istanza che usa machine learning.
-   - Selezionare **R Services (In-Database)**. Installa il supporto per l'uso nel database di R.
+   - Selezionare **R Services (In-Database)** . Installa il supporto per l'uso nel database di R.
     
      ![Selezione delle funzionalità R Services](media/2016setup-rsvcs-features.png "selezionare queste funzionalità per R Services In-Database")
 
@@ -216,7 +216,7 @@ A livello di istanza, potrebbe includere un'ulteriore configurazione:
 Il database, potrebbe essere necessario gli aggiornamenti di configurazione seguenti:
 
 * [Consentire agli utenti di SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [Aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > Non tutte le modifiche elencate sono necessari e nessuno potrebbero essere necessarie. I requisiti variano a seconda lo schema di sicurezza, in cui è installato SQL Server e come si prevede che gli utenti per connettersi al database ed eseguire gli script esterni. Altri suggerimenti sulla risoluzione dei problemi sono disponibili qui: [Domande frequenti sull'installazione e sull'aggiornamento](../r/upgrade-and-installation-faq-sql-server-r-services.md)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 43d427129cae773fc17a0d73f57a26144b7cd09f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994227"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454523"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Differenze nell'installazione di SQL Server Machine Learning Services in SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Come con le versioni precedenti, il **SQLRUserGroup** continua a fornire lettura
 
 ## <a name="implied-authentication"></a>Autenticazione implicita
 
-Come in precedenza, è comunque necessaria per una configurazione aggiuntiva *l'autenticazione implicita* nei casi in cui uno script o codice ha per la connessione al Server SQL Usa l'autenticazione attendibile per recuperare dati o risorse. La configurazione aggiuntiva comporta la creazione di un accesso al database per **SQLRUserGroup**, il cui unico membro è ora il singolo account di servizio Launchpad di SQL Server invece di più account di lavoro. Per altre informazioni su questa attività, vedere [aggiungere SQLRUserGroup come utente del database](../security/add-sqlrusergroup-to-database.md).
+Come in precedenza, è comunque necessaria per una configurazione aggiuntiva *l'autenticazione implicita* nei casi in cui uno script o codice ha per la connessione al Server SQL Usa l'autenticazione attendibile per recuperare dati o risorse. La configurazione aggiuntiva comporta la creazione di un accesso al database per **SQLRUserGroup**, il cui unico membro è ora il singolo account di servizio Launchpad di SQL Server invece di più account di lavoro. Per altre informazioni su questa attività, vedere [aggiungere SQLRUserGroup come utente del database](../security/create-a-login-for-sqlrusergroup.md).
 
 
 ## <a name="symbolic-link-created-by-setup"></a>Collegamento simbolico creato dal programma di installazione

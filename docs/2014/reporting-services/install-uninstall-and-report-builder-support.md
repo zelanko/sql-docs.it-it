@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108952"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454602"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installazione, disinstallazione e supporto di Generatore report
   Generatore report è uno strumento di creazione di report che consente di creare, aggiornare e condividere report, parti del report e set di dati condivisi. Generatore report è disponibile in due versioni: autonoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La versione autonoma viene installata nel computer in uso dall'utente o da un amministratore. La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] viene installata automaticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e viene scaricata nel computer da Gestione report o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -145,14 +145,14 @@ ms.locfileid: "66108952"
   
 -   Utilizzare il livello di autorizzazione di collaborazione, concesso al gruppo Membri per impostazioni predefinita, per consentire all'utente di gestire report e origini dati condivise nelle cartelle pubbliche. Questo livello di autorizzazione è concesso agli utenti più esperti.  
   
- Per informazioni generali sulle autorizzazioni, nonché sulla creazione e sull'utilizzo dei ruoli, vedere la documentazione del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclusa nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888)   
+ Per informazioni generali sulle autorizzazioni, nonché sulla creazione e sull'utilizzo dei ruoli, vedere la documentazione del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclusa nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888)  
   
 ### <a name="configuration-of-report-server"></a>Configurazione del server di report  
  Quando si creano report in Generatore report e ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installata in Windows Vista, Windows Server 2008 o Windows 7, è possibile che si verifichi un errore di accesso negato quando si tenta di accedere al server di report per aprire o salvare un report. Questo errore è causato dalla funzionalità di sicurezza Controllo account utente disponibile in Windows Vista, Windows Server 2008 e Windows 7 che limita l'utilizzo eccessivo di autorizzazioni elevate rimuovendo le autorizzazioni di amministratore al momento dell'accesso alle applicazioni.  
   
  Tramite la configurazione aggiuntiva, tuttavia, il server di report è disponibile per gli utenti di Generatore report. È possibile aggiungere gli URL di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ai siti attendibili. Per impostazione predefinita, Internet Explorer 7.0 o versioni successive viene eseguito in Modalità protetta in Windows Vista, Windows Server 2008 e Windows 7. La Modalità protetta è una funzionalità che impedisce alle richieste del browser di accedere a processi di alto livello eseguiti nello stesso computer. È possibile disabilitare la modalità protetta per le applicazioni del server di report aggiungendo le applicazioni come Siti attendibili. È necessario disporre dell'autorizzazione di amministratore per apportare questa modifica.  
   
- Per altre informazioni sulla configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Gestione configurazione Reporting Services &#40;CANC&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) nel [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sul sito msdn.microsoft.com.  
+ Per altre informazioni sulla configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Gestione configurazione Reporting Services &#40;CANC&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) nel [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sul sito msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> Database di esempio SQL Server  

@@ -14,12 +14,12 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 066f5607ed159b382b156f0d679382881444e9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66095913"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454682"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **modalità nativa** usa due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione di metadati e oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database sono denominati `reportserver` e `reportservertempdb`. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".  
@@ -72,6 +72,6 @@ ms.locfileid: "66095913"
  Quando si crea un database del server di report, tenere presente che non tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere usate per ospitare il database. Per altre informazioni, vedere la sezione "Report Server Database requisiti dell'edizione Server" del [funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione configurazione Reporting Services &#40;/del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Gestione configurazione Reporting Services &#40;/del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

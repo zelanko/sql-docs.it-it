@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503829"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454681"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gestire e integrare i carichi di lavoro di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ Gli account con privilegi minimi vengono creati durante l'installazione e inseri
 Come amministratore di database, è possibile utilizzare la protezione dei dati di SQL Server per specificare gli utenti autorizzati a eseguire gli script e che i dati utilizzati nel processi sia gestiti con gli stessi ruoli di sicurezza che consentono di controllare accedere tramite query T-SQL. Come amministratore di sistema, è possibile negare in modo esplicito **SQLRUserGroup** accesso ai dati sensibili nel server locale mediante la creazione degli ACL.
 
 >[!NOTE]
-> Per impostazione predefinita, il **SQLRUserGroup** non dispone di un account di accesso o le autorizzazioni in SQL Server. Account di lavoro richiede un account di accesso per l'accesso ai dati, è necessario crearlo manualmente. Uno scenario che chiama in modo specifico per la creazione di un account di accesso deve supportare le richieste provenienti da uno script in esecuzione, per dati o le operazioni nell'istanza del motore di database, quando l'identità dell'utente è un utente di Windows e la stringa di connessione specifica utente attendibile. Per altre informazioni, vedere [aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+> Per impostazione predefinita, il **SQLRUserGroup** non dispone di un account di accesso o le autorizzazioni in SQL Server. Account di lavoro richiede un account di accesso per l'accesso ai dati, è necessario crearlo manualmente. Uno scenario che chiama in modo specifico per la creazione di un account di accesso deve supportare le richieste provenienti da uno script in esecuzione, per dati o le operazioni nell'istanza del motore di database, quando l'identità dell'utente è un utente di Windows e la stringa di connessione specifica utente attendibile. Per altre informazioni, vedere [aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="disable-script-execution"></a>Disabilitare l'esecuzione di script
 

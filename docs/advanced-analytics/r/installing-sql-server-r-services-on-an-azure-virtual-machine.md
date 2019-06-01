@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506039"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454756"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installare servizi di SQL Server Machine Learning con R e Python in una macchina virtuale di Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ Per abilitare l'accesso dai client di analisi scientifica dei dati remota:
 
 Se si prevede che i client che chiamano il server saranno necessario eseguire query ODBC come parte del loro soluzioni di machine learning, è necessario assicurarsi che Launchpad possa effettuare chiamate ODBC per conto del client remoto. 
 
-A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launchpad di accedere all'istanza. Per altre informazioni, vedere [aggiungere SQLRUserGroup come utente del database](../security/add-sqlrusergroup-to-database.md).
+A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launchpad di accedere all'istanza. Per altre informazioni, vedere [aggiungere SQLRUserGroup come utente del database](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 
