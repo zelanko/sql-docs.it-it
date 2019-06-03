@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718416"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454576"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -68,7 +68,7 @@ Seguire le istruzioni per impostare e configurare il supporto SSISDB per Always 
 È anche necessario creare un listener del gruppo di disponibilità per il gruppo di disponibilità in cui viene aggiunto il database SSISDB. Vedere [Creare o configurare un listener del gruppo di disponibilità](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Aggiornare il file di configurazione del servizio Scale Out Master
-Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` nel nodo master e secondario. Aggiornare **SqlServerName** in *[Nome DNS del listener del gruppo di disponibilità],[Porta]*.
+Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` nel nodo master e secondario. Aggiornare **SqlServerName** in *[Nome DNS del listener del gruppo di disponibilità],[Porta]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Abilitare la registrazione dell'esecuzione dei pacchetti
 
@@ -99,7 +99,7 @@ Chiamare la stored procedure `[catalog].[update_logdb_info]` usando i valori di 
 
 Nelle macchine virtuali di Azure questa procedura di configurazione richiede passaggi aggiuntivi. Una spiegazione completa di questi concetti e passaggi esula dall'ambito di questo articolo.
 
-1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
 
 2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Esercitazione: Bilanciare il carico del traffico interno con un servizio di bilanciamento del carico Basic nel portale di Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

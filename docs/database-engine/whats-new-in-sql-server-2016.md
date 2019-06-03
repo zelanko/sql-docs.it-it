@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872311"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413616"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novità del motore di database - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Per informazioni sulle novità negli altri componenti di SQL Server, vedere [Nov
 
 #### <a name="try-it-out"></a>Per provarlo
 
-- Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
+- Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![download](../analysis-services/media/download.png "download").
 
 - Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .
 
@@ -444,7 +444,7 @@ Scaricare la versione più recente di [SQL Server Management Studio (SSMS)](../s
 ### <a name="upgrade-advisor"></a>Preparazione aggiornamento
 La versione di anteprima di Gestione spazio aggiornamenti di SQL Server 2016 è uno strumento autonomo che consente agli utenti di versioni precedenti di eseguire un set di regole di aggiornamento nel database di SQL Server per trovare le modifiche di rilievo, le differenze di comportamento e le funzionalità deprecate, fornendo assistenza per l'adozione di nuove funzionalità come Stretch Database.
 
- È possibile scaricare la versione di anteprima di Gestione spazio aggiornamenti [qui](https://www.microsoft.com/download/details.aspx?id=48119) oppure è possibile installare questo strumento con l'installazione guidata piattaforma Web.
+ È possibile scaricare la versione di anteprima di Gestione spazio aggiornamenti [qui](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) oppure è possibile installare questo strumento con l'installazione guidata piattaforma Web.
 
 ## <a name="see-also"></a>Vedere anche
 [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)

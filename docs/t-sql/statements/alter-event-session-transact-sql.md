@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392854"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270147"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,14 +123,14 @@ ON SERVER
 |*event_session_name*|Nome di una sessione dell'evento esistente.|  
 |STATE = START &#124; STOP|Avvia o arresta la sessione dell'evento. Questo argomento è valido solo quando ALTER EVENT SESSION è applicato a un oggetto della sessione dell'evento.|  
 |ADD EVENT \<event_specifier>|Associa l'evento identificato da \<event_specifier> con la sessione dell'evento.|
-|[*event_module_guid*]*.event_package_name.event_name*|Nome di un evento in un pacchetto dell'evento dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *event_name* è l'oggetto dell'evento.<br /><br /> Gli eventi vengono visualizzati nella vista sys.dm_xe_objects come object_type "event".|  
+|[*event_module_guid*] *.event_package_name.event_name*|Nome di un evento in un pacchetto dell'evento dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *event_name* è l'oggetto dell'evento.<br /><br /> Gli eventi vengono visualizzati nella vista sys.dm_xe_objects come object_type "event".|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|Specifica gli attributi personalizzabili per l'evento. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name*.|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|Azione da associare alla sessione dell'evento, dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *action_name* è l'oggetto dell'azione.<br /><br /> Le azioni vengono visualizzate nella vista sys.dm_xe_objects come object_type "action".|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|Azione da associare alla sessione dell'evento, dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *action_name* è l'oggetto dell'azione.<br /><br /> Le azioni vengono visualizzate nella vista sys.dm_xe_objects come object_type "action".|  
 |WHERE \<predicate_expression>|Indica l'espressione del predicato utilizzata per determinare se un evento deve essere elaborato. Se \<predicate_expression> è true l'evento viene elaborato ulteriormente dalle azioni e dalle destinazioni della sessione, mentre se \<predicate_expression> è false l'evento viene eliminato dalla sessione prima di essere elaborato dalle azioni e dalle destinazioni della sessione. Le espressioni del predicato possono essere composte da un massimo di 3000 caratteri, pertanto gli argomenti di tipo stringa risultano limitati.|
 |*event_field_name*|Nome del campo relativo all'evento che consente di identificare l'origine del predicato.|  
 |[event_module_guid].event_package_name.predicate_source_name|Nome dell'origine del predicato globale dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto del predicato.<br />-   *predicate_source_name* è definito nella vista sys.dm_xe_objects come object_type 'pred_source'.|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|Nome dell'oggetto del predicato da associare all'evento, dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto del predicato.<br />-   *predicate_compare_name* è un'origine globale definita nella vista sys.dm_xe_objects come object_type 'pred_compare'.|  
-|DROP EVENT \<event_specifier>|Elimina l'evento identificato da *\<event_specifier>*. \<event_specifier> deve essere valido nella sessione eventi.|  
+|DROP EVENT \<event_specifier>|Elimina l'evento identificato da *\<event_specifier>* . \<event_specifier> deve essere valido nella sessione eventi.|  
 |ADD TARGET \<event_target_specifier>|Associa la destinazione identificata da \<event_target_specifier> alla sessione dell'evento.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Nome di una destinazione nella sessione dell'evento dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *target_name* è l'azione. Le azioni vengono visualizzate nella vista sys.dm_xe_objects come object_type "target".|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Imposta un parametro di destinazione. I parametri di destinazione vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *target_name*.<br /><br /> **NOTA** Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
@@ -145,7 +145,7 @@ ON SERVER
 ## <a name="remarks"></a>Remarks  
  Non è possibile usare gli argomenti `ADD` e `DROP` nella stessa istruzione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Esempi  

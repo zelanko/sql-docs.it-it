@@ -1,7 +1,7 @@
 ---
 title: Destinazione di Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da23e2b0bdda3c99babe18d500edace9d18f9ca4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: d934cafef262f5c07b5eeac95d65abd776d8bb35
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727199"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403031"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destinazione di Azure Data Lake Store
 
@@ -47,3 +47,27 @@ ms.locfileid: "65727199"
        Se il formato di file è ORC, è necessario installare JRE (Java Runtime Environment) per la piattaforma appropriata.
   
 3.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.  
+
+## <a name="prerequisite-for-orc-file-format"></a>Prerequisiti per il formato di file ORC
+Per usare il formato di file ORC è necessario Java.
+L'architettura (a 32 o a 64 bit) della build di Java deve corrispondere a quella del runtime di SSIS da usare.
+Sono state sottoposte a test le build di Java seguenti.
+
+- [OpenJDK 8u192 di Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Configurare OpenJDK di Zulu
+1. Scaricare ed estrarre il pacchetto di installazione con estensione zip.
+2. Dal prompt dei comandi, eseguire `sysdm.cpl`.
+3. Nella scheda **Avanzate** selezionare **Variabili di ambiente**.
+4. Nella sezione **Variabili di sistema** selezionare **Nuova**.
+5. Immettere `JAVA_HOME` in **Nome variabile**.
+6. Selezionare **Sfoglia directory**, passare alla cartella estratta e selezionare la sottocartella `jre`.
+   Selezionare quindi **OK** e **Valore variabile** verrà popolato automaticamente.
+7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
+8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
+9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Configurare Oracle Java SE Runtime Environment
+1. Scaricare ed eseguire il programma di installazione con estensione exe.
+2. Seguire le istruzioni del programma di installazione per completare l'installazione.

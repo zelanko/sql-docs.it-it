@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 7a39657a1bc1bfd9909a4c31a028ce4fa7816553
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072214"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454753"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installare SQL Server tramite un file di configurazione
 
@@ -23,7 +23,7 @@ ms.locfileid: "58072214"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consente di generare un file di configurazione in base all'impostazione predefinita del sistema e ai dati di input inseriti in fase di esecuzione. È possibile utilizzare il file di configurazione per distribuire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in tutta l'organizzazione con la stessa configurazione, nonché standardizzare le installazioni manuali nell'organizzazione creando un file batch che consente di avviare Setup.exe. 
  
-Questo articolo viene aggiornato per le versioni di SQL Server 2016 e successive. Per le versioni precedenti di SQL Server, vedere [Installare SQL Server 2014 tramite un file di configurazione](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
+Questo articolo viene aggiornato per le versioni di SQL Server 2016 e successive. Per le versioni precedenti di SQL Server, vedere [Installare SQL Server 2014 tramite un file di configurazione](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
  
 Il programma di installazione supporta l'utilizzo del file di configurazione solo tramite il prompt dei comandi. L'ordine di elaborazione dei parametri durante l'utilizzo del file di configurazione viene indicato di seguito:  
   

@@ -44,18 +44,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820802"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454771"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
 
-Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Esercitazione: Procedura guidata Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Esercitazione: Procedura guidata Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -126,7 +126,7 @@ Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e 
 
   ![Salvare](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **Salva nel file** : consente di salvare lo script in uno o più file con estensione sql. Fare clic sul pulsante Sfoglia (**…**) per specificare il nome e il percorso del file. Selezionare la casella di controllo **Sovrascrivi file esistente** per sostituire il file se ne esiste già uno con lo stesso nome. Fare clic su **File singolo** o **Singolo file per oggetto** per specificare come devono essere generati gli script. Fare clic su **Testo Unicode** o **Testo ANSI** per specificare il tipo di testo che deve essere usato nello script.  
+-   **Salva nel file** : consente di salvare lo script in uno o più file con estensione sql. Fare clic sul pulsante Sfoglia ( **…** ) per specificare il nome e il percorso del file. Selezionare la casella di controllo **Sovrascrivi file esistente** per sostituire il file se ne esiste già uno con lo stesso nome. Fare clic su **File singolo** o **Singolo file per oggetto** per specificare come devono essere generati gli script. Fare clic su **Testo Unicode** o **Testo ANSI** per specificare il tipo di testo che deve essere usato nello script.  
   
 -   **Salva negli Appunti** : consente di salvare lo script Transact-SQL negli Appunti.  
   
