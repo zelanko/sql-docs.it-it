@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581231"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413560"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "65581231"
 > [!IMPORTANT]  
 >  L'estensione doc per il rendering di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Il rendering di Word è compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 grazie al [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Per altre informazioni, vedere [Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ Il rendering di Word è compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 grazie al [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Per altre informazioni, vedere [Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
   
  La versione precedente dell'estensione per il rendering di Word, compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, è rinominata Word 2003. Per impostazione predefinita, è disponibile solo l'estensione per il rendering di Word. È necessario aggiornare i file di configurazione di Reporting Services per rendere disponibile l'estensione per il rendering di Word 2003. Il tipo di contenuto dei file generati dal renderer di Word 2003 è **application/vnd.ms-word** e l'estensione dei file è doc.  
   
