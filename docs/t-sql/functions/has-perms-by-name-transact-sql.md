@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169211"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947953"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Nome dell'entità a protezione diretta. Se l'entità a protezione diretta è il server stesso, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. Non prevede alcun valore predefinito.  
   
  *securable_class*  
- Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)**.  
+ Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)** .  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
+ Nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
  *permission*  
  Espressione scalare non Null di tipo **sysname** che rappresenta il nome dell'autorizzazione da controllare. Non prevede alcun valore predefinito. Il nome di autorizzazione ANY è un carattere jolly.  
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Espressione scalare facoltativa di tipo **sysname** che rappresenta il nome della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
   
 > [!NOTE]  
->  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le sottoentità a protezione diretta non possono usare le parentesi nella forma **'[**_nome secondario_**]'**. È necessario usare invece **'**_nome secondario_**'**.  
+>  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le sottoentità a protezione diretta non possono usare le parentesi nella forma **'[** _nome secondario_ **]'** . È necessario usare invece **'** _nome secondario_ **'** .  
   
  *sub-securable_class*  
  Espressione scalare facoltativa di tipo **nvarchar(60)** che rappresenta la classe della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
@@ -96,9 +96,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Vengono utilizzate le regole di confronto seguenti:  
   
--   Regole di confronto del database corrente: entità a protezione diretta che includono le entità a protezione diretta non contenute in uno schema, entità a protezione diretta con ambito schema in una o due parti, database di destinazione quando si utilizza un nome in tre parti.  
+-   Regole di confronto del database corrente: entità a protezione diretta a livello di database che includono entità a protezione diretta non contenute in uno schema, entità a protezione diretta con ambito schema in una o due parti, database di destinazione quando si usa un nome in tre parti.  
   
--   Regole di confronto del database master: entità a protezione diretta del database.  
+-   regole di confronto del database master: entità a protezione diretta a livello di server.  
   
 -   ANY non è supportato per i controlli a livello di colonna. È necessario specificare l'autorizzazione appropriata.  
   

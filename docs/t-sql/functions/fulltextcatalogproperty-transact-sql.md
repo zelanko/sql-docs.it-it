@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662795"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948978"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Espressione che contiene il nome della proprietà di catalogo full-text. Nella t
 |**AccentSensitivity**|Impostazione relativa alla distinzione tra caratteri accentati e non accentati.<br /><br /> 0 = distinzione dei caratteri accentati/non accentati disattivata<br /><br /> 1 = distinzione dei caratteri accentati/non accentati attivata|  
 |**IndexSize**|Dimensioni logiche in megabyte del catalogo full-text. Include le dimensioni della frase chiave semantica e degli indici di somiglianza del documento.<br /><br /> Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.|  
 |**ItemCount**|Numero di elementi indicizzati, inclusi tutti gli indici full-text, di frasi chiave e di somiglianza del documento in un catalogo|  
-|**LogSize**|Supportata unicamente per compatibilità con le versioni precedenti. Restituisce sempre 0.<br /><br /> Dimensioni in byte del set completo dei log degli errori associati a un catalogo full-text del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search.|  
+|**LogSize**|Supportato unicamente per compatibilità con le versioni precedenti. Restituisce sempre 0.<br /><br /> Dimensioni in byte del set completo dei log degli errori associati a un catalogo full-text del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search.|  
 |**MergeStatus**|Indica se è in corso un'unione nell'indice master.<br /><br /> 0 = unione nell'indice master non in corso<br /><br /> 1 = unione nell'indice master in corso|  
 |**PopulateCompletionAge**|Differenza espressa in secondi tra il completamento dell'ultimo popolamento di indici full-text e la data 01/01/1990 00.00.00.<br /><br /> Aggiornato solo per ricerche per indicizzazione complete o incrementali. Restituisce 0 se non si verifica alcun popolamento.|  
 |**PopulateStatus**|0 = inattivo<br /><br /> 1 = popolamento completo in corso<br /><br /> 2 = sospeso<br /><br /> 3 = rallentato<br /><br /> 4 = Recupero in corso<br /><br /> 5 = Chiusura<br /><br /> 6= popolamento incrementale in corso<br /><br /> 7 = compilazione dell'indice in corso<br /><br /> 8 = disco pieno (sospeso)<br /><br /> 9 = rilevamento modifiche|  

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - system usernames [SQL Server]
 - users [SQL Server], names
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba7d702a9e7a6e89bb76c23fd570efee1b4e470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 211d229c767d2c4dbf21d9d813f4a825316efa34
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705939"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948549"
 ---
 # <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ SYSTEM_USER
   
  Se il nome utente e il nome dell'account di accesso sono diversi, SYSTEM_USER restituisce il nome dell'account di accesso.  
   
- Se l'utente corrente è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso di Windows nel formato: *DOMAIN*\\*user_login_name*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
+ Se l'utente corrente ha eseguito l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso Windows nel formato: *DOMAIN*\\*nome_account_utente*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
   
  SYSTEM_USER restituisce il nome del contesto di esecuzione corrente. Se l'istruzione EXECUTE AS è stata utilizzata per cambiare contesto, SYSTEM_USER restituirà il nome del contesto rappresentato.  
   

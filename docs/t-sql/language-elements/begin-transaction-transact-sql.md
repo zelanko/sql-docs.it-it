@@ -27,16 +27,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802248"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981126"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,13 +134,13 @@ COMMIT TRAN T1;
   
  BEGIN TRAN M2 WITH MARK  
   
- "Server: messaggio 3920, livello 16, stato 1, riga 3"  
+ Server: messaggio 3920, livello 16, stato 1, riga 3  
   
  L'opzione WITH MARK viene applicata solo alla prima istruzione BEGIN TRAN WITH MARK.  
   
  L'opzione verrà ignorata.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -157,7 +157,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>b. Rollback di una transazione
+### <a name="b-rolling-back-a-transaction"></a>B. Rollback di una transazione
 **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione. In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.

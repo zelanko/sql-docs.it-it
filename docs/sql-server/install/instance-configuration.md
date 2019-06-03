@@ -1,7 +1,7 @@
 ---
 title: Guida dell'Installazione guidata | Microsoft Docs
 ms.custom: ''
-ms.date: 04/21/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: c5aa429284ae8eec9c47e752b918be7fae723a9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 06a8b0b4a3e692ca1eaef89e8e7114b41bf650a1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029122"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993793"
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 > [!NOTE]  
 > Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep è possibile specificare il nome dell'istanza quando si completa un'istanza predisposta nella pagina **Configurazione dell'istanza**. È possibile scegliere di configurare l'istanza predisposta che si sta completando come istanza predefinita se non è presente alcuna istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul computer.  
   
-### <a name="multiple-instances"></a>Più istanze  
+### <a name="multiple-instances"></a>Istanze multiple  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un singolo server o processore, ma solo un'istanza può costituire l'istanza predefinita, mentre tutte le altre istanze devono essere istanze denominate. Un computer può eseguire più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultaneamente e ciascuna di esse viene eseguita in modo indipendente dalle altre.  
   
  Per ulteriori informazioni, vedere [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
@@ -97,19 +97,17 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
  Tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che condividono lo stesso nome di istanza devono soddisfare i criteri seguenti:  
   
--   **Stessa versione**  
-  
--   **Stessa edizione**  
-  
--   **Stesse impostazioni della lingua**  
-  
--   **Stesso stato del cluster**  
-  
-    > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non riesce a interagire con i cluster.  
-  
+-   **Stessa versione**   
+-   **Stessa edizione**    
+-   **Stesse impostazioni della lingua**    
+-   **Stesso stato del cluster**    
 -   **Stesso sistema operativo**  
   
+  
+    > [!NOTE]  
+    > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non riesce a interagire con i cluster.  
+
+
 ## <a name="analysis-services-configuration---account-provisioning"></a>Configurazione di Analysis Services - Provisioning account
   Utilizzare questa pagina per impostare la modalità server e per concedere le autorizzazioni amministrative a utenti o servizi che richiedono l'accesso illimitato ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Durante l'installazione non viene aggiunto automaticamente il gruppo locale BUILTIN\Administrators di Windows al ruolo di amministratore del server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza che viene installata. Se si desidera aggiungere il gruppo Administrators locale al ruolo di amministratore del server, è necessario specificare in modo esplicito tale gruppo.  
   
@@ -159,7 +157,121 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 ### <a name="see-also"></a>Vedere anche  
  Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
-## <a name="database-engine-configuration---data-directories"></a>Configurazione Motore di database - Directory dati
+
+### <a name="analysis-services-configuration---data-directories"></a>Configurazione di Analysis Services - Directory dati
+  Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del gruppo di sicurezza SQLServerMSASUser$\<istanza> creato e di cui viene effettuato il provisioning durante l'installazione.  
+  
+#### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+  
+|Descrizione|Directory predefinita|Indicazioni|  
+|-----------------|-----------------------|---------------------|  
+|Directory radice dati |C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Assicurarsi che la cartella \Programmi\Microsoft SQL Server\ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
+|Directory file di log|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Si tratta della directory per i file di log di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  
+|Directory temporanea|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Posizionare la directory temporanea nel sottosistema di archiviazione a elevate prestazioni.|  
+|Directory di backup|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |Si tratta della directory dei file di backup predefiniti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per le installazioni di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, si tratta anche della posizione in cui i servizi di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] memorizzano nella cache i file di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Verificare che vengano impostate le autorizzazioni appropriate in modo da impedire la perdita di dati e che il gruppo di utenti per il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga delle autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
+  
+#### <a name="notes"></a>Note  
+  
+-   Le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuite in una farm di SharePoint archiviano i file dell'applicazione, i file di dati e le proprietà nei database del contenuto e delle applicazioni di servizio.  
+  
+-   Quando si aggiungono funzionalità a un'installazione esistente, non è possibile modificare il percorso di una caratteristica installata in precedenza, né specificare il percorso di una nuova caratteristica.  
+
+-   Potrebbe essere necessario configurare software di scansione, ad esempio applicazioni antivirus e antispyware, per escludere le cartelle e i tipi di file di SQL Server. Per altre informazioni, vedere questo articolo del supporto: [Come scegliere il software antivirus in esecuzione su computer che eseguono SQL Server](https://support.microsoft.com/kb/309422)
+  
+-   Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Anche i componenti [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere installati in directory separate.  
+  
+-   Non è possibile installare file di programma e file di dati nelle situazioni seguenti:  
+  
+    -   In un'unità disco rimovibile  
+  
+    -   In un file system che utilizza la compressione  
+  
+    -   In una directory in cui si trovano i file di sistema  
+  
+#### <a name="see-also"></a>Vedere anche  
+ Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
+  
+    
+ [Autorizzazioni NTFS e di condivisione per un file server](https://go.microsoft.com/fwlink/?LinkID=206571) 
+
+  
+## <a name="serverconfig"></a> Configurazione del motore di database - Configurazione del server
+  Utilizzare questa pagina per impostare la modalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiungere utenti o gruppi di Windows come amministratori del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  
+### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Considerazioni sull'esecuzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene eseguito il provisioning del gruppo **BUILTIN\Administrators** come account di accesso nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] e i membri del gruppo Administrators locale possono accedere usando le credenziali di amministratore. L'utilizzo di autorizzazioni elevate non è una procedura consigliata. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non viene eseguito il provisioning del gruppo **BUILTIN\Administrators** come account di accesso. Di conseguenza, è consigliabile creare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni utente amministrativo e aggiungere tale account al ruolo predefinito del server sysadmin durate l'installazione di una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. È consigliabile eseguire questa operazione anche per gli account di Windows utilizzati per eseguire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, inclusi i processi dell'agente di replica.  
+  
+### <a name="options"></a>Opzioni  
+ **Modalità di sicurezza** : selezionare l'autenticazione di Windows o l'autenticazione mista per l'istallazione.  
+  
+ **Provisioning entità Windows** : nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il gruppo locale Builtin\Administrator di Windows era incluso nel ruolo del server sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e consentiva agli amministratori di Windows di accedere in modo efficace all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]il gruppo Builtin\Administrator non è disponibile nel ruolo del server sysadmin. Al contrario, è necessario eseguire in modo esplicito il provisioning degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione.  
+  
+> [!IMPORTANT]  
+>  È necessario eseguire il provisioning esplicito degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione. Se non si completa questo passaggio, non sarà possibile procedere con l'installazione.  
+  
+ **Specifica amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : è necessario specificare almeno un'entità di Windows per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per l'esecuzione del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic sul pulsante **Utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ Dopo avere modificato l'elenco, scegliere **OK**, quindi verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, scegliere **Avanti**.  
+  
+ Se si seleziona l'autenticazione Modalità mista, è necessario fornire credenziali di accesso per l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito.  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+  
+ **Modalità di autenticazione di Windows**  
+ Quando un utente si connette utilizzando un account utente di Windows, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il nome di account e la password vengono convalidati tramite il token dell'entità di Windows nel sistema operativo. Si tratta della modalità di autenticazione predefinita e garantisce maggiore protezione rispetto alla modalità mista. L'autenticazione di Windows, per la quale viene utilizzato il protocollo di sicurezza Kerberos, garantisce l'applicazione dei criteri password mediante convalida della complessità delle password, fornisce supporto per il blocco dell'account e supporta la scadenza delle password.  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Non impostare mai password vuote o vulnerabili.  
+  
+ **Modalità mista (autenticazione di Windows o autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ Consente agli utenti di connettersi tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli utenti che utilizzano un account utente di Windows per la connessione possono utilizzare connessioni trusted convalidate da Windows.  
+  
+ Se è necessario selezionare l'autenticazione Modalità mista e utilizzare account di accesso SQL per le applicazioni legacy, sarà necessario impostare password complesse per tutti gli account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+> [!NOTE]  
+>  L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile solo per la compatibilità con le versioni precedenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+  
+ **Immettere la password**  
+ Immettere e confermare l'account di accesso dell'amministratore di sistema (sa). Le password rappresentano la prima forma di difesa contro eventuali intrusi, pertanto l'impostazione di password complesse costituisce una misura di sicurezza fondamentale per la sicurezza del sistema. Non impostare mai password dell'account "sa" vuote o vulnerabili.  
+  
+> [!NOTE]  
+>  Le password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono contenere da 1 a 128 caratteri, inclusa qualsiasi combinazione di lettere, simboli e numeri. Se si seleziona l'autenticazione Modalità mista, sarà necessario immettere una password dell'account sa complessa prima di passare alla pagina successiva dell'Installazione guidata.  
+  
+ **Linee guida per la creazione di password complesse**  
+ Le password complesse non vengono decifrate facilmente, né da parte degli utenti né mediante l'utilizzo di programmi specifici. Le password complesse non prevedono l'utilizzo di termini o condizioni non consentite, quali:  
+  
+-   Condizione di spazio vuoto o NULL    
+-   'Password'    
+-   "Admin"    
+-   "Administrator"    
+-   "sa"    
+-   'sysadmin'  
+-   
+ Una password complessa non può essere costituita dagli elementi seguenti associati al computer di installazione:  
+  
+-   Nome dell'utente attualmente connesso al computer.    
+-   Nome del computer.  
+  
+ Una password complessa deve essere formata da più di otto caratteri e soddisfare almeno tre dei quattro criteri seguenti:  
+  
+-   Deve contenere lettere maiuscole.   
+-   Deve contenere lettere minuscole.  
+-   Deve contenere numeri.    
+-   Deve contenere caratteri non alfanumerici, ad esempio #, % o ^.  
+  
+ Le password immesse in questa pagina devono soddisfare i requisiti relativi ai criteri password complessi. In presenza di qualsiasi componente di automazione in cui viene utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assicurarsi che la password soddisfi i requisiti relativi ai criteri password complessi.  
+  
+### <a name="related-content"></a>Contenuto correlato  
+ Per ulteriori informazioni sulla scelta tra l'autenticazione di Windows e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md).  
+ 
+ 
+ Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+ 
+## <a name ="datadir"></a> Configurazione del motore di database - Directory dati
   Usare questa pagina per specificare il percorso di installazione per i file di dati e di programma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
   
  Per specificare una condivisione file SMB come directory, è necessario immettere manualmente il percorso UNC supportato. La selezione di una condivisione file SMB non è supportata. Il formato di un percorso UNC supportato di una condivisione file SMB è \\\NomeServer\NomeCondivisione\\...  
@@ -207,157 +319,13 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 -   Non è possibile installare file di programma e file di dati nelle situazioni seguenti:  
   
-    -   In un'unità disco rimovibile  
-  
-    -   In un file system che utilizza la compressione  
-  
-    -   In una directory in cui si trovano i file di sistema  
-  
+    -   In un'unità disco rimovibile    
+    -   In un file system che utilizza la compressione   
+    -   In una directory in cui si trovano i file di sistema    
     -   In un'unità di rete di cui è stato eseguito il mapping in un'istanza del cluster di failover  
   
-### <a name="see-also"></a>Vedere anche  
-### <a name="analysis-services-configuration---data-directories"></a>Configurazione di Analysis Services - Directory dati
-  Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del gruppo di sicurezza SQLServerMSASUser$\<istanza> creato e di cui viene effettuato il provisioning durante l'installazione.  
-  
-#### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
-  
-|Descrizione|Directory predefinita|Indicazioni|  
-|-----------------|-----------------------|---------------------|  
-|Directory radice dati |C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Assicurarsi che la cartella \Programmi\Microsoft SQL Server\ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
-|Directory file di log|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Si tratta della directory per i file di log di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  
-|Directory temporanea|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Posizionare la directory temporanea nel sottosistema di archiviazione a elevate prestazioni.|  
-|Directory di backup|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |Si tratta della directory dei file di backup predefiniti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per le installazioni di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, si tratta anche della posizione in cui i servizi di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] memorizzano nella cache i file di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Verificare che vengano impostate le autorizzazioni appropriate in modo da impedire la perdita di dati e che il gruppo di utenti per il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga delle autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
-  
-#### <a name="notes"></a>Note  
-  
--   Le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuite in una farm di SharePoint archiviano i file dell'applicazione, i file di dati e le proprietà nei database del contenuto e delle applicazioni di servizio.  
-  
--   Quando si aggiungono funzionalità a un'installazione esistente, non è possibile modificare il percorso di una caratteristica installata in precedenza, né specificare il percorso di una nuova caratteristica.  
-
--   Potrebbe essere necessario configurare software di scansione, ad esempio applicazioni antivirus e antispyware, per escludere le cartelle e i tipi di file di SQL Server. Per altre informazioni, vedere questo articolo del supporto: [Come scegliere il software antivirus in esecuzione su computer che eseguono SQL Server](https://support.microsoft.com/kb/309422)
-  
--   Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Anche i componenti [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere installati in directory separate.  
-  
--   Non è possibile installare file di programma e file di dati nelle situazioni seguenti:  
-  
-    -   In un'unità disco rimovibile  
-  
-    -   In un file system che utilizza la compressione  
-  
-    -   In una directory in cui si trovano i file di sistema  
-  
-#### <a name="see-also"></a>Vedere anche  
- Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-  
-    
- [Autorizzazioni NTFS e di condivisione per un file server](https://go.microsoft.com/fwlink/?LinkID=206571) 
-
-## <a name="database-engine-configuration---filestream"></a>Configurazione del Motore di database - Filestream
-  Utilizzare questa pagina per abilitare FILESTREAM per l'installazione corrente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando dati BLOB (Binary Large Object) binari **varbinary(max)** come file nel file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  
-  
-### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Abilita FILESTREAM per l'accesso Transact-SQL**  
- Selezionare questa opzione per abilitare FILESTREAM per l'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] . È necessario che questo controllo sia selezionato affinché le altre opzioni di controllo siano disponibili.  
-  
- **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file**  
- Selezionare questa opzione per abilitare l'accesso tramite flusso Win32 per FILESTREAM.  
-  
- **Nome condivisione di Windows**  
- Utilizzare questo controllo per immettere il nome della condivisione di Windows in cui verranno archiviati i dati FILESTREAM.  
-  
- **Consenti ai client remoti l'accesso tramite flusso ai dati FILESTREAM**  
- Selezionare questo controllo per consentire ai client remoti di accedere ai dati FILESTREAM nel server corrente.  
-  
-### <a name="see-also"></a>Vedere anche  
- [Abilitare e configurare FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-
-  
-## <a name="database-engine-configuration---server-configuration"></a>Configurazione del motore di database - Configurazione del server
-  Utilizzare questa pagina per impostare la modalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiungere utenti o gruppi di Windows come amministratori del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
-  
-### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Considerazioni sull'esecuzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene eseguito il provisioning del gruppo **BUILTIN\Administrators** come account di accesso nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] e i membri del gruppo Administrators locale possono accedere usando le credenziali di amministratore. L'utilizzo di autorizzazioni elevate non è una procedura consigliata. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non viene eseguito il provisioning del gruppo **BUILTIN\Administrators** come account di accesso. Di conseguenza, è consigliabile creare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni utente amministrativo e aggiungere tale account al ruolo predefinito del server sysadmin durate l'installazione di una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. È consigliabile eseguire questa operazione anche per gli account di Windows utilizzati per eseguire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, inclusi i processi dell'agente di replica.  
-  
-### <a name="options"></a>Opzioni  
- **Modalità di sicurezza** : selezionare l'autenticazione di Windows o l'autenticazione mista per l'istallazione.  
-  
- **Provisioning entità Windows** : nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il gruppo locale Builtin\Administrator di Windows era incluso nel ruolo del server sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e consentiva agli amministratori di Windows di accedere in modo efficace all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]il gruppo Builtin\Administrator non è disponibile nel ruolo del server sysadmin. Al contrario, è necessario eseguire in modo esplicito il provisioning degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione.  
-  
-> [!IMPORTANT]  
->  È necessario eseguire il provisioning esplicito degli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le nuove installazioni durante l'esecuzione del programma di installazione. Se non si completa questo passaggio, non sarà possibile procedere con l'installazione.  
-  
- **Specifica amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: è necessario specificare almeno un'entità di Windows per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per l'esecuzione del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic sul pulsante **Utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Dopo avere modificato l'elenco, scegliere **OK**, quindi verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, scegliere **Avanti**.  
-  
- Se si seleziona l'autenticazione Modalità mista, è necessario fornire credenziali di accesso per l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito.  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
-  
- **Modalità di autenticazione di Windows**  
- Quando un utente si connette utilizzando un account utente di Windows, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il nome di account e la password vengono convalidati tramite il token dell'entità di Windows nel sistema operativo. Si tratta della modalità di autenticazione predefinita e garantisce maggiore protezione rispetto alla modalità mista. L'autenticazione di Windows, per la quale viene utilizzato il protocollo di sicurezza Kerberos, garantisce l'applicazione dei criteri password mediante convalida della complessità delle password, fornisce supporto per il blocco dell'account e supporta la scadenza delle password.  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Non impostare mai password vuote o vulnerabili.  
-  
- **Modalità mista (autenticazione di Windows o autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
- Consente agli utenti di connettersi tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli utenti che utilizzano un account utente di Windows per la connessione possono utilizzare connessioni trusted convalidate da Windows.  
-  
- Se è necessario selezionare l'autenticazione Modalità mista e utilizzare account di accesso SQL per le applicazioni legacy, sarà necessario impostare password complesse per tutti gli account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
-> [!NOTE]  
->  L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile solo per la compatibilità con le versioni precedenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
-  
- **Immettere la password**  
- Immettere e confermare l'account di accesso dell'amministratore di sistema (sa). Le password rappresentano la prima forma di difesa contro eventuali intrusi, pertanto l'impostazione di password complesse costituisce una misura di sicurezza fondamentale per la sicurezza del sistema. Non impostare mai password dell'account "sa" vuote o vulnerabili.  
-  
-> [!NOTE]  
->  Le password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono contenere da 1 a 128 caratteri, inclusa qualsiasi combinazione di lettere, simboli e numeri. Se si seleziona l'autenticazione Modalità mista, sarà necessario immettere una password dell'account sa complessa prima di passare alla pagina successiva dell'Installazione guidata.  
-  
- **Linee guida per la creazione di password complesse**  
- Le password complesse non vengono decifrate facilmente, né da parte degli utenti né mediante l'utilizzo di programmi specifici. Le password complesse non prevedono l'utilizzo di termini o condizioni non consentite, quali:  
-  
--   Condizione di spazio vuoto o NULL  
-  
--   'Password'  
-  
--   "Admin"  
-  
--   "Administrator"  
-  
--   "sa"  
-  
--   'sysadmin'  
-  
- Una password complessa non può essere costituita dagli elementi seguenti associati al computer di installazione:  
-  
--   Nome dell'utente attualmente connesso al computer.  
-  
--   Nome del computer.  
-  
- Una password complessa deve essere formata da più di otto caratteri e soddisfare almeno tre dei quattro criteri seguenti:  
-  
--   Deve contenere lettere maiuscole.  
-  
--   Deve contenere lettere minuscole.  
-  
--   Deve contenere numeri.  
-  
--   Deve contenere caratteri non alfanumerici, ad esempio #, % o ^.  
-  
- Le password immesse in questa pagina devono soddisfare i requisiti relativi ai criteri password complessi. In presenza di qualsiasi componente di automazione in cui viene utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assicurarsi che la password soddisfi i requisiti relativi ai criteri password complessi.  
-  
-### <a name="related-content"></a>Contenuto correlato  
- Per ulteriori informazioni sulla scelta tra l'autenticazione di Windows e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md).  
-  
- Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
-  
-## <a name="database-engine-configuration---tempdb"></a>Configurazione del motore di database - TempDB
+ 
+## <a name="a-nametempdba-database-engine-configuration---tempdb"></a><a name="tempdb"><a/> Configurazione del motore di database - TempDB
   Usare questa pagina per specificare posizione, dimensione, impostazioni di espansione e numero di file di log e di dati **tempdb** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
   
  Per specificare una condivisione file SMB come directory, è necessario immettere manualmente il percorso UNC supportato. La selezione di una condivisione file SMB non è supportata. Il formato di un percorso UNC supportato di una condivisione file SMB è \\\NomeServer\NomeCondivisione\\...  
@@ -377,8 +345,8 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 |Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Directory dati**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Suggerimento: Se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Assicurarsi che la directory (o le directory se vengono specificati più file) sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.|  
-|Directory log**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Suggerimento: Se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.<br /><br /> Assicurarsi che la directory specificata sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.<br /><br /> Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
+|Directory dati**tempdb**|Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Suggerimento: Se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Assicurarsi che la directory (o le directory se vengono specificati più file) sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.|  
+|Directory log**tempdb**|Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Suggerimento: Se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.<br /><br /> Assicurarsi che la directory specificata sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.<br /><br /> Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  Configurare le impostazioni di **tempdb** in base alle proprie esigenze in termini di carico di lavoro e requisiti. Le impostazioni seguenti si applicano ai file di dati **tempdb** :  
@@ -429,6 +397,39 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 ### <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Autorizzazioni NTFS e di condivisione per un file server](https://go.microsoft.com/fwlink/?LinkID=206571)  
+
+<!--
+The MaxDOP setting only applies to SQL Server 2019 and greater
+-->
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="database-engine-configuration---maxdop"></a>Configurazione del motore di database - MaxDOP
+Max degree of parallelism (MaxDOP) determina il numero massimo di processori che una singola istruzione può usare. SQL Server 2019 introduce la configurazione di questa opzione durante l'installazione e rileva automaticamente l'impostazione MaxDOP consigliata per il server in base al numero di core. Il valore massimo predefinito è 8.  
+
+È possibile configurare manualmente questa impostazione qui e modificarla dopo l'installazione. Per altre informazioni, vedere [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+::: moniker-end
+
+
+## <a name="database-engine-configuration---filestream"></a>Configurazione del Motore di database - Filestream
+  Utilizzare questa pagina per abilitare FILESTREAM per l'installazione corrente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando dati BLOB (Binary Large Object) binari **varbinary(max)** come file nel file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  
+  
+### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+ **Abilita FILESTREAM per l'accesso Transact-SQL**  
+ Selezionare questa opzione per abilitare FILESTREAM per l'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] . È necessario che questo controllo sia selezionato affinché le altre opzioni di controllo siano disponibili.  
+  
+ **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file**  
+ Selezionare questa opzione per abilitare l'accesso tramite flusso Win32 per FILESTREAM.  
+  
+ **Nome condivisione di Windows**  
+ Utilizzare questo controllo per immettere il nome della condivisione di Windows in cui verranno archiviati i dati FILESTREAM.  
+  
+ **Consenti ai client remoti l'accesso tramite flusso ai dati FILESTREAM**  
+ Selezionare questo controllo per consentire ai client remoti di accedere ai dati FILESTREAM nel server corrente.  
+  
+### <a name="see-also"></a>Vedere anche  
+ [Abilitare e configurare FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+
 
 ## <a name="database-engine-configuration---user-instance"></a>Configurazione del Motore di database – Istanze utente
 Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per gli utenti che non dispongono di autorizzazioni di amministratore, nonché per aggiungere utenti al ruolo di amministratore.  

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 397922e30eee608cc3fc32a841d204bab3d45e2f
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2af7316e8c2530c627e93f07a5cbd05ba9bd55ab
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421348"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945280"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +51,10 @@ SERVERPROPERTY ( 'propertyname' )
 |Proprietà|Valori di codice restituiti|  
 |--------------|---------------------|  
 |BuildClrVersion|Versione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] usata durante la compilazione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = input non valido, errore o non applicabile.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
-|Confronto|Nome delle regole di confronto predefinite per il server.<br /><br /> NULL = Input non valido o errore.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
+|Regole di confronto|Nome delle regole di confronto predefinite per il server.<br /><br /> NULL = Input non valido o errore.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |CollationID|ID delle regole di confronto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Tipo di dati di base: **int**|  
 |ComparisonStyle|Stile di confronto di Windows per le regole di confronto.<br /><br /> Tipo di dati di base: **int**|  
-|ComputerNamePhysicalNetBIOS|Nome NetBIOS del computer locale in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per un'istanza cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un cluster di failover, questo valore cambia in caso di failover dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su altri nodi del cluster di failover.<br /><br /> In un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo valore rimane costante e restituisce lo stesso valore della proprietà MachineName.<br /><br /> **Nota:** Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa in un cluster di failover e si desidera ottenere il nome dell'istanza del cluster di failover, utilizzare la proprietà MachineName.<br /><br /> NULL = input non valido, errore o non applicabile.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
+|ComputerNamePhysicalNetBIOS|Nome NetBIOS del computer locale in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per un'istanza cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un cluster di failover, questo valore cambia in caso di failover dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su altri nodi del cluster di failover.<br /><br /> In un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo valore rimane costante e restituisce lo stesso valore della proprietà MachineName.<br /><br /> **Nota:** Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa in un cluster di failover e si vuole ottenere il nome dell'istanza del cluster di failover, usare la proprietà MachineName.<br /><br /> NULL = input non valido, errore o non applicabile.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |Edizione|Edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Nelle versioni a 64 bit del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene aggiunta la dicitura (64 bit) al nome della versione stessa.<br /><br /> Restituisce:<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: Core-based Licensing'<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |EditionID|Rappresenta l'edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Core-based Licensing<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = database SQL o SQL Data Warehouse<br /><br /> Tipo di dati di base: **bigint**|  
 |EngineEdition|Edizione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nel server.<br /><br /> 1 = Personal o Desktop Engine: non disponibile in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.<br /><br /> 2 = Standard: valore restituito per le edizioni Standard, Web e Business Intelligence.<br /><br /> 3 = Enterprise: valore restituito per le edizioni Evaluation, Developer ed entrambe le edizioni Enterprise.<br /><br /> 4 = Express: valore restituito per le edizioni Express, Express with Tools ed Express with Advanced Services.<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 - [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = istanza gestita<br /><br /> Tipo di dati di base: **int**|  
@@ -124,7 +124,7 @@ GO
 >
 > La documentazione verrà aggiornato una volta risolto il problema.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Tutti gli utenti possono eseguire una query sulle proprietà del server. 
   

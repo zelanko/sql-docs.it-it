@@ -24,15 +24,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 866b1e7f94645fb9336ce75e48afa8f8fb437895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5866bee12907bbcd9765639fe6a54b94698b0a9c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746766"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980571"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Una sessione già integrata nella transazione distribuita esegue una chiamata di stored procedure remota in cui viene fatto riferimento a un server remoto.  
   
- L'opzione **sp_configure remote proc trans** determina se le chiamate di stored procedure remote in una transazione locale causano automaticamente la promozione della transazione locale a una transazione distribuita gestita da MS DTC. È possibile usare l'opzione SET REMOTE_PROC_TRANSACTIONS a livello di connessione per ignorare l'impostazione predefinita dell'istanza specificata da **sp_configure remote proc trans**. Quando si attiva questa opzione, una chiamata di stored procedure remota causa la promozione di una transazione locale a una transazione distribuita. La connessione in cui viene creata la transazione MS DTC diventa l'origine della transazione. L'istruzione COMMIT TRANSACTION avvia un'operazione di commit coordinata da MS DTC. Se l'opzione **sp_configure remote proc trans** è impostata su ON, le chiamate di stored procedure remote eseguite in transazioni locali vengono protette automaticamente come parte di transazioni distribuite senza che sia necessario riprogrammare le applicazioni in modo che eseguano l'istruzione BEGIN DISTRIBUTED TRANSACTION anziché l'istruzione BEGIN TRANSACTION.  
+ L'opzione **sp_configure remote proc trans** determina se le chiamate di stored procedure remote in una transazione locale causano automaticamente la promozione della transazione locale a una transazione distribuita gestita da MS DTC. È possibile usare l'opzione SET REMOTE_PROC_TRANSACTIONS a livello di connessione per ignorare l'impostazione predefinita dell'istanza specificata da **sp_configure remote proc trans**. Quando questa opzione è attivata, una chiamata di stored procedure remota determina la promozione di una transazione locale a una transazione distribuita. La connessione in cui viene creata la transazione MS DTC diventa l'origine della transazione. L'istruzione COMMIT TRANSACTION avvia un'operazione di commit coordinata da MS DTC. Se l'opzione **sp_configure remote proc trans** è impostata su ON, le chiamate di stored procedure remote eseguite in transazioni locali vengono protette automaticamente come parte di transazioni distribuite senza che sia necessario riprogrammare le applicazioni in modo che eseguano l'istruzione BEGIN DISTRIBUTED TRANSACTION anziché l'istruzione BEGIN TRANSACTION.  
   
  Per ulteriori informazioni sull'ambiente e sul processo delle transazioni distribuite, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  

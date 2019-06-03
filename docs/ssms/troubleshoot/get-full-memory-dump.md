@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822509"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983123"
 ---
 # <a name="get-full-memory-dump"></a>Ottenere il dump completo della memoria
 
@@ -88,6 +88,15 @@ Per acquisire le informazioni di diagnostica per la risoluzione dei problemi di 
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Comprimere la cartella.
+
+## <a name="share-the-information"></a>Condividere le informazioni
+
+1. Per condividere le informazioni con il team di SSMS, registrare il problema all'indirizzo https://aka.ms/sqlfeedback.
+
+2. Quindi condividere il file di dump della memoria raccolto in OneDrive (o una soluzione equivalente) dove il file può essere raccolto.
+
+    > [!Important]
+    > I file di dump della memoria possono contenere informazioni sensibili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

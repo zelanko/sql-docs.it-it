@@ -18,16 +18,16 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801865"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980181"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,7 +133,7 @@ Definisce il tipo di dati **table**. La dichiarazione di tabella include definiz
  Costante, valore NULL o funzione di sistema utilizzata come valore predefinito della colonna.  
   
  IDENTITY  
- Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore univoco e incrementale alla colonna. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY per fungere da identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **decimal(p,0)** o **numeric(p,0)**. Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di inizializzazione che l'incremento oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
+ Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore univoco e incrementale alla colonna. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY per fungere da identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di inizializzazione che l'incremento oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
   
  *seed*  
  Valore di inizializzazione utilizzato per la prima riga caricata nella tabella.  
@@ -224,7 +224,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 (3 row(s) affected)
 ```  
   
-### <a name="b-using-declare-with-two-variables"></a>b. Utilizzo di DECLARE con due variabili  
+### <a name="b-using-declare-with-two-variables"></a>B. Utilizzo di DECLARE con due variabili  
  Nell'esempio seguente vengono recuperati i nomi dei rappresentanti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] che svolgono la propria attività nel Nord America e per cui l'ammontare delle vendite annue è pari almeno a $ 2.000.000.  
   
 ```  

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d83e2dab2e215037ce88b86eaf3308258581ef1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad75430d6458ce9927dd9031c5e98294559d03a
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816745"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983189"
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt; (minore di) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ expression < expression
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using--in-a-simple-query"></a>A. Utilizzo di < in una query semplice  
+### <a name="a-using--in-a-simple-query"></a>A. Uso di < in una query semplice  
  Nell'esempio seguente vengono restituite tutte le righe nella tabella `HumanResources.Department` che dispongono di un valore in `DepartmentID` minore di 3.  
   
 ```  
@@ -78,7 +78,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-using--to-compare-two-variables"></a>B. Utilizzare < per confrontare due variabili  
+### <a name="b-using--to-compare-two-variables"></a>B. Uso di < per confrontare due variabili  
   
 ```  
 DECLARE @a int = 45, @b int = 40;  

@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - AsGml method
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d6620beb8537a05f766f1f68eb07c0b1cd07d1a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9d4faaae6df3f1800c592d511972e9fa46c7348e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701987"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935475"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - tipo di dati geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce la rappresentazione GML (Geography Markup Language) di un'istanza **geography**.  
   
- Per altre informazioni su Geography Markup Language (GML), vedere la specifica Open Geospatial Consortium: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629).  
+ Per altre informazioni su GML (Geography Markup Language), vedere la specifica Open Geospatial Consortium: [Specifiche OGC, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="syntax"></a>Sintassi  
   

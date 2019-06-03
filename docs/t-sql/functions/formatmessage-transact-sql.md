@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212370"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949000"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>Remarks  
  In modo analogo all'istruzione RAISERROR, l'istruzione FORMATMESSAGE modifica il messaggio mediante la sostituzione delle variabili di segnaposto con i valori di parametro specificati. Per altre informazioni sui segnaposto consentiti nei messaggi di errore e sul processo di modifica, vedere [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
- L'istruzione FORMATMESSAGE esegue la ricerca del messaggio nella lingua corrente dell'utente. Se non esiste una versione localizzata del messaggio, viene utilizzata la versione inglese (Stati Uniti).  
+ L'istruzione FORMATMESSAGE esegue la ricerca del messaggio nella lingua corrente dell'utente. Se non esiste una versione localizzata del messaggio, viene usata la versione inglese (Stati Uniti).  
   
- Per i messaggi localizzati, i parametri specificati devono corrispondere ai segnaposti del parametro nella versione inglese (Stati Uniti). Ovvero, il parametro 1 nella versione localizzata deve corrispondere al parametro 1 nella versione inglese (Stati Uniti), il parametro 2 deve corrispondere al parametro 2 e così via.  
+ Per i messaggi localizzati, i valori del parametro specificati devono corrispondere ai segnaposto del parametro nella versione inglese (Stati Uniti). Ovvero, il parametro 1 nella versione localizzata deve corrispondere al parametro 1 nella versione inglese (Stati Uniti), il parametro 2 deve corrispondere al parametro 2 e così via.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -76,7 +76,7 @@ SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');
 SELECT @var1;  
 ```  
   
-### <a name="b-example-with-a-message-string"></a>b. Esempio con una stringa di messaggio  
+### <a name="b-example-with-a-message-string"></a>B. Esempio con una stringa di messaggio  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

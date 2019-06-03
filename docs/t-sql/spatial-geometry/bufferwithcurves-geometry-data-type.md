@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9adca69b9f275fae20eef2b5bb9f619c034556c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654219"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936157"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Tipo SQL Server restituito: **geometry**
 |Valore del parametro distance|Dimensioni tipo|Tipo spaziale restituito|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero o uno|Istanza **GeometryCollection** vuota|  
-|distance < 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo. **Nota:** è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota.|  
+|distance < 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo. **Nota:** è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota|  
 |distance = 0|Tutte le dimensioni|Copia dell'istanza **geometry** di chiamata|  
 |distance > 0|Tutte le dimensioni|Istanza **CurvePolygon** o **GeometryCollection**|  
   

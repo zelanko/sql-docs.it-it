@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromText method
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 78ea6106d85a6295a6b9cc2088febe5d1498fff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acadcd11bf7d11c21d3dd83dcdd6999da20d9f0b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698455"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936135"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *point_tagged_text*  
- Rappresentazione WKT dell'istanza **geographyPoint** da restituire. *point_tagged_text* è un'espressione **nvarchar(max)**.  
+ Rappresentazione WKT dell'istanza **geographyPoint** da restituire. *point_tagged_text* è un'espressione **nvarchar(max)** .  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyPoint** da restituire.  

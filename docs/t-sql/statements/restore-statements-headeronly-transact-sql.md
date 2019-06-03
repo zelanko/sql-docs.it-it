@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c8296ca538f9daac6b0e05aae6f8124bfe2abb62
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242244"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947055"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Istruzioni RESTORE - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) alla versione corrente).<br /><br /> Tipo di componente di crittografia usato: certificato o chiave asimmetrica. Se il backup non è stato crittografato, questo valore è NULL.|  
   
 > [!NOTE]  
->  Se per i set di backup sono state definite password, tramite l'istruzione RESTORE HEADERONLY vengono visualizzate informazioni complete solo per il set di backup la cui password corrisponde al valore specificato nell'opzione PASSWORD del comando. Vengono inoltre visualizzate informazioni complete relative ai set di backup non protetti. Il valore della colonna **BackupName** per gli altri set di backup protetti con password dei supporti viene impostato su '**_Password Protected_**', mentre tutte le altre colonne sono NULL.  
+>  Se per i set di backup sono state definite password, tramite l'istruzione RESTORE HEADERONLY vengono visualizzate informazioni complete solo per il set di backup la cui password corrisponde al valore specificato nell'opzione PASSWORD del comando. Vengono inoltre visualizzate informazioni complete relative ai set di backup non protetti. Il valore della colonna **BackupName** per gli altri set di backup protetti con password dei supporti viene impostato su ' **_Password Protected_** ', mentre tutte le altre colonne sono NULL.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un client è possibile utilizzare l'istruzione RESTORE HEADERONLY per il recupero delle informazioni di intestazione di tutti i backup di un dispositivo di backup specifico. Per ogni backup nel dispositivo di backup il server invia le informazioni di intestazione sotto forma di riga.  
@@ -159,9 +159,9 @@ FROM <backup_device>
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  
->  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
+>  Il livello di protezione garantito da questa password è vulnerabile. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Per ottenere informazioni su un set o dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  

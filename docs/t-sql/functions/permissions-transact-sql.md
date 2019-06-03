@@ -22,15 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641509"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943436"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  Se un parametro risulta NULL oppure non è valido, ad esempio se l'oggetto specificato in *objectid* o la colonna specificata in column non esiste, viene restituito NULL. I valori in bit delle autorizzazioni non applicabili, ad esempio l'autorizzazione EXECUTE (bit 0x20) per una tabella, non sono definiti.  
   
- Per determinare i vari set di bit della mappa di bit restituita dalla funzione PERMISSIONS, utilizzare l'operatore AND bit per bit (&).  
+ Per determinare ogni set di bit nella mappa di bit restituita dalla funzione PERMISSIONS, usare l'operatore AND (&) bit per bit.  
   
  Per ottenere un elenco delle autorizzazioni per un utente del database corrente, è inoltre possibile eseguire la stored procedure di sistema sp_helprotect.  
   

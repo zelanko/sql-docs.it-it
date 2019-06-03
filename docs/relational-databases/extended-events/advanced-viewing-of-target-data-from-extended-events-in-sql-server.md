@@ -1,7 +1,7 @@
 ---
 title: Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2016
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478166"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198343"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 
@@ -42,7 +42,7 @@ Il presente articolo presuppone che si sappia già come creare e avviare una ses
 
 Questo articolo presuppone anche che sia stata installata una versione mensile molto recente di SSMS. La guida all'installazione è disponibile alla pagina:
 
-- [Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+- [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 
@@ -133,7 +133,7 @@ L'opzione **Visualizza dati di destinazione** visualizza i dati acquisiti finora
 
 Nel riquadro **Esplora oggetti** è possibile espandere i nodi e quindi fare clic con il pulsante destro del mouse:
 
-- **Gestione** > **Eventi estesi** > **Sessioni** > *[sessione-utente]* > *[nodo-destinazione-utente]* > **Visualizza dati di destinazione**.
+- **Gestione** > **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  >  *[nodo-destinazione-utente]*  > **Visualizza dati di destinazione**.
 
 
 I dati di destinazione vengono visualizzati in un riquadro a schede in SSMS, come illustrato nello screenshot seguente.
@@ -153,7 +153,7 @@ I dati di destinazione vengono visualizzati in un riquadro a schede in SSMS, com
 Quando la sessione evento è attiva, potrebbe essere necessario controllare i dati dell'evento in tempo reale, non appena vengono ricevuti dalla destinazione.
 
 
-- **Gestione** > **Eventi estesi** > **Sessioni** > *[sessione-utente]* > **Controlla dati dinamici**.
+- **Gestione** > **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  > **Controlla dati dinamici**.
 
 
 ![Sessione utente > Controlla dati dinamici](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ Quando la sessione evento è attiva, potrebbe essere necessario controllare i da
 
 La visualizzazione dei dati viene aggiornata in base all'intervallo specificato. Vedere **Latenza di recapito massima** in:
 
-- **Eventi estesi** > **Sessioni** > *[sessione-utente]* > **Proprietà** > **Avanzate** > **Latenza di recapito massima**
+- **Eventi estesi** > **Sessioni** >  *[sessione-utente]*  > **Proprietà** > **Avanzate** > **Latenza di recapito massima**
 
 
 
@@ -318,4 +318,6 @@ L'evento **query_post_execution_showplan** consente di visualizzare il piano di 
 
 ![Piano di query, con l'elenco di proprietà per un nodo](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
+## <a name="see-also"></a>Vedere anche
 
+[XELite: libreria multipiattaforma per la lettura di XEvent da file XEL o flussi SQL live](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), rilasciata a maggio 2019.

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641022"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982350"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -259,7 +259,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
  Valore predefinito del parametro, come definito nel modulo. Quando nel modulo è previsto un valore per un parametro privo di valore predefinito ed è stato omesso un parametro o è stata specificata la parola chiave DEFAULT, viene generato un errore.  
   
  @*string_variable*  
- Nome di una variabile locale. @*string_variable* può essere di tipo **char**, **varchar**, **nchar** o **nvarchar**. Sono inclusi i tipi di dati **(max)**.  
+ Nome di una variabile locale. @*string_variable* può essere di tipo **char**, **varchar**, **nchar** o **nvarchar**. Sono inclusi i tipi di dati **(max)** .  
   
  [N] '*tsql_string*'  
  Valore stringa costante. *tsql_string* può essere di tipo **nvarchar** o **varchar**. Se si specifica N, la stringa viene interpretata come di tipo **nvarchar**.  
@@ -301,7 +301,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
   
 |Nome|Definizione|  
 |----------|----------------|  
-|RECOMPILE|Forza la compilazione, l'utilizzo e l'eliminazione di un nuovo piano dopo l'esecuzione del modulo. Se per il modulo è disponibile un piano di query esistente, tale piano rimane nella cache.<br /><br /> Utilizzare questa opzione se il parametro fornito è atipico oppure se i dati sono cambiati notevolmente. Questa opzione non viene utilizzata per stored procedure estese. È consigliabile utilizzarla solo quando è strettamente necessario, in quanto si tratta di un'opzione onerosa.<br /><br /> **Nota:** non è possibile usare WITH RECOMPILE in caso di chiamata di una stored procedure che usa la sintassi OPENDATASOURCE. Quando viene specificato un nome di oggetto composto da quattro parti, l'opzione WITH RECOMPILE viene ignorata.<br /><br /> **Nota:** Le funzioni scalari definite dall'utente compilate in modo nativo non supportano RECOMPILE. Se è necessario ricompilare, usare [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
+|RECOMPILE|Forza la compilazione, l'utilizzo e l'eliminazione di un nuovo piano dopo l'esecuzione del modulo. Se per il modulo è disponibile un piano di query esistente, tale piano rimane nella cache.<br /><br /> Utilizzare questa opzione se il parametro fornito è atipico oppure se i dati sono cambiati notevolmente. Questa opzione non viene utilizzata per stored procedure estese. È consigliabile utilizzarla solo quando è strettamente necessario, in quanto si tratta di un'opzione onerosa.<br /><br /> **Nota:** non è possibile usare WITH RECOMPILE quando viene chiamata una stored procedure che usa la sintassi OPENDATASOURCE. Quando viene specificato un nome di oggetto composto da quattro parti, l'opzione WITH RECOMPILE viene ignorata.<br /><br /> **Nota:** le funzioni scalari definite dall'utente compilate in modo nativo non supportano RECOMPILE. Se è necessario ricompilare, usare [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**RESULT SETS UNDEFINED**|**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Questa opzione non fornisce alcuna garanzia sugli eventuali risultati restituiti e non viene specificata alcuna definizione. L'istruzione viene eseguita senza errore se vengono restituiti risultati o se non ne vengono restituiti. RESULT SETS UNDEFINED rappresenta il comportamento predefinito se result_sets_option non viene specificato.<br /><br /> Per le funzioni scalari definite dall'utente interpretate e per le funzioni scalari definite dall'utente compilate in modo nativo, questa opzione non è operativa perché le funzioni non restituiscono mai un set di risultati.|  
 |RESULT SETS NONE|**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantisce che l'istruzione di esecuzione non restituirà risultati. Se vengono restituiti risultati il batch viene interrotto.<br /><br /> Per le funzioni scalari definite dall'utente interpretate e per le funzioni scalari definite dall'utente compilate in modo nativo, questa opzione non è operativa perché le funzioni non restituiscono mai un set di risultati.|  
 |*\<result_sets_definition>*|**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantisce che il risultato verrà restituito come specificato in result_sets_definition. Per le istruzioni che restituiscono più set di risultati, specificare più sezioni *result_sets_definition*. Racchiudere ogni sezione *result_sets_definition* tra parentesi, separando le diverse sezioni con virgole. Per altre informazioni, vedere \<result_sets_definition> più avanti in questo argomento.<br /><br /> Questa opzione genera sempre un errore per le funzioni scalari definite dall'utente compilate in modo nativo, poiché le funzioni non restituiscono mai un set di risultati.|
@@ -374,7 +374,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>Procedure consigliate  
  Specificare un account di accesso o un utente che disponga almeno dei privilegi necessari per eseguire le operazioni definite nell'istruzione o nel modulo. Ad esempio, non specificare un nome account di accesso con autorizzazioni a livello di server se sono richieste solo autorizzazioni a livello di database oppure non specificare l'account di un proprietario di database a meno che siano richieste le autorizzazioni corrispondenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione EXECUTE, non è necessario disporre di autorizzazioni specifiche. Sono tuttavia richieste autorizzazioni per le entità a protezione diretta a cui viene fatto riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione INSERT, il chiamante dell'istruzione EXECUTE deve disporre dell'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo.  
   
  Le autorizzazioni per l'istruzione EXECUTE per un modulo vengono assegnate per impostazione predefinita al proprietario del modulo, che può quindi trasferirle ad altri utenti. Quando si esegue un modulo che esegue una stringa, la verifica delle autorizzazioni viene eseguita nel contesto dell'utente che esegue il modulo e non nel contesto dell'utente che l'ha creato. Se, tuttavia, lo stesso utente è proprietario del modulo chiamante e del modulo richiamato, la verifica delle autorizzazioni per l'istruzione EXECUTE non viene eseguita per il secondo modulo.  
@@ -661,7 +661,7 @@ WITH RESULT SETS
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="example-o-basic-procedure-execution"></a>Esempio O: esecuzione di una procedura di base  
+### <a name="example-o-basic-procedure-execution"></a>Esempio O: Esecuzione di una routine di base  
  Esecuzione di una stored procedure:  
   
 ```  
@@ -680,7 +680,7 @@ EXEC ('EXEC ' + @var);
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>Esempio P: esecuzione di stringhe  
+### <a name="example-p-executing-strings"></a>Esempio P: Esecuzione di stringhe  
  Esecuzione di una stringa SQL:  
   
 ```  
@@ -701,7 +701,7 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>Esempio Q: procedura con parametri  
+### <a name="example-q-procedures-with-parameters"></a>Esempio Q: Routine con parametri  
  L'esempio seguente crea una procedura con parametri e illustra tre modalità per l'esecuzione di questa:  
   
 ```  

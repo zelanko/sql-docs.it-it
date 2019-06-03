@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: c15cff20feb4fd3f9ef5057babaad884de022975
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502857"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943301"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -450,8 +450,8 @@ Non è consentita la modifica di queste colonne:
 
 Il tipo di dati di colonne **text**, **ntext** e **image** può essere modificato solo nei modi seguenti:
 
-- Da **text** a **varchar(max)**, **nvarchar(max)** o **xml**
-- Da **ntext** a **varchar(max)**, **nvarchar(max)** o **xml**
+- Da **text** a **varchar(max)** , **nvarchar(max)** o **xml**
+- Da **ntext** a **varchar(max)** , **nvarchar(max)** o **xml**
 - Da **image** a **varbinary(max)**
 
 Alcune modifiche del tipo di dati possono comportare la modifica dei dati. Ad esempio, la modifica di una colonna **nchar** o **nvarchar** in **char** o **varchar** potrebbe causare la conversione di caratteri estesi. Per altre informazioni, vedere [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). La riduzione della precisione o della scala di una colonna può causare il troncamento dei dati.
@@ -469,7 +469,7 @@ Quando si usa Always Encrypted con enclave sicuri, è possibile modificare quals
 
 *column_name* è il nome della colonna da modificare, aggiungere o rimuovere. *column_name* può essere composto da un massimo di 128 caratteri. Nel caso di nuove colonne, è possibile omettere *column_name* per le colonne che sono state create con il tipo di dati **timestamp**. Viene usato il nome **timestamp** se non si specifica il nome *column_name* per una colonna con il tipo di dati **timestamp**.
 
-[ _type\_schema\_name_**.** ] _type\_name_ è il nuovo tipo di dati per la colonna modificata oppure il tipo di dati per la colonna aggiunta. Non è possibile specificare *type_name* per colonne esistenti di tabelle partizionate. *type_name* può essere uno dei tipi seguenti:
+[ _type\_schema\_name_ **.** ] _type\_name_ è il nuovo tipo di dati per la colonna modificata oppure il tipo di dati per la colonna aggiunta. Non è possibile specificare *type_name* per colonne esistenti di tabelle partizionate. *type_name* può essere uno dei tipi seguenti:
 
 - Tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Tipo di dati alias basato su un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per consentirne l'uso in una definizione di tabella, si creano tipi di dati alias con l'istruzione CREATE TYPE.
@@ -673,12 +673,12 @@ Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici onli
 > [!NOTE]
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** } **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** } **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica una posizione in cui spostare le righe di dati attualmente presenti a livello foglia nell'indice cluster. La tabella viene spostata nella nuova posizione. Questa opzione è valida solo per i vincoli che creano un indice cluster.
 
 > [!NOTE]
-> In questo contesto default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica "**"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> In questo contesto default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]** . Se si specifica " **"** default **"** , l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 { CHECK | NOCHECK } CONSTRAINT specifica se *constraint_name* è abilitato o disabilitato. È possibile utilizzare questa opzione solo con vincoli FOREIGN KEY e CHECK. Quando si specifica NOCHECK, il vincolo viene disabilitato e gli inserimenti o gli aggiornamenti successivi della colonna non vengono convalidati in base alle condizioni del vincolo. I vincoli DEFAULT, PRIMARY KEY e UNIQUE non possono essere disabilitati.
 
@@ -698,12 +698,12 @@ Questa opzione è disponibile solo quando il rilevamento delle modifiche è abil
 
 Per abilitare il rilevamento delle modifiche, nella tabella deve essere presente una chiave primaria.
 
-WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
+WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)** 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica se nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene tenuta traccia delle colonne con rilevamento delle modifiche abilitato che sono state aggiornate. Il valore predefinito è OFF.
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Trasferisce un blocco di dati in uno dei modi seguenti:
 
@@ -727,7 +727,7 @@ Per la restrizione **SWITCH** durante la replica, vedere [Replicare tabelle e in
 
 Gli indici columnstore non cluster compilati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e per il database SQL prima della versione V12 sono in un formato di sola lettura. Prima di poter eseguire un'operazione PARTITION, è necessario ricompilare gli indici columnstore non cluster nel formato corrente, vale a dire in un formato aggiornabile.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)** 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta `FILESTREAM`.
 
 Specifica dove vengono archiviati i dati FILESTREAM.
@@ -746,11 +746,11 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 
 Disabilita o abilita il controllo delle versioni di sistema di una tabella. Per abilitare il controllo delle versioni di sistema di una tabella, il sistema verifica che il tipo di dati, il vincolo per il supporto dei valori Null e i requisiti di vincolo della chiave primaria per il controllo delle versioni di sistema siano soddisfatti. Se non si usa l'argomento HISTORY_TABLE, il sistema genera una nuova tabella di cronologia corrispondente allo schema della tabella corrente, crea un collegamento tra le due tabelle e consente al sistema di registrare la cronologia di ogni record nella tabella corrente della tabella di cronologia. Il nome di questa tabella di cronologia sarà `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Se si usa l'argomento HISTORY_TABLE per creare un collegamento e usare una tabella di cronologia esistente, il sistema crea un collegamento tra la tabella corrente e la tabella specificata. Quando si crea un collegamento a una tabella di cronologia esistente, è possibile scegliere di eseguire una verifica coerenza dei dati. Questa verifica coerenza dei dati garantisce che i record esistenti non si sovrappongano. L'impostazione predefinita prevede l'esecuzione della verifica coerenza dei dati. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica il periodo di conservazione finito o infinito per i dati cronologici in una tabella temporale. Se è omesso, si applicherà il periodo di conservazione infinito.
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
+SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)** 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica i metodi consentiti di escalation blocchi per una tabella.
@@ -929,7 +929,7 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Editio
 
 Mentre le righe esistenti fanno riferimento al valore archiviato nei metadati, il valore predefinito viene archiviato nella riga per tutte le nuove righe inserite e che non specificano un altro valore per la colonna. Il valore predefinito archiviato nei metadati viene spostato in una riga esistente quando la riga viene aggiornata, anche se la colonna effettiva non viene specificata nell'istruzione UPDATE, o se la tabella o l'indice cluster viene ricompilato.
 
-Le colonne di tipo **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** o CLR UDTS non possono essere aggiunte in un'operazione online. Non è possibile aggiungere una colonna online se con tale operazione le dimensioni massime possibili per la riga superano il limite di 8.060 byte. In tal caso, la colonna viene aggiunta come operazione offline.
+Le colonne di tipo **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** o CLR UDTS non possono essere aggiunte in un'operazione online. Non è possibile aggiungere una colonna online se con tale operazione le dimensioni massime possibili per la riga superano il limite di 8.060 byte. In tal caso, la colonna viene aggiunta come operazione offline.
 
 ## <a name="parallel-plan-execution"></a>Esecuzione di piani paralleli
 

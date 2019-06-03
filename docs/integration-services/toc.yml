@@ -228,6 +228,8 @@
       href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
     - name: Attività di caricamento di Azure SQL DW
       href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+    - name: Attività File flessibili
+      href: ../integration-services/control-flow/flexible-file-task.md
     - name: Attività Backup database
       href: ../integration-services/control-flow/back-up-database-task.md
     - name: Inserimento bulk - attività
@@ -406,6 +408,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Destinazione di Azure Data Lake Store
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: Origine di File flessibili
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: Destinazione di File flessibili
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: Componenti di flusso CDC
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:

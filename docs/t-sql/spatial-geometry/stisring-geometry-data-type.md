@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsRing (geometry Data Type)
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: dfe97518539396e53a8b0f051bf80186b85791f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b08d711ed9d0a8016acbf2b438671373b6c62
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676189"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938773"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

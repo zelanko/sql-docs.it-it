@@ -22,15 +22,15 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979847"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946118"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,9 +112,9 @@ GO
 ```  
   
 > [!NOTE]  
->  Per la restituzione dei dati evento, usare il metodo XQuery **value()** invece del metodo **query()**. Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
+>  Per la restituzione dei dati evento, usare il metodo XQuery **value()** invece del metodo **query()** . Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
   
-### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>b. Creazione di una tabella di log con dati di eventi in un trigger DDL  
+### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Creazione di una tabella di log con dati di eventi in un trigger DDL  
 Questo esempio crea una tabella per l'archiviazione di informazioni su tutti gli eventi a livello di database e tale tabella viene popolata con un trigger DDL. L'uso di XQuery sui dati XML generai da `EVENTDATA` consente di acquisire il tipo di evento e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  

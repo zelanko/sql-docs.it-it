@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSrid (geometry Data Type)
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 74cbd1d34ba7503881c8c9ab424be67edc02588c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 947d30eeee473388ea457910cafbbf4dc831f4e6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652539"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938236"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

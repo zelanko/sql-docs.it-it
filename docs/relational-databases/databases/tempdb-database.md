@@ -2,7 +2,7 @@
 title: Database tempdb | Microsoft Docs
 description: Questo argomento illustra i dettagli relativi alla configurazione e all'uso del database tempdb in SQL Server e nel database SQL di Azure
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265368"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994232"
 ---
 # <a name="tempdb-database"></a>Database tempdb
 
@@ -158,7 +158,7 @@ Di seguito sono riportate le operazioni che non è possibile eseguire sul databa
 - Impostazione del database su OFFLINE
 - Impostazione del database o del filegroup primario su READ_ONLY
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a tempdb per impedire a un utente di usarlo, tuttavia questa operazione non è consigliata poiché alcune operazioni di routine richiedono l'uso di tempdb.  
 
@@ -215,6 +215,43 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le prestazioni d
 Per altre informazioni sui miglioramenti delle prestazioni in tempdb, vedere l'articolo di blog seguente:
 
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB - File, flag di traccia e aggiornamenti)
+
+## <a name="memory-optimized-tempdb-metadata"></a>Metadati tempdb ottimizzati per la memoria
+
+La contesa tra metadati tempdb è tipicamente un collo di bottiglia per la scalabilità per molti carichi di lavoro in esecuzione su SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nuova funzionalità della famiglia di funzionalità [Database in memoria](../in-memory-database.md), i metadati tempdb ottimizzati per la memoria, che rimuove questo collo di bottiglia e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb eccessivi. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] le tabelle di sistema coinvolte nella gestione dei metadati delle tabelle temporanee possono essere spostate in tabelle ottimizzate per la memoria non durevoli senza latch. Per accettare questa nuova funzionalità, usare lo script seguente:
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+Per rendere effettiva questa modifica della configurazione è necessario riavviare il servizio.
+
+Questa implementazione presenta alcune limitazioni che è importante prendere in considerazione:
+
+1. L'attivazione o la disattivazione della funzionalità non avviene in modo dinamico. A causa delle modifiche intrinseche che devono essere apportate alla struttura del database tempdb, è necessario un riavvio per abilitare o disabilitare la funzionalità.
+2. È possibile che una singola transazione non possa accedere alle tabelle ottimizzate per la memoria in più di un database.  Ciò significa che tutte le transazioni che interessano una tabella ottimizzata per la memoria in un database utente non saranno in grado di accedere alle viste di sistema tempdb nella stessa transazione.  Se si tenta di accedere alle viste di sistema tempdb nella stessa transazione della tabella ottimizzata per la memoria in un database utente, verrà visualizzato l'errore seguente:
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    Esempio:
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. Poiché le query eseguite nelle tabelle ottimizzate per la memoria non supportano gli hint di blocco e isolamento, le query eseguite nelle viste di catalogo tempdb ottimizzate per la memoria non rispetteranno gli hint di blocco e isolamento. Come nelle altre viste del catalogo di sistema in SQL Server, tutte le transazioni eseguite nelle viste di sistema saranno nell'isolamento READ COMMITTED (o in questo caso READ COMMITTED SNAPSHOT).
+4. È possibile che si verifichino alcuni problemi con gli indici columnstore nelle tabelle temporanee quando sono abilitati i metadati tempdb ottimizzati per la memoria. Per questa versione di anteprima, è consigliabile evitare gli indici columnstore nelle tabelle temporanee quando si usano i metadati tempdb ottimizzati per la memoria.
+
+> [!NOTE] 
+> Queste limitazioni si applicano solo quando si fa riferimento a viste di sistema tempdb. Se si desidera, sarà possibile creare una tabella temporanea nella stessa transazione non appena si accede a una tabella con ottimizzazione per la memoria in un database utente.
+
+È possibile verificare se tempdb è ottimizzato per la memoria usando il comando T-SQL seguente:
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Pianificazione delle capacità per tempdb in SQL Server
 

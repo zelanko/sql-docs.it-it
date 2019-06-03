@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161644"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175023"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -244,7 +244,7 @@ Note sulla tabella:
  Archiviare tutti i valori mancanti come NULL. Tutti i valori NULL archiviati usando la parola NULL nel file di testo delimitato vengono importati come stringa "NULL".
   
    Encoding = {'UTF8' | 'UTF16'}  
- In Azure SQL Data Warehouse PolyBase è in grado di leggere i file di testo delimitato con codifica UTF8 e UTF16-LE. In SQL Server e PDW PolyBase non supporta la lettura dei file con codifica UTF16.
+ In Azure SQL Data Warehouse e PDW (APS CU7.4) PolyBase è in grado di leggere file di testo delimitato con codifica UTF8 e UTF16-LE. In SQL Server, PolyBase non supporta la lettura di file con codifica UTF16.
   
  DATA_COMPRESSION = *data_compression_method*  
  Specifica il metodo di compressione dei dati per il file esterno. Quando DATA_COMPRESSION non è specificato, per impostazione predefinita vengono usati i dati non compressi.
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>b. Creare un formato di file esterno RCFILE  
+### <a name="b-create-an-rcfile-external-file-format"></a>B. Creare un formato di file esterno RCFILE  
  In questo esempio viene creato un formato di file esterno per un file RC che usa il metodo di serializzazione/deserializzazione org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Specifica anche di usare il codec predefinito per il metodo di compressione dei dati. Se non si specifica DATA_COMPRESSION, per impostazione predefinita la compressione non viene usata.
   
 ```  

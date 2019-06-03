@@ -19,15 +19,15 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c071df768fa18e153bfac1c2dcd738bbaafa538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781140"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982733"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (carattere jolly per corrispondenze di singoli caratteri) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Usare il carattere di sottolineatura _ per individuare singoli caratteri in un'o
   
 ## <a name="examples"></a>Esempi  
 
-## <a name="a-simple-example"></a>A. Esempio semplice   
+## <a name="a-simple-example"></a>A: Esempio semplice   
 
 L'esempio seguente restituisce tutti i nomi di database che iniziano con la lettera `m` e la cui terza lettera è la lettera `d`. Il carattere di sottolineatura specifica che il secondo carattere del nome può essere qualsiasi lettera. I database `model` e `msdb` soddisfano questi criteri. Il database `master` non li soddisfa.
 

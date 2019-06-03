@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STUnion (geometry Data Type)
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: aad0cad982f7b13262f89e2fda146d1ae5344c5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fe364e8e1f3ca9d610d95283e8a1957a6d60e31
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639370"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935656"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265268"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982140"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +123,7 @@ Questo errore si verifica anche se non è in corso il rollback di ID di sessione
 
 È possibile ottenere lo stesso report di stato ripetendo la stessa istruzione KILL _session ID_|_UOW_ senza usare l'opzione WITH STATUSONLY. Tuttavia, non è consigliabile ripetere l'opzione in questo modo. Se si ripete un'istruzione KILL _session ID_, il nuovo processo potrebbe infatti arrestarsi se dopo il completamento del rollback l'ID di sessione viene riassegnato a una nuova attività prima dell'esecuzione della nuova istruzione KILL. Impedire l'arresto del nuovo processo specificando WITH STATUSONLY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** È richiesta l'autorizzazione ALTER ANY CONNECTION. L'autorizzazione ALTER ANY CONNECTION viene concessa mediante l'appartenenza al ruolo server predefinito sysadmin o processadmin.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** È richiesta l'autorizzazione KILL DATABASE CONNECTION. L'account di accesso a livello di server principale ha l'autorizzazione KILL DATABASE CONNECTION.  
@@ -138,7 +138,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>b. Utilizzo di KILL session ID WITH STATUSONLY per ottenere un report di stato  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. Utilizzo di KILL session ID WITH STATUSONLY per ottenere un report di stato  
 Nell'esempio seguente viene generato un report di stato del processo di rollback per l'ID di sessione specifico.  
   
 ```sql  

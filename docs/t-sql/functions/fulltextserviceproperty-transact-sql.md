@@ -18,15 +18,15 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5f411b829f55473c71cbdbcbfc91ebf52ebef80e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206160"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946584"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ FULLTEXTSERVICEPROPERTY ('property')
   
 |Proprietà|valore|  
 |--------------|-----------|  
-|**ResourceUsage**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
-|**ConnectTimeout**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
+|**ResourceUsage**|Viene restituito 0. Supportato unicamente per compatibilità con le versioni precedenti.|  
+|**ConnectTimeout**|Viene restituito 0. Supportato unicamente per compatibilità con le versioni precedenti.|  
 |**IsFulltextInstalled**|Indica se il componente full-text è installato o meno nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Il componente full-text non è installato.<br /><br /> 1 = Il componente full-text è installato.<br /><br /> NULL = Input non valido o errore.|  
-|**DataTimeout**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
+|**DataTimeout**|Viene restituito 0. Supportato unicamente per compatibilità con le versioni precedenti.|  
 |**LoadOSResources**|Indica se i word breaker e i filtri del sistema operativo sono registrati e utilizzati in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è disabilitata per impostazione predefinita per impedire modifiche accidentali del comportamento in seguito ad aggiornamenti al sistema operativo. L'attivazione dell'utilizzo delle risorse del sistema operativo consente l'accesso alle risorse per le lingue e i tipi di documenti registrati nel servizio di indicizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] per cui non è installata una risorsa specifica dell'istanza. Se si abilita il caricamento delle risorse del sistema operativo, verificare che si tratti di file binari firmati attendibili. In caso contrario, non potranno essere caricate quando la proprietà **VerifySignature** è impostata su 1.<br /><br /> 0 = Utilizza solo i filtri e i word breaker specifici per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Carica i filtri e i word breaker del sistema operativo.|  
 |**VerifySignature**|Specifica se solo i file binari firmati vengono caricati dal servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search. Per impostazione predefinita vengono caricati solo i file binari firmati attendibili.<br /><br /> 0 = Non verificare se i file binari sono firmati o meno.<br /><br /> 1 = Verifica che vengano caricati solo i file binari firmati attendibili.|  
   

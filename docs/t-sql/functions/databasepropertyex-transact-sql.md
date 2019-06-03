@@ -17,16 +17,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b502e1d930f8cfdd118e12f74921347c342601e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 690ed4abb406abc63be259241ba8c1c346bcf512
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045010"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943765"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="arguments"></a>Argomenti  
 *database*  
-Espressione che specifica il nome del database per il quale `DATABASEPROPERTYEX` restituisce le informazioni sulla proprietà denominata. *database* ha il tipo di dati **nvarchar(128)**.  
+Espressione che specifica il nome del database per il quale `DATABASEPROPERTYEX` restituisce le informazioni sulla proprietà denominata. *database* ha il tipo di dati **nvarchar(128)** .  
 
 Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` richiede il nome del database corrente. Se viene specificato un nome di database diverso, restituisce NULL per tutte le proprietà.
   
@@ -55,16 +55,16 @@ Espressione che specifica il nome della proprietà del database da restituire. *
   
 |Proprietà|Descrizione|Valore restituito|  
 |---|---|---|
-|Confronto|Nome delle regole di confronto predefinite per il database.|Nome delle regole di confronto.<br /><br /> NULL: database non avviato.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
+|Regole di confronto|Nome delle regole di confronto predefinite per il database.|Nome delle regole di confronto.<br /><br /> NULL: database non avviato.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |ComparisonStyle|Stile di confronto di Windows per le regole di confronto. Usare i seguenti valori di stile per creare una mappa di bit per il valore ComparisonStyle terminato:<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento: 2<br /><br /> Ignora Kana: 65536<br /><br /> Ignora larghezza: 131072<br /><br /> <br /><br /> Il valore predefinito 196609, ad esempio, è il risultato della combinazione delle opzioni Ignora maiuscole/minuscole, Ignora Kana e Ignora larghezza.|Restituisce lo stile di confronto.<br /><br /> Restituisce 0 per tutte le regole di confronto binarie.<br /><br /> Tipo di dati di base: **int**|  
 |Edizione|Edizione o livello di servizio del database.|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Utilizzo generico<br /><br /> Business Critical<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br /> System (per il database master)<br /><br /> NULL: database non avviato.<br /><br /> Tipo di dati di base: **nvarchar**(64)|  
-|IsAnsiNullDefault|Il database segue le regole ISO per il supporto dei valori Null.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
-|IsAnsiNullsEnabled|Tutti i confronti con un valore Null restituiscono unknown.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
-|IsAnsiPaddingEnabled|Le stringhe vengono riempite in modo che abbiano tutte la stessa lunghezza prima dell'esecuzione di confronti o inserimenti.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
-|IsAnsiWarningsEnabled|SQL Server visualizza messaggi di errore o di avviso se si verificano condizioni di errore standard.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
-|IsArithmeticAbortEnabled|Le query vengono interrotte se durante l'esecuzione si verifica un errore di overflow o di divisione per zero.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
-|IsAutoClose|Il database viene chiuso correttamente e le risorse corrispondenti vengono liberate dopo la disconnessione dell'ultimo utente.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
-|IsAutoCreateStatistics|In Query Optimizer vengono create statistiche di colonna singola, se necessario, per migliorare le prestazioni di esecuzione delle query.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsAnsiNullDefault|Il database segue le regole ISO per il supporto dei valori Null.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsAnsiNullsEnabled|Tutti i confronti con un valore Null restituiscono unknown.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsAnsiPaddingEnabled|Le stringhe vengono riempite in modo che abbiano tutte la stessa lunghezza prima dell'esecuzione di confronti o inserimenti.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsAnsiWarningsEnabled|SQL Server visualizza messaggi di errore o di avviso se si verificano condizioni di errore standard.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsArithmeticAbortEnabled|Le query vengono interrotte se durante l'esecuzione si verifica un errore di overflow o di divisione per zero.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsAutoClose|Il database viene chiuso correttamente e le risorse corrispondenti vengono liberate dopo la disconnessione dell'ultimo utente.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
+|IsAutoCreateStatistics|In Query Optimizer vengono create statistiche di colonna singola, se necessario, per migliorare le prestazioni di esecuzione delle query.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
 |IsAutoCreateStatisticsIncremental|Se possibile, le statistiche a colonna singola create automaticamente sono incrementali.|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
 |IsAutoShrink|I file di database sono sottoposti periodicamente a compattazione automatica.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|  
 |IsAutoUpdateStatistics|Quando una query usa statistiche esistenti potenzialmente non aggiornate, Query Optimizer aggiorna tali statistiche.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**|
@@ -130,7 +130,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
 0  
 ```  
   
-### <a name="b-retrieving-the-default-collation-for-a-database"></a>b. Recupero delle regole di confronto predefinite per un database  
+### <a name="b-retrieving-the-default-collation-for-a-database"></a>B. Recupero delle regole di confronto predefinite per un database  
 In questo esempio vengono restituiti vari attributi del database `AdventureWorks`.
   
 ```sql

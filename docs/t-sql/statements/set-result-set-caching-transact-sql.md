@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd0141a6fbd21c11f7401fa2c45dae0cc75b983d
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65561494"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948743"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL)
 
@@ -37,9 +37,11 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+> [!Note]
+> Questa funzionalità viene implementata in tutte le aree. Controllare la versione distribuita per l'istanza in uso e le [note sulla versione di Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) più recenti per la disponibilità delle funzionalità.
   
-Questo comando deve essere eseguito mentre si è connessi al database master.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
-) per mostrare l'impostazione di memorizzazione nella cache dei risultati per un database.  
+Questo comando deve essere eseguito mentre si è connessi al database master.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) per mostrare l'impostazione di memorizzazione nella cache dei risultati per un database.  
 
 **SÌ** Specifica che i set di risultati delle query restituiti da questo database verranno memorizzati nella cache nell'archiviazione di Azure SQL Data Warehouse.
 

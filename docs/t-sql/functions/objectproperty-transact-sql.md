@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100896"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948952"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|Qualsiasi oggetto con ambito schema|Vincolo UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabella|Tabella definita dall'utente.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Vista|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:**  Il proprietario dello schema non deve necessariamente corrispondere al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
+|OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:**  Il proprietario dello schema non corrisponde necessariamente al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
 |TableDeleteTrigger|Tabella|La tabella include un trigger DELETE.<br /><br /> >1 = ID del primo trigger del tipo specificato.|  
 |TableDeleteTriggerCount|Tabella|La tabella include il numero di trigger DELETE specificato.<br /><br /> >0 = Numero di trigger DELETE.|  
 |TableFullTextMergeStatus|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se una tabella dispone di un indice full-text su cui è attualmente in corso un'operazione di unione.<br /><br /> 0 = La tabella non dispone di un indice full-text o sull'indice full-text non è in corso un'operazione di unione.<br /><br /> 1 = Sull'indice full-text è in corso un'operazione di unione.|  
@@ -200,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Verifica che una funzione a valori scalari definita dall'utente sia deterministica  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verifica che una funzione a valori scalari definita dall'utente sia deterministica  
  Nell'esempio seguente viene verificato se la funzione definita dall'utente con valori scalari `ufnGetProductDealerPrice`, che restituisce un valore **money**, è o meno deterministica.  
   
 ```  
