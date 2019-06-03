@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c8be3a1568e45f62e393ce07f5fd174d5e3949ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66064464"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270167"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -296,6 +296,8 @@ Consente di impostare le funzionalità di eliminazione automatica per le [tabell
 
 - Con database singoli e pool elastici di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa opzione può essere impostata nei singoli database utente del server di database SQL.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nell'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
+
+<a name="lqp"></a>
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
