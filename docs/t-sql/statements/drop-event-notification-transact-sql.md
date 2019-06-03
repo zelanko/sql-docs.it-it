@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 492ea717df3722e09b42e31cc8acf579658f082b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852662f66b3989cfec15392218346d792be8b835
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839719"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270219"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 ## <a name="remarks"></a>Remarks  
  Se viene attivata una notifica degli eventi all'interno di una transazione e tale notifica viene eliminata all'interno della stessa transazione, l'istanza della notifica degli eventi viene inviata e quindi la notifica degli eventi viene eliminata.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eliminare una notifica degli eventi definita a livello di ambito del database, è necessario come minimo che l'utente sia il proprietario della notifica degli eventi o disponga dell'autorizzazione ALTER ANY DATABASE EVENT NOTIFICATION nel database corrente.  
   
  Per eliminare una notifica degli eventi definita a livello di ambito del server, è necessario come minimo che l'utente sia il proprietario della notifica degli eventi o disponga dell'autorizzazione ALTER ANY EVENT NOTIFICATION nel server.  
