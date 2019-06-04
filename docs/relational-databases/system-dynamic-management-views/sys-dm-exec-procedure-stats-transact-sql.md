@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013408"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462671"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +77,10 @@ ms.locfileid: "63013408"
 |**min_spills**|**bigint**|Il numero minimo di pagine che questa stored procedure ha mai risultante da un'unica esecuzione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Il numero massimo di pagine che questa stored procedure ha mai risultante da un'unica esecuzione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|L'identificatore per il nodo in questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|Numero totale di letture di server di pagine effettuate dalle esecuzioni della stored procedure dopo l'ultima compilazione.<br /><br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure|  
+|**last_page_server_reads**|**bigint**|Il numero di letture di pagine server eseguita l'ultima esecuzione della stored procedure.<br /><br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure|  
+|**min_page_server_reads**|**bigint**|Il numero minimo di server di pagina legge che questa stored procedure effettuate durante una singola esecuzione.<br /><br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure|  
+|**max_page_server_reads**|**bigint**|Il numero massimo di server di pagina legge che questa stored procedure effettuate durante una singola esecuzione.<br /><br /> **Si applica a**: Con Iperscalabilità di Database SQL di Azure|  
   
  <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta delle statistiche è abilitata, tempo del processo viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  
   
