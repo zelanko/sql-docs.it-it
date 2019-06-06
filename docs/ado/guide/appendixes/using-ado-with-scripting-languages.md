@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217748"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702769"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Uso di ADO con i linguaggi di scripting
 All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite gli script lato server. In questo scenario, ADO, il provider OLE DB sottostante che viene utilizzato e vengono installati altri componenti necessari per fare riferimento a un archivio dati specificato in un server che esegue Internet Information Services (IIS). Usando le pagine ASP (Active Server), ADO è un componente di cui viene fatto riferimento in uno script che può generare codice HTML, ad esempio. Il contenuto HTML può essere passato tramite HTTP in un Web browser client. Tramite la creazione di script, la pagina Web può inviare azioni torna allo script sul lato server, in modo da aggiornare, attraversare o visualizzare i dati specifici.  
@@ -30,13 +30,13 @@ All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite 
 |------------|-------------------------|  
 |Connessione di ADO|Yes|  
 |Comando ADO|No|  
-|Parametro ADO|No|  
+|Parametro ADO|no|  
 |ADO Recordset|Yes|  
 |ADO Record|Yes|  
 |Stream ADO|Yes|  
 |Errore ADO|No|  
 |Catalogo ADOX|No|  
-|ADOX CellSet|no|  
+|ADOX CellSet|No|  
 |Servizi Desktop remoto DataControl|Yes|  
 |DataSpace Servizi Desktop remoto|Yes|  
 |Data factory di servizi desktop remoto|No|  

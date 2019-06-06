@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: edd070cc6f10829b597534d024d767de2a0c7e12
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911188"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701716"
 ---
 # <a name="receiving-results"></a>Ricezione dei risultati
 In ADO la maggior parte dei comandi generare alcune informazioni restituite al chiamante. Per i comandi di restituzione di set di righe, i risultati vengono ricevuti un **Recordset** oggetto, che è probabilmente più utilizzato l'oggetto ADO.  

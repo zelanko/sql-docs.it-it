@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5fc27ed728483fd42d90e599580ce32194f08b99
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184943"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699901"
 ---
 # <a name="using-a-recordset-object"></a>Uso di un oggetto Recordset
 In alternativa, è possibile usare **Open** per stabilire una connessione in modo implicito e inviare un comando tramite la connessione in un'unica operazione. Ad esempio, in Visual Basic:  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b4798e2658bf23edaf7cd04fb819e26de2a55cc9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472383"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700826"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminazione di record con il metodo Delete
 Usando il **eliminare** metodo contrassegna il record corrente o un gruppo di record in un **Recordset** oggetto per l'eliminazione. Se il **Recordset** oggetto non consente l'eliminazione di record, si verifica un errore. Se si è in modalità di aggiornamento immediato, le eliminazioni verranno eseguite immediatamente nel database. Se non è possibile eliminare un record (a causa di violazioni di integrità del database, ad esempio), il record rimarranno nella modalità di modifica dopo la chiamata a **Update.** Ciò significa che è necessario annullare l'aggiornamento con [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) prima di uscire il record corrente (ad esempio, usando [Close](../../../ado/reference/ado-api/close-method-ado.md), [spostare](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

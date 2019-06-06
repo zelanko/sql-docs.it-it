@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d5d64dc151fbd54da17a65e2178b7f38eb6b2834
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699660"
 ---
 # <a name="customization-file-logs-section"></a>Sezione Logs del file di personalizzazione
 Il **registri** sezione contiene una voce di file di log, che specifica il nome di un file che registra gli errori durante l'operazione del **DataFactory**.  

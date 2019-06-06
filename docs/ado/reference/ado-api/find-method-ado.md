@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028137"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697960"
 ---
 # <a name="find-method-ado"></a>Metodo Find (ADO)
 Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, può essere specificata la direzione della ricerca, la riga iniziale e offset della riga iniziale. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata sul record trovato. in caso contrario, la posizione è impostata su finale (o avvio) del **Recordset**.  
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>Note  
  Solo un nome di colonna singola può essere specificato *criteri*. Questo metodo non supporta le ricerche su più colonne.  
   
- L'operatore di confronto *criteri* potrebbe essere "**>**"(maggiore),"**\<**" (minore di), "=" (uguale), "> =" (maggiore o uguale), "< =" (minore o uguale a), "<>" (non uguale), o "like" (criteri di ricerca).  
+ L'operatore di confronto *criteri* potrebbe essere " **>** "(maggiore)," **\<** " (minore di), "=" (uguale), "> =" (maggiore o uguale), "< =" (minore o uguale a), "<>" (non uguale), o "like" (criteri di ricerca).  
   
  Il valore in *criteri* potrebbe essere una stringa, numero a virgola mobile o Data. Valori stringa sono delimitati da virgolette singole o doppie "" cancelletto (#) (ad esempio, "stato ="WA"" o "state = WA # #"). I valori delle date sono delimitati con segni di (cancelletto) "#" (ad esempio, "start_date > & 97/n. 7/22"). Questi valori possono contenere ore, minuti e secondi per indicare i timbri data / ora, ma non devono contenere millisecondi o si verificheranno errori.  
   

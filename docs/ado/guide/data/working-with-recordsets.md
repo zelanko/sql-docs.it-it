@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184821"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704437"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottimizzare l'ordine dei dati nel set di risultati, per cercare un record specifico in base ai criteri che viene fornito e anche per ottimizzare le operazioni di ricerca tramite indici. Se queste funzionalità sono disponibili per l'utilizzo dipende dal provider e in alcuni casi, ad esempio quella del [indice](../../../ado/reference/ado-api/index-property.md) proprietà - la struttura dell'origine dati stessa.  
@@ -54,7 +54,7 @@ Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottim
   
  Per il criterio, è possibile specificare solo un nome di colonna singola. In altre parole, questo metodo non supporta le ricerche a più colonne.  
   
- L'operatore di confronto per il criterio può essere"**>**"(maggiore),"**\<**" (minore di), "=" (uguale), "> =" (maggiore o uguale), "< =" (minore o uguale a), " <> "(non uguale), o"LIKE"(criteri di ricerca).  
+ L'operatore di confronto per il criterio può essere" **>** "(maggiore)," **\<** " (minore di), "=" (uguale), "> =" (maggiore o uguale), "< =" (minore o uguale a), " <> "(non uguale), o"LIKE"(criteri di ricerca).  
   
  Il valore del criterio può essere una stringa, numero a virgola mobile o Data. Valori stringa sono delimitati da virgolette singole o doppie "" cancelletto (#) (ad esempio, "stato ="WA"" o "state = WA # #"). I valori delle date sono delimitati con segni di (cancelletto) "#" (ad esempio, "start_date > & 97/n. 7/22").  
   
@@ -63,7 +63,7 @@ Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottim
  Gli asterischi sono utilizzabile solo alla fine di una stringa di criteri o insieme all'inizio e fine di una stringa di criteri, come illustrato in precedenza. È possibile usare l'asterisco come carattere jolly iniziale ('* str') o incorporati con caratteri jolly s\*r'). Ciò causerà un errore.  
   
 ### <a name="seek-and-index"></a>Ricerca e di indice  
- Usare la **Seek** metodo insieme al **indice** proprietà se il provider sottostante supporta gli indici per il **Recordset** oggetto. Usare la [supporta](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** metodo per determinare se il provider sottostante supporta **Seek**e il **Supports (adIndex)** metodo per determinare se il provider supporta gli indici. (Ad esempio, il [Provider OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta **Seek** e **indice**.)  
+ Usare la **Seek** metodo insieme al **indice** proprietà se il provider sottostante supporta gli indici per il **Recordset** oggetto. Usare la [supporta](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** metodo per determinare se il provider sottostante supporta **Seek**e il **Supports (adIndex)** metodo per determinare se il provider supporta gli indici. (Ad esempio, il [Provider OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta **Seek** e **indice**.)  
   
  Se **Seek** non trovare la riga desiderata, nessun errore si verifica e la riga è posizionato alla fine delle **Recordset**. Impostare il **indice** proprietà per l'indice desiderato prima di eseguire questo metodo.  
   
@@ -88,12 +88,12 @@ Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottim
   
 -   *FieldName* deve essere un nome di campo valido dal **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome nelle parentesi quadre.  
   
--   *Operatore* deve essere uno dei seguenti: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oppure **come**.  
+-   *Operatore* deve essere uno dei seguenti: **\<** , **>** , **\< =** , **>=** , **<>** , **=** , oppure **come**.  
   
 -   *Valore* è il valore con cui si confronteranno i valori di campo (ad esempio `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilizzare le virgolette singole (') con le stringhe e caratteri cancelletto (`#`) con le date. Per i numeri, è possibile utilizzare la notazione scientifica i separatori decimali e simboli del dollaro. Se *Operator* viene **quali**, *valore* possono usare caratteri jolly. Solo l'asterisco (\*) e segno di percentuale (%) sono consentiti i caratteri jolly e devono essere l'ultimo carattere nella stringa. *Valore* non può essere null.  
   
     > [!NOTE]
-    >  Per includere le virgolette singole (') nel filtro *valore*, usare due virgolette singole per rappresentare uno. Ad esempio, per filtrare in base *o ' Malley*, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa di segni di cancelletto (#). Ad esempio, per filtrare in base *'1'*, la stringa di criteri deve essere `"col1 = #'1'#"`.  
+    >  Per includere le virgolette singole (') nel filtro *valore*, usare due virgolette singole per rappresentare uno. Ad esempio, per filtrare in base *o ' Malley*, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa di segni di cancelletto (#). Ad esempio, per filtrare in base *'1'* , la stringa di criteri deve essere `"col1 = #'1'#"`.  
   
  Non vi è alcuna priorità tra **AND** e **o**. Le clausole possono essere raggruppate all'interno delle parentesi. Tuttavia, non è possibile raggruppare le clausole unite da un **o** e quindi aggiungere il gruppo a un'altra clausola con l'operatore AND, come indicato di seguito.  
   

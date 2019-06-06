@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b5f6379eb6cfc1d0f9020019d543cda180d9d88b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062807"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700606"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Passaggio 1: Configurare il progetto di Visual Basic
 In questo scenario, si presuppone di disporre di Microsoft Visual Basic 6.0, ADO 2.5 o versioni successive e il Provider Microsoft OLE DB per Internet Publishing installati nel sistema. Si verrà innanzitutto creato un nuovo progetto e quindi aggiungere alcuni controlli al form predefinito nel progetto.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853324"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701324"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o servizi desktop remoto, un mondo ideale sarebbe uno dei dati di ogni origine espone un'interfaccia OLE DB, in modo da ADO è stato possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database implementa le interfacce OLE DB, alcune origini dati non sono ancora esposti in questo modo. Tuttavia, la maggior parte dei sistemi DBMS in uso oggi accessibili tramite ODBC.
@@ -65,7 +65,7 @@ MSDASQL
 
  Il provider non supporta parametri di connessione specifico oltre a quelli definiti da ADO. Tuttavia, il provider passerà a eventuali parametri di connessione non ADO da Gestione driver ODBC.
 
- Poiché è possibile omettere il **Provider** parametro, pertanto è possibile comporre una stringa di connessione ADO è identica alla stringa di connessione ODBC per la stessa origine dati. Usare gli stessi nomi di parametro (**DRIVER =**, **DATABASE =**, **DSN =** e così via), i valori e la sintassi come si sarebbe durante la composizione di una stringa di connessione ODBC. È possibile connettersi con o senza un nome di origine di dati predefiniti (DSN) o FileDSN.
+ Poiché è possibile omettere il **Provider** parametro, pertanto è possibile comporre una stringa di connessione ADO è identica alla stringa di connessione ODBC per la stessa origine dati. Usare gli stessi nomi di parametro (**DRIVER =** , **DATABASE =** , **DSN =** e così via), i valori e la sintassi come si sarebbe durante la composizione di una stringa di connessione ODBC. È possibile connettersi con o senza un nome di origine di dati predefiniti (DSN) o FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintassi con un DSN o FileDSN:
 
@@ -84,9 +84,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Note
  Se si usa un' **DSN** oppure **FileDSN**, deve essere definito tramite Amministrazione origine dati ODBC nel Pannello di controllo di Windows. In Microsoft Windows 2000, l'amministratore ODBC si trova in strumenti di amministrazione. Nelle versioni precedenti di Windows, è denominata l'icona del ruolo Amministratore ODBC **ODBC a 32 bit** o semplicemente **ODBC**.
 
- Come alternativa all'impostazione di un **DSN**, è possibile specificare il driver ODBC (**DRIVER =**), ad esempio "SQL Server"; il nome del server (**SERVER =**); e il nome del database (**DATABASE =**).
+ Come alternativa all'impostazione di un **DSN**, è possibile specificare il driver ODBC (**DRIVER =** ), ad esempio "SQL Server"; il nome del server (**SERVER =** ); e il nome del database (**DATABASE =** ).
 
- È anche possibile specificare un nome di account utente (**UID =**) e la password per l'account utente (**PWD =**) nei parametri ODBC specifiche o nello standard definiti da ADO *utente* e *password* parametri.
+ È anche possibile specificare un nome di account utente (**UID =** ) e la password per l'account utente (**PWD =** ) nei parametri ODBC specifiche o nello standard definiti da ADO *utente* e *password* parametri.
 
  Anche se un **DSN** già una definizione specifica un database, è possibile specificare *una* *database* parametro oltre a un **DSN** per la connessione per un database diverso. È consigliabile includere sempre *il* *database* parametro quando si usa un **DSN**. Ciò garantisce che la connessione al database corretto se un altro utente modificato il parametro predefinito del database dall'ultima ricerca i **DSN** definizione.
 
@@ -211,13 +211,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|Yes|Yes|Yes|
 |[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Yes|Yes|Yes|Yes|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Yes|Yes|Yes|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Yes|Yes|Yes|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Yes|Yes|Yes|Yes|
 |[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|Yes|Yes|Yes|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|No|No|Yes|Yes|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|No|no|Yes|Yes|
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|Yes|Yes|Yes|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Yes|Yes|Yes|Yes|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Yes|Yes|Yes|Yes|

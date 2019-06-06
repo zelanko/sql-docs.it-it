@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0fbb20e623c37528285b8c1dd248ad24217cb2bc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028097"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697820"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Esempio delle proprietà Filter e RecordCount (VB)
 In questo esempio viene aperto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sulla tabella nel server di pubblicazione le ***Pubs*** database. Quindi, utilizza il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare il numero di record visibili da tali server di pubblicazione in un determinato paese/area geografica. Il **RecordCount** proprietà viene utilizzata per mostrare la differenza tra i set di record non filtrate e filtrate.  

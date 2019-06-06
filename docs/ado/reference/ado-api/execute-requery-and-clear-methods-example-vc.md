@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2e319fe88f709acd25bded8c4dce8e6b4c702773
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63070944"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695254"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Eseguire, rieseguire una query ed eliminare i metodi esempio (VC + +)
 Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Le funzioni ExecuteCommand e PrintOutput sono necessari per eseguire questo esempio.  

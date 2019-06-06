@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1205c87f1251543521deddd7d1118b602ac7e05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f40553d6b992a2cae7d886663d1f622d788eb847
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709739"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706331"
 ---
 # <a name="primarykey-property-adox"></a>Proprietà PrimaryKey (ADOX)
 Indica se l'indice rappresenta la chiave primaria nella tabella.  

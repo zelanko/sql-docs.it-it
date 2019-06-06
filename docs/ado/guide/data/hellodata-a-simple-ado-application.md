@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162107"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700632"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 I passaggi di questa semplice applicazione grazie a ognuna delle operazioni principali ADO: introduzione, l'analisi, la modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrare l'attenzione sui fondamenti di ADO e per evitare confusioni a livello di codice, gestione degli errori nell'esempio è minimo.  
@@ -51,9 +51,9 @@ I passaggi di questa semplice applicazione grazie a ognuna delle operazioni prin
 |DataGrid MS|Nome|grdDisplay1|  
 |TextBox|Nome|txtDisplay1|  
 ||Proprietà Multiline|true|  
-|Pulsante di comando|nome|cmdGetData|  
+|Pulsante di comando|Nome|cmdGetData|  
 ||Didascalia|Get Data|  
-|Pulsante di comando|Nome|cmdExamineData|  
+|Pulsante di comando|nome|cmdExamineData|  
 ||Didascalia|Esaminare i dati|  
 |Pulsante di comando|Nome|cmdEditData|  
 ||Didascalia|Modificare i dati|  

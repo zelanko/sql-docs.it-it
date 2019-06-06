@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cbfdff7c22152acfd0deb97a6e278bd5fd3f553f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308912"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698435"
 ---
 # <a name="copyto-method-ado"></a>Metodo CopyTo (ADO)
 Copia il numero specificato di caratteri o byte (a seconda [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) nella [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a un altro **Stream** oggetto.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855184"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702728"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per il servizio Microsoft Active Directory
 Il Provider di Active Directory Service Interfaces (ADSI) consente di ADO per connettersi ai servizi eterogenei directory tramite ADSI. In questo modo le applicazioni ADO accesso in lettura per i servizi directory di Microsoft Windows NT 4.0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e Novell Directory Services. ADSI è basato su un modello di provider, in modo che se è presente un nuovo provider concedere l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi facilmente. Il provider ADSI è a thread libero e abilitata per Unicode.  
@@ -67,13 +67,13 @@ ADSDSOObject
 |*Attributi*|Indica un elenco delimitato da virgole di attributi da restituire.|  
 |*Ambito*|Facoltativo. Oggetto **stringa** che specifica l'ambito della ricerca. I possibili valori sono i seguenti:<br /><br /> -Base - eseguire la ricerca solo l'oggetto di base (radice della ricerca).<br />-UnLivello - ricerca di un solo livello.<br />-Sottoalbero, eseguire una ricerca nell'intero sottoalbero.|  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- Il provider supporta anche SQL SELECT per il testo del comando. Ad esempio:   
+ Il provider supporta anche SQL SELECT per il testo del comando. Ad esempio:  
   
 ```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -117,9 +117,9 @@ objectClass='user' AND objectCategory='Person'"
   
 |Metodo|Disponibile?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|no|  
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|no|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|  
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|  
@@ -135,7 +135,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|  
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|Yes|  
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|no|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|No|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   
  Per altre informazioni su ADSI e le specifiche del provider, consultare la documentazione di Active Directory Service Interfaces o visitare la pagina Web ADSI.  

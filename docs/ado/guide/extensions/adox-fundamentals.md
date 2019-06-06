@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 824c3fd5121aca7638d67cc3606d8280f75e255b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699674"
 ---
 # <a name="adox-fundamentals"></a>Nozioni fondamentali su ADOX
 Microsoft® ActiveX® Data Objects Extensions per Data Definition Language and Security (ADOX) è un'estensione per gli oggetti ADO e di un modello di programmazione. ADOX include gli oggetti per la creazione di schemi e modifica, nonché protezione. Poiché si tratta di un approccio basato su oggetti per modificare lo schema, è possibile scrivere codice che funzionerà con i dati di varie origini indipendentemente dalle differenze nelle loro sintassi native.  

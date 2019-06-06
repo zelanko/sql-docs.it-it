@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6a53f52e9be83994d5d47628654a64146880ee06
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315930"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695853"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Esempio del metodo CompareBookmarks (VB)
 Questo esempio viene illustrato il [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (metodo). Il valore relativo di segnalibri è raramente necessaria, a meno che un determinato segnalibro è in qualche modo particolare.  

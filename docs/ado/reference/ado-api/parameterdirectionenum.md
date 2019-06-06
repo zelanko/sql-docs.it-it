@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f62d2119764466cabb542d26849712d733453ba
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314829"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703263"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) rappresenta un parametro di input, un parametro di output, sia un tipo di input e un parametro di output o il valore restituito da una stored procedure.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9db18a572fc82b05e75fb7bb286afb572fe500fd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929893"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704242"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrazione di un oggetto business personalizzato
 Per avviare correttamente un oggetto business personalizzato (con estensione dll o .exe) tramite il server Web, il ProgID dell'oggetto business deve essere immesso nel Registro di sistema come descritto in questa procedura. Questa funzionalità di servizi desktop remoto consente di proteggere la sicurezza del server Web tramite l'esecuzione di eseguibili attendibili.  

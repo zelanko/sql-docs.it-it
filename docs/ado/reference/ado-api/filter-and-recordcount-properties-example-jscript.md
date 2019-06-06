@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dc0d846c77e2f5f237955a9ce437ea39b51d2cb2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028092"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694984"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Esempio di proprietà RecordCount (JScript) e filtro
 Questo esempio viene aperto un **Recordset** sulla tabella del database Northwind, quindi Usa le aziende il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare i record visibili a quelle in cui il campo di CompanyName inizia con la lettera D. tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **FilterJS**.  

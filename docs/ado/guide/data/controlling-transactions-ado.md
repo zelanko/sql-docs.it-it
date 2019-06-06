@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0006957b75d89c6c8ae3455508cc122682cb2d05
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472657"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702142"
 ---
 # <a name="controlling-transactions-ado"></a>Controllo delle transazioni (ADO)
 ADO supporta l'elaborazione all'interno di una connessione con l'aiuto di transazioni di **BeginTrans**, **CommitTrans**, e **RollbackTrans** metodi su un  **Connessione** oggetto. L'idea generale dell'implementazione di elaborazione delle transazioni nel ADO è illustrato nel seguente frammento di codice semplice.  

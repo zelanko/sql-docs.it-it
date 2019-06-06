@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855849"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701210"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per Microsoft Panoramica del servizio di indicizzazione
 Il Provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice per file system e i dati Web indicizzati dal servizio di indicizzazione Microsoft. Le applicazioni ADO possono eseguire query SQL per recuperare le informazioni sulle proprietà di contenuto e file.
@@ -99,7 +99,7 @@ MSIDXS
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|no|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|

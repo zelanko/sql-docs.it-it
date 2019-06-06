@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3382e222a03f7538d3c666c3b85527b487d499f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f25b61ca54b3a4ac15584ecf31874f90787c735d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911514"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700464"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Persistenza dei recordset gerarchici
 È possibile salvare un modello gerarchico **Recordset** in un file in formato ADTG o XML chiamando la [salvare](../../../ado/reference/ado-api/save-method.md) (metodo). Tuttavia, due limitazioni si applicano durante il salvataggio gerarchica **Recordset**s in formato XML: Se non è possibile salvare in XML la gerarchica **Recordset** include aggiornamenti, in sospeso e non è possibile salvare un con parametri gerarchici **Recordset**.  

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c796cefc03092e944520a6517bc31c585a2dc42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ee5560a27f7df49a82e964753f792bd46270d3a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62509913"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696489"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)
 Questi metodi gestiscono l'elaborazione all'interno delle transazioni una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto come indicato di seguito:  

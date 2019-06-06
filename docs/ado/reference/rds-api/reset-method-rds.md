@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fc769436a919a4d522fb48699c6fc6faa0d6e5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8e83341a72e6864b6545a4ccbbc2262403f9b06
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670260"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697498"
 ---
 # <a name="reset-method-rds"></a>Metodo Reset (Servizi Desktop remoto)
 Esegue l'ordinamento o filtro sul lato client **Recordset** basato sulle proprietà di ordinamento e filtro specificata.  

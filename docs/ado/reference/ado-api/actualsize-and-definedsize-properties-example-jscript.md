@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d16ef9737201956d80c5ad70f3e9281bf7fb6edc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: eba72bf4ddf9a67b85435cec924897b0d0fbc17c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065369"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704020"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>Esempio delle proprietà ActualSize e DefinedSize (JScript)
 Questo esempio Usa la [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) proprietà da visualizzare la dimensione definita e dalla dimensione effettiva di un campo. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **ActualSizeJS**.  

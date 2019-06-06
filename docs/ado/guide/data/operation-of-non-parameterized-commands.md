@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 884ef4e72b975de0eb9dd92e80ec3ce0d513546b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 40677971cc2bc5b97c62aad1e638e52deb24c67e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63187787"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700533"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funzionamento dei comandi senza parametri
 Per i comandi senza parametri, vengono eseguiti tutti i comandi di provider e il **recordset** vengono creati durante l'esecuzione del comando. Se il comando viene eseguito in modo sincrono, tutti i **recordset** verrà popolato completamente. Se è stata selezionata una modalità di popolamento asincrono, lo stato di popolamento del **recordset** variano in base alla modalità di popolamento e la dimensione delle **recordset**.  

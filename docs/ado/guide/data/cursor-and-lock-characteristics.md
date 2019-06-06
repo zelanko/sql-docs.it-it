@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8507be55ae84a3a03fd75871106bc39e0631d89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a3a206a21cf7c6680a656c89c48b8f52d1069d78
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472614"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702119"
 ---
 # <a name="cursor-and-lock-characteristics"></a>Caratteristiche dei cursori e dei blocchi
 Mentre le caratteristiche di un cursore dipendono dalle funzionalità del provider, i seguenti vantaggi e svantaggi in genere si applicano ai vari tipi di cursori e blocchi.  
