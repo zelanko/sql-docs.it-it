@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248975"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718561"
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
 La sezione di Visual C++ di [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) viene fornita una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico su un'istanza del modello di evento all'interno dell'ambiente creato dal **#import** direttiva.  
@@ -29,7 +29,7 @@ La sezione di Visual C++ di [creazione di istanze evento ADO per linguaggio](../
   
 -   Il **#import** direttiva risolve **typedef**del, tipi di dati della firma di metodo e i modificatori di propri moduli fondamentali.  
   
--   I metodi virtuali puri che devono essere sovrascritti sono precedute tutte dal prefisso da "**raw _**".  
+-   I metodi virtuali puri che devono essere sovrascritti sono precedute tutte dal prefisso da "**raw _** ".  
   
  Parte del codice semplicemente riflette stile di codifica.  
   

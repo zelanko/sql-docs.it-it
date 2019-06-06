@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 265b274a76e1cf88b5d039a1296090e4fa4c6324
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248904"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718565"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Indice sintassi ADO per Visual C++ per COM
 Questo indice è un riferimento incrociato a riferimenti al linguaggio ADO basato su Microsoft Visual C++.  
   
- Se si usa la **#import** direttiva nell'applicazione, verrà generato un file di intestazione che consentirà di usare una sintassi simile a Microsoft Visual Basic. Nomi di proprietà del form **get _**_PropertyName_ e **Put _**_PropertyName_ può essere considerata come se fossero stati dichiarati semplicemente come  *PropertyName*. Una proprietà può quindi essere considerata come un membro dati anziché una funzione.  
+ Se si usa la **#import** direttiva nell'applicazione, verrà generato un file di intestazione che consentirà di usare una sintassi simile a Microsoft Visual Basic. Nomi di proprietà del form **get _** _PropertyName_ e **Put _** _PropertyName_ può essere considerata come se fossero stati dichiarati semplicemente come  *PropertyName*. Una proprietà può quindi essere considerata come un membro dati anziché una funzione.  
   
  Tutti i metodi, proprietà ed eventi sono funzioni che restituiscono un **HRESULT**, che è possibile testare per determinare se la funzione è stata eseguita correttamente.  
   

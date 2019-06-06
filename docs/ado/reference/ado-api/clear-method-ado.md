@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e69e7d2d2a66ccb9df0e03f6f77849c502f3bf2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d35df7a036f41d74ce0a3fc94c3adef1abae91c3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239750"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718504"
 ---
 # <a name="clear-method-ado"></a>Metodo Clear (ADO)
 Rimuove tutti i [errore](../../../ado/reference/ado-api/error-object.md) oggetti dalle [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta.  

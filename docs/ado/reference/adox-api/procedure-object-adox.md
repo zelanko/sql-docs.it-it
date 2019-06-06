@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41d8e640d5b85f8adc32e0ce69801accacdc602d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2c275322fbe65585e100907f25009d2d3e6e0d0f
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709517"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718844"
 ---
 # <a name="procedure-object-adox"></a>Oggetto Procedure (ADOX)
 Rappresenta una stored procedure. Quando usato in combinazione con l'oggetto ADO [comandi](../../../ado/reference/ado-api/command-object-ado.md) oggetti, il **Procedure** oggetto può essere utilizzato per l'aggiunta, eliminazione o modifica di stored procedure.  
