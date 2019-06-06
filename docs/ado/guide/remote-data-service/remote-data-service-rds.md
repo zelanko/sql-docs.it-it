@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 154ded5979e4c277f0f8f9b14ca3814cd7a0e9ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bb2b494f55bb421312798a550da72fcfd5630286
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929832"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718358"
 ---
 # <a name="remote-data-service-rds"></a>Servizio dati remoto (RDS)
 Servizio dati remoto (RDS) è una funzionalità di ADO, con cui è possibile spostare dati da un server a un'applicazione client o una pagina Web, modificare i dati nel client e restituire gli aggiornamenti al server in un unico round trip.  

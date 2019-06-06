@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494393"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719397"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql-conf
 
@@ -395,7 +394,7 @@ La prima acquisizione di fase viene controllata dal **coredump.coredumptype** im
 
     La tabella seguente elenca i possibili **coredump.coredumptype** valori.
 
-    | Tipo | Descrizione |
+    | Type | Descrizione |
     |-----|-----|
     | **mini** | Mini è il tipo di file di dump più piccolo. Usa le informazioni sul sistema di Linux per determinare i thread e i moduli del processo. Il dump contiene solo i moduli e gli stack di thread di ambiente host. Non contiene riferimenti indiretti memoria o alle raccolte globals. |
     | **miniplus** | È simile a mini miniPlus, ma include memoria aggiuntiva. Riconosce le caratteristiche interne di SQLPAL e l'ambiente host, aggiungere le seguenti aree di memoria per il dump:</br></br> -Funzioni globali varie</br> -Tutta la memoria superiori a 64TB</br> -All denominata area trovata **/proc/$ pid e mappe**</br> -Memoria indiretto dal thread e stack</br> -Informazioni thread</br> -Del Teb e associati di Peb</br> -Modulo informazioni</br> -VMM e VAD albero |

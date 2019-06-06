@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 982c379f24731f80f30249b98ed2a571111de1f4
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248804"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718142"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append e CreateParameter (esempio di metodi (JScript)
 Questo esempio Usa la [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AppendJS**.  
