@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184803"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697930"
 ---
 # <a name="execute-method-ado-command"></a>Metodo Execute (Command - ADO)
 Esegue la query, l'istruzione SQL o stored procedure specificata nel [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oppure [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [oggetto comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Note  
  Usando il **Execute** metodo su un **comando** viene eseguito la query specificata nell'oggetto di **CommandText** proprietà o **CommandStream** proprietà dell'oggetto.  
   
- I risultati vengono restituiti un **Recordset** (per impostazione predefinita) o come un flusso di informazioni binarie. Per ottenere un flusso binario, specificare **adExecuteStream** nelle *opzioni*, quindi fornire un flusso impostando **Command.Properties ("Output Stream")**. Un oggetto ADO **Stream** oggetto può essere specificato per ricevere i risultati o un altro oggetto di flusso, ad esempio l'oggetto risposta IIS può essere specificato. Se è stato specificato alcun flusso prima di chiamare **Execute** con **adExecuteStream**, si verifica un errore. La posizione del flusso sul valore restituito da **Execute** è provider specifico.  
+ I risultati vengono restituiti un **Recordset** (per impostazione predefinita) o come un flusso di informazioni binarie. Per ottenere un flusso binario, specificare **adExecuteStream** nelle *opzioni*, quindi fornire un flusso impostando **Command.Properties ("Output Stream")** . Un oggetto ADO **Stream** oggetto può essere specificato per ricevere i risultati o un altro oggetto di flusso, ad esempio l'oggetto risposta IIS può essere specificato. Se è stato specificato alcun flusso prima di chiamare **Execute** con **adExecuteStream**, si verifica un errore. La posizione del flusso sul valore restituito da **Execute** è provider specifico.  
   
  Se il comando non può restituire risultati (ad esempio, una query di aggiornamento di SQL) restituisce il provider **Nothing** fino a quando l'opzione **adExecuteStream** è specificata; in caso contrario, il metodo Execute restituisce un chiuso **Recordset**. Alcune lingue dell'applicazione consentono di ignorare questo valore restituito se nessun **Recordset** desiderata.  
   

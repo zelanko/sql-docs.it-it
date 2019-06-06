@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cae1cc5e15bd945a28e5c36008faeade43b54b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 18b57d2d1c4ccf846137be730cb1c1e3c7d88f75
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469998"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702889"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Esempio delle proprietà Provider e DefaultDatabase (VC++)
 Questo esempio viene illustrato il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà aprendo tre [connessione](../../../ado/reference/ado-api/connection-object-ado.md) di oggetti usando diversi provider. Viene inoltre utilizzata la [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) proprietà da impostare il database predefinito per il Provider ODBC di Microsoft.  

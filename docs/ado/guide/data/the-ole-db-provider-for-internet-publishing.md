@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 62fce79d6ee223ee5b039fe914685fdf3bd33c98
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472210"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704803"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Provider OLE DB per Internet Publishing
 L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti sono utilizzabile con il Provider Microsoft OLE DB per Internet Publishing (Provider di pubblicazione Internet) per accedere e modificare risorse, ad esempio file o cartelle Web gestito da Microsoft FrontPage. Con ADO, è possibile specificare l'origine di un **Record**, **Stream**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sia un URL. È possibile caricare, scaricare, spostare, copiare ed eliminare le risorse o modificare direttamente le proprietà delle risorse.  
@@ -33,19 +33,19 @@ L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [S
   
  Esistono tre modi per la connessione di ADO per Internet Publishing Provider:  
   
--   Specificare "URL =" nella stringa di connessione. Ad esempio:   
+-   Specificare "URL =" nella stringa di connessione. Ad esempio:  
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Ad esempio:   
+-   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Ad esempio:  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà delle [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Ad esempio:   
+-   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà delle [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Ad esempio:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

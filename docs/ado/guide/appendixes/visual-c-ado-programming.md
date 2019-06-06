@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142970"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702614"
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione ADO in Visual C++
 Il riferimento all'API ADO viene descritta la funzionalità delle ADO application programming interface (API) usando una sintassi simile a Microsoft Visual Basic. Anche se i destinatari sono tutti gli utenti, programmatori ADO utilizzano svariati linguaggi come Visual Basic, Visual C++ (con e senza il **#import** (direttiva)) e Visual J++ (con il pacchetto di classe ADO/WFC).  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- Il compilatore genererà l'appropriato **ottenere**_-_, **Put**-, o **PutRef**_proprietà_ chiamata in base quale sintassi alternativa viene dichiarato e indica se la proprietà viene letta o scritta.  
+ Il compilatore genererà l'appropriato **ottenere** _-_ , **Put**-, o **PutRef**_proprietà_ chiamata in base quale sintassi alternativa viene dichiarato e indica se la proprietà viene letta o scritta.  
   
  Il **declspec**  direttiva del compilatore può solo dichiarare **ottenere**, **put**, o **Ottieni** e **put** sintassi alternativa per una funzione. Operazioni di sola lettura hanno solo una **ottenere** dichiarazione; le operazioni di sola scrittura avere solo una **put** dichiarazione; le operazioni che sono di lettura e scrittura entrambi questi elementi sono **ottenere** e **put** dichiarazioni.  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Ad esempio, assegnare un valore a un campo di un **Recordset** oggetto, denominato  **_rs_**, derivata dal **autori** tabella il **pubs** database. Usare la **Item ()** proprietà a cui accedere la terza **campo** del **Recordset** oggetto **campi** (raccolte vengono indicizzate dalla raccolta uguale a zero; si suppone che il terzo campo viene denominato  **_au\_fname_**). Chiamare quindi il **Value ()** metodo sul **campo** oggetto al quale assegnare un valore stringa.  
+ Ad esempio, assegnare un valore a un campo di un **Recordset** oggetto, denominato  **_rs_** , derivata dal **autori** tabella il **pubs** database. Usare la **Item ()** proprietà a cui accedere la terza **campo** del **Recordset** oggetto **campi** (raccolte vengono indicizzate dalla raccolta uguale a zero; si suppone che il terzo campo viene denominato  **_au\_fname_** ). Chiamare quindi il **Value ()** metodo sul **campo** oggetto al quale assegnare un valore stringa.  
   
  Ciò può essere espresso in Visual Basic nelle risorse seguenti quattro modi (gli ultimi due formati siano univoci a Visual Basic; altri linguaggi non dispongono di equivalenti):  
   

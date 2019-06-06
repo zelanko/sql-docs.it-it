@@ -1,21 +1,20 @@
 ---
 title: Installazione di ricerca Full-Text SQL Server in Linux | Microsoft Docs
-description: Questo articolo descrive come installare ricerca Full-Text di SQL Server in Linux.
+description: Questo articolo descrive come installare la ricerca full-text di SQL Server in Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809739"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705050"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installazione di ricerca Full-Text SQL Server in Linux
 
@@ -32,7 +31,7 @@ Installare ricerca Full-Text di SQL Server per la tua piattaforma:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Installazione in RHEL</a>
+## <a name="RHEL">Eseguire l'installazione in RHEL</a>
 
 Usare i comandi seguenti per installare il **mssql-server-fts** in Red Hat Enterprise Linux. 
 
@@ -47,9 +46,9 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi usare la stessa procedura di installazione offline descritta nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Installazione in Ubuntu</a>
+## <a name="ubuntu">Eseguire l'installazione in Ubuntu</a>
 
 Usare i comandi seguenti per installare il **mssql-server-fts** in Ubuntu. 
 
@@ -65,9 +64,9 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi usare la stessa procedura di installazione offline descritta nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Installare in SLES</a>
+## <a name="SLES">Eseguire l'installazione in SLES</a>
 
 Usare i comandi seguenti per installare il **mssql-server-fts** su SUSE Linux Enterprise Server. 
 
@@ -82,7 +81,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi usare la stessa procedura di installazione offline descritta nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se è necessaria un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Lingue supportate
 
@@ -110,7 +109,7 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 | Tedesco | 1031 |
 | Greco | 1032 |
 | Gujarati | 1095 |
-| Hebrew | 1037 |
+| Ebraico | 1037 |
 | Hindi | 1081 |
 | Islandese | 1039 |
 | Indonesiano | 1057 |
@@ -148,9 +147,9 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 
 Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, è necessario un filtro installato per elaborare il file. Per altre informazioni sui filtri, vedere [configurare e gestire filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'**. Per SQL Server, vengono installati i filtri seguenti:
+È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'** . Per SQL Server, vengono installati i filtri seguenti:
 
-| Nome componente | ID classe | Versione |
+| Nome componente | ID classe | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -168,18 +167,18 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|. cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.css | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.csv | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dbs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione DSW | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -189,7 +188,7 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |. HTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |HTX | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -197,11 +196,11 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |IDL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|INF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.ini | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|INX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.jav | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |. js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -215,18 +214,18 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |Con estensione odc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|PL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.PRC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|RC | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|RC2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|RCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|Reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.pl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.prc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rc2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. RTF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.scc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
@@ -235,21 +234,21 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|TDL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tab | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.trg | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.UDT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.udt | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.viw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|estensione vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vspscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vsscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |vssscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

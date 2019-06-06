@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e947fbc490769379392e1dcef80ad4cd2818d510
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1aac155aef874303f3281893db021b9492eef289
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183902"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703519"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Esempio delle proprietà Command e CommandText (VC++)
 Il codice seguente illustra come usare il [comando](../../../ado/reference/adox-api/command-property-adox.md) proprietà di aggiornamento del testo di una stored procedure.  

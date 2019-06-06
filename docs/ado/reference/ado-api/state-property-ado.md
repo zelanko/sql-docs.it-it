@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e8a46dd9358b085fb6079f03df88474b72440068
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027666"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711254"
 ---
 # <a name="state-property-ado"></a>Proprietà State (ADO)
 Indica tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Se l'oggetto è in esecuzione un metodo asincrono, indica se lo stato corrente dell'oggetto è la connessione, l'esecuzione o il recupero.  

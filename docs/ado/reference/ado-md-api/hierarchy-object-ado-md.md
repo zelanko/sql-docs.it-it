@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5915102164afccd8e2055e14d0ef9d63b2cf5937
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740281"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709142"
 ---
 # <a name="hierarchy-object-ado-md"></a>Oggetto Hierarchy (ADO MD)
 Rappresenta uno dei modi in cui i membri di un [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) può essere aggregata o "raggruppate". Una dimensione può essere aggregata una o più gerarchie.  

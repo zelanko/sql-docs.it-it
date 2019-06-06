@@ -4,18 +4,17 @@ description: Questo articolo contiene le note sulla versione e funzionalità sup
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/25/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e272187ae3e634246f9f32323438d81d633c3fbc
-ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
+ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66036910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705150"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
@@ -48,6 +47,7 @@ La tabella seguente elenca la cronologia di rilascio per [!INCLUDE[ssSQL17](../i
 
 | Versione               | Version       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
@@ -77,6 +77,20 @@ Se si sta aggiornando esistente [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 - [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU15"></a> CU15 (maggio 2018)
+
+Si tratta della versione 15 aggiornamento cumulativo (CU15) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3162.1. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4498951 ](https://support.microsoft.com/en-us/help/4498951).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti Debian e RPM con le informazioni nella tabella seguente:
+
+| Pacchetto | Versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto di Red Hat RPM | 14.0.3162.1-1 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.3162.1-1 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3162.1-1 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU14"></a> CU14 (marzo 2018)
 
@@ -537,7 +551,7 @@ Per iniziare, vedere le guide introduttive seguenti:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Eseguire l'installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Esecuzione in Docker](quickstart-install-connect-ubuntu.md)
 - [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Esecuzione e connessione - Cloud](quickstart-install-connect-clouds.md)

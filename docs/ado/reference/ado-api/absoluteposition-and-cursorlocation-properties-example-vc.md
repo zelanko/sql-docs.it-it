@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 922ccc2768b317d3ea0dac612bf965def9c7f2e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0c6435ece8cf7da8947f8f1bfe0ec8c8fb1a4b8b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155689"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704071"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Esempio di AbsolutePosition e CursorLocation in proprietà XML (VC + +)
 Questo esempio viene illustrato come la [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) proprietà può tenere traccia dell'avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà per abilitare il **AbsolutePosition** proprietà impostando il cursore su un cursore client.  

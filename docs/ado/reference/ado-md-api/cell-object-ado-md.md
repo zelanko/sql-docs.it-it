@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fc34bb3dc275e325163d8113db1a3b38c954840b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469486"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709790"
 ---
 # <a name="cell-object-ado-md"></a>Oggetto Cell (ADO MD)
 Rappresenta i dati in corrispondenza dell'intersezione delle coordinate dell'asse contenuti in un set di celle.  
@@ -43,7 +43,7 @@ Rappresenta i dati in corrispondenza dell'intersezione delle coordinate dell'ass
   
  Il **proprietà** raccolta contiene le proprietà specifiche del provider. La tabella seguente elenca le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione per il provider per un elenco completo delle proprietà disponibili.  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |ColoreSfondo|Colore di sfondo utilizzato durante la visualizzazione della cella.|  
 |FontFlags|Maschera di bit che riporta in dettaglio gli effetti sul tipo di carattere.|  

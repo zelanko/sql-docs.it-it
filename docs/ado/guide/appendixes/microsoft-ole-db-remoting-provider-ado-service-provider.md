@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29addb89a5713b32b98df374a673fff4d549d771
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 794e71013b552cbd4e17b9cb37e4c8c261aeeae6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853453"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702698"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Panoramica di Provider Microsoft OLE DB remota
 Il Provider .NET Remoting Microsoft OLE DB consente a un utente locale in un computer client richiamare i provider di dati in un computer remoto. Come si farebbe se trattasse di un utente locale nel computer remoto, specificare i parametri del provider di dati per il computer remoto. Quindi specificare i parametri utilizzati dal Provider di servizi remoti di accedere al computer remoto. È quindi possibile accedere nel computer remoto come se trattasse di un utente locale.

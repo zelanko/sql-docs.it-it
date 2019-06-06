@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723199"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713161"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usare SQL Server Management Studio in Windows per la gestione di SQL Server in Linux
 
@@ -57,7 +56,7 @@ Usare i seguenti passaggi di base per la connessione:
 
 1. Nel **Connetti al Server** finestra, immettere le informazioni seguenti (se SSMS è già in esecuzione, fare clic su **Connetti > motore di Database** per aprire il **Connetti al Server** finestra):
 
-   | Impostazione | Description |
+   | Impostazione | Descrizione |
    |-----|-----|
    | **Tipo server** | Il valore predefinito è il motore di database; non modificare questo valore. |
    | **Nome server** | Immettere il nome del computer Linux di SQL Server di destinazione o il relativo indirizzo IP. |
@@ -145,6 +144,6 @@ Quando un riquadro è espanso, Monitoraggio attività esegue una query di istanz
 ## <a name="see-also"></a>Vedere anche
 - [Che cos'è SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Esportare e importare un database con SSMS](sql-server-linux-migrate-ssms.md)
-- [Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Monitoraggio delle prestazioni e dell'attività del server](../relational-databases/performance/server-performance-and-activity-monitoring.md)

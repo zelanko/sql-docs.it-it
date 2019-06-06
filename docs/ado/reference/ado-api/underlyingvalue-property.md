@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d946e744fe3b3e5fba12f83067dc751296b58ac6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63043506"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710540"
 ---
 # <a name="underlyingvalue-property"></a>Proprietà UnderlyingValue
 Indica il valore corrente di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto nel database.  

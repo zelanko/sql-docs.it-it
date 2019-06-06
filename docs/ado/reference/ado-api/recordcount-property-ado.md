@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa6f29c480244919de71d06cf3d56e672f00c47f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240064"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712026"
 ---
 # <a name="recordcount-property-ado"></a>Proprietà RecordCount (ADO)
 
@@ -47,7 +47,7 @@ Al contrario, se l'oggetto Recordset *non* supporta segnalibri o approssimativo 
 - **adApproxPosition** è correlato al posizionamento approssimativo.
 
 > [!NOTE]
-> In ADO 2.8 e versioni precedenti, il provider SQLOLEDB recupera tutti i record quando viene utilizzato un cursore lato server, nonostante il fatto che restituisce **True** per entrambe **supporta (adApproxPosition)** e**Supporta (adBookmark)**.
+> In ADO 2.8 e versioni precedenti, il provider SQLOLEDB recupera tutti i record quando viene utilizzato un cursore lato server, nonostante il fatto che restituisce **True** per entrambe **supporta (adApproxPosition)** e**Supporta (adBookmark)** .
   
 Il tipo di cursore del **Recordset** oggetto influisce sulla possibilità di determinare il numero di record. Il **RecordCount** proprietà restituirà -1 per un cursore forward-only; il conteggio effettivo per un valore statico o keyset cursor; e -1 o il conteggio effettivo per un cursore dinamico, a seconda dell'origine dati.
   

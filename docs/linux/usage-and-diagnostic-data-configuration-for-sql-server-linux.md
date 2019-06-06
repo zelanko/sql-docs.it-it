@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c94023e89dbdfb784f2b1bc8db8c9842c4455fb1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 58001c0789151a6bf80fee3b47ae38c0d3ddc872
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944230"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712694"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Configurare l'utilizzo e raccolta di dati di diagnostica per SQL Server in Linux
 

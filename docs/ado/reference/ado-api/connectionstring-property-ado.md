@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140359"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695959"
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -68,4 +68,4 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 ## <a name="see-also"></a>Vedere anche  
  [ConnectionString, ConnectionTimeout ed esempio di proprietà State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Esempio ConnectionString, ConnectionTimeout e proprietà State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

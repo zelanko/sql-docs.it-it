@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d71009c7e4f2c9b717a41f10ca4dc8b9f815ad30
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308295"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708423"
 ---
 # <a name="adox-enumerated-constants"></a>Costanti enumerate ADOX
 Per agevolare il debug, le costanti enumerate ADOX elenca un valore per ciascuna costante. Tuttavia, questo valore è puramente consulenza e può variare da una versione di ADOX a un altro. Il codice deve dipendere esclusivamente il nome, non il valore effettivo di costanti enumerate.  

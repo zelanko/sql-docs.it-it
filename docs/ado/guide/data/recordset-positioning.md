@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f37f69b64e4a1a7fd55fb24a0c85d515971d4e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c01d24a5f92b4bca1e5b41a0cbece980237fd961
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910447"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701675"
 ---
 # <a name="recordset-positioning"></a>Posizionamento nei recordset
 Usare la **esempio di AbsolutePosition** la posizione ordinale in base alle proprietà per passare a un record, il **Recordset** oggetto, o per determinare la posizione ordinale del record corrente. Il provider deve supportare le funzionalità appropriate per questa proprietà sia disponibile.  

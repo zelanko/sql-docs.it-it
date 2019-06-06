@@ -1,6 +1,5 @@
 ---
 title: Edizioni e funzionalità supportate di SQL Server 2017 ~ Linux | Microsoft Docs
-ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -27,12 +26,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533564"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713181"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2017 in Linux
 
@@ -52,15 +51,15 @@ Per un elenco delle funzionalità di SQL Server non è disponibile in Linux, ved
     
 [Scaricare SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edizioni di[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edizioni di[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  La tabella seguente descrive tali edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
-|Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definizione|  
+|Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Definizione|  
 |---------------------------------------|----------------|  
 |Enterprise|L'offerta premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition offre funzionalità complete di datacenter fascia alta con prestazioni velocissime, abilitando livelli di servizio elevati per carichi di lavoro di importanza strategica.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition offre gestione di dati di base per i reparti e piccole organizzazioni di eseguire le applicazioni e supporta gli strumenti di sviluppo comuni locali e cloud, abilitando una gestione efficace del database con risorse IT minime.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition costituisce un'opzione con un costo totale di proprietà ridotto per provider di servizi di hosting Web e VAP Web, offrendo funzionalità di scalabilità, convenienza e facilità di gestione per proprietà Web di ogni dimensione.|  
-|Developer|L'edizione[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer consente agli sviluppatori di compilare qualsiasi tipo di applicazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Benché includa tutte le funzionalità dell'edizione Enterprise, ne è consentito l'utilizzo solo come sistema di sviluppo e di prova e non come server di produzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer rappresenta la scelta ideale per chi desidera compilare e testare applicazioni.|  
+|Sviluppatore|L'edizione[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer consente agli sviluppatori di compilare qualsiasi tipo di applicazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Benché includa tutte le funzionalità dell'edizione Enterprise, ne è consentito l'utilizzo solo come sistema di sviluppo e di prova e non come server di produzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer rappresenta la scelta ideale per chi desidera compilare e testare applicazioni.|  
 |Express edition|L'edizione Express è un database di base gratuito, ideale per l'apprendimento e la compilazione di applicazioni basate sui dati desktop e server di piccole dimensioni. Questa edizione costituisce la scelta ottimale per fornitori di software indipendenti, sviluppatori e sviluppatori amatoriali di applicazioni client. Se sono necessarie funzionalità di database più avanzate, è possibile aggiornare facilmente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express a versioni di fascia superiore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Uso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con applicazioni client/server  
@@ -99,21 +98,21 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Compressione backup|Yes|Yes|No|No| 
-|Snapshot del database|Yes|No|No|No|
+|Snapshot del database|Yes|No|No|no|
 |Always On istanza del cluster di failover<sup>1</sup>|Yes|Yes|No|No| 
 |I gruppi di disponibilità Always On<sup>2</sup>|Yes|No|No|No|
-|I gruppi di disponibilità di base <sup>3</sup>|No|Yes|No|No|
+|I gruppi di disponibilità di base <sup>3</sup>|No|Yes|no|No|
 |Gruppo di disponibilità con commit di un numero minimo di repliche|Yes|Yes|No|No|
 |Gruppo di disponibilità senza cluster|Yes|Yes|No|No|
 |Ripristino di pagine e file online|Yes|No|No|No|
 |Indicizzazione online|Yes|No|No|No|
-|Ricompilazioni degli indici online ripristinabili|Yes|No|No|No|
-|Modifica dello schema online|Yes|No|No|No|
-|Recupero rapido|Yes|No|No|No|
-|Backup con mirroring|Yes|No|No|No|
-|Aggiunta di memoria a caldo e CPU|Yes|No|No|No|
-|Backup crittografato|Yes|Yes|No|No|
-|Backup ibrido in Microsoft Azure (backup nell'URL)|Yes|Yes|No|No|
+|Ricompilazioni degli indici online ripristinabili|Yes|No|no|No|
+|Modifica dello schema online|Yes|no|No|no|
+|Recupero rapido|Yes|No|no|no|
+|Backup con mirroring|Yes|No|no|No|
+|Aggiunta di memoria a caldo e CPU|Yes|No|no|no|
+|Backup crittografato|Yes|Yes|no|No|
+|Backup ibrido in Microsoft Azure (backup nell'URL)|Yes|Yes|no|No|
   
 <sup>1</sup> su Enterprise edition, il numero di nodi è il valore massimo del sistema operativo. In Standard Edition è presente il supporto per due nodi. 
 
@@ -127,7 +126,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|  
 |File binari di oggetti di grandi dimensioni in indici columnstore cluster|Yes|Yes|Yes|Yes|  
-|Ricompilazione degli indici columnstore non cluster online|Yes|No|No|No|
+|Ricompilazione degli indici columnstore non cluster online|Yes|no|No|No|
 |OLTP in memoria <sup>1</sup>|Yes|Yes|Yes|Yes|
 |Memoria principale persistente|Yes|Yes|Yes|Yes|
 |Partizionamento di tabelle e indici|Yes|Yes|Yes|Yes|  
@@ -138,8 +137,8 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Governance delle risorse di I/O|Yes|No|No|No|  
 |Durabilità posticipata|Yes|Yes|Yes|Yes|
 |Ottimizzazione automatica|Yes|No|No|No|
-|Join adattivi in modalità batch|Yes|No|No|No|
-|Feedback delle concessioni di memoria in modalità batch|Yes|No|No|No|
+|Join adattivi in modalità batch|Yes|no|no|No|
+|Feedback delle concessioni di memoria in modalità batch|Yes|No|no|No|
 |Esecuzione interleaved per funzioni con valori di tabella a più istruzioni|Yes|Yes|Yes|Yes|
 |Miglioramenti dell'inserimento bulk|Yes|Yes|Yes|Yes|
 
@@ -170,14 +169,14 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Automazione dei criteri (controllo pianificato e modifica)|Yes|Yes|Yes|No|No|   
 |Agente di raccolta dati relativi alle prestazioni|Yes|Yes|Yes|No|No| 
 |Report di prestazioni standard|Yes|Yes|Yes|No|No| 
-|Guide di piano e blocco del piano per le guide di piano|Yes|Yes|Yes|No|No|   
+|Guide di piano e blocco del piano per le guide di piano|Yes|Yes|Yes|No|no|   
 |Query diretta di viste indicizzate (tramite hint NOEXPAND)|Yes|Yes|Yes|Yes| 
 |Gestione automatica viste indicizzate|Yes|Yes|Yes|No|No| 
 |Viste partizionate distribuite|Yes|No|No|No| 
 |Operazioni indicizzate parallele|Yes|No|No|No|  
 |Utilizzo automatico di viste indicizzate da Query Optimizer|Yes|No|No|No| 
-|Verifica di coerenza parallela|Yes|No|No|No| 
-|Punto di controllo dell'Utilità SQL Server|Yes|No|No|No|    
+|Verifica di coerenza parallela|Yes|No|No|no| 
+|Punto di controllo dell'Utilità SQL Server|Yes|no|No|No|    
 
 ##  <a name="Programmability"></a> Programmability  
   

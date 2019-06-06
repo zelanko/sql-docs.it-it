@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155909"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699408"
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
 È possibile scrivere un gestore personalizzato se sei un amministratore di server IIS che richiede l'impostazione predefinita il supporto di servizi desktop remoto, ma un maggior controllo sulle richieste degli utenti e diritti di accesso.  
@@ -32,7 +32,7 @@ ms.locfileid: "63155909"
 ## <a name="idatafactoryhandler-interface"></a>Interfaccia IDataFactoryHandler  
  Questa interfaccia dispone di due metodi **GetRecordset** e **Riconnetti**. Entrambi i metodi richiedono che il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) impostata su **adUseClient**.  
   
- Entrambi i metodi accettano gli argomenti visualizzati dopo la prima virgola nel "**gestore =**" parola chiave. Ad esempio, `"Handler=progid,arg1,arg2;"` passerà una stringa dell'argomento `"arg1,arg2"`, e `"Handler=progid"` passa un argomento null.  
+ Entrambi i metodi accettano gli argomenti visualizzati dopo la prima virgola nel "**gestore =** " parola chiave. Ad esempio, `"Handler=progid,arg1,arg2;"` passerà una stringa dell'argomento `"arg1,arg2"`, e `"Handler=progid"` passa un argomento null.  
   
 ## <a name="getrecordset-method"></a>Metodo GetRecordset  
  Questo metodo esegue query sull'origine dati e crea un nuovo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) utilizzando gli argomenti specificati. Il **Recordset** deve essere aperta con **adLockBatchOptimistic** e non deve essere aperto in modo asincrono.  

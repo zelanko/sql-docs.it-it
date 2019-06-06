@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249059"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696729"
 ---
 # <a name="ado-enumerated-constants"></a>Costanti enumerate ADO
 Per semplificare il debug, le enumerazioni ADO elenca un valore per ciascuna costante. Tuttavia, questo valore è puramente consulenza e può variare da una versione di ADO a un altro. Il codice deve dipendere esclusivamente il nome, non il valore effettivo di ogni costante enumerata.  
@@ -82,7 +82,7 @@ Per semplificare il debug, le enumerazioni ADO elenca un valore per ciascuna cos
  [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice B: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   

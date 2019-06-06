@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211740"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705211"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per la funzionalità di sicurezza di SQL Server in Linux
 
@@ -139,9 +138,9 @@ Create a security policy adding the function as both a filter and a block predic
 ```
 CREARE SalesFilter dei criteri di sicurezza   
 Aggiungi filtro PREDICATO Security.fn_securitypredicate(SalesPersonID)    
-  IN Sales. SalesOrderHeader,   
+  ON Sales.SalesOrderHeader,   
 AGGIUNGERE Security.fn_securitypredicate(SalesPersonID) PREDICATO di blocco    
-  IN Sales. SalesOrderHeader   
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -149,11 +148,11 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
-Selezionare * da Sales. SalesOrderHeader;    
+SELECT * FROM Sales.SalesOrderHeader;    
 RIPRISTINARE; 
  
 EXECUTE AS USER = 'Manager';   
-Selezionare * da Sales. SalesOrderHeader;   
+SELECT * FROM Sales.SalesOrderHeader;   
 RIPRISTINARE;   
 ```
  
@@ -161,7 +160,7 @@ Alter the security policy to disable the policy.  Now both users can access all 
 
 ```
 ALTER SECURITY POLICY SalesFilter   
-CON (STATE = OFF);    
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -182,7 +181,7 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 CREARE TestUser utente senza account di accesso;   
 GRANT selezionare ON Person.EmailAddress a TestUser;    
  
-EXECUTE AS USER = "TestUser";   
+EXECUTE AS USER = 'TestUser';   
 Selezionare EmailAddressID, indirizzo di posta elettronica da Person.EmailAddress;       
 RIPRISTINARE;    
 ```
@@ -230,7 +229,7 @@ GO
 CREARE MyServerCert certificato con soggetto = 'My Database certificato della chiave DEK';  
 GO  
 
-USARE AdventureWorks2014;   GO
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 CON L'ALGORITMO = AES_256  

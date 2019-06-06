@@ -1,21 +1,20 @@
 ---
 title: 'Funzionamento di istanza del cluster di failover: SQL Server in Linux | Microsoft Docs'
-description: ''
+description: Questo articolo illustra come usare un'istanza del cluster di failover (FCI) SQL Server in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: 86ba2672ee1ddb7d7c801556c817d93e6d2e0ceb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982818"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712916"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Gestione di un'istanza del cluster di failover - SQL Server in Linux
 
@@ -58,7 +57,7 @@ Per eseguire un failover manuale, bopomofo Red Hat Enterprise Linux (RHEL) o per
 ## <a name = "#-manual-failover-sles"></a> Failover manuale (SLES)
 
 
-In Suse Linux Enterprise Server (SLES), usare il `migrate` comando per eseguire il failover manuale di un failover di SQL Server. Ad esempio: 
+In Suse Linux Enterprise Server (SLES), usare il `migrate` comando per eseguire il failover manuale di un failover di SQL Server. Ad esempio:
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>

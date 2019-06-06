@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634014"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712900"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -139,7 +138,7 @@ Il Server NFS eseguire le operazioni seguenti:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Ad esempio:  
+1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Ad esempio: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -319,7 +318,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    sudo pcs cluster start --all
    ```
 
-   > Componente aggiuntivo RHEL a disponibilità elevata include conflitti degli agenti per KVM e VMWare. Fencing deve essere disabilitato in tutti gli altri hypervisor. La disabilitazione degli agenti di fencing è sconsigliata negli ambienti di produzione. A partire da periodo di tempo, esistono agenti fencing per gli ambienti Hyper-v o il cloud. Se si esegue una di queste configurazioni, è necessario disabilitare l'isolamento. \**NON è consigliato in un sistema di produzione.**
+   > Componente aggiuntivo RHEL a disponibilità elevata include conflitti degli agenti per KVM e VMWare. Fencing deve essere disabilitato in tutti gli altri hypervisor. La disabilitazione degli agenti di fencing è sconsigliata negli ambienti di produzione. A partire da periodo di tempo, esistono agenti fencing per gli ambienti Hyper-v o il cloud. Se si esegue una di queste configurazioni, è necessario disabilitare l'isolamento. \**NON è consigliato in un sistema di produzione.* *
 
    Questo comando disabilita gli agenti di fencing.
 

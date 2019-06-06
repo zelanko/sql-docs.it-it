@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fbeedf9e56c1f0606a7c8f842baedc9d11ad3929
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239735"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698800"
 ---
 # <a name="clone-method-ado"></a>Metodo Clone (ADO)
 Crea un duplicato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto da un oggetto esistente **Recordset** oggetto. Facoltativamente, specifica che il clone sia di sola lettura.  
@@ -70,13 +70,13 @@ rsNew.Filter = rsOriginal.Filter
   
 |Evento|Attivazione in cloni?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|No|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|no|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|no|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|No|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|No|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|no|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|no|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 39130be0e6be31700f70002726f3aaf674aa4c82
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472835"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700924"
 ---
 # <a name="batch-mode"></a>Modalità batch
 Attiva la modalità batch quando il **LockType** è impostata su **adLockBatchOptimistic** e l'aggiornamento in batch è supportato dal provider. Alcune impostazioni del tipo di blocco non sono disponibili in base alla posizione del cursore. Ad esempio, un tipo di blocco pessimistico non è disponibile quando il **CursorLocation** è impostata su **adUseClient**. Al contrario, un provider non può supportare un blocco ottimistico batch quando il cursore si trova nel server. È consigliabile usare l'aggiornamento in blocco con un solo cursore statico o keyset.  

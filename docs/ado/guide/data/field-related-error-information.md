@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161561"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702017"
 ---
 # <a name="field-related-error-information"></a>Informazioni sugli errori correlati ai campi
 Se un errore è direttamente correlato a un campo, ad esempio, se i dati sono mancanti o se è di tipo non corretto per il campo - è possibile recuperare altre informazioni sulla causa del problema esaminando la **campo** dell'oggetto **stato**  proprietà. Questa proprietà è stata migliorata per fornire informazioni specifiche relative al problema. In questo caso, ad esempio, quando una chiamata a **UpdateBatch** ha esito negativo, la causa del problema può essere determinata esaminando la **stato** proprietà del **campi** in ognuna dell'interessati record. La proprietà conterrà uno dei valori di **FieldStatusEnum** costante. La tabella seguente include i valori che sono di particolare interesse quando si verifica un errore.  

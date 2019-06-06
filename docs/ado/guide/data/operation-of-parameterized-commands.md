@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302345"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701870"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alle dimensioni dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, può risultare più efficiente usare un' comando con parametri.  
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Utilizzo di una gerarchia senza parametri, non è possibile correlare le tabelle di giochi e i team in modo che l'elemento figlio **Recordset** per ogni team contiene la pianificazione completa. È possibile creare capitoli che contengono la pianificazione iniziale o la pianificazione di viaggio, ma non entrambi. Infatti, la clausola RELATE è limitato a relazioni padre-figlio del form (pc1 = cc1) AND (pc2 = pc2). Pertanto, se il comando include "Sono correlati team_id a home_team, team_id TO visiting_team", si otterrebbe solo giochi in cui un team ricopriva stesso. È invece preferibile "(team_id=home_team) o (team_id = visiting_team)", ma il provider Shape non supporta la clausola OR.  
   
- Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:   
+ Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

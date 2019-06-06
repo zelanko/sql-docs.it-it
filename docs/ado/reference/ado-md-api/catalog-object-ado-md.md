@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b9db4bed718f60cbc9a5331d241b9cc8556718e8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469916"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709932"
 ---
 # <a name="catalog-object-ado-md"></a>Oggetto Catalog (ADO MD)
 Contiene informazioni sullo schema multidimensionale (vale a dire, i cubi e sottostante dimensioni, gerarchie, livelli e membri) specifiche di un provider di dati multidimensionali (dati Multidimensionali).  

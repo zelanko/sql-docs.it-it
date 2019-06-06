@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cc95d6ef7e61dcde373a646359d134dce0b3389d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711939"
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset (ADO)
 Rappresenta l'intero set di record da una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, il **Recordset** oggetto fa riferimento a un singolo record all'interno del set come record corrente.  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

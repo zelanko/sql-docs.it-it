@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24eccf2dee8eb8f72b75d568e31d200c337b2fdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cd25f6abf4c7cade7edbd35780cc191bce9c003d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719744"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702800"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Internet Information Services con i codici di errore per il servizio dati remoto
 La tabella seguente elenca i codici di errore di Microsoft® Internet Information Services (IIS) correlati all'utilizzo di servizio dati remoto. La conversione decimale positiva dei due byte basso, vengono visualizzati la conversione decimale negativa del codice di errore completo e i valori esadecimali.

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5583f9b2c5093859e9bb5d3fd0eb9444828cb4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 03d60a00a116f771e3854a4fe1b6b5ec512c0708
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62675854"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704174"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Passaggio 1: Specificare un programma del server (esercitazione su RDS)
 Nel caso più generale, usare il [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetti [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo per specificare il programma, server predefinito [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), o un'applicazione server personalizzata (oggetto business). Viene creata un'istanza di un programma server sul server e un riferimento all'applicazione server, oppure *proxy*, viene restituito.  

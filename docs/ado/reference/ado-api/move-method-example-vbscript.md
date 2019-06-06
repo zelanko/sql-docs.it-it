@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 82b09a23fd47473f45524f770806f5f7bd71f2dd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63138651"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707392"
 ---
 # <a name="move-method-example-vbscript"></a>Esempio del metodo Move (VBScript)
 Questo esempio Usa la [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo per posizionare il puntatore di record, basato sull'input dell'utente.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32ed7e6240f5f9622bfcb80e2f05a633fcaf2fdc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241143"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711641"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Esempio dei metodi Save e Open (VB)
 Questi tre esempi che illustrano come il [salvare](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodi possono essere usati insieme.  

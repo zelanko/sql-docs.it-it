@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cfea2f0ded82fb08b25f0227bb73090f61bf47a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642924"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710479"
 ---
 # <a name="version-property-example-vb"></a>Esempio della proprietà Version (VB)
 Questo esempio Usa la [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per visualizzare la versione corrente di ADO. Utilizza anche diverse proprietà dinamica da visualizzare:  

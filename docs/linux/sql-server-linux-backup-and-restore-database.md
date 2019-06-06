@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 29db423235533a0855f268459c6db379c7f7dfca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690129"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713342"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database di SQL Server in Linux
 
@@ -23,7 +22,7 @@ ms.locfileid: "47690129"
 
 È possibile eseguire i backup dei database di SQL Server 2017 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile usare **sqlcmd** per connettersi a SQL Server ed eseguire i backup. Da Windows, è possibile connettersi a SQL Server in Linux e vengono eseguiti backup con l'interfaccia utente. La funzionalità di backup è lo stesso più piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="backup-a-database"></a>Effettuare il backup di un database 
+## <a name="backup-a-database"></a>Effettuare il backup di un database
 
 Nell'esempio seguente **sqlcmd** si connette all'istanza di SQL Server locale e richiede una procedura completa di backup di un database utente denominato `demodb`.
 
@@ -31,7 +30,7 @@ Nell'esempio seguente **sqlcmd** si connette all'istanza di SQL Server locale e 
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-Quando si esegue il comando, SQL Server verrà richiesto di immettere una password. Dopo avere immesso la password, la shell verrà restituiti i risultati dello stato di avanzamento backup. Esempio:
+Quando si esegue il comando, SQL Server verrà richiesto di immettere una password. Dopo avere immesso la password, la shell verrà restituiti i risultati dello stato di avanzamento backup. Ad esempio:
 
 ```
 Password:

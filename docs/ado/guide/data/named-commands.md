@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2604fdc39789be2e0c86cc7d2cbc6491d55ba1ff
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161651"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701956"
 ---
 # <a name="named-commands"></a>Comandi con nome
 [Creazione ed esecuzione di un semplice comando](../../../ado/guide/data/creating-and-executing-a-simple-command.md) illustra un modo per eseguire un comando. Non vi è un altro modo: è possibile renderlo un comando con nome e quindi chiamare il comando direttamente sulla denominato il **connessione** oggetto (assegnato al **ActiveConnection** proprietà del **comando** oggetto). Denominazione di un comando indica che l'assegnazione di un nome per il **Name** proprietà di un **comando** oggetto. Ad esempio,  

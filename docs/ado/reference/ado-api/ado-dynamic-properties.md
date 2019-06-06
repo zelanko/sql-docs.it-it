@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249046"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696869"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
 Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolte del [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. L'origine per queste proprietà è di provider di dati, ad esempio la [il Provider OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio le [Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Vedere la documentazione di provider di servizio per altre informazioni su una proprietà dinamica specifica o provider di dati appropriato.  
@@ -41,7 +41,7 @@ Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/re
  [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice B: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   

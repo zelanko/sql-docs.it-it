@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1bff3c8a155e1e9378acbb659f00817f478382e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e81a2d2274d557bf722a3762f7a3e039dfcc5d4d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161600"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700839"
 ---
 # <a name="grandchild-aggregates"></a>Aggregazioni nipote
 La colonna a capitoli creata in una clausola di un comando della forma può essere stata assegnata un *nome capitolo-alias* (in genere con la parola chiave AS). È possibile identificare ogni colonna in un capitolo del data shaping **Recordset** con un nome completo che identifica l'elemento figlio che contiene la colonna. Ad esempio, se il capitolo di padre, Cap1, include un capitolo figlio, Cap2, che dispone di una colonna amount amt, quindi il nome completo sarebbe chap1.chap2.amt. Il nome completo è quindi utilizzabile come argomento a una delle funzioni di aggregazione (SUM, AVG, MAX, MIN, COUNT, STDEV o qualsiasi).  

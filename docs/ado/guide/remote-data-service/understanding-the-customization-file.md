@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955806"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704141"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
-Ogni intestazione di sezione nel file di personalizzazione è costituito da parentesi quadre (**[]**) che contiene un tipo e un parametro. Per le stringhe letterali sono indicati i quattro tipi di sezioni **connettersi**, **sql**, **elencoutenti**, oppure **log**. Il parametro è la stringa letterale, il valore predefinito, un identificatore specificato dall'utente o nulla.  
+Ogni intestazione di sezione nel file di personalizzazione è costituito da parentesi quadre ( **[]** ) che contiene un tipo e un parametro. Per le stringhe letterali sono indicati i quattro tipi di sezioni **connettersi**, **sql**, **elencoutenti**, oppure **log**. Il parametro è la stringa letterale, il valore predefinito, un identificatore specificato dall'utente o nulla.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -55,7 +55,7 @@ identifier
   
  Una sezione viene usata nelle circostanze seguenti:  
   
--   Oggetto **connettersi** sezione viene usata se la parte valore del client di connettersi, parola chiave della stringa "**origine dati =**_valore_", corrisponde a un **connettersi** Identificatore di sezione *.*  
+-   Oggetto **connettersi** sezione viene usata se la parte valore del client di connettersi, parola chiave della stringa "**origine dati =** _valore_", corrisponde a un **connettersi** Identificatore di sezione *.*  
   
 -   Un' **sql** sezione viene usata se la stringa di comando del client contiene una stringa che corrisponde a un **sql** identificatore di sezione.  
   

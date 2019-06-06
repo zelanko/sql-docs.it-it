@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcba9515535e32557470b75267a0e99976a18595
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0fee14a397104f8320fc01ce29f8364384151922
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033393"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711721"
 ---
 # <a name="refresh-method-ado"></a>Metodo Refresh (ADO)
 Aggiorna gli oggetti in una raccolta in modo da riflettere gli oggetti disponibili e specifiche del provider.  

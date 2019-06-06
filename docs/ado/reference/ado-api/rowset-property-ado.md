@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f528ef5c83f0a9922c32fb06955d0ff921bfae6c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315793"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711433"
 ---
 # <a name="rowset-property-ado"></a>Proprietà Rowset (ADO)
 Ottiene o imposta un DB OLE **Rowset** oggetto da/in un **ADORecordsetConstruction** oggetto. Quando si usa put_Rowset, il set di righe viene trasformato in un oggetto ADO **Recordset** oggetto.  

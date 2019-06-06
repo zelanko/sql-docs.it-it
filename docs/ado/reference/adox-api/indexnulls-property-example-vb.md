@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fc1a2db077a08b37ddd6143ea7a76ebd257f2a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213335"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706490"
 ---
 # <a name="indexnulls-property-example-vb"></a>Esempio della proprietà IndexNulls (VB)
 Questo esempio viene illustrato il [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) proprietà di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice crea un nuovo indice e imposta il valore della **IndexNulls** basate sull'input dell'utente (da una casella di riepilogo denominata List1). Successivamente, il **indice** viene aggiunto al **Employees** [tabella](../../../ado/reference/adox-api/table-object-adox.md) nel *Northwind* [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Il nuovo **indice** viene applicato a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) base il **dipendenti** tabella e il **Recordset** viene aperto. Viene aggiunto un nuovo record per il **dipendenti** tabella, con un **Null** valore nel campo indicizzato. Se viene visualizzato questo nuovo record dipende dall'impostazione delle **IndexNulls** proprietà.  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 57fd1d8c90a9d5b24d0d4cbea6eb0491006f89da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e7f315e65702eab373430ede3adb23199f4edc83
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527113"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712849"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare cluster di dischi condiviso SLES per SQL Server
 
@@ -156,7 +155,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
 
 3. **Installare l'estensione per la disponibilità elevata**. Per installare l'estensione, seguire la procedura nell'argomento SUSE seguente:
     
-    [Guida introduttiva all'installazione e alla configurazione](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html) 
+    [Guida introduttiva all'installazione e alla configurazione](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
 
 4. **Installare l'agente delle risorse FCI per SQL Server**. Eseguire i comandi seguenti in entrambi i nodi:
 

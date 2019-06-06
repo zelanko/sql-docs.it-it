@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281062"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712315"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso. I proxy pacchetti esegue il marshalling dei dati e per lo stub del lato server per le comunicazioni con l'oggetto business alla invierà le richieste e i dati tramite Internet. Per gli oggetti di componente in-process, non vengono utilizzati proxy, viene fornito solo un puntatore all'oggetto.  

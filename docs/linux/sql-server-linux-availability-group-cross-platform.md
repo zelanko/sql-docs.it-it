@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 520866e80cd3526d7c039cd98e08f5cc8fc52798
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947575"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713390"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configura SQL Server gruppo di disponibilità AlwaysOn in Windows e Linux (multipiattaforma)
 

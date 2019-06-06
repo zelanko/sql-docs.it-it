@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 87d8358344d75cd6995d43d081abbec7aeaabe1c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294402"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701054"
 ---
 # <a name="adding-records-to-a-recordset"></a>Aggiunta di record a un set di record
 Usare la **AddNew** metodo per creare e inizializzare un nuovo record in un oggetto esistente **Recordset**. È possibile usare la **supporta** metodo con un **CursorOptionEnum** pari a **adAddNew** per verificare se è possibile aggiungere record corrente **Recordset** oggetti.

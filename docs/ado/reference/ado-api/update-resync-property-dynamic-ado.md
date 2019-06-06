@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43b8864d03e3ec2e563984e203779e5905a15813
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 57ff6e224537feebaf51eee1435ed64ab845025d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042573"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710519"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Proprietà dinamica Update Resync (ADO)
 Specifica se il [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) metodo è seguito da implicita [Risincronizza](../../../ado/reference/ado-api/resync-method.md) operazione del metodo e in questo caso, l'ambito di tale operazione.  

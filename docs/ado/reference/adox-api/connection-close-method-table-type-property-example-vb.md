@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: aa4089925e5a51f5e4fa4578094634e724b8a615
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183893"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703376"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Esempio del metodo Close di Connection e della proprietà Type di Table (VB)
 Impostando il [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà **Nothing** deve chiudere la connessione al catalogo. Raccolte associate sarà vuote. Saranno rese orfane tutti gli oggetti che sono stati creati da oggetti dello schema nel catalogo. Tutte le proprietà per gli oggetti memorizzati nella cache sarà ancora disponibile, ma un tentativo di leggere le proprietà che richiede una chiamata al provider avrà esito negativo.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1deb00db88eecae2322a81cdbee8d1e48275b165
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864002"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707687"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Esempio della proprietà MarshalOptions (VC++)
 Questo esempio Usa la [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) proprietà per specificare quali righe vengono inviate al server - tutte le righe o solo le righe modificate.  

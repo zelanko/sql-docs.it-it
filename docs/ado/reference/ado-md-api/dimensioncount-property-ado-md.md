@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4370d902c18dc8c05f61817f859cb72da28e5fb5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8032122a6b9bafb04c077961b857c5ae9d7628a3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225881"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709320"
 ---
 # <a name="dimensioncount-property-ado-md"></a>Proprietà DimensionCount (ADO MD)
 Indica il numero di dimensioni in un' [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

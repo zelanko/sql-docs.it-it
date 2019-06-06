@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314695"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711426"
 ---
 # <a name="seek-method"></a>Metodo Seek
 Cerca l'indice di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare rapidamente la riga che corrisponde ai valori specificati e cambia la posizione della riga corrente di tale riga.  
@@ -42,7 +42,7 @@ recordset.Seek KeyValues, SeekOption
  Oggetto [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valore che specifica il tipo di confronto da eseguire tra le colonne dell'indice e il corrispondente *KeyValues*.  
   
 ## <a name="remarks"></a>Note  
- Usare la **Seek** metodo in combinazione con la [indice](../../../ado/reference/ado-api/index-property.md) proprietà se il provider sottostante supporta gli indici per il **Recordset** oggetto. Usare la [supporta](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** metodo per determinare se il provider sottostante supporta **Seek**e il **Supports (adIndex)** metodo per determinare se il provider supporta gli indici. (Ad esempio, il [Provider OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta **Seek** e **indice**.)  
+ Usare la **Seek** metodo in combinazione con la [indice](../../../ado/reference/ado-api/index-property.md) proprietà se il provider sottostante supporta gli indici per il **Recordset** oggetto. Usare la [supporta](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** metodo per determinare se il provider sottostante supporta **Seek**e il **Supports (adIndex)** metodo per determinare se il provider supporta gli indici. (Ad esempio, il [Provider OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta **Seek** e **indice**.)  
   
  Se **Seek** non trovare la riga desiderata, nessun errore si verifica e la riga è posizionato alla fine delle **Recordset**. Impostare il **indice** proprietà per l'indice desiderato prima di eseguire questo metodo.  
   

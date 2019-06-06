@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c8bfe0781af1bf3ca5dcd4ae642ffb49ef81817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cf814281f2700cac9158f66dee9a44187817ea5e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314700"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711281"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Esempio del metodo Seek e della proprietà Index (VC++)
 Questo esempio viene usato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [Seek](../../../ado/reference/ado-api/seek-method.md) metodo e [indice](../../../ado/reference/ado-api/index-property.md) proprietà in combinazione con un determinato ***ID dipendente***, per individuare il nome del dipendente nel ***dipendenti*** tabella del database Nwind.  

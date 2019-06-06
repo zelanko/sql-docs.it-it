@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64b54acb2334aa09c5d4c2fde421f1dca9f8f3c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d693ccbeb06860cd4633a933e80b9ccbe6526a8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472393"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702229"
 ---
 # <a name="data-shaping-overview"></a>Panoramica del data shaping
 *Il data shaping* la creazione di relazioni gerarchiche tra due o più entità logiche in una query. La gerarchia può essere visualizzata in una relazione padre-figlio tra un record di uno [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e uno o più record (noto anche come un capitolo) di un'altra **Recordset**. In una relazione padre-figlio, l'elemento padre **Recordset** contiene l'elemento figlio **Recordset**. Un esempio di tale relazione gerarchica è customers e orders. Per ogni cliente in un database, possono essere presenti zero o più ordini. La relazione gerarchica può essere ricorsivo, vale a dire che i record nipote possono essere annidati in un record figlio. In teoria, un record gerarchico può essere annidato a qualsiasi profondità. In pratica, ADO limita la ricorsione per un massimo di 512 **Recordset**s.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276444"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712464"
 ---
 # <a name="handler-property-rds"></a>Proprietà Handler (Servizi Desktop remoto)
 Indica il nome di un programma di personalizzazione lato server (gestore) che estende le funzionalità dei [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ed eventuali parametri utilizzati per il *gestore*.  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  Il nome del gestore predefinito è **MSDFMAP. Gestore**, e il relativo parametro predefinito è un file di personalizzazione denominato **MSDFMAP. INI**. Usare questa proprietà per richiamare i file di personalizzazione alternativo creati dall'amministratore del server.  
   
- L'alternativa all'impostazione di **gestore** proprietà consiste nello specificare parametri in e un gestore il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà; vale a dire, "**gestore =** _NomeGestore, parameter1, parameter2,...._".  
+ L'alternativa all'impostazione di **gestore** proprietà consiste nello specificare parametri in e un gestore il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà; vale a dire, "**gestore =** _NomeGestore, parameter1, parameter2,...._ ".  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156428"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704040"
 ---
 # <a name="activecommand-property-example-vb"></a>Esempio della proprietà ActiveCommand (VB)
 Questo esempio viene illustrato il [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) proprietà.  
@@ -93,7 +93,7 @@ End Sub
   
  Il **ActiveCommandXprint** routine viene assegnata solo un **Recordset** dell'oggetto, deve visualizzare il testo del comando e parametro che ha creato il **Recordset**. Questa operazione può essere eseguita perché il **Recordset** dell'oggetto **ActiveCommand** proprietà restituisce l'oggetto associato [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
   
- Il **comandi** dell'oggetto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà produce il comando con parametri che ha creato il **Recordset**. Il **comandi** dell'oggetto [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta produce il valore che è stato sostituito con segnaposto per il parametro del comando ("**?**").  
+ Il **comandi** dell'oggetto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà produce il comando con parametri che ha creato il **Recordset**. Il **comandi** dell'oggetto [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta produce il valore che è stato sostituito con segnaposto per il parametro del comando (" **?** ").  
   
  Infine, un nome e ID messaggio di errore o dell'autore vengono stampati.  
   

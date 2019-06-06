@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0ccaa2b12229077d21cd50ce73d55ff287507f0d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316844"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696322"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Esempio delle proprietà BOF, EOF e Bookmark (VB)
 Questo esempio Usa la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) delle proprietà per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e tornarvi in un secondo momento.  

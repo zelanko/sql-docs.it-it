@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 155e1e810309ee4efa40badac55ca749a4329182
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062927"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702334"
 ---
 # <a name="ado-fundamentals"></a>Nozioni fondamentali su ADO
 ADO offre agli sviluppatori un modello a oggetti potenti e logica per l'accesso a livello di codice, la modifica e aggiornamento dei dati da una vasta gamma di origini dati tramite le interfacce OLE DB di sistema. L'uso più comune di ADO è eseguire la query una o più tabelle in un database relazionale, recuperare e visualizzare i risultati in un'applicazione e forse consentire agli utenti di creare e salvare le modifiche ai dati. Altre attività includono quanto segue:  

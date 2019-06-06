@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826086"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705662"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
@@ -135,5 +134,5 @@ TLS è usato per crittografare le connessioni da un'applicazione client per [!IN
 |--- |--- |
 |La catena di certificati è stato emesso da un'autorità non attendibile.  |Questo errore si verifica quando i client sono in grado di verificare la firma sul certificato presentato da SQL Server durante l'handshake TLS. Assicurarsi che il client considera attendibile uno il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] certificato direttamente oppure l'autorità di certificazione che ha firmato il certificato di SQL Server. |
 |Il nome dell'entità di destinazione non è corretto.  |Assicurarsi che il campo nome comune nel certificato del Server SQL corrisponde al nome di server specificato nella stringa di connessione del client. |  
-|Una connessione esistente chiusa forzatamente dall'host remoto. |Questo errore può verificarsi quando il client non supporta la versione del protocollo TLS richiesta da SQL Server. Ad esempio, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è configurato per richiedere di TLS 1.2, assicurarsi che i client supportano anche il protocollo TLS 1.2. |
+|Connessione in corso interrotta forzatamente dall'host remoto. |Questo errore può verificarsi quando il client non supporta la versione del protocollo TLS richiesta da SQL Server. Ad esempio, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è configurato per richiedere di TLS 1.2, assicurarsi che i client supportano anche il protocollo TLS 1.2. |
 | | |   

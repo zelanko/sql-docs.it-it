@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 573c433dbcf6ee7bb32f7a83639836f30bd43025
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 222b6900292a46c0a42fcae5e070734a91052caa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242461"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707380"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (esempio di metodi (VB)
 Questo esempio Usa la [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) metodi per spostare il puntatore di record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato sul comando specificato. La procedura MoveAny è necessaria per eseguire questa procedura.  

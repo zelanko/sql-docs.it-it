@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 503651db5d71403802c82a4931e4bdf9b1a69fd4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863698"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707620"
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio della proprietà MaxRecords (VC++)
 Questo esempio Usa la [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente le 10 libri più costosi indicati nel ***titoli*** tabella.  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 9feb60a7e3498bd940f97b8176375dc0f63133af
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 1f89e4f093c2216c90f133bdf38298272ea57f18
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775753"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713245"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
@@ -50,7 +49,7 @@ Per iniziare, installare SQL Server in Linux con una delle seguenti esercitazion
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Eseguire l'installazione in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Esecuzione in Docker](quickstart-install-connect-docker.md)
 - [Eseguire il provisioning di una macchina virtuale SQL in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 

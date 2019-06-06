@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b228ad46c89766475e8a74e26a0aaf389130acd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4b3014c9fa1eccd6b1efa04987293e464111e14d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864431"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697576"
 ---
 # <a name="item-property-example-vc"></a>Esempio della proprietà Item (VC++)
 Questo esempio viene illustrato come la [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà accede ai membri di una raccolta. Nell'esempio viene aperto il ***autori*** tabella del ***Pubs*** database con un comando con parametri.  

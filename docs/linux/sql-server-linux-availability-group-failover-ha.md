@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657906"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713460"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover gruppo di disponibilità AlwaysOn in Linux
 
@@ -118,13 +117,13 @@ Questo processo per il failover forzato è specifico di SQL Server in Linux.
 
 1. Verificare che la risorsa del gruppo di disponibilità non è gestita dal cluster più. 
 
-      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente delle risorse alla gestione e monitoraggio delle risorse significative. Esempio: 
+      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente delle risorse alla gestione e monitoraggio delle risorse significative. Ad esempio: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Se il tentativo di impostare la modalità di risorse per la modalità non gestita non riesce, eliminare la risorsa. Esempio:
+      - Se il tentativo di impostare la modalità di risorse per la modalità non gestita non riesce, eliminare la risorsa. Ad esempio:
 
       ```bash
       sudo pcs resource delete <resourceName>
