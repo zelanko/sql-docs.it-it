@@ -10,17 +10,46 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.date: 06/06/2019
+ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454731"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749151"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scaricare e installare la versione più recente.](download.md)**
+
+## <a name="june-2019"></a>Giugno 2019
+
+Il 6 giugno 2019 &nbsp;  /  &nbsp; versione: 1.8.0 
+
+&nbsp;
+
+| Cambia | Dettagli |
+| :----- | :------ |
+| Versione dell'estensione per i server di gestione centrale (CMS) | Server di gestione centrale è archiviato un elenco di istanze di SQL Server in cui è organizzato in uno o più gruppi di server di gestione centrale. Gli utenti possono connettersi ai propri server CMS esistenti e gestire i server, ad esempio l'aggiunta e rimozione di server. Per altre informazioni, è possibile leggere [qui](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Versione di estensioni di strumenti di amministrazione di Database per Windows | Questa estensione viene avviata due delle esperienze più usate in SQL Server Management Studio dalla Data Studio di Azure. Gli utenti possono fare clic con il pulsante destro su molti oggetti diversi (ad esempio database, tabelle, colonne, viste e altro ancora) e selezionare le proprietà per visualizzare la finestra di dialogo Proprietà SQL Server Management Studio per quell'oggetto. Inoltre, gli utenti possono fare clic con il pulsante destro su un database e selezionare Genera script per avviare la nota SSMS Generazione guidata script. 
+| Miglioramenti di confronto schema | &bull; &nbsp; Opzioni di escludere/includere aggiunta <br/>&bull; &nbsp; Generare script viene aperto lo Script dopo aver generato <br/>&bull; &nbsp; Rimuovere le barre di scorrimento double  <br/>&bull; &nbsp; Miglioramenti di formattazione e layout <br/>&bull; &nbsp; Le modifiche completate sono reperibile [qui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| Sezione Messages spostato alla propria scheda | Quando gli utenti è stata eseguita la query SQL, i risultati e messaggi di sono nei pannelli di barre in pila. Ora sono in schede separate in un pannello, ad esempio in SSMS. |
+| Miglioramenti di Notebook SQL | &bull; &nbsp; Gli utenti a questo punto è possono scegliere di usare le proprie installazioni di Python 3 o Anaconda nei blocchi appunti <br/>&bull; &nbsp; Più stabilità e correzioni/fine fit &bull; &nbsp; consente di visualizzare l'elenco completo dei miglioramenti [qui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio Code può rilasciare Merge 1.34 | I miglioramenti più recenti sono reperibili [qui](https://code.visualstudio.com/updates/v1_34) |
+| Bug risolti e problemi. | Visualizzare [bug e problemi, in GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemi noti
+- Estensioni di strumenti di amministrazione di database per Windows
+    - Non è possibile avviare le proprietà dal nodo del server disconnessa
+    - Non è possibile avviare le proprietà per i server di Azure
+    - Non tutti gli oggetti hanno le finestre delle proprietà
+    - Le finestre di dialogo richiedere molto tempo per l'avvio
+    - Errori di avvio di server con alcuni tipi di connessioni (ad esempio AAD)
+- Blocchi appunti
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) consentire agli utenti di usare sistema Python per il notebook
+- Confronto schema
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) confronto schema attività Mostra predefinito Annulla menu di scelta rapida che non esegue alcuna operazione
 
 ## <a name="may-2019"></a>Maggio 2019
 
@@ -32,8 +61,8 @@ ms.locfileid: "66454731"
 | :----- | :------ |
 | Versione dell'estensione per confronto Schema | Confronto schema è una funzionalità ben nota in SQL Server Data Tools (SSDT) e il caso d'uso principale consiste nel confrontare e visualizzare le differenze tra i database e i file con estensione dacpac ed eseguire determinate azioni per renderli uguali. |
 | Spostare visualizzazione attività alla finestra di Output | Gli utenti possono ora visualizzare lo stato dell'attività con esecuzione prolungata, ad esempio Backup, ripristino e confronto Schema nella visualizzazione attività nella finestra di Output
-| Pagina di benvenuto aggiunto | &bull; &nbsp; I collegamenti alle azioni comuni come nuova Query, nuovi File, nuovo Notebook <br/>&bull; &nbsp; Collegamenti alla documentazione e Github |
-| Miglioramenti di Notebook SQL | &bull; &nbsp; Miglioramenti di rendering markdown, incluso un supporto migliore per tabelle e le note <br/>&bull; &nbsp; Miglioramenti all'usabilità per la barra degli strumenti <br/>&bull; &nbsp; I collegamenti markdown per i notebook attendibili non è più richiedono Ctrl/Cmd + clic e possono essere selezionati direttamente <br/>&bull; &nbsp; Miglioramenti nella pulizia dei processi di Jupyter dopo la chiusura notebook e ridurre gli errori quando si avvia contemporaneamente più blocchi appunti <br/>&bull; &nbsp; Miglioramenti alle connessioni di notebook SQL per assicurarsi che gli errori non si verificano durante l'esecuzione di 2 notebook nello stesso database <br/>&bull; &nbsp; Miglioramenti al notebook lo scorrimento automatico per la cella attualmente in esecuzione quando si fa clic sul pulsante Esegui celle nella barra degli strumenti <br/>&bull; &nbsp; Miglioramenti di prestazioni e stabilità generali |
+| Pagina di benvenuto aggiunto | &bull; &nbsp; I collegamenti alle azioni comuni come nuova Query, nuovi File, nuovo Notebook <br/>&bull; &nbsp; Collegamenti alla documentazione e GitHub |
+| Miglioramenti di Notebook SQL | &bull; &nbsp; Miglioramenti di rendering markdown, incluso un supporto migliore per tabelle e le note <br/>&bull; &nbsp; Miglioramenti all'usabilità per la barra degli strumenti <br/>&bull; &nbsp; I collegamenti markdown per i notebook attendibili non è più richiedono Ctrl/Cmd + clic e possono essere selezionati direttamente <br/>&bull; &nbsp; Miglioramenti nella pulizia dei processi di Jupyter dopo la chiusura notebook e ridurre gli errori quando si avvia contemporaneamente più blocchi appunti <br/>&bull; &nbsp; Miglioramenti alle connessioni di notebook SQL per assicurarsi che gli errori non si verificano durante l'esecuzione di 2 notebook nello stesso database <br/>&bull; &nbsp; Miglioramenti per lo scorrimento automatico del blocco appunti per la cella attualmente in esecuzione quando si fa clic sul pulsante Esegui celle nella barra degli strumenti <br/>&bull; &nbsp; Miglioramenti di prestazioni e stabilità generali |
 | Bug risolti e problemi. | Visualizzare [bug e problemi, in GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
 | &nbsp; | &nbsp; |
 

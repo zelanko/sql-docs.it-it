@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014984"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744156"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster di big data in SQL Server
 
@@ -33,11 +33,11 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-| **mssqlctl** updates | Numerosi **mssqlctl** [gli aggiornamenti di comando e parametro](../big-data-cluster/reference-mssqlctl.md). Ciò include un aggiornamento per il **mssqlctl login** comando, che ora ha come destinazione il nome utente di controller e l'endpoint. |
-| Miglioramenti di archiviazione | Supporto per configurazioni di archiviazione diversi per i log e dati. Inoltre, è stato ridotto il numero di attestazioni di volume permanente per un cluster di big data. |
-| Più istanze del pool di calcolo | Supporto per più istanze di calcolo del pool. |
-| Funzionalità e il nuovo comportamento di pool | Il pool di calcolo viene ora usato per impostazione predefinita per le operazioni di pool di dati e i pool di archiviazione in un **ROUND_ROBIN** sola distribuzione. Il pool di dati ora può usare un nuovo nuove **REPLICATO** tipo di distribuzione, il che significa che gli stessi dati sono presenti in tutte le istanze di pool di dati. |
-| Miglioramenti alle tabelle esterne | Consente di digitare le tabelle esterne dell'origine dati HADOOP ora supporta la lettura di righe fino a 1 MB di dimensioni. Le tabelle esterne (ODBC, pool di archiviazione, pool di dati) ora il supporto delle righe larghe come una tabella di SQL Server. |
+| Aggiornamenti di **mssqlctl** | Numerosi [aggiornamenti di comandi e parametri](../big-data-cluster/reference-mssqlctl.md) **mssqlctl** tra cui un aggiornamento al comando **mssqlctl login**, che ora ha come destinazione il nome utente e l'endpoint del controller. |
+| Miglioramenti all'archiviazione | Supporto per configurazioni di archiviazione diverse per log e dati. È stato anche ridotto il numero di attestazioni di volume permanente per un cluster di Big Data. |
+| Più istanze del pool di calcolo | Supporto per più istanze del pool di calcolo. |
+| Nuove funzionalità e comportamento del pool | Il pool di calcolo viene ora usato per impostazione predefinita per le operazioni del pool di dati e del pool di archiviazione solo nella distribuzione **ROUND_ROBIN**. Il pool di dati ora può usare un nuovo tipo di distribuzione **REPLICATED**, il che significa che gli stessi dati sono presenti in tutte le istanze del pool di dati. |
+| Miglioramenti alle tabelle esterne | Le tabelle esterne del tipo origine dati HADOOP ora supportano la lettura di righe con dimensioni fino a 1 MB. Le tabelle esterne (ODBC, pool di archiviazione, pool di dati) ora supportano righe larghe quanto una tabella di SQL Server. |
 
 ### <a name="known-issues"></a>Problemi noti
 
@@ -132,12 +132,12 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-| Profili di distribuzione | Usare l'impostazione predefinita e personalizzata [file JSON di configurazione di distribuzione](deployment-guidance.md#configfile) per le distribuzioni di cluster di big data anziché le variabili di ambiente. |
-| Distribuzioni fornite dall'utente | `mssqlctl cluster create` a questo punto richiede eventuali impostazioni necessarie per le distribuzioni predefinito. |
-| Modifiche ai nomi di endpoint del servizio e i pod | I seguenti endpoint esterni sono stati modificati i nomi:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** improvements | Uso **mssqlctl** al [elencare gli endpoint esterni](deployment-guidance.md#endpoints) e verificare la versione di **mssqlctl** con il `--version` parametro. |
+| Profili di distribuzione | Per le distribuzioni di cluster di Big Data, usare i [file JSON di configurazione della distribuzione](deployment-guidance.md#configfile), predefiniti o personalizzati, invece delle variabili di ambiente. |
+| Distribuzioni richieste | `mssqlctl cluster create` ora richiede di specificare le eventuali impostazioni necessarie per le distribuzioni predefinite. |
+| Modifiche dei nomi di endpoint di servizio e pod | I seguenti endpoint esterni sono stati modificati i nomi:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| Miglioramenti di **mssqlctl** | Usare **mssqlctl** per [elencare gli endpoint esterni](deployment-guidance.md#endpoints) e controllare la versione di **mssqlctl** con il parametro `--version`. |
 | Eseguire l'installazione offline | Linee guida per le distribuzioni di cluster non in linea dei big Data. |
-| Miglioramenti di suddivisione in livelli di HDFS | La suddivisione in livelli S3, la memorizzazione nella cache di montaggio e OAuth supporto per Azure Data Lake Store Gen2. |
+| Miglioramenti della suddivisione in livelli HDFS | La suddivisione in livelli S3, la memorizzazione nella cache di montaggio e OAuth supporto per Azure Data Lake Store Gen2. |
 | Nuovo `mssql` connettore Spark-SQL Server | |
 
 ### <a name="known-issues"></a>Problemi noti
@@ -220,11 +220,11 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-| Materiale sussidiario sul supporto della GPU per l'esecuzione di Deep Learning con TensorFlow in Spark. | [Distribuire un cluster di big data con supporto GPU ed eseguire TensorFlow](spark-gpu-tensorflow.md). |
-| **SqlDataPool** e **SqlStoragePool** zdroje dat non vengono più creati per impostazione predefinita. | Essere creata manualmente in base alle esigenze. Vedere le [problemi noti](#externaltablesctp24). |
-| Supporto di `INSERT INTO SELECT` per il pool di dati. | Per un esempio, vedere [esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` opzione. | Forza o disabilita l'utilizzo dell'attività di calcolo del pool per le query su tabelle esterne. Ad esempio `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
-| Raccomandazioni aggiornate distribuzione AKS. | Quando si valutano i cluster di big data nel servizio contenitore di AZURE, è ora consigliabile usare un singolo nodo della dimensione **Standard_L8s**. |
+| Materiale sussidiario sul supporto della GPU per l'esecuzione di Deep Learning con TensorFlow in Spark. | [Distribuire un cluster di Big Data con il supporto della GPU ed eseguire TensorFlow](spark-gpu-tensorflow.md). |
+| Le origini dati **SqlDataPool** e **SqlStoragePool** non vengono più create per impostazione predefinita. | Se necessario, crearle manualmente. Vedere i [problemi noti](#externaltablesctp24). |
+| Supporto di `INSERT INTO SELECT` per il pool di dati. | Per un esempio, vedere [Esercitazione: Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md) (Inserire dati in un pool di dati di SQL Server con Transact-SQL). |
+| Opzioni `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Forza o disabilita l'utilizzo dell'attività di calcolo del pool per le query su tabelle esterne. Ad esempio `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Aggiornamento delle raccomandazioni sulla distribuzione del servizio Azure Kubernetes. | Quando si valutano i cluster di Big Data nel servizio Azure Kubernetes, è ora consigliabile usare un singolo nodo di dimensioni **Standard_L8s**. |
 | Aggiornamento del runtime Spark a Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemi noti
@@ -351,17 +351,17 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 | :---------- | :------ |
-| Inviare processi Spark nei cluster di big data in IntelliJ. | [Inviare processi Spark nei cluster di big data di SQL Server in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Comando comune per la gestione di cluster e la distribuzione di applicazioni. | [Come distribuire un'app nel cluster di big data 2019 Server SQL (anteprima)](big-data-cluster-create-apps.md) |
-| Estensione di Visual Studio Code per distribuire applicazioni in un cluster di big data. | [Come usare Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big Data](app-deployment-extension.md) |
-| Modifiche per il **mssqlctl** dello strumento di uso del comando. | Per altre informazioni, vedere la [problemi noti per mssqlctl](#mssqlctlctp23). |
-| Usare Sparklyr nel cluster di big data | [Usare Sparklyr nel cluster di big data di SQL Server 2019](sparklyr-from-RStudio.md) |
-| Montare un'archiviazione esterna compatibile con Hadoop Distributed File System (HDFS) in un cluster Big Data con la **suddivisione in livelli HDFS**. | Visualizzare [suddivisione in livelli HDFS](hdfs-tiering.md). |
-| Nuova esperienza di connessione unificato per l'istanza master di SQL Server e il Gateway HDFS/Spark. | Visualizzare [istanza master di SQL Server e il Gateway HDFS/Spark](connect-to-big-data-cluster.md). |
-| Eliminazione di un cluster con **mssqlctl cluster delete** ora Elimina solo gli oggetti nello spazio dei nomi che fanno parte di un cluster di big data. | Lo spazio dei nomi non viene eliminato. Tuttavia, nelle versioni precedenti questo comando è stato eliminato l'intero spazio dei nomi. |
-| _Sicurezza_ i nomi degli endpoint sono stati modificati e consolidati. | **servizio-sicurezza-lb** e **servizio-sicurezza-nodeport** sono state consolidate nella **endpoint-security** endpoint. |
-| _Proxy_ i nomi degli endpoint sono stati modificati e consolidati. | **servizio-proxy-lb** e **servizio-proxy-nodeport** sono state consolidate nella **endpoint-servizio-proxy** endpoint. |
-| _Controller_ i nomi degli endpoint sono stati modificati e consolidati. | **servizio-mssql-controller-lb** e **servizio-mssql-controller-nodeport** sono state consolidate nella **endpoint-controller** l'endpoint. |
+| Inviare processi Spark nei cluster di Big Data in IntelliJ. | [Inviare processi Spark nei cluster di Big Data di SQL Server in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Interfaccia della riga di comando comune per la distribuzione di applicazioni e la gestione di cluster. | [Come distribuire un'app in un cluster di Big Data di SQL Server 2019 (anteprima)](big-data-cluster-create-apps.md) |
+| Estensione di VS Code per distribuire applicazioni in un cluster di Big Data. | [Come usare VS Code per distribuire applicazioni nei cluster di Big Data di SQL Server](app-deployment-extension.md) |
+| Modifiche apportate all'utilizzo dei comandi dello strumento **mssqlctl**. | Per informazioni più dettagliate, vedere i [problemi noti di mssqlctl](#mssqlctlctp23). |
+| Usare Sparklyr nel cluster di big data | [Usare Sparklyr in cluster di Big Data di SQL Server 2019](sparklyr-from-RStudio.md) |
+| Montare un'archiviazione esterna compatibile con Hadoop Distributed File System (HDFS) in un cluster Big Data con la **suddivisione in livelli HDFS**. | Vedere [Suddivisione in livelli HDFS](hdfs-tiering.md). |
+| Nuova esperienza di connessione unificata per l'istanza master di SQL Server e il gateway HDFS/Spark. | Vedere [Istanza master di SQL Server e gateway HDFS/Spark](connect-to-big-data-cluster.md). |
+| L'eliminazione di un cluster con **mssqlctl cluster delete** rimuove ora solo gli oggetti dello spazio dei nomi che fanno parte del cluster di Big Data. | Lo spazio dei nomi non viene eliminato. Nelle versioni precedenti, invece, questo comando elimina l'intero spazio dei nomi. |
+| I nomi degli endpoint di _sicurezza_ sono stati cambiati e consolidati. | **service-security-lb** e **service-security-nodeport** sono stati consolidati nell'endpoint **endpoint-security**. |
+| I nomi degli endpoint _proxy_ sono stati cambiati e consolidati. | **service-proxy-lb** e **service-proxy-nodeport** sono stati consolidati nell'endpoint **endpoint-service-proxy**. |
+| I nomi degli endpoint di _controller_ sono stati cambiati e consolidati. | **service-mssql-controller-lb** e **service-mssql-controller-nodeport** sono stati consolidati nell'endpoint **endpoint-controller**. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
@@ -497,7 +497,7 @@ Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
 Nel portale di amministrazione cluster non viene visualizzata l'endpoint per l'istanza master di SQL Server. Per trovare l'indirizzo IP e la porta per l'istanza master, usare il comando seguente **kubectl** comando:
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>Tabelle esterne

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462800"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744202"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Avvio rapido: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -82,7 +82,7 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    | **Area di Azure** | L'area di Azure per il nuovo cluster servizio contenitore di AZURE (impostazione predefinita **westus**). |
    | **Dimensioni della macchina** | Il [dimensioni della macchina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) da usare per i nodi del cluster servizio contenitore di AZURE (impostazione predefinita **Standard_L8s**). |
    | **Nodi di lavoro** | Il numero di nodi di lavoro del cluster servizio contenitore di AZURE (impostazione predefinita **1**). |
-   | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster. (default **sqlbigdata**). |
+   | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster di big data. (default **sqlbigdata**). |
    | **Password** | Password per l'istanza master, un gateway HDFS/Spark e un controller (impostazione predefinita **MySQLBigData2019**). |
    | **Utente controller** | Nome utente dell'utente controller (impostazione predefinita: **admin**). |
 
@@ -118,7 +118,7 @@ Dopo 10 a 20 minuti, si dovrebbe ricevere una notifica che il pod controller sia
 
 ## <a name="inspect-the-cluster"></a>Esaminare il cluster
 
-In qualsiasi momento durante la distribuzione, è possibile usare kubectl o il portale di amministrazione Cluster per controllare lo stato e i dettagli relativi al cluster in esecuzione big data.
+In qualsiasi momento durante la distribuzione, è possibile usare **kubectl** oppure **mssqlctl** per controllare lo stato e i dettagli relativi al cluster in esecuzione big data.
 
 ### <a name="use-kubectl"></a>Usare kubectl
 
@@ -127,42 +127,32 @@ Aprire una nuova finestra di comando da utilizzare **kubectl** durante il proces
 1. Eseguire il comando seguente per ottenere un riepilogo dello stato dell'intero cluster:
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Se non è stato modificato il nome del cluster di big data, lo script per impostazione predefinita **sqlbigdata**.
 
 1. Controllare i servizi di kubernetes e i relativi endpoint interni ed esterni con quanto segue **kubectl** comando:
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. È anche possibile esaminare lo stato dei POD kubernetes con il comando seguente:
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. Scopri ulteriori informazioni su un pod specifico con il comando seguente:
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > Per altre informazioni su come monitorare e risolvere i problemi di una distribuzione, vedere [monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big data](cluster-troubleshooting-commands.md).
-
-### <a name="use-the-cluster-administration-portal"></a>Usare il portale di amministrazione del Cluster
-
-Il pod Controller è in esecuzione, è possibile utilizzare anche nel portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `mgmtproxy-svc-external` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali usate per accedere al portale corrispondano ai valori per **utente Controller** e **Password** specificato nello script di distribuzione.
-
-È possibile ottenere l'indirizzo IP del **mgmtproxy-svc-external** servizio eseguendo questo comando in una finestra bash o cmd:
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> Nella versione CTP 3.0, si verrà visualizzato un avviso di sicurezza all'accesso alla pagina web, perché i cluster di big data è attualmente in uso certificati SSL generati automaticamente.
 
 ## <a name="connect-to-the-cluster"></a>Connettersi al cluster
 

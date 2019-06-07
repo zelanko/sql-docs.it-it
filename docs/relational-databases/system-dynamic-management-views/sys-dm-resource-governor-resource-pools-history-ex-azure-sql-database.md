@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc5c5d8377b93a3e0101f1160444a207b5881cd
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d585f1f1245457aa9051f25bca696cf4495d93ed
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618118"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743918"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -95,14 +95,14 @@ Snapshot restituisce intervalli di 15 secondi per ultimi 30 minuti di resource p
 |**avg_data_io_percent**|Decimal(5,2)|Utilizzo dei / o medio espresso in percentuale sulla base del limite del pool.|
 |**avg_log_write_percent**|Decimal(5,2)|Medio scrittura utilizzo delle risorse in percentuale del limite del pool.|
 |**avg_storage_percent**|Decimal(5,2)|Utilizzo di spazio di archiviazione medio espresso in percentuale del limite di archiviazione del pool.|
-|**avg_allocated_storage_percent**|Decimal(5,2)|La percentuale di dati spazio allocato per tutti i database nel pool elastico. Questa è la percentuale di spazio per i dati allocato alla dimensione massima dei dati per il pool elastico. Per ulteriori informazioni, vedere Gestione dello spazio file nel database SQL|
+|**avg_allocated_storage_percent**|Decimal(5,2)|La percentuale di dati spazio allocato per tutti i database nel pool elastico. Questa è la percentuale di spazio per i dati allocato alla dimensione massima dei dati per il pool elastico. Per altre informazioni, vedere: Gestione dello spazio file nel database SQL|
 |**max_worker_percent**|Decimal(5,2)|Massimi ruoli di lavoro simultanei (richieste) espresso in percentuale sulla base del limite del pool.|
 |**max_session_percent**|Decimal(5,2)|Numero massimo di sessioni simultaneo espresso in percentuale sulla base del limite del pool.|
 |||
 
 ## <a name="permissions"></a>Permissions
 
-Questa vista richiede l'autorizzazione VIEW DATABASE STATE.
+In questa vista richiede l'autorizzazione VIEW SERVER STATE.
 
 ## <a name="remarks"></a>Note
 

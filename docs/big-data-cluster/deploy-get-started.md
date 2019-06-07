@@ -9,12 +9,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774775"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743986"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster di SQL Server i big Data
 
@@ -39,7 +39,7 @@ Altri strumenti sono necessari per scenari diversi. Ogni articolo deve spiegare 
 
 I cluster di big data vengono distribuiti come una serie di contenitori correlati che vengono gestite nei [Kubernetes](https://kubernetes.io/docs/home). È possibile ospitare Kubernetes in diversi modi. Anche se si dispone già di un ambiente Kubernetes esistente, è consigliabile esaminare i requisiti correlati per i cluster di big data.
 
-- **Azure Kubernetes Service (AKS)**: Servizio contenitore di AZURE consente di distribuire un cluster Kubernetes gestito in Azure. Solo gestire e mantenere i nodi agente. Con servizio contenitore di AZURE, si è autorizzati a eseguire il provisioning di un hardware per il cluster. È anche facile da usare un cluster di big data [script di distribuzione](quickstart-big-data-cluster-deploy.md) per creare il cluster AKS e distribuire il cluster di big data in un unico passaggio. Per altre informazioni sull'uso di servizio contenitore di AZURE con i cluster di big data, vedere [configurare Azure Kubernetes Service per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big data](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)** : Servizio contenitore di AZURE consente di distribuire un cluster Kubernetes gestito in Azure. Solo gestire e mantenere i nodi agente. Con servizio contenitore di AZURE, si è autorizzati a eseguire il provisioning di un hardware per il cluster. È anche facile da usare un cluster di big data [script di distribuzione](quickstart-big-data-cluster-deploy.md) per creare il cluster AKS e distribuire il cluster di big data in un unico passaggio. Per altre informazioni sull'uso di servizio contenitore di AZURE con i cluster di big data, vedere [configurare Azure Kubernetes Service per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big data](deploy-on-aks.md).
 
 - **Più macchine**: È anche possibile distribuire Kubernetes a più computer Linux, che può essere server fisici o macchine virtuali. Il [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) strumento può essere usato per creare il cluster Kubernetes. Questo metodo funziona bene se si dispone già di infrastruttura esistente che si desidera utilizzare per il cluster di big data. Per altre informazioni sull'uso **kubeadm** le distribuzioni con i cluster di big data, vedere [configurare su Kubernetes in più computer per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big data](deploy-with-kubeadm.md).
 
@@ -51,7 +51,7 @@ Dopo la configurazione di Kubernetes, si distribuisce un cluster di big data con
 
 - Se si distribuisce in un ambiente di sviluppo e test, è possibile scegliere di usare uno dei [le configurazioni predefinite](deployment-guidance.md#deploy) disql **mssqlctl**.
 
-- Per personalizzare la distribuzione, è possibile creare e usare la propria [i file di configurazione di distribuzione](deployment-guidance.md#configfile). 
+- Per personalizzare la distribuzione, è possibile creare e usare la propria [i file di configurazione di distribuzione](deployment-guidance.md#configfile).
 
 - Per un'installazione completamente automatica, è possibile passare tutte le altre impostazioni nelle variabili di ambiente. Per altre informazioni, vedere [distribuzioni automatiche](deployment-guidance.md#unattended).
 

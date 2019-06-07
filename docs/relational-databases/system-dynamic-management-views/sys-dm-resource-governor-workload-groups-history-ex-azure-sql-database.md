@@ -19,14 +19,14 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 manager: craigg
-ms.openlocfilehash: a177d3bcb81e17bb3a3accf6e1fade02132a58fa
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 1a2123c3da5945fb42184631e43fe27d83972375
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213762"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744019"
 ---
-# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>Sys.dm_resource_governor_workload_groups_history_ex (Database SQL di Azure)
+# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Snapshot restituisce intervalli di 15 secondi per ultimi 30 minuti di resource pool stats per un Database SQL di Azure.
@@ -78,7 +78,7 @@ Snapshot restituisce intervalli di 15 secondi per ultimi 30 minuti di resource p
 
 ## <a name="permissions"></a>Permissions
 
-Questa vista richiede l'autorizzazione VIEW DATABASE STATE.
+In questa vista richiede l'autorizzazione VIEW SERVER STATE.
 
 ## <a name="remarks"></a>Note
 

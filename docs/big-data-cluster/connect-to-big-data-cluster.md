@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994061"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743989"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Connettersi a un cluster di SQL Server i big data con Azure Data Studio
 
@@ -37,8 +37,11 @@ Per connettersi a un cluster di big data con Azure Data Studio, creare una nuova
 1. Dalla riga di comando, trovare l'indirizzo IP dell'istanza master con il comando seguente:
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Valore predefinito è nome del cluster di big data **mssql-cluster** a meno che non il nome in un file di configurazione di distribuzione personalizzato. Per altre informazioni, vedere [configurare le impostazioni di distribuzione per i cluster di big data](deployment-custom-configuration.md#clustername).
 
 1. In Azure Data Studio, premere **F1** > **nuova connessione**.
 

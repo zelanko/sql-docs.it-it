@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993989"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743937"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -92,8 +92,10 @@ I big data opzioni sono definite nei file di configurazione JSON di distribuzion
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> In questo esempio, richiesto per tutte le impostazioni che non fanno parte della configurazione predefinita, ad esempio le password. Si noti che le informazioni di Docker viene fornite all'utente da Microsoft come parte del 2019 Server SQL [programma Early Adoption](https://aka.ms/eapsignup).
+In questo scenario, richiesto per tutte le impostazioni che non fanno parte della configurazione predefinita, ad esempio le password. Si noti che le informazioni di Docker viene fornite all'utente da Microsoft come parte del 2019 Server SQL [programma Early Adoption](https://aka.ms/eapsignup).
+
+> [!IMPORTANT]
+> Il nome predefinito del cluster di big data è **mssql-cluster**. Questo aspetto è importante conoscere per eseguire il **kubectl** comandi che specificano lo spazio dei nomi Kubernetes con il `-n` parametro.
 
 ## <a id="customconfig"></a> Configurazioni personalizzate
 
@@ -220,8 +222,11 @@ Una volta completato lo script di distribuzione, è possibile ottenere gli indir
 1. Dopo la distribuzione, trovare l'indirizzo IP dell'endpoint del controller, esaminando l'output di EXTERNAL-IP di quanto segue **kubectl** comando:
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Se non è modificato il nome predefinito durante la distribuzione, usare `-n mssql-cluster` nel comando precedente. **MSSQL-cluster** è il nome predefinito per il cluster di big data.
 
 1. Accedere al cluster di big data con **mssqlctl login**. Impostare il **-controller-endpoint** parametro per l'indirizzo IP esterno dell'endpoint del controller.
 
@@ -267,7 +272,7 @@ minikube ip
 Indipendentemente dalla piattaforma si sta usando il cluster Kubernetes, per ottenere tutti gli endpoint del servizio distribuiti per il cluster, eseguire il comando seguente:
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> Connettersi al cluster

@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473521"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743832"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Esercitazione: Caricare i dati di esempio in un cluster di big data di SQL Server
 
@@ -71,7 +71,7 @@ I passaggi seguenti descrivono come usare un client Windows per caricare i dati 
    | <KNOX_PASSWORD> | La password per il Gateway HDFS/Spark. |
 
    > [!TIP]
-   > Uso [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-cluster-name>` ed esaminare gli indirizzi di EXTERNAL-IP per l'istanza master (**master-svc-external**) e Knox (**gateway-svc-external**).
+   > Uso [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-big-data-cluster-name>` ed esaminare gli indirizzi di EXTERNAL-IP per l'istanza master (**master-svc-external**) e Knox (**gateway-svc-external**). È il nome predefinito di un cluster **mssql-cluster**.
 
 1. Eseguire lo script di bootstrap.
 
@@ -107,7 +107,7 @@ I passaggi seguenti descrivono come usare un client Linux per caricare i dati di
    | <KNOX_PASSWORD> | La password per il Gateway HDFS/Spark. |
 
    > [!TIP]
-   > Uso [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-cluster-name>` ed esaminare gli indirizzi di EXTERNAL-IP per l'istanza master (**master-svc-external**) e Knox (**gateway-svc-external**).
+   > Uso [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-big-data-cluster-name>` ed esaminare gli indirizzi di EXTERNAL-IP per l'istanza master (**master-svc-external**) e Knox (**gateway-svc-external**). È il nome predefinito di un cluster **mssql-cluster**.
 
 1. Eseguire lo script di bootstrap.
 
