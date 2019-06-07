@@ -8189,16 +8189,20 @@
               href: ../azure-data-studio/sql-server-2019-extension.md
             - name: SQL Server Agent (anteprima)
               href: ../azure-data-studio/sql-server-agent-extension.md
+            - name: Estensione Server di gestione centrale di SQL Server (anteprima)
+              href: ../azure-data-studio/sql-server-cms-extension.md
             - name: Estensione dacpac di SQL Server (anteprima)
               href: ../azure-data-studio/sql-server-dacpac-extension.md
             - name: SQL Server Import (anteprima)
               href: ../azure-data-studio/sql-server-import-extension.md
             - name: SQL Server Profiler (anteprima)
               href: ../azure-data-studio/sql-server-profiler-extension.md
-            - name: Estensione di SandDance (anteprima)
-              href: ../azure-data-studio/sanddance-extension.md
+            - name: Estensione Confronto schema (anteprima)
+              href: ../azure-data-studio/schema-compare-extension.md
             - name: Estensione di PowerShell
               href: ../azure-data-studio/powershell-extension.md
+            - name: Estensione di SandDance (anteprima)
+              href: ../azure-data-studio/sanddance-extension.md
         - name: Creazione di estensioni
           items:
             - name: Panoramica dell'estendibilità
@@ -9367,8 +9371,6 @@
               href: ../powershell/sql-server-powershell.md
             - name: Oggetti SMO (SQL Server Management Objects)
               href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-            - name: Guida di riferimento a Transact-SQL (Motore di database)
-              href: ../t-sql/language-reference.md
             - name: Ambiente SSMS
               items:
                 - name: Ambiente SSMS
@@ -15006,7 +15008,7 @@
           href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
         - name: systranschemas (T-SQL)
           href: ../relational-databases/system-views/systranschemas-transact-sql.md
-    - name: Transact-SQL (T-SQL)
+    - name: Guida di riferimento a Transact-SQL (T-SQL)
       displayName: tsql
       href: ../t-sql/language-reference.md
       items:
