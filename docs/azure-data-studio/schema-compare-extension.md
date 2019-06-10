@@ -10,15 +10,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 836884e69fcc841f30f02f871b54d791d27d566b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748464"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798093"
 ---
-# <a name="schema-compare-extension-preview"></a>Estensione di confronto dello schema (anteprima)
+# <a name="schema-compare-extension-preview"></a>Estensione Confronto schema (anteprima)
 L'estensione del confronto Schema offre un'esperienza facile da usare per confrontare i database e i file con estensione dacpac e applicare le modifiche dall'origine alla destinazione.
 
 Questa esperienza è attualmente la versione di anteprima iniziale. Segnalare problemi e richieste di funzionalità [qui.](https://github.com/microsoft/azuredatastudio/issues)

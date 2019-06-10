@@ -4,18 +4,18 @@ titleSuffix: SQL Server 2019 big data clusters
 description: Questo articolo descrive la distribuzione di applicazioni in un cluster di big data di SQL Server 2019 (anteprima).
 author: jterh
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44e0be15c9b9cc3abb8af3e8f2e7fc8049d385df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a6ba9caed2b01abc50e16e34d1a13413af2d0ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283732"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801863"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster di SQL Server 2019 dei big Data?
 
@@ -64,7 +64,7 @@ Le due interfacce principali per la distribuzione dell'applicazione sono:
 
 Per altre informazioni su come creare ed eseguire applicazioni nel cluster di big data di SQL Server, vedere gli argomenti seguenti:
 
-- [Distribuire le applicazioni usando mssqlctl](big-data-cluster-create-apps.md)
+- [Distribuire applicazioni con mssqlctl](big-data-cluster-create-apps.md)
 - [Distribuire le applicazioni usando l'estensione per la distribuzione di App](app-deployment-extension.md)
 - [Utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md)
 

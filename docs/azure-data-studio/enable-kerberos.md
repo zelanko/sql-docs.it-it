@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-manager: craigg
-ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778374"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi a SQL Server utilizzando l'autenticazione di Windows - Kerberos in [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
@@ -32,7 +32,7 @@ Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verifica della presenza del setup di Kerberos su Sql Server
 
-Effettuare il login sul computer host di Sql Server. Dal prompt dei comandi Windows, utilizzare il comando `setspn -L %COMPUTERNAME%` per elencare tutti i Nomi Entità Server per l'host. Dovrebbero essere visualizzate voci che iniziano con *MSSQLSvc/HostName.Domain.com* il che indica che Sql Server è registrato con un nome SPN ed è pronto ad accettare l'autenticazione Kerberos.  
+Effettuare il login sul computer host di Sql Server. Dal prompt dei comandi Windows, utilizzare il comando `setspn -L %COMPUTERNAME%` per elencare tutti i Nomi Entità Server per l'host. Dovrebbero essere visualizzate voci che iniziano con *MSSQLSvc/HostName.Domain.com* il che indica che Sql Server è registrato con un nome SPN ed è pronto ad accettare l'autenticazione Kerberos. 
 - Se non si ha accesso all'host di Sql Server, accedere su qualsiasi altro sistema operativo Windows presente nello stesso dominio Active Directory e utilizzare il comando `setspn -L <SQLSERVER_NETBIOS>` dove <SQLSERVER_NETBIOS> è il nome del computer dell'host di Sql Server.
 
 
@@ -133,7 +133,6 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ## <a name="configure-kdc-in-krb5conf"></a>Configurazione KDC in krb5.conf
 
 Modificare il file `/etc/krb5.conf` in un editor di propria scelta. Configurare le chiavi seguenti:
-
 
 ```bash
 sudo vi /etc/krb5.conf
