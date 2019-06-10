@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620385"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800755"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
@@ -36,7 +36,7 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
 
    
-1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 1. La prima volta che si esegue [!INCLUDE[name-sos](../includes/name-sos-short.md)] il **benvenuto** deve aperta la pagina. Se non viene visualizzato il **benvenuto** pagina, selezionare **consentono** > **benvenuto**. Selezionare **nuova connessione** per aprire il **connessione** riquadro:
    
    ![Icona "Nuova connessione"](media/quickstart-sql-server/new-connection-icon.png)
@@ -77,7 +77,7 @@ La procedura seguente crea un database denominato **TutorialDB**:
    ```
 1. Per eseguire la query, fare clic su **Esegui** .
 
-Dopo il completamento della query, il nuovo **TutorialDB** viene visualizzato nell'elenco dei database.  Se non è presente, fare doppio clic sul nodo **Database** e selezionare **Aggiorna**.
+Dopo il completamento della query, il nuovo **TutorialDB** viene visualizzato nell'elenco dei database. Se non è presente, fare doppio clic sul nodo **Database** e selezionare **Aggiorna**.
 
 
 ## <a name="create-a-table"></a>Creare una tabella
@@ -112,7 +112,7 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
    GO
    ```
 
-Dopo il completamento della query, la nuova tabella **dbo.Customers** è visualizzata nell'elenco di tabelle.  Potrebbe tuttavia essere necessario fare clic con il pulsante destro del mouse sul nodo **TutorialDB > Tabelle** e selezionare **Aggiorna**.
+Dopo il completamento della query, la nuova tabella **dbo.Customers** è visualizzata nell'elenco di tabelle. Potrebbe tuttavia essere necessario fare clic con il pulsante destro del mouse sul nodo **TutorialDB > Tabelle** e selezionare **Aggiorna**.
 
 ## <a name="insert-rows"></a>Inserire righe
 

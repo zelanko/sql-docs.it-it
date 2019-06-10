@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Questo articolo illustra come eseguire i notebook di Jupyter in Azure Data Studio connesso a un cluster di big data di SQL Server 2019.
 author: achatter
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462054"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802822"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Come usare i notebook in fase di anteprima di SQL Server 2019
 

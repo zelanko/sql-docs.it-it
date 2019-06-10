@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 230e57dbbe3b3d2ca88bd6f4fd727555b4fa38b2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 4e0f357c677a2b8e1ca729cc441f0acadaa5de01
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214822"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785124"
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214822"
 |----------------------|-------------------------------|  
 |Connessione a un'istanza predefinita utilizzando il protocollo predefinito.|APPHOST|  
 |Connessione a un'istanza denominata utilizzando il protocollo predefinito. |APPHOST\SQLEXPRESS|  
-|Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|,|  
+|Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.\SQLEXPRESS|  
 |Connessione a un'istanza predefinita sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost\SQLEXPRESS|  

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Informazioni sui cluster di big data 2019 di SQL Server (anteprima) che vengono eseguiti su Kubernetes e fornire le opzioni di scalabilità orizzontale per relazionali e dati di HDFS.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801886"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Cluster di Big Data di SQL Server
 
@@ -61,7 +61,7 @@ Gestione e monitoraggio vengono forniti tramite una combinazione di strumenti da
 
 Il [portale di amministrazione cluster](cluster-admin-portal.md) è un'interfaccia web che consente di visualizzare lo stato e integrità dei POD nel cluster. Vengono inoltre forniti collegamenti ad altri dashboard per log analitica e dashboard di monitoraggio.
 
-È possibile utilizzare Data Studio di Azure per eseguire una serie di attività nel cluster di big data. Questa opzione è abilitata per il nuovo **estensione 2019 per Server SQL (anteprima)**. Questa estensione offre:
+È possibile utilizzare Data Studio di Azure per eseguire una serie di attività nel cluster di big data. Questa opzione è abilitata per il nuovo **estensione 2019 per Server SQL (anteprima)** . Questa estensione offre:
 
 - Frammenti predefiniti per attività comuni di gestione.
 - Possibilità di esplorare HDFS, caricare i file, i file di anteprima e creare una directory.

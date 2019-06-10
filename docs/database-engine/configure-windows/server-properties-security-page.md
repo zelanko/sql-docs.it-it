@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 48fb7495e7dcd3818e784fd7c9dd7b4152871ebb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: beda4797b2beeeea2bfb24a35cf052b9ac22b5eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848857"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794127"
 ---
 # <a name="server-properties---security-page"></a>Proprietà server (pagina Sicurezza)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
