@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 53176d73c79bf6253d58d4cd6d3e44390a2e35eb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 4e0fed979571c27aa42e01a9e876abae81aaff9e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487818"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783824"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Tipi di dati di SQL Server e SSIS supportati per i domini DQS
 
@@ -32,7 +32,7 @@ ms.locfileid: "65487818"
   
 |Tipo di dati del dominio DQS.|Tipo di dati di SQL Server supportati|  
 |--------------------------|------------------------------------|  
-|date|Data|  
+|Date|Data|  
 |Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> REAL<br /><br /> SMALLMONEY|  
 |Valore intero|BIGINT<br /><br /> INT<br /><br /> smallint<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
@@ -44,7 +44,7 @@ ms.locfileid: "65487818"
   
 |Tipo di dati del dominio DQS.|Tipo di dati di SSIS supportati|  
 |--------------------------|------------------------------|  
-|date|DT_DATE|  
+|Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |Valore intero|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  

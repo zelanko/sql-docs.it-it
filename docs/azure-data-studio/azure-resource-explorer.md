@@ -5,17 +5,17 @@ description: Informazioni su come esplorare e gestire Server SQL di Azure, Datab
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-manager: craigg
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91e766fae5dca7a3d9e2dec56af17161d684e145
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180831"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789221"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Esplorare e gestire le risorse di SQL di Azure con Azure Resource Explorer
 
