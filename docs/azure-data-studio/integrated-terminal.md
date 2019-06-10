@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: d29234810e30efd204f498e2f7c63ba6571cbfe7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66010946"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797531"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
 
@@ -35,7 +35,7 @@ Per aprire il terminale:
 
 ## <a name="managing-multiple-terminals"></a>Gestione di più terminali
 
-È possibile creare più terminali aperti in diverse posizioni e spostarsi facilmente tra di essi È possibile infatti aggiungere più istanze del terminale facendo clic sull'icona "+" (più) in alto a destra del pannello **TERMINALE** o premendo **Ctrl+Maiusc+`**. Ogni istanza creata aggiunge un'altra voce nell'elenco a discesa in alto a destra, il quale può essere usato per selezionare i vari terminali.
+È possibile creare più terminali aperti in diverse posizioni e spostarsi facilmente tra di essi È possibile infatti aggiungere più istanze del terminale facendo clic sull'icona "+" (più) in alto a destra del pannello **TERMINALE** o premendo **Ctrl+Maiusc+`** . Ogni istanza creata aggiunge un'altra voce nell'elenco a discesa in alto a destra, il quale può essere usato per selezionare i vari terminali.
 
 ![Più terminali](media/integrated-terminal/terminal-multiple-instances.png)
 

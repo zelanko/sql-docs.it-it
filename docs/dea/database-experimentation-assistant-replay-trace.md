@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015115"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794447"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Riprodurre una traccia nel Database sperimentazione Assistant
 
@@ -65,7 +65,7 @@ In DEA, selezionare l'icona di menu. Nel menu espanso, selezionare **riprodurre 
 ### <a name="replay-a-trace"></a>Riprodurre una traccia
 
 1.  **Nome file di traccia**: Immettere un nome di file di traccia.
-1.  **Dimensioni file massime (MB)**: Immettere un valore di dimensione rollover dei file di traccia. Il valore predefinito è 200 MB. È possibile immettere un valore personalizzato.
+1.  **Dimensioni file massime (MB)** : Immettere un valore di dimensione rollover dei file di traccia. Il valore predefinito è 200 MB. È possibile immettere un valore personalizzato.
 1.  **Percorso per archiviare l'output di traccia di riproduzione**: Immettere il percorso del file di output con estensione trc.
 1.  **Nome dell'istanza SQL Server**:  Immettere il nome dell'istanza di SQL Server in cui si desidera riprodurre le tracce.
 1.  Selezionare **Start**.
