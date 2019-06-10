@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 75117d76-6396-493e-862a-0e9a6de26bfa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d55adeb8f3ba353b5b04e26005526c49ad783abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8ff248fc77e02e5578752ae1b1585f65b893e4e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619199"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803859"
 ---
 # <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Passaggio 2: Creare un database SQL per lo sviluppo Python con pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

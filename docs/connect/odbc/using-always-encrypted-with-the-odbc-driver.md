@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198032"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801742"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -557,7 +557,7 @@ La tabella seguente fornisce un riepilogo delle azioni da eseguire quando si usa
 
 |`ColumnEncryption`|Direzione BCP|Descrizione|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (al client)|Recupera testo crittografato. Il tipo di dati osservati è **varbinary(max)**.|
+|`Disabled`|OUT (al client)|Recupera testo crittografato. Il tipo di dati osservati è **varbinary(max)** .|
 |`Enabled`|OUT (al client)|Recupera testo non crittografato. Il driver decrittograferà i dati della colonna.|
 |`Disabled`|IN (al server)|Inserisce testo crittografato. Questa operazione serve per spostare in modo non trasparente i dati crittografati senza che sia necessario decrittografarli. L'operazione avrà esito negativo se l'opzione `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` non è impostata sull'utente o BCPMODIFYENCRYPTED non è impostata sull'handle di connessione. Per altre informazioni, vedere più avanti.|
 |`Enabled`|IN (al server)|Inserisce testo non crittografato. Il driver crittograferà i dati della colonna.|

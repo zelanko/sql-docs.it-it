@@ -1,18 +1,18 @@
 ---
 title: Attestazioni per il servizio token Windows (c2WTS) e Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397155"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454566"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
 
@@ -50,7 +50,7 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
 
     **Come procedura consigliata C2WTS deve essere eseguito con la propria identità di dominio.**
 
-    * Creare un account Active Directory e registrarlo come account gestito in SharePoint Server. Per altre informazioni sugli account gestiti, vedere [Managed Accounts in Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/) (Account gestiti in Sharepoint)
+    * Creare un account Active Directory e registrarlo come account gestito in SharePoint Server. Per altre informazioni sugli account gestiti, vedere [Managed Accounts in Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/) (Account gestiti in Sharepoint)
    
     * Configurare il servizio C2WTS per usare l'account gestito tramite Amministrazione centrale SharePoint > Sicurezza > Configura account di servizio > Servizio Windows - Attestazioni per il servizio token Windows
 
@@ -84,13 +84,13 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
     * Selezionare **Users or Computers...&#42;** (Utenti o computer) e immettere l'account che ospita il servizio. Ad esempio, se SQL Server è in esecuzione con un account denominato *sqlservice*, immettere `sqlservice`. 
       Per la **Web part Visualizzatore di report** sarà l'account del servizio per l'istanza di Reporting Services (modalità nativa).
 
-    * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN. Per la **Web part Visualizzatore di report**, verrà visualizzato il nome SPN http configurato in [Configurazione della web part (modalità nativa) di Visualizzatore di report](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN. Per la **Web part Visualizzatore di report**, verrà visualizzato il nome SPN http configurato in [Configurazione della web part (modalità nativa) di Visualizzatore di report](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Selezionare OK per uscire dalle finestre di dialogo.
 
 3. Configurare *AllowedCallers* per C2WTS.
 
-    In C2WTS è necessario che le identità chiamanti siano elencate esplicitamente nel file di configurazione **C2WTShost.exe.config**. C2WTS non accetta richieste da tutti gli utenti autenticati nel sistema, a meno che venga non venga configurato appositamente. In questo caso il chiamante è il gruppo di Windows WSS_WPG. Il file C2WTShost.exe.config viene salvato nel percorso seguente:
+    In C2WTS è necessario che le identità chiamanti siano elencate esplicitamente nel file di configurazione **C2WTShost.exe.config**. C2WTS accetta richieste da tutti gli utenti autenticati nel sistema solo se viene configurato appositamente. In questo caso il chiamante è il gruppo di Windows WSS_WPG. Il file C2WTShost.exe.config viene salvato nel percorso seguente:
 
     Modificando l'account del servizio in Amministrazione centrale SharePoint, per il servizio C2WTS, tale account verrà aggiunto al gruppo WSS_WPG.
 

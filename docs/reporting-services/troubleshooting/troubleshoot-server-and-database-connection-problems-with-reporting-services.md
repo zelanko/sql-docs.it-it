@@ -1,6 +1,6 @@
 ---
 title: Risolvere i problemi di connessione al server e al database con Reporting Services | Microsoft Docs
-ms.date: 02/28/2016
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e44d8dde3f93a946a25cc8fe269a26f70a7432a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574120"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403163"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Risolvere i problemi di connessione al server e al database con Reporting Services
 Utilizzare questo argomento per la risoluzione dei problemi che si verificano durante la connessione a un server di report. In questo argomento vengono inoltre fornite informazioni sui messaggi di tipo "Errore imprevisto". Per altre informazioni sulla configurazione dell'origine dati e la configurazione delle informazioni di connessione del server di report, vedere [Specificare le informazioni sulle credenziali e le connessioni per le origini dati dei report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurare una connessione a un database del server di report (Gestione configurazione SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -31,7 +31,7 @@ Questo errore si verifica quando le credenziali vengono passate tra più conness
 Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (provider: provider named pipe, errore: 40 - Impossibile aprire una connessione a SQL Server). Tale errore viene restituito dall'istanza del motore di database che ospita il database del server di report. Nella maggior parte dei casi questo errore si verifica poiché il servizio SQL Server è stato arrestato. Se si usa invece SQL Server Express with Advanced Services o un'istanza denominata, l'errore si verifica anche se la stringa di connessione per il database del server di report o l'URL del server di report non è corretto. Per risolvere questi problemi, effettuare le seguenti operazioni:  
   
 * Verificare che il servizio SQL Server (**MSSQLSERVER**) sia stato avviato. Nel computer che ospita l'istanza del motore di database fare clic sul pulsante Start, scegliere Strumenti di amministrazione, fare clic su Servizi e scorrere fino a SQL Server (**MSSQLSERVER**). Se non è stato avviato, fare clic con il pulsante destro del mouse sul servizio, quindi scegliere Proprietà. In Tipo di avvio selezionare Automatico, fare clic su Applica, quindi su Avvia e infine scegliere OK.   
-* Verificare che l'URL del server di report e la stringa di connessione al database del server di report siano corretti. Se Reporting Services o il motore di database è stato installato come un'istanza denominata, la stringa di connessione predefinita creata durante l'installazione includerà il nome dell'istanza. Se, ad esempio, è stata installata un'istanza predefinita di SQL Server Express with Advanced Services in un server denominato DEVSRV01, l'URL di Gestione report sarà DEVSRV01\Reports$SQLEXPRESS. Il nome del server di database nella stringa di connessione, inoltre, sarà simile a DEVSRV01\SQLEXPRESS. Per altre informazioni sugli URL e le stringhe di connessione all'origine dati per SQL Server Express, vedere [Reporting Services in SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Per verificare la stringa di connessione al database del server di report, avviare lo strumento di configurazione di Reporting Services e visualizzare la pagina Impostazioni database.  
+* Verificare che l'URL del server di report e la stringa di connessione al database del server di report siano corretti. Se Reporting Services o il motore di database è stato installato come un'istanza denominata, la stringa di connessione predefinita creata durante l'installazione includerà il nome dell'istanza. Se, ad esempio, è stata installata un'istanza predefinita di SQL Server Express with Advanced Services in un server denominato DEVSRV01, l'URL del portale Web sarà DEVSRV01\Reports$SQLEXPRESS. Il nome del server di database nella stringa di connessione, inoltre, sarà simile a DEVSRV01\SQLEXPRESS. Per altre informazioni sugli URL e le stringhe di connessione all'origine dati per SQL Server Express, vedere [Reporting Services in SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Per verificare la stringa di connessione al database del server di report, avviare lo strumento di configurazione di Reporting Services e visualizzare la pagina Impostazioni database.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Impossibile stabilire la connessione. Verificare che il server sia in esecuzione.  
 Questo errore viene restituito dal provider ADOMD.NET e può verificarsi per vari motivi. Se il server è stato indicato come "localhost", provare a specificare invece il nome del server. L'errore può inoltre verificarsi se non è possibile allocare memoria alla nuova connessione. Per altre informazioni, vedere l' [articolo della Knowledge Base 912017 - FIX: Messaggio di errore quando ci si connette a un'istanza di SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
@@ -76,7 +76,7 @@ Questo errore si verifica quando il server di report non è in grado di connette
   
 L'errore può inoltre verificarsi se l'istanza del motore di database che ospita il database del server di report non è configurata per le connessioni remote. In alcune edizioni di SQL Server la connessione remota è abilitata per impostazione predefinita. Per verificare se tale connessione è abilitata nell'istanza del motore di database di SQL Server in uso, eseguire lo strumento Gestione configurazione di SQL Server. È necessario abilitare sia il protocollo TCP/IP sia le named pipe. Un server di report utilizza entrambi i protocolli. Per istruzioni su come abilitare le connessioni remote, vedere la sezione "Come configurare le connessioni remote al database del server di report" in [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-Se il messaggio di errore include il testo aggiuntivo seguente, significa che la password dell'account impiegato per eseguire l'istanza del motore di database è scaduta: "Errore durante la connessione al server. Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (**provider: Interfacce di rete SQL Server, errore: 26 - Errore nell'individuazione del server/dell'istanza specificati)**." Per risolvere l'errore, reimpostare la password.   
+Se il messaggio di errore include il testo aggiuntivo seguente, significa che la password dell'account impiegato per eseguire l'istanza del motore di database è scaduta: "Errore durante la connessione al server. Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (**provider: Interfacce di rete SQL Server, errore: 26 - Errore nell'individuazione del server/dell'istanza specificati)** ." Per risolvere l'errore, reimpostare la password.   
   
 ## <a name="rpc-server-is-not-listening"></a>"Il server RPC non è in ascolto"  
 Il servizio del server di report utilizza il server RPC (Remote Procedure Call) per alcune operazioni. Se viene visualizzato l'errore "Il server RPC non è in ascolto", verificare che il servizio del server di report sia in esecuzione.  
