@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7619712d0445182d0ded0d7d544bd23f2cee8e90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214862"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800776"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Usare FILESTREAM e FileTable con i gruppi di disponibilità Always On
 
@@ -32,16 +32,6 @@ ms.locfileid: "53214862"
  Tutte le funzionalità FILESTREAM sono supportate. Dopo un failover, i dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
   
  La funzionalità FileTable è supportata parzialmente. Dopo un failover, i dati FileTable sono accessibili nella replica primaria, ma non nelle repliche secondarie leggibili.  
-  
- **Contenuto dell'argomento**  
-  
--   [Prerequisiti](#Prerequisites)  
-  
--   [Utilizzo di nomi di rete virtuale per FILESTREAM e accesso a FileTable](#vnn)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
--   [Contenuto correlato](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
   

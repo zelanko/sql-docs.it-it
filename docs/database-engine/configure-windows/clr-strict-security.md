@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7024f4214388f77edc2f97e402db8da71e9c857c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8b255f03070bffb289184a1dbf6ec9fdedbbec4a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205260"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799522"
 ---
 # <a name="clr-strict-security"></a>CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Quando abilitata, l'opzione `PERMISSION_SET` nelle istruzioni `CREATE ASSEMBLY` 
 > [!IMPORTANT]
 >  Dopo l'abilitazione di strict security, tutti gli assembly non firmati non verranno caricati. È necessario modificare oppure eliminare e ricreare ogni assembly in modo che sia firmato con un certificato o una chiave asimmetrica con un account di accesso corrispondente con l'autorizzazione `UNSAFE ASSEMBLY` nel server.
 
-## <a name="permissions"></a>Permissions 
+## <a name="permissions"></a>Autorizzazioni 
 
 ### <a name="to-change-this-option"></a>Per modificare questa opzione  
 È richiesta l'autorizzazione `CONTROL SERVER` o l'appartenenza al ruolo predefinito del server `sysadmin`.

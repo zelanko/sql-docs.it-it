@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421188"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462509"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Una tabella ottimizzata per la memoria che contiene 200 GB di dati richiede più
 
 Per un database ospitato nel servizio cloud del database SQL di Azure, il livello di servizio scelto influisce sulla quantità di memoria attiva che il database può usare. È consigliabile monitorare l'utilizzo della memoria del database tramite un avviso. Per informazioni dettagliate, vedere:
 
-- Esaminare i limiti di archiviazione di OLTP in memoria per il [piano tariffario](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
+- Esaminare i limiti di archiviazione di OLTP in memoria per il [piano tariffario](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
 - [Monitorare l'archiviazione di OLTP in memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
@@ -118,7 +118,7 @@ Per le linee guida per verificare se le funzionalità di OLTP in memoria possono
 
 
 
-## <a name="b-unsupported-features"></a>b. Funzionalità non supportate
+## <a name="b-unsupported-features"></a>B. Funzionalità non supportate
 
 Le funzionalità non supportate in alcuni scenari di OLTP in memoria sono descritte in:
 
@@ -214,9 +214,9 @@ Per una panoramica degli indici in tabelle ottimizzate per la memoria, vedere:
 
 #### <a name="hash-indexes"></a>Indici hash
 
-Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore '**=**'.
+Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore ' **=** '.
 
-- Gli operatori non precisi, ad esempio '**! =**','**>**' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
+- Gli operatori non precisi, ad esempio ' **! =** ',' **>** ' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
 
 - Un indice hash potrebbe non essere la scelta migliore se la velocità di duplicazione del valore chiave diventa troppo elevata.
 
@@ -226,7 +226,7 @@ Gli indici hash possono rappresentare il formato più veloce per l'accesso a una
 
 #### <a name="nonclustered-columnstore-indexes"></a>Indici columnstore non cluster
 
-Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)*. Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella ottimizzata per la memoria.
+Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)* . Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella ottimizzata per la memoria.
 
 
 - Un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) può essere compilato in una tabella basata su disco, anche come indice cluster. Ma in una tabella ottimizzata per la memoria, un indice columnstore non può essere raggruppato in cluster.

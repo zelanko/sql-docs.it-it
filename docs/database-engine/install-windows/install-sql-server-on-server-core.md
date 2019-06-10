@@ -10,13 +10,13 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 3eb1ff10fbf0af49cd698537af915378cc1ddb87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306219"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794930"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installare SQL Server in Server Core
 
@@ -42,8 +42,8 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
   
 |Funzionalità|Supportato|Informazioni aggiuntive|  
 |-------------|---------------|----------------------------|  
-|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Sì||  
-|Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Sì||  
+|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Sì||  
+|Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Sì||  
 |Ricerca full-text|Sì||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Sì||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Sì||  
@@ -53,7 +53,7 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
 |Server Integration Services|Sì||  
 |Compatibilità con le versioni precedenti di strumenti client.|no||  
 |SDK di strumenti client|no||  
-|Documentazione online di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |no||  
+|Documentazione online di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|no||  
 |Strumenti di gestione - Di base|Solo remoto|L'installazione di queste funzionalità in Server Core non è supportata. Questi componenti possono essere installati in un server diverso da Server Core e connessi ai servizi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installati in Server Core.|  
 |Strumenti di gestione - Completa|Solo remoto|L'installazione di queste funzionalità in Server Core non è supportata. Questi componenti possono essere installati in un server diverso da Server Core e connessi ai servizi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installati in Server Core.|  
 |Controller di Riesecuzione distribuita|no||  
@@ -68,8 +68,8 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
   
 |||  
 |-|-|  
-|Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Tutte le edizioni a 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
-|Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Tutte le lingue|  
+|Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le edizioni a 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le lingue|  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella combinazione lingua/impostazioni locali del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows il lingua giapponese<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tedesca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua cinese (Cina)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua araba (Arabia Saudita)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tailandese (Thai)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua turca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua portoghese (Portogallo)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua inglese|  
 |Edizione di Windows|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
