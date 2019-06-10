@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312835"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798065"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni dell'area di lavoro e utente
 
@@ -31,7 +31,7 @@ ms.locfileid: "63312835"
 
 Il comando di menu **File** > **Preferenze** > **Impostazioni** (**sqlops**  >  **Preferenze** > **Impostazioni** su Mac) fornisce il punto di ingresso per configurare le impostazioni utente e dell'area di lavoro. Esse vengono fornite con un elenco di impostazioni predefinite. Copiare qualsiasi impostazione si desideri modificare nell'appropriato file `settings.json`. Le schede a destra consentono di passare rapidamente tra i file delle impostazioni utente e dell'area di lavoro.
 
-È anche possibile aprire le impostazioni utente e dell'area di lavoro dal **riquadro comandi** (**Ctrl + MAIUSC + P**) con **preferenze: Aprire le impostazioni utente** e **preferenze: Aprire le impostazioni dell'area di lavoro** oppure usare il tasto di scelta rapida (**Ctrl +,**).
+È anche possibile aprire le impostazioni utente e dell'area di lavoro dal **riquadro comandi** (**Ctrl + MAIUSC + P**) con **preferenze: Aprire le impostazioni utente** e **preferenze: Aprire le impostazioni dell'area di lavoro** oppure usare il tasto di scelta rapida (**Ctrl +,** ).
 
 Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le righe di codice per essere rientrate automaticamente.
 
