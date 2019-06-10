@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 15635f99ee6ecc20fd0341f04f6cf5caaac74914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f8e46d571c5379255b138f0555f1e907f98aca73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772201"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Apertura di Amministratore origine dati ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47676783"
   
 2.  Nel **Pannello di controllo**aprire **Strumenti di amministrazione**.  
   
-3.  In **Strumenti di amministrazione**fare clic su **Origine dati (ODBC)**.  
+3.  In **Strumenti di amministrazione**fare clic su **Origine dati (ODBC)** .  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Per aprire Amministrazione origine dati ODBC in Windows Server 2008  
   
-1.  Fare clic sul menu **Start** , scegliere **Strumenti di amministrazione**e quindi **Origine dati (ODBC)**.  
+1.  Fare clic sul menu **Start** , scegliere **Strumenti di amministrazione**e quindi **Origine dati (ODBC)** .  
 
 
 > [!NOTE]  

@@ -4,19 +4,19 @@ titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di stato cluster mssqlctl.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 76838876dba8fc52ba8a4c92f9e428d61140bc21
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 4d85164f1e66f603067b4502e5a103c0abe9befa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995059"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779355"
 ---
-# <a name="mssqlctl-cluster-status"></a>stato del cluster mssqlctl
+# <a name="mssqlctl-cluster-status"></a>mssqlctl cluster status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
