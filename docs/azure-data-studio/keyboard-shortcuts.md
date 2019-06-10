@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 9ce8b817a704e6bae6d56a47b49f78fd1c17a2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b5a07ce70b57f5d62d53bf8ae9b570edcc78d7e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104748"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800241"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Tasti di scelta rapida in [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -29,7 +29,7 @@ Poiché [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le associazi
 
 Per visualizzare tutti i tasti di scelta rapida attualmente definiti:
 
-Aprire il **tasti di scelta rapida** editor dalle **File** menu: **File** > **preferenze** > **scelte rapide da tastiera** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Preferenze** > **tasti di scelta rapida** su Mac).
+Aprire il **tasti di scelta rapida** editor dalle **File** menu: **File** > **preferenze** > **scelte rapide da tastiera** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Preferenze** > **tasti di scelta rapida** su Mac).
 
 Oltre a visualizzare tasti corrente, il **tasti di scelta rapida** editor sono elencati i comandi disponibili privi di tasti di scelta rapida definiti. Il **tasti di scelta rapida** editor consente di modificare, rimuovere, reimpostare, e definire nuovi tasti di scelta rapida.  
 

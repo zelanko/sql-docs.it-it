@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015165"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794497"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia nel Database sperimentazione Assistant
 
@@ -39,8 +39,8 @@ La memorizzazione nella cache di query in SQL Server potrebbe influenzare i risu
     - **Nome dell'istanza SQL Server**: Immettere un nome per il computer che esegue SQL Server in cui si desidera acquisire una traccia del server.
     - **Nome del database**: Immettere un nome per un database in cui si desidera avviare una traccia di database. Se non si specifica un database, traccia viene acquisita in tutti i database nel server.
     - **Nome file di traccia**: Immettere un nome per il file di traccia per l'acquisizione.
-    - **Dimensioni file massime (MB)**: Selezionare la dimensione di rollover dei file. Viene creato un nuovo file in base alle esigenze con le dimensioni di file che scelto. Le dimensioni consigliate di rollover sono 200 MB.
-    - **Durata (in min)**: Selezionare il periodo di tempo (in minuti) che si desidera che l'acquisizione di traccia per l'esecuzione.
+    - **Dimensioni file massime (MB)** : Selezionare la dimensione di rollover dei file. Viene creato un nuovo file in base alle esigenze con le dimensioni di file che scelto. Le dimensioni consigliate di rollover sono 200 MB.
+    - **Durata (in min)** : Selezionare il periodo di tempo (in minuti) che si desidera che l'acquisizione di traccia per l'esecuzione.
     - **Percorso in cui archiviare i file di output traccia**: Selezionare il percorso di destinazione per il file di traccia. 
 
     > [!NOTE]

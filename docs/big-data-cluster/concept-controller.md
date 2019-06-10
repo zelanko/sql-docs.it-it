@@ -5,18 +5,18 @@ description: Questo articolo descrive il controller di un cluster di big data di
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994080"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783170"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Che cos'è il controller in un cluster di big data di SQL Server?
 
