@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data 2019 Server SQL (anteprima) con i processi Spark in Azure Data Studio.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994171"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770892"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark
 
@@ -108,7 +108,7 @@ Il passaggio successivo consiste nel creare un processo che carica i dati clicks
    |---|---|
    | nome del server | Uso di SQL Server per la lettura lo schema della tabella |
    | Numero di porta | Porta SQL Server è in ascolto (valore predefinito 1433) |
-   | username | Nome utente di accesso di SQL Server |
+   | userName | Nome utente di accesso di SQL Server |
    | password | Password di accesso di SQL Server |
    | nome del database | Database di destinazione |
    | nome della tabella esterna | Tabella da utilizzare per ottenere risultati |
