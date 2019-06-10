@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 7ea5095fcec5681ea54a07bbcf8c41255d66db87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255926"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780270"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54255926"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -60,7 +60,7 @@ ms.locfileid: "54255926"
   
 4.  Le informazioni presentate nella pagina **Introduzione** variano a seconda che una replica secondaria sia idonea per un failover pianificato. Se in questa pagina è indicato "**Eseguire un failover pianificato per il gruppo di disponibilità**", è possibile eseguire failover del gruppo di disponibilità senza perdita di dati.  
   
-5.  Nella pagina **Seleziona nuova replica primaria** è possibile visualizzare lo stato della replica primaria corrente e del quorum WSFC, prima di scegliere la replica secondaria che diventerà la nuova replica primaria (la *destinazione di failover*). Per un failover manuale pianificato assicurarsi di selezionare una replica secondaria il cui valore **Conformità failover** sia "**Senza perdita di dati**". Per un failover forzato e per tutte le possibili destinazioni di failover, questo valore sarà "**Perdita di dati, Avvisi(**_#_**)**", dove *#* indica il numero di avvisi presenti per una replica secondaria specificata. Per visualizzare gli avvisi per una destinazione del failover specificata, fare clic sul valore "Conformità failover".  
+5.  Nella pagina **Seleziona nuova replica primaria** è possibile visualizzare lo stato della replica primaria corrente e del quorum WSFC, prima di scegliere la replica secondaria che diventerà la nuova replica primaria (la *destinazione di failover*). Per un failover manuale pianificato assicurarsi di selezionare una replica secondaria il cui valore **Conformità failover** sia "**Senza perdita di dati**". Per un failover forzato e per tutte le possibili destinazioni di failover, questo valore sarà "**Perdita di dati, Avvisi(** _#_ **)** ", dove *#* indica il numero di avvisi presenti per una replica secondaria specificata. Per visualizzare gli avvisi per una destinazione del failover specificata, fare clic sul valore "Conformità failover".  
   
      Per ulteriori informazioni, vedere [Pagina Seleziona nuova replica primaria](#SelectNewPrimaryReplica)più avanti in questo argomento.  
   

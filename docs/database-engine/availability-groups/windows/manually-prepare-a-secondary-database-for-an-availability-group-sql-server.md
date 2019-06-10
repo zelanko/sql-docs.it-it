@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832083"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799257"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparare un database secondario per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Questo argomento illustra come preparare un database per un gruppo di disponibil
 ###  <a name="Security"></a> Sicurezza  
  Quando viene eseguito il backup di un database, la [proprietà TRUSTWORTHY del database](../../../relational-databases/security/trustworthy-database-property.md) viene impostata su OFF. Di conseguenza, la proprietà TRUSTWORTHY è sempre impostata su OFF in un database appena ripristinato.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** . Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md).  
   
  Se il database da ripristinare non esiste nell'istanza del server, l'istruzione RESTORE richiede autorizzazioni CREATE DATABASE. Per altre informazioni, vedere [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md).  
@@ -80,7 +80,7 @@ Questo argomento illustra come preparare un database per un gruppo di disponibil
   
 3.  Nell'istanza del server che ospita la replica secondaria, ripristinare il backup completo del database primario (e facoltativamente un backup differenziale) seguito da eventuali backup del log successivi.  
   
-     Nella pagina **Opzioni di RESTORE DATABASE**, selezionare **Lascia il database non operativo e non eseguire il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. (RESTORE WITH NORECOVERY)**.  
+     Nella pagina **Opzioni di RESTORE DATABASE**, selezionare **Lascia il database non operativo e non eseguire il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. (RESTORE WITH NORECOVERY)** .  
   
      Se i percorsi dei file del database primario e del database secondario sono diversi, ad esempio se il database primario si trova nell'unità "F:" ma nell'istanza del server che ospita la replica secondaria non è disponibile un'unità "F:", includere l'opzione MOVE nella clausola WITH.  
   
@@ -110,7 +110,7 @@ Questo argomento illustra come preparare un database per un gruppo di disponibil
   
 -   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per preparare un database secondario**  
   
 > [!NOTE]  

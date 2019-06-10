@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807939"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799074"
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47807939"
 |Viene descritto come utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler per acquisire tracce di richieste dell'applicazione che entrano a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È possibile riprodurre queste tracce in un secondo momento per attività quali test delle prestazioni o diagnosi dei problemi.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Vengono descritte le funzionalità Change Data Capture e Rilevamento delle modifiche e viene indicato come utilizzare queste funzionalità per tener traccia delle modifiche ai dati in un database.|[Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Viene descritto come utilizzare il visualizzatore di file di log per trovare e visualizzare errori e messaggi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei vari log, come ad esempio la cronologia processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i log di SQL Server e i registri eventi di Windows.|[Visualizzatore file di log](../../relational-databases/logs/log-file-viewer.md)|  
-|Viene descritto come utilizzare l'Ottimizzazione guidata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per analizzare database e creare requisiti per risolvere potenziali problemi di prestazione.|[Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Viene descritto come utilizzare l'Ottimizzazione guidata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per analizzare database e creare requisiti per risolvere potenziali problemi di prestazione.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Viene descritto come gli amministratori del database di produzione possono stabilire una connessione diagnostica con le istanze quando non sono accettate connessioni standard.|[Connessione di diagnostica per gli amministratori di database](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Viene descritto come utilizzare la funzionalità server remoti deprecati per abilitare l'accesso da un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'altra. Il meccanismo preferito per questa funzionalità è un server collegato.|[Server remoti](../../database-engine/configure-windows/remote-servers.md)|  
 |Vengono illustrate le funzionalità di Service Broker per applicazioni di messaggistica e accodamento e viene fatto riferimento alla documentazione di Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f0f897fcc970ee95942fd9e72ce7e21af257fa2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 85af1eb285a8739fb6c9e092609909be660223bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599921"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786800"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Opzione di configurazione del server Agent XPs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51599921"
 
 2.  Dalla barra Standard fare clic su **Nuova query**.
 
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. 
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. 
   
 ```sql 
 sp_configure 'show advanced options', 1;  

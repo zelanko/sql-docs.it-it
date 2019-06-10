@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6fb534c8715c486d3abbb04d5cb61c9ee51f43ff
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: da6141a1e023110dc3ae0a8252a77bc2352895c7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801505"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799491"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurazione di Windows Firewall per l'accesso al Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "56801505"
   
  In alternativa alla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per attivare l'attesa su una porta fissa e aprire la porta, è possibile elencare l'eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Sqlservr.exe) come un'eccezione ai programmi bloccati. Utilizzare questo metodo quando si desidera continuare a utilizzare le porte dinamiche. In questo modo, è possibile accedere a una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per configurare Windows Firewall per l'accesso al motore di database, usando:**  
   

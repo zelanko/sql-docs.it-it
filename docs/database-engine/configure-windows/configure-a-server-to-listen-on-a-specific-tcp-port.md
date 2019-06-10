@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3f3b6bfdb766ab2007591ed661fe89e81b813c04
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132801"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799504"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurare un server per l'attesa su una porta TCP specifica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Poiché la porta 1433 è lo standard noto per [!INCLUDE[ssNoVersion](../../inclu
   
 5.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (**\<<nome istanza>**)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
   
 ## <a name="connecting"></a>Connecting  
 Dopo la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'ascolto su una porta specifica sono disponibili tre soluzioni per connettersi a una porta specifica con un'applicazione client:  

@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306168"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789441"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 e 2014, l'unico modo per inizializzare una replica secondaria in un gruppo di disponibilità AlwaysOn di SQL Server consiste nell'usare le operazioni di backup, copia e ripristino. SQL Server 2016 introduce una nuova funzionalità per l'inizializzazione di una replica secondaria: il *seeding automatico*. Il seeding automatico usa il trasporto del flusso di log per trasmettere il backup mediante un'infrastruttura VDI nella replica secondaria per ogni database del gruppo di disponibilità tramite endpoint configurati. Questa nuova funzionalità può essere usata durante la creazione iniziale di un gruppo di disponibilità o quando viene aggiunto un database a un gruppo di disponibilità. Il seeding automatico si trova in tutte le edizioni di SQL Server che supportano i gruppi di disponibilità Always On e può essere usato sia con i gruppi di disponibilità tradizionali che con i [gruppi di disponibilità distribuiti](distributed-availability-groups.md).
 
-## <a name="considerations"></a>Considerazioni
+## <a name="security"></a>Security
 
-Le considerazioni sull'uso del seeding automatico includono:
+Le autorizzazioni di sicurezza variano a seconda del tipo di replica da inizializzare:
 
-* [Impatto del log delle prestazioni e delle transazioni sulla replica primaria](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Layout dei dischi](#disklayout)
-* [Sicurezza](#security)
+* Per un gruppo di disponibilità tradizionale, le autorizzazioni devono essere concesse al gruppo di disponibilità nella replica secondaria quando viene aggiunta al gruppo di disponibilità. In Transact-SQL, usare i comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
+* Per un gruppo di disponibilità distribuito in cui i database della replica che verranno creati si trovano nella replica primaria del secondo gruppo di disponibilità non sono necessarie autorizzazioni aggiuntive perché è già un gruppo di disponibilità primario.
+* Per una replica secondaria nel secondo gruppo di disponibilità di un gruppo di disponibilità distribuito, è necessario usare il comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Viene eseguito il seeding di questa replica secondaria dal gruppo di disponibilità primario del secondo gruppo di disponibilità.
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impatto del log delle prestazioni e delle transazioni sulla replica primaria
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impatto del log delle prestazioni e delle transazioni sulla replica primaria
 
 Il seeding automatico potrebbe essere pratico o meno per inizializzare una replica secondaria, a seconda delle dimensioni del database, della velocità della rete e della distanza tra le repliche primaria e secondaria. Si consideri ad esempio di avere una situazione simile alla seguente:
 
@@ -49,7 +48,7 @@ Il seeding automatico è un processo a thread singolo in grado di gestire fino a
 
 Per il seeding automatico è possibile usare la compressione, ma è disabilitata per impostazione predefinita. Attivando la compressione si riduce la larghezza di banda di rete e si accelera possibilmente il processo, ma si ottiene in cambio un sovraccarico aggiuntivo del processore. Per usare la compressione durante il seeding automatico, abilitare il flag di traccia 9567. Vedere [Ottimizzare la compressione per un gruppo di disponibilità](tune-compression-for-availability-group.md).
 
-### <a name = "disklayout"></a> Layout dei dischi
+## <a name = "disklayout"></a> Layout dei dischi
 
 In SQL Server 2016 e versioni precedenti la cartella in cui viene creato il database per il seeding automatico deve già esistere e deve essere uguale a quella del percorso per la replica primaria. 
 
@@ -81,13 +80,6 @@ Se si combinano percorsi predefiniti e non predefiniti nelle repliche primarie e
 
 Per ripristinare il comportamento di SQL Server 2016 e versioni precedenti, abilitare il flag di traccia 9571. Per informazioni su come abilitare i flag di traccia, vedere [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Security
-
-Le autorizzazioni di sicurezza variano a seconda del tipo di replica da inizializzare:
-
-* Per un gruppo di disponibilità tradizionale, le autorizzazioni devono essere concesse al gruppo di disponibilità nella replica secondaria quando viene aggiunta al gruppo di disponibilità. In Transact-SQL, usare i comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* Per un gruppo di disponibilità distribuito in cui i database della replica che verranno creati si trovano nella replica primaria del secondo gruppo di disponibilità non sono necessarie autorizzazioni aggiuntive perché è già un gruppo di disponibilità primario.
-* Per una replica secondaria nel secondo gruppo di disponibilità di un gruppo di disponibilità distribuito, è necessario usare il comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Viene eseguito il seeding di questa replica secondaria dal gruppo di disponibilità primario del secondo gruppo di disponibilità.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>Creare un gruppo di disponibilità con seeding automatico
 
@@ -160,7 +152,7 @@ Se per la replica secondaria è stato usato il seeding automatico quando è stat
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Modificare la modalità di seeding di una replica
 
-La modalità di seeding di una replica può essere modificata dopo la creazione del gruppo di disponibilità, pertanto il seeding automatico può essere abilitato o disabilitato. Abilitando il seeding automatico dopo la creazione consente a un database di essere aggiunto al gruppo di disponibilità con il seeding automatico, se è stato creato con le operazioni di backup, copia e ripristino. Ad esempio
+La modalità di seeding di una replica può essere modificata dopo la creazione del gruppo di disponibilità, pertanto il seeding automatico può essere abilitato o disabilitato. Abilitando il seeding automatico dopo la creazione consente a un database di essere aggiunto al gruppo di disponibilità con il seeding automatico, se è stato creato con le operazioni di backup, copia e ripristino. Esempio:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]

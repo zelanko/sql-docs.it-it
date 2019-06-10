@@ -15,12 +15,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 07470283d3f6028fae4b6435d6134813601009e0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 735822224ef24dc609ca0f84c3265e89f1f63240
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012883"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462608"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gestione connessione di Azure Data Lake Analytics
 
@@ -45,7 +45,7 @@ Gestione connessione di Data Lake Analytics è un componente del [Feature Pack d
    A. Se si seleziona l'opzione di autenticazione **Identità utente di Azure AD**:
    
       i. Specificare i valori per i campi **Nome utente** e **Password**.    
-      ii. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore del tenant non ha precedentemente autorizzato SSIS ad accedere all'account di Data Lake Analytics, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+      ii. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore del tenant non ha precedentemente autorizzato SSIS ad accedere all'account di Data Lake Analytics, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Quando si seleziona l'autenticazione dell'**identità del servizio di Azure AD** l'autenticazione a più fattori e l'autenticazione dell'account Microsoft non sono supportate.

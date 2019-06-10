@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1162e13a1cf0168b9ffb9c9ce2913227202dbe52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ea3ef8aa6e667935ea65c619221bfbbd10199e99
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854049"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785167"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>Opzione di configurazione del server lightweight pooling
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

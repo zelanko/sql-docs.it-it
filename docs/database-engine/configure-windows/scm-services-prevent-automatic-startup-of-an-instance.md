@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: c2116101f7e9b0ab51cf3e7c5e4066f0e55a0d1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590277"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771881"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Impedire l'avvio automatico di un'istanza di SQL Server (Gestione configurazione SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "53590277"
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **MSSQLServer**quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server \<**_nomeistanza_**> Proprietà** nella scheda **Servizio** della casella **Generale** impostare il valore di **Modalità di avvio** su **Manuale**.  
+4.  Nella finestra di dialogo **SQL Server \<** _nomeistanza_ **> Proprietà** nella scheda **Servizio** della casella **Generale** impostare il valore di **Modalità di avvio** su **Manuale**.  
   
-5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<**_nomeistanza_**> Proprietà** e quindi chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<** _nomeistanza_ **> Proprietà** e quindi chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

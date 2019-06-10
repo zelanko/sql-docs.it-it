@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f480c19522982f99496dfe50d21578312a2d8ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7b595eb58dba9f76c2fcb7e825cfc4e0597d739e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686919"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799495"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>Configurare un server per l'attesa su una pipe alternativa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47686919"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Per configurare l'utilizzo della named pipe mediante il Motore di database di SQL Server  
   
-1.  Nel riquadro della console di Gestione configurazione SQL Server, espandere **Configurazione di rete SQL Server** e **Protocolli per** *\<nome istanza>*.  
+1.  Nel riquadro della console di Gestione configurazione SQL Server, espandere **Configurazione di rete SQL Server** e **Protocolli per** *\<nome istanza>* .  
   
 2.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **Named pipe**, quindi scegliere **Proprietà**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47686919"
   
 4.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (**\<<nome istanza>**)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
   
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa su una pipe alternativa, è possibile connettersi a una named pipe specifica mediante un'applicazione client in tre modi differenti:  
   

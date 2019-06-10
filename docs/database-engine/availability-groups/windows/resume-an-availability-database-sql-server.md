@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 608106f70ab12353efd0f5315e4edd0951df7273
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5304bd107c5aa41a2c0be30d7576f4f782d19820
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642519"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777779"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Riprendere un database di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,38 +31,19 @@ ms.locfileid: "47642519"
 > [!NOTE]  
 >  La sospensione e la ripresa di un database secondario AlwaysOn non incide direttamente sulla disponibilità del database primario. Tuttavia, la sospensione di un database secondario può avere un impatto sulle funzionalità di ridondanza e failover del database primario, finché il database secondario sospeso non viene ripreso. Questo comportamento è diverso rispetto al mirroring del database, in cui lo stato del mirroring risulta sospeso sia sul database mirror che sul database principale, finché il mirroring non viene ripreso. La sospensione di un database primario AlwaysOn comporta la sospensione dello spostamento di dati su tutti i corrispondenti database secondari e le funzionalità di ridondanza e failover cessano per tale database finché non viene ripreso il database primario.  
   
--   **Prima di iniziare:**  
   
-     [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
-  
--   **Per riprendere un database secondario tramite:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
+## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Un comando RESUME viene restituito non appena è stato accettato dalla replica che ospita il database di destinazione, ma la ripresa effettiva del database avviene in modo asincrono.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisiti  
   
--   È necessario essere connessi all'istanza del server che ospita il database da riprendere.  
-  
--   Il gruppo di disponibilità deve essere online.  
-  
+-   È necessario essere connessi all'istanza del server che ospita il database da riprendere.    
+-   Il gruppo di disponibilità deve essere online.    
 -   Il database primario deve essere online e disponibile.  
   
-###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  

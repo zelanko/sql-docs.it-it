@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367239"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793618"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurare la replica con i gruppi di disponibilità Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   La configurazione della replica in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dei gruppi di disponibilità AlwaysOn richiede sette passaggi. Ogni passaggio è descritto in dettaglio nelle sezioni seguenti.  
-  
-1.  [Configurare le pubblicazioni e le sottoscrizioni del database.](#step1)  
-  
-2.  [Configurare il gruppo di disponibilità AlwaysOn.](#step2)  
-  
-3.  [Assicurarsi che tutti gli host della replica secondaria vengano configurati per la replica.](#step3)  
-  
-4.  [Configurare gli host della replica secondaria come server di pubblicazione di replica.](#step4)  
-  
-5.  [Reindirizzare il server di pubblicazione originale al nome del listener gruppo di disponibilità.](#step5)  
-  
-6.  [Eseguire la stored procedure di convalida per verificare la configurazione.](#step6)  
-  
-7.  [Aggiungere il server di pubblicazione originale a Monitoraggio replica.](#step7)  
-  
- I passaggi 1 e 2 possono essere effettuati in qualsiasi ordine.  
   
 ##  <a name="step1"></a> 1. Configurare le pubblicazioni e le sottoscrizioni del database  
  **Configurare il server di distribuzione**  

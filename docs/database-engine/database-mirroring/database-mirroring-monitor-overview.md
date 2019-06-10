@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 6e92c372d4e71401e101b4f915bf4c6807cf0064
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126351"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795558"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "54126351"
   
 -   Gli ultimi ruoli noti di ogni partner (principale o mirror)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per monitorare il mirroring del database, è necessario essere membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **dbm_monitor** nel database **msdb** nell'istanza del server. Se l'utente è membro di **sysadmin** o di **dbm_monitor** su una sola delle istanze del server partner, il monitoraggio può connettersi solo a tale partner e non riesce a recuperare informazioni dall'altro partner.  
   
  Se l'utente è membro solo di **dbm_monitor** su un'istanza del server, disporrà di autorizzazioni limitate su tale istanza. L'utente sarà in grado di visualizzare esclusivamente la riga di stato più recente. Se l'utente si connette a un'istanza del server usando le autorizzazioni per **dbm_monitor** , Monitoraggio mirroring del database avvisa che l'utente ha autorizzazioni limitate.  
@@ -66,9 +66,9 @@ ms.locfileid: "54126351"
  *<PRINCIPAL_SERVER>*  
  Nome del partner che rappresenta attualmente l'istanza del server principale. Il nome è nel formato seguente:  
   
- *<NOME_SISTEMA>*[**\\**_<nome_istanza>_]  
+ *<NOME_SISTEMA>* [ **\\** _<nome_istanza>_ ]  
   
- dove *<NOME_SISTEMA>* è il nome del sistema contenente l'istanza del server. Per un'istanza del server non predefinita, viene anche visualizzato il nome dell'istanza, _<NOME_SISTEMA>_**\\**_<nome_istanza>_.  
+ dove *<NOME_SISTEMA>* è il nome del sistema contenente l'istanza del server. Per un'istanza del server non predefinita, viene anche visualizzato il nome dell'istanza, _<NOME_SISTEMA>_ **\\** _<nome_istanza>_ .  
   
  *<MIRROR_SERVER>*  
  Nome del partner che rappresenta attualmente l'istanza del server mirror. Il formato è identico a quello del server principale.  
@@ -83,7 +83,7 @@ ms.locfileid: "54126351"
   
  Un amministratore di sistema può visualizzare la configurazione corrente degli avvisi per il database selezionando la pagina a schede **Avvisi** . Da questa pagina è possibile accedere alla finestra di dialogo **Imposta valori di soglia avvisi** per abilitare e configurare una o più soglie degli avvisi.  
   
- Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:**_\<data>\<ora>_. Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
+ Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:** _\<data>\<ora>_ . Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
   
 ## <a name="action-menu"></a>Menu Azione  
  Il menu **Azione** include sempre i comandi seguenti:  

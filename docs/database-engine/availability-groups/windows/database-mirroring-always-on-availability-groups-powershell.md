@@ -14,34 +14,26 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12a1a9a62a8fa467612bb64ee77f96aff9c23fa9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206380"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793334"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Creare un endpoint del mirroring del database per un gruppo di disponibilità usando PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene illustrato come creare un endpoint del mirroring del database che verrà utilizzato da [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite PowerShell.  
   
- **Contenuto dell'argomento**  
+
   
--   **Prima di iniziare:**  [Sicurezza](#Security)  
-  
--   **Per creare un endpoint del mirroring del database usando:**  [PowerShell](#PowerShellProcedure)  
-  
-## <a name="before-you-begin"></a>Prima di iniziare  
-  
-###  <a name="Security"></a> Sicurezza  
-  
+##  <a name="Permissions"></a> Autorizzazioni  
+ È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+
 > [!IMPORTANT]  
 >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
-  
-####  <a name="Permissions"></a> Permissions  
- È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per creare un endpoint del mirroring del database**  

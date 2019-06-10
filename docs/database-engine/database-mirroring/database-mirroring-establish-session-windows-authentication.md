@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 97f3e713cc130456c40765ad84678739e7c6e6f3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 57ff486a239436dd8686970052ae73f3fed2ebb6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204214"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774746"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mirroring del database: stabilire una sessione - Autenticazione di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "53204214"
     > [!NOTE]  
     >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: autenticazione di Windows o autenticazione basata su certificati. Per altre informazioni, vedere [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
-     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE**=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
+     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE **=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
   
      Per eseguire un'istruzione SET PARTNER, l'opzione STATE degli endpoint di entrambi i partner deve essere impostata su STARTED.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "53204214"
   
 4.  Per impostare il server principale come partner sul database mirror, connettersi al server mirror ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
      dove _\<database\_name\>_ è il nome del database di cui eseguire il mirroring (il nome è lo stesso per entrambi i partner) e _\<server\_network\_address\>_ è l'indirizzo di rete del server principale.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
+     TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
      dove _\<indirizzo-sistema>_ è una stringa che identifica in maniera univoca il computer di destinazione e _\<porta>_ è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "53204214"
   
 5.  Per impostare il server mirror come partner sul database principale, connettersi al server principale ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=** _\<server\_network\_address\>_  
   
      Per ulteriori informazioni, vedere il passaggio 4.  
   

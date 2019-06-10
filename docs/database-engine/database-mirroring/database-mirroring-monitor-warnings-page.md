@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5324e48c091f7bc4f999795f28f19f943217f7d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 01a523c57399bb5d4a2ebf5a5d866bac3cb39e1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126131"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795524"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitoraggio mirroring del database (pagina Avvisi)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54126131"
  Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
   
 ## <a name="remarks"></a>Remarks  
- Se attualmente le informazioni per un'istanza del server non sono disponibili, le celle della colonna **Valore soglia su** sono visualizzate con uno sfondo grigio e un testo filigrana. Se il monitoraggio non è connesso all'istanza del server, in ogni cella della griglia viene visualizzato **Non connesso a** _<NOME_SISTEMA>_ o **Non connesso a** _<NOME_SISTEMA>_**\\**_<nome_istanza>_, a seconda che l'istanza sia quella predefinita o una denominata. Se il monitoraggio è in attesa della restituzione di una query, in ogni cella della griglia viene visualizzato **In attesa di dati**.  
+ Se attualmente le informazioni per un'istanza del server non sono disponibili, le celle della colonna **Valore soglia su** sono visualizzate con uno sfondo grigio e un testo filigrana. Se il monitoraggio non è connesso all'istanza del server, in ogni cella della griglia viene visualizzato **Non connesso a** _<NOME_SISTEMA>_ o **Non connesso a** _<NOME_SISTEMA>_ **\\** _<nome_istanza>_ , a seconda che l'istanza sia quella predefinita o una denominata. Se il monitoraggio è in attesa della restituzione di una query, in ogni cella della griglia viene visualizzato **In attesa di dati**.  
   
  Quando le informazioni sono disponibili, nella cella per ogni avviso viene visualizzato un valore soglia specificato (insieme all'unità di misura) o **Non abilitato**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54126131"
 |**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|Transazione non inviata meno recente|32044|  
 |**Avvisa se l'overhead di commit del mirror supera la soglia**|Overhead commit mirror|32045|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per l'accesso completo è richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Solo i membri di **sysadmin** possono configurare e visualizzare i valori soglia degli avvisi per le metriche delle prestazioni chiave.  
   
  L'appartenenza al ruolo **dbm_monitor** consente di visualizzare nella pagina **Avvisi** solo la riga di stato più recente.  

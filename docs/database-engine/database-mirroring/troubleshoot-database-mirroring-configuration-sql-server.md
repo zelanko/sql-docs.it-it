@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257186"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795118"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54257186"
 |[Accesso alla rete](#NetworkAccess)|Documenta il requisito in base a cui ogni istanza del server deve essere in grado di accedere alle porte dell'altra istanza o delle altre istanze tramite TCP.|  
 |[Preparazione del database mirror](#MirrorDbPrep)|Riepiloga i requisiti per la preparazione del database mirror per consentire l'avvio del mirroring.|  
 |[Operazione di creazione file non riuscita](#FailedCreateFileOp)|Descrive le attività da eseguire in seguito a un'operazione di creazione file non riuscita.|  
-|[Avvio del mirroring mediante Transact-SQL](#StartDbm)|Descrive l'ordine richiesto per le istruzioni ALTER DATABASE *_database* SET PARTNER **='**__partner_**'** .|  
+|[Avvio del mirroring mediante Transact-SQL](#StartDbm)|Descrive l'ordine richiesto per le istruzioni ALTER DATABASE *_database* SET PARTNER **='** __partner_ **'** .|  
 |[Transazioni tra database](#CrossDbTxns)|Un failover automatico può portare a una risoluzione automatica e talvolta errata delle transazioni in dubbio. Per questo motivo, il mirroring del database non supporta transazioni tra database.|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -144,7 +144,7 @@ ms.locfileid: "54257186"
  Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) oppure [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Avvio del mirroring mediante Transact-SQL  
- L'ordine con cui vengono rilasciate le istruzioni ALTER DATABASE *_database* SET PARTNER **='**_server_partner_**'** è molto importante.  
+ L'ordine con cui vengono rilasciate le istruzioni ALTER DATABASE *_database* SET PARTNER **='** _server_partner_ **'** è molto importante.  
   
 1.  La prima istruzione deve essere eseguita sul server mirror. Quando viene eseguita questa istruzione, il server mirror non tenta di contattare altre istanze del server e indica invece al database di attendere che il server mirror venga contattato dal server principale.  
   

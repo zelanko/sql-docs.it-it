@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209430"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779169"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorare Gruppi di disponibilità (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,27 +32,8 @@ ms.locfileid: "53209430"
 > [!TIP]  
 >  Molte di queste viste possono essere unite tramite le relative colonne ID in modo che le informazioni vengano restituite da più viste in una singola query.  
   
- **Contenuto dell'argomento:**  
   
--   [Autorizzazioni](#Permissions)  
-  
--   **Utilizzo di Transact-SQL per monitorare:**  
-  
-     [Funzionalità Gruppi di disponibilità Always On su un'istanza del server](#AoAgFeatureOnSI)  
-  
-     [Gruppi di disponibilità nel cluster WSFC](#WSFC)  
-  
-     [Gruppi di disponibilità](#AvGroups)  
-  
-     [Repliche di disponibilità](#AvReplicas)  
-  
-     [Database di disponibilità](#AvDbs)  
-  
-     [Listener del gruppo di disponibilità](#AGlisteners)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiedono l'autorizzazione VIEW ANY DEFINITION sull'istanza del server. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiedono l'autorizzazione VIEW SERVER STATE sul server.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Monitoraggio della funzionalità Gruppi di disponibilità Always On su un'istanza del server  
@@ -189,7 +170,7 @@ ms.locfileid: "53209430"
 >  Il percorso della replica primaria è l'origine autorevole per un gruppo di disponibilità.  
   
 > [!NOTE]  
->  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Inoltre, per monitorare l'attività del log delle transazioni sui database di disponibilità, usare i seguenti contatori dell'oggetto prestazione **SQLServer:Databases**: **Ora di scrittura scaricamento log (ms)**, **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec** e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Inoltre, per monitorare l'attività del log delle transazioni sui database di disponibilità, usare i seguenti contatori dell'oggetto prestazione **SQLServer:Databases**: **Ora di scrittura scaricamento log (ms)** , **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec** e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitoraggio dei listener del gruppo di disponibilità  
  Per monitorare i listener del gruppo di disponibilità sulle subnet del cluster WSFC, utilizzare le viste seguenti:  

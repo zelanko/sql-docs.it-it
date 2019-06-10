@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d8610467022235207baca20b318971d33671998
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+manager: jroth
+ms.openlocfilehash: d54ee0a26e82c660c93e8c1f185c4e60e8b75805
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626744"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775247"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Le istruzioni specificate risultano particolarmente utili per la risoluzione del
 Questo errore indica in genere che non è possibile trovare il computer SQL Server o che il numero di porta TCP non è noto, non è corretto o è bloccato da un firewall.
 
 > [!TIP]
-> Una pagina di risoluzione interattiva è disponibile dal Supporto Tecnico Microsoft [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] in [Risoluzione dei problemi di connettività a SQL Server](http://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server).
+> Una pagina di risoluzione interattiva è disponibile dal Supporto Tecnico Microsoft [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] in [Risoluzionedei problemi di connettività a SQL Server](http://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server).
 
 ### <a name="not-included"></a>Errori non inclusi
 

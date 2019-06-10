@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2883f607a56da0e30067180854c289625ae11dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfebc4164264e2deeb02ab5f8e9f8b8b6ef64655
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753909"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795205"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47753909"
 -   **Connesso a**  *nome_istanza_server*  
   
     > [!NOTE]  
-    >  Se non si è membri del ruolo predefinito del server **sysadmin** , lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)**.  
+    >  Se non si è membri del ruolo predefinito del server **sysadmin** , lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)** .  
   
  Il nome di ogni istanza del server partner è visualizzato in un campo *Istanza del server e relativo stato di connessione* separato. Il campo in alto indica il server principale all'avvio dell'esecuzione del monitoraggio.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "47753909"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
