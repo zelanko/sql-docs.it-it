@@ -14,15 +14,17 @@ helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 76871b93dc05f68f5678833c81ee7426e7f8f950
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534007"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822589"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aggiunge un account di accesso all'elenco di accesso alla pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -32,7 +34,6 @@ ms.locfileid: "58534007"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'login'   
     [ , [ @reserved = ] 'reserved' ]  
 ```  

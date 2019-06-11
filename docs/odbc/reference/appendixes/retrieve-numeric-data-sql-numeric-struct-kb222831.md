@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629514"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822974"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperare i dati numerici con SQL\_numerico\_STRUCT
 
@@ -35,7 +35,7 @@ L'articolo [tipi di dati C](c-data-types.md) fornisce altre informazioni sul for
 Il codice SQL\_numerico\_STRUCT viene definito nel file di intestazione Sqlext come segue:
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ Questo esempio di codice illustra come a:
 >
 > Microsoft fornisce questi esempi di codice "così com'è" senza garanzia di alcun tipo, espressa o implicita, incluse esemplificativo le garanzie implicite di commerciabilità o idoneità per uno scopo specifico.
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>Risultati intermedi:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ A questo punto la sfida consiste nel creare l'integer ridotto all'esterno di que
 Codice che implementa la conversione da little-endian modalità a integer ridotto. È compito dello sviluppatore dell'applicazione per implementare questa funzionalità. Esempio di codice seguente è solo uno dei tanti metodi possibili.
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ Il programma di esempio seguente viene illustrato l'utilizzo di SQL\_C\_numerico
 Il driver ODBC usato per eseguire il programma deve supportare la funzionalità ODBC 3.0.
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

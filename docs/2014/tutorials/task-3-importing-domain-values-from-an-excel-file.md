@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250170"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822986"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>Attività 3: Importazione dei valori di dominio da un file di Excel
+
   In questa attività si importano valori per il **stato** dominio da un foglio di lavoro di un file di Excel.  
   
 1.  Fare clic su **lo stato** dominio le **elenco di domini**.  

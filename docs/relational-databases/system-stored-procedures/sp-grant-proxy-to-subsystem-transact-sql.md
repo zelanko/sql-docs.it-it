@@ -15,16 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
+author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+manager: jroth
+ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528133"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822628"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Concede a un proxy l'accesso a un sottosistema.  
@@ -34,7 +36,6 @@ ms.locfileid: "58528133"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sp_grant_proxy_to_subsystem  
      { [ @proxy_id = ] proxy_id | [ @proxy_name = ] 'proxy_name' },  
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
@@ -60,6 +61,7 @@ sp_grant_proxy_to_subsystem
 |**10**|Comando di Analysis Services|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
 |**12**|Script di PowerShell|  
+| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema a cui concedere l'accesso a. Il **subsystem_name** viene **sysname**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
@@ -76,6 +78,7 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Comando di Analysis Services|  
 |**Dts**|Esecuzione pacchetti SSIS|  
 |**PowerShell**|Script di PowerShell|  
+| &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Note  
  Concedendo a un proxy l'accesso a un sottosistema non vengono modificate le autorizzazione per l'entità specificata nel proxy.  
@@ -88,7 +91,7 @@ sp_grant_proxy_to_subsystem
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. Concessione dell'accesso a un sottosistema in base all'ID  
  Nell'esempio seguente viene concesso al proxy `Catalog application proxy` l'accesso al sottosistema script ActiveX.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -101,7 +104,7 @@ GO
 ### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. Concessione dell'accesso a un sottosistema in base al nome.  
  Nell'esempio seguente viene concesso al proxy `Catalog application proxy` l'accesso al sottosistema di esecuzione pacchetti SSIS.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

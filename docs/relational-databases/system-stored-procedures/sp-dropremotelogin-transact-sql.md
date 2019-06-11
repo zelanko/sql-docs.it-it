@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527923"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822474"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove un account di accesso remoto di cui è stato eseguito il mapping a un account di accesso locale utilizzato per eseguire stored procedure remote nel server locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
@@ -37,7 +39,6 @@ ms.locfileid: "58527923"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sp_dropremotelogin [ @remoteserver = ] 'remoteserver'   
      [ , [ @loginame = ] 'login' ]   
      [ , [ @remotename = ] 'remote_name' ]  
@@ -70,21 +71,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. Eliminazione di tutti gli account di accesso remoti per un server remoto  
  Nell'esempio seguente viene rimossa la voce relativa al server remoto `ACCOUNTS`, con la conseguente rimozione di tutti i mapping tra gli account di accesso nel server locale e gli account di accesso remoti nel server remoto.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
 ### <a name="b-dropping-a-login-mapping"></a>B. Eliminazione di un mapping tra account di accesso  
  Nell'esempio seguente viene rimossa la voce per il mapping degli account di accesso remoti tra il server remoto `ACCOUNTS` e l'account di accesso locale `Albert`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
 ### <a name="c-dropping-a-remote-user"></a>C. Eliminazione di un utente remoto  
  Nell'esempio seguente viene rimosso l'account di accesso remoto `Chris` del server remoto `ACCOUNTS` sul quale è stato eseguito il mapping all'account di accesso locale `salesmgr`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   

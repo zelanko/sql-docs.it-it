@@ -16,18 +16,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_page_info dynamic management view
-author: ''
+author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507717"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822241"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Restituisce informazioni su una pagina in un database.  La funzione restituisce una riga che contiene le informazioni di intestazione dalla pagina, inclusi i `object_id`, `index_id`, e `partition_id`.  Questa funzione sostituisce l'uso di `DBCC PAGE` nella maggior parte dei casi.

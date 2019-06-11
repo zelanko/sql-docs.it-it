@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535583"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822636"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza un elenco di associazioni tra le entità di sicurezza e i proxy.  
@@ -34,7 +36,6 @@ ms.locfileid: "58535583"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principale, account di accesso, ruolo del server, oppure **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL.  
+`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principale, account di accesso, ruolo del server, oppure **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar(256)** , con un valore predefinito è NULL.  
   
 `[ @proxy_id = ] id` Il numero di identificazione per elencare le informazioni per il proxy. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|Nome del proxy.|  
 |**name**|**sysname**|Nome dell'entità di sicurezza per l'associazione.|  
 |**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Note  
  Quando viene specificato alcun parametro, **sp_enum_login_for_proxy** Elenca le informazioni su tutti gli account di accesso nell'istanza per ogni proxy.  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>A. Visualizzazione di un elenco di tutte le associazioni  
  Nell'esempio seguente viene visualizzato un elenco di tutte le autorizzazioni stabilite tra gli account di accesso e i proxy nell'istanza corrente.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>B. Visualizzazione di un elenco di proxy per un account di accesso specifico  
  Nell'esempio seguente viene visualizzato un elenco di proxy cui può accedere l'account `terrid`.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

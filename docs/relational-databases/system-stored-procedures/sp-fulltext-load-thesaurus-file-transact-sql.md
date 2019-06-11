@@ -20,14 +20,15 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ea972558da077dd984ce2ef30c99e1b46b0e5c4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983011"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822765"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fa in modo che l'istanza del server analizzi e carichi i dati dal file del thesaurus che corrisponde alla lingua per cui è specificato l'identificatore LCID. Questa stored procedure risulta utile dopo avere eseguito l'aggiornamento di un file del thesaurus. L'esecuzione **sp_fulltext_load_thesaurus_file** ha provocato la ricompilazione delle query full-text che utilizzano il thesaurus relativo all'identificatore LCID specificato.  
@@ -37,7 +38,6 @@ ms.locfileid: "65983011"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]   
 ```  
   
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Valore intero che esegue il mapping dell'identificatore delle impostazioni locali (LCID) della lingua per cui si desidera caricare la definizione XML del thesaurus. Per ottenere gli identificatori LCID delle lingue disponibili in un'istanza del server, usare il [Sys. fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista del catalogo.  
   
- **@loadOnlyIfNotLoaded** = *action*  
+ **@loadOnlyIfNotLoaded**  = *action*  
  Specifica se il file del thesaurus viene caricato nelle tabelle interne del thesaurus anche se è già stato caricato. *azione* è uno di:  
   
 |Value|Definizione|  
@@ -74,23 +74,19 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. Caricamento di un file del thesaurus anche se è già caricato  
  Nell'esempio seguente viene analizzato e caricato il file del thesaurus inglese.  
   
-```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
-GO  
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
 ### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>B. Caricamento di un file del thesaurus solo se non è ancora caricato  
  Nell'esempio seguente viene analizzato e caricato il file del thesaurus arabo, a meno che non sia già caricato.  
   
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;  
-GO  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
- [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurare e gestire i file del Thesaurus per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
-  
-  
+
+## <a name="see-also"></a>Vedere anche
+
+[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

@@ -16,16 +16,18 @@ helpviewer_keywords:
 - sp_droprolemember
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
-manager: craigg
+author: VanMSFT
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c235c23ac0be8dcaf6dc57dae14be9732f5c09f8
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526113"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822445"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Rimuove un account di sicurezza da un ruolo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database corrente.  
@@ -36,17 +38,17 @@ ms.locfileid: "58526113"
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
-  
+
+### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Sintassi per SQL Server e Database SQL di Azure
+
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
-  
+
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Sintassi per Azure SQL Data Warehouse e Parallel Data Warehouse
+
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
@@ -72,14 +74,14 @@ sp_droprolemember 'role' ,
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'utente `JonB` viene rimosso dal ruolo `Sales`.  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente l'utente `JonB` viene rimosso dal ruolo `Sales`.  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   

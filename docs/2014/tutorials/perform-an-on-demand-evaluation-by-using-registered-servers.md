@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030792"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822377"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Esecuzione di una valutazione su richiesta utilizzando Server registrati
+
   È possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite Server registrati. È possibile utilizzare gruppi di server locali o un server di gestione centrale.  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030792"
   
     -   Per valutare i criteri rispetto a un server specifico o un gruppo di server, espandere **gruppi di Server locali** o il server di gestione centrale assegnare un nome, fare doppio clic il server o un gruppo di server che si desidera valutare i criteri rispetto a e quindi fare clic su **Valutare i criteri**.  
   
-4.  Nel **valuta criteri** accanto alla finestra di dialogo il **origine** fare clic sui puntini di sospensione (**...** ) pulsante.  
+4.  Nel **valuta criteri** accanto alla finestra di dialogo il **origine** fare clic sui puntini di sospensione ( **...** ) pulsante.  
   
-5.  Nel **Seleziona origine** nella finestra di dialogo è possibile selezionare uno **file** oppure **Server** come origine dei file di criteri da valutare. Se si sceglie **Server**, è possibile eseguire una valutazione su richiesta di eventuali criteri consigliate precedentemente importati nella gestione basata su criteri in un server locale o remoto. In questa esercitazione, si farà clic sul **file**e quindi selezionare i file dei criteri individuali che si desidera valutare. A tale scopo, eseguire le operazioni seguenti:  
+5.  Nel **Seleziona origine** nella finestra di dialogo è possibile selezionare uno **file** oppure **Server** come origine dei file di criteri da valutare. Se si sceglie **Server**, è possibile eseguire una valutazione su richiesta di eventuali criteri consigliate precedentemente importati nella gestione basata su criteri in un server locale o remoto. In questa esercitazione, si farà clic sul **file**e quindi selezionare i file dei criteri individuali che si desidera valutare. A tale scopo, effettuare le operazioni seguenti:  
   
     1.  Fare clic su **file**.  
   
-    2.  Accanto a **file**, fare clic sui puntini di sospensione (**...** ) pulsante.  
+    2.  Accanto a **file**, fare clic sui puntini di sospensione ( **...** ) pulsante.  
   
     3.  Selezionare uno o più file con estensione XML dei criteri per valutare e quindi fare clic su **aperto**.  
   
