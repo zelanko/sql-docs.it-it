@@ -1,7 +1,7 @@
 ---
 title: Classe di evento Broker:Remote Message Ack | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400de29cec4be8fc882860c777d6dcd5fa765243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7eb9cc127650d2fb6faacabcd30ce0ecb2ae3588
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748789"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265479"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Remote Message Ack** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia o riceve l'acknowledgement di un messaggio.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Remote Message Ack** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia o riceve l'acknowledgement di un messaggio.  
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Remote Message Ack  
   
@@ -50,7 +52,7 @@ ms.locfileid: "47748789"
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**StarvationElevation**|**int**|Il messaggio è stato inviato con una priorità più elevata rispetto alla priorità configurata per la conversazione: 0 = falso, 1 = vero.|33|Sì|  
+|**StarvationElevation**|**int**|Il messaggio è stato inviato con una priorità più elevata rispetto alla priorità configurata per la conversazione: 0 = false, 1 = true.|33|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|no|  
   
   

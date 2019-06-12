@@ -1,7 +1,7 @@
 ---
 title: Classe di evento Broker:Corrupted Message | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ef3eaafc0d9eb5953db7d26c594020466c1e488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73b12fb1e6d2b008bbde9f7863ce0d7eaa620a1f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745989"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265549"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Broker:Corrupted Message** quando Service Broker riceve un messaggio danneggiato.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Broker:Corrupted Message** quando Service Broker riceve un messaggio danneggiato.  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Corrupted Message  
   
@@ -45,7 +47,7 @@ ms.locfileid: "47745989"
 |**NTDomainName**|**nvarchar**|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  
 |**ObjectName**|**nvarchar**|Nome del servizio dell'altro lato della conversazione e stringa di connessione utilizzata dal database remoto per connettersi al database.|34|no|  
-|**RoleName**|**nvarchar**|Ruolo dell'endpoint che riceve il messaggio. I possibili valori sono i seguenti.<br /><br /> **initiator**: L'endpoint che riceve il messaggio è l'iniziatore della conversazione.<br /><br /> **target**:                 L'endpoint che riceve il messaggio è la destinazione della conversazione.|38|no|  
+|**RoleName**|**nvarchar**|Ruolo dell'endpoint che riceve il messaggio. I possibili valori sono i seguenti.<br /><br /> **initiator**: L'endpoint che riceve il messaggio è l'initiator della conversazione.<br /><br /> **target**:                 L'endpoint che riceve il messaggio è la destinazione della conversazione.|38|no|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |**Severity**|**int**|Gravità dell'errore che ha determinato l'eliminazione del messaggio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|29|no|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
