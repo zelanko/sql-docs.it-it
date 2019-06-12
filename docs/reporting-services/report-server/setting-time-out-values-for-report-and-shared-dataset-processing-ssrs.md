@@ -1,6 +1,6 @@
 ---
 title: Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580953"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506443"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS)
   È possibile fare in modo che [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specifichi valori di timeout per limitare l'uso delle risorse del sistema. Il server di report supporta due valori di timeout:  
   
--   Il valore di timeout per le query del set di dati incorporato, ovvero il numero di secondi per cui il server di report rimane in attesa di una risposta dal database. Questo valore viene definito in un report.  
+- Il valore di timeout per le query del set di dati incorporato, ovvero il numero di secondi per cui il server di report rimane in attesa di una risposta dal database. Questo valore viene definito in un report.  
   
--   Il valore di timeout per le query del set di dati condiviso, ovvero il numero di secondi per cui il server di report rimane in attesa di una risposta dal database. Questo valore è parte della definizione del set di dati condiviso e può essere modificato quando si gestisce tale set sul server di report.  
+- Il valore di timeout per le query del set di dati condiviso, ovvero il numero di secondi per cui il server di report rimane in attesa di una risposta dal database. Questo valore è parte della definizione del set di dati condiviso e può essere modificato quando si gestisce tale set sul server di report.  
   
--   Il valore del timeout di esecuzione di un report è il numero massimo di secondi disponibile per l'elaborazione del report, dopo il quale l'esecuzione viene arrestata. Questo valore viene definito a livello di sistema. È possibile modificare questa impostazione per singoli report.  
+- Il valore del timeout di esecuzione di un report è il numero massimo di secondi disponibile per l'elaborazione del report, dopo il quale l'esecuzione viene arrestata. Questo valore viene definito a livello di sistema. È possibile modificare questa impostazione per singoli report.  
   
  La maggior parte degli errori di timeout si verifica durante l'elaborazione di query. Se si verificano spesso errori di timeout, provare ad aumentare il valore di timeout della query. Verificare che il valore del timeout di esecuzione del report sia impostato su un valore maggiore del valore del timeout per le query. È necessario impostare un periodo di tempo sufficiente per completare sia l'elaborazione delle query che quella del report.  
   
@@ -50,12 +50,11 @@ ms.locfileid: "65580953"
  Si noti che se si specifica un valore di timeout minore di 60 secondi, il report può venire eseguito completamente se l'elaborazione ha inizio e termina durante la parte di attesa del ciclo, ossia quando il server di report non valuta i processi in esecuzione. Se, ad esempio, si imposta un valore di timeout di 10 secondi per un report la cui esecuzione richiede 20 secondi, il report viene elaborato completamente se l'esecuzione inizia all'inizio del ciclo di 60 secondi.  
   
 > [!NOTE]  
->  È possibile definire l'impostazione **RunningRequestsDbCycle** nel file RSReportServer.config per modificare la frequenza di valutazione dei processi in esecuzione.  
+> È possibile definire l'impostazione **RunningRequestsDbCycle** nel file RSReportServer.config per modificare la frequenza di valutazione dei processi in esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [Portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
   
