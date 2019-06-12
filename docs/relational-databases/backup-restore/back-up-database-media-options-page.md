@@ -14,12 +14,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e29fe0deaaba673136ee1e1f135e61a8f2b402e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e89089c6f95547f30bc4d99cdecdc38c8fe88957
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212090"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402998"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,51 +41,42 @@ ms.locfileid: "53212090"
   
 ### <a name="overwrite-media"></a>Sovrascrivi supporti  
  Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (archiviazione di Windows Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup usando **BACKUP TO URL. WITH FORMAT** (istruzione Transact-SQL). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+
+ L'opzione **Sovrascrivi supporti** è disabilitata se è stato selezionato **URL** come destinazione di backup nella pagina **Generale**.
   
  Solo l'opzione **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti** è supportata con le opzioni di crittografia. Se si selezionano le opzioni nella sezione **Esegui backup nel set di supporti esistente**, le opzioni di crittografia nella pagina **Opzioni di backup** saranno disabilitate.  
   
 > [!NOTE]  
 >  Per informazioni sui set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Esegui backup nel set di supporti esistente**  
- Consente di eseguire il backup del database in un set di supporti esistente. Selezionando questa opzione, vengono attivate tre opzioni.  
+**Esegui backup nel set di supporti esistente**: Consente di eseguire il backup del database in un set di supporti esistente. Selezionando questa opzione, vengono attivate tre opzioni.  
   
  Selezionare una delle opzioni seguenti:  
   
- **Accoda al set di backup esistente**  
- Consente di accodare il set di backup a quello dei supporti esistente e di mantenere tutti i backup precedenti.  
+ - **Accoda al set di backup esistente**: Consente di accodare il set di backup a quello dei supporti esistente e di mantenere tutti i backup precedenti.  
   
- **Sovrascrivi tutti i set di backup esistenti**  
- Consente di sostituire un eventuale backup precedente nei set di supporti esistenti con quello corrente.  
+ - **Sovrascrivi tutti i set di backup esistenti**: Consente di sostituire un eventuale backup precedente nei set di supporti esistenti con quello corrente.  
   
- **Controlla nome set di supporti e scadenza set di backup**  
- Facoltativa. Se si esegue il backup in un set di supporti esistente, consente di richiedere che durante l'operazione di backup vengano verificati il nome e la data di scadenza dei set di backup.  
+ - **Controlla nome set di supporti e scadenza set di backup**: Facoltativa. Se si esegue il backup in un set di supporti esistente, consente di richiedere che durante l'operazione di backup vengano verificati il nome e la data di scadenza dei set di backup.  
   
- **Nome set di supporti**  
- Facoltativa. Se l'opzione **Controlla nome set di supporti e scadenza set di backup** è selezionata, consente di specificare il nome del set di supporti da usare per l'operazione di backup.  
+ - **Nome set di supporti**:  Facoltativa. Se l'opzione **Controlla nome set di supporti e scadenza set di backup** è selezionata, consente di specificare il nome del set di supporti da usare per l'operazione di backup.  
   
- **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti**  
- Consente di utilizzare un nuovo set di supporti, cancellando i set di backup precedenti.  
+ - **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti**:  Consente di utilizzare un nuovo set di supporti, cancellando i set di backup precedenti.  
   
  Se si seleziona questa opzione, verranno attivate le opzioni seguenti:  
   
- **Nome nuovo set di supporti**  
- Facoltativa. Consente di immettere un nuovo nome per il set di supporti.  
+ - **Nome nuovo set di supporti**: Facoltativa. Consente di immettere un nuovo nome per il set di supporti.  
   
- **Descrizione nuovo set di supporti**  
- Facoltativa. Consente di immettere una descrizione significativa del nuovo set di supporti. La descrizione deve essere sufficientemente specifica da indicare il contenuto in modo accurato.  
+ - **Descrizione nuovo set di supporti**:  Facoltativa. Consente di immettere una descrizione significativa del nuovo set di supporti. La descrizione deve essere sufficientemente specifica da indicare il contenuto in modo accurato.  
   
 ### <a name="reliability"></a>Affidabilità  
  Le opzioni del pannello **Log delle transazioni** controllano la gestione degli errori da parte dell'operazione di backup.  
   
- **Verifica backup al termine**  
- Consente di verificare che il set di backup sia completo e che tutti i volumi siano leggibili.  
+ - **Verifica backup al termine**:  Consente di verificare che il set di backup sia completo e che tutti i volumi siano leggibili.  
   
- **Esegui checksum prima della scrittura nei supporti**  
- Consente di verificare i checksum prima di scrivere nei supporti di backup. La selezione di questa opzione equivale a specificare l'opzione CHECKSUM nell'istruzione BACKUP di [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione può determinare un aumento del carico di lavoro e una riduzione della velocità effettiva dell'operazione di backup. Per informazioni sui checksum di backup, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+ - **Esegui checksum prima della scrittura nei supporti**: Consente di verificare i checksum prima di scrivere nei supporti di backup. La selezione di questa opzione equivale a specificare l'opzione CHECKSUM nell'istruzione BACKUP di [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione può determinare un aumento del carico di lavoro e una riduzione della velocità effettiva dell'operazione di backup. Per informazioni sui checksum di backup, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- **Continua in caso di errori**  
- L'operazione di backup deve continuare anche se si verificano errori.  
+ - **Continua in caso di errori**: L'operazione di backup deve continuare anche se si verificano errori.  
   
 ### <a name="transaction-log"></a>Log delle transazioni  
  Le opzioni del pannello **Log delle transazioni** controllano il comportamento del backup del log delle transazioni. Tali opzioni sono rilevanti solo nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk. Sono attivate solo se l'opzione **Log delle transazioni** è stata selezionata nel campo **Tipo backup** disponibile nella pagina [Generale](../../relational-databases/backup-restore/back-up-database-general-page.md) della finestra di dialogo **Backup database**.  
@@ -99,7 +90,7 @@ ms.locfileid: "53212090"
  **Esegui backup della parte finale del log e lascia il database in stato di ripristino**  
  Consente di eseguire il backup della parte finale del log lasciando il database in stato di ripristino. Questa opzione crea un *backup della parte finale del log*, che consente di eseguire il backup dei log non ancora sottoposti a questa procedura (il log attivo), in genere per la preparazione del ripristino di un database. Il database non sarà disponibile per gli utenti finché non viene ripristinato completamente.  
   
- La selezione di questa opzione equivale a specificare WITH NO_TRUNCATE, NORECOVERY in un'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ La selezione di questa opzione equivale a specificare l'opzione WITH NO_TRUNCATE, NORECOVERY in un'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Unità nastro  
  Le opzioni del pannello **Unità nastro** controllano la gestione dei nastri durante l'operazione di backup. Queste opzioni sono attivate solo se l'opzione **Nastro** è stata selezionata nel campo **Destinazione** disponibile nella pagina [Generale](../../relational-databases/backup-restore/back-up-database-general-page.md) della finestra di dialogo **Backup database**.  
@@ -107,11 +98,9 @@ ms.locfileid: "53212090"
 > [!NOTE]  
 >  Per informazioni sull'uso dei dispositivi nastro, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- **Scarica nastro al termine del backup**  
- Consente di scaricare il nastro al termine del backup.  
+ - **Scarica nastro al termine del backup**: Consente di scaricare il nastro al termine del backup.  
   
- **Riavvolgi il nastro prima di scaricarlo**  
- Consente di rilasciare e riavvolgere il nastro prima di scaricarlo. Questa opzione è abilitata solo se è selezionata l'opzione **Scarica nastro al termine del backup** .  
+ - **Riavvolgi il nastro prima di scaricarlo**: Consente di rilasciare e riavvolgere il nastro prima di scaricarlo. Questa opzione è abilitata solo se è selezionata l'opzione **Scarica nastro al termine del backup** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

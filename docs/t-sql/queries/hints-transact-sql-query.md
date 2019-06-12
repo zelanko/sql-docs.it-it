@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: f5e268e821713e52a48b31bf7afa9553e2dc9712
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429018"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ Specifica che le viste indicizzate vengono espanse. Specifica anche che Query Op
   
 Con questo hint per la query viene praticamente disabilitato l'utilizzo diretto di viste indicizzate e di relativi indici nel piano di query.  
   
-La vista indicizzata rimane compressa se c'è un riferimento diretto alla vista nella sezione SELECT della query. La vista rimane compressa anche se si specifica WITH (NOEXPAND) o WITH (NOEXPAND, INDEX(index\_value_ [ **,**_...n_ ] ) ). Per altre informazioni sull'hint per la query NOEXPAND, vedere [Utilizzo di NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+La vista indicizzata rimane compressa se c'è un riferimento diretto alla vista nella sezione SELECT della query. La vista rimane compressa anche se si specifica WITH (NOEXPAND) o WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) ). Per altre informazioni sull'hint per la query NOEXPAND, vedere [Utilizzo di NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 L'hint influisce solo sulle viste nella sezione SELECT delle istruzioni, comprese le viste nelle istruzioni INSERT, UPDATE, MERGE e DELETE.  
   
@@ -257,8 +257,8 @@ Impone in Query Optimizer l'applicazione di un piano che funziona anche con dime
   
 Se non è possibile implementare tale piano, Query Optimizer restituisce un errore invece di posticipare il rilevamento dell'errore fino all'esecuzione della query. Le righe possono includere colonne di lunghezza variabile. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] è consentito definire righe con dimensioni massime superiori alla capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In un'applicazione tuttavia vengono in genere archiviate righe le cui dimensioni effettive rientrano nei limiti della capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] rileva una riga di lunghezza eccessiva, viene restituito un errore di esecuzione.  
  
-<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Specifica uno o più hint aggiuntivi per Query Processor. Gli hint aggiuntivi vengono specificati tramite un nome di hint **racchiuso tra virgolette singole**.   
 
@@ -267,15 +267,15 @@ Sono supportati i nomi di hint seguenti:
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
    Fa in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano di query che usi il presupposto di indipendenza semplice anziché il presupposto predefinito di indipendenza di base per i join, nel modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di Query Optimizer in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versione successiva. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   Fa in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano che usa la selettività minima durante la stima dei predicati AND per i filtri per tenere conto della correlazione. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 quando viene usato con il modello di stima della cardinalità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti e ha un effetto simile quando il [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 viene usato con il modello di stima della cardinalità di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versioni successive.
+   Fa in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano che usa la selettività minima durante la stima dei predicati AND per i filtri per tenere conto della correlazione. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 usato con il modello di stima della cardinalità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti e ha un effetto simile al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 usato con il modello di stima della cardinalità di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versioni successive.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   Disabilita i join adattivi in modalità batch. Per altre informazioni, vedere [Join adattivi in modalità batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
+   Disabilita i join adattivi in modalità batch. Per altre informazioni, vedere [Join adattivi in modalità batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Disabilita il feedback delle concessioni di memoria in modalità batch. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).   
+   Disabilita il feedback delle concessioni di memoria in modalità batch. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Disabilita la compilazione posticipata delle variabili di tabella. Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+  Disabilita la compilazione posticipata delle variabili di tabella. Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   Disabilita l'esecuzione interleaved per funzioni con valori di tabella a più istruzioni. Per altre informazioni, vedere [Esecuzione interleaved per funzioni con valori di tabella a più istruzioni](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
+   Disabilita l'esecuzione interleaved per funzioni con valori di tabella a più istruzioni. Per altre informazioni, vedere [Esecuzione interleaved per funzioni con valori di tabella a più istruzioni](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Indica a Query Processor di non usare un'operazione di ordinamento (ordinamento batch) per i join a cicli annidati ottimizzati durante la generazione di un piano. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -288,21 +288,21 @@ Sono supportati i nomi di hint seguenti:
    
    Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
-   Indica a Query Optimizer di usare una distribuzione dei dati media durante la compilazione di una query con uno o più parametri. Questa istruzione rende il piano di query indipendente dal valore del parametro usato inizialmente durante la compilazione della query. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o all'impostazione di [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
+   Indica a Query Optimizer di usare una distribuzione dei dati media durante la compilazione di una query con uno o più parametri. Questa istruzione rende il piano di query indipendente dal valore del parametro usato inizialmente durante la compilazione della query. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o all'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `PARAMETER_SNIFFING = OFF`.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  Disabilita il feedback delle concessioni di memoria in modalità riga. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).
+  Disabilita il feedback delle concessioni di memoria in modalità riga. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
-  Abilita l'inlining di funzioni scalari definite dall'utente. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+  Abilita l'inlining di funzioni scalari definite dall'utente. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/scalar-udf-inlining.md). **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * 'DISALLOW_BATCH_MODE'    
-  Disabilita l'esecuzione in modalità batch. Per altre informazioni, vedere [Modalità di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+  Disabilita l'esecuzione in modalità batch. Per altre informazioni, vedere [Modalità di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Abilita le statistiche rapide generate automaticamente (modifica istogramma) per qualsiasi colonna di indice iniziale per cui è necessaria la stima della cardinalità. L'istogramma usato per la stima della cardinalità viene modificato durante la compilazione della query per tenere conto del valore massimo o minimo effettivo di questa colonna. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   Abilita gli hotfix di Query Optimizer (modifiche rilasciate negli aggiornamenti cumulativi e nei Service Pack di SQL Server). Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 o all'impostazione di [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON.
+   Abilita gli hotfix di Query Optimizer (modifiche rilasciate negli aggiornamenti cumulativi e nei Service Pack di SQL Server). Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 o all'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `QUERY_OPTIMIZER_HOTFIXES = ON`.
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
-   Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) che corrisponde al livello di compatibilità del database corrente. Usare questo hint per eseguire l'override dell'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON o il [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+   Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) che corrisponde al livello di compatibilità del database corrente. Usare questo hint per eseguire l'override dell'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON` o il [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o all'impostazione di [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
+   Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti. Questo nome di hint equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o all'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Forza il comportamento di Query Optimizer a livello di query. Il comportamento rispecchia quello che si verifica se la query viene compilata con il livello di compatibilità del database _n_, dove _n_ è un livello di compatibilità del database supportato. Fare riferimento a [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) per un elenco dei valori attualmente supportati per _n_. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
@@ -328,10 +328,10 @@ Sono supportati i nomi di hint seguenti:
 > [!IMPORTANT] 
 > Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
 
- USE PLAN N **'**_xml\_plan_**'**     
- Forza in Query Optimizer l'uso di un piano di query esistente per una query specificata da **'**_xml\_plan_**'**. Non è possibile specificare USE PLAN con le istruzioni INSERT, UPDATE, MERGE o DELETE.  
+ USE PLAN N **'** _xml\_plan_ **'**      
+ Forza in Query Optimizer l'uso di un piano di query esistente per una query specificata da **'** _xml\_plan_ **'** . Non è possibile specificare USE PLAN con le istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
-TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** Applica l'hint di tabella specificato alla tabella o alla vista corrispondente a _exposed\_object\_name_. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Applica l'hint di tabella specificato alla tabella o alla vista corrispondente a _exposed\_object\_name_. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
   
  _exposed\_object\_name_ può essere uno dei riferimenti seguenti:  
   
@@ -341,7 +341,7 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
  Quando si specifica _exposed\_object\_name_ senza specificare anche un hint di tabella, gli indici specificati nella query come parte di un hint di tabella per l'oggetto non vengono considerati. Query Optimizer determina quindi l'uso degli indici. È possibile usare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } È l'hint di tabella da applicare alla tabella o alla vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } È l'hint di tabella da applicare alla tabella o alla vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. Per altre informazioni, vedere la sezione Osservazioni.  
   
@@ -385,7 +385,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>b. Utilizzo di OPTIMIZE FOR  
+### <a name="b-using-optimize-for"></a>B. Utilizzo di OPTIMIZE FOR  
  L'esempio seguente indica a Query Optimizer di usare il valore `'Seattle'` per la variabile locale `@city_name` e di usare dati statistici per determinare il valore per la variabile locale `@postal_code` durante l'ottimizzazione della query. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -547,7 +547,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Specifica di hint di tabella che influiscono sulla semantica  
-Nell'esempio seguente sono contenuti due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l’hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, specificare gli hint INDEX e FORCESEEK e sostituire l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'esempio seguente contiene due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l’hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, specificare gli hint INDEX e FORCESEEK e sostituire l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e6fe87180bad276b7c1acbc57a0fa72bfca560b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 6682aeeaf5daedee04757381131464bcaf379f50
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577933"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499566"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo di connessione OLE DB (SSRS)
   Per includere dati da un provider di dati OLE DB, è necessario disporre di un set di dati basato su un'origine dati del report di tipo OLE DB. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -31,7 +31,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  La stringa di connessione utilizzata dipende dall'origine dati esterna alla quale si esegue la connessione. Per impostare le proprietà della stringa di connessione specifiche per un provider di dati, nella pagina **Generale** della finestra di dialogo **Proprietà origine dati** fare clic sul pulsante **Compila** per aprire la finestra di dialogo **Proprietà connessione** . Impostare le proprietà dell'origine dati estese tramite la finestra di dialogo **Proprietà di Data Link** .  
   
- Per esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenziali  
@@ -39,7 +39,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Caratteri speciali in una password  
  Se si configura l'origine dati OLE DB per la richiesta di una password o l'inclusione della password nella stringa di connessione e un utente immette la password con caratteri speciali, ad esempio segni di punteggiatura, è possibile che alcuni driver dell'origine dati sottostante non supportino la convalida dei caratteri speciali. In tal caso, quando si elabora il report verrà visualizzato un messaggio che indica che la password non è valida.  
@@ -82,7 +82,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

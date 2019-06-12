@@ -1,8 +1,8 @@
 ---
 title: Tipo di connessione SQL Azure (SSRS) | Microsoft Docs
 description: L'estensione per i dati della connessione SQL Azure supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c096ce1edd6069cfa27185ee3146444a6a9872b
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331521"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500183"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
 
@@ -44,7 +44,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Viene inoltre usata la finestra di dialogo **Proprietà origini dati** per fornire credenziali quale il nome utente e la password. Le opzioni `User Id` e `Password` vengono aggiunte automaticamente alla stringa di connessione; non è necessario digitarle come parte della stringa di connessione.  
   
-Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="Credentials"></a> Credenziali
 
@@ -58,7 +58,7 @@ Da un client di creazione di report sono disponibili le opzioni seguenti per la 
   
 - Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
   
-Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Query
 
@@ -99,7 +99,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```
 
-Fare clic sul pulsante **Esegui** (**!**) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.  
+Fare clic sul pulsante **Esegui** ( **!** ) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.  
   
 Per parametrizzare questa query, aggiungere un parametro di query. Modificare ad esempio la clausola WHERE nella stringa seguente:  
 
@@ -185,7 +185,7 @@ In queste sezioni della documentazione sono incluse informazioni concettuali app
 [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Viene fornita una panoramica sull'accesso ai dati del report.  
   
-[Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+[Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
 [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

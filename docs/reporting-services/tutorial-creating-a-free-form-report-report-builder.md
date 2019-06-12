@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 78f733d5f34c1c0bf6f89b40ef0346c85f1638b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294979"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499556"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
 In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di un notiziario. Ogni pagina visualizza testo statico, elementi visivi di riepilogo e dati di vendita di esempio dettagliati.
@@ -22,7 +22,7 @@ In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di 
 
 Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Si inizia con un'area dati elenco come base per il report in formato libero, quindi si aggiunge un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.  
   
-Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
+Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,13 +48,13 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Origine dati**.  
   
-2.  Nella casella **Nome** digitare: **ListDataSource**  
+2.  Nella casella **Nome** digitare **ListDataSource**  
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
   
-    **\<nomeserver>**, ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
+    **\<nomeserver>** , ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
   
 5.  Fare clic su **Credenziali**, quindi immettere le credenziali necessarie per la connessione all'istanza del motore di database di SQL Server.  
   
@@ -64,7 +64,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Set di dati**.  
   
-2.  Nella casella **Nome** digitare: **ListDataset**.  
+2.  Nella casella **Nome** digitare **ListDataset**.  
   
 3.  Fare clic su **Utilizzare un set di dati incorporato nel report**, quindi verificare che l'origine dati sia **ListDataSource**.  
   
@@ -215,7 +215,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
     *  **20 pt**.
     *  **Cremisi**.  
   
-9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
+9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola, per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
  
 10. Trascinare il campo `[FullName]` da ListDataSet nel riquadro dei dati del report nella casella di testo e posizionarlo dopo "Salve", quindi digitare una virgola (,).  
    
@@ -244,7 +244,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
       *  **10 pt**.
       *  **Nero**.  
  
-20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo. 
+20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che verrà aggiunto nel passaggio successivo. 
   
 21. Trascinare il campo Sales nella casella di testo, posizionarlo dopo il testo digitato nel passaggio precedente, quindi digitare un punto esclamativo (!).  
 
@@ -505,7 +505,7 @@ Per altre informazioni sugli elenchi, vedere:
 * [Creare fatture e moduli con elenchi](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](report-data/query-design-tools-ssrs.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 

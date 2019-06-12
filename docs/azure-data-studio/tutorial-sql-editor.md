@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797940"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -25,7 +25,6 @@ La creazione e l'esecuzione di query, stored procedure, script, e così via sono
 In questa esercitazione imparerete a usare [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] per:
 > [!div class="checklist"]
 > * Ricercare oggetti database
-
 > * Modificare i dati della tabella 
 > * Usare frammenti di codice per scrivere rapidamente T-SQL
 > * Visualizzare i dettagli dell'oggetto database con *Visualizza definizione* e *Vai a definizione*
@@ -56,7 +55,7 @@ Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database
 
    ![widget di ricerca rapida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Modificare la colonna **Email** nella prima riga, scrivendo *orlando0@adventure-works.comorlando0@adventure-works.com. Premere* invio** per salvare le modifiche.
+1. Modificare la colonna **Email** nella prima riga, scrivendo *orlando0@adventure-works.comorlando0@adventure-works.com* . Premere **invio** per salvare le modifiche.
 
    ![Modificare i dati](./media/tutorial-sql-editor/edit-data.png)
 
@@ -77,7 +76,6 @@ Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database
 
 5. Sostituire allo stesso modo tutte le occorrenze di *SchemaName* con *dbo*. 
 6. Il frammento contiene segnaposto per parametri e testo da aggiornare nel corpo. Il comando *EXECUTE* contiene inoltre il segnaposto come commento, poiché non si sa a priori il numero di parametri che avrà la procedura. er questa esercitazione il frammento di codice di aggiornamento risulterà simile al codice seguente:
-
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -185,7 +183,7 @@ A questo punto viene creata la stored procedure e il riquadro **RISULTATI** most
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Utilizzare il salvataggio dei risultati come JSON per testare la procedura setCustomer
 
-La stored procedure *setCustomer* creata nella sezione precedente richiede i dati JSON passati nel parametro *@json_val*. In questa sezione viene illustrato come ottenere un JSON formattato correttamente per poi passarlo al parametro, in modo da testare la stored procedure.
+La stored procedure *setCustomer* creata nella sezione precedente richiede i dati JSON passati nel parametro *@json_val* . In questa sezione viene illustrato come ottenere un JSON formattato correttamente per poi passarlo al parametro, in modo da testare la stored procedure.
 
 1. Nella barra laterale **SERVER** premere il tasto destro del mouse su *dbo.Customers* e fare clic su **Seleziona le prime 1000 righe**.
 

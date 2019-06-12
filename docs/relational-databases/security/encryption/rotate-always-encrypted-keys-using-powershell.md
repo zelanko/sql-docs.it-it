@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21bb0bc1abe1a2a77af2d06bc6659312c0313581
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306099"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413468"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ L'amministratore della sicurezza genera una nuova chiave master della colonna, r
 |Passaggio 2. Creare una nuova chiave master della colonna in un archivio chiavi.<br><br>**Nota:** il modulo SqlServer non supporta questo passaggio. Per eseguire questa attività da una riga di comando, è necessario usare gli strumenti specifici del tipo di archivio chiavi.|[Creazione e archiviazione di chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Sì | no
 |Passaggio 3. Avviare un ambiente PowerShell e importare il modulo SqlServer. | [Importare il modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | no | no
 |Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della chiave master **precedente** della colonna. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria |New-SqlColumnMasterKeySettings| no | no
-|Passaggio 5. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della **nuova** chiave master della colonna. SqlColumnMasterKeySettings è un oggetto presente in memoria (PowerShell). Per crearlo, è necessario usare il cmdlet specifico dell'archivio chiavi. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| no | no
+|Passaggio 5. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della **nuova** chiave master della colonna. SqlColumnMasterKeySettings è un oggetto presente in memoria (PowerShell). Per crearlo, è necessario usare il cmdlet specifico dell'archivio chiavi. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| no | no
 |Passaggio 6. Eseguire l'autenticazione in Azure, se la chiave master precedente (corrente) o nuova della colonna è archiviata nell'insieme di credenziali delle chiavi di Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sì | no
 |Passaggio 7. Crittografare nuovamente ogni valore della chiave di crittografia della colonna, attualmente protetta con la chiave master precedente della colonna, usando la nuova chiave master della colonna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Nota:** quando si esegue questo cmdlet, passare gli oggetti SqlColumnMasterKeySettings per la chiave master precedente e nuova della colonna, insieme a un valore della chiave di crittografia della colonna da crittografare di nuovo.|Sì|no
 |Passaggio 8. Condividere il percorso della nuova chiave master della colonna (nome del provider e percorso della chiave master della colonna) e il set di nuovi valori crittografati delle chiavi di crittografia della colonna con l'amministratore del database.| Vedere gli esempi seguenti. | no | no

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21b727f60c0c60495c50e2e583b4cd776fd2e997
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: adf098f6a855a3db241f33b81b060c654ae47d6d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571291"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499598"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile usare l'estensione per l'elaborazione dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "65571291"
  La stringa di connessione è l'URL alla cartella di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in SharePoint nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o in un'altra libreria, ad esempio `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenziali  
- Specificare le credenziali necessarie per accedere alla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Specificare le credenziali necessarie per accedere alla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Query  
  Dopo essersi connessi all'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , usare la query in formato grafico MDX per compilare una query individuando e selezionando una delle strutture di dati sottostanti. Dopo aver compilato una query, eseguirla per visualizzare dati di esempio nel riquadro dei risultati.  

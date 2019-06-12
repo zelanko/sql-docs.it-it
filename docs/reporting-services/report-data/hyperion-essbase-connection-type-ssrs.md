@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2395d063b8e4b5f9f237d49f5011e8630124d9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65572320"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500417"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
   Per includere dati da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]che consente di recuperare dati multidimensionali da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "65572320"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenziali  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -73,7 +73,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Proprietà di campo predefinite  
- Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. La proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è ad esempio mappata alla proprietà di campo predefinita del set di dati del report **UniqueName**. Per includere il valore del nome univoco in una casella di testo, usare l'espressione `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. La proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è ad esempio mappata alla proprietà di campo predefinita del set di dati del report **UniqueName**. Per includere il valore del nome univoco in una casella di testo, usare l'espressione `=Fields!` *\<FieldName>* `.UniqueName`.  
   
  Nella tabella seguente viene riportato un elenco delle proprietà di campo predefinite che è possibile utilizzare per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -90,7 +90,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Proprietà personalizzate  
- Proprietà di campo personalizzate supportate da un provider di dati e incluse nella query MDX sottostante relativa al set di dati di un report, ma non nel riquadro Set di dati del report come campi nel set di dati. **Long Names** è ad esempio una proprietà del membro definita per un livello di dimensione. Per includere il valore in una casella di testo, usare l'espressione `=Fields!`*\<FieldName>*`("Long Names")`. Per i nomi dei campi nell'espressione viene fatta distinzione tra maiuscole e minuscole.  
+ Proprietà di campo personalizzate supportate da un provider di dati e incluse nella query MDX sottostante relativa al set di dati di un report, ma non nel riquadro Set di dati del report come campi nel set di dati. **Long Names** è ad esempio una proprietà del membro definita per un livello di dimensione. Per includere il valore in una casella di testo, usare l'espressione `=Fields!` *\<FieldName>* `("Long Names")`. Per i nomi dei campi nell'espressione viene fatta distinzione tra maiuscole e minuscole.  
   
  Per fare riferimento alle proprietà estese personalizzate in un'espressione, utilizzare la sintassi seguente:  
   
@@ -125,7 +125,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

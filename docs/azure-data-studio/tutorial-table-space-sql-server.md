@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6594aea6a618e2b9c4bd28368462f85c94a5ff0a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 9fb9fd0c1c498c330b92b71d00b2c9f33667056c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089678"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773662"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare la tabella dello spazio dell'utilizzo esempio insight widget usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -75,7 +75,7 @@ Il **dashboard.database.widgets** sezione dovrebbe essere simile all'immagine se
 
 Il grafico di informazioni dettagliate di [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce filtri e dettagli al passaggio del mouse. Provare i passaggi seguenti:
 
-1. Fare clic e attivare/disattivare la legenda *rows_count* nel grafico.  [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e nasconde le serie di dati quando si attiva o disattiva una legenda.
+1. Fare clic e attivare/disattivare la legenda *rows_count* nel grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e nasconde le serie di dati quando si attiva o disattiva una legenda.
     
 2. Passare il puntatore del mouse sul grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)]mostra ulteriori informazioni sull'etichetta della serie di dati e il relativo valore, come illustrato nella schermata seguente:
 

@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143896"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800271"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Avvio rapido: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati in Azure SQL Data Warehouse
 
@@ -36,11 +36,11 @@ Ricorda il nome del server e le credenziali di accesso.
 
 Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server Azure SQL Data Warehouse.
 
-1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] verrà mostrata la pagina **Connessione**. Se essa non appare, fare clic sull'icona **Nuova connessione** nella barra laterale **SERVER**: 
+1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] verrà mostrata la pagina **Connessione**. Se essa non appare, fare clic sull'icona **Nuova connessione** nella barra laterale **SERVER**:
    
    ![Nuova connessione](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. Questo articolo usa *Account di accesso SQL*, ma l'accesso tramite *Autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito, specificando il nome del server, il nome utente e la password per il server Azure SQL usato: 
+2. Questo articolo usa *Account di accesso SQL*, ma l'accesso tramite *Autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito, specificando il nome del server, il nome utente e la password per il server Azure SQL usato:
 
    | Impostazione       | Valore suggerito | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 

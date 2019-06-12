@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1114f310bb27d98d83454127d641b9946c6f5c5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4c50b757f6866307b52106055fd5affbf46789c0
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65575534"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500126"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo di connessione Teradata (SSRS)
   Per includere dati da un database relazionale di Teradata nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo Teradata. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati del provider gestito .NET per Teradata.  
@@ -27,14 +27,14 @@ ms.locfileid: "65575534"
 data source=<IP Address>  
 ```  
   
- Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Remarks"></a> Osservazioni  
@@ -53,7 +53,7 @@ data source=<IP Address>
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154656"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775413"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il supporto nativo per le applicazioni di messaggistica e accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Questa caratteristica semplifica il lavoro degli sviluppatori per creare applicazioni complesse che utilizzano i componenti di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per comunicare tra database diversi. Gli sviluppatori possono utilizzare [!INCLUDE[ssSB](../../includes/sssb-md.md)] per compilare con facilità applicazioni distribuite e affidabili.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre supporto nativo per la messaggistica e l'accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Gli sviluppatori possono creare facilmente applicazioni complesse che usano i componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per la comunicazione tra vari database, nonché compilare applicazioni distribuite e affidabili.  
   
- Gli sviluppatori di applicazioni che utilizzano [!INCLUDE[ssSB](../../includes/sssb-md.md)] possono distribuire il carico di lavoro su più database senza programmare interni di comunicazione e messaggistica complessi. In questo modo, è possibile ottenere una riduzione delle attività di sviluppo e test, in quanto [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestisce i percorsi di comunicazione nel contesto di una conversazione, con conseguente miglioramento delle prestazioni. Ad esempio, i database front-end che supportano i siti Web possono registrare le informazioni e mettere in coda le attività con molti processi nei database back-end. [!INCLUDE[ssSB](../../includes/sssb-md.md)] si assicura che tutte le attività vengano gestite nel contesto delle transazioni per garantire affidabilità e coerenza tecnica.  
+## <a name="when-to-use-service-broker"></a>Quando usare Service Broker
+
+ Usare i componenti di Service Broker per implementare funzionalità di elaborazione di messaggi asincroni nel database native. Gli sviluppatori di applicazioni che utilizzano [!INCLUDE[ssSB](../../includes/sssb-md.md)] possono distribuire il carico di lavoro su più database senza programmare interni di comunicazione e messaggistica complessi. Service Broker consente di ottenere una riduzione delle attività di sviluppo e test, in quanto [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestisce i percorsi di comunicazione nel contesto di una conversazione, con conseguente miglioramento delle prestazioni. Ad esempio, i database front-end che supportano i siti Web possono registrare le informazioni e mettere in coda le attività con molti processi nei database back-end. [!INCLUDE[ssSB](../../includes/sssb-md.md)] si assicura che tutte le attività vengano gestite nel contesto delle transazioni per garantire affidabilità e coerenza tecnica.  
   
+## <a name="overview"></a>Panoramica
+
+  Service Broker è un framework di recapito messaggi che consente di creare applicazioni orientate ai servizi nel database native. A differenza delle classiche funzionalità di elaborazione query che leggono continuamente i dati dalle tabelle e li elaborano durante il ciclo di vita della query, nell'applicazione orientata ai servizi sono presenti servizi di database che scambiano i messaggi. Ogni servizio ha una coda in cui i messaggi vengono inseriti fino a quando non vengono elaborati.
+  
+![Service Broker](media/service-broker.png)
+  
+  I messaggi nelle code possono essere recuperati tramite il comando `RECEIVE` di Transact-SQL o dalla procedura di attivazione che viene chiamata quando il messaggio arriva nella coda.
+  
+### <a name="creating-services"></a>Creazione di servizi
+ 
+  È possibile creare i servizi di database tramite l'istruzione Transact SQL [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md). Il servizio può essere associato alla coda di messaggi creata tramite l'istruzione [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md):
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>Invio di messaggi
+  
+  I messaggi vengono inviati nella conversazione tra i servizi usando l'istruzione Transact-SQL [SEND](../../t-sql/statements/send-transact-sql.md). Una conversazione è un canale di comunicazione che viene stabilito tra i servizi usando l'istruzione Transact-SQL `BEGIN DIALOG`. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   Il messaggio verrà inviato a `ExpenssesService` e inserito in `dbo.ExpenseQueue`. Poiché a questa coda non è associata alcuna procedura di attivazione, il messaggio rimarrà nella coda fino a quando non verrà letto da qualcuno.
+
+### <a name="processing-messages"></a>Elaborazione di messaggi
+
+   I messaggi inseriti nella coda possono essere selezionati usando una query `SELECT` standard. L'istruzione `SELECT` non modifica la coda, né rimuove i messaggi. Per la lettura e il pull dei messaggi dalla coda, è possibile usare l'istruzione Transact-SQL [RECEIVE](../../t-sql/statements/receive-transact-sql.md).
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  Dopo aver elaborato tutti i messaggi della coda, chiudere la conversazione usando l'istruzione Transact-SQL [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md).
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Dove si trova la documentazione per Service Broker?  
  La documentazione di riferimento per [!INCLUDE[ssSB](../../includes/sssb-md.md)] è inclusa nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella documentazione di riferimento sono incluse le sezioni seguenti:  
   

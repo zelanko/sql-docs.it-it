@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31d02cdaab35dc25cf828aa22897f6b35547a558
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: bf367ee27ac900e07ddc5676d3bae4ae4bef265c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577923"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499653"
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo di connessione ODBC (SSRS)
   Per includere dati da un provider di dati ODBC, è necessario disporre di un set di dati basato su un'origine dati del report di tipo ODBC. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati ODBC di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -38,7 +38,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
 > [!NOTE]  
 >  È consigliabile non aggiungere le informazioni di accesso, ad esempio la password, alla stringa di connessione. In Generatore report è presente una scheda separata nella finestra di dialogo **Origine dati** che può essere utilizzata per immettere le credenziali.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Remarks"></a> Osservazioni  
@@ -66,7 +66,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

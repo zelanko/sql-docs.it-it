@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1609d87b58a9b38a9e0ba112573dfe696659e51c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 84ca9bd1e9a197d518dafd5d33234ac4ffc3cb26
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571643"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500536"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo di connessione Analysis Services per MDX (SSRS)
   Per includere dati da un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questo tipo di origine dati incorporato è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . È possibile recuperare metadati su dimensioni, gerarchie, livelli, indicatori di prestazioni chiave (KPI), misure e attributi da un cubo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per usarli come dati del report.  
@@ -29,7 +29,7 @@ ms.locfileid: "65571643"
 data source=<server name>;initial catalog=<database name>  
 ```  
   
- Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenziali  
@@ -47,7 +47,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -90,7 +90,7 @@ data source=<server name>;initial catalog=<database name>
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

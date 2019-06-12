@@ -1,7 +1,7 @@
 ---
 title: Requisiti hardware e software per l'installazione di SQL Server 2016 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/06/2018
+ms.custom: sqlfreshmay19
+ms.date: 05/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 093a70a8e9651271aa2a8df4641f6f1e568fc2a7
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 3342007b5d122d2c780583636758f838851edc06
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756736"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413586"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware and Software Requirements for Installing SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +83,7 @@ In [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] viene introdotto il supp
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File di supporto per l'installazione  
   
--   Per i requisiti minimi di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[win8srv](../../includes/win8srv-md.md)] o [!INCLUDE[win8](../../includes/win8-md.md)], vedere [Installazione di SQL Server in Windows Server 2012 o Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562)).  
+-   Per i requisiti minimi di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[win8srv](../../includes/win8srv-md.md)] o [!INCLUDE[win8](../../includes/win8-md.md)], vedere [Installazione di SQL Server in Windows Server 2012 o Windows 8](https://support.microsoft.com/kb/2681562).  
   
 ##  <a name="hwswr"></a> Requisiti hardware e software  
 I requisiti seguenti si applicano a tutte le installazioni:  
@@ -110,7 +110,7 @@ I requisiti seguenti si applicano a tutte le installazioni:
 |---------------|-----------------|  
 |Memoria \*|**Minimo:**<br/><br/> Edizioni Express: 512 MB<br/><br/> Tutte le altre edizioni: 1 GB<br/><br/> **Consigliato:**<br/><br/> Edizioni Express: 1 GB<br/><br/> Tutte le altre edizioni: almeno 4 GB, che devono essere incrementati con l'aumentare delle dimensioni del database per garantire prestazioni ottimali.|  
 |Velocità del processore|**Minima**: processore x64: 1,4 GHz<br/><br/> **Consigliato:** almeno 2 GHz|  
-|Tipo di processore|Processore x64 AMD Opteron, AMD Athlon 64, Intel Xeon con supporto Intel EM64T, Intel Pentium IV con supporto EM64T|  
+|Tipo di processore|Processore x64: AMD Opteron, AMD Athlon 64, Intel Xeon con supporto Intel EM64T, Intel Pentium IV con supporto EM64T|  
   
 > [!NOTE]  
 > L'installazione di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] è supportata solo su processori x64, non è più supportata su processori x86.  
@@ -120,21 +120,8 @@ I requisiti seguenti si applicano a tutte le installazioni:
  **Supporto WOW64:**  
   
  WOW64 (Windows 32-bit on Windows 64-bit) è una funzionalità delle edizioni a 64 bit di Windows che consente l'esecuzione a livello nativo in modalità a 32 bit delle applicazioni a 32 bit. Le applicazioni verranno eseguite in modalità a 32 bit anche se il sistema operativo sottostante viene eseguito a 64 bit. La funzionalità WOW64 non è supportata per le installazioni di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Tuttavia, gli strumenti di gestione sono supportati in WOW64.  
-  
- **Supporto dei sistemi operativi:**  
-  
- Le edizioni [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] vengono classificate come segue:  
-  
--   [Edizioni principali](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Principal)  
-  
--   [Edizioni Breadth](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Breadth)  
-  
-> [!NOTE]  
-> Le seguenti funzionalità di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni precedenti costituiscono un'eccezione rispetto ai sistemi operativi supportati elencati in questa sezione in quanto possono essere installate in Windows Server 2008 R2 SP1 o versioni successive:  
->  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
-> 
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - Componente aggiuntivo per prodotti SharePoint  
+
+ 
 
 **Supporto di Server Core:**
 
@@ -180,23 +167,44 @@ Per altre informazioni sull'installazione di [!INCLUDE[ssCurrent](../../includes
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] e sistemi operativi del server successivi non sono disponibili come architetture a 32 bit. Tutti i sistemi operativi server supportati sono disponibili solo a 64 bit. Tutte le funzionalità sono supportate in sistemi operativi server a 64 bit.  
   
-###  <a name="TOP_Principal"></a> Principal Editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
- Nella tabella seguente vengono indicati i requisiti del sistema operativo per le edizioni principali di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
-  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition|Sistemi operativi supportati|  
-|---------------------------------------|--------------------------------|  
-|[!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
-|[!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation<br/><br/> Windows 10 Home<br/><br/> Windows 10 Professional<br/><br/> Windows 10 Enterprise<br/><br/>Windows 10 IoT Enterprise<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)]<br/><br/>[!INCLUDE[win8](../../includes/win8-md.md)]<br/><br/>[!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)]<br/><br/>[!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)]|  
-|[!INCLUDE[ssWeb](../../includes/ssweb-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
+###  <a name="TOP_Principal"></a> Compatibilità del sistema operativo   
 
+ Nella tabella seguente sono indicate le edizioni di SQL Server compatibili con le varie versioni di Windows:  
   
-###  <a name="TOP_Breadth"></a> Edizioni Breadth di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
- Nella tabella seguente vengono indicati i requisiti del sistema operativo per le edizioni breadth di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
-  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition|Sistemi operativi supportati|  
-|---------------------------------------|--------------------------------|  
-|[!INCLUDE[ssDeveloper](../../includes/ssdeveloper-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation<br/><br/> Windows 10 Home<br/><br/> Windows 10 Professional<br/><br/> Windows 10 Enterprise<br/><br/>Windows 10 IoT Enterprise<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)]<br/><br/>[!INCLUDE[win8](../../includes/win8-md.md)]<br/><br/>[!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)]<br/><br/>[!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)]|  
-|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation<br/><br/> Windows 10 Home<br/><br/> Windows 10 Professional<br/><br/> Windows 10 Enterprise<br/><br/>Windows 10 IoT Enterprise<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)]<br/><br/>[!INCLUDE[win8](../../includes/win8-md.md)]<br/><br/>[!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)]<br/><br/>[!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)]|  
+
+| Edizione di SQL Server:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2019 Standard      |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2019 Essentials    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2016 Datacenter    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2016 Standard      |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2016 Essentials    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 R2 Datacenter |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 R2 Standard   |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 R2 Essentials |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 R2 Foundation |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 Datacenter    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 Standard      |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 Essentials    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows Server 2012 Foundation    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
+| Windows 10 IoT Enterprise         |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 10 Enterprise             |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 10 Professional           |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 10 Home                   |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 8.1 Enterprise            |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 8.1 Pro                   |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 8.1 Enterprise            |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 8 Pro                     |    no      |    Sì    |    Sì   | no  |   Sì   |
+| Windows 8                         |    no      |    Sì    |    Sì   | no  |   Sì   | 
+| &nbsp; | &nbsp; |
+
+
+> [!NOTE]  
+> Le seguenti funzionalità di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni precedenti costituiscono un'eccezione rispetto ai sistemi operativi supportati elencati in questa sezione in quanto possono essere installate in Windows Server 2008 R2 SP1 o versioni successive:  
+>  
+>-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
+>-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - Componente aggiuntivo per prodotti SharePoint  
 
   
 ##  <a name="CrossLanguageSupport"></a> Supporto di lingue diverse  
@@ -230,45 +238,28 @@ Per altre informazioni sull'installazione di [!INCLUDE[ssCurrent](../../includes
 ##  <a name="StorageTypes"></a> Tipi di archiviazione per i file di dati  
  I tipi di archiviazione supportati per i file di dati sono:  
   
--   Disco locale  
-    > [!WARNING]  
-    > Il disco locale è supportato nell'installazione del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riportata online.
-
-    > [!IMPORTANT]
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente supporta unità disco con dimensioni del settore native standard di 512 byte e 4 KB.  I dischi rigidi con dimensioni del settore superiori a 4KB possono causare errori durante il tentativo di archiviazione dei file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui dischi.  Vedere [Limiti di dimensioni del settore supportati da unità disco rigido in SQL Server](https://support.microsoft.com/kb/926930) per altre informazioni sulle dimensioni del settore dei dischi rigidi supportate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
+-   Disco locale 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente supporta unità disco con dimensioni del settore native standard di 512 byte e 4 KB.  I dischi rigidi con dimensioni del settore superiori a 4KB possono causare errori durante il tentativo di archiviazione dei file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui dischi.  Vedere [Limiti di dimensioni del settore supportati da unità disco rigido in SQL Server](https://support.microsoft.com/kb/926930) per altre informazioni sulle dimensioni del settore dei dischi rigidi supportate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+    - Il disco locale è supportato nell'installazione del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riportata online.
 -   Archiviazione condivisa  
-
--   [Spazi di archiviazione diretta \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
-  
+-   [Spazi di archiviazione diretta \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
 -   Condivisione file SMB  
-  
-    > [!NOTE]  
-    > L'archiviazione SMB non è supportata per i file di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per le installazioni autonome o cluster. Usare invece l'archiviazione collegata direttamente, una rete SAN o S2D.  
-  
-    > [!IMPORTANT]  
-    > L'archiviazione SMB può essere ospitata da un file server di Windows o da un dispositivo di archiviazione SMB di terze parti. Nel primo caso, la versione del file server di Windows deve essere la versione 2008 o successiva. Per ulteriori informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una condivisione file SMB come opzione di archiviazione, vedere [Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    - L'archiviazione SMB non è supportata per i file di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per le installazioni autonome o cluster. Usare invece l'archiviazione collegata direttamente, una rete SAN o S2D. 
+    - L'archiviazione SMB può essere ospitata da un file server di Windows o da un dispositivo di archiviazione SMB di terze parti. Nel primo caso, la versione del file server di Windows deve essere la versione 2008 o successiva. Per ulteriori informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una condivisione file SMB come opzione di archiviazione, vedere [Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
   
   
 ##  <a name="DC_support"></a> L'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio  
  Per motivi di sicurezza, è consigliabile non installare [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] in un controller di dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma verranno applicate le limitazioni seguenti:  
   
--   Non è possibile eseguire servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio utilizzando un account Servizio locale.  
-  
--   Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer, non è possibile modificare il computer da membro di dominio a controller di dominio. Prima di modificare il computer host in controller di dominio, è necessario disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
--   Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer, non è possibile modificare il computer da controller di dominio a membro di dominio. Prima di modificare il computer host in membro di dominio, è necessario disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
--   Le istanze del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono supportate quando i nodi del cluster sono controller di dominio.  
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportato in un controller di dominio di sola lettura. Tramite il programma di installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà possibile creare gruppi di sicurezza o fornire account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio di sola lettura. In questo scenario il programma di installazione non verrà completato.  
-
+-   Non è possibile eseguire servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio utilizzando un account Servizio locale.    
+-   Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer, non è possibile modificare il computer da membro di dominio a controller di dominio. Prima di modificare il computer host in controller di dominio, è necessario disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .    
+-   Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer, non è possibile modificare il computer da controller di dominio a membro di dominio. Prima di modificare il computer host in membro di dominio, è necessario disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .   
+-   Le istanze del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono supportate quando i nodi del cluster sono controller di dominio.   
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportato in un controller di dominio di sola lettura. Tramite il programma di installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà possibile creare gruppi di sicurezza o fornire account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio di sola lettura. In questo scenario il programma di installazione non verrà completato. 
 - Un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportata in un ambiente in cui si può accedere solo a un controller di dominio di sola lettura. 
   
 ## <a name="see-also"></a>Vedere anche  
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [Specifiche di prodotto per SQL Server 2016](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
-  
-  
+

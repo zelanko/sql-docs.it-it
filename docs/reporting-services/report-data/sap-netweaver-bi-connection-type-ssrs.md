@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35e4cf42786b3ed699bcc0e469a8f4885eaf8d62
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 0e377fc94559600a98ee2cd03daadd59a5f3c2eb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571179"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500082"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
   Per includere dati da un'origine dati esterna SAP NetWeaver® Business Intelligence nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Questo tipo di origine dati incorporata si basa sull'estensione per i dati per il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 per [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "65571179"
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenziali  
@@ -37,7 +37,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -89,7 +89,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |**Key**|**Oggetto**|Restituisce la chiave per un livello.|  
 |**LevelNumber**|**Integer**|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
 |**ParentUniqueName**|**String**|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
-|**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** di un dipendente potrebbe essere *[0D_Azienda]. [ 10D_Reparto]. [11]*.|  
+|**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** di un dipendente potrebbe essere *[0D_Azienda]. [ 10D_Reparto]. [11]* .|  
   
  Per altre informazioni sull'utilizzo di campi e proprietà di campo in un'espressione, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -116,7 +116,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

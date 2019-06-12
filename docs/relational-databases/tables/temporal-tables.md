@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 08bdce27a5894cdbdba0122ec33a98c94f244ea3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017917"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454715"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  I tempi registrati nelle colonne datetime2 del sistema sono basati sull'ora di inizio della transazione stessa. Ad esempio, tutte le righe inserite all'interno di una singola transazione avranno la stessa ora UTC registrata nella colonna corrispondente all'inizio del periodo **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>Come si esegue una query sui dati temporali?  
- La clausola **FROM**_\<tabella\>_ dell'istruzione **SELECT** usa una nuova clausola **FOR SYSTEM_TIME** con cinque sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. La nuova sintassi dell'istruzione **SELECT** è supportata direttamente su una singola tabella, propagata attraverso diversi join e viste su più tabelle temporali.  
+ La clausola **FROM** _\<tabella\>_ dell'istruzione **SELECT** usa una nuova clausola **FOR SYSTEM_TIME** con cinque sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. La nuova sintassi dell'istruzione **SELECT** è supportata direttamente su una singola tabella, propagata attraverso diversi join e viste su più tabelle temporali.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -142,14 +142,14 @@ SELECT * FROM Employee
   
 |Espressione|Righe risultanti|Descrizione|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Restituisce una tabella con una singola riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *<date_time>*. Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *<date_time>*.|  
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Restituisce una tabella con una singola riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *<date_time>* . Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *<date_time>* .|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe che non sono più state attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM non sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Come sopra per la descrizione di **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time>, tranne per il fatto che la tabella delle righe restituite include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint <end_date_time>.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che sono state aperte e chiuse nell'intervallo di tempo specificato, definito dai due valori datetime per l'argomento CONTAINED IN. Sono incluse le righe diventate attive esattamente in corrispondenza del limite inferiore o che non sono più state attive esattamente in corrispondenza del limite superiore.|  
 |**ALL**|Tutte le righe|Restituisce l'unione di righe che appartengono alla tabella corrente e a quella di cronologia.|  
   
 > [!NOTE]  
->  Facoltativamente, è possibile scegliere di nascondere le colonne periodo in modo tale che le query che non fanno riferimento in modo esplicito alle colonne periodo non le restituiscano (scenario **SELECT \* FROM**_\<tabella\>_). Per restituire una colonna nascosta, basta fare riferimento in modo esplicito alla colonna nella query. Allo stesso modo, le istruzioni **INSERT** e **BULK INSERT** continueranno come se le nuove colonne periodo non fossero presenti (e i valori delle colonne saranno popolati automaticamente). Per altre informazioni sull'uso della clausola **HIDDEN** , vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+>  Facoltativamente, è possibile scegliere di nascondere le colonne periodo in modo tale che le query che non fanno riferimento in modo esplicito alle colonne periodo non le restituiscano (scenario **SELECT \* FROM** _\<tabella\>_ ). Per restituire una colonna nascosta, basta fare riferimento in modo esplicito alla colonna nella query. Allo stesso modo, le istruzioni **INSERT** e **BULK INSERT** continueranno come se le nuove colonne periodo non fossero presenti (e i valori delle colonne saranno popolati automaticamente). Per altre informazioni sull'uso della clausola **HIDDEN** , vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

@@ -1,7 +1,7 @@
 ---
 title: Server collegati (motore di database) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -20,16 +20,24 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f9e1a278e51c2ace53932fcc48ef3759baa307d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512726"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354378"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Configurare un server collegato per consentire a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di eseguire comandi su origini dati OLE DB all'esterno dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere i server collegati sono configurati per consentire a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che include tabelle in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un altro prodotto del database quale Oracle. Molti tipi di origini dati OLE DB possono essere configurati come server collegati, incluso Access e Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] . I server collegati offrono i vantaggi riportati di seguito:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  I server collegati consentono a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e all'[istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) di leggere i dati dalle origini dati remote e di eseguire comandi sui server di database remoti, ad esempio le origini dati OLE DB, al di fuori dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere i server collegati sono configurati per consentire a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che include tabelle in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un altro prodotto del database quale Oracle. Molti tipi di origini dati OLE DB possono essere configurati come server collegati, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel e Azure CosmosDB.
+
+> [!NOTE]
+> I server collegati sono disponibili in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e nell'istanza gestita di database SQL di Azure. Non sono abilitate nei database SQL di Azure singleton e in pool elastici. Esistono alcuni [vincoli nell'istanza gestita che è possibile verificare qui](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+
+## <a name="when-to-use-linked-servers"></a>Quando si usano i server collegati?
+
+  I server collegati consentono di implementare i database distribuiti con cui recuperare e aggiornare i dati in altri database. Sono un'ottima soluzione negli scenari in cui è necessario implementare il partizionamento orizzontale dei database senza dover creare un codice di applicazione personalizzata o per caricare direttamente dati da origini remote. I server collegati offrono i vantaggi riportati di seguito:  
   
 -   Possibilità di accedere ai dati dall'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -82,7 +90,7 @@ Per gestire le definizioni dei server collegati è possibile utilizzare stored p
   
 Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo**e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
   
- Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_**.**_schema_**.**_nome\_oggetto_.  
+ Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_ **.** _schema_ **.** _nome\_oggetto_.  
   
 > [!NOTE]  
 > È possibile definire un server collegato in modo che punti all'indietro (loopback) al server in cui è stato definito. I server di loopback risultano particolarmente utili durante il test di un'applicazione in cui vengono utilizzate query distribuite in una rete con un solo server. I server collegati di loopback sono destinati ai test e non sono supportati per molte operazioni, ad esempio le transazioni distribuite.  

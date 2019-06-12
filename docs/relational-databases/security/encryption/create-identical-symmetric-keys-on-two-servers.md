@@ -1,7 +1,7 @@
 ---
 title: Creare chiavi simmetriche identiche su due server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997563"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428827"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Creare chiavi simmetriche identiche su due server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53997563"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY SYMMETRIC KEY per il database. Se si specifica AUTHORIZATION, è richiesta l'autorizzazione IMPERSONATE per l'utente di database o l'autorizzazione ALTER per il ruolo applicazione. Se la crittografia viene applicata con un certificato o una chiave asimmetrica, è richiesta l'autorizzazione VIEW DEFINITION per il certificato o la chiave asimmetrica. Solo gli account di accesso di Windows e di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i ruoli applicazione possono disporre di chiavi simmetriche. I gruppi e i ruoli non possono disporre di chiavi simmetriche.  
   
 ## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
@@ -90,9 +90,23 @@ ms.locfileid: "53997563"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- Per ulteriori informazioni, vedere quanto segue:  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>Modifiche della crittografia in SQL Server 2017 CU2
+
+SQL Server 2016 usa l'algoritmo hash SHA1 per le operazioni di crittografia. A partire da SQL Server 2017 viene invece usato SHA-2. Ciò significa che possono essere necessari alcuni passaggi aggiuntivi affinché l'installazione di SQL Server 2017 sia in grado di decrittografare gli elementi crittografati da SQL Server 2016. Ecco i passaggi aggiuntivi:
+
+- Verificare che SQL Server 2017 sia aggiornato ad almeno l'aggiornamento cumulativo 2 (CU2).
+  - Per importanti informazioni dettagliate, vedere [Aggiornamento cumulativo 2 (CU2) per SQL Server 2017](https://support.microsoft.com/help/4052574).
+- Dopo aver installato CU2, attivare il flag di traccia 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
+  - Il flag di traccia 4631 è nuovo in SQL Server 2017. Il flag di traccia 4631 richiede un `ON` globale per creare la chiave master, il certificato o la chiave simmetrica in SQL Server 2017. In questo modo gli elementi creati possono interagire con SQL Server 2016 e versioni precedenti.
+
+Per altre informazioni, vedere:
+
+- [CORREZIONE: SQL Server 2017 non è in grado di decrittografare i dati crittografati da versioni precedenti di SQL Server usando la stessa chiave simmetrica](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [Le chiavi simmetriche identiche non funzionano tra SQL Server 2017 e altre versioni di SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>Per ulteriori informazioni
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

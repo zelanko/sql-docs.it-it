@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574884"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413336"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -36,7 +36,7 @@ Per comprendere le tabelle e il relativo utilizzo, vedere [Tabelle in SQL Data W
 
 ## <a name="syntax"></a>Sintassi
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ Crea una o più partizioni di tabella. Queste partizioni sono porzioni orizzonta
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>Opzione Indice columnstore cluster ordinato (anteprima)
 
-Indice columnstore cluster è l'opzione predefinita per la creazione di tabelle in Azure SQL Data Warehouse.  La specifica ORDER prevede sempre chiavi di tipo COMPOUND.  L'ordinamento sarà sempre in ordine crescente. Se non è specificata una clausola ORDER, l'indice columnstore non verrà ordinato.
+Indice columnstore cluster è l'opzione predefinita per la creazione di tabelle in Azure SQL Data Warehouse.  La specifica ORDER prevede sempre chiavi di tipo COMPOUND.  L'ordinamento sarà sempre in ordine crescente. Se non è specificata una clausola ORDER, l'indice columnstore non verrà ordinato. A causa del processo di ordinamento, una tabella con indici columnstore cluster ordinati potrebbe richiedere tempi di caricamento dei dati più lunghi rispetto agli indici columnstore cluster non ordinati. Se è necessario più spazio di tempdb durante il caricamento dei dati, è possibile ridurre la quantità di dati per ogni istruzione INSERT.
 
 Durante l'anteprima, è possibile eseguire questa query per verificare le colonne in cui è abilitata la clausola ORDER.  Successivamente sarà disponibile una vista del catalogo per fornire queste informazioni e l'ordinale di colonna se nella clausola ORDER sono specificate più colonne.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   

@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983ba238c0c5d5a0e355f49af734a72ae946ee79
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: e467af9ecc9879229172b2d1b25471c071a66612
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980397"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413427"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53980397"
   Crea un nuovo gruppo di disponibilità, se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata per la funzionalità [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 > [!IMPORTANT]  
->  Eseguire CREATE AVAILABILITY GROUP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera usare come replica primaria iniziale del nuovo gruppo di disponibilità. Questa istanza del server deve trovarsi in un nodo WSFC (Windows Server Failover Clustering).  
+>  Eseguire CREATE AVAILABILITY GROUP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera utilizzare come replica primaria iniziale del nuovo gruppo di disponibilità. Questa istanza del server deve trovarsi in un nodo WSFC (Windows Server Failover Clustering).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -104,11 +104,11 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ip4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+        'ip4_address', 'pv4_mask'  
       | 'ipv6_address'  
      }  
   
@@ -210,7 +210,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<server_instance> Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitata una replica. Il formato dell'indirizzo dipende dal fatto che l'istanza sia l'istanza predefinita o un'istanza denominata e se si tratti di un'istanza autonoma o un'istanza del cluster di failover (FCI), come segue:  
   
- { '*_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
+ { ' *_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
   
  I componenti di questo indirizzo sono i seguenti:  
   
@@ -228,19 +228,19 @@ CREATE AVAILABILITY GROUP group_name
   
  Per informazioni sui prerequisiti per i nodi WSFC e le istanze del server, vedere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica il percorso URL per l'[endpoint del mirroring del database](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui verrà ospitata la replica di disponibilità in corso di definizione nella clausola REPLICA ON corrente.  
   
  La clausola ENDPOINT_URL è obbligatoria. Per altre informazioni, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica un URL per definire un URL di endpoint o un URL di routing di sola lettura. I parametri URL sono i seguenti:  
   
  *system-address*  
  Stringa, ad esempio un nome di sistema, un nome di dominio completo o un indirizzo IP, che identifica in modo univoco il computer di destinazione.  
   
  *port*  
- Numero di porta associato all'endpoint del mirroring dell'istanza del server partner (per l'opzione ENDPOINT_URL) o numero di porta usato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza del server (per l'opzione READ_ONLY_ROUTING_URL).  
+ Numero di porta associato all'endpoint del mirroring dell'istanza del server partner (per l'opzione ENDPOINT_URL) o numero di porta utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza del server (per l'opzione READ_ONLY_ROUTING_URL).  
   
  AVAILABILITY_MODE **=** { {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY }  
  SYNCHRONOUS_COMMIT o ASYNCHRONOUS_COMMIT specifica se la replica primaria deve attendere la conferma della finalizzazione (scrittura) dei record del log su disco da parte della replica secondaria prima di poter eseguire il commit della transazione in un database primario specifico. Il commit delle transazioni in database diversi della stessa replica primaria può essere eseguito indipendentemente. L'aggiornamento cumulativo 1 di SQL Server 2017 introduce CONFIGURATION_ONLY. La replica CONFIGURATION_ONLY si applica solo ai gruppi di disponibilità con CLUSTER_TYPE = EXTERNAL o CLUSTER_TYPE = NONE. 
@@ -316,10 +316,10 @@ CREATE AVAILABILITY GROUP group_name
   
  Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
   
- Per un'istanza denominata, è possibile ottenere il numero di porta eseguendo una query sulle colonne **port** e **type_desc** della DMV [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L'istanza del server usa il listener Transact-SQL (**type_desc='TSQL'**).  
+ Per un'istanza denominata, è possibile ottenere il numero di porta eseguendo una query sulle colonne **port** e **type_desc** della DMV [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L'istanza del server usa il listener Transact-SQL (**type_desc='TSQL'** ).  
   
  Per altre informazioni sul calcolo dell'URL di routing di sola lettura per una replica, vedere [Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
   
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica primaria. Questo è il comportamento predefinito.  
   
- READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE } Specifica un elenco delimitato da virgole di istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo secondario:  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } Specifica un elenco delimitato da virgole di istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo secondario:  
   
 -   Sono configurate per consentire tutte le connessioni o connessioni in sola lettura (vedere l'argomento ALLOW_CONNECTIONS dell'opzione SECONDARY_ROLE, sopra).  
   
@@ -350,7 +350,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<server_instance> Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da host per una replica che è una replica secondaria leggibile quando è in esecuzione nel ruolo secondario.  
   
- Usare un elenco delimitato da virgole per specificare tutte le istanze del server che potrebbero ospitare una replica secondaria leggibile. Il routing di sola lettura segue l'ordine in cui le istanze del server vengono specificate nell'elenco. Se si include l'istanza del server host di una replica nell'elenco di routing di sola lettura della replica, il posizionamento di questa istanza del server alla fine dell'elenco costituisce in genere buona pratica, poiché le connessioni con finalità di lettura vengono indirizzate a una replica secondaria, se ne è disponibile una.  
+ Utilizzare un elenco delimitato da virgole per specificare tutte le istanze del server che potrebbero ospitare una replica secondaria leggibile. Il routing di sola lettura segue l'ordine in cui le istanze del server vengono specificate nell'elenco. Se si include l'istanza del server host di una replica nell'elenco di routing di sola lettura della replica, il posizionamento di questa istanza del server alla fine dell'elenco costituisce in genere buona pratica, poiché le connessioni con finalità di lettura vengono indirizzate a una replica secondaria, se ne è disponibile una.  
   
  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile eseguire il bilanciamento del carico delle richieste con finalità di lettura in tutte le repliche secondarie leggibili. A questo scopo, inserire le repliche in un set annidato di parentesi all'interno dell'elenco di routing di sola lettura. Per altre informazioni ed esempi, vedere [Configurare il bilanciamento del carico tra le repliche di sola lettura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
@@ -372,12 +372,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name > specifica il nome del gruppo di disponibilità che costituisce una parte del gruppo di disponibilità distribuito.  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica il percorso URL per il listener associato al gruppo di disponibilità.  
   
  La clausola LISTENER è obbligatoria.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica un URL per il listener associato al gruppo di disponibilità. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Specifica il seeding manuale (impostazione predefinita). Questo metodo richiede la creazione di un backup del database nella replica primaria e il ripristino manuale del backup nelle repliche del gruppo di disponibilità secondario.  
   
- LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** Definisce un nuovo listener del gruppo di disponibilità per questo gruppo di disponibilità. LISTENER è un argomento facoltativo.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Definisce un nuovo listener del gruppo di disponibilità per questo gruppo di disponibilità. LISTENER è un argomento facoltativo.  
   
 > [!IMPORTANT]
 >  Prima di creare il primo listener, è consigliabile leggere l'argomento [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -436,27 +436,27 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER accetta una delle seguenti opzioni \<listener_option>: 
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Specifica che il listener del gruppo di disponibilità deve usare il protocollo DHCP (Dynamic Host Configuration Protocol).  Facoltativamente, usare la clausola ON per identificare la rete in cui viene creato il listener. DHCP è limitato a una sola subnet usata per ogni istanza del server che ospita una replica nel gruppo di disponibilità.  
   
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare DHCP negli ambienti di produzione. Se si verifica un periodo di inattività e il lease IP DHCP scade, è necessario del tempo aggiuntivo per registrare il nuovo indirizzo IP della rete DHCP che è associato al nome DNS del listener e influisce sulla connettività client. DHCP può essere tranquillamente usato per la configurazione dell'ambiente di sviluppo e test per verificare le funzioni di base di gruppi di disponibilità e per l'integrazione con le applicazioni.  
   
- Ad esempio  
+ Esempio:  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Specifica che, anziché usare DHCP, il listener del gruppo di disponibilità deve usare uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore della rete per ottenere un indirizzo IP statico per ogni subnet in cui verrà ospitata una replica per il nuovo gruppo di disponibilità.  
   
- Ad esempio  
+ Esempio:  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ip4_address*  
  Specifica un indirizzo IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Specifica una maschera IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio, `255.255.254.0`.  
   
  *ipv6_address*  
@@ -476,7 +476,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
@@ -495,14 +495,14 @@ CREATE AVAILABILITY GROUP group_name
 |Opzione della replica|Impostazione su `COMPUTER01`|Impostazione su `COMPUTER02`|Impostazione su `COMPUTER03`|Descrizione|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In questo esempio i sistemi si trovano nello stesso dominio, pertanto per gli URL dell'endpoint può essere usato il nome del sistema come relativo indirizzo.|  
-|AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|In due repliche viene usata la modalità con commit sincrono. In caso di sincronizzazione, supportano il failover senza perdita di dati. Nella terza replica viene usata la modalità di disponibilità con commit asincrono.|  
-|FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Le repliche con commit sincrono supportano il failover automatico e il failover manuale pianificato. La replica in cui viene usata la modalità di disponibilità con commit sincrono supporta solo il failover manuale forzato.|  
+|AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|In due repliche viene utilizzata la modalità con commit sincrono. In caso di sincronizzazione, supportano il failover senza perdita di dati. Nella terza replica viene utilizzata la modalità di disponibilità con commit asincrono.|  
+|FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Le repliche con commit sincrono supportano il failover automatico e il failover manuale pianificato. La replica in cui viene utilizzata la modalità di disponibilità con commit sincrono supporta solo il failover manuale forzato.|  
 |BACKUP_PRIORITY|30|30|90|Alla replica con commit asincrono viene assegnata una priorità più alta, pari a 90, rispetto alle repliche con commit sincrono. Generalmente i backup vengono eseguiti nell'istanza del server in cui è ospitata la replica con commit asincrono.|  
-|SECONDARY_ROLE|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01:1433' )|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02:1433' )|( ALLOW_CONNECTIONS = READ_ONLY, <br />READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03:1433' )|Solo la replica con commit asincrono viene usata come replica secondaria leggibile.<br /><br /> Specifica il nome del computer e il numero di porta predefinito del motore di database (1433).<br /><br /> L'argomento è facoltativo.|  
+|SECONDARY_ROLE|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01:1433' )|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02:1433' )|( ALLOW_CONNECTIONS = READ_ONLY, <br />READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03:1433' )|Solo la replica con commit asincrono viene utilizzata come replica secondaria leggibile.<br /><br /> Specifica il nome del computer e il numero di porta predefinito del motore di database (1433).<br /><br /> L'argomento è facoltativo.|  
 |PRIMARY_ROLE|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = NONE )|Nel ruolo primario tutte le repliche rifiutano i tentativi di connessione con finalità di lettura.<br /><br /> Le richieste di connessione con finalità di lettura vengono indirizzate a COMPUTER03 se la replica locale è in esecuzione nel ruolo secondario. Quando tale replica è in esecuzione nel ruolo primario, il routing di sola lettura è disabilitato.<br /><br /> L'argomento è facoltativo.|  
 |SESSION_TIMEOUT|10|10|10|In questo esempio si specifica il valore di timeout della sessione predefinito (10). L'argomento è facoltativo.|  
   
- Infine, nell'esempio si specificano la clausola LISTENER facoltativa per creare un listener per il nuovo gruppo di disponibilità e un nome DNS univoco, `MyAgListenerIvP6`, per questo listener. Le due repliche si trovano in subnet diverse, pertanto per il listener devono essere usati indirizzi IP statici. Per ognuna delle due repliche di disponibilità, tramite la clausola WITH IP si specifica un indirizzo IP statico, `2001:4898:f0:f00f::cf3c` e `2001:4898:e0:f213::4ce2`, per il quale è usato il formato IPv6. In questo esempio si specifica anche utilizza l'argomento PORT facoltativo per indicare la porta `60173` come porta del listener.  
+ Infine, nell'esempio si specificano la clausola LISTENER facoltativa per creare un listener per il nuovo gruppo di disponibilità e un nome DNS univoco, `MyAgListenerIvP6`, per questo listener. Le due repliche si trovano in subnet diverse, pertanto per il listener devono essere usati indirizzi IP statici. Per ognuna delle due repliche di disponibilità, tramite la clausola WITH IP si specifica un indirizzo IP statico, `2001:4898:f0:f00f::cf3c` e `2001:4898:e0:f213::4ce2`, per il quale è utilizzato il formato IPv6. In questo esempio si specifica anche utilizza l'argomento PORT facoltativo per indicare la porta `60173` come porta del listener.  
   
 ```SQL
 CREATE AVAILABILITY GROUP MyAg   

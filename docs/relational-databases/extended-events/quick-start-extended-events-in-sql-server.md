@@ -1,7 +1,7 @@
 ---
 title: 'Avvio rapido: Eventi estesi in SQL Server | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/10/2016
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478236"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354578"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 
@@ -110,11 +110,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
     ![Nuova sessione > Eventi > Configura > Filtro (predicato) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Fare clic sulla scheda **Filtro (predicato)**. Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
+7. Fare clic sulla scheda **Filtro (predicato)** . Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
 
 8. Scegliere **sqlserver.sql_text** dall'elenco a discesa **Campo**.
    - Per **Operatore** scegliere un operatore LIKE.
-   - Per **Valore** digitare **%SELECT%HAVING%**.
+   - Per **Valore** digitare **%SELECT%HAVING%** .
 
     > [!NOTE]
     > In questo nome in due parti, *sqlserver* è il nome del pacchetto e *sql_text* è il nome del campo. L'evento scelto in precedenza, *sql_statement_completed* , deve essere nello stesso pacchetto del campo scelto.
@@ -411,7 +411,7 @@ In **Esplora oggetti**di SSMS è possibile fare clic con il pulsante destro del 
 Esistono innumerevoli scenari in cui è possibile usare in maniera efficace gli eventi estesi. Gli articoli seguenti forniscono scenari di esempio che comportano l'uso dei blocchi acquisiti durante le query.
 
 
-Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei blocchi sono descritti negli articoli seguenti. Gli articoli illustrano anche alcune tecniche avanzate, ad esempio l'uso di **@dbid**e l'uso dinamico di `EXECUTE (@YourSqlString)`:
+Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei blocchi sono descritti negli articoli seguenti. Gli articoli illustrano anche alcune tecniche avanzate, ad esempio l'uso di **@dbid** e l'uso dinamico di `EXECUTE (@YourSqlString)`:
 
 - [Cercare gli oggetti con il maggior numero di blocchi acquisiti](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Questo scenario usa l'elemento package0.histogram di destinazione, che elabora i dati dell'evento non elaborati prima di visualizzarli all'utente.
@@ -553,10 +553,11 @@ Le viste di sistema per gli eventi estesi includono:
     - Clausole CREATE EVENT SESSION.
     - Controlli dell'interfaccia utente di SSMS.
 
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Gli esempi di codice possono essere diversi per il database SQL di Azure
 
-<a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>Appendice: Istruzioni SELECT per verificare in anticipo il proprietario delle autorizzazioni
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a> Appendice: Istruzioni SELECT per verificare in anticipo il proprietario delle autorizzazioni
 
 Le autorizzazioni indicate in questo articolo sono:
 

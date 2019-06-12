@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 21daadd4301444b75f80961949396741f0ad04e8
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574008"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500224"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guida di riferimento a errori ed eventi (Reporting Services)
 
@@ -47,7 +47,7 @@ Gli eventi del server di report riportati di seguito vengono registrati nel regi
 |119|Errore|Attivazione|Server di report<br /><br /> Elaborazione pianificazione e recapito|*\<Source>* non ha l'autorizzazione per l'accesso al contenuto del database del server di report.|  
 |120|Errore|Attivazione|Server di report|Impossibile decrittografare la chiave simmetrica. È stato probabilmente modificato l'account con cui viene eseguito il servizio. Per altre informazioni, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Errore|Avvio/Chiusura|Server di report|Impossibile avviare il servizio RPC (Remote Procedure Call).|  
-|122|Avviso|Recapito|Elaborazione pianificazione e recapito|Elaborazione pianificazione e recapito non è in grado di connettersi al server SMTP utilizzato per il recapito della posta elettronica. Per altre informazioni sulle connessioni server SMTP, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Avviso|Recapito|Elaborazione pianificazione e recapito|Elaborazione pianificazione e recapito non è in grado di connettersi al server SMTP utilizzato per il recapito della posta elettronica. Per altre informazioni sulle connessioni server SMTP, vedere [impostazioni di posta elettronica - modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |123|Avviso|Registrazione|Server di report<br /><br /> Gestione report|Il server di report non è stato in grado di scrivere nel log di traccia. Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Informazioni|Attivazione|Server di report|Il servizio del server di report è stato inizializzato. Per altre informazioni, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Informazioni|Attivazione|Server di report|La chiave utilizzata per la crittografia dei dati è stata estratta. Per altre informazioni sulle chiavi, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  

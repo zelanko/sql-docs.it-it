@@ -1,7 +1,7 @@
 ---
 title: Contenitore Ciclo Foreach | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727714"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403043"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
 
@@ -68,6 +68,8 @@ ms.locfileid: "65727714"
 -   Enumeratore BLOB di Azure Foreach per enumerare i BLOB in un contenitore BLOB di Archiviazione di Azure.  
 
 -   Enumeratore Foreach file di ADLS per enumerare i file in una directory in Azure Data Lake Store.
+
+-   Enumeratore Foreach file di Data Lake Storage Gen2 per enumerare i file in una directory di Azure Data Lake Storage Gen2.
   
  Nella figura seguente viene illustrato un contenitore Ciclo Foreach che include un'attività File system. Il ciclo Foreach utilizza Foreach File Enumerator e l'attività File system è configurata per la copia di un file. Se la cartella specificata dall'enumeratore contiene quattro file, il ciclo si ripeterà quattro volte e copierà quattro file.  
   
@@ -98,6 +100,7 @@ ms.locfileid: "65727714"
 |Foreach HDFS File Enumerator|Specificare una cartella, i file da enumerare e il formato del nome dei file recuperati e indicare se includere le sottocartelle nell'enumerazione.|  
 |Blob di Azure Foreach|Specificare il contenitore BLOB di Azure che contiene i BLOB da enumerare.|  
 |Foreach file di ADLS|Specificare la directory di Azure Data Lake Store che contiene i file da enumerare.|
+|Foreach file di Data Lake Storage Gen2|Specificare la directory di Azure Data Lake Storage Gen2 che contiene i file da enumerare, oltre ad altre opzioni.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Aggiungere l'enumerazione a un flusso di controllo con il contenitore Ciclo Foreach
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -215,6 +218,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 |**Foreach HDFS File Enumerator**|Enumerare i file HDFS nel percorso HDFS specificato. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach HDFS File Enumerator**.|  
 |**Enumeratore Foreach BLOB di Azure**|Enumerare i file BLOB nel percorso BLOB specificato. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach Azure Blob Enumerator**.|  
 |**Enumeratore Foreach file di ADLS**|Enumerare i file nella directory di Data Lake Store specificata. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Enumeratore Foreach file di ADLS**.|
+|**Enumeratore Foreach file di Data Lake Storage Gen2**|Enumerare i file nella directory di Data Lake Storage Gen2 specificata. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Enumeratore Foreach file di Data Lake Storage Gen2**.|
   
  **Espressioni**  
  Fare clic su **Espressioni** o espandere questa voce per visualizzare l'elenco delle espressioni di proprietà esistenti. Fare clic sul pulsante con i puntini di sospensione **(...)** per aggiungere un'espressione di proprietà per una proprietà dell'enumeratore oppure per modificare e valutare un'espressione di proprietà esistente.  
@@ -470,6 +474,9 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Blob directory** (Directory BLOB)  
  Specificare la directory BLOB che contiene i file BLOB da enumerare. La directory BLOB è una struttura gerarchica virtuale.  
   
+ **Ricerca in modo ricorsivo**  
+ Specificare se eseguire la ricerca in modo ricorsivo all'interno delle sottodirectory.
+
  **Blob name filter** (Filtro del nome BLOB)  
  Specificare un filtro di nome per enumerare i file con un determinato modello di nome. Ad esempio, `MySheet*.xls\*` include file come MySheet001.xls e MySheetABC.xlsx.  
   
@@ -490,6 +497,18 @@ Specifica un filtro per il nome file. Vengono enumerati solo i file i cui nomi c
   
 **SearchRecursively**  
 Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory specificata.  
+
+####  <a name="ForeachBlobFsFile"></a> Enumeratore = Enumeratore Foreach file di Data Lake Storage Gen2 
+L'**enumeratore Foreach file di Data Lake Storage Gen2** consente a un pacchetto SSIS di enumerare i file in Azure Data Lake Storage Gen2.
+
+**AzureStorageConnection**  
+Specifica una gestione connessione di archiviazione di Azure esistente o ne crea una nuova che fa riferimento a un servizio di Data Lake Storage Gen2.
+
+**FolderPath**  
+Specifica il percorso della cartella in cui enumerare i file.
+
+**SearchRecursively**  
+Specifica se eseguire la ricerca in modo ricorsivo all'interno della cartella specificata.  
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Pagina Mapping variabili - Editor ciclo Foreach
  Utilizzare la pagina **Mapping variabili** della finestra di dialogo **Editor ciclo Foreach** per eseguire il mapping delle variabili al valore della raccolta. Il valore della variabile viene aggiornato con i valori della raccolta in ogni iterazione del ciclo.  

@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 3675362cefae97ce453e80dccd5ed79113a257a5
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980267"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413546"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ipv4_address', 'ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
@@ -256,7 +256,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  \<server_instance>  
  Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitata una replica. Il formato dell'indirizzo dipende dal fatto che l'istanza sia l'istanza predefinita o un'istanza denominata e se si tratti di un'istanza autonoma o un'istanza del cluster di failover (FCI). La sintassi è la seguente:  
   
- { '*_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
+ { ' *_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
   
  I componenti di questo indirizzo sono i seguenti:  
   
@@ -279,7 +279,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
   
  ENDPOINT_URL è obbligatorio nella clausola ADD REPLICA ON e facoltativo nella clausola MODIFY REPLICA ON.  Per altre informazioni, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica un URL per definire un URL di endpoint o un URL di routing di sola lettura. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -337,7 +337,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  MANUAL  
  Specifica il seeding manuale (impostazione predefinita). Questo metodo richiede la creazione di un backup del database nella replica primaria e il ripristino manuale del backup nella replica secondaria.  
   
- BACKUP_PRIORITY **=**_n_  
+ BACKUP_PRIORITY **=** _n_  
  Specifica la priorità di esecuzione dei backup nella replica rispetto alle altre repliche nello stesso gruppo di disponibilità. Il valore è un numero intero compreso nell'intervallo 0-100. I valori hanno il significato seguente:  
   
 -   1..100 indica che la replica di disponibilità potrebbe essere scelta per l'esecuzione dei backup. 1 indica la priorità più bassa e 100 indica la priorità più alta. Se BACKUP_PRIORITY = 1, la replica di disponibilità verrà scelta per l'esecuzione dei backup solo se non sono attualmente disponibili repliche di disponibilità con priorità più alta.  
@@ -365,10 +365,10 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
   
  Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
   
- Per un'istanza denominata, è possibile ottenere il numero di porta eseguendo una query sulle colonne **port** e **type_desc** della DMV [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L'istanza del server usa il listener Transact-SQL (**type_desc='TSQL'**).  
+ Per un'istanza denominata, è possibile ottenere il numero di porta eseguendo una query sulle colonne **port** e **type_desc** della DMV [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L'istanza del server usa il listener Transact-SQL (**type_desc='TSQL'** ).  
   
  Per altre informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
@@ -389,7 +389,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  ALL  
  Sono consentite tutte le connessioni ai database nella replica primaria. Questo è il comportamento predefinito.  
   
- READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
  Specifica un elenco delimitato da virgole di istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo secondario:  
   
 -   Sono configurate per consentire tutte le connessioni o connessioni in sola lettura (vedere l'argomento ALLOW_CONNECTIONS dell'opzione SECONDARY_ROLE, sopra).  
@@ -408,7 +408,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  Nessuno  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito. In caso di utilizzo con MODIFY REPLICA ON, questo valore disabilita un elenco esistente, se presente.  
   
- SESSION_TIMEOUT **=**_seconds_  
+ SESSION_TIMEOUT **=** _seconds_  
  Specifica il periodo di timeout della sessione in secondi. Se non si specifica questa opzione, il periodo di timeout predefinito è di 10 secondi. Il valore minimo è 5 secondi.  
   
 > [!IMPORTANT]  
@@ -459,7 +459,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  Per informazioni su limitazioni, prerequisiti e consigli per il failover forzato e sull'effetto di un failover forzato sui database primari precedenti nel gruppo di disponibilità, vedere [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
+ ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
  Definisce un nuovo listener per il gruppo di disponibilità. Supportato solo nella replica primaria.  
   
 > [!IMPORTANT]
@@ -486,12 +486,12 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
  \<ag_name>  
  Specifica il nome del gruppo di disponibilità che costituisce una metà del gruppo di disponibilità distribuito.  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica il percorso URL per il listener associato al gruppo di disponibilità.  
   
  La clausola LISTENER è obbligatoria.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica un URL per il listener associato al gruppo di disponibilità. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -519,7 +519,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  Il failover automatico sul gruppo di disponibilità secondario non è supportato.  
   
- SEEDING_MODE**=** { AUTOMATIC | MANUAL }  
+ SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
  Specifica in che modo sarà eseguito il seeding iniziale del gruppo di disponibilità secondario.  
   
  AUTOMATIC  
@@ -543,27 +543,27 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
  \<add_listener_option>  
  ADD LISTENER accetta una delle opzioni seguenti:  
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Specifica che il listener del gruppo di disponibilità userà il protocollo DHCP (Dynamic Host Configuration Protocol).  Facoltativamente, utilizzare la clausola ON per identificare la rete su cui verrà creato il listener. DHCP è limitato a una sola subnet utilizzata per ogni istanza del server nel cui gruppo di disponibilità è ospitata una replica di disponibilità.  
   
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare DHCP negli ambienti di produzione. Se si verifica un periodo di inattività e il lease IP DHCP scade, è necessario del tempo aggiuntivo per registrare il nuovo indirizzo IP della rete DHCP che è associato al nome DNS del listener e influisce sulla connettività client. DHCP può essere tranquillamente usato per la configurazione dell'ambiente di sviluppo e test per verificare le funzioni di base di gruppi di disponibilità e per l'integrazione con le applicazioni.  
   
- Ad esempio  
+ Esempio:  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Specifica che, anziché usare DHCP, nel listener del gruppo di disponibilità saranno usati uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore di rete per ottenere un indirizzo IP statico per ogni subnet in cui verrà ospitata una replica di disponibilità per il nuovo gruppo di disponibilità.  
   
- Ad esempio  
+ Esempio:  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ipv4_address*  
  Specifica un indirizzo IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Specifica una maschera IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio, `255.255.254.0`.  
   
  *ipv6_address*  
@@ -576,22 +576,22 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  Ad esempio: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
  Modifica un listener del gruppo di disponibilità esistente. Supportato solo nella replica primaria.  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER accetta una delle opzioni seguenti:  
   
- ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
+ ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
  Aggiunge l'indirizzo IP specificato al listener del gruppo di disponibilità specificato da *dns\_name*.  
   
  PORT **=** *listener_port*  
  Vedere la descrizione di questo argomento più indietro in questa sezione.  
   
- RESTART LISTENER **'**_dns\_name_**'**  
+ RESTART LISTENER **'** _dns\_name_ **'**  
  Consente di riavviare il listener associato al nome DNS specificato. Supportato solo nella replica primaria.  
   
- REMOVE LISTENER **'**_dns\_name_**'**  
+ REMOVE LISTENER **'** _dns\_name_ **'**  
  Consente di rimuovere il listener associato al nome DNS specificato. Supportato solo nella replica primaria.  
   
  OFFLINE  
@@ -608,7 +608,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  È necessaria anche l'autorizzazione ALTER ANY DATABASE.   
   
 ## <a name="examples"></a>Esempi  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ade6eb0154c66a405bb49470a6773f7bdc80be5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a12a9a0d7b219fd3e950ace9ceed143cc8bcc58c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574920"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500158"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Tipo di connessione SQL Server (SSRS)
   Per includere dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo tipo di origine dati può essere utilizzata per stabilire la connessione e recuperare dati dalla versione corrente e da versioni precedenti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -31,7 +31,7 @@ ms.locfileid: "65574920"
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
@@ -48,7 +48,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -86,7 +86,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- Fare clic sul pulsante **Esegui** (**!**) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.  
+ Fare clic sul pulsante **Esegui** ( **!** ) sulla barra degli strumenti per eseguire la query e visualizzare il set di risultati.  
   
  Per parametrizzare questa query, aggiungere un parametro di query. Modificare ad esempio la clausola WHERE nella stringa seguente:  
   
@@ -156,7 +156,7 @@ WHERE EmployeeID = (@EmpID)
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

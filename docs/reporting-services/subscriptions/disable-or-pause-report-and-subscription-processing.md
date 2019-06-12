@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 66c9072f10165b520120b80a9264a828a4e037db
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581069"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499879"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni
   Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo argomento vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono praticabili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le tabelle seguenti riepilogano i metodi e le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   Raccolta di SharePoint (disponibile solo da un sito di SharePoint con un server di report in modalità integrata SharePoint)  
   
- Prima che sia possibile utilizzare l'estensione per il recapito tramite posta elettronica, è necessario configurarla. In caso contrario, l'estensione non sarà disponibile. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Prima che sia possibile utilizzare l'estensione per il recapito tramite posta elettronica, è necessario configurarla. In caso contrario, l'estensione non sarà disponibile. Per altre informazioni, vedere [impostazioni di posta elettronica - modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
- Per disattivare estensioni specifiche, è possibile rimuovere voci dell'estensione nel file **RSReportServer.config** . Per altre informazioni, vedere [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Per disattivare estensioni specifiche, è possibile rimuovere voci dell'estensione nel file **RSReportServer.config** . Per altre informazioni, vedere [del file di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [impostazioni di posta elettronica - modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  Dopo avere rimosso un'estensione per il recapito, questa non sarà più disponibile in Gestione report o in un sito di Share Point. Se si rimuove un'estensione per il recapito, alcune sottoscrizioni potrebbero diventare inattive. Assicurarsi di eliminare le sottoscrizioni o di configurarle per l'utilizzo di un'estensione per il recapito diversa prima di rimuovere un'estensione.  
   

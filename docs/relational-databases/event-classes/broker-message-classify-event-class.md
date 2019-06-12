@@ -1,7 +1,7 @@
 ---
 title: Classe di evento Broker:Message Classify | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -13,16 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e6c3eb4997cd89bae19a231e808cb4699528e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf9029a72ab1d02f02c5d1e7f51ffb85b76d93e3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632439"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265506"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Classify** quando Service Broker stabilisce la modalità di recapito di un messaggio.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Classify** quando Service Broker stabilisce la modalità di recapito di un messaggio.  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Message Classify  
   
@@ -33,7 +35,7 @@ ms.locfileid: "47632439"
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Message Classify** , corrisponde sempre a **141**.|27|no|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|no|  
-|**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Local**: la route scelta ha l'indirizzo LOCAL.<br /><br /> **Remote**:                  la route scelta ha un indirizzo diverso da LOCAL.<br /><br /> **Delayed**:                 il messaggio viene posticipato perché l'inoltro è disabilitato o non è disponibile alcuna route corrispondente.|21|Sì|  
+|**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Local**: la route scelta ha l'indirizzo LOCAL.<br /><br /> **Remote**:                 la route scelta ha un indirizzo diverso da LOCAL.<br /><br /> **Delayed**:                 il messaggio viene posticipato perché l'inoltro è disabilitato o non è disponibile alcuna route corrispondente.|21|Sì|  
 |**FileName**|**nvarchar**|Nome del servizio a cui è indirizzato il messaggio.|36|no|  
 |**GUID**|**uniqueidentifier**|ID di conversazione del dialogo. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|no|  
 |**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  

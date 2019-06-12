@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fc582f9328196233768e1fd7e7bd2bb81688c81d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124581"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413447"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54124581"
   
      In questa parte viene definito il payload supportato dall'endpoint. I tipi di payload supportati sono [!INCLUDE[tsql](../../includes/tsql-md.md)], SERVICE BROKER e DATABASE MIRRORING. In questa parte è inoltre possibile includere informazioni specifiche della lingua.  
   
-> **NOTA** I servizi Web XML nativi (endpoint SOAP/HTTP) sono stati eliminati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA** I servizi Web XML nativi (endpoint SOAP/HTTP) sono stati rimossi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  I seguenti argomenti sono validi solo per l'opzione TCP.  
   
- LISTENER_PORT **=**_listenerPort_  
+ LISTENER_PORT **=** _listenerPort_  
  Specifica il numero della porta della quale il protocollo TCP/IP di Service Broker è in attesa delle connessioni. Per convenzione, viene utilizzato il valore 4022 ma sono validi tutti i numeri compresi tra 1024 e 32767.  
   
- LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  Specifica l'indirizzo IP in corrispondenza del quale verrà eseguita l'attesa dell'endpoint. Il valore predefinito è ALL. Ciò significa che il listener accetterà una connessione su qualsiasi indirizzo IP valido.  
   
  Se si configura il mirroring del database con un indirizzo IP anziché con un nome di dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), è necessario specificare `LISTENER_IP =IP_address` anziché `LISTENER_IP=ALL` quando si creano gli endpoint del mirroring.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Cancella i messaggi per i servizi ubicati altrove. Impostazione predefinita.  
   
- MESSAGE_FORWARD_SIZE **=**_forward_size_  
+ MESSAGE_FORWARD_SIZE **=** _forward_size_  
  Specifica lo spazio di archiviazione massimo espresso in MB da allocare per l'endpoint durante l'archiviazione dei messaggi da inoltrare.  
   
  **Opzioni di DATABASE_MIRRORING**  
@@ -268,7 +268,7 @@ FOR DATABASE_MIRRORING (
   
 -   Utenti o gruppi a cui è stata concessa l'autorizzazione CONNECT per l'endpoint.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server **sysadmin** . Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="example"></a>Esempio  
@@ -276,7 +276,7 @@ FOR DATABASE_MIRRORING (
 ### <a name="creating-a-database-mirroring-endpoint"></a>Creazione di un endpoint del mirroring del database  
  Nell'esempio seguente viene creato un endpoint del mirroring del database. L'endpoint utilizza il numero di porta `7022`, anche se qualsiasi numero di porta funzionerebbe correttamente. L'endpoint è configurato in modo da utilizzare solo Kerberos come modalità di autenticazione Windows. L'opzione `ENCRYPTION` è configurata sul valore non predefinito `SUPPORTED` per garantire il supporto di dati crittografati e non crittografati. L'endpoint verrà configurato in modo da supportare entrambi i ruoli partner e di controllo del mirroring.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -286,6 +286,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv4-address-and-port"></a>Creare un nuovo endpoint che punti a un indirizzo IPv4 e a una porta specifici
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv6-address-and-port"></a>Creare un nuovo endpoint che punti a un indirizzo IPv6 e a una porta specifici
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8be8ed5a1718e33b9e0c2c04caf75967f7067ea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571379"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500300"
 ---
 # <a name="report-datasets-ssrs"></a>Set di dati del report (SSRS)
   Per aggiungere dati a un rapporto, è necessario creare set di dati. Ogni set di dati rappresenta il set di risultati dall'esecuzione di un comando di query su un'origine dati. Le colonne del set di risultati sono la raccolta di campi. Le righe del set di risultati sono i dati. Un set di dati non contiene i dati effettivi. Un set di dati contiene le informazioni necessarie per recuperare un set di dati specifico da un'origine dati.  
@@ -92,9 +92,9 @@ ms.locfileid: "65571379"
   
  Nella Progettazione query, è possibile eseguire la query per visualizzare i dati di esempio e convalidare la sintassi del comando di query. I nomi di colonna nel set di risultati diventano i nomi campo visualizzati nel riquadro dei dati del report. Il set di risultati deve essere un singolo set di righe e colonne in cui esiste lo stesso numero di valori per ogni riga di dati. Non sono supportati più set di risultati di una singola query. Non sono supportate le gerarchie incomplete che non dispongono di un numero costante di colonne e che possono produrre un numero diverso di valori dei dati per ogni riga.  
   
- Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) e [Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md) e [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;Generatore report&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+ Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;Generatore report&#41;](query-design-tools-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Procedure  
@@ -120,9 +120,9 @@ ms.locfileid: "65571379"
 ##  <a name="Section"></a> Contenuto della sezione  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
- [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md)  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

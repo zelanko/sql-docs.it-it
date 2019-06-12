@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580129"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413640"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,7 +209,7 @@ ALTER INDEX { index_name | ALL }
   
  Il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supporta il formato del nome in tre parti database_name.[schema_name].table_or_view_name, dove database_name è il database corrente o tempdb e table_or_view_name inizia con #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Specifica che l'indice verrà ricompilato con le stesse colonne, lo stesso tipo di indice, lo stesso attributo di univocità e lo stesso tipo di ordinamento. Questa clausola equivale a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD abilita un indice disabilitato. La ricompilazione di un indice cluster non comporta la ricompilazione degli indici non cluster associati, a meno che non venga specificata la parola chiave ALL. Se non vengono specificate opzioni di indice, vengono applicati i valori esistenti delle opzioni di indice archiviati in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Per le opzioni di indice il cui valore non è archiviato in **sys.indexes**, viene applicato il valore predefinito indicato nella definizione dell'argomento dell'opzione.  
   
  Se viene specificata la parola chiave ALL e la tabella sottostante è un heap, l'operazione di ricompilazione non ha effetto sulla tabella. Vengono ricompilati tutti gli indici non cluster associati alla tabella.  
@@ -248,7 +248,7 @@ PARTITION
   
  Numero di partizioni di un indice partizionato da ricompilare o riorganizzare. *partition_number* è un'espressione costante che può fare riferimento a variabili, incluse variabili o funzioni con tipo definito dall'utente (UDT) e funzioni definite dall'utente, ma non a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È necessario che *partition_number* esista o l'istruzione avrà esito negativo.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +309,7 @@ COMPRESS_ALL_ROW_GROUPS consente di forzare i rowgroup differenziali OPEN o CLOS
   
 -   L'opzione OFF forza tutti i rowgroup nel columnstore.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Specifica alcune opzioni per l'indice senza ricompilare né riorganizzare l'indice. La parola chiave SET non può essere specificata per un indice disabilitato.  
   
 PAD_INDEX = { ON | OFF }  
@@ -423,7 +423,7 @@ FILLFACTOR = *fillfactor*
   
 -   Un subset di un indice partizionato (è possibile ricompilare online un intero indice partizionato).  
 
--  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)], prima della versione 12, e in SQL Server, prima di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], non è consentito l'uso dell'opzione `ONLINE` per la compilazione di indici cluster o le operazioni di ricompilazione quando la tabella di base contiene le colonne **varchar (max)** o **varbinary (max)**.
+-  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)], prima della versione 12, e in SQL Server, prima di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], non è consentito l'uso dell'opzione `ONLINE` per la compilazione di indici cluster o le operazioni di ricompilazione quando la tabella di base contiene le colonne **varchar (max)** o **varbinary (max)** .
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -529,7 +529,7 @@ Il valore predefinito è 0 minuti.
   
  Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -663,7 +663,7 @@ Per ricompilare un indice columnstore cluster, [!INCLUDE[ssNoVersion](../../incl
   
 1. Richiede spazio sul supporto fisico per archiviare due copie dell'indice columnstore durante la ricompilazione. Al termine della ricompilazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina l'indice columnstore cluster originale.
 
-1. Per una tabella di Azure SQL Data Warehouse con un indice columnstore cluster ordinato, ALTER INDEX REBUILD riordinerà i dati.  
+1. Per una tabella di Azure SQL Data Warehouse con un indice columnstore cluster ordinato, ALTER INDEX REBUILD riordinerà i dati. Monitorare tempdb durante le operazioni di ricompilazione. Se è necessario più spazio per tempdb, è possibile aumentare le dimensioni del data warehouse. Tornare alle dimensioni precedenti al termine della ricompilazione dell'indice.
   
 ## <a name="reorganizing-indexes"></a> Riorganizzazione degli indici
 La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente. Per visualizzare l'impostazione del fattore di riempimento, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  

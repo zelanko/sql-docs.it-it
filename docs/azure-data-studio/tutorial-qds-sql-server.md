@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089680"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797932"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiungere il *cinque query più lente* widget al dashboard del database di esempio
 
@@ -122,14 +122,14 @@ Per aggiungere il *widget di query lente* al dashboard, modificare il *dashboard
 
    ![Aprire il dashboard](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
-7. Il widget delle informazioni dettagliate viene visualizzato nel dashboard:  
+7. Il widget delle informazioni dettagliate viene visualizzato nel dashboard: 
 
    ![Widget QDS](./media/tutorial-qds-sql-server/insight-qds-result.png)
 
 
 ## <a name="view-insight-details-for-more-information"></a>Visualizzare il widget delle informazioni dettagliate per altri approfondimenti
 
-1. Per visualizzare informazioni aggiuntive per un widget di informazioni dettagliate, fare clic sui puntini di sospensione (**...** ) in alto a destra e selezionare **Mostra dettagli**.
+1. Per visualizzare informazioni aggiuntive per un widget di informazioni dettagliate, fare clic sui puntini di sospensione ( **...** ) in alto a destra e selezionare **Mostra dettagli**.
 2. Per visualizzare ulteriori dettagli di un elemento, selezionarlo dall'elenco dei **dati**.
 
    ![Finestra di dialogo Dettagli Insight](./media/tutorial-qds-sql-server/insight-details-dialog.png)
@@ -156,7 +156,7 @@ Per aggiungere il *widget di query lente* al dashboard, modificare il *dashboard
 
 1. Aprire la finestra di dialogo delle informazioni dettagliate.
 2. Selezionare uno degli elementi di query.
-2. Fare clic con il pusante destro del mouse sul valore **query_plan** e selezionare **Copia cella** 
+2. Fare clic con il pusante destro del mouse sul valore **query_plan** e selezionare **Copia cella**
 
    ![Piano di Insights QDS](./media/tutorial-qds-sql-server/insight-qds-plan.png)
 
@@ -166,7 +166,7 @@ Per aggiungere il *widget di query lente* al dashboard, modificare il *dashboard
 
 5. Premere **Ctrl+S** per salvare il file e modificare l'estensione del file in *.sqlplan*. *sqlplan* non è visualizzato nell'elenco a discesa estensione di file, quindi digitarlo in. Per questa esercitazione, denominare il file *slowquery.sqlplan*.
 
-6. Il piano di query viene aperto nel visualizzatore dei piani di query in [!INCLUDE[name-sos](../includes/name-sos-short.md)]: 
+6. Il piano di query viene aperto nel visualizzatore dei piani di query in [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 
    ![Piano di Insights QDS](./media/tutorial-qds-sql-server/sqlplan.png)
 

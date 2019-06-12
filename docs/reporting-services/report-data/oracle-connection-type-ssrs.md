@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1cf0134d4c71111537a9d7c020c03f77d9377fd1
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.openlocfilehash: 67cb43743f8153a39d28af26807ddea98955674e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66413428"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499555"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo di connessione Oracle (SSRS)
 Per utilizzare dati di un database Oracle nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo Oracle. Questo tipo di origine dati predefinita usa il provider di dati Oracle direttamente e richiede un componente software client Oracle.
@@ -33,14 +33,14 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -91,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

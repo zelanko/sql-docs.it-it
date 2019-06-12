@@ -7,22 +7,22 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5550a1151ed0fb71a769e7990d9cd47b3e9b0e47
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 93f38f8e703aabc765d3badc91393eb130081c99
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089690"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797966"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino di database usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 In questa esercitazione imparerete a usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per:
 > [!div class="checklist"]
-> * Effettuare il backup di un database  
+> * Effettuare il backup di un database 
 > * Visualizzare lo stato del backup
 > * Generare lo script utilizzato per eseguire il backup
 > * Ripristinare un database
@@ -36,9 +36,9 @@ Questa esercitazione richiede il database *TutorialDB* su SQL Server. Per crearl
 
 Questa esercitazione richiede la connessione a un database di SQL Server. Database SQL di Azure con i backup automatici in modo che Data Studio di Azure non eseguire il backup di Database SQL di Azure e il ripristino. Per informazioni dettagliate, vedere [informazioni sui backup automatici del Database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
-## <a name="backup-a-database"></a>Effettuare il backup di un database 
+## <a name="backup-a-database"></a>Effettuare il backup di un database
 
-1. Aprire la dashboard del database TutorialDB (aprire la barra laterale **SERVER** con **CTRL+G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**). 
+1. Aprire la dashboard del database TutorialDB (aprire la barra laterale **SERVER** con **CTRL+G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**).
 
 2. Aprire la finestra di dialogo **Backup database** (fare clic su **Backup** sul widget **Attività**).
 
@@ -62,11 +62,11 @@ Dopo aver fatto clic su **Backup**, la finestra di dialogo **Backup database** s
 ## <a name="restore-a-database-from-a-backup-file"></a>Ripristinare un database da un file di backup
 
 
-1. Aprire la barra laterale **SERVER** (**CTRL+G**), premere il tasto destro sul vostro server e scegliere **Gestisci**.  
+1. Aprire la barra laterale **SERVER** (**CTRL+G**), premere il tasto destro sul vostro server e scegliere **Gestisci**. 
 
 2. Aprire la finestra di dialogo **Ripristina database** (fare clic su **Ripristino** sul widget **attività**).
 
-2. Selezionare **file di Backup** nel campo **ripristina da**.  
+2. Selezionare **file di Backup** nel campo **ripristina da**. 
 
 3. Fare clic sui puntini di sospensione (...) nel **percorso del file di Backup** e selezionare il file di backup più recente per *TutorialDB*.
 
@@ -83,7 +83,7 @@ Dopo aver fatto clic su **Backup**, la finestra di dialogo **Backup database** s
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
-> * Effettuare il backup di un database  
+> * Effettuare il backup di un database 
 > * Visualizzare lo stato del backup
 > * Generare lo script utilizzato per eseguire il backup
 > * Ripristinare un database

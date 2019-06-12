@@ -11,12 +11,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8c8588c9fe1aeb5768f27ea57b35f5ce2303bdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f47d33179fb382472def9950a928be137e1f6583
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132111"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354388"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modificare il tempo di recupero di riferimento di un database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "54132111"
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni 
   
 > [!CAUTION]  
->  Un carico di lavoro transazionale online su un database configurato per i checkpoint indiretti potrebbe subire un calo delle prestazioni. I checkpoint indiretti assicurano che il numero di pagine dirty è inferiore a una determinata soglia, in modo che il recupero del database viene completato entro il tempo di recupero di riferimento. A differenza dei checkpoint indiretti che usano il numero di pagine dirty, l'opzione di configurazione recovery interval usa il numero di transazioni per determinare il tempo di recupero. Quando i checkpoint indiretti sono abilitati per un database che riceve un numero elevato di operazioni DML, il writer in background può iniziare a scaricare i buffer dirty su disco in modo intensivo per garantire che il tempo necessario per eseguire il recupero non superi il tempo di recupero di riferimento impostato per il database. Questo può causare in determinati sistemi ulteriore attività di I/O che può comportare un collo di bottiglia delle prestazioni se il sottosistema del disco opera al di sopra o in prossimità della soglia di I/O.  
+>  Un carico di lavoro transazionale online su un database configurato per i checkpoint indiretti potrebbe subire un calo delle prestazioni. I checkpoint indiretti assicurano che il numero di pagine dirty è inferiore a una determinata soglia, in modo che il recupero del database viene completato entro il tempo di recupero di riferimento. A differenza dei checkpoint indiretti, che usano il numero di pagine dirty, l'opzione di configurazione Intervallo di recupero usa il numero di transazioni per determinare il tempo di recupero. Quando i checkpoint indiretti sono abilitati per un database che riceve un numero elevato di operazioni DML, il writer in background può iniziare a scaricare i buffer dirty su disco in modo intensivo per garantire che il tempo necessario per eseguire il recupero non superi il tempo di recupero di riferimento impostato per il database. Questo può causare in determinati sistemi ulteriore attività di I/O che può comportare un collo di bottiglia delle prestazioni se il sottosistema del disco opera al di sopra o in prossimità della soglia di I/O.  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -46,20 +46,20 @@ ms.locfileid: "54132111"
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
-2.  Fare clic con il pulsante destro del mouse sul database che si desidera modificare e scegliere il comando **Proprietà** .  
+2.  Espandere il contenitore **Database**, quindi fare clic con il pulsante destro del mouse sul database da modificare e scegliere il comando **Proprietà**.  
   
 3.  Nella finestra di dialogo **Proprietà database** fare clic sulla pagina **Opzioni** .  
   
-4.  Nel campo **Tempo di recupero di riferimento (secondi)** del pannello **Recupero** specificare il numero di secondi desiderato come limite superiore nel tempo di recupero per il database.  
+4.  Nel campo **Tempo di recupero di riferimento (secondi)** del pannello **Recupero** specificare un numero di secondi come limite superiore del tempo di recupero per il database.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per modificare il tempo di recupero di riferimento**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui risiede il database.  
   
-2.  Usare l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md), come indicato di seguito:  
+2.  Usare l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md), come indicato di seguito:  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDI | MINUTI }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], il valore predefinito è 1 minuto. Se maggiore di 0 (impostazione predefinita per le versioni meno recenti), specifica il limite superiore per il tempo di recupero per il database specificato in caso di arresto anomalo.  

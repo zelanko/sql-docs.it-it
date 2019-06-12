@@ -13,14 +13,14 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0df8dab5bb48afbade1526a7ab02f4b5a30258d2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210990"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500034"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Aggiungere elementi del report impaginato di Reporting Services ai dashboard in Power BI
 
@@ -40,7 +40,7 @@ ms.locfileid: "53210990"
   
 -   Se si vuole aggiornare l'elemento aggiunto, è necessario configurare i report per le credenziali archiviate.  Quando si aggiunge un elemento, viene creata automaticamente una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire l'aggiornamento dei dati dell'elemento nel dashboard.  Se il report non usa le credenziali archiviate, quando viene eseguita la sottoscrizione verrà visualizzato un messaggio simile al seguente nella pagina **Sottoscrizioni personali**.  
   
-    "Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente..."
+    Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente..."
  
     Vedere la sezione "Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)" di [Archiviare le credenziali in un'origine dati di Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53210990"
   
 ##  <a name="bkmk_to_pin"></a> Per aggiungere un elemento del report  
   
-1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,19 +96,19 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
   
 ##  <a name="bkmk-troubleshoot"></a> Risolvere eventuali problemi  
   
--   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti del Visualizzatore report:**  questo messaggio indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti di Visualizzatore report**: questo indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente: Vedere la sezione [Elementi che è possibile aggiungere](#bkmk_supported_items).  
+- **Impossibile eseguire l'aggiunta**: quando si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. Vedere la sezione [Elementi che è possibile aggiungere](#bkmk_supported_items).  
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato aggiornato per un periodo di tempo.  Il token delle credenziali utente è scaduto ed è necessario eseguire nuovamente l'accesso.  La registrazione delle credenziali utente con Azure e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] è valida per 90 giorni. Nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] fare clic su **Impostazioni personali**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato aggiornato per un periodo di tempo.  Il token delle credenziali utente è scaduto ed è necessario eseguire nuovamente l'accesso.  La registrazione delle credenziali utente con Azure e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] è valida per 90 giorni. Nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] fare clic su **Impostazioni personali**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
 -   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato mai aggiornato.  Il problema è che il report non è configurato per usare le credenziali archiviate. Un report deve usare le credenziali archiviate perché l'azione di aggiunta di un elemento del report crea una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire la pianificazione dell'aggiornamento dei riquadri. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] richiedono credenziali archiviate. Se si esamina la pagina **Sottoscrizioni personali**, viene visualizzato un messaggio di errore simile al seguente:  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -135,7 +135,7 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
 
 ## <a name="see-also"></a>Vedere anche  
  [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md)  
  [Dashboard in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

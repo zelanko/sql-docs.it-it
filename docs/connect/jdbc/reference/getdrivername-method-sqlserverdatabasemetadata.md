@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b94c20b6f01941b2b45ccd09988f49d4a33912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 87221173fc919244eca5a9df153ac1975f6d12ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639749"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767155"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>Metodo getDriverName (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.lang.String getDriverName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getDriverName viene specificato dal metodo getDriverName nell'interfaccia DatabaseMetaData.  
+ Questo metodo getUserName viene specificato dal metodo getUserName nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

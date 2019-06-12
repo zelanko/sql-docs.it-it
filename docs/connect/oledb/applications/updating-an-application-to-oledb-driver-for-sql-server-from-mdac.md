@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524480"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778091"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aggiornamento di un'applicazione al driver OLE DB per SQL Server da MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52524480"
 
 -   Il driver OLE DB per SQL Server restituisce sinonimi nei set di righe degli schemi TABLES e TABLE_INFO, con TABLE_TYPE impostato su SYNONYM.  
 
--   I valori restituiti del tipo di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt** o altri tipi LOB non possono essere restituiti a versioni client precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Se si desidera utilizzare questi tipi come valori restituiti, è necessario utilizzare Driver OLE DB per SQL Server.  
+-   I valori restituiti del tipo di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **udt** o altri tipi LOB non possono essere restituiti a versioni client precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Se si desidera utilizzare questi tipi come valori restituiti, è necessario utilizzare Driver OLE DB per SQL Server.  
 
 -   A differenza del driver OLE DB per SQL Server, MDAC consente l'esecuzione delle istruzioni seguenti all'inizio delle transazioni manuali e implicite. L'esecuzione deve avvenire in modalità autocommit.  
 

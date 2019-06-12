@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 745d7696e7ad98c86586ffc4be2d2d1057fd388b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65575361"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499977"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -28,7 +28,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  In Progettazione query vengono visualizzati automaticamente gli elenchi SharePoint a cui è possibile accedere perché si dispone delle autorizzazioni sufficienti.  
   
- Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report. Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide. I tipi di credenziali che è possibile usare con questa estensione per i dati dipendono dalla configurazione della tecnologia SharePoint per l'elenco SharePoint usato come origine dati.  
@@ -71,7 +71,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione&#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specificare credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione&#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specificare credenziali in Generatore report](specify-credential-and-connection-information-for-report-data-sources.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Query  
  Per progettare una query, creare un nuovo set di dati basato sull'origine dati, quindi aprire la finestra Progettazione query associata. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -169,7 +169,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
