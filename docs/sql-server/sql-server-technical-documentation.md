@@ -18,20 +18,24 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.author: jroth
+manager: craigg
+monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 93d36f922d3cd66cd8b617afbdb3e9bf80d79e22
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836185"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744160"
 ---
 # <a name="sql-server-documentation"></a>Documentazione di SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+> [!div class="nextstepaction"]
+> [Condividere il feedback sulla pagina hub della documentazione SQL](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server è una parte essenziale della piattaforma dati di Microsoft. SQL Server è leader del settore dei sistemi di gestione di database operativi (ODBMS, Operational Database Management System). Questa documentazione consente di installare, configurare e usare SQL Server sia in Windows che in Linux. Il contenuto include esempi end-to-end, esempi di codice e video. Per gli argomenti relativi al linguaggio di SQL Server, vedere [Guida di riferimento al linguaggio](../t-sql/language-reference.md).
 ::: moniker-end
 
@@ -52,6 +56,7 @@ La documentazione per SQL Server 2014 e le versioni precedenti, incluso SQL Serv
 |[Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Note sulla versione di SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 |[Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ![info_tip](../sql-server/media/info-tip.png) La documentazione di SQL Server **2014** è disponibile [qui](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
@@ -61,6 +66,7 @@ La documentazione per SQL Server 2014 e le versioni precedenti, incluso SQL Serv
 |Novità  | Note sulla versione  |
 |---------|---------|
 |[Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Note sulla versione di SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -69,6 +75,7 @@ La documentazione per SQL Server 2014 e le versioni precedenti, incluso SQL Serv
 |Novità  | Note sulla versione  |
 |---------|---------|
 |[Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > L'anteprima di SQL Server 2019 è ora disponibile. Per altre informazioni, vedere [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
@@ -79,6 +86,7 @@ La documentazione per SQL Server 2014 e le versioni precedenti, incluso SQL Serv
 |Novità  | Note sulla versione  |
 |---------|---------|
 |[Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -140,9 +148,13 @@ La documentazione per SQL Server 2014 e le versioni precedenti, incluso SQL Serv
 - [Database di esempio AdventureWorks e script per SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [Esempi di SQL Server in GitHub](https://github.com/Microsoft/sql-server-samples)
 
-## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005
+## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005 - versioni precedenti
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+<!--
+The following includes/ files contain their own H2 headers.
+-->
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

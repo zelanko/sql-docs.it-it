@@ -1,6 +1,6 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198181"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810289"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,12 +53,14 @@ In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 sono state an
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
+|Estensioni del linguaggio di SQL Server - [Estensione per il linguaggio Java](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|[Microsoft Extensibility SDK per Java per Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) è ora open source e [disponibile su GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Registrare i linguaggi esterni|La nuova DDL, `CREATE EXTERNAL LANGUAGE`, registra i linguaggi esterni, come ad esempio Java, in SQL Server. Vedere [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |Altri tipi di dati supportati per Java|Vedere [Java data types](../language-extensions/how-to/java-to-sql-data-types.md) (Tipi di dati Java).|
 |Criteri di acquisizione personalizzati per Query Store|Una volta abilitate, le configurazioni aggiuntive di Query Store sono disponibili in una nuova impostazione di criteri di acquisizione di Query Store, per ottimizzare la raccolta dei dati in un server specifico. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |Il [database in memoria](../relational-databases/in-memory-database.md) aggiunge una nuova sintassi DDL per controllare il pool di buffer ibrido. <sup>2</sup>|Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) consente di accedere direttamente alle pagine di database che si trovano in un dispositivo con memoria persistente, qualora sia necessario.|
 |Aggiunta di una nuova funzionalità relativa ai database in memoria, metadati tempdb ottimizzati per la memoria.|Vedere [Metadati tempdb ottimizzati per la memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |Codifica dei caratteri UTF-8 per supporto server collegati. |[Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md) |
+|Il programma di installazione di SQL Server include le raccomandazioni MaxDOP che seguono le linee guida documentate. |[Configurare l'opzione di configurazione del server max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` restituisce più informazioni sul grado di parallelismo e concessione di memoria per i piani di query. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
@@ -171,7 +173,7 @@ In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 sono state an
 |Scalabilità migliorata per il checkpoint indiretto. |[Scalabilità migliorata per il checkpoint indiretto](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |Aggiunta del supporto per l'uso della codifica dei caratteri UTF-8 con le regole di confronto BIN2 (`UTF8_BIN2`). |[Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md) |
 |Definire azioni di eliminazione propagate su un vincolo ad arco in a database a grafo. |[Vincoli di arco](../relational-databases/tables/graph-edge-constraints.md) |
-|Abilitare o disabilitare `LIGHTWEIGHT_QUERY_PROFILING` con la nuova configurazione con ambito database. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|Abilitare o disabilitare `LIGHTWEIGHT_QUERY_PROFILING` con la nuova configurazione con ambito database. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>Strumenti
@@ -433,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Questa sintassi non è necessaria per sfruttare i vantaggi di questa funzionalità nel database SQL di Azure in cui la funzionalità viene [abilitata su richiesta durante l'anteprima pubblica](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Dopo l'abilitazione, la funzionalità è attiva per impostazione predefinita.
+> Questa sintassi non è necessaria per sfruttare i vantaggi di questa funzionalità nel database SQL di Azure in cui la funzionalità viene [abilitata su richiesta durante l'anteprima pubblica](/azure/sql-database/sql-database-accelerated-database-recovery). Dopo l'abilitazione, la funzionalità è attiva per impostazione predefinita.
 
 In caso di database critici con possibili transazioni di grandi dimensioni, provare a usare questa funzionalità durante l'anteprima. Inviare commenti al [team di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
