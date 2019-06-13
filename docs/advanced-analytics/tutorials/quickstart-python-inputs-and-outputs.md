@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583224"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033400"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Avvio rapido: Gestire gli input e output con Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execute_external_script: `InputDataSet` e `OutputDataSet`.
 
-1. È possibile ottenere i dati dalla tabella come input per lo script R. Eseguire l'istruzione seguente. Ottiene i dati dalla tabella, effettua un round trip tramite il runtime R e restituisce i valori con il nome della colonna *NewColName*.
+1. È possibile ottenere i dati dalla tabella come input allo script di Python. Eseguire l'istruzione seguente. Ottiene i dati dalla tabella, effettua un round trip tramite il runtime di Python e restituisce i valori con il nome della colonna *NewColName*.
 
-    I dati restituiti dalla query vengono passati al runtime di R, che restituisce i dati al Database SQL come frame di dati. La clausola WITH RESULT SETS definisce lo schema della tabella di dati restituiti per il Database SQL.
+    I dati restituiti dalla query vengono passati al runtime di Python, che restituisce i dati al Database SQL come un DataFrame di pandas. La clausola WITH RESULT SETS definisce lo schema della tabella di dati restituiti per il Database SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execu
 
     ![Output dello script Python che restituisce i dati da una tabella](./media/python-output-pythontestdata.png)
 
-2. È possibile modificare il nome delle variabili di input o outpue. Lo script precedente usato l'input predefinito e i nomi delle variabili, di output _InputDataSet_ e _OutputDataSet_. Per definire i dati di input associati _InputDatSet_, si utilizza il *@input_data_1* variabile.
+2. È possibile modificare il nome delle variabili di input o outpue. Lo script precedente usato l'input predefinito e i nomi delle variabili, di output _InputDataSet_ e _OutputDataSet_. Per definire i dati di input associati _InputDataSet_, si utilizza il *@input_data_1* variabile.
 
     In questo script, i nomi dell'output e le variabili di input per la stored procedure sono stati modificati per *SQL_out* e *SQL_in*:
 
