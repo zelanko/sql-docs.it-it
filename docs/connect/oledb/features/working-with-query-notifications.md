@@ -21,13 +21,13 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d65583e80dc367e974e68a70dc36990b4a80278d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7139e6a80e05fbe3671acc9246d42a1354da714f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602711"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796035"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51602711"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Ad esempio  
+ Esempio:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -86,7 +86,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  Il commit della sottoscrizione di notifica viene sempre eseguito, indipendentemente dall'esecuzione dell'istruzione in una transazione utente o in modalità di commit automatico o a prescindere se la transazione in cui è stata eseguita l'istruzione sia stata sottoposta a commit o a rollback. La notifica server viene generata in seguito a una delle condizioni di notifica non valide seguenti: modifica dello schema o dei dati sottostanti o raggiungimento del periodo di timeout, a seconda dell'evento che si verifica per primo. Le registrazioni della notifica vengono eliminate subito dopo essere state generate. In seguito alla ricezione delle notifiche, è pertanto necessario che venga effettuata nuovamente la sottoscrizione se si desidera ottenere ulteriori aggiornamenti.  
   
- Un'altra connessione o un altro thread può verificare la presenza di notifiche nella coda di destinazione. Ad esempio  
+ Un'altra connessione o un altro thread può verificare la presenza di notifiche nella coda di destinazione. Esempio:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

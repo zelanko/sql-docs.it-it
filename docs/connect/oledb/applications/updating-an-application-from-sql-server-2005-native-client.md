@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d8a32569f9d7125505c6d50235a2dc17e19a7408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 17280079f493d8abbad2f8ffb76d25c2a0ba868f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804329"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771073"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aggiornamento di un'applicazione da SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47804329"
 |Il **sp_columns** stored procedure restituisce ora **"NO"** anziché **"NO"** per la colonna IS_NULLABLE.|Nel Driver OLE DB per SQL Server, **sp_columns** stored procedure restituisce ora **"NO"** anziché **"NO"** per una colonna IS_NULLABLE.|  
 |Quando la data non è inclusa nell'intervallo consentito viene restituito un errore differente.|Per il **datetime** tipo, un numero di errore diversi restituirà Driver OLE DB per SQL Server per una data di out-of-range quello restituito nelle versioni precedenti.<br /><br /> In particolare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 restituiva il numero 22007 per tutti i valori fuori intervallo anno nelle conversioni di stringa per **datetime**, e il Driver OLE DB per SQL Server restituisce il numero 22008 quando la data è compresa nell'intervallo supportato dal **datetime2** ma esterna all'intervallo supportato da **datetime** oppure **smalldatetime**.|  
 |Il valore **datetime** tronca i secondi frazionari e non viene arrotondato se tale arrotondamento comporta la modifica del giorno.|Nelle versioni precedenti a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, il client arrotonda i valori **datetime** inviati al server al valore più vicino corrispondente a 1/300 di secondo. Nel Driver OLE DB per SQL Server, questo scenario causa il troncamento dei secondi frazionari se l'arrotondamento comporta la modifica del giorno.|  
-|Possibile troncamento di secondi per **datetime** valore.|In un'applicazione compilata con il driver OLE DB per SQL Server che si connette a un server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 vengono troncati i secondi e i secondi frazionari per la porzione relativa al tempo dei dati inviati al server se si esegue l'associazione a una colonna datetime con un identificatore di tipo DBTYPE_DBTIMESTAMP (OLE DB) o SQL_TIMESTAMP (ODBC) e una scala di 0.<br /><br /> Ad esempio<br /><br /> Dati di input: 1994-08-21 21:21:36.000<br /><br /> Dati inseriti: 1994-08-21 21:21:00.000|  
+|Possibile troncamento di secondi per **datetime** valore.|In un'applicazione compilata con il driver OLE DB per SQL Server che si connette a un server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 vengono troncati i secondi e i secondi frazionari per la porzione relativa al tempo dei dati inviati al server se si esegue l'associazione a una colonna datetime con un identificatore di tipo DBTYPE_DBTIMESTAMP (OLE DB) o SQL_TIMESTAMP (ODBC) e una scala di 0.<br /><br /> Esempio:<br /><br /> Dati di input: 1994-08-21 21:21:36.000<br /><br /> Dati inseriti: 1994-08-21 21:21:00.000|  
 |La conversione dei dati OLE DB da DBTYPE_DBTIME a DBTYPE_DATE non può più causare la modifica del giorno.|Nelle versioni precedenti a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, se la parte relativa all'ora di un tipo DBTYPE_DATE è entro mezzo secondo dalla mezzanotte, il codice di conversione OLE DB causa la modifica del giorno. Nel Driver OLE DB per SQL Server, il giorno non viene modificato (i secondi frazionari vengono troncati e non vengono arrotondati).|  
 |Modifiche relative alle conversioni IBCPSession::BCColFmt.|Nel Driver OLE DB per SQL Server, quando si usa IBCPSession::BCOColFmt per convertire SQLDATETIME o SQLDATETIME in un tipo stringa, viene esportato un valore frazionario. Se ad esempio si converte il tipo SQLDATETIME nel tipo SQLNVARCHARMAX, le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 restituiscono<br /> 1989-02-01 00:00:00.<br />Il driver OLE DB per SQL Server restituisce <br />1989-02-01 00:00:00.0000000.|  
 |Le applicazioni personalizzate che utilizzano l'API BCP ora possono visualizzare un avviso.|L'API BCP genererà un messaggio di avviso se la lunghezza dei dati di tutti i tipi è superiore a quella specificata per un campo. In precedenza, questo avviso veniva visualizzato solo per i dati di tipo carattere e non per tutti i tipi.|  

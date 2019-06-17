@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f18836d12be9834512783f90a2d7730fcfc98798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 36cdeda1cdad226c00449d118f154fd555e7246d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845209"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792093"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>Metodo getSendTimeAsDatetime (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676869"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Visualizzare le proprietà di un facet della gestione basata su criteri
@@ -51,7 +51,7 @@ ms.locfileid: "62676869"
   
 4.  Fare clic sul segno più per espandere la cartella **Facet** .  
   
-5.  Fare clic con il pulsante destro del mouse sul facet di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo ***Proprietà facet -**_nome_facet_, vedere [Finestra di dialogo Proprietà facet, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Finestra di dialogo Proprietà facet, pagina Criteri dipendenti](facet-properties-dialog-box-dependent-policies-page.md) e [Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Fare clic con il pulsante destro del mouse sul facet di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo ***Proprietà facet -** _nome_facet_, vedere [Finestra di dialogo Proprietà facet, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Finestra di dialogo Proprietà facet, pagina Criteri dipendenti](facet-properties-dialog-box-dependent-policies-page.md) e [Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Al termine, fare clic su **Chiudi**.  
   

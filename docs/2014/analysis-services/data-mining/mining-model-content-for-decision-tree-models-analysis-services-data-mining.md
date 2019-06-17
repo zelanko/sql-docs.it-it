@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083666"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
@@ -75,10 +75,10 @@ ms.locfileid: "66083666"
 |Tipo di nodo|Descrizione|  
 |---------------|-----------------|  
 |1 (Model)|Nodo radice per il modello.|  
-|2 (Albero)|Nodo padre per alberi di classificazione del modello. Denominato **"Tutti"**.|  
+|2 (Albero)|Nodo padre per alberi di classificazione del modello. Denominato **"Tutti"** .|  
 |3 (Interno)|Inizio di ramo interno, disponibile all'interno di un albero di classificazione o di un albero di regressione.|  
 |4 (Distribuzione)|Nodo foglia, disponibile all'interno di un albero di classificazione o di un albero di regressione.|  
-|25 (Albero di regressione)|Nodo padre per albero di regressione all'interno del modello. Denominato **"Tutti"**.|  
+|25 (Albero di regressione)|Nodo padre per albero di regressione all'interno del modello. Denominato **"Tutti"** .|  
   
  NODE_CAPTION  
  Nome descrittivo a scopo di visualizzazione.  

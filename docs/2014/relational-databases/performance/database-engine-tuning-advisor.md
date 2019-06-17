@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151204"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -63,7 +63,7 @@ ms.locfileid: "63151204"
  Interfaccia utente grafica di Ottimizzazione guidata motore di database  
  Un'interfaccia di facile utilizzo nella quale è possibile specificare il carico di lavoro e selezionare diverse opzioni di ottimizzazione.  
   
- Utilità**dta**   
+ Utilità**dta**  
  Versione del prompt dei comandi di Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
  carico di lavoro  

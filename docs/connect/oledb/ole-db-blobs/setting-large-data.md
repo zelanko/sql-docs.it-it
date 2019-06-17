@@ -16,13 +16,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f4ae2a3aae9bca39ff0ad86d8ac57c1b39eef77c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816099"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788326"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

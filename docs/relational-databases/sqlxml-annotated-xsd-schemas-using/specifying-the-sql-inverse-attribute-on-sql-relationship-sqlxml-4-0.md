@@ -23,17 +23,17 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d8a6390ded6250355936dbef29051f76be14266
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980698"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Specifica dell'attributo sql:inverse in sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Il **SQL: inverse** attributo è utile solo quando lo schema XSD viene usato per il caricamento bulk o da un updategram. Il **SQL: inverse** attributo può essere specificato per il  **\<SQL: Relationship >** elemento. Negli updategram la relativa logica interpreta lo schema nella determinazione delle tabelle e delle colonne aggiornate dall'operazione dell'updategram. Le relazioni padre-figlio specificate nello schema determinano l'ordine di modifica (inserimento o eliminazione) dei record.  
   
- Nel caso di uno schema XSD in cui la relazione padre-figlio viene specificata nell'ordine inverso a quello della relazione chiave primaria/chiave esterna tra le colonne del database corrispondenti, l'operazione di inserimento o eliminazione dell'updategram non riuscirà a causa della violazione della relazione chiave primaria/chiave esterna. In questi casi, il **SQL: inverse** attributo è specificato (**SQL: inverse = "true"**) nella  **\<SQL: Relationship >** elemento e la logica dell'updategram Inverte l'interpretazione della relazione padre-figlio specificata nello schema.  
+ Nel caso di uno schema XSD in cui la relazione padre-figlio viene specificata nell'ordine inverso a quello della relazione chiave primaria/chiave esterna tra le colonne del database corrispondenti, l'operazione di inserimento o eliminazione dell'updategram non riuscirà a causa della violazione della relazione chiave primaria/chiave esterna. In questi casi, il **SQL: inverse** attributo è specificato (**SQL: inverse = "true"** ) nella  **\<SQL: Relationship >** elemento e la logica dell'updategram Inverte l'interpretazione della relazione padre-figlio specificata nello schema.  
   
  Il **SQL: inverse** attributo accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   

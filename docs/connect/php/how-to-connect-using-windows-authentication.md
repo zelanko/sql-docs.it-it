@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18294f43eceabb531d61c919303b5e874ba63a99
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759945"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796138"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procedura: Connessione con l'autenticazione di Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -114,7 +114,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 
 [Procedura: Creare un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Procedura: Creare un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Procedura: Creazione di un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gestione di utenti, ruoli e account di accesso](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

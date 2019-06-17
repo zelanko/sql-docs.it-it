@@ -3,17 +3,17 @@ title: Usare i gestori di pacchetti R - servizi di SQL Server Machine Learning
 description: Usare i comandi R standard, ad esempio Packages per aggiungere nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642268"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140781"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Utilizzare i gestori di pacchetti R per installare pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ Questa procedura Usa RGui ma è possibile usare qualsiasi altro R della riga di 
 
 ## <a name="install-a-package-using-rgui"></a>Installare un pacchetto utilizzando RGui
 
-1. [Determinare il percorso della libreria di istanza](installing-and-managing-r-packages.md). Passare alla cartella in cui sono installati gli strumenti R. Ad esempio, il percorso predefinito per un'istanza predefinita di SQL Server 2017 è come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determinare il percorso della libreria di istanza](../package-management/default-packages.md). Passare alla cartella in cui sono installati gli strumenti R. Ad esempio, il percorso predefinito per un'istanza predefinita di SQL Server 2017 è come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. RGui.exe e scegliere **Esegui come amministratore**. Se non hai le autorizzazioni necessarie, contattare l'amministratore del database e fornire un elenco dei pacchetti che necessari.
 

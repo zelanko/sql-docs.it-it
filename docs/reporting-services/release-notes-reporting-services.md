@@ -1,20 +1,20 @@
 ---
 title: Note sulla versione di (SSRS) 2017 e versioni successive | Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283294"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037846"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Note sulla versione per SQL Server Reporting Services (SSRS) 2017 e versioni successive
 
@@ -86,7 +86,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Le dimensioni del testo non vengono adattate se pageHeight è minore di 0,5 pollici. | &nbsp; |
 | Un deadlock si verifica nel database del catalogo SSRS quando viene usato con CRM. | &nbsp; |
 | Le intestazioni di colonna con allineamento verticale non vengono visualizzate correttamente quando si scorre verso il basso nel report. | &nbsp; |
-| Per gli utenti aggiunti al ruolo SCOM Reporting verrà bloccato l'accesso al portale Web SSRS. | &nbsp; |
+| Utenti aggiunti al ruolo di Reporting di System Center Operations Manager hanno accesso bloccato al portale web SSRS. | &nbsp; |
 | Caratteri tailandese non viene esportata correttamente nel PDF. | &nbsp; |
 | Modifica del comportamento del ruolo browser. | &nbsp; |
 | rc:Toolbar=false non funziona nell'edizione Express. | &nbsp; |

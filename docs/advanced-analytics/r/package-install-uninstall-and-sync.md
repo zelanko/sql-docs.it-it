@@ -3,17 +3,17 @@ title: Sincronizzazione del pacchetto R dal file system - servizi di SQL Server 
 description: Aggiornare le librerie di R in SQL Server con le versioni più recenti installate nel file system.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642746"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140514"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronizzazione tramite il pacchetto R per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ Prima di poter usare la sincronizzazione di pacchetto, è necessario disporre la
 
 Questa funzionalità è disponibile in SQL Server 2017 CTP 2 o versione successiva.
 
-È possibile aggiungere questa funzionalità a un'istanza di SQL Server 2016 per l'aggiornamento dell'istanza per usare la versione più recente di Microsoft R. Per altre informazioni, vedere [SqlBindR.exe Usa per eseguire l'aggiornamento di SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+È possibile aggiungere questa funzionalità a un'istanza di SQL Server 2016 per l'aggiornamento dell'istanza per usare la versione più recente di Microsoft R. Per altre informazioni, vedere [SqlBindR.exe Usa per eseguire l'aggiornamento di SQL Server R Services](../install/upgrade-r-and-python.md).
 
 ### <a name="enable-the-package-management-feature"></a>Abilitare la funzionalità di gestione pacchetti
 
@@ -69,7 +69,7 @@ Ogni volta che si aggiunge un nuovo pacchetto utilizzando le funzioni di gestion
 
 + Per sincronizzare i pacchetti contrassegnati come **privato**, sia il proprietario del pacchetto o l'amministratore deve eseguire la funzione e i pacchetti devono essere privati.
 
-+ Per sincronizzare i pacchetti per conto di altri utenti, il proprietario deve BA un membro del **db_owner** ruolo predefinito del database.
++ Per sincronizzare i pacchetti per conto di altri utenti, il proprietario deve essere un membro del **db_owner** ruolo predefinito del database.
 
 ## <a name="how-package-synchronization-works"></a>Funzionamento della sincronizzazione del pacchetto
 

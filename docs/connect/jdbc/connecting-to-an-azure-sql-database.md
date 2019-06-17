@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306129"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789326"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
 
@@ -47,9 +47,9 @@ Per evitare l'eliminazione di connessioni inattive da un componente di rete, è 
   
 |Impostazione del Registro di sistema|Valore consigliato|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveTime della connessione|30000|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveInterval della connessione|1000|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ TcpMaxDataRetransmissions|10|  
   
 Riavviare il computer per attivare le impostazioni del Registro di sistema.  
 
@@ -81,9 +81,9 @@ Prima della versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Impostazione di hostNameInCertificate obbligatoria per l'utilizzo della crittografia
 
-Prima della versione 7.2 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **encrypt=true** (se il server di nome della connessione stringa è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.). Questa proprietà è facoltativa a partire dalla versione 7.2 del driver.
+Prima della versione 7.2 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografa = true** (se il server di nome della connessione stringa è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.). Questa proprietà è facoltativa a partire dalla versione 7.2 del driver.
 
-Ad esempio
+Esempio:
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

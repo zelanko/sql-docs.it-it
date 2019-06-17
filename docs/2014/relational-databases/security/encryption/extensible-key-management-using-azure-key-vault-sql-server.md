@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f211a7300dceb542235538e0e7067e8dd989fe6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046753"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consente a Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografia da usare il servizio Azure Key Vault come un [Extensible Key Management &#40;EKM&#41; ](extensible-key-management-ekm.md) provider per la protezione relativo chiavi di crittografia.  
@@ -52,7 +52,7 @@ ms.locfileid: "63011520"
  ![EKM di SQL Server con l'insieme di credenziali delle chiave di Azure](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM di SQL Server con l'insieme di credenziali delle chiave di Azure")  
   
 ##  <a name="Step1"></a> Passaggio 1: Configurare l'insieme di credenziali chiave per l'uso da SQL Server  
- Completare i passaggi seguenti per configurare un insieme di credenziali delle chiavi da usare con il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] per la protezione delle chiavi di crittografia. È possibile che per l'organizzazione sia già in uso un insieme di credenziali. Se non esiste un insieme di credenziali, l'amministratore di Azure incaricato della gestione delle chiavi di crittografia può creare un insieme di credenziali, generare una chiave asimmetrica nell'insieme di credenziali e quindi autorizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usare la chiave. Per acquisire familiarità con il servizio dell'insieme di credenziali delle chiavi, consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)e il riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](/powershell/module/azurerm.keyvault/) .  
+ Completare i passaggi seguenti per configurare un insieme di credenziali delle chiavi da usare con il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] per la protezione delle chiavi di crittografia. È possibile che per l'organizzazione sia già in uso un insieme di credenziali. Se non esiste un insieme di credenziali, l'amministratore di Azure incaricato della gestione delle chiavi di crittografia può creare un insieme di credenziali, generare una chiave asimmetrica nell'insieme di credenziali e quindi autorizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usare la chiave. Per acquisire familiarità con il servizio dell'insieme di credenziali delle chiavi, consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)e il riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) .  
   
 > [!IMPORTANT]  
 >  Se sono disponibili più sottoscrizioni di Azure, è necessario usare la sottoscrizione contenente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -98,7 +98,7 @@ ms.locfileid: "63011520"
   
     -   [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521403)  
+    -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault)  
   
 ##  <a name="Step2"></a> Passaggio 2: Installare il connettore SQL Server  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector viene scaricato e installato dall'amministratore del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile scaricare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector dalla pagina [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Cercare **SQL Server Connector per l'insieme di credenziali delle chiavi di Microsoft Azure**, esaminare i dettagli, i requisiti di sistema e le istruzioni di installazione e scegliere di scaricare il connettore e avviare l'installazione con il pulsante **Scarica**. Esaminare la licenza e accettarne le condizioni, quindi continuare.  

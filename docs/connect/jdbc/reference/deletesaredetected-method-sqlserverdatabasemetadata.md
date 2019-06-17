@@ -1,7 +1,7 @@
 ---
 title: Metodo deletesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,23 +15,23 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20007b2918d8e0b8675c082edc5040c092973579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806099"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786367"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Metodo deletesAreDetected (SQLServerDatabaseMetaData)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Recupera un valore che indica se è possibile rilevare una riga visibile eliminata chiamando il metodo [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```cpp
 public boolean deletesAreDetected(int type)  
 ```  
   

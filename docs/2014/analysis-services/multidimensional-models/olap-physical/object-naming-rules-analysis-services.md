@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65979967"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
@@ -80,7 +80,7 @@ ms.locfileid: "65979967"
   
 |Livello di compatibilità del database e modalità del server|Caratteri riservati consentiti?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (tutte le versioni)|No|  
+|MOLAP (tutte le versioni)|no|  
 |Tabulare - 1050|No|  
 |Tabulare - 1100|No|  
 |Tabulare - 1130 e superiore|Yes|  

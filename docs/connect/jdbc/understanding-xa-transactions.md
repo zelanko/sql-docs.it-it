@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736942"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788429"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -160,7 +160,7 @@ Quando si installa una nuova versione del driver JDBC, è consigliabile utilizza
 > [!IMPORTANT]  
 > Aggiornare il file sqljdbc_xa.dll durante il periodo di manutenzione o quando non è in corso nessuna transazione MS DTC.
   
-1. Scaricare il file sqljdbc_xa. dll usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] comandi **DBCC sqljdbc_xa (gratuito)**.  
+1. Scaricare il file sqljdbc_xa. dll usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] comandi **DBCC sqljdbc_xa (gratuito)** .  
   
 2. Copiare il nuovo file sqljdbc_xa.dll dalla directory di installazione del driver JDBC alla directory Binn di ogni computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che parteciperà alle transazioni distribuite.  
   

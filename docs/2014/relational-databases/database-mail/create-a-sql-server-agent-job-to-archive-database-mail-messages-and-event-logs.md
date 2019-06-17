@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917593"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
@@ -47,11 +47,11 @@ ms.locfileid: "62917593"
   
 -   La prima procedura consente di creare un processo denominato Archive Database Mail effettuando i passaggi riportati di seguito.  
   
-    1.  Copiare tutti i messaggi dalle tabelle di Posta elettronica database in una nuova tabella con il nome basato sul mese precedente nel formato **DBMailArchive_**_<anno_mese>_.  
+    1.  Copiare tutti i messaggi dalle tabelle di Posta elettronica database in una nuova tabella con il nome basato sul mese precedente nel formato **DBMailArchive_** _<anno_mese>_ .  
   
-    2.  Copiare gli allegati correlati ai messaggi copiati nel primo passaggio dalle tabelle di Posta elettronica database in una nuova tabella con il nome basato sul mese precedente nel formato **DBMailArchive_Attachments_**_<anno_mese>_.  
+    2.  Copiare gli allegati correlati ai messaggi copiati nel primo passaggio dalle tabelle di Posta elettronica database in una nuova tabella con il nome basato sul mese precedente nel formato **DBMailArchive_Attachments_** _<anno_mese>_ .  
   
-    3.  Copiare gli eventi del registro eventi di Posta elettronica database correlati ai messaggi copiati nel primo passaggio dalle tabelle di Posta elettronica database in una nuova tabella con un nome basato sul mese precedente nel formato **DBMailArchive_Log_**_<anno_mese>_.  
+    3.  Copiare gli eventi del registro eventi di Posta elettronica database correlati ai messaggi copiati nel primo passaggio dalle tabelle di Posta elettronica database in una nuova tabella con un nome basato sul mese precedente nel formato **DBMailArchive_Log_** _<anno_mese>_ .  
   
     4.  Eliminare dalle tabelle di Posta elettronica database i record degli elementi di posta trasferiti.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62917593"
   
 2.  Nella casella **Nome passaggio** digitare **Copy Database Mail Items**.  
   
-3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)**.  
+3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)** .  
   
 4.  Nella casella **Database** selezionare **msdb**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917593"
   
 2.  Nella casella **Nome passaggio** digitare **Copy Database Mail Attachments**.  
   
-3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)**.  
+3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)** .  
   
 4.  Nella casella **Database** selezionare **msdb**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62917593"
   
 2.  Nella casella **Nome passaggio** digitare **Copy Database Mail Log**.  
   
-3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)**.  
+3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)** .  
   
 4.  Nella casella **Database** selezionare **msdb**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62917593"
   
 2.  Nella casella **Nome passaggio** digitare **Remove rows from Database Mail**.  
   
-3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)**.  
+3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)** .  
   
 4.  Nella casella **Database** selezionare **msdb**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62917593"
   
 2.  Nella casella **Nome passaggio** digitare **Remove rows from Database Mail event log**.  
   
-3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)**.  
+3.  Nella casella **Tipo** selezionare **Script Transact-SQL (T-SQL)** .  
   
 4.  Nella casella **Comando** digitare l'istruzione seguente per rimuovere dal log eventi di Posta elettronica database le righe con una data anteriore al mese corrente:  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62917593"
   
 5.  Nell'area **Frequenza** selezionare le opzioni che consentono di eseguire il processo periodicamente, ad esempio una volta al mese.  
   
-6.  Nell'area **Frequenza giornaliera** selezionare **Una sola volta alle \<ora>**.  
+6.  Nell'area **Frequenza giornaliera** selezionare **Una sola volta alle \<ora>** .  
   
 7.  Verificare che le altre opzioni siano configurate come desiderato, quindi fare clic su **OK** per salvare la pianificazione.  
   

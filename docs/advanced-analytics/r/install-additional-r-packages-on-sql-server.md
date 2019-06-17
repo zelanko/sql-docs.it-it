@@ -3,17 +3,17 @@ title: Installare nuovi pacchetti di linguaggio R - servizi di SQL Server Machin
 description: Aggiungere nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994205"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140591"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installare nuovi pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,8 +88,7 @@ Funzionalità di R e Python sono incluse in numerosi prodotti Microsoft, ognuno 
 
 Se è installato SQL Server 2017 Microsoft Machine Learning Server (Standalone) o SQL Server 2016 R Server (Standalone) oltre a analitica nel database (SQL Server 2017 Machine Learning Services e SQL Server 2016 R Services), il computer dispone separato installazioni di R per ogni, con i duplicati di tutte le librerie e strumenti R.
 
-I pacchetti installati nella libreria R_SERVER vengono usati solo da un server autonomo e non è possibile accedervi da un'istanza di SQL Server (In-Database). Usare sempre la `R_SERVICES` libreria quando si installano pacchetti che si desidera utilizzare nel database in SQL Server. Per altre informazioni sui percorsi, vedere [percorso di libreria del pacchetto](installing-and-managing-r-packages.md#package-library-location).
-
+I pacchetti installati nella libreria R_SERVER vengono usati solo da un server autonomo e non è possibile accedervi da un'istanza di SQL Server (In-Database). Usare sempre la `R_SERVICES` libreria quando si installano pacchetti che si desidera utilizzare nel database in SQL Server. Per altre informazioni sui percorsi, vedere [percorso di libreria del pacchetto](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Vedere anche
 

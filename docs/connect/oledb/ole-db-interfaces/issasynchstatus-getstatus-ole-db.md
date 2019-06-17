@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505070"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789750"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
