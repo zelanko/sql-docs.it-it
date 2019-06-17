@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988098"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modificare le proprietà in una vista origine dati (Analysis Services)
@@ -70,7 +70,7 @@ ms.locfileid: "62988098"
 |Descrizione|Specifica la descrizione della colonna. Se per la colonna di database sottostante è stata archiviata una descrizione come proprietà estesa, verrà visualizzato tale valore. Questa proprietà è modificabile.|  
 |FriendlyName|Specifica un nome per una colonna di una tabella o una vista più facilmente comprensibile per gli utenti o più pertinente per l'area di interesse. Per impostazione predefinita, la proprietà **FriendlyName** di una colonna di una tabella o una vista corrisponde alla proprietà **Name** della colonna. La proprietà **FriendlyName** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a colonne di tabelle o viste. Questa proprietà è modificabile.|  
 |Length|Specifica la lunghezza massima della colonna, in base ai dati nella colonna della vista o della tabella sottostante.|  
-|Nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
+|nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

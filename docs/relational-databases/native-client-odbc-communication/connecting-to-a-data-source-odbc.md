@@ -26,10 +26,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a6ebe847e999d83343b072938882b9fd9e51b290
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013955"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connessione a un'origine dati (ODBC)
@@ -70,7 +70,7 @@ ms.locfileid: "63013955"
   
 -   Finestra di dialogo del driver  
   
-     È possibile codificare l'applicazione da passare a un handle di finestra valido **SQLDriverConnect** e impostare le *DriverCompletion* parametro SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT o SQL_DRIVER_COMPLETE_ richiesto. Il driver genera quindi una finestra di dialogo per richiedere all'utente le informazioni di connessione. Questo metodo semplifica il codice dell'applicazione.  
+     È possibile codificare l'applicazione da passare a un handle di finestra valido **SQLDriverConnect** e impostare le *DriverCompletion* parametro SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT o SQL_DRIVER_COMPLETE_ Obbligatorio. Il driver genera quindi una finestra di dialogo per richiedere all'utente le informazioni di connessione. Questo metodo semplifica il codice dell'applicazione.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
  **SQLBrowseConnect**, ad esempio **SQLDriverConnect**, Usa una stringa di connessione. Tuttavia, utilizzando **SQLBrowseConnect**, un'applicazione può costruire una stringa di connessione completa in maniera iterativa con l'origine dati in fase di esecuzione. In questo modo, l'applicazione può eseguire due operazioni:  
