@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095336"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Account di esecuzione (modalità nativa SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66095336"
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>*.  
+ Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>* .  
   
  **Password**  
  Digitare la password.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099444"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099444"
   
 |Object|Descrizione|  
 |------------|-----------------|  
-|Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web dispone di un URL, ad esempio http:*//nomeserver*, e può contenere più siti.|  
+|Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web dispone di un URL, ad esempio http: *//nomeserver*, e può contenere più siti.|  
 |Sito|Un sito può essere un sito padre o un sito secondario di un'applicazione Web.|  
 |Raccolta di SharePoint|Una raccolta contiene documenti o cartelle. Gli unici oggetti di un sito nei quali possono essere archiviati report, origini dei dati condivise e immagini esterne sono le raccolte o le cartelle.|  
 |Elemento|Gli elementi del server di report ai quali è possibile fare riferimento in un URL includono definizione di report o sottoreport, modelli di report, origini dei dati condivise o immagini esterne.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66099444"
 ### <a name="url-for-a-sharepoint-server"></a>URL per un server di SharePoint  
  Quando si distribuisce un progetto modello di report o server di report da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al server di report, è necessario utilizzare un URL del server di SharePoint.  
   
- Per trovare il nome del server da utilizzare, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare un report. Il nome del server si trova immediatamente dopo il prefisso del protocollo, ad esempio http:*//nomeserver*.  
+ Per trovare il nome del server da utilizzare, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare un report. Il nome del server si trova immediatamente dopo il prefisso del protocollo, ad esempio http: *//nomeserver*.  
   
- L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Gli endpoint proxy includono un numero di porta, ad esempio http:*//nomeserver:8080/reportserver*.  
+ L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Gli endpoint proxy includono un numero di porta, ad esempio http: *//nomeserver:8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL per un sito o un sito secondario di SharePoint Server  
  Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL il nome del sito si trova immediatamente dopo il nome del server, ad esempio http://*nomeserver/sito* o http://*nomeserver/sito/sitosecondario*.  

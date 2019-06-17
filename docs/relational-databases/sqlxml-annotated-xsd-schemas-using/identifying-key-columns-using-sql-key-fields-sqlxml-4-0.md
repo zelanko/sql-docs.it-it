@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c9478f193e3e117abf22da53b225e43adac14c6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980811"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
@@ -51,7 +51,7 @@ ms.locfileid: "65980811"
   
  Il  **\<SQL: Relationship >** tag viene usato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in  **\<SQL: Relationship >** non sono sufficienti per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Pertanto, senza la **SQL: Key-campi** annotazione, la gerarchia generata non è precisa.  
   
- Con **SQL: Key-campi** specificato in  **\<ordine >**, l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e dei relativi elementi figlio vengono visualizzate sotto le elemento padre.  
+ Con **SQL: Key-campi** specificato in  **\<ordine >** , l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e dei relativi elementi figlio vengono visualizzate sotto le elemento padre.  
   
  Lo schema è il seguente:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "65980811"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
- Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >**. Lo schema richiede ancora che specifica la **SQL: Key-campi** annotazione per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
+ Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >** . Lo schema richiede ancora che specifica la **SQL: Key-campi** annotazione per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536574"
 ---
 # <a name="sqlinstalldriverex-function"></a>Funzione SQLInstallDriverEx
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commenti  
  Il *lpszDriver* argomento è un elenco di attributi in forma di coppie parola chiave / valore. Ogni coppia viene terminata con un byte null e l'intero elenco viene terminata con un byte null. (Vale a dire, due byte null contrassegnano la fine dell'elenco.) Il formato di questo elenco è come segue:  
   
- _driver desc_ **\\**0Driver**=**_driver-DLL-filename_ **\\**0 [programma di installazione**=**_programma di installazione-DLL-filename_<b>\\</b>0]  
+ _driver desc_ **\\** 0Driver **=** _driver-DLL-filename_ **\\** 0 [programma di installazione **=** _programma di installazione-DLL-filename_<b>\\</b>0]  
   
- [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
+ [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
   
  dove \0 è un byte null e *driver-attr-keywordn* è qualsiasi parola chiave degli attributi del driver. Le parole chiave devono essere visualizzato nell'ordine specificato. Ad esempio, si supponga che un driver per i file di testo formattato dispone di driver separato e file DLL di installazione e possono usare i file con le estensioni di file con estensione txt e. csv. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
   

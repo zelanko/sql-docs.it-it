@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489071"
 ---
 # <a name="task-4-setting-domain-rules"></a>Attività 4: Impostazione delle regole di dominio
-  In questa attività viene creata una regola per il **Contact Email** dominio per verificare se l'indirizzo di posta elettronica termina con **@adventure-works.com**. Visualizzare [creazione di una regola di dominio](https://msdn.microsoft.com/library/hh510397.aspx) per altre informazioni sulla pagina.  
+  In questa attività viene creata una regola per il **Contact Email** dominio per verificare se l'indirizzo di posta elettronica termina con **@adventure-works.com** . Visualizzare [creazione di una regola di dominio](https://msdn.microsoft.com/library/hh510397.aspx) per altre informazioni sulla pagina.  
   
 1.  Fare clic su **Contact Email** nel **elenco di domini**.  
   

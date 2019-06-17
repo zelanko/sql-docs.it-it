@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f784da5b506930bd3a28366c4610c79e73b14c77
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105545"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "66105545"
 #### <a name="sources-of-spatial-data"></a>Origini dei dati spaziali  
  Sono supportate le seguenti origini dei dati spaziali:  
   
--   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<unità>*:\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
+-   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<unità>* :\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
   
     > [!NOTE]  
     >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Bureau of the Census.  

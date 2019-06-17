@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099202"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
@@ -108,7 +108,7 @@ ms.locfileid: "66099202"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
   
 9. Scegliere **Avanti**.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "66099202"
   
 5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
-6.  Nelle **espressione**, digitare **[Sum(SalesYear2009)]**. Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
+6.  Nelle **espressione**, digitare **[Sum(SalesYear2009)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   
 7.  Verificare che il tipo di dati sia **Text**.  
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481294"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
@@ -77,7 +77,7 @@ ms.locfileid: "65481294"
 ##  <a name="State"></a> Stato di una Knowledge Base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
--   **\<Vuoto>**: il campo Stato è vuoto se la Knowledge Base è stata pubblicata facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **Yes - Publish the knowledge base and exit** (Sì, pubblica la Knowledge Base ed esci).  
+-   **\<Vuoto>** : il campo Stato è vuoto se la Knowledge Base è stata pubblicata facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **Yes - Publish the knowledge base and exit** (Sì, pubblica la Knowledge Base ed esci).  
   
 -   **In lavorazione**: il lavoro sulla Knowledge Base è stato salvato facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **No - Save the work on the knowledge base and exit** (No, salva il lavoro sulla Knowledge Base ed esci).  
   

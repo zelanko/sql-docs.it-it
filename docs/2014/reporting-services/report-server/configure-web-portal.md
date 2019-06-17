@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103941"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurare Gestione report (modalità nativa)
@@ -147,7 +147,7 @@ ms.locfileid: "66103941"
   
 2.  Aprire Internet Explorer.  
   
-3.  Immettere l'URL di Gestione report. Per impostazione predefinita, l'URL è http://\<**nome-server**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà http://\<**nome-server**>/reports\<**_nomeistanza**>.  
+3.  Immettere l'URL di Gestione report. Per impostazione predefinita, l'URL è http://\<**nome-server**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà http://\<**nome-server**>/reports\< **_nomeistanza**>.  
   
 4.  Fare clic su **Impostazioni sito**.  
   

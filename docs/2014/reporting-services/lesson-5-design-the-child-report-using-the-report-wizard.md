@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108434"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lezione 5: Progettare il report figlio tramite la Creazione guidata report
@@ -40,7 +40,7 @@ ms.locfileid: "66108434"
   
     1.  Trascinare **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**e **StockedQty** da **Campi disponibili** nella casella **Valori** .  
   
-    2.  Fare clic sulla freccia accanto a **SUM (ProductID)**, **SUM (purchaseorderid)**, **SUM (purchaseorderdetailid)**, **SUM (OrderQty)**,  **SUM (receivedqty)**, **SUM (rejectedqty)**, e **SUM (stockedqty)** e deselezionare il **somma** selezione.  
+    2.  Fare clic sulla freccia accanto a **SUM (ProductID)** , **SUM (purchaseorderid)** , **SUM (purchaseorderdetailid)** , **SUM (OrderQty)** ,  **SUM (receivedqty)** , **SUM (rejectedqty)** , e **SUM (stockedqty)** e deselezionare il **somma** selezione.  
   
 7.  Fare clic su **successivo** due volte, quindi fare clic su **Finish** per chiudere la **Creazione guidata Report**.  
   

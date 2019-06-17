@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105534"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66105534"
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<nomefile>*.shp che contiene i dati spaziali e un file di supporto *\<nomefile>*.dbf.  
+ Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<nomefile>* .shp che contiene i dati spaziali e un file di supporto *\<nomefile>* .dbf.  
   
  Quando si specifica come origine dati spaziali un file di forma posizionato nel computer locale, i dati spaziali vengono incorporati automaticamente nel report. Per utilizzare in modo dinamico i dati spaziali di un file ESRI, è necessario eseguire le operazioni seguenti:  
   

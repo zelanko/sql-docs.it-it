@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110075"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà azione (Generatore report e SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66110075"
   
  Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo senza l'estensione del nome di file. Se il report è archiviato nella stessa cartella del report corrente, è sufficiente utilizzare il nome del report. Se il report si trova in una cartella diversa nello stesso server di report, utilizzare un percorso relativo o completo. Un percorso relativo inizia dalla cartella corrente e risale la gerarchia di cartelle, ad esempio ../Cartella2/Report1. Un percorso completo inizia da /, la cartella Home, ad esempio /Report/Report1.  
   
- Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo, inclusa l'estensione del nome di file (RDL). Ad esempio, http://*\<NomeServerSharePoint > /\<sito >*/Documents/Report1.rdl. I percorsi relativi non sono supportati.  
+ Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo, inclusa l'estensione del nome di file (RDL). Ad esempio, http:// *\<NomeServerSharePoint > /\<sito >* /Documents/Report1.rdl. I percorsi relativi non sono supportati.  
   
  Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) nella [documentazione di Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66110075"
  Selezionare questa opzione per definire un collegamento a una pagina Web. Digitare o selezionare l'URL di una pagina Web o un'espressione che restituisca l'URL di una pagina Web. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione. L'espressione può includere un campo contenente un URL. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai a URL**.  
   
  **Selezionare un URL**  
- Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://*\<nomeserver >*  /Images/Image1.jpg. Per un elemento pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http://*\<NomeServerSharePoint > /\<sito >*  /documenta/immagini / Image1).  
+ Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http:// *\<nomeserver >*  /Images/Image1.jpg. Per un elemento pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http:// *\<NomeServerSharePoint > /\<sito >*  /documenta/immagini / Image1).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

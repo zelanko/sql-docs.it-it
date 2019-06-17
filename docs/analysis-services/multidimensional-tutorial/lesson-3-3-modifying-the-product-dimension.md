@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 668d68fcdb3231a476d2da8296baa1120a79f3c6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403653"
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lezione 3-3: modifica della dimensione Product
@@ -58,19 +58,19 @@ Nelle attività di questo argomento si utilizzerà un calcolo denominato per for
   
 2.  Nel riquadro **Attributi** della scheda **Struttura dimensione** selezionare **Product Line**.  
   
-3.  Nella finestra proprietà sul lato destro dello schermo, scegliere il **NameColumn** campo nella parte inferiore della finestra proprietà e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo. Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
+3.  Nella finestra proprietà sul lato destro dello schermo, scegliere il **NameColumn** campo nella parte inferiore della finestra proprietà e quindi fare clic su Sfoglia ( **...** ) per aprire la **colonna nome** nella finestra di dialogo. Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
   
 4.  Selezionare **ProductLineName** nella parte inferiore dell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
-    Il campo NameColumn ora contiene il testo **Product.ProductLineName (WChar)**. I membri della gerarchia dell'attributo **Product Line** ora vengono visualizzati con il nome completo della linea di prodotti anziché con un nome abbreviato.  
+    Il campo NameColumn ora contiene il testo **Product.ProductLineName (WChar)** . I membri della gerarchia dell'attributo **Product Line** ora vengono visualizzati con il nome completo della linea di prodotti anziché con un nome abbreviato.  
   
 5.  Nel riquadro **Attributi** della scheda **Struttura dimensione** selezionare **Product Key**.  
   
-6.  Nella finestra Proprietà scegliere il **NameColumn** proprietà campo e quindi fare clic sui puntini (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
+6.  Nella finestra Proprietà scegliere il **NameColumn** proprietà campo e quindi fare clic sui puntini ( **...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 7.  Selezionare **EnglishProductName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
-    Il campo NameColumn ora contiene il testo **Product.EnglishProductName (WChar)**.  
+    Il campo NameColumn ora contiene il testo **Product.EnglishProductName (WChar)** .  
   
 8.  Nella finestra Proprietà scorrere verso l'alto, fare clic sul campo proprietà **Name** , quindi digitare **Product Name**.  
   

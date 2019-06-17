@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980756"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Specifica del livello di nidificazione nelle relazioni ricorsive mediante sql:max-depth
@@ -62,7 +62,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  In questo frammento il dipendente 5 è sotto la supervisione del dipendente 4, il dipendente 4 è sotto la supervisione del dipendente 3 e i dipendenti 3 e 2 sono sotto la supervisione del dipendente 1.  
   
- Per produrre questo risultato, è possibile utilizzare lo schema XSD seguente e specificare una query XPath in tale schema. Lo schema descrive un'  **\<Emp >** elemento di tipo EmployeeType, costituito da un  **\<Emp >** elemento figlio dello stesso tipo, EmployeeType. Si tratta di una relazione ricorsiva (l'elemento e il rispettivo predecessore sono dello stesso tipo). Inoltre, lo schema Usa un'  **\<SQL: Relationship >** per descrivere la relazione padre-figlio tra il supervisore e supervisionato. Si noti che in questo  **\<SQL: Relationship >**, Emp rappresenta sia l'elemento padre che la tabella figlio.  
+ Per produrre questo risultato, è possibile utilizzare lo schema XSD seguente e specificare una query XPath in tale schema. Lo schema descrive un'  **\<Emp >** elemento di tipo EmployeeType, costituito da un  **\<Emp >** elemento figlio dello stesso tipo, EmployeeType. Si tratta di una relazione ricorsiva (l'elemento e il rispettivo predecessore sono dello stesso tipo). Inoltre, lo schema Usa un'  **\<SQL: Relationship >** per descrivere la relazione padre-figlio tra il supervisore e supervisionato. Si noti che in questo  **\<SQL: Relationship >** , Emp rappresenta sia l'elemento padre che la tabella figlio.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -286,7 +286,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>Elementi non ricorsivi  
  Se il **SQL: max-depth** annotazione viene specificata su un elemento nello schema che non causa una ricorsione, viene ignorato. Nello schema seguente, un'  **\<Emp >** elemento costituito da una  **\<costante >** elemento figlio, che, a sua volta, presenta un  **\<Emp >** elemento figlio.  
   
- In questo schema, il **SQL: max-depth** annotazione specificata per il  **\<costante >** elemento viene ignorato perché non è nessuna ricorsione tra il  **\<Emp >** padre e il  **\<costante >** elemento figlio. Ma non esiste ricorsione tra il  **\<Emp >** predecessore e il  **\<Emp >** figlio. Lo schema specifica la **SQL: max-depth** annotazione in entrambi. Pertanto, il **SQL: max-depth** annotazione specificata per il predecessore (**\<Emp >** ricopre il ruolo di supervisore) ha la precedenza.  
+ In questo schema, il **SQL: max-depth** annotazione specificata per il  **\<costante >** elemento viene ignorato perché non è nessuna ricorsione tra il  **\<Emp >** padre e il  **\<costante >** elemento figlio. Ma non esiste ricorsione tra il  **\<Emp >** predecessore e il  **\<Emp >** figlio. Lo schema specifica la **SQL: max-depth** annotazione in entrambi. Pertanto, il **SQL: max-depth** annotazione specificata per il predecessore ( **\<Emp >** ricopre il ruolo di supervisore) ha la precedenza.  
   
 #### <a name="example-c"></a>Esempio C  
   
@@ -330,9 +330,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Per testare questo schema, seguire i passaggi forniti per il precedente esempio A in questo argomento.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Tipi complessi derivati dalla restrizione  
- Se si dispone di una derivazione da di tipo complesso  **\<restrizione >**, gli elementi del corrispondente tipo complesso di base non è possibile specificare il **SQL: max-depth** annotazione. In questi casi, il **SQL: max-depth** annotazione può essere aggiunto all'elemento del tipo derivato.  
+ Se si dispone di una derivazione da di tipo complesso  **\<restrizione >** , gli elementi del corrispondente tipo complesso di base non è possibile specificare il **SQL: max-depth** annotazione. In questi casi, il **SQL: max-depth** annotazione può essere aggiunto all'elemento del tipo derivato.  
   
- D'altra parte, se si dispone di una derivazione da di tipo complesso  **\<estensione >**, gli elementi del tipo complesso base corrispondente possono specificare la **SQL: max-depth** annotazione.  
+ D'altra parte, se si dispone di una derivazione da di tipo complesso  **\<estensione >** , gli elementi del tipo complesso base corrispondente possono specificare la **SQL: max-depth** annotazione.  
   
  Ad esempio, lo schema XSD seguente genera un errore perché il **SQL: max-depth** annotazione viene specificata nel tipo di base. Questa annotazione non è supportata su un tipo derivato da  **\<restrizione >** da un altro tipo. Per risolvere questo problema, è necessario modificare lo schema e specificare il **SQL: max-depth** annotazione sull'elemento nel tipo derivato.  
   

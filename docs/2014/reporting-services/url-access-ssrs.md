@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098723"
 ---
 # <a name="url-access-ssrs"></a>Accesso con URL (SSRS)
@@ -58,7 +58,7 @@ reportpath
   
 ### <a name="syntax-description"></a>Descrizione della sintassi  
  *rswebserviceurl*  
- URL del servizio Web del server di report. Per la modalità nativa, è l'URL del servizio Web dell'istanza del server di report configurata in Gestione configurazione Reporting Services (vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Ad esempio:   
+ URL del servizio Web del server di report. Per la modalità nativa, è l'URL del servizio Web dell'istanza del server di report configurata in Gestione configurazione Reporting Services (vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Ad esempio:  
   
 ```  
 http://myrshost/reportserver  
@@ -77,13 +77,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Il nome di percorso relativo dell'elemento nel database del server di report in modalità nativa o l'URL completo dell'elemento in un catalogo di SharePoint.  
   
- Il percorso dell'elemento del catalogo. Per la modalità nativa, si tratta del percorso relativo dell'elemento nel database del server di report, che inizia con una barra (`/`). Ad esempio:   
+ Il percorso dell'elemento del catalogo. Per la modalità nativa, si tratta del percorso relativo dell'elemento nel database del server di report, che inizia con una barra (`/`). Ad esempio:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- Per la modalità integrata SharePoint, si tratta dell'URL completo dell'elemento nella raccolta di SharePoint, inclusa l'estensione dell'elemento. Ad esempio:   
+ Per la modalità integrata SharePoint, si tratta dell'URL completo dell'elemento nella raccolta di SharePoint, inclusa l'estensione dell'elemento. Ad esempio:  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  

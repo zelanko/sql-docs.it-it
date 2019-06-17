@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096843"
 ---
 # <a name="accept-license-terms"></a>Accettazione delle condizioni di licenza
@@ -46,7 +46,7 @@ ms.locfileid: "66096843"
   
  Le informazioni relative all'utilizzo delle caratteristiche vengono inviate a [!INCLUDE[msCoName](../../includes/msconame-md.md)]e archiviate con diritti di accesso limitati.  
   
- Per disabilitare la segnalazione di Analisi utilizzo software al termine dell'installazione, **usare lo strumento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, disponibile nel menu **Strumenti di configurazione** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per disabilitare la segnalazione di Analisi utilizzo software al termine dell'installazione, **usare lo strumento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , disponibile nel menu **Strumenti di configurazione** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per le azioni di installazione quali aggiornamento, ripristino, installazione e così via, le informazioni vengono raccolte e caricate solo durante l'esecuzione del programma di installazione  
   

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 39f875041963cc8d48b2dcf70515c99042cdb8fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094442"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installazione del provider OLE DB di Analysis Services nei server di SharePoint
@@ -107,7 +107,7 @@ ms.locfileid: "66094442"
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a> Utilizzare PowerPivot per il pacchetto di installazione di SharePoint (sppowerpivot. msi) per installare il Provider OLE DB SQL Server 2012  
- Installare il [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] il Provider OLE DB in e il Server Excel Services usando il [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] pacchetto di installazione **(sppowerpivot. msi)**.  
+ Installare il [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] il Provider OLE DB in e il Server Excel Services usando il [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] pacchetto di installazione **(sppowerpivot. msi)** .  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] .  
   

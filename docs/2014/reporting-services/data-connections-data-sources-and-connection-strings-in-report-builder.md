@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb8d81c9c47f00ed84036accf86768d084072c4d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109486"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report
@@ -59,7 +59,7 @@ ms.locfileid: "66109486"
 |Origine dati SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Impostare il tipo di origine dati su `SAP NetWeaver BI`.|  
 |Origine dati Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Impostare il tipo di origine dati su `Hyperion Essbase`.|  
 |Origine dati Teradata|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Impostare il tipo di origine dati su `Teradata`. La stringa di connessione è un indirizzo IP (Internet Protocol) nel formato in quattro campi, ognuno dei quali può contenere da una a tre cifre.|  
-|Origine dati Teradata|`Database=` *\<nome database>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Impostare il tipo di origine dati su `Teradata`, analogamente all'esempio precedente. Utilizzare solo il database predefinito specificato nel tag Database e non individuare automaticamente le relazioni dei dati.|  
+|Origine dati Teradata|`Database=` *\<nome database>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Impostare il tipo di origine dati su `Teradata`, analogamente all'esempio precedente. Utilizzare solo il database predefinito specificato nel tag Database e non individuare automaticamente le relazioni dei dati.|  
 |Origine dati XML, servizio Web|`data source=http://adventure-works.com/results.aspx`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per un servizio Web che supporta Web Services Definition Language (WSDL).|  
 |Origine dati XML, documento XML|`http://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per il documento XML.|  
 |Origine dati XML, documento XML incorporato|*Vuoto*|Impostare il tipo di origine dati su `XML`. I dati XML vengono incorporati nella definizione del report.|  

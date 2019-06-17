@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095698"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Elenco di controllo di distribuzione: Installazione multiserver di PowerPivot per SharePoint 2010
@@ -90,7 +90,7 @@ ms.locfileid: "66095698"
   
     5.  Fare clic su **servizi SQL Server**.  
   
-    6.  Fare doppio clic su **SQL Server (MSSQLSERVER)**, fare clic su **riavviare**.  
+    6.  Fare doppio clic su **SQL Server (MSSQLSERVER)** , fare clic su **riavviare**.  
   
 3.  Abilitare l'accesso in entrata al server di database tramite Windows Firewall. In questo modo, i server SharePoint nella farm possono connettersi ai database di SharePoint. Per altre informazioni, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -211,7 +211,7 @@ ms.locfileid: "66095698"
   
 6.  In Tipo di server selezionare **Analysis Services**.  
   
-7.  Nome del Server, immettere  **\<nome-server > \powerpivot.**, dove  **\<nome-server >** è il nome del computer in cui è l'installazione di PowerPivot per SharePoint.  
+7.  Nome del Server, immettere  **\<nome-server > \powerpivot.** , dove  **\<nome-server >** è il nome del computer in cui è l'installazione di PowerPivot per SharePoint.  
   
 8.  Fare clic su **Connetti**.  
   

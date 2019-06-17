@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477094"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Attività 14: Attività dell'attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS
@@ -34,7 +34,7 @@ ms.locfileid: "65477094"
   
 5.  Usando il **variabili** finestra, aggiungere due nuove variabili con le impostazioni seguenti. Se non viene visualizzato il **variabili** finestra, fare clic su **SSIS** nella barra dei menu e fare clic su **variabili**.  
   
-    |Nome|Tipo di dati|Value|  
+    |nome|Tipo di dati|Value|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  

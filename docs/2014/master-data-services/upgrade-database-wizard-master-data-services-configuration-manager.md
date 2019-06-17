@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478488"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)

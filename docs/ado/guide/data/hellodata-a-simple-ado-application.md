@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700632"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
@@ -53,9 +53,9 @@ I passaggi di questa semplice applicazione grazie a ognuna delle operazioni prin
 ||Proprietà Multiline|true|  
 |Pulsante di comando|Nome|cmdGetData|  
 ||Didascalia|Get Data|  
-|Pulsante di comando|nome|cmdExamineData|  
+|Pulsante di comando|Nome|cmdExamineData|  
 ||Didascalia|Esaminare i dati|  
-|Pulsante di comando|Nome|cmdEditData|  
+|Pulsante di comando|nome|cmdEditData|  
 ||Didascalia|Modificare i dati|  
-|Pulsante di comando|Nome|cmdUpdateData|  
+|Pulsante di comando|nome|cmdUpdateData|  
 ||Didascalia|Dati di aggiornamento|

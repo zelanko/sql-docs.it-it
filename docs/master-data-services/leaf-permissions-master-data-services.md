@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5854df5b70664de7455e3da87cd7233b7f419c5d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488179"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorizzazioni per elementi foglia (Master Data Services)
@@ -62,7 +62,7 @@ ms.locfileid: "65488179"
 ### <a name="example"></a>Esempio  
  Per l'entità Product, assegnare l'autorizzazione **Update** all'attributo Subcategory. Negare l'autorizzazione per tutti gli altri attributi.  
   
-|Nome|Codice|Subcategory (Aggiornamento)|  
+|nome|Codice|Subcategory (Aggiornamento)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain bike|  
 |Mountain-100|BK-M201|{5} Mountain bike|  

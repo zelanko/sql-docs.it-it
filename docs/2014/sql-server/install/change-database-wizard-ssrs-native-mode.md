@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096666"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Procedura guidata Cambia database (modalità nativa SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "66096666"
  Se si seleziona un database del server di report diverso, viene visualizzata la modalità del database corrente per indicare il modo in cui il database viene utilizzato.  
   
  **Credenziali**  
- Viene specificato l'account utilizzato dal server di report per la connessione al database del server di report. Tra i valori validi sono inclusi l'account del servizio Web ReportServer, un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definito nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il server di report o un account di Windows. Se si usa un account di Windows, è possibile specificare un account locale (*\<nomecomputer >\\< nome utente\>*) se il server di report e il database si trovano sul computer stesso, o un utente di dominio account (*\<dominio >\\< nome utente\>*) se si trovano in computer diversi nello stesso dominio.  
+ Viene specificato l'account utilizzato dal server di report per la connessione al database del server di report. Tra i valori validi sono inclusi l'account del servizio Web ReportServer, un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definito nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il server di report o un account di Windows. Se si usa un account di Windows, è possibile specificare un account locale ( *\<nomecomputer >\\< nome utente\>* ) se il server di report e il database si trovano sul computer stesso, o un utente di dominio account ( *\<dominio >\\< nome utente\>* ) se si trovano in computer diversi nello stesso dominio.  
   
  Il server di report creerà un account di accesso al database e assegnerà le autorizzazioni per il database all'account specificato.  
   

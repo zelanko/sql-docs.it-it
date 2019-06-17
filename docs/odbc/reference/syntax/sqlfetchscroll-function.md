@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537362"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Prima dell'inizio*|1|  
 |*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Dopo la fine*|  
+|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*Dopo la fine*|  
 |*Dopo la fine*|*Dopo la fine*|  
   
  [1] se le dimensioni del set di righe sono stata modificata dalla chiamata precedente a recuperare le righe, questa è la dimensione del set di righe che è stata usata con la chiamata precedente.  
@@ -257,7 +257,7 @@ SQLRETURN SQLFetchScroll(
   
  Se il cursore rileva righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva queste modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostata su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ aggiornare. Nel secondo caso, vengono aggiornati i dati nei buffer di set di righe, ma non refetched ed eliminate righe non vengono rimosse dal set di risultati. Di conseguenza, quando una riga viene eliminata dal o inserita nel set di righe corrente, il cursore non modifica i buffer di righe. Al contrario, rileva la modifica quando recupera qualsiasi set di righe incluse in precedenza la riga eliminata o include ora la riga inserita.  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```cpp  
 // Fetch the next rowset.  

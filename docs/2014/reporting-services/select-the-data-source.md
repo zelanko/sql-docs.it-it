@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101435"
 ---
 # <a name="select-the-data-source"></a>Selezione origine dati
@@ -40,7 +40,7 @@ ms.locfileid: "66101435"
   
  Fare clic su **Modifica** per specificare il server dell'origine dati nella finestra di dialogo **Proprietà connessione** . È possibile specificare un'origine dati remota o locale.  
   
- Fare clic su **Credenziali** per specificare le credenziali per il database. Le credenziali specificate devono essere sufficienti per connettersi all'origine dei dati per la progettazione dei report. Quando il report è distribuito in un server di report, le credenziali per il database devono poter essere utilizzate da tutti gli utenti del report. Se, ad esempio, si desidera che tutti gli utenti del report usino le proprie credenziali per connettersi all'origine dati, selezionare **Usa autenticazione di Windows (sicurezza integrata)**. Le credenziali specificate devono essere valide per l'origine dati. Se, pertanto, si seleziona l'autenticazione di Windows, accertarsi che l'origine dati accetti connessioni da tutti gli account utente che eseguiranno il report. Le credenziali per il database possono essere gestite separatamente dal report. Per altre informazioni, vedere [Gestire origini dati dei report](report-data/manage-report-data-sources.md).  
+ Fare clic su **Credenziali** per specificare le credenziali per il database. Le credenziali specificate devono essere sufficienti per connettersi all'origine dei dati per la progettazione dei report. Quando il report è distribuito in un server di report, le credenziali per il database devono poter essere utilizzate da tutti gli utenti del report. Se, ad esempio, si desidera che tutti gli utenti del report usino le proprie credenziali per connettersi all'origine dati, selezionare **Usa autenticazione di Windows (sicurezza integrata)** . Le credenziali specificate devono essere valide per l'origine dati. Se, pertanto, si seleziona l'autenticazione di Windows, accertarsi che l'origine dati accetti connessioni da tutti gli account utente che eseguiranno il report. Le credenziali per il database possono essere gestite separatamente dal report. Per altre informazioni, vedere [Gestire origini dati dei report](report-data/manage-report-data-sources.md).  
   
  **Imposta come origine dati condivisa**  
  Selezionare questa opzione per archiviare l'origine dati nel progetto, anziché nel report, come origine dati condivisa. In questo modo, potrà essere utilizzata come origine dati per altri report nel progetto.  

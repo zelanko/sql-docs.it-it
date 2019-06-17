@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100036"
 ---
 # <a name="project-property-pages-dialog-box"></a>pagine delle proprietà del progetto - finestra di dialogo
-  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere _\<Nome report progetto>_**Proprietà**.  
+  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere _\<Nome report progetto>_ **Proprietà**.  
   
  Dopo aver definito le proprietà di configurazione, è possibile selezionare una configurazione nell'elenco a discesa **Configurazioni soluzione** sulla barra degli strumenti.  
   
 ## <a name="options"></a>Opzioni  
  **Configurazione**  
- Consente di selezionare la configurazione da modificare. Inizialmente, sono disponibili le seguenti configurazioni: **Eseguire il debug**, **DebugLocal**, e **versione**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)**.  
+ Consente di selezionare la configurazione da modificare. Inizialmente, sono disponibili le seguenti configurazioni: **Eseguire il debug**, **DebugLocal**, e **versione**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)** .  
   
  Per visualizzare le proprietà per più configurazioni contemporaneamente, selezionare **Tutte le configurazioni** o **Più configurazioni**.  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66100036"
   
  Quando si pubblica in un server di report in esecuzione in modalità nativa, specificare il percorso completo della gerarchia di cartelle a partire dalla radice. Ad esempio, Folder1/Folder2/Folder3.  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http://*\<nomeserver > /\<sito >*/documenti/MyFolder.  
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http:// *\<nomeserver > /\<sito >* /documenti/MyFolder.  
   
  **TargetReportFolder**  
  Nome della cartella nella quale archiviare i report pubblicati. Per impostazione predefinita, corrisponde al nome del progetto report. Se la cartella non esiste nel server di report, verrà creata durante la pubblicazione dei report.  
   
  Quando si pubblica in un server di report in esecuzione in modalità nativa, specificare il percorso completo della gerarchia di cartelle a partire dalla radice. Se una cartella si trova all'interno di un'altra cartella, includere il percorso della cartella a partire dalla radice, ad esempio Cartella1/Cartella2/Cartella3.  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http://*\<nomeserver >*/*\<sito >*/documenti/MyFolder.  
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http:// *\<nomeserver >* / *\<sito >* /documenti/MyFolder.  
   
  **TargetServerURL**  
  URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report.  
   
  Quando si pubblica in un server di report in esecuzione in modalità nativa, utilizzare l'URL della directory virtuale del server di report. Ad esempio, http://\<server > / reportserver. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report. Per impostazione predefinita, il server di report viene installato in una directory virtuale denominata "reportserver".  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio, http://\<*nomeserver >*, http://&lt*servername*/\<*sito >* o http://\< *servername >*/\<*site >*/\<*sitosecondario >*.  
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio, http://\<*nomeserver >* , http://&lt*servername*/\<*sito >* o http://\< *servername >* /\<*site >* /\<*sitosecondario >* .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicazione di report](../publish-reports.md)   

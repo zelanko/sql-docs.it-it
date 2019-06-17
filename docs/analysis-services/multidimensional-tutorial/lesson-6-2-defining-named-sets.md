@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f6d9ebe43d45ce16ca4889d08656029cad22dcf
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404033"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lezione 6-2: definizione di set denominati
@@ -33,7 +33,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
     Quando si definisce un nuovo calcolo nella scheda **Calcoli** ricordare che i calcoli vengono risolti seguendo l'ordine di visualizzazione del riquadro **Libreria script** . Il calcolo selezionato all'interno di tale riquadro al momento della creazione di un nuovo calcolo ne determina l'ordine di esecuzione. Un nuovo calcolo viene definito immediatamente dopo il calcolo selezionato.  
   
-3.  Nella casella **Nome** cambiare il nome del nuovo set denominato in **[Core Products]**.  
+3.  Nella casella **Nome** cambiare il nome del nuovo set denominato in **[Core Products]** .  
   
     Si noti nel riquadro **Libreria script** l'icona speciale che distingue un set denominato da un comando script o da un membro calcolato.  
   
@@ -50,9 +50,9 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
 1.  Fare clic con il pulsante destro del mouse su **[Core Products]** nel riquadro **Libreria script** e fare clic su **Nuovo set denominato**.  
   
-2.  Nella casella **Nome** cambiare il nome di questo set denominato in **[Large Resellers]**.  
+2.  Nella casella **Nome** cambiare il nome di questo set denominato in **[Large Resellers]** .  
   
-3.  Nella casella **Espressione** digitare **Exists()**.  
+3.  Nella casella **Espressione** digitare **Exists()** .  
   
     La funzione Exists verrà usata per restituire il set di membri della gerarchia dell'attributo Reseller Name che si interseca con il set di membri della gerarchia dell'attributo Number of Employees contenente il maggior numero di dipendenti.  
   

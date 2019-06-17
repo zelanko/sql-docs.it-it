@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107145"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66107145"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Per installare l'assembly di un provider di dati nel server di report  
   
-1.  Accedere al percorso predefinito della directory bin nel server di report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito della directory bin del server di report è *\<unità>*:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Accedere al percorso predefinito della directory bin nel server di report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito della directory bin del server di report è *\<unità>* :\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report. In alternativa, è possibile caricare l'assembly nella Global Assembly Cache (GAC). Per altre informazioni, vedere [Utilizzo di assembly e della Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK in MSDN.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66107145"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se si carica l'assembly nella Global Assembly Cache (GAC), è necessario impostare le proprietà del nome sicuro. Ad esempio:   
+     Se si carica l'assembly nella Global Assembly Cache (GAC), è necessario impostare le proprietà del nome sicuro. Ad esempio:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -109,7 +109,7 @@ ms.locfileid: "66107145"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Per installare l'assembly di un provider di dati nel client di Progettazione report  
   
-1.  Accedere al percorso predefinito della directory PrivateAssemblies nel client di Progettazione report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito di questa directory è *\<unità>*:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Accedere al percorso predefinito della directory PrivateAssemblies nel client di Progettazione report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito di questa directory è *\<unità>* :\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Copiare l'assembly dal percorso di gestione temporanea nella directory PrivateAssemblies del client di Progettazione report. In alternativa, è possibile caricare l'assembly nella Global Assembly Cache (GAC). Per altre informazioni, vedere [Utilizzo di assembly e della Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK in MSDN.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66107145"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se si carica l'assembly nella cache di assembly globale (CAG), è necessario impostare le proprietà del nome sicuro. Ad esempio:   
+     Se si carica l'assembly nella cache di assembly globale (CAG), è necessario impostare le proprietà del nome sicuro. Ad esempio:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

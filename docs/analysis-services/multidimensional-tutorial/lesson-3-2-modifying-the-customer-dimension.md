@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbe4fbfc2cad2df41a1d9bd14fcb2620e2dec5c1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403643"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lezione 3-2: modifica della dimensione Customer
@@ -106,7 +106,7 @@ Dopo aver creato un calcolo denominato nella vista origine dati, è possibile ut
   
 4.  Nel campo proprietà **Name** digitare **Full Name**.  
   
-5.  Fare clic nella **NameColumn** proprietà campo nella parte inferiore e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
+5.  Fare clic nella **NameColumn** proprietà campo nella parte inferiore e quindi fare clic su Sfoglia ( **...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 6.  Selezionare **FullName** nella parte inferiore dell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -178,7 +178,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
 2.  Nel riquadro **Attributi** fare clic sull'attributo **City** .  
   
-3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** nella parte inferiore e fare clic sul pulsante Sfoglia (**...**).  
+3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** nella parte inferiore e fare clic sul pulsante Sfoglia ( **...** ).  
   
 4.  Nella finestra di dialogo **Colonne chiave** , nell'elenco **Colonne disponibili** selezionare la colonna **StateProvinceName**e fare clic sul pulsante **>** .  
   
@@ -186,7 +186,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
 5.  Fare clic su **OK**.  
   
-6.  Per impostare la proprietà **NameColumn** dell'attributo **City** , fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
+6.  Per impostare la proprietà **NameColumn** dell'attributo **City** , fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia ( **...** ).  
   
 7.  Nella finestra di dialogo **Colonna nome** , nell'elenco **Colonna di origine** selezionare **City**e fare clic su **OK**.  
   
@@ -198,7 +198,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
 2.  Nel riquadro **Attributi** fare clic sull'attributo **State-Province** .  
   
-3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e quindi sul pulsante Sfoglia (**...**).  
+3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e quindi sul pulsante Sfoglia ( **...** ).  
   
 4.  Nella finestra di dialogo **Colonne chiave** , nell'elenco **Colonne disponibili** selezionare la colonna **EnglishCountryRegionName**e fare clic sul pulsante **>** .  
   
@@ -206,7 +206,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
 5.  Fare clic su **OK**.  
   
-6.  Per impostare la proprietà **NameColumn** dell'attributo **State-Province** fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
+6.  Per impostare la proprietà **NameColumn** dell'attributo **State-Province** fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia ( **...** ).  
   
 7.  Nell'elenco **Colonna di origine** della finestra di dialogo **Colonna nome** selezionare **StateProvinceName**e fare clic su **OK**.  
   

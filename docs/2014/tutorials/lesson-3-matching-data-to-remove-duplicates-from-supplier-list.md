@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484650"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lezione 3: Corrispondenza dei dati per rimuovere i duplicati dall'elenco fornitori

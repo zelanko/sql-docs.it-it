@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109622"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Pagine Creazione di una sottoscrizione guidata dai dati (Gestione report)
@@ -151,7 +151,7 @@ ms.locfileid: "66109622"
  Consente di impostare una pianificazione eseguita a intervalli di ore.  
   
  **Giornaliero**  
- Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: Ogni  *\<giorno >*, ogni giorno feriale e ogni  *\<numero >* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+ Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: Ogni  *\<giorno >* , ogni giorno feriale e ogni  *\<numero >* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
  **Settimanale**  
  Consente di impostare una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure i giorni della settimana.  

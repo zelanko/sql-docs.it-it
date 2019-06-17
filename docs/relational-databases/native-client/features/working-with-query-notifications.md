@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265455"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
@@ -85,7 +85,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  Il commit della sottoscrizione di notifica viene sempre eseguito, indipendentemente dall'esecuzione dell'istruzione in una transazione utente o in modalità di commit automatico o a prescindere se la transazione in cui è stata eseguita l'istruzione sia stata sottoposta a commit o a rollback. La notifica server viene generata in seguito a una delle condizioni di notifica non valide seguenti: modifica dello schema o dei dati sottostanti o raggiungimento del periodo di timeout, a seconda dell'evento che si verifica per primo. Le registrazioni della notifica vengono eliminate subito dopo essere state generate. In seguito alla ricezione delle notifiche, è pertanto necessario che venga effettuata nuovamente la sottoscrizione se si desidera ottenere ulteriori aggiornamenti.  
   
- Un'altra connessione o un altro thread può verificare la presenza di notifiche nella coda di destinazione. Ad esempio:   
+ Un'altra connessione o un altro thread può verificare la presenza di notifiche nella coda di destinazione. Ad esempio:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

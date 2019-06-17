@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104585"
 ---
 # <a name="report-f1-help"></a>Guida sensibile al contesto del report
@@ -23,7 +23,7 @@ ms.locfileid: "66104585"
 > [!NOTE]  
 >  È facile confondere il corpo del report per il report. Il corpo del report è l'elemento del report che contiene il contenuto del report. Il report include il corpo del report e, facoltativamente, un'intestazione e un piè di pagina. Se si fa clic con il pulsante destro del mouse sul corpo del report, non è possibile accedere o impostare le proprietà del report.  
   
- Per accedere a questi argomenti dalla finestra di dialogo **Proprietà report** , fare clic su **?**.  
+ Per accedere a questi argomenti dalla finestra di dialogo **Proprietà report** , fare clic su **?** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  

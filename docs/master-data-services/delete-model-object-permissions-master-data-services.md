@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 99e2008d7e49605b749ea4d2a768e217fafa2d68
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478228"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Eliminare le autorizzazioni per oggetti modello (Master Data Services)

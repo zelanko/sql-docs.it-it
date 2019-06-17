@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489449"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
@@ -72,7 +72,7 @@ ms.locfileid: "65489449"
   
 20. Passare al **con correzione** scheda.  
   
-21. Si noti che **lo stato** per il record con **City** come **Los Angeles** è impostata su **autorità di certificazione** ora. Si noti che nel **motivo** campo è quello **corretti dalla regola 'City-state Rule'**.  
+21. Si noti che **lo stato** per il record con **City** come **Los Angeles** è impostata su **autorità di certificazione** ora. Si noti che nel **motivo** campo è quello **corretti dalla regola 'City-state Rule'** .  
   
      ![Correzione regola City-state](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "correzione regola City-state")  
   

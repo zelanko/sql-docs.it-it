@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108491"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lezione 3: Progettare il report padre tramite la Creazione guidata report
@@ -39,7 +39,7 @@ ms.locfileid: "66108491"
   
     1.  Trascinare **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**, e **ReorderLevel** da **Campi disponibili** alla casella **Valori** .  
   
-    2.  Fare clic sulla freccia accanto a **SUM (ProductID)**, **SUM (safetystocklevel)**, **SUM (ReorderLevel)** e deselezionare il **somma** selezione.  
+    2.  Fare clic sulla freccia accanto a **SUM (ProductID)** , **SUM (safetystocklevel)** , **SUM (ReorderLevel)** e deselezionare il **somma** selezione.  
   
 7.  Fare clic su **successivo** due volte, quindi fare clic su **Finish** per chiudere la **Creazione guidata Report**.  
   

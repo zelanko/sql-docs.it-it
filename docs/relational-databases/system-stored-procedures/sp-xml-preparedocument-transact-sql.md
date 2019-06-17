@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980039"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -72,7 +72,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Specifica le dichiarazioni degli spazi dei nomi utilizzate nelle espressioni XPath di riga e colonna in OPENXML. *xpath_namespaces* è un parametro di testo: **char**, **nchar**, **varchar**, **nvarchar**, **testo**, **ntext** oppure **xml**.  
   
- Il valore predefinito è  **\<radice xmlns:mp = "urn: schemas-microsoft-com: xml-metaprop" >**. *xpath_namespaces* fornisce l'URI dello spazio dei nomi per i prefissi utilizzati in espressioni XPath in OPENXML tramite un documento XML ben formato. *xpath_namespaces* dichiara il prefisso deve essere usato per fare riferimento allo spazio dei nomi **urn: schemas-microsoft-com: xml-metaprop**; in questo modo i metadati relativi a elementi XML analizzati. Questa tecnica consente di ridefinire il prefisso dello spazio dei nomi di metaproprietà conservando allo stesso tempo lo spazio dei nomi. Il prefisso **mp** sia ancora valido per **urn: schemas-microsoft-com: xml-metaprop** anche se *xpath_namespaces* non contiene tale dichiarazione.  
+ Il valore predefinito è  **\<radice xmlns:mp = "urn: schemas-microsoft-com: xml-metaprop" >** . *xpath_namespaces* fornisce l'URI dello spazio dei nomi per i prefissi utilizzati in espressioni XPath in OPENXML tramite un documento XML ben formato. *xpath_namespaces* dichiara il prefisso deve essere usato per fare riferimento allo spazio dei nomi **urn: schemas-microsoft-com: xml-metaprop**; in questo modo i metadati relativi a elementi XML analizzati. Questa tecnica consente di ridefinire il prefisso dello spazio dei nomi di metaproprietà conservando allo stesso tempo lo spazio dei nomi. Il prefisso **mp** sia ancora valido per **urn: schemas-microsoft-com: xml-metaprop** anche se *xpath_namespaces* non contiene tale dichiarazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o > 0 (esito negativo)  

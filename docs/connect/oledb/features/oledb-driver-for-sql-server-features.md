@@ -1,6 +1,6 @@
 ---
 title: Funzionalità del driver OLE DB per SQL Server | Microsoft Docs
-description: 'Funzionalità del driver OLE DB per SQL Server '
+description: Funzionalità del driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 445345d39d5612fb543466900cee97d64a567d87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744461"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800869"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Funzionalità del driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

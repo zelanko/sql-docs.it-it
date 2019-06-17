@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622359"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797056"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considerazioni sulla sicurezza per i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

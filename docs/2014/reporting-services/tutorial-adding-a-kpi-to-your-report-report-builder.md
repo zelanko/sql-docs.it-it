@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098980"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
@@ -273,7 +273,7 @@ ms.locfileid: "66098980"
   
 9. Fare clic su **valori e stati**.  
   
-10. Nell'elenco a discesa dei valori, selezionare **[SUM (Sales)]**, ma non modificare eventuali altre opzioni.  
+10. Nell'elenco a discesa dei valori, selezionare **[SUM (Sales)]** , ma non modificare eventuali altre opzioni.  
   
      Per impostazione predefinita, si verifica la sincronizzazione dei dati nell'area dati e il valore **Tablix1**, ovvero il nome dell'area dati della tabella nel report, viene visualizzato nella casella **Ambito sincronizzazione** .  
   

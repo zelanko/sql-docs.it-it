@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93213609abbc3e274cc61207d02b3828f9b90d7d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099028"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
@@ -155,7 +155,7 @@ ms.locfileid: "66099028"
   
     ```  
   
-3.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
+3.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ).  
   
      La query viene eseguita e viene visualizzato il set di risultati per il campi SalesDate, Subcategory, Product, Sales e Quantity.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "66099028"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
+     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "66099028"
   
 3.  Sulla barra multifunzione, nella **Home** nella scheda il **numero** gruppo dall'elenco a discesa, selezionare **data**.  
   
-     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
+     Nella cella verrà visualizzata la data di esempio **[1/31/2000]** . Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "66099028"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Nella cella viene visualizzata la data di esempio **[31 gennaio 2000]**.  
+     Nella cella viene visualizzata la data di esempio **[31 gennaio 2000]** .  
   
 7.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

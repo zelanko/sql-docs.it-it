@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105049"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Report, parti del report e definizioni dei report (Generatore report e SSRS)

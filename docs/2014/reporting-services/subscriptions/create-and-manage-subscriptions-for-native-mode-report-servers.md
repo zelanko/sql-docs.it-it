@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100984"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Creare, modificare ed eliminare sottoscrizioni standard (Reporting Services in modalità nativa)
@@ -79,7 +79,7 @@ ms.locfileid: "66100984"
   
 8.  In Formato di rendering selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
-9. Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>*\\*\<nome utente>* per il nome utente.  
+9. Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>* \\ *\<nome utente>* per il nome utente.  
   
 10. Specificare le opzioni di sovrascrittura. Se si fa clic su **Non sovrascrivere il file se esiste una versione precedente**il recapito non verrà eseguito in presenza di un file esistente. Se si seleziona **Incrementa nomi dei file man mano che vengono aggiunte nuove versioni**, il server di report aggiunge un numero al nome del file per distinguerlo dai file esistenti con lo stesso nome.  
   
