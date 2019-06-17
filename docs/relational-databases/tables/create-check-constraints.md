@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652605"
 ---
 # <a name="create-check-constraints"></a>Creare vincoli CHECK
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   È possibile creare un vincolo CHECK in una tabella per specificare i valori di dati accettabili in una o più colonne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52521657"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.locfileid: "52521657"
   
 1.  In **Esplora oggetti**espandere la tabella a cui si vuole aggiungere un vincolo CHECK, fare clic con il pulsante destro del mouse su **Vincoli** e scegliere **Nuovo vincolo**.  
   
-2.  Nella finestra di dialogo **Vincoli CHECK** fare clic nel campo **Espressione** e quindi sui puntini di sospensione **(...)**.  
+2.  Nella finestra di dialogo **Vincoli CHECK** fare clic nel campo **Espressione** e quindi sui puntini di sospensione **(...)** .  
   
 3.  Nella finestra di dialogo **Espressione vincolo CHECK** immettere le espressioni SQL per il vincolo CHECK: Ad esempio per limitare le voci nella colonna `SellEndDate` della tabella `Product` a un valore che è maggiore o uguale alla data nella colonna `SellStartDate` o è un valore NULL, digitare:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52521657"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     ALTER TABLE dbo.DocExc   

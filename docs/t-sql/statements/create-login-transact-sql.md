@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095329"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
@@ -51,7 +51,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -88,9 +88,9 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>Argomenti
 
-*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<NomeDominio>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo "**\\**". Gli account di accesso di Windows possono contenere un simbolo "**\\**". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
+*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<NomeDominio>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo " **\\** ". Gli account di accesso di Windows possono contenere un simbolo " **\\** ". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
 
-PASSWORD **=**'*password*' Si applica solo agli account di accesso di SQL Server. Specifica la password per l'account di accesso che viene creato. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da SQL Server 2012 (11.x), le informazioni relative alle password archiviate vengono calcolate usando l'algoritmo SHA-512 della password con salting.
+PASSWORD **=** '*password*' Si applica solo agli account di accesso di SQL Server. Specifica la password per l'account di accesso che viene creato. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da SQL Server 2012 (11.x), le informazioni relative alle password archiviate vengono calcolate usando l'algoritmo SHA-512 della password con salting.
 
 Per le password viene fatta distinzione tra maiuscole e minuscole. Le password devono essere sempre composte da almeno otto caratteri e non possono superare i 128 caratteri. Le password possono includere i caratteri a-z, A-Z, 0-9 e la maggior parte dei caratteri non alfanumerici. Le password non possono contenere virgolette singole o il valore di *login_name*.
 
@@ -100,13 +100,13 @@ HASHED Si applica solo agli account di accesso SQL Server. Specifica che è già
 
 MUST_CHANGE Si applica solo agli account di accesso SQL Server. Se questa opzione è inclusa, in SQL Server viene richiesto all'utente di immettere una nuova password al primo uso del nuovo account di accesso.
 
-CREDENTIAL **=**_credential\_name_ è il nome della credenziale di cui eseguire il mapping al nuovo account di accesso di SQL Server. La credenziale deve già esistere nel server. Attualmente questa opzione consente solo di connettere la credenziale a un account di accesso. Non è possibile eseguire il mapping di una credenziale all'account di accesso dell'amministratore di sistema.
+CREDENTIAL **=** _credential\_name_ è il nome della credenziale di cui eseguire il mapping al nuovo account di accesso di SQL Server. La credenziale deve già esistere nel server. Attualmente questa opzione consente solo di connettere la credenziale a un account di accesso. Non è possibile eseguire il mapping di una credenziale all'account di accesso dell'amministratore di sistema.
 
-SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli account di accesso con autenticazione di SQL Server, non agli account di accesso con autenticazione di Windows. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. SID di account di accesso di SQL Server: valore letterale (**binary(16)**) a 16 byte basato su un GUID. Ad esempio, `SID = 0x14585E90117152449347750164BA00A7`.
+SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli account di accesso con autenticazione di SQL Server, non agli account di accesso con autenticazione di Windows. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. SID di account di accesso di SQL Server: valore letterale (**binary(16)** ) a 16 byte basato su un GUID. Ad esempio, `SID = 0x14585E90117152449347750164BA00A7`.
 
-DEFAULT_DATABASE **=**_database_ specifica il database predefinito da assegnare all'account di accesso. Se questa opzione non è inclusa, il database predefinito viene impostato su master.
+DEFAULT_DATABASE **=** _database_ specifica il database predefinito da assegnare all'account di accesso. Se questa opzione non è inclusa, il database predefinito viene impostato su master.
 
-DEFAULT_DATABASE **=**_language_ specifica la lingua predefinita da assegnare all'account di accesso. Se questa opzione non è inclusa, la lingua predefinita viene impostata sulla lingua predefinita corrente del server. Se la lingua predefinita del server viene modificata in seguito, la lingua predefinita dell'account di accesso rimane inalterata.
+DEFAULT_DATABASE **=** _language_ specifica la lingua predefinita da assegnare all'account di accesso. Se questa opzione non è inclusa, la lingua predefinita viene impostata sulla lingua predefinita corrente del server. Se la lingua predefinita del server viene modificata in seguito, la lingua predefinita dell'account di accesso rimane inalterata.
 
 CHECK_EXPIRATION **=** { ON | **OFF** } si applica solo agli account di accesso di SQL Server. Specifica se i criteri di scadenza delle password devono essere applicati a questo account di accesso. Il valore predefinito è OFF.
 
@@ -259,7 +259,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\*Database singolo/pool elastico<br />database SQL\*_**|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|** _\*Database singolo/pool elastico<br />database SQL\*_ **|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -281,11 +281,11 @@ CREATE LOGIN login_name
 
 *login_name* specifica il nome dell'account di accesso creato. Database singolo/pool elastico di database SQL di Azure supporta solo account di accesso SQL.
 
-PASSWORD **='** password**'* specifica la password per l'account di accesso SQL da creare. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.
+PASSWORD **='** password* *'* specifica la password per l'account di accesso SQL da creare. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.
 
 Per le password viene fatta distinzione tra maiuscole e minuscole. Le password devono essere sempre composte da almeno otto caratteri e non possono superare i 128 caratteri. Le password possono includere i caratteri a-z, A-Z, 0-9 e la maggior parte dei caratteri non alfanumerici. Le password non possono contenere virgolette singole o il valore di *login_name*.
 
-SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli account di accesso con autenticazione di SQL Server, non agli account di accesso con autenticazione di Windows. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. Per il database SQL, si tratta in genere di un valore letterale (**binary(32)**) a 32 byte costituito da `0x01060000000000640000000000000000` e 16 byte che rappresentano un GUID. Ad esempio, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli account di accesso con autenticazione di SQL Server, non agli account di accesso con autenticazione di Windows. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. Per il database SQL, si tratta in genere di un valore letterale (**binary(32)** ) a 32 byte costituito da `0x01060000000000640000000000000000` e 16 byte che rappresentano un GUID. Ad esempio, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Remarks
 
@@ -301,11 +301,11 @@ SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli acco
 
 L'istruzione **CREATE LOGIN** deve essere l'unica istruzione in un batch.
 
-In alcuni metodi di connessione al database SQL, come ad esempio **sqlcmd**, è necessario accodare il nome del server del database SQL al nome dell'account di accesso nella stringa di connessione usando la notazione *\<login>*@*\<server>*. Ad esempio, se l'account di accesso è `login1` e il nome completo del server del database SQL è `servername.database.windows.net`, il parametro *username* della stringa di connessione deve essere `login1@servername`. Poiché la lunghezza totale del parametro *username* è di 128 caratteri, *login_name* è limitato a 127 caratteri meno la lunghezza del nome del server. Nell'esempio la lunghezza di `login_name` può essere solo di 117 caratteri poiché `servername` è costituito da 10 caratteri.
+In alcuni metodi di connessione al database SQL, come ad esempio **sqlcmd**, è necessario accodare il nome del server del database SQL al nome dell'account di accesso nella stringa di connessione usando la notazione *\<login>* @ *\<server>* . Ad esempio, se l'account di accesso è `login1` e il nome completo del server del database SQL è `servername.database.windows.net`, il parametro *username* della stringa di connessione deve essere `login1@servername`. Poiché la lunghezza totale del parametro *username* è di 128 caratteri, *login_name* è limitato a 127 caratteri meno la lunghezza del nome del server. Nell'esempio la lunghezza di `login_name` può essere solo di 117 caratteri poiché `servername` è costituito da 10 caratteri.
 
 Nel database SQL è necessario essere connessi al database master per creare un account di accesso.
 
-Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com**, l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver**.
+Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
 
 Nel database SQL i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -379,7 +379,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Istanza gestita<br />database SQL\*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|** _\* Istanza gestita<br />database SQL\*_ **|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -412,7 +412,7 @@ PASSWORD **=** '*password*' specifica la password per l'account di accesso SQL d
 
 Per le password viene fatta distinzione tra maiuscole e minuscole. Le password devono essere sempre composte da almeno otto caratteri e non possono superare i 128 caratteri. Le password possono includere i caratteri a-z, A-Z, 0-9 e la maggior parte dei caratteri non alfanumerici. Le password non possono contenere virgolette singole o il valore di *login_name*.
 
-SID **=** *sid* si usa per ricreare l'account di accesso. Si applica solo agli account di accesso per l'autenticazione di SQL Server. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. Per il database SQL, si tratta in genere di un valore letterale (**binary(32)**) a 32 byte costituito da `0x01060000000000640000000000000000` e 16 byte che rappresentano un GUID. Ad esempio, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID **=** *sid* si usa per ricreare l'account di accesso. Si applica solo agli account di accesso per l'autenticazione di SQL Server. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. Per il database SQL, si tratta in genere di un valore letterale (**binary(32)** ) a 32 byte costituito da `0x01060000000000640000000000000000` e 16 byte che rappresentano un GUID. Ad esempio, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Remarks
 
@@ -560,7 +560,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ **|[Piattaforma di strumenti<br />analitici (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -582,11 +582,11 @@ CREATE LOGIN login_name
 
 *login_name* specifica il nome dell'account di accesso creato. Il database SQL di Azure supporta solo gli account di accesso SQL.
 
-PASSWORD **='** password**'* specifica la password per l'account di accesso SQL da creare. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.
+PASSWORD **='** password* *'* specifica la password per l'account di accesso SQL da creare. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.
 
 Per le password viene fatta distinzione tra maiuscole e minuscole. Le password devono essere sempre composte da almeno otto caratteri e non possono superare i 128 caratteri. Le password possono includere i caratteri a-z, A-Z, 0-9 e la maggior parte dei caratteri non alfanumerici. Le password non possono contenere virgolette singole o il valore di *login_name*.
 
- SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli account di accesso con autenticazione di SQL Server, non agli account di accesso con autenticazione di Windows. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. Per SQL Data Warehouse, si tratta in genere di un valore letterale (**binary(32)**) a 32 byte costituito da `0x01060000000000640000000000000000` e 16 byte che rappresentano un GUID. Ad esempio, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli account di accesso con autenticazione di SQL Server, non agli account di accesso con autenticazione di Windows. Specifica il SID del nuovo account di accesso con autenticazione di SQL Server. Se questa opzione non viene usata, SQL Server assegna un SID automaticamente. La struttura del SID dipende dalla versione di SQL Server. Per SQL Data Warehouse, si tratta in genere di un valore letterale (**binary(32)** ) a 32 byte costituito da `0x01060000000000640000000000000000` e 16 byte che rappresentano un GUID. Ad esempio, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Remarks
 
@@ -600,11 +600,11 @@ Per le password viene fatta distinzione tra maiuscole e minuscole. Le password d
 
 L'istruzione **CREATE LOGIN** deve essere l'unica istruzione in un batch.
 
-In alcuni metodi di connessione a SQL Data Warehouse, come ad esempio **sqlcmd**, è necessario accodare il nome del server SQL Data Warehouse al nome dell'account di accesso nella stringa di connessione usando la notazione *\<login>*@*\<server>*. Ad esempio, se l'account di accesso è `login1` e il nome completo del server SQL Data Warehouse è `servername.database.windows.net`, il parametro *username* della stringa di connessione deve essere `login1@servername`. Poiché la lunghezza totale del parametro *username* è di 128 caratteri, *login_name* è limitato a 127 caratteri meno la lunghezza del nome del server. Nell'esempio la lunghezza di `login_name` può essere solo di 117 caratteri poiché `servername` è costituito da 10 caratteri.
+In alcuni metodi di connessione a SQL Data Warehouse, come ad esempio **sqlcmd**, è necessario accodare il nome del server SQL Data Warehouse al nome dell'account di accesso nella stringa di connessione usando la notazione *\<login>* @ *\<server>* . Ad esempio, se l'account di accesso è `login1` e il nome completo del server SQL Data Warehouse è `servername.database.windows.net`, il parametro *username* della stringa di connessione deve essere `login1@servername`. Poiché la lunghezza totale del parametro *username* è di 128 caratteri, *login_name* è limitato a 127 caratteri meno la lunghezza del nome del server. Nell'esempio la lunghezza di `login_name` può essere solo di 117 caratteri poiché `servername` è costituito da 10 caratteri.
 
 In SQL Data Warehouse è necessario essere connessi al database master per creare un account di accesso.
 
-Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com**, l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver**.
+Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
 
 In SQL Data Warehouse i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -674,7 +674,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Piattaforma di strumenti<br />analitici (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|** _\* Piattaforma di strumenti<br />analitici (PDW) \*_ **
 
 &nbsp;
 
@@ -697,9 +697,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>Argomenti
 
-*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<NomeDominio>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo "**\\**". Gli account di accesso di Windows possono contenere un simbolo "**\\**". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
+*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<NomeDominio>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo " **\\** ". Gli account di accesso di Windows possono contenere un simbolo " **\\** ". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
 
-PASSWORD **='**_password_' Si applica solo agli account di accesso SQL Server. Specifica la password per l'account di accesso che viene creato. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da SQL Server 2012 (11.x), le informazioni relative alle password archiviate vengono calcolate usando l'algoritmo SHA-512 della password con salting.
+PASSWORD **='** _password_' Si applica solo agli account di accesso SQL Server. Specifica la password per l'account di accesso che viene creato. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da SQL Server 2012 (11.x), le informazioni relative alle password archiviate vengono calcolate usando l'algoritmo SHA-512 della password con salting.
 
 Per le password viene fatta distinzione tra maiuscole e minuscole. Le password devono essere sempre composte da almeno otto caratteri e non possono superare i 128 caratteri. Le password possono includere i caratteri a-z, A-Z, 0-9 e la maggior parte dei caratteri non alfanumerici. Le password non possono contenere virgolette singole o il valore di *login_name*.
 

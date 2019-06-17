@@ -20,17 +20,17 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 510025046d0509c1ef074ecafaab0a0c78e2bf81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136041"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047441"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Visualizzazione e modifica delle proprietà delle sottoscrizioni push
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento viene descritto come modificare le proprietà delle sottoscrizioni push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Per visualizzare e modificare le proprietà delle sottoscrizioni push, utilizzando:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54136041"
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Visualizzare e modificare le proprietà della sottoscrizione push dal server di pubblicazione nella:  
   
--   Finestra di dialogo **Proprietà sottoscrizione - \<Publisher>: \<PublicationDatabase>**, disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   Finestra di dialogo **Proprietà sottoscrizione - \<Publisher>: \<PublicationDatabase>** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   Scheda **Tutte le sottoscrizioni** , disponibile in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
@@ -67,20 +67,20 @@ ms.locfileid: "54136041"
   
 4.  Se necessario, modificare le proprietà e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile modificare le sottoscrizioni push e accedere alle relative proprietà a livello di programmazione utilizzando stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una sottoscrizione push di una pubblicazione snapshot o transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Specificare **@publication**, **@subscriber**e il valore **all** per **@article**.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Specificare **@publication** , **@subscriber** e il valore **all** per **@article** .  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)specificando **@subscriber**.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)specificando **@subscriber** .  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per modificare le proprietà di una sottoscrizione push di una pubblicazione snapshot o transazionale  
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)specificando **@subscriber** e gli eventuali parametri per le proprietà del Sottoscrittore da modificare.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Specificare **@publication**, **@subscriber**, **@destination_db**, il valore **all** per **@article**, la proprietà della sottoscrizione da modificare come **@property**e il nuovo valore come **@value**. In questo modo vengono modificate le impostazioni di sicurezza per la sottoscrizione push.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Specificare **@publication** , **@subscriber** , **@destination_db** , il valore **all** per **@article** , la proprietà della sottoscrizione da modificare come **@property** e il nuovo valore come **@value** . In questo modo vengono modificate le impostazioni di sicurezza per la sottoscrizione push.  
   
 3.  (Facoltativo) Per modificare le proprietà del pacchetto DTS (Data Transformation Services) di una sottoscrizione, eseguire [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) nel database di sottoscrizione del Sottoscrittore. Specificare l'ID del processo dell'agente di distribuzione per **@jobid** e le proprietà del pacchetto DTS seguenti:  
   
@@ -97,13 +97,13 @@ ms.locfileid: "54136041"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Per visualizzare le proprietà di una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Specificare **@publication** e **@subscriber**.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Specificare **@publication** e **@subscriber** .  
   
-2.  Nel server di pubblicazione, eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)specificando **@subscriber**.  
+2.  Nel server di pubblicazione, eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)specificando **@subscriber** .  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Per modificare le proprietà di una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Specificare **@publication**, **@subscriber**, **@subscriber_db**, la proprietà della sottoscrizione da modificare come **@property**e il nuovo valore come **@value**.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Specificare **@publication** , **@subscriber** , **@subscriber_db** , la proprietà della sottoscrizione da modificare come **@property** e il nuovo valore come **@value** .  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
   

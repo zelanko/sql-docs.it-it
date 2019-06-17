@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c2489e492674a37a63e84b409e60dd40247800e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726367"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
@@ -53,7 +53,7 @@ ms.locfileid: "65726367"
   
     2.  In **Tipo di attivazione**selezionare **Programma server registrato**.  
   
-    3.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)**(Non Unicode (Impostazioni MDMP inattive)).  
+    3.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)** (Non Unicode (Impostazioni MDMP inattive)).  
   
     4.  Assegnare un ID programma appropriato.  
   
@@ -61,15 +61,15 @@ ms.locfileid: "65726367"
   
     1.  Passare alla workbench dell'amministratore (codice di transazione RSA1) e, nel riquadro sinistro, selezionare **Open Hub Destination**(Destinazione hub aperto).  
   
-    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"**(Crea destinazione di hub aperto).  
+    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"** (Crea destinazione di hub aperto).  
   
-    3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"**, quindi immettere la destinazione RFC creata in precedenza.  
+    3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"** , quindi immettere la destinazione RFC creata in precedenza.  
   
     4.  Salvare e attivare la nuova destinazione di hub aperto.  
   
 3.  Creare un processo di trasferimento dati (DTP):  
   
-    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"**(Crea processo di trasferimento dati).  
+    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"** (Crea processo di trasferimento dati).  
   
     2.  Configurare, salvare e attivare il DTP.  
   

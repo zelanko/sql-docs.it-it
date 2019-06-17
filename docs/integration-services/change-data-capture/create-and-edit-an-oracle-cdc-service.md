@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728938"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Creare e modificare un servizio Oracle CDC
@@ -61,7 +61,7 @@ ms.locfileid: "65728938"
   
      È possibile utilizzare un account di Windows locale o di dominio per l'account del servizio. In questo caso, è necessario immettere un valore in **Password** per l'account. Questo account può essere per l'host locale o un account di dominio. Assicurarsi di aggiornare la password quando viene modificata utilizzando Servizi locali nel Pannello di controllo di Windows.  
   
- **Nome server**: selezionare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione a cui connettersi, ad esempio, **\\\\<nome_computer>\\<nome_istanza>**. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
+ **Nome server**: selezionare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione a cui connettersi, ad esempio, **\\\\<nome_computer>\\<nome_istanza>** . Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
  **Autenticazione**  
  Selezionare una delle opzioni seguenti:  

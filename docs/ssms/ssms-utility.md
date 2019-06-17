@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102619"
 ---
 # <a name="ssms-utility"></a>Utilità Ssms
@@ -53,35 +53,35 @@ Ssms
  *solutionfile*  
  Specifica una soluzione da aprire. Il parametro deve includere il percorso completo del file di soluzione.  
   
- [**-S** _nomeserver_]  
+ [ **-S** _nomeserver_]  
   Nome server  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
   Nome database  
 
- [**-G**] Connessione con l'autenticazione di Azure Active Directory. Il tipo di connessione dipende dal fatto che sia incluso **-P** e/o **-U**.
+ [ **-G**] Connessione con l'autenticazione di Azure Active Directory. Il tipo di connessione dipende dal fatto che sia incluso **-P** e/o **-U**.
  - Se **-U** e **-P** *non* sono inclusi, viene usato **Active Directory - Integrata** e non verranno visualizzate finestre di dialogo.
  - Se sia **-U** che **-P** sono inclusi, viene usato **Active Directory - Password**. **Non è consigliabile** usare questa opzione perché è necessario specificare una password non crittografata nella riga di comando, ma è meglio evitarlo.
  - Se **-U** è incluso, ma **-P** è mancante, verrà visualizzata la finestra di dialogo dell'autorizzazione, ma tutti i tentativi di accesso avranno esito negativo. 
 
   Si noti che **Active Directory - Universale con supporto MFA** non è attualmente supportato. 
   
-[**-U** _username_]  
+[ **-U** _username_]  
  Nome utente quando ci si connette con "Autenticazione SQL" o "Active Directory - Password"  
   
-[**-P** _password_]  
+[ **-P** _password_]  
  Password quando ci si connette con "Autenticazione SQL" o "Active Directory - Password"
   
-[**-E**]  
+[ **-E**]  
  Stabilisce la connessione utilizzando l'autenticazione di Windows  
   
-[**-nosplash**]  
+[ **-nosplash**]  
  Se si specifica questa opzione, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non viene visualizzata la grafica della schermata iniziale all'apertura. Utilizzare questa opzione in caso di connessione al computer che esegue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per mezzo di Servizi terminal tramite una connessione a larghezza di banda limitata. Questo argomento non supporta la distinzione tra maiuscole e minuscole e può trovarsi prima o dopo altri argomenti.  
   
-[**-log**_[filename]?_]  
+[ **-log** _[filename]?_ ]  
  L'attività [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene registrata nel file specificato per la risoluzione dei problemi  
   
-[**-?**]  
+[ **-?** ]  
  Visualizza informazioni della Guida relative alla riga di comando.  
   
 ## <a name="remarks"></a>Remarks  

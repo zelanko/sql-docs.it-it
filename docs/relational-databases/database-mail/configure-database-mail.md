@@ -41,11 +41,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999513"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "54127661"
  Consente di digitare l'indirizzo di posta elettronica che verrà utilizzato per le risposte ai messaggi di posta elettronica inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, possono essere indirizzate all'amministratore del database danw@Adventure-Works.com.  
   
  **Nome server**  
- Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.**_<nome_società>_**.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
+ Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.** _<nome_società>_ **.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
  **Numero di porta**  
  Digitare il numero di porta del server SMTP per l'account. La maggior parte dei server SMTP utilizza la porta 25.  
@@ -196,13 +196,13 @@ ms.locfileid: "54127661"
  Consente di visualizzare o aggiornare la descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo posta elettronica**  
- Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Un account di Microsoft SQL Server Agent, ad esempio, può inviare posta elettronica dall'indirizzo **SqlAgent@Adventure-Works.com**.  
+ Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Un account di Microsoft SQL Server Agent, ad esempio, può inviare posta elettronica dall'indirizzo **SqlAgent@Adventure-Works.com** .  
   
  **Nome visualizzato**  
  Consente di visualizzare o aggiornare il nome da visualizzare nei messaggi di posta elettronica inviati da questo account. Il nome visualizzato è facoltativo. Si tratta del nome visualizzato nei messaggi inviati da questo account. Un account di SQL Server Agent, ad esempio, può visualizzare il nome **SQL Server Agent Automated Mailer** nei messaggi di posta elettronica.  
   
  **Indirizzo risposte**  
- Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di SQL Server Agent, ad esempio, possono essere indirizzate all'amministratore del database **danw@Adventure-Works.com**.  
+ Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di SQL Server Agent, ad esempio, possono essere indirizzate all'amministratore del database **danw@Adventure-Works.com** .  
   
  **Nome server**  
  Consente di visualizzare o aggiornare il nome del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.<nome_società>.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
@@ -393,7 +393,7 @@ ms.locfileid: "54127661"
  Dimensioni massime di un allegato, in byte.  
   
  **Estensioni file allegati non consentite**  
- Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica. Fare clic sul pulsante Sfoglia (**...**) per aggiungere altre estensioni.  
+ Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica. Fare clic sul pulsante Sfoglia ( **...** ) per aggiungere altre estensioni.  
   
  **Durata minima eseguibile Posta elettronica database (secondi)**  
  Periodo minimo di tempo, in secondi, durante il quale il processo di posta elettronica esterno resta attivo. Il processo rimane attivo finché sono presenti messaggi di posta elettronica nella coda di Posta elettronica database. Questo parametro indica il periodo di tempo per cui il processo rimane attivo se non esiste alcun messaggio da elaborare.  
@@ -420,7 +420,7 @@ ms.locfileid: "54127661"
  [Configurazione guidata Posta elettronica database](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Usare la finestra di dialogo **Invia messaggio di prova da**_<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
+ Usare la finestra di dialogo **Invia messaggio di prova da** _<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
   
  **Profilo di Posta elettronica database**  
  Selezionare un profilo di Posta elettronica database nell'elenco. Questo campo è obbligatorio. Se non viene visualizzato alcun profilo, non esiste alcun profilo oppure non si dispone dell'autorizzazione per esso. Per creare e configurare profili, usare la **Configurazione guidata posta elettronica database** . Se non è elencato alcun profilo, utilizzare la Configurazione guidata posta elettronica database per crearne uno.  

@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716084"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "56590476"
 > [!IMPORTANT]  
 >  Qualsiasi utente autenticato può leggere e scrivere nel registro eventi applicazioni di Windows, per cui sono necessarie autorizzazioni inferiori rispetto al registro eventi di sicurezza di Windows e risulta pertanto meno sicuro di quest'ultimo.  
   
- Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o in Windows Server 2008 è possibile impostare i criteri **generati dall'applicazione** con la maggiore granularità dalla riga di comando tramite il programma criteri di controllo (**AuditPol.exe)**. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
+ Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o in Windows Server 2008 è possibile impostare i criteri **generati dall'applicazione** con la maggiore granularità dalla riga di comando tramite il programma criteri di controllo (**AuditPol.exe)** . Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
   
  Quando si salvano informazioni di controllo in un file, per contribuire a impedirne l'alterazione, è possibile limitare l'accesso al percorso del file nei modi seguenti:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "56590476"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mirroring del database e SQL Server Audit  
  Un database che dispone di una specifica del controllo del database definita e che utilizza il mirroring del database includerà la specifica del controllo del database. Per funzionare correttamente sull'istanza SQL Server con mirroring, è necessario che siano configurati gli elementi seguenti:  
   
--   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Per questa configurazione usare il comando CREATE AUDIT WITH GUID **=**_\<GUID controllo server di origine_>.  
+-   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Per questa configurazione usare il comando CREATE AUDIT WITH GUID **=** _\<GUID controllo server di origine_>.  
   
 -   Per le destinazioni del file binario, l'account di servizio del server mirror deve disporre delle autorizzazioni appropriate per il percorso in cui verrà scritto l'itinerario di controllo.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "56590476"
 |[sys.server_audit_specifications_details](../../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|Contiene informazioni sui dettagli (azioni) delle specifiche del controllo del server in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.server_file_audits](../../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|Contiene informazioni estese sul tipo di controllo dei file in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  A ogni funzionalità e comando per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono associati requisiti di autorizzazione singoli.  
   
  Per creare, modificare o eliminare un controllo del server o una specifica del controllo del server, le entità server devono disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER. Per creare, modificare o eliminare una specifica del controllo del database, le entità di database devono disporre dell'autorizzazione ALTER ANY DATABASE AUDIT o dell'autorizzazione ALTER o CONTROL per il database. Le entità devono inoltre disporre dell'autorizzazione necessaria per connettersi al database o dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  

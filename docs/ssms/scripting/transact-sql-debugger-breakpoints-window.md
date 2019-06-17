@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af1a6dcbd241daa2d7edf0bb14f17e84d32bf2d6
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821752"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Debugger Transact-SQL - Finestra Punti di interruzione
@@ -36,7 +36,7 @@ ms.locfileid: "65821752"
  Consente di visualizzare il nome del punto di interruzione. I nomi dei punti di interruzione vengono forniti dal debugger. Questo nome include il nome della finestra dell'editor di query del Motore di database che contiene il punto di interruzione e il numero di riga nell'editor di query in cui è impostato il punto di interruzione.  
   
  **Condizione**  
- Viene visualizzato **(nessuna condizione)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.  
+ Viene visualizzato **(nessuna condizione)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.  
   
  **Passaggi**  
  Viene visualizzato**interrompi sempre**.  
@@ -44,7 +44,7 @@ ms.locfileid: "65821752"
  È possibile aggiungere e rimuovere le colonne seguenti selezionandole nell'elenco **Colonne** .  
   
  **Filter**  
- Viene visualizzato **(nessuno)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
+ Viene visualizzato **(nessuno)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
   
  **Quando raggiunto**  
  Viene visualizzato **Interrompi**.  

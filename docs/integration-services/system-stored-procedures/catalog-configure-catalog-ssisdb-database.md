@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d22165af735fe807149dffb6f5e60a35fc33184
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717028"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (database SSISDB)
@@ -35,10 +35,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>Argomenti  
  [ @property_name = ] *property_name*  
- Nome della proprietà del catalogo. *property_name* è di tipo **nvarchar(255)**. Per altre informazioni sulle proprietà disponibili, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Nome della proprietà del catalogo. *property_name* è di tipo **nvarchar(255)** . Per altre informazioni sulle proprietà disponibili, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
  [ @property_value = ] *property_value*  
- Valore della proprietà del catalogo. *property_value* è di tipo **nvarchar(255)**. Per altre informazioni sui valori delle proprietà, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Valore della proprietà del catalogo. *property_value* è di tipo **nvarchar(255)** . Per altre informazioni sui valori delle proprietà, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

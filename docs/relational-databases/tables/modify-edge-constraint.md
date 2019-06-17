@@ -20,18 +20,18 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5b6a471156f0b1371c727ce96aac72f4f812dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62693322"
 ---
 # <a name="modify-edge-constraints"></a>Modificare vincoli di arco
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   È possibile modificare un vincolo di arco in [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile modificare il vincolo di arco di una tabella archi modificando l'ordine delle clausole del vincolo di arco o aggiungendo una nuova clausola.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47650249"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL

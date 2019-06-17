@@ -16,17 +16,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4c94df2f2857f0657e315d3944eeaf783eef3a20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716058"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Visualizzazione di un log di controllo di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento descrive come visualizzare un log di controllo di SQL Server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52508287"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione **CONTROL SERVER** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "52508287"
   
 2.  Espandere la cartella **Controlli** .  
   
-3.  Fare clic con il pulsante destro del mouse sul log di controllo da visualizzare e selezionare **Visualizza log di controllo**. Verrà visualizzata la finestra di dialogo **Visualizzatore file di log -**_nome\_server_. Per altre informazioni, vedere [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
+3.  Fare clic con il pulsante destro del mouse sul log di controllo da visualizzare e selezionare **Visualizza log di controllo**. Verrà visualizzata la finestra di dialogo **Visualizzatore file di log -** _nome\_server_. Per altre informazioni, vedere [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
 4.  Al termine, fare clic su **Chiudi**.  
   

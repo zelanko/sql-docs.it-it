@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4947751be0d3ed2c0d10cfce774f1fa9cec35a38
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097556"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
@@ -67,7 +67,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 4.  Fare clic con il pulsante destro del mouse sul processo da modificare e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo-**_nome\_processo_ selezionare nell'elenco **Categoria** la categoria di processi alla quale assegnare il processo.  
+5.  Nella finestra di dialogo **Proprietà processo-** _nome\_processo_ selezionare nell'elenco **Categoria** la categoria di processi alla quale assegnare il processo.  
   
 6.  Fare clic su **OK**.  
   

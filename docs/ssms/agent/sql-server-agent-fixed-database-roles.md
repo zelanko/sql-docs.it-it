@@ -22,10 +22,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c7f65ad3957280953faa58792ea39e48ce16f20e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089714"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Ruoli di database predefiniti di SQL Server Agent
@@ -102,7 +102,7 @@ Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLA
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Creazione/modifica/eliminazione|no|no|Sì  (solo processi di proprietà)<br /><br />Non è possibile modificare la proprietà del processo.|no|Sì (solo pianificazioni di proprietà)|no|  
 |Visualizzazione di un elenco (enumerazione)|Sì|Sì<br /><br />È possibile ottenere un elenco degli operatori disponibili da usare in **sp_notify_operator** e nella finestra di dialogo **Proprietà processo** di Management Studio.|Sì|Sì|Sì|Sì|  
-|Abilitazione/disabilitazione|no|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per i parametri **@enabled** e **@job_id** (o **@job_name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare pianificazioni di cui non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per i parametri **@enabled** e **@schedule_id** (o **@name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|Non applicabile|  
+|Abilitazione/disabilitazione|no|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per i parametri **@enabled** e **@job_id** (o **@job_name** ). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare pianificazioni di cui non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per i parametri **@enabled** e **@schedule_id** (o **@name** ). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|Non applicabile|  
 |Visualizzazione di proprietà|Sì|Sì|Sì|Sì|Sì|Sì|  
 |Modifica di proprietà|no|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
 |Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Sì|no|Non applicabile|Non applicabile|  

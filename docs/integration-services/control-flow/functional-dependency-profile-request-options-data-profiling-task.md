@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b75355aec1c0461f1f0b5b5938ec931de4820c2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727647"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
@@ -37,14 +37,14 @@ ms.locfileid: "65727647"
   
  Per il lato determinante, è possibile specificare una colonna o un set di colonne nella proprietà **DeterminantColumns** . Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per la proprietà **DeterminantColumns** vengono selezionate le opzioni seguenti:  
   
--   Quando si seleziona il carattere jolly **(\*)**, l'attività Profiling dati testa ogni colonna come lato determinante della dipendenza.  
+-   Quando si seleziona il carattere jolly **(\*)** , l'attività Profiling dati testa ogni colonna come lato determinante della dipendenza.  
   
 -   Quando si selezionano il carattere jolly **(\*)** e un'altra colonna o colonne, l'attività Profiling dati testa ogni combinazione di colonne come lato determinante della dipendenza. Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Se si specificano **(\*)** e la colonna C come valore della proprietà **DeterminantColumns**, l'attività Profiling dati testa le combinazioni (A, C) e (B, C) come lato determinante della dipendenza.  
   
- Per il lato dipendente, è possibile specificare una singola colonna o il carattere jolly **(\*)** nella proprietà **DependentColumn**. Quando si seleziona **(\*)**, l'attività Profiling dati testa la colonna o il set di colonne del lato determinante rispetto a ciascuna colonna.  
+ Per il lato dipendente, è possibile specificare una singola colonna o il carattere jolly **(\*)** nella proprietà **DependentColumn**. Quando si seleziona **(\*)** , l'attività Profiling dati testa la colonna o il set di colonne del lato determinante rispetto a ciascuna colonna.  
   
 > [!NOTE]  
->  Se si seleziona **(\*)**, questa opzione potrebbe comportare un numero elevato di calcoli, riducendo le prestazioni dell'attività. Se l'attività, tuttavia, rileva un subset che soddisfa la soglia per una dipendenza funzionale, non vengono analizzate combinazioni aggiuntive. Nella tabella di esempio descritta in precedenza, ad esempio, se l'attività determina che la colonna C è una colonna determinante, non verranno analizzati altri candidati composti.  
+>  Se si seleziona **(\*)** , questa opzione potrebbe comportare un numero elevato di calcoli, riducendo le prestazioni dell'attività. Se l'attività, tuttavia, rileva un subset che soddisfa la soglia per una dipendenza funzionale, non vengono analizzate combinazioni aggiuntive. Nella tabella di esempio descritta in precedenza, ad esempio, se l'attività determina che la colonna C è una colonna determinante, non verranno analizzati altri candidati composti.  
   
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
  Nel riquadro **Proprietà richiesta**per **Richiesta profilo Dipendenza funzionale** vengono visualizzati i gruppi di opzioni seguenti:  
@@ -78,7 +78,7 @@ ms.locfileid: "65727647"
  Per ulteriori informazioni, vedere la sezione "Informazioni sulla selezione di colonne determinanti e dipendenti" riportata in precedenza in questo argomento.  
   
  **IsWildCard**  
- Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **(\*)** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
  Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  

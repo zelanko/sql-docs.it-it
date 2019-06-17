@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4f03fa46643f062aa03cac60dbf3dcbe7b31f22c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724757"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Scrittura del codice di una gestione connessione personalizzata
@@ -34,7 +34,7 @@ ms.locfileid: "65724757"
   
 ## <a name="configuring-the-connection-manager"></a>Configurazione della gestione connessione  
   
-### <a name="setting-the-connectionstring-property"></a>Impostazione della proprietà ConnectionString   
+### <a name="setting-the-connectionstring-property"></a>Impostazione della proprietà ConnectionString  
  La proprietà <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> è un'importante proprietà ed è l'unica specifica di una gestione connessione personalizzata. La gestione connessione utilizza il valore di questa proprietà per connettersi all'origine dati esterna. Se si combinano diverse altre proprietà, ad esempio il nome del server e il nome del database, per creare la stringa di connessione, è possibile utilizzare una funzione di supporto per assemblare la stringa sostituendo determinati valori in un modello di stringa di connessione con il nuovo valore fornito dall'utente. Nell'esempio di codice seguente è illustrata un'implementazione della proprietà <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> che si basa su una funzione di supporto per assemblare la stringa.  
   
 ```vb  

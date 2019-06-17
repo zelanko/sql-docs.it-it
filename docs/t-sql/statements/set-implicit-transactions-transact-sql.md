@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2dae52947d736ccc371e1cdc675924149c67cf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939810"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |BEGIN TRANSACTION|GRANT|SELECT (vedere l'eccezione riportata di seguito)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
 |Elimina|OPEN|UPDATE|  
-|DROP|,|,|  
+|DROP|.|.|  
   
  Quando è impostata su OFF, ognuna delle istruzioni T-SQL precedenti è vincolata da un'istruzione BEGIN TRANSACTION e COMMIT TRANSACTION non visibile. Quando è impostata su OFF, la modalità di transazione è nota come *autocommit*. Se il codice T-SQL esegue un'istruzione BEGIN TRANSACTION in modo visibile, la modalità di transazione è *esplicita*.  
   
