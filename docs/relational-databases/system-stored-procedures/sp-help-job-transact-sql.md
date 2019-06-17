@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660783"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Per visualizzare un processo specifico, ovvero *job_id* oppure *job_name* deve essere specificato.  Omettere entrambe *job_id* e *job_name* per restituire informazioni su tutti i processi.
   
-`[ @job_aspect = ] 'job_aspect'` Attributo del processo da visualizzare. *job_aspect* viene **varchar(9)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @job_aspect = ] 'job_aspect'` Attributo del processo da visualizzare. *job_aspect* viene **varchar(9)** , con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|Informazioni sui passaggi del processo|  
 |**TARGETS**|Informazioni sul server di destinazione|  
   
-`[ @job_type = ] 'job_type'` Il tipo di processo da includere nel report. *job_type* viene **varchar(12)**, con un valore predefinito è NULL. *job_type* può essere **locale** oppure **MULTISERVER**.  
+`[ @job_type = ] 'job_type'` Il tipo di processo da includere nel report. *job_type* viene **varchar(12)** , con un valore predefinito è NULL. *job_type* può essere **locale** oppure **MULTISERVER**.  
   
 `[ @owner_login_name = ] 'login_name'` Il nome di account di accesso del proprietario del processo. *login_name* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @subsystem = ] 'subsystem'` Il nome del sottosistema. *sottosistema* viene **nvarchar (40)**, con un valore predefinito è NULL.  
+`[ @subsystem = ] 'subsystem'` Il nome del sottosistema. *sottosistema* viene **nvarchar (40)** , con un valore predefinito è NULL.  
   
 `[ @category_name = ] 'category'` Il nome della categoria. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
@@ -98,7 +98,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_last_modified = ] date_modified` La data che dell'ultima modifica del processo. *date_modified* viene **datetime**, con un valore predefinito è NULL.  
   
-`[ @description = ] 'description_pattern'` La descrizione del processo. *description_pattern* viene **nvarchar(512)**, con un valore predefinito è NULL. *description_pattern* può includere i caratteri jolly di SQL Server per criteri di ricerca.  
+`[ @description = ] 'description_pattern'` La descrizione del processo. *description_pattern* viene **nvarchar(512)** , con un valore predefinito è NULL. *description_pattern* può includere i caratteri jolly di SQL Server per criteri di ricerca.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

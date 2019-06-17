@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026940"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
@@ -47,7 +47,7 @@ Le tabelle in questa appendice mostrano come funzioni ODBC causano le transizion
   
 -   **E**  
 
-     **_n_**  , **C_n_**, **S_n_**, oppure **D_n_** -lo stato di ambiente, connessione, istruzione o descrittore passa allo stato specificato.  
+     **_n_**  , **C_n_** , **S_n_** , oppure **D_n_** -lo stato di ambiente, connessione, istruzione o descrittore passa allo stato specificato.  
  
 -   **(IH)**  -È stato passato un handle non valido alla funzione. Ad esempio, se l'handle è un handle null oppure un handle valido del tipo errato - è stato passato un handle di connessione quando un handle di istruzione è stata necessario: la funzione non restituisca SQL_INVALID_HANDLE; in caso contrario, il comportamento è indefinito e probabilmente irreversibile. Questo errore viene visualizzato solo quando è il risultato della chiamata alla funzione nello stato specificato solo possibile. Questo errore non modifica lo stato e viene sempre rilevato da Gestione Driver, come indicato dalla parentesi.  
   

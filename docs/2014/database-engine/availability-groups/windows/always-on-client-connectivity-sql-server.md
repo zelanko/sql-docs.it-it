@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790660"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connettività client Always On (SQL Server)
@@ -36,14 +36,14 @@ ms.locfileid: "62790660"
 |Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più Subnet: Failover degli Endpoint singola Subnet più rapido|Failover su più Subnet: Le istanze cluster di risoluzione dell'istanza denominata di SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
-|SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
-|ADO.NET con .NET Framework 4.0 con patch di connettività**<sup>*</sup>**|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **<sup>**</sup>**|Yes|Yes|Yes|Yes|Yes|  
+|SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|no|  
+|ADO.NET con .NET Framework 4.0 con patch di connettività **<sup>*</sup>**|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **<sup>** </sup>**|Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC Driver 4.0 per SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
  **<sup>*</sup>**  Scaricare la patch di connettività per ADO .NET con .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  
   
- **<sup>**</sup>* * Scaricare la patch di connettività per ADO.NET con .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
+ **<sup>** </sup>* * Scaricare la patch di connettività per ADO.NET con .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
   
 > [!IMPORTANT]  
 >  Per connettersi a un listener del gruppo di disponibilità, un client deve utilizzare una stringa di connessione TCP.  

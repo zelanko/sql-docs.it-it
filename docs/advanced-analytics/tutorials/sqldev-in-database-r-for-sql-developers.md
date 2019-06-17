@@ -3,17 +3,17 @@ title: Esercitazione per analitica nel database con R - SQL Server Machine Learn
 description: Informazioni su come incorporare il codice lingua nella stored procedure SQL Server e funzioni T-SQL di programmazione R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511218"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140754"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Esercitazione: Analitica di dati R per sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Questa esercitazione presuppone la conoscenza delle operazioni di base dei datab
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) o [servizi SQL Server 2017 Machine Learning con R abilitata](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Librerie di R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [Librerie di R](../package-management/installed-package-information.md)
 
 + [Autorizzazioni](../security/user-permission.md)
 

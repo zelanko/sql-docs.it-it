@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699591"
 ---
 # <a name="rds-programming-model-in-detail"></a>Informazioni dettagliate sul modello di programmazione RDS
@@ -65,7 +65,7 @@ Di seguito sono gli elementi chiave del modello di programmazione di servizi des
   
  Il **Servizi Desktop remoto. DataControl** oggetto include anche metodi per lo spostamento, ordinamento e il filtraggio delle righe del controllo associato **Recordset** oggetto. Questi metodi sono simili, ma non identici, i metodi sull'oggetto ADO **Recordset** oggetto.  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  Servizi Desktop remoto supporta due degli eventi interni, che sono indipendenti tra il modello di eventi ADO. Il [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) eventi viene chiamato ogni volta che il **Servizi Desktop remoto. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) le modifiche alle proprietà, notificando all'utente dopo aver completato un'operazione asincrona, terminato o si è verificato un errore. Il [onError](../../../ado/reference/rds-api/onerror-event-rds.md) eventi viene chiamato ogni volta che si verifica un errore, anche se l'errore si verifica durante un'operazione asincrona.  
   
 > [!NOTE]

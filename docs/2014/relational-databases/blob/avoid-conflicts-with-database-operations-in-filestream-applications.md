@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010366"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM

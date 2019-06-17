@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012025"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
@@ -67,17 +67,17 @@ ms.locfileid: "63012025"
   
 1.  In Esplora oggetti espandere la cartella dell'istanza del server in cui si desidera creare il nuovo account di accesso.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e selezionare **Account di accesso...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e selezionare **Account di accesso...** .  
   
 3.  Nella pagina **Generale** della finestra di dialogo **Account di accesso - Nuovo** immettere il nome di un utente nella casella **Nome account di accesso**. In alternativa, fare clic su **Cerca...** per aprire la finestra di dialogo **Seleziona un utente o un gruppo**.  
   
-     Se si fa clic su **Cerca...**:  
+     Se si fa clic su **Cerca...** :  
   
     1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le opzioni seguenti o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
   
     2.  In **Da questo percorso** fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi server disponibili. Al termine, fare clic su **OK**.  
   
-    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)** , immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Fare clic su **Avanzate...** per opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](https://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -115,31 +115,31 @@ ms.locfileid: "63012025"
 ### <a name="server-roles"></a>Ruoli del server  
  Nella pagina **Ruoli del server** sono elencati tutti i possibili ruoli che possono essere assegnati al nuovo account accesso. Sono disponibili le opzioni seguenti:  
   
- Casella di controllo**bulkadmin**   
+ Casella di controllo**bulkadmin**  
  I membri del ruolo predefinito del server **bulkadmin** sono autorizzati a eseguire l'istruzione BULK INSERT.  
   
- Casella di controllo**dbcreator**   
+ Casella di controllo**dbcreator**  
  I membri del ruolo predefinito del server **dbcreator** sono autorizzati a creare, modificare, eliminare e ripristinare qualsiasi database.  
   
- Casella di controllo**diskadmin**   
+ Casella di controllo**diskadmin**  
  I membri del ruolo predefinito del server **diskadmin** sono autorizzati a gestire file su disco.  
   
- Casella di controllo**processadmin**   
+ Casella di controllo**processadmin**  
  I membri del ruolo predefinito del server **processadmin** sono autorizzati a terminare processi in esecuzione in un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Casella di controllo**public**   
+ Casella di controllo**public**  
  Tutti gli utenti, gruppi e ruoli di SQL Server appartengono al ruolo predefinito del server **public** per impostazione predefinita.  
   
- Casella di controllo**securityadmin**   
+ Casella di controllo**securityadmin**  
  I membri del ruolo predefinito del server **securityadmin** gestiscono gli account di accesso e le relative proprietà. Possono concedere, negare e revocare le autorizzazioni a livello di server e a livello di database. Questi membri sono inoltre autorizzati a reimpostare le password per gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Casella di controllo**serveradmin**   
+ Casella di controllo**serveradmin**  
  I membri del ruolo predefinito del server **serveradmin** sono autorizzati a modificare le opzioni di configurazione a livello di server e ad arrestare il server.  
   
- Casella di controllo**setupadmin**   
+ Casella di controllo**setupadmin**  
  I membri del ruolo predefinito del server **setupadmin** possono aggiungere e rimuovere server collegati e inoltre eseguire alcune stored procedure di sistema.  
   
- Casella di controllo**sysadmin**   
+ Casella di controllo**sysadmin**  
  I membri del ruolo predefinito del server **sysadmin** sono autorizzati a eseguire qualsiasi attività nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Mapping utenti  
@@ -181,13 +181,13 @@ ms.locfileid: "63012025"
     > [!NOTE]  
     >  Quando si seleziona **Il server**_nome_server_, la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
   
-3.  Se si seleziona **Oggetti specifici...**:  
+3.  Se si seleziona **Oggetti specifici...** :  
   
-    1.  Nella finestra di dialogo **Seleziona oggetti** in **Selezionare i tipi di oggetti seguenti** fare clic su **Tipi di oggetti...**.  
+    1.  Nella finestra di dialogo **Seleziona oggetti** in **Selezionare i tipi di oggetti seguenti** fare clic su **Tipi di oggetti...** .  
   
     2.  Nella finestra di dialogo **Seleziona tipi di oggetti** selezionare uno o tutti i tipi di oggetti seguenti: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità** e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)** fare clic su **Sfoglia...**.  
+    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)** fare clic su **Sfoglia...** .  
   
     4.  Nella finestra di dialogo **Cerca oggetti** , selezionare gli oggetti disponibili del tipo selezionato nella finestra di dialogo **Seleziona tipi di oggetti** , quindi fare clic su **OK**.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "63012025"
   
  Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Completamento: Passaggi da effettuare dopo aver creato un account di accesso  
+##  <a name="FollowUp"></a> Completamento: passaggi da effettuare dopo aver creato un account di accesso  
  Una volta creato, un account di accesso può connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ma potrebbe non disporre delle autorizzazioni necessarie a eseguire operazioni utili. Nell'elenco seguente vengono indicati alcuni collegamenti alle operazioni più comuni degli account di accesso.  
   
 -   Per consentire l'aggiunta di un account di accesso a un ruolo database, vedere [Aggiungere un ruolo](join-a-role.md).  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014900"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Utilizzo del caricamento bulk di SQLXML nell'ambiente .NET
@@ -139,7 +139,7 @@ ms.locfileid: "66014900"
 9. Per caricare i dati XML nella tabella creata, compilare ed eseguire il progetto.  
   
     > [!NOTE]  
-    >  Il riferimento al componente di caricamento bulk (xblkld4.dll) può essere aggiunto anche utilizzando lo strumento tlbimp.exe, disponibile come parte di .NET Framework. Questo strumento crea un wrapper gestito per la DLL nativa (xblkld4.dll) che può quindi essere utilizzato in qualsiasi progetto .NET. Ad esempio:   
+    >  Il riferimento al componente di caricamento bulk (xblkld4.dll) può essere aggiunto anche utilizzando lo strumento tlbimp.exe, disponibile come parte di .NET Framework. Questo strumento crea un wrapper gestito per la DLL nativa (xblkld4.dll) che può quindi essere utilizzato in qualsiasi progetto .NET. Ad esempio:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108409"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
@@ -40,13 +40,13 @@ ms.locfileid: "66108409"
   
 2.  Se non viene visualizzato il **gruppi di righe** riquadro, fare doppio clic nell'area di progettazione e fare clic su **view** e quindi fare clic su **raggruppamento**.  
   
-3.  Dal riquadro **Dati report** trascinare il campo `Date` nel riquadro **Gruppi di righe**. Posizionarlo al di sopra della riga **(Dettagli)**.  
+3.  Dal riquadro **Dati report** trascinare il campo `Date` nel riquadro **Gruppi di righe**. Posizionarlo al di sopra della riga **(Dettagli)** .  
   
      L'handle di riga contiene ora una parentesi quadra per mostrare un gruppo. La tabella presenta ora due colonne Date, una su ogni lato di una linea verticale tratteggiata.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Dal riquadro **Dati report** trascinare il campo `Order` nel riquadro **Gruppi di righe**. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.  
+4.  Dal riquadro **Dati report** trascinare il campo `Order` nel riquadro **Gruppi di righe**. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)** .  
   
      L'handle di riga contiene ora due parentesi quadre per mostrare due gruppi. La tabella ora presenta due `Order` colonne, troppo.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66108409"
   
      Verrà aggiunta una somma delle quantità di tutti gli ordini alla riga dei totali.  
   
-4.  Nella cella vuota a sinistra di `Sum[Qty]`digitare l'etichetta "**Order Total"**.  
+4.  Nella cella vuota a sinistra di `Sum[Qty]`digitare l'etichetta "**Order Total"** .  
   
 5.  È possibile aggiungere un colore di sfondo alla riga dei totali. Selezionare le due celle della somma e la cella dell'etichetta.  
   

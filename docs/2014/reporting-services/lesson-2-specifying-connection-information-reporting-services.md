@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108517"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Definizione delle informazioni di connessione (Reporting Services)
@@ -50,7 +50,7 @@ ms.locfileid: "66108517"
     >   
     >  Per altre informazioni sulle stringhe di connessione, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) e [finestra di dialogo Proprietà origine dati, generale](data-source-properties-dialog-box-general.md).  
   
-6.  Fare clic su **Credenziali** nel riquadro sinistro e selezionare **Usa autenticazione di Windows (sicurezza integrata)**.  
+6.  Fare clic su **Credenziali** nel riquadro sinistro e selezionare **Usa autenticazione di Windows (sicurezza integrata)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] zdroj dat [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] viene aggiunto per il **i dati del Report** riquadro.  
   

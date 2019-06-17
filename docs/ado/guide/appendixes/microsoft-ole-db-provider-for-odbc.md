@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701324"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
@@ -205,24 +205,24 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|Yes|Yes|Yes|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Yes|Yes|Yes|Yes|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Yes|Yes|Yes|Yes|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Yes|Yes|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|no|No|Yes|Yes|
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|Yes|Yes|Yes|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|Yes|Yes|Yes|
 |[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Yes|Yes|Yes|Yes|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Yes|Yes|Yes|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Yes|Yes|Yes|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Yes|Yes|Yes|Yes|
 |[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|Yes|Yes|Yes|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|No|no|Yes|Yes|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|no|No|Yes|Yes|
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|Yes|Yes|Yes|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Yes|Yes|Yes|Yes|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Yes|Yes|Yes|Yes|
 
- * Non supportato per i database Microsoft Access.
+ \* Non supportato per i database Microsoft Access.
 
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Il Provider Microsoft OLE DB per ODBC inserisce diverse proprietà dinamiche nel **delle proprietà** raccolta di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti.

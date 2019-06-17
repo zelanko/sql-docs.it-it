@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011950"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Concedere un'autorizzazione a un'entità
@@ -65,7 +65,7 @@ ms.locfileid: "63011950"
   
 4.  Fare clic con il pulsante destro del mouse su una stored procedure e selezionare **Proprietà**.  
   
-5.  Nel **proprietà Stored Procedure -**_nome_stored_procedure_ nella finestra di dialogo selezionare una pagina, seleziona **autorizzazioni**. Utilizzare questa pagina per aggiungere utenti o ruoli alla stored procedure e specificare le autorizzazioni degli utenti o dei ruoli.  
+5.  Nel **proprietà Stored Procedure -** _nome_stored_procedure_ nella finestra di dialogo selezionare una pagina, seleziona **autorizzazioni**. Utilizzare questa pagina per aggiungere utenti o ruoli alla stored procedure e specificare le autorizzazioni degli utenti o dei ruoli.  
   
 6.  Al termine, fare clic su **OK**.  
   

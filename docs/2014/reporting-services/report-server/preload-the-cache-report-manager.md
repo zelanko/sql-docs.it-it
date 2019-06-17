@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103593"
 ---
 # <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
@@ -86,7 +86,7 @@ ms.locfileid: "66103593"
   
 8.  Scegliere **Avanti**.  
   
-9. Specificare la query o il comando per il recupero dei dati relativi ai sottoscrittori. Se lo si desidera, aumentare il periodo di timeout per le query che richiedono un'elaborazione prolungata. Ad esempio:   
+9. Specificare la query o il comando per il recupero dei dati relativi ai sottoscrittori. Se lo si desidera, aumentare il periodo di timeout per le query che richiedono un'elaborazione prolungata. Ad esempio:  
   
     ```  
     Select * from UserInfo  

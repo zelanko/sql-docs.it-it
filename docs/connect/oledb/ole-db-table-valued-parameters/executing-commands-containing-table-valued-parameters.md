@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, executing commands containing
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 466f2b5b8b84519d8b4d9c98ad324b3e4187ac61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 9a32de76937a0029b0cef2e490a107ee4a741696
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396694"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801172"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Esecuzione di comandi contenenti parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

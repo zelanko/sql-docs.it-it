@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63135319"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valori restituiti da SQLGetInfo per dBASE
@@ -129,7 +129,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
 |SQL_MAX_INDEX_SIZE|220|  
 |SQL_MAX_PROCEDURE_NAME_LEN|0|  
-|SQL_MAX_ROW_SIZE|4.000|  
+|SQL_MAX_ROW_SIZE|4\.000|  
 |SQL_MAX_ROW_SIZE_INCLUDES_LONG|"N"|  
 |SQL_MAX_SCHEMA_NAME_LEN|0|  
 |SQL_MAX_STATEMENT_LEN|65000|  

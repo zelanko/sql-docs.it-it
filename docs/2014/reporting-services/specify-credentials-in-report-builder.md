@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101136"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Specifica di credenziali in Generatore report
@@ -62,7 +62,7 @@ ms.locfileid: "66101136"
 -   Non sono necessarie credenziali.  
   
 ### <a name="windows-integrated-security"></a>Sicurezza integrata di Windows  
- Quando si seleziona **Usa autenticazione di Windows (sicurezza integrata)**, il token di sicurezza dell'utente corrente viene passato all'origine dati. In questo caso, all'utente non viene richiesto di digitare un nome utente o una password. Questa opzione richiede in genere che le caratteristiche di delega siano abilitate. In caso contrario, è possibile usare questa opzione solo per accedere a un'origine dati disponibile nello stesso computer.  
+ Quando si seleziona **Usa autenticazione di Windows (sicurezza integrata)** , il token di sicurezza dell'utente corrente viene passato all'origine dati. In questo caso, all'utente non viene richiesto di digitare un nome utente o una password. Questa opzione richiede in genere che le caratteristiche di delega siano abilitate. In caso contrario, è possibile usare questa opzione solo per accedere a un'origine dati disponibile nello stesso computer.  
   
 ### <a name="user-name-and-password-login"></a>Accesso tramite nome utente e password  
  Quando si seleziona **Usa il nome utente e la password seguenti**, è necessario specificare un nome utente e una password per accedere all'origine dati. Per un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , le credenziali possono essere relative a un account di accesso al database. Le credenziali vengono passate all'origine dati per l'autenticazione.  

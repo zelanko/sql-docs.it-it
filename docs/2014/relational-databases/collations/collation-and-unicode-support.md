@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918947"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -53,7 +53,7 @@ ms.locfileid: "62918947"
 |------------|-----------------|  
 |Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra maiuscole e minuscole. Ovvero, in SQL Server non viene operata una distinzione tra lettere maiuscole e minuscole, che vengono considerate identiche ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra maiuscole e minuscole specificando _CI.|  
 |Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Ad esempio, 'un 'non è uguale a'???'. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra caratteri accentati e non accentati. Ovvero, in SQL Server non viene opera una distinzione tra caratteri accentati e non accentati, che vengono considerati identici ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando _AI.|  
-|Distinzione Kana (_KS)|Consente di distinguere tra i due tipi di caratteri kana giapponesi: Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero, in SQL Server i caratteri Hiragana e Katakana vengono considerati identici ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|  
+|Distinzione Kana (_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero, in SQL Server i caratteri Hiragana e Katakana vengono considerati identici ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|  
 |Distinzione larghezza (_WS)|Opera una distinzione tra caratteri a larghezza intera e caratteri a metà larghezza. Se questa opzione non viene selezionata, SQL Server considera identiche le rappresentazioni con caratteri a larghezza intera e a metà larghezza dello stesso carattere ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione larghezza.|  
   
  In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i seguenti set di regole di confronto:  

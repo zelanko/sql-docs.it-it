@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028378"
 ---
 # <a name="objecttype-trace-event-column"></a>Colonna ObjectType per gli eventi di traccia
@@ -101,7 +101,7 @@ ms.locfileid: "63028378"
 |22601|Indice|  
 |22604|Account di accesso con certificato|  
 |22611|XMLSchema|  
-|22868|Tipo|  
+|22868|Type|  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483273"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Create account e profili di Posta elettronica database (Gestione configurazione Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "65483273"
 |**Indirizzo di posta elettronica**|Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Questo è l'indirizzo di posta elettronica dal quale viene inviata la posta elettronica e deve essere nel formato *nome_posta_elettronica*@*nome_dominio*. Un esempio di indirizzo di posta elettronica è sales@contoso.com.|  
 |**Nome visualizzato**|Impostazione facoltativa. Digitare il nome da visualizzare nei messaggi di posta elettronica inviati dall'account. Un esempio di nome visualizzato è Contoso Sales Group.|  
 |**Indirizzo di posta elettronica risposte**|Impostazione facoltativa. Digitare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati dall'account. Un esempio di indirizzo di posta elettronica per le risposte è admin@contoso.com.|  
-|**Server SMTP**|Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Formato di server di esempio SMTP `smtp.` *< nome_società >*`.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.|  
+|**Server SMTP**|Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Formato di server di esempio SMTP `smtp.` *< nome_società >* `.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.|  
 |**Numero di porta**|Digitare il numero di porta del server SMTP per l'account. Il numero di porta per SMTP predefinito è 25.|  
 |**Il server necessita di una connessione sicura (SSL)**|Consente di crittografare le comunicazioni mediante SSL (Secure Sockets Layer).|  
   

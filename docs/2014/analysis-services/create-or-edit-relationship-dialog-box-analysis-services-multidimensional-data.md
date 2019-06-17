@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086781"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea relazione o Modifica relazione (Analysis Services - Dati multidimensionali)
@@ -38,7 +38,7 @@ ms.locfileid: "66086781"
  Consente di selezionare la tabella o la query denominata contenente il riferimento a una o più colonne nella tabella di destinazione.  
   
  **Tabella di destinazione (chiave primaria)**  
- Consente di selezionare la tabella contenente una o più colonne a cui fa riferimento la tabella di origine. Per i self join, selezionare la stessa tabella selezionata in **Tabella di origine (chiave esterna)**.  
+ Consente di selezionare la tabella contenente una o più colonne a cui fa riferimento la tabella di origine. Per i self join, selezionare la stessa tabella selezionata in **Tabella di origine (chiave esterna)** .  
   
  **Colonne di origine**  
  Consente di selezionare le colonne che fanno riferimento alle colonne nella tabella di destinazione.  
