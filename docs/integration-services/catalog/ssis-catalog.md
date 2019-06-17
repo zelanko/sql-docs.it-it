@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729170"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
@@ -126,7 +126,7 @@ ms.locfileid: "65729170"
   
  È possibile aggiornare o ridistribuire un progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuendolo con lo stesso nome nella stessa cartella del catalogo. Per impostazione predefinita, ogni volta che si ridistribuisce un progetto, il catalogo **SSISDB** mantiene la versione precedente del progetto. Per gestire le dimensioni dei dati delle operazioni, è possibile usare **Processo di manutenzione del server SSIS** per rimuovere le versioni precedenti dei progetti.  
  
-Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'accesso di SQL Server **##MS_SSISServerCleanupJobLogin##**. Questo accesso è destinato esclusivamente all'uso interno da parte di SSIS.
+Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'accesso di SQL Server **##MS_SSISServerCleanupJobLogin##** . Questo accesso è destinato esclusivamente all'uso interno da parte di SSIS.
   
  Tramite le seguenti proprietà del catalogo **SSISDB** viene definito il comportamento di questo processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile visualizzare e modificare le proprietà tramite la finestra di dialogo **Proprietà catalogo** oppure usando [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) e [catalog.configure_catalog &#40;Database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
@@ -422,7 +422,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
     1.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il nodo **Sicurezza**, quindi espandere il nodo **Account di accesso**.  
   
-    2.  Fare clic con il pulsante destro del mouse su **##MS_SSISServerCleanupJobLogin##**, quindi fare clic su **Crea script per account di accesso** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
+    2.  Fare clic con il pulsante destro del mouse su **##MS_SSISServerCleanupJobLogin##** , quindi fare clic su **Crea script per account di accesso** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
   
 5.  Se si ripristina il database SSISDB in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, generare lo script CREATE PROCEDURE per sp_ssis_startup, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   

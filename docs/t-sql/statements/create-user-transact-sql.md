@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488310"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -177,7 +177,7 @@ CREATE USER user_name
  Specifica il nome con cui viene identificato l'utente all'interno del database. *user_name* è un **sysname**. Non può superare la lunghezza di 128 caratteri. Quando si crea un utente basato su un'entità di Windows, il nome dell'entità di Windows diventa il nome utente, a meno che non ne sia stato specificato un altro.  
   
  LOGIN *login_name*  
- Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di SQL Server, si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di sicurezza di Windows, usare il formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
+ Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di SQL Server, si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di sicurezza di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
   
  Se l'istruzione CREATE USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione CREATE USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
@@ -185,7 +185,7 @@ CREATE USER user_name
  Specifica il primo schema in cui verrà eseguita una ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database.  
   
  '*windows_principal*'  
- Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di sicurezza di Windows, usare il formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
+ Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di sicurezza di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
   
  '*Azure_Active_Directory_principal*'  
  **Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
@@ -259,7 +259,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  La clausola WITHOUT LOGIN crea un utente su cui non è stato eseguito il mapping a un account di accesso di SQL Server. Tale utente può connettersi ad altri database come guest. È possibile concedere autorizzazioni a questo utente senza account di accesso. Quando il contesto di sicurezza viene modificato in un utente senza account di accesso, gli utenti originali ricevono le autorizzazioni dell'utente senza account di accesso. Vedere l'esempio [D. Creazione e uso di un utente senza un account di accesso](#withoutLogin).  
   
- Solo gli utenti di cui è stato eseguito il mapping a entità di sicurezza di Windows possono contenere un carattere barra rovesciata (**\\**).
+ Solo gli utenti di cui è stato eseguito il mapping a entità di sicurezza di Windows possono contenere un carattere barra rovesciata ( **\\** ).
   
  Non è possibile utilizzare CREATE USER per creare un utente guest, in quanto l'utente guest è già presente in ogni database. Per abilitare l'utente guest, concedere a tale utente l'autorizzazione CONNECT nel modo seguente:  
   

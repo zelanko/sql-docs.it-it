@@ -12,10 +12,10 @@ ms.author: janinez
 author: janinezhang
 manager: craigg
 ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720743"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Caricare i dati in Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
@@ -52,9 +52,9 @@ SQL Server Integration Services (SSIS) è un set di strumenti flessibile che off
 ## <a name="prerequisites"></a>Prerequisites
 Per eseguire questa esercitazione, sono necessari:
 
-1. **SQL Server Integration Services (SSIS)**. SSIS è un componente di SQL Server e richiede una versione con licenza o la versione per sviluppatori o la versione di valutazione di SQL Server. Per ottenere una versione di valutazione di SQL Server, vedere [Evaluation Center per SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+1. **SQL Server Integration Services (SSIS)** . SSIS è un componente di SQL Server e richiede una versione con licenza o la versione per sviluppatori o la versione di valutazione di SQL Server. Per ottenere una versione di valutazione di SQL Server, vedere [Evaluation Center per SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (facoltativo). Per ottenere l'edizione gratuita di Visual Studio Community, vedere [Visual Studio Community][Visual Studio Community]. Se non si vuole installare Visual Studio, è possibile installare solo SQL Server Data Tools (SSDT). SSDT installa una versione di Visual Studio con funzionalità limitate.
-3. **SQL Server Data Tools per Visual Studio (SSDT)**. Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
+3. **SQL Server Data Tools per Visual Studio (SSDT)** . Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. **Un database di Azure SQL Data Warehouse e le autorizzazioni**. In questa esercitazione ci si connette a un'istanza di SQL Data Warehouse e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati.
 
 ## <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services
@@ -87,7 +87,7 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
 
 1. Trascinare un'attività SQL DW Upload (Caricamento SQL Data Warehouse) dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo**).
 
-2. Fare doppio clic sull'attività per aprire l'**editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)**.
+2. Fare doppio clic sull'attività per aprire l'**editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)** .
 
     ![Pagina Generale dell'editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
 

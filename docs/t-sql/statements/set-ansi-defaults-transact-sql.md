@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 871d79c805451e1710dbc400914d2dace01c7eea
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62737076"
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ Quando si esegue SET ANSI_DEFAULTS, l'opzione QUOTED_IDENTIFIER viene impostata 
 |SET ANSI_NULL_DFLT_ON|SET CURSOR_CLOSE_ON_COMMIT|  
 |SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

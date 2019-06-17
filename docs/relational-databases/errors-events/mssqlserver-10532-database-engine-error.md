@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d08c70c063142ff93e15464a04ddf156f290ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985958"
 ---
 # <a name="mssqlserver10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47854381"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|PG_NO_ELIGIBLE_STMT|  
-|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché il batch o il modulo specificato da **@plan_handle** non contiene un'istruzione idonea per una guida di piano. Specificare un valore diverso per **@plan_handle**.|  
+|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché il batch o il modulo specificato da **@plan_handle** non contiene un'istruzione idonea per una guida di piano. Specificare un valore diverso per **@plan_handle** .|  
   
 ## <a name="explanation"></a>Spiegazione  
 Il batch o il modulo specificato da **@plan_handle** non contiene un'istruzione idonea per una guida di piano.  
   
 ## <a name="user-action"></a>Azione dell'utente  
-Specificare un valore diverso per **@plan_handle**.  
+Specificare un valore diverso per **@plan_handle** .  
   
 ## <a name="see-also"></a>Vedere anche  
 [Guide di piano](~/relational-databases/performance/plan-guides.md)  

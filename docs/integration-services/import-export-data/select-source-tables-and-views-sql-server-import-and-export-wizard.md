@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e20ae3e7392c01195ecb8cb829976efb3d6ad2c9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723743"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
@@ -75,16 +75,16 @@ Dopo aver visualizzato i dati in anteprima, potrebbe essere necessario modificar
 
 ### <a name="excel-source-tables"></a>Tabelle di origine Excel
 L'elenco delle tabelle e delle viste di origine di un'origine dati Excel include due tipi di oggetti Excel.
--   **Fogli di lavoro**. I nomi dei fogli di lavoro sono seguiti dal segno di dollaro ($), ad esempio **'Foglio1$'**.
+-   **Fogli di lavoro**. I nomi dei fogli di lavoro sono seguiti dal segno di dollaro ($), ad esempio **'Foglio1$'** .
 -   **Intervalli denominati.** Gli intervalli denominati, se presenti, sono elencati per nome.
 
-Se si vuole caricare i dati da o in uno specifico intervallo di celle senza nome, ad esempio **[Foglio1$A1:B4]**, è necessario scrivere una query. Tornare alla pagina **Impostazione copia tabella o query** e selezionare **Scrivi una query per specificare i dati da trasferire**.
+Se si vuole caricare i dati da o in uno specifico intervallo di celle senza nome, ad esempio **[Foglio1$A1:B4]** , è necessario scrivere una query. Tornare alla pagina **Impostazione copia tabella o query** e selezionare **Scrivi una query per specificare i dati da trasferire**.
 
 ### <a name="excel-destination-tables"></a>Tabelle di destinazione Excel
 Se si esportano dati in Excel, è possibile specificare la destinazione in uno dei tre modi seguenti.
--   **Foglio di lavoro.** Per specificare un foglio di lavoro, aggiungere il carattere $ alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]**.
+-   **Foglio di lavoro.** Per specificare un foglio di lavoro, aggiungere il carattere $ alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]** .
 -   **Intervallo denominato.** Per specificare un intervallo denominato, è sufficiente usare il nome dell'intervallo, ad esempio **MioIntervalloDati**.
--   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]**.
+-   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]** .
 
 > [!TIP]
 > Quando si usa Excel come origine o destinazione, è consigliabile fare clic su **Modifica mapping** e rivedere i mapping dei tipi di dati nella pagina **Mapping colonne** . 

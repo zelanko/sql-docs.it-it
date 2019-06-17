@@ -14,17 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ce55668552be49eb708b02d79233c2888e2cf57e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010166"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Creare i criteri della gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento verrà descritto come creare i criteri della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "51511956"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -57,7 +57,7 @@ ms.locfileid: "51511956"
   
 6.  Se si desidera che i criteri siano abilitati non appena vengono creati, selezionare la casella di controllo **Abilitati** . Se la modalità di valutazione è **Su richiesta**, la casella di controllo **Abilitati** non è disponibile.  
   
-7.  Nell'elenco **Condizione di controllo** selezionare una delle condizioni esistenti oppure **Nuova condizione**. Per modificare una condizione, selezionarla, quindi fare clic sui puntini di sospensione (**...**). Per altre informazioni, vedere [Creare una nuova condizione della gestione basata su criteri](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) o [Visualizzare o modificare le proprietà di una condizione della gestione basata su criteri](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
+7.  Nell'elenco **Condizione di controllo** selezionare una delle condizioni esistenti oppure **Nuova condizione**. Per modificare una condizione, selezionarla, quindi fare clic sui puntini di sospensione ( **...** ). Per altre informazioni, vedere [Creare una nuova condizione della gestione basata su criteri](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) o [Visualizzare o modificare le proprietà di una condizione della gestione basata su criteri](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
   
 8.  Nella casella **In base alle destinazioni** selezionare uno o più tipi di destinazione per i criteri. Alcune condizioni e facet possono essere applicati solo a determinati tipi di destinazioni. I set di destinazioni disponibili vengono visualizzati nella casella associata. Espandere **Ogni** per selezionare una condizione di filtro per tipi specifici delle destinazioni. Se in questa casella non viene visualizzata alcuna destinazione, l'ambito della condizione è costituito dal livello server.  
   

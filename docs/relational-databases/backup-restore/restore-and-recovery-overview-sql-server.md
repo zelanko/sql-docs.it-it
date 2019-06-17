@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65461823"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
@@ -91,9 +91,9 @@ ms.locfileid: "65461823"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recupero dati|Recupero completo (se il log è disponibile).|Rischio parziale di perdita di dati.|Tutti i dati successivi all'ultimo backup completo o differenziale vanno perduti.|  
 |Ripristino temporizzato|Qualsiasi periodo di tempo coperto dai backup del log.|Non consentito se il backup del log contiene modifiche con registrazione minima delle operazioni bulk.|Non supportato.|  
-|File restore **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
-|Page restore **\***|Supporto completo.|In casi specifici.**\*\***|Nessuna.|  
-|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|File restore **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|Page restore **\***|Supporto completo.|In casi specifici. **\*\***|Nessuna.|  
+|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
   
  **\*** Disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -158,7 +158,7 @@ ms.locfileid: "65461823"
 
 ## <a name="adr"></a> Ripristino accelerato del database
 
-In SQL Server 2019 preview CTP 2.3 viene introdotto il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) per SQL Server locale. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database di SQL Server. Il [recupero del database](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) è il processo che SQL Server usa per avviare ogni database in uno stato coerente a livello di transazioni o in uno stato normale. Un database in cui è abilitato il ripristino accelerato del database completa l'operazione di ripristino in modo considerevolmente più veloce dopo un failover o una chiusura non normale. 
+In SQL Server 2019 preview CTP 2.3 viene introdotto il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) per SQL Server locale. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il processo di ripristino del motore di database di SQL Server. Il [recupero del database](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) è il processo che SQL Server usa per avviare ogni database in uno stato coerente a livello di transazioni o in uno stato normale. Un database in cui è abilitato il recupero del database accelerato completa l'operazione di recupero in modo considerevolmente più veloce dopo un failover o una chiusura non normale. 
 
 È possibile abilitare il ripristino accelerato del database per ogni database in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 o versioni successive usando la sintassi seguente:
 

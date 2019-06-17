@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af878e23862e791443ad0057997cf93d0eab8ca1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715987"
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (database SSISDB)
@@ -38,10 +38,10 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @project _name = ] *project_name*  
- Nome del progetto. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @object_version_lsn = ] *object_version_lsn*  
  Versione del progetto. *object_version_lsn* è di tipo **bigint**.  

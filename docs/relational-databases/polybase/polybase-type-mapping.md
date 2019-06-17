@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 490b00717d16e4ca101ea591c22e71a2d228e659
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774967"
 ---
 # <a name="type-mapping-with-polybase"></a>Mapping dei tipi con PolyBase
@@ -83,7 +83,7 @@ Per le tabelle esterne che fanno riferimento a file in origini dati esterne, è 
 
 **Tipo non corrispondente** 
 
-**Float:** Oracle supporta la precisione a virgola mobile 126, inferiore rispetto alla precisione supportata da SQL Server (53). È quindi possibile il mapping diretto di **Float (1-53)**, ma per valori superiori si verifica una perdita di dati a causa di troncamento.
+**Float:** Oracle supporta la precisione a virgola mobile 126, inferiore rispetto alla precisione supportata da SQL Server (53). È quindi possibile il mapping diretto di **Float (1-53)** , ma per valori superiori si verifica una perdita di dati a causa di troncamento.
 
 **Timestamp:** Timestamp e Timestamp with local timezone in Oracle supportano una precisione frazionaria pari a 9 secondi, mentre DateTime2 in SQL Server supporta una precisione frazionaria pari a 7 secondi. 
 

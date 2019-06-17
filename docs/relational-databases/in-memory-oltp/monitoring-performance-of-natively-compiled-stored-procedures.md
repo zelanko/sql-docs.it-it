@@ -13,10 +13,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106228"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
@@ -43,12 +43,12 @@ Le statistiche di esecuzione si riflettono nelle viste di sistema [sys.dm_exec_p
 
 ## <a name="procedure-level-execution-statistics"></a>Statistiche di esecuzione a livello di routine
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di routine tramite [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di routine per tutti i moduli T-SQL compilati in modo nativo nell'istanza corrente:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di routine tramite [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di routine per tutti i moduli T-SQL compilati in modo nativo nell'istanza corrente:
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di routine tramite l'opzione di [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di routine per tutti i moduli T-SQL compilati in modo nativo nel database corrente:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di routine tramite l'opzione di [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di routine per tutti i moduli T-SQL compilati in modo nativo nel database corrente:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -57,12 +57,12 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>Statistiche di esecuzione a livello di query
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di query tramite [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di query per tutti i moduli T-SQL compilati in modo nativo nell'istanza corrente:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di query tramite [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di query per tutti i moduli T-SQL compilati in modo nativo nell'istanza corrente:
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di istruzione tramite l'opzione di [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di query per tutti i moduli T-SQL compilati in modo nativo nel database corrente:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : abilitare o disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo a livello di istruzione tramite l'opzione di [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. L'istruzione seguente abilita la raccolta di statistiche di esecuzione a livello di query per tutti i moduli T-SQL compilati in modo nativo nel database corrente:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098034"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedura: Creare uno unit test di SQL Server vuoto
@@ -45,13 +45,13 @@ Per creare uno unit test di SQL Server, sono disponibili due opzioni:
   
 3.  In **Nome test** immettere un nome da assegnare al test.  
   
-4.  In **Aggiungi a progetto di test** selezionare un progetto di test esistente a cui aggiungere il test. Se non sono presenti progetti di test o si vuole crearne uno nuovo, selezionare **Crea nuovo progetto di test <language>**.  
+4.  In **Aggiungi a progetto di test** selezionare un progetto di test esistente a cui aggiungere il test. Se non sono presenti progetti di test o si vuole crearne uno nuovo, selezionare **Crea nuovo progetto di test <language>** .  
   
 5.  Fare clic su **OK**.  
   
     Se il progetto di test è nuovo, verrà visualizzata la finestra di dialogo **Nuovo progetto di test**. Assegnare un nome al progetto e fare clic su **OK**.  
   
-    Se il progetto di test è nuovo o non è stato configurato, verrà visualizzata la finestra di dialogo **Configurazione test di SQL Server<ProjectName>**. In questa finestra di dialogo è possibile configurare le seguenti informazioni per il progetto di test:  
+    Se il progetto di test è nuovo o non è stato configurato, verrà visualizzata la finestra di dialogo **Configurazione test di SQL Server<ProjectName>** . In questa finestra di dialogo è possibile configurare le seguenti informazioni per il progetto di test:  
   
     -   Connessione al database utilizzata per l'esecuzione di test.  
   
@@ -81,7 +81,7 @@ Per creare uno unit test di SQL Server, sono disponibili due opzioni:
   
 1.  Aprire una classe di unit test di SQL Server esistente nella **finestra di progettazione unit test di SQL Server**. Per accedere alla **finestra di progettazione unit test di SQL Server**, fare doppio clic sul file del codice sorgente dello unit test in **Esplora soluzioni**.  
   
-2.  Fare clic sul segno più (**+**) nella barra di navigazione per visualizzare la finestra di dialogo **Specificare un nome di unit test**.  
+2.  Fare clic sul segno più ( **+** ) nella barra di navigazione per visualizzare la finestra di dialogo **Specificare un nome di unit test**.  
   
 3.  Digitare un nome e scegliere **OK**.  
   

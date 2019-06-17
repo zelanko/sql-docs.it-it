@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520707"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di operazioni di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Definizione dello schema nel formato seguente: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ Definizione dello schema nel formato seguente: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Nome della colonna nel set di righe.  
@@ -155,7 +155,7 @@ NULL       NULL
 NULL       NULL  
 ```  
   
-### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Utilizzo di ColPattern per l'impostazione del mapping tra colonne e attributi XML  
+### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Utilizzo di ColPattern per l'impostazione del mapping tra colonne e attributi XML  
  La query seguente restituisce gli attributi ID cliente, data dell'ordine, ID prodotto e quantità dal documento XML. Il *rowpattern* identifica gli elementi `<OrderDetails>`. `ProductID` e `Quantity` sono attributi dell'elemento `<OrderDetails>`. Tuttavia, `OrderID`, `CustomerID` e `OrderDate` sono gli attributi dell'elemento padre (`<Orders>`).  
   
  Il parametro facoltativo *ColPattern* viene specificato per i mapping seguenti:  

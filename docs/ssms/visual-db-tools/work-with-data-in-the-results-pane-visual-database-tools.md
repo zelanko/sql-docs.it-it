@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4b8860af3af85b004da53a7fd218032e65d732f3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105296"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
@@ -119,7 +119,7 @@ Gli elementi restituiti dal database e visualizzati nel riquadro Risultati sono 
   
 -   I tipi di dati binari spesso non sono di alcuna utilità per chi lavora nel riquadro Risultati, oltre a richiedere lunghi tempi di download. Vengono pertanto rappresentati con *<Binary data>* o *Null*.  
   
--   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati sono di un tipo caratterizzato da un livello di precisione maggiore, può accadere che vengano troncati o rappresentati con *<Unable to read data>*.  
+-   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati sono di un tipo caratterizzato da un livello di precisione maggiore, può accadere che vengano troncati o rappresentati con *<Unable to read data>* .  
   
 ## <a name="see-also"></a>Vedere anche  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

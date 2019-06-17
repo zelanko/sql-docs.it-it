@@ -24,10 +24,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946578"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET(BULK...) (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "64946578"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows possono essere configurati in modo da abilitare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasmettendo le credenziali di un utente di Windows autenticato. Questa configurazione è nota come *rappresentazione* o *delega*. La comprensione delle modalità di gestione della sicurezza da parte della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai fini della rappresentazione dell'utente rappresenta un elemento importante quando si usa BULK INSERT o OPENROWSET. La rappresentazione utente fa sì che i file di dati possano trovarsi su un computer diverso rispetto al processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o all'utente. Se, ad esempio, un utente nel **Computer_A** ha accesso a un file di dati presente nel **Computer_B**e la delega delle credenziali è stata impostata in modo corretto, l'utente potrà connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nel **Computer_C**, accedere al file di dati nel **Computer_B**ed effettuare un'importazione in blocco dei dati dal file in una tabella nel **Computer_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Importazione bulk da un file di dati remoto  
- Per usare BULK INSERT o INSERT...SELECT \* FROM OPENROWSET(BULK...) per effettuare l'importazione in blocco dei dati da un altro computer, è necessario che il file di dati sia condiviso tra i due computer. Per specificare un file di dati condiviso, usare il relativo nome UNC (Universal Naming Convention), il cui formato generico è **\\\\**_Nomeserver_**\\**_Nomecondivisione_**\\**_Percorso_**\\**_Nomefile_. Inoltre, è necessario che all'account utilizzato per l'accesso al file di dati siano state concesse le autorizzazioni richieste per la lettura del file sul disco remoto.  
+ Per usare BULK INSERT o INSERT...SELECT \* FROM OPENROWSET(BULK...) per effettuare l'importazione in blocco dei dati da un altro computer, è necessario che il file di dati sia condiviso tra i due computer. Per specificare un file di dati condiviso, usare il relativo nome UNC (Universal Naming Convention), il cui formato generico è **\\\\** _Nomeserver_ **\\** _Nomecondivisione_ **\\** _Percorso_ **\\** _Nomefile_. Inoltre, è necessario che all'account utilizzato per l'accesso al file di dati siano state concesse le autorizzazioni richieste per la lettura del file sul disco remoto.  
   
  Ad esempio, l'istruzione `BULK INSERT` seguente esegue l'importazione bulk dei dati nella tabella `SalesOrderDetail` del database `AdventureWorks` da un file di dati denominato `newdata.txt`. Tale file di dati è memorizzato in una cartella condivisa denominata `\dailyorders` e presente in una directory condivisa di rete denominata `salesforce` in un sistema denominato `computer2`.  
   

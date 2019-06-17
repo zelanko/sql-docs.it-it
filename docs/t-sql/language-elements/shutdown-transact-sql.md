@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9aa0b901424df92a5e223855f066a65c2fcb2234
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981718"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Eseguendo **net stop mssqlserver** dal prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$**_instancename_ da un prompt dei comandi per un'istanza denominata.  
+-   Eseguendo **net stop mssqlserver** dal prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$** _instancename_ da un prompt dei comandi per un'istanza denominata.  
   
 -   Utilizzando Servizi nel Pannello di controllo.  
   

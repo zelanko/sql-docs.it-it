@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3518aeb808b6a77294993aa11a40e35363dfbcd3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644123"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>DENY, autorizzazioni del gruppo di disponibilità (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Specifica un'autorizzazione che può essere negata su un gruppo di disponibilità. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Specifica il gruppo di disponibilità per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Specifica il gruppo di disponibilità per cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  TO \<server_principal>  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene negata l'autorizzazione.  
@@ -91,7 +91,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il gruppo di disponibilità o l'autorizzazione ALTER ANY AVAILABILITY GROUP per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -105,7 +105,7 @@ DENY VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>b. Negazione dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
+### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Negazione dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
  Nell'esempio seguente viene negata l'autorizzazione `TAKE OWNERSHIP` per il gruppo di disponibilità `MyAg` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` con l'opzione `CASCADE`.  
   
 ```  

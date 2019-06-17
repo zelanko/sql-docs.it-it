@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132991"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669666"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Sottoscrizioni aggiornabili - Per la replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132991"
   
 -   I sottoscrittori non possono aggiornare o inserire valori **text**, **ntext** o **image** perché non è possibile leggere dalle tabelle inserite o eliminate all'interno dei trigger di rilevamento modifiche della replica. In modo analogo, i sottoscrittori non possono aggiornare o inserire valori **text** o **image** tramite **WRITETEXT** o **UPDATETEXT** perché i dati vengono sovrascritti dal server di pubblicazione. È invece possibile partizionare le colonne **text** e **image** in una tabella distinta e modificare le due tabelle all'interno di una transazione.  
   
-     Per aggiornare gli oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)** anziché, rispettivamente, **text**, **ntext**, e **image** .  
+     Per aggiornare gli oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** anziché, rispettivamente, **text**, **ntext**, e **image** .  
   
 -   Gli aggiornamenti delle chiavi univoche, incluse le chiavi primarie, che generano duplicati, ad esempio, un aggiornamento del form `UPDATE <column> SET <column> =<column>+1` , non sono consentiti e vengono rifiutati in quanto violazioni dell'univocità. Questo avviene perché gli aggiornamenti dei set eseguiti nel sottoscrittore vengono propagati tramite replica come singole istruzioni **UPDATE** per tutte le righe interessate.  
   

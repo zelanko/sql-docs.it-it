@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720478"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
@@ -48,7 +48,7 @@ Le sezioni seguenti contengono le informazioni necessarie per usare Excel corret
 
 È possibile importare dati da Excel o esportare dati in Excel con SSIS usando uno degli strumenti seguenti:
 
--   **SQL Server Integration Services (SSIS)**. Creare un pacchetto SSIS che usa l'origine Excel o la destinazione Excel con Gestione connessione Excel. (Questo articolo non descrive come creare pacchetti SSIS.)
+-   **SQL Server Integration Services (SSIS)** . Creare un pacchetto SSIS che usa l'origine Excel o la destinazione Excel con Gestione connessione Excel. (Questo articolo non descrive come creare pacchetti SSIS.)
 
 -   L'**Importazione/Esportazione guidata SQL Server** basata su SSIS. Per altre informazioni, vedere [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) e [Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
@@ -125,11 +125,11 @@ Se si esportano dati da Excel e si abilita questa opzione, la prima riga di dati
 
 Esistono tre tipi di oggetti di Excel che si possono usare come origine o destinazione per i dati: un foglio di lavoro, un intervallo denominato o un intervallo di celle senza nome specificato con il relativo indirizzo.
 
--   **Foglio di lavoro.** Per specificare un foglio di lavoro, aggiungere il carattere `$` alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]**. Oppure cercare un nome che termina con il carattere `$` nell'elenco di tabelle e viste esistenti.
+-   **Foglio di lavoro.** Per specificare un foglio di lavoro, aggiungere il carattere `$` alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]** . Oppure cercare un nome che termina con il carattere `$` nell'elenco di tabelle e viste esistenti.
 
 -   **Intervallo denominato.** Per specificare un intervallo denominato, indicare il nome dell'intervallo, ad esempio **MioIntervalloDati**. Oppure cercare un nome che non termina con il carattere `$` nell'elenco di tabelle e viste esistenti.
     
--   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]**.
+-   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]** .
 
 Per selezionare o specificare il tipo di oggetto di Excel da usare come origine o destinazione per i dati, eseguire una delle operazioni seguenti:
 

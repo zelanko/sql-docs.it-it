@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719873"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
@@ -145,7 +145,7 @@ La mancata predisposizione di questi elementi di sicurezza determina l'esito neg
     |--------------------|-----------------|  
     |**Catalogo SSIS**|Pacchetti archiviati nel database SSISDB. I pacchetti sono contenuti nei progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Pacchetti archiviati nel database MSDB. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.|  
-    |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è *\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: È possibile specificare un'altra cartella o specificare cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], modificando il file di configurazione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: È possibile specificare un'altra cartella o specificare cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], modificando il file di configurazione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**File System**|Pacchetti archiviati in qualsiasi cartella nel computer locale.|  
   
      **Nelle tabelle seguenti vengono descritte le opzioni di configurazione disponibili per il passaggio di processo in base all'origine del pacchetto selezionata.**  

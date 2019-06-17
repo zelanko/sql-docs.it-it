@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503247"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
@@ -108,7 +108,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, dat
 > Il database SQL di Azure non supporta la lettura da file di Windows.
 
 
-**'** _data_source_name_ **'**   
+**'** _data_source_name_ **'**    
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Origine dati esterna denominata che punta alla posizione dell'archiviazione BLOB di Azure del file che verrà importato. L'origine dati esterna deve essere creata tramite l'opzione `TYPE = BLOB_STORAGE` aggiunta in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).    
  
@@ -118,7 +118,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=**_batch_size_  
+ BATCHSIZE **=** _batch_size_  
  Specifica il numero di righe in un batch. Ogni batch viene copiato nel server come singola transazione. In caso di errori, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il commit o il rollback della transazione per ogni batch. Per impostazione predefinita, tutti i dati inclusi nel file di dati specificato costituiscono un batch. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.  
   
  CHECK_CONSTRAINTS  
@@ -134,7 +134,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  L'opzione MAXERRORS non viene applicata al controllo dei vincoli.  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
+ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }  
  Specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di **127** o minori di **32**.  
 
 ```sql
@@ -157,7 +157,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|  
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }  
 Specifica che l'operazione di importazione viene eseguita tramite BULK INSERT utilizzando il valore specificato per il tipo di file di dati.  
 
 &nbsp;
@@ -170,7 +170,7 @@ Specifica che l'operazione di importazione viene eseguita tramite BULK INSERT ut
 |**widenative**|Tipi di dati nativi (database), ad eccezione delle colonne di tipo **char**, **varchar** e **text**, in cui i dati vengono archiviati in formato Unicode. Creare il file di dati **widenative** tramite l'importazione bulk dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilità **bcp**.<br /><br /> Il valore **widenative** rappresenta un'alternativa con prestazioni migliori rispetto a **widechar**. Se il file di dati contiene caratteri estesi [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], specificare **widenative**.<br /><br /> Per altre informazioni, vedere [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='**_file_name_**'**  
+ERRORFILE **='** _file_name_ **'**  
 Specifica il file utilizzato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.
 
 Il file degli errori viene creato durante l'esecuzione del comando. Se il file esiste già, viene generato un errore. Viene inoltre creato un file di controllo con estensione ERROR.txt. Questo file contiene un riferimento a ogni riga nel file degli errori e offre informazioni di diagnostica. Una volta corretti gli errori, è possibile caricare i dati.  
@@ -215,7 +215,7 @@ LASTROW **=** _last_row_ Specifica il numero dell'ultima riga da caricare. Il va
 > [!NOTE]  
 >  L'opzione MAX_ERRORS non è applicabile alle verifiche dei vincoli o alla conversione di tipi di dati **money** e **bigint**.  
   
- ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
+ ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] )  
  Specifica il tipo di ordinamento dei dati nel file. Le prestazioni dell'importazione bulk sono migliori se i dati da importare vengono ordinati in base all'indice cluster della tabella, se disponibile. Se il file di dati viene ordinato in modo diverso rispetto all'ordine di una chiave di indice cluster o se la tabella non include un indice cluster, la clausola ORDER viene ignorata. I nomi di colonna specificati devono corrispondere a nomi di colonna validi nella tabella di destinazione. Per impostazione predefinita, per l'operazione di inserimento bulk si presume che il file di dati non sia ordinato. Per garantire l'ottimizzazione dell'importazione bulk, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene inoltre verificato che i dati importati siano ordinati.  
   
  *n*  
@@ -262,10 +262,10 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path può essere presente nell'archiviazione BLOB di Azure.
 
- FIELDTERMINATOR **='**_field_terminator_**'**  
+ FIELDTERMINATOR **='** _field_terminator_ **'**  
  Specifica il carattere di terminazione del campo da usare per i file di dati di tipo **char** e **widechar**. Il carattere di terminazione del campo predefinito è \t (carattere di tabulazione). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
- ROWTERMINATOR **='**_row_terminator_**'**  
+ ROWTERMINATOR **='** _row_terminator_ **'**  
  Specifica il carattere di terminazione della riga da usare per i file di dati di tipo **char** e **widechar**. Il carattere di terminazione della riga predefinito è **\r\n** (carattere di nuova riga).  Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
   
@@ -446,7 +446,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  A causa della modalità di gestione dei file di testo in Microsoft Windows, **(\n** viene automaticamente sostituito con **\r\n)**.  
+>  A causa della modalità di gestione dei file di testo in Microsoft Windows, **(\n** viene automaticamente sostituito con **\r\n)** .  
 
 > [!IMPORTANT]
 > Il database SQL di Azure non supporta la lettura da file di Windows.

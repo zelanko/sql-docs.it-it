@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b6703906dbe133436656ca2822ac18a9df42ad4c
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034277"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -229,7 +229,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>b. Utilizzo della clausola OVER con funzioni di aggregazione  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Utilizzo della clausola OVER con funzioni di aggregazione  
  Nell'esempio seguente viene utilizzata la clausola `OVER` con funzioni di aggregazione su tutte le righe restituite dalla query. Nell'esempio l'utilizzo della clausola `OVER` è più efficace rispetto all'utilizzo di sottoquery per derivare i valori di aggregazione.  
   
 ```sql  
