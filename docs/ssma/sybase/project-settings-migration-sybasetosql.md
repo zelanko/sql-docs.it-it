@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 442212b30f220960f86481f0638c6c12c17da270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504082"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Impostazioni del progetto (migrazione) (SybaseToSQL)
@@ -53,7 +53,7 @@ Il riquadro di migrazione è disponibile in entrambe la **impostazioni del proge
 |**Mantieni valori Identity**|Specifica se SSMA consente di mantenere i valori identity Sybase durante l'aggiunta di dati a SQL Server. Il valore False fa sì che i valori identity da assegnare alla destinazione.<br /><br />**Modalità predefinita**:  True<br /><br />**La modalità ottimistico**:  True<br /><br />**Modalità intero**:  True|  
 |**Mantieni valori Null**|Specifica se SSMA consente di mantenere i valori null nei dati di origine durante l'aggiunta di dati in SQL Server, indipendentemente dai valori predefiniti che vengono specificati in SQL Server.<br /><br />**Modalità predefinita**:  True<br /><br />**La modalità ottimistico**:  True<br /><br />**Modalità intero**:  True|  
 |**In caso di errore**|Interrompe la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompere la migrazione:** Operazione di migrazione dei dati viene arrestata<br /><br />**Passare alla tabella riportata di seguito:** Interrompe la migrazione dei dati alla tabella corrente e procede a quella successiva<br /><br />**Procedere al batch successivo:** Interrompe la migrazione dei dati per il batch corrente e procede a quella successiva<br /><br />**Modalità predefinita**: Passare al batch successivo<br /><br />**La modalità ottimistico**: Passare al batch successivo<br /><br />**Modalità intero**: Passare al batch successivo|  
-|**Parte frazionaria arrotondamento dei numeri**|Specifica se rimuovere la parte frazionaria di dati decimali e numerici durante la migrazione per i tipi integer o visualizzare messaggio di errore se parte frazionaria è non semplice<br /><br />**Modalità predefinita**:  no<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:  No|  
+|**Parte frazionaria arrotondamento dei numeri**|Specifica se rimuovere la parte frazionaria di dati decimali e numerici durante la migrazione per i tipi integer o visualizzare messaggio di errore se parte frazionaria è non semplice<br /><br />**Modalità predefinita**:  No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:  No|  
 |**Unicode Endian Sybase**|Specifica il tipo per le stringhe di Sybase Unicode little-endian. Per questa particolare impostazione, è possono impostare le opzioni seguenti:<br /><br />Little-endian<br /><br />Big-endian<br /><br />**Modalità predefinita**:  Little-endian<br /><br />**La modalità ottimistico**:  Little-endian<br /><br />**Modalità intero**:  Little-endian|  
 |**Blocco a livello di tabella**|Specifica se SSMA consente di bloccare le tabelle durante l'aggiunta di dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento bulk per la durata dell'operazione di copia bulk. Se il valore è False, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**:  True<br /><br />**La modalità ottimistico**:  True<br /><br />**Modalità intero**:  True|  
 |**Utilizzare i cursori**|I dati vengono recuperati dal database di origine utilizzando i cursori se questa opzione è impostata.<br /><br />**Modalità predefinita**:  False<br /><br />**La modalità ottimistico**:  False<br /><br />**Modalità intero**:  False|  

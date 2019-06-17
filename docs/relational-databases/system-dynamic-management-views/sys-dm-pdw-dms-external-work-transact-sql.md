@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691042"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "62691042"
 |step_index|**int**|Passaggio della query che richiama questo ruolo di lavoro del servizio migrazione del database.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a step_index nel [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Passaggio nel piano di servizio migrazione del database corrente.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a dms___step_index nel [DM pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nodo che esegue il ruolo di lavoro del servizio migrazione del database.|Uguale allo node_id nelle [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|Tipo|**nvarchar(60)**|Tipo di operazione esterna che questo nodo è in esecuzione.<br /><br /> FILE SPLIT è un'operazione su un file Hadoop esterno che è stata suddivisa in più si trova più piccoli.|'SPLIT FILE'|  
+|type|**nvarchar(60)**|Tipo di operazione esterna che questo nodo è in esecuzione.<br /><br /> FILE SPLIT è un'operazione su un file Hadoop esterno che è stata suddivisa in più si trova più piccoli.|'SPLIT FILE'|  
 |work_id|**int**|Il file split ID.|Maggiore o uguale a 0.<br /><br /> Deve essere univoco per ogni nodo di calcolo.|  
 |input_name|**nvarchar(60)**|Stringa del nome per l'input da leggere.|Per un file di Hadoop, si tratta del nome di file Hadoop.|  
 |read_location|**bigint**|Offset della posizione di lettura.||  

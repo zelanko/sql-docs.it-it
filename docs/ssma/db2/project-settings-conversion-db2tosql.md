@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273022"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni progetto (conversione) (DB2ToSQL)
@@ -62,7 +62,7 @@ La parte superiore è necessario che l'espressione di clausole TOP restituisce u
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Full:** No  
+**Modalità predefinita/Full:** no  
   
 **Ottimistica modalità:** Yes  
   
@@ -112,7 +112,7 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 **Modalità predefinita/Full:** Yes  
   
-**Ottimistica modalità:** no  
+**Ottimistica modalità:** No  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>Convertire FORALL istruzione WHILE istruzione  
 Definisce il modo SSMA tratterà cicli FORALL sugli elementi della raccolta PL/SQL.  
@@ -136,7 +136,7 @@ DB2 consente la creazione di vincoli di chiave esterna, in cui un'operazione SET
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** No  
+**Modalità predefinita/ottimistica/Full:** no  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>Convertire le chiamate di funzione per le chiamate di procedura  
 Alcune funzioni di DB2 sono definite come transazioni autonomi o contenere istruzioni che non è valide in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questi casi, SSMA consente di creare una procedura e una funzione che è un wrapper per la procedura. La funzione convertita chiama la procedura di implementazione.  
@@ -260,7 +260,7 @@ SSMA è possibile convertire TO_CHAR(date, format) DB2 in procedure dal database
   
 -   Se si seleziona **funzione usando TO_CHAR_DATE**, SSMA converte TO_CHAR (date, formato) in TO_CHAR_DATE funzioni usando della lingua inglese per la conversione.  
   
--   Se si seleziona **funzione usando TO_CHAR_DATE_LS (NLS care)**, SSMA converte TO_CHAR (date, formato) in TO_CHAR_DATE_LS funzioni usando della lingua di sessione per la conversione  
+-   Se si seleziona **funzione usando TO_CHAR_DATE_LS (NLS care)** , SSMA converte TO_CHAR (date, formato) in TO_CHAR_DATE_LS funzioni usando della lingua di sessione per la conversione  
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
@@ -416,7 +416,7 @@ Specifica se generare un XML set di risultati quando si seleziona in una variabi
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** no  
+**Modalità predefinita/ottimistica/Full:** No  
   
 ## <a name="returning-clause-conversion"></a>RESTITUZIONE di conversione clausola  
   

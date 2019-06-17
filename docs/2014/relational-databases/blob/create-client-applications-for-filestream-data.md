@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010179"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Creazione di applicazioni client per dati FILESTREAM
@@ -40,7 +40,7 @@ ms.locfileid: "66010179"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) restituisce un token che rappresenta la transazione corrente di una sessione. In un'applicazione viene utilizzato questo token per associare le operazioni di flusso file system FILESTREAM alla transazione.  
   
--   Un handle di file Win32 è ottenuto in [API OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md) . L'applicazione usa l'handle del flusso di dati FILESTREAM e può quindi passare l'handle alle seguenti API Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), o [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se l'applicazione chiama qualsiasi altra API utilizzando l'handle, viene restituito un errore ERROR_ACCESS_DENIED. L'applicazione deve chiudere l'handle usando [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
+-   Un handle di file Win32 è ottenuto in [API OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md) . L'applicazione usa l'handle per trasmettere i dati FILESTREAM e può passare l'handle alle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se l'applicazione chiama qualsiasi altra API utilizzando l'handle, viene restituito un errore ERROR_ACCESS_DENIED. L'applicazione deve chiudere l'handle usando [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
  L'accesso al contenitore di tutti i dati FILESTREAM viene eseguito in una transazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] possono essere eseguite nella stessa transazione per mantenere la coerenza tra i dati SQL e i dati FILESTREAM.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66010179"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> Ottenere un handle di file Win32  
- Per ottenere un handle di file Win32, chiamare l'API OpenSqlFilestream. Tale API viene esportata dal file sqlncli.dll. L'handle restituito può essere passato a una delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), o [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Negli esempi seguenti si illustra come ottenere un handle di file Win32 e come utilizzarlo per leggere e scrivere dati in un oggetto BLOB FILESTREAM.  
+ Per ottenere un handle di file Win32, chiamare l'API OpenSqlFilestream. Tale API viene esportata dal file sqlncli.dll. L'handle restituito può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Negli esempi seguenti si illustra come ottenere un handle di file Win32 e come utilizzarlo per leggere e scrivere dati in un oggetto BLOB FILESTREAM.  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   

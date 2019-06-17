@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668967"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "62668967"
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
 |system_type_id|**tinyint**|ID del tipo di sistema della colonna.|  
 |user_type_id|**int**|ID del tipo di colonna definito dall'utente.<br /><br /> Per restituire il nome del tipo, aggiungere il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) su questa colonna vista del catalogo.|  
-|max_length|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**.<br /><br /> Per la **testo** colonne, il valore max_length sarà 16 o il valore impostato dall'opzione 'text in row' di sp_tableoption.|  
+|max_length|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**.<br /><br /> Per la **testo** colonne, il valore max_length sarà 16 o il valore impostato dall'opzione 'text in row' di sp_tableoption.|  
 |precisione|**tinyint**|Precisione della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
 |scala|**tinyint**|Scala della colonna se di tipo numerico, altrimenti 0.|  
 |collation_name|**sysname**|Nome delle regole di confronto della colonna se la colonna è di tipo carattere. In caso contrario, NULL.|  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632558"
 ---
 # <a name="update---sql-command"></a>UPDATE (comando SQL)
@@ -36,7 +36,7 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- AGGIORNAMENTO [ *DatabaseName1!*] *TableName1*  
+ AGGIORNAMENTO [ *DatabaseName1!* ] *TableName1*  
  Specifica la tabella in cui vengono aggiornati i record con nuovi valori.  
   
  *DatabaseName1!* Specifica il nome di un database diverso da quello specificato con l'origine dati contenente la tabella. È necessario includere il nome del database contenente la tabella se il database non è quello corrente. Includere il delimitatore punto esclamativo (!) dopo il nome del database e prima del nome di tabella.  

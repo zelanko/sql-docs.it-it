@@ -31,10 +31,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9ab56815fa36f23a15bc646c69094c3ca2f5fa3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299250"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Il caricamento di convertire gli oggetti di Database in SQL Server (AccessToSQL)

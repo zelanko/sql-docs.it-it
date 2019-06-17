@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767553"
 ---
-# <a name="lesson-2-adding-looping"></a>Lezione 2: Aggiungere cicli
+# <a name="lesson-2-adding-looping"></a>Lezione 2: Aggiunta di cicli
   Nella [Lezione 1: Creazione del progetto e il pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md), è stato creato un pacchetto che estrae i dati da un'unica origine file flat, trasformati i dati usando le trasformazioni ricerca e infine caricati i dati nella **FactCurrency** tabella dei fatti i **AdventureWorksDW2012** database di esempio.  
   
  Tuttavia, per un processo di estrazione, trasformazione e caricamento (ETL, Extract, Transform and Loading) raramente viene usato un unico file flat. In genere durante un processo ETL i dati vengono estratti da più origini file flat. L'estrazione dei dati da più origini richiede un flusso di controllo iterativo. Una delle caratteristiche più attese di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nella possibilità di aggiungere facilmente iterazioni o cicli ai pacchetti.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078205"
 ---
 # <a name="defining-and-browsing-translations"></a>Definizione ed esplorazione delle traduzioni
@@ -44,9 +44,9 @@ ms.locfileid: "66078205"
   
 6.  Nella riga per il **didascalia** dell'oggetto per il **Month Name** attributo, digitare `Mes del Año` nel **spagnolo (Spagna)** colonna per la traduzione e `Mois d'Année` nel **Francese (Francia)** colonna per la traduzione.  
   
-     Si noti che quando si immettono queste traduzioni, i puntini di sospensione (**...** ) viene visualizzato. Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
+     Si noti che quando si immettono queste traduzioni, i puntini di sospensione ( **...** ) viene visualizzato. Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
   
-7.  Fare clic sui puntini di sospensione (**...** ) per il **spagnolo (Spagna)** traduzioni per il **Month Name** attributo.  
+7.  Fare clic sui puntini di sospensione ( **...** ) per il **spagnolo (Spagna)** traduzioni per il **Month Name** attributo.  
   
      Verrà visualizzata la finestra di dialogo **Traduzione dati attributo** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66078205"
   
      ![Finestra di dialogo traduzione dati attributo](../../2014/tutorials/media/l9-translations-4.gif "nella finestra di dialogo traduzione dati attributo")  
   
-9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione (**...** ) per il **francese (Francia)** traduzioni per il **Month Name** attributo.  
+9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione ( **...** ) per il **francese (Francia)** traduzioni per il **Month Name** attributo.  
   
 10. Selezionare **FrenchMonthName** nell'elenco **Colonne per la traduzione**e fare clic su **OK**.  
   

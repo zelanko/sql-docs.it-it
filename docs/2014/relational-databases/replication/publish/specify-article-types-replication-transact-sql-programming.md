@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261766"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Impostazione dei tipi di articolo (programmazione Transact-SQL della replica)
@@ -36,11 +36,11 @@ ms.locfileid: "63261766"
   
     -   **logbased** : articolo di tabella basato su log, che rappresenta l'impostazione predefinita per la replica transazionale e snapshot. Con la replica vengono automaticamente generate la stored procedure utilizzata per il filtro orizzontale e la vista che definisce un articolo con filtro verticale.  
   
-    -   **logbased manualfilter** : articolo basato su log con filtro orizzontale in cui la stored procedure utilizzata per applicare il filtro orizzontale viene creata e definita manualmente dall'utente e specificata per **@filter**. Per altre informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** : articolo basato su log con filtro orizzontale in cui la stored procedure utilizzata per applicare il filtro orizzontale viene creata e definita manualmente dall'utente e specificata per **@filter** . Per altre informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** : articolo basato su log con filtro verticale in cui la vista che definisce l'articolo con filtro verticale viene creata e definita dall'utente e specificata per **@sync_object**. Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualview** : articolo basato su log con filtro verticale in cui la vista che definisce l'articolo con filtro verticale viene creata e definita dall'utente e specificata per **@sync_object** . Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** : articolo basato su log con filtro orizzontale e verticale in cui sia la stored procedure utilizzata per applicare il filtro orizzontale sia la vista che definisce l'articolo con filtro verticale vengono create e definite dall'utente e specificate rispettivamente per **@filter** e **@sync_object**. Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** : articolo basato su log con filtro orizzontale e verticale in cui sia la stored procedure utilizzata per applicare il filtro orizzontale sia la vista che definisce l'articolo con filtro verticale vengono create e definite dall'utente e specificate rispettivamente per **@filter** e **@sync_object** . Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63261766"
   
     -   **indexed view schema only** : articolo di vista indicizzata di solo schema. È necessario replicare anche la tabella di base.  
   
-    -   **indexed view logbased manualfilter** : articolo di vista indicizzata basato su log con filtro orizzontale in cui la stored procedure utilizzata per applicare il filtro orizzontale viene creata e definita manualmente dall'utente e specificata per **@filter**. Per altre informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** : articolo di vista indicizzata basato su log con filtro orizzontale in cui la stored procedure utilizzata per applicare il filtro orizzontale viene creata e definita manualmente dall'utente e specificata per **@filter** . Per altre informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** : articolo di vista indicizzata basato su log con filtro in cui la vista che definisce un articolo con filtro verticale viene creata e definita dall'utente e specificata per **@sync_object**. Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview** : articolo di vista indicizzata basato su log con filtro in cui la vista che definisce un articolo con filtro verticale viene creata e definita dall'utente e specificata per **@sync_object** . Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** : articolo di vista indicizzata basato su log con filtro in cui sia la stored procedure utilizzata per applicare il filtro orizzontale sia la vista che definisce un articolo con filtro verticale vengono create e definite dall'utente e specificate rispettivamente per **@filter** e **@sync_object**. Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** : articolo di vista indicizzata basato su log con filtro in cui sia la stored procedure utilizzata per applicare il filtro orizzontale sia la vista che definisce un articolo con filtro verticale vengono create e definite dall'utente e specificate rispettivamente per **@filter** e **@sync_object** . Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   

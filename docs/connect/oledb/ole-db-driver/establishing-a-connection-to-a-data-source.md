@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5a8af0b67c7998a9696f2451659901c79baaa8d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813649"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769184"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47813649"
   
  Se nel computer sono in esecuzione più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il nome del server viene specificato come NomeServer\NomeIstanza.  
   
- L'oggetto origine dati espone anche l'interfaccia **IDBInitialize**. Dopo aver impostato le proprietà, la connessione all'origine dati viene stabilita chiamando il metodo **IDBInitialize::Initialize**. Ad esempio  
+ L'oggetto origine dati espone anche l'interfaccia **IDBInitialize**. Dopo aver impostato le proprietà, la connessione all'origine dati viene stabilita chiamando il metodo **IDBInitialize::Initialize**. Esempio:  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   

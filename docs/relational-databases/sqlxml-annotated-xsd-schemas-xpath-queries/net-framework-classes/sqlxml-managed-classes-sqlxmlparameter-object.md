@@ -19,17 +19,17 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737835"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>Classi gestite SQLXML - Oggetto SqlXmlParameter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   L'oggetto SqlXmlParameter supporta queste proprietà:  
   
- nome  
+ Nome  
  Nome del parametro. Ai comandi possono essere passati parametri. La chiamata al metodo CreateParameter dell'oggetto SqlXmlCommand crea l'oggetto parametro.  
   
  Value  
