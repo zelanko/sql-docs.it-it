@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727175"
 ---
 # <a name="write-enabled-partitions"></a>Partizioni abilitate per la scrittura
   I dati di un cubo sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una partizione per la scrittura. Le partizioni abilitate per la scrittura vengono utilizzate per consentire agli utenti aziendali di sperimentare vari scenari modificando i valori delle celle e analizzando gli effetti delle modifiche sui dati del cubo. Quando si abilita per la scrittura una partizione, le applicazioni client potranno registrare modifiche ai dati nella partizione. Tali modifiche, note come dati writeback, vengono archiviate in una tabella separata e non sovrascrivono i dati esistenti in un gruppo di misure. Vengono però incorporate nei risultati delle query come se facessero parte dei dati del cubo.  
   
- È possibile abilitare per la scrittura un intero cubo o soltanto determinate partizioni nel cubo. Le dimensioni abilitate per la scrittura sono diverse ma complementari. Una partizione abilitata per la scrittura consente agli utenti di aggiornare le celle della partizione, mentre una dimensione abilitata per la scrittura consente agli utenti di aggiornare i membri della dimensione. È inoltre possibile utilizzare queste due caratteristiche in combinazione. Una partizione o un cubo abilitato per la scrittura, ad esempio, non deve necessariamente includere dimensioni abilitate per la scrittura. **Argomento correlato:**[dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+ È possibile abilitare per la scrittura un intero cubo o soltanto determinate partizioni nel cubo. Le dimensioni abilitate per la scrittura sono diverse ma complementari. Una partizione abilitata per la scrittura consente agli utenti di aggiornare le celle della partizione, mentre una dimensione abilitata per la scrittura consente agli utenti di aggiornare i membri della dimensione. È inoltre possibile utilizzare queste due caratteristiche in combinazione. Una partizione o un cubo abilitato per la scrittura, ad esempio, non deve necessariamente includere dimensioni abilitate per la scrittura. **Argomento correlato:** [dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
 >  Se si desidera abilitare per la scrittura un cubo con un database Microsoft Access come origine dati, non utilizzare il provider Microsoft OLE DB per driver ODBC nelle definizioni dell'origine dati del cubo, delle partizioni o delle dimensioni. Utilizzare invece il provider Microsoft OLE DB per Jet versione 4.0 o qualsiasi versione del Service Pack di Jet che include OLE per Jet 4.0. Per altre informazioni, vedere l'articolo della Microsoft Knowledge Base [come ottenere il service pack più recente per il motore di Database Microsoft Jet 4.0](https://support.microsoft.com/?kbid=239114).  

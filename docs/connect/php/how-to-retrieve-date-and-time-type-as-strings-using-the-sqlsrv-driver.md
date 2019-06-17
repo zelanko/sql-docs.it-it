@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b83978f35dadff86e231b93b836c7ffdd1e0f08
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676049"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797731"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Procedura: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
