@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062512"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Progettazione query MDX di Analysis Services (SSAS)
@@ -40,7 +40,7 @@ ms.locfileid: "66062512"
   
 |Riquadro|Funzione|  
 |----------|--------------|  
-|Pulsante Seleziona cubo (**...**)|Consente di visualizzare il cubo attualmente selezionato.|  
+|Pulsante Seleziona cubo ( **...** )|Consente di visualizzare il cubo attualmente selezionato.|  
 |Riquadro dei metadati|Consente di visualizzare un elenco gerarchico di misure, indicatori di prestazioni chiave (KPI) e dimensioni definiti sul cubo selezionato.|  
 |Riquadro Membri calcolati|Consente di visualizzare i membri calcolati attualmente definiti disponibili per l'utilizzo nella query.|  
 |Riquadro Filtro|Consente di scegliere dimensioni e gerarchie correlate per filtrare i dati a livello di origine e limitare i dati restituiti.|  
@@ -92,7 +92,7 @@ ms.locfileid: "66062512"
   
 |Riquadro|Funzione|  
 |----------|--------------|  
-|Pulsante Seleziona cubo (**...**)|Consente di visualizzare il cubo attualmente selezionato.|  
+|Pulsante Seleziona cubo ( **...** )|Consente di visualizzare il cubo attualmente selezionato.|  
 |Riquadro Metadati/Funzioni/Modelli|Consente di visualizzare un elenco gerarchico di misure, indicatori di prestazioni chiave (KPI) e dimensioni definiti sul cubo selezionato.|  
 |Riquadro query|Consente di visualizzare il testo della query.|  
 |Riquadro Risultati|Consente di visualizzare i risultati dell'esecuzione della query.|  

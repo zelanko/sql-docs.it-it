@@ -1,32 +1,20 @@
 ---
 title: Gestione report (modalità nativa SSRS) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940667"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568379"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gestione report (modalità nativa SSRS)
   Gestione report è uno strumento di gestione e accesso ai report basato sul Web che consente di amministrare una singola istanza del server di report da una postazione remota su una connessione HTTP. e offre funzionalità di visualizzatore di report e di navigazione. Contenuto dell'argomento:  
@@ -69,7 +57,7 @@ ms.locfileid: "59940667"
   
  Alcune funzionalità di Gestione report sono disponibili solo in determinate edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md).  
+ In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
   
  Se si utilizza [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o Windows Server 2008, è necessario configurare Gestione report per l'amministrazione locale. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -109,17 +97,15 @@ ms.locfileid: "59940667"
 |![Icona di cartella](media/hlp-16folder.gif "Icona di cartella")|Cartella|Fare clic sull'icona o sul nome della cartella per aprirla.|  
 |![Icona della sottoscrizione](media/hlp-16subscription.gif "icona della sottoscrizione")|Sottoscrizione|Fare clic sull'icona o sulla descrizione della sottoscrizione per modificarla.|  
 |![Icona della sottoscrizione guidata dai dati](media/hlp-16subscriptiondd.gif "icona della sottoscrizione guidata dai dati")|Sottoscrizione guidata dai dati|Fare clic sull'icona o sulla descrizione della sottoscrizione guidata dai dati per modificarla.|  
-|![Icona di risorsa generica](media/hlp-16file.gif "Icona di risorsa generica")|Risorsa|Fare clic sull'icona o sul nome della risorsa per aprirla. La risorsa viene aperta in una finestra separata.|  
+|![Icona di risorsa generica](media/hlp-16file.gif "Icona di risorsa generica")|Resource|Fare clic sull'icona o sul nome della risorsa per aprirla. La risorsa viene aperta in una finestra separata.|  
 |![Icona di origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dei dati condivisa|Fare clic sull'icona di un'origine dei dati condivisa per aprire le pagine delle proprietà, l'elenco dei report e l'elenco delle sottoscrizioni per l'origine dei dati.|  
 |![Icona della pagina proprietà](media/hlp-16prop.gif "icona pagina delle proprietà")|Pagina delle proprietà|Fare clic sull'icona della pagina delle proprietà per accedere a pagine aggiuntive per l'impostazione di proprietà e opzioni di sicurezza.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Pianificazione per Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Generatore report &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Strumenti di Reporting Services](tools/reporting-services-tools.md)   
- [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Visualizzare ed esplorare i report in modalità nativa con Web part di SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Pianificazione per Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Generatore report &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Strumenti di Reporting Services](tools/reporting-services-tools.md)
+- [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)  
+[Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)

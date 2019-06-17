@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959752"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
@@ -34,7 +34,7 @@ ms.locfileid: "62959752"
 |Tipo di account|Posizione in cui viene specificato l'account|  
 |---------------------|------------------------------------|  
 |Utente di Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: parametri **@job_login** e **@job_password** di [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO (Replication Management Objects): proprietà <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> per <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Applicazione autonoma|L'agente di merge viene eseguito nel contesto dell'utente di Windows che esegue l'applicazione.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Connessione al Sottoscrittore  
@@ -63,7 +63,7 @@ ms.locfileid: "62959752"
 |L'autenticazione di base viene utilizzata se si specifica uno dei valori seguenti:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valore **0** per il **@internet_security_mode** parametro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: un valore di <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> per <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Riga di comando dell'agente di merge: valore **0** per **- InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: parametri **@internet_login** e **@internet_password** di [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Riga di comando dell'agente di merge: **-InternetLogin** e **-InternetPassword**.|  
 |Autenticazione integrata di\* viene utilizzato se viene specificato uno dei seguenti:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valore **1** per il **@internet_security_mode** parametro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: un valore di <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> per <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Riga di comando dell'agente di merge: valore **1** per **- InternetSecurityMode**.|L'agente di merge esegue le connessioni nel contesto dell'utente di Windows specificato per l'agente di merge (A).|  
   
- * L'autenticazione è utilizzabile solo se tutti i computer si trovano nello stesso dominio o in più domini con relazioni di trust tra loro.  
+ \* L'autenticazione è utilizzabile solo se tutti i computer si trovano nello stesso dominio o in più domini con relazioni di trust tra loro.  
   
 > [!NOTE]  
 >  La delega è necessaria se si utilizza l'autenticazione integrata. Per le connessioni dal Sottoscrittore a IIS è consigliabile utilizzare l'autenticazione di base e SSL.  

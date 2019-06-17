@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2148c5145ab9d28c698d04253871677560fea9d9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980199"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` È il nome del catalogo full-text. *fulltext_catalog_name* viene **sysname**, con un valore predefinito è NULL. Se *fulltext_catalog_name* viene omesso oppure è NULL, vengono restituite tutte le tabelle indicizzate full-text associate al database. Se *fulltext_catalog_name* è specificato, ma *table_name* viene omesso oppure è NULL, viene recuperati le informazioni sugli indici full-text per ogni tabella indicizzata full-text associata al catalogo. Se entrambe *fulltext_catalog_name* e *table_name* vengono specificati, viene restituita una riga se *table_name* associata *fulltext_catalog_name*; in caso contrario, viene generato un errore.  
   
-`[ @table_name = ] 'table_name'` È il nome della tabella una o due parti per cui vengono richiesti i metadati full-text. *TABLE_NAME* viene **nvarchar(517)**, con un valore predefinito NULL. Se solo *nome_tabella* è specificato, solo la riga relativa a *table_name* viene restituito.  
+`[ @table_name = ] 'table_name'` È il nome della tabella una o due parti per cui vengono richiesti i metadati full-text. *TABLE_NAME* viene **nvarchar(517)** , con un valore predefinito NULL. Se solo *nome_tabella* è specificato, solo la riga relativa a *table_name* viene restituito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

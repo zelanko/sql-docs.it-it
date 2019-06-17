@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245673"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Motore di database - Connetti al server (pagina Account di accesso)

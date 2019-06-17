@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022517"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
@@ -149,7 +149,7 @@ ms.locfileid: "63022517"
   
 -   L'account con il quale l'agente snapshot e l'agente di lettura log effettuano la connessione dal server di distribuzione al server di pubblicazione viene specificato mediante uno dei metodi seguenti:  
   
-    -   Il parametro **@security_mode** di [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Se si usa l'autenticazione Oracle, vengono specificati anche i valori dei parametri **@login** e **@password**.  
+    -   Il parametro **@security_mode** di [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Se si usa l'autenticazione Oracle, vengono specificati anche i valori dei parametri **@login** e **@password** .  
   
     -   La finestra di dialogo **Connetti al server** di SQL Server Management Studio, che viene utilizzata durante la configurazione del server di pubblicazione Oracle nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63058097"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Account di accesso per sottoscrizioni aggiornabili
   Se si seleziona **Replica** nella pagina **Sottoscrizioni aggiornabili** di questa procedura guidata è necessario specificare un account nel Sottoscrittore nel cui contesto vengono stabilite le connessioni al server di pubblicazione per sottoscrizioni ad aggiornamento immediato. Le connessioni vengono utilizzate dai trigger che si attivano presso il Sottoscrittore e propagano le modifiche al server di pubblicazione. Questo account è necessario anche se si seleziona **Accoda le modifiche ed esegui il commit appena possibile** nella pagina **Sottoscrizioni aggiornabili** , perché per impostazione predefinita la Creazione guidata nuova sottoscrizione configura gli aggiornamenti in coda con la possibilità di passare, se necessario, ad aggiornamenti immediati.  
   
 > [!IMPORTANT]  
->  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_**_\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
+>  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_** _\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
   
  Sono disponibili tre opzioni per il tipo di connessione:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63058097"
   
 -   Un server collegato creato dalla replica. La connessione viene eseguita con le credenziali dell'utente che apporta la modifica presso il Sottoscrittore.  
   
- In questa procedura guidata è possibile specificare le prime due opzioni. L'ultima opzione può essere specificata solo usando [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Specificare il valore **1** per il parametro **@security_mode**.  
+ In questa procedura guidata è possibile specificare le prime due opzioni. L'ultima opzione può essere specificata solo usando [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Specificare il valore **1** per il parametro **@security_mode** .  
   
 ## <a name="options"></a>Opzioni  
  **Crea un server collegato che stabilisce la connessione utilizzando l'autenticazione di SQL Server**  

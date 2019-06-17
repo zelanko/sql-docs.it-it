@@ -29,10 +29,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e352c6423230e7a921b019c6b02c40bf61bc538
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025233"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aggiornamento di dati tramite updategram XML (SQLXML 4.0)
@@ -266,7 +266,7 @@ ms.locfileid: "63025233"
   
  Gli elementi e gli attributi specificati nell'updategram fanno riferimento agli elementi e agli attributi nello schema di mapping.  
   
- Il seguente schema di mapping XSD è  **\<cliente >**,  **\<ordine >**, e  **\<OD >** gli elementi associati al Tabelle nel database Sales, Sales. SalesOrderHeader e Sales. SalesOrderDetail.  
+ Il seguente schema di mapping XSD è  **\<cliente >** ,  **\<ordine >** , e  **\<OD >** gli elementi associati al Tabelle nel database Sales, Sales. SalesOrderHeader e Sales. SalesOrderDetail.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -360,7 +360,7 @@ ms.locfileid: "63025233"
   
  Poiché uno studente può iscriversi a molti corsi e un corso può avere molti studenti, la terza tabella, Enrollment, è necessaria per rappresentare questa relazione M:N.  
   
- Il seguente schema di mapping XSD fornisce una visualizzazione XML delle tabelle utilizzando il  **\<Student >**,  **\<corso >**, e  **\<registrazione >** elementi. Il **IDREFS** attributi nello schema di mapping specificano la relazione tra questi elementi. Il **StudentIDList** attributo del  **\<corso >** elemento è un **IDREFS** tipo attributo che fa riferimento alla colonna StudentID nella tabella Enrollment. Allo stesso modo, il **EnrolledIn** attributo del  **\<Student >** elemento è un **IDREFS** tipo attributo che fa riferimento alla colonna CourseID nell'ambito della registrazione tavolo.  
+ Il seguente schema di mapping XSD fornisce una visualizzazione XML delle tabelle utilizzando il  **\<Student >** ,  **\<corso >** , e  **\<registrazione >** elementi. Il **IDREFS** attributi nello schema di mapping specificano la relazione tra questi elementi. Il **StudentIDList** attributo del  **\<corso >** elemento è un **IDREFS** tipo attributo che fa riferimento alla colonna StudentID nella tabella Enrollment. Allo stesso modo, il **EnrolledIn** attributo del  **\<Student >** elemento è un **IDREFS** tipo attributo che fa riferimento alla colonna CourseID nell'ambito della registrazione tavolo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

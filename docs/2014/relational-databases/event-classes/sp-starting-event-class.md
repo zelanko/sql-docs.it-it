@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa44fe3a5b6e7009057f351d06258b5ab809aa5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63050862"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting - classe di evento
@@ -32,7 +32,7 @@ ms.locfileid: "63050862"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Yes|  
 |DatabaseID|`int`|ID del database nel quale viene eseguita la stored procedure. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita la stored procedure.|35|Yes|  
-|EventClass|`int`|Tipo di evento = 42.|27|no|  
+|EventClass|`int`|Tipo di evento = 42.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140686"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Modificare i dettagli della pianificazione per un processo master di SQL Server Agent
@@ -56,7 +56,7 @@ ms.locfileid: "63140686"
   
 4.  Fare clic con il pulsante destro del mouse sul processo di cui si vuole modificare la pianificazione e selezionare **Proprietà**.  
   
-5.  Nel **proprietà processo -**_job_name_ nella finestra di dialogo **selezione pagina**, selezionare **pianificazioni**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md).  
+5.  Nel **proprietà processo -** _job_name_ nella finestra di dialogo **selezione pagina**, selezionare **pianificazioni**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   

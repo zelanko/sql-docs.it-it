@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678629"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power l'appliance attiva o disattiva per il sistema di piattaforma Analitica
@@ -39,7 +39,7 @@ Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'a
 > [!WARNING]  
 > Tutti i passaggi devono essere eseguiti nell'ordine esatto e ogni passaggio è necessario completare prima di eseguita il passaggio successivo, se non diversamente specificato. Eseguire i passaggi nell'ordine errato o senza tempi di attesa per ogni passaggio completare può comportare errori quando il dispositivo è acceso in un secondo momento.  
   
-1.  Connettersi al nodo di controllo di PDW (**_PDW_region_-CTL01** ) e accedere con l'account amministratore di dominio di Analitica Platform System appliance.  
+1.  Connettersi al nodo di controllo di PDW ( **_PDW_region_-CTL01** ) e accedere con l'account amministratore di dominio di Analitica Platform System appliance.  
   
 2.  Eseguire `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` per aprire la **Configuration Manager**.  
   

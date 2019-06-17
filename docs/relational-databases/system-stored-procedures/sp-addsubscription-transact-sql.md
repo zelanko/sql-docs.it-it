@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998305"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|La sottoscrizione deve essere inizializzata. Questa opzione viene impostata quando il valore di *sync_type* è automatica.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Tipo di sottoscrizione. *subscription_type* viene **nvarchar(4)**, con un valore predefinito è push. I possibili valori sono push o pull. Gli agenti di distribuzione delle sottoscrizioni push si trovano nel server di distribuzione, mentre gli agenti di distribuzione delle sottoscrizioni pull si trovano nel Sottoscrittore. *subscription_type* può essere pull per creare una sottoscrizione pull denominata nota al server di pubblicazione. Per altre informazioni, vedere [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md).  
+ Tipo di sottoscrizione. *subscription_type* viene **nvarchar(4)** , con un valore predefinito è push. I possibili valori sono push o pull. Gli agenti di distribuzione delle sottoscrizioni push si trovano nel server di distribuzione, mentre gli agenti di distribuzione delle sottoscrizioni pull si trovano nel Sottoscrittore. *subscription_type* può essere pull per creare una sottoscrizione pull denominata nota al server di pubblicazione. Per altre informazioni, vedere [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Con le sottoscrizioni anonime non è necessario utilizzare questa stored procedure.  
   
  [ @update_mode=] '*update_mode*'  
- È il tipo di aggiornamento. *update_mode* viene **nvarchar(30)**, i possibili valori sono i seguenti.  
+ È il tipo di aggiornamento. *update_mode* viene **nvarchar(30)** , i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -197,7 +197,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Data dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato AAAAMMGG. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- Prompt dei comandi facoltativo da eseguire. *optional_command_line* viene **nvarchar (4000)**, con un valore predefinito è NULL.  
+ Prompt dei comandi facoltativo da eseguire. *optional_command_line* viene **nvarchar (4000)** , con un valore predefinito è NULL.  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  È necessario specificare una password se *dts_package_name* è specificato.  
   
  [ @dts_package_location=] '*dts_package_location*'  
- Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar (12)**, con un valore predefinito del server di distribuzione. Per la posizione del pacchetto è possibile specificare distributor o subscriber.  
+ Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar (12)** , con un valore predefinito del server di distribuzione. Per la posizione del pacchetto è possibile specificare distributor o subscriber.  
   
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *server di pubblicazione* non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
- Specifica il tipo di dispositivo di backup utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicetype* viene **nvarchar(20)**, i possibili valori sono i seguenti:  
+ Specifica il tipo di dispositivo di backup utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicetype* viene **nvarchar(20)** , i possibili valori sono i seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype* viene utilizzato solo quando *sync_method*è impostato su initialize_with_backup.  
   
  [ @backupdevicename=] '*backupdevicename*'  
- Specifica il nome del dispositivo utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicename* viene **nvarchar(1000)**, con un valore predefinito è NULL.  
+ Specifica il nome del dispositivo utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicename* viene **nvarchar(1000)** , con un valore predefinito è NULL.  
   
  [ @mediapassword= ] '*mediapassword*'  
  Specifica una password per il set di supporti se durante la formattazione dei supporti è stata impostata una password. *MEDIAPASSWORD* viene **sysname**, con un valore predefinito NULL.  

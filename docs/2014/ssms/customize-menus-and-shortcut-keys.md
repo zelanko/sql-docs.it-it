@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245786"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
-  Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+*\<<una sola lettera>*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
+  Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+ *\<<una sola lettera>* . Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
   
  È possibile creare tasti di scelta rapida per stored procedure tramite CTRL dalla pagina **Tastiera** della finestra di dialogo **Strumenti**/**Opzioni** .  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797819"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @class = ] 'class'` La classe su cui vengono richieste informazioni. *classe* viene **varchar (8)**, con valore predefinito è **processo**. *classe* può essere uno dei valori seguenti.  
+`[ @class = ] 'class'` La classe su cui vengono richieste informazioni. *classe* viene **varchar (8)** , con valore predefinito è **processo**. *classe* può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
 |**OPERATOR**|Restituisce informazioni su una categoria di operatori.|  
   
-`[ @type = ] 'type'` Tipo di categoria per il quale vengono richieste informazioni. *tipo di* viene **varchar(12)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di categoria per il quale vengono richieste informazioni. *tipo di* viene **varchar(12)** , con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

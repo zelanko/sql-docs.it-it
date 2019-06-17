@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715788"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
@@ -41,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @class = ] 'class'` La classe della categoria. *classe* viene **varchar (8)**, non prevede alcun valore predefinito deve avere uno dei valori seguenti.  
+`[ @class = ] 'class'` La classe della categoria. *classe* viene **varchar (8)** , non prevede alcun valore predefinito deve avere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

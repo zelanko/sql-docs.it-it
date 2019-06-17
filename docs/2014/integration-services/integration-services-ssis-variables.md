@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892279"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
@@ -91,7 +91,7 @@ ms.locfileid: "62892279"
  Espressione  
  Specifica l'espressione assegnata alla variabile.  
   
- Nome  
+ nome  
  Specifica il nome della variabile.  
   
  Spazio dei nomi  
@@ -103,7 +103,7 @@ ms.locfileid: "62892279"
  ReadOnly  
  Quando la proprietà è impostata su `False`, la variabile è in lettura/scrittura.  
   
- Ambito  
+ `Scope`  
  > [!NOTE]  
 >  È possibile modificare questa proprietà solo facendo clic su **Sposta variabile** nella finestra **Variabili** .  
   

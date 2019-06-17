@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891792"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat
   In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  È necessario creare una nuova gestione connessione file flat per ogni formato di file da utilizzare. Dal momento che in questa esercitazione viene eseguita l'estrazione di dati da più file flat con lo stesso formato di dati, è necessario aggiungere e configurare una sola gestione connessione file flat al pacchetto.  

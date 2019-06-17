@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796078"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'table'` È la tabella sulla quale vincolo vengono restituite informazioni. La tabella specificata deve essere locale rispetto al database corrente. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+`[ @objname = ] 'table'` È la tabella sulla quale vincolo vengono restituite informazioni. La tabella specificata deve essere locale rispetto al database corrente. *Nella tabella* viene **nvarchar(776)** , non prevede alcun valore predefinito.  
   
-`[ @nomsg = ] 'no_message'` È un parametro facoltativo che consente di stampare il nome della tabella. *no_message* viene **varchar (5)**, il valore predefinito è **msg**. **nomsg** Annulla la stampa.  
+`[ @nomsg = ] 'no_message'` È un parametro facoltativo che consente di stampare il nome della tabella. *no_message* viene **varchar (5)** , il valore predefinito è **msg**. **nomsg** Annulla la stampa.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

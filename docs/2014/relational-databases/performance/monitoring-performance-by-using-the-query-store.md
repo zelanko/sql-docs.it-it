@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150804"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Archivio query
@@ -40,7 +40,7 @@ ms.locfileid: "63150804"
   
 #### <a name="by-using-transact-sql-statements"></a>Abilitazione con le istruzioni Transact-SQL  
   
-1.  Per abilitare l'archivio query, usare l'istruzione `ALTER DATABASE`. Ad esempio:   
+1.  Per abilitare l'archivio query, usare l'istruzione `ALTER DATABASE`. Ad esempio:  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  

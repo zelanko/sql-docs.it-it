@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815364"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Creare un gruppo di disponibilità (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "62815364"
 ###  <a name="SummaryTsqlStatements"></a> Riepilogo delle attività e istruzioni Transact-SQL corrispondenti  
  Nella tabella seguente sono elencate le attività di base necessarie per la creazione e la configurazione di un gruppo di disponibilità e vengono indicate le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] da utilizzare per queste attività. È necessario eseguire le attività [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nell'ordine con cui sono elencate nella tabella.  
   
-|Attività|Istruzione/i Transact-SQL|Posizione in cui eseguire l'attività**<sup>*</sup>**|  
+|Attività|Istruzione/i Transact-SQL|Posizione in cui eseguire l'attività **<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Creare un endpoint del mirroring del database (una volta per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *nomeEndpoint* ... FOR DATABASE_MIRRORING|Eseguire in ogni istanza del server in cui non è presente l'endpoint del mirroring del database.|  
 |Creare un gruppo di disponibilità|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Eseguire nell'istanza del server che dovrà ospitare la replica primaria iniziale.|  

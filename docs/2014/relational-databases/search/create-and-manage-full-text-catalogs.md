@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011466"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
@@ -70,7 +70,7 @@ ms.locfileid: "66011466"
   
 3.  Fare clic con il pulsante destro sul nome del catalogo full-text da ricompilare e scegliere **Ricompila**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?**, fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?** , fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66011466"
   
 3.  Scegliere **Ricompila tutto**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?**, fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?** , fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila tutti i cataloghi full-text** scegliere **Chiudi**.  
   

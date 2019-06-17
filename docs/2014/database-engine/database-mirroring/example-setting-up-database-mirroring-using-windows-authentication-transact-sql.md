@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806864"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Esempio: Configurazione del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
@@ -155,7 +155,7 @@ GO
   
 -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Esempio: Configurare tramite certificati di mirroring del Database &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Esempio: Configurazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067665"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -28,18 +28,18 @@ ms.locfileid: "63067665"
   
 |Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/D|no|Nome dell'origine dati restituiti da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
-|DRIVER|N/D|no|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nome del driver ODBC Client nativo è {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
+|DSN|N/D|No|Nome dell'origine dati restituiti da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
+|DRIVER|N/D|No|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nome del driver ODBC Client nativo è {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
   
 ## <a name="level-2"></a>Livello 2  
   
 |Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Yes|no|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
-|UID|no|Yes|ID di accesso dell'utente.|  
+|SERVER|Yes|No|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
+|UID|No|Yes|ID di accesso dell'utente.|  
 |PWD|No|Sì (dipende dall'utente)|Password specificata dall'utente.|  
-|APP|no|Yes|Nome della chiamata al metodo di applicazione **SQLBrowseConnect**.|  
-|WSID|no|Yes|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
+|APP|No|Yes|Nome della chiamata al metodo di applicazione **SQLBrowseConnect**.|  
+|WSID|No|Yes|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
   
 ## <a name="level-3"></a>Livello 3  
   

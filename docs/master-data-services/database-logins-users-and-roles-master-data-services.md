@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487724"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65487724"
   
 |Account di accesso|Descrizione|  
 |-----------|-----------------|  
-|**mds_dlp_login**|Consente la creazione di assembly UNSAFE. Per altre informazioni, vedere [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> - Account di accesso disabilitato con password generata casualmente.<br /><br /> - Esegue il mapping a dbo per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> - Per msdb, mds_clr_user esegue il mapping a questo account di accesso.|  
+|**mds_dlp_login**|Consente la creazione di assembly UNSAFE. Per altre informazioni, vedere [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> \- Account di accesso disabilitato con password generata casualmente.<br /><br /> \- Esegue il mapping a dbo per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> \- Per msdb, mds_clr_user esegue il mapping a questo account di accesso.|  
 |**mds_email_login**|Account di accesso abilitato utilizzato per le notifiche.<br /><br /> Per msdb e il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user esegue il mapping a questo account di accesso.|  
   
 ## <a name="msdb-users"></a>Utenti di msdb  
@@ -43,15 +43,15 @@ ms.locfileid: "65487724"
 |Utente|Descrizione|  
 |----------|-----------------|  
 |**mds_clr_user**|Non usato. Esegue il mapping a mds_dlp_login.|  
-|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> - Esegue il mapping a mds_email_login.<br /><br /> - È membro del ruolo: DatabaseMailUserRole.|  
+|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> \- Esegue il mapping a mds_email_login.<br /><br /> \- È membro del ruolo: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Utenti del database Master Data Services  
   
 |Utente|Descrizione|  
 |----------|-----------------|  
-|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> - Dispone dell'autorizzazione SELECT per lo schema mdm.<br /><br /> - Dispone dell'autorizzazione EXECUTE per il tipo di tabella mdm.MemberGetCriteria definito dall'utente.<br /><br /> - Dispone dell'autorizzazione EXECUTE per la stored procedure mdm.udpNotificationQueueActivate.|  
+|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> \- Dispone dell'autorizzazione SELECT per lo schema mdm.<br /><br /> \- Dispone dell'autorizzazione EXECUTE per il tipo di tabella mdm.MemberGetCriteria definito dall'utente.<br /><br /> \- Dispone dell'autorizzazione EXECUTE per la stored procedure mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|È proprietario degli schemi mdm e mdq. Lo schema predefinito è mdm.<br /><br /> Non disporre di un account di accesso di cui è stato eseguito il mapping.|  
-|**mds_ssb_user**|Utilizzato per eseguire attività di Service Broker.<br /><br /> -Ha le autorizzazioni DELETE, INSERT, REFERENCES, SELECT e UPDATE per tutti gli schemi.<br /><br /> - Non ha un account di accesso a cui è stato eseguito il mapping.|  
+|**mds_ssb_user**|Utilizzato per eseguire attività di Service Broker.<br /><br /> -Ha le autorizzazioni DELETE, INSERT, REFERENCES, SELECT e UPDATE per tutti gli schemi.<br /><br /> \- Non ha un account di accesso a cui è stato eseguito il mapping.|  
   
 ## <a name="master-data-services-database-role"></a>Ruolo del database Master Data Services  
   

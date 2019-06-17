@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480920"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurare livelli di gravità per i file di log DQS
@@ -54,7 +54,7 @@ ms.locfileid: "65480920"
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Configurazione**.  
   
-3.  Fare clic sulla scheda **Impostazioni log** . Vengono elencate le seguenti attività DQS per cui è possibile selezionare un livello di gravità: **Gestione dominio**, **Individuazione delle informazioni**, **Progetto di pulizia (es. servizio dati di riferimento)**, **Criteri di corrispondenza e Progetto corrispondente** e **Servizio dati di riferimento**.  
+3.  Fare clic sulla scheda **Impostazioni log** . Vengono elencate le seguenti attività DQS per cui è possibile selezionare un livello di gravità: **Gestione dominio**, **Individuazione delle informazioni**, **Progetto di pulizia (es. servizio dati di riferimento)** , **Criteri di corrispondenza e Progetto corrispondente** e **Servizio dati di riferimento**.  
   
 4.  Selezionare il livello di gravità che si desidera registrare per un'attività DQS. È possibile selezionare uno dei tipi seguenti: **Errore irreversibile**, **Errore**, **Avviso**, **Informazioni** e **Debug**. Se ad esempio si desidera che nei file di log DQS vengano scritti solo i messaggi di errore irreversibile per l'attività di individuazione delle informazioni, selezionare **Errore irreversibile** nell'elenco a discesa dell'attività **Individuazione informazioni** .  
   

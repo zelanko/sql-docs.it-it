@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067457"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Finestra di dialogo Vincoli CHECK (Visual Database Tools)
@@ -48,7 +48,7 @@ ms.locfileid: "63067457"
  Visualizza il nome del vincolo CHECK selezionato. Per modificare il nome del vincolo, digitare il testo direttamente nel campo della proprietà.  
   
  **Descrizione**  
- Descrive il vincolo CHECK. La descrizione può essere modificata digitando direttamente nel campo della proprietà oppure facendo clic sui puntini di sospensione (**...**) a destra del campo della proprietà e modificando il testo nella finestra di dialogo **Proprietà Descrizione**.  
+ Descrive il vincolo CHECK. La descrizione può essere modificata digitando direttamente nel campo della proprietà oppure facendo clic sui puntini di sospensione ( **...** ) a destra del campo della proprietà e modificando il testo nella finestra di dialogo **Proprietà Descrizione**.  
   
  **Categoria Progettazione tabelle**  
  Viene espansa per visualizzare le proprietà **Verifica dati esistenti durante la creazione o la riabilitazione**, **Attiva per istruzioni INSERTS e UPDATES**e **Attiva per replica**.  

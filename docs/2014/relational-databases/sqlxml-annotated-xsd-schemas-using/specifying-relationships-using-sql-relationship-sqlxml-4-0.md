@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013664"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
@@ -54,7 +54,7 @@ ms.locfileid: "66013664"
  Specifica il nome univoco della relazione,  
   
  **Parent**  
- Specifica la relazione padre (tabella). Si tratta di un attributo facoltativo. Se non è specificato, il nome della tabella padre viene ottenuto dalle informazioni presenti nella gerarchia padre-figlio del documento. Se lo schema specifica due gerarchie padre-figlio che utilizzano lo stesso  **\<SQL: Relationship >** ma elementi padre diversi, non si specifica l'attributo parent in  **\<sql: relazione >**. Queste informazioni vengono ottenute dalla gerarchia nello schema.  
+ Specifica la relazione padre (tabella). Si tratta di un attributo facoltativo. Se non è specificato, il nome della tabella padre viene ottenuto dalle informazioni presenti nella gerarchia padre-figlio del documento. Se lo schema specifica due gerarchie padre-figlio che utilizzano lo stesso  **\<SQL: Relationship >** ma elementi padre diversi, non si specifica l'attributo parent in  **\<sql: relazione >** . Queste informazioni vengono ottenute dalla gerarchia nello schema.  
   
  **parent-key**  
  Specifica la chiave padre dell'elemento padre. Se la chiave padre è costituita da più colonne, i valori vengono specificati con uno spazio tra l'uno e l'altro. Tra i valori specificati per la chiave multicolonna e la chiave figlio corrispondente viene applicato un mapping posizionale.  
@@ -68,7 +68,7 @@ ms.locfileid: "66013664"
  **Inverso**  
  Questo attributo specificato in  **\<SQL: Relationship >** viene utilizzato dagli Updategram. Per altre informazioni, vedere [che specifica l'attributo SQL: inverse in SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- Il `sql:key-fields` annotazione deve essere specificata in un elemento che contiene un elemento figlio, con un  **\<SQL: Relationship >** definito tra l'elemento e l'elemento figlio e che non fornisce la chiave primaria del tabella specificata nell'elemento padre. Anche se lo schema non specifica  **\<SQL: Relationship >**, è necessario specificare `sql:key-fields` per produrre la gerarchia appropriata. Per altre informazioni, vedere [identificazione di colonne chiave mediante SQL: Key-campi](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ Il `sql:key-fields` annotazione deve essere specificata in un elemento che contiene un elemento figlio, con un  **\<SQL: Relationship >** definito tra l'elemento e l'elemento figlio e che non fornisce la chiave primaria del tabella specificata nell'elemento padre. Anche se lo schema non specifica  **\<SQL: Relationship >** , è necessario specificare `sql:key-fields` per produrre la gerarchia appropriata. Per altre informazioni, vedere [identificazione di colonne chiave mediante SQL: Key-campi](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Per produrre la nidificazione appropriata nel risultato, è consigliabile specificare `sql:key-fields` in tutti gli schemi.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66013664"
 </xsd:schema>  
 ```  
   
- Anziché specificare una relazione denominata, è possibile specificare una relazione anonima. In questo caso, l'intero contenuto del  **\<annotation >**...  **\</annotation >**, che descrive le due relazioni, viene visualizzato come elemento figlio del  **\<Product >**.  
+ Anziché specificare una relazione denominata, è possibile specificare una relazione anonima. In questo caso, l'intero contenuto del  **\<annotation >** ...  **\</annotation >** , che descrive le due relazioni, viene visualizzato come elemento figlio del  **\<Product >** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,9 +382,9 @@ ms.locfileid: "66013664"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Specifica di sql:relationship in più elementi  
- In questo esempio, lo schema XSD con annotazione contiene il  **\<cliente >**,  **\<ordine >**, e  **\<OrderDetail >** elementi.  
+ In questo esempio, lo schema XSD con annotazione contiene il  **\<cliente >** ,  **\<ordine >** , e  **\<OrderDetail >** elementi.  
   
- Il  **\<ordine >** è un elemento figlio del  **\<cliente >** elemento. **\<SQL: Relationship >** viene specificata per il  **\<ordine >** elemento figlio; di conseguenza, gli ordini appartenenti a un cliente vengono visualizzati come elementi figlio di  **\<cliente >**.  
+ Il  **\<ordine >** è un elemento figlio del  **\<cliente >** elemento. **\<SQL: Relationship >** viene specificata per il  **\<ordine >** elemento figlio; di conseguenza, gli ordini appartenenti a un cliente vengono visualizzati come elementi figlio di  **\<cliente >** .  
   
  Il  **\<ordine >** elemento include il  **\<OrderDetail >** elemento figlio. **\<SQL: Relationship >** viene specificata nel  **\<OrderDetail >** elemento figlio, in modo che i dettagli dell'ordine che interessano un ordine appaiono come elementi figlio di tale **\<ordine >** elemento.  
   
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Nello schema, sia la  **\<Emp1 >** elemento e  **\<Emp2 >** elemento sono di tipo `EmpType`. Il tipo `EmpType` descrive un'  **\<ordine >** elemento figlio e le corrispondenti  **\<SQL: Relationship >**. In questo caso, non è presente alcun singolo elemento padre che possa essere identificato in  **\<SQL: Relationship >** utilizzando le **padre** attributo. In questo caso, non si specifica la **padre** attributo  **\<SQL: Relationship >**; il **padre** attributo informazioni vengono ottenute dal gerarchia nello schema.  
+ Nello schema, sia la  **\<Emp1 >** elemento e  **\<Emp2 >** elemento sono di tipo `EmpType`. Il tipo `EmpType` descrive un'  **\<ordine >** elemento figlio e le corrispondenti  **\<SQL: Relationship >** . In questo caso, non è presente alcun singolo elemento padre che possa essere identificato in  **\<SQL: Relationship >** utilizzando le **padre** attributo. In questo caso, non si specifica la **padre** attributo  **\<SQL: Relationship >** ; il **padre** attributo informazioni vengono ottenute dal gerarchia nello schema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Per testare una query Xpath di esempio sullo schema  
   

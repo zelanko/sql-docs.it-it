@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875036"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Ripristino di file e filegroup sovrascrivendo file esistenti (SQL Server)
@@ -101,7 +101,7 @@ ms.locfileid: "62875036"
   
 6.  Nel riquadro **Selezione pagina** fare clic sulla pagina **Opzioni** .  
   
-7.  Nel pannello **Opzioni di ripristino** , selezionare **Sovrascrivi il database esistente (WITH REPLACE)**. L'operazione di ripristino sovrascrive eventuali database esistenti e i file correlati, anche se esiste già un database o un file con lo stesso nome.  
+7.  Nel pannello **Opzioni di ripristino** , selezionare **Sovrascrivi il database esistente (WITH REPLACE)** . L'operazione di ripristino sovrascrive eventuali database esistenti e i file correlati, anche se esiste già un database o un file con lo stesso nome.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

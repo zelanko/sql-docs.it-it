@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805165"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
@@ -30,7 +30,7 @@ ms.locfileid: "65805165"
   
 ## <a name="options"></a>Opzioni  
  *Istanza del server e relativo stato di connessione*  
- Nome di un'istanza del server partner nel formato _SYSTEM_**\\**_INSTANCE_NAME_. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
+ Nome di un'istanza del server partner nel formato _SYSTEM_ **\\** _INSTANCE_NAME_. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
   
  Il campo indica inoltre se il monitoraggio è attualmente connesso all'istanza del server. I possibili stati di connessione sono i seguenti:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65805165"
 -   **Connesso a**  *nome_istanza_server*  
   
     > [!NOTE]  
-    >  Se non si è membri del ruolo predefinito del server **sysadmin** , lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)**.  
+    >  Se non si è membri del ruolo predefinito del server **sysadmin** , lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)** .  
   
  Il nome di ogni istanza del server partner è visualizzato in un campo *Istanza del server e relativo stato di connessione* separato. Il campo in alto indica il server principale all'avvio dell'esecuzione del monitoraggio.  
   

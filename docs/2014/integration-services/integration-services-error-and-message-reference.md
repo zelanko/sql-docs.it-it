@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892659"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
@@ -193,7 +193,7 @@ ms.locfileid: "62892659"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|Il percorso del pacchetto specificato non contiene un nome di pacchetto. Questo errore si verifica quando il percorso non contiene almeno una barra rovesciata o una barra.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|Impossibile trovare la cartella "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Durante il tentativo di ricerca di una cartella in SQL si è verificato un errore OLE DB con codice 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|Il provider di log SSIS non è riuscito ad aprire il log. Codice di errore: 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|Il provider di log SSIS non è riuscito ad aprire il log. Codice errore: 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Impossibile recuperare la raccolta ConnectionInfos. Errore 0x%1!8.8X! "%2". Questo errore si verifica in caso di esito negativo della chiamata a IDTSApplication100::get_ConnectionInfos.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Rilevato deadlock durante il tentativo di blocco delle variabili. Impossibile acquisire blocchi dopo 16 tentativi. Timeout dei blocchi.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|VariableDispenser non ha restituito la raccolta Variables. Tentativo di esecuzione di un'operazione consentita solo per le raccolte rese disponibili per l'accesso in lettura e scrittura.|  
@@ -1244,7 +1244,7 @@ ms.locfileid: "62892659"
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|Il numero di colonne non è corretto.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|Impossibile trovare la colonna "%1" nell'origine dei dati.|  
 |0xC0202007|-1071636473|DTS_E_OLEDBRECORD|È disponibile un record OLE DB.  Origine: "%1" Hresult: 0x%2!8.8X!  Descrizione: "%3".|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Codice di errore SSIS DTS_E_OLEDBERROR.  Si è verificato un errore OLE DB. Codice di errore: 0x%1!8.8X!.|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Codice di errore SSIS DTS_E_OLEDBERROR.  Si è verificato un errore OLE DB. Codice errore: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|Componente già connesso. È necessario disconnettere il componente prima di ritentare la connessione.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|Il valore della proprietà "%1" non è corretto.|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|Impossibile aprire il file di dati "%1".|  
@@ -1991,8 +1991,8 @@ ms.locfileid: "62892659"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|Commit non riuscito.|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La proprietà personalizzata "%1" di %2 può essere utilizzata solo con file ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La proprietà personalizzata "%1" di %2 può essere utilizzata solo con DT_BYTES.|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Il provider OLE DB %2 necessario non è registrato. Codice di errore: 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Il provider OLE DB %2 necessario non è registrato. È possibile che non siano disponibili provider a 64 bit.  Codice di errore: 0x%1!8.8X!.|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Il provider OLE DB %2 necessario non è registrato. Codice errore: 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Il provider OLE DB %2 necessario non è registrato. È possibile che non siano disponibili provider a 64 bit.  Codice errore: 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|È stato eseguito il mapping della colonna della cache "%1" a più colonne. Rimuovere i mapping duplicati della colonna.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|Non è stato eseguito il mapping di %1 a una colonna della cache valida.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Impossibile eseguire il mapping della colonna di input "%1" e della colonna della cache "%2" perché i tipi di dati non corrispondono.|  
@@ -2036,7 +2036,7 @@ ms.locfileid: "62892659"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|Il formato della voce di configurazione "%1" non è corretto. Il problema può essere causato da un delimitatore mancante o da errori di formattazione, come un delimitatore di matrice non valido.|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|Impossibile eseguire la configurazione da una variabile padre "%1" perché non è disponibile la raccolta della variabile padre.|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Errore durante l'importazione dei file di configurazione: "%1".|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|Impossibile eseguire la configurazione da una variabile padre "%1" perché la variabile padre non è disponibile. Codice di errore: 0x%2!8.8X!.|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|Impossibile eseguire la configurazione da una variabile padre "%1" perché la variabile padre non è disponibile. Codice errore: 0x%2!8.8X!.|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|Il file di configurazione è vuoto e non contiene voci di configurazione.|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|Il tipo di configurazione per la configurazione "%1" non è valido. La causa dell'errore potrebbe essere il tentativo di impostare la proprietà del tipo di un oggetto di configurazione su un tipo di configurazione non valido.|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|Impossibile trovare il tipo di configurazione per la configurazione del Registro di sistema nella chiave "%1". Aggiungere un valore denominato ConfigType alla chiave del Registro di sistema e assegnare un valore stringa "Variable", "Property", "ConnectionManager", "LoggingProvider" o "ForEachEnumerator".|  

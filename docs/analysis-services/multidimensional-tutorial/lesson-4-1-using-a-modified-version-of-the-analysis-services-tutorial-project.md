@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89674116f8f41dbfca3041f3378e384b581be61f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403923"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1: uso di una versione modificata del progetto Analysis Services Tutorial

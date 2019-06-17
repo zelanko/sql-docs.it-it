@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62657491"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
@@ -33,11 +33,11 @@ ms.locfileid: "62657491"
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Nella cartella di installazione radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione dalla condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-2.  Nella pagina **Installazione** fare clic su **Nuova installazione autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o aggiunta di funzionalità a un'installazione esistente**. Non fare clic su **Installazione nuovo cluster di failover di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  Nella pagina **Installazione** fare clic su **Nuova installazione autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o aggiunta di funzionalità a un'installazione esistente**. Non fare clic su **Installazione nuovo cluster di failover di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  Prima che l'installazione continui, Controllo configurazione sistema verificherà lo stato del sistema del computer.  
   
-4.  Nella pagina **Tipo di installazione** fare clic su **Esegui una nuova installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**.  
+4.  Nella pagina **Tipo di installazione** fare clic su **Esegui una nuova installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** .  
   
 5.  Nella pagina **Selezione funzionalità** selezionare gli strumenti che si vuole installare e attenersi alle istruzioni della restante parte del processo di installazione.  
   
