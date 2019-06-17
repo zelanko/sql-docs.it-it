@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754209"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62754209"
 |[Accesso alla rete](#NetworkAccess)|Documenta il requisito in base a cui ogni istanza del server deve essere in grado di accedere alle porte dell'altra istanza o delle altre istanze tramite TCP.|  
 |[Preparazione del database mirror](#MirrorDbPrep)|Riepiloga i requisiti per la preparazione del database mirror per consentire l'avvio del mirroring.|  
 |[Operazione di creazione file non riuscita](#FailedCreateFileOp)|Descrive le attività da eseguire in seguito a un'operazione di creazione file non riuscita.|  
-|[Avvio del mirroring mediante Transact-SQL](#StartDbm)|Descrive l'ordine richiesto per le istruzioni ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'**.|  
+|[Avvio del mirroring mediante Transact-SQL](#StartDbm)|Descrive l'ordine richiesto per le istruzioni ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** .|  
 |[Transazioni tra database](#CrossDbTxns)|Un failover automatico può portare a una risoluzione automatica e talvolta errata delle transazioni in dubbio. Per questo motivo, il mirroring del database non supporta transazioni tra database.|  
   
 ##  <a name="Accounts"></a> Accounts  

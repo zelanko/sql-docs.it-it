@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705136"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Finestra di dialogo Valuta criteri, pagina Risultati valutazione
   Utilizzare questa finestra di dialogo per visualizzare i risultati di valutazione dei criteri e applicare criteri della Gestione basata su criteri a un set di destinazioni non conforme ai criteri.  
   
 ## <a name="options"></a>Opzioni  
- **Risultati: Policy**  
+ **Risultati: criterio**  
  Nome dei criteri da valutare. Il contenuto di questa casella è di sola lettura.  
   
  **Risultati: Messaggio**  

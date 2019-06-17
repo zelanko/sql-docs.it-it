@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714339"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
@@ -67,7 +67,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  È necessario specificare questo parametro se *mapping_id* è NULL.  
   
-`[ @source_version = ] 'source_version'` È il numero di versione del DBMS di origine. *source_version* viene **varchar (10)**, con un valore predefinito NULL.  
+`[ @source_version = ] 'source_version'` È il numero di versione del DBMS di origine. *source_version* viene **varchar (10)** , con un valore predefinito NULL.  
   
 `[ @source_type = ] 'source_type'` È il tipo di dati nel DBMS di origine. *source_type* viene **sysname**. È necessario specificare questo parametro se *mapping_id* è NULL.  
   
@@ -95,7 +95,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|La destinazione è un database Sybase.|  
 |NULL (predefinito)||  
   
-`[ @destination_version = ] 'destination_version'` È la versione del prodotto del sistema DBMS di destinazione. *destination_version* viene **varchar (10)**, con un valore predefinito NULL.  
+`[ @destination_version = ] 'destination_version'` È la versione del prodotto del sistema DBMS di destinazione. *destination_version* viene **varchar (10)** , con un valore predefinito NULL.  
   
 `[ @destination_type = ] 'destination_type'` È il tipo di dati elencato nel sistema DBMS di destinazione. *destination_type* viene **sysname**, con un valore predefinito NULL.  
   

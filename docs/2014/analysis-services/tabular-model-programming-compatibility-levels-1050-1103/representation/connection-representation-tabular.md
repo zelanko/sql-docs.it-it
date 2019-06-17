@@ -1,23 +1,23 @@
 ---
 title: Rappresentazione di una connessione (tabulare) | Microsoft Docs
-ms.date: 05/07/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: tabular-models
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757773"
 ---
 # <a name="connection-representation-tabular"></a>Rappresentazione di una connessione (tabulare)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   L'oggetto connessione definisce l'origine dei dati che popolano il modello tabulare.  
   
 ## <a name="connection-representation"></a>Rappresentazione di una connessione  

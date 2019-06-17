@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721112"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>Inizializzazione di una sottoscrizione transazionale da un backup (programmazione Transact-SQL della replica)
@@ -34,7 +34,7 @@ ms.locfileid: "62721112"
   
     -   Se il valore è **1**, la pubblicazione supporta questa funzionalità.  
   
-    -   Se il valore è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **allow_initialize_from_backup** per **@property** e il valore `true` per **@value**.  
+    -   Se il valore è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **allow_initialize_from_backup** per **@property** e il valore `true` per **@value** .  
   
 2.  Per una nuova pubblicazione, eseguire [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) nel database di pubblicazione nel server di pubblicazione. Specificare il valore `true` per **allow_initialize_from_backup**. Per altre informazioni, vedere [Create a Publication](publish/create-a-publication.md).  
   

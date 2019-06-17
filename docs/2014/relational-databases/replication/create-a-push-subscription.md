@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721733"
 ---
 # <a name="create-a-push-subscription"></a>Creazione di una sottoscrizione push
@@ -91,20 +91,20 @@ ms.locfileid: "62721733"
   
     -   Se il valore di **allow_push** è **1**, le sottoscrizioni push sono supportate.  
   
-    -   Se il valore di **allow_push** viene **0**, eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)specificando **allow_push** per **@property** e `true` per **@value**.  
+    -   Se il valore di **allow_push** viene **0**, eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)specificando **allow_push** per **@property** e `true` per **@value** .  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specificare **@publication**, **@subscriber** e **@destination_db**. Specificare il valore **push** per **@subscription_type**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [creare una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specificare **@publication** , **@subscriber** e **@destination_db** . Specificare il valore **push** per **@subscription_type** . Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [creare una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Specificare le opzioni seguenti:  
   
-    -   I parametri **@subscriber**, **@subscriber_db**e **@publication** .  
+    -   I parametri **@subscriber** , **@subscriber_db** e **@publication** .  
   
-    -   I parametri [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per **@job_login** e **@job_password**.  
+    -   I parametri [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per **@job_login** e **@job_password** .  
   
         > [!NOTE]  
-        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password**. L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
+        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password** . L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
   
-    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_login** e **@subscriber_password**. Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
+    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_login** e **@subscriber_password** . Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
   
     -   Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione. Per altre informazioni, vedere [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
@@ -117,30 +117,30 @@ ms.locfileid: "62721733"
   
     -   Se il valore di **allow_push** è **1**, la pubblicazione supporta le sottoscrizioni push.  
   
-    -   Se il valore di **allow_push** non è **1**, eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)specificando **allow_push** per **@property** e `true` per **@value**.  
+    -   Se il valore di **allow_push** non è **1**, eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)specificando **allow_push** per **@property** e `true` per **@value** .  
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)specificando i parametri seguenti:  
   
-    -   **@publication**. Nome della pubblicazione.  
+    -   **@publication** . Nome della pubblicazione.  
   
-    -   **@subscriber_type**. Per una sottoscrizione client specificare **local** e per una sottoscrizione server specificare **global**.  
+    -   **@subscriber_type** . Per una sottoscrizione client specificare **local** e per una sottoscrizione server specificare **global**.  
   
-    -   **@subscription_priority**. Per una sottoscrizione server, specificare una priorità per la pubblicazione utilizzando un valore compreso tra**0.00** e **99.99**.  
+    -   **@subscription_priority** . Per una sottoscrizione server, specificare una priorità per la pubblicazione utilizzando un valore compreso tra**0.00** e **99.99**.  
   
          Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Specificare le opzioni seguenti:  
   
-    -   I parametri **@subscriber**, **@subscriber_db**e **@publication** .  
+    -   I parametri **@subscriber** , **@subscriber_db** e **@publication** .  
   
-    -   Le credenziali di Windows utilizzate per l'esecuzione dell'agente di merge nel server di distribuzione per **@job_login** e **@job_password**.  
+    -   Le credenziali di Windows utilizzate per l'esecuzione dell'agente di merge nel server di distribuzione per **@job_login** e **@job_password** .  
   
         > [!NOTE]  
-        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password**. L'agente di merge esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
+        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password** . L'agente di merge esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
   
-    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_login** e **@subscriber_password**. Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
+    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_login** e **@subscriber_password** . Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
   
-    -   (Facoltativo) Il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Specificare questi valori se è necessario utilizzare l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
+    -   (Facoltativo) Il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password** . Specificare questi valori se è necessario utilizzare l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
   
     -   Una pianificazione per il processo dell'agente di merge per la sottoscrizione. Per altre informazioni, vedere [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

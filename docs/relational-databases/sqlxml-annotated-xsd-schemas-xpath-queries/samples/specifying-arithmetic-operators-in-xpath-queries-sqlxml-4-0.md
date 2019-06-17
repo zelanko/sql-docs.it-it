@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737527"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
@@ -37,7 +37,7 @@ ms.locfileid: "62737527"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >**, in quanto la  **\< elemento >** nodo è il nodo primario per il **figlio** asse). Per tutti i  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
+ Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >** , in quanto la  **\< elemento >** nodo è il nodo primario per il **figlio** asse). Per tutti i  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
   
 > [!NOTE]  
 >  I numeri in XPath sono numeri a virgola mobile a precisione doppia e il confronto di numeri a virgola mobile come nell'esempio causa un arrotondamento.  

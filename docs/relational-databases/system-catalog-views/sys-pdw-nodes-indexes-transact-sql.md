@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715838"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62715838"
 |object_id|**int**|ID dell'oggetto a cui appartiene l'indice.||  
 |NAME|**sysname**|Nome dell'indice. Nome è univoco solo all'interno dell'oggetto. NULL = Heap||  
 |index_id|**int**|ID dell'indice. index_ID è univoco solo all'interno dell'oggetto.<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> > 1 = indice Non cluster||  
-|Tipo|**tinyint**|Tipo di indice:<br /><br /> 0 = heap<br /><br /> 1 = Cluster<br /><br /> 2 = Non cluster<br /><br /> 5 = indice columnstore con ottimizzazione per la memoria xVelocity di cluster|  
+|type|**tinyint**|Tipo di indice:<br /><br /> 0 = heap<br /><br /> 1 = Cluster<br /><br /> 2 = Non cluster<br /><br /> 5 = indice columnstore con ottimizzazione per la memoria xVelocity di cluster|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di indice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> COLUMNSTORE CLUSTER||  
 |is_unique|**bit**|0 = Indice non univoco.|Sempre 0.|  
 |data_space_id|**int**|ID dello spazio dati per questo indice. Lo spazio dati può essere un filegroup o uno schema di partizione.<br /><br /> 0 = object_id è una funzione con valori di tabella.||  

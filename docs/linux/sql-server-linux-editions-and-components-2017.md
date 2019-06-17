@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713181"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2017 in Linux
@@ -98,21 +98,21 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Compressione backup|Yes|Yes|No|No| 
-|Snapshot del database|Yes|No|No|no|
+|Snapshot del database|Yes|No|no|No|
 |Always On istanza del cluster di failover<sup>1</sup>|Yes|Yes|No|No| 
-|I gruppi di disponibilità Always On<sup>2</sup>|Yes|No|No|No|
-|I gruppi di disponibilità di base <sup>3</sup>|No|Yes|no|No|
+|I gruppi di disponibilità Always On<sup>2</sup>|Yes|no|No|no|
+|I gruppi di disponibilità di base <sup>3</sup>|No|Yes|No|No|
 |Gruppo di disponibilità con commit di un numero minimo di repliche|Yes|Yes|No|No|
-|Gruppo di disponibilità senza cluster|Yes|Yes|No|No|
-|Ripristino di pagine e file online|Yes|No|No|No|
+|Gruppo di disponibilità senza cluster|Yes|Yes|no|No|
+|Ripristino di pagine e file online|Yes|No|no|No|
 |Indicizzazione online|Yes|No|No|No|
 |Ricompilazioni degli indici online ripristinabili|Yes|No|no|No|
-|Modifica dello schema online|Yes|no|No|no|
-|Recupero rapido|Yes|No|no|no|
-|Backup con mirroring|Yes|No|no|No|
-|Aggiunta di memoria a caldo e CPU|Yes|No|no|no|
-|Backup crittografato|Yes|Yes|no|No|
-|Backup ibrido in Microsoft Azure (backup nell'URL)|Yes|Yes|no|No|
+|Modifica dello schema online|Yes|no|No|No|
+|Recupero rapido|Yes|No|No|no|
+|Backup con mirroring|Yes|no|No|No|
+|Aggiunta di memoria a caldo e CPU|Yes|No|No|No|
+|Backup crittografato|Yes|Yes|No|no|
+|Backup ibrido in Microsoft Azure (backup nell'URL)|Yes|Yes|No|No|
   
 <sup>1</sup> su Enterprise edition, il numero di nodi è il valore massimo del sistema operativo. In Standard Edition è presente il supporto per due nodi. 
 
@@ -126,19 +126,19 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|  
 |File binari di oggetti di grandi dimensioni in indici columnstore cluster|Yes|Yes|Yes|Yes|  
-|Ricompilazione degli indici columnstore non cluster online|Yes|no|No|No|
+|Ricompilazione degli indici columnstore non cluster online|Yes|no|No|no|
 |OLTP in memoria <sup>1</sup>|Yes|Yes|Yes|Yes|
 |Memoria principale persistente|Yes|Yes|Yes|Yes|
 |Partizionamento di tabelle e indici|Yes|Yes|Yes|Yes|  
 |Compressione dati|Yes|Yes|Yes|Yes|
 |Resource Governor|Yes|No|No|No|  
 |Parallelismo della tabella partizionata|Yes|No|No|No|
-|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Yes|No|No|No|
-|Governance delle risorse di I/O|Yes|No|No|No|  
+|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Yes|No|no|No|
+|Governance delle risorse di I/O|Yes|No|No|no|  
 |Durabilità posticipata|Yes|Yes|Yes|Yes|
 |Ottimizzazione automatica|Yes|No|No|No|
-|Join adattivi in modalità batch|Yes|no|no|No|
-|Feedback delle concessioni di memoria in modalità batch|Yes|No|no|No|
+|Join adattivi in modalità batch|Yes|No|No|No|
+|Feedback delle concessioni di memoria in modalità batch|Yes|No|No|no|
 |Esecuzione interleaved per funzioni con valori di tabella a più istruzioni|Yes|Yes|Yes|Yes|
 |Miglioramenti dell'inserimento bulk|Yes|Yes|Yes|Yes|
 
@@ -154,7 +154,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Mascheramento dati dinamici|Yes|Yes|Yes|Yes|   
 |Controllo di base|Yes|Yes|Yes|Yes| 
 |Controllo con granularità fine|Yes|Yes|Yes|Yes| 
-|Crittografia trasparente del database|Yes|No|No|No|   
+|Crittografia trasparente del database|Yes|No|no|No|   
 |Ruoli definiti dall'utente|Yes|Yes|Yes|Yes| 
 |Database indipendenti|Yes|Yes|Yes|Yes| 
 |Crittografia per backup|Yes|Yes|No|No|  
@@ -167,16 +167,16 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Supporto per script di PowerShell|Yes|Yes|Yes|Yes| 
 |Supporto per le operazioni del componente dell'applicazione livello dati (DAC) - estrazione, distribuzione, aggiornamento, eliminazione|Yes|Yes|Yes|Yes| 
 |Automazione dei criteri (controllo pianificato e modifica)|Yes|Yes|Yes|No|No|   
-|Agente di raccolta dati relativi alle prestazioni|Yes|Yes|Yes|No|No| 
+|Agente di raccolta dati relativi alle prestazioni|Yes|Yes|Yes|no|No| 
 |Report di prestazioni standard|Yes|Yes|Yes|No|No| 
-|Guide di piano e blocco del piano per le guide di piano|Yes|Yes|Yes|No|no|   
+|Guide di piano e blocco del piano per le guide di piano|Yes|Yes|Yes|No|No|   
 |Query diretta di viste indicizzate (tramite hint NOEXPAND)|Yes|Yes|Yes|Yes| 
 |Gestione automatica viste indicizzate|Yes|Yes|Yes|No|No| 
-|Viste partizionate distribuite|Yes|No|No|No| 
+|Viste partizionate distribuite|Yes|no|No|No| 
 |Operazioni indicizzate parallele|Yes|No|No|No|  
 |Utilizzo automatico di viste indicizzate da Query Optimizer|Yes|No|No|No| 
-|Verifica di coerenza parallela|Yes|No|No|no| 
-|Punto di controllo dell'Utilità SQL Server|Yes|no|No|No|    
+|Verifica di coerenza parallela|Yes|no|no|no| 
+|Punto di controllo dell'Utilità SQL Server|Yes|No|No|No|    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -190,8 +190,8 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Funzionalità MERGE e UPSERT|Yes|Yes|Yes|Yes|   
 |Tipi di dati data e ora|Yes|Yes|Yes|Yes|  
 |Supporto di internazionalizzazione|Yes|Yes|Yes|Yes| 
-|Ricerca full-text e semantica|Yes|Yes|Yes|Yes|No| 
-|Impostazione della lingua nelle query|Yes|Yes|Yes|Yes|No|   
+|Ricerca full-text e semantica|Yes|Yes|Yes|Yes|no| 
+|Impostazione della lingua nelle query|Yes|Yes|Yes|Yes|no|   
 |Service Broker (messaggistica)|Yes|Yes|No (solo client)|No (solo client)|No (solo client)|   
 |Transact-SQL - endpoint|Yes|Yes|Yes|No|No| 
 |Grafico|Yes|Yes|Yes|Yes|  

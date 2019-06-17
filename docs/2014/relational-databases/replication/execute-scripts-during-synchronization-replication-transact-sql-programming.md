@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721260"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Esecuzione di script durante la sincronizzazione (programmazione Transact-SQL della replica)
@@ -32,7 +32,7 @@ ms.locfileid: "62721260"
   
 2.  Salvare il file script in un percorso in cui sia accessibile all'agente snapshot per la pubblicazione.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Specificare **@publication**, il nome del file script con il percorso UNC completo creato nel passaggio 2 per **@scriptfile**e uno dei valori seguenti per **@skiperror**:  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Specificare **@publication** , il nome del file script con il percorso UNC completo creato nel passaggio 2 per **@scriptfile** e uno dei valori seguenti per **@skiperror** :  
   
     -   **0** : l'agente arresterà l'esecuzione dello script se viene rilevato un errore.  
   

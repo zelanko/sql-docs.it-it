@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691797"
 ---
 # <a name="select-source-dialog-box"></a>Finestra di dialogo Seleziona origine
@@ -26,11 +26,11 @@ ms.locfileid: "62691797"
   
  **Per aprire la finestra di dialogo**  
   
--   In Server registrati fare clic con il pulsante destro del mouse su **Gruppi di server locali** , su qualsiasi server in **Gruppi di server locali**o su qualsiasi server in **Server di gestione centrale**, quindi scegliere **Valuta criteri**. Nella pagina **Selezione criteri** della finestra di dialogo **Valuta criteri** fare clic sul pulsante Sfoglia (**...**).  
+-   In Server registrati fare clic con il pulsante destro del mouse su **Gruppi di server locali** , su qualsiasi server in **Gruppi di server locali**o su qualsiasi server in **Server di gestione centrale**, quindi scegliere **Valuta criteri**. Nella pagina **Selezione criteri** della finestra di dialogo **Valuta criteri** fare clic sul pulsante Sfoglia ( **...** ).  
   
--   In Esplora oggetti espandere **Gestione**, espandere **Gestione criteri**, fare clic con il pulsante destro del mouse su **Criteri**, quindi scegliere **Importa criteri**. Nella finestra di dialogo **Importa** fare clic sul pulsante Sfoglia (**...**).  
+-   In Esplora oggetti espandere **Gestione**, espandere **Gestione criteri**, fare clic con il pulsante destro del mouse su **Criteri**, quindi scegliere **Importa criteri**. Nella finestra di dialogo **Importa** fare clic sul pulsante Sfoglia ( **...** ).  
   
--   In Esplora oggetti fare clic con il pulsante destro del mouse su un server, un database o un oggetto di database, scegliere **Criteri**, quindi fare clic su **Valuta**. Nella pagina **Selezione criteri** della finestra di dialogo **Valuta criteri** fare clic sul pulsante Sfoglia (**...**).  
+-   In Esplora oggetti fare clic con il pulsante destro del mouse su un server, un database o un oggetto di database, scegliere **Criteri**, quindi fare clic su **Valuta**. Nella pagina **Selezione criteri** della finestra di dialogo **Valuta criteri** fare clic sul pulsante Sfoglia ( **...** ).  
   
 ## <a name="options"></a>Opzioni  
  **File**  

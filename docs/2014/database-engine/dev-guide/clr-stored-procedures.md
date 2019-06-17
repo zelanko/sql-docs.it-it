@@ -22,17 +22,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753819"
 ---
 # <a name="clr-stored-procedures"></a>Stored procedure CLR
   Le stored procedure sono routine che non possono essere utilizzate in espressioni scalari. Diversamente dalle funzioni scalari, possono restituire risultati tabulari e messaggi al client, richiamare istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language) e restituire parametri di output. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [panoramica dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Requisiti per le stored procedure CLR  
- In common language runtime (CLR), stored procedure vengono implementate come metodi statici pubblici su una classe in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Il metodo statico può essere dichiarato come void o restituisce un valore integer. Se restituisce un valore integer, il numero intero restituito viene considerato come codice restituito dalla procedura. Ad esempio:   
+ In common language runtime (CLR), stored procedure vengono implementate come metodi statici pubblici su una classe in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Il metodo statico può essere dichiarato come void o restituisce un valore integer. Se restituisce un valore integer, il numero intero restituito viene considerato come codice restituito dalla procedura. Ad esempio:  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -148,7 +148,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  Utilizzare `SqlPipe.Send(string)` per inviare messaggi all'applicazione client. Il testo del messaggio ha un limite di 8000 caratteri. Se il messaggio supera 8000 caratteri, verrà troncato.  
   
 ###### <a name="returning-tabular-results"></a>Restituzione di risultati tabulari  
- Per inviare i risultati di una query direttamente al client, utilizzare uno degli overload del metodo `Execute` sull'oggetto `SqlPipe`. Si tratta della soluzione più efficiente per restituire risultati al client, in quanto i dati vengono trasferiti ai buffer di rete senza essere copiati nella memoria gestita. Ad esempio:   
+ Per inviare i risultati di una query direttamente al client, utilizzare uno degli overload del metodo `Execute` sull'oggetto `SqlPipe`. Si tratta della soluzione più efficiente per restituire risultati al client, in quanto i dati vengono trasferiti ai buffer di rete senza essere copiati nella memoria gestita. Ad esempio:  
   
  [C#]  
   

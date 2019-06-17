@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757199"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Visualizzazione o configurare le opzioni di connessione al server remoto (SQL Server)

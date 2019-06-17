@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755025"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
@@ -64,9 +64,9 @@ ms.locfileid: "62755025"
  *<PRINCIPAL_SERVER>*  
  Nome del partner che rappresenta attualmente l'istanza del server principale. Il nome è nel formato seguente:  
   
- *<NOME_SISTEMA>*[**\\**_<nome_istanza>_]  
+ *<NOME_SISTEMA>* [ **\\** _<nome_istanza>_ ]  
   
- dove *<NOME_SISTEMA>* è il nome del sistema contenente l'istanza del server. Per un'istanza del server non predefinita, viene anche visualizzato il nome dell'istanza, _<NOME_SISTEMA>_**\\**_<nome_istanza>_.  
+ dove *<NOME_SISTEMA>* è il nome del sistema contenente l'istanza del server. Per un'istanza del server non predefinita, viene anche visualizzato il nome dell'istanza, _<NOME_SISTEMA>_ **\\** _<nome_istanza>_ .  
   
  *<MIRROR_SERVER>*  
  Nome del partner che rappresenta attualmente l'istanza del server mirror. Il formato è identico a quello del server principale.  
@@ -81,7 +81,7 @@ ms.locfileid: "62755025"
   
  Un amministratore di sistema può visualizzare la configurazione corrente degli avvisi per il database selezionando la pagina a schede **Avvisi** . Da questa pagina è possibile accedere alla finestra di dialogo **Imposta valori di soglia avvisi** per abilitare e configurare una o più soglie degli avvisi.  
   
- Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:**_\<data>_*\<ora>*. Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
+ Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:** _\<data>_ *\<ora>* . Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
   
 ## <a name="action-menu"></a>Menu Azione  
  Il menu **Azione** include sempre i comandi seguenti:  

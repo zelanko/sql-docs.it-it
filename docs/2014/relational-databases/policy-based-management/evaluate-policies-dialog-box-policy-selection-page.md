@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705130"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Finestra di dialogo Valuta criteri, pagina Selezione criteri
@@ -24,15 +24,15 @@ ms.locfileid: "62705130"
   
 ## <a name="options"></a>Opzioni  
  **Origine**  
- Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine** .  
+ Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona origine** .  
   
  **File**  
- Digitare il percorso o usare il pulsante Sfoglia (**...**) per selezionare un file che contiene i criteri della gestione basata su criteri.  
+ Digitare il percorso o usare il pulsante Sfoglia ( **...** ) per selezionare un file che contiene i criteri della gestione basata su criteri.  
   
  **Server**  
  Selezionare questa opzione per eseguire una connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che contiene i criteri desiderati.  
   
- **Criteri: Policy**  
+ **Criteri: criterio**  
  Fare clic su questa opzione per aprire la finestra di dialogo relativa ai criteri specificati.  
   
  **Criteri: Categoria**  

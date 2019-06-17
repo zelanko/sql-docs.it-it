@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62695679"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>Proprietà processo: Nuovo processo (pagina pianificazioni)
+# <a name="job-properties-new-job-schedules-page"></a>Proprietà processo: Nuovo processo (pagina Pianificazioni)
   Usare questa pagina per visualizzare e organizzare le pianificazioni relative a un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opzioni  

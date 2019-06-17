@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736082"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
@@ -100,7 +100,7 @@ ms.locfileid: "62736082"
 ### <a name="node-id-name-caption-and-description"></a>ID, nome, didascalia e descrizione dei nodi  
  Il valore dell'ID univoco,**NODE_UNIQUE_NAME**, del nodo radice di qualsiasi modello è sempre uguale a 0. Tutti gli ID dei nodi vengono assegnati automaticamente da Analysis Services e non possono essere modificati.  
   
- Il nodo radice di ogni modello contiene anche i metadati di base relativi al modello. Tra i metadati sono inclusi il database di Analysis Services in cui viene archiviato il modello (**MODEL_CATALOG**), lo schema (**MODEL_SCHEMA)** e il nome del modello (**MODEL_NAME)**. Queste informazioni sono ripetute in tutti i nodi del modello, pertanto non è necessario eseguire query sul nodo radice per ottenere i metadati.  
+ Il nodo radice di ogni modello contiene anche i metadati di base relativi al modello. Tra i metadati sono inclusi il database di Analysis Services in cui viene archiviato il modello (**MODEL_CATALOG**), lo schema (**MODEL_SCHEMA)** e il nome del modello (**MODEL_NAME)** . Queste informazioni sono ripetute in tutti i nodi del modello, pertanto non è necessario eseguire query sul nodo radice per ottenere i metadati.  
   
  Oltre al nome usato come identificatore univoco, ogni nodo dispone di un *nome* ,**NODE_NAME**, che viene creato automaticamente dall'algoritmo a scopo di visualizzazione e non può essere modificato.  
   

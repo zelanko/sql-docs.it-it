@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705391"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale
@@ -43,7 +43,7 @@ ms.locfileid: "62705391"
  I criteri eseguiti in modalità di valutazione **Su richiesta** non utilizzano questa casella di controllo.  
   
  **Condizioni di controllo**  
- Selezionare la condizione della gestione basata su criteri utilizzata dai criteri correnti. Vengono elencate tutte le condizioni del server relative al facet della gestione basata su criteri associato. Fare clic su **Nuova condizione** per creare una nuova condizione. Fare clic sul pulsante con i puntini di sospensione (**...**) per modificarla.  
+ Selezionare la condizione della gestione basata su criteri utilizzata dai criteri correnti. Vengono elencate tutte le condizioni del server relative al facet della gestione basata su criteri associato. Fare clic su **Nuova condizione** per creare una nuova condizione. Fare clic sul pulsante con i puntini di sospensione ( **...** ) per modificarla.  
   
  **In base alle destinazioni**  
  Selezionare i tipi di destinazione disponibili per il facet per completare un'espressione di filtro.  

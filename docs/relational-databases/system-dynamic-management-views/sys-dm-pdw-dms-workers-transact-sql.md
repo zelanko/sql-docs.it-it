@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690452"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62690452"
 |dms_step_index|**int**|Passaggio nel piano di servizio migrazione del database che è in esecuzione il thread di lavoro.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.||  
 |pdw_node_id|**int**|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere node_id nelle [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribuzione che esegue il ruolo di lavoro, se presente.|Vedere in distribution_id [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Tipo|**nvarchar(32)**|Tipo di thread di lavoro DMS che questa voce rappresenta.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
+|type|**nvarchar(32)**|Tipo di thread di lavoro DMS che questa voce rappresenta.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|**nvarchar(32)**|Stato del servizio migrazione del database.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Velocità effettiva di lettura o scrittura nell'ultimo secondo.|Maggiore o uguale a 0. NULL se la query è stata annullata o non riuscita prima di eseguire il ruolo di lavoro.|  
 |bytes_processed|**bigint**|Numero totale di byte elaborati dal thread di lavoro.|Maggiore o uguale a 0. NULL se la query è stata annullata o non riuscita prima di eseguire il ruolo di lavoro.|  

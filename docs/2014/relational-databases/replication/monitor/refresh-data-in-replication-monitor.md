@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667237"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Aggiornamento dei dati in Monitoraggio replica
@@ -34,7 +34,7 @@ ms.locfileid: "62667237"
   
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>Per impostare l'aggiornamento automatico di una finestra dei dettagli  
   
-1.  Aprire una finestra dei dettagli in Monitoraggio replica. Ad esempio:   
+1.  Aprire una finestra dei dettagli in Monitoraggio replica. Ad esempio:  
   
     1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   

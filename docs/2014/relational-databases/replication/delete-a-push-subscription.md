@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75e5953d8f7ef9af1134db56f7061261eee2c0fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721427"
 ---
 # <a name="delete-a-push-subscription"></a>Eliminazione di una sottoscrizione push
@@ -65,15 +65,15 @@ ms.locfileid: "62721427"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per eliminare una sottoscrizione push di una pubblicazione snapshot o transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Specificare i parametri **@publication** e **@subscriber**. Specificare il valore **all** per il parametro **@article**. (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Specificare i parametri **@publication** e **@subscriber** . Specificare il valore **all** per il parametro **@article** . (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
   
 2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_subscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql) per rimuovere i metadati di replica nel database di sottoscrizione.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Per eliminare una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), specificando **@publication**, **@subscriber** e **@subscriber_db**. (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
+1.  Nel server di pubblicazione eseguire [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), specificando **@publication** , **@subscriber** e **@subscriber_db** . (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
   
-2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Specificare i parametri **@publisher**, **@publisher_db**e **@publication**. per rimuovere i metadati di merge dal database di sottoscrizione.  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Specificare i parametri **@publisher** , **@publisher_db** e **@publication** . per rimuovere i metadati di merge dal database di sottoscrizione.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio viene eliminata una sottoscrizione push di una pubblicazione transazionale.  

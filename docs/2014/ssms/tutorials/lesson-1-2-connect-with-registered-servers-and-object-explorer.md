@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636425"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Connettersi con Server registrati ed Esplora oggetti
@@ -37,7 +37,7 @@ ms.locfileid: "62636425"
   
 5.  Nella casella **Nome server registrato** digitare [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  Nel **proprietà connessione** nella scheda il **Connetti al database** elenco, selezionare  **\<Sfoglia server >**.  
+6.  Nel **proprietà connessione** nella scheda il **Connetti al database** elenco, selezionare  **\<Sfoglia server >** .  
   
 7.  Nella finestra di dialogo **Cerca database** fare clic su **Sì**.  
   

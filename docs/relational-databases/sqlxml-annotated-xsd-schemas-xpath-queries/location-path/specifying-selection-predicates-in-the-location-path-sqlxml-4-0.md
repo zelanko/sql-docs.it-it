@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720028"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Definizione di predicati di selezione nel percorso (SQLXML 4.0)
@@ -42,7 +42,7 @@ ms.locfileid: "62720028"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In questa query XPath `child` e `attribute` sono nomi di asse. `Customer` è il test di nodo (TRUE se `Customer` è un  **\<nodo elemento >**, in quanto  **\<elemento >** è il tipo di nodo principale per il `child` asse). `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un attributo del nodo di contesto, in quanto  **\<attributo >** è l'entità tipo di nodo del **attributo** asse).  
+ In questa query XPath `child` e `attribute` sono nomi di asse. `Customer` è il test di nodo (TRUE se `Customer` è un  **\<nodo elemento >** , in quanto  **\<elemento >** è il tipo di nodo principale per il `child` asse). `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un attributo del nodo di contesto, in quanto  **\<attributo >** è l'entità tipo di nodo del **attributo** asse).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   

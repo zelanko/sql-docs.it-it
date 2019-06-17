@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691668"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definizione di una relazione tra record logici degli articoli di tabelle di merge
@@ -50,7 +50,7 @@ ms.locfileid: "62691668"
 -   Se si aggiunge, modifica o elimina un record logico dopo che sono state inizializzate sottoscrizioni per la pubblicazione, è necessario generare un nuovo snapshot e reinizializzare tutte le sottoscrizioni in seguito alla modifica. Per altre informazioni sui requisiti per la modifica delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Definire record logici nella finestra di dialogo **Aggiungi join** disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+ Definire record logici nella finestra di dialogo **Aggiungi join** disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
  È possibile definire record logici nella finestra di dialogo **Aggiungi join** solo se vengono applicati a un filtro join di una pubblicazione di tipo merge e la pubblicazione soddisfa i requisiti per l'utilizzo di partizioni pre-calcolate. Per definire record logici che non vengono applicati a filtri di join e per impostare il rilevamento e la risoluzione dei conflitti a livello di record logici, è necessario utilizzare le stored procedure.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62691668"
   
     -   Se il valore è **1**, le partizioni calcolate vengono già utilizzate.  
   
-    -   Se il valore è **0**, eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **use_partition_groups** per **@property** e il valore **true** per **@value**.  
+    -   Se il valore è **0**, eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **use_partition_groups** per **@property** e il valore **true** per **@value** .  
   
         > [!NOTE]  
         >  Se la pubblicazione non supporta le partizioni calcolate, non sarà possibile utilizzare i record logici. Per altre informazioni vedere "Requisiti per l'uso delle partizioni pre-calcolate" nell'argomento [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -100,13 +100,13 @@ ms.locfileid: "62691668"
   
 2.  Se gli articoli che includeranno il record logico non esistono, eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare una delle opzioni di rilevamento e risoluzione dei conflitti seguenti per il record logico:  
   
-    -   Per rilevare e risolvere conflitti che si verificano all'interno di righe correlate del record logico, specificare il valore **true** per **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution**.  
+    -   Per rilevare e risolvere conflitti che si verificano all'interno di righe correlate del record logico, specificare il valore **true** per **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution** .  
   
-    -   Per usare il rilevamento dei conflitti standard o colonna a livello di riga e la risoluzione, specificare il valore `false` per **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution**, ovvero l'impostazione predefinita.  
+    -   Per usare il rilevamento dei conflitti standard o colonna a livello di riga e la risoluzione, specificare il valore `false` per **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution** , ovvero l'impostazione predefinita.  
   
 3.  Ripetere il passaggio 2 per ogni articolo che includerà il record logico. È necessario utilizzare la stessa opzione di rilevamento e risoluzione dei conflitti per ogni articolo del record logico. Per altre informazioni, vedere [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
-4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Specificare **@publication**, il nome di un articolo della relazione per **@article**, il nome del secondo articolo per **@join_articlename**, un nome per la relazione per **@filtername**, una clausola che definisce la relazione tra i due articoli **@join_filterclause**, il tipo di join per **@join_unique_key** e uno dei valori seguenti per **@filter_type**:  
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Specificare **@publication** , il nome di un articolo della relazione per **@article** , il nome del secondo articolo per **@join_articlename** , un nome per la relazione per **@filtername** , una clausola che definisce la relazione tra i due articoli **@join_filterclause** , il tipo di join per **@join_unique_key** e uno dei valori seguenti per **@filter_type** :  
   
     -   **2** : consente di definire una relazione logica.  
   
@@ -121,15 +121,15 @@ ms.locfileid: "62691668"
   
 1.  Per rilevare e risolvere conflitti che si verificano all'interno di righe correlate nel record logico:  
   
-    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_detection** per **@property** e il valore **true** per **@value**. Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_detection** per **@property** e il valore **true** per **@value** . Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
-    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_resolution** per **@property** e il valore **true** per **@value**. Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_resolution** per **@property** e il valore **true** per **@value** . Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
 2.  Per utilizzare l'opzione standard di rilevamento e risoluzione dei conflitti a livello di riga o di colonna:  
   
-    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_detection** per **@property** e il valore `false` per **@value**. Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_detection** per **@property** e il valore `false` per **@value** . Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
-    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_resolution** per **@property** e il valore `false` per **@value**. Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+    -   Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **logical_record_level_conflict_resolution** per **@property** e il valore `false` per **@value** . Specificare il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>Per rimuovere una relazione tra record logici  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62691668"
     > [!NOTE]  
     >  Questa query restituisce le stesse informazioni di [sp_helpmergefilter](/sql/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql). La stored procedure di sistema restituisce tuttavia solo le informazioni sulle relazioni tra record logici che corrispondono anche a filtri join.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql). Specificare **@publication**, il nome di uno degli articoli della relazione per **@article**e il nome della relazione ottenuto al passaggio 1 per **@filtername**.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql). Specificare **@publication** , il nome di uno degli articoli della relazione per **@article** e il nome della relazione ottenuto al passaggio 1 per **@filtername** .  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio le partizioni pre-calcolate vengono abilitate in una pubblicazione esistente e viene creato un record logico che comprende i due nuovi articoli per le tabelle `SalesOrderHeader` e `SalesOrderDetail` .  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660802"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication**=** ] **'**_publication_**'**  
- Nome della pubblicazione. *pubblicazione*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
+ [ @publication **=** ] **'** _publication_ **'**  
+ Nome della pubblicazione. *pubblicazione*viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
   
- [ @found**=** ] **'***found***'** OUTPUT  
+ [ @found **=** ] **'***found***'** OUTPUT  
  Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  Numero di identificazione della pubblicazione. *publication_id* viene **uniqueidentifier** e un parametro di OUTPUT con valore predefinito è NULL.  
   
- [ @reserved**=**] **'***reserved***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *riservato* viene **nvarchar(20)**, con un valore predefinito è NULL.  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *riservato* viene **nvarchar(20)** , con un valore predefinito è NULL.  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="result-sets"></a>Set di risultati  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683978"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` Se l'agente di distribuzione è in esecuzione **sp_table_validation**, indica se l'agente di distribuzione viene interrotta immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, viene generato l'errore 20578 e l'agente di replica viene segnalato l'arresto. Questo parametro viene ignorato quando **sp_table_validation** viene eseguito direttamente dall'utente.  
   
-`[ @table_name = ] table_name` È il nome della tabella della vista utilizzata per i messaggi di output. *TABLE_NAME* viene **sysname**, il valore predefinito è **@table**.  
+`[ @table_name = ] table_name` È il nome della tabella della vista utilizzata per i messaggi di output. *TABLE_NAME* viene **sysname**, il valore predefinito è **@table** .  
   
-`[ @column_list = ] 'column_list'` È l'elenco di colonne da utilizzare nella funzione checksum. *column_list* viene **nvarchar (4000)**, con un valore predefinito è NULL. Abilita la convalida degli articoli di tipo merge per specificare un elenco di colonne che non include le colonne calcolate e timestamp.  
+`[ @column_list = ] 'column_list'` È l'elenco di colonne da utilizzare nella funzione checksum. *column_list* viene **nvarchar (4000)** , con un valore predefinito è NULL. Abilita la convalida degli articoli di tipo merge per specificare un elenco di colonne che non include le colonne calcolate e timestamp.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Se si esegue una convalida mediante checksum e checksum previsto è uguale a quello della tabella **sp_table_validation** restituisce un messaggio che la tabella ha superato la convalida mediante checksum. In caso contrario, restituisce un messaggio per indicare che la tabella potrebbe non essere sincronizzata e specifica la differenza tra il numero di righe previsto e quello effettivo.  

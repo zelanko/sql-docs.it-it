@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761618"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
@@ -83,7 +83,7 @@ ms.locfileid: "62761618"
   
 4.  Fare clic sulla relazione nell'elenco **Relazione selezionata** .  
   
-5.  Fare clic su **Specifica tabelle e colonne** nella griglia a destra e quindi sul pulsante con i puntini di sospensione (**...**) a destra della proprietà.  
+5.  Fare clic su **Specifica tabelle e colonne** nella griglia a destra e quindi sul pulsante con i puntini di sospensione ( **...** ) a destra della proprietà.  
   
 6.  Nella finestra di dialogo **Tabelle e colonne** selezionare dall'elenco a discesa **Chiave primaria** la tabella che si troverà sul lato chiave primaria della relazione.  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a0830e5db32fcc651b59114e1a2dad870e48d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705237"
 ---
 # <a name="import-policies-dialog-box"></a>Finestra di dialogo Importa criteri
@@ -24,7 +24,7 @@ ms.locfileid: "62705237"
   
 ## <a name="options"></a>Opzioni  
  **File da importare**  
- Per importare i criteri da un file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia (**...**).  
+ Per importare i criteri da un file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia ( **...** ).  
   
  **Sostituisci duplicati con gli elementi importati**  
  Selezionare questa opzione per sovrascrivere eventuali criteri o condizioni con lo stesso nome che esistono già nell'istanza corrente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Non è possibile sovrascrivere una condizione con criteri dipendenti, a meno che non vengano sovrascritti anche questi ultimi. Se questa opzione non viene selezionata, una condizione esistente che utilizza la stessa espressione di condizione non genererà un errore.  

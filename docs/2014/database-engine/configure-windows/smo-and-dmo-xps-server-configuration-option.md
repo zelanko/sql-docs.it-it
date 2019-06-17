@@ -1,9 +1,8 @@
 ---
 title: Opzioni di configurazione del server SMO e DMO XPs | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
-ms.prod: sql
-ms.prod_service: high-availability
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
@@ -12,15 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755284"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>Opzioni di configurazione del server SMO e DMO XPs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
   L'opzione SMO and DMO XPs consente di abilitare le stored procedure estese SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) nel server.  
   
  Si noti che, a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], DMO è stato rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +27,7 @@ ms.locfileid: "62755284"
 |Value|Significato|  
 |-----------|-------------|  
 |0|Le stored procedure estese SMO non sono disponibili.|  
-|1|Le stored procedure estese SMO sono disponibili. Impostazione predefinita.|  
+|1|Le stored procedure estese SMO sono disponibili. Questa è l'impostazione predefinita.|  
   
  L'impostazione diventa immediatamente effettiva.  
   

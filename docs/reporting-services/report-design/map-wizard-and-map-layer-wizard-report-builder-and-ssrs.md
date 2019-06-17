@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8587cedde63352f7027e573092c6e8ae02dc218d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580117"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499888"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
  Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -114,12 +114,12 @@ ms.locfileid: "65580117"
  La raccolta mappe contiene le mappe dei report presenti nella cartella della raccolta mappe per l'ambiente di creazione del report. Le mappe della raccolta rappresentano un modo rapido per aggiungere una mappa al report. Le mappe predefinite della raccolta vengono fornite da un provider di mappe.  
   
 > [!NOTE]  
->  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente United States Census Bureau ([https://www.census.gov/](https://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, visitare [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Census Bureau.  
+>  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([https://www.census.gov/](https://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, vedere [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentazione tecnica dei file di forma TIGER/Line e dei file TIGER/Line). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Bureau of the Census.  
   
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<nomefile>*.shp che contiene i dati spaziali e un file di supporto *\<nomefile>*.dbf.  
+ Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<nomefile>* .shp che contiene i dati spaziali e un file di supporto *\<nomefile>* .dbf.  
   
  Quando si specifica come origine dati spaziali un file di forma posizionato nel computer locale, i dati spaziali vengono incorporati automaticamente nel report. Per utilizzare in modo dinamico i dati spaziali di un file ESRI, è necessario eseguire le operazioni seguenti:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65580117"
  Una query spaziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è una query del set di dati che specifica dati che possono essere di tipo SQLGeometry o SQLGeography di un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Se nella procedura guidata si definisce un'origine dati, nella pagina Progetta query verranno visualizzate diverse finestre Progettazione query, a seconda del tipo di origine dati a cui si è connessi. Per altre informazioni, vedere [Finestre di progettazione query &#40;Generatore report&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Se nella procedura guidata si definisce un'origine dati, nella pagina Progetta query verranno visualizzate diverse finestre Progettazione query, a seconda del tipo di origine dati a cui si è connessi. Per altre informazioni, vedere [strumenti di progettazione Query &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
  Quando si esegue la query in Progettazione query, nel set di risultati viene visualizzata una colonna con i dati spaziali sotto forma di testo. Ad esempio una riga potrebbe contenere dati spaziali che rappresentano un singolo punto e la riga successiva dati spaziali che definiscono un set di punti. Ogni riga diventa un elemento della mappa. È possibile variare la visualizzazione di ogni elemento della mappa come un'unità indivisibile.  
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678494"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lezione 1: Creazione della struttura di Data Mining Bike Buyer
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lezione 1: Creazione della struttura di data mining Bike Buyer
   In questa lezione verrà creata una struttura di data mining che consente di stimare se un potenziale cliente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] acquisterà una bicicletta. Se non si ha familiarità con le strutture di data mining e sul loro ruolo nel data mining, vedere [strutture di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La struttura di data mining Bike Buyer che verrà creato in questa lezione supporta l'aggiunta di modelli di data mining in base il [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining di clustering per esaminare le diverse modalità di raggruppamento dei clienti e si utilizzeranno modelli di data mining di albero delle decisioni per stimare se un potenziale cliente acquisterà una bicicletta.  

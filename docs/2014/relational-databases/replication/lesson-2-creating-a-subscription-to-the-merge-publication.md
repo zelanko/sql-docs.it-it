@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721034"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lezione 2: Creazione di una sottoscrizione per la pubblicazione di tipo Merge
@@ -40,7 +40,7 @@ ms.locfileid: "62721034"
   
 7.  Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database** , selezionare **OK**e fare clic su **Avanti**.  
   
-8.  Nella pagina sicurezza agente di Merge, fare clic sui puntini di sospensione (**...** ) pulsante, immettere \< _nome_macchina >_**\repl_merge** nel **account processo** casella, specificare la password per questo account, fare clic su **OK**, fare clic su **successiva**, quindi fare clic su **Next** nuovamente.  
+8.  Nella pagina sicurezza agente di Merge, fare clic sui puntini di sospensione ( **...** ) pulsante, immettere \< _nome_macchina >_ **\repl_merge** nel **account processo** casella, specificare la password per questo account, fare clic su **OK**, fare clic su **successiva**, quindi fare clic su **Next** nuovamente.  
   
 9. Nella pagina Inizializzazione sottoscrizioni selezionare **Alla prima sincronizzazione** dall'elenco **Quando** , fare clic su **Avanti**e di nuovo su **Avanti** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721034"
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere **Database**, **SalesOrdersReplica**e **Sicurezza**, fare clic con il pulsante destro del mouse su **Utenti**e scegliere **Nuovo utente**.  
   
-2.  Nel **generali** pagina, immettere \< _nome_computer >_**\repl_merge** nel **nome utente** fare clic sul pulsante con i puntini di sospensione ( **...** ) e fare clic **esplorare**, selezionare \< _nome_macchina >_**\repl_merge**, fare clic su **OK**, fare clic su **Controlla nomi**, quindi fare clic su **OK**.  
+2.  Nel **generali** pagina, immettere \< _nome_computer >_ **\repl_merge** nel **nome utente** fare clic sul pulsante con i puntini di sospensione ( **...** ) e fare clic **esplorare**, selezionare \< _nome_macchina >_ **\repl_merge**, fare clic su **OK**, fare clic su **Controlla nomi**, quindi fare clic su **OK**.  
   
 3.  In **Appartenenza a ruoli del database**selezionare **db_owner**e fare clic su **OK** per creare l'utente.  
   

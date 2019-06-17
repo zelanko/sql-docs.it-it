@@ -14,13 +14,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213536"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785950"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "53213536"
   
 2.  Eseguire il comando (nell'esempio seguente viene chiamato **ICommandExecute::Execute()** con IID_IRow).  
   
-3.  Recuperare i dati di colonna usando **IRow::Open()** oppure **IRow::GetColumns()**.  
+3.  Recuperare i dati di colonna usando **IRow::Open()** oppure **IRow::GetColumns()** .  
   
     -   **IRow::Open()** può essere utilizzato per aprire un' **ISequentialStream** sulla riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari. Sarà quindi possibile utilizzare **IStream** o **ISequentialStream** per leggere i dati dalla colonna.  
   
-    -   Se viene utilizzato **IRow::GetColumns()**, l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto del flusso.  
+    -   Se viene utilizzato **IRow::GetColumns()** , l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto del flusso.  
   
 4.  Uso **ISequentialStream::Read()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
   

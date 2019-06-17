@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702128"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestione di errori e avvisi (XMLA)
@@ -50,9 +50,9 @@ ms.locfileid: "62702128"
 ### <a name="fault-code-information"></a>Informazioni sul codice di errore  
  Nella tabella seguente vengono elencate le informazioni sul codice di errore XMLA contenute nella sezione dei dettagli della risposta SOAP. Le colonne rappresentano gli attributi di un errore nella sezione dei dettagli di un errore SOAP.  
   
-|Nome colonna|Tipo|Descrizione|Valore null consentito<sup>1</sup>|  
+|Nome colonna|Type|Descrizione|Valore null consentito<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un valore `UnsignedInt`.|No|  
+|`ErrorCode`|`UnsignedInt`|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un valore `UnsignedInt`.|no|  
 |`WarningCode`|`UnsignedInt`|Codice restituito che indica una condizione di avviso. Il valore esadecimale deve essere convertito in un valore `UnsignedInt`.|Yes|  
 |`Description`|`String`|Testo o descrizione dell'errore o dell'avviso restituiti dal componente che ha generato l'errore.|Yes|  
 |`Source`|`String`|Nome del componente che ha generato l'errore o l'avviso.|Yes|  

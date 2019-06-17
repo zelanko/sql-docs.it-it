@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42990a22e3e4389940fe24d31bf028229e68aff4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 5e0ad826c8846330c7207b14ac2344687563bbfa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417902"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797104"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Supporto per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

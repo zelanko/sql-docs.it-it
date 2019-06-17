@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760824"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di Access (AccessToSQL)
@@ -103,7 +103,7 @@ Per altre informazioni sull'aggiunta di database per i progetti, vedere [aggiunt
   
 2.  Nella finestra di dialogo di connessione, immettere o selezionare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto (**.**).  
+    -   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto ( **.** ).  
   
     -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   

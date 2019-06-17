@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755224"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Connetti al server (pagina Proprietà connessione) - Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "62755224"
   
 ## <a name="options"></a>Opzioni  
  **Connetti al database**  
- Selezionare dall'elenco un database al quale connettersi. Se si seleziona  **\<predefinito >**, si verrà connessi al database predefinito per il server. Se si seleziona  **\<Esplora server >**, è possibile esplorare il server per il database desiderato a cui connettersi.  
+ Selezionare dall'elenco un database al quale connettersi. Se si seleziona  **\<predefinito >** , si verrà connessi al database predefinito per il server. Se si seleziona  **\<Esplora server >** , è possibile esplorare il server per il database desiderato a cui connettersi.  
   
  **Timeout connessione**  
  Immettere il numero di secondi di attesa dell'attivazione di una connessione prima del timeout. Il valore predefinito è 15 secondi.  
