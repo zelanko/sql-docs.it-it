@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225498"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allocare handle e connettersi a SQL Server (ODBC)
@@ -41,7 +41,7 @@ ms.locfileid: "63225498"
   
 8.  Chiamare la funzione SQLConnect per utilizzare un'origine dati per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     e  
+     Oppure  
   
      Chiamare [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) di utilizzare una stringa di connessione per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

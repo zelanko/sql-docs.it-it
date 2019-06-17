@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3ccdf7ffa8b5eaf01108ca0492b9b5db9ecc042
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 975fdc643bfd094eee2385ae345aed29ee708841
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801464"
 ---
 # <a name="default-sql-server-data-types"></a>Tipi di dati di SQL Server predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 4b2f02fc81b969f8633a5a951483745c1d2635b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744611"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799642"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Caricamento dei Driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,7 +84,7 @@ Prima di caricare il driver SQLSRV all'avvio di PHP, spostare un file di driver 
 Per altre informazioni sulle direttive di **php.ini**, vedere [Descrizione delle direttive core di php.ini](https://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Introduzione a Microsoft Drivers per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introduzione ai driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Requisiti di sistema dei driver Microsoft per PHP per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
 

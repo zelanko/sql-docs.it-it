@@ -19,10 +19,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183062"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Esecuzione della console SSMA (MySQLToSQL)
@@ -420,7 +420,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -508,7 +508,7 @@ synchronize-target
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target  
@@ -517,7 +517,7 @@ o Gestione configurazione
   
   object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target>  
@@ -573,7 +573,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database  
@@ -733,7 +733,7 @@ o Gestione configurazione
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```  
 <convert-sql-statement  

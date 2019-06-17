@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200356"
 ---
 # <a name="log-long-running-queries-odbc"></a>Registrare query a esecuzione prolungata (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200356"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Per registrare query con esecuzione prolungata tramite Amministratore ODBC  
   
-1.  Nelle **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione** e quindi fare doppio clic su **origine dati (ODBC)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
+1.  Nelle **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione** e quindi fare doppio clic su **origine dati (ODBC)** . In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
   
 2.  Scegliere il **DSN utente**, **DSN di sistema**, o **DSN su File** scheda.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200356"
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Per registrare dati di query con esecuzione prolungata a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il nome di file e percorso completo del file di log di query con esecuzione prolungata. Ad esempio:   
+1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il nome di file e percorso completo del file di log di query con esecuzione prolungata. Ad esempio:  
   
     ```  
     C:\\Odbcqry.log  

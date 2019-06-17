@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+manager: jroth
+ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405721"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801843"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver per SQL Server
 
@@ -28,8 +28,8 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
   
 ## <a name="getting-started"></a>Introduzione  
 
-* [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Java](step-1-configure-development-environment-for-java-development.md)  
-* [Passaggio 2: Creare un database SQL per lo sviluppo Java](step-2-create-a-sql-database-for-java-development.md)  
+* [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di Java](step-1-configure-development-environment-for-java-development.md)  
+* [Passaggio 2: Creare un database SQL per lo sviluppo di Java](step-2-create-a-sql-database-for-java-development.md)  
 * [Passaggio 3: Modello di verifica per la connessione a SQL tramite Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentazione  
@@ -37,7 +37,7 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
 * [Introduzione](getting-started-with-the-jdbc-driver.md)
 * [Panoramica](overview-of-the-jdbc-driver.md)  
 * [Guida per programmatori](programming-guide-for-jdbc-sql-driver.md)
-* [Sicurezza](securing-jdbc-driver-applications.md)  
+* [Security](securing-jdbc-driver-applications.md)  
 * [Prestazioni e affidabilità](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [Risoluzione dei problemi](diagnosing-problems-with-the-jdbc-driver.md)
 * [Esempi di codice](sample-jdbc-driver-applications.md)

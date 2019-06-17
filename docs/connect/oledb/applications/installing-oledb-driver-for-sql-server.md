@@ -21,13 +21,13 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: e779d51f535d3b3489c1fbe043c7ff9212b0e875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744381"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800874"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installazione del driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Il Driver OLE DB per SQL Server libreria di file di intestazione e (msoledbsql.h
   
 X64 msoledbsql.msi installa anche la versione a 32 bit del Driver OLE DB per SQL Server. Se l'applicazione è destinata a una piattaforma diversa da quella che in cui è stata sviluppata, è possibile scaricare le versioni di msoledbsql.msi per x64 e x86.
 
-Quando si richiama msoledbsql.msi, solo i componenti client vengono installati per impostazione predefinita. I componenti client sono file che supportano l'esecuzione di un'applicazione sviluppata tramite il driver OLE DB per SQL Server. Per installare i componenti SDK, specificare `ADDLOCAL=All` sulla riga di comando. Ad esempio  
+Quando si richiama msoledbsql.msi, solo i componenti client vengono installati per impostazione predefinita. I componenti client sono file che supportano l'esecuzione di un'applicazione sviluppata tramite il driver OLE DB per SQL Server. Per installare i componenti SDK, specificare `ADDLOCAL=All` sulla riga di comando. Esempio:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

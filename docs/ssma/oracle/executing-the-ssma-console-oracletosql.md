@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287232"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Esecuzione della console SSMA (OracleToSQL)
@@ -415,7 +415,7 @@ Esegue la migrazione dei dati di origine alla destinazione.
   
 </migrate-data>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -513,7 +513,7 @@ o Gestione configurazione
   
    object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target>  
@@ -628,7 +628,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <save-as-script  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287805"
 ---
 # <a name="examples-using-auto-mode"></a>Esempi: Uso della modalità AUTO
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Per impostazione predefinita, quando si utilizza la modalità AUTO per recuperare dati binari, al posto dei dati binari viene restituito un riferimento a un URL relativo alla radice virtuale del database in cui è stata eseguita la query. Questa situazione si presenta se non è specificata l'opzione BINARY BASE64.  
   
- Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Ad esempio:   
+ Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Ad esempio:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

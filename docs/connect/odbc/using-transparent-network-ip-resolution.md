@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610744"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801714"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Uso della risoluzione dell'IP di rete trasparente
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ TransparentNetworkIPResolution è una revisione della funzionalità MultiSubnetF
 * 1: tutti gli indirizzi IP vengono eseguiti in parallelo
 * 2: tutti gli indirizzi IP vengono eseguiti uno dopo l'altro
 
-|transparentNetworkIPResolution|MultiSubnetFailover|Comportamento|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Comportamento|
 |:-:|:-:|:-:|
 |(predefinito)|(predefinito)|0|
 |(predefinito)|Abilitata|1|
@@ -47,7 +47,7 @@ Parola chiave|Valori|Default
 
 Il `SQL_COPT_SS_TNIR` attributo pre-connessione consente a un'applicazione controllare questa impostazione a livello di codice:
 
-Attributo di connessione|   Dimensioni/tipo|  Default| valore| Descrizione
+Attributo di connessione|   Dimensioni/Tipo|  Default| valore| Descrizione
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` o `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Abilita o disabilita TNIR.
 

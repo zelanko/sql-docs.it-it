@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5f033ac12569c7de61af071930d6c8d58d8b611
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198216"
 ---
 # <a name="installing-odbc-components"></a>Installazione dei componenti ODBC
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Questa sezione descrive come i componenti ODBC vengono installati e rimossi. Poiché gli sviluppatori di driver installare sempre un componente ODBC (i driver), devono leggere questa sezione. Gli sviluppatori di applicazioni necessario leggere questa sezione solo se sono verranno inclusi i componenti ODBC con le proprie applicazioni. Componenti ODBC includono gestione Driver, driver, funzioni di conversione, il programma di installazione DLL, la libreria di cursori e tutti i file correlati. Ai fini di questa sezione, le applicazioni ODBC non sono considerate componenti ODBC.  
   

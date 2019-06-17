@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0945a8fb56f24e6ad714e81e035f41fa9f18dc05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f13f175dc6f50818b5eef6b142f4d211103a4b3c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776239"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803161"
 ---
 # <a name="connection-url-sample"></a>Esempio di URL della connessione
 
@@ -35,7 +35,7 @@ Il file di codice per questo esempio è ConnectURL.java ed è disponibile nel se
 Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni su quale file JAR scegliere, vedere [Requisiti di sistema per il driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a>Esempio
 

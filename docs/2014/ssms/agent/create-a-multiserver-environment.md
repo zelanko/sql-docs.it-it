@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192966"
 ---
 # <a name="create-a-multiserver-environment"></a>Creazione di un ambiente multiserver
@@ -37,12 +37,12 @@ ms.locfileid: "63192966"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 o versione successiva**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Yes|Yes|No|No|No|No|No|  
-|**MSX = 8.0 < SP3**|Yes|Yes|No|No|No|No|no|  
+|**MSX = 7.0**|Yes|Yes|no|No|No|No|No|  
+|**MSX = 8.0 < SP3**|Yes|Yes|No|No|No|No|No|  
 |**MSX = 8.0 SP3 o versione successiva**|No|No|Yes|Yes|Yes|Yes|Yes|  
-|**MSX = 9.0**|no|No|No|Yes|Yes|Yes|Yes|  
-|**MSX = 10.0**|No|no|No|no|Yes|Yes|Yes|  
-|**MSX = 10.5**|no|No|No|No|no|Yes|Yes|  
+|**MSX = 9.0**|No|no|No|Yes|Yes|Yes|Yes|  
+|**MSX = 10.0**|no|no|No|No|Yes|Yes|Yes|  
+|**MSX = 10.5**|No|No|No|No|No|Yes|Yes|  
 |**MSX = 11.0**|No|No|No|No|No|No|Yes|  
   
  Al momento della creazione di un ambiente multiserver, è opportuno considerare i problemi seguenti:  

@@ -13,13 +13,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf04e89adec8cc9ff02dbee83cc21083d57f4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ea105ebb0d0fb2d6bf5e8cec0fadacd369abadc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634809"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802038"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Costruttore SQLServerException (lang. String, Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

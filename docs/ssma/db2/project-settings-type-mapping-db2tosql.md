@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270010"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Impostazioni progetto (Mapping di tipo) (DB2ToSQL)
@@ -104,7 +104,7 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 |UROWID|UNIQUEIDENTIFIER|  
 |varchar|ntext|  
 |varchar2|ntext|  
-|xmltype|Xml|  
+|xmltype|xml|  
   
 <sup>\*</sup> Si applica per restituire mapping solo di valori tipo.  
   
@@ -176,7 +176,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
 |varchar[\*..\*]|varchar[\*]|  
 |varchar2[\*..\*]|varchar[\*]|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mapping dei tipi di variabile locale predefinito  
 Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili locali.  
@@ -187,7 +187,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |binary_double|float[53]|  
 |binary_float|float[53]|  
 |binary_interger|INT|  
-|BLOB|varbinary(max)|  
+|Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
 |Char varying [\*.. 8000]|varchar[\*]|  
@@ -263,7 +263,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |varchar[8001..\*]|ntext|  
 |varchar2[\*..8000]|varchar[\*]|  
 |varchar2[8001..\*]|varcha(max)|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Riferimento all'interfaccia utente &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

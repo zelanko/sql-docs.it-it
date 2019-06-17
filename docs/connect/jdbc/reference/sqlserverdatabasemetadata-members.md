@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbbe2bde7b6eba06b865b5cd4fb94e471b626510
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788080"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800557"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Membri di SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47788080"
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|Recupera una descrizione dei diritti di accesso per le colonne di una tabella.|  
 |[getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di una tabella disponibili nel catalogo specificato.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatabasemetadata.md)|Recupera la connessione che ha prodotto questo oggetto di metadati.|  
-|[getCrossReference](../../../connect/jdbc/reference/getcrossreference-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di chiave esterna per la tabella di chiave esterna specificata che fa riferimento alle colonne di chiave primaria della tabella di chiave primaria specificata. |  
+|[getCrossReference](../../../connect/jdbc/reference/getcrossreference-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di chiave esterna per la tabella di chiave esterna specificata che fa riferimento alle colonne di chiave primaria della tabella di chiave primaria specificata.|  
 |[getDatabaseMajorVersion](../../../connect/jdbc/reference/getdatabasemajorversion-method-sqlserverdatabasemetadata.md)|Recupera il numero della versione principale del database sottostante.|  
 |[getDatabaseMinorVersion](../../../connect/jdbc/reference/getdatabaseminorversion-method-sqlserverdatabasemetadata.md)|Recupera il numero della versione secondaria del database sottostante.|  
 |[getDatabaseProductName](../../../connect/jdbc/reference/getdatabaseproductname-method-sqlserverdatabasemetadata.md)|Recupera il nome di questo prodotto di database.|  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, type discovery
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: aab78327d575858675ade3bbc5d652cce5db12a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: c45b5f6b00c15dee35d263447f5b95c8e31b986f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801105"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Individuazione del tipo di parametro con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

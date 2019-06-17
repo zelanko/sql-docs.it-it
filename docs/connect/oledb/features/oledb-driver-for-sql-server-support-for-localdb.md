@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6dc2acb8239c8c4002094ffb6003cb1b9a5fe40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 099ffb2203397bd02b91af68651ccb42a23e2b5b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768959"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802972"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Supporto del driver OLE DB per SQL Server per Local DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

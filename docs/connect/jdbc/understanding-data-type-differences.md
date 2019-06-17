@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773209"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801952"
 ---
 # <a name="understanding-data-type-differences"></a>Informazioni sulle differenze tra i tipi di dati
 
@@ -42,7 +42,7 @@ I tipi di stringa binaria JDBC sono **binario**, **VARBINARY**, e **LONGVARBINAR
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | A lunghezza fissa    | Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binario** tipo viene mappato direttamente a Microsoft JDBC **BINARY** tipo. Si tratta di un tipo a lunghezza fissa con spaziatura messo a disposizione dal server nel caso in cui la colonna presenti SET ANSI_PADDING ON. La spaziatura viene aggiunta dal driver JDBC se mancante nelle colonne char del server.<br /><br /> Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** è di tipo JDBC **BINARY** tipo con lunghezza fissa di 8 byte. |
 | A lunghezza variabile | Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varbinary** tipo esegue il mapping a JDBC **VARBINARY** tipo.<br /><br /> Il **udt** digitare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il mapping a JDBC come una **VARBINARY** tipo.                                                                                                                                                                                                                                 |
-| Long            | Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **immagine** tipo esegue il mapping a JDBC **LONGVARBINARY** tipo. Poiché si tratta di un tipo deprecato a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è necessario usare un tipo valore di grandi dimensioni, **varbinary(max)**.                                                                                                                                                                                           |
+| Long            | Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **immagine** tipo esegue il mapping a JDBC **LONGVARBINARY** tipo. Poiché si tratta di un tipo deprecato a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è necessario usare un tipo valore di grandi dimensioni, **varbinary(max)** .                                                                                                                                                                                           |
   
 ## <a name="exact-numeric-types"></a>Tipi di valori numerici esatti
 

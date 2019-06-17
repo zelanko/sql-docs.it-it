@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, encryption
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 41aa355de39aabc266e798b6870a8f43ceca4110
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 108aef449d80fa01e88fac29e6058754626b6aed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814725"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802892"
 ---
 # <a name="using-encryption-without-validation"></a>Utilizzo della crittografia senza convalida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 48ae75c5eee03cba273e65297b3652c1a2da99ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606821"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800855"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Passaggio 3: Modello di verifica per la connessione a SQL con pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

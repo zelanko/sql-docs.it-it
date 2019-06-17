@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198582"
 ---
 # <a name="delete---sql-command"></a>DELETE (comando SQL)
@@ -34,7 +34,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- DA [ *DatabaseName!*] *TableName*  
+ DA [ *DatabaseName!* ] *TableName*  
  Specifica la tabella in cui i record sono contrassegnati per l'eliminazione.  
   
  *DatabaseName!* Specifica il nome di un database contenente la tabella se il database che lo contiene non è il database specificato con l'origine dati. È necessario includere il nome di un database contenente la tabella se il database non è il database specificato con l'origine dati. Includere il delimitatore punto esclamativo (!) dopo il nome del database e prima del nome di tabella.  

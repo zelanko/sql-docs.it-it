@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736992"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798600"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server
 
@@ -195,7 +195,7 @@ La proprietà username non richiede dell'area di autenticazione se l'utente appa
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Tramite l'autenticazione Kerberos da computer Unix nello stesso dominio
 
-Questa guida si presuppone un lavoro esiste già il programma di installazione di Kerberos. Eseguire il codice seguente in un computer Windows con l'uso dell'autenticazione Kerberos per verificare se citato in precedenza è true. Il codice verrà stampato "schema di autenticazione: KERBEROS"nella console se ha esito positivo. Nessun flag di runtime aggiuntivi, dipendenze o le impostazioni del driver sono necessari di fuori di quelle disponibili. Lo stesso blocco di codice può essere eseguito su Linux per verificare le connessioni riuscite.
+Questa guida si presuppone un lavoro esiste già il programma di installazione di Kerberos. Eseguire il codice seguente in un computer Windows con l'uso dell'autenticazione Kerberos per verificare se citato in precedenza è true. Il codice verrà stampato ": schema di autenticazione KERBEROS" nella console se ha esito positivo. Nessun flag di runtime aggiuntivi, dipendenze o le impostazioni del driver sono necessari di fuori di quelle disponibili. Lo stesso blocco di codice può essere eseguito su Linux per verificare le connessioni riuscite.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287670"
 ---
 # <a name="allocating-the-environment-handle"></a>Allocazione dell'handle di ambiente
@@ -31,7 +31,7 @@ La prima attività per qualsiasi applicazione ODBC consiste nel caricare il Driv
   
  L'attività successiva, che deve essere eseguita prima di un'applicazione può chiamare qualsiasi altra funzione ODBC, consiste nell'inizializzare l'ambiente ODBC e allocare un handle di ambiente, come indicato di seguito:  
   
-1.  L'applicazione dichiara una variabile di tipo SQLHENV. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile e l'opzione SQL_HANDLE_ENV. Ad esempio:   
+1.  L'applicazione dichiara una variabile di tipo SQLHENV. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile e l'opzione SQL_HANDLE_ENV. Ad esempio:  
   
     ```  
     SQLHENV henv1;  

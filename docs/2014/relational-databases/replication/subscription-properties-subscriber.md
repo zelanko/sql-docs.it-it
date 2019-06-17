@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250265"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Proprietà di sottoscrizione della replica di SQL Server 
@@ -39,7 +39,7 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-all-subscriptions"></a>Opzioni per tutte le sottoscrizioni  
  **Sicurezza**  
- Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà (**...**) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà (**...**).  
+ Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **...** ) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà ( **...** ).  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -52,7 +52,7 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()** . Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()** , vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
@@ -96,11 +96,11 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
  Consente di stabilire se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Sicurezza**  
- Fare clic sulla riga **Account processo agente** , quindi sul pulsante delle proprietà (**...**) per modificare l'account con cui viene eseguito l'agente di merge o di distribuzione nel Sottoscrittore. Le opzioni di sicurezza correlate a connessioni dipendono dal tipo di sottoscrizione:  
+ Fare clic sulla riga **Account processo agente** , quindi sul pulsante delle proprietà ( **...** ) per modificare l'account con cui viene eseguito l'agente di merge o di distribuzione nel Sottoscrittore. Le opzioni di sicurezza correlate a connessioni dipendono dal tipo di sottoscrizione:  
   
--   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà **...**.    
--   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...**.  
--   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...**.  
+-   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà **...** .    
+-   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...** .  
+-   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...** .  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -110,7 +110,7 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()** . Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()** , vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
