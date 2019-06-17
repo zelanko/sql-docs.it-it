@@ -17,23 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198314"
 ---
 # <a name="driver-specification-subkeys"></a>Sottochiavi di specifica del driver
 Ogni driver elencate nella sottochiave del driver ODBC ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore corrispondente nella sottochiave ODBC driver. I valori sotto questa sottochiave elencare i percorsi completi dei driver e file DLL, i valori delle parole chiave del driver restituite da di installazione di driver **SQLDrivers**e il conteggio di utilizzo. I formati dei valori vengono visualizzati nella tabella seguente.  
   
-|nome|Tipo di dati|Dati|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
 |CreateDSN|REG_SZ|*driver-description*|  
 |Driver|REG_SZ|*driver-DLL-path*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *file-extension1*[**,\*.** *file-extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *file-extension1*[ **,\*.** *file-extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |Configurazione|REG_SZ|*setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
