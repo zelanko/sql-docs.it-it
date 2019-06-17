@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62513279"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server
@@ -327,7 +327,7 @@ GO
 |**Read committed**|No|Yes|Yes|  
 |**Repeatable read**|No|No|Yes|  
 |**Snapshot**|No|No|No|  
-|**Serializable**|No|No|no|  
+|**Serializable**|No|No|No|  
   
  Per altre informazioni sui tipi specifici di blocco o di controllo delle versioni delle righe controllati da ogni livello di isolamento delle transazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -372,7 +372,7 @@ GO
   
  Nella tabella seguente sono illustrate le risorse che il [!INCLUDE[ssDE](../includes/ssde-md.md)] può bloccare.  
   
-|Risorsa|Descrizione|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
 |RID|ID di riga utilizzato per bloccare una singola riga all'interno di un heap.|  
 |KEY|Blocco di riga all'interno di un indice utilizzato per proteggere intervalli di chiavi nelle transazioni serializzabili.|  
@@ -477,11 +477,11 @@ GO
 |------|---------------------------|------|------|------|------|------|  
 |**Modalità richiesta**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
 |**Blocco preventivo condiviso (IS)**|Yes|Yes|Yes|Yes|Yes|No|  
-|**Condiviso (S)**|Yes|Yes|Yes|No|No|No|  
-|**Aggiornamento (U)**|Yes|Yes|No|No|No|no|  
-|**Blocco preventivo esclusivo (IX)**|Yes|No|no|Yes|no|No|  
-|**Blocco condiviso preventivo esclusivo (SIX)**|Yes|No|No|no|No|No|  
-|**Esclusivo (X)**|No|No|No|No|No|No|  
+|**Condiviso (S)**|Yes|Yes|Yes|No|No|no|  
+|**Aggiornamento (U)**|Yes|Yes|No|no|No|No|  
+|**Blocco preventivo esclusivo (IX)**|Yes|No|No|Yes|no|No|  
+|**Blocco condiviso preventivo esclusivo (SIX)**|Yes|no|No|No|no|No|  
+|**Esclusivo (X)**|no|No|no|No|no|no|  
   
 > [!NOTE]  
 >  I blocchi preventivi esclusivi (IX) sono compatibili con la modalità di blocco IX perché tale modalità prevede l'intenzione di aggiornamento solo di alcune righe e non di tutte. Altre transazioni possono pertanto accedere alle risorse per la lettura o l'aggiornamento di alcune righe, a condizione che non utilizzino le righe già in fase di aggiornamento. Se viene eseguito il tentativo di aggiornare la stessa riga da parte di due transazioni, a entrambe viene concesso il blocco IX a livello di tabella e pagina. Un blocco X a livello di riga viene tuttavia concesso a una delle transazioni. L'altra transazione dovrà rimanere in attesa fino alla rimozione di tale blocco.  
@@ -496,7 +496,7 @@ GO
   
  Il blocco di intervalli di chiavi impedisce le letture fantasma, nonché gli inserimenti fantasma in un recordset a cui accede una transazione attraverso la protezione degli intervalli di chiavi tra le righe.  
   
- Il blocco di intervalli di chiavi viene applicato a un indice specificando i valori iniziale e finale delle chiavi. In questo modo si impedisce ogni tentativo di inserimento, aggiornamento o eliminazione di una riga con un valore di chiave che rientra nell'intervallo in quanto tali operazioni dovrebbero acquisire un blocco sull'indice. Ad esempio, una transazione serializzabile può eseguire un'istruzione SELECT che legge tutte le righe i cui valori di chiave sono compresi tra **'** AAA **'** e **'** CZZ **'**. Un blocco di intervalli di chiavi applicato ai valori di chiave compresi tra **'** AAA **'** e **'** CZZ **'** impedisce ad altre transazioni di inserire righe con valori di chiave all'interno di tale intervallo, ad esempio **'** ADG **'**, **'** BBD **'** o **'** CAL **'**.  
+ Il blocco di intervalli di chiavi viene applicato a un indice specificando i valori iniziale e finale delle chiavi. In questo modo si impedisce ogni tentativo di inserimento, aggiornamento o eliminazione di una riga con un valore di chiave che rientra nell'intervallo in quanto tali operazioni dovrebbero acquisire un blocco sull'indice. Ad esempio, una transazione serializzabile può eseguire un'istruzione SELECT che legge tutte le righe i cui valori di chiave sono compresi tra **'** AAA **'** e **'** CZZ **'** . Un blocco di intervalli di chiavi applicato ai valori di chiave compresi tra **'** AAA **'** e **'** CZZ **'** impedisce ad altre transazioni di inserire righe con valori di chiave all'interno di tale intervallo, ad esempio **'** ADG **'** , **'** BBD **'** o **'** CAL **'** .  
   
 #### <a name="key-range-lock-modes"></a>Modalità di blocco di intervalli di chiavi  
 
@@ -523,13 +523,13 @@ GO
 ||Modalità concessa esistente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modalità richiesta**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Condiviso (S)**|Yes|Yes|No|Yes|Yes|Yes|No|  
-|**Aggiornamento (U)**|Yes|No|no|Yes|No|Yes|No|  
-|**Esclusivo (X)**|No|No|No|no|No|Yes|No|  
+|**Condiviso (S)**|Yes|Yes|no|Yes|Yes|Yes|no|  
+|**Aggiornamento (U)**|Yes|no|No|Yes|No|Yes|No|  
+|**Esclusivo (X)**|No|no|no|No|No|Yes|no|  
 |**RangeS-S**|Yes|Yes|No|Yes|Yes|No|No|  
-|**RangeS-U**|Yes|No|No|Yes|No|No|No|  
-|**RangeI-N**|Yes|Yes|Yes|No|No|Yes|No|  
-|**RangeX-X**|No|no|No|No|no|No|No|  
+|**RangeS-U**|Yes|No|no|Yes|No|No|No|  
+|**RangeI-N**|Yes|Yes|Yes|no|No|Yes|No|  
+|**RangeX-X**|no|No|No|No|No|No|No|  
   
 #### <a name="conversion-locks"></a>Blocchi di conversione  
 
@@ -561,7 +561,7 @@ GO
   
 -   Il livello di isolamento della transazione deve essere impostato su SERIALIZABLE.  
   
--   Query Processor deve utilizzare un indice per implementare il predicato di filtro dell'intervallo. Ad esempio, la clausola WHERE in un'istruzione SELECT può stabilire una condizione di intervallo con il predicato: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Un blocco di intervalli di chiavi può essere acquisito solo se **ColumnX** è coperto da una chiave di indice.  
+-   Query Processor deve utilizzare un indice per implementare il predicato di filtro dell'intervallo. Ad esempio, la clausola WHERE in un'istruzione SELECT può stabilire una condizione di intervallo con il predicato: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . Un blocco di intervalli di chiavi può essere acquisito solo se **ColumnX** è coperto da una chiave di indice.  
   
 #### <a name="examples"></a>Esempi  
 
@@ -639,7 +639,7 @@ INSERT mytable VALUES ('Dan');
   
 ### <a name="deadlocking"></a>Utilizzo di deadlock  
 
- Un deadlock si verifica quando due o più attività si bloccano reciprocamente in modo permanente, in quanto ognuna delle attività prevede un blocco su una risorsa che le altre attività stanno cercando di bloccare. Ad esempio:   
+ Un deadlock si verifica quando due o più attività si bloccano reciprocamente in modo permanente, in quanto ognuna delle attività prevede un blocco su una risorsa che le altre attività stanno cercando di bloccare. Ad esempio:  
   
 -   La transazione A acquisisce un blocco di condivisione nella riga 1.  
   
@@ -691,7 +691,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Risorse per l'esecuzione di query parallele.** Thread coordinator, producer o consumer associati a una porta di scambio possono bloccarsi a vicenda causando un deadlock, generalmente quando è incluso almeno un altro processo che non fa parte della query parallela. Quando inoltre viene avviata l'esecuzione di una query parallela, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina il grado di parallelismo o il numero di thread di lavoro sulla base del carico di lavoro corrente. Se il carico di lavoro del sistema cambia inaspettatamente, ad esempio per l'avvio di nuove query o per l'esaurimento dei thread di lavoro, è possibile che si verifichi un deadlock.  
   
--   **Risorse MARS (Multiple Active Result Sets)**. Queste risorse sono utilizzate per controllare in che modo più richieste attive vengono intercalate con il servizio MARS. Per ulteriori informazioni. Per altre informazioni, vedere [MARS Multiple Active Result Set () in SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+-   **Risorse MARS (Multiple Active Result Sets)** . Queste risorse sono utilizzate per controllare in che modo più richieste attive vengono intercalate con il servizio MARS. Per ulteriori informazioni. Per altre informazioni, vedere [MARS Multiple Active Result Set () in SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
     -   **Risorsa utente**. Quando un thread è in attesa di una risorsa che è potenzialmente controllata da un'applicazione utente, la risorsa viene considerata risorsa esterna o utente e viene trattata come un blocco.  
   
@@ -1267,7 +1267,7 @@ BEGIN TRANSACTION
 
  I contatori delle prestazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono informazioni sulle prestazioni del sistema su cui incidono i processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I contatori delle prestazioni seguenti consentono di monitorare tempdb e l'archivio versioni, nonché le transazioni che utilizzano il controllo delle versioni delle righe. I contatori delle prestazioni sono inclusi nell'oggetto prestazione SQLServer:Transactions.  
   
- **Spazio disponibile in tempdb (KB)**. Esegue il monitoraggio della quantità, in kilobyte (KB), di spazio libero nel database tempdb. In tempdb deve essere disponibile una quantità di spazio sufficiente per gestire l'archivio versioni che supporta l'isolamento dello snapshot.  
+ **Spazio disponibile in tempdb (KB)** . Esegue il monitoraggio della quantità, in kilobyte (KB), di spazio libero nel database tempdb. In tempdb deve essere disponibile una quantità di spazio sufficiente per gestire l'archivio versioni che supporta l'isolamento dello snapshot.  
   
  Nella formula seguente viene eseguito un calcolo approssimativo delle dimensioni dell'archivio versioni. Per le transazioni con esecuzione prolungata, può essere utile monitorare la frequenza di generazione e pulizia per stimare le dimensioni massime dell'archivio versioni.  
   
@@ -1275,7 +1275,7 @@ BEGIN TRANSACTION
   
  Il tempo massimo di esecuzione delle transazioni non deve includere le compilazioni di indici online. Poiché queste operazioni possono richiedere una quantità di tempo prolungata nelle tabelle di dimensioni molto elevate, le compilazioni di indici online utilizzano un archivio versioni distinto. Le dimensioni approssimative dell'archivio versioni compilazioni di indici online equivale alla quantità di dati modificati nella tabella, inclusi tutti gli indici, quando è attiva la compilazione di indici online.  
   
- **Dimensioni archivio versioni (KB)**. Esegue il monitoraggio delle dimensioni in KB di tutti gli archivi versioni. Queste informazioni consentono di determinare la quantità di spazio necessario nel database tempdb per l'archivio versioni. Il monitoraggio di questo contatore per un certo periodo di tempo offre una stima utile dell'ulteriore spazio necessario per tempdb.  
+ **Dimensioni archivio versioni (KB)** . Esegue il monitoraggio delle dimensioni in KB di tutti gli archivi versioni. Queste informazioni consentono di determinare la quantità di spazio necessario nel database tempdb per l'archivio versioni. Il monitoraggio di questo contatore per un certo periodo di tempo offre una stima utile dell'ulteriore spazio necessario per tempdb.  
   
  `Version Generation rate (KB/s)` (Indici per tabelle con ottimizzazione per la memoria). Esegue il monitoraggio della frequenza di generazione delle versioni in KB al secondo in tutti gli archivi versioni.  
   

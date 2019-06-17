@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312492"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Istruzioni di eliminazione e aggiornamento posizionato
@@ -34,7 +34,7 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  [**In cui** *condizione di ricerca*]  
   
- **PER UPDATE OF** [*nome-colonna* [**,** *nome-colonna*]...]  
+ **PER UPDATE OF** [*nome-colonna* [ **,** *nome-colonna*]...]  
   
  L'applicazione quindi posiziona il cursore sulla riga deve essere aggiornato o eliminato. È possibile eseguire questa operazione chiamando **SQLFetchScroll** per recuperare un set di righe contenente la riga necessaria e chiamare **SQLSetPos** per posizionare il cursore del set di righe in una determinata riga. L'applicazione esegue quindi l'istruzione di eliminazione o aggiornamento posizionato su un'istruzione diversa rispetto all'istruzione viene utilizzato dal set di risultati. La sintassi di tali istruzioni è:  
   
@@ -42,7 +42,7 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *-nome del cursore*  
   

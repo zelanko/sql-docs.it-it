@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620605"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037847"
 ---
 # <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
 
@@ -81,7 +81,7 @@ ms.locfileid: "65620605"
  [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Vengono fornite informazioni sugli aspetti che è necessario considerare prima di iniziare a compilare il report.  
   
- [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi a Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)  
  Definisce i concetti chiave usati in tutta la documentazione relativa a [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

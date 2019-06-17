@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010689"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Definizione di variabili XPath in query XPath (SQLXML 4.0)
@@ -26,7 +26,7 @@ ms.locfileid: "66010689"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Utilizzare le variabili XPath  
- Un modello di esempio è costituito da due query XPath. Ognuna delle query XPath accetta un parametro. Il modello specifica inoltre valori predefiniti per tali parametri. Se i valori dei parametri non sono specificati, vengono utilizzati i valori predefiniti. Vengono specificati due parametri con i valori predefiniti in  **\<sql:header >**.  
+ Un modello di esempio è costituito da due query XPath. Ognuna delle query XPath accetta un parametro. Il modello specifica inoltre valori predefiniti per tali parametri. Se i valori dei parametri non sono specificati, vengono utilizzati i valori predefiniti. Vengono specificati due parametri con i valori predefiniti in  **\<sql:header >** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

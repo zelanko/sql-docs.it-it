@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092434"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Esecuzione di Preparazione aggiornamento (prompt dei comandi)
@@ -56,10 +56,10 @@ where <server_info> is any combination of the following:
  **-Istanza** _nome_istanza_  
  Specifica il nome dell'istanza da analizzare. Nessun valore predefinito. Se non si specifica questo parametro il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è MSSQLSERVER. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
- **-ASInstance**  _AS_instance_name_   
+ **-ASInstance**  _AS_instance_name_  
  Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da analizzare. Nessun valore predefinito. Se non si specifica questo valore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è MSSQLServerOLAPService. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
- **-RSInstance**  _RS_instance_name_   
+ **-RSInstance**  _RS_instance_name_  
  Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da analizzare. Nessun valore predefinito. Se non si specifica questo valore, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è ReportServer. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
  **-SqlUser** _login_id_  

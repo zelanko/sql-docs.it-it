@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079469"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Colonne chiave (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66079469"
   
  **Per visualizzare la finestra di dialogo colonne chiave**  
   
--   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selezionare un attributo e nella finestra **Proprietà** fare clic sul pulsante con i puntini di sospensione (**...**) associato alla proprietà **KeyColumns** di quell'attributo.  
+-   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selezionare un attributo e nella finestra **Proprietà** fare clic sul pulsante con i puntini di sospensione ( **...** ) associato alla proprietà **KeyColumns** di quell'attributo.  
   
 ## <a name="options"></a>Opzioni  
  **Tabella di origine**  

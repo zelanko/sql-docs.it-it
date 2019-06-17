@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049724"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` È il nome del proprietario della tabella. *owner_name* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Specifica una clausola di filtro che controlla quali righe di dati appena caricati devono essere aggiunte per l'unione di tabelle di rilevamento. *filter_clause* viene **nvarchar (4000)**, con un valore predefinito NULL. Se *filter_clause* viene **null**, tutte le operazioni bulk vengono aggiunte le righe caricate.  
+`[ @filter_clause = ] 'filter_clause'` Specifica una clausola di filtro che controlla quali righe di dati appena caricati devono essere aggiunte per l'unione di tabelle di rilevamento. *filter_clause* viene **nvarchar (4000)** , con un valore predefinito NULL. Se *filter_clause* viene **null**, tutte le operazioni bulk vengono aggiunte le righe caricate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

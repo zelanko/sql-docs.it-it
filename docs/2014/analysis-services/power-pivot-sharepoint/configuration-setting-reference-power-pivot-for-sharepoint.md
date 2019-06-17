@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071884"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Riferimento all'impostazione della configurazione (PowerPivot per SharePoint)
@@ -41,7 +41,7 @@ ms.locfileid: "66071884"
 ##  <a name="LoadingData"></a> Timeout caricamento dati  
  I dati di PowerPivot vengono recuperati e caricati dalle istanze del server Analysis Services nella farm di SharePoint. A seconda della modalità e della data di esecuzione dell'ultimo accesso ai dati, verranno caricati da una raccolta contenuto o da una cache di file locale. I dati vengono caricati in memoria ogni volta che si riceve una query o una richiesta di elaborazione. Per ottimizzare la disponibilità complessiva del server, è possibile impostare un valore di timeout che consente l'arresto di una richiesta di caricamento dati da parte del server se non è possibile completarla entro il tempo stabilito.  
   
-|Nome|Impostazione predefinita|Valori validi|Descrizione|  
+|nome|Impostazione predefinita|Valori validi|Descrizione|  
 |----------|-------------|------------------|-----------------|  
 |Timeout caricamento dati|1800 (in secondi)|Da 1 a 3600|Specifica la durata di attesa relativa a una risposta da un'istanza specifica del server Analysis Services da parte di un'applicazione di servizio PowerPivot.<br /><br /> Per impostazione predefinita, l'applicazione di servizio attende 30 minuti per un payload dei dati dall'istanza del servizio Motore a cui è stata inoltrata una richiesta specifica.<br /><br /> Se non è possibile caricare l'origine dati PowerPivot entro questo intervallo di tempo, il thread sarà arrestato e ne verrà avviato uno nuovo.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66071884"
 ##  <a name="AllocationScheme"></a> Bilanciamento del carico  
  Una delle funzioni eseguite tramite il servizio PowerPivot consiste nel determinare dove verranno caricati i dati di Analysis Services tra le istanze del servizio PowerPivot disponibili. Impostando `AllocationMethod` vengono specificati i criteri in base ai quali viene selezionata un'istanza del servizio.  
   
-|Nome|Impostazione predefinita|Valori validi|Descrizione|  
+|nome|Impostazione predefinita|Valori validi|Descrizione|  
 |----------|-------------|------------------|-----------------|  
 |Metodo di allocazione|RoundRobin|Round robin<br /><br /> Basato sull'integrità|Schema di allocazione delle richieste di caricamento tra due o più istanze del server Analysis Services.<br /><br /> Per impostazione predefinita, il servizio PowerPivot consentirà di alternare le richieste in base all'integrità del server. La metodologia basata sull'integrità consente di allocare le richieste sul server che dispone della maggior parte delle risorse di sistema utilizzabili in base alla memoria disponibile e all'utilizzo della CPU.<br /><br /> Il round robin consente una rotazione delle richieste tra i vari server disponibili, indipendentemente dal carico corrente o dall'integrità del server.|  
   
@@ -74,8 +74,8 @@ ms.locfileid: "66071884"
   
 |Nome|Impostazione predefinita|Valori validi|Descrizione|  
 |----------|-------------|------------------|-----------------|  
-|Ora inizio|4.00 A.M.|Da 1 a 12 ore, dove il valore è un numero intero valido all'interno di quell'intervallo.<br /><br /> Il tipo è Time.|Consente di impostare il limite inferiore di un intervallo orario lavorativo.|  
-|Ora fine|08.00 P.M.|Da 1 a 12 ore, dove il valore è un numero intero valido all'interno di quell'intervallo.<br /><br /> Il tipo è Time.|Consente di impostare il limite superiore di un intervallo orario lavorativo.|  
+|Ora inizio|4\.00 A.M.|Da 1 a 12 ore, dove il valore è un numero intero valido all'interno di quell'intervallo.<br /><br /> Il tipo è Time.|Consente di impostare il limite inferiore di un intervallo orario lavorativo.|  
+|Ora fine|08\.00 P.M.|Da 1 a 12 ore, dove il valore è un numero intero valido all'interno di quell'intervallo.<br /><br /> Il tipo è Time.|Consente di impostare il limite superiore di un intervallo orario lavorativo.|  
 |Account di aggiornamento dati automatico PowerPivot|None|ID dell'applicazione di destinazione|Questo account viene utilizzato per eseguire processi di aggiornamento dati per conto del proprietario di una pianificazione.<br /><br /> È necessario definire prima un'account di aggiornamento dati automatico per potervi fare riferimento nella pagina di configurazione dell'applicazione di servizio. Per altre informazioni, vedere [configurare l'Account di aggiornamento dati PowerPivot automatico &#40;PowerPivot per SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
 |Consenti agli utenti di immettere credenziali di Windows personalizzate|Enabled|Boolean|Determina se la pagina di configurazione dell'aggiornamento dati pianificato mostra un'opzione che consente a un proprietario di pianificazione di specificare account utente e password per eseguire un processo di aggiornamento dati.<br /><br /> Il servizio di archiviazione sicura deve essere abilitato affinché questa opzione funzioni. Per altre informazioni, vedere [configurare le credenziali archiviate per l'aggiornamento dati PowerPivot &#40;PowerPivot per SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
 |Lunghezza massima cronologia di elaborazione|365|Da 1 a 5000 giorni|Determina per quanto tempo viene conservata la cronologia dell'aggiornamento dati nel database dell'applicazione di servizio PowerPivot. Per altre informazioni, vedere [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).|  

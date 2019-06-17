@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711825"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe di evento Audit Database Mirroring Login
@@ -28,7 +28,7 @@ ms.locfileid: "62711825"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Database Mirroring Login  
   
-|Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
+|Colonna di dati|Type|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Non utilizzata per questa classe di evento.|10|Yes|  
 |**ClientProcessID**|**int**|Non utilizzata per questa classe di evento.|9|Yes|  
@@ -38,19 +38,19 @@ ms.locfileid: "62711825"
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Nella tabella seguente sono elencati i valori di sottoclasse per questo evento.|21|Yes|  
 |**FileName**|**nvarchar**|Supporta il metodo di autenticazione configurato nell'endpoint del mirroring del database remoto. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master** .<br /><br /> **NTLM, CERTIFICATE**. Accetta un'autenticazione NTLM o il certificato di autenticazione dell'endpoint.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta un'autenticazione Kerberos o il certificato di autenticazione dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta un certificato di autenticazione dell'endpoint o il metodo di autenticazione viene negoziato da Windows.|36|No|  
 |**HostName**|**nvarchar**|Non utilizzata per questa classe di evento.|8|Yes|  
-|**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|No|  
+|**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|no|  
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Yes|  
 |**NTDomainName**|**nvarchar**|Dominio di Windows a cui appartiene l'utente.|7|Yes|  
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
-|**ObjectName**|**nvarchar**|La stringa di connessione utilizzata per questa connessione.|34|no|  
+|**ObjectName**|**nvarchar**|La stringa di connessione utilizzata per questa connessione.|34|No|  
 |**OwnerName**|**nvarchar**|Supporta il metodo di autenticazione configurato nell'endpoint del mirroring del database locale. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master** .<br /><br /> **NTLM, CERTIFICATE**. Accetta un'autenticazione NTLM o il certificato di autenticazione dell'endpoint.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta un'autenticazione Kerberos o il certificato di autenticazione dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta un certificato di autenticazione dell'endpoint o il metodo di autenticazione viene negoziato da Windows.|37|No|  
-|**ProviderName**|**nvarchar**|Metodo di autenticazione utilizzato per questa connessione.|46|No|  
+|**ProviderName**|**nvarchar**|Metodo di autenticazione utilizzato per questa connessione.|46|no|  
 |**RoleName**|**nvarchar**|Ruolo della connessione. I valori possibili sono **initiator** o **target**.|38|No|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Yes|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  
-|**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|no|  
-|**TargetUserName**|**nvarchar**|Stato di accesso. I possibili valori sono i seguenti:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> Nota: ISC = Initiate Security Context. ASC = Accept Security Context.|39|no|  
+|**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  
+|**TargetUserName**|**nvarchar**|Stato di accesso. I possibili valori sono i seguenti:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> Nota: ISC = Initiate Security Context. ASC = Accept Security Context.|39|No|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
   
  Nella tabella seguente sono elencati i valori di sottoclasse per questa classe di evento.  

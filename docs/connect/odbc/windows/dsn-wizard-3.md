@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615249"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797775"
 ---
 # <a name="data-source-wizard-screen-3"></a>Creazione guidata origine dati - Schermata 3
 
@@ -72,7 +72,7 @@ Se l'applicazione si connette a un disponibilità elevata, disaster recovery (gr
 
 ### <a name="transparent-network-ip-resolution"></a>Risoluzione dell'IP di rete trasparente.
 
-Modifica il comportamento della **failover su più subnet** per consentire una riconnessione più veloce durante il failover. Visualizzare [utilizzando la risoluzione IP di rete trasparente](../../../connect/odbc/using-transparent-network-ip-resolution.md) per altre informazioni.
+Modifica il comportamento della **failover su più subnet** per consentire una riconnessione più veloce durante il failover. Per altre informazioni, vedere [Uso della risoluzione dell'IP di rete trasparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Crittografia di colonna.
 

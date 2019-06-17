@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072110"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partizioni (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
@@ -66,7 +66,7 @@ ms.locfileid: "66072110"
 |**Partizione**|Visualizza il nome della partizione locale.|  
 |**Dimensioni (MB)**|Visualizza le dimensioni (in megabyte) della partizione locale.|  
 |**Cartella originale**|Visualizza il nome della cartella originale in cui era archiviata la partizione locale.|  
-|**Cartella ripristino**|Consente di digitare il nome della cartella di ripristino per la partizione locale. È inoltre possibile fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare il percorso della cartella da usare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Cartella ripristino**|Consente di digitare il nome della cartella di ripristino per la partizione locale. È inoltre possibile fare clic sul pulsante con i puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare il percorso della cartella da usare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Ripristinare le partizioni remote**  
  Selezionare questa opzione per ripristinare partizioni remote archiviate in file di backup remoti.  
@@ -80,7 +80,7 @@ ms.locfileid: "66072110"
 |------------|-----------------|  
 |**Server**|Visualizza il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce la partizione remota.|  
 |**Data Source**|Visualizza il nome dell'origine dei dati nel file di backup che rappresenta il database contenente la partizione remota.|  
-|**File di backup**|Consente di digitare il nome e il percorso completo del file di backup remoto da usare. È inoltre possibile fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Individua file di database** e selezionare il percorso e il nome del file di backup remoto da usare. Per altre informazioni sulla finestra di dialogo **Trova file di database**, vedere [Finestra di dialogo Individua file di database &#40;Analysis Services - Dati multidimensionali&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**File di backup**|Consente di digitare il nome e il percorso completo del file di backup remoto da usare. È inoltre possibile fare clic sul pulsante con i puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Individua file di database** e selezionare il percorso e il nome del file di backup remoto da usare. Per altre informazioni sulla finestra di dialogo **Trova file di database**, vedere [Finestra di dialogo Individua file di database &#40;Analysis Services - Dati multidimensionali&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** e modificare le opzioni avanzate, ad esempio la stringa di connessione all'origine dati, per il ripristino della partizione remota. Per altre informazioni sulla finestra di dialogo **Partizioni remote - Impostazioni avanzate**, vedere [Finestra di dialogo Partizioni remote – Impostazioni avanzate &#40;Analysis Services - Dati multidimensionali&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

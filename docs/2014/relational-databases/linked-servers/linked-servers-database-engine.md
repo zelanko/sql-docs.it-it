@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743509"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
@@ -46,7 +46,7 @@ ms.locfileid: "62743509"
   
  Un *provider OLE DB* è una DLL in grado di gestire un'origine dei dati specifica e interagire con essa. Un' *origine dei dati OLE DB* identifica lo specifico database a cui è possibile accedere con OLE DB. Anche se le origini dei dati su cui si eseguono query tramite definizioni di server collegati sono in genere database, esistono provider OLE DB per un'ampia gamma di file e formati di file, quali file di testo, dati di fogli di calcolo e risultati di ricerche di contenuto full-text.  
   
- Il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Provider OLE DB Native Client (PROGID: SQLNCLI11) è il provider OLE DB ufficiale per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Il provider OLE DB di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) è il provider OLE DB ufficiale per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le query distribuite sono progettate per funzionare con qualsiasi provider OLE DB che implementi le interfacce OLE DB necessarie. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è stato tuttavia testato solo con il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e con alcuni altri provider.  
@@ -78,7 +78,7 @@ ms.locfileid: "62743509"
   
  Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo**e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
   
- Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome in quattro parti deve essere nel formato _linked_server_name_**. _`schema`_.** _object_name_.  
+ Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome in quattro parti deve essere nel formato _linked_server_name_ **. _`schema`_ .** _object_name_.  
   
 > [!NOTE]  
 >  È possibile definire un server collegato in modo che punti all'indietro (loopback) al server in cui è stato definito. I server di loopback risultano particolarmente utili durante il test di un'applicazione in cui vengono utilizzate query distribuite in una rete con un solo server. I server collegati di loopback sono destinati ai test e non sono supportati per molte operazioni, ad esempio le transazioni distribuite.  

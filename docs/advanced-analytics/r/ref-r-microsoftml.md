@@ -3,17 +3,17 @@ title: Libreria di funzioni di MicrosoftML R - servizi di SQL Server Machine Lea
 description: Introduzione alla libreria di funzioni di MicrosoftML in SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services con R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641819"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140490"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (libreria R in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ In questa sezione elenca le funzioni in base alla categoria per farsi un'idea de
 
 Le funzioni nello **MicrosoftML** possono essere chiamati nel codice R è incapsulato in stored procedure. La maggior parte degli sviluppatori di compilare **MicrosoftML** soluzioni in locale, e quindi eseguire la migrazione di codice R completato alle stored procedure come un esercizio di distribuzione.
 
-Il **MicrosoftML** dal pacchetto per R è installato "out-of-the-box" in SQL Server 2017. È anche disponibile per l'uso con SQL Server 2016 se si aggiornano i componenti di R per l'istanza: [Aggiornare un'istanza di SQL Server utilizzando l'associazione](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+Il **MicrosoftML** dal pacchetto per R è installato "out-of-the-box" in SQL Server 2017. È anche disponibile per l'uso con SQL Server 2016 se si aggiornano i componenti di R per l'istanza: [Aggiornare un'istanza di SQL Server utilizzando l'associazione](../install/upgrade-r-and-python.md)
 
 Il pacchetto non è caricato per impostazione predefinita. Come primo passaggio, caricare il **MicrosoftML** del pacchetto e quindi caricare **RevoScaleR** se è necessario usare contesti di calcolo remoti o sugli oggetti origine dati o di connettività correlati. Quindi, fare riferimento a singole funzioni che è necessario.
 

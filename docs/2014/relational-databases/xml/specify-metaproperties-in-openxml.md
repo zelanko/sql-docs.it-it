@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679502"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Impostazione di metaproprietà in OPENXML
@@ -67,7 +67,7 @@ ms.locfileid: "62679502"
   
 -   La colonna **parent** viene mappata a **\@mp:parentid** a indicare che la colonna contiene l'ID XML del padre dell'elemento.  
   
--   La colonna **parentLocalName** viene mappata a**\@mp:parentlocalname** a indicare che la colonna contiene il nome locale del padre.  
+-   La colonna **parentLocalName** viene mappata a **\@mp:parentlocalname** a indicare che la colonna contiene il nome locale del padre.  
   
  L'istruzione SELECT restituisce quindi il set di righe fornito da OPENXML:  
   

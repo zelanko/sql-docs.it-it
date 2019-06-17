@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633749"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisiti di sistema (driver ODBC Visual FoxPro)
@@ -51,7 +51,7 @@ I requisiti di sistema per l'installazione offrono la minima del sistema operati
   
     -   Visual FoxPro [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   2.0 FoxPro, 2.5, 2.6 [tabella](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   2\.0 FoxPro, 2.5, 2.6 [tabella](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
  Il Driver ODBC Visual FoxPro supporta double-byte character set (DBCS). Per altre informazioni, vedere [International Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   

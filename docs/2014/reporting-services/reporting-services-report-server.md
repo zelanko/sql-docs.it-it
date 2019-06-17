@@ -25,10 +25,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102819"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
@@ -90,14 +90,14 @@ ms.locfileid: "66102819"
 |**Gestione configurazione**|Yes|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Gestione report**|Yes|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Yes|No.|  
-|**Report personali**|Yes|no|  
+|**Report personali**|Yes|No|  
 |**Sottoscrizioni personali** e metodi di invio in batch|Yes|No|  
 |**Avvisi dati**|no|Yes|  
-|**Power View**|No|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|no|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Yes|Yes<br /><br /> I report RDL possono essere eseguiti nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa o SharePoint.|  
 |**Report RDLX**|No|Yes<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|  
-|**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Yes|  
-|**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Yes|  
+|**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|no|Yes|  
+|**Aree AAM per distribuzioni che si interfacciano a Internet**|no|Yes|  
 |**Backup e recupero di SharePoint**|no|Yes|  
 |**Supporto del log ULS**|No|Yes|  
   

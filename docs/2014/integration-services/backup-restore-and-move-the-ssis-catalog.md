@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061269"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSISDB
@@ -44,7 +44,7 @@ ms.locfileid: "66061269"
   
     1.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] espandere il nodo **Sicurezza**, quindi espandere il nodo **Account di accesso**.  
   
-    2.  Fare clic con il pulsante destro del mouse su **##MS_SSISServerCleanupJobLogin##**, quindi fare clic su **Crea script per account di accesso** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
+    2.  Fare clic con il pulsante destro del mouse su **##MS_SSISServerCleanupJobLogin##** , quindi fare clic su **Crea script per account di accesso** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
   
 5.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, generare lo script CREATE PROCEDURE per sp_ssis_startup, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a3fba818dbedfe7d21f3b3a9527ed3b83f085ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055149"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint (SharePoint 2016)
@@ -87,7 +87,7 @@ ms.locfileid: "63055149"
 6.  Selezionare **Installa** per completare l'installazione.  
   
 ### <a name="command-line-installation"></a>Installazione dalla riga di comando  
- Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative e quindi eseguire il file **spPowerPivot16.msi**. Ad esempio:   
+ Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative e quindi eseguire il file **spPowerPivot16.msi**. Ad esempio:  
   
  `Msiexec.exe /i spPowerPivot16.msi`.  
   
@@ -168,7 +168,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADO
   
  È possibile disinstallare o ripristinare [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] tramite uno dei metodi seguenti:  
   
-1.  **Pannello di controllo di Windows:** Selezionare [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]**. Selezionare **Disinstalla** o **Ripristina**.  
+1.  **Pannello di controllo di Windows:** Selezionare [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]** . Selezionare **Disinstalla** o **Ripristina**.  
   
 2.  Eseguire spPowerPivot16.msi e selezionare l'opzione **Rimuovi** o **Ripristina** .  
   

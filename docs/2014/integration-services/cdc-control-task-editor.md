@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061121"
 ---
 # <a name="cdc-control-task-editor"></a>Editor attività Controllo CDC
@@ -80,7 +80,7 @@ ms.locfileid: "66061121"
  È disponibile solo se si seleziona **AutomaticStatePersistence** ed è un parametro obbligatorio.  
   
  **Tabella da utilizzare per l'archiviazione dello stato**  
- Digitare il nome della tabella di stato da utilizzare per l'archiviazione dello stato CDC. La tabella specificata deve disporre di due colonne denominate **name** e **state** , entrambe dello stesso tipo di dati **varchar (256)**.  
+ Digitare il nome della tabella di stato da utilizzare per l'archiviazione dello stato CDC. La tabella specificata deve disporre di due colonne denominate **name** e **state** , entrambe dello stesso tipo di dati **varchar (256)** .  
   
  Facoltativamente, è possibile selezionare **Nuova** per ottenere uno script SQL che compila una nuova tabella Stato con le colonne obbligatorie. Se **AutomaticStatePersistence** è selezionato, lo sviluppatore deve creare una tabella di stato in base ai requisiti elencati in precedenza.  
   

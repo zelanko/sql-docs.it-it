@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479749"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65479749"
   
 |Account di accesso|Descrizione|  
 |-----------|-----------------|  
-|`mds_dlp_login`|Consente la creazione di assembly UNSAFE.<br /><br /> - Account di accesso disabilitato con password generata casualmente.<br /><br /> - Esegue il mapping a dbo per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> - Per msdb, mds_clr_user esegue il mapping a questo account di accesso.<br /><br /> <br /><br /> Per altre informazioni, vedere [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
+|`mds_dlp_login`|Consente la creazione di assembly UNSAFE.<br /><br /> \- Account di accesso disabilitato con password generata casualmente.<br /><br /> \- Esegue il mapping a dbo per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> \- Per msdb, mds_clr_user esegue il mapping a questo account di accesso.<br /><br /> <br /><br /> Per altre informazioni, vedere [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
 |`mds_email_login`|Account di accesso abilitato utilizzato per le notifiche.<br /><br /> Per msdb e il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user esegue il mapping a questo account di accesso.|  
   
 ## <a name="msdb-users"></a>Utenti di msdb  

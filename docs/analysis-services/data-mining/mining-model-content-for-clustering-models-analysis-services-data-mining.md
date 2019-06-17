@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3344fbcd8a1a31f0bb98a8a1702f1535eb831b3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736231"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di clustering (Analysis Services - Data mining)
@@ -98,7 +98,7 @@ ms.locfileid: "62736231"
  NODE_DESCRIPTION  
  Descrizione del nodo.  
   
- **Nodo padre** Sempre **(All)**.  
+ **Nodo padre** Sempre **(All)** .  
   
  **Nodi del cluster** Elenco delimitato da virgole degli attributi principali che distinguono il cluster dagli altri.  
   

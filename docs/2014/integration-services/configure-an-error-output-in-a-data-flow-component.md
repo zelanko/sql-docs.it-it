@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060821"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurazione di un output degli errori in un componente del flusso di dati
@@ -82,7 +82,7 @@ ms.locfileid: "66060821"
   
 4.  Fare clic con il pulsante destro del mouse sul componente di cui si desidera configurare le colonne dell'output degli errori, quindi scegliere **Visualizza editor avanzato**.  
   
-5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>**, quindi **Colonne di output**.  
+5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>** , quindi **Colonne di output**.  
   
 6.  Fare clic su una colonna e aggiornarne le proprietà.  
   

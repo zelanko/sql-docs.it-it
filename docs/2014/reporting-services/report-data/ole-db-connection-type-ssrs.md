@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107218"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo di connessione OLE DB (SSRS)
@@ -60,7 +60,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Remarks"></a> Osservazioni  
  OLE DB è una tecnologia nativa per la compilazione di provider di dati per le origini dati specifiche. OLE DB si basa su interfacce COM (Component Object Model). OLE DB è una tecnologia più recente rispetto a ODBC e precedente ai provider di dati ADO.NET. I provider di dati OLE DB sono registrati con il sistema operativo come qualsiasi altro componente COM. I provider di dati OLE DB sono disponibili da Microsoft e fornitori di terze parti. Microsoft fornisce anche MSDASQL, un provider di dati OLE DB che funge da ponte per la comunicazione ai driver ODBC. Per altre informazioni, vedere [Tipo di connessione ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md).  
   
- Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal provider di dati. Il supporto dei parametri varia in base al provider di dati. Per ulteriori informazioni, vedere gli argomenti specifici del provider di dati selezionato. Ad esempio:   
+ Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal provider di dati. Il supporto dei parametri varia in base al provider di dati. Per ulteriori informazioni, vedere gli argomenti specifici del provider di dati selezionato. Ad esempio:  
   
 -   [Provider OLE DB per Analysis Services &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   

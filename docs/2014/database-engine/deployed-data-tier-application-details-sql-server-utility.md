@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754097"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62754097"
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)**(Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)** (Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni applicazione del livello dati.  
   

@@ -15,15 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198398"
 ---
 # <a name="installation-components"></a>Componenti di installazione
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Il processo di installazione viene avviato quando l'utente esegue il programma di installazione. Il programma di installazione funziona in combinazione con il *DLL di installazione* e una *DLL di installazione driver* per ogni driver. Il programma di installazione sia il programma di installazione DLL utilizzare gli argomenti in di **SQLInstallDriverEx** e **SQLInstallTranslatorEx** funzioni per determinare quali file copiare o eliminare per ciascun componente. Nella figura seguente mostra la relazione tra questi componenti di installazione.  
   

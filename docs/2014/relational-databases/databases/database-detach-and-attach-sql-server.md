@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762423"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762423"
 > [!NOTE]  
 >  Se il file di dati primario in corso di collegamento è di sola lettura, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] si considera il database di sola lettura.  
   
- Quando un database crittografato prima di tutto è collegato a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il proprietario del database è necessario aprire la chiave master del database eseguendo l'istruzione seguente: DECRITTOGRAFIA OPEN MASTER KEY TRAMITE PASSWORD = **»*`password`*'**. È consigliabile abilitare la decrittografia automatica della chiave master eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando un database crittografato prima di tutto è collegato a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il proprietario del database è necessario aprire la chiave master del database eseguendo l'istruzione seguente: DECRITTOGRAFIA OPEN MASTER KEY TRAMITE PASSWORD = **» *`password`* '** . È consigliabile abilitare la decrittografia automatica della chiave master eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  I requisiti necessari per il collegamento dei file di log dipendono in parte dallo stato di lettura/scrittura o di sola lettura del database, come illustrato di seguito:  
   

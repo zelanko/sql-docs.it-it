@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175041"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader caricatore della riga di comando per Parallel Data Warehouse
@@ -490,7 +490,7 @@ Disponibile con aggiornamento CU7.4, specifica la lunghezza riga massima (in byt
 ## <a name="return-code-values"></a>Valori restituiti  
 0 (esito positivo) o un altro valore intero (errore)  
   
-In un file batch o finestra di comando, usare `errorlevel` per visualizzare il codice restituito. Ad esempio:   
+In un file batch o finestra di comando, usare `errorlevel` per visualizzare il codice restituito. Ad esempio:  
   
 ```  
 dwloader  
@@ -555,13 +555,13 @@ La modalità append carica i dati in due fasi. La fase uno carica i dati dal fil
 |Tipo di tabella|Transazione multipla<br />Modalità (-m)|La tabella è vuota|Concorrenza supportata|Registrazione|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|Yes|Yes|Yes|Minimo|  
-|Heap|Yes|No|Yes|Minimo|  
+|Heap|Yes|no|Yes|Minimo|  
 |Heap|No|Yes|no|Minimo|  
-|Heap|no|no|No|Minimo|  
-|Cl|Yes|Yes|no|Minimo|  
+|Heap|No|No|No|Minimo|  
+|Cl|Yes|Yes|No|Minimo|  
 |Cl|Yes|no|Yes|Full|  
-|Cl|No|Yes|No|Minimo|  
-|Cl|no|No|Yes|Full|  
+|Cl|No|Yes|no|Minimo|  
+|Cl|No|no|Yes|Full|  
   
 Mostrato nella tabella precedente **dwloader** usando la modalità append, il caricamento in un heap o di una tabella dell'indice cluster (CI), con o senza il flag transazionale tra più e il caricamento in una tabella vuota o una tabella non vuota. Il blocco e registrazione di comportamento di ogni combinazione questo tipo di carico viene visualizzato nella tabella. Ad esempio, il caricamento di fase (2) con la modalità append in un indice cluster senza la modalità multi-transazionale e in un oggetto vuoto tabella avranno PDW creare un blocco esclusivo sulla tabella e la registrazione è minima. Ciò significa che un cliente non sarà in grado di caricare simultaneamente (2) fase ed eseguire una query in una tabella vuota. Tuttavia, quando si caricano con la stessa configurazione in una tabella non vuota, PDW non emetterà un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, si verifica la registrazione completa, rallenta il processo.  
   

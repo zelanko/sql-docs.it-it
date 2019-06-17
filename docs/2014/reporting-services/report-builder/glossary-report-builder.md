@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107811"
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
@@ -78,7 +78,7 @@ ms.locfileid: "66107811"
 |Common Language Runtime (CLR)|Motore alla base dell'esecuzione del codice gestito. Il runtime fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza dall'accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling.|  
 |espressione complessa|Espressione che non può essere rappresentata come singolo riferimento di campo predefinito e che viene visualizzata sull'area di progettazione come <\<Expr>>.|  
 |Concatenation|Combinazione di due o più stringhe di caratteri o espressioni in un'unica stringa di caratteri o espressione oppure combinazione di due o più stringe o espressioni binarie in un'unica stringa o espressione binaria.|  
-|concorrenza|Processo che consente a più utenti di accedere e modificare contemporaneamente i dati condivisi. In SQL Server vengono utilizzati i blocchi per consentire a più utenti di accedere e modificare contemporaneamente i dati condivisi ed evitare la generazione di conflitti.|  
+|concurrency|Processo che consente a più utenti di accedere e modificare contemporaneamente i dati condivisi. In SQL Server vengono utilizzati i blocchi per consentire a più utenti di accedere e modificare contemporaneamente i dati condivisi ed evitare la generazione di conflitti.|  
 |file config|Vedere: file di configurazione|  
 |configurazione|In riferimento a un microcomputer singolo, somma dei componenti interni ed esterni del sistema, inclusi memoria, unità disco, tastiera, monitor e hardware aggiuntivo generalmente meno critico, ad esempio mouse, modem o stampante.|  
 |file di configurazione|File contenente specifiche operative leggibili dal computer per un componente hardware o software o informazioni relative a un altro file oppure a un utente specifico.|  
@@ -184,7 +184,7 @@ ms.locfileid: "66107811"
 |assegnazione di ruolo a livello di elemento|Criteri di sicurezza che si applicano a un elemento nella cartella del server di report.|  
 |assegnazione di ruolo a livello di elemento|Modello di sicurezza che definisce un ruolo utilizzato per controllare l'accesso o l'interazione con un elemento nello spazio dei nomi della cartella del server di report.|  
 |indicatore di prestazioni chiave (KPI)|Metrica standardizzata quantificabile che riflette una variabile aziendale critica, ad esempio una quota di mercato, misurata nel tempo.|  
-|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio: SELECT, FROM e AND.|  
+|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio:  SELECT, FROM e AND.|  
 |Indicatore KPI|Vedere: indicatore di prestazioni chiave (KPI)|  
 |campo etichette|Campo del set di dati di un report che identifica un'etichetta per un campo chiave corrispondente. I parametri e le aree dati possono visualizzare l'etichetta per un campo chiave anziché il valore.|  
 |latenza|Quantità di tempo che intercorre tra il completamento di una modifica dei dati in un server e il momento in cui tale modifica è visibile in un altro server.|  
@@ -215,7 +215,7 @@ ms.locfileid: "66107811"
 |MDX|Vedere anche: Espressioni MDX (MDX)|  
 |proiezione Mercator|In un elemento di report mappa, proiezione di mappa cilindrica ideata da Gerardus Mercator nel 1569.|  
 |metadati|Informazioni sulle proprietà dei dati, ad esempio il tipo di dati in una colonna (numerico, di testo e così via) o la lunghezza di una colonna; informazioni su un file, quali titolo, descrizione, data di creazione e data dell'ultima modifica; informazioni sulla struttura dei dati o informazioni che specificano la progettazione di oggetti quali cubi o dimensioni.|  
-|metodo|Funzione che esegue un'azione tramite l'utilizzo di un oggetto COM, come avviene in SQL-DMO, OLE DB e ADO (ActiveX Data Objects).|  
+|method|Funzione che esegue un'azione tramite l'utilizzo di un oggetto COM, come avviene in SQL-DMO, OLE DB e ADO (ActiveX Data Objects).|  
 |tipo MIME|Formato di file di un'immagine, ad esempio BMP, GIF o JPEG.|  
 |dipendenza dei modelli|Relazione tra due o più modelli in cui un modello dipende dalle informazioni incluse nell'altro modello.|  
 |Espressioni MDX (MDX)|Sintassi utilizzata per la definizione di oggetti multidimensionali, nonché per l'esecuzione di query e la modifica di dati multidimensionali.|  
@@ -302,7 +302,7 @@ ms.locfileid: "66107811"
 |controlli ReportViewer|Controllo server Web e controllo Windows Form che assicurano funzionalità incorporate per l'elaborazione di report in applicazioni ASP.NET e Windows Form.|  
 |resource|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  
 |set di risultati|Set di righe restituite da un'istruzione SELECT.|  
-|ruolo|1. Utente o gruppo a cui viene concesso un set di autorizzazioni specifiche.  <br />2. In Analysis Services, un ruolo usa gli account di sicurezza di Windows per limitare l'ambito di accesso e le autorizzazioni per l'accesso degli utenti a database, cubi, dimensioni e modelli di data mining.  <br />3. In una sessione di mirroring del database, il server principale e il server mirror eseguono ruoli principali e mirror complementari. Facoltativamente, il ruolo del server di controllo del mirroring viene eseguito da una terza istanza di server.|  
+|role|1. Utente o gruppo a cui viene concesso un set di autorizzazioni specifiche.  <br />2. In Analysis Services, un ruolo usa gli account di sicurezza di Windows per limitare l'ambito di accesso e le autorizzazioni per l'accesso degli utenti a database, cubi, dimensioni e modelli di data mining.  <br />3. In una sessione di mirroring del database, il server principale e il server mirror eseguono ruoli principali e mirror complementari. Facoltativamente, il ruolo del server di controllo del mirroring viene eseguito da una terza istanza di server.|  
 |assegnazione di ruolo|Criteri di sicurezza che definiscono gli utenti e i gruppi autorizzati ad accedere a elementi specifici e a eseguire determinate operazioni.|  
 |definizione di ruolo|Raccolta denominata di attività che specifica le operazioni che possono essere eseguite da un utente in un server di report.|  
 |riga|In una tabella SQL, singola occorrenza dell'oggetto modellato dalla tabella.|  
@@ -312,7 +312,7 @@ ms.locfileid: "66107811"
 |scalare|Campo a valore singolo, opposto a un'aggregazione.|  
 |aggregazione scalare|Funzione di aggregazione, ad esempio MIN(), MAX() o AVG(), che viene specificata nell'elenco di colonne dell'istruzione SELECT contenente solo funzioni di aggregazione.|  
 |schema|Nello standard SQL-92, raccolta di oggetti di database di proprietà di un singolo utente che formano un unico spazio dei nomi. Uno spazio dei nomi è un set di oggetti che non può avere nomi duplicati.|  
-|ambito|Termine utilizzato in più contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering oppure il set di elementi del report che possono essere visualizzati o nascosti in base a un elemento Toggle.|  
+|scope|Termine utilizzato in più contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering oppure il set di elementi del report che possono essere visualizzati o nascosti in base a un elemento Toggle.|  
 |script|Raccolta di istruzioni Transact-SQL utilizzate per eseguire un'operazione.|  
 |entità a protezione diretta|Entità che possono essere protette con le autorizzazioni.|  
 |Secure Sockets Layer (SSL)|Standard aperto proposto per stabilire un canale di comunicazione sicuro in modo da impedire l'intercettazione di informazioni critiche, ad esempio i numeri della carta di credito. Tale standard consente principalmente di eseguire transazioni finanziare elettroniche sicure sul Web, sebbene sia progettato anche per essere utilizzato in altri servizi Internet.|  

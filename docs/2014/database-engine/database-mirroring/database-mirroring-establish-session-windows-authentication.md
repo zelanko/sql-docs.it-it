@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755514"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "62755514"
     > [!NOTE]  
     >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: autenticazione di Windows o autenticazione basata su certificati. Per altre informazioni, vedere [protezione del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE**=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
+     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE **=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
   
      Per eseguire un'istruzione SET PARTNER, l'opzione STATE degli endpoint di entrambi i partner deve essere impostata su STARTED.  
   
@@ -63,13 +63,13 @@ ms.locfileid: "62755514"
   
 4.  Per impostare il server principale come partner sul database mirror, connettersi al server mirror ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
+     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
   
      dove *<database_name>* è il nome del database di cui eseguire il mirroring (il nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete del server principale.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP<strong>://</strong>\<*indirizzo_sistema>*<strong>:</strong>\<*porta>*  
+     TCP<strong>://</strong>\<*indirizzo_sistema>* <strong>:</strong>\<*porta>*  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62755514"
   
 5.  Per impostare il server mirror come partner sul database principale, connettersi al server principale ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
+     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
   
      Per ulteriori informazioni, vedere il passaggio 4.  
   

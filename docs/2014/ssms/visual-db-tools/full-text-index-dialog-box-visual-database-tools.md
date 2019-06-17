@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028414"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "63028414"
  Se viene espansa, visualizza **Colonne** e **Nome catalogo full-text**.  
   
  **Colonne**  
- Visualizza un elenco separato da virgole con i nomi delle colonne in cui è possibile effettuare la ricerca full-text. Per visualizzare l'elenco completo, fare clic sul pulsante con i puntini di sospensione (**...**) a sinistra del campo della proprietà.  
+ Visualizza un elenco separato da virgole con i nomi delle colonne in cui è possibile effettuare la ricerca full-text. Per visualizzare l'elenco completo, fare clic sul pulsante con i puntini di sospensione ( **...** ) a sinistra del campo della proprietà.  
   
  **Full-Text Catalog Name**  
  Visualizza il nome del catalogo full-text in cui è archiviato l'indice full-text. Per archiviare l'indice in un catalogo diverso, fare clic sul nome del catalogo e selezionarne un altro dall'elenco a discesa.  

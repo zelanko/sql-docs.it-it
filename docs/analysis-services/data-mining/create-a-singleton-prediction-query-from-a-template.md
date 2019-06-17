@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740311"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
@@ -86,7 +86,7 @@ AS [t]
   
 10. Nel riquadro del testo della query cercare la sottolineatura rossa sotto la virgola e i puntini di sospensione che indicano un errore di sintassi. Eliminare i puntini di sospensione e aggiungere le condizioni di query aggiuntive desiderate. Se non si aggiungono altre condizioni, eliminare la virgola.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la condizione di query aggiuntive è stata impostata su **'45' as [Age]**.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la condizione di query aggiuntive è stata impostata su **'45' as [Age]** .  
   
 11. Fare clic su **Esegui**.  
   
