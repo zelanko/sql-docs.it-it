@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205315"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utilizzare più versioni e istanze di SQL Server

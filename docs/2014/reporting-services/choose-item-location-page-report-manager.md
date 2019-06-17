@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109894"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
@@ -52,7 +52,7 @@ ms.locfileid: "66109894"
 4.  Nella scheda **Generale** , nella pagina delle proprietà, fare clic su **Cambia percorso** per aprire la pagina Scegli percorso elemento.  
   
 ## <a name="options"></a>Opzioni  
- **Percorso**  
+ **Location**  
  Consente di specificare il nome della cartella in cui inserire l'elemento creato. È possibile digitare il nome completo oppure selezionare la cartella nella visualizzazione albero.  
   
  **Visualizzazione struttura ad albero**  

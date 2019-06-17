@@ -2,17 +2,17 @@
 title: Suggerimenti per l'uso di pacchetti R installati nelle librerie utente - servizi di SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642290"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140507"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>Suggerimenti per l'uso di pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ I pacchetti R eseguiti su più piattaforme di elaborazione. Assicurarsi che le v
 
 Se è stato modificato in precedenza nell'ambiente R nel computer, prima di installare nulla, verificare che la variabile di ambiente R `.libPath` usi solo un percorso.
 
-Questo percorso deve puntare alla cartella R_SERVICES per l'istanza. Per altre informazioni, incluse le procedure determinare quali pacchetti sono già installati, vedere [pacchetti predefinita di R e Python in SQL Server](installing-and-managing-r-packages.md).
+Questo percorso deve puntare alla cartella R_SERVICES per l'istanza. Per altre informazioni, incluse le procedure determinare quali pacchetti sono già installati, vedere [pacchetti predefinita di R e Python in SQL Server](../package-management/default-packages.md).
 
 ## <a name="new-to-sql-server"></a>Novità di SQL Server
 
@@ -73,7 +73,7 @@ Ciò non funziona durante l'esecuzione di soluzioni R in SQL Server, perché i p
 
 + Aggiornare il codice per rimuovere riferimenti diretti ai percorsi di librerie di R o i pacchetti R. 
 
-+ Conoscere quale libreria di pacchetti è associata l'istanza. Per altre informazioni, vedere [pacchetti predefinita di R e Python in SQL Server](installing-and-managing-r-packages.md).
++ Conoscere quale libreria di pacchetti è associata l'istanza. Per altre informazioni, vedere [pacchetti predefinita di R e Python in SQL Server](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Vedere anche
 

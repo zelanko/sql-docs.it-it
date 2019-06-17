@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248306"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definizione dei dati MDX - CREATE SUBCUBE
@@ -47,7 +47,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Time.Year.[1997]|Yes|{Time.Year.2003}|Time.Year.All|  
 |Time.Year.[1997]|No|{Time.Year.2003}|Time.Year.[2003]|  
 |Time.Year.[1997]|Yes|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year.[1997]|no|{Time.Year.2003, Time.Year.2004}|Either Time.Year.[2003] o<br /><br /> Time.Year.[2004]|  
+|Time.Year.[1997]|No|{Time.Year.2003, Time.Year.2004}|Either Time.Year.[2003] o<br /><br /> Time.Year.[2004]|  
   
  I sottocubi includono sempre membri [Totale].  
   

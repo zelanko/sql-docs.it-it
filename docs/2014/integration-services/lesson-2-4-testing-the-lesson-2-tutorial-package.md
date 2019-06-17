@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767485"
 ---
-# <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Passaggio 4: Test del pacchetto dell'esercitazione della lezione 2
+# <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione
   Dopo aver configurato il contenitore Ciclo Foreach e la gestione connessione file flat, il pacchetto creato nella lezione 2 consente di eseguire un'iterazione dell'insieme di 14 file flat contenuti nella cartella Sample Data. Ogni volta che viene trovato un nome di file corrispondente ai criteri specificati, il contenitore Ciclo Foreach popola la variabile definita dall'utente con il nome del file. Tale variabile aggiorna di conseguenza la proprietà ConnectionString della gestione connessione file flat e viene stabilita una connessione al nuovo file flat. Il contenitore Ciclo Foreach quindi esegue l'attività del flusso di dati non modificati sui dati del nuovo file flat prima di connettersi al file successivo contenuto nella cartella.  
   
  Utilizzare la procedura seguente per verificare la funzionalità relativa ai cicli aggiunta al pacchetto.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099084"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
@@ -118,7 +118,7 @@ ms.locfileid: "66099084"
   
      Questa query non contiene parametri di query. Verranno aggiunti più avanti in questa esercitazione.  
   
-11. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Il set di risultati vengono visualizzate 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita e include le colonne seguenti: StoreID, Subcategory, Quantity.  
+11. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Il set di risultati vengono visualizzate 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita e include le colonne seguenti: StoreID, Subcategory, Quantity.  
   
 12. Scegliere **Avanti**.  
   
@@ -172,9 +172,9 @@ ms.locfileid: "66099084"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     Il `WHERE` clausola limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID*.  
+     Il `WHERE` clausola limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID* .  
   
-4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID*.  
+4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID* .  
   
 5.  In **Valore parametro**digitare **200**.  
   
@@ -186,14 +186,14 @@ ms.locfileid: "66099084"
   
 8.  Nel riquadro Dati report espandere la cartella **Parametri** .  
   
- Si noti che è ora disponibile un parametro di report denominato *@StoreID*. Per impostazione predefinita, il parametro contiene dati digitare **testo**. Poiché l'identificatore del punto vendita è un intero, nella procedura descritta di seguito il tipo di dati verrà modificato in Integer.  
+ Si noti che è ora disponibile un parametro di report denominato *@StoreID* . Per impostazione predefinita, il parametro contiene dati digitare **testo**. Poiché l'identificatore del punto vendita è un intero, nella procedura descritta di seguito il tipo di dati verrà modificato in Integer.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Modificare il tipo di dati e altre proprietà predefiniti per un parametro di report  
  Dopo aver creato un parametro di report, è possibile impostare i valori predefiniti per le proprietà.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Per modificare il tipo di dati predefinito per un parametro di report  
   
-1.  Nel riquadro dati Report nel **parametri** nodo, fare doppio clic su *@StoreID*, quindi fare clic su **le proprietà dei parametri**.  
+1.  Nel riquadro dati Report nel **parametri** nodo, fare doppio clic su *@StoreID* , quindi fare clic su **le proprietà dei parametri**.  
   
 2.  Nel prompt dei comandi, digitare **identificatore Store?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66099084"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Visualizzare l'anteprima del report. Il Visualizzatore di report verrà visualizzato il prompt per *@StoreID*.  
+6.  Visualizzare l'anteprima del report. Il Visualizzatore di report verrà visualizzato il prompt per *@StoreID* .  
   
 7.  Nella barra degli strumenti del visualizzatore di report, accanto a Store ID, digitare **200**e quindi fare clic su **Visualizza report**.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66099084"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
   
-1.  Nel riquadro dati Report fare clic sul parametro *@StoreID*, quindi fare clic su **le proprietà dei parametri**.  
+1.  Nel riquadro dati Report fare clic sul parametro *@StoreID* , quindi fare clic su **le proprietà dei parametri**.  
   
 2.  Fare clic su **Valori disponibili**e quindi su **Ottieni valori da una query**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "66099084"
   
 9. Visualizzare l'anteprima del report.  
   
-     Sulla barra degli strumenti del Visualizzatore di report, la casella di testo del parametro è ora un elenco di riepilogo a discesa che consente di visualizzare  **\<selezionare un valore >**.  
+     Sulla barra degli strumenti del Visualizzatore di report, la casella di testo del parametro è ora un elenco di riepilogo a discesa che consente di visualizzare  **\<selezionare un valore >** .  
   
 10. L'elenco a discesa, selezionare Contoso Catalog Store e quindi fare clic su **visualizzazione Report**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "66099084"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 3.  Fare clic su **valori predefiniti**, quindi fare clic su **Ottieni valori da una query**.  
   
@@ -287,13 +287,13 @@ ms.locfileid: "66099084"
   
 7.  Visualizzare l'anteprima del report.  
   
- Per la *@StoreID*, il Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store". Questo è il primo valore dal set di risultati per il set di dati **archivi**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
+ Per la *@StoreID* , il Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store". Questo è il primo valore dal set di risultati per il set di dati **archivi**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Per specificare un valore predefinito personalizzato  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 3.  Fare clic su **valori predefiniti**, fare clic su **specificare i valori**, quindi fare clic su **Add**. Verrà aggiunta una nuova riga di valori.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "66099084"
   
 6.  Visualizzare l'anteprima del report.  
   
- Per la *@StoreID*, il Visualizzatore di report viene visualizzato il valore "Contoso Catalog Store". Questo è il nome visualizzato per l'identificatore del negozio **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
+ Per la *@StoreID* , il Visualizzatore di report viene visualizzato il valore "Contoso Catalog Store". Questo è il nome visualizzato per l'identificatore del negozio **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
 ##  <a name="NameValue"></a> 4d. Cercare un valore da un set di dati che disponga di coppie nome/valore  
  Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
@@ -326,7 +326,7 @@ ms.locfileid: "66099084"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Nell'intestazione di colonna del punto vendita è contenuto il testo visualizzato per un'espressione complessa: **<\<Expr>>**.  
+     Nell'intestazione di colonna del punto vendita è contenuto il testo visualizzato per un'espressione complessa: **<\<Expr>>** .  
   
 8.  Visualizzare l'anteprima del report.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "66099084"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 3.  Selezionare **Consenti più valori**.  
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721088"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica transazionale
@@ -50,7 +50,7 @@ ms.locfileid: "62721088"
   
 10. Nella pagina Sicurezza agente deselezionare la casella di controllo **Usa le impostazioni di sicurezza dell'agente snapshot** .  
   
-11. Fare clic su **Impostazioni di sicurezza** accanto ad Agente snapshot, immettere \<_Nome_computer>_**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**.  
+11. Fare clic su **Impostazioni di sicurezza** accanto ad Agente snapshot, immettere \<_Nome_computer>_ **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**.  
   
 12. Ripetere il passaggio precedente per impostare repl_logreader come account di processo per l'agente di lettura log e quindi fare clic su **Fine**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62721088"
   
 3.  Selezionare la pagina **Elenco di accesso alla pubblicazione** e fare clic su **Aggiungi**.  
   
-4.  Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare _<Machine_Name>_**\repl_distribution** e quindi fare clic su **OK**. Fare clic su **OK**.  
+4.  Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare _<Machine_Name>_ **\repl_distribution** e quindi fare clic su **OK**. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata la pubblicazione transazionale. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  

@@ -15,10 +15,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504786"
 ---
 # <a name="glossary"></a>Glossario
@@ -314,7 +314,7 @@ ms.technology:
 |conflitto di vincoli|Conflitto che viola i vincoli imposti su elementi o unità di modifica, ad esempio la relazione delle cartelle o il percorso di dati con denominazione identica all'interno di un file system.|  
 |violazione del vincolo|Violazione che si verifica quando i criteri del vincolo non vengono soddisfatti.|  
 |database indipendente|Database di SQL Server che include l'autenticazione degli utenti, le impostazioni del database e i metadati necessari per definire e accedere al database e che non presenta dipendenze di configurazione dall'istanza del motore di database di SQL Server in cui è installato il database.|  
-|contenitore|Elemento del flusso di controllo che specifica la struttura del pacchetto.|  
+|container|Elemento del flusso di controllo che specifica la struttura del pacchetto.|  
 |formattatore del contenuto|Parte del server di distribuzione che trasforma i dati non elaborati delle notifiche in messaggi leggibili.|  
 |chiave simmetrica|Chiave di crittografia utilizzata per crittografare e decrittografare contenuto protetto durante la pubblicazione e l'utilizzo.|  
 |contesa|In una rete, competizione tra stazioni per l'utilizzo di una linea di comunicazione o di una risorsa di rete.|  
@@ -967,7 +967,7 @@ ms.technology:
 |riquadro Messaggi|Una delle schede in cui sono ospitati i messaggi restituiti da SQL Server dopo l'esecuzione di una query TSQL.|  
 |Messaging Application Programming Interface (MAPI)|Architettura di messaggistica che consente l'interazione di più applicazioni con numerosi sistemi di messaggistica su diverse piattaforme hardware. MAPI si basa sul modello COM (Component Object Model).|  
 |metadati|Informazioni sulle proprietà o sulla struttura di dati che non fa parte dei valori contenuti nei dati.|  
-|metodo|Nella programmazione orientata a oggetti, un blocco di codice denominato che esegue un'attività quando viene chiamato.|  
+|method|Nella programmazione orientata a oggetti, un blocco di codice denominato che esegue un'attività quando viene chiamato.|  
 |Microsoft Message Queuing|Tecnologia Microsoft che consente l'esecuzione di applicazioni in momenti diversi per comunicare su reti e sistemi eterogenei che possono essere temporaneamente offline.|  
 |algoritmo Microsoft Sequence Clustering|Algoritmo corrispondente a una combinazione di analisi e clustering delle sequenze che identifica i cluster di eventi ordinati in modo analogo in una sequenza. I cluster possono essere utilizzati per stimare il probabile ordinamento degli eventi in una sequenza in base a caratteristiche note.|  
 |Importazione dati di utilizzo di Microsoft SharePoint Foundation|Processo timer predefinito per SharePoint Foundation che importa i file di log dei dati d'uso nel database di registrazione.|  
@@ -1399,7 +1399,7 @@ ms.technology:
 |snapshot dello schema|Snapshot che include lo schema per le tabelle e gli oggetti pubblicati necessari per la replica (trigger, tabelle di metadati e così via), ma non i dati utente.|  
 |basato su schema|Si riferisce a un metodo di elaborazione basato su uno schema che definisce elementi, attributi e tipi che verranno utilizzati per convalidare i documenti di input e output.|  
 |ambito|Indica la misura in cui è possibile fare riferimento a un identificatore, ad esempio un oggetto o una proprietà, all'interno di un programma. L'ambito può essere globale in relazione all'applicazione o locale in relazione al documento attivo.|  
-|ambito|Set di dati in fase di sincronizzazione.|  
+|scope|Set di dati in fase di sincronizzazione.|  
 |memoria script|Memoria locale (RAM lato client) utilizzata da uno script PHP.|  
 |riquadro di script|Parte dell'editor di testo di Progettazione tabelle.|  
 |script|Si riferisce all'automazione di azioni utente o alla configurazione di uno stato standard in un computer mediante script.|  
@@ -1496,8 +1496,8 @@ ms.technology:
 |Esplora soluzioni|Componente di Microsoft SQL Server Management Studio che consente di visualizzare e gestire gli elementi e di eseguire attività di gestione degli elementi di una soluzione o di un progetto.|  
 |ordine di valutazione|Ordine di valutazione (dall'ordine di valutazione più alto a quello più basso) e di calcolo (dall'ordine di valutazione più basso a quello più alto) per membri calcolati, membri personalizzati, formule personalizzate di rollup e celle calcolate in una singola sessione di calcolo di un cubo multidimensionale.|  
 |ordinamento|Metodo di organizzazione dei dati in base al valore o al tipo di dati. È possibile ordinare i dati alfabeticamente, numericamente o per data. I tipi di ordinamento utilizzano un ordine crescente (da 1 a 9, da A a Z) o decrescente (da 9 a 1, da Z a A).|  
-|origine|Disco, file, documento o altra raccolta di informazioni da cui vengono estratti o spostati i dati.|  
-|origine|Componente flusso di dati SSIS che rende disponibili i dati di origini dati esterne diverse ad altri componenti del flusso di dati.|  
+|source|Disco, file, documento o altra raccolta di informazioni da cui vengono estratti o spostati i dati.|  
+|source|Componente flusso di dati SSIS che rende disponibili i dati di origini dati esterne diverse ad altri componenti del flusso di dati.|  
 |origine|Provider di sincronizzazione che enumera tutte le modifiche e le invia al provider di destinazione.|  
 |adattatore di origine|Componente flusso di dati che consente di estrarre dati da un archivio dati.|  
 |controllo del codice sorgente|Set di funzionalità che includono un meccanismo per l'archiviazione del codice sorgente in un repository centrale e per l'estrazione del codice dallo stesso. Implica inoltre un sistema di controllo delle versioni che può gestire i file attraverso il ciclo di vita di sviluppo, tenendo traccia delle modifiche apportate, dell'autore, della data e dell'ora in cui sono state apportate e del motivo.|  

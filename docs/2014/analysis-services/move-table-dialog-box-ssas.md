@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077613"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Finestra di dialogo Sposta tabella (SSAS)
@@ -24,6 +24,6 @@ ms.locfileid: "66077613"
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Sposta la tabella selezionata prima della tabella**  
- La tabella che si desidera spostare verrà inserita nella posizione precedente la tabella scelta da questo elenco. Se si vuole spostare una tabella alla fine del set di tabelle, scegliere **(sposta alla fine)**.  
+ La tabella che si desidera spostare verrà inserita nella posizione precedente la tabella scelta da questo elenco. Se si vuole spostare una tabella alla fine del set di tabelle, scegliere **(sposta alla fine)** .  
   
   

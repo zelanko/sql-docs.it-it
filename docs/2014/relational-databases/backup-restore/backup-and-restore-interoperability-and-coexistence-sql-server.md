@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922436"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: Interoperabilità e coesistenza (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922436"
   
  Se si verifica un problema durante l'avvio del database, il recupero non riesce e il database viene contrassegnato come sospetto. Se è possibile isolare uno o più file in cui è presente il problema, l'amministratore del database può attivare la modalità offline per i file e tentare di riavviare il database. Per attivare la modalità offline per un file, è possibile utilizzare l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) seguente:  
   
- ALTER DATABASE *database_name* MODIFY FILE (nome **='*`filename`*'**, OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (nome **=' *`filename`* '** , OFFLINE)  
   
  Se l'avvio ha esito positivo, tutti i filegroup che includono un file offline rimangono in modalità offline.  
   

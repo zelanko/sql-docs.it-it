@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ff03ce6ec79aede2e056f0154836e77970af9c50
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604701"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800824"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby
 È necessario configurare l'ambiente di sviluppo con i prerequisiti per lo sviluppo di un'applicazione usando il Driver Ruby per SQL Server.    

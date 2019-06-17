@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205111"
 ---
 # <a name="examples-using-openxml"></a>Esempi: Uso di OPENXML
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Gli elementi <`Customer`> non hanno sottoelementi, quindi, se si esegue la stessa istruzione SELECT con il parametro *flags* impostato su **2** per indicare il mapping incentrato sugli elementi, i valori **CustomerID** e **ContactName** verranno restituiti come NULL per entrambi i clienti.  
   
- La variabile @xmlDocument può essere anche di tipo **xml** o di tipo **(n)varchar(max)**.  
+ La variabile @xmlDocument può essere anche di tipo **xml** o di tipo **(n)varchar(max)** .  
   
  Se nel documento XML <`CustomerID`> e <`ContactName`> sono sottoelementi, il mapping incentrato sugli elementi ne recupererà i valori.  
   
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio:   
+ Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio:  
   
 -   La query seguente restituisce il numero di nodi **Customer** presenti nel documento. Poiché non è stata specificata la clausola WITH, l'istruzione OPENXML restituisce una tabella edge. L'istruzione SELECT esegue la query sulla tabella edge.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Nella clausola WITH di *SchemaDeclaration* il parametro *ColPattern* è specificato anche con i parametri *ColName* e *ColType* . Il parametro *ColPattern* facoltativo è il modello XPath specificato e indica quanto segue:  
   
--   Il modello XPath (**.**) specificato come *ColPattern* per la colonna **ProdID** nel set di righe identifica il nodo di contesto, ovvero il nodo corrente. Il valore specificato per *rowpattern* è l'attributo **ProductID** dell'elemento <`OrderDetail`>.  
+-   Il modello XPath ( **.** ) specificato come *ColPattern* per la colonna **ProdID** nel set di righe identifica il nodo di contesto, ovvero il nodo corrente. Il valore specificato per *rowpattern* è l'attributo **ProductID** dell'elemento <`OrderDetail`>.  
   
 -   Il valore di *ColPattern*, **../\@Quantity**, specificato per la colonna **Qty** nel set di righe identifica l'attributo **Quantity** del nodo padre, <`OrderDetail`>, del nodo di contesto, \<ProductID>.  
   
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()**.  
+ In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()** .  
   
  Questo è il risultato:  
   

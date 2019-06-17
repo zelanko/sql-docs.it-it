@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f975fe18b76c4e748d7d2969d20c53b5818f0c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071325"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Ripristino di emergenza e disponibilità di PowerPivot (SQL Server 2014)
@@ -47,7 +47,7 @@ ms.locfileid: "66071325"
   
 -   **(3)** Servizi di calcolo Excel viene eseguito in ognuno dei server applicazioni e consente l'esecuzione dell'applicazione del servizio su tutti i server applicazioni. Pertanto se un singolo server applicazioni è offline, Servizi di calcolo Excel sarà comunque disponibile.  
   
--   **(4)** e **(6)** Le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint vengono eseguito nei server all'esterno della farm di SharePoint, incluso il servizio Windows **SQL Server Analysis Services (POWERPIVOT)**. Ognuna di queste istanze viene registrata con Excel Services **(3)**. Excel Services gestisce il bilanciamento del carico delle richieste ai server [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . L'architettura [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 consente di disporre di più server per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] in modo da poter facilmente aggiungere più istanze in base alle esigenze. Per altre informazioni, vedere [Gestire le impostazioni del modello di dati di Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)** e **(6)** Le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint vengono eseguito nei server all'esterno della farm di SharePoint, incluso il servizio Windows **SQL Server Analysis Services (POWERPIVOT)** . Ognuna di queste istanze viene registrata con Excel Services **(3)** . Excel Services gestisce il bilanciamento del carico delle richieste ai server [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . L'architettura [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 consente di disporre di più server per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] in modo da poter facilmente aggiungere più istanze in base alle esigenze. Per altre informazioni, vedere [Gestire le impostazioni del modello di dati di Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** I database di SQL Server usati per i database del contenuto, di configurazione e dell'applicazione. È incluso il database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il piano DR deve includere il livello di database. In questa progettazione i database vengono eseguiti nello stesso server come **(4)** una delle istanze di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** e **(5)** possono anche essere in server diversi.  
   

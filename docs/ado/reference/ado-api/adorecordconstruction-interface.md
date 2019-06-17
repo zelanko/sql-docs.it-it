@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718171"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
@@ -38,7 +38,7 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
 ## <a name="methods"></a>Metodi  
  Nessuna.  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  Nessuna.  
   
 ## <a name="remarks"></a>Note  

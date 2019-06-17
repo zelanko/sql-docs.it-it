@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62722369"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
@@ -64,7 +64,7 @@ ms.locfileid: "62722369"
   
 1.  Accedere come amministratore al computer che esegue IIS.  
   
-2.  Avviare **Gestione Internet Information Services (IIS)**:  
+2.  Avviare **Gestione Internet Information Services (IIS)** :  
   
     1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62722369"
   
 8.  Nella pagina **Accesso alla directory** :  
   
-    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Si tratta degli account che verranno specificati nella pagina **Informazioni server Web** della Creazione guidata nuova sottoscrizione oppure come valore per il parametro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* .  
+    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Si tratta degli account che verranno specificati nella pagina **Informazioni server Web** della Creazione guidata nuova sottoscrizione oppure come valore per il parametro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* .  
   
 9. Nella pagina **Accesso alla condivisione snapshot** immettere la condivisione snapshot. In questa condivisione vengono impostate le autorizzazioni appropriate affinché i Sottoscrittori possano accedere ai file di snapshot. Per altre informazioni sulle autorizzazioni per la condivisione, vedere [Proteggere la cartella snapshot](security/secure-the-snapshot-folder.md).  
   
@@ -272,7 +272,7 @@ ms.locfileid: "62722369"
   
     7.  Fare clic su **OK**.  
   
-4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)**:  
+4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)** :  
   
     1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   

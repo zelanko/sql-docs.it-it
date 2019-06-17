@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635888"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @server = ] 'server'` È il server su cui vengono restituite informazioni. Quando *server* non viene specificato, i report su tutti i server nella **Servers**. *server* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @optname = ] 'option'` L'opzione che descrive il server. *opzione* viene **varchar (** 35 **)**, con un valore predefinito è NULL e deve essere uno dei valori seguenti.  
+`[ @optname = ] 'option'` L'opzione che descrive il server. *opzione* viene **varchar (** 35 **)** , con un valore predefinito è NULL e deve essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usare regole di confronto remote**|Consente di utilizzare le regole di confronto di una colonna remota anziché quelle del server locale.|  
   
-`[ @show_topology = ] 'show_topology'` È la relazione del server specificato ad altri server. *show_topology* viene **varchar (** 1 **)**, con un valore predefinito è NULL. Se *show_topology* non è uguale a **t** oppure è NULL, **sp_helpserver** restituisce le colonne elencate nella sezione set di risultati. Se *show_topology* è uguale a **t**, oltre alle colonne elencate nel set di risultati **sp_helpserver** restituisce inoltre **topx** e **topy** informazioni.  
+`[ @show_topology = ] 'show_topology'` È la relazione del server specificato ad altri server. *show_topology* viene **varchar (** 1 **)** , con un valore predefinito è NULL. Se *show_topology* non è uguale a **t** oppure è NULL, **sp_helpserver** restituisce le colonne elencate nella sezione set di risultati. Se *show_topology* è uguale a **t**, oltre alle colonne elencate nel set di risultati **sp_helpserver** restituisce inoltre **topx** e **topy** informazioni.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
