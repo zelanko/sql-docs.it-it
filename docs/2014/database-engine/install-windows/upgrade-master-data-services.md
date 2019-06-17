@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774656"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
@@ -127,7 +127,7 @@ ms.locfileid: "62774656"
   
     4.  Nel **tipo di installazione** pagina della procedura guidata, selezionare la **aggiungere funzionalità a un'istanza esistente** opzione e scegliere l'istanza in cui è installato il database MDS.  
   
-    5.  Nel **selezione delle caratteristiche** nella pagina **funzionalità condivise**, selezionare **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  Nel **selezione delle caratteristiche** nella pagina **funzionalità condivise**, selezionare **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Completare la procedura guidata.  
   

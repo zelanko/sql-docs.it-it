@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789869"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)
@@ -99,7 +99,7 @@ ms.locfileid: "62789869"
   
 3.  Utilizzare li cmdlet `Get-ClusterResource` per cercare la risorsa nome di rete, quindi utilizzare il cmdlet `Set-ClusterParameter` per impostare il valore `HostRecordTTL`, come segue:  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      Nell'esempio di PowerShell seguente impostare HostRecordTTL su 300 secondi per una risorsa nome di rete denominata "`SQL Network Name (SQL35)`".  
   
@@ -255,7 +255,7 @@ ms.locfileid: "62789869"
   
 -   **Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità:**  
   
-     Ad esempio:   
+     Ad esempio:  
   
     -   Non modificare le proprietà del gruppo di disponibilità, ad esempio i possibili proprietari.  
   

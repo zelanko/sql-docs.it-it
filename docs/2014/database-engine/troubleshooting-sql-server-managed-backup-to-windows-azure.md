@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842578"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Windows Azure
@@ -105,8 +105,8 @@ ms.locfileid: "62842578"
   
      Se SQL Server non risponde, gli eventi vengono registrati nel canale di amministrazione.  Un esempio del registro eventi:  
   
-     *Errore di SQL (motore non risponde o restituito sqlException: SqlException:*   
-     *analisi dello stack, messaggio e codice di errore verrà visualizzati in un canale di amministrazione xevent, insieme a alcune informazioni aggiuntive, ad esempio:*   
+     *Errore di SQL (motore non risponde o restituito sqlException: SqlException:*    
+     *analisi dello stack, messaggio e codice di errore verrà visualizzati in un canale di amministrazione xevent, insieme a alcune informazioni aggiuntive, ad esempio:*    
     *"Probabilmente riscontra problemi di connettività di SQL Server. Database verrà ignorato nell'iterazione corrente"*  
   
 -   **SQL Agent non risponde o si blocca quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:**  

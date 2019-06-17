@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_2577 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 2577 (Database Engine error)
 ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec9a7b6ce05637a35761b40bd039e243fec3e99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62914690"
 ---
 # <a name="mssqlserver2577"></a>MSSQLSERVER_2577
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Dettagli  
   
 |||  
@@ -34,33 +33,34 @@ ms.locfileid: "62914690"
 |Testo del messaggio|Numeri di sequenza della catena non ordinati nella catena IAM (Index Allocation Map) per l'ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE). La pagina P_ID1, con numero di sequenza SEQUENCE1 punta alla pagina P_ID2, con numero di sequenza SEQUENCE2.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Ogni pagina IAM (Index Allocation Map) ha un numero di sequenza. Il numero di sequenza indica la posizione della pagina IAM all'interno della catena IAM. Di norma i numeri di sequenza vengono aumentati di un'unità per ogni pagina IAM. La pagina IAM *P_ID2* ha un numero di sequenza che non segue questa regola.  
+ Ogni pagina IAM (Index Allocation Map) ha un numero di sequenza. Il numero di sequenza indica la posizione della pagina IAM all'interno della catena IAM. Di norma i numeri di sequenza vengono aumentati di un'unità per ogni pagina IAM. La pagina IAM *P_ID2* ha un numero di sequenza che non segue questa regola.  
   
 ## <a name="user-action"></a>Azione dell'utente  
   
 ### <a name="look-for-hardware-failure"></a>Individuare errori hardware  
-Eseguire gli strumenti di diagnostica hardware e risolvere eventuali problemi. Esaminare inoltre il registro di sistema di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e il registro delle applicazioni, nonché il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire se l'errore è dovuto a un problema hardware. Risolvere tutti i problemi relativi all'hardware indicati nei log.  
+ Eseguire gli strumenti di diagnostica hardware e risolvere eventuali problemi. Esaminare inoltre il registro di sistema di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e il registro delle applicazioni, nonché il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire se l'errore è dovuto a un problema hardware. Risolvere tutti i problemi relativi all'hardware indicati nei log.  
   
-In caso di problemi persistenti che provocano il danneggiamento dei dati, provare a sostituire i vari componenti hardware per isolare il problema. Verificare che nel sistema non sia abilitata la memorizzazione nella cache in scrittura sul controller del disco. Se si ritiene che il problema sia dovuto alla memorizzazione nella cache in scrittura, rivolgersi al fornitore dell'hardware.  
+ In caso di problemi persistenti che provocano il danneggiamento dei dati, provare a sostituire i vari componenti hardware per isolare il problema. Verificare che nel sistema non sia abilitata la memorizzazione nella cache in scrittura sul controller del disco. Se si ritiene che il problema sia dovuto alla memorizzazione nella cache in scrittura, rivolgersi al fornitore dell'hardware.  
   
-Infine, potrebbe essere conveniente passare a un nuovo sistema hardware. A tale scopo può essere necessario riformattare le unità disco e reinstallare il sistema operativo.  
+ Infine, potrebbe essere conveniente passare a un nuovo sistema hardware. A tale scopo può essere necessario riformattare le unità disco e reinstallare il sistema operativo.  
   
 ### <a name="restore-from-backup"></a>Eseguire un ripristino da backup  
-Se il problema non è correlato all'hardware ed è disponibile un backup valido noto, ripristinare il database dal backup.  
+ Se il problema non è correlato all'hardware ed è disponibile un backup valido noto, ripristinare il database dal backup.  
   
 ### <a name="run-dbcc-checkdb"></a>Eseguire DBCC CHECKDB  
-Se non è disponibile un backup valido, eseguire DBCC CHECKDB senza la clausola REPAIR per determinare l'entità del danno. Verrà automaticamente suggerita la clausola REPAIR da usare. Eseguire quindi DBCC CHECKDB con la clausola REPAIR appropriata per correggere il database.  
+ Se non è disponibile un backup valido, eseguire DBCC CHECKDB senza la clausola REPAIR per determinare l'entità del danno. Verrà automaticamente suggerita la clausola REPAIR da usare. Eseguire quindi DBCC CHECKDB con la clausola REPAIR appropriata per correggere il database.  
   
 > [!CAUTION]  
-> Se non si è certi dell'effetto prodotto sui dati dall'esecuzione di DBCC CHECKDB con la clausola REPAIR, contattare il personale del supporto tecnico prima di eseguire l'istruzione.  
+>  Se non si è certi dell'effetto prodotto sui dati dall'esecuzione di DBCC CHECKDB con la clausola REPAIR, contattare il personale del supporto tecnico prima di eseguire l'istruzione.  
   
-Se l'esecuzione di DBCC CHECKDB con una clausola REPAIR non consente di risolvere il problema, contattare il personale del supporto tecnico.  
+ Se l'esecuzione di DBCC CHECKDB con una clausola REPAIR non consente di risolvere il problema, contattare il personale del supporto tecnico.  
   
 ### <a name="results-of-running-repair-options"></a>Risultati dell'esecuzione delle opzioni REPAIR  
-L'esecuzione dell'istruzione REPAIR ricompila la catena IAM. REPAIR divide innanzitutto la catena IAM esistente in due metà. La prima metà della catena termina con una pagina IAM, *P_ID1*. Il puntatore di pagina successiva della pagina *P_ID1* viene impostato su (0:0). La seconda metà della catena inizia con una pagina IAM, *P_ID2*. Il puntatore di pagina precedente della pagina *P_ID2* viene impostato su (0:0).  
+ L'esecuzione dell'istruzione REPAIR ricompila la catena IAM. REPAIR divide innanzitutto la catena IAM esistente in due metà. La prima metà della catena termina con una pagina IAM, *P_ID1*. Il puntatore di pagina successiva della pagina *P_ID1* viene impostato su (0:0). La seconda metà della catena inizia con una pagina IAM, *P_ID2*. Il puntatore di pagina precedente della pagina *P_ID2* viene impostato su (0:0).  
   
-REPAIR collega quindi le due metà e rigenera i numeri di sequenza della catena IAM. Le pagine IAM che non possono essere corrette verranno deallocate.  
+ REPAIR collega quindi le due metà e rigenera i numeri di sequenza della catena IAM. Le pagine IAM che non possono essere corrette verranno deallocate.  
   
 > [!CAUTION]  
-> L'operazione di correzione può comportare la perdita di dati.  
+>  L'operazione di correzione può comportare la perdita di dati.  
+  
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810064"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
@@ -76,7 +76,7 @@ ms.locfileid: "62810064"
   
 #### <a name="to-check-the-current-setting-on-your-operating-system"></a>Per controllare l'impostazione corrente nel sistema operativo  
   
-1.  Fare clic su **Start**, scegliere **Pannello di controllo**, fare doppio clic su **Connessioni di rete**, quindi su **Connessione alla rete locale (LAN)**.  
+1.  Fare clic su **Start**, scegliere **Pannello di controllo**, fare doppio clic su **Connessioni di rete**, quindi su **Connessione alla rete locale (LAN)** .  
   
 2.  Nella scheda **Generale** fare clic su **Proprietà**, selezionare l'opzione **Condivisione file e stampanti per reti Microsoft**e quindi scegliere **Proprietà**.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "62810064"
 |-|-------------|-------------|  
 |Memoria convenzionale|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 2 GB<br /><br /> 3 GB con **3 gb** avvio parametro *<br /><br /> 4 GB su WOW64\*\*|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 8 TB in sistemi con architettura x64|  
   
- ***/3gb** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * **/3gb** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows on Windows 64) è una modalità che 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ \* * WOW64 (Windows on Windows 64) è una modalità che 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Esempi  
   
