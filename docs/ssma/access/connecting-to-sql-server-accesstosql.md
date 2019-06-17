@@ -23,10 +23,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63139023"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>La connessione a SQL Server (AccessToSQL)
@@ -59,11 +59,11 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
   
 2.  Nel **nome Server** casella, immettere o selezionare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto (**.**).  
+    -   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto ( **.** ).  
   
     -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   
-    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio:  MyServer\MyInstance.  
+    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio: MyServer\MyInstance.  
   
     -   Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connettersi tramite named pipe protocollo e specificando il nome della pipe, ad esempio \\ \\.\pipe\sql\query. Per altre informazioni, vedere il [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentazione.  
   

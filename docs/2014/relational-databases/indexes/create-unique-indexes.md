@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162359"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
@@ -112,7 +112,7 @@ ms.locfileid: "63162359"
   
 7.  In **(Generale)** nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
   
-8.  Selezionare **Colonne** e quindi fare clic sul pulsante con i puntini di sospensione **(...)**.  
+8.  Selezionare **Colonne** e quindi fare clic sul pulsante con i puntini di sospensione **(...)** .  
   
 9. In **Nome colonna** della finestra di dialogo **Colonne indice**selezionare le colonne da indicizzare. È possibile selezionare fino a 16 colonne. Per ottenere prestazioni ottimali, selezionare una o due colonne per indice. Per ogni colonna selezionata, è possibile specificare se nell'indice i valori della colonna dovranno essere organizzati in ordine crescente o decrescente.  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144308"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
@@ -210,7 +210,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  I valori restituiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Length|Precisione|Scala|  
+|Tipo di dati SQL|Type|Sottotipo|Length|Precisione|Scala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  I valori consentiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Length|Precisione|Scala|  
+|Tipo di dati SQL|Type|Sottotipo|Length|Precisione|Scala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

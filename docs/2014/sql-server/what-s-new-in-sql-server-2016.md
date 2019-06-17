@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63295237"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Cosa&#39;s New in SQL Server 2014
@@ -77,7 +77,7 @@ ms.locfileid: "63295237"
 -   **Nuova DMF per il recupero del buffer di input in SQL Server:** Disponibile una nuova DMF per il recupero del buffer di input per una sessione o una richiesta (sys.dm_exec_input_buffer). Dal punto di vista funzionale equivale a DBCC INPUTBUFFER. [Vedere il blog per informazioni dettagliate](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Mitigazione dei rischi per la concessione di memoria sottostimati e sopravvalutati:** Aggiunto nuovo hint per la query per Resource Governor tramite MIN_GRANT_PERCENT e MAX_GRANT_PERCENT. Ciò consente di sfruttare questi hint durante l'esecuzione di query limitando le concessioni di memoria per evitare una contesa di memoria. Per altre informazioni, vedere [KB310740 articolo della knowledge base](https://support.microsoft.com/en-us/kb/3107401)
 -   **Migliore diagnostica di concessione/utilizzo memoria:** Un nuovo evento esteso è stato aggiunto all'elenco delle funzionalità di traccia in SQL Server (query_memory_grant_usage) per tenere traccia delle concessioni di memoria richiesta e concesso. Fornisce funzionalità di traccia e analisi migliorate per la risoluzione dei problemi di esecuzione query con concessioni di memoria. Per altre informazioni, vedere [articolo della knowledge base KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Eseguire query di diagnostica di esecuzione per spill tempdb:**-avviso di Hash e Sort Warnings ora hanno colonne aggiuntive per tenere traccia delle statistiche i/o fisico, memoria utilizzata e righe interessate. È stato anche introdotto un nuovo evento esteso hash_spill_details. A questo punto è possibile tenere traccia delle informazioni più granulari per gli avvisi di hash e ordinamento ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Questo miglioramento è ora anche esposto attraverso i piani di Query XML sotto forma di un nuovo attributo al tipo complesso SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Impostare le statistiche su ora Mostra Ordina le statistiche della tabella di lavoro. .
+-   **Eseguire query di diagnostica di esecuzione per spill tempdb:** -avviso di Hash e Sort Warnings ora hanno colonne aggiuntive per tenere traccia delle statistiche i/o fisico, memoria utilizzata e righe interessate. È stato anche introdotto un nuovo evento esteso hash_spill_details. A questo punto è possibile tenere traccia delle informazioni più granulari per gli avvisi di hash e ordinamento ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Questo miglioramento è ora anche esposto attraverso i piani di Query XML sotto forma di un nuovo attributo al tipo complesso SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Impostare le statistiche su ora Mostra Ordina le statistiche della tabella di lavoro. .
 -   **Diagnostica migliorata per i piani di esecuzione di query che implicano la distribuzione del predicato residua:** Le righe effettive lette verranno ora segnalate nei piani di esecuzione query per migliorare la risoluzione dei problemi delle prestazioni di query. Questa deve annullare la necessità per acquisire SET STATISTICS IO separatamente. Questa ora consente di visualizzare le informazioni relative a una distribuzione del predicato residua in un piano di query. Per altre informazioni, vedere [articolo della knowledge base KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

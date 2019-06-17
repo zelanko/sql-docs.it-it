@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453382"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Esecuzione della Console SSMA (DB2ToSQL)
@@ -344,7 +344,7 @@ convert-schema
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <convert-schema  
@@ -743,7 +743,7 @@ o Gestione configurazione
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```  
 <convert-sql-statement  

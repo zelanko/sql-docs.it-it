@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126304"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Esecuzione della console SSMA (SybaseToSQL)
@@ -231,7 +231,7 @@ Errore di connessione al server di database di origine durante l'esecuzione del 
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <generate-assessment-report  
@@ -352,7 +352,7 @@ Questo comando esegue la migrazione dei dati di origine alla destinazione.
   
 </migrate-data>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -501,7 +501,7 @@ o Gestione configurazione
   
   object-type="<object-category>" />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database>  
@@ -645,7 +645,7 @@ o Gestione configurazione
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```  
 <convert-sql-statement  

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198761"
 ---
 # <a name="managing-data-sources"></a>Gestione delle origini dati
@@ -30,7 +30,7 @@ Dopo aver installato un driver ODBC dal programma di installazione del driver, �
 > [!NOTE]  
 >  Per gestire un'origine dati che si connette a un driver a 32 bit in piattaforme a 64 bit, utilizzare c:\windows\sysWOW64\odbcad32.exe. Per gestire un'origine dati che si connette a un driver a 64 bit, utilizzare c:\windows\system32\odbcad32.exe. Nelle **strumenti di amministrazione** in un sistema operativo Windows 8 a 64 bit, sono presenti icone per 32 bit e 64 bit **Amministrazione origine dati ODBC** nella finestra di dialogo.  
   
- Se si usa il odbcad32.exe a 64 bit per configurare o rimuovere un DSN che si connette a un driver a 32 bit, ad esempio, **Driver è Microsoft Access (\*mdb)**, si riceverà il messaggio di errore seguente:  
+ Se si usa il odbcad32.exe a 64 bit per configurare o rimuovere un DSN che si connette a un driver a 32 bit, ad esempio, **Driver è Microsoft Access (\*mdb)** , si riceverà il messaggio di errore seguente:  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

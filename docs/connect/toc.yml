@@ -3651,7 +3651,7 @@
                           href: ../odbc/reference/syntax/sqlcopydesc-function.md
                         - name: Funzione SQLDataSources
                           href: ../odbc/reference/syntax/sqldatasources-function.md
-                        - name: 'Funzione SQLDescribeCol '
+                        - name: Funzione SQLDescribeCol
                           href: ../odbc/reference/syntax/sqldescribecol-function.md
                         - name: Funzione SQLDescribeParam
                           href: ../odbc/reference/syntax/sqldescribeparam-function.md

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161892"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
@@ -180,7 +180,7 @@ ms.locfileid: "63161892"
 ### <a name="bounding-box"></a>Riquadro  
  Si definisce *riquadro* il perimetro della griglia di livello principale di un piano geometrico. I parametri del riquadro sono presenti solo nello schema a mosaico griglia geometrica. Questi parametri non sono disponibili se **Schema a mosaico** è impostato su **Griglia geografica**.  
   
- Nel pannello sono visualizzate le **(*`X-min`*,*`Y-min`*)** e **(*`X-max`*,*`Y-max`*)** coordinate del rettangolo. Non esistono valori predefiniti, pertanto, quando si crea un indice spaziale nuovo su una colonna di tipo `geometry`, è necessario specificare i valori delle coordinate.  
+ Nel pannello sono visualizzate le **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** coordinate del rettangolo. Non esistono valori predefiniti, pertanto, quando si crea un indice spaziale nuovo su una colonna di tipo `geometry`, è necessario specificare i valori delle coordinate.  
   
  `X-min`  
  La coordinata X dell'angolo inferiore sinistro del riquadro.  

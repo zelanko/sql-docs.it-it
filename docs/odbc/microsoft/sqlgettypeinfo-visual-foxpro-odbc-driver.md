@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181410"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (driver ODBC Visual FoxPro)
@@ -35,7 +35,7 @@ ms.locfileid: "63181410"
 |SQL_BIGINT|Non supportato. È disponibile alcun tipo di Visual FoxPro a 64 bit.|  
 |SQL_BIT|Logico|  
 |SQL_CHAR|Carattere|  
-|SQL_DATE|date|  
+|SQL_DATE|Date|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -46,11 +46,11 @@ ms.locfileid: "63181410"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Valore intero|  
 |SQL_TIME|Non supportato. Non vi è alcun Visual FoxPro *ora* tipo.|  
-|SQL_TIMESTAMP|Datetime|  
+|SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Valore intero|  
 |SQL_VARBINARY|Memo (binario) *, generale|  
 |SQL_VARCHAR|Carattere|  
   
- * Tipo di predefinito  
+ \* Tipo di predefinito  
   
  Per altre informazioni sui tipi di dati Visual FoxPro, vedere [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Per altre informazioni su questa funzione, vedere [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) nel *riferimento per programmatori ODBC*.

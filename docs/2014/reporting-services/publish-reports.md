@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108024"
 ---
 # <a name="publish-reports"></a>Pubblicazione di report
@@ -27,7 +27,7 @@ ms.locfileid: "66108024"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Per pubblicare tutti i report di un progetto  
   
--   Nel menu **Compilazione** fare clic su **Distribuisci \<nome progetto report>**. In alternativa, in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report e scegliere **Distribuisci**. È possibile visualizzare lo stato del processo di pubblicazione nella finestra Output.  
+-   Nel menu **Compilazione** fare clic su **Distribuisci \<nome progetto report>** . In alternativa, in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report e scegliere **Distribuisci**. È possibile visualizzare lo stato del processo di pubblicazione nella finestra Output.  
   
     > [!NOTE]  
     >  Quando si distribuisce un progetto server di report, vengono distribuite anche le origini dati condivise nel progetto report.  

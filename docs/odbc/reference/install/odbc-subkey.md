@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63281006"
 ---
 # <a name="odbc-subkey"></a>Sottochiave ODBC
 I valori nella sottochiave ODBC specificano le opzioni di traccia ODBC. Queste opzioni vengono impostate tramite la scheda di traccia della finestra di dialogo Amministrazione origine dati ODBC visualizzato dal **SQLManageDataSources**. Sottochiave ODBC stesso è facoltativa. Il formato di questi valori è come illustrato nella tabella seguente.  
   
-|nome|Tipo di dati|Dati|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
 |TraceFile|REG_SZ|*tracefile-path*|  

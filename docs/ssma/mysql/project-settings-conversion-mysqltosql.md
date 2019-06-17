@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162022"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Impostazioni del progetto (conversione) (MySQLToSQL)
@@ -42,7 +42,7 @@ Nel riquadro di conversione è disponibile nel **impostazioni del progetto** e *
 |**Nome**|**Definizione**|  
 |**Generare vincoli per le colonne di tipo di dati di Enumerazione**|Genera vincoli per le colonne di tipo di dati di Enumerazione nella tabella di SQL Server o SQL Azure, se non è presente nella tabella di MySQL. In caso affermativo, tutte le colonne convertite del tipo di dati di Enumerazione sono accompagnate dal vincolo CHECK, controllare il valore.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  no<br /><br />**Modalità intero**:   Yes|  
 |**Generare vincoli per le colonne di tipo di SET di dati**|Genera i vincoli per le colonne di tipo di SET di dati della tabella di SQL Server o SQL Azure, se non è presente nella tabella di MySQL. In caso affermativo, tutte le colonne convertite della tipo di SET di dati sia associate a vincolo CHECK, controllare il valore.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:   Yes|  
-|**Generare vincoli per le colonne delle colonne di tipo di dati numerico senza segno**|Aggiungi il controllo per un valore non negativo alle colonne dei tipi di dati numerico senza segno.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  no<br /><br />**Modalità intero**:   Yes|  
+|**Generare vincoli per le colonne delle colonne di tipo di dati numerico senza segno**|Aggiungi il controllo per un valore non negativo alle colonne dei tipi di dati numerico senza segno.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:   Yes|  
 |**Generazione di vincolo per colonne di tipo anno dei dati**|Genera l'errore di vincolo per colonne di tipo anno dei dati nella tabella SQL Server o SQL Azure, se non è presente nella tabella MySQL. In caso affermativo, tutti convertiti colonne di tipo sia associato a vincolo CHECK, controllare il valore di dati dell'anno.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:   Yes|  
   
 ### <a name="data-types"></a>Tipi di dati  
@@ -63,7 +63,7 @@ Nel riquadro di conversione è disponibile nel **impostazioni del progetto** e *
 |**Operatore IN**|Specifica come convertire operatore IN MySQL.<br /><br />**Modalità predefinita**:   Converti sempre a nella<br /><br />**La modalità ottimistico**:  Converti sempre a nella<br /><br />**Modalità intero**:   Espandere, se necessario|  
 |**Conversione di MySQL (funzione)**|Specifica come convertire le funzioni standard di MySQL.<br /><br />**Modalità predefinita**:   Optimistic<br /><br />**La modalità ottimistico**:  Optimistic<br /><br />**Modalità intero**:   Preciso|  
 |**Non supportati motori di archiviazione**|In caso affermativo, tutte le istruzioni che fanno riferimento a tabelle utilizzando stored motori diversi da MyISAM e InnoDb devono essere contrassegnate con messaggi di avviso di conversione.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:   Yes|  
-|**Eliminare la generazione di colonna ausiliario ROWID**|In caso affermativo, impedisce la creazione della creazione di colonne ausiliario ROWD nelle tabelle di destinazione. Potrebbero influire sulla migrazione di alcune strutture.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:   No|  
+|**Eliminare la generazione di colonna ausiliario ROWID**|In caso affermativo, impedisce la creazione della creazione di colonne ausiliario ROWD nelle tabelle di destinazione. Potrebbero influire sulla migrazione di alcune strutture.<br /><br />**Modalità predefinita**:   No<br /><br />**La modalità ottimistico**:  No<br /><br />**Modalità intero**:   no|  
 |**Conversione di istruzioni TRUNCATE**|Specifica come eseguire la conversione di istruzioni TRONCATE.<br /><br />**Modalità predefinita**:   TRUNCATE<br /><br />**La modalità ottimistico**:  TRUNCATE<br /><br />**Modalità intero**:   TRUNCATE|  
   
 ### <a name="misc"></a>Varie  

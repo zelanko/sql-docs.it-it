@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0b42e3d5b74b730a197b4c8cb595e871a247c6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403513"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lezione 8-1: definizione e uso di un'azione drill-through
@@ -109,7 +109,7 @@ Nelle procedure descritte in questo argomento viene definita un'azione drill-thr
   
 7.  Modificare la proprietà **Name** dell'attributo **Due Date Key** in **Due Date**e modificare la proprietà **Name Column** di questo attributo in **Date.SimpleDate (WChar)** usando lo stesso metodo eseguito per l'attributo **Order Date Key**.  
   
-8.  Modificare la proprietà **Name** dell'attributo **Ship Date Key** in **Ship Date** e modificare la proprietà **Name Column** di questo attributo in **Date.SimpleDate (WChar)**.  
+8.  Modificare la proprietà **Name** dell'attributo **Ship Date Key** in **Ship Date** e modificare la proprietà **Name Column** di questo attributo in **Date.SimpleDate (WChar)** .  
   
 9. Passare alla scheda **Azioni[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di Progettazione cubi per il cubo**  Tutorial.  
   
