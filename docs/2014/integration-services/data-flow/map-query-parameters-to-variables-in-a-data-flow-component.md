@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901630"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapping dei parametri di query a variabili in un componente del flusso di dati

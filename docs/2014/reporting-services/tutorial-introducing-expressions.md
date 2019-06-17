@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098853"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
@@ -123,7 +123,7 @@ ms.locfileid: "66098853"
   
      Nella query vengono specificati nomi di colonne tra cui data di nascita, nome, cognome, stato o provincia, identificatore di paese/regione, sesso e acquisti da inizio anno.  
   
-10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Il set di risultati vengono visualizzate 20 righe di dati e include le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Il set di risultati vengono visualizzate 20 righe di dati e include le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
   
 11. Scegliere **Avanti**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66098853"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3. Visualizzare il nome, l'iniziale e il cognome  
- Usare la funzione **Left** e l'operatore di **concatenazione**(**&**) in un'espressione tramite cui viene restituito un nome con un'iniziale e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione**.  
+ Usare la funzione **Left** e l'operatore di **concatenazione**( **&** ) in un'espressione tramite cui viene restituito un nome con un'iniziale e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione**.  
   
 #### <a name="to-add-the-name-column"></a>Per aggiungere la colonna Name  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66098853"
   
      La funzione **Left** viene aggiunta all'espressione.  
   
-6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 7.  Nell'elenco **Valori** fare doppio clic su **FirstName**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "66098853"
   
 4.  Nell'elenco **Elemento** fare doppio clic su **Switch**.  
   
-5.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+5.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 6.  Nell'elenco **Valori** fare doppio clic su **Gender**.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098853"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Scegliere **Esegui** (**!**) per eseguire la query.  
+9. Scegliere **Esegui** ( **!** ) per eseguire la query.  
   
      I risultati query sono i nomi e gli identificatori di paesi.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "66098853"
   
 5.  Nell'elenco **Elemento** fare doppio clic su **Lookup**.  
   
-6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 7.  Nel **i valori** elenco, fare doppio clic su `CountryRegionID`.  
   
@@ -393,7 +393,7 @@ ms.locfileid: "66098853"
   
 8.  Digitare **"d",**  
   
-9. Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+9. Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 10. Nell'elenco **Valori** fare doppio clic su **LastPurchase**.  
   
@@ -449,7 +449,7 @@ ms.locfileid: "66098853"
   
 4.  Nell'elenco **Elemento** fare doppio clic su **Round**.  
   
-5.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+5.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 6.  Nell'elenco **Valori** fare doppio clic su **YTDPurchase**.  
   
@@ -461,7 +461,7 @@ ms.locfileid: "66098853"
   
 10. Nell'elenco **Elemento** fare doppio clic su **Avg**.  
   
-11. Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+11. Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 12. Nell'elenco **Valori** fare doppio clic su **YTDPurchase**.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "66098853"
   
 19. Nell'elenco **Elemento** fare doppio clic su **Round**.  
   
-20. Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+20. Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 21. Nell'elenco **Valori** fare doppio clic su **YTDPurchase**.  
   
@@ -493,7 +493,7 @@ ms.locfileid: "66098853"
   
 25. Nell'elenco **Elemento** fare doppio clic su **Avg**.  
   
-26. Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+26. Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 27. Nell'elenco **Valori** fare doppio clic su **YTDPurchase**.  
   
@@ -588,7 +588,7 @@ ms.locfileid: "66098853"
   
 9. Nell'elenco **Elemento** fare doppio clic su **RunningValue**.  
   
-10. Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+10. Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 11. Nell'elenco **Valori** fare doppio clic su **FirstName**.  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021902"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
@@ -68,7 +68,7 @@ ms.locfileid: "63021902"
   
 -   "L'istanza del server Oracle '\<*NomeServerPubblicazioneOracle*>' è stata precedentemente configurata per l'uso di '\<*NomeDatabaseDistribuzioneSQLServer*>' come database di distribuzione. Per iniziare a usare '\<*NuovoDatabaseDistribuzioneSQLServer*>' come database di distribuzione, è necessario rimuovere la configurazione corrente della replica nell'istanza del server Oracle, eliminando così tutte le pubblicazioni presenti in tale istanza del server."  
   
--   "Il server Oracle '\<*NomeServerOracleServer*>' è già definito come server di pubblicazione '\<*NomeServerPubblicazioneOracle*>' nel database di distribuzione '\<*NomeDatabaseDistribuzioneSQL*>.*\<NomeDatabaseDistribuzione>*'. Eliminare il server di pubblicazione oppure eliminare il sinonimo public '*\<NomeSinonimo*' per ricrearlo."  
+-   "Il server Oracle '\<*NomeServerOracleServer*>' è già definito come server di pubblicazione '\<*NomeServerPubblicazioneOracle*>' nel database di distribuzione '\<*NomeDatabaseDistribuzioneSQL*>. *\<NomeDatabaseDistribuzione>* '. Eliminare il server di pubblicazione oppure eliminare il sinonimo public ' *\<NomeSinonimo*' per ricrearlo."  
   
  Con l'eliminazione di un server di pubblicazione Oracle, vengono automaticamente rimossi gli oggetti di replica nel database Oracle. In alcuni casi è tuttavia necessario eseguire manualmente la pulizia degli oggetti di replica Oracle. Per rimuovere manualmente gli oggetti di replica Oracle creati con la replica:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021902"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Viene generato l'errore SQL Server 21642 relativo all'accesso a un server collegato duplicato  
  Durante la configurazione iniziale di un server di pubblicazione Oracle, viene creata una voce di server collegato per la connessione tra server di pubblicazione e server di distribuzione. Il nome del server collegato corrisponde al nome del servizio TNS Oracle. Se si tenta di creare un server collegato con lo stesso nome, viene visualizzato il messaggio di errore seguente:  
   
- 'Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato '*\<NomeServerCollegato*'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso'.  
+ 'Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato ' *\<NomeServerCollegato*'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso'.  
   
  Questo errore si può verificare se si tenta di creare il server collegato direttamente oppure se è stata precedentemente eliminata la relazione tra il server di pubblicazione Oracle e il server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e si tenta ora di riconfigurarla. Se questo errore viene visualizzato durante un tentativo di riconfigurazione del server di pubblicazione, eliminare il server collegato con [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63021902"
   
 2.  Nella finestra di dialogo **Esegui** digitare **regedit**e quindi fare clic su **OK**.  
   
-3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>* \Providers.  
+3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<NomeIstanza>* \Providers.  
   
      Nella cartella Providers dovrebbe essere presente una cartella denominata OraOLEDB.Oracle. In questa cartella dovrebbe essere incluso il nome valore DWORD **AllowInProcess**, con un valore pari a **1**.  
   

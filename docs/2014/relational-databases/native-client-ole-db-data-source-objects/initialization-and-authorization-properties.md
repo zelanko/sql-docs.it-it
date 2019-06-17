@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 580839c3640023c25a8038995fc751354aa076d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63201100"
 ---
 # <a name="initialization-and-authorization-properties"></a>Proprietà di inizializzazione e di autorizzazione
@@ -74,7 +74,7 @@ ms.locfileid: "63201100"
  Nel provider specifici set di proprietà DBPROPSET_SQLSERVERDATASOURCEINFO il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client definisce le proprietà aggiuntive, vedere [proprietà di informazioni di origine dati](data-source-information-properties.md) per altre informazioni.  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>Stringa del provider OLE DB di SQL Server Native Client  
- Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client riconosce una sintassi simile a ODBC nei valori della proprietà della stringa del provider. La proprietà della stringa del provider viene fornita come valore della proprietà di inizializzazione OLE DB DBPROP_INIT_PROVIDERSTRING quando viene stabilita una connessione all'origine dati OLE DB. Questa proprietà fornisce i dati di connessione specifici del provider OLE DB necessari per implementare una connessione all'origine dati OLE DB. All'interno della stringa gli elementi sono delimitati da punto e virgola. L'elemento finale nella stringa deve terminare con un punto e virgola. Ogni elemento è costituito da una parola chiave, da un segno di uguale e dal valore passato durante l'inizializzazione. Ad esempio:   
+ Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client riconosce una sintassi simile a ODBC nei valori della proprietà della stringa del provider. La proprietà della stringa del provider viene fornita come valore della proprietà di inizializzazione OLE DB DBPROP_INIT_PROVIDERSTRING quando viene stabilita una connessione all'origine dati OLE DB. Questa proprietà fornisce i dati di connessione specifici del provider OLE DB necessari per implementare una connessione all'origine dati OLE DB. All'interno della stringa gli elementi sono delimitati da punto e virgola. L'elemento finale nella stringa deve terminare con un punto e virgola. Ogni elemento è costituito da una parola chiave, da un segno di uguale e dal valore passato durante l'inizializzazione. Ad esempio:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108385"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro di dati
@@ -41,7 +41,7 @@ ms.locfileid: "66108385"
   
 4.  Nel **espressione** segnalati, fare clic su `ProductID` nell'elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
   
-5.  Fare clic su di uguale (**=**) operatore nel **operatore** elenco a discesa.  
+5.  Fare clic su di uguale ( **=** ) operatore nel **operatore** elenco a discesa.  
   
 6.  Fare clic sul pulsante espressione accanto al **valore** campo, fare clic su **parametri** nel **categoria** area e quindi fare doppio clic `productid` nel  **I valori** area. Il **imposta espressione per: Valore** campo deve contenere un'espressione simile a **= parametri! productid. Valore**.  
   

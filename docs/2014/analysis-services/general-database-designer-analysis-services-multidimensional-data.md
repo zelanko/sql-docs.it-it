@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081074"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Generale (Progettazione database) (Analysis Services - Dati multidimensionali)
@@ -48,7 +48,7 @@ ms.locfileid: "66081074"
  **Lingua**  
  Consente di selezionare la lingua per la transazione specificata.  
   
- Per aggiungere una nuova traduzione alla griglia, fare clic su  **\<Aggiungi nuova traduzione >**.  
+ Per aggiungere una nuova traduzione alla griglia, fare clic su  **\<Aggiungi nuova traduzione >** .  
   
  **Didascalia tradotta**  
  Consente di digitare la didascalia del database nella lingua della traduzione. Se vuota, viene utilizzata la didascalia predefinita del database.  
@@ -67,7 +67,7 @@ ms.locfileid: "66081074"
  **Name**  
  Consente di digitare il nome del tipo di conto.  
   
- Per aggiungere un nuovo tipo di account, fare clic su  **\<Aggiungi nuovo tipo di conto >**.  
+ Per aggiungere un nuovo tipo di account, fare clic su  **\<Aggiungi nuovo tipo di conto >** .  
   
  **Alias**  
  Consente di impostare il nome predefinito del tipo di conto per l'utilizzo con Configurazione guidata funzionalità di Business Intelligence. Se la colonna è lasciata vuota, viene utilizzato il valore predefinito indicato nella colonna **Nome** .  

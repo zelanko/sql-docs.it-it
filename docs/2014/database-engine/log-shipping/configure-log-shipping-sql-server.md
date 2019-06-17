@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774585"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "62774585"
   
 8.  Si noti la pianificazione di backup presente nella casella **Pianificazione** in **Processo di backup**. Se si desidera personalizzare la pianificazione dell'installazione, fare clic su **Pianificazione** e quindi modificare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in base alle specifiche esigenze.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione di log shipping, è possibile controllare il comportamento della compressione dei backup del log scegliendo una delle opzioni seguenti: **Usare l'impostazione del server predefinito**, **Comprimi backup**, o **non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup per i backup del log scegliendo una delle opzioni seguenti: **Usa l'impostazione predefinita del server**, **Comprimi backup** o **Non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Fare clic su **OK**.  
   

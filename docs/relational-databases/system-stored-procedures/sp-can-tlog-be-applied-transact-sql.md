@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995455"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
@@ -42,7 +42,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @backup_file_name = ] 'backup_file_name'` È il nome di un file di backup. *backup_file_name* is **nvarchar(128)**.  
+`[ @backup_file_name = ] 'backup_file_name'` È il nome di un file di backup. *backup_file_name* is **nvarchar(128)** .  
   
 `[ @database_name = ] 'database_name'` È il nome del database. *database_name* è di tipo **sysname**.  
   

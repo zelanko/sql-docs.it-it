@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010481"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
-  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un oggetto binario FILESTREAM grandi dimensioni (BLOB) che viene archiviato nel file system. L'handle può essere passato a una delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), o [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
+  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un oggetto binario FILESTREAM grandi dimensioni (BLOB) che viene archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
   
  L'accesso al contenitore di tutti i dati FILESTREAM deve essere eseguito in una transazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
   

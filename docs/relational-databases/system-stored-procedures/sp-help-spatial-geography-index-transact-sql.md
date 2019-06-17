@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ec690eb615ed86ea5c99b34a91a11dad4fbd2716
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017840"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Note  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa `sp_help_spatial_geography_index` per esaminare i **geografia** indice spaziale **SIndx_SpatialTable_geography_col2** definiti nella tabella **geography_col** per l'esempio di query specificata in **@qs**. In questo esempio vengono restituite solo le proprietà principali dell'indice specificato.  
+ L'esempio seguente usa `sp_help_spatial_geography_index` per esaminare i **geografia** indice spaziale **SIndx_SpatialTable_geography_col2** definiti nella tabella **geography_col** per l'esempio di query specificata in **@qs** . In questo esempio vengono restituite solo le proprietà principali dell'indice specificato.  
   
 ```  
 declare @qs geography  

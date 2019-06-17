@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767643"
 ---
-# <a name="step-4-adding-package-configurations"></a>Passaggio 4: Aggiunta delle configurazioni dei pacchetti
+# <a name="step-4-adding-package-configurations"></a>Passaggio 4: Aggiunta di configurazioni pacchetto
   In questa attività si procederà all'aggiunta di una configurazione a ogni pacchetto. Le configurazioni consentono di aggiornare i valori delle proprietà dei pacchetti e gli oggetti dei pacchetti in fase di esecuzione.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include diversi tipi di configurazioni. È possibile archiviare le configurazioni in variabili di ambiente, voci del Registro di sistema, variabili definite dall'utente, tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e file XML. Per offrire maggiore flessibilità, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta l'utilizzo di configurazioni indirette, ovvero l'utilizzo di una variabile di ambiente per specificare il percorso della configurazione nella quale sono specificati i valori effettivi. I pacchetti del progetto Deployment Tutorial utilizzano una combinazione di file di configurazione XML e configurazioni indirette. In un file di configurazione XML è possibile includere configurazioni per più proprietà e, quando opportuno, farvi riferimento con più pacchetti. In questa esercitazione verrà utilizzato un file di configurazione separato per ogni pacchetto.  

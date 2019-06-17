@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796184"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
-`[ @operation = ] 'operation'` Operazione valida per il processo specificato. *operazione* viene **varchar(64)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @operation = ] 'operation'` Operazione valida per il processo specificato. *operazione* viene **varchar(64)** , con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Operazione del server con cui viene attivata la sincronizzazione del clock di sistema dei server di destinazione con il clock di sistema del dominio multiserver. Si tratta di un'operazione onerosa ed è pertanto consigliabile non eseguirla di frequente.|  
 |**UPDATE**|Processo operazione che aggiorna solo le **sysjobs** informazioni per un processo, non i passaggi di processo o pianificazioni. Viene chiamato automaticamente dal **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'` Il tipo di oggetto per il processo specificato. *object_type* viene **varchar(64)**, con un valore predefinito è NULL. *object_type* può essere JOB o SERVER. Per altre informazioni su validi *object_type*valori, vedere [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Il tipo di oggetto per il processo specificato. *object_type* viene **varchar(64)** , con un valore predefinito è NULL. *object_type* può essere JOB o SERVER. Per altre informazioni su validi *object_type*valori, vedere [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 `[ @object_name = ] 'object_name'` Il nome dell'oggetto. *object_name* viene **sysname**, con un valore predefinito è NULL. Se *object_type* è processo *object_name*è il nome del processo. Se *object_type*è SERVER, *object_name*è il nome del server.  
   
-`[ @target_server = ] 'target_server'` Il nome del server di destinazione. *target_server* viene **nvarchar (128)**, con un valore predefinito è NULL.  
+`[ @target_server = ] 'target_server'` Il nome del server di destinazione. *target_server* viene **nvarchar (128)** , con un valore predefinito è NULL.  
   
 `[ @has_error = ] has_error` È se il processo deve segnalare gli errori. *has_error* viene **tinyint**, e il valore predefinito è NULL, che indica gli errori non devono essere segnalati. **1** indica che tutti gli errori devono essere segnalati.  
   

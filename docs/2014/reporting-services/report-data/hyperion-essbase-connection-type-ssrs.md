@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a0c38487f58a6db6e80d48c2b39b09e3ed93106
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107266"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
@@ -76,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Proprietà di campo predefinite  
- Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. La proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è ad esempio mappata alla proprietà di campo predefinita del set di dati del report `UniqueName`. Per includere il valore del nome univoco in una casella di testo, usare l'espressione `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. La proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è ad esempio mappata alla proprietà di campo predefinita del set di dati del report `UniqueName`. Per includere il valore del nome univoco in una casella di testo, usare l'espressione `=Fields!` *\<FieldName>* `.UniqueName`.  
   
  Nella tabella seguente viene riportato un elenco delle proprietà di campo predefinite che è possibile utilizzare per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -93,7 +93,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Proprietà personalizzate  
- Proprietà di campo personalizzate supportate da un provider di dati e incluse nella query MDX sottostante relativa al set di dati di un report, ma non nel riquadro Set di dati del report come campi nel set di dati. **Long Names** è ad esempio una proprietà del membro definita per un livello di dimensione. Per includere il valore in una casella di testo, usare l'espressione `=Fields!`*\<FieldName>*`("Long Names")`. Per i nomi dei campi nell'espressione viene fatta distinzione tra maiuscole e minuscole.  
+ Proprietà di campo personalizzate supportate da un provider di dati e incluse nella query MDX sottostante relativa al set di dati di un report, ma non nel riquadro Set di dati del report come campi nel set di dati. **Long Names** è ad esempio una proprietà del membro definita per un livello di dimensione. Per includere il valore in una casella di testo, usare l'espressione `=Fields!` *\<FieldName>* `("Long Names")`. Per i nomi dei campi nell'espressione viene fatta distinzione tra maiuscole e minuscole.  
   
  Per fare riferimento alle proprietà estese personalizzate in un'espressione, utilizzare la sintassi seguente:  
   

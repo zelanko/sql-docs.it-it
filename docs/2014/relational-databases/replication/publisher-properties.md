@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261980"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Proprietà server di pubblicazione di replica di SQL Server
@@ -70,7 +70,7 @@ ms.locfileid: "63261980"
   
 ### <a name="options"></a>Opzioni  
  **Sottoscrittori**  
- La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà (**...**) accanto a un Sottoscrittore.  
+ La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un Sottoscrittore.  
   
  **Aggiungi**  
  Fare clic su **Aggiungi** per aggiungere un Sottoscrittore e quindi fare clic su **Aggiungi Sottoscrittore SQL Server** o su **Aggiungi Sottoscrittore non SQL Server**.  

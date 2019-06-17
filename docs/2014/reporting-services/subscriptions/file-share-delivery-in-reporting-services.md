@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100912"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
@@ -67,7 +67,7 @@ ms.locfileid: "66100912"
   
  È possibile specificare le opzioni di sovrascrittura per riutilizzare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
   
- Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A questo scopo, aggiungere il `@timestamp` variabile per il nome del file (ad esempio *CompanySales@timestamp*). In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
+ Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A questo scopo, aggiungere il `@timestamp` variabile per il nome del file (ad esempio *CompanySales@timestamp* ). In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

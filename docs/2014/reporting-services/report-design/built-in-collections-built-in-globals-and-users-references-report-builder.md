@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106434"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66106434"
   
 |Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
-|Nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
+|nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|`Boolean`|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
 |DeviceInfo|Raccolta nome/valore di sola lettura|Coppie chiave/valore per i parametri deviceinfo per la richiesta di rendering corrente.<br /><br /> È possibile specificare i valori stringa usando la chiave o un indice nella raccolta.|  
   

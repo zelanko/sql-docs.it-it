@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015709"
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Proprietà degli attributi - Membri del gruppo di attributi
@@ -22,7 +22,7 @@ ms.locfileid: "63015709"
   
  La proprietà **DiscretizationMethod** di un attributo controlla la modalità di raggruppamento dei membri.  
   
-|Impostazione**DiscretizationMethod** |Descrizione|  
+|Impostazione**DiscretizationMethod**|Descrizione|  
 |--------------------------------------|-----------------|  
 |**None**|Visualizza i membri.|  
 |**Automatico**|Seleziona il metodo che meglio rappresenta i dati: il metodo **EqualAreas** o il metodo **Clusters** .|  

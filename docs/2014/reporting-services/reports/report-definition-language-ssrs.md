@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102501"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
@@ -81,7 +81,7 @@ ms.locfileid: "66102501"
 |**Tipi CLR**|**Tipo di dati corrispondente**|  
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
-|DateTime, DateTimeOffset|Datetime|  
+|DateTime, DateTimeOffset|DateTime|  
 |Int16, Int32, UInt16, Byte, SByte|Valore intero|  
 |Single, Double|float|  
 |String, Char, GUID, Timespan|String|  

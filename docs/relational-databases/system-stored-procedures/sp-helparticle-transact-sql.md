@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017807"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome di un articolo nella pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%**. Se *articolo* viene omesso, vengono restituite informazioni su tutti gli articoli per la pubblicazione specificata.  
+`[ @article = ] 'article'` È il nome di un articolo nella pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%** . Se *articolo* viene omesso, vengono restituite informazioni su tutti gli articoli per la pubblicazione specificata.  
   
 `[ @returnfilter = ] returnfilter` Specifica se la clausola di filtro deve essere restituita. *returnfilter* viene **bit**, il valore predefinito è **1**, che restituisce la clausola di filtro.  
   

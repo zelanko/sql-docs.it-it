@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054270"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Aggiungere, aggiornare ed eliminare dati (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66054270"
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
- **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**   
+ **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  Preparare i membri da importare nella tabella di staging appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ad esempio fornire valori per i campi obbligatori. Per una panoramica delle tabelle di staging, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   

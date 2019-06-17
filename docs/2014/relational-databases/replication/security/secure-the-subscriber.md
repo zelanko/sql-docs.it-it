@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960822"
 ---
 # <a name="secure-the-subscriber"></a>Sicurezza del Sottoscrittore
@@ -53,7 +53,7 @@ ms.locfileid: "62960822"
  Per altre informazioni, vedere [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) e [Visualizzare e modificare le impostazioni di sicurezza della replica](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_**_\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
+>  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_** _\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
   
 ## <a name="queued-updating-subscriptions"></a>Sottoscrizioni ad aggiornamento in coda  
  Quando si configurano sottoscrizioni ad aggiornamento in coda, è necessario tenere in considerazione due aspetti relativi alla sicurezza.  

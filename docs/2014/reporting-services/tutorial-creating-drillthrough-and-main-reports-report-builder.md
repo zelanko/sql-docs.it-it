@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098881"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di drill-through e report principali (Generatore Report)
@@ -110,7 +110,7 @@ ms.locfileid: "66098881"
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di Analysis Services.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66098881"
   
 5.  Trascinare la misura Importo vendite nel riquadro dei dati, quindi posizionarlo a destra di Product Subcategory Name.  
   
-6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)**.  
+6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
   
 7.  Scegliere **Avanti**.  
   
@@ -315,7 +315,7 @@ ms.locfileid: "66098881"
   
 2.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-3.  Digitare **Vendite e margini per categoria:**.  
+3.  Digitare **Vendite e margini per categoria:** .  
   
 4.  Fare clic con il pulsante destro del mouse, quindi fare clic su **Crea segnaposto**.  
   
@@ -411,7 +411,7 @@ ms.locfileid: "66098881"
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -442,7 +442,7 @@ ms.locfileid: "66098881"
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
   
-1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)**.  
+1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)** .  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
@@ -529,7 +529,7 @@ ms.locfileid: "66098881"
   
 4.  Trascinare Fatturato netto da Membri calcolati al riquadro dati e posizionarlo a destra di `Net QTY`.  
   
-5.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)**.  
+5.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
   
      Controllare il set di risultati della query  
   
@@ -644,7 +644,7 @@ ms.locfileid: "66098881"
   
 4.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
-5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_QTY`.  
+5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)** . Selezionare `Net_QTY`.  
   
 6.  Ripetere i passaggi da 2 a 5 per la cella `[Sum(Net QTY)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
@@ -656,7 +656,7 @@ ms.locfileid: "66098881"
   
 3.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
-4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_Sales`.  
+4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)** . Selezionare `Net_Sales`.  
   
 5.  Ripetere i passaggi da 1 a 4 per la cella `[Sum(Net_Sales)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
@@ -684,7 +684,7 @@ ms.locfileid: "66098881"
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Vendite per categoria di prodotto 2009: categoria Online e Rivenditore:**.  
+2.  Digitare **Vendite per categoria di prodotto 2009: categoria Online e Rivenditore:** .  
   
 3.  Selezionare il testo digitato.  
   

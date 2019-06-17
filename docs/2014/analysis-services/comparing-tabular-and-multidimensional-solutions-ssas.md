@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087766"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Confronto tra soluzioni tabulari e multidimensionali (SSAS)
@@ -100,14 +100,14 @@ ms.locfileid: "66087766"
 |Azioni|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|No|  
 |Oggetti Aggregation|[Sì](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
 |Misure calcolate|[Sì](multidimensional-models/create-calculated-members.md)|Yes|  
-|Assembly personalizzati|[Sì](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
+|Assembly personalizzati|[Sì](multidimensional-models/multidimensional-model-assemblies-management.md)|no|  
 |Rollup personalizzati|Yes|No|  
 |Distinct Count|[Sì](multidimensional-models/use-aggregate-functions.md)|Sì (tramite DAX) *|  
 |Drill-through|[Sì](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
 |Gerarchie|[Sì](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
 |KPI|[Sì](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
 |Gruppi di misure collegati|[Sì](multidimensional-models/linked-measure-groups.md)|No|  
-|Relazioni molti-a-molti|[Sì](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|no|  
+|Relazioni molti-a-molti|[Sì](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
 |Gerarchie padre-figlio|[Sì](multidimensional-models/parent-child-dimension.md)|Sì (tramite DAX)|  
 |Partizioni|[Sì](tabular-models/partitions-ssas-tabular.md)|  
 |prospettive|[Sì](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sì](tabular-models/partitions-ssas-tabular.md)|  
@@ -116,7 +116,7 @@ ms.locfileid: "66087766"
 |Gerarchie definite dall'utente|[Sì](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
 |Writeback|[Sì](multidimensional-models/set-partition-writeback.md)|No|  
   
- * Se la soluzione deve supportare un numero molto elevato di conteggi distinti (ad esempio diversi milioni di ID cliente), considerare innanzitutto tabulare. che risulta più efficiente in questo scenario. Vedere la sezione sui conteggi distinti nel white paper, [Case Study di Analysis Services: Uso di modelli tabulari in soluzioni commerciali su larga scala](https://msdn.microsoft.com/library/dn751533.aspx).  
+ \* Se la soluzione deve supportare un numero molto elevato di conteggi distinti (ad esempio diversi milioni di ID cliente), considerare innanzitutto tabulare. che risulta più efficiente in questo scenario. Vedere la sezione sui conteggi distinti nel white paper, [Case Study di Analysis Services: Uso di modelli tabulari in soluzioni commerciali su larga scala](https://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Dimensione del modello  
  Le dimensioni del modello, in termini di numero totale di oggetti, non variano in base al tipo di soluzione. Tuttavia, gli strumenti di progettazione usati per compilare ciascuna soluzione variano in base alla capacità di supportare un gran numero di oggetti. La compilazione di un modello più grande è più semplice in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] perché fornisce più funzionalità per creare diagrammi ed elencare oggetti in base al tipo in Esplora oggetti ed Esplora soluzioni.  

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015095"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
@@ -248,7 +248,7 @@ Le istanze del cluster di failover AlwaysOn migliorano la disponibilità elevata
 4.  Fare clic su **Riavvia** per riavviare il servizio **SQL Server** e rendere effettiva la modifica. Vedere Figura 10.
 
 >[!NOTE] 
->È possibile modificare l'account del servizio che esegue il servizio SQL Server tramite **Gestione configurazione SQL Server**. Fare clic sulla scheda **Accedi** nella finestra di dialogo **Proprietà** **SQL Server (MSSQLSERVER)**. Vedere Figura 11.
+>È possibile modificare l'account del servizio che esegue il servizio SQL Server tramite **Gestione configurazione SQL Server**. Fare clic sulla scheda **Accedi** nella finestra di dialogo **Proprietà** **SQL Server (MSSQLSERVER)** . Vedere Figura 11.
 
 ### <a name="create-an-availability-group"></a>Creare un gruppo di disponibilità
 

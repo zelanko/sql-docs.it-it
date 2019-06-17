@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108796"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installare side-by-side Reporting Services e Internet Information Services (modalità nativa SSRS)
@@ -43,9 +43,9 @@ ms.locfileid: "66108796"
   
 |Esempio|Richiesta|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Riceve tutte le richieste inviate ai http://123.234.345.456/reports o http://\<nomecomputer > / reports se un DNS può risolvere l'indirizzo IP in tale nome host.|  
+|http://123.234.345.456:80/reports|Riceve tutte le richieste inviate ai http://123.234.345.456/reports o http://\< nomecomputer > / reports se un DNS può risolvere l'indirizzo IP in tale nome host.|  
 |http://+:80/reports|Riceve tutte le richieste inviate a qualsiasi indirizzo IP o nome host valido per tale computer finché l'URL contiene il nome della directory virtuale "reports".|  
-|http://123.234.345.456:80|Riceve qualsiasi richiesta che specifica http://123.234.345.456 o http://\<nomecomputer > Se un DNS può risolvere l'indirizzo IP in tale nome host.|  
+|http://123.234.345.456:80|Riceve qualsiasi richiesta che specifica http://123.234.345.456 o http://\< nomecomputer > Se un DNS può risolvere l'indirizzo IP in tale nome host.|  
 |http://+:80|Riceve le richieste che non sono già state ricevute da altre applicazioni, per qualsiasi endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Tutti assegnati**.|  
 |http://*:80|Riceve le richieste che non sono già state ricevute da altre applicazioni, per gli endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Non assegnati**.|  
   

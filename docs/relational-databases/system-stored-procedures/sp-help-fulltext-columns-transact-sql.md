@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 076a3df69245cb269593e1a2298f18c9266ab217
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980319"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_name = ] 'table\_name'` È il nome della tabella una o due parti per il quale vengono richieste informazioni di indice full-text. *TABLE_NAME* viene **nvarchar(517)**, con un valore predefinito NULL. Se *table_name* viene omesso, viene recuperati informazioni sulle colonne di indice full-text per ogni tabella indicizzata full-text.  
+`[ @table_name = ] 'table\_name'` È il nome della tabella una o due parti per il quale vengono richieste informazioni di indice full-text. *TABLE_NAME* viene **nvarchar(517)** , con un valore predefinito NULL. Se *table_name* viene omesso, viene recuperati informazioni sulle colonne di indice full-text per ogni tabella indicizzata full-text.  
   
 `[ @column_name = ] 'column\_name'` È il nome della colonna per cui vengono richiesti metadati di indice full-text. *column_name* viene **sysname**, con un valore predefinito NULL. Se *column_name* viene omesso oppure è NULL, vengono restituite informazioni di colonna full-text per ogni colonna indicizzata full-text per *table_name*. Se *table_name* anche viene omesso oppure è NULL, vengono restituite informazioni di colonna di indice full-text per ogni colonna indicizzata full-text per tutte le tabelle nel database.  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871712"
 ---
 # <a name="msdb-database"></a>Database msdb
@@ -62,15 +62,15 @@ ms.locfileid: "62871712"
 |CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
 |CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Yes<br /><br /> Yes|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Yes<br /><br /> Yes|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|Yes|  
-|ENCRYPTION|OFF|no|  
+|ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Yes|  
 |PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
 |RECOVERY|SIMPLE|Yes|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  

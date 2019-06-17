@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916889"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Log shipping - Impostazioni backup log delle transazioni
@@ -46,7 +46,7 @@ ms.locfileid: "62916889"
  Consente di visualizzare il nome del processo di SQL Server Agent utilizzato per creare i backup del log delle transazioni per il log shipping. Durante la creazione iniziale del processo, è possibile modificare il nome digitandolo nella casella.  
   
  **Pianificazione**  
- Consente di visualizzare la pianificazione corrente per il backup dei log delle transazioni del database primario. Prima che il processo di backup venga creato, è possibile modificare la pianificazione facendo clic su **Pianificazione...**. Dopo la creazione del processo, è possibile modificare la pianificazione facendo clic su **Modifica processo...**.  
+ Consente di visualizzare la pianificazione corrente per il backup dei log delle transazioni del database primario. Prima che il processo di backup venga creato, è possibile modificare la pianificazione facendo clic su **Pianificazione...** . Dopo la creazione del processo, è possibile modificare la pianificazione facendo clic su **Modifica processo...** .  
   
 ### <a name="backup-job"></a>Processo di backup  
  **Pianificazione...**  

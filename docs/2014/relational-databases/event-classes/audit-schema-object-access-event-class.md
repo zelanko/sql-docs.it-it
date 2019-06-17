@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 052e685615f654ad333ba441bb0c5cf5773a758b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017153"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access - classe di evento
@@ -35,7 +35,7 @@ ms.locfileid: "63017153"
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |**DBUserName**|**nvarchar**|Nome dell'utente che ha eseguito l'istruzione nel database.|40|Yes|  
 |**EventClass**|**int**|Tipo di evento = 114.|27|No|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Yes|  

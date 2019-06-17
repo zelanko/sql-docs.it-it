@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164051"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Sequence Clustering (Esercitazione intermedia sul data mining)
@@ -159,7 +159,7 @@ ms.locfileid: "63164051"
   
      La probabilità della transizione verrà visualizzata come percentuale.  
   
-7.  Nel **Cluster** elenco a discesa, seleziona **popolazione (tutto)**.  
+7.  Nel **Cluster** elenco a discesa, seleziona **popolazione (tutto)** .  
   
      L'elenco degli attributi verrà aggiornato per visualizzare le caratteristiche di tutti gli ordini utilizzati per creare il modello. In questo modello di data mining, è la caratteristica più importante per distinguere tra cluster `Region`, con il valore **America del Nord**.  
   

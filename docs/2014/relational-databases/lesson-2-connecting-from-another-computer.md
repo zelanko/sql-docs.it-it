@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144794"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
@@ -44,7 +44,7 @@ ms.locfileid: "63144794"
     > [!NOTE]  
     >  Possono essere disponibili entrambe le opzioni a 32 e 64 bit.  
   
-2.  Nelle **Gestione configurazione SQL Server**, espandere **configurazione di rete SQL Server**, quindi fare clic su **protocolli per**  _\<NomeIstanza >_.  
+2.  Nelle **Gestione configurazione SQL Server**, espandere **configurazione di rete SQL Server**, quindi fare clic su **protocolli per**  _\<NomeIstanza >_ .  
   
      L'istanza predefinita (un'istanza senza nome) è indicata come **MSSQLSERVER**. Se è stata installata un'istanza denominata, il nome fornito è elencato. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] viene installato come **SQLEXPRESS**, a meno che non sia stato specificato un nome diverso durante l'installazione.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63144794"
   
 2.  Nella finestra di dialogo **Connetti al server** confermare l'opzione **Motore di database** nella casella **Tipo server** .  
   
-3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:**_<nome_computer>_. In questo esempio di istanza denominata digitare **tcp:**_<nome_computer>_**,49172**.  
+3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:** _<nome_computer>_ . In questo esempio di istanza denominata digitare **tcp:** _<nome_computer>_ **,49172**.  
   
     > [!NOTE]  
     >  Se si omette **tcp:** nella casella **Nome server** , il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  

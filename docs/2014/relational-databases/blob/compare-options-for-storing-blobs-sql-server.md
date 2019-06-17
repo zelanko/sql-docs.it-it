@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010353"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
@@ -51,9 +51,9 @@ ms.locfileid: "66010353"
 |**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Yes|**Sì**|  
 |**Modello di sicurezza integrata**|No|Yes|**Sì**|  
 |**Aggiornamenti sul posto di dati FILESTREAM**|Yes|No|**Sì**|  
-|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|  
+|**Gerarchia di file e directory gestita nel database**|no|no|**Sì**|  
 |**Compatibilità delle applicazioni di Windows**|Yes|no|**Sì**|  
-|**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
+|**Accesso relazionale agli attributi dei file**|no|No|**Sì**|  
   
 ##  <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
  Per un confronto tra queste due funzionalità, vedere questo blog post del team RBS: [Confronto tra le funzionalità FILESTREAM e SQL Server Remote BLOB Store](https://go.microsoft.com/fwlink/?LinkId=210317).  

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773689"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Salvataggio del lavoro in Progettazione tabelle (Visual Database Tools)

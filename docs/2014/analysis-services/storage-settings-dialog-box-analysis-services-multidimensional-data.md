@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068033"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Impostazioni di archiviazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Impostazioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per impostare la memorizzazione nella cache attiva, la modalità di archiviazione e le impostazioni di notifica per una dimensione, un cubo, un gruppo di misure o una partizione. Per visualizzare la finestra di dialogo **Impostazioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile:  
   
--   Fare clic sul pulsante con puntini di sospensione (**...** ) per il `ProactiveCaching` valore della proprietà di una dimensione, cubo, gruppo di misure o partizione nel **delle proprietà** finestra di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Fare clic sul pulsante con puntini di sospensione ( **...** ) per il `ProactiveCaching` valore della proprietà di una dimensione, cubo, gruppo di misure o partizione nel **delle proprietà** finestra di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   Espandere un gruppo di misure nella scheda **Partizioni** di **Progettazione cubi** e fare clic su **Impostazioni di archiviazione**.  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 83ac2322d39fba05ce75f50fcd9cf9e5005b72b4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982982"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
@@ -45,7 +45,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \@objname = '*\@objname*'  
+ \@objname = ' *\@objname*'  
  Il nome della tabella abilitata per l'estensione SQL Server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
