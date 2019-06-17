@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737032"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775966"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -39,7 +39,7 @@ Proprietà di connessione per supportare l'autenticazione Azure Active Directory
     * **NotSpecified**
         * Usare `authentication=NotSpecified` o lasciare il valore predefinito quando nessuno di questi metodi di autenticazione sono necessari.
 
-*   **accessToken**: Usare questa proprietà di connessione per connettersi a un Database SQL usando un token di accesso. accessToken può essere impostato solo usando il parametro Properties del metodo getConnection () nella classe DriverManager. Non può essere utilizzato nell'URL della connessione.  
+*   **accessToken**: usare questa proprietà di connessione per connettersi a un Database SQL usando un token di accesso. accessToken può essere impostato solo usando il parametro Properties del metodo getConnection () nella classe DriverManager. Non può essere utilizzato nell'URL della connessione.  
 
 Per altre informazioni, vedere la proprietà di autenticazione sul [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) pagina.  
 
@@ -164,7 +164,7 @@ You have successfully logged on as: <your domain user name>
 #### <a name="windows"></a>Windows
 È dotato di JDK `kinit`, che è possibile usare per ottenere un ticket TGT dal centro distribuzione chiavi (KDC) in un dominio aggiunto al computer in cui è federato con Azure Active Directory.
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Passaggio 1: Recupero di ticket di concessione Ticket
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Passaggio 1: Il recupero dei Ticket di concessione Ticket
 - **Eseguire in**: Windows
 - **Azione**:
   - Usare il comando `kinit username@DOMAIN.COMPANY.COM` per ottenere un ticket TGT dal KDC, quindi verrà richiesto di specificare la password di dominio.
@@ -190,9 +190,9 @@ Accesso a un computer Windows aggiunti a un dominio per eseguire query sui Contr
   ```
 - **Per estrarre informazioni** denominare il controller di dominio, in questo caso `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Passaggio 2: La configurazione KDC in krb5.conf
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Passaggio 2: Configurazione KDC in krb5.conf
 - **Eseguire in**: Linux/Mac
-- **Azione**: Modificare il /etc/krb5.conf in un editor di propria scelta. Configurare le chiavi seguenti
+- **Azione**: modifica /etc/krb5.conf in un editor di propria scelta. Configurare le chiavi seguenti
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM

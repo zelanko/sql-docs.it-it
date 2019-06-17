@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150632"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
@@ -388,7 +388,7 @@ database_name.owner_name.table_name
  **Selezionare i database e le tabelle da ottimizzare**  
  Consente di specificare i database e le tabelle da ottimizzare. Per specificare tutti i database, selezionare la casella di controllo nell'intestazione della colonna **Nome** . Per specificare solo determinati database, selezionare le caselle di controllo accanto ai nomi dei database desiderati. Per impostazione predefinita, tutte le tabelle per i database selezionati vengono incluse automaticamente nella sessione di ottimizzazione. Per escludere determinate tabelle, fare clic sulla freccia nella colonna **Tabelle selezionate** e quindi deselezionare le caselle di controllo accanto alle tabelle che non si desidera ottimizzare.  
   
- Freccia in giù**Tabelle selezionate**   
+ Freccia in giù**Tabelle selezionate**  
  Consente di espandere l'elenco delle tabelle in cui è possibile selezionare singole tabelle per l'ottimizzazione.  
   
  **Salva log di ottimizzazione**  

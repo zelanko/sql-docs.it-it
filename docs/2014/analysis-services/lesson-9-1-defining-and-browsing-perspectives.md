@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078223"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definizione ed esplorazione delle prospettive
@@ -54,35 +54,35 @@ ms.locfileid: "66078223"
   
     -   `Reseller Sales` Gruppo di misure  
   
-    -   Gruppo di misure**Sales Quotas**   
+    -   Gruppo di misure**Sales Quotas**  
   
-    -   Gruppo di misure**Sales Quotas 1**   
+    -   Gruppo di misure**Sales Quotas 1**  
   
-    -   Dimensione del cubo**Reseller**   
+    -   Dimensione del cubo**Reseller**  
   
-    -   Dimensione del cubo**Reseller Geography**   
+    -   Dimensione del cubo**Reseller Geography**  
   
-    -   Dimensione del cubo**Sales Territory**   
+    -   Dimensione del cubo**Sales Territory**  
   
-    -   Dimensione del cubo**Employee**   
+    -   Dimensione del cubo**Employee**  
   
-    -   Dimensione del cubo**Promotion**   
+    -   Dimensione del cubo**Promotion**  
   
-    -   di**Reseller Revenue**   
+    -   di**Reseller Revenue**  
   
-    -   Set denominato**Large Resellers**   
+    -   Set denominato**Large Resellers**  
   
-    -   Membro calcolato**Total Sales Amount**   
+    -   Membro calcolato**Total Sales Amount**  
   
-    -   Membro calcolato**Total Product Cost**   
+    -   Membro calcolato**Total Product Cost**  
   
-    -   Membro calcolato**Reseller GPM**   
+    -   Membro calcolato**Reseller GPM**  
   
-    -   Membro calcolato**Total GPM**   
+    -   Membro calcolato**Total GPM**  
   
-    -   Membro calcolato**Reseller Sales Ratio to All Products**   
+    -   Membro calcolato**Reseller Sales Ratio to All Products**  
   
-    -   Membro calcolato**Total Sales Ratio to All Products**   
+    -   Membro calcolato**Total Sales Ratio to All Products**  
   
      Questi oggetti non riguardano le vendite Internet.  
   
@@ -103,27 +103,27 @@ ms.locfileid: "66078223"
   
     -   `Internet Sales` Gruppo di misure  
   
-    -   Gruppo di misure**Internet Sales Reason**   
+    -   Gruppo di misure**Internet Sales Reason**  
   
-    -   Dimensione del cubo**Customer**   
+    -   Dimensione del cubo**Customer**  
   
-    -   Dimensione del cubo**Internet Sales Order Details**   
+    -   Dimensione del cubo**Internet Sales Order Details**  
   
-    -   Dimensione del cubo**Sales Reason**   
+    -   Dimensione del cubo**Sales Reason**  
   
-    -   Azione drill-through**Internet Sales Details Drillthrough Action**   
+    -   Azione drill-through**Internet Sales Details Drillthrough Action**  
   
-    -   Membro calcolato**Total Sales Amount**   
+    -   Membro calcolato**Total Sales Amount**  
   
-    -   Membro calcolato**Total Product Cost**   
+    -   Membro calcolato**Total Product Cost**  
   
-    -   Membro calcolato**Internet GPM**   
+    -   Membro calcolato**Internet GPM**  
   
-    -   Membro calcolato**Total GPM**   
+    -   Membro calcolato**Total GPM**  
   
-    -   Membro calcolato**Internet Sales Ratio to All Products**   
+    -   Membro calcolato**Internet Sales Ratio to All Products**  
   
-    -   Membro calcolato**Total Sales Ratio to All Products**   
+    -   Membro calcolato**Total Sales Ratio to All Products**  
   
      Questi oggetti non riguardano le vendite rivenditore.  
   
@@ -142,23 +142,23 @@ ms.locfileid: "66078223"
   
     -   `Reseller Sales` Gruppo di misure  
   
-    -   Gruppo di misure**Internet Sales Reason**   
+    -   Gruppo di misure**Internet Sales Reason**  
   
-    -   Gruppo di misure**Sales Quotas**   
+    -   Gruppo di misure**Sales Quotas**  
   
-    -   Gruppo di misure**Sales Quotas1**   
+    -   Gruppo di misure**Sales Quotas1**  
   
-    -   Dimensione del cubo**Internet Sales Order Details**   
+    -   Dimensione del cubo**Internet Sales Order Details**  
   
-    -   Dimensione del cubo**Sales Reason**   
+    -   Dimensione del cubo**Sales Reason**  
   
-    -   Azione drill-through**Internet Sales Details Drillthrough Action**   
+    -   Azione drill-through**Internet Sales Details Drillthrough Action**  
   
 4.  Selezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   Misura**Internet Sales Count**   
+    -   Misura**Internet Sales Count**  
   
-    -   Misura**Reseller Sales Count**   
+    -   Misura**Reseller Sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Esplorazione del cubo tramite ogni prospettiva  
   

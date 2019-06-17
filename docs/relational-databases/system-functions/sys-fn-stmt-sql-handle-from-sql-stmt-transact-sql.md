@@ -15,10 +15,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62744486"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
@@ -40,7 +40,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Argomenti  
  *query_sql_text*  
- È il testo della query in query store che si desidera che l'handle di. *query_sql_text* è un **nvarchar (max)**, non prevede alcun valore predefinito.  
+ È il testo della query in query store che si desidera che l'handle di. *query_sql_text* è un **nvarchar (max)** , non prevede alcun valore predefinito.  
   
  *query_param_type*  
  È il tipo di parametro della query. *query_param_type* è un **tinyint**. I valori possibili sono:  
@@ -58,7 +58,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Colonne restituite  
  Nella tabella seguente vengono elencate le colonne che sys.fn_stmt_sql_handle_from_sql_stmt restituisce.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|Handle SQL.|  
 |**query_sql_text**|**nvarchar(max)**|Il testo del [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione.|  

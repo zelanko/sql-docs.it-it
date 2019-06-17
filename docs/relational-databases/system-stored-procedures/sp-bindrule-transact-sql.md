@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995668"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rulename = ] 'rule'` È il nome della regola creata tramite l'istruzione CREATE RULE. *regola* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+`[ @rulename = ] 'rule'` È il nome della regola creata tramite l'istruzione CREATE RULE. *regola* viene **nvarchar(776)** , non prevede alcun valore predefinito.  
   
-`[ @objname = ] 'object_name'` È la tabella e colonna o tipo di dati alias a cui è necessario associare la regola. Una regola non può essere associata a una colonna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, di tipo CLR definito dall'utente o **timestamp**, né a una colonna calcolata.  
+`[ @objname = ] 'object_name'` È la tabella e colonna o tipo di dati alias a cui è necessario associare la regola. Una regola non può essere associata a una colonna **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, di tipo CLR definito dall'utente o **timestamp**, né a una colonna calcolata.  
   
  *object_name* viene **nvarchar(776)** non prevede alcun valore predefinito. Se *object_name* è un nome di una sola parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *regola* , a meno che una regola è stata associata direttamente alla colonna.  
   

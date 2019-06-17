@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250533"
 ---
 # <a name="scripting-replication"></a>Creazione di script di replica
@@ -82,7 +82,7 @@ ms.locfileid: "63250533"
   
 3.  Fare clic con il pulsante destro del mouse su una pubblicazione o una sottoscrizione e quindi scegliere **Genera script**.  
   
-4.  Specificare le opzioni nella finestra di dialogo **Genera script SQL - \<OggettoReplica>**.  
+4.  Specificare le opzioni nella finestra di dialogo **Genera script SQL - \<OggettoReplica>** .  
   
 5.  Fare clic su **Genera script nel file**.  
   

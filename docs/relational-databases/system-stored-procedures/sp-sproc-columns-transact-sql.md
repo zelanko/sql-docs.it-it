@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032744"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @procedure_name = ] 'name'` È il nome della procedura utilizzata per restituire informazioni del catalogo. *nome* viene **nvarchar (** 390 **)**, valore predefinito è %, ovvero tutte le tabelle nel database corrente. La ricerca con caratteri jolly è supportata.  
+`[ @procedure_name = ] 'name'` È il nome della procedura utilizzata per restituire informazioni del catalogo. *nome* viene **nvarchar (** 390 **)** , valore predefinito è %, ovvero tutte le tabelle nel database corrente. La ricerca con caratteri jolly è supportata.  
   
-`[ @procedure_owner = ] 'owner'` È il nome del proprietario della procedura. *proprietario*viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità predefinite procedure del sistema DBMS sottostante.  
+`[ @procedure_owner = ] 'owner'` È il nome del proprietario della procedura. *proprietario*viene **nvarchar (** 384 **)** , con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità predefinite procedure del sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di una procedura avente il nome specificato, vengono restituite informazioni su tale procedura. Se *owner*non viene specificato e l'utente corrente non dispone di una procedura con il nome specificato **sp_sproc_columns** cerca di una procedura avente il nome specificato che appartenga al proprietario del database. Se tale procedura viene individuata, vengono restituite informazioni sulle colonne corrispondenti.  
   
 `[ @procedure_qualifier = ] 'qualifier'` È il nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-`[ @column_name = ] 'column_name'` È una singola colonna e viene usato quando è necessaria una sola colonna di informazioni del catalogo. *column_name* viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
+`[ @column_name = ] 'column_name'` È una singola colonna e viene usato quando è necessaria una sola colonna di informazioni del catalogo. *column_name* viene **nvarchar (** 384 **)** , con un valore predefinito è NULL. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
   
 `[ @ODBCVer = ] 'ODBCVer'` È in uso la versione di ODBC. *ODBCVer* viene **int**, e il valore predefinito è 2, che indica ODBC versione 2.0. Per altre informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, fare riferimento a ODBC **SQLProcedureColumns** specifica per ODBC versione 3.0  
   

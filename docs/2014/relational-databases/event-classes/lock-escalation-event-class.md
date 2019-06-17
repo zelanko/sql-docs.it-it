@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662371"
 ---
 # <a name="lockescalation-event-class"></a>Classe di evento Lock:Escalation
@@ -35,7 +35,7 @@ ms.locfileid: "62662371"
 |**DatabaseName**|`nvarchar`|Nome del database in cui si è verificata l'escalation.|35|Yes|  
 |**EventClass**|`int`|Tipo di evento = 60.|27|No|  
 |**EventSubClass**|`int`|Causa dell'escalation dei blocchi:<br /><br /> **0 - LOCK_THRESHOLD** indica che l'istruzione supera la soglia del blocco.<br /><br /> **1 - MEMORY_THRESHOLD** indica che l'istruzione supera la soglia di memoria.|21|Yes|  
-|**EventSequence**|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventSequence**|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**GroupID**|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |**HostName**|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IntegerData**|`int`|Conteggio dei blocchi HoBT. Numero di blocchi HoBT al momento dell'escalation dei blocchi.|25|Yes|  
