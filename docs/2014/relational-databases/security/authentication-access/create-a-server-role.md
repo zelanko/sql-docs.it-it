@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011966"
 ---
 # <a name="create-a-server-role"></a>Creazione di un ruolo del server
@@ -69,7 +69,7 @@ ms.locfileid: "63011966"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli server** e selezionare **Nuovo ruolo server**.  
   
-4.  Nel **nuovo ruolo del Server -**_nome_ruolo_server_ finestra di dialogo il **generali** pagina, immettere un nome per il nuovo ruolo del server nel **nome ruolo del Server**finestra.  
+4.  Nel **nuovo ruolo del Server -** _nome_ruolo_server_ finestra di dialogo il **generali** pagina, immettere un nome per il nuovo ruolo del server nel **nome ruolo del Server**finestra.  
   
 5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server**.  
   

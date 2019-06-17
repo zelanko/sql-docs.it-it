@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012012"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Visualizzazione di un log di controllo di SQL Server
@@ -49,7 +49,7 @@ ms.locfileid: "63012012"
   
 2.  Espandere la cartella **Controlli** .  
   
-3.  Fare clic con il pulsante destro del mouse sul log di controllo da visualizzare e selezionare **Visualizza log di controllo**. Verrà visualizzata la **Visualizzatore File di Log -**_nome_server_ nella finestra di dialogo. Per altre informazioni, vedere [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Fare clic con il pulsante destro del mouse sul log di controllo da visualizzare e selezionare **Visualizza log di controllo**. Verrà visualizzata la **Visualizzatore File di Log -** _nome_server_ nella finestra di dialogo. Per altre informazioni, vedere [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Al termine, fare clic su **Chiudi**.  
   

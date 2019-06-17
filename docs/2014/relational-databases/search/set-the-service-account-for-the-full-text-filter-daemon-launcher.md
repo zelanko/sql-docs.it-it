@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010942"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
@@ -32,7 +32,7 @@ ms.locfileid: "66010942"
   
 1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
-2.  Nelle **Gestione configurazione SQL Server**, fare clic su **SQL Server Services**, fare doppio clic su **utilità di avvio del Daemon filtri Full-text SQL (*`instance name`*)** , quindi fare clic su **proprietà**.  
+2.  Nelle **Gestione configurazione SQL Server**, fare clic su **SQL Server Services**, fare doppio clic su **utilità di avvio del Daemon filtri Full-text SQL ( *`instance name`* )** , quindi fare clic su **proprietà**.  
   
 3.  Fare clic sulla scheda **Accesso** della finestra di dialogo, quindi selezionare o immettere l'account con il quale eseguire ogni processo creato dal servizio Utilità di avvio del daemon filtri full-text di SQL.  
   

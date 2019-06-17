@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081489"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Finestra di dialogo Drill-through (Visualizzatore modello di data mining)
@@ -36,7 +36,7 @@ ms.locfileid: "66081489"
   
  **Nota** Le colonne della struttura sono visualizzate solo se nella struttura di data mining è abilitato il drill-through e viene selezionata l'opzione **Colonne struttura e modello**. Per visualizzare le colonne è inoltre necessario disporre delle autorizzazioni drill-through per il modello di data mining e per la struttura di data mining.  
   
- Le colonne della struttura non incluse nel modello vengono visualizzati come **struttura.\< Nome colonna >**.  
+ Le colonne della struttura non incluse nel modello vengono visualizzati come **struttura.\< Nome colonna >** .  
   
 > [!NOTE]  
 >  È possibile fare clic con il pulsante destro del mouse in un punto della griglia di colonne e selezionare **Copia tutto** per copiare negli Appunti i dati drill-through in formato delimitato da tabulazione. Nei dati copiati sono inclusi solo i dati dei case, non la definizione del nodo.  

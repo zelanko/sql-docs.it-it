@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684304"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Conteggio cumulativo delle analisi di intervallo e tabella avviate nell'indice o nell'heap.|    
 |**singleton_lookup_count**|**bigint**|Conteggio cumulativo dei recuperi di singole righe dall'indice o heap.|    
 |**forwarded_fetch_count**|**bigint**|Conteggio delle righe recuperate tramite un record di inoltro.<br /><br /> 0 = Indici|    
-|**lob_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine LOB recuperate dall'unità di allocazione LOB_DATA. Queste pagine contengono dati archiviati in colonne di tipo **testo**, **ntext**, **immagine**, **varchar (max)**, **(nvarchar max)**, **varbinary (max)**, e **xml**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine LOB recuperate dall'unità di allocazione LOB_DATA. Queste pagine contengono dati archiviati in colonne di tipo **testo**, **ntext**, **immagine**, **varchar (max)** , **(nvarchar max)** , **varbinary (max)** , e **xml**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Conteggio cumulativo dei byte di dati LOB recuperati.|    
 |**lob_orphan_create_count**|**bigint**|Conteggio cumulativo dei valori LOB isolati (orfani) creati per le operazioni bulk.<br /><br /> 0 = Indice non cluster|    
 |**lob_orphan_insert_count**|**bigint**|Conteggio cumulativo dei valori LOB isolati (orfani) inseriti durante le operazioni bulk.<br /><br /> 0 = Indice non cluster|    
-|**row_overflow_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine di dati di overflow della riga recuperate dall'unità di allocazione ROW_OVERFLOW_DATA.<br /><br /> Queste pagine contengono dati archiviati nelle colonne di tipo **varchar (n)**, **nvarchar (n)**, **varbinary**, e **sql_variant** sia stato il push all'esterno di righe.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine di dati di overflow della riga recuperate dall'unità di allocazione ROW_OVERFLOW_DATA.<br /><br /> Queste pagine contengono dati archiviati nelle colonne di tipo **varchar (n)** , **nvarchar (n)** , **varbinary**, e **sql_variant** sia stato il push all'esterno di righe.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Conteggio cumulativo dei byte di dati di overflow della riga recuperati.|    
 |**column_value_push_off_row_count**|**bigint**|Conteggio cumulativo dei valori di colonna per i dati LOB e di overflow della riga spostati all'esterno di righe per adattare una riga inserita o aggiornata all'interno di una pagina.|    
 |**column_value_pull_in_row_count**|**bigint**|Conteggio cumulativo dei valori di colonna per i dati LOB e di overflow della riga esclusi dalla riga. Ciò si verifica quando un'operazione di aggiornamento libera spazio in un record e offre l'opportunità di includere uno o più valori all'esterno di righe dall'unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA nell'unità di allocazione IN_ROW_DATA.|    

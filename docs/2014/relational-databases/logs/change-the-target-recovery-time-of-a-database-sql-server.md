@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743217"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modificare il tempo di recupero di riferimento di un database (SQL Server)
@@ -57,7 +57,7 @@ ms.locfileid: "62743217"
   
 2.  Usare l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options), come indicato di seguito:  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDI | MINUTI }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDI | MINUTI }  
   
      *target_recovery_time*  
      Quando è maggiore di 0 (valore predefinito), il valore specifica il limite superiore del tempo di recupero per il database specificato in caso di arresto anomalo del sistema.  

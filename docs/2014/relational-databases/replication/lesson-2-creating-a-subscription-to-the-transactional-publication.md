@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721081"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale
@@ -40,7 +40,7 @@ ms.locfileid: "62721081"
   
 7.  Nella finestra di dialogo **Nuovo database** digitare **ProductReplica** nella casella **Nome database** , fare clic su **OK**e scegliere **Avanti**.  
   
-8.  Nel **sicurezza agente di distribuzione** finestra di dialogo fare clic sui puntini di sospensione (**...** ) pulsante, immettere \< _nome_macchina >_**\repl_distribution** nel **account processo** immettere la password per questo oggetto account, fare clic su **OK**, quindi fare clic su **successivo**.  
+8.  Nel **sicurezza agente di distribuzione** finestra di dialogo fare clic sui puntini di sospensione ( **...** ) pulsante, immettere \< _nome_macchina >_ **\repl_distribution** nel **account processo** immettere la password per questo oggetto account, fare clic su **OK**, quindi fare clic su **successivo**.  
   
 9. Fare clic su **Fine** per accettare i valori predefiniti nelle pagine seguenti e completare la procedura guidata.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721081"
   
 2.  Nella pagina **Generale** , nell'elenco della pagina **Tipo utente** selezionare **Utente di Windows**.  
   
-3.  Selezionare il **nome utente** casella e fare clic sui puntini di sospensione (...), nella **immettere il nome dell'oggetto da selezionare** casella digitare < nome_computer >**\repl_distribution**, fare clic su  **Controlla nomi**, quindi fare clic su **OK**.  
+3.  Selezionare il **nome utente** casella e fare clic sui puntini di sospensione (...), nella **immettere il nome dell'oggetto da selezionare** casella digitare < nome_computer > **\repl_distribution**, fare clic su  **Controlla nomi**, quindi fare clic su **OK**.  
   
 4.  Nella pagina **Appartenenze** , in **Appartenenza a ruoli del database** selezionare **db_owner**, quindi scegliere **OK** per creare l'utente.  
   

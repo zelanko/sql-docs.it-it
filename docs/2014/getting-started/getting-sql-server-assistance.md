@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088555"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "66088555"
   
  Se non si trovano le informazioni desiderate, è possibile inserire domande nei forum e nei newsgroup della community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Documentazione online di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Documentazione online di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono inclusi i concetti e le procedure necessari per utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ed è disponibile del materiale di riferimento per i linguaggi e le interfacce di programmazione per l'archiviazione, il recupero, la creazione di report e la modifica dei dati mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  È possibile accedere alla documentazione online nei modi seguenti:  

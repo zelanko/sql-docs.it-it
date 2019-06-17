@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011928"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
@@ -71,7 +71,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Lavorare con i ruoli a livello di server.  
  Nella tabella seguente vengono illustrati i comandi, le viste e le funzioni che consentono di utilizzare ruoli a livello di server.  
   
-|Funzionalità|Tipo|Descrizione|  
+|Funzionalità|Type|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadati|Restituisce un elenco di ruoli a livello di server.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadati|Restituisce informazioni sui membri di un ruolo a livello di server.|  

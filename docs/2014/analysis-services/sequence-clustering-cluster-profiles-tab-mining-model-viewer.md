@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069100"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Scheda Profili cluster Sequence Clustering (Visualizzatore modello di data mining)
@@ -51,7 +51,7 @@ ms.locfileid: "66069100"
   
 -   **\<nome attributo > Samples**: Gli istogrammi di questa riga mostrano le sequenze di elementi rappresentativi di ogni cluster. In termini DMX, si tratta dei case di esempio per ogni cluster.  
   
--   **\<nome attributo >**: Gli istogrammi di questa riga descrivono tutti gli elementi contenuti nel cluster e la distribuzione complessiva. Fare clic su un istogramma quando **Legenda data mining** è visibile ed è possibile visualizzare i valori numerici per ognuno  
+-   **\<nome attributo >** : Gli istogrammi di questa riga descrivono tutti gli elementi contenuti nel cluster e la distribuzione complessiva. Fare clic su un istogramma quando **Legenda data mining** è visibile ed è possibile visualizzare i valori numerici per ognuno  
   
  **Stati**  
  Questa colonna del grafico è facoltativa e può essere visualizzata o rimossa selezionando l'opzione **Mostra legenda** . Tramite la colonna **Stati** è possibile comprendere la correlazione tra stati e colori nell'istogramma dei cluster corrispondente.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058864"
 ---
 # <a name="fast-parse"></a>Analisi veloce
@@ -29,7 +29,7 @@ ms.locfileid: "66058864"
   
  Se il flusso di dati nel pacchetto richiede analisi che dipendono dalle impostazioni locali, è consigliabile utilizzare l'analisi standard anziché l'analisi veloce. L'analisi veloce non riconosce ad esempio dati dipendenti dalle impostazioni locali che includono simboli quali il separatore decimale, formati di data diversi dai formati anno-mese-giorno e simboli di valuta.  
   
- Le rappresentazioni troncate che includono in modo implicito una o più parti della data, ad esempio il secolo, l'anno o il mese, non vengono riconosciute dall'analisi veloce. L'analisi veloce non riconosce né il formato "**-AAMM**", che specifica l'anno e il mese in un secolo implicito, né il formato "**--MM**", che specifica un mese in un anno implicito. Vengono tuttavia riconosciute alcune rappresentazioni con precisione ridotta, ad esempio il formato "hhmm;" che indica solo le ore e i minuti, e il formato "**AAAA**", che indica solo l'anno.  
+ Le rappresentazioni troncate che includono in modo implicito una o più parti della data, ad esempio il secolo, l'anno o il mese, non vengono riconosciute dall'analisi veloce. L'analisi veloce non riconosce né il formato " **-AAMM**", che specifica l'anno e il mese in un secolo implicito, né il formato " **--MM**", che specifica un mese in un anno implicito. Vengono tuttavia riconosciute alcune rappresentazioni con precisione ridotta, ad esempio il formato "hhmm;" che indica solo le ore e i minuti, e il formato "**AAAA**", che indica solo l'anno.  
   
  L'analisi veloce è specificata a livello di colonna. Nell'origine file flat e nella trasformazione Conversione dati è possibile specificare l'analisi veloce nelle colonne di output. Input e output possono includere sia colonne dipendenti dalle impostazioni locali che colonne indipendenti dalle impostazioni locali.  
   

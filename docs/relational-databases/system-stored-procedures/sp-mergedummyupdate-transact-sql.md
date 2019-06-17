@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017763"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
@@ -38,7 +38,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @source_object = ] 'source_object'` È il nome dell'oggetto di origine. *source_object*viene **nvarchar(386)**, non prevede alcun valore predefinito.  
+`[ @source_object = ] 'source_object'` È il nome dell'oggetto di origine. *source_object*viene **nvarchar(386)** , non prevede alcun valore predefinito.  
   
 `[ @rowguid = ] 'rowguid'` È l'identificatore di riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   

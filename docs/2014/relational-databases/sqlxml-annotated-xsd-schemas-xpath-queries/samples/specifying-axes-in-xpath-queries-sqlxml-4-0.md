@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010720"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Definizione di assi in query XPath (SQLXML 4.0)
@@ -90,7 +90,7 @@ ms.locfileid: "66010720"
 /child::Customer/child::Order  
 ```  
   
- Nella query `child` è l'asse e `Customer` e `Order` sono i test di nodo (questi test di nodo sono TRUE se Customer e Order sono  **\<elemento >** nodi, in quanto il  **\<elemento >** nodo è il nodo primario per il `child` asse). Per ogni nodo che corrisponde  **\<cliente >**, i nodi corrispondenti  **\<ordini >** vengono aggiunti al risultato. Solo  **\<ordine >** viene restituita nel set di risultati.  
+ Nella query `child` è l'asse e `Customer` e `Order` sono i test di nodo (questi test di nodo sono TRUE se Customer e Order sono  **\<elemento >** nodi, in quanto il  **\<elemento >** nodo è il nodo primario per il `child` asse). Per ogni nodo che corrisponde  **\<cliente >** , i nodi corrispondenti  **\<ordini >** vengono aggiunti al risultato. Solo  **\<ordine >** viene restituita nel set di risultati.  
   
  L'asse `child` è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66010720"
 </ROOT>  
 ```  
   
- Se la query XPath viene specificata come `Customer/Order/OrderDetail`, da ogni nodo che corrisponde  **\<cliente >** la query passa ai relativi  **\<ordine >** elementi. E per ogni nodo che corrisponde  **\<ordine >**, la query aggiunge i nodi  **\<OrderDetail >** al risultato. Solo  **\<OrderDetail >** viene restituita nel set di risultati.  
+ Se la query XPath viene specificata come `Customer/Order/OrderDetail`, da ogni nodo che corrisponde  **\<cliente >** la query passa ai relativi  **\<ordine >** elementi. E per ogni nodo che corrisponde  **\<ordine >** , la query aggiunge i nodi  **\<OrderDetail >** al risultato. Solo  **\<OrderDetail >** viene restituita nel set di risultati.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utilizzare . per specificare l'asse padre  
  La query seguente recupera tutte le  **\<ordine >** elementi con un elemento padre  **\<cliente >** elemento con un **CustomerID** attributo valore di 1. La query Usa la `child` asse nel predicato per trovare il padre del  **\<ordine >** elemento.  
@@ -181,7 +181,7 @@ ms.locfileid: "66010720"
 ```  
   
 > [!NOTE]  
->  La query XPath `/Order[../@CustomerID="1"]` restituirà un errore perché non è presente alcun padre di  **\<ordine >**. Sebbene possano essere presenti elementi nello schema di mapping che contengono  **\<ordine >**, l'espressione XPath non è iniziato in corrispondenza di uno di essi; di conseguenza,  **\<ordine >** viene considerato il tipo di elemento di primo livello nel documento.  
+>  La query XPath `/Order[../@CustomerID="1"]` restituirà un errore perché non è presente alcun padre di  **\<ordine >** . Sebbene possano essere presenti elementi nello schema di mapping che contengono  **\<ordine >** , l'espressione XPath non è iniziato in corrispondenza di uno di essi; di conseguenza,  **\<ordine >** viene considerato il tipo di elemento di primo livello nel documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   

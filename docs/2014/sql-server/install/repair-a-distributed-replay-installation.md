@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092962"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Ripristinare un'installazione di Riesecuzione distribuita
@@ -32,7 +32,7 @@ ms.locfileid: "66092962"
   
 2.  Selezionare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella **Disinstalla o modifica programma** finestra e quindi il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella finestra di dialogo fare clic su **Repair**.  
   
-3.  Seguire i passaggi nel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] procedura guidata e nella **Selezione funzionalità** pagina, selezionare i componenti riesecuzione distribuita si vuole ripristinare e quindi fare clic su **successivo.**.  
+3.  Seguire i passaggi nel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] procedura guidata e nella **Selezione funzionalità** pagina, selezionare i componenti riesecuzione distribuita si vuole ripristinare e quindi fare clic su **successivo.** .  
   
 4.  Completare l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per ripristinare le funzionalità di Riesecuzione distribuita selezionate.  
   

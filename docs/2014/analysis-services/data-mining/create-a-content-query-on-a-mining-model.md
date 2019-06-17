@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085576"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
@@ -40,11 +40,11 @@ ms.locfileid: "66085576"
   
      Il modello **Query contenuto** si apre nell'editor del codice adatto. Nel riquadro dei metadati sono elencati i modelli disponibili nel database corrente. Per modificare il database, selezionare un altro database nell'elenco **Database disponibili** .  
   
-5.  Immettere il nome di un modello di data mining nella riga `FROM` [*\<modello di data mining, name, MyModel >*]`.CONTENT`. Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
+5.  Immettere il nome di un modello di data mining nella riga `FROM` [ *\<modello di data mining, name, MyModel >* ]`.CONTENT`. Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
   
      Se non si vuole digitare il nome, è possibile selezionare un modello di data mining in **Esplora oggetti** e trascinarlo nel modello.  
   
-6.  Nella riga `SELECT` *\<elenco di selezione dall'elenco expr \* >*, digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
+6.  Nella riga `SELECT` *\<elenco di selezione dall'elenco expr \* >* , digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
   
      Per visualizzare un elenco di colonne che è possibile restituire nelle query del contenuto del modello di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 966b8a03d10bb8e87950e19e3e099954e8aaad8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62961006"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gestione degli account nell'elenco di accesso alla pubblicazione
@@ -60,15 +60,15 @@ ms.locfileid: "62961006"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Per visualizzare gruppi e account di accesso che appartengono all'elenco di accesso alla pubblicazione  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_help_publication_access](/sql/relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql). Per **@publication**, specificare il nome della pubblicazione. Verranno visualizzate informazioni sui gruppi e gli account di accesso presenti nell'elenco di accesso alla pubblicazione.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_help_publication_access](/sql/relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql). Per **@publication** , specificare il nome della pubblicazione. Verranno visualizzate informazioni sui gruppi e gli account di accesso presenti nell'elenco di accesso alla pubblicazione.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>Per aggiungere gruppi e account di accesso all'elenco di accesso alla pubblicazione  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_grant_publication_access](/sql/relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql). Per **@publication**, specificare il nome della pubblicazione e per **@login**il nome dell'account di accesso o del gruppo da aggiungere.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_grant_publication_access](/sql/relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql). Per **@publication** , specificare il nome della pubblicazione e per **@login** il nome dell'account di accesso o del gruppo da aggiungere.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>Per rimuovere gruppi e account di accesso dall'elenco di accesso alla pubblicazione  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). Per **@publication**, specificare il nome della pubblicazione e per **@login**il nome dell'account di accesso o del gruppo da rimuovere.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). Per **@publication** , specificare il nome della pubblicazione e per **@login** il nome dell'account di accesso o del gruppo da rimuovere.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di sicurezza dell'agente di replica](replication-agent-security-model.md)   

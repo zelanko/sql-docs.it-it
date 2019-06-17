@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061383"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Attività File system di Azure Data Lake Store
@@ -28,8 +28,8 @@ Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto,
 
 La proprietà **Operation** specifica l'operazione del file system da eseguire. Sono supportate le operazioni seguenti.
 
-* **CopyToADLS:** Caricare file in Azure Data Lake Store.
-* **CopyFromADLS:** Scaricare i file da Azure Data Lake Store.
+* **CopyToADLS:** carica i file in ADLS.
+* **CopyFromADLS:** scarica i file da ADLS.
 
 Per qualsiasi operazione è necessario specificare una gestione della connessione di Azure Data Lake.
 
@@ -38,13 +38,13 @@ Di seguito sono riportate le descrizioni delle proprietà specifiche per ogni op
 ## <a name="copytoadls"></a>CopyToADLS
 
 * **LocalDirectory:** Specifica la directory di origine che contiene i file da caricare.
-* **FileNamePattern:** Specifica un filtro di nome file per file di origine. Verranno caricati solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`.
-* **SearchRecursively:** Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory di origine per i file da caricare.
-* **AzureDataLakeDirectory:** Specifica la directory di destinazione di Azure Data Lake Store per caricare i file.
+* **FileNamePattern:** specifica un filtro di nome file per i file di origine. Verranno caricati solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`.
+* **SearchRecursively:** specifica se cercare in modo ricorsivo i file da caricare all'interno della directory di origine.
+* **AzureDataLakeDirectory:** specifica la directory di destinazione di ADLS in cui caricare i file.
 * **FileExpiry:** Specifica una data di scadenza e l'ora per i file caricati in Azure Data Lake Store, o lasciare vuoto per indicare che i file non scadono mai questa proprietà.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 
-* **AzureDataLakeDirectory:** Specifica la directory di origine ADLS che contiene i file da scaricare.
-* **SearchRecursively:** Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory di origine per i file da scaricare.
-* **LocalDirectory:** Specifica la directory di destinazione per archiviare i file scaricati.
+* **AzureDataLakeDirectory:** specifica la directory di origine di ADLS che contiene i file da scaricare.
+* **SearchRecursively:** specifica se cercare in modo ricorsivo i file da scaricare all'interno della directory di origine.
+* **LocalDirectory:** specifica la directory di destinazione in cui archiviare i file scaricati.

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078026"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Individua file di database (Analysis Services - Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "66078026"
   
 -   Fare clic su **Sfoglia** nella pagina **Generale** della finestra di dialogo **Ripristina database** .  
   
--   Fare clic sul pulsante con i puntini di sospensione (**...**) nella colonna **File di backup** della griglia **Restore backup partitions** (Ripristina partizioni di backup) nella pagina **Partizioni** della finestra di dialogo **Ripristina database** .  
+-   Fare clic sul pulsante con i puntini di sospensione ( **...** ) nella colonna **File di backup** della griglia **Restore backup partitions** (Ripristina partizioni di backup) nella pagina **Partizioni** della finestra di dialogo **Ripristina database** .  
   
 ## <a name="options"></a>Opzioni  
  **Selezionare la cartella**  

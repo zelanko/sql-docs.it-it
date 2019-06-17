@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011728"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
@@ -87,7 +87,7 @@ ms.locfileid: "63011728"
 ## <a name="working-with-database-level-roles"></a>Utilizzo di ruoli a livello di database  
  Nella tabella seguente vengono spiegati i comandi, le viste e le funzioni necessari per l'utilizzo dei ruoli a livello di database.  
   
-|Funzionalità|Tipo|Descrizione|  
+|Funzionalità|Type|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadati|Restituisce un elenco dei ruoli predefiniti del database.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadati|Visualizza le autorizzazioni di un ruolo predefinito del database.|  

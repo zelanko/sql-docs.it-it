@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996097"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
@@ -56,7 +56,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>Argomenti  
 `[ @dbname = ] 'dbname'` È la stringa che specifica il database di sottoscrizione di destinazione in base al nome. *dbname* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @filename = ] 'filename'` È il nome e percorso fisico del file MDF primario (**master** file di dati). *nome file* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
+`[ @filename = ] 'filename'` È il nome e percorso fisico del file MDF primario (**master** file di dati). *nome file* viene **nvarchar(260)** , non prevede alcun valore predefinito.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` È la modalità di sicurezza del sottoscrittore da utilizzare quando ci si connette a un sottoscrittore durante la sincronizzazione. *subscriber_security_mode* viene **int**, con un valore predefinito è NULL.  
   
@@ -91,7 +91,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)**, non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)** , non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
   
 `[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito. Il valore di *job_password* deve essere inferiore a 120 caratteri Unicode.  
   

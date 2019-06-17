@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086645"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Convalida incrociata (componenti aggiuntivi Data mining di SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "66086645"
  Se si sceglie una struttura che supporta sia i modelli di clustering che altri tipi di modelli, i modelli di clustering non vengono testati.  
   
 ## <a name="understanding-cross-validation-results"></a>Informazioni sui risultati della convalida incrociata  
- I risultati della convalida incrociata vengono visualizzati in un nuovo foglio di lavoro, intitolata **Report convalida incrociata \<nome attributo >**. Il nuovo foglio di lavoro contiene diverse sezioni. La prima sezione è un riepilogo che fornisce importanti metadati sul modello testato, in modo che sia possibile sapere a quale modello o struttura si riferiscono i risultati.  
+ I risultati della convalida incrociata vengono visualizzati in un nuovo foglio di lavoro, intitolata **Report convalida incrociata \<nome attributo >** . Il nuovo foglio di lavoro contiene diverse sezioni. La prima sezione è un riepilogo che fornisce importanti metadati sul modello testato, in modo che sia possibile sapere a quale modello o struttura si riferiscono i risultati.  
   
  La seconda sezione del report fornisce un riepilogo statistico che indica l'efficacia del modello originale. In questo riepilogo le differenze tra i modelli creati per ogni riduzione vengono analizzate tre misure chiave: *radice errore quadratico medio*, *errore assoluto medio*, e *punteggioinformalogaritmica*. Si tratta di misure statistiche standard utilizzate non solo nel data mining, ma anche nella maggior parte dei tipi di analisi statistica.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071228"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
@@ -149,7 +149,7 @@ ms.locfileid: "66071228"
   
 -   Vedere i passaggi nell'illustrazione riportata di seguito.  
   
-1.  In una raccolta documenti di SharePoint fare clic su **Menu Apri** (**...**) per una cartella di lavoro di PowerPivot.  
+1.  In una raccolta documenti di SharePoint fare clic su **Menu Apri** ( **...** ) per una cartella di lavoro di PowerPivot.  
   
 2.  Fare clic sul secondo **Menu Apri** , quindi scegliere **Gestisci aggiornamento dati PowerPivot**.  
   

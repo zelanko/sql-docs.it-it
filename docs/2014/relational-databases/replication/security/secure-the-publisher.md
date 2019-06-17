@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960146"
 ---
 # <a name="secure-the-publisher"></a>Sicurezza del server di pubblicazione
@@ -43,7 +43,7 @@ ms.locfileid: "62960146"
  L'elenco di accesso alla pubblicazione costituisce il principale sistema di protezione delle pubblicazioni nel server di pubblicazione. che funziona in maniera analoga a un elenco di controllo di accesso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Quando si crea una pubblicazione, la replica crea un elenco di accesso alla pubblicazione per la pubblicazione creata. Tale elenco può essere configurato per contenere l'elenco degli account di accesso e dei gruppi autorizzati ad accedere alla pubblicazione. Quando un agente si connette al server di pubblicazione o al server di distribuzione e richiede l'accesso a una pubblicazione, i dati di autenticazione dell'elenco di accesso alla pubblicazione vengono confrontati con l'account di accesso al server di pubblicazione specificato dall'agente. Ciò garantisce un maggior livello di sicurezza del server di pubblicazione, impedendo che gli account di accesso del server di pubblicazione e del server di distribuzione vengano utilizzati da uno strumento client per apportare modifiche direttamente nel server di pubblicazione.  
   
 > [!NOTE]  
->  La replica crea un ruolo sul server di pubblicazione per ogni pubblicazione, in modo da applicare l'appartenenza all'elenco di accesso alla pubblicazione. Il nome del ruolo ha il formato **Msmerge_**_\<IDPubblicazione>_ per la replica di tipo merge e **MSReplPAL_**_\<IDDatabasePubblicazione>_**_**_\<IDPubblicazione>_ per la replica transazionale e snapshot.  
+>  La replica crea un ruolo sul server di pubblicazione per ogni pubblicazione, in modo da applicare l'appartenenza all'elenco di accesso alla pubblicazione. Il nome del ruolo ha il formato **Msmerge_** _\<IDPubblicazione>_ per la replica di tipo merge e **MSReplPAL_** _\<IDDatabasePubblicazione>_ **_** _\<IDPubblicazione>_ per la replica transazionale e snapshot.  
   
  Per impostazione predefinita, nell'elenco di accesso alla pubblicazione sono inclusi gli account di accesso seguenti: i membri del ruolo predefinito del server **sysadmin** al momento della creazione della pubblicazione e l'account di accesso utilizzato per creare la pubblicazione. Per impostazione predefinita, tutti gli account di accesso membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** nel database di pubblicazione possono sottoscrivere una pubblicazione, senza necessità di essere aggiunti esplicitamente all'elenco di accesso alla pubblicazione.  
   

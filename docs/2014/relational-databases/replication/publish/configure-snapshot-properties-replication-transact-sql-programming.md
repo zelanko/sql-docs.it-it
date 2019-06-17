@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021333"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurazione delle proprietà dello snapshot (programmazione Transact-SQL della replica)
@@ -26,7 +26,7 @@ ms.locfileid: "63021333"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Per configurare le proprietà dello snapshot durante la creazione di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare il nome della pubblicazione per **@publication**, il valore **snapshot** o **continuous** per **@repl_freq**e uno o più parametri correlati allo snapshot seguenti:  
+1.  Nel server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare il nome della pubblicazione per **@publication** , il valore **snapshot** o **continuous** per **@repl_freq** e uno o più parametri correlati allo snapshot seguenti:  
   
     -   **@alt_snapshot_folder** : specificare un percorso se allo snapshot di questa pubblicazione si accede da tale percorso anziché o in aggiunta alla cartella snapshot predefinita.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63021333"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Per configurare le proprietà dello snapshot durante la creazione di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare il nome della pubblicazione per **@publication**, il valore **snapshot** o **continuous** per **@repl_freq**e uno o più parametri correlati allo snapshot seguenti:  
+1.  Nel server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare il nome della pubblicazione per **@publication** , il valore **snapshot** o **continuous** per **@repl_freq** e uno o più parametri correlati allo snapshot seguenti:  
   
     -   **@alt_snapshot_folder** : specificare un percorso se allo snapshot di questa pubblicazione si accede da tale percorso anziché o in aggiunta alla cartella snapshot predefinita.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63021333"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Per modificare le proprietà dello snapshot di una pubblicazione snapshot o transazionale esistente  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property** :  
   
-    -   **alt_snapshot_folder** : specificare anche un nuovo percorso della cartella snapshot alternativa per **@value**.  
+    -   **alt_snapshot_folder** : specificare anche un nuovo percorso della cartella snapshot alternativa per **@value** .  
   
     -   **compress_snapshot** : specificare anche il valore **true** o **false** per **@value** per indicare se i file di snapshot presenti nella cartella snapshot alternativa sono compressi nel formato CAB.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "63021333"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Per modificare le proprietà dello snapshot di una pubblicazione di tipo merge esistente  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property** :  
   
-    -   **alt_snapshot_folder** : specificare anche un nuovo percorso della cartella snapshot alternativa per **@value**.  
+    -   **alt_snapshot_folder** : specificare anche un nuovo percorso della cartella snapshot alternativa per **@value** .  
   
     -   **compress_snapshot** : specificare anche il valore **true** o **false** per **@value** per indicare se i file di snapshot presenti nella cartella snapshot alternativa sono compressi nel formato CAB.  
   

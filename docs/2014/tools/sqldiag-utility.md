@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035420"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
@@ -123,7 +123,7 @@ ms.locfileid: "63035420"
   
  1 = compressione NTFS  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  Specifica la data e l'ora di inizio della raccolta di dati diagnostici nel formato seguente:  
   
  AAAAMMGG_HH:MM:SS  
@@ -138,7 +138,7 @@ ms.locfileid: "63035420"
   
  L'utilità **SQLdiag** usa l'ora locale del computer in cui è in esecuzione.  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  Specifica la data e l'ora di arresto della raccolta di dati diagnostici nel formato seguente:  
   
  AAAAMMGG_HH:MM:SS  
@@ -158,11 +158,11 @@ ms.locfileid: "63035420"
   
  È possibile usare*SQLdiag_application_name* per avviare o arrestare un'istanza specifica del servizio **SQLdiag** .  
   
- Ad esempio:   
+ Ad esempio:  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
- È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio:   
+ È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio:  
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
@@ -308,7 +308,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- Se l'ora corrente è 08:00, l'ora di fine è già trascorsa prima dell'inizio della raccolta di dati diagnostici. Poiché l'utilità **SQLDiag** modifica automaticamente le date di inizio e fine riferendole al giorno successivo qualora siano già trascorse, in questo esempio la raccolta di dati diagnostici inizia alle 09:00 della data corrente (è stata specificata un'ora di inizio relativa con il prefisso **+**) e continua fino alle 08:30 del giorno successivo.  
+ Se l'ora corrente è 08:00, l'ora di fine è già trascorsa prima dell'inizio della raccolta di dati diagnostici. Poiché l'utilità **SQLDiag** modifica automaticamente le date di inizio e fine riferendole al giorno successivo qualora siano già trascorse, in questo esempio la raccolta di dati diagnostici inizia alle 09:00 della data corrente (è stata specificata un'ora di inizio relativa con il prefisso **+** ) e continua fino alle 08:30 del giorno successivo.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>Arresto e riavvio di SQLdiag per la raccolta giornaliera di dati diagnostici  
  Per raccogliere un set specifico di dati diagnostici su base giornaliera senza dover avviare e arrestare manualmente l'utilità **SQLdiag**, usare l'argomento **/L** . L'argomento **/L** consente di impostare l'esecuzione continua dell'utilità **SQLdiag** grazie all'impostazione del riavvio automatico dell'utilità dopo un'interruzione pianificata. Se si specifica l'argomento **/L** e l'utilità **SQLdiag** viene arrestata perché ha raggiunto l'ora di fine specificata dall'argomento **/E** oppure perché viene eseguita in modalità snapshot specificata con l'argomento **/X** , l'utilità **SQLdiag** non viene chiusa, bensì riavviata.  

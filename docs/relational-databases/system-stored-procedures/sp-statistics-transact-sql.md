@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004197"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -53,13 +53,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituiti gli indici di tale tabella. Se *proprietario* non viene specificato e l'utente corrente non dispone di una tabella con la proprietà specificata *nome*, viene eseguita la ricerca per una tabella con la proprietà specificata *nome* di proprietà di proprietario del database. Se tale tabella esiste, vengono restituiti gli indici corrispondenti.  
   
-`[ @table_qualifier = ] 'qualifier'` È il nome del qualificatore della tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @table_qualifier = ] 'qualifier'` È il nome del qualificatore della tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_ **.** _owner_ **.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
 `[ @index_name = ] 'index_name'` È il nome dell'indice. *index_name* viene **sysname**, con un valore predefinito è %. La ricerca con caratteri jolly è supportata.  
   
-`[ @is_unique = ] 'is_unique'` È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* viene **char (1)**, il valore predefinito è **N**.  
+`[ @is_unique = ] 'is_unique'` È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* viene **char (1)** , il valore predefinito è **N**.  
   
-`[ @accuracy = ] 'accuracy'` È il livello di accuratezza della pagina per le statistiche e cardinalità. *accuratezza* viene **char (1)**, il valore predefinito è **Q**. Specificare **elettronica** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
+`[ @accuracy = ] 'accuracy'` È il livello di accuratezza della pagina per le statistiche e cardinalità. *accuratezza* viene **char (1)** , il valore predefinito è **Q**. Specificare **elettronica** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
   
  Il valore **elettronica** (SQL_ENSURE) chiede al driver di recuperare in modo incondizionato le statistiche.  
   

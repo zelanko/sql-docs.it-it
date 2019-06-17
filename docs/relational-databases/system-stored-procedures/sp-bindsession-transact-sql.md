@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996609"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
@@ -44,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Argomenti  
  **'** *bind_token* **'**  
- È il token che identifica la transazione ottenuto in origine tramite **sp_getbindtoken** o il servizio ODS **srv_getbindtoken** (funzione). *bind_token*is **varchar(255)**.  
+ È il token che identifica la transazione ottenuto in origine tramite **sp_getbindtoken** o il servizio ODS **srv_getbindtoken** (funzione). *bind_token*is **varchar(255)** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

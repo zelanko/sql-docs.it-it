@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996168"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
@@ -40,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tsqlbatch = ] 'tsqlbatch'` È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch per il parametro informazioni sono che si desidera. *TSqlBatch* viene **nvarchar (max)** o in modo implicito nel **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch per il parametro informazioni sono che si desidera. *TSqlBatch* viene **nvarchar (max)** o in modo implicito nel **nvarchar (max)** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  

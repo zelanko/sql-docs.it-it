@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019221"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilità delle formule DAX in modalità DirectQuery 
@@ -107,7 +107,7 @@ Il linguaggio DAX non prevede alcuna funzione cast di questo tipo, tuttavia i ca
 -   I valori booleani vengono sempre trattati come valori logici nei confronti e quando vengono usati con EXACT, AND, OR, &amp;&amp;o ||.  
   
 **Cast di una stringa a un valore booleano**  
-In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"**, **"false"**; in una stringa vuota cast a un valore false.  
+In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"** , **"false"** ; in una stringa vuota cast a un valore false.  
   
 Il cast a un tipo di dati booleano di qualsiasi altra stringa genera un errore.  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6f9701371b9a6007f831d1e06dd6bbd0605e7dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063575"
 ---
 # <a name="breakpoints-window"></a>Finestra Punti di interruzione
@@ -34,7 +34,7 @@ ms.locfileid: "66063575"
  Consente di visualizzare il nome del punto di interruzione. I nomi dei punti di interruzione vengono forniti dal debugger. Questo nome include il nome della finestra dell'editor di query del Motore di database che contiene il punto di interruzione e il numero di riga nell'editor di query in cui è impostato il punto di interruzione.  
   
  **Condizione**  
- Viene visualizzato **(nessuna condizione)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.  
+ Viene visualizzato **(nessuna condizione)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.  
   
  **Passaggi**  
  Viene visualizzato**interrompi sempre**.  
@@ -42,7 +42,7 @@ ms.locfileid: "66063575"
  È possibile aggiungere e rimuovere le colonne seguenti selezionandole nell'elenco **Colonne** .  
   
  **Filter**  
- Viene visualizzato **(nessuno)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
+ Viene visualizzato **(nessuno)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
   
  **Quando raggiunto**  
  Viene visualizzato **Interrompi**.  

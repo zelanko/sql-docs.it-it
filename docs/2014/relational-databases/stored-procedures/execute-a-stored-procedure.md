@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016072"
 ---
 # <a name="execute-a-stored-procedure"></a>Eseguire una stored procedure
@@ -65,7 +65,7 @@ ms.locfileid: "63016072"
   
 -   Esecuzione di stored procedure di sistema  
   
-     Le stored procedure di sistema iniziano con il prefisso **sp_**. Poiché sono visualizzate logicamente in ogni database definito dall'utente e dal sistema, possono essere eseguite da qualsiasi database senza che sia necessario specificare il nome completo della stored procedure. È tuttavia consigliabile specificare lo schema in tutti i nomi di stored procedure di sistema con il nome dello schema **sys** per evitare conflitti. Nell'esempio seguente viene illustrato il metodo consigliato per la chiamata a una stored procedure di sistema.  
+     Le stored procedure di sistema iniziano con il prefisso **sp_** . Poiché sono visualizzate logicamente in ogni database definito dall'utente e dal sistema, possono essere eseguite da qualsiasi database senza che sia necessario specificare il nome completo della stored procedure. È tuttavia consigliabile specificare lo schema in tutti i nomi di stored procedure di sistema con il nome dello schema **sys** per evitare conflitti. Nell'esempio seguente viene illustrato il metodo consigliato per la chiamata a una stored procedure di sistema.  
   
     ```sql  
     EXEC sys.sp_who;  

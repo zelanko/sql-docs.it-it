@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a66709cc090f39a41e5bee5b52a779b8d2f6764
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063542"
 ---
 # <a name="command-window"></a>Finestra di comando
@@ -29,7 +29,7 @@ ms.locfileid: "66063542"
   
  **Per stampare il valore di una variabile**  
   
--   In **Finestra di comando** digitare **Debug.Print \<NomeVariabile>**, quindi premere INVIO.  
+-   In **Finestra di comando** digitare **Debug.Print \<NomeVariabile>** , quindi premere INVIO.  
   
  **Per elencare le informazioni sul thread corrente**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66063542"
   
  **Per aggiungere una variabile alla finestra Controllo immediato**  
   
--   In **Finestra di comando** digitare **Debug.QuickWatch \<NomeVariabile>**, quindi premere INVIO.  
+-   In **Finestra di comando** digitare **Debug.QuickWatch \<NomeVariabile>** , quindi premere INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)  

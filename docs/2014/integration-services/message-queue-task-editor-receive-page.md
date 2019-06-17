@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057667"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor attività Message Queue (pagina Ricezione)
@@ -85,7 +85,7 @@ ms.locfileid: "66057667"
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
   
  **Variabile**  
- Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...**> per configurare una nuova variabile.  
+ Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...** > per configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66057667"
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
  **Variabile**  
- Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...**> e quindi configurare una nuova variabile.  
+ Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...** > e quindi configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   

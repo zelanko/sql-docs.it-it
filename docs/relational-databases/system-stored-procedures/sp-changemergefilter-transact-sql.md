@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997038"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` È il nome della proprietà da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore*viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
+`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore*viene **nvarchar(1000)** , non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   

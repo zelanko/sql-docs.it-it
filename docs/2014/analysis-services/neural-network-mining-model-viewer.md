@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072323"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rete neurale (Visualizzatore modello di data mining)
@@ -39,7 +39,7 @@ ms.locfileid: "66072323"
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**Attribute**|Consente di scegliere un attributo di input dall'elenco. Se si lascia l'impostazione predefinita,  **\<tutto >**, il grafico mostra un elenco di tutti gli attributi di input classificati in base alla relativa influenza sull'attributo stimabile.|  
+|**Attribute**|Consente di scegliere un attributo di input dall'elenco. Se si lascia l'impostazione predefinita,  **\<tutto >** , il grafico mostra un elenco di tutti gli attributi di input classificati in base alla relativa influenza sull'attributo stimabile.|  
 |**Valore**|Consente di scegliere un valore per l'attributo di input.|  
   
  **Output**  

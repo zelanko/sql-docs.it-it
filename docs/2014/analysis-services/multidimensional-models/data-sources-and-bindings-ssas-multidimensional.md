@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076075"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
@@ -177,7 +177,7 @@ ms.locfileid: "66076075"
  Tutti gli elementi che fanno riferimento alle associazioni out-of-line sono facoltativi. Per qualsiasi elemento non specificato, ASSL utilizza la specifica contenuta nell'istruzione DDL dell'oggetto persistente. La specifica di `DataSource` o `DataSourceView` nel comando `Process` è facoltativa. Se `DataSource` o `DataSourceView` è specificato, la relativa istanza non viene creata. Gli oggetti non risultano inoltre persistenti una volta completato il comando `Process`.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definizione del tipo di associazione out-of-line  
- Nella raccolta `Bindings` out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ciascuna proprietà `Binding`. Ciascuna proprietà `Binding` ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto assume il formato flat tipico del `Object` nell'elemento `Process` comandi, a meno che il \< *oggetto*>\<*/oggetto*> i tag non sono presenti.  
+ Nella raccolta `Bindings` out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ciascuna proprietà `Binding`. Ciascuna proprietà `Binding` ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto assume il formato flat tipico del `Object` nell'elemento `Process` comandi, a meno che il \< *oggetto*>\< */oggetto*> i tag non sono presenti.  
   
  Ogni oggetto per cui è specificata l'associazione è identificato da un elemento XML nel formato \< *oggetto*> ID (ad esempio, `DimensionID`). Dopo aver identificato l'oggetto in modo specifico con il modulo \< *oggetto*> ID, si identifica l'elemento per cui è stata specificata l'associazione, ovvero in genere `Source`. Una situazione comune da tenere in considerazione è quella in cui `Source` è una proprietà in `DataItem`, come nel caso delle associazioni di colonna in un attributo. In questo caso, non specificare il tag `DataItem`. Specificare solo la proprietà `Source`, come se si trovasse direttamente nella colonna da associare.  
   

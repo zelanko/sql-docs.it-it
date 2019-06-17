@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078463"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definizione della granularità della dimensione in un gruppo di misure
@@ -126,7 +126,7 @@ ms.locfileid: "66078463"
   
      Si noti che il **dipendente** e `Date` collegate alle dimensioni del cubo la **Sales Quotas e Sales Quotas 1** tramite relazioni regolari gruppi di misure. Si noti anche che la dimensione del cubo **Sales Territory** non è collegata a nessuno di questi gruppi di misure.  
   
-4.  Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il `Sales Quotas` gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+4.  Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il `Sales Quotas` gruppo di misure e quindi fare clic sul pulsante Sfoglia ( **...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 5.  Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66078463"
   
 10. Fare clic su **OK**.  
   
-11. Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas 1** gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+11. Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas 1** gruppo di misure e quindi fare clic sul pulsante Sfoglia ( **...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 12. Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078463"
   
      Ridenominazione di **Order Date** dimensione del cubo a `Date` rende più semplice per gli utenti a comprenderne il ruolo come la dimensione data primaria del cubo.  
   
-20. Fare clic sul pulsante Sfoglia (**...** ) nella cella nel punto di intersezione tra il `Sales Quotas` gruppo di misure e `Date` dimensione.  
+20. Fare clic sul pulsante Sfoglia ( **...** ) nella cella nel punto di intersezione tra il `Sales Quotas` gruppo di misure e `Date` dimensione.  
   
 21. Nella finestra di dialogo **Definisci relazione** selezionare **Regolare** nell'elenco **Selezionare il tipo di relazione** .  
   

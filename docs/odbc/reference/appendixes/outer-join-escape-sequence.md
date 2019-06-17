@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63018364"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequenza di escape outer join
@@ -38,7 +38,7 @@ ODBC Usa sequenze di escape per gli outer join. La sintassi di questa sequenza d
   
  *outer join* :: = *nome tabella* [*correlazione-name*] {sinistra &#124; a destra &#124; completo}  
   
- OUTER JOIN {*-nome della tabella* [*nome di correlazione*] &#124; *outer join*} via  
+ OUTER JOIN { *-nome della tabella* [*nome di correlazione*] &#124; *outer join*} via  
   
  *search-*  
   

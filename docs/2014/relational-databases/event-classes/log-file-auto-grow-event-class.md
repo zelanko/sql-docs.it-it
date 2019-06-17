@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023406"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow - classe di evento
@@ -36,8 +36,8 @@ ms.locfileid: "63023406"
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |**Durata**|**bigint**|Periodo di tempo, in millisecondi, necessario per l'estensione del file.|13|Yes|  
 |**EndTime**|**datetime**|Ora di fine dell'operazione di **aumento automatico** del file di log.|18|Yes|  
-|**EventClass**|**int**|Tipo di evento = 93.|27|No|  
-|**EventSequence**|**int**|Sequenza della classe di evento **CursorClose** nel batch.|51|No|  
+|**EventClass**|**int**|Tipo di evento = 93.|27|no|  
+|**EventSequence**|**int**|Sequenza della classe di evento **CursorClose** nel batch.|51|no|  
 |**Filename**|**nvarchar**|Nome logico del file esteso.|36|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |**IntegerData**|**Int**|Numero di pagine da 8 kilobyte (KB) aggiunte al file per aumentarne le dimensioni.|25|Yes|  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678995"
 ---
 # <a name="advanced-save-options"></a>Opzioni di salvataggio avanzate
-  Utilizzare questa finestra di dialogo per selezionare uno schema di codifica della lingua e specificare i caratteri da inserire alla fine di ogni riga. Per l'accesso di **opzioni di salvataggio avanzate** finestra di dialogo il **File** dal menu fare clic su **Salva** \<nome query >**. SQL come** a Aprire il **Salva File con nome** finestra di dialogo, fare clic sulla freccia verso il basso nel **salvare** pulsante e quindi fare clic su **Salva con codifica**.  
+  Utilizzare questa finestra di dialogo per selezionare uno schema di codifica della lingua e specificare i caratteri da inserire alla fine di ogni riga. Per l'accesso di **opzioni di salvataggio avanzate** finestra di dialogo il **File** dal menu fare clic su **Salva** \<nome query > **. SQL come** a Aprire il **Salva File con nome** finestra di dialogo, fare clic sulla freccia verso il basso nel **salvare** pulsante e quindi fare clic su **Salva con codifica**.  
   
 ## <a name="options"></a>Opzioni  
  **Codifica**  

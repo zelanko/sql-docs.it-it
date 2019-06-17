@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083524"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
@@ -51,7 +51,7 @@ ms.locfileid: "66083524"
  Nelle sezioni seguenti viene illustrata la disposizione dei nodi all'interno di ognuno di questi tipi di modello.  
   
 ### <a name="structure-of-an-artxp-model"></a>Struttura di un modello ARTXP  
- L'algoritmo ARTXP consente di creare un modello simile a un modello di albero delle decisioni. Vengono raggruppati attributi stimabili che vengono divisi ogni volta che vengono rilevate differenze significative. Pertanto, in ogni modello ARTXP è contenuto un ramo separato per ogni attributo stimabile. Ad esempio, l'esercitazione di base sul data mining consente di creare un modello per la stima dei ricavi delle vendite per molte aree. In questo caso, **[Amount]** è l'attributo stimabile e viene creato un ramo distinto per ogni area. Se fossero presenti due attributi stimabili, ovvero **[Amount]** e **[Quantity]**, verrebbe creato un ramo distinto per ogni combinazione di attributo e area.  
+ L'algoritmo ARTXP consente di creare un modello simile a un modello di albero delle decisioni. Vengono raggruppati attributi stimabili che vengono divisi ogni volta che vengono rilevate differenze significative. Pertanto, in ogni modello ARTXP è contenuto un ramo separato per ogni attributo stimabile. Ad esempio, l'esercitazione di base sul data mining consente di creare un modello per la stima dei ricavi delle vendite per molte aree. In questo caso, **[Amount]** è l'attributo stimabile e viene creato un ramo distinto per ogni area. Se fossero presenti due attributi stimabili, ovvero **[Amount]** e **[Quantity]** , verrebbe creato un ramo distinto per ogni combinazione di attributo e area.  
   
  Nel nodo di livello superiore del ramo ARTXP sono contenute le stesse informazioni del nodo radice dell'albero delle decisioni. Tra queste, il numero di elementi figlio del nodo (CHILDREN_CARDINALITY), il numero di case che soddisfano le condizioni del nodo (NODE_SUPPORT) e varie statistiche descrittive (NODE_DISTRIBUTION).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66083524"
 >  Per visualizzare le formule, è possibile trovare la formula di regressione completa a livello del nodo foglia, ma non in un nodo intermedio o radice.  
   
 ### <a name="structure-of-an-arima-model"></a>Struttura di un modello ARIMA  
- L'algoritmo ARIMA consente di creare una singola informazione per ogni combinazione di una serie di dati (ad esempio **[Region]**) e un attributo stimabile (ad esempio **[Sales Amount]**)-l'equazione che descrive il Modifica dell'attributo stimabile nel tempo.  
+ L'algoritmo ARIMA consente di creare una singola informazione per ogni combinazione di una serie di dati (ad esempio **[Region]** ) e un attributo stimabile (ad esempio **[Sales Amount]** )-l'equazione che descrive il Modifica dell'attributo stimabile nel tempo.  
   
  L'equazione per ogni serie deriva da più componenti, uno per ogni struttura periodica rilevata nei dati. Ad esempio, se si dispone di dati delle vendite raccolti su base mensile, l'algoritmo potrebbe rilevare strutture periodiche mensili, trimestrali o annuali.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959666"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -45,7 +45,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="arguments"></a>Argomenti  
 `[ @article_resolver = ] 'article_resolver'` Specifica il nome della logica di business personalizzata di cui annullare la registrazione. *article_resolver* viene **nvarchar(255**, non prevede alcun valore predefinito. Se la logica di business in fase di rimozione è un componente COM, questo parametro è il nome descrittivo del componente. Se la logica di business è un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, questo parametro è il nome dell'assembly.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel *article_resolver* parametro. *resolver_clsid* viene **nvarchar (50)**, con un valore predefinito è NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel *article_resolver* parametro. *resolver_clsid* viene **nvarchar (50)** , con un valore predefinito è NULL.  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* viene **bit**, con un valore predefinito è 0. **1** indica che la logica di business personalizzata è un gestore della logica di business stesso Assembly. **0** indica che è un componente COM.  
   

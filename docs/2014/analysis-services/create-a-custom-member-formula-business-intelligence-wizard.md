@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087001"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Creazione formula personalizzata membro (Configurazione guidata funzionalità di Business Intelligence)
@@ -27,7 +27,7 @@ ms.locfileid: "66087001"
  Consente di selezionare l'attributo da associare a una formula personalizzata membro.  
   
  **Colonna di origine**  
- Fare clic su Sfoglia (**...** ) per aprire la **selezionare una colonna** nella finestra di dialogo e selezionare la colonna della formula personalizzata membro da associare con l'attributo.  
+ Fare clic su Sfoglia ( **...** ) per aprire la **selezionare una colonna** nella finestra di dialogo e selezionare la colonna della formula personalizzata membro da associare con l'attributo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   

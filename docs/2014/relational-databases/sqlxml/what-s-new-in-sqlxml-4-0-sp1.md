@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012134"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Cosa&#39;s novità di SQLXML 4.0 SP1
@@ -144,7 +144,7 @@ ms.locfileid: "66012134"
   
      Questa chiave viene introdotta in modo che sia possibile scegliere di mantenere gli spazi vuoti nei dati. Se si aggiunge tale chiave del Registro di sistema e se ne imposta il valore su 0, gli spazi vuoti (LF, CR e TAB) nei dati XML vengono restituiti codificati nel caso di valori di attributi. Nel caso di valori di elementi, solo il carattere CR viene restituito codificato.  
   
-     Ad esempio:   
+     Ad esempio:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

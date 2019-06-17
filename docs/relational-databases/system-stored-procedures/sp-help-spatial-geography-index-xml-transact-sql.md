@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ed44f70a49c1cf221a9ef74b19030512273b1480
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017974"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa `sp_help_spatial_geography_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geography_col2** definiti nella tabella **geography_col** per l'esempio di query specificata in  **@qs**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
+ L'esempio seguente usa `sp_help_spatial_geography_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geography_col2** definiti nella tabella **geography_col** per l'esempio di query specificata in  **@qs** . L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
   
  Un' [XQuery](../../xquery/xquery-basics.md) viene quindi eseguita nel set di risultati, la restituzione di una proprietà specifica.  
   

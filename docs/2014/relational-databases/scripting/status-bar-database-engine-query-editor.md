@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063631"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
@@ -22,9 +22,9 @@ ms.locfileid: "66063631"
   
 1.  **Prima di iniziare:**  [Colori della barra di stato](#StatusBarColors)  
   
-2.  **Per impostare un colore di stato del server in:**  [Esplora oggetti](#SetOEServerColor), [Server registrato](#SetRegServerColor)  
+2.  **Per impostare un colore di stato per un server in:**  [Esplora oggetti](#SetOEServerColor), [Server registrato](#SetRegServerColor)  
   
-3.  **Per usare un colore di stato:**  [Aprire l'Editor di Query utilizzando un colore di Server](#OpenServerColor), [aprire un Editor di Query specificando un colore di stato](#OpenSpecColor)  
+3.  **Per usare un colore di stato:**  [Aprire l'editor di query con un colore per il server](#OpenServerColor), [Aprire l'editor di query specificando un colore di stato](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Colori della barra di stato  
  È possibile associare un colore della barra di stato a uno specifico nodo server in **Esplora oggetti** o **Server registrati**. È possibile specificare i colori solo per nodi server connessi a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], non ai nodi server per altre tecnologie SQL Server. È inoltre possibile specificare anche un colore della barra di stato personalizzato ogni volta che si connette una nuova finestra dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile aprire una finestra dell'editor di query utilizzando il colore di stato definito per il nodo server oppure specificare un colore univoco per la finestra in questione.  
@@ -36,7 +36,7 @@ ms.locfileid: "66063631"
   
 1.  In **Esplora oggetti** fare clic sul pulsante **Connetti**, quindi selezionare **Motore di database...**  
   
-2.  Nella finestra di dialogo **Connetti al server** selezionare **Opzioni >>**.  
+2.  Nella finestra di dialogo **Connetti al server** selezionare **Opzioni >>** .  
   
 3.  Selezionare la casella di controllo **Usa colore personalizzato** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66063631"
   
 -   Scegliere **Nuovo** dal menu **File**, quindi selezionare **Query del motore di database**.  
   
--   Nella finestra di dialogo **Connetti al server** selezionare **Opzioni >>**.  
+-   Nella finestra di dialogo **Connetti al server** selezionare **Opzioni >>** .  
   
 -   Selezionare la casella di controllo **Usa colore personalizzato** .  
   
