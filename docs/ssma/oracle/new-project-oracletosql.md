@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209836"
 ---
 # <a name="new-project-oracletosql"></a>Nuovo progetto (OracleToSQL)
@@ -24,7 +24,7 @@ Usare la **nuovo progetto** finestra di dialogo per creare un nuovo progetto SSM
 **Name**  
 Immettere il nome del progetto. SSMA viene aggiunta l'estensione di file.  
   
-**Percorso**  
+**Location**  
 Immettere o selezionare la cartella o il percorso di rete per salvare il progetto.  
   
 **Eseguire la migrazione a**  

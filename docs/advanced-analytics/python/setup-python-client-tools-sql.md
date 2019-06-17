@@ -3,17 +3,17 @@ title: Configurare un client di analisi scientifica dei dati per lo sviluppo Pyt
 description: Configurare un ambiente Python locale (Notebook di Jupyter o PyCharm) per le connessioni remote a servizi di SQL Server Machine Learning con Python.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642812"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140640"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client di analisi scientifica dei dati per lo sviluppo Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ Uno script di installazione aggiunge tre librerie specifiche di Microsoft per il
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) Installa versione 9.2.1 dei pacchetti Python di Microsoft. Questa versione corrisponde a un'istanza di SQL Server 2017 predefinita. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) Installa versione 9.3 dei pacchetti Python di Microsoft. Questa versione è una scelta migliore se l'istanza remota di SQL Server 2017 [associato a Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) Installa versione 9.3 dei pacchetti Python di Microsoft. Questa versione è una scelta migliore se l'istanza remota di SQL Server 2017 [associato a Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Aprire una finestra di PowerShell con autorizzazioni di amministratore con privilegi elevati (fare doppio clic su **Esegui come amministratore**).
 
@@ -107,7 +107,7 @@ Anaconda include notebook di Jupyter. Come passaggio successivo, creare un noteb
 
 3. Immettere `import revoscalepy` ed eseguire il comando a uno carico delle librerie specifiche di Microsoft.
 
-4. Immettere ed eseguire `print(revoscalepy.__version__)` per restituire le informazioni sulla versione. Dovrebbe essere 9.2.1 o 9.3.0. È possibile usare una di queste versioni con [revoscalepy sul server](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers). 
+4. Immettere ed eseguire `print(revoscalepy.__version__)` per restituire le informazioni sulla versione. Dovrebbe essere 9.2.1 o 9.3.0. È possibile usare una di queste versioni con [revoscalepy sul server](../package-management/installed-package-information.md). 
 
 4. Immettere una serie più complessa di istruzioni. Questo esempio genera le statistiche di riepilogo usando [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) su un set di dati locale. Altre funzioni di ottenere la posizione dei dati di esempio e creare un oggetto origine dati per un file con estensione xdf locale.
 

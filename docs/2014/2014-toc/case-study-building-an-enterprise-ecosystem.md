@@ -1,5 +1,5 @@
 ---
-title: 'Case Study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e di SQL Server 2014 Replication for Scalability and Performance | Microsoft Docs'
+title: 'Case study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e di SQL Server 2014 Replication for Scalability and Performance | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470102"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Case Study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e di SQL Server 2014 Replication for Scalability and Performance
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Case study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per ottenere scalabilità e prestazioni
 
   **Riepilogo:** In questo documento illustra gli scenari seguenti:  
 Come usare la replica transazionale in SQL Server 2014 per distribuire le transazioni dai client Dynamics AX in più nodi. Poiché i dati vengono gestiti nei nodi in tempo reale, la replica transazionale fornisce la ridondanza dei dati, che aumenta la disponibilità dei dati, e include i dati disponibili per un'analisi delle prestazioni più efficiente.  

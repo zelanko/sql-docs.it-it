@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8046d93f28c6d7c61899bb5f9aa3598f834c0ab3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088380"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Generatore membri calcolati (Analysis Services - Dati multidimensionali)
@@ -28,7 +28,7 @@ ms.locfileid: "66088380"
 |----------|----------------|  
 |**Name**|Consente di digitare il nome del membro calcolato.|  
 |**Gerarchia padre**|Consente di selezionare la gerarchia in cui creare il membro calcolato.|  
-|**Membro padre**|Questa opzione è abilitata se si seleziona una gerarchia padre, diversa dalla dimensione `Measures`, che include più di un livello. Fare clic sui puntini di sospensione (**...** ) per selezionare un membro padre. Il membro padre determina la posizione del membro calcolato nella struttura della dimensione.|  
+|**Membro padre**|Questa opzione è abilitata se si seleziona una gerarchia padre, diversa dalla dimensione `Measures`, che include più di un livello. Fare clic sui puntini di sospensione ( **...** ) per selezionare un membro padre. Il membro padre determina la posizione del membro calcolato nella struttura della dimensione.|  
 |**Espressione**|Consente di digitare l'espressione MDX da utilizzare.|  
 |**Controlla**|Fare clic su **Controlla** per verificare l'espressione MDX definita in **Espressione**.|  
 |**Metadati**|Visualizza i metadati relativi all'oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] corrente che è possibile includere nell'espressione MDX definita in **Espressione**.<br /><br /> È possibile copiare la sintassi MDX per l'elemento selezionato facendo clic con il pulsante destro del mouse sull'elemento e scegliendo **Copia**oppure trascinando l'elemento selezionato in **Espressione**.|  

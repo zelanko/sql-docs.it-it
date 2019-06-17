@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632771"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni data e ora (driver ODBC Visual FoxPro)
@@ -61,7 +61,7 @@ La tabella seguente elenca le funzioni di data e ora ODBC supportate per il Driv
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- In questa sintassi **1!d** indica che *valore* data nel *aaaa-mm-gg* formato e **ts** indica che *valore*  è un timestamp nel *aaaa-mm-gg hh.mm.ss*[.*f...*] formato. La sintassi abbreviata per i dati di data e timestamp è come segue:  
+ In questa sintassi **1!d** indica che *valore* data nel *aaaa-mm-gg* formato e **ts** indica che *valore*  è un timestamp nel *aaaa-mm-gg hh.mm.ss*[.*f...* ] formato. La sintassi abbreviata per i dati di data e timestamp è come segue:  
   
 ```  
 {d 'value'}  

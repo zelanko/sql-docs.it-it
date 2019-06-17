@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241425"
 ---
 # <a name="c-to-sql-timestamp"></a>Da C a SQL: Timestamp
@@ -41,6 +41,6 @@ L'identificatore per il tipo di dati C ODBC timestamp è:
   
  Per informazioni su quali valori sono validi in una struttura SQL_C_TIMESTAMP, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
   
- Quando i dati di timestamp C viene convertiti in dati SQL di tipo carattere, i dati di tipo carattere risultante sono nel "*yyyy*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...*] "formato.  
+ Quando i dati di timestamp C viene convertiti in dati SQL di tipo carattere, i dati di tipo carattere risultante sono nel "*yyyy*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...* ] "formato.  
   
  Il driver ignora il valore di lunghezza/indicatore quando si convertono i dati dal tipo di dati timestamp C e si presuppone che la dimensione del buffer di dati è la dimensione del tipo di dati timestamp C. Viene passato il valore di lunghezza/indicatore il *StrLen_or_Ind* nell'argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento in **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* nell'argomento **SQLPutData** e il *ParameterValuePtr* argomento in **SQLBindParameter**.

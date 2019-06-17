@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781996"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Istanza denominata**  
   
--   *MSSQLSvc/FQDN*:[_porta_**|**_nomeistanza_], dove:  
+-   *MSSQLSvc/FQDN*:[_porta_ **|** _nomeistanza_], dove:  
   
     -   *MSSQLSvc* è il servizio da registrare.  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Istanza predefinita**  
   
--   *MSSQLSvc/FQDN*:_porta_**|**_MSSQLSvc/FQDN_, dove:  
+-   *MSSQLSvc/FQDN*:_porta_ **|** _MSSQLSvc/FQDN_, dove:  
   
     -   *MSSQLSvc* è il servizio da registrare.  
   
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn:InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registrazione automatica del nome SPN  
- Quando viene avviata un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di registrare il nome SPN per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza viene arrestata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di annullare la registrazione del nome SPN. Per una connessione TCP/IP, il nome SPN viene registrato nel formato *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Sia le istanze denominate che quella predefinita vengono registrate come *MSSQLSvc* e differenziate in base al valore *\<tcpport>*.  
+ Quando viene avviata un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di registrare il nome SPN per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza viene arrestata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di annullare la registrazione del nome SPN. Per una connessione TCP/IP, il nome SPN viene registrato nel formato *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Sia le istanze denominate che quella predefinita vengono registrate come *MSSQLSvc* e differenziate in base al valore *\<tcpport>* .  
   
- Per altre connessioni che supportano l'autenticazione Kerberos il nome SPN viene registrato nel formato *MSSQLSvc /\<FQDN >*:*\<NomeIstanza >* per un'istanza denominata. e nel formato *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
+ Per altre connessioni che supportano l'autenticazione Kerberos il nome SPN viene registrato nel formato *MSSQLSvc /\<FQDN >* : *\<NomeIstanza >* per un'istanza denominata. e nel formato *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
   
  Se l'account di servizio non dispone delle autorizzazioni richieste per eseguire queste azioni, potrebbe essere necessario intervenire manualmente per registrare o annullare la registrazione del nome SPN.  
   

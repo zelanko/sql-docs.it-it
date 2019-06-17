@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187924"
 ---
 # <a name="metadata-visibility-configuration"></a>Configurazione della visibilità dei metadati
@@ -53,7 +53,7 @@ GO
 |-|-|  
 |Tabelle di sistema per il log shipping|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle di sistema dell'agente|  
 |Tabelle di sistema del piano di manutenzione database|Tabelle di sistema di backup|  
-|Tabelle di sistema di replica|Replica e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **dell'agente** |  
+|Tabelle di sistema di replica|Replica e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **dell'agente**|  
   
  Un'accessibilità limitata ai metadati comporta quanto segue:  
   

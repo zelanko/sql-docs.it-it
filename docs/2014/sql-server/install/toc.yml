@@ -1,30 +1,30 @@
 - name: SQL Server 2014 Upgrade Advisor
   href: sql-server-2014-upgrade-advisor.md
-- name: Installazione di Gestione spazio aggiornamenti
+- name: Installazione di Preparazione aggiornamento
   href: installing-upgrade-advisor.md
   items:
-    - name: Prerequisiti di Gestione spazio aggiornamenti
+    - name: Prerequisiti di Preparazione aggiornamento
       href: upgrade-advisor-prerequisites.md
-    - name: Installazione di Gestione spazio aggiornamenti dal prompt dei comandi
+    - name: Installazione di Preparazione aggiornamento dal prompt dei comandi
       href: installing-upgrade-advisor-from-the-command-prompt.md
-- name: Uso di Gestione spazio aggiornamenti
+- name: Utilizzo di Preparazione aggiornamento
   href: working-with-upgrade-advisor.md
-- name: Panoramica di Gestione spazio aggiornamenti
+- name: Panoramica di Preparazione aggiornamento
   href: overview-of-upgrade-advisor.md
   items:
     - name: Panoramica del processo di aggiornamento
       href: upgrade-process-overview.md
-    - name: Panoramica di Gestione spazio aggiornamenti
+    - name: Panoramica di Preparazione aggiornamento
       href: upgrade-advisor-overview.md
-    - name: Esecuzione di Gestione spazio aggiornamenti (interfaccia utente)
+    - name: Esecuzione di Preparazione aggiornamento (interfaccia utente)
       href: running-upgrade-advisor-user-interface.md
-    - name: Esecuzione di Gestione spazio aggiornamenti (prompt dei comandi)
+    - name: Esecuzione di Preparazione aggiornamento (prompt dei comandi)
       href: running-upgrade-advisor-command-prompt.md
-    - name: Uso dei report
+    - name: Utilizzo dei report
       href: using-reports.md
-    - name: Errori di Gestione spazio aggiornamenti
+    - name: Errori di Preparazione aggiornamento
       href: upgrade-advisor-errors.md
-- name: Procedure per Gestione spazio aggiornamenti
+- name: Procedure per Preparazione aggiornamento
   href: upgrade-advisor-how-to-topics.md
   items:
     - name: 'Procedura: Installare Gestione spazio aggiornamenti'

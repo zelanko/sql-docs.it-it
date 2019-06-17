@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238385"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
@@ -24,7 +24,7 @@ ms.locfileid: "63238385"
   
  I controlli sono costituiti da zero o più attività di controllo, che vengono registrate in una *destinazione*del controllo. La destinazione del controllo può essere un file binario, il registro eventi applicazioni di Windows o il registro eventi di sicurezza di Windows. I record inviati alla destinazione possono contenere gli elementi descritti nella tabella seguente.  
   
-|Nome colonna|Descrizione|Tipo|Sempre disponibile|  
+|Nome colonna|Descrizione|Type|Sempre disponibile|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data e ora di generazione dell'azione controllabile.|`datetime2`|Yes|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|`int`|Yes|  
@@ -35,7 +35,7 @@ ms.locfileid: "63238385"
 |**session_id**|ID della sessione in cui si è verificato l'evento.|`int`|Yes|  
 |**server_principal_id**|ID del contesto dell'account di accesso utilizzato per eseguire l'azione.|`int`|Yes|  
 |**database_principal_id**|ID del contesto dell'utente del database in cui viene eseguita l'azione.|`int`|No|  
-|**object_id**|ID primario dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|`int`|No|  
+|**object_id**|ID primario dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|`int`|no|  
 |**target_server_principal_id**|Entità server cui si applica l'azione controllabile.|`int`|Yes|  
 |**target_database_principal_id**|Entità di database cui si applica l'azione controllabile.|`int`|No|  
 |**class_type**|Tipo di entità controllabile in cui si verifica il controllo.|`varchar(2)`|Yes|  
@@ -49,7 +49,7 @@ ms.locfileid: "63238385"
 |**server_instance_name**|Nome dell'istanza del server in cui si è verificato il controllo. Viene utilizzato il formato standard computer\istanza.|`nvarchar(120)`|Yes|  
 |**database_name**|Contesto del database in cui si è verificata l'azione.|`sysname`|No|  
 |**schema_name**|Contesto dello schema in cui si è verificata l'azione.|`sysname`|No|  
-|**object_name**|Nome dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|`sysname`|No|  
+|**object_name**|Nome dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|`sysname`|no|  
 |**istruzione**|istruzione TSQL (se presente)|`nvarchar(4000)`|No|  
 |**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|`nvarchar(4000)`|No|  
   

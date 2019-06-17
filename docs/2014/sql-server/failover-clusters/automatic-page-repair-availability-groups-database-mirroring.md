@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137508"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Correzione di pagina automatica (per Gruppi di disponibilità e Mirroring del database)
@@ -88,7 +88,7 @@ ms.locfileid: "63137508"
   
 
   
-##  <a name="ViewAPRattempts"></a> Come si fa: Visualizza i tentativi di correzione automatica della pagina  
+##  <a name="ViewAPRattempts"></a> Procedura: Visualizza i tentativi di correzione automatica della pagina  
  Tramite le DMV seguenti vengono restituite righe degli ultimi tentativi di correzione automatica delle pagine in un database di disponibilità o database con mirroring specificato, con un massimo di 100 righe per database.  
   
 -   **Gruppi di disponibilità AlwaysOn:**  

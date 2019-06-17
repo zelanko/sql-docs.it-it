@@ -3,17 +3,17 @@ title: Creare un repository di pacchetti R locale usando miniCRAN - servizi di S
 description: Usare miniCran per rilevare, assemblare e installare le dipendenze dei pacchetti R in un unico pacchetto consolidato.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d9154bc1c01bdf9bd7bdfd7a4032b4ed173464d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83d73bb9d075825472cda96a7dcd54e25549de5e
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642600"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140625"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creare un repository di pacchetti R locale usando miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ Effettuare **non** aggiungere dipendenze a questo elenco iniziale. Il **igraph**
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Creare il repository locale. Assicurarsi di modificare la versione di R, se necessario per la versione installata nell'istanza di SQL Server. Versione 3.2.2 è SQL Server 2016, versione 3.3 è SQL Server 2017. Se è stato eseguito un aggiornamento del componente, la versione può essere più recente. Per altre informazioni, vedere [Python e R di ottenere informazioni sul pacchetto](determine-which-packages-are-installed-on-sql-server.md).
+3. Creare il repository locale. Assicurarsi di modificare la versione di R, se necessario per la versione installata nell'istanza di SQL Server. Versione 3.2.2 è SQL Server 2016, versione 3.3 è SQL Server 2017. Se è stato eseguito un aggiornamento del componente, la versione può essere più recente. Per altre informazioni, vedere [Python e R di ottenere informazioni sul pacchetto](../package-management/installed-package-information.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -159,8 +159,5 @@ Dopo aver creato un repository locale con i pacchetti che necessari, spostare il
 
 ## <a name="see-also"></a>Vedere anche
 
-+ [Ottenere informazioni sui pacchetti](determine-which-packages-are-installed-on-sql-server.md)
++ [Ottenere informazioni sui pacchetti](../package-management/installed-package-information.md)
 + [Esercitazioni di R](../tutorials/sql-server-r-tutorials.md)
-+ [Guide pratiche](sql-server-machine-learning-tasks.md)
-
-

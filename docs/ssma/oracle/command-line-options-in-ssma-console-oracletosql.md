@@ -16,10 +16,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 039728bd18abcd1f3a660297fa0a1d937b7b1eb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288250"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opzioni della riga di comando nella console SSMA (OracleToSQL)
@@ -30,7 +30,7 @@ Microsoft offre un solido set opzioni riga di comando per eseguire e controllare
   
 Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
   
--   Opzioni non sono tra maiuscole e minuscole e può iniziare con '**-**'or,'**/**' caratteri.  
+-   Opzioni non sono tra maiuscole e minuscole e può iniziare con ' **-** 'or,' **/** ' caratteri.  
   
 -   Se si specificano opzioni, diventa obbligatorio specificare i parametri di opzione corrispondenti.  
   

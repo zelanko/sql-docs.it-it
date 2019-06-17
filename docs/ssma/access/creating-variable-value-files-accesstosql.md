@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138833"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
@@ -22,7 +22,7 @@ Un File con valori di variabile è un file XML che includono i valori dei parame
   
 > [!NOTE]  
 > -  I nomi delle variabili sono il prefisso e suffisso con un simbolo di dollaro $. Se una variabile non viene assegnata un valore nel file di valore della variabile, verificherà un errore durante l'analisi del file di script, risultante in blocco il processo di esecuzione della console.  
-> -  Il carattere di escape per **$** viene **$$**. Se il valore di un valore statico o variabile di un parametro contiene un **$** simbolo (dollaro), quindi **$$** deve essere specificata di considerarlo come un carattere anziché una variabile.  
+> -  Il carattere di escape per **$** viene **$$** . Se il valore di un valore statico o variabile di un parametro contiene un **$** simbolo (dollaro), quindi **$$** deve essere specificata di considerarlo come un carattere anziché una variabile.  
 > -  Ai fini delle manutenibilità, le variabili possono essere dichiarate all'interno di `'variable-group'` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
   
 **Esempi:**  

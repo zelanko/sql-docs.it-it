@@ -21,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b78f2d8fdc34743e4e74d1e27346651c7adc443
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66076724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046620"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Calcoli nei modelli multidimensionali
   La scheda **Calcoli** in Progettazione cubi consente di creare membri calcolati, set denominati e altri calcoli MDX (Multidimensional Expressions).  
@@ -40,7 +40,7 @@ ms.locfileid: "66076724"
 -   Il riquadro Espressioni di calcolo supporta la visualizzazione Form e visualizzazione Script.  
   
 > [!NOTE]  
->  Per altre informazioni sulla creazione di script MDX, vedere [Introduzione alla creazione di script MDX in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)e vedere la sezione risorse aggiuntive sulle [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) pagina di Sito Web Microsoft TechNet. Per altre informazioni su problemi di prestazioni legati alla progettazione dei cubi, vedere la [guida alle prestazioni di SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Per altre informazioni sulla creazione di script MDX, vedere [Introduzione alla creazione di script MDX in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)e vedere la sezione risorse aggiuntive sulle [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) pagina di Sito Web Microsoft TechNet. Per altre informazioni su problemi di prestazioni legati alla progettazione dei cubi, vedere la [guida alle prestazioni di SQL Server 2005 Analysis Services](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
   
 ## <a name="creating-a-new-calculation"></a>Creazione di un nuovo calcolo  
  Per creare un nuovo calcolo, nella scheda **Calcoli** di Progettazione cubi scegliere **Nuovo membro calcolato** , **Nuovo set denominato**o **Nuovo comando script**dal menu **Cubo**, a seconda del tipo di calcolo da creare. È anche possibile fare clic sui pulsanti corrispondenti sulla barra degli strumenti o fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno del riquadro **Libreria script** e quindi scegliere uno dei comandi dal menu di scelta rapida. In questo modo viene aggiunto un nuovo calcolo al riquadro **Libreria script** e i campi corrispondenti vengono visualizzati nel form di calcolo nel riquadro delle espressioni di calcolo. In caso di creazione di un nuovo script, questa operazione apre la visualizzazione Script nel riquadro Espressioni di calcolo. Per altre informazioni sulla creazione dei tre tipi di calcoli, vedere [Creare membri calcolati](create-calculated-members.md), [Creare set denominati](create-named-sets.md)e [Definire le assegnazioni e altri comandi script](define-assignments-and-other-script-commands.md).  

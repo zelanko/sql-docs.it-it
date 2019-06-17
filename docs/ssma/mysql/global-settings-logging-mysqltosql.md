@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195163"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Impostazioni globali (registrazione) (MySQLToSQL)
@@ -51,7 +51,7 @@ Per ogni opzione sotto **a livello di messaggi**, configurare uno dei seguenti l
 |**Debug**|Scrivere tutti i messaggi, compresi i messaggi, nel log di debug.|  
   
 **Percorso File di log**  
-Il percorso del file e il nome dei file di log SSMA. Per specificare un nome diverso, scegliere il percorso corrente e quindi fare clic su Sfoglia (**...** ) pulsante.  
+Il percorso del file e il nome dei file di log SSMA. Per specificare un nome diverso, scegliere il percorso corrente e quindi fare clic su Sfoglia ( **...** ) pulsante.  
   
 **Dimensioni File di log**  
 Le dimensioni massime del file di log in KB. La dimensione minima è 10 KB. La dimensione predefinito è 10240 KB.  

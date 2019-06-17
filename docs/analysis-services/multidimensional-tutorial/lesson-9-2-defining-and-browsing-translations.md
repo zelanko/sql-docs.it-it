@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403483"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lezione 9-2: definizione ed esplorazione delle traduzioni
@@ -41,13 +41,13 @@ Nelle procedure descritte in questo argomento vengono definite traduzioni di met
   
     Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **Caption** per la dimensione **Date** digitare **Fecha** nella colonna della traduzione in **Spagnolo (Spagna)** e **Temps** nella colonna della traduzione in **Francese (Francia)**.  
+5.  Nella riga relativa all'oggetto **Caption** per la dimensione **Date** digitare **Fecha** nella colonna della traduzione in **Spagnolo (Spagna)** e **Temps** nella colonna della traduzione in **Francese (Francia)** .  
   
 6.  Nella riga relativa all'oggetto **Caption** per l'attributo **Month Name** , digitare **Mes del Año** nella colonna della traduzione in **Spagnolo (Spagna)** e **Mois d'Année** nella colonna della traduzione in **Francese (Francia)** .  
   
-    Si noti che quando si immettono queste traduzioni, i puntini di sospensione (**...** ) viene visualizzato. Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
+    Si noti che quando si immettono queste traduzioni, i puntini di sospensione ( **...** ) viene visualizzato. Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
   
-7.  Fare clic sui puntini di sospensione (**...** ) per il **spagnolo (Spagna)** traduzioni per il **Month Name** attributo.  
+7.  Fare clic sui puntini di sospensione ( **...** ) per il **spagnolo (Spagna)** traduzioni per il **Month Name** attributo.  
   
     Verrà visualizzata la finestra di dialogo **Traduzione dati attributo** .  
   
@@ -55,7 +55,7 @@ Nelle procedure descritte in questo argomento vengono definite traduzioni di met
   
     ![Finestra di dialogo traduzione dati attributo](../media/l9-translations-4.gif "nella finestra di dialogo traduzione dati attributo")  
   
-9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione (**...** ) per il **francese (Francia)** traduzioni per il **Month Name** attributo.  
+9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione ( **...** ) per il **francese (Francia)** traduzioni per il **Month Name** attributo.  
   
 10. Selezionare **FrenchMonthName** nell'elenco **Colonne per la traduzione**e fare clic su **OK**.  
   

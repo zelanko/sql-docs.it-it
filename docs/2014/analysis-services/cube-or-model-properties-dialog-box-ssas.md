@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086594"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Finestra di dialogo Proprietà cubo o modello (SSAS)
@@ -41,7 +41,7 @@ ms.locfileid: "66086594"
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati del cubo o del modello.|  
 |**Modalità di elaborazione Cache script**|Consente di selezionare la modalità di elaborazione da utilizzare per il cubo o il modello. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Modalità di elaborazione**|Consente di selezionare la modalità di elaborazione da utilizzare per il cubo o il modello. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
-|**Percorso di archiviazione**|Digitare la cartella da usare come percorso di archiviazione predefinito per i gruppi di misure e le partizioni associati al cubo o al modello oppure fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare una cartella. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
+|**Percorso di archiviazione**|Digitare la cartella da usare come percorso di archiviazione predefinito per i gruppi di misure e le partizioni associati al cubo o al modello oppure fare clic sul pulsante con i puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare una cartella. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**Stato**|Consente di visualizzare lo stato di elaborazione del cubo o del modello. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Consente di visualizzare la data e l'ora dell'ultima elaborazione del cubo o del modello.|  
   

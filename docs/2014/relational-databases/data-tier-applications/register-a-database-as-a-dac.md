@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918133"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
@@ -69,7 +69,7 @@ ms.locfileid: "62918133"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Imposta proprietà**.  
+ **Avanti >** : consente di passare alla pagina **Imposta proprietà**.  
   
  **Annulla** : consente di terminare la procedura guidata senza registrare un'applicazione livello dati.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918133"
   
  **\< Precedente** -verrà nuovamente visualizzato il **Introduzione** pagina.  
   
- **Avanti >**: consente di verificare che sia possibile compilare un'applicazione livello dati dagli oggetti nel database e di visualizzare i risultati nella pagina **Convalida e riepilogo**.  
+ **Avanti >** : consente di verificare che sia possibile compilare un'applicazione livello dati dagli oggetti nel database e di visualizzare i risultati nella pagina **Convalida e riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
@@ -96,16 +96,16 @@ ms.locfileid: "62918133"
   
  **\< Precedente** -verrà nuovamente visualizzato il **imposta proprietà** pagina per modificare le voci selezionate.  
   
- **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
+ **Avanti>** : consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_**.**_NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_ **.** _NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
   
  **\< Precedente** -verrà nuovamente visualizzato il **imposta proprietà** pagina per modificare le voci selezionate.  
   
- **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
+ **Avanti>** : consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62918133"
   
  **\< Precedente** -verrà nuovamente visualizzato il **imposta proprietà** pagina per modificare le voci selezionate.  
   
- **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
+ **Avanti>** : consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   

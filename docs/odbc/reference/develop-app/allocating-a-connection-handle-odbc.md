@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83964bf1e76eef5c7c4ba4121b0c581e8d8a406b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288321"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Allocazione di un handle di connessione ODBC
 Prima che l'applicazione possa connettersi a un'origine dati o driver, è necessario allocare un handle di connessione, come indicato di seguito:  
   
-1.  L'applicazione dichiara una variabile di tipo SQLHDBC. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle dell'ambiente in cui si desidera allocare la connessione e l'opzione SQL_HANDLE_DBC. Ad esempio:   
+1.  L'applicazione dichiara una variabile di tipo SQLHDBC. Chiama poi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle dell'ambiente in cui si desidera allocare la connessione e l'opzione SQL_HANDLE_DBC. Ad esempio:  
   
     ```  
     SQLHDBC hdbc1;  

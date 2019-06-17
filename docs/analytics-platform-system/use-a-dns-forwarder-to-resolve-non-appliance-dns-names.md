@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243783"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usare un server d'inoltro DNS per risolvere i nomi DNS Non Appliance nel sistema di piattaforma Analitica
-Un server d'inoltro DNS può essere configurato nei nodi di servizi di dominio Active Directory (**_appliance\_domain_-AD01** e  **_appliance\_ dominio_-AD02**) del dispositivo di sistema di piattaforma Analitica per consentire gli script e applicazioni software per accedere ai server esterni.  
+Un server d'inoltro DNS può essere configurato nei nodi di servizi di dominio Active Directory ( **_appliance\_domain_-AD01** e  **_appliance\_ dominio_-AD02**) del dispositivo di sistema di piattaforma Analitica per consentire gli script e applicazioni software per accedere ai server esterni.  
   
 ## <a name="ResolveDNS"></a>Usando un server d'inoltro DNS  
 L'appliance del sistema di piattaforma Analitica è configurato per impedire la risoluzione dei nomi DNS del server che non sono nell'appliance. Alcuni processi, ad esempio Windows Software Update Services (WSUS), saranno necessario accedere ai server all'esterno dell'appliance. Per supportare questo scenario di utilizzo del DNS di sistema di piattaforma Analitica può essere configurato per supportare un server d'inoltro nome esterno che consentirà al sistema di piattaforma Analitica host e macchine virtuali (VM) usare server DNS esterni per la risoluzione dei nomi all'esterno dell'appliance. Configurazione personalizzata dei suffissi DNS non è supportata, ovvero che è necessario utilizzare nomi di dominio completo per risolvere un nome di server non appliance.  
@@ -66,7 +66,7 @@ Per i clienti che sceglie di configurare l'appliance per cercare gli aggiornamen
   
 3.  Nell'elenco delle connessioni, fare clic su **VMSEthernet**, quindi fare clic su **proprietà**.  
   
-4.  Selezionare **Internet Protocol versione 4 (TCP/IPv4)**, quindi fare clic su **proprietà**.  
+4.  Selezionare **Internet Protocol versione 4 (TCP/IPv4)** , quindi fare clic su **proprietà**.  
   
 5.  Nel **server DNS alternativo** , aggiungere l'indirizzo IP fornito dall'amministratore di rete del cliente.  
   

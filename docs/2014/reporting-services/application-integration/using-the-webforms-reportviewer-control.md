@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238209"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
@@ -38,7 +38,7 @@ ms.locfileid: "63238209"
   
      Il controllo **ReportViewer** denominato reportViewer1 verrà aggiunto al form.  
   
- Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, scegliere **\<<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere selezionato l'opzione **\<Server Report>**, verranno visualizzate due proprietà aggiuntive, ovvero **URL server di report** e **Percorso report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
+ Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, scegliere **\<<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere selezionato l'opzione **\<Server Report>** , verranno visualizzate due proprietà aggiuntive, ovvero **URL server di report** e **Percorso report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
   
  Per visualizzare un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente. Dopo aver selezionato un report, assicurarsi di immettere il nome del file RDLC del report nella proprietà **ReportPath** del controllo ReportViewer. Questa proprietà viene visualizzata sotto il nodo **LocalReport** nel riquadro **Properties**.  
   

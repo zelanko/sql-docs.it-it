@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653751"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lezione 2: Generare classi dallo Schema RDL mediante lo strumento xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lezione 2: Generare classi dallo schema RDL con lo strumento xsd
   Dopo aver creato il progetto di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], è necessario recuperare una copia locale dello schema di definizione del report ed eseguire lo strumento per la definizione di XML Schema (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Per generare le classi RDL  
@@ -32,7 +32,7 @@ ms.locfileid: "62653751"
   
 3.  Passare al percorso in cui è stato creato il progetto di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] e salvare lo schema con il nome ReportDefinition.xsd.  
   
-4.  Dopo aver salvato il file, aprire un'istanza del [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] prompt dei comandi. Per aprire un'istanza del prompt dei comandi, fare clic sul menu Start, scegliere **tutti i programmi**, scegliere **Microsoft Visual Studio 2010**, scegliere **strumenti di Visual Studio** e fare clic su **Prompt dei comandi di visual Studio (2010)**.  
+4.  Dopo aver salvato il file, aprire un'istanza del [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] prompt dei comandi. Per aprire un'istanza del prompt dei comandi, fare clic sul menu Start, scegliere **tutti i programmi**, scegliere **Microsoft Visual Studio 2010**, scegliere **strumenti di Visual Studio** e fare clic su **Prompt dei comandi di visual Studio (2010)** .  
   
 5.  Modificare il percorso corrente sul percorso in cui è stato salvato il file ReportDefinition.xsd:  
   

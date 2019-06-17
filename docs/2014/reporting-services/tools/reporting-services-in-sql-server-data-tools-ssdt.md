@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099985"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
@@ -92,7 +92,7 @@ ms.locfileid: "66099985"
   
  Utilizzare il riquadro Proprietà per:  
   
--   Impostare le proprietà per l'elemento attualmente selezionato nell'area di progettazione. Per alcune proprietà è disponibile un elenco a discesa di valori. È inoltre possibile digitare il valore direttamente nella cella. Alcune proprietà contengono una raccolta di valori, indicata dal valore **(Raccolta)**. La maggior parte delle proprietà può accettare un'espressione. Le espressioni complesse sono indicate dal valore **\<Espressione>**. Fare clic su **\<Espressione>** per aprire la finestra di dialogo **Espressione**. Per altre informazioni, vedere [Finestra di dialogo Espressione](../expression-dialog-box.md).  
+-   Impostare le proprietà per l'elemento attualmente selezionato nell'area di progettazione. Per alcune proprietà è disponibile un elenco a discesa di valori. È inoltre possibile digitare il valore direttamente nella cella. Alcune proprietà contengono una raccolta di valori, indicata dal valore **(Raccolta)** . La maggior parte delle proprietà può accettare un'espressione. Le espressioni complesse sono indicate dal valore **\<Espressione>** . Fare clic su **\<Espressione>** per aprire la finestra di dialogo **Espressione**. Per altre informazioni, vedere [Finestra di dialogo Espressione](../expression-dialog-box.md).  
   
 -   Utilizzare i pulsanti della barra degli strumenti del riquadro Proprietà per modificare la modalità di visualizzazione della griglia passando dalla visualizzazione per categorie alla visualizzazione in ordine alfabetico. In visualizzazione categorie può essere necessario espandere una categoria per visualizzare tutte le proprietà sottostanti. Per aprire la finestra di dialogo Proprietà di un elemento, fare clic sul pulsante delle **pagine delle proprietà** sulla barra degli strumenti oppure fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà**.  
   

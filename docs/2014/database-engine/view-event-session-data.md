@@ -10,12 +10,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d224572ce81bf260134682d86f6f0f2ce4946f55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66088749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131796"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
   In questo argomento verrà descritto l'utilizzo dell'interfaccia utente visualizzata per vedere e analizzare i dati degli eventi estesi:  
@@ -44,23 +44,27 @@ ms.locfileid: "66088749"
   
 -   Per una destinazione event_file, visualizzare i dati di destinazione del file (file XEL) utilizzando uno dei metodi seguenti:  
   
-    -   Utilizzare File -> Apri in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
-    -   Trascinare e rilasciare il file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
+    -   Utilizzare File -> Apri in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    
+    -   Trascinare e rilasciare il file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    
     -   Fare doppio clic sul file XEL.  
-  
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse su una sessione Eventi estesi in esecuzione e selezionare Visualizza dati di destinazione.  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   È possibile visualizzare più di uno. File XEL selezionando **Unisci file eventi estesi** dal File -> Apri menu.  
-  
+    
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse su una sessione Eventi estesi in esecuzione e selezionare Visualizza dati di destinazione. 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   Usare Powershell in lettura-SQLXevent nel [SQLServer.XEvent modulo](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    
+    -   A livello di programmazione utilizzare XEvents mediante il [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    
+    -   È possibile visualizzare più di uno. File XEL selezionando **Unisci file eventi estesi** dal File -> Apri menu.
+
 ### <a name="watching-live-data"></a>Controllo dei dati dinamici  
  È possibile controllare i dati dinamici mentre vengono acquisiti.  
   
 -   In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
-  
+
 -   Fare clic con il pulsante destro del mouse sul nome della sessione, quindi scegliere **Controlla i dati dinamici** per avviare la visualizzazione dei dati di traccia.  
   
      Le colonne che vengono visualizzate per impostazione predefinita sono **Nome evento** e **Timestamp**.  
@@ -68,7 +72,9 @@ ms.locfileid: "66088749"
      Per aggiungere colonne aggiuntive alla finestra della traccia, fare clic sul pulsante **Scegli colonne** sulla barra degli strumenti Eventi estesi. Nella scheda **Dettagli** verranno visualizzati tutti i dettagli dell'evento selezionato.  
   
      Gli eventi vengono in genere visualizzati in 30 secondi. Se si desidera modificare il periodo di latenza, è possibile modificare il valore di **Latenza di recapito massima** nella pagina **Avanzate** della finestra di dialogo **Nuova sessione** .  
-  
+     
+-    Per poter trasmettere dati in tempo reale per il [modulo di SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### <a name="to-refresh-target-data"></a>Per aggiornare i dati di destinazione  
  L'aggiornamento dei dati di destinazione non è supportato per le destinazioni event_file:  
   

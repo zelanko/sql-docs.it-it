@@ -3,17 +3,17 @@ title: Creare grafici e tracciati con R funzioni SQL Server Machine Learning e S
 description: Esercitazione che illustra come creare grafici e tracciati con le funzioni del linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513168"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140391"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e tracciati con R (procedura dettagliata) e SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ In genere, i server di database bloccano l'accesso a Internet. Ciò può risulta
     + Quando la riga che inizia con `plot` esecuzioni, il rendering dei dati viene nuovamente serializzato nell'ambiente R locale in modo che è possibile visualizzarlo nel client di R.
 
     > [!NOTE]
-    > Se si usa SQL Server in una macchina virtuale di Azure, si potrebbe ottenere un errore a questo punto. Si verifica un errore quando la regola del firewall predefinite in Azure blocca l'accesso alla rete dal codice R. Per informazioni dettagliate su come risolvere questo errore, vedere [(R) servizi di installazione di Machine Learning in una VM Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > Se si usa SQL Server in una macchina virtuale di Azure, si potrebbe ottenere un errore a questo punto. Si verifica un errore quando la regola del firewall predefinite in Azure blocca l'accesso alla rete dal codice R. Per informazioni dettagliate su come risolvere questo errore, vedere [(R) servizi di installazione di Machine Learning in una VM Azure](../install/sql-machine-learning-azure-virtual-machine.md).
 
 4. La figura seguente mostra il tracciato di output. I punti di inizio corsa dei taxi vengono aggiunti alla mappa come punti rossi. L'immagine potrebbe apparire diverso, a seconda di quanti percorsi inclusi tra l'origine dati usata.
 

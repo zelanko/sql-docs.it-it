@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098857"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore Report)
@@ -191,7 +191,7 @@ ms.locfileid: "66098857"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
+9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ).  
   
      Il set di risultati vengono visualizzate sette colonne: StoreKey, StoreName, SellingArea, City, County, Sales e SpatialLocation. Questi dati rappresentano un set di punti vendita nello Stato di New York che vendono beni di consumo. Ogni riga del set di risultati contiene un identificatore del negozio, il nome del negozio, l'area disponibile per l'esposizione dei prodotti, la città e la regione in cui si trova il negozio, il totale vendite e la posizione indicata con longitudine e latitudine. L'area di visualizzazione varia da 455 piedi quadrati a 1125 piedi quadrati.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098857"
   
 19. Aggiungere un titolo della legenda. Fare clic sul titolo della legenda e quindi fare clic su **proprietà titolo legenda**.  
   
-20. Eliminare il titolo e digitare **Display Area (Square Feet)**.  
+20. Eliminare il titolo e digitare **Display Area (Square Feet)** .  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098857"
   
 4.  Fare clic su **Visibilità**.  
   
-5.  Nelle **trasparenza (%)**, digitare **30**.  
+5.  Nelle **trasparenza (%)** , digitare **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
