@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471080"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62471080"
 |__$pre_version|**varbinary (32)**|Versione del database in cui ha avuto origine la modifica in conflitto.|  
 |__$reason_code|**int**|Codice di risoluzione del conflitto. Il valore può essere uno dei seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per altre informazioni, vedere **_ $reason_text**.|  
 |__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. Il valore può essere uno dei seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
-|__$update_bitmap|**varbinary(** *n* **)**. Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
+|__$update_bitmap|**varbinary(** *n* **)** . Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
 |__$inserted_date|**datetime**|Data e ora in cui la riga in conflitto è stata inserita in questa tabella.|  
 |__$row_id|**timestamp**|Versione della riga associata alla riga che ha causato il conflitto.|  
 |__$change_id|**binary (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  

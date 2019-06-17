@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519121"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
@@ -65,7 +65,7 @@ ms.locfileid: "62519121"
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Tipo|LS|Impostazione predefinita|Descrizione|  
+|Proprietà|Type|LS|Impostazione predefinita|Descrizione|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
@@ -102,7 +102,7 @@ ms.locfileid: "62519121"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Supporto di RSPrintClient per il metodo di stampa  
  L'oggetto **RSClientPrint** supporta il metodo **Print** usato per avviare la finestra di dialogo di stampa. Il metodo **Print** include gli argomenti descritti di seguito.  
   
-|Argomento|I/O|Tipo|Descrizione|  
+|Argomento|I/O|Type|Descrizione|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|Specifica la directory virtuale del server di report (ad esempio, https://adventure-works/reportserver).|  
 |ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, Ad esempio: "/ AdventureWorks Sample Reports/Employee Sales Summary&empID=1234 EventID=1234"|  

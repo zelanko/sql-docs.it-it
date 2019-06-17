@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509943"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Visualizzare la cronologia dell'aggiornamento dati (Power Pivot per SharePoint)
@@ -45,7 +45,7 @@ ms.locfileid: "62509943"
   
 2.  Selezionare la cartella di lavoro, quindi fare clic sulla freccia GIÙ visualizzata sul lato destro.  
   
-3.  Selezionare **Gestisci aggiornamento dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+3.  Selezionare **Gestisci aggiornamento dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
  Viene visualizzata la pagina della cronologia in cui è disponibile un record completo per tutte le attività di aggiornamento relative ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella cartella di lavoro di Excel corrente.  
   

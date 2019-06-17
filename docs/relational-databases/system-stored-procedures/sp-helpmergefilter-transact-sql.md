@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502802"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, il valore predefinito è **%**, che restituisce i nomi di tutti gli articoli.  
+`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, il valore predefinito è **%** , che restituisce i nomi di tutti gli articoli.  
   
-`[ @filtername = ] 'filtername'` È il nome del filtro su cui si desidera ottenere informazioni. *FilterName* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i filtri definiti per l'articolo o la pubblicazione.  
+`[ @filtername = ] 'filtername'` È il nome del filtro su cui si desidera ottenere informazioni. *FilterName* viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutti i filtri definiti per l'articolo o la pubblicazione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

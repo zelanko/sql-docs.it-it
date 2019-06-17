@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473202"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
@@ -49,7 +49,7 @@ ms.locfileid: "62473202"
   
 4.  Fare clic con il pulsante destro del mouse sul processo da modificare e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo -**_nome_processo_ selezionare nell'elenco **Categoria** la categoria di processi cui assegnare il processo.  
+5.  Nella finestra di dialogo **Proprietà processo -** _nome_processo_ selezionare nell'elenco **Categoria** la categoria di processi cui assegnare il processo.  
   
 6.  Fare clic su **OK**.  
   

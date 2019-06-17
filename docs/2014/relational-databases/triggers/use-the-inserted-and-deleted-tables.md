@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524377"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle inserite ed eliminate
@@ -74,7 +74,7 @@ ms.locfileid: "62524377"
   
  Quando un'istruzione INSERT, UPDATE o DELETE fa riferimento a una vista con trigger INSTEAD OF, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue una chiamata al trigger invece di eseguire azioni sulle tabelle. Il trigger deve utilizzare le informazioni visualizzate nelle tabelle inserted e deleted per compilare le istruzioni necessarie per implementare l'azione richiesta nelle tabelle di base, anche nel caso in cui il formato delle informazioni nelle tabelle inserted e deleted compilate per la vista sia diverso dal formato dei dati delle tabelle di base.  
   
- Il formato delle tabelle inserted e deleted passate a un trigger INSTEAD OF definito in una vista corrisponde all'elenco di selezione dell'istruzione SELECT definita per la vista. Ad esempio:   
+ Il formato delle tabelle inserted e deleted passate a un trigger INSTEAD OF definito in una vista corrisponde all'elenco di selezione dell'istruzione SELECT definita per la vista. Ad esempio:  
   
 ```  
 USE AdventureWorks2012;  

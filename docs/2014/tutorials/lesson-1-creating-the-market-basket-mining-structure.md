@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676258"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lezione 1: Creazione della struttura di Data Mining Market Basket
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lezione 1: Creazione della struttura di data mining Market Basket
   In questa lezione verrà creata una struttura di data mining che consente di stimare quali prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] un cliente tende ad acquistare contemporaneamente. Se non si ha familiarità con le strutture di data mining e sul loro ruolo nel data mining, vedere [strutture di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La struttura di data mining di associazione che verrà creato in questa lezione supporta l'aggiunta di modelli di data mining in base il [algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining per stimare il tipo di prodotti che un cliente tende ad acquistare contemporaneamente, ovvero per un'analisi di mercato sugli acquisti. Ad esempio, è possibile individuare la tendenza ad acquistare contemporaneamente mountain bike, pneumatici per bicicletta e caschi.  

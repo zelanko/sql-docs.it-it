@@ -20,10 +20,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637470"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
@@ -44,7 +44,7 @@ Sys.external_libraries la vista del catalogo include una riga per ogni libreria 
 |NAME |sysname |Nome della libreria esterna. È univoco all'interno del database per proprietario.|
 |principal_id |INT |ID dell'entità che possiede questa libreria esterna. |
 |language | sysname | Nome del linguaggio o runtime che supporta la libreria esterna. I valori validi sono 'R', 'Python' e 'Java'. I runtime aggiuntivi possono essere aggiunti in futuro.|
-|ambito |INT |0 per ambito pubblico. 1 per l'ambito privato |  
+|scope |INT |0 per ambito pubblico. 1 per l'ambito privato |  
 |scope_desc |varchar(7) |Indica se il pacchetto è pubblica o privata|
 
 ## <a name="see-also"></a>Vedere anche  

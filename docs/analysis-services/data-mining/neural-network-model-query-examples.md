@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a9829df9c616e49bca6802512f405c676d498e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472443"
 ---
 # <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
@@ -177,7 +177,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> Esempio di Query 5: Creazione di una stima singleton  
  Il modo più semplice per compilare una query di stima su un modello di rete neurale consiste nell'utilizzare il generatore delle query di stima, disponibile nella scheda **Stima modello di data mining** di Progettazione modelli di data mining sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile esplorare il modello nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network per filtrare gli attributi di interesse e visualizzare le tendenze, quindi passare alla scheda **Stima modello di data mining** per creare una query e stimare i nuovi valori per tali tendenze.  
   
- È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel visualizzatore e per **Input**, selezionare  **\<tutti >**.  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
+ È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel visualizzatore e per **Input**, selezionare  **\<tutti >** .  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
   
  Esplorando i risultati nel visualizzatore, è possibile notare che in alcuni giorni della settimana i volumi degli ordini sono bassi e che sembra esserci una correlazione tra un aumento delle vendite e un aumento nel numero di operatori. È quindi possibile utilizzare una query di stima sul modello per testare un'ipotesi di simulazione e verificare se un aumento del numero degli operatori del livello 2 in un giorno in cui i volumi di ordini sono bassi comporta un aumento anche degli ordini. A questo scopo, creare una query simile alla seguente:  
   

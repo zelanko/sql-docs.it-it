@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472251"
 ---
 # <a name="restore-from-power-pivot"></a>Eseguire il ripristino da PowerPivot
@@ -35,7 +35,7 @@ ms.locfileid: "62472251"
   
 ### <a name="to-restore-from-power-pivot"></a>Per eseguire il ripristino da PowerPivot  
   
-1.  Nell'istanza di Active Directory di SSMS in cui si vuole eseguire il ripristino fare clic con il pulsante destro del mouse su **Database** e quindi scegliere **Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+1.  Nell'istanza di Active Directory di SSMS in cui si vuole eseguire il ripristino fare clic con il pulsante destro del mouse su **Database** e quindi scegliere **Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 2.  In **File di backup** in **Origine ripristino** nella finestra di dialogo **Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** fare clic su **Sfoglia**, quindi selezionare un file con estensione xslx o abf da cui eseguire il ripristino.  
   

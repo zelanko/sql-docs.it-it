@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636106"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Scrittura di driver ODBC 3.x
@@ -29,72 +29,72 @@ La tabella seguente illustra il supporto di funzione in un'applicazione ODBC 3. 
 |Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3.*x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3.*x*<br /><br /> applicazione?|Il mapping o supportate<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|No|No[1]|Yes|  
-|**SQLAllocEnv**|no|No[1]|Yes|  
-|**SQLAllocHandle**|Yes|Yes|no|  
+|**SQLAllocEnv**|No|No[1]|Yes|  
+|**SQLAllocHandle**|Yes|Yes|No|  
 |**SQLAllocStmt**|No|No[1]|Yes|  
 |**SQLBindCol**|Yes|Yes|No|  
-|**SQLBindParam**|no|Sì [2]|Yes|  
+|**SQLBindParam**|No|Sì [2]|Yes|  
 |**SQLBindParameter**|Yes|Yes|No|  
 |**SQLBrowseConnect**|Yes|Yes|No|  
-|**SQLBulkOperations**|Yes|Yes|No|  
+|**SQLBulkOperations**|Yes|Yes|no|  
 |**SQLCancel**|Yes|Yes|no|  
 |**SQLCloseCursor**|Yes|Yes|No|  
 |**SQLColAttribute**|Yes|Yes|no|  
 |**SQLColAttributes**|No[3]|No|Yes|  
 |**SQLColumnPrivileges**|Yes|Yes|No|  
 |**SQLColumns**|Yes|Yes|No|  
-|**SQLConnect**|Yes|Yes|No|  
+|**SQLConnect**|Yes|Yes|no|  
 |**SQLCopyDesc**|Yes|Yes|Sì [4]|  
-|**SQLDataSources**|No|Yes|Yes|  
+|**SQLDataSources**|no|Yes|Yes|  
 |**SQLDescribeCol**|Yes|Yes|No|  
 |**SQLDescribeParam**|Yes|Yes|No|  
 |**SQLDisconnect**|Yes|Yes|No|  
 |**SQLDriverConnect**|Yes|Yes|No|  
-|**SQLDrivers**|No|Yes|Yes|  
-|**SQLEndTran**|Yes|Yes|no|  
+|**SQLDrivers**|no|Yes|Yes|  
+|**SQLEndTran**|Yes|Yes|No|  
 |**SQLError**|no|No[1]|Yes|  
 |**SQLExecDirect**|Yes|Yes|No|  
 |**SQLExecute**|Yes|Yes|No|  
-|**SQLExtendedFetch**|Yes|no|No|  
-|**SQLFetch**|Yes|Yes|No|  
+|**SQLExtendedFetch**|Yes|No|No|  
+|**SQLFetch**|Yes|Yes|no|  
 |**SQLFetchScroll**|Yes|Yes|No|  
-|**SQLForeignKeys**|Yes|Yes|No|  
+|**SQLForeignKeys**|Yes|Yes|no|  
 |**SQLFreeConnect**|No|Sì [1]|Yes|  
 |**SQLFreeEnv**|No|Sì [1]|Yes|  
-|**SQLFreeHandle**|Yes|Yes|No|  
-|**SQLFreeStmt**|Yes|Yes|no|  
+|**SQLFreeHandle**|Yes|Yes|no|  
+|**SQLFreeStmt**|Yes|Yes|No|  
 |**SQLGetConnectAttr**|Yes|Yes|no|  
 |**SQLGetConnectOption**|No[5]|No[1]|Yes|  
 |**SQLGetCursorName**|Yes|Yes|No|  
-|**SQLGetData**|Yes|Yes|No|  
+|**SQLGetData**|Yes|Yes|no|  
 |**SQLGetDescField**|Yes|Yes|No|  
-|**SQLGetDescRec**|Yes|Yes|No|  
-|**SQLGetDiagField**|Yes|Yes|no|  
-|**SQLGetDiagRec**|Yes|Yes|no|  
+|**SQLGetDescRec**|Yes|Yes|no|  
+|**SQLGetDiagField**|Yes|Yes|No|  
+|**SQLGetDiagRec**|Yes|Yes|No|  
 |**SQLGetEnvAttr**|Yes|Yes|no|  
 |**SQLGetFunctions**|No[6]|Yes|Yes|  
 |**SQLGetInfo**|Yes|Yes|No|  
 |**SQLGetStmtAttr**|Yes|Yes|No|  
 |**SQLGetStmtOption**|No[5]|No[1]|Yes|  
-|**SQLGetTypeInfo**|Yes|Yes|no|  
+|**SQLGetTypeInfo**|Yes|Yes|No|  
 |**SQLMoreResults**|Yes|Yes|No|  
 |**SQLNativeSql**|Yes|Yes|No|  
 |**SQLNumParams**|Yes|Yes|No|  
-|**SQLNumResultCols**|Yes|Yes|no|  
-|**SQLParamData**|Yes|Yes|No|  
+|**SQLNumResultCols**|Yes|Yes|No|  
+|**SQLParamData**|Yes|Yes|no|  
 |**SQLParamOptions**|No|No|Yes|  
 |**SQLPrepare**|Yes|Yes|No|  
-|**SQLPrimaryKeys**|Yes|Yes|no|  
+|**SQLPrimaryKeys**|Yes|Yes|No|  
 |**SQLProcedureColumns**|Yes|Yes|No|  
-|**SQLProcedures**|Yes|Yes|No|  
-|**SQLPutData**|Yes|Yes|No|  
-|**SQLRowCount**|Yes|Yes|No|  
+|**SQLProcedures**|Yes|Yes|no|  
+|**SQLPutData**|Yes|Yes|no|  
+|**SQLRowCount**|Yes|Yes|no|  
 |**SQLSetConnectAttr**|Yes|Yes|No|  
 |**SQLSetConnectOption**|No[5]|No[1]|Yes|  
 |**SQLSetCursorName**|Yes|Yes|No|  
-|**SQLSetDescField**|Yes|Yes|No|  
+|**SQLSetDescField**|Yes|Yes|no|  
 |**SQLSetDescRec**|Yes|Yes|No|  
-|**SQLSetEnvAttr**|Yes|Yes|no|  
+|**SQLSetEnvAttr**|Yes|Yes|No|  
 |**SQLSetPos**|Yes|Yes|No|  
 |**SQLSetParam**|No|No|Yes|  
 |**SQLSetScrollOption**|Yes|Yes|No|  

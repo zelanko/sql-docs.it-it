@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071854"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurare gli account del servizio PowerPivot
@@ -44,7 +44,7 @@ ms.locfileid: "66071854"
   
 ##  <a name="bkmk_passwordssas"></a> Aggiornare una password scaduta per l'istanza di SQL Server Analysis Services (PowerPivot)  
   
-1.  Fare clic sul pulsante Start, scegliere **Strumenti di amministrazione**, quindi fare clic su **Servizi**. Fare doppio clic su **SQL Server Analysis Services (PowerPivot)**. Scegliere **Accesso**, quindi immettere la nuova password per l'account.  
+1.  Fare clic sul pulsante Start, scegliere **Strumenti di amministrazione**, quindi fare clic su **Servizi**. Fare doppio clic su **SQL Server Analysis Services (PowerPivot)** . Scegliere **Accesso**, quindi immettere la nuova password per l'account.  
   
 2.  Nella sezione Sicurezza di Amministrazione centrale scegliere **Configura account gestiti**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071854"
   
 3.  In **Selezionare un account per questo servizio**scegliere un account gestito esistente o crearne uno nuovo. L'account deve essere un account utente di dominio.  
   
-4.  Selezionare **Pool di applicazioni di servizio - sistema dei servizi Web SharePoint** per modificare l'identità del pool di applicazione di servizio PowerPivot predefinita. A seconda della modalità di configurazione dell'installazione, il servizio potrebbe essere eseguito in un pool di applicazioni del servizio esistente creato per i servizi SharePoint. Per impostazione predefinita, lo strumento di configurazione PowerPivot registrare il servizio come **applicazione di servizio PowerPivot predefinita (applicazione del servizio PowerPivot)**.  
+4.  Selezionare **Pool di applicazioni di servizio - sistema dei servizi Web SharePoint** per modificare l'identità del pool di applicazione di servizio PowerPivot predefinita. A seconda della modalità di configurazione dell'installazione, il servizio potrebbe essere eseguito in un pool di applicazioni del servizio esistente creato per i servizi SharePoint. Per impostazione predefinita, lo strumento di configurazione PowerPivot registrare il servizio come **applicazione di servizio PowerPivot predefinita (applicazione del servizio PowerPivot)** .  
   
      Se il servizio è stato configurato manualmente da un amministratore di SharePoint, in esso è molto probabilmente disponibile un relativo pool di applicazioni.  
   

@@ -15,15 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 740a09d9a6bceb9d3f290faa71444df0d1e7c6c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629559"
 ---
 # <a name="administration-program"></a>Programma di amministrazione
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Un programma di amministrazione, l'amministratore ODBC, è incluso con il SDK di MDAC/SDK Windows. Questo programma e può essere ridistribuito dagli utenti di SDK. Inoltre, gli sviluppatori possono scrivere i propri programmi di amministrazione. In generale, gli sviluppatori di scrivono i propri programmi di amministrazione solo se desiderano mantenere controllo completo sulla configurazione dell'origine dati o se si siano configurando le origini dei dati direttamente da un'applicazione che funge da un programma di amministrazione. Ad esempio, un foglio di calcolo potrebbe consentire agli utenti di aggiungere e quindi usare le origini dati in fase di esecuzione.  
   

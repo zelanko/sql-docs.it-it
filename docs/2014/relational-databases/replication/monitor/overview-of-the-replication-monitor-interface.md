@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668987"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
@@ -45,11 +45,11 @@ ms.locfileid: "62668987"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Visualizzazione delle informazioni ed esecuzione di attività relative ai server di distribuzione  
  Monitoraggio replica consente di visualizzare informazioni sui server di distribuzione in tre schede:  
   
--   Scheda**Pubblicazioni**   
+-   Scheda**Pubblicazioni**  
   
      In questa scheda sono incluse informazioni di riepilogo per tutte le pubblicazioni di un server di distribuzione.  
   
--   Scheda**Elenco verifica sottoscrizioni**   
+-   Scheda**Elenco verifica sottoscrizioni**  
   
      In questa scheda sono incluse informazioni sulle sottoscrizioni per il server di distribuzione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. In questa scheda è inoltre possibile effettuare le attività seguenti: accedere alle proprietà di sottoscrizione, accedere a informazioni dettagliate sull'agente o gli agenti associati a una sottoscrizione, reinizializzare le sottoscrizioni e convalidare le sottoscrizioni.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62668987"
   
      Questa scheda non è disponibile per i server di distribuzione che eseguono versioni di [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o successive.  
   
--   Scheda**Agenti**   
+-   Scheda**Agenti**  
   
      In questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "62668987"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Visualizzazione delle informazioni ed esecuzione di attività relative ai server di pubblicazione  
  Monitoraggio replica consente di visualizzare informazioni sui server di pubblicazione in tre schede:  
   
--   Scheda**Pubblicazioni**   
+-   Scheda**Pubblicazioni**  
   
      In questa scheda sono incluse informazioni di riepilogo per tutte le pubblicazioni di un server di pubblicazione.  
   
--   Scheda**Elenco verifica sottoscrizioni**   
+-   Scheda**Elenco verifica sottoscrizioni**  
   
      Questa scheda è destinata alla visualizzazione delle informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. In questa scheda è inoltre possibile accedere alle proprietà di sottoscrizione, accedere a informazioni dettagliate sull'agente o gli agenti associati a una sottoscrizione, reinizializzare le sottoscrizioni e convalidare le sottoscrizioni.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62668987"
   
      Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Scheda**Agenti**   
+-   Scheda**Agenti**  
   
      In questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62668987"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Visualizzazione delle informazioni ed esecuzione di attività relative alle pubblicazioni  
  In Monitoraggio replica vengono visualizzate informazioni sulle pubblicazioni in tre schede e in alcune finestre dei dettagli:  
   
--   Scheda**Tutte le sottoscrizioni**   
+-   Scheda**Tutte le sottoscrizioni**  
   
      In questa scheda vengono visualizzate informazioni su tutte le sottoscrizioni della pubblicazione selezionata. Per impostazione predefinita, le informazioni disponibili in questa scheda vengono visualizzate in ordine di priorità: errori, avvisi e sottoscrizioni ordinate in base alle prestazioni, dalle più scarse alle migliori.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62668987"
   
          Nella griglia presente in questa scheda vengono visualizzate icone di errore e di avviso per qualsiasi sottoscrizione che richieda un'attenzione particolare.  
   
--   Scheda**Agenti**   
+-   Scheda**Agenti**  
   
      In questa scheda vengono visualizzate informazioni sugli agenti utilizzati dalla replica. In questa scheda vengono visualizzate informazioni relative agli agenti seguenti:  
   
@@ -145,7 +145,7 @@ ms.locfileid: "62668987"
   
      Questa scheda consente inoltre di accedere a informazioni dettagliate su ciascun agente, nonché di avviare e arrestare ciascun agente. Per informazioni sugli agenti associati alle sottoscrizioni (agente di distribuzione e agente di merge), vedere la sezione "Visualizzazione delle informazioni ed esecuzione di attività relative alle sottoscrizioni" in questo argomento.  
   
--   Scheda**Avvisi**   
+-   Scheda**Avvisi**  
   
      Questa scheda consente di specificare avvisi per gli agenti. Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   

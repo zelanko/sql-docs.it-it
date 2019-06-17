@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473132"
 ---
 # <a name="alerts"></a>Avvisi
@@ -92,7 +92,7 @@ ms.locfileid: "62473132"
   
      La soglia per l'avviso e il comportamento prodotto dall'avviso. La soglia è rappresentata da un numero. Il comportamento può essere uno dei seguenti **: è minore di**, **diventa uguale a**o **è maggiore di un numero specificato per Valore**. L'opzione **Valore** rappresenta un numero che descrive il contatore della condizione delle prestazioni. Per impostare, ad esempio, un avviso per l'oggetto prestazione **SQLServer:Locks** quando il valore **Tempo di attesa blocchi (ms)** supera i 30 minuti, selezionare **è maggiore di** e **specificare 30 come valore**.  
   
-     Sempre a titolo di esempio, è possibile specificare che un avviso venga generato per l'oggetto prestazione **SQLServer:Transactions** quando lo spazio disponibile in **tempdb** è minore di 1000 KB. Per procedere, scegliere il contatore **Spazio disponibile in tempdb (KB)**, **è minore di**e un **Valore** pari a **1000**.  
+     Sempre a titolo di esempio, è possibile specificare che un avviso venga generato per l'oggetto prestazione **SQLServer:Transactions** quando lo spazio disponibile in **tempdb** è minore di 1000 KB. Per procedere, scegliere il contatore **Spazio disponibile in tempdb (KB)** , **è minore di**e un **Valore** pari a **1000**.  
   
     > [!NOTE]  
     >  Viene eseguito un campionamento periodico dei dati relativi alle prestazioni, che può determinare un lieve ritardo (qualche secondo) tra il raggiungimento della soglia e la generazione dell'avviso.  

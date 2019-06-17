@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507309"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -67,7 +67,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Indica *statement_text* viene visualizzato nel contesto di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, funzioni scalari, funzione con istruzioni multiple con valori di tabella, o [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DML nel database corrente.  
   
  SQL  
- Indica *statement_text* viene visualizzato nel contesto di un'istruzione autonoma o un batch che può essere inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite qualsiasi meccanismo. [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni inviate tramite le stored procedure estese o oggetti common language runtime (CLR) o dall'utilizzo di EXEC N' '*sql_string*', vengono elaborate come batch nel server e, pertanto, devono essere identificate come \@ tipo**=** 'SQL'. Se si specifica SQL, hint per la query PARAMETERIZATION {FORCED | SEMPLICE} non è possibile specificare il \@gli hint di parametro.  
+ Indica *statement_text* viene visualizzato nel contesto di un'istruzione autonoma o un batch che può essere inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite qualsiasi meccanismo. [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni inviate tramite le stored procedure estese o oggetti common language runtime (CLR) o dall'utilizzo di EXEC N' '*sql_string*', vengono elaborate come batch nel server e, pertanto, devono essere identificate come \@ tipo **=** 'SQL'. Se si specifica SQL, hint per la query PARAMETERIZATION {FORCED | SEMPLICE} non è possibile specificare il \@gli hint di parametro.  
   
  TEMPLATE  
  Indica che la Guida di piano corrisponde a qualsiasi query che Parametrizza il form indicato nella *statement_text*. Se viene specificato di modello, solo il PARAMETERIZATION {FORCED | Hint di query semplice} possono essere specificati nel \@gli hint di parametro. Per altre informazioni sulle guide di piano TEMPLATE, vedere [specificare parametrizzazione delle Query per le guide di piano utilizzando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
@@ -77,9 +77,9 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Per una Guida di piano corrisponda a un batch sottomesso da un'applicazione *batch_tex*t deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna. Per altre informazioni, vedere la sezione Osservazioni.  
   
- [*schema_name*.] *object_name* specifica il nome di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, funzioni scalari, funzione con istruzioni multiple con valori di tabella, o [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DML che contiene *statement_text*. Se *schema_name* non viene specificato, *schema_name* utilizza lo schema dell'utente corrente. Se si specifica NULL e \@tipo = 'SQL', il valore di \@module_or_batch viene impostato sul valore di \@stmt. Se \@tipo = ' modello **'**, \@module_or_batch deve essere NULL.  
+ [*schema_name*.] *object_name* specifica il nome di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, funzioni scalari, funzione con istruzioni multiple con valori di tabella, o [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DML che contiene *statement_text*. Se *schema_name* non viene specificato, *schema_name* utilizza lo schema dell'utente corrente. Se si specifica NULL e \@tipo = 'SQL', il valore di \@module_or_batch viene impostato sul valore di \@stmt. Se \@tipo = ' modello **'** , \@module_or_batch deve essere NULL.  
   
- [ \@params =] {N'*\@data_type parameter_name* [,*... n* ]' | NULL}  
+ [ \@params =] {N' *\@data_type parameter_name* [, *... n* ]' | NULL}  
  Specifica le definizioni di tutti i parametri incorporati nel *statement_text*. \@params si applica solo se le operazioni seguenti è vera:  
   
 -   \@tipo = 'SQL' o 'TEMPLATE'. Se 'TEMPLATE', \@params non deve essere NULL.  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@data_type parameter_name* devono essere specificati nello stesso formato con cui è stato sottomesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilizzo di sp_executesql oppure inviandolo internamente dopo la parametrizzazione. Per altre informazioni, vedere la sezione Osservazioni. Se il batch non include parametri, è necessario specificare NULL. Le dimensioni di \@params è limitata solo dalla memoria disponibile del server.  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ ,*...n* ] )  
+ [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
+ N'OPTION (*query_hint* [ , *...n* ] )  
  Specifica una clausola OPTION da associare a una query che corrisponde a \@istr. \@hint deve essere sintatticamente identica a una clausola OPTION in un'istruzione SELECT e può contenere qualsiasi sequenza valida di hint per la query.  
   
  N'*XML_showplan*'  
@@ -113,15 +113,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  Le guide di piano sono supportate solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Le guide di piano sono visibili in qualsiasi edizione. È inoltre possibile collegare un database che contiene guide di piano a qualsiasi edizione. Quando si ripristina o si collega un database a una versione aggiornata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le guide di piano non vengono modificate. Dopo l'esecuzione di un aggiornamento del server è opportuno verificare l'effettiva necessità delle guide di piano di ogni database.  
   
 ## <a name="plan-guide-matching-requirements"></a>Requisiti di corrispondenza per la guida di piano  
- Le guide di piano che specificano \@tipo = 'SQL' o \@tipo = 'TEMPLATE' corrispondano esattamente a una query, i valori per *batch_text* e  *\@parameter_name data_type* [,*... n* ] necessario specificare esattamente lo stesso formato delle rispettive controparti inviate dall'applicazione. Ciò significa che è necessario specificare il testo del batch esattamente come il compilatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve. Per acquisire il testo effettivo del batch e del parametro, è possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Per altre informazioni, vedere [utilizzare SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ Le guide di piano che specificano \@tipo = 'SQL' o \@tipo = 'TEMPLATE' corrispondano esattamente a una query, i valori per *batch_text* e  *\@parameter_name data_type* [, *... n* ] necessario specificare esattamente lo stesso formato delle rispettive controparti inviate dall'applicazione. Ciò significa che è necessario specificare il testo del batch esattamente come il compilatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve. Per acquisire il testo effettivo del batch e del parametro, è possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Per altre informazioni, vedere [utilizzare SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
  Quando \@tipo = 'SQL' e \@module_or_batch viene impostato su NULL, il valore di \@module_or_batch viene impostato sul valore di \@stmt. Ciò significa che il valore per *statement_text* è necessario specificare esattamente lo stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna.  
   
- Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al valore del *statement_text* al *batch_text* e  *\@parameter_name data_type* [,*... n* ], oppure se \@tipo = **'** oggetto ', al testo della query corrispondente all'interno *object_name*, non sono considerati gli elementi della stringa seguenti:  
+ Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al valore del *statement_text* al *batch_text* e  *\@parameter_name data_type* [, *... n* ], oppure se \@tipo = **'** oggetto ', al testo della query corrispondente all'interno *object_name*, non sono considerati gli elementi della stringa seguenti:  
   
 -   Spazi vuoti (tabulazioni, spazi, ritorni a capo o avanzamenti di riga) all'interno della stringa.  
   
--   Commenti (**--** oppure **/ \* \* /**).  
+-   Commenti ( **--** oppure **/ \* \* /** ).  
   
 -   Punto e virgola finale.  
   

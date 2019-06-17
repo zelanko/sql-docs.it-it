@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645517"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
@@ -43,7 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'` È il nome dell'utente di Windows o del gruppo a cui revocare l'accesso. *account di accesso* deve includere il nome di dominio, ad esempio **[ADVWKS\sylvester1]**. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login'` È il nome dell'utente di Windows o del gruppo a cui revocare l'accesso. *account di accesso* deve includere il nome di dominio, ad esempio **[ADVWKS\sylvester1]** . *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

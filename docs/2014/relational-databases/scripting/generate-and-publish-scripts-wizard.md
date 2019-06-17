@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063985"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
@@ -101,7 +101,7 @@ ms.locfileid: "66063985"
   
  **Non visualizzare più questa pagina**: consente di non visualizzare più questa pagina al successivo avvio della procedura guidata **Genera e pubblica script**.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza generare o pubblicare uno script dal database.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66063985"
   
 -   **Avanzate** : consente di visualizzare la finestra di dialogo **Opzioni di generazione script avanzate** in cui è possibile selezionare opzioni avanzate per la generazione di script.  
   
--   **Salva nel file** : consente di salvare lo script in uno o più file con estensione sql. Fare clic sul pulsante Sfoglia (**…**) per specificare il nome e il percorso del file. Selezionare la casella di controllo **Sovrascrivi file esistente** per sostituire il file se ne esiste già uno con lo stesso nome. Fare clic su **File singolo** o **Singolo file per oggetto** per specificare come devono essere generati gli script. Fare clic su **Testo Unicode** o **Testo ANSI** per specificare il tipo di testo che deve essere usato nello script.  
+-   **Salva nel file** : consente di salvare lo script in uno o più file con estensione sql. Fare clic sul pulsante Sfoglia ( **…** ) per specificare il nome e il percorso del file. Selezionare la casella di controllo **Sovrascrivi file esistente** per sostituire il file se ne esiste già uno con lo stesso nome. Fare clic su **File singolo** o **Singolo file per oggetto** per specificare come devono essere generati gli script. Fare clic su **Testo Unicode** o **Testo ANSI** per specificare il tipo di testo che deve essere usato nello script.  
   
 -   **Salva negli Appunti** : consente di salvare lo script Transact-SQL negli Appunti.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "66063985"
   
 -   **Script per USE DATABASE** -aggiunge il `USE DATABASE` istruzione allo script. Per verificare che gli oggetti di database vengano creati nel database corretto, includere l'istruzione `USE DATABASE`. Quando si prevede che lo script da usare in un database diverso, selezionare **False** omettere il `USE DATABASE` istruzione. Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Tipi di dati da script** -consente di selezionare cosa deve essere inserito negli script: **Data only**, **solo Schema**, o entrambi. Il valore predefinito è **Solo schema**.  
+-   **Tipi di dati per cui generare lo script**: consente di selezionare cosa includere negli script, ovvero **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Solo schema**.  
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo agli script per tabelle o viste.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66063985"
   
 11. **Genera script per associazioni** : consente di includere nello script inviato al provider per la pubblicazione l'associazione per gli oggetti predefiniti e gli oggetti della regola. Il valore predefinito è **True**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) e [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Tipi di dati da pubblicare** -consente di selezionare cosa deve essere inserito negli script: **Data only**, **solo Schema**, o entrambi. Il valore predefinito è **Schema e dati**.  
+12. **Tipi di dati da pubblicare**: consente di selezionare cosa includere negli script, ovvero **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Schema e dati**.  
   
  **Opzioni di pubblicazione**: consente di specificare se usare transazioni per la pubblicazione nel provider di hosting Web.  
   

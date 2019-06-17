@@ -23,10 +23,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 48505a7e33d8d691314216846ee054d6625b7cf4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62446228"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "62446228"
 |object_id|**int**|ID del criterio di sicurezza che contiene il predicato.|  
 |security_predicate_id|**int**|ID predicato all'interno del criterio di sicurezza.|  
 |target_object_id|**int**|ID dell'oggetto a cui è associato il predicato di sicurezza.|  
-|predicate_definition|**nvarchar(max)**|Nome completo della funzione che verrà usata come predicato di sicurezza, inclusi gli argomenti. Si noti che il nome `schema.function` può essere normalizzato (vale a dire preceduto da un carattere di escape) come qualsiasi altro elemento nel testo per la coerenza. Ad esempio: <br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|Nome completo della funzione che verrà usata come predicato di sicurezza, inclusi gli argomenti. Si noti che il nome `schema.function` può essere normalizzato (vale a dire preceduto da un carattere di escape) come qualsiasi altro elemento nel testo per la coerenza. Ad esempio:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Tipo di predicato usato dai criteri di sicurezza:<br /><br /> 0 = PREDICATO DEL FILTRO<br /><br /> 1 = PREDICATO DI BLOCCO|  
 |predicate_type_desc|**nvarchar(60)**|Tipo di predicato usato dai criteri di sicurezza:<br /><br /> FILTER<br /><br /> BLOCCO|  
 |operazione|**int**|Il tipo di operazione specificato per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = AFTER INSERT<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  

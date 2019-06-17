@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655676"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Impostazione della modalità di propagazione delle modifiche per gli articoli transazionali
@@ -37,11 +37,11 @@ ms.locfileid: "62655676"
 ## <a name="default-and-custom-stored-procedures"></a>Stored procedure predefinite e personalizzate  
  Le tre procedure che la replica crea per impostazione predefinita per ogni articolo di tabella sono:  
   
--   **sp_MSins_\<** *NomeTabella* **>**, per la gestione degli inserimenti.  
+-   **sp_MSins_\<** *NomeTabella* **>** , per la gestione degli inserimenti.  
   
--   **sp_MSupd_\<** *NomeTabella* **>**, per la gestione degli aggiornamenti.  
+-   **sp_MSupd_\<** *NomeTabella* **>** , per la gestione degli aggiornamenti.  
   
--   **sp_MSdel_\<** *NomeTabella* **>**, per la gestione delle eliminazioni.  
+-   **sp_MSdel_\<** *NomeTabella* **>** , per la gestione delle eliminazioni.  
   
  Il valore **\<***NomeTabella***>** usato nella procedura dipende dalla modalità adottata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga o meno una tabella con lo stesso nome, ma di un proprietario diverso.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62655676"
   
 -   Se si apportano modifiche allo schema in una tabella pubblicata, è necessario rigenerare le procedure personalizzate. Per altre informazioni, vedere [Rigenerare procedure transazionali personalizzate per riflettere le modifiche dello schema](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Ad esempio:   
+-   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Ad esempio:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

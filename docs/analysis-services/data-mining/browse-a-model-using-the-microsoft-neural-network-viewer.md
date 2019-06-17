@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 280e8fa3702868ff36c799443b87b0827a962a89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676074"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network
@@ -62,7 +62,7 @@ ms.locfileid: "62676074"
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variabili  
- La griglia nel **variabili** scheda contiene le colonne seguenti: **Attributo**, **valore**, **predilige [valore 1]**, e **predilige [valore 2]**. Per impostazione predefinita, le colonne vengono ordinate in base al valore di **Predilige [valore 1]**. Se si fa clic su un'intestazione di colonna, viene modificato l'ordinamento della colonna selezionata.  
+ La griglia nel **variabili** scheda contiene le colonne seguenti: **Attributo**, **valore**, **predilige [valore 1]** , e **predilige [valore 2]** . Per impostazione predefinita, le colonne vengono ordinate in base al valore di **Predilige [valore 1]** . Se si fa clic su un'intestazione di colonna, viene modificato l'ordinamento della colonna selezionata.  
   
  Una barra a destra dell'attributo indica lo stato dell'attributo di output prediletto dallo stato dell'attributo di input specificato. La dimensione della barra indica in quale misura lo stato di input è prediletto dallo stato di output.  
   

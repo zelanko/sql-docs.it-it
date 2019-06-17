@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010005"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
@@ -32,7 +32,7 @@ ms.locfileid: "66010005"
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di conoscenza dei file.|Poiché una tabella FileTable viene visualizzata come cartella nel file system di Windows, è possibile caricare facilmente file in un nuova tabella FileTable tramite alcuni dei metodi disponibili per lo spostamento o la copia di file. Questi metodi includono Esplora risorse, opzioni della riga di comando come xcopy e robocopy e applicazioni o script personalizzati.<br /><br /> Non è possibile convertire una cartella esistente in tabella FileTable.|  
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per altre informazioni, vedere [Esempio: La migrazione dei file dal File System in una tabella FileTable](#HowToMigrateFiles) in questo argomento.|  
   
-###  <a name="HowToLoadNew"></a> Come si fa: Caricare file in una tabella FileTable  
+###  <a name="HowToLoadNew"></a> Procedura: Caricare file in una tabella FileTable  
  Tra i metodi che è possibile utilizzare per caricare file in una tabella FileTable sono inclusi i seguenti:  
   
 -   Trascinare e rilasciare file dalle cartelle di origine alla nuova cartella FileTable in Esplora risorse.  
@@ -41,7 +41,7 @@ ms.locfileid: "66010005"
   
 -   Scrivere un'applicazione personalizzata in C# o Visual Basic.NET che utilizzi metodi dello spazio dei nomi **System.IO** per spostare o copiare i file.  
   
-###  <a name="HowToMigrateFiles"></a> Esempio: La migrazione dei file dal File System in una tabella FileTable  
+###  <a name="HowToMigrateFiles"></a> Esempio: Migrazione di file dal file system in una tabella FileTable  
  In questo scenario i file vengono archiviati nel file system ed è disponibile una tabella di metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente puntatori ai file. Si desidera spostare i file in una tabella FileTable, quindi sostituire il percorso UNC originale per ogni file nei metadati con il percorso UNC della tabella FileTable. La funzione [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) consente di raggiungere tale obiettivo.  
   
  Per questo esempio, si supponga che vi sia una tabella di database esistente, `PhotoMetadata`, che contiene dati su fotografie. Questa tabella contiene una colonna `UNCPath` di tipo `varchar`(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) con la clausola IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Come si fa: Caricamento bulk di file in una tabella FileTable  
+###  <a name="HowToBulkLoad"></a> Procedura: Eseguire il caricamento bulk di file in una tabella FileTable  
  È possibile utilizzare diversi metodi per eseguire il caricamento bulk di file in una tabella FileTable:  
   
 -   **bcp**  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  Per informazioni su come disabilitare i vincoli FileTable, vedere [Gestire le tabelle FileTable](manage-filetables.md).  
   
-###  <a name="disabling"></a> Come si fa: Disabilitare i vincoli FileTable per il caricamento Bulk  
+###  <a name="disabling"></a> Procedura: Disabilitare vincoli FileTable per eseguire il caricamento bulk  
  Per eseguire il caricamento bulk di file in una tabella FileTable senza la necessità di applicare vincoli definiti dal sistema, è possibile disabilitare temporaneamente i vincoli. Per altre informazioni, vedere [Gestire le tabelle FileTable](manage-filetables.md).  
   
 ## <a name="see-also"></a>Vedere anche  

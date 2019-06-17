@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650765"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opzioni della riga di comando nella Console SSMA (AccessToSQL)
@@ -25,7 +25,7 @@ Microsoft offre un solido set di opzioni della riga di comando per eseguire e co
   
 Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
   
-Opzioni non sono tra maiuscole e minuscole e può iniziare con uno di '**-**'o'**/**' caratteri.  
+Opzioni non sono tra maiuscole e minuscole e può iniziare con uno di ' **-** 'o' **/** ' caratteri.  
   
 Se si specificano opzioni, è obbligatorio che si specificano i parametri di opzione corrispondente.  
   

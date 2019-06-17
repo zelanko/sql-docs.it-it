@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059491"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione dimensione (pagina Avanzate)
@@ -92,7 +92,7 @@ ms.locfileid: "66059491"
 |**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
   
  **Percorso log degli errori**  
- Consente di digitare il percorso del log degli errori o di selezionare una destinazione con il pulsante **Sfoglia (...)**.  
+ Consente di digitare il percorso del log degli errori o di selezionare una destinazione con il pulsante **Sfoglia (...)** .  
   
  **Sfoglia (...)**  
  Consente di selezionare il percorso del log degli errori.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066695"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
@@ -46,7 +46,7 @@ ms.locfileid: "66066695"
 ##  <a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
+|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  

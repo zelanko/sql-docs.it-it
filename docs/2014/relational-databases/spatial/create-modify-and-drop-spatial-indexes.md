@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014275"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
@@ -62,7 +62,7 @@ ms.locfileid: "66014275"
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in una `geometry` colonna del tipo, è necessario specificare il **(*`X-min`*,*`Y-min`*)** e **(*`X-max`*,*`Y-max`*)** coordinate del rettangolo. Per un indice in una `geography` colonna del tipo, il riquadro campi diventa sola lettura dopo aver specificato le **griglia geografica** lo schema a mosaico, mosaico per griglia di geografia utilizza un rettangolo di selezione.  
+     Quando si crea un indice in una `geometry` colonna del tipo, è necessario specificare il **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** coordinate del rettangolo. Per un indice in una `geography` colonna del tipo, il riquadro campi diventa sola lettura dopo aver specificato le **griglia geografica** lo schema a mosaico, mosaico per griglia di geografia utilizza un rettangolo di selezione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

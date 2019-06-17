@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012345"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lato client e Formattazione XML sul lato server (SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Se la formattazione XML viene eseguita sul server (**xml del client = "0"**), è possibile utilizzare l'alias per le colonne che restituiscono dbobject una query nella quale tabella effettiva e una colonna vengono restituiti i nomi (anche se si dispone di alias specificati). Ad esempio, il modello seguente esegue una query e la formattazione XML viene eseguita sul server (il **xml del client** non è specificata l'opzione e la **eseguito sul Client** opzione non è selezionata per il directory principale virtuale). La query specifica anche la modalità AUTO (non la modalità NESTED sul lato client).  
+ Se la formattazione XML viene eseguita sul server (**xml del client = "0"** ), è possibile utilizzare l'alias per le colonne che restituiscono dbobject una query nella quale tabella effettiva e una colonna vengono restituiti i nomi (anche se si dispone di alias specificati). Ad esempio, il modello seguente esegue una query e la formattazione XML viene eseguita sul server (il **xml del client** non è specificata l'opzione e la **eseguito sul Client** opzione non è selezionata per il directory principale virtuale). La query specifica anche la modalità AUTO (non la modalità NESTED sul lato client).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013339"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processo di generazione di record (SQLXML 4.0)
@@ -146,7 +146,7 @@ ms.locfileid: "66013339"
   
  I dati XML di esempio e la procedura per creare un esempio reale vengono forniti di seguito.  
   
--   Quando un  **\<cliente >** inserisce il nodo dell'elemento nel file di dati XML nell'ambito, il caricamento di massa XML genera un record della tabella Cust. Caricamento di massa XML quindi copia i valori della colonna necessari (CustomerID, CompanyName e City) dalla  **\<CustomerID >**,  **\<CompanyName >** e la  **\<Città >** immettere elementi figlio come questi elementi nell'ambito.  
+-   Quando un  **\<cliente >** inserisce il nodo dell'elemento nel file di dati XML nell'ambito, il caricamento di massa XML genera un record della tabella Cust. Caricamento di massa XML quindi copia i valori della colonna necessari (CustomerID, CompanyName e City) dalla  **\<CustomerID >** ,  **\<CompanyName >** e la  **\<Città >** immettere elementi figlio come questi elementi nell'ambito.  
   
 -   Quando un  **\<ordine >** nodo elemento entra in ambito, il caricamento di massa XML genera un record per la tabella CustOrder. Caricamento di massa XML viene copiato il valore di **OrderID** attribuire a questo record. Il valore richiesto per la colonna CustomerID viene ottenuta dalla  **\<CustomerID >** elemento figlio dell'elemento di  **\<cliente >** elemento. Caricamento Bulk XML utilizza le informazioni specificate in `<sql:relationship>` per ottenere il valore di chiave esterna CustomerID per il record, a meno che il **CustomerID** attributo è stato specificato nel  **\<ordine >** elemento. La regola generale prevede che se l'elemento specifica in modo esplicito un valore per l'attributo chiave esterna, il caricamento bulk XML utilizza tale valore e non ottiene il valore dall'elemento padre tramite l'annotazione `<sql:relationship>` specificata. Come si  **\<ordine >** nodo elemento abbandona l'ambito, il caricamento Bulk XML invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi elabora tutti i successivi  **\<ordine >** nodi elemento allo stesso modo.  
   

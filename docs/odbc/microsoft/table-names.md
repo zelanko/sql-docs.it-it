@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d72d7868d0e19719ea7992bdb8ccd1f61f3718d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633165"
 ---
 # <a name="table-names"></a>Nomi di tabella
@@ -26,7 +26,7 @@ Quando si dBASE, Microsoft Excel, Paradox, o testo driver viene utilizzato, i no
   
  Utilizzo di un nome di tabella in un' posizione in un'istruzione SQL non supporta l'uso dei percorsi o le estensioni, ma verrà accettate solo il nome principale (ad esempio, EMP da C:\ABC\EMP).  
   
- I nomi di correlazione (alias) possono essere utilizzati. Ad esempio:   
+ I nomi di correlazione (alias) possono essere utilizzati. Ad esempio:  
   
 ```  
 SELECT *    

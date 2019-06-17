@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e8f03d12d3ac1695d4f6d000c8eab89a42004fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667389"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Autorizzazione di utenti non amministratori all'utilizzo di Monitoraggio replica
@@ -75,12 +75,12 @@ ms.locfileid: "62667389"
   
 2.  Nel server di distribuzione nel database di distribuzione, eseguire [sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql), specificando il valore `replmonitor` per il **@rolename** parametro. Se l'utente è elencato `MemberName` nel set di risultati, appartiene già a questo ruolo.  
   
-3.  Se l'utente non appartiene al `replmonitor` ruolo, eseguire [sp_addrolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) nel server di distribuzione nel database di distribuzione. Specificare il valore `replmonitor` per **@rolename** e il nome dell'utente del database o i [!INCLUDE[msCoName](../../../includes/msconame-md.md)] account di accesso di Windows da aggiungere per **@membername**.  
+3.  Se l'utente non appartiene al `replmonitor` ruolo, eseguire [sp_addrolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) nel server di distribuzione nel database di distribuzione. Specificare il valore `replmonitor` per **@rolename** e il nome dell'utente del database o i [!INCLUDE[msCoName](../../../includes/msconame-md.md)] account di accesso di Windows da aggiungere per **@membername** .  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Per rimuovere un utente dal ruolo predefinito del database replmonitor  
   
-1.  Per verificare che l'utente appartiene al `replmonitor` ruolo, eseguire [sp_helprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) nel database di distribuzione, il server di distribuzione e specificare il valore `replmonitor` per **@rolename**. Se l'utente non è elencato in `MemberName` nel set di risultati, attualmente non appartiene al ruolo.  
+1.  Per verificare che l'utente appartiene al `replmonitor` ruolo, eseguire [sp_helprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) nel database di distribuzione, il server di distribuzione e specificare il valore `replmonitor` per **@rolename** . Se l'utente non è elencato in `MemberName` nel set di risultati, attualmente non appartiene al ruolo.  
   
-2.  Se l'utente appartiene al `replmonitor` ruolo, eseguire [sp_droprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) nel server di distribuzione nel database di distribuzione. Specificare il valore `replmonitor` per **@rolename** e il nome dell'utente del database o l'account di accesso di Windows rimosso per **@membername**.  
+2.  Se l'utente appartiene al `replmonitor` ruolo, eseguire [sp_droprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) nel server di distribuzione nel database di distribuzione. Specificare il valore `replmonitor` per **@rolename** e il nome dell'utente del database o l'account di accesso di Windows rimosso per **@membername** .  
   
   

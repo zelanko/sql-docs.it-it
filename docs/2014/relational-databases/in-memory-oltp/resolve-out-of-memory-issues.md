@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468353"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
@@ -24,12 +24,12 @@ ms.locfileid: "62468353"
   
 |Argomento|Panoramica|  
 |-----------|--------------|  
-| [Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#resolve-database-restore-failures-due-to-oom) |Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'."|  
+| [Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#resolve-database-restore-failures-due-to-oom) |Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '."|  
 | [Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Operazioni da eseguire nel caso in cui i problemi di memoria insufficiente incidono negativamente sulle prestazioni.|  
-| [Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'. ..." quando la memoria disponibile è sufficiente per l'operazione.|  
+| [Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '. ..." quando la memoria disponibile è sufficiente per l'operazione.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
- Quando si tenta di ripristinare un database è possibile ottenere il messaggio di errore: "Operazione non riuscita per il database di ripristino '*\<databaseName >*'a causa di memoria insufficiente nel pool di risorse'*\<Nomepoolrisorse >*'." Prima di poter ripristinare correttamente il database, è necessario risolvere il problema di memoria insufficiente rendendo disponibile una maggiore quantità di memoria.  
+ Quando si tenta di ripristinare un database è possibile ottenere il messaggio di errore: "Operazione non riuscita per il database di ripristino ' *\<databaseName >* 'a causa di memoria insufficiente nel pool di risorse' *\<Nomepoolrisorse >* '." Prima di poter ripristinare correttamente il database, è necessario risolvere il problema di memoria insufficiente rendendo disponibile una maggiore quantità di memoria.  
   
  Per risolvere l'errore di recupero a causa delle memoria insufficiente, aumentare la memoria disponibile usando uno o tutti questi metodi per aumentare temporaneamente la memoria disponibile per l'operazione di recupero.  
   
@@ -135,7 +135,7 @@ GO
 > Vedere l'argomento [le procedure consigliate: Uso di OLTP In memoria in un ambiente di VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) per altre informazioni.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente  
- Se viene visualizzato il messaggio di errore "corso la disabilitazione delle allocazioni di pagine per il database '*\<databaseName >*'a causa di memoria insufficiente nel pool di risorse'*\<Nomepoolrisorse >*'. Vedere '<https://go.microsoft.com/fwlink/?LinkId=330673>' per ulteriori informazioni. " nel log degli errori quando la memoria fisica disponibile è sufficiente per allocare pagina, il problema può essere dovuto a Resource Governor disabilitato. Quando Resource Governor è disabilitato MEMORYBROKER_FOR_RESERVE genera richieste di memoria artificiali.  
+ Se viene visualizzato il messaggio di errore "corso la disabilitazione delle allocazioni di pagine per il database ' *\<databaseName >* 'a causa di memoria insufficiente nel pool di risorse' *\<Nomepoolrisorse >* '. Vedere '<https://go.microsoft.com/fwlink/?LinkId=330673>' per ulteriori informazioni. " nel log degli errori quando la memoria fisica disponibile è sufficiente per allocare pagina, il problema può essere dovuto a Resource Governor disabilitato. Quando Resource Governor è disabilitato MEMORYBROKER_FOR_RESERVE genera richieste di memoria artificiali.  
   
  Per risolvere questo problema, è necessario abilitare Resource Governor.  
   

@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089763"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - Organizza colonne
   Utilizzare la finestra di dialogo **Organizza colonne** per selezionare le colonne di dati per il raggruppamento o l'aggregazione degli eventi visualizzati in una traccia, in modo da semplificare la visualizzazione e l'analisi di tabelle o di file di traccia di grandi dimensioni.  
   
- A seguito di un'operazione di aggregazione, tutti gli eventi presenti nella traccia vengono spostati e compressi in corrispondenza del rispettivo tipo di classe di evento. A sinistra del nome della classe di evento viene visualizzato un segno più (**+**). Quando si fa clic sul segno più, la classe di evento si espande ed è possibile visualizzare tutti gli eventi del tipo in questione.  
+ A seguito di un'operazione di aggregazione, tutti gli eventi presenti nella traccia vengono spostati e compressi in corrispondenza del rispettivo tipo di classe di evento. A sinistra del nome della classe di evento viene visualizzato un segno più ( **+** ). Quando si fa clic sul segno più, la classe di evento si espande ed è possibile visualizzare tutti gli eventi del tipo in questione.  
   
  A seguito di un'operazione di raggruppamento, vengono organizzate insieme tutte le classi di evento di un tipo specifico nell'area di visualizzazione della finestra di traccia. Gli eventi non vengono tuttavia compressi in corrispondenza del tipo di classe di evento.  
   
@@ -34,12 +34,12 @@ ms.locfileid: "66089763"
  **Gruppi**  
  Consente di spostare i nomi delle colonne di dati sotto **Gruppi** per raggruppare o aggregare le classi di evento nella finestra di traccia.  
   
- Per aggregare gli eventi, spostare una colonna di dati all'interno di **Gruppi**. In questo modo, tutti gli eventi di un tipo specifico vengono compressi in corrispondenza del nome del tipo di classe di evento nell'area di visualizzazione della finestra di traccia. A sinistra del nome della classe di evento viene visualizzato un segno più (**+**). Fare clic su questo segno per espandere il tipo di classe di evento e visualizzare tutti gli eventi. È possibile attivare e disattivare l'aggregazione e il raggruppamento scegliendo **Visualizzazione aggregata** o **Visualizzazione a gruppi** dal menu **Visualizza** .  
+ Per aggregare gli eventi, spostare una colonna di dati all'interno di **Gruppi**. In questo modo, tutti gli eventi di un tipo specifico vengono compressi in corrispondenza del nome del tipo di classe di evento nell'area di visualizzazione della finestra di traccia. A sinistra del nome della classe di evento viene visualizzato un segno più ( **+** ). Fare clic su questo segno per espandere il tipo di classe di evento e visualizzare tutti gli eventi. È possibile attivare e disattivare l'aggregazione e il raggruppamento scegliendo **Visualizzazione aggregata** o **Visualizzazione a gruppi** dal menu **Visualizza** .  
   
  Per raggruppare gli eventi, spostare più colonne di dati all'interno di **Gruppi**. In questo modo, tutti gli eventi di un tipo specifico vengono raggruppati insieme nell'area di visualizzazione della finestra di traccia, senza venire compressi in corrispondenza di ogni nome del tipo di classe di evento. È possibile passare dalla visualizzazione a gruppi a quella non a gruppi e viceversa scegliendo **Visualizzazione a gruppi** dal menu Visualizza. Se si spostano più colonne di dati all'interno di **Gruppi**, l'opzione che consente di passare a una **visualizzazione aggregata** non è disponibile.  
   
  **Colonne**  
- Elenco delle colonne di dati disponibili che possono essere spostate in **Gruppi**. Fare clic sul segno più (**+**) a sinistra di **Colonne** per espandere l'elenco.  
+ Elenco delle colonne di dati disponibili che possono essere spostate in **Gruppi**. Fare clic sul segno più ( **+** ) a sinistra di **Colonne** per espandere l'elenco.  
   
  **Su**  
  Dopo aver selezionato una colonna di dati, fare clic su **Su** per spostare le colonne di dati all'interno di **Gruppi**. Facendo clic su **Su** , è inoltre possibile riorganizzare la visualizzazione delle colonne nella finestra di traccia.  

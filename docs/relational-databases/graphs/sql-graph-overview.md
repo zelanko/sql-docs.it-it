@@ -16,10 +16,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502495"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph processing con SQL Server e Database SQL di Azure
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 I nodi e archi vengono archiviati come tabelle  
 
 ### <a name="query-language-extensions"></a>Estensioni del linguaggio di query  
-Nuovo `MATCH` clausola è stata introdotta per supportare criteri di ricerca e l'esplorazione multi hop tramite graph. Il `MATCH` funzione Usa sintassi grafica ASCII per criteri di ricerca. Ad esempio:   
+Nuovo `MATCH` clausola è stata introdotta per supportare criteri di ricerca e l'esplorazione multi hop tramite graph. Il `MATCH` funzione Usa sintassi grafica ASCII per criteri di ricerca. Ad esempio:  
 
 ```   
 -- Find friends of John

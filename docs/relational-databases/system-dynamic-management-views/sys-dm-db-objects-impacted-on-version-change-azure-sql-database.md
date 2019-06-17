@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507263"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Database di SQL Azure)
@@ -68,6 +68,6 @@ class  class_desc        major_id    minor_id    dependency
 |JSON|Oggetto interessato|Azione correttiva|  
 |-----------|---------------------|-----------------------|  
 |1|**Indici**|Ricompilare gli indici identificati da **sys.dm_db_objects_impacted_on_version_change** , ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />o Gestione configurazione<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Oggetto**|Tutti i vincoli identificati da **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo che i dati geometry e geography nella tabella sottostante viene ricalcolati. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Ad esempio:  <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o Gestione configurazione<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|2|**Oggetto**|Tutti i vincoli identificati da **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo che i dati geometry e geography nella tabella sottostante viene ricalcolati. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Ad esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o Gestione configurazione<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

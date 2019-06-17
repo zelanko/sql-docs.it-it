@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655506"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Rigenerazione di procedure transazionali personalizzate per riflettere le modifiche dello schema
@@ -30,7 +30,7 @@ ms.locfileid: "62655506"
   
     1.  Quando si esegue [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), assicurarsi che il bit 0x02 di **@schema_option** sia impostato su **true**.  
   
-    2.  Eseguire [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) e specificare un valore "insert", "update" o "delete" per il parametro **@type** e il nome della procedura di scripting personalizzata per il parametro **@value**.  
+    2.  Eseguire [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) e specificare un valore "insert", "update" o "delete" per il parametro **@type** e il nome della procedura di scripting personalizzata per il parametro **@value** .  
   
      Alla successiva modifica dello schema, la replica chiama questa stored procedure per inserire nello script la definizione per la nuova stored procedure personalizzata definita dall'utente e quindi propaga la procedura a ogni Sottoscrittore.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62655506"
   
     1.  Quando si esegue [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), impostare il bit 0x02 di **@schema_option** su **false** affinché la replica non generi automaticamente procedure personalizzate nel Sottoscrittore.  
   
-    2.  Prima di ogni modifica dello schema, creare un nuovo file script e registrare lo script con la replica eseguendo [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Specificare un valore "custom_script" per il parametro **@type** e il percorso dello script nel server di pubblicazione per il parametro **@value**.  
+    2.  Prima di ogni modifica dello schema, creare un nuovo file script e registrare lo script con la replica eseguendo [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Specificare un valore "custom_script" per il parametro **@type** e il percorso dello script nel server di pubblicazione per il parametro **@value** .  
   
      Alla successiva modifica significativa dello schema, questo script viene eseguito in ogni Sottoscrittore all'interno della stessa transazione del comando DDL. Dopo che è stata apportata la modifica dello schema, la registrazione dello script viene annullata. Per consentire l'esecuzione dello script dopo una successiva modifica dello schema, è necessario registrarlo nuovamente.  
   

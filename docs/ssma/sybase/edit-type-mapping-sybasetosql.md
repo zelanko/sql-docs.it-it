@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633026"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Modificare il mapping dei tipi (SybaseToSQL)
@@ -35,10 +35,10 @@ Selezionare il tipo di dati di origine eseguire il mapping a un [!INCLUDE[ssNoVe
 Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati sotto **tipo di origine**:  
   
 **From**  
-Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che questo mapping è per un intervallo di partire **nchar (10)**.  
+Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che questo mapping è per un intervallo di partire **nchar (10)** .  
   
 **Per**  
-Specificare la lunghezza massima consentita per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che questo mapping è per un intervallo termina **nchar(20)**.  
+Specificare la lunghezza massima consentita per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che questo mapping è per un intervallo termina **nchar(20)** .  
   
 **Tipo di destinazione**  
 Selezionare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati a cui viene eseguito il mapping al tipo di origine. Quando SSMA consente di creare la tabella o una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo di dati di origine verrà modificato in questo tipo di dati.  
@@ -46,5 +46,5 @@ Selezionare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di
 Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato nella **tipo di destinazione**:  
   
 **Replace with**  
-Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere per specificare che il tipo di dati di origine specificato deve essere mappato a 20 **nvarchar(20)**.  
+Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere per specificare che il tipo di dati di origine specificato deve essere mappato a 20 **nvarchar(20)** .  
   

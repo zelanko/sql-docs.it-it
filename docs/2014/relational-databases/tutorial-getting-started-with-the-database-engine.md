@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524333"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Guida introduttiva con il motore di Database
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al motore di database
   Benvenuto a questa esercitazione introduttiva su [!INCLUDE[ssDE](../includes/ssde-md.md)] . Questa esercitazione è destinata agli utenti che non hanno familiarità con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e hanno installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. In questa breve esercitazione verranno fornite informazioni per iniziare a utilizzare [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  

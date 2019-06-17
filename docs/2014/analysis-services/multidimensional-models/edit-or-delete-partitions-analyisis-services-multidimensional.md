@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075144"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Modificare o eliminare partizioni (Analyisis Services - Multidimensionale)
@@ -33,11 +33,11 @@ ms.locfileid: "66075144"
 >  In alternativa, è possibile utilizzare script XMLA per automatizzare le attività per la compilazione, l'unione e l'eliminazione di partizioni. Uno script XMLA può essere creato ed eseguito in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]o in pacchetti SSIS personalizzati eseguibili come attività pianificate. Per altre informazioni, vedere [Automatizzare le attività amministrative di Analysis Services con SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="partition-source"></a>Origine partizione  
- Specifica la query denominata o la tabella di origine per la partizione. Per modificare la tabella di origine, fare clic sulla cella e quindi sul pulsante Sfoglia (**...**).  
+ Specifica la query denominata o la tabella di origine per la partizione. Per modificare la tabella di origine, fare clic sulla cella e quindi sul pulsante Sfoglia ( **...** ).  
   
  ![Colonna di origine nel riquadro partizione](../media/ssas-partitionsource.png "colonna di origine nel riquadro partizione")  
   
- Se la partizione è basata su una query, fare clic sul pulsante Sfoglia (**...**) per modificare la query. In questo modo, verrà modificata la proprietà **Source** della partizione. Per altre informazioni, vedere [Modificare l'origine di una partizione in modo da usare una tabella dei fatti diversa](change-a-partition-source-to-use-a-different-fact-table.md).  
+ Se la partizione è basata su una query, fare clic sul pulsante Sfoglia ( **...** ) per modificare la query. In questo modo, verrà modificata la proprietà **Source** della partizione. Per altre informazioni, vedere [Modificare l'origine di una partizione in modo da usare una tabella dei fatti diversa](change-a-partition-source-to-use-a-different-fact-table.md).  
   
  È possibile specificare una tabella nella vista origine dati con la stessa struttura della tabella di origine originale (nell'origine dati esterna da cui vengono recuperati i dati). L'origine può trovarsi in qualsiasi origine dati o vista origine dati del database del cubo.  
   

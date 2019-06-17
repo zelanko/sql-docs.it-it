@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011883"
 ---
 # <a name="non-xml-format-files-sql-server"></a>File in formato non XML (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "66011883"
   
 |Campo del file di formato|Descrizione|  
 |------------------------|-----------------|  
-|Version|Il numero di versione viene riconosciuto solo dall'utilità **bcp**, non da [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numero di versione dell'utilità **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Nota: La versione del **bcp** utilità (Bcp.exe) usato per leggere un file di formato deve essere uguale o versione successiva da quella utilizzata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** non riesce a leggere un file di formato versione 12.0 generato dall'utilità [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Version|Il numero di versione viene riconosciuto solo dall'utilità **bcp**, non da [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numero di versione dell'utilità **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Nota: la versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** non riesce a leggere un file di formato versione 12.0 generato dall'utilità [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Numero di colonne|Numero di campi del file di dati. Tutte le righe devono contenere lo stesso numero di campi.|  
   
  Gli altri campi del file di formato descrivono i campi dati di cui viene eseguita l'importazione o l'esportazione bulk. Per ogni campo dati è necessaria una riga separata nel file di formato. Ogni riga del file di formato contiene i valori dei campi del file di formato descritti nella tabella seguente.  

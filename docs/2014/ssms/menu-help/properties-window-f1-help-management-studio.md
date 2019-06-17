@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62661758"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Guida sensibile al contesto della finestra Proprietà (Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "62661758"
  Elenca l'oggetto o gli oggetti attualmente selezionati. Saranno visibili solo gli oggetti dell'editor attivo o della finestra di progettazione attiva.  
   
  **Per categoria**  
- Elenca, per categoria, tutte le proprietà e i relativi valori per l'oggetto selezionato. È possibile comprimere una categoria per ridurre il numero di proprietà visualizzate. Quando si espande o comprime una categoria, viene visualizzato un segno più (**+**) o meno (**-**) a sinistra del nome della categoria. Le categorie sono elencate in ordine alfabetico.  
+ Elenca, per categoria, tutte le proprietà e i relativi valori per l'oggetto selezionato. È possibile comprimere una categoria per ridurre il numero di proprietà visualizzate. Quando si espande o comprime una categoria, viene visualizzato un segno più ( **+** ) o meno ( **-** ) a sinistra del nome della categoria. Le categorie sono elencate in ordine alfabetico.  
   
  **Per nome**  
  Ordina alfabeticamente tutti gli eventi e le proprietà in fase di progettazione per gli oggetti selezionati.  

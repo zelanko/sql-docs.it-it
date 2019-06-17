@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468594"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursori scorrevoli e isolamento delle transazioni
@@ -41,17 +41,17 @@ Nella tabella seguente elenca i fattori che controllano la visibilità delle mod
 |Cursore type\action|self|Il proprietario<br /><br /> Txn|Assumere<br /><br /> Txn<br /><br /> (RU[a])|Assumere<br /><br /> Txn<br /><br /> (RC[a])|Assumere<br /><br /> Txn<br /><br /> (RR[a])|Assumere<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Static|||||||  
-|Insert|Forse [b]|no|No|No|no|No|  
-|Update|Forse [b]|No|no|No|No|No|  
-|DELETE|Forse [b]|No|No|No|no|No|  
+|Insert|Forse [b]|no|No|No|No|No|  
+|Update|Forse [b]|No|No|No|No|no|  
+|DELETE|Forse [b]|No|No|no|No|No|  
 |Gestito da keyset|||||||  
-|Insert|Forse [b]|No|No|no|No|No|  
-|Update|Yes|Yes|Yes|Yes|No|no|  
-|DELETE|Forse [b]|Yes|Yes|Yes|No|no|  
+|Insert|Forse [b]|No|No|No|No|No|  
+|Update|Yes|Yes|Yes|Yes|No|No|  
+|DELETE|Forse [b]|Yes|Yes|Yes|no|No|  
 |Dynamic|||||||  
 |Insert|Yes|Yes|Yes|Yes|Yes|No|  
 |Update|Yes|Yes|Yes|Yes|No|no|  
-|DELETE|Yes|Yes|Yes|Yes|no|No|  
+|DELETE|Yes|Yes|Yes|Yes|No|No|  
   
  [a] le lettere tra parentesi indicano il livello di isolamento della transazione contenente il cursore. il livello di isolamento della transazione (in cui è stata effettuata la modifica) non è rilevante.  
   

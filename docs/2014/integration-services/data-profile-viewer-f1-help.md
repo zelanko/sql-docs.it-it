@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059717"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore profilo dati
@@ -31,13 +31,13 @@ ms.locfileid: "66059717"
  **Aprire**  
  Consente di accedere al file salvato che contiene l'output dell'attività Profiling dati.  
   
- Riquadro**Profili**   
+ Riquadro**Profili**  
  Espandere l'albero nel riquadro **Profili** per visualizzare i profili inclusi nell'output. Selezionare un profilo per visualizzarne i risultati.  
   
- Riquadro**Messaggio**   
+ Riquadro**Messaggio**  
  Visualizza i messaggi di stato.  
   
- Riquadro**Drill-down**   
+ Riquadro**Drill-down**  
  Visualizza le righe di dati che corrispondono a un valore nell'output, se l'origine dati utilizzata dall'attività Profiling dati è disponibile.  
   
  Se, ad esempio, si visualizza l'output di un profilo Distribuzione valori di colonna per una colonna US State, il riquadro **Distribuzione dettagliata valori** potrebbe contenere una riga per "WA". Fare doppio clic sulla riga nel riquadro **Distribuzione dettagliata valori** per visualizzare le righe di dati in cui il valore della colonna di stato è "WA" nel riquadro di drill-down.  
@@ -174,7 +174,7 @@ ms.locfileid: "66059717"
  Visualizza il numero di righe in cui il valore della colonna determinante determina la colonna dipendente.  
   
  **Conteggio violazioni**  
- Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui i valori dipendenti corrispondono ai valori indicati nella colonna **\<dependent column name>**.  
+ Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui i valori dipendenti corrispondono ai valori indicati nella colonna **\<dependent column name>** .  
   
  **Percentuale del supporto**  
  Visualizza la percentuale di righe in cui la colonna determinante determina la colonna dipendente.  

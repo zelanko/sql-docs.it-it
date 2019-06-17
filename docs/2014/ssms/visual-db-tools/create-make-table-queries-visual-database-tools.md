@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676310"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Creazione di query di creazione tabella (Visual Database Tools)
@@ -65,7 +65,7 @@ WHERE country = 'UK'
   
      Per creare una tabella di destinazione in un altro database è necessario specificare il nome completo di una tabella, compreso il nome del database di destinazione, il proprietario (se necessario) e il nome della tabella.  
   
-4.  Specificare le colonne da copiare aggiungendole alla query. Per altre informazioni dettagliate, vedere [Aggiungere colonne a query &#40;Visual Database Tools&#41;](visual-database-tools.md). Verranno copiate solo le colonne aggiunte alla query. Per copiare righe intere, scegliere  **\* (tutte le colonne)**.  
+4.  Specificare le colonne da copiare aggiungendole alla query. Per altre informazioni dettagliate, vedere [Aggiungere colonne a query &#40;Visual Database Tools&#41;](visual-database-tools.md). Verranno copiate solo le colonne aggiunte alla query. Per copiare righe intere, scegliere  **\* (tutte le colonne)** .  
   
      Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   

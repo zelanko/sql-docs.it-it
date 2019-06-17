@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635868"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'object_statement'` È il nome dell'oggetto nel database corrente, o un'istruzione, che abbia le autorizzazioni per report. *object_statement* viene **nvarchar(776)**, valore predefinito è NULL, che restituisce tutte le autorizzazioni per oggetti e istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato _owner_**.** _oggetto_.  
+`[ @name = ] 'object_statement'` È il nome dell'oggetto nel database corrente, o un'istruzione, che abbia le autorizzazioni per report. *object_statement* viene **nvarchar(776)** , valore predefinito è NULL, che restituisce tutte le autorizzazioni per oggetti e istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato _owner_ **.** _oggetto_.  
   
  Se *object_statement* è un'istruzione, può essere un'istruzione CREATE.  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` È il nome dell'entità che ha le autorizzazioni concesse. *utente che concede* viene **sysname**, valore predefinito è NULL, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
   
-`[ @permissionarea = ] 'type'` È una stringa di caratteri che indica se visualizzare autorizzazioni per oggetti (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo di* viene **varchar (10)**, il valore predefinito è **os**. *tipo di* può essere qualsiasi combinazione dei **o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
+`[ @permissionarea = ] 'type'` È una stringa di caratteri che indica se visualizzare autorizzazioni per oggetti (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo di* viene **varchar (10)** , il valore predefinito è **os**. *tipo di* può essere qualsiasi combinazione dei **o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -82,7 +82,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- e  
+ Oppure  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  

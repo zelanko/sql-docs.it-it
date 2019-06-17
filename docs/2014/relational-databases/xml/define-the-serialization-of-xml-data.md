@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637579"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
@@ -31,7 +31,7 @@ ms.locfileid: "62637579"
 ## <a name="serialization-encoding"></a>Codifica della serializzazione  
  Se il tipo SQL di destinazione è VARBINARY, il risultato viene serializzato nel formato UTF-16 preceduto da un indicatore dell'ordine dei byte UTF-16, ma senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
@@ -45,7 +45,7 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  Se il tipo SQL di destinazione è NVARCHAR o NCHAR, il risultato viene serializzato nel formato UTF-16 non preceduto dall'indicatore dell'ordine dei byte e senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
@@ -59,7 +59,7 @@ select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))
   
  Se il tipo SQL di destinazione è VARCHAR o NCHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  

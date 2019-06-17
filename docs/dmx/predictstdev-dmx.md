@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659007"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Un valore scalare del tipo specificato da  *\<riferimento a colonna scalare >*.  
+ Un valore scalare del tipo specificato da  *\<riferimento a colonna scalare >* .  
   
 ## <a name="remarks"></a>Note  
  Se il riferimento alla colonna è discreto, **PredictStdev** restituirà 0 perché non è possibile calcolare la deviazione standard da valori discreti.  

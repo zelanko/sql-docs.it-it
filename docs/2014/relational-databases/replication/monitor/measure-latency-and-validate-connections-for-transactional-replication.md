@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667816"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
@@ -111,21 +111,21 @@ ms.locfileid: "62667816"
   
 2.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Verificare che la sottoscrizione esista e che lo stato sia attivo.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) specificando **@publication**. Tenere presente il valore del parametro di output **@tracer_token_id** .  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) specificando **@publication** . Tenere presente il valore del parametro di output **@tracer_token_id** .  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Per determinare la latenza e convalidare le connessioni per una pubblicazione transazionale  
   
 1.  Inviare un token di traccia alla pubblicazione utilizzando la procedura precedente.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) specificando **@publication**. Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** desiderato nel set di risultati.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) specificando **@publication** . Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** desiderato nel set di risultati.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql) specificando **@publication** e l'ID del token di traccia indicato nel passaggio 2 per **@tracer_id**. Vengono restituite le informazioni sulla latenza per il token di traccia selezionato.  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql) specificando **@publication** e l'ID del token di traccia indicato nel passaggio 2 per **@tracer_id** . Vengono restituite le informazioni sulla latenza per il token di traccia selezionato.  
   
 #### <a name="to-remove-tracer-tokens"></a>Per rimuovere token di traccia  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) specificando **@publication**. Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** del token di traccia da eliminare nel set di risultati.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) specificando **@publication** . Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** del token di traccia da eliminare nel set di risultati.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) specificando **@publication** e l'ID del token di traccia da eliminare indicato nel passaggio 2 per **@tracer_id**.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) specificando **@publication** e l'ID del token di traccia da eliminare indicato nel passaggio 2 per **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio viene inserito un record di token di traccia e viene utilizzato l'ID restituito del token di traccia inviato per visualizzare le informazioni sulla latenza.  

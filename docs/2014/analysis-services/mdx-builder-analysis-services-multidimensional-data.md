@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078019"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Generatore MDX (Analysis Services - Dati multidimensionali)
-  Usare la finestra di dialogo **Generatore MDX** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per compilare un'espressione MDX (Multidimensional Expressions). È possibile visualizzare il **Generatore MDX** finestra di dialogo facendo le **modifica MDX** pulsante puntini di sospensione (**...** ) per il **Consenti lettura del contenuto del cubo** opzione, il **Consenti lettura contenuto cella base a sicurezza cella** opzione o **consentono la lettura e la scrittura del contenuto del cubo** opzione il **dati delle celle** della pagina **progettazione ruoli**.  
+  Usare la finestra di dialogo **Generatore MDX** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per compilare un'espressione MDX (Multidimensional Expressions). È possibile visualizzare il **Generatore MDX** finestra di dialogo facendo le **modifica MDX** pulsante puntini di sospensione ( **...** ) per il **Consenti lettura del contenuto del cubo** opzione, il **Consenti lettura contenuto cella base a sicurezza cella** opzione o **consentono la lettura e la scrittura del contenuto del cubo** opzione il **dati delle celle** della pagina **progettazione ruoli**.  
   
 ## <a name="options"></a>Opzioni  
   
