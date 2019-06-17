@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779956"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Estensioni a AdventureWorks per illustrare OLTP in memoria
@@ -221,7 +221,7 @@ ms.locfileid: "62779956"
   
  Production.Product  
   
--   *Tipi alias definiti dall'utente (UDT)*: nella tabella originale viene usato il tipo di dati definito dall'utente dbo.Flag, equivalente al bit del tipo di dati di sistema. Nella tabella migrata viene utilizzato, in alternativa, il tipo di dati bit.  
+-   *Tipi alias definiti dall'utente (UDT)* : nella tabella originale viene usato il tipo di dati definito dall'utente dbo.Flag, equivalente al bit del tipo di dati di sistema. Nella tabella migrata viene utilizzato, in alternativa, il tipo di dati bit.  
   
 -   *Regole di confronto BIN2* -le colonne Name e ProductNumber sono incluse nelle chiavi di indice e devono pertanto disporre di regole di confronto BIN2 in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. In questo caso, si presuppone che l'applicazione non si basi sulle specifiche delle regole di confronto, quale l'esclusione della distinzione tra maiuscole e minuscole.  
   
@@ -845,7 +845,7 @@ ORDER BY state, file_type
   
  Al termine di una seconda esecuzione del carico di lavoro dimostrativo, inserendo 10 milioni di ordini vendita dopo la reimpostazione della dimostrazione, si noterà che i file creati durante la prima esecuzione del carico di lavoro sono stati rimossi. Se si esegue la query sopra indicata più volte durante l'esecuzione del carico di lavoro, si potranno visualizzare i file del checkpoint durante le varie fasi.  
   
- Dopo la seconda esecuzione del carico di lavoro con l'inserimento di 10 milioni di ordini vendita, si visualizzerà un utilizzo del disco molto simile a (ma non necessariamente lo stesso di quello dopo la prima esecuzione) quello del sistema dinamico in natura. Ad esempio:   
+ Dopo la seconda esecuzione del carico di lavoro con l'inserimento di 10 milioni di ordini vendita, si visualizzerà un utilizzo del disco molto simile a (ma non necessariamente lo stesso di quello dopo la prima esecuzione) quello del sistema dinamico in natura. Ad esempio:  
   
 ```  
 SELECT state_desc  

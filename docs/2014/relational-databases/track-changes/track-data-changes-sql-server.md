@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63073943"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
@@ -101,7 +101,7 @@ ms.locfileid: "63073943"
 |Tipo di colonna|Modifiche acquisite nelle tabelle delle modifiche|Limitazioni|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonne di tipo sparse|Yes|Non supporta l'acquisizione delle modifiche quando si utilizza un set di colonne.|  
-|Colonne calcolate|no|Le modifiche alle colonne calcolate non vengono rilevate. La colonna verrà visualizzata nella tabella delle modifiche con il tipo appropriato, ma avrà valore NULL.|  
+|Colonne calcolate|No|Le modifiche alle colonne calcolate non vengono rilevate. La colonna verrà visualizzata nella tabella delle modifiche con il tipo appropriato, ma avrà valore NULL.|  
 |XML|Yes|Le modifiche a singoli elementi XML non vengono rilevate.|  
 |timestamp|Yes|Il tipo di dati nella tabella delle modifiche viene convertito in binario.|  
 |Tipi di dati BLOB|Yes|L'immagine precedente della colonna BLOB viene archiviata solo se viene modificata la colonna stessa.|  

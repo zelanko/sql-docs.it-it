@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811285"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
@@ -85,7 +85,7 @@ ms.locfileid: "62811285"
   
 1.  Dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server** , quindi fare clic su **Gestione configurazione SQL Server**.  
   
-2.  Espandere **Configurazione di rete SQL Server**e quindi fare clic con il pulsante destro del mouse su **Protocolli** *\<* NomeIstanza*>* e scegliere **Proprietà**.  
+2.  Espandere **Configurazione di rete SQL Server**e quindi fare clic con il pulsante destro del mouse su **Protocolli** *\<* NomeIstanza *>* e scegliere **Proprietà**.  
   
 3.  Sia per l'associazione di canale che per l'associazione al servizio, nella scheda **Avanzate** configurare l'impostazione adatta per **Protezione estesa** .  
   

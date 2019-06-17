@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726899"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768599"
 ---
 # <a name="data-source-objects-ole-db"></a>Oggetti origine dati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726899"
 
   Il driver OLE DB per SQL Server usa il termine origine dati per il set di interfacce OLE DB usate per stabilire un collegamento a un archivio dati, ad esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Creazione di un'istanza dell'oggetto origine dati del provider è la prima attività di un Driver OLE DB per il consumer di SQL Server.  
   
- Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID per il Driver OLE DB per SQL Server è CLSID_MSOLEDBSQL il GUID C/C++ (il simbolo MSOLEDBSQL_CLSID risolverà il corretto progid nel file msoledbsql.h cui viene fatto riferimento). Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
+ Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID per il Driver OLE DB per SQL Server è C /C++ GUID CLSID_MSOLEDBSQL (il simbolo MSOLEDBSQL_CLSID risolverà il corretto progid nel file msoledbsql.h cui viene fatto riferimento). Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
   
  Driver OLE DB per SQL Server è un server in-process. Le istanze degli oggetti del driver OLE DB per SQL Server vengono create usando la macro CLSCTX_INPROC_SERVER per indicare il contesto di esecuzione.  
   

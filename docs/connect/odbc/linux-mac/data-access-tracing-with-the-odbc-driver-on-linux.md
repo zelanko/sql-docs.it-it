@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81ff6d637b28a55d45c8be02de24832b0cbc27ea
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306199"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785865"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traccia di accesso ai dati con il driver ODBC in Linux e macOS
 
@@ -38,7 +38,7 @@ TraceFile=/home/myappuser/odbctrace.log
 
 Dopo aver completato la traccia dell'applicazione, rimuovere `Trace=Yes` dal `odbcinst.ini` file per evitare la riduzione delle prestazioni di traccia e assicurarsi di rimuovere eventuali file di traccia non necessari.
 
-La traccia si applica a tutte le applicazioni che usano il driver in `odbcinst.ini`. Per non tracciare tutte le applicazioni, ad esempio per evitare di rivelare informazioni riservate dei singoli utenti, è possibile tracciare una singola istanza dell'applicazione specificando il percorso di un file `odbcinst.ini` privato tramite la variabile di ambiente `ODBCSYSINI`. Ad esempio
+La traccia si applica a tutte le applicazioni che usano il driver in `odbcinst.ini`. Per non tracciare tutte le applicazioni, ad esempio per evitare di rivelare informazioni riservate dei singoli utenti, è possibile tracciare una singola istanza dell'applicazione specificando il percorso di un file `odbcinst.ini` privato tramite la variabile di ambiente `ODBCSYSINI`. Esempio:
 
 ```bash
 $ ODBCSYSINI=/home/myappuser myapp

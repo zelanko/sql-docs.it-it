@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016181"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
@@ -55,7 +55,7 @@ ms.locfileid: "63016181"
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Per accedere alle community dedicate a SQL Server dalla pagina Ricerca per categorie  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?** .  
   
 2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie** . Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63016181"
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Per eseguire ricerche in MSDN Online e nelle community dedicate a SQL Server dalla pagina Cerca  
   
-1.  Scegliere **Cerca** dal menu **?**.  
+1.  Scegliere **Cerca** dal menu **?** .  
   
 2.  Immettere i termini di ricerca nella casella di testo **Cerca** e fare clic su **Cerca**.  
   

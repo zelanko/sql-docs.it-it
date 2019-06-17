@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809759"
 ---
 # <a name="remote-servers"></a>Server remoti
@@ -57,7 +57,7 @@ ms.locfileid: "62809759"
 >  Se possibile, usare l'autenticazione di Windows.  
   
 ### <a name="remote-server-security-example"></a>Esempio di sicurezza del server remoto  
- Considerare queste installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** viene configurata per eseguire il mapping di un account di accesso in ingresso da **serverSend**, denominato **Sales_Mary**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**, denominato **Alice**. Viene eseguito il mapping di un altro account di accesso in ingresso da **serverSend**, denominato **Joe**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**_,_ denominato **Joe**.  
+ Considerare queste installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** viene configurata per eseguire il mapping di un account di accesso in ingresso da **serverSend**, denominato **Sales_Mary**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**, denominato **Alice**. Viene eseguito il mapping di un altro account di accesso in ingresso da **serverSend**, denominato **Joe**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive** _,_ denominato **Joe**.  
   
  Il codice di esempio di Transact-SQL seguente configura `serverSend` per l'esecuzione di RPC su `serverReceive`.  
   

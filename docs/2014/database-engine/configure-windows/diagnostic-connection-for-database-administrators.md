@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810422"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
@@ -43,7 +43,7 @@ ms.locfileid: "62810422"
   
  Solo i membri del ruolo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin possono stabilire la connessione DAC.  
   
- L'applicazione livello dati è disponibile e supportata con l'utilità del prompt dei comandi **sqlcmd** usando un'opzione di amministrazione speciale (**-A**). Per altre informazioni sull'uso di **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). È anche possibile connessione apponendo il prefisso `admin:`al nome dell'istanza nel formato **sqlcmd - Sadmin:**_< nome_istanza >._ È anche possibile avviare un'applicazione livello dati da un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor di Query tramite la connessione al `admin:` \< *nome_istanza*>.  
+ L'applicazione livello dati è disponibile e supportata con l'utilità del prompt dei comandi **sqlcmd** usando un'opzione di amministrazione speciale ( **-A**). Per altre informazioni sull'uso di **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). È anche possibile connessione apponendo il prefisso `admin:`al nome dell'istanza nel formato **sqlcmd - Sadmin:** _< nome_istanza >._ È anche possibile avviare un'applicazione livello dati da un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor di Query tramite la connessione al `admin:` \< *nome_istanza*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  Dato che l'applicazione livello dati ha il solo scopo di consentire la diagnosi di problemi del server in rare circostanze, vi sono alcune restrizioni nella connessione:  
@@ -76,7 +76,7 @@ ms.locfileid: "62810422"
   
 -   Comandi DBCC di base quali DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` e DBCC SQLPERF. Non eseguire comandi che usano una grande quantità di risorse, ad esempio **DBCC** CHECKDB, DBCC DBREINDEX o DBCC SHRINKDATABASE.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] comando KILL*\<spid>*. In base allo stato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il comando KILL potrebbe non avere sempre esito positivo. In questo caso, l'unica possibilità potrebbe consistere nel riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono riportate alcune linee guida generali:  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] comando KILL *\<spid>* . In base allo stato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il comando KILL potrebbe non avere sempre esito positivo. In questo caso, l'unica possibilità potrebbe consistere nel riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono riportate alcune linee guida generali:  
   
     -   Verificare che lo SPID sia stato effettivamente terminato eseguendo la query `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Se non viene restituita alcuna riga, la sessione è stata terminata.  
   
