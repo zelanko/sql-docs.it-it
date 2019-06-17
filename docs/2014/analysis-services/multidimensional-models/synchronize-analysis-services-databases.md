@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072845"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizzare database di Analysis Services
@@ -100,7 +100,7 @@ ms.locfileid: "66072845"
      **Cartella di destinazione**  
      Consente di visualizzare il nome della cartella dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di destinazione in cui sincronizzare la partizione locale. Se nella colonna è incluso il valore "(Impostazione predefinita)", la partizione locale è contenuta nel percorso predefinito relativo all'istanza di destinazione.  
   
-     Fare clic sui puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni locali archiviate nel percorso selezionato.  
+     Fare clic sui puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni locali archiviate nel percorso selezionato.  
   
     > [!NOTE]  
     >  Non è possibile modificare questa colonna per le partizioni locali archiviate nel percorso predefinito relativo all'istanza di origine.  
@@ -144,12 +144,12 @@ ms.locfileid: "66072845"
      **Server di destinazione**  
      Consente di visualizzare il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno della quale devono essere sincronizzate le partizioni remote archiviate nel percorso specificato in **Server di origine** e **Cartella di origine** .  
   
-     Fare clic sui puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Gestione connessione** e specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui sincronizzare le partizioni remote archiviate nel percorso specificato.  
+     Fare clic sui puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Gestione connessione** e specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui sincronizzare le partizioni remote archiviate nel percorso specificato.  
   
      **Cartella di destinazione**  
      Consente di visualizzare il nome della cartella dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di destinazione in cui sincronizzare la partizione remota. Se nella colonna è incluso il valore "(Impostazione predefinita)", la partizione remota è contenuta nel percorso predefinito relativo all'istanza di destinazione.  
   
-     Fare clic sui puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni remote archiviate nel percorso selezionato.  
+     Fare clic sui puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni remote archiviate nel percorso selezionato.  
   
      **Dimensione**  
      Consente di visualizzare le dimensioni stimate delle partizioni remote archiviate nel percorso.  

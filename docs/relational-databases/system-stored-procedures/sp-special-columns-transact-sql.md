@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004152"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
@@ -59,16 +59,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [ @col_type=] '*col_type*'  
- Tipo di colonna. *col_type* viene **char (** 1 **)**, con un valore predefinito di R. digitare R restituisce la colonna o ottimale set di colonne, tramite il recupero dei valori di colonna o le colonne, che consente di qualsiasi riga nell'oggetto specificato tabella che deve essere identificato in modo univoco. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
+ Tipo di colonna. *col_type* viene **char (** 1 **)** , con un valore predefinito di R. digitare R restituisce la colonna o ottimale set di colonne, tramite il recupero dei valori di colonna o le colonne, che consente di qualsiasi riga nell'oggetto specificato tabella che deve essere identificato in modo univoco. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
   
  [ @scope=] '*scope*'  
- Ambito minimo richiesto per ROWID. *ambito* viene **char (** 1 **)**, valore predefinito T. l'ambito C specifica che il valore ROWID è valido solo se posizionato in tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
+ Ambito minimo richiesto per ROWID. *ambito* viene **char (** 1 **)** , valore predefinito T. l'ambito C specifica che il valore ROWID è valido solo se posizionato in tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
   
  [ @nullable=] '*nullable*'  
- Indica se le colonne speciali possono accettare un valore null. *nullable* viene **char (** 1 **)**, con un valore predefinito è u. il valore O specifica le colonne speciali che non ammettono valori null. mentre U specifica le colonne che ammettono parzialmente valori Null.  
+ Indica se le colonne speciali possono accettare un valore null. *nullable* viene **char (** 1 **)** , con un valore predefinito è u. il valore O specifica le colonne speciali che non ammettono valori null. mentre U specifica le colonne che ammettono parzialmente valori Null.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- Versione ODBC utilizzata. *ODBCVer* viene **int (** 4 **)**, con un valore predefinito è 2. che indica ODBC versione 2.0. Per altre informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
+ Versione ODBC utilizzata. *ODBCVer* viene **int (** 4 **)** , con un valore predefinito è 2. che indica ODBC versione 2.0. Per altre informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
@@ -82,7 +82,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|Tipo di dati SQL ODBC.|  
 |TYPE_NAME|**sysname**|Nome del tipo di dati dipende dall'origine dati; ad esempio, **char**, **varchar**, **money**, oppure **testo**.|  
 |PRECISION|**Int**|Precisione della colonna nell'origine dati. Questo campo restituisce sempre un valore.|  
-|LENGTH|**Int**|Lunghezza, espressa in byte, necessaria per il tipo di dati in forma binaria nell'origine dati, ad esempio, 10 per **char (** 10 **)**, 4 per **integer**e 2 per **smallint** .|  
+|LENGTH|**Int**|Lunghezza, espressa in byte, necessaria per il tipo di dati in forma binaria nell'origine dati, ad esempio, 10 per **char (** 10 **)** , 4 per **integer**e 2 per **smallint** .|  
 |SCALE|**smallint**|Scala della colonna nell'origine dati. Per i tipi di dati in cui la scala non è applicabile viene restituito NULL.|  
 |PSEUDO_COLUMN|**smallint**|Indica se la colonna è una pseudocolonna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

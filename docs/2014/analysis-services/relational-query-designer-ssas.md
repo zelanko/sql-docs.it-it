@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070456"
 ---
 # <a name="relational-query-designer-ssas"></a>Progettazione query relazionale (SSAS)
@@ -247,7 +247,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Fare clic sul pulsante **Esegui** (**!**). Nella tabella seguente fornisce un esempio di `uspGetWhereUsedProductID` parametri per i quali vengono forniti valori nella **Definisci parametri Query** nella finestra di dialogo.  
+ Fare clic sul pulsante **Esegui** ( **!** ). Nella tabella seguente fornisce un esempio di `uspGetWhereUsedProductID` parametri per i quali vengono forniti valori nella **Definisci parametri Query** nella finestra di dialogo.  
   
 |||  
 |-|-|  
