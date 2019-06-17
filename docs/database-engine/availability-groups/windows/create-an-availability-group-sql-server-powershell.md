@@ -12,54 +12,36 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53f91ef270d9e4ea255a1cf71250dcc21c88346a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 6bc6fcad5f667b0c1224c4d1e897ae9fc30642d0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974330"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793528"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Creare un gruppo di disponibilità Always On con PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento si illustra come usare i cmdlet di PowerShell per creare e configurare un gruppo di disponibilità AlwaysOn usando PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *gruppo di disponibilità* permette di definire un set di database utente di cui sarà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
->  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
--   **Prima di iniziare:**  
-  
-     [Prerequisiti, restrizioni e raccomandazioni](#PrerequisitesRestrictions)  
-  
-     [Sicurezza](#Security)  
-  
-     [Riepilogo delle attività e cmdlet di PowerShell corrispondenti](#SummaryPSStatements)  
-  
-     [Per impostare e usare il provider PowerShell per SQL Server](#PsProviderLinks)  
-  
--   **Per creare e configurare un gruppo di disponibilità usando:**  [Uso di PowerShell per creare e configurare un gruppo di disponibilità](#PowerShellProcedure)  
-  
--   **Esempi:**  [Uso di PowerShell per creare un gruppo di disponibilità](#ExampleConfigureGroup)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
--   [Contenuto correlato](#RelatedContent)  
+>  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  In alternativa all'uso dei cmdlet di PowerShell, è possibile usare la procedura guidata Crea gruppo di disponibilità o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Per altre informazioni, vedere [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) o [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
- Prima di iniziare a creare il primo gruppo di disponibilità, è consigliabile leggere questa sezione.  
   
-###  <a name="PrerequisitesRestrictions"></a> Prerequisiti, restrizioni e raccomandazioni  
+##  <a name="PrerequisitesRestrictions"></a> Prerequisiti, restrizioni e raccomandazioni  
   
 -   Prima di creare un gruppo di disponibilità, verificare che le istanze host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si trovino ognuna in un nodo WSCF (Windows Server Failover Clustering) diverso di un singolo cluster di failover WSFC. Inoltre, verificare che le istanze del server abbiano soddisfatto gli altri prerequisiti dell'istanza del server, che tutti gli altri requisiti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] siano soddisfatti e che si tengano presenti i consigli. Per altre informazioni, si consiglia di leggere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
+  
+##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell per creare e configurare un gruppo di disponibilità  
+
 ###  <a name="SummaryPSStatements"></a> Riepilogo delle attività e cmdlet di PowerShell corrispondenti  
  Nella tabella seguente sono elencate le attività di base necessarie per la configurazione di un gruppo di disponibilità e sono indicate le attività supportate dai cmdlet di PowerShell. È necessario eseguire le attività [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nell'ordine con cui sono elencate nella tabella.  
   
@@ -77,9 +59,7 @@ ms.locfileid: "57974330"
   
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Visualizzazione della Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell per creare e configurare un gruppo di disponibilità  
+-   [Visualizzare la Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 > [!NOTE]  
 >  Per visualizzare la sintassi e un esempio di un cmdlet specifico, usare il cmdlet **Get-Help** nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  

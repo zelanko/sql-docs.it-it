@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542728"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795480"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Impostazione del mirroring del database tramite certificati (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo esempio vengono illustrati tutti i passaggi necessari per la creazione di una sessione di mirroring del database tramite l'autenticazione basata sui certificati. Negli esempi di questo argomento viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database.  
   

@@ -1,7 +1,7 @@
 ---
 title: Indici per tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673020"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462462"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Tutte le tabelle ottimizzate per la memoria devono contenere almeno un indice in quanto gli indici consentono l'interconnessione delle righe. In una tabella con ottimizzazione per la memoria, ogni indice è anche ottimizzato per la memoria. Le differenze tra un indice in un indice ottimizzato per la memoria e un indice tradizionale in una tabella basata su disco sono molte:  
@@ -35,7 +36,7 @@ Il tipo di indice deve essere uno dei seguenti:
 - Indice hash  
 - Indice non cluster ottimizzato per la memoria (struttura interna predefinita di un albero B) 
   
-Gli indici *hash* sono illustrati in dettaglio in [Indici hash per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+Gli indici *hash* sono illustrati in dettaglio in [Indici hash per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
 Gli indici *non cluster* sono illustrati in dettaglio in [Indice non cluster per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index).  
 Gli indici*columnstore* sono illustrati in [un altro articolo](../../relational-databases/indexes/columnstore-indexes-overview.md).  
 
@@ -57,7 +58,7 @@ Per essere dichiarata con la clausola DURABILITY = SCHEMA\_AND_DATA predefinita,
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hanno un limite di 8 indici per ogni tipo di tabella o tabella ottimizzata per la memoria. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non è più previsto un limite al numero di indici specifici di tabelle ottimizzate per la memoria e tipi di tabella.
@@ -116,11 +117,30 @@ Questa sottosezione contiene un blocco di codice Transact-SQL che mostra la sint
   
 ## <a name="duplicate-index-key-values"></a>Valori duplicati delle chiavi di indice
 
-I valori duplicati delle chiavi di indice possono influire sulle prestazioni delle operazioni su tabelle ottimizzate per la memoria. Un numero elevato di duplicati (ad esempio, 100+) rende inefficienti le attività di gestione di un indice perché la maggior parte delle operazioni di indice deve attraversare catene di duplicati. L'impatto è evidente nelle operazioni `INSERT`, `UPDATE` e `DELETE` su tabelle ottimizzate per la memoria. 
+La presenza di valori duplicati per una chiave di indice potrebbe ridurre le prestazioni delle tabelle ottimizzate per la memoria. Il sistema deve attraversare le catene di voci duplicate per la maggior parte delle operazioni di lettura e scrittura dell'indice. Quando una catena di voci duplicate supera le 100 voci, la riduzione delle prestazioni può diventare misurabile.
 
-Questo problema è più evidente nel caso di indici hash, sia per il costo inferiore per ogni operazione per gli indici hash sia per l'interferenza di catene di duplicati di grandi dimensioni con la catena di collisioni hash. Per ridurre la duplicazione di un indice, usare un indice non cluster e aggiungere colonne aggiuntive, ad esempio dalla chiave primaria, alla fine della chiave di indice per ridurre il numero di duplicati. Per altre informazioni sulle collisioni hash, vedere [Indici hash per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+### <a name="duplicate-hash-values"></a>Valori hash duplicati
 
-Si consideri ad esempio una tabella `Customers` con una chiave primaria in `CustomerId` e un indice nella colonna `CustomerCategoryID`. In genere in una determinata categoria si trovano molti clienti e quindi esistono molti valori duplicati per una determinata chiave di indice sulla colonna CustomerCategoryID. In questo scenario è consigliabile usare un indice non cluster in `(CustomerCategoryID, CustomerId)`. L'indice può essere usato per le query che usano un predicato che interessa il valore `CustomerCategoryID`e non contiene la duplicazione evitando inefficienze nella manutenzione dell'indice.
+Questo problema è più evidente nel caso di indici hash. Gli indici hash ne risentono maggiormente a causa delle considerazioni riportate di seguito:
+
+- Il costo inferiore per ogni operazione per gli indici hash.
+- L'interferenza di catene di duplicati di grandi dimensioni con la catena di collisioni hash.
+
+Per ridurre la duplicazione in un indice, provare a eseguire le modifiche seguenti:
+
+- Usare un indice non cluster.
+- Aggiungere colonne aggiuntive alla fine della chiave di indice, per ridurre il numero di duplicati.
+  - Ad esempio, è possibile aggiungere colonne che sono anche nella chiave primaria.
+
+Per altre informazioni sulle collisioni hash, vedere [Indici hash per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+
+### <a name="example-improvement"></a>Miglioramento di esempio
+
+Ecco un esempio di come evitare problemi di prestazioni insufficienti per l'indice.
+
+Si consideri una tabella `Customers` con una chiave primaria in `CustomerId` e un indice nella colonna `CustomerCategoryID`. In genere esisteranno molti clienti in una determinata categoria e questo significa che saranno presenti molti valori duplicati per CustomerCategoryID all'interno di una determinata chiave dell'indice.
+
+In questo scenario è consigliabile usare un indice non cluster in `(CustomerCategoryID, CustomerId)`. L'indice può essere usato per le query che usano un predicato che coinvolge `CustomerCategoryID`, ma la chiave di indice non contiene duplicati. Pertanto, la presenza di valori CustomerCategoryID duplicati o della colonna aggiuntiva nell'indice non causerà inefficienze per la manutenzione dell'indice.
 
 La query seguente mostra il numero medio di valori di chiave di indice duplicati per l'indice in `CustomerCategoryID` nella tabella `Sales.Customers`, all'interno del database di esempio [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
 
@@ -155,15 +175,11 @@ Un indice non cluster è da preferirsi a un indice hash in tutte le istruzioni S
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,7 +211,7 @@ L'indice hash richiede che la clausola `WHERE` specifichi un test di uguaglianza
   
 Nessuno dei due tipi di indice è utile se la clausola `WHERE` specifica solo la seconda colonna nella chiave dell'indice.  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>Tabella di riepilogo per il confronto degli scenari d'uso degli indici  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>Tabella di riepilogo per il confronto degli scenari d'uso degli indici  
   
 Nella tabella seguente sono elencate tutte le operazioni supportate dai vari tipi di indice. *Sì* significa che l'indice è in grado di soddisfare la richiesta in modo appropriato e *No* significa che non lo è. 
   
@@ -206,6 +222,7 @@ Nella tabella seguente sono elencate tutte le operazioni supportate dai vari tip
 | Index Seek su predicati di disuguaglianza e di intervallo <br/> (>, <, <=, >=, `BETWEEN`). | no <br/> (risultati in un'analisi di indice) | Sì <sup>1</sup> | Sì |  
 | Recupero di righe con un ordinamento corrispondente alla definizione dell'indice. | no | Sì | Sì |  
 | Recupero di righe con un ordinamento inverso rispetto alla definizione dell'indice. | no | no | Sì |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Per un indice non cluster ottimizzato per la memoria, non è necessaria la chiave completa per eseguire una ricerca nell'indice.  
 

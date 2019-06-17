@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802605"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749185"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ Il set di risultati restituito dalla funzione **sys.dm_db_index_physical_stats**
   
 Una volta noto il grado di frammentazione, usare la tabella seguente per determinare il metodo migliore per la correzione della frammentazione.  
   
-|Valore di**avg_fragmentation_in_percent** |Istruzione correttiva|  
+|Valore di**avg_fragmentation_in_percent**|Istruzione correttiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% e < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|  
@@ -93,8 +93,14 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 ### <a name="Security"></a> Sicurezza  
   
-#### <a name="Permissions"></a> Permissions  
-È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
+#### <a name="Permissions"></a> Autorizzazioni  
+È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro di almeno uno dei ruoli seguenti:
+
+* Ruolo del database **db_ddladmin** <sup>1</sup> 
+* Ruolo del database **db_owner**
+* Ruolo del server **sysadmin**  
+
+<sup>1</sup>Il ruolo del database **db_ddladmin** è quello con i [minori privilegi](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models).
   
 ## <a name="SSMSProcedureFrag"></a> Controllare la frammentazione dell'indice tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -161,7 +167,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -255,7 +261,7 @@ Per altre informazioni, vedere [sys.dm_db_index_physical_stats &#40;Transact-SQL
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -275,7 +281,7 @@ Per altre informazioni, vedere [sys.dm_db_index_physical_stats &#40;Transact-SQL
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -292,7 +298,7 @@ Per altre informazioni, vedere [sys.dm_db_index_physical_stats &#40;Transact-SQL
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene ricompilato un solo indice nella tabella `Employee` .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene ricompilato un solo indice nella tabella `Employee` .  
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527124"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765798"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Abilitare o disabilitare la funzionalità gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527124"
 > [!IMPORTANT]  
 >  Se si elimina e si ricrea un cluster WSFC, è necessario disabilitare e riabilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità nel cluster WSFC originale.  
   
--   **Prima di iniziare:**  
   
-     [Prerequisiti](#Prerequisites)  
-  
-     [Sicurezza](#Security)  
-  
--   **Procedura:**  
-  
-    -   [Determinare se la funzionalità Gruppi di disponibilità Always On è abilitata](#IsEnabled)  
-  
-    -   [Abilitare Gruppi di disponibilità Always On](#EnableAOAG)  
-  
-    -   [Disabilitare Gruppi di disponibilità Always On](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="Prerequisites"></a> Prerequisiti per l'abilitazione di Gruppi di disponibilità Always On  
+##  <a name="Prerequisites"></a> Prerequisiti per l'abilitazione di Gruppi di disponibilità Always On  
   
 -   L'istanza del server deve trovarsi in un nodo WSFC (Windows Server Failover Clustering).  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527124"
   
  Per informazioni sui prerequisiti, vedere[Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sicurezza  
+## <a name="Permissions"></a> Autorizzazioni  
  Mentre la funzionalità Gruppi di disponibilità Always On è abilitata in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'istanza del server ha il controllo completo sul cluster WSFC.  
-  
-####  <a name="Permissions"></a> Permissions  
+
  È richiesta l'appartenenza al gruppo degli **amministratori** nel computer locale, nonché il controllo totale nel cluster WSCF. Quando si abilita Always On usando PowerShell, aprire la finestra del prompt dei comandi con l'opzione **Esegui come amministratore** .  
   
  Richiede le autorizzazioni per la gestione e la creazione degli oggetti di Active Directory.  
@@ -200,7 +184,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 3.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su SQL Server (**\<**_nome istanza_**&gt;)**, dove **\<**_nome istanza_**>** è il nome di un'istanza locale per cui si vuole disabilitare Gruppi di disponibilità Always On, quindi scegliere **Proprietà**.  
   
-4.  Deselezionare la casella di controllo**Abilita gruppi di disponibilità Always On**nella scheda **Disponibilità elevata Always On** e scegliere **OK**.  
+4.  Deselezionare la casella di controllo**Abilita gruppi di disponibilità Always On** nella scheda **Disponibilità elevata Always On** e scegliere **OK**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile salvare la modifica e riavviare il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Always On sarà disabilitato e la proprietà del server **IsHadrEnabled** sarà impostata su 0, per indicare che la funzionalità Gruppi di disponibilità Always On è disabilitata.  
   

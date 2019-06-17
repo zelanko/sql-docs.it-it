@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9274cd7423df9dea1dad8febee2a49871c24f296
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 4d804c41803824f0bc7d69873677984dfba6a729
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974310"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780288"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Nella maggior parte dei casi, è possibile usare la Creazione guidata Gruppo di 
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
  È inoltre necessaria l'autorizzazione CONTROL ON ENDPOINT se si desidera gestire l'endpoint del mirroring del database tramite la Creazione guidata Gruppo di disponibilità.  
@@ -97,7 +97,7 @@ Nella maggior parte dei casi, è possibile usare la Creazione guidata Gruppo di 
     |Scheda|Breve descrizione|  
     |---------|-----------------------|  
     |**Repliche**|Usare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.|  
-    |**Endpoint**|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente.<br /><br /> Nota: Se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
+    |**Endpoint**|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente.<br /><br /> Nota: se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
     |**Preferenze di backup**|Usare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso e le priorità di backup per le singole repliche di disponibilità.|  
     |**Listener**|Usare questa scheda per creare un listener del gruppo di disponibilità. Per impostazione predefinita, la procedura guidata non crea un listener.|  
   

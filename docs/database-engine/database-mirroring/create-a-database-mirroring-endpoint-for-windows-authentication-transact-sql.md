@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3d1953d29d718edebbdae18677d240395d0b710f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 630dee3126fe6c122f3e2d034252260769e3ed03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838119"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774945"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "47838119"
 > [!IMPORTANT]  
 >  Se un endpoint del mirroring del database è presente e già in uso, è consigliabile utilizzare quello. L'eliminazione di un endpoint in uso determina la chiusura delle sessioni esistenti.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  [Sicurezza](#Security)  
   
--   **Per creare un endpoint del mirroring del database usando** [Transact-SQL](#TsqlProcedure)  
+-   **Per creare un endpoint del mirroring del database usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47838119"
 > [!IMPORTANT]  
 >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
@@ -108,7 +108,7 @@ ms.locfileid: "47838119"
         > [!IMPORTANT]  
         >  In ogni istanza del server è necessaria un'unica porta di attesa univoca.  
   
-    -   Per l'autenticazione di Windows, l'opzione AUTHENTICATION è facoltativa, a meno che non si desideri che l'endpoint utilizzi solo NTLM o Kerberos per autenticare connessioni. *\<authorizationMethod>* specifica il metodo usato per autenticare le connessioni come NTLM, KERBEROS o NEGOTIATE. Con il metodo predefinito NEGOTIATE l'endpoint utilizzerà il protocollo di negoziazione di Windows per scegliere tra NTLM e Kerberos. La negoziazione consente di utilizzare le connessioni con o senza autenticazione, a seconda del livello di autenticazione dell'endpoint opposto.  
+    -   Per l'autenticazione di Windows, l'opzione AUTHENTICATION è facoltativa, a meno che non si desideri che l'endpoint utilizzi solo NTLM o Kerberos per autenticare connessioni. *\<authorizationMethod>* specifica uno dei metodi seguenti usato per autenticare le connessioni: NTLM, KERBEROS o NEGOTIATE. Con il metodo predefinito NEGOTIATE l'endpoint utilizzerà il protocollo di negoziazione di Windows per scegliere tra NTLM e Kerberos. La negoziazione consente di utilizzare le connessioni con o senza autenticazione, a seconda del livello di autenticazione dell'endpoint opposto.  
   
     -   Per impostazione predefinita, ENCRYPTION è impostato su REQUIRED, pertanto verrà utilizzata la crittografia per tutte le connessioni a questo endpoint. È tuttavia possibile disabilitare la crittografia o renderla facoltativa in un endpoint. Sono disponibili le alternative seguenti:  
   
@@ -203,7 +203,7 @@ GO
  [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Esempio: Impostazione del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Esempio: Configurazione del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

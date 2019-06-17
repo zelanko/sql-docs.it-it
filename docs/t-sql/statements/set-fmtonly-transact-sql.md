@@ -1,7 +1,7 @@
 ---
 title: SET FMTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,21 +23,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15a6d81f064e417726fe7b4efe6987f7b96fa85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbc4cb3569573b8558edcf7335c0515da16d750c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666079"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500552"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
 
   Restituisce solo i metadati al client. Può essere utilizzata per testare il formato della risposta senza eseguire effettivamente la query.  
-  
-> [!NOTE]  
->  Non utilizzare questa funzionalità. La funzionalità è stata sostituita da [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) e [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
-  
+
+> [!NOTE]
+> Non utilizzare questa funzionalità. Questa funzionalità è stata sostituita dagli elementi seguenti:
+>
+> - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+> - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,50 +51,104 @@ ms.locfileid: "47666079"
 ```  
 SET FMTONLY { ON | OFF }   
 ```  
-  
-## <a name="remarks"></a>Remarks  
- Se l'opzione SET FMTONLY è impostata su ON, in seguito alla richiesta non viene elaborata o inviata al client alcuna riga.  
-  
- L'opzione SET FMTONLY viene impostata in fase di esecuzione, non in fase di analisi.  
-  
-## <a name="permissions"></a>Permissions  
+
+## <a name="remarks"></a>Remarks
+
+Quando `FMTONLY` è `ON`, viene restituito un set di righe con i nomi delle colonne, ma senza righe di dati.
+
+`SET FMTONLY ON` non ha effetto quando viene analizzato il batch Transact-SQL. L'effetto si verifica durante la fase di esecuzione.
+
+Il valore predefinito è `OFF`.
+
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
-  
-## <a name="examples"></a>Esempi  
-  
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A. Visualizzare le informazioni di intestazione di colonna per una query senza eseguire la query.  
- Nell'esempio seguente l'opzione `SET FMTONLY` viene impostata su `ON` e viene eseguita un'istruzione `SELECT`. L'istruzione restituisce solo la colonna delle informazioni e nessuna riga di dati.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SET FMTONLY ON;  
-GO  
-SELECT *   
-FROM HumanResources.Employee;  
-GO  
-SET FMTONLY OFF;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. Visualizzare le informazioni di intestazione di colonna per una query senza eseguire la query.  
- L'esempio seguente illustra come restituire solo le informazioni dell'intestazione colonna (metadati) per una query. Il batch inizia con FMTONLY impostata su OFF e quindi FMTONLY viene impostata su ON prima dell'istruzione SELECT. Di conseguenza l'istruzione SELECT restituisce solo le intestazioni colonna e non viene restituita nessuna riga di dati.  
-  
-```  
--- Uses AdventureWorks  
-  
-BEGIN  
-    SET FMTONLY OFF;  
-    SET DATEFORMAT mdy;  
-    SET FMTONLY ON;  
-    SELECT * FROM dbo.DimCustomer;  
-    SET FMTONLY OFF;  
-END  
-  
-```  
-  
+
+## <a name="examples"></a>Esempi
+
+Nell'esempio di codice Transact-SQL che segue `FMTONLY` viene impostato su `ON`. Questa impostazione fa in modo che SQL Server restituisca solo le informazioni sui metadati per le colonne selezionate. Nello specifico vengono restituiti i nomi delle colonne. Non vengono restituite righe di dati.
+
+Nell'esempio, l'esecuzione di prova della stored procedure `prc_gm29` restituisce quanto segue:
+
+- Set di righe multipli.
+- Colonne da più tabelle, in una delle relative istruzioni `SELECT`.
+
+<!--
+Issue 2246 inspired this code example, and the replacement of the two pre-existing examples. 2019/June/03, GM.
+-->
+
+```sql
+go
+SET NoCount ON;
+
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+CREATE TABLE #tabTemp41
+(
+   KeyInt41        int           not null,
+   Name41          nvarchar(16)  not null,
+   TargetDateTime  datetime      not null  default GetDate()
+);
+
+CREATE TABLE #tabTemp42
+(
+   KeyInt42 int          not null,   -- JOIN-able to KeyInt41.
+   Name42   nvarchar(16) not null
+);
+go
+
+INSERT into #tabTemp41 (KeyInt41, Name41) values (10, 't41-c');
+INSERT into #tabTemp42 (KeyInt42, Name42) values (10, 't42-p');
+go
+
+CREATE PROCEDURE prc_gm29
+AS
+begin
+SELECT * from #tabTemp41;
+SELECT * from #tabTemp42;
+
+SELECT t41.KeyInt41, t41.TargetDateTime, t41.Name41, t42.Name42
+   from
+                 #tabTemp41 as t41
+      INNER JOIN #tabTemp42 as t42 on t42.KeyInt42 = t41.KeyInt41
+end;
+go
+
+SET DATEFORMAT mdy;
+
+SET FMTONLY ON;
+EXECUTE prc_gm29;   -- Returns multiple tables.
+SET FMTONLY OFF;
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+/****  Actual Output:
+[C:\JunkM\]
+>> osql.exe -S myazuresqldb.database.windows.net -U somebody -P secret -d MyDatabase -i C:\JunkM\Issue-2246-a.SQL 
+
+ KeyInt41    Name41           TargetDateTime
+ ----------- ---------------- -----------------------
+
+ KeyInt42    Name42
+ ----------- ----------------
+
+ KeyInt41    TargetDateTime          Name41           Name42
+ ----------- ----------------------- ---------------- ----------------
+
+
+[C:\JunkM\]
+>>
+****/
+```
+
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

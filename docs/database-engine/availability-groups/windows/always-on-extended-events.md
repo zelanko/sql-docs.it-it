@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860632"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789653"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurare eventi estesi per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860632"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Sessione Alwayson_health](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Eventi estesi per il debug](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Riferimento degli eventi estesi dei gruppi di disponibilità Always On](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a>Sessione Alwayson_health  
  La sessione di eventi estesi alwayson_health viene creata automaticamente quando si crea il gruppo di disponibilità e acquisisce un subset degli eventi correlati al gruppo di disponibilità. Questa sessione è preconfigurata e rappresenta uno strumento semplice e rapido per consentire di iniziare rapidamente la risoluzione dei problemi di un gruppo di disponibilità. La Creazione guidata Gruppo di disponibilità avvia automaticamente la sessione in ogni replica di disponibilità partecipante configurata nella procedura guidata.  
   
@@ -91,7 +85,7 @@ Per informazioni su alcuni eventi coperti da alwayson_health, vedere il [Riferim
 |colonna|Descrizione|  
 |------------|-----------------|  
 |nome|availability_replica_state_change|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Operativo|  
   
 #### <a name="event-fields"></a>Campi dell'evento  
@@ -122,7 +116,7 @@ GO
 |colonna|Descrizione|  
 |------------|-----------------|  
 |nome|availability_group_lease_expired|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Operativo|  
   
 #### <a name="event-fields"></a>Campi dell'evento  
@@ -150,7 +144,7 @@ GO
 |nome|Descrizione|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Analitici|  
   
 #### <a name="event-fields"></a>Campi dell'evento  
@@ -250,7 +244,7 @@ GO
 |colonna|Descrizione|  
 |------------|-----------------|  
 |nome|data_movement_suspend_resume|  
-|Category|Alwayson|  
+|Category|Always on|  
 |Channel|Operativo|  
   
 #### <a name="event-fields"></a>Campi dell'evento  
@@ -286,14 +280,14 @@ GO
 ```  
   
 ###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
- Si verifica quando viene eseguita un'istruzione DLL del gruppo di disponibilità che include CREATE, ALTER o DROP. Lo scopo principale dell'evento è indicare un problema relativo a un'azione utente su una replica di disponibilità o di indicare il punto iniziale di un'azione operativa, seguita da un problema di runtime, ad esempio failover manuale, failover forzato, spostamento dei dati sospeso o spostamento dei dati ripreso.  
+ Si verifica quando viene eseguita un'istruzione DDL del gruppo di disponibilità che include CREATE, ALTER o DROP. Lo scopo principale dell'evento è indicare un problema relativo a un'azione utente su una replica di disponibilità o di indicare il punto iniziale di un'azione operativa, seguita da un problema di runtime, ad esempio failover manuale, failover forzato, spostamento dei dati sospeso o spostamento dei dati ripreso.  
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
 |colonna|Descrizione|  
 |------------|-----------------|  
 |nome|alwayson_ddl_execution|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Analitici|  
   
 #### <a name="event-fields"></a>Campi dell'evento  
@@ -326,7 +320,7 @@ GO
 |colonna|Descrizione|  
 |------------|-----------------|  
 |nome|availability_replica_manager_state_change|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Operativo|  
   
 #### <a name="event-fields"></a>Campi dell'evento  

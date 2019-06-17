@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198343"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744131"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 
@@ -321,3 +321,5 @@ L'evento **query_post_execution_showplan** consente di visualizzare il piano di 
 ## <a name="see-also"></a>Vedere anche
 
 [XELite: libreria multipiattaforma per la lettura di XEvent da file XEL o flussi SQL live](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), rilasciata a maggio 2019.
+
+[Cmdlet di PowerShell Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), rilasciato nel giugno 2019.

@@ -1,5 +1,5 @@
 ---
-title: Aggiornare database replicati | Microsoft Docs
+title: Aggiornare i database replicati o applicare patch | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124611"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794717"
 ---
-# <a name="upgrade-replicated-databases"></a>Aggiornare database replicati
+# <a name="upgrade-or-patch-replicated-databases"></a>Aggiornare i database replicati o applicare patch
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ Il percorso di aggiornamento a SQL Server cambia a seconda del modello di distri
 
 Un approccio comune che è stato adottato per gli aggiornamenti affiancati delle topologie di replica consiste nello spostare nel nuovo ambiente affiancato solo le coppie di server di pubblicazione/sottoscrittore invece dell'intera topologia. Questo approccio graduale consente di controllare i tempi di inattività e di ridurre, in una certa misura, l'impatto sull'azienda che dipende dalla replica.  
 
-
-> [!NOTE]  
-> **Per informazioni più dettagliate sull'aggiornamento a SQL 2016 della topologia di replica, vedere il post del blog [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+La maggior parte di questo articolo riguarda l'aggiornamento della versione di SQL Server. Il processo di aggiornamento sul posto, tuttavia, deve essere usato anche per l'applicazione di patch a SQL Server con un Service Pack o un aggiornamento cumulativo. 
 
  >[!WARNING]
  > L'aggiornamento di una topologia di replica è un processo che si compone di più passaggi. È consigliabile provare ad aggiornare una replica della topologia di replica in un ambiente di test prima di eseguire l'aggiornamento nell'ambiente di produzione reale. Ciò consentirà di procurarsi le conoscenze operativa necessarie per gestire senza problemi l'aggiornamento evitando di incorrere in lunghi e costosi tempi di inattività durante il processo di aggiornamento. Alcuni clienti sono riusciti a ridurre i tempi di inattività in modo significativo usando i gruppi di disponibilità AlwaysOn e/o le istanze del cluster di failover di SQL Server nei propri ambienti di produzione durante l'aggiornamento della topologia di replica. Inoltre, prima di tentare l'aggiornamento, è consigliabile eseguire un backup di tutti i database, tra cui i database di distribuzione, MSDB, master, i database utente che partecipano alla replica.

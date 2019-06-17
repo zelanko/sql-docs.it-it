@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 551d71d427b9e7997082a8feda1b766b85bfe659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: be6b135e4e21f7bdcec47c231be6fe872a20ab76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837270"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795309"
 ---
 # <a name="register-mirrored-database"></a>Registra database con mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47837270"
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring** , selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione** .|  
+|**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: Per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring**, selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione**.|  
 |**Database**|Nome di un database con mirroring sull'istanza del server selezionata.|  
 |**Ruolo corrente**|Ruolo del mirroring corrente del database, Principale o Mirror, sull'istanza del server selezionata.|  
 |**Partner (Connetti come)**|Nome del partner di failover per il database. **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<nome account di accesso>***'** sono le stringhe visualizzate tra parentesi. Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
@@ -66,6 +66,6 @@ ms.locfileid: "47837270"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

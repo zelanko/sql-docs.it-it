@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 152d4b274fe2e966a30ffe09ba2939ba4cafef39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e44e40d6c1fc01a012054223ce027e78363f33b4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202480"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800983"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Aggiungere una replica al gruppo di disponibilità Always On usando la Creazione guidata gruppo di disponibilità in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53202480"
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "Istanze del server" e "Repliche e gruppi di disponibilità" in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
@@ -56,10 +56,8 @@ ms.locfileid: "53202480"
     -   Sarà necessario specificare una condivisione di rete affinché la procedura guidata sia in grado di creare e accedere ai backup. Per la replica primaria, all'account usato per avviare il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] devono essere associate le autorizzazioni del file system in lettura e scrittura per una condivisione di rete. Per le repliche secondarie, all'account deve essere associata l'autorizzazione di lettura per la condivisione di rete.  
   
      Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
-  
-###  <a name="Security"></a> Sicurezza  
-  
-####  <a name="Permissions"></a> Permissions  
+   
+## <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
  È inoltre necessaria l'autorizzazione CONTROL ON ENDPOINT se si desidera gestire l'endpoint del mirroring del database tramite la Procedura guidata Aggiungi replica a gruppo di disponibilità.  
@@ -80,7 +78,7 @@ ms.locfileid: "53202480"
     |Scheda|Breve descrizione|  
     |---------|-----------------------|  
     |**Repliche**|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una nuova replica secondaria.|  
-    |**Endpoint**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: Se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
+    |**Endpoint**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
     |**Preferenze di backup**|Utilizzare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso, se si desidera modificare l'impostazione corrente e per specificare le priorità di backup per le singole repliche di disponibilità.|  
   
 6.  Se le repliche selezionate contengono database con una chiave master del database, immettere le password per le chiavi master del database nella colonna **Password**. La colonna **Stato** visualizza **Password obbligatoria** per i database con una chiave master del database. L'opzione **Avanti** è disattivata finché non viene immessa la password corretta nella colonna **Password**. Dopo avere immesso le password, fare clic su **Aggiorna**. Se le password sono state immesse correttamente, la colonna Stato indica **Password immessa** e **Avanti** diventa disponibile.  

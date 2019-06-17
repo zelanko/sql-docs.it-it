@@ -14,14 +14,14 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e6d23fb19b756bbf303a06512fecc3a6d29b8090
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097452"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718091"
 ---
-# <a name="transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv-troubleshooting"></a>Risoluzione dei problemi relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault (AKV)
+# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>Risoluzione dei problemi relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault (AKV)
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 In questo argomento sono disponibili informazioni sugli argomenti seguenti:  

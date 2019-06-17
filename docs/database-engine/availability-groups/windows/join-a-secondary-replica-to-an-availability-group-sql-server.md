@@ -16,50 +16,29 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213155"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799289"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Creare un join di una replica secondaria a un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustra come creare un join di una replica secondaria a un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Dopo l'aggiunta di una replica secondaria a un gruppo di disponibilità AlwaysOn, è necessario creare un join della replica secondaria al gruppo di disponibilità. L'operazione di join della replica deve essere eseguita nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui viene ospitata la replica secondaria.  
+
   
--   **Prima di iniziare:**  
+##  <a name="Prerequisites"></a> Prerequisiti  
   
-     [Prerequisiti](#Prerequisites)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per preparare un database secondario tramite:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Completamento:** [Configurare i database secondari](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="Prerequisites"></a> Prerequisiti  
-  
--   La replica primaria del gruppo di disponibilità deve essere attualmente online.  
-  
--   È necessario essere connessi all'istanza del server che ospita una replica secondaria di cui non sia ancora stato creato un join al gruppo di disponibilità.  
-  
+-   La replica primaria del gruppo di disponibilità deve essere attualmente online.    
+-   È necessario essere connessi all'istanza del server che ospita una replica secondaria di cui non sia ancora stato creato un join al gruppo di disponibilità.    
 -   L'istanza del server locale deve essere in grado di connettersi all'endpoint del mirroring del database dell'istanza del server che ospita la replica primaria.  
   
 > [!IMPORTANT]  
 >  Se nessuno dei prerequisiti viene soddisfatto, l'operazione di join non viene completata. Al termine di un tentativo di join errato, potrebbe essere necessario connettersi all'istanza del server in cui è ospitata la replica primaria per rimuovere e aggiungere nuovamente la replica secondaria, prima di poter creare un join al gruppo di disponibilità. Per altre informazioni, vedere [Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) e [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -77,7 +56,7 @@ ms.locfileid: "53213155"
   
 6.  Per creare un join della replica secondaria al gruppo di disponibilità, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica secondaria.  

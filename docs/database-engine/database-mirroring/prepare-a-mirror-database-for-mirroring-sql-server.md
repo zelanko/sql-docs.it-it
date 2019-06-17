@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2179ae0fd8110f7172ca936b77045f58fb50cd7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d555bc79dffcb750494bd9f1f79622d03fc75eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770175"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795329"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparazione di un database mirror per il mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47770175"
   
 -   [Per preparare un nuovo database mirror](#CombinedProcedure)  
   
--   **Completamento:**  [dopo la preparazione di un database mirror](#FollowUp)  
+-   **Completamento:**  [Dopo la preparazione di un database mirror](#FollowUp)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "47770175"
   
  Per informazioni sull'abilitazione della decrittografia automatica della chiave master del database di un database mirror, vedere [Impostazione di un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Proprietario del database o amministratore di sistema.  
   
 ##  <a name="PrepareToRestartMirroring"></a> Per preparare un database mirror esistente per il riavvio del mirroring  
@@ -112,7 +112,7 @@ ms.locfileid: "47770175"
   
 2.  Creare un backup completo o differenziale del database principale.  
   
-    -   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+    -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
     -   [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
   
@@ -237,7 +237,7 @@ ms.locfileid: "47770175"
   
  Per un esempio completo di impostazione del mirroring del database, con le impostazioni relative alla sicurezza e ai partner, nonché l'aggiunta di un server di controllo del mirroring, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Completamento: dopo la preparazione di un database mirror  
+##  <a name="FollowUp"></a> Completamento: Dopo la preparazione di un database mirror  
   
 1.  Se è stato eseguito un backup del log aggiuntivo dopo l'ultima operazione RESTORE LOG, è necessario applicare manualmente ogni backup del log aggiuntivo, utilizzando RESTORE WITH NORECOVERY.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "47770175"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
@@ -263,7 +263,7 @@ ms.locfileid: "47770175"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Mirroring di database e cataloghi full-text &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   

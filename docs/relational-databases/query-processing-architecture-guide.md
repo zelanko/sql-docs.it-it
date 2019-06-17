@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161688"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462720"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -334,7 +334,7 @@ In Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vie
   * Predicati relativi a condizioni di ricerca nella clausola WHERE
   * Operazioni di join
   * Funzioni di aggregazione
-  * Clausole`GROUP BY` 
+  * Clausole`GROUP BY`
   * Riferimenti alla tabella
 * Il costo stimato necessario per l'utilizzo dell'indice è inferiore a quello di qualsiasi altro meccanismo di accesso considerato in Query Optimizer. 
 * Ogni tabella a cui si fa riferimento nella query, direttamente oppure espandendo una vista per accedere alle tabelle sottostanti, corrispondente a un riferimento alla tabella nella vista indicizzata, deve disporre dello stesso set di hint ad essa applicato nella query.
@@ -421,7 +421,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un pool di
 I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono i componenti principali seguenti: 
 
 - **Piano di esecuzione della query**     
-  La parte centrale del piano di esecuzione è una struttura di dati rientrante di sola lettura che può essere utilizzata da un numero qualsiasi di utenti. Questo elemento è detto piano della query. Nel piano della query non viene archiviato alcun contesto utente. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo. 
+  La parte centrale del piano di esecuzione è una struttura di dati rientrante di sola lettura che può essere usata da un numero qualsiasi di utenti. Questo elemento è detto piano della query. Nel piano della query non viene archiviato alcun contesto utente. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo. 
 - **Contesto di esecuzione**     
   Ogni utente che esegue la query dispone di una struttura di dati contenente i dati specifici per l'esecuzione, ad esempio i valori dei parametri. Questa struttura di dati è denominata contesto di esecuzione. Le strutture di dati del contesto di esecuzione vengono riutilizzate. Se un utente esegue una query e una delle strutture non è in uso, questa viene reinizializzata con il contesto del nuovo utente. 
 
@@ -729,6 +729,8 @@ I valori dei parametri vengono individuati durante la compilazione o ricompilazi
 -  Query inviate tramite sp_executesql 
 -  Query preparate
 
+Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, vedere [Risolvere i problemi di query con problemi di piani di esecuzione di query sensibili ai parametri](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
+
 > [!NOTE]
 > Per le query che usano l'hint `RECOMPILE`, vengono individuati sia i valori dei parametri che i valori correnti delle variabili locali. I valori individuati (dei parametri e delle variabili locali) sono quelli esistenti nella posizione all'interno del batch prima dell'istruzione con l'hint `RECOMPILE`. In particolare, per i parametri, non vengono individuati i valori passati con la chiamata del batch.
 
@@ -916,17 +918,17 @@ Singole istruzioni `CREATE TABLE` o `ALTER TABLE` possono avere più vincoli che
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due metodi per fare riferimento a origini dati OLE DB eterogenee nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)]:
 
 * Nomi di server collegati  
-  Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` . Per fare riferimento agli oggetti di server collegati nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], è possibile utilizzare nomi in quattro parti. Ad esempio, se si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione seguente fa riferimento a una tabella in tale server: 
+  Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` . Per fare riferimento agli oggetti di server collegati nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], è possibile usare nomi in quattro parti. Ad esempio, se si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione seguente fa riferimento a una tabella in tale server: 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   È anche possibile specificare il nome del server collegato in un'istruzione `OPENQUERY` per aprire un set di righe dall'origine dei dati OLE DB. Successivamente, è possibile inserire i riferimenti a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità utilizzate per i riferimenti a una tabella. 
+   È anche possibile specificare il nome del server collegato in un'istruzione `OPENQUERY` per aprire un set di righe dall'origine dei dati OLE DB. Successivamente, è possibile inserire i riferimenti a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità usate per i riferimenti a una tabella. 
 
 * Nomi di connettore ad hoc  
-  Nel caso di un numero limitato di riferimenti a un'origine dei dati, nella funzione `OPENROWSET` o `OPENDATASOURCE` vengono specificate le informazioni necessarie per la connessione al server collegato. In seguito, sarà possibile fare riferimento a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità utilizzate per i riferimenti a una tabella: 
+  Nel caso di un numero limitato di riferimenti a un'origine dei dati, nella funzione `OPENROWSET` o `OPENDATASOURCE` vengono specificate le informazioni necessarie per la connessione al server collegato. In seguito, sarà possibile fare riferimento a tale set di righe nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in base alle stesse modalità usate per i riferimenti a una tabella: 
   
   ```sql
   SELECT *
@@ -935,11 +937,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due me
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza OLE DB per la comunicazione tra il motore relazionale e il motore di archiviazione. Il motore relazionale suddivide ogni istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in una serie di operazioni su set di righe OLE DB semplici, aperti dal motore di archiviazione nelle tabelle di base. Pertanto, il motore relazionale può aprire inoltre set di righe OLE DB semplici in qualsiasi origine dei dati OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza OLE DB per la comunicazione tra il motore relazionale e il motore di archiviazione. Il motore relazionale suddivide ogni istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in una serie di operazioni su set di righe OLE DB semplici, aperti dal motore di archiviazione dalle tabelle di base. Pertanto, il motore relazionale può aprire inoltre set di righe OLE DB semplici in qualsiasi origine dei dati OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Il motore relazionale utilizza l'API OLE DB per aprire i set di righe nei server collegati, recuperare le righe e gestire le transazioni.
 
-Per ogni origine dei dati OLE DB accessibile come server collegato, è necessario un provider OLE DB nel server che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La serie di operazioni [!INCLUDE[tsql](../includes/tsql-md.md)] che è possibile utilizzare per un'origine dei dati OLE DB specifica dipende dalle funzionalità del provider OLE DB.
+Per ogni origine dei dati OLE DB accessibile come server collegato, è necessario un provider OLE DB nel server che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il set di operazioni [!INCLUDE[tsql](../includes/tsql-md.md)] che è possibile usare per un'origine dei dati OLE DB specifica dipende dalle funzionalità del provider OLE DB.
 
 Per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i membri del ruolo predefinito del server `sysadmin` possono abilitare o disabilitare l'uso di nomi di connettore ad hoc per un provider OLE DB tramite la proprietà `DisallowAdhocAccess` di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando l'accesso ad-hoc è abilitato, qualsiasi utente connesso a quella istanza può eseguire istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] contenenti nomi di connettore ad hoc che fanno riferimento a qualsiasi origine dati in rete accessibile tramite il provider OLE DB. Per controllare l'accesso alle origini dei dati, i membri del ruolo `sysadmin` possono disabilitare l'accesso ad hoc per i provider OLE DB corrispondenti, limitando in tal modo l'accesso da parte degli utenti alle sole origini dei dati a cui viene fatto riferimento dai nomi dei server collegati definiti dagli amministratori. Per impostazione predefinita, l'accesso ad hoc è abilitato per il provider OLE DB di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e disabilitato per tutti gli altri provider OLE DB.
 

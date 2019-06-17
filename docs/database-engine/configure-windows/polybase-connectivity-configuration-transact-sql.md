@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415251"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772227"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -59,25 +59,25 @@ RECONFIGURE
   
 -   Opzione 0: disabilitazione della connettività Hadoop  
   
--   Opzione 1: Hortonworks HDP 1.3 su Windows Server  
+-   Opzione 1: Hortonworks HDP 1.3 in Windows Server  
   
 -   Opzione 1: archivio BLOB di Azure (WASB[S])  
   
--   Opzione 2: Hortonworks HDP 1.3 su Linux  
+-   Opzione 2: Hortonworks HDP 1.3 in Linux  
   
 -   Opzione 3: Cloudera CDH 4.3 su Linux  
   
--   Opzione 4: Hortonworks HDP 2.0 su Windows Server  
+-   Opzione 4: Hortonworks HDP 2.0 in Windows Server  
   
 -   Opzione 4: archivio BLOB di Azure (WASB[S])  
   
--   Opzione 5: Hortonworks HDP 2.0 su Linux  
+-   Opzione 5: Hortonworks HDP 2.0 in Linux  
   
--   Opzione 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 su Linux  
+-   Opzione 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 in Linux  
   
 -   Opzione 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 in Linux  
   
--   Opzione 7: Hortonworks 2.1, 2.2 e 2.3 su Windows Server  
+-   Opzione 7: Hortonworks 2.1, 2.2 e 2.3 in Windows Server  
   
 -   Opzione 7: archivio BLOB di Azure (WASB[S])  
   

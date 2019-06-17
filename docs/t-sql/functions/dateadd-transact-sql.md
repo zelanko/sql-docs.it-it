@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943687"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469646"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ Espressione che può risolversi in uno dei valori seguenti:
 Per *date*, `DATEADD` accetta un'espressione di colonna, un'espressione, un valore letterale stringa o una variabile definita dall'utente. Un valore stringa deve risolversi in un elemento **datetime**. Per evitare problemi di ambiguità, esprimere gli anni nel formato a quattro cifre. Per informazioni sugli anni a due cifre, vedere [Configurare l'opzione di configurazione del server Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-types"></a>Tipi restituiti
-Il tipo di dati dell'argomento *date* diventa il tipo di dati del valore restituito da `DATEADD`, ad eccezione dei valori *date* letterali stringa. Per una valore letterale stringa, `DATEADD` restituisce un valore **datetime**. `DATEADD` genera un errore se la scala dei secondi del valore letterale stringa supera tre posizioni decimali (.nnn) o se il valore letterale stringa contiene la parte relativa alla differenza di fuso orario.
+
+Il tipo di dati del valore restituito per questo metodo è dinamico. Il tipo restituito dipende dall'argomento specificato per `date`. Se il valore per `date` è una data letterale stringa, `DATEADD` restituisce un valore **datetime**. Se viene fornito un altro tipo di dati di input valido per `date`, `DATEADD` restituisce lo stesso tipo di dati. `DATEADD` genera un errore se la scala dei secondi del valore letterale stringa supera tre posizioni decimali (.nnn) o se il valore letterale stringa contiene la parte relativa alla differenza di fuso orario.
   
 ## <a name="return-value"></a>Valore restituito  
   

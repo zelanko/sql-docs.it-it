@@ -12,12 +12,12 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749039"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462677"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,19 @@ ms.locfileid: "47749039"
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le chiavi di crittografia sono costituite da una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati riservati. La chiave simmetrica viene creata durante l'inizializzazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si avvia per la prima volta l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La chiave è utilizzata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare dati riservati archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che contiene dati riservati in un database viene creata una coppia di chiavi pubblica e privata.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Applicazioni per chiavi del SQL Server e del database  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene due applicazioni principali per le chiavi: una *chiave master del servizio* (SMK) generata per un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e una *chiave master del database* (DMK) usata per un database.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene due applicazioni principali per le chiavi: una *chiave master del servizio* (SMK) generata per un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e una *chiave master del database* (DMK) usata per un database.
+
+### <a name="service-master-key"></a>Chiave master del servizio
   
- La SMK viene generata automaticamente la prima volta che viene avviata e usata l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare la password, le credenziali o la chiave master del database di un server collegato. La SMK viene crittografata usando la chiave locale del computer che utilizza l'API Windows Data Protection (DPAPI). Il DPAPI usa una chiave derivata dalle credenziali Windows dell'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le credenziali del computer. La chiave master del servizio può essere decrittografata solo dall'account del servizio con cui è stata creata o da un'entità autorizzata ad accedere alle credenziali della macchina.  
+ La chiave master del servizio è l'elemento radice della gerarchia di crittografia di SQL Server. La SMK viene generata automaticamente la prima volta che viene avviata e usata l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare la password, le credenziali o la chiave master del database di un server collegato. La chiave SMK viene crittografata usando la chiave locale del computer che usa l'API Windows Data Protection (DPAPI). Il DPAPI usa una chiave derivata dalle credenziali Windows dell'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le credenziali del computer. La chiave master del servizio può essere decrittografata solo dall'account del servizio con cui è stata creata o da un'entità autorizzata ad accedere alle credenziali della macchina.
+
+La chiave master del servizio può essere aperta solo dall'account di servizio Windows nel quale è stata creata oppure da un'entità con accesso sia al nome che alla password del'account di servizio.
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usa l'algoritmo di crittografia AES per proteggere la chiave master del servizio (SMK) e la chiave master del database (DMK). AES è un algoritmo di crittografia più recente rispetto a 3DES utilizzato nelle versioni precedenti. Dopo aver aggiornato un'istanza di [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] le chiavi SMK e DMK devono essere rigenerate per aggiornare le chiavi master ad AES. Per altre informazioni sulla rigenerazione della chiave SMK, vedere [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+
+### <a name="database-master-key"></a>Chiave master del database
   
- La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Si può utilizzare anche per crittografare dati, ma ha limitazioni di lunghezza che la rendono meno pratica per i dati rispetto all'utilizzo di una chiave simmetrica.  
-  
- Al momento della creazione, la chiave master viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente. Per attivare la decrittografia automatica della chiave master, viene crittografata una copia della chiave utilizzando la SMK. Viene archiviata in entrambi i database dove è usata e nel database **master** di sistema.  
+ La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Si può utilizzare anche per crittografare dati, ma ha limitazioni di lunghezza che la rendono meno pratica per i dati rispetto all'utilizzo di una chiave simmetrica. Per abilitare la decrittografia automatica della chiave master del database, viene crittografata una copia della chiave usando la chiave SMK. Viene archiviata in entrambi i database dove è usata e nel database **master** di sistema.  
   
  La copia della DMK archiviata nel database **master** di sistema viene aggiornata automaticamente ogni qualvolta la DMK è modificata. È possibile modificare questa impostazione predefinita usando l'opzione **DROP ENCRYPTION BY SERVICE MASTER KEY** dell'istruzione **ALTER MASTER KEY** . Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione **OPEN MASTER KEY** e una password.  
   

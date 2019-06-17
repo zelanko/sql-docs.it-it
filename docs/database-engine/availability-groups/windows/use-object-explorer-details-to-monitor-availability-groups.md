@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824989"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803441"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,21 +30,8 @@ ms.locfileid: "47824989"
 > [!NOTE]  
 >  Per informazioni sull'uso del riquadro Dettagli Esplora oggetti, vedere [Riquadro Dettagli di Esplora oggetti](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
--   **Per monitorare un gruppo di disponibilità tramite:**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **Dettagli Esplora oggetti:**  
-  
-     [Dettagli gruppo di disponibilità](#AvGroupsDetails)  
-  
-     [Dettagli replica di disponibilità](#AvReplicaDetails)  
-  
-     [Dettagli database di disponibilità](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanza del server) che ospita la replica primaria o una replica secondaria.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -146,7 +133,7 @@ ms.locfileid: "47824989"
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   
  [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   

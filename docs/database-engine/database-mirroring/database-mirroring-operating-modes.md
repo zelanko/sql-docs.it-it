@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503462"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795522"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52503462"
  La sessione di mirroring del database viene eseguita in modo asincrono e facoltativamente utilizza un server di controllo, nonché il server principale e il server mirror.  
   
  Livello di sicurezza delle transazioni  
- Proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di protezione: FULL e OFF.  
+ Proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di sicurezza: FULL e OFF.  
   
  Controllo  
  Per l'utilizzo nella sola modalità a sicurezza elevata. Istanza facoltativa di SQL Server che consente al server mirror di stabilire se avviare un failover automatico. A differenza dei due partner di failover, il server di controllo del mirroring non rende disponibile il database. Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
@@ -202,7 +202,7 @@ ms.locfileid: "52503462"
 -   [Stato del server di controllo del mirroring](#WitnessState)  
   
 ####  <a name="TxnSafety"></a> Transaction Safety  
- Il livello di sicurezza delle transazioni è una proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di protezione: FULL e OFF.  
+ Il livello di sicurezza delle transazioni è una proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di sicurezza: FULL e OFF.  
   
 -   SAFETY FULL  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52503462"
   
 -   Quando è disponibile ma non è connesso a un partner, il server di controllo del mirroring si trova nello stato UNKNOWN o DISCONNECTED in relazione a tale partner. In questo caso, il server di controllo del mirroring non dispone del quorum con tale partner e, se i partner non sono connessi tra loro, il database non sarà più disponibile.  
   
- Per informazioni sul quorum, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Per altre informazioni sul quorum, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Lo stato di ogni server di controllo del mirroring in un'istanza del server viene registrato nelle colonne **mirroring_witness_state** e **mirroring_witness_state_desc** della vista del catalogo **sys.database_mirroring**. Per altre informazioni, vedere [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   

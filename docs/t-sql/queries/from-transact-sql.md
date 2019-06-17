@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft Docs
+title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334788"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462686"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Specifica le tabelle, le viste, le tabelle derivate e le tabelle unite in join utilizzate nelle istruzioni DELETE, SELECT e UPDATE in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nell'istruzione SELECT la clausola FROM è obbligatoria, tranne nel caso in cui l'elenco di selezione includa solo costanti, variabili ed espressioni aritmetiche (non nomi di colonna).  
-  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+In Transact-SQL, la clausola FROM è disponibile per le istruzioni seguenti:
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+La clausola FROM è in genere obbligatoria per l'istruzione SELECT. L'eccezione è quando non viene elencata alcuna colonna di tabella e gli unici elementi elencati sono valori letterali o variabili o espressioni aritmetiche.
+
+Questo articolo illustra anche le parole chiave seguenti che possono essere usate nella clausola FROM:
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -352,7 +365,7 @@ ON (p.ProductID = v.ProductID);
  Indica la colonna dei valori dell'operatore PIVOT. Se usato con UNPIVOT, *value_column* non può corrispondere al nome di una colonna esistente in *table_source* nell'input.  
   
  FOR *pivot_column*  
- Colonna pivot dell'operatore PIVOT. *pivot_column* deve essere di un tipo di dati che è possibile convertire in modo implicito o esplicito nel tipo **nvarchar()**. Questa colonna non può essere **image** o **rowversion**.  
+ Colonna pivot dell'operatore PIVOT. *pivot_column* deve essere di un tipo di dati che è possibile convertire in modo implicito o esplicito nel tipo **nvarchar()** . Questa colonna non può essere **image** o **rowversion**.  
   
  Quando viene usato UNPIVOT, *pivot_column* indica il nome della colonna di output risultante dal raggruppamento delle colonne di *table_source*. In *table_source* non può esistere già una colonna con questo nome.  
   
@@ -372,7 +385,7 @@ ON (p.ProductID = v.ProductID);
 **Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Restituisce una tabella con un singolo record per ogni riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *\<date_time>*. Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *\<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *\<date_time>*.   
+ Restituisce una tabella con un singolo record per ogni riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *\<date_time>* . Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *\<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
@@ -385,7 +398,7 @@ ON (p.ProductID = v.ProductID);
 
 **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Come sopra per la descrizione di **FROM \<start_date_time> TO \<end_date_time>**, tranne per il fatto che include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint \<end_date_time>.  
+ Come sopra per la descrizione di **FROM \<start_date_time> TO \<end_date_time>** , tranne per il fatto che include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint \<end_date_time>.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
@@ -441,7 +454,7 @@ L'operatore APPLY funziona nel modo seguente per restituire l'origine di tabella
   
  Per altre informazioni su PIVOT e UNPIVOT ed esempi, vedere [Uso di PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni per l'istruzione DELETE, SELECT o UPDATE.  
   
 ## <a name="examples"></a>Esempi  
@@ -473,7 +486,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>b. Utilizzo degli hint di ottimizzazione TABLOCK e HOLDLOCK  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Utilizzo degli hint di ottimizzazione TABLOCK e HOLDLOCK  
  Nella transazione parziale seguente viene illustrato come impostare un blocco di tabella condiviso esplicito in `Employee` e come leggere l'indice. Il blocco viene mantenuto attivo fino al termine della transazione.  
   
 ```sql    
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>Vedere anche  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

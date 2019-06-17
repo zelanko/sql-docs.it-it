@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534094"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795473"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52534094"
  Il tempo di failover è composto principalmente dal tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda rollforward, più un breve tempo aggiuntivo. Per altre informazioni sulla modalità usata dal server mirror per elaborare i record dei log, vedere [Mirroring di database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md). Per informazioni sulla stima del tempo di failover, vedere la sezione Stima del tempo di rollforward durante il failover, più avanti in questo argomento.  
   
 > [!IMPORTANT]  
->  Se il failover si verifica durante una transazione in cui viene creato e quindi modificato un indice o una tabella, per il failover può essere necessario un tempo superiore al normale.  Ad esempio, il tempo di failover può aumentare se il failover si verifica durante la serie di operazioni seguente: BEGIN TRANSACTION, CREATE INDEX su una tabella e SELECT INTO sulla tabella. La possibilità di un failover prolungato durante una transazione di questo tipo permane finché la transazione non viene completata con un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
+>  Se il failover si verifica durante una transazione in cui viene creato e quindi modificato un indice o una tabella, per il failover può essere necessario un tempo superiore al normale.  Il failover durante la serie di operazioni seguente, ad esempio, potrebbe aumentare il tempo di failover:  BEGIN TRANSACTION, CREATE INDEX su una tabella e SELECT INTO sulla tabella. La possibilità di un failover prolungato durante una transazione di questo tipo permane finché la transazione non viene completata con un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>Coda rollforward  
  Il rollforward del database comporta l'applicazione dei record di log presenti nella coda rollforward sul server mirror. La *coda rollforward* contiene i record di log che sono stati scritti su disco nel server mirror ma per i quali non è ancora stato eseguito il rollforward nel database mirror.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00397c644e2e9cffd04026d4cc4beb4ade4b69c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ce3c4df7141f6bf31c02e4376001a280135db5a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830860"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774731"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mirroring del database e istanze del cluster di failover di SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47830860"
   
  ![Failover su un cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "Failover su un cluster")  
   
- Le tre istanze del server nella sessione di mirroring risiedono in tre cluster distinti: **Cluster_A**, **Cluster_B**e **Cluster_C**. In ogni cluster è in esecuzione un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come istanza cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . All'avvio della sessione di mirroring, l'istanza cluster di failover in **Cluster_A** è il server principale, l'istanza cluster di failover in **Cluster_B** è il server mirror e l'istanza cluster di failover in **Cluster_C** è il server di controllo del mirroring nella sessione. Nella fase finale, si verifica un problema nel nodo attivo del **Cluster_A** e, di conseguenza, il server principale non è più disponibile.  
+ Le tre istanze del server nella sessione di mirroring risiedono in tre cluster distinti: **Cluster_A**, **Cluster_B** e **Cluster_C**. In ogni cluster è in esecuzione un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come istanza cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . All'avvio della sessione di mirroring, l'istanza cluster di failover in **Cluster_A** è il server principale, l'istanza cluster di failover in **Cluster_B** è il server mirror e l'istanza cluster di failover in **Cluster_C** è il server di controllo del mirroring nella sessione. Nella fase finale, si verifica un problema nel nodo attivo del **Cluster_A** e, di conseguenza, il server principale non è più disponibile.  
   
  Prima che si verifichi il failover del cluster, il server mirror, con la collaborazione del server di controllo del mirroring, rileva la perdita del server principale. Il server mirror esegue il rollforward del rispettivo database, portandolo online come nuovo database principale nel più breve tempo possibile. Al termine del failover nel **Cluster_A** , il server principale precedente è diventato il server mirror, che sincronizza il rispettivo database con il database principale corrente del **Cluster_B**.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "47830860"
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Modalità di funzionamento del mirroring del database](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [Istanze del cluster di failover AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

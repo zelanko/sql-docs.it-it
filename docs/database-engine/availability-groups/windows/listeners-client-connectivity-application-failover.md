@@ -17,46 +17,21 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214702"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799302"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Connettersi a un listener del gruppo di disponibilità Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+  Questo articolo contiene informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 > [!NOTE]  
 >  Per la maggior parte delle configurazioni comuni del listener, è possibile creare il listener del primo gruppo di disponibilità tramite cmdlet di PowerShell o istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Per ulteriori informazioni, vedere [Attività correlate](#RelatedTasks)più avanti in questo argomento.  
   
- **Contenuto dell'argomento:**  
-  
--   [Listener del gruppo di disponibilità](#AGlisteners)  
-  
--   [Utilizzo di un listener per connettersi alla replica primaria](#ConnectToPrimary)  
-  
--   [Utilizzo di un listener per connettersi a una replica secondaria di sola lettura (routing di sola lettura)](#ConnectToSecondary)  
-  
-    -   [Per configurare repliche di disponibilità per il routing di sola lettura](#ConfigureARsForROR)  
-  
-    -   [Finalità dell'applicazione di sola lettura e routing di sola lettura](#ReadOnlyAppIntent)  
-  
--   [Ignorare i listener del gruppo di disponibilità](#BypassAGl)  
-  
--   [Comportamento delle connessioni client al failover](#CCBehaviorOnFailover)  
-  
--   [Supporto del failover su più subnet del gruppo di disponibilità](#SupportAgMultiSubnetFailover)  
-  
--   [Listener del gruppo di disponibilità e certificati SSL](#SSLcertificates)  
-  
--   [Listener del gruppo di disponibilità e nomi entità server (SPN)](#SPNs)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
--   [Contenuto correlato](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> Listener del gruppo di disponibilità  
  È possibile fornire la connettività client al database di un determinato gruppo di disponibilità creando un listener del gruppo di disponibilità. Un listener del gruppo di disponibilità è un nome di rete virtuale (VNN, Virtual Network Name) a cui i client possono connettersi per accedere a un database in una replica primaria o secondaria di un gruppo di disponibilità Always On. Un listener del gruppo di disponibilità consente a un client di connettersi a una replica di disponibilità senza conoscere il nome dell'istanza fisica di SQL Server a cui il client si deve connettere.  Non è necessario modificare la stringa di connessione client per connettersi al percorso corrente della replica primaria corrente.  
@@ -67,13 +42,8 @@ ms.locfileid: "53214702"
   
  Per informazioni essenziali sui listener del gruppo di disponibilità, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Contenuto della sezione**  
   
--   [Configurazione del listener del gruppo di disponibilità](#AGlConfig)  
-  
--   [Selezione della porta per il listener del gruppo di disponibilità](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> Configurazione del listener del gruppo di disponibilità  
+##  <a name="AGlConfig"></a> Configurazione del listener del gruppo di disponibilità  
  Il listener del gruppo di disponibilità è definito dagli elementi seguenti:  
   
  Nome DNS univoco  
@@ -95,14 +65,14 @@ ms.locfileid: "53214702"
   
  Le configurazioni di rete ibride e DHCP su più subnet non sono supportate per i listener del gruppo di disponibilità. Quando si verifica un failover è di fatto possibile che un indirizzo IP dinamico scada o venga rilasciato, compromettendo la disponibilità elevata complessiva.  
   
-###  <a name="SelectListenerPort"></a> Selezione della porta per il listener del gruppo di disponibilità  
+##  <a name="SelectListenerPort"></a> Selezione della porta per il listener del gruppo di disponibilità  
  Quando si configura un listener del gruppo di disponibilità, è necessario specificare una porta.  È possibile configurare la porta predefinita su 1433 per non rendere troppo complesse le stringhe di connessione client. Se si intende utilizzare la porta 1433, non è necessario specificare un numero di porta in una stringa di connessione.   Inoltre, poiché ogni listener del gruppo di disponibilità dispone di un nome di rete virtuale separato, ogni listener del gruppo di disponibilità configurato su un solo cluster WSFC può essere configurato per fare riferimento alla stessa porta predefinita 1433.  
   
  È inoltre possibile specificare una porta del listener non standard. Ciò significa, tuttavia, che è necessario specificare in modo esplicito una porta di destinazione nella stringa di connessione ogni volta che ci si connette al listener del gruppo di disponibilità.  Sarà inoltre necessario aprire un'autorizzazione sul firewall per la porta non standard.  
   
  Se si utilizza la porta predefinita 1433 per il nome di rete virtuale del listener del gruppo di disponibilità, è necessario assicurarsi che nessuno altro servizio sul nodo cluster utilizzi questa porta, cosa che provocherebbe un conflitto tra porte.  
   
- Se una delle istanze di SQL Server è già in attesa sulla porta TCP 1433 attraverso il listener dell'istanza e nessun altro servizio, incluse istanze aggiuntive di SQL Server, nel computer è in attesa sulla porta 1433, non si verificherà alcun conflitto tra porte con il listener del gruppo di disponibilità.  Il motivo è dato dal fatto che il listener del gruppo di disponibilità può condividere la stessa porta TCP nello stesso processo del servizio.  È tuttavia opportuno non configurare più istanze di SQL Server (side-by-side) per l'attesa sulla stessa porta.  
+ Se una delle istanze di SQL Server è già in attesa sulla porta TCP 1433 attraverso il listener dell'istanza e nessun altro servizio, incluse istanze aggiuntive di SQL Server, nel computer è in attesa sulla porta 1433, non si verificherà alcun conflitto tra porte con il listener del gruppo di disponibilità.  Il motivo è dato dal fatto che il listener del gruppo di disponibilità può condividere la stessa porta TCP nello stesso processo del servizio.  È tuttavia opportuno non configurare più istanze di SQL Server (side-by-side) per l'ascolto sulla stessa porta.  
   
 ##  <a name="ConnectToPrimary"></a> Utilizzo di un listener per connettersi alla replica primaria  
  Per utilizzare un listener del gruppo di disponibilità per connettersi alla replica primaria per l'accesso in lettura e scrittura, nella stringa di connessione è necessario specificare il nome DNS del listener del gruppo di disponibilità.  Se una nuova replica diventa la replica primaria del gruppo di disponibilità, le connessioni esistenti che utilizzano il nome di rete del listener del gruppo di disponibilità vengono interrotte.  Le nuove connessioni al listener del gruppo di disponibilità vengono quindi indirizzate alla nuova replica primaria. Di seguito è riportato un esempio di una stringa di connessione di base per il provider ADO.NET (System.Data.SqlClient).  
@@ -122,7 +92,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   La stringa di connessione fa riferimento a un listener del gruppo di disponibilità e la finalità dell'applicazione della connessione in ingresso è impostata su sola lettura, ad esempio con la parola chiave **Application Intent=ReadOnly** nelle proprietà o negli attributi di connessione oppure nelle stringhe di connessione ODBC o OLEDB. Per altre informazioni, vedere [Finalità dell'applicazione di sola lettura e routing di sola lettura](#ReadOnlyAppIntent)più avanti in questa sezione.  
   
-###  <a name="ConfigureARsForROR"></a> Per configurare repliche di disponibilità per il routing di sola lettura  
+##  <a name="ConfigureARsForROR"></a> Per configurare repliche di disponibilità per il routing di sola lettura  
  Un amministratore del database deve configurare le repliche di disponibilità come segue:  
   
 1.  Per ogni replica di disponibilità che si desidera configurare come replica secondaria leggibile, un amministratore del database deve configurare le impostazioni seguenti che vengono applicate solo nel ruolo secondario:  
@@ -139,7 +109,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> Finalità dell'applicazione di sola lettura e routing di sola lettura  
+##  <a name="ReadOnlyAppIntent"></a> Finalità dell'applicazione di sola lettura e routing di sola lettura  
  La proprietà della stringa di connessione della finalità dell'applicazione esprime la richiesta dell'applicazione client di essere indirizzata a una versione in lettura e scrittura o in sola lettura del database del gruppo di disponibilità. Per utilizzare un routing di sola lettura, un client deve utilizzare la finalità dell'applicazione di sola lettura nella stringa di connessione per connettersi al listener del gruppo di disponibilità. Senza la finalità dell'applicazione di sola lettura, le connessioni al listener del gruppo di disponibilità sono indirizzate al database sulla una replica primaria.  
   
  L'attributo della finalità dell'applicazione viene archiviato nella sessione del client durante l'accesso. L'istanza di SQL Server elaborerà questa finalità e determinerà come procedere in base alla configurazione del gruppo di disponibilità e allo stato in lettura e scrittura corrente del database di destinazione nella replica secondaria.  
@@ -171,7 +141,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  In alternativa, durante la migrazione dal mirroring del database a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le applicazioni possono specificare la stringa di connessione per il mirroring del database purché esista una sola replica secondaria e non siano consentite le connessioni utente. Per altre informazioni, vedere [Uso delle stringhe di connessione per il mirroring del database con gruppi di disponibilità](#DbmConnectionString)più avanti in questa sezione.  
   
-###  <a name="DbmConnectionString"></a> Uso delle stringhe di connessione per il mirroring del database con gruppi di disponibilità  
+##  <a name="DbmConnectionString"></a> Uso delle stringhe di connessione per il mirroring del database con gruppi di disponibilità  
  Se un gruppo di disponibilità include solo una replica di disponibilità ed è configurato ALLOW_CONNECTIONS = READ_ONLY o ALLOW_CONNECTIONS = NONE per la replica secondaria, i client possono connettersi alla replica primaria tramite una stringa di connessione per il mirroring del database. Questo approccio può essere utile durante la migrazione di un'applicazione esistente dal mirroring del database a un gruppo di disponibilità, a condizione che il gruppo di disponibilità sia limitato a due repliche di disponibilità (una replica primaria e una replica secondaria). Se si aggiungono altre repliche di disponibilità, è necessario creare un listener per il gruppo di disponibilità e aggiornare le applicazioni affinché utilizzino il nome DNS del listener del gruppo di disponibilità.  
   
  Quando si utilizzano le stringhe di connessione per il mirroring del database, il client può utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La stringa di connessione fornita da un client deve specificare almeno il nome di un'istanza del server, ovvero il *nome del partner iniziale*, per identificare l'istanza del server che ospita inizialmente la replica di disponibilità alla quale si desidera connettersi. Facoltativamente, la stringa di connessione può fornire anche il nome di un'altra istanza del server, il *nome del partner di failover*, per identificare l'istanza del server che ospita inizialmente la replica secondaria come nome del partner di failover.  

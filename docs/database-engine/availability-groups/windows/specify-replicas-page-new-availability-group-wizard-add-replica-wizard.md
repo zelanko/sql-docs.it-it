@@ -13,17 +13,17 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212480"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777633"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento vengono descritte le opzioni della pagina **Specifica repliche** . Questa pagina si trova nella **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e nella **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Tramite la pagina **Specifica repliche** è possibile specificare e configurare una o più repliche di disponibilità da aggiungere al gruppo di disponibilità. Nella pagina sono presenti quattro schede, presentate nella tabella seguente. Fare clic sul nome di una scheda nella tabella per accedere alla sezione corrispondente, più avanti in questo argomento.  
+  In questo argomento vengono descritte le opzioni della pagina **Specifica repliche** . Questa pagina si trova nella **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e nella **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Tramite la pagina **Specifica repliche** è possibile specificare e configurare una o più repliche di disponibilità da aggiungere al gruppo di disponibilità. Nella pagina sono presenti quattro schede, presentate nella tabella seguente. Fare clic sul nome di una scheda nella tabella per accedere alla sezione corrispondente, più avanti in questo argomento.  
   
 |Scheda|Breve descrizione|  
 |---------|-----------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "53212480"
  Specificare le preferenze del listener per questo gruppo di disponibilità, nel modo seguente:  
   
  **Nome DNS del listener**  
- Specificare il nome di rete del listener. Questo nome deve essere univoco nel dominio e può contenere solo caratteri alfanumerici, trattini (**-**) e caratteri di sottolineatura (**_**), in qualsiasi ordine. Se viene specificato tramite la scheda **Listener** , il nome DNS può avere una lunghezza massima di 15 caratteri.  
+ Specificare il nome di rete del listener. Questo nome deve essere univoco nel dominio e può contenere solo caratteri alfanumerici, trattini ( **-** ) e caratteri di sottolineatura ( **_** ), in qualsiasi ordine. Se viene specificato tramite la scheda **Listener** , il nome DNS può avere una lunghezza massima di 15 caratteri.  
   
 > [!IMPORTANT]  
 >  Se si immette un nome del listener DNS (o numero di porta) non valido nella scheda **Listener** , il pulsante **Avanti** è disabilitato nella pagina **Specifica repliche** .  
@@ -166,10 +166,10 @@ ms.locfileid: "53212480"
   
  Se si seleziona **Indirizzo IP statico** come modalità di rete (selezione predefinita), viene visualizzata una griglia con le colonne **Subnet** e **Indirizzo IP** e i pulsanti **Aggiungi** e **Rimuovi** associati. Si noti che la griglia è vuota finché non si aggiunge la prima subnet.  
   
- Colonna**Subnet**   
+ Colonna**Subnet**  
  Viene visualizzato l'indirizzo subnet selezionato per ogni subnet aggiunta per il listener.  
   
- Colonna**Indirizzo IP**   
+ Colonna**Indirizzo IP**  
  Viene visualizzato l'indirizzo IPv4 o IPv6 specificato per una determinata subnet.  
   
  **Aggiungi**  

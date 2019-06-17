@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872261"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794994"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,11 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
 -   Un ambiente di sviluppo senza una configurazione a disponibilità elevata.  
   
 -   Un ambiente di produzione non mission-critical in grado di tollerare i tempi di inattività e in esecuzione su hardware e software recenti. La quantità di tempo di inattività dipende dalle dimensioni del database e dalla velocità del sottosistema di I/O. L'aggiornamento di SQL Server 2014 quando le tabelle ottimizzate per la memoria sono in uso comporta maggiore tempo. Per altre informazioni, vedere [pianificare e testare il Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
-  
+
+> [!NOTE]
+> Per un esempio del modo in cui Microsoft ha usato questa strategia, vedere il post di blog seguente: [To upgrade or not to upgrade](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/) (Aggiornare o non aggiornare). 
+
+
 > [!WARNING]  
 >  Quando si esegue il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestata e riavviata quando si eseguono i controlli di pre-aggiornamento.  
   

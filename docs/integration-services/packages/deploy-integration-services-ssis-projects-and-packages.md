@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720054"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469657"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720054"
 Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con questo modello di distribuzione non era possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stato introdotto il modello di distribuzione del pacchetto che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
+>  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con questo modello di distribuzione non era possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
 
 > [!NOTE]
 > In questo articolo viene illustrato come distribuire i pacchetti SSIS a livello generale e come distribuire i pacchetti in locale. È possibile distribuire i pacchetti SSIS anche nelle piattaforme seguenti:
@@ -345,7 +345,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 > [!IMPORTANT]  
 >  Per un'esecuzione specifica, un pacchetto può essere eseguito solo con i valori contenuti in un ambiente server singolo.  
   
- È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È inoltre possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È anche possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Per creare e utilizzare un ambiente server  
   
