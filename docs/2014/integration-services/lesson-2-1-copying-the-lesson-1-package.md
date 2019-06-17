@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891674"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Passaggio 1: Copia del pacchetto della lezione 1
@@ -38,7 +38,7 @@ ms.locfileid: "62891674"
   
 7.  Nella finestra Proprietà aggiornare la `Name` proprietà `Lesson 2`.  
   
-8.  Fare clic sulla casella per il **ID** proprietà, fare clic sulla freccia a discesa e quindi fare clic su  **\<Genera nuovo ID >**.  
+8.  Fare clic sulla casella per il **ID** proprietà, fare clic sulla freccia a discesa e quindi fare clic su  **\<Genera nuovo ID >** .  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>Per aggiungere il pacchetto della lezione 1 completato  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62891674"
   
 3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
   
-4.  Fare clic sul pulsante Sfoglia **(...)**, passare a **Lesson 1.dtsx** nel computer e quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante Sfoglia **(...)** , passare a **Lesson 1.dtsx** nel computer e quindi fare clic su **Apri**.  
   
      Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   

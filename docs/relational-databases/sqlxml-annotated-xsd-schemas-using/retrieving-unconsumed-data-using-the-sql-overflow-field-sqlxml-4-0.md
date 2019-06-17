@@ -20,15 +20,15 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf5a92c2deaf8fc6867c183e17db8992a39bfd1b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980759"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database utilizzando schemi con annotazioni, è possibile specificare il **SQL: overflow-campo** attributo per identificare la colonna della tabella in cui sono memorizzati i dati di overflow. Il **SQL: overflow-campo** possibile specificare l'attributo su  **\<elemento >**.  
+  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database utilizzando schemi con annotazioni, è possibile specificare il **SQL: overflow-campo** attributo per identificare la colonna della tabella in cui sono memorizzati i dati di overflow. Il **SQL: overflow-campo** possibile specificare l'attributo su  **\<elemento >** .  
   
  I dati vengono quindi recuperati nei modi seguenti:  
   

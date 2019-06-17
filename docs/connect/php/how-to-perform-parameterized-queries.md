@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c1e764373b0a8877da8dcdcf967ec8a591f1580
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666589"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796100"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procedura: Eseguire query con parametri
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -114,7 +114,7 @@ sqlsrv_close( $conn);
 L'esempio precedente usa la funzione **sqlsrv_query** per eseguire le query. Questa funzione è utile per l'esecuzione di query singole poiché esegue sia la preparazione delle istruzioni che l'esecuzione. Per rieseguire una query con valori di parametri diversi è consigliabile usare una combinazione di **sqlsrv_prepare**/**sqlsrv_execute**. Per un esempio di riesecuzione di una query con valori di parametri diversi, vedere l'esempio successivo.  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente mostra l'associazione implicita delle variabili durante l'uso della funzione **sqlsrv_prepare** . L'esempio inserisce più ordini di vendita nella tabella *Sales.SalesOrderDetail* . La matrice *$params* viene associata all'istruzione (*$stmt*) quando viene effettuata la chiamata a **sqlsrv_prepare**. Prima di ogni esecuzione di una query che inserisce un nuovo ordine di vendita nella tabella, la matrice *$params* viene aggiornata con i nuovi valori corrispondenti ai dettagli dell'ordine di vendita. La successiva esecuzione della query usa i nuovi valori di parametri.  
+L'esempio seguente mostra l'associazione implicita delle variabili durante l'uso della funzione **sqlsrv_prepare** . L'esempio inserisce più ordini di vendita nella tabella *Sales.SalesOrderDetail* . La matrice *$params* viene associata all'istruzione ( *$stmt*) quando viene effettuata la chiamata a **sqlsrv_prepare**. Prima di ogni esecuzione di una query che inserisce un nuovo ordine di vendita nella tabella, la matrice *$params* viene aggiornata con i nuovi valori corrispondenti ai dettagli dell'ordine di vendita. La successiva esecuzione della query usa i nuovi valori di parametri.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   

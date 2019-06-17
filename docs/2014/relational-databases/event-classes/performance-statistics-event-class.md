@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827194"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
@@ -34,7 +34,7 @@ ms.locfileid: "62827194"
 |BigintData1|`bigint`|NULL|52|Yes|  
 |BinaryData|`image`|NULL|2|Yes|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0 = Nuovo testo SQL del batch non presente nella cache.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> 1 di tipo 0|21|Yes|  
 |IntegerData2|`int`|NULL|55|Yes|  
 |ObjectID|`int`|NULL|22|Yes|  

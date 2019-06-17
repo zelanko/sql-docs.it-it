@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921957"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
@@ -66,7 +66,7 @@ ms.locfileid: "62921957"
   
      La tabella **suspect_pages** include una riga per ogni pagina che ha restituito un errore 824, fino a un limite di 1.000 righe. Nella seguente tabella vengono mostrati errori registrati nella colonna **event_type** della tabella **suspect_pages** .  
   
-    |Descrizione dell'errore|Valore**event_type** |  
+    |Descrizione dell'errore|Valore**event_type**|  
     |-----------------------|---------------------------|  
     |Errore 823 causato da un errore CRC del sistema operativo o errore 824 diverso da un errore nel checksum o da una pagina incompleta (ad esempio un ID pagina errato)|1|  
     |Errore nel checksum|2|  

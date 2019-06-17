@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920680"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backup di log delle transazioni (SQL Server)
@@ -42,11 +42,11 @@ ms.locfileid: "62920680"
   
 |Time|Evento|  
 |----------|-----------|  
-|8.00|Backup del database|  
-|12.00|Backup del log delle transazioni|  
-|16.00|Backup del log delle transazioni|  
-|18.00|Backup del database|  
-|20.00|Backup del log delle transazioni|  
+|8\.00|Backup del database|  
+|12\.00|Backup del log delle transazioni|  
+|16\.00|Backup del log delle transazioni|  
+|18\.00|Backup del database|  
+|20\.00|Backup del log delle transazioni|  
   
  Il backup del log delle transazioni creato alle 20.00 contiene record del log delle transazioni a partire dalle 16.00 fino alle 20.00, il che include l'ora in cui è stato creato il backup del database completo, ovvero le 18.00. La sequenza di backup del log delle transazioni è continua dal backup del database completo iniziale creato alle 8.00 all'ultimo backup del log delle transazioni creato alle 20.00. Per informazioni su come applicare i backup del log, vedere l'esempio in [Applicare backup log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   

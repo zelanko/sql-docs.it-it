@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921016"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
@@ -88,9 +88,9 @@ ms.locfileid: "62921016"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recupero dati|Recupero completo (se il log è disponibile).|Rischio parziale di perdita di dati.|Tutti i dati successivi all'ultimo backup completo o differenziale vanno perduti.|  
 |Ripristino temporizzato|Qualsiasi periodo di tempo coperto dai backup del log.|Non consentito se il backup del log contiene modifiche con registrazione minima delle operazioni bulk.|Non supportato.|  
-|File restore **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
-|Page restore **\***|Supporto completo.|In casi specifici.**\*\***|Nessuna.|  
-|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|File restore **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|Page restore **\***|Supporto completo.|In casi specifici. **\*\***|Nessuna.|  
+|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
   
  **\*** Disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

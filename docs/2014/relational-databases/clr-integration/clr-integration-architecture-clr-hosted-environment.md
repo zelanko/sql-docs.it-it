@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922565"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente CLR
@@ -124,8 +124,8 @@ ms.locfileid: "62922565"
 |Set di autorizzazioni|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni|  
 |Restrizioni del modello di programmazione|Yes|Yes|Nessuna restrizione|  
-|Requisito di verificabilità|Yes|Yes|no|  
-|Possibilità di chiamare il codice nativo|No|no|Yes|  
+|Requisito di verificabilità|Yes|Yes|No|  
+|Possibilità di chiamare il codice nativo|No|No|Yes|  
   
  Grazie alle restrizioni associate in termini di modello di programmazione consentito, SAFE rappresenta la modalità più affidabile e protetta. Gli assembly SAFE dispongono di autorizzazioni sufficienti per l'esecuzione, l'elaborazione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere effettivamente indipendenti dai tipi e non possono chiamare codice non gestito.  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922275"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
@@ -184,15 +184,15 @@ ms.locfileid: "62922275"
   
      BACKUP DATABASE *database*  
   
-     TO *dispositivo_backup* [ **,**...*n* ]  
+     TO *dispositivo_backup* [ **,** ...*n* ]  
   
-     [ WITH *con_opzioni* [ **,**...*o* ] ];  
+     [ WITH *con_opzioni* [ **,** ...*o* ] ];  
   
     |Opzione|Descrizione|  
     |------------|-----------------|  
     |*database*|Corrisponde al database di cui eseguire il backup.|  
-    |*dispositivo_backup* [ **,**...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=**_nome_dispositivo_backup_fisico_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *con_opzioni* [ **,**...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, *o*. Per informazioni su alcune opzioni WITH di base, vedere il passaggio 2.|  
+    |*dispositivo_backup* [ **,** ...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=** _nome_dispositivo_backup_fisico_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *con_opzioni* [ **,** ...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, *o*. Per informazioni su alcune opzioni WITH di base, vedere il passaggio 2.|  
   
 2.  Facoltativamente, specificare uno o più opzioni WITH. Alcune opzioni WITH di base sono descritte di seguito. Per informazioni su tutte le opzioni WITH, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -204,10 +204,10 @@ ms.locfileid: "62922275"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Solo in SQL Server 2014 o versioni successive specificare l'algoritmo di crittografia da utilizzare e il certificato o la chiave asimmetrica da utilizzare per proteggere la crittografia.  
   
-         DESCRIPTION **=** { **'*`text`*'** | **@**_text_variable_ }  
+         DESCRIPTION **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          Specifica il testo in formato libero che descrive il set di backup. La stringa può essere composta da un massimo di 255 caratteri.  
   
-         NAME **=** { *nome_set_backup* | **@**_variabile_nome_set_backup_ }  
+         NAME **=** { *nome_set_backup* |  **@** _variabile_nome_set_backup_ }  
          Specifica il nome del set di backup. I nomi possono essere composti da un massimo di 128 caratteri. Se si omette NAME, al set di backup non viene assegnato alcun nome specifico.  
   
     -   Opzioni WITH del set di backup di base:  
@@ -216,7 +216,7 @@ ms.locfileid: "62922275"
   
          In alternativa, utilizzare l'opzione FORMAT per formattare i supporti di backup:  
   
-         FORMAT [ **,** MEDIANAME**=** { *nome_supporto* | **@**_variabile_nome_supporto_ } ] [ **,** MEDIADESCRIPTION **=** { *testo* | **@**_variabile_testo_ } ]  
+         FORMAT [ **,** MEDIANAME **=** { *nome_supporto* |  **@** _variabile_nome_supporto_ } ] [ **,** MEDIADESCRIPTION **=** { *testo* |  **@** _variabile_testo_ } ]  
          Utilizzare la clausola FORMAT, se i supporti vengono utilizzati per la prima volta o si desiderano sovrascrivere tutti i dati esistenti. Facoltativamente, assegnare al nuovo supporto un nome e una descrizione.  
   
         > [!IMPORTANT]  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033653"
 ---
 # <a name="update-statistics"></a>Aggiorna statistiche
@@ -58,7 +58,7 @@ ms.locfileid: "63033653"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto che si vuole aggiornare e scegliere **Proprietà**.  
   
-6.  Nel **proprietà statistiche -**_nome_statistiche_ della finestra di dialogo Seleziona il **aggiornare le statistiche per le colonne selezionate** casella di controllo e quindi fare clic su **OK**.  
+6.  Nel **proprietà statistiche -** _nome_statistiche_ della finestra di dialogo Seleziona il **aggiornare le statistiche per le colonne selezionate** casella di controllo e quindi fare clic su **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

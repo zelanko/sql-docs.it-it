@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721184"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lezione 1: Pubblicazione dei dati tramite replica di tipo Merge
@@ -51,7 +51,7 @@ ms.locfileid: "62721184"
   
 9. Selezionare **Una riga di questa tabella verrà inviata a una sola sottoscrizione**e quindi fare clic su **OK**.  
   
-10. Nella pagina **Filtro righe tabella** fare clic su **Employee (Human Resources)**, selezionare **Aggiungi** , quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
+10. Nella pagina **Filtro righe tabella** fare clic su **Employee (Human Resources)** , selezionare **Aggiungi** , quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
   
 11. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderHeader** in **Tabella unita in join**, selezionare **L'istruzione per il join verrà scritta manualmente**e quindi completare l'istruzione per il join come segue:  
   
@@ -77,13 +77,13 @@ ms.locfileid: "62721184"
   
 18. In **Specificare le opzioni del join**selezionare **Chiave univoca**e quindi fare clic su **OK**.  
   
-19. Nella pagina **Filtro righe tabella** fare clic su **SalesOrderHeader (Sales)**, selezionare **Aggiungi**, quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
+19. Nella pagina **Filtro righe tabella** fare clic su **SalesOrderHeader (Sales)** , selezionare **Aggiungi**, quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
   
 20. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderDetail** in **Tabella unita in join**, fare clic su **OK**e quindi su **Avanti**.  
   
 21. Selezionare **Crea snapshot immediatamente**, deselezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot**e quindi fare clic su **Avanti**.  
   
-22. Nella pagina Sicurezza agente fare clic su **Impostazioni di sicurezza**, digitare \<_Nome_computer>_**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**. Scegliere **Fine**.  
+22. Nella pagina Sicurezza agente fare clic su **Impostazioni di sicurezza**, digitare \<_Nome_computer>_ **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**. Scegliere **Fine**.  
   
 23. Nella pagina Completamento procedura guidata immettere **AdvWorksSalesOrdersMerge** nella casella **Nome pubblicazione** , quindi fare clic su **Fine**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62721184"
   
 3.  Selezionare la pagina **Elenco di accesso alla pubblicazione** e fare clic su **Aggiungi**.  
   
-4.  Nella finestra di dialogo Aggiungi accesso alla pubblicazione selezionare _<Nome_computer>_**\repl_merge** e quindi fare clic su **OK**. Fare clic su **OK**.  
+4.  Nella finestra di dialogo Aggiungi accesso alla pubblicazione selezionare _<Nome_computer>_ **\repl_merge** e quindi fare clic su **OK**. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata la pubblicazione di tipo merge. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per la pubblicazione di tipo Merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  

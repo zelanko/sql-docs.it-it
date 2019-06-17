@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62854964"
 ---
 # <a name="create-synonyms"></a>Creare sinonimi
@@ -50,7 +50,7 @@ ms.locfileid: "62854964"
   
 1.  In **Esplora oggetti**espandere il database in cui si desidera creare la nuova vista.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Sinonimi**, quindi selezionare **Nuovo sinonimo...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Sinonimi**, quindi selezionare **Nuovo sinonimo...** .  
   
 3.  Nella finestra di dialogo **Aggiungi sinonimo** immettere le informazioni riportate di seguito.  
   

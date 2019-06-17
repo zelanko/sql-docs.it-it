@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922132"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backup di sola copia (SQL Server)
@@ -52,14 +52,14 @@ ms.locfileid: "62922132"
   
 -   Per un backup completo di sola copia:  
   
-     BACKUP DATABASE *database_name* TO \<dispositivo_backup*>* ... WITH COPY_ONLY...  
+     BACKUP DATABASE *database_name* TO \<dispositivo_backup *>* ... WITH COPY_ONLY...  
   
     > [!NOTE]  
     >  L'opzione COPY_ONLY non ha alcun effetto quando specificata con l'opzione DIFFERENTIAL.  
   
 -   Per un backup del log di sola copia:  
   
-     BACKUP LOG *database_name* TO *\<* dispositivo_backup*>* ... WITH COPY_ONLY...  
+     BACKUP LOG *database_name* TO *\<* dispositivo_backup *>* ... WITH COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   

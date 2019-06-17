@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721543"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurare IIS 7 per la sincronizzazione Web
@@ -64,7 +64,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 6.  Creare una directory virtuale in IIS. È consigliabile creare la directory virtuale nel sito Web creato nel passaggio 4 ed eseguirne il mapping alla directory creata nel passaggio 1. È consigliabile applicare le massime restrizioni nell'assegnazione delle autorizzazioni per questa directory. È necessario selezionare almeno autorizzazioni **Lettura** ed **Esecuzione** .  
   
-    1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
+    1.  In **Gestione Internet Information Services (IIS)** , nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
   
     2.  Per la **Alias**, immettere `SQLReplication`.  
   
@@ -157,9 +157,9 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 1.  In **Gestione Internet Information Services (IIS)** fare clic su **Sito Web predefinito.**  
   
-2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)**.  
+2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)** .  
   
-3.  Verrà aperto Internet Explorer e verrà visualizzato il messaggio "Si è verificato un problema con il certificato di sicurezza del sito Web". Questo avviso suggerisce che il certificato associato non è stato rilasciato da una CA riconosciuta e potrebbe non essere attendibile. Si tratta di un avviso previsto, pertanto fare clic su **Continuare con il sito Web (scelta non consigliata)**.  
+3.  Verrà aperto Internet Explorer e verrà visualizzato il messaggio "Si è verificato un problema con il certificato di sicurezza del sito Web". Questo avviso suggerisce che il certificato associato non è stato rilasciato da una CA riconosciuta e potrebbe non essere attendibile. Si tratta di un avviso previsto, pertanto fare clic su **Continuare con il sito Web (scelta non consigliata)** .  
   
 4.  Se viene visualizzata la richiesta **Connetti a localhost**, immettere un nome utente e una password per continuare. Dovrebbe venire visualizzata la pagina predefinita del sito Web.  
   
@@ -226,9 +226,9 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     6.  Selezionare gli utenti o i gruppi che non necessitano dell'accesso alla directory, quindi fare clic su **Rimuovi**e su **OK**.  
   
-4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)**:  
+4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)** :  
   
-    1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** espandere il nodo del server locale.  
+    1.  In **Gestione Internet Information Services (IIS)** , nel riquadro **Connessioni** espandere il nodo del server locale.  
   
     2.  Fare clic con il pulsante destro del mouse su **Pool di applicazioni**, quindi scegliere **Aggiungi pool di applicazioni**.  
   
@@ -280,7 +280,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     4.  Se viene utilizzato un server proxy, selezionare **Utilizza un server proxy per le connessioni LAN** e **Ignora server proxy per indirizzi locali**, quindi fare clic su **OK**.  
   
-2.  Nel Sottoscrittore, in Internet Explorer, connettersi al server in modalità diagnostica aggiungendo `?diag` alla fine dell'indirizzo di replisapi.dll. Ad esempio: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  Nel Sottoscrittore, in Internet Explorer, connettersi al server in modalità diagnostica aggiungendo `?diag` alla fine dell'indirizzo di replisapi.dll. Ad esempio: **https://server.domain.com/directory/replisapi.dll?diag** .  
   
     > [!NOTE]  
     >  Nell'esempio precedente sostituire **server.dominio.com** con il nome esatto di **Rilasciato a** elencato nella sezione **Certificati del server** in Gestione IIS.  

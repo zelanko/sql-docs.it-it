@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740629"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795933"
 ---
 # <a name="stored-procedures---calling"></a>Stored procedure - Chiamata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,9 +96,9 @@ ms.locfileid: "47740629"
   
  La sintassi generale per la chiamata a una stored procedure mediante la sequenza di escape ODBC CALL è:  
   
- {[**? =**]**chiamare**_procedure\_nome_[**(**[*parametro*] [**,** [_parametro_]]... **)**]}  
+ {[ **? =** ]**chiamare**_procedure\_nome_[ **(** [*parametro*] [ **,** [_parametro_]]... **)** ]}  
   
- Ad esempio  
+ Esempio:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  

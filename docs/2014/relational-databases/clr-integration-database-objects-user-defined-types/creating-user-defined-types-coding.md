@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62919940"
 ---
 # <a name="coding-user-defined-types"></a>Codifica dei tipi definiti dall'utente

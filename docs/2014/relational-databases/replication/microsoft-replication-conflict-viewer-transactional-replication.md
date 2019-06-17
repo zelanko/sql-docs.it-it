@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714868"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizzatore conflitti di replica Microsoft (replica transazionale)
@@ -60,7 +60,7 @@ ms.locfileid: "62714868"
  **Mostra le prime cinque colonne e le altre colonne con dati in conflitto**  
  Selezionare questa opzione per visualizzare le prime cinque colonne e tutte le colonne contenenti conflitti. Questa opzione risulta utile quando nella tabella sono presenti numerose colonne, ma si desidera visualizzare solo le colonne più significative per la risoluzione dei conflitti. Le prime cinque colonne vengono sempre visualizzate perché i campi di identificazione di una riga, ad esempio i campi del nome o della chiave primaria, sono solitamente inclusi tra le prime colonne della tabella.  
   
- **Visualizza informazioni sulla colonna** (**...**)  
+ **Visualizza informazioni sulla colonna** ( **...** )  
  Fare clic per visualizzare le informazioni sulla colonna: **Nome tabella**, **Nome colonna**, **Tipo di dati** e **Valore colonna**.  
   
  **Registra informazioni dettagliate sul conflitto**  

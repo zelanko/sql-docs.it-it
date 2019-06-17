@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62931620"
 ---
 # <a name="choose-a-resolver"></a>Selezione di un sistema di risoluzione
@@ -34,7 +34,7 @@ ms.locfileid: "62931620"
   
 |Problema relativo alla risoluzione dei conflitti|Consiglio|  
 |-------------------------------|--------------------|  
-|Categorie diverse di utenti richiedono valori di priorità diversi.|Utilizzare il sistema di risoluzione predefinito e creare sottoscrizioni server con diversi valori di priorità.<br /><br /> Oppure<br /><br /> Utilizzare un sistema di risoluzione dell'articolo in grado di riconoscere una colonna con valori di autorità nell'articolo per semplificare la risoluzione del conflitto.|  
+|Categorie diverse di utenti richiedono valori di priorità diversi.|Utilizzare il sistema di risoluzione predefinito e creare sottoscrizioni server con diversi valori di priorità.<br /><br /> -Oppure-<br /><br /> Utilizzare un sistema di risoluzione dell'articolo in grado di riconoscere una colonna con valori di autorità nell'articolo per semplificare la risoluzione del conflitto.|  
 |Si desidera impostare la priorità della prima modifica eseguita.|Utilizzare il sistema di risoluzione predefinito e creare sottoscrizioni client.|  
 |Le modifiche apportate alla stessa riga di dati da più utenti sono accettabili a condizione che non vengano apportate modifiche in conflitto nella stessa colonna.|Utilizzare il sistema di risoluzione predefinito o un sistema di risoluzione dell'articolo con il rilevamento a livello di colonna.|  
 |Contrassegnare come conflitto più modifiche a un valore di una riga.|Utilizzare il sistema di risoluzione predefinito o un sistema di risoluzione dell'articolo con il rilevamento a livello di riga.|  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042323"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Scaricare e applicare gli aggiornamenti Microsoft per il sistema di piattaforma Analitica
@@ -107,7 +107,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 1.  Prima di iniziare, aprire il [monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md), fare clic sui **stato dello strumento** scheda e verificare che il  **Cluster** e **rete** colonne Mostra verde (o NA) per tutti i nodi. In presenza di eventuali avvisi in una di queste colonne, l'appliance potrebbe non essere in grado di installare gli aggiornamenti in modo corretto. Risolvere tutti gli avvisi esistenti nel **Cluster** e **rete** colonne prima di procedere.  
   
-2.  Accedere al _< nome_dominio >_**-HST01** nodo come l'amministratore di dominio di Fabric.  
+2.  Accedere al _< nome_dominio >_ **-HST01** nodo come l'amministratore di dominio di Fabric.  
   
 3.  Per applicare tutti gli aggiornamenti approvati per Windows Server Update Services, eseguire il programma di aggiornamento. Visualizzare [eseguire il programma di aggiornamento](#RunUpdateWizard) sotto per le istruzioni.  
   
@@ -123,7 +123,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 5.  Nel **lo stato** elenco a discesa dal menu **qualsiasi** e fare clic su **Aggiorna**.  
   
-6.  Espandere **servizi di aggiornamento**, *<appliance name>*- VMM **aggiornamenti**, **tutti gli aggiornamenti**, dove *<appliance name>* è il nome dell'appliance.  
+6.  Espandere **servizi di aggiornamento**, *<appliance name>* - VMM **aggiornamenti**, **tutti gli aggiornamenti**, dove *<appliance name>* è il nome dell'appliance.  
   
 7.  Nel **tutti gli aggiornamenti** finestra set **approvazione** al **tutti tranne i rifiutati**.  
   

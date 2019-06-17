@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658857"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -32,7 +32,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Un valore scalare del tipo specificato da *\<* riferimento a colonna scalare*>*.  
+ Un valore scalare del tipo specificato da *\<* riferimento a colonna scalare *>* .  
   
 ## <a name="remarks"></a>Note  
  Se lo stato stimato viene omesso, verrà utilizzato lo stato con la più alta probabilità stimabile, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare il \<stato stimato > a **INCLUDE_NULL**.  

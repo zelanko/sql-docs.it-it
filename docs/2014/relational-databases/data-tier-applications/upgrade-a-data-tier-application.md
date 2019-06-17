@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872657"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
@@ -106,7 +106,7 @@ ms.locfileid: "62872657"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona pacchetto**.  
+ **Avanti >** : consente di passare alla pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62872657"
   
  **\< Indietro** : consente di tornare alla pagina **Introduzione** .  
   
- **Avanti >**: consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
+ **Avanti >** : consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62872657"
   
  **\< Precedente** -torna allo stato iniziale del **Seleziona pacchetto** pagina.  
   
- **Avanti >**: consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
+ **Avanti >** : consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62872657"
   
  **\< Precedente** -restituisce la **Seleziona pacchetto** pagina.  
   
- **Avanti >**: consente di passare alla pagina **Rileva modifiche**.  
+ **Avanti >** : consente di passare alla pagina **Rileva modifiche**.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62872657"
   
  **\< Precedente** -restituisce la **selezione pacchetto di applicazione livello dati** pagina.  
   
- **Avanti >**: consente di passare alla pagina **Opzioni**.  
+ **Avanti >** : consente di passare alla pagina **Opzioni**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "62872657"
   
  **\< Precedente** -restituisce la **rileva modifiche** pagina.  
   
- **Avanti >**: consente di passare alla pagina **Revisione del piano di aggiornamento**.  
+ **Avanti >** : consente di passare alla pagina **Revisione del piano di aggiornamento**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "62872657"
   
  **\< Precedente** -restituisce la **rileva modifiche** pagina.  
   
- **Avanti >**: consente di passare alla pagina **Riepilogo**.  
+ **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "62872657"
   
  **\< Precedente** -verrà nuovamente visualizzato il **esaminare il piano di aggiornamento** pagina.  
   
- **Avanti >**: consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
+ **Avanti >** : consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   

@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721323"
 ---
 # <a name="errors-and-events-reference-replication"></a>Guida di riferimento a errori ed eventi (replica)
   In questa sezione della documentazione vengono fornite informazioni sulla causa e sulla risoluzione di diversi errori correlati alla replica.  
   
-|Errore|Message|  
+|Errore|`Message`|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](mssql-eng002601.md)|Non è possibile inserire la riga di chiave duplicata nell'oggetto '%.*ls!' con indice univoco '%.\*ls'.|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|Violazione del vincolo %ls '%.*ls'. Non è possibile inserire la chiave duplicata nell'oggetto '%.\*ls'.|  

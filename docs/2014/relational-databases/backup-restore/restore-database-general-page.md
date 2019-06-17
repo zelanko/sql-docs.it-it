@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96e21edc6c7207c2325ee1a6a3385ef92cad42e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921171"
 ---
 # <a name="restore-database-general-page"></a>Ripristina database (pagina Generale)
@@ -40,7 +40,7 @@ ms.locfileid: "62921171"
   
 ## <a name="options"></a>Opzioni  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>`Source`  
  Le opzioni incluse nel pannello **Ripristina da**identificano il percorso dei set di backup del database e determinano i set di backup da ripristinare.  
   
 |Nome|Definizione|  

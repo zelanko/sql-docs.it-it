@@ -35,10 +35,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806403"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
@@ -161,7 +161,7 @@ ms.locfileid: "62806403"
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**   
+     Elenco**Database**  
      Consente di specificare i database su cui verrà eseguita l'attività.  
   
     -   **Tutti i database**  
@@ -180,7 +180,7 @@ ms.locfileid: "62806403"
   
          Viene generato un piano di manutenzione per l'esecuzione di questa attività solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
-     Casella di controllo**Includi indici**   
+     Casella di controllo**Includi indici**  
      Viene controllata l'integrità di tutte le pagine di indice, nonché delle pagine dei dati della tabella.  
   
 #### <a name="define-database-shrink-tasks"></a>Definizione attività Compatta database  
@@ -192,13 +192,13 @@ ms.locfileid: "62806403"
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**   
+     Elenco**Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Casella**Compatta database quando le dimensioni superano**   
+     Casella**Compatta database quando le dimensioni superano**  
      Specificare le dimensioni in megabyte che causano l'esecuzione dell'attività.  
   
-     Casella**Spazio che deve rimanere disponibile dopo la compattazione**   
+     Casella**Spazio che deve rimanere disponibile dopo la compattazione**  
      Arresta l'attività di compattazione quando lo spazio disponibile nei file del database raggiunge questa soglia (come percentuale).  
   
      **Mantieni spazio liberato nei file di database**  
@@ -213,47 +213,47 @@ ms.locfileid: "62806403"
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**   
+     Elenco**Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Elenco**Oggetti**   
+     Elenco**Oggetti**  
      Limitare l'elenco **Selezione** alla visualizzazione di tabelle, viste o entrambe. Questo elenco è disponibile solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Elenco**Selezione**   
+     Elenco**Selezione**  
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
-     Casella di controllo**Compatta oggetti di grandi dimensioni**   
+     Casella di controllo**Compatta oggetti di grandi dimensioni**  
      Dealloca spazio per tabelle e viste, se possibile. Questa opzione utilizza l'istruzione `ALTER INDEX ... LOB_COMPACTION = ON`  
   
 2.  Nella pagina **Definizione attività Ricompila indice** selezionare il database o i database in cui verranno creati più indici. In questa attività viene utilizzata l'istruzione `ALTER INDEX ... REBUILD PARTITION`. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)). Al termine, fare clic su **Avanti**.  
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**   
+     Elenco**Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Elenco**Oggetti**   
+     Elenco**Oggetti**  
      Limitare l'elenco **Selezione** alla visualizzazione di tabelle, viste o entrambe. Questo elenco è disponibile solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Elenco**Selezione**   
+     Elenco**Selezione**  
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
-     Area**Opzioni spazio disponibile**   
+     Area**Opzioni spazio disponibile**  
      Contiene opzioni relative all'applicazione del fattore di riempimento a indici e tabelle.  
   
      **Spazio libero predefinito per pagina**  
      Riorganizza le pagine mantenendo la quantità predefinita di spazio disponibile. Selezionando questa opzione verranno eliminati gli indici delle tabelle del database e verranno ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici. Si tratta dell'opzione predefinita.  
   
-     Casella**Modifica percentuale di spazio disponibile per pagina**   
+     Casella**Modifica percentuale di spazio disponibile per pagina**  
      Elimina gli indici delle tabelle del database e li ricrea utilizzando un nuovo fattore di riempimento calcolato automaticamente, riservando in tal modo la quantità di spazio disponibile specificata nelle pagine dell'indice. Maggiore è la percentuale, maggiore sarà la quantità di spazio disponibile riservata nelle pagine dell'indice e maggiori saranno le dimensioni dell'indice. I valori validi sono compresi tra 0 e 100. Utilizza l'opzione `FILLFACTOR` .  
   
-     Area**Opzioni avanzate**   
+     Area**Opzioni avanzate**  
      Presenta opzioni aggiuntive per l'ordinamento degli indici e la reindicizzazione.  
   
-     Casella di controllo**Ordina risultati in tempdb**   
+     Casella di controllo**Ordina risultati in tempdb**  
      Utilizza l'opzione `SORT_IN_TEMPDB` che determina la posizione in cui i risultati intermedi dell'ordinamento, generati durante la creazione dell'indice, vengono memorizzati temporaneamente. Se non è necessario eseguire un'operazione di ordinamento o se l'ordinamento può essere eseguito in memoria, l'opzione `SORT_IN_TEMPDB` viene ignorata.  
   
-     Casella di controllo**Mantieni indici online durante la reindicizzazione**   
+     Casella di controllo**Mantieni indici online durante la reindicizzazione**  
      Utilizza l'opzione `ONLINE` per consentire agli utenti di accedere alla tabella o ai dati dell'indice cluster sottostanti, nonché agli eventuali indici non cluster associati durante le operazioni sugli indici. Se si seleziona questa opzione consente di attivare le opzioni aggiuntive per la ricompilazione degli indici che non consentono le ricompilazioni online: **Non ricompilare indici** e **Ricompila indici offline**.  
   
     > [!NOTE]  
@@ -265,13 +265,13 @@ ms.locfileid: "62806403"
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**   
+     Elenco**Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Elenco**Oggetti**   
+     Elenco**Oggetti**  
      Limitare l'elenco **Selezione** alla visualizzazione di tabelle, viste o entrambe. Questo elenco è disponibile solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Elenco**Selezione**   
+     Elenco**Selezione**  
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
      **Tutte le statistiche esistenti**  
@@ -323,16 +323,16 @@ ms.locfileid: "62806403"
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Tipo di backup**   
+     Elenco**Tipo di backup**  
      Visualizza il tipo di backup da eseguire. Questo valore è di sola lettura.  
   
-     Elenco**Database**   
+     Elenco**Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
      **Componente di cui eseguire il backup**  
      Selezionare **Database** per eseguire il backup dell'intero database. Selezionare **File e filegroup** per eseguire il backup solo di una parte del database. Quando si seleziona questa opzione, è necessario specificare il nome del file o del filegroup. Se nella casella **Database** sono selezionati più database, è necessario specificare **Database** solo per **Componente di cui eseguire il backup**. Per eseguire i backup di file o filegroup, creare un'attività per ogni database. Queste opzioni sono disponibili solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Casella di controllo**Scadenza set di backup**   
+     Casella di controllo**Scadenza set di backup**  
      Indica quando è possibile sovrascrivere il set di backup per il backup specifico. Selezionare **Dopo** e immettere un numero di giorni alla scadenza oppure selezionare **Il** e immettere una data di scadenza. Questa opzione è disabilitata se è selezionato **URL** come destinazione di backup.  
   
      **Backup su**  
@@ -345,22 +345,22 @@ ms.locfileid: "62806403"
   
      Fare clic su **Contenuto** per leggere l'intestazione del file e visualizzare il contenuto del backup corrente del file.  
   
-     Finestra di dialogo**Seleziona destinazione di backup**   
+     Finestra di dialogo**Seleziona destinazione di backup**  
      Selezionare il file, l'unità nastro o il dispositivo di backup come destinazione. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
-     Elenco**Azione per file di backup esistenti**   
+     Elenco**Azione per file di backup esistenti**  
      Specifica il modo in cui devono essere gestiti i backup esistenti. Selezionare **Accoda** per aggiungere i nuovi backup dopo eventuali backup esistenti nel file o sul nastro. Selezionare **Sovrascrivi** per rimuovere il contenuto meno recente dal file o dal nastro e sostituirlo con il nuovo backup.  
   
      **Crea un file di backup per ogni database**  
      Creare un file di backup nel percorso specificato nella casella della cartella. Viene creato un file per ciascun database selezionato. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
-     Casella di controllo**Crea una sottodirectory per ogni database**   
+     Casella di controllo**Crea una sottodirectory per ogni database**  
      Crea una sottodirectory nella directory specificata che contiene il database di cui si esegue il backup nell'ambito del piano di manutenzione.  
   
     > [!IMPORTANT]  
     >  La sottodirectory erediterà le autorizzazioni dalla relativa directory padre. Limitare le autorizzazioni per impedire l'accesso non autorizzato.  
   
-     Casella**Cartella**   
+     Casella**Cartella**  
      Specificare la cartella in cui inserire i file di database creati automaticamente. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
      **Credenziali SQL**  
@@ -375,10 +375,10 @@ ms.locfileid: "62806403"
      **Prefisso URL**  
      Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<account di archiviazione.blob.core.windows.net**.  
   
-     Casella**Estensione file di backup**   
+     Casella**Estensione file di backup**  
      Specificare l'estensione da utilizzare per i file di backup. L'estensione predefinita è bak.  
   
-     Casella di controllo**Verifica integrità backup**   
+     Casella di controllo**Verifica integrità backup**  
      Consente di verificare che il set di backup sia completo e che tutti i volumi siano leggibili.  
   
      **Crittografia dei backup**  
@@ -398,7 +398,7 @@ ms.locfileid: "62806403"
   
      Sono supportate solo le chiavi che si trovano in Extensible Key Management (EKM).  
   
-     Elenco**Imposta compressione backup**    
+     Elenco**Imposta compressione backup**  
      In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive, selezionare uno dei valori di [compressione di backup](../backup-restore/backup-compression-sql-server.md) seguenti:  
   
     |||  
@@ -438,16 +438,16 @@ ms.locfileid: "62806403"
      **Cerca nella cartella ed elimina i file in base all'estensione**  
      Consente di eliminare tutti i file con l'estensione specificata contenuti nella cartella indicata. Utilizzare questa opzione per eliminare più file contemporaneamente, ad esempio tutti i file di backup con estensione bak contenuti nella cartella specificata.  
   
-     Casella**Cartella**   
+     Casella**Cartella**  
      Percorso e nome della cartella contenente i file da eliminare.  
   
-     Casella**Estensione file**   
+     Casella**Estensione file**  
      Indica l'estensione dei file da eliminare. Per eliminare più file contemporaneamente, ad esempio tutti i file di backup con estensione bak contenuti nella cartella specificata, specificare l'estensione bak.  
   
-     Casella di controllo**Includi sottocartelle di primo livello**   
+     Casella di controllo**Includi sottocartelle di primo livello**  
      Vengono eliminati i file con l'estensione specificata in **Estensione file** dalle sottocartelle di primo livello nella cartella specificata in **Cartella**.  
   
-     Casella di controllo**Elimina i file in base alla data del file al momento dell'esecuzione dell'attività**   
+     Casella di controllo**Elimina i file in base alla data del file al momento dell'esecuzione dell'attività**  
      Specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati, indicando un numero e un'unità di tempo nella casella **Elimina i file con data anteriore a** .  
   
      **Elimina i file con data anteriore a**  
@@ -459,13 +459,13 @@ ms.locfileid: "62806403"
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Casella di controllo**Scrivi report in un file di testo**   
+     Casella di controllo**Scrivi report in un file di testo**  
      Salva il report in un file.  
   
-     Casella**Percorso cartella**   
+     Casella**Percorso cartella**  
      Specifica il percorso del file che conterrà il report.  
   
-     Casella di controllo**Invia report tramite posta elettronica**   
+     Casella di controllo**Invia report tramite posta elettronica**  
      Inviare un messaggio di posta elettronica quando un'attività non viene completata in seguito a un errore. Per usare questa attività, l'opzione Posta elettronica database deve essere abilitata e configurata correttamente con MSDB come database host della posta elettronica e un operatore [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve avere un indirizzo di posta elettronica valido.  
   
      **Operatore agente**  

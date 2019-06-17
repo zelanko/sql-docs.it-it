@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865283"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Restituisce il valore intero della modalità di failover ed è un' **OUTPUT** parametro. *failover_mode_id* è un **tinyint** con valore predefinito è **0**. Viene restituito **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+ [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  Restituisce la modalità di implementazione delle modifiche dei dati nel Sottoscrittore. *failover_mode* è un **nvarchar(10)** con valore predefinito è NULL. È un' **OUTPUT** parametro.  
   
 |Value|Descrizione|  

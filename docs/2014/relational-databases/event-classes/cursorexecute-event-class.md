@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663507"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute - classe di evento
@@ -34,8 +34,8 @@ ms.locfileid: "62663507"
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Yes|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
-|**EventClass**|**int**|Tipo di evento registrato = 74.|27|no|  
-|**EventSequence**|**int**|Posizione della classe di evento **CursorExecute** nel batch.|51|No|  
+|**EventClass**|**int**|Tipo di evento registrato = 74.|27|No|  
+|**EventSequence**|**int**|Posizione della classe di evento **CursorExecute** nel batch.|51|no|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |**Handle**|**int**|Valore integer utilizzato da ODBC, OLE DB o DB-Library per il coordinamento dell'esecuzione con il server.|33|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

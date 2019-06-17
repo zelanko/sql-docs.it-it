@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918290"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Abilitare la compressione in una tabella o un indice
@@ -69,7 +69,7 @@ ms.locfileid: "62918290"
   
 2.  Per comprimere un indice, espandere la tabella contenente l'indice che si desidera comprimere, quindi espandere la cartella **Indici** .  
   
-3.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice da comprimere, scegliere **Archiviazione** e selezionare **Gestione compressione...**.  
+3.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice da comprimere, scegliere **Archiviazione** e selezionare **Gestione compressione...** .  
   
 4.  In Compressione guidata dati nella pagina **Compressione guidata dati** fare clic su **Avanti**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62918290"
   
      Le opzioni seguenti sono disponibili nella pagina **Seleziona tipo di compressione** :  
   
-     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**   
+     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**  
      Selezionare questa opzione per configurare la stessa impostazione di compressione per tutte le partizioni. La casella di selezione viene abilitata e la colonna **Tipo di compressione** nella griglia viene disabilitata. Se viene selezionata, le opzioni nell'elenco adiacente sono **Nessuno**, **Riga**e **Pagina**.  
   
      **Numero partizioni**  
