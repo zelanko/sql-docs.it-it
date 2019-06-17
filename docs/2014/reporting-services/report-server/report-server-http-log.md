@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103403"
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
@@ -64,7 +64,7 @@ ms.locfileid: "66103403"
 |Time|Ora di esecuzione dell'attività.|No|  
 |ClientIp|Indirizzo IP del client che ha eseguito l'accesso al server di report.|Yes|  
 |UserName|Nome dell'utente che ha eseguito l'accesso al server di report.|No|  
-|ServerPort|Numero della porta utilizzata per la connessione.|no|  
+|ServerPort|Numero della porta utilizzata per la connessione.|No|  
 |Host|Contenuto dell'intestazione host.|No|  
 |Metodo|Azione o metodo SOAP chiamato dal client.|Yes|  
 |UriStem|Risorsa cui è stato eseguito l'accesso.|Yes|  
@@ -72,10 +72,10 @@ ms.locfileid: "66103403"
 |ProtocolStatus|Codice di stato HTTP.|Yes|  
 |BytesReceived|Numero di byte ricevuti dal server.|no|  
 |TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|no|  
-|ProtocolVersion|Versione del protocollo utilizzata dal client.|no|  
+|ProtocolVersion|Versione del protocollo utilizzata dal client.|No|  
 |UserAgent|Tipo di browser utilizzato dal client.|No|  
 |CookieReceived|Contenuto del cookie ricevuto dal server.|No|  
-|CookieSent|Contenuto del cookie inviato dal server.|No|  
+|CookieSent|Contenuto del cookie inviato dal server.|no|  
 |Referrer|Sito precedente visitato dal client.|No|  
   
 ## <a name="see-also"></a>Vedere anche  

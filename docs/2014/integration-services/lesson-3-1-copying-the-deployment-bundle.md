@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891710"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>Passaggio 1: Copia il pacchetto di distribuzione
+# <a name="step-1-copying-the-deployment-bundle"></a>Passaggio 1: Copia del pacchetto di distribuzione
   In questa attività si procederà alla copia del pacchetto di distribuzione nel computer di destinazione.  
   
  Il modo più semplice per copiare il pacchetto di distribuzione nel computer di destinazione consiste innanzitutto nella creazione di una condivisione pubblica in tale computer, l'esecuzione del mapping di un'unità alla condivisione pubblica e quindi la copia in quest'ultima del pacchetto di distribuzione. Se sono necessarie informazioni su come creare e configurare le cartelle pubbliche oppure il mapping delle unità, vedere la documentazione di Windows.  

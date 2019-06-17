@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894795"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codifica e debug del componente script
@@ -170,7 +170,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |Variabili|Utilizzare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta `Variables` nell'elemento del progetto `ComponentWrapper`, esposto tramite la proprietà `Variables` della classe `ScriptMain`.<br /><br /> Il metodo `PreExecute` può accedere unicamente a variabili di sola lettura. Il metodo `PostExecute` può accedere sia a variabili di sola lettura sia a variabili di lettura/scrittura.|  
 |Connessioni|Utilizzare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta `Connections` nell'elemento del progetto `ComponentWrapper`, esposto tramite la proprietà `Connections` della classe `ScriptMain`.|  
-|Eventi|Generare eventi tramite il <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> proprietà del `ScriptMain` classe e il **Fire\<X >** metodi del <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaccia.|  
+|Events|Generare eventi tramite il <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> proprietà del `ScriptMain` classe e il **Fire\<X >** metodi del <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaccia.|  
 |Registrazione|Eseguire la registrazione utilizzando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> della classe `ScriptMain`.|  
   
 ## <a name="debugging-the-script-component"></a>Debug del componente script  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204806"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di previsione (Esercitazione intermedia sul data mining)
@@ -28,7 +28,7 @@ ms.locfileid: "63204806"
   
 3.  Nel **Selezione metodo di definizione** verificare che **da esistenti database relazionale o data warehouse** sia selezionata e quindi fare clic su **Next**.  
   
-4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?**, selezionare **Microsoft Time Series**e quindi fare clic su  **Avanti**.  
+4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?** , selezionare **Microsoft Time Series**e quindi fare clic su  **Avanti**.  
   
 5.  Nel **selezione vista origine dati** nella pagina **viste origine dati disponibili**, selezionare **SalesByRegion**.  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754702"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitoraggio mirroring del database (pagina Stato)
@@ -45,7 +45,7 @@ ms.locfileid: "62754702"
 |**Cronologia**|Fare clic per visualizzare la cronologia del mirroring sull'istanza del server. Viene aperta la finestra di dialogo **Cronologia mirroring del database** , in cui sono visualizzate la cronologia dello stato del mirroring e le statistiche per un database con mirroring per un'istanza del server determinata.<br /><br /> Il pulsante **Cronologia** è visualizzato in grigio se il monitoraggio non è connesso all'istanza del server.|  
   
  **Log principale (** *\<ora>* **)**  
- Stato del log sull'istanza del server principale all'ora locale sull'istanza del server, indicata da *\<ora>*. Sono visualizzati i parametri seguenti:  
+ Stato del log sull'istanza del server principale all'ora locale sull'istanza del server, indicata da *\<ora>* . Sono visualizzati i parametri seguenti:  
   
  **Log non inviato**  
  Quantità del log in attesa nella coda di invio, espressa in KB.  
@@ -63,7 +63,7 @@ ms.locfileid: "62754702"
  Frequenza alla quale le transazioni in entrata vengono immesse nel log del server principale, espressa in KB al secondo. Per stabilire se il mirroring è in ritardo, procede secondo le previsioni o sta recuperando, confrontare questo valore con il valore **Tempo stimato per l'invio del log** .  
   
  **Log mirror (** *\<ora>* **)**  
- Stato del log sull'istanza del server mirror all'ora locale sull'istanza del server, indicata da *\<ora>*. Sono visualizzati i parametri seguenti:  
+ Stato del log sull'istanza del server mirror all'ora locale sull'istanza del server, indicata da *\<ora>* . Sono visualizzati i parametri seguenti:  
   
  **Log non ripristinato**  
  Quantità del log in attesa nella coda di rollforward, espressa in KB.  
@@ -93,7 +93,7 @@ ms.locfileid: "62754702"
 -   **Protezione elevata con failover automatico (sincrona)**  
   
 ## <a name="remarks"></a>Note  
- I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente utilizzando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Dipendono dal **processo di Monitoraggio mirroring del database**per aggiornare la tabella dello stato a intervalli regolari. Per conoscere la durata dello stato visualizzato l'utente può consultare i tempi nelle etichette **Log principale (***\<ora>***)** e **Log mirror (***\<ora>***)**.  
+ I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente utilizzando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Dipendono dal **processo di Monitoraggio mirroring del database**per aggiornare la tabella dello stato a intervalli regolari. Per conoscere la durata dello stato visualizzato l'utente può consultare i tempi nelle etichette **Log principale (***\<ora>***)** e **Log mirror (***\<ora>***)** .  
   
  Se questo processo non esiste o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato diventa sempre più obsoleto ed è possibile che non rifletta più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   

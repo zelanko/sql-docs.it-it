@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004260"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -49,12 +49,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` Il numero di identificazione del processo da arrestare. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
-`[ @originating_server = ] 'master_server'` Il nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* viene **nvarchar (128)**, con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
+`[ @originating_server = ] 'master_server'` Il nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* viene **nvarchar (128)** , con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
   
 > [!NOTE]  
 >  È possibile specificare solo uno dei primi tre parametri.  
   
-`[ @server_name = ] 'target_server'` Il nome del server di destinazione specifico in cui arrestare un processo multiserver. *target_server* viene **nvarchar (128)**, con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server master per un processo multiserver.  
+`[ @server_name = ] 'target_server'` Il nome del server di destinazione specifico in cui arrestare un processo multiserver. *target_server* viene **nvarchar (128)** , con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server master per un processo multiserver.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

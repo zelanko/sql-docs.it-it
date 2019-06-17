@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013507"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship e regola di ordinamento delle chiavi (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013507"
 </xsd:schema>  
 ```  
   
- Come le  **\<cliente >** nodo elemento entra nell'ambito, il caricamento Bulk XML genera un record del cliente. Questo record viene mantenuto fino a quando il caricamento Bulk XML legge  **\</Customer. >**. Nell'elaborazione di  **\<ordine >** nodo elemento, il caricamento Bulk XML utilizza `<sql:relationship>` per ottenere il valore della colonna chiave esterna CustomerID della tabella CustOrder dal **\<cliente >** padre elemento, in quanto il  **\<ordine >** elemento non specifica il **CustomerID** attributo. Ciò significa che, nel definire il  **\<cliente >** elemento, è necessario specificare il **CustomerID** attributo nello schema prima di specificare `<sql:relationship>`. In caso contrario, quando un  **\<ordine >** elemento entra nell'ambito, il caricamento Bulk XML genera un record per la tabella CustOrder e quando il codice XML in blocco caricamento raggiunge il  **\</Order >** tag di fine invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] senza il valore della colonna chiave esterna CustomerID.  
+ Come le  **\<cliente >** nodo elemento entra nell'ambito, il caricamento Bulk XML genera un record del cliente. Questo record viene mantenuto fino a quando il caricamento Bulk XML legge  **\</Customer. >** . Nell'elaborazione di  **\<ordine >** nodo elemento, il caricamento Bulk XML utilizza `<sql:relationship>` per ottenere il valore della colonna chiave esterna CustomerID della tabella CustOrder dal **\<cliente >** padre elemento, in quanto il  **\<ordine >** elemento non specifica il **CustomerID** attributo. Ciò significa che, nel definire il  **\<cliente >** elemento, è necessario specificare il **CustomerID** attributo nello schema prima di specificare `<sql:relationship>`. In caso contrario, quando un  **\<ordine >** elemento entra nell'ambito, il caricamento Bulk XML genera un record per la tabella CustOrder e quando il codice XML in blocco caricamento raggiunge il  **\</Order >** tag di fine invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] senza il valore della colonna chiave esterna CustomerID.  
   
  Salvare lo schema fornito in questo esempio come SampleSchema.xml.  
   

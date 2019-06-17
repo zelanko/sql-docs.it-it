@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012472"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66012472"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >**, in quanto la  **\< elemento >** nodo è il nodo primario per il `child` asse). Per tutti i  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
+ Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >** , in quanto la  **\< elemento >** nodo è il nodo primario per il `child` asse). Per tutti i  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
   
 > [!NOTE]  
 >  I numeri in XPath sono numeri a virgola mobile a precisione doppia e il confronto di numeri a virgola mobile come nell'esempio causa un arrotondamento.  

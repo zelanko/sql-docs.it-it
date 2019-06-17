@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639944"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Reimpostazione della password - sistema di piattaforma Analitica
@@ -40,7 +40,7 @@ Il **sa** account di accesso in SQL Server. **SA** è un membro del **sysadmin**
 Sia le credenziali di amministratore di dominio e le credenziali di amministratore di sistema rispettano i criteri di complessità delle password per ogni tipo di credenziale. Quando si modificano le credenziali di amministratore di dominio, la nuova password viene aggiornata per il dominio in cui è necessaria in SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW non supporta il carattere di segno di dollaro (**$**) nell'amministratore di dominio o le password di amministratore locale. I caratteri **^ % &** sono consentiti nelle password, ma PowerShell considera come caratteri speciali. Se uno di questi caratteri vengono usato per le password per l'amministratore di sistema o SQL Server**sa** account (il **AdminPassword** e **PdwSAPassword** parametri durante programma di installazione) per l'installazione, tra cui INSTALL, UPGRADE, REPLACENODE e l'applicazione di patch, avrà esito negativo. Per garantire una corretta esecuzione dell'aggiornamento quando le password corrente contengono caratteri non supportati, modificare le password in modo che non contengono tali caratteri prima di eseguire l'aggiornamento. Al termine dell'aggiornamento, è possibile impostare le password nuovamente i valori originali. Per altre informazioni sui requisiti della password, vedere [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW non supporta il carattere di segno di dollaro ( **$** ) nell'amministratore di dominio o le password di amministratore locale. I caratteri **^ % &** sono consentiti nelle password, ma PowerShell considera come caratteri speciali. Se uno di questi caratteri vengono usato per le password per l'amministratore di sistema o SQL Server**sa** account (il **AdminPassword** e **PdwSAPassword** parametri durante programma di installazione) per l'installazione, tra cui INSTALL, UPGRADE, REPLACENODE e l'applicazione di patch, avrà esito negativo. Per garantire una corretta esecuzione dell'aggiornamento quando le password corrente contengono caratteri non supportati, modificare le password in modo che non contengono tali caratteri prima di eseguire l'aggiornamento. Al termine dell'aggiornamento, è possibile impostare le password nuovamente i valori originali. Per altre informazioni sui requisiti della password, vedere [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Per reimpostare una password  
   

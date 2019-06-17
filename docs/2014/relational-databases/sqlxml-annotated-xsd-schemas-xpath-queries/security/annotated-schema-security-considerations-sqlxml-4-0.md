@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 635c5c433f583ecad9f8dda1e35e4c981742212e
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010584"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Considerazioni relative alla sicurezza degli schemi con annotazioni (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66010584"
   
 -   Il mapping esplicito specificato mediante le annotazioni espone le informazioni del database, ad esempio i nomi di tabelle e colonne. È opportuno dunque non rendere pubblici pubblicamente questi schemi.  
   
--   L'esecuzione di determinate query, ad esempio quelle specificate su uno schema di mapping con ricorsione utilizzando l'annotazione `max-depth` impostata su un valore più elevato, può richiedere tempi più lunghi. È facoltativamente possibile specificare un limite di timeout impostando la proprietà di timeout del comando (in secondi). Ad esempio:   
+-   L'esecuzione di determinate query, ad esempio quelle specificate su uno schema di mapping con ricorsione utilizzando l'annotazione `max-depth` impostata su un valore più elevato, può richiedere tempi più lunghi. È facoltativamente possibile specificare un limite di timeout impostando la proprietà di timeout del comando (in secondi). Ad esempio:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

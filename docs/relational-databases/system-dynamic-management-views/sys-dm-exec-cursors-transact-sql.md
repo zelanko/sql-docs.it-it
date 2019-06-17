@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013424"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -82,7 +82,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sul tipo di cursore e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Tipo|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
 |Dynamic|Il cursore è stato dichiarato come Dynamic.|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sullo scopo dei cursori e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Ambito|Descrizione|  
+|`Scope`|Descrizione|  
 |-----------|-----------------|  
 |Local|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
 |Global|Specifica che l'ambito del cursore è globale rispetto alla connessione.|  

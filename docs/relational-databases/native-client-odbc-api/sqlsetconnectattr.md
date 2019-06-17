@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014169"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
@@ -98,7 +98,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **Readonly** e **ReadWrite**. Ad esempio:   
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **Readonly** e **ReadWrite**. Ad esempio:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -159,7 +159,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |Value|Descrizione|  
 |-----------|-----------------|  
 |SQL_EN_ON|La connessione verrà crittografata.|  
-|SQL_EN_OFF|La connessione non verrà crittografata. Impostazione predefinita.|  
+|SQL_EN_OFF|La connessione non verrà crittografata. Questa è l'impostazione predefinita.|  
 
 <a name="sqlcoptssenlistindtc"></a>
 ## <a name="sqlcoptssenlistindtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  

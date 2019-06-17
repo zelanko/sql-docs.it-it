@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891579"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Passaggio 2: Esegue l'installazione guidata pacchetti
+# <a name="step-2-running-the-package-installation-wizard"></a>Passaggio 2: Esecuzione dell'Installazione guidata pacchetti
   In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
   
  L'Installazione guidata pacchetti consente di eseguire in modo semplificato i passaggi necessari per installare e configurare i pacchetti. I pacchetti verranno installati in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer di destinazione, ovvero il computer in cui si copia il pacchetto di distribuzione. Verrà inoltre creata la cartella C:\DeploymentTutorialInstall nella quale verranno installati i file non di pacchetto.  
@@ -46,7 +46,7 @@ ms.locfileid: "62891579"
   
 9. Nella pagina Selezione cartella di installazione fare clic su **Sfoglia**.  
   
-10. Nella finestra di dialogo **Sfoglia cartella** espandere **Risorse del computer** e quindi fare clic su **Disco locale (C:)**.  
+10. Nella finestra di dialogo **Sfoglia cartella** espandere **Risorse del computer** e quindi fare clic su **Disco locale (C:)** .  
   
 11. Fare clic su **Crea nuova cartella** e sostituire il nome predefinito della nuova cartella, vale a dire **Nuova cartella**, con **DeploymentTutorialInstall**.  
   

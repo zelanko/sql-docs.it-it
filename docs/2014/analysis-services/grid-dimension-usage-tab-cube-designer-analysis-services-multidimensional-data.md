@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080806"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Griglia (scheda Utilizzo dimensioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66080806"
 |------------|----------------|  
 |**Gruppi di misure**|Consente di selezionare i gruppi di misure da visualizzare come colonne nel riquadro **Griglia** . Se si seleziona **(Mostra tutto)** vengono visualizzati tutti i gruppi di misure disponibili.<br /><br /> Per rinominare un gruppo di misure, fare clic sull'intestazione di una colonna selezionata per tale gruppo.|  
 |**Dimensions**|Consente di selezionare le dimensioni del cubo da visualizzare come righe nel riquadro **Griglia** . Se si seleziona **(Mostra tutto)** vengono visualizzate tutte le dimensioni del cubo disponibili.<br /><br /> Per rinominare una dimensione di cubo, fare clic sull'intestazione di una riga selezionata per tale dimensione.|  
-|**(Cell)**|Consente di selezionare una cella e fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Definisci relazione** e definire una relazione tra una dimensione di cubo e un gruppo di misure. Per altre informazioni sulla finestra di dialogo **Definisci relazione**, vedere [Finestra di dialogo Definisci relazione &#40;Analysis Services - Dati multidimensionali&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Consente di selezionare una cella e fare clic sul pulsante con i puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Definisci relazione** e definire una relazione tra una dimensione di cubo e un gruppo di misure. Per altre informazioni sulla finestra di dialogo **Definisci relazione**, vedere [Finestra di dialogo Definisci relazione &#40;Analysis Services - Dati multidimensionali&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="context-menu"></a>Menu di scelta rapida  
  Nel menu di scelta rapida, visualizzato facendo clic con il pulsante destro del mouse sul riquadro **Griglia** , sono disponibili le opzioni seguenti:  
