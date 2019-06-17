@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62867845"
 ---
 # <a name="mssqlserver4186"></a>MSSQLSERVER_4186
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 -   Esaminare la definizione della funzione definita dall'utente. Se la funzione non esegue l'accesso ai dati dell'utente o del sistema, modificarla in modo da includere la clausola WITH SCHEMABINDING.  
   
--   Rimuovere la colonna dalla clausola OUTPUT.   
+-   Rimuovere la colonna dalla clausola OUTPUT.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Clausola OUTPUT &#40;Transact-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)  

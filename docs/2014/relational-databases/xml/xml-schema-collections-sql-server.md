@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193036"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "63193036"
   
 -   MODELGROUP  
   
- Ad esempio:   
+ Ad esempio:  
   
 -   **SomeAttribute** è un componente di tipo ATTRIBUTE.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63193036"
   
 -   Scrivere query Transact-SQL sulle viste del catalogo appropriate per le raccolte di XML Schema.  
   
--   Usare la funzione predefinita **XML_SCHEMA_NAMESPACE()**. È possibile applicare `xml` metodi con tipo di dati sull'output di questa funzione. ma non è possibile modificare gli elementi XML Schema sottostanti.  
+-   Usare la funzione predefinita **XML_SCHEMA_NAMESPACE()** . È possibile applicare `xml` metodi con tipo di dati sull'output di questa funzione. ma non è possibile modificare gli elementi XML Schema sottostanti.  
   
  Queste tecniche di enumerazione sono illustrate negli esempi seguenti.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Singoli elementi di XML schema all'interno della raccolta possono essere ottenuti come `xml` istanze con tipo di dati specificando lo spazio dei nomi di destinazione come terzo argomento **xml_schema_namespace ()**. come illustrato nell'esempio seguente.  
+ Singoli elementi di XML schema all'interno della raccolta possono essere ottenuti come `xml` istanze con tipo di dati specificando lo spazio dei nomi di destinazione come terzo argomento **xml_schema_namespace ()** . come illustrato nell'esempio seguente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Restituzione di uno schema specifico da una raccolta di XML Schema  
  L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "<https://www.microsoft.com/books>" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  

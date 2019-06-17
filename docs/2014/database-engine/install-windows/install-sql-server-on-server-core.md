@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775773"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installare SQL Server 2014 in Server Core
@@ -28,7 +28,7 @@ ms.locfileid: "62775773"
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> Non è possibile eseguire le versioni 2.0, 3.0 e 3.5 side-by-side in un computer. Durante l'installazione di .NET Framework 3.5 SP1 si ottengono automaticamente i livelli 2.0 e 3.0.|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> In un computer con sistema operativo Windows Server, è necessario scaricare e installare .NET Framework 3.5 SP1 prima di eseguire il programma di installazione per installare i componenti dipendenti da .NET 3.5 SP1.<br /><br /> Per altre informazioni sui requisiti e indicazioni su come acquisire e abilitare .NET Framework 3.5 nel [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [considerazioni sulla distribuzione di Microsoft .NET Framework 3.5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], uno dei prerequisiti di installazione prevede l'installazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile.<br /><br /> Per la [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], scaricare il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile dalla [Microsoft.NET Framework 4 (programma di installazione autonomo) per Server Core](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467)e installarlo prima di procedere con il programma di installazione.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], uno dei prerequisiti di installazione prevede l'installazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile.<br /><br /> Per la [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], scaricare il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile dalla [Microsoft.NET Framework 4 (programma di installazione autonomo) per Server Core](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467) e installarlo prima di procedere con il programma di installazione.|  
 |Windows Installer 4.5|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
   
@@ -37,20 +37,20 @@ ms.locfileid: "62775773"
   
 |Funzionalità|Supportato|  
 |-------------|---------------|  
-|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Yes|  
-|Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Yes|  
+|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Yes|  
+|Replica[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Yes|  
 |Ricerca full-text|Yes|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Yes|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|no|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No|  
 |Connettività strumenti client|Yes|  
 |Server Integration Services<sup>[1]</sup>|Yes|  
 |Compatibilità con le versioni precedenti di strumenti client.|no|  
-|SDK di strumenti client|no|  
-|Documentazione online di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |No|  
+|SDK di strumenti client|No|  
+|Documentazione online di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|No|  
 |Strumenti di gestione - Di base|Solo remoto<sup>[2]</sup>|  
 |Strumenti di gestione - Completa|Solo remoto<sup>[2]</sup>|  
-|Controller di Riesecuzione distribuita|no|  
+|Controller di Riesecuzione distribuita|No|  
 |Client Riesecuzione distribuita|Solo remoto<sup>[2]</sup>|  
 |SDK di Connettività SQL Client|Yes|  
 |Microsoft Sync Framework|Sì<sup>[3]</sup>|  
@@ -68,8 +68,8 @@ ms.locfileid: "62775773"
   
 |||  
 |-|-|  
-|Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Tutti i [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edizioni a 64 bit<sup>[1]</sup>|  
-|Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Tutte le lingue|  
+|Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutti i [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edizioni a 64 bit<sup>[1]</sup>|  
+|Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le lingue|  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella combinazione lingua/impostazioni locali del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows il lingua giapponese<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tedesca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua cinese (Cina)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua araba (Arabia Saudita)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tailandese (Thai)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua turca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua portoghese (Portogallo)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua inglese|  
 |Edizione di Windows|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bit x64 Datacenter<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bit x64 Standard<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Data Center Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Enterprise Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Standard Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bit x64 Web Server Core|  
   

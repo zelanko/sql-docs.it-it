@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782315"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62782315"
  Il client deve essere in grado di verificare la proprietà del certificato utilizzato dal server. Se il client dispone del certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server, non sono necessarie ulteriori operazioni di configurazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sono inclusi i certificati chiave pubblica di numerose autorità di certificazione. Se il certificato del server è stato firmato da un'autorità di certificazione pubblica o privata per la quale il client non dispone del certificato chiave pubblica, è necessario installare il certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server.  
   
 > [!NOTE]  
->  Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Se ad esempio si dispone di un cluster costituito da due nodi, denominati rispettivamente test1.*\<nomeazienda>*.com e test2.*\<<nomeazienda>*.com, e di un server virtuale denominato virtsql, è necessario installare un certificato per virtsql.*\<nomeazienda>*.com in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption**su **Sì**.  
+>  Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Se ad esempio si dispone di un cluster costituito da due nodi, denominati rispettivamente test1. *\<nomeazienda>* .com e test2. *\<<nomeazienda>* .com, e di un server virtuale denominato virtsql, è necessario installare un certificato per virtsql. *\<nomeazienda>* .com in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption**su **Sì**.  
   
  **Contenuto dell'argomento**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62782315"
   
 1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere **Proprietà**.  
   
-2.  Nel **protocolli per**_\<nome istanza >_ **proprietà** finestra di dialogo il **certificato** scheda, seleziona il lo si desidera certificato dall'elenco a discesa per il **certificato** casella e quindi fare clic su **OK**.  
+2.  Nel **protocolli per** _\<nome istanza >_ **proprietà** finestra di dialogo il **certificato** scheda, seleziona il lo si desidera certificato dall'elenco a discesa per il **certificato** casella e quindi fare clic su **OK**.  
   
 3.  Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   

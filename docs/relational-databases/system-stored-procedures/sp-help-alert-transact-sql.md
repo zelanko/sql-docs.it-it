@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796571"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @alert_name = ] 'alert_name'` Il nome dell'avviso. *nome_avviso* viene **nvarchar (128)**. Se *nome_avviso* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
+`[ @alert_name = ] 'alert_name'` Il nome dell'avviso. *nome_avviso* viene **nvarchar (128)** . Se *nome_avviso* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
   
 `[ @order_by = ] 'order_by'` L'ordinamento da usare per produrre i risultati. *order_by*viene **sysname**, con un valore predefinito è N' '*nome*'.  
   
@@ -121,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|È diverso da zero se uno o più operatori ricevono una notifica dell'avviso. Può essere uno o più d'uno dei valori seguenti uniti dall'operatore OR:<br /><br /> **1**= notifica tramite posta elettronica<br /><br /> **2**= notifica tramite cercapersone<br /><br /> **4**= ha **net send** notifica.|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] (Indici per tabelle con ottimizzazione per la memoria).|  
 |**performance_condition**|**nvarchar(512)**|Se **tipo** viene **2**, questa colonna Mostra la definizione della condizione delle prestazioni. Se **tipo** viene **3**, questa colonna viene visualizzata la query per l'evento WMI. Negli altri casi la colonna è NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sarà sempre '**[senza categoria]**' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sarà sempre ' **[senza categoria]** ' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**type**|**int**|Tipo di avviso:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso per evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso relativo alle prestazioni<br /><br /> **3** = avviso per evento WMI|  
   
 ## <a name="remarks"></a>Note  

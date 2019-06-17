@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62824395"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Visualizzazione di avvisi relativi all'esecuzione di report personalizzati
@@ -32,7 +32,7 @@ ms.locfileid: "62824395"
   
 2.  Fare doppio clic su `reports.xml`, quindi fare clic su **modifica**.  
   
-3.  Change**\<SuppressWarning > true\</SuppressWarning > alla \<SuppressWarning > false\</SuppressWarning >**.  
+3.  Change **\<SuppressWarning > true\</SuppressWarning > alla \<SuppressWarning > false\</SuppressWarning >** .  
   
 4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62824395"
   
 2.  Fare doppio clic su `reports.xml`, fare clic su **modifica**.  
   
-3.  Change  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > alla \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  Change  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > alla \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
   
 4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

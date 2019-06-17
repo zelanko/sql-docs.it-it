@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62933690"
 ---
 # <a name="functions-on-sequences---id"></a>Funzioni su sequenze - id
@@ -177,7 +177,7 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione di due argomenti di **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione di due argomenti di **ID ()** .  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede che il tipo di argomento del **ID ()** a essere un sottotipo di xs: IDREF *.  
   

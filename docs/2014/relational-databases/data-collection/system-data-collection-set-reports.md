@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873409"
 ---
 # <a name="system-data-collection-set-reports"></a>Report per i set di raccolta dati di sistema
@@ -56,7 +56,7 @@ ms.locfileid: "62873409"
  Nella tabella al di sotto del grafico sono indicati gli orari di raccolta dati e i corrispondenti dati di utilizzo.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sottoreport Utilizzo disco per database: <database_name>  
- Il sottoreport **Utilizzo disco per database:**_<nome_database>_ viene visualizzato quando si fa clic sul nome di un database nella tabella di riepilogo del report del set di raccolta Utilizzo disco. In questo report viene fornita una suddivisione grafica e numerica dello spazio utilizzato dai file di dati e dai file di log delle transazioni del database. Lo spazio utilizzato per i file di dati è suddiviso in categorie relative a percentuale di spazio allocato alle pagine di indice, spazio non allocato, spazio allocato alle pagine di dati e spazio inutilizzato. Queste categorie sono definite come segue:  
+ Il sottoreport **Utilizzo disco per database:** _<nome_database>_ viene visualizzato quando si fa clic sul nome di un database nella tabella di riepilogo del report del set di raccolta Utilizzo disco. In questo report viene fornita una suddivisione grafica e numerica dello spazio utilizzato dai file di dati e dai file di log delle transazioni del database. Lo spazio utilizzato per i file di dati è suddiviso in categorie relative a percentuale di spazio allocato alle pagine di indice, spazio non allocato, spazio allocato alle pagine di dati e spazio inutilizzato. Queste categorie sono definite come segue:  
   
 |Categoria|Definizione|  
 |--------------|----------------|  

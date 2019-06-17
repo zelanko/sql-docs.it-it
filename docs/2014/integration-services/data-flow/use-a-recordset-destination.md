@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899999"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
@@ -153,7 +153,7 @@ ms.locfileid: "62899999"
   
     5.  Per **MessageSourceType**selezionare **Input diretto**.  
   
-5.  Nella pagina **Espressioni** di **Editor attività Invia messaggi**fare clic sul pulsante con i puntini di sospensione (**...**) per aprire **Editor espressioni di proprietà**.  
+5.  Nella pagina **Espressioni** di **Editor attività Invia messaggi**fare clic sul pulsante con i puntini di sospensione ( **...** ) per aprire **Editor espressioni di proprietà**.  
   
 6.  In **Editor espressioni di proprietà**immettere le informazioni seguenti:  
   

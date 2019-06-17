@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807565"
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Proprietà delle celle MDX - proprietà FORMATTED_VALUE
@@ -85,7 +85,7 @@ ms.locfileid: "62807565"
 |E|5,04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE è impostata in modo esplicito su `1034,` da qui la virgola ( `,` ) come separatore decimale.|  
 |F|50.40%|La proprietà FORMAT_STRING è impostata su `Percent` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata modificata da 5040 a 0.5040|  
 |G|50,40%|La proprietà FORMAT_STRING è impostata su `Percent`, valore ereditato da F, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` , da qui la virgola ( `,` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata ereditata da F.|  
-|H|No|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Poiché non vi è differenza tra il NO inglese e quello spagnolo, l'utente non nota alcuna differenza nella proprietà FORMATTED_VALUE.|  
+|H|no|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Poiché non vi è differenza tra il NO inglese e quello spagnolo, l'utente non nota alcuna differenza nella proprietà FORMATTED_VALUE.|  
 |I|SI|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 59 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione YES/NO, qualsiasi valore diverso da zero (0) è un YES e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è SI.|  
 |J|Desactivado|La proprietà FORMAT_STRING è impostata su `ON/OFF`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione ON/OFF, qualsiasi valore uguale a zero (0) è un OFF e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è Desactivado.|  
 |K|Activado|La proprietà FORMAT_STRING è impostata su `ON/OFF`, la proprietà VALUE su -312 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione ON/OFF, qualsiasi valore diverso da zero (0) è un ON e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è Activado.|  

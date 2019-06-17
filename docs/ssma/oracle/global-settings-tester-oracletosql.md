@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62864902"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Impostazioni globali (tester) (OracleToSQL)
@@ -52,7 +52,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Yes  
   
-2.  no  
+2.  No  
   
 **Arrestare l'esecuzione di test dopo il primo errore**  
 Questa impostazione specifica se interrompere l'esecuzione test case corrente, se si è verificato un errore durante l'esecuzione. Set di opzioni predefinito è **Sì**.  
@@ -61,7 +61,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Yes  
   
-2.  no  
+2.  No  
   
 ## <a name="see-also"></a>Vedere anche  
 [Finishing Test Case Preparation &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  

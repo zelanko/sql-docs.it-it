@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791881"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
@@ -28,7 +28,7 @@ ms.locfileid: "62791881"
   
  Utilizzare un provider di dati che supporti il protocollo TDS (Tabular Data Stream) versione 7.4 o successive, ad esempio SQL Server Native Client 11.0 o il provider di dati per SQL Server in .NET Framework 4.02.  
   
- **(Per i carichi di lavoro di sola lettura)**. Il ruolo della replica secondaria deve essere configurato per le connessioni di sola lettura, il gruppo di disponibilità deve presentare un elenco di routing e la connessione nell'origine dati di Analysis Services deve specificare il listener del gruppo di disponibilità. In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
+ **(Per i carichi di lavoro di sola lettura)** . Il ruolo della replica secondaria deve essere configurato per le connessioni di sola lettura, il gruppo di disponibilità deve presentare un elenco di routing e la connessione nell'origine dati di Analysis Services deve specificare il listener del gruppo di disponibilità. In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
   
 ##  <a name="bkmk_UseSecondary"></a> Elenco di controllo: usare una replica secondaria per le operazioni di sola lettura  
  È possibile configurare una connessione all'origine dati per l'utilizzo di una replica secondaria leggibile se la soluzione di Analysis Services include il writeback. Se si dispone di una connessione di rete veloce, la replica secondaria genera una latenza dati molto bassa, fornendo dati pressoché identici a quelli della replica primaria. Utilizzando la replica secondaria per le operazioni di Analysis Services, è possibile ridurre le contese di lettura-scrittura sulla replica primaria e utilizzare in modo migliore le repliche secondarie nel gruppo di disponibilità.  
@@ -55,7 +55,7 @@ ms.locfileid: "62791881"
   
     -   Nell'elenco a discesa **Secondario leggibile** selezionare **Solo finalità di lettura**.  
   
-    -   Nell'elenco a discesa **Connessioni nel ruolo primario** selezionare **Consenti tutte le connessioni**. Impostazione predefinita.  
+    -   Nell'elenco a discesa **Connessioni nel ruolo primario** selezionare **Consenti tutte le connessioni**. Questa è l'impostazione predefinita.  
   
     -   Facoltativamente, nell'elenco a discesa **Modalità di disponibilità** selezionare **Commit sincrono**. Questo passaggio non è obbligatorio, ma assicura la parità dei dati tra la replica primaria e quella secondaria.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779225"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria
@@ -73,7 +73,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Index Seek su predicati di uguaglianza (=).|Yes<br /><br /> (chiave completa necessaria)|Sì <sup>1</sup>|Yes|  
 |Index seek su predicati di disuguaglianza (>, <, \<=, > =, BETWEEN).|No (risultati in un'analisi di indice)|Sì <sup>1</sup>|Yes|  
 |Recupero di righe con un ordinamento corrispondente alla definizione dell'indice.|No|Yes|Yes|  
-|Recupero di righe con un ordinamento inverso alla definizione dell'indice.|No|No|Yes|  
+|Recupero di righe con un ordinamento inverso alla definizione dell'indice.|no|no|Yes|  
   
  Nella tabella, Sì significa che l'indice può soddisfare la richiesta in modo appropriato e No significa che l'indice non può essere usato per soddisfare correttamente la richiesta.  
   

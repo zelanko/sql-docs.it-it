@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814508"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
@@ -64,9 +64,9 @@ ms.locfileid: "62814508"
   
 ||Modalità commit asincrono|Modalità commit sincrono con modalità di failover manuale|Modalità commit sincrono con modalità di failover automatico|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Failover automatico|no|No|Yes|  
+|Failover automatico|No|No|Yes|  
 |Failover manuale pianificato|No|Yes|Yes|  
-|failover forzato|Yes|Yes|Sì**<sup>*</sup>**|  
+|failover forzato|Yes|Yes|Sì **<sup>*</sup>**|  
   
  **<sup>*</sup>**  Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come un failover manuale.  
   
